@@ -25,13 +25,18 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Run paper-trading cycle
+      - name: Run crypto paper-trading cycle
         run: python src/crypto_tracker.py
 
-      - name: Publish dashboard to docs/ (GitHub Pages)
+      - name: Run stock paper-trading cycle
+        run: python src/stock_tracker.py
+
+      - name: Publish dashboards to docs/ (GitHub Pages)
         run: |
           cp reports/crypto_dashboard.html docs/index.html
           cp reports/crypto_dashboard_data.json docs/crypto_dashboard_data.json
+          cp reports/stock_dashboard.html docs/stocks.html
+          cp reports/stock_dashboard_data.json docs/stock_dashboard_data.json
 
       - name: Commit state + dashboard
         run: |
