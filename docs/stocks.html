@@ -1,0 +1,265 @@
+<meta charset="utf-8">
+<meta http-equiv="refresh" content="300">
+<title>TQQQ Rotation — Live $1k Paper Sim</title>
+<style>
+  :root{
+    --bg:#0A0E13; --panel:#121821; --panel2:#0F141C; --line:#1E2733;
+    --text:#E8EDF2; --muted:#8A97A5; --faint:#5A6673;
+    --gain:#3DD68C; --loss:#F0544F; --risk:#F2B33D; --sig:#5EA8FF;
+    --mono:Consolas,"Cascadia Code","SF Mono",Menlo,monospace;
+  }
+  @media (prefers-color-scheme: light){
+    :root{--bg:#F3F5F8; --panel:#FFFFFF; --panel2:#EDF0F4; --line:#D8DEE6;
+      --text:#17202B; --muted:#5A6673; --faint:#8A97A5;
+      --gain:#0E9F63; --loss:#D33B36; --risk:#B87F14; --sig:#2E7CD6;}
+  }
+  :root[data-theme="dark"]{--bg:#0A0E13; --panel:#121821; --panel2:#0F141C;
+    --line:#1E2733; --text:#E8EDF2; --muted:#8A97A5; --faint:#5A6673;
+    --gain:#3DD68C; --loss:#F0544F; --risk:#F2B33D; --sig:#5EA8FF;}
+  :root[data-theme="light"]{--bg:#F3F5F8; --panel:#FFFFFF; --panel2:#EDF0F4;
+    --line:#D8DEE6; --text:#17202B; --muted:#5A6673; --faint:#8A97A5;
+    --gain:#0E9F63; --loss:#D33B36; --risk:#B87F14; --sig:#2E7CD6;}
+
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--text);margin:0;
+    font:15px/1.5 "Segoe UI",system-ui,sans-serif;padding:20px;}
+  .wrap{max-width:1060px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+
+  .eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--muted);font-weight:600}
+  .num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+  /* status bar */
+  .bar{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+  .bar h1{font-size:17px;margin:0;font-weight:650;letter-spacing:.01em}
+  .live{display:inline-flex;align-items:center;gap:6px;font-size:11px;
+    letter-spacing:.12em;font-weight:700;color:var(--gain);
+    border:1px solid var(--gain);border-radius:3px;padding:2px 8px}
+  .live .dot{width:7px;height:7px;border-radius:50%;background:var(--gain);
+    animation:pulse 2s infinite}
+  @keyframes pulse{50%{opacity:.35}}
+  @media (prefers-reduced-motion: reduce){.live .dot{animation:none}}
+  .asof{margin-left:auto;color:var(--faint);font-size:12px}
+
+  /* headline strip */
+  .strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:14px}
+  .kpi{background:var(--panel);border:1px solid var(--line);border-radius:6px;
+    padding:14px 16px;display:flex;flex-direction:column;gap:4px}
+  .kpi .v{font-size:30px;font-weight:650;line-height:1.1}
+  .kpi .d{font-size:13px;font-weight:600}
+  .up{color:var(--gain)} .down{color:var(--loss)}
+  .chip{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;
+    padding:2px 9px;border-radius:3px;text-transform:uppercase}
+  .chip.in{background:color-mix(in srgb,var(--gain) 16%,transparent);color:var(--gain)}
+  .chip.out{background:color-mix(in srgb,var(--muted) 16%,transparent);color:var(--muted)}
+
+  /* main grid */
+  .grid{display:grid;grid-template-columns:1.6fr 1fr;gap:14px}
+  @media(max-width:860px){.grid{grid-template-columns:1fr}}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:6px;
+    padding:16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+  .panel h2{font-size:13px;margin:0;font-weight:650}
+  canvas{width:100%;height:auto;display:block}
+
+  /* gap meter */
+  .meter{height:10px;border-radius:5px;background:var(--panel2);
+    position:relative;overflow:hidden}
+  .meter .fill{position:absolute;top:0;bottom:0;border-radius:5px}
+  .meter-row{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
+
+  /* trade log */
+  .tbl{width:100%;border-collapse:collapse;font-size:13px}
+  .tbl th{text-align:left;color:var(--faint);font-weight:600;font-size:11px;
+    letter-spacing:.1em;text-transform:uppercase;padding:4px 8px;
+    border-bottom:1px solid var(--line)}
+  .tbl td{padding:6px 8px;border-bottom:1px solid var(--line)}
+  .tbl tr:last-child td{border-bottom:none}
+  .buy{color:var(--gain);font-weight:700} .sell{color:var(--loss);font-weight:700}
+  .scroll{overflow-x:auto}
+
+  /* risk stripe */
+  .riskcard{border-left:4px solid var(--risk)}
+  .riskcard .rn{color:var(--risk);font-weight:650;font-size:12px;
+    letter-spacing:.06em;text-transform:uppercase}
+  .rule{color:var(--muted);font-size:13px}
+  .facts{display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:13px}
+  .facts div{background:var(--panel2);border-radius:4px;padding:8px 10px}
+  .facts .k{color:var(--faint);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+  footer{color:var(--faint);font-size:12px;text-align:center;padding:6px 0 2px}
+</style>
+
+<div class="wrap">
+  <div class="bar">
+    <span class="live"><span class="dot"></span>PAPER SIM</span>
+    <h1>3x Leveraged Trend Rotation — $1,000 Challenge</h1>
+    <span class="asof" id="asof"></span>
+  </div>
+
+  <div class="strip">
+    <div class="kpi">
+      <span class="eyebrow">Portfolio value</span>
+      <span class="v num" id="pv"></span>
+      <span class="d num" id="pd"></span>
+    </div>
+    <div class="kpi">
+      <span class="eyebrow">SPY benchmark ($1,000 same day)</span>
+      <span class="v num" id="bv"></span>
+      <span class="d num" id="bd"></span>
+    </div>
+    <div class="kpi">
+      <span class="eyebrow">Current position</span>
+      <span class="v num" id="pos"></span>
+      <span class="d"><span class="chip" id="sigchip"></span></span>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="panel">
+      <span class="eyebrow">Equity curve</span>
+      <h2>Strategy vs SPY benchmark, from inception</h2>
+      <canvas id="eq" width="640" height="300"></canvas>
+      <div class="rule" id="eqnote"></div>
+    </div>
+
+    <div class="panel">
+      <span class="eyebrow">The signal</span>
+      <h2>QQQ vs 200-day moving average</h2>
+      <canvas id="sig" width="380" height="180"></canvas>
+      <div class="meter-row"><span>below MA — in cash</span><span>above MA — in TQQQ</span></div>
+      <div class="meter" id="meter"><div class="fill" id="meterfill"></div></div>
+      <div class="rule num" id="gaptxt"></div>
+    </div>
+
+    <div class="panel">
+      <span class="eyebrow">Trade log</span>
+      <h2>Every paper order this simulation has placed</h2>
+      <div class="scroll">
+        <table class="tbl" id="trades">
+          <thead><tr><th>Date</th><th>Side</th><th>Ticker</th><th>Price</th><th>Shares</th><th>Value</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel riskcard">
+      <span class="rn">⚠ Maximum-risk strategy — paper money only</span>
+      <h2 id="stratname"></h2>
+      <div class="rule" id="stratrule"></div>
+      <div class="facts">
+        <div><div class="k">Backtest CAGR</div><div class="num" id="bt-cagr"></div></div>
+        <div><div class="k">Backtest max drawdown</div><div class="num" id="bt-dd"></div></div>
+        <div><div class="k">Started</div><div class="num" id="bt-start"></div></div>
+        <div><div class="k">Starting stake</div><div class="num">$1,000.00</div></div>
+      </div>
+      <div class="rule">A −50% or worse drawdown is an expected feature of this
+        strategy, not a malfunction. Simulation only — nothing here is
+        investment advice, and no real orders are ever placed.</div>
+    </div>
+  </div>
+
+  <footer>Updated by <span class="num">live_tracker.py</span> · data: Yahoo Finance daily closes · rerun the tracker to refresh this screen</footer>
+</div>
+
+<script>
+const D = {"generated_utc": "2026-07-16T21:34:31+00:00", "created": "2026-07-16", "starting_cash": 1000.0, "current": {"date": "2026-07-16", "value": 997.18, "bench": 999.23, "holding": "TQQQ", "signal_in_market": true, "qqq": 705.94, "ma200": 639.03}, "ma_gap_pct": 10.47, "trades": [{"date": "2026-07-16", "action": "BUY", "ticker": "TQQQ", "price": 70.94, "shares": 14.096419, "value": 1000.0, "reason": "Initial entry \u2014 QQQ above 200-day MA"}], "history": [{"date": "2026-07-16", "value": 997.18, "bench": 999.23, "holding": "TQQQ", "signal_in_market": true, "qqq": 705.94, "ma200": 639.03}], "signal_series": [{"date": "2026-04-21", "qqq": 643.62, "ma": 597.85}, {"date": "2026-04-22", "qqq": 654.39, "ma": 598.37}, {"date": "2026-04-23", "qqq": 650.7, "ma": 598.88}, {"date": "2026-04-24", "qqq": 663.15, "ma": 599.43}, {"date": "2026-04-27", "qqq": 663.5, "ma": 599.98}, {"date": "2026-04-28", "qqq": 656.83, "ma": 600.51}, {"date": "2026-04-29", "qqq": 660.84, "ma": 601.04}, {"date": "2026-04-30", "qqq": 667.01, "ma": 601.61}, {"date": "2026-05-01", "qqq": 673.41, "ma": 602.2}, {"date": "2026-05-04", "qqq": 672.14, "ma": 602.77}, {"date": "2026-05-05", "qqq": 680.86, "ma": 603.38}, {"date": "2026-05-06", "qqq": 695.01, "ma": 604.05}, {"date": "2026-05-07", "qqq": 694.18, "ma": 604.72}, {"date": "2026-05-08", "qqq": 710.45, "ma": 605.47}, {"date": "2026-05-11", "qqq": 712.51, "ma": 606.22}, {"date": "2026-05-12", "qqq": 706.46, "ma": 606.94}, {"date": "2026-05-13", "qqq": 713.93, "ma": 607.68}, {"date": "2026-05-14", "qqq": 719.0, "ma": 608.45}, {"date": "2026-05-15", "qqq": 708.15, "ma": 609.17}, {"date": "2026-05-18", "qqq": 705.11, "ma": 609.88}, {"date": "2026-05-19", "qqq": 700.76, "ma": 610.63}, {"date": "2026-05-20", "qqq": 712.37, "ma": 611.38}, {"date": "2026-05-21", "qqq": 713.73, "ma": 612.16}, {"date": "2026-05-22", "qqq": 716.75, "ma": 612.92}, {"date": "2026-05-26", "qqq": 729.48, "ma": 613.74}, {"date": "2026-05-27", "qqq": 728.65, "ma": 614.52}, {"date": "2026-05-28", "qqq": 734.79, "ma": 615.35}, {"date": "2026-05-29", "qqq": 737.5, "ma": 616.15}, {"date": "2026-06-01", "qqq": 741.92, "ma": 616.97}, {"date": "2026-06-02", "qqq": 745.34, "ma": 617.81}, {"date": "2026-06-03", "qqq": 743.39, "ma": 618.65}, {"date": "2026-06-04", "qqq": 739.8, "ma": 619.48}, {"date": "2026-06-05", "qqq": 704.29, "ma": 620.17}, {"date": "2026-06-08", "qqq": 715.28, "ma": 620.93}, {"date": "2026-06-09", "qqq": 707.05, "ma": 621.66}, {"date": "2026-06-10", "qqq": 692.93, "ma": 622.28}, {"date": "2026-06-11", "qqq": 716.33, "ma": 623.03}, {"date": "2026-06-12", "qqq": 720.55, "ma": 623.78}, {"date": "2026-06-15", "qqq": 743.18, "ma": 624.64}, {"date": "2026-06-16", "qqq": 729.06, "ma": 625.41}, {"date": "2026-06-17", "qqq": 721.72, "ma": 626.18}, {"date": "2026-06-18", "qqq": 739.81, "ma": 627.07}, {"date": "2026-06-22", "qqq": 737.95, "ma": 627.92}, {"date": "2026-06-23", "qqq": 713.65, "ma": 628.63}, {"date": "2026-06-24", "qqq": 710.62, "ma": 629.31}, {"date": "2026-06-25", "qqq": 716.38, "ma": 630.02}, {"date": "2026-06-26", "qqq": 706.52, "ma": 630.66}, {"date": "2026-06-29", "qqq": 724.08, "ma": 631.39}, {"date": "2026-06-30", "qqq": 736.4, "ma": 632.17}, {"date": "2026-07-01", "qqq": 725.17, "ma": 632.87}, {"date": "2026-07-02", "qqq": 712.6, "ma": 633.49}, {"date": "2026-07-06", "qqq": 722.82, "ma": 634.16}, {"date": "2026-07-07", "qqq": 709.43, "ma": 634.78}, {"date": "2026-07-08", "qqq": 711.44, "ma": 635.37}, {"date": "2026-07-09", "qqq": 723.28, "ma": 636.0}, {"date": "2026-07-10", "qqq": 725.51, "ma": 636.63}, {"date": "2026-07-13", "qqq": 711.74, "ma": 637.21}, {"date": "2026-07-14", "qqq": 719.69, "ma": 637.84}, {"date": "2026-07-15", "qqq": 717.74, "ma": 638.47}, {"date": "2026-07-16", "qqq": 705.94, "ma": 639.03}], "strategy": {"name": "3x Leveraged Trend Rotation", "rule": "Hold TQQQ while QQQ > 200-day MA; else T-bills (BIL)", "backtest_cagr": "31.8% (2010-2026)", "backtest_maxdd": "-56%", "risk_note": "Highest-risk strategy tested. Paper money only."}};
+
+const $ = id => document.getElementById(id);
+const fmt$ = v => "$" + v.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});
+const pct = v => (v>=0?"+":"") + (v*100).toFixed(2) + "%";
+
+const cur = D.current, start = D.starting_cash;
+const ret = cur.value/start-1, bret = cur.bench/start-1;
+
+$("asof").textContent = "as of " + cur.date + " close · sim day " +
+  (Math.round((new Date(cur.date)-new Date(D.created))/86400000)+1);
+$("pv").textContent = fmt$(cur.value);
+$("pd").textContent = pct(ret) + " since start";
+$("pd").className = "d num " + (ret>=0?"up":"down");
+$("bv").textContent = fmt$(cur.bench);
+$("bd").textContent = pct(bret) + " · strategy " + (cur.value>=cur.bench?"ahead":"behind") +
+  " by " + fmt$(Math.abs(cur.value-cur.bench));
+$("bd").className = "d num " + (bret>=0?"up":"down");
+$("pos").textContent = cur.holding;
+const chip = $("sigchip");
+chip.textContent = cur.signal_in_market ? "signal: in market" : "signal: risk-off (cash)";
+chip.className = "chip " + (cur.signal_in_market?"in":"out");
+
+$("stratname").textContent = D.strategy.name;
+$("stratrule").textContent = "Rule: " + D.strategy.rule;
+$("bt-cagr").textContent = D.strategy.backtest_cagr;
+$("bt-dd").textContent = D.strategy.backtest_maxdd;
+$("bt-start").textContent = D.created;
+
+// gap meter: map gap% in [-10,+10] to [0,100]
+const gap = D.ma_gap_pct;
+const gpos = Math.max(0, Math.min(100, (gap+10)/20*100));
+const mf = $("meterfill");
+const css = getComputedStyle(document.documentElement);
+mf.style.left = Math.min(50,gpos)+"%";
+mf.style.width = Math.abs(gpos-50)+"%";
+mf.style.background = gap>=0 ? css.getPropertyValue("--gain") : css.getPropertyValue("--loss");
+$("gaptxt").textContent = "QQQ " + cur.qqq.toLocaleString() + " vs MA " +
+  cur.ma200.toLocaleString() + " — " + (gap>=0?"+":"") + gap +
+  "% " + (gap>=0 ? "above" : "below") + " the line" +
+  (gap>=0 && gap<2 ? " (close to a sell trigger)" : "");
+
+// trade log
+const tb = $("trades").tBodies[0];
+D.trades.slice().reverse().forEach(t=>{
+  const tr = document.createElement("tr");
+  tr.innerHTML = "<td class='num'>"+t.date+"</td><td class='"+
+    (t.action==="BUY"?"buy":"sell")+"'>"+t.action+"</td><td class='num'>"+t.ticker+
+    "</td><td class='num'>"+fmt$(t.price)+"</td><td class='num'>"+t.shares.toFixed(4)+
+    "</td><td class='num'>"+fmt$(t.value)+"</td>";
+  tb.appendChild(tr);
+});
+
+// ---- charts (dependency-free canvas) ----
+function line(ctx,pts,color,w=2,dash=[]){
+  if(pts.length<2) return;
+  ctx.strokeStyle=color; ctx.lineWidth=w; ctx.setLineDash(dash); ctx.beginPath();
+  pts.forEach((p,i)=> i?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1]));
+  ctx.stroke(); ctx.setLineDash([]);
+}
+function scale(vals,lo,hi,a,b){ return v => b + (v-lo)/(hi-lo||1)*(a-b); }
+
+// equity chart
+(function(){
+  const c=$("eq"), ctx=c.getContext("2d");
+  const H=D.history;
+  const gainC=css.getPropertyValue("--gain").trim(), mutedC=css.getPropertyValue("--faint").trim();
+  if(H.length<2){
+    $("eqnote").textContent="Day 1 — the curve appears once there are two or more daily closes. Both lines start at $1,000.";
+    ctx.fillStyle=mutedC; ctx.font="13px sans-serif";
+    ctx.fillText("collecting data — first plot after next market close",30,150);
+    // draw flat baseline
+    line(ctx,[[20,150],[620,150]],mutedC,1,[4,4]);
+    return;
+  }
+  const vals=H.map(h=>h.value).concat(H.map(h=>h.bench));
+  const lo=Math.min(...vals)*0.98, hi=Math.max(...vals)*1.02;
+  const sy=scale(vals,lo,hi,20,285), sx=i=>30+i/(H.length-1)*(610-30+580*0);
+  const X=i=>30+i/(H.length-1)*580;
+  // baseline $1000
+  line(ctx,[[30,sy(start)],[610,sy(start)]],mutedC,1,[4,4]);
+  line(ctx,H.map((h,i)=>[X(i),sy(h.bench)]),mutedC,1.6);
+  line(ctx,H.map((h,i)=>[X(i),sy(h.value)]),gainC,2.2);
+  // endpoint dots
+  const last=H.length-1;
+  ctx.fillStyle=gainC; ctx.beginPath();
+  ctx.arc(X(last),sy(H[last].value),3.5,0,7); ctx.fill();
+  $("eqnote").textContent="green: strategy · grey: SPY · dashed: $1,000 start";
+})();
+
+// signal chart: QQQ vs 200dma, last 60 sessions
+(function(){
+  const c=$("sig"), ctx=c.getContext("2d");
+  const S=D.signal_series.filter(p=>p.ma);
+  if(S.length<2) return;
+  const vals=S.map(p=>p.qqq).concat(S.map(p=>p.ma));
+  const lo=Math.min(...vals)*0.99, hi=Math.max(...vals)*1.01;
+  const sy=scale(vals,lo,hi,12,170), X=i=>10+i/(S.length-1)*360;
+  line(ctx,S.map((p,i)=>[X(i),sy(p.ma)]),css.getPropertyValue("--risk").trim(),1.6,[5,3]);
+  line(ctx,S.map((p,i)=>[X(i),sy(p.qqq)]),css.getPropertyValue("--sig").trim(),2);
+})();
+</script>
