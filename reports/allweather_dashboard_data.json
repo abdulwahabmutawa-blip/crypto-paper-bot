@@ -1,0 +1,135 @@
+{
+  "generated_utc": "2026-07-16T22:58:19+00:00",
+  "created": "2026-07-16",
+  "starting_cash": 1000.0,
+  "live_ts": "2026-07-16T22:58:19+00:00",
+  "current": {
+    "date": "2026-07-16",
+    "value": 1000.0,
+    "bench": 1000.0,
+    "holding": "5 assets"
+  },
+  "board": [
+    {
+      "sym": "SPY",
+      "price": 750.72,
+      "line": "target 30.0% \u00b7 now 30.0% \u00b7 $300",
+      "tag": "held",
+      "on": true,
+      "pick": false,
+      "fill": 30.0
+    },
+    {
+      "sym": "TLT",
+      "price": 84.21,
+      "line": "target 40.0% \u00b7 now 40.0% \u00b7 $400",
+      "tag": "held",
+      "on": true,
+      "pick": false,
+      "fill": 40.0
+    },
+    {
+      "sym": "GLD",
+      "price": 364.96,
+      "line": "target 15.0% \u00b7 now 15.0% \u00b7 $150",
+      "tag": "held",
+      "on": true,
+      "pick": false,
+      "fill": 15.0
+    },
+    {
+      "sym": "DBC",
+      "price": 28.46,
+      "line": "target 7.5% \u00b7 now 7.5% \u00b7 $75",
+      "tag": "held",
+      "on": true,
+      "pick": false,
+      "fill": 7.5
+    },
+    {
+      "sym": "BIL",
+      "price": 91.53,
+      "line": "target 7.5% \u00b7 now 7.5% \u00b7 $75",
+      "tag": "held",
+      "on": true,
+      "pick": false,
+      "fill": 7.5
+    }
+  ],
+  "board_title": "Fixed allocation, rebalanced monthly",
+  "meta": {
+    "title": "All-Weather Control \u2014 $1,000 Challenge",
+    "badge": "PAPER SIM \u00b7 CONTROL GROUP",
+    "bench_label": "SPY benchmark ($1,000 same day)",
+    "board_note": "No signals, no forecasts, no cleverness \u2014 the diversified do-nothing portfolio every other bot has to beat to justify its complexity."
+  },
+  "intraday": [
+    {
+      "ts": "2026-07-16T22:58:19+00:00",
+      "value": 1000.0,
+      "bench": 1000.0,
+      "holding": "5 assets"
+    }
+  ],
+  "trades": [
+    {
+      "date": "2026-07-16",
+      "action": "ALLOCATE",
+      "ticker": "SPY",
+      "price": 750.72,
+      "units": 0.3996,
+      "value": 300.0,
+      "reason": "Initial allocation 30.0%"
+    },
+    {
+      "date": "2026-07-16",
+      "action": "ALLOCATE",
+      "ticker": "TLT",
+      "price": 84.21,
+      "units": 4.75,
+      "value": 400.0,
+      "reason": "Initial allocation 40.0%"
+    },
+    {
+      "date": "2026-07-16",
+      "action": "ALLOCATE",
+      "ticker": "GLD",
+      "price": 364.96,
+      "units": 0.411,
+      "value": 150.0,
+      "reason": "Initial allocation 15.0%"
+    },
+    {
+      "date": "2026-07-16",
+      "action": "ALLOCATE",
+      "ticker": "DBC",
+      "price": 28.46,
+      "units": 2.6353,
+      "value": 75.0,
+      "reason": "Initial allocation 7.5%"
+    },
+    {
+      "date": "2026-07-16",
+      "action": "ALLOCATE",
+      "ticker": "BIL",
+      "price": 91.53,
+      "units": 0.8194,
+      "value": 75.0,
+      "reason": "Initial allocation 7.5%"
+    }
+  ],
+  "history": [
+    {
+      "date": "2026-07-16",
+      "value": 1000.0,
+      "bench": 1000.0,
+      "holding": "5 assets"
+    }
+  ],
+  "strategy": {
+    "name": "All-Weather Control (Dalio-style)",
+    "rule": "30% stocks / 40% long bonds / 15% gold / 7.5% commodities / 7.5% T-bills, rebalanced monthly",
+    "backtest_cagr": "+7.5%/yr since 2010 \u00b7 +11.5%/yr 2024+",
+    "backtest_maxdd": "-22% worst ever \u00b7 only -6.6% since 2024"
+  }
+}

@@ -34,6 +34,15 @@ jobs:
       - name: Run congress copier cycle
         run: python src/congress_tracker.py
 
+      - name: Run mean-reversion cycle
+        run: python src/bot_meanrev.py
+
+      - name: Run commodity trend cycle
+        run: python src/bot_commodity.py
+
+      - name: Run all-weather cycle
+        run: python src/bot_allweather.py
+
       - name: Publish dashboards to docs/ (GitHub Pages)
         run: |
           cp reports/crypto_dashboard.html docs/index.html
@@ -42,6 +51,12 @@ jobs:
           cp reports/stock_dashboard_data.json docs/stock_dashboard_data.json
           cp reports/congress_dashboard.html docs/congress.html
           cp reports/congress_dashboard_data.json docs/congress_dashboard_data.json
+          cp reports/meanrev_dashboard.html docs/meanrev.html
+          cp reports/meanrev_dashboard_data.json docs/meanrev_dashboard_data.json
+          cp reports/commodity_dashboard.html docs/commodity.html
+          cp reports/commodity_dashboard_data.json docs/commodity_dashboard_data.json
+          cp reports/allweather_dashboard.html docs/allweather.html
+          cp reports/allweather_dashboard_data.json docs/allweather_dashboard_data.json
 
       - name: Commit state + dashboard
         run: |

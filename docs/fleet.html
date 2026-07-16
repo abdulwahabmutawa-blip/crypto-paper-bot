@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="refresh" content="600">
+<title>The Bot Fleet — six $1,000 paper experiments</title>
+<style>
+  :root{--bg:#0B0E13;--panel:#141A23;--line:#232C3A;--text:#EAEFF5;
+    --muted:#94A2B3;--faint:#5E6B7C;--gain:#3DD68C;--loss:#F0544F;
+    --mono:Consolas,"Cascadia Code",Menlo,monospace;}
+  @media (prefers-color-scheme: light){
+    :root{--bg:#F3F5F8;--panel:#FFF;--line:#D8DEE6;--text:#161D26;
+      --muted:#5E6B7C;--faint:#94A2B3;--gain:#0E9F63;--loss:#D33B36;}}
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--text);margin:0;
+    font:15px/1.5 "Segoe UI",system-ui,sans-serif;padding:24px;}
+  .wrap{max-width:860px;margin:0 auto}
+  h1{font-size:22px;margin:0 0 4px}
+  .sub{color:var(--muted);margin:0 0 22px;font-size:14px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+  a.card{display:block;background:var(--panel);border:1px solid var(--line);
+    border-radius:8px;padding:16px;text-decoration:none;color:var(--text);
+    transition:transform .1s}
+  a.card:hover{transform:translateY(-2px);border-color:var(--muted)}
+  .emoji{font-size:22px}
+  .name{font-weight:650;margin:6px 0 2px}
+  .desc{color:var(--muted);font-size:13px}
+  .val{font-family:var(--mono);font-size:13px;color:var(--faint);margin-top:8px}
+  footer{color:var(--faint);font-size:12px;margin-top:26px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>The Bot Fleet</h1>
+  <p class="sub">Six $1,000 paper-trading experiments, six theories of market
+  edge — trading live every ~20 minutes on GitHub Actions, every decision on a
+  public ledger. Simulation only; not investment advice.</p>
+  <div class="grid">
+    <a class="card" href="index.html"><span class="emoji">🪙</span>
+      <div class="name">Crypto Regime Switcher</div>
+      <div class="desc">Momentum brain in uptrends, dip-buying brain in chop —
+        picked daily by BTC's 200-day tide gauge.</div>
+      <div class="val">edge theory: regimes</div></a>
+    <a class="card" href="stocks.html"><span class="emoji">📈</span>
+      <div class="name">Leveraged Stock Trend</div>
+      <div class="desc">3x Nasdaq while QQQ holds its 200-day MA, T-bills
+        below it. The lab champion in trending markets.</div>
+      <div class="val">edge theory: trends</div></a>
+    <a class="card" href="congress.html"><span class="emoji">🏛</span>
+      <div class="name">Congress Copier</div>
+      <div class="desc">Auto-follows every member of Congress with a proven
+        market-beating record; copies their new filings.</div>
+      <div class="val">edge theory: information</div></a>
+    <a class="card" href="commodity.html"><span class="emoji">🛢</span>
+      <div class="name">Commodity Trend</div>
+      <div class="desc">Gold, silver, oil, broad basket — ride whichever is
+        trending, stand aside otherwise. The 4th asset class.</div>
+      <div class="val">edge theory: diversification</div></a>
+    <a class="card" href="meanrev.html"><span class="emoji">🎯</span>
+      <div class="name">Mean-Reversion Mega-Caps</div>
+      <div class="desc">Buys panic in quality names, sells the relief bounce.
+        The anti-momentum experiment.</div>
+      <div class="val">edge theory: overreaction</div></a>
+    <a class="card" href="allweather.html"><span class="emoji">🌦</span>
+      <div class="name">All-Weather Control</div>
+      <div class="desc">Fixed diversified allocation, monthly rebalance, zero
+        cleverness. The control group they all must beat.</div>
+      <div class="val">edge theory: none — that's the point</div></a>
+  </div>
+  <footer>Paper money · public ledger:
+    <a href="https://github.com/abdulwahabmutawa-blip/crypto-paper-bot" style="color:var(--gain)">github.com/abdulwahabmutawa-blip/crypto-paper-bot</a></footer>
+</div>
+</body>
+</html>
