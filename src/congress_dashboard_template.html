@@ -1,0 +1,247 @@
+<meta charset="utf-8">
+<meta http-equiv="refresh" content="300">
+<title>Congress Copier — Live $1k Paper Sim</title>
+<style>
+  :root{
+    --bg:#0B0E17; --panel:#131829; --panel2:#0F1320; --line:#232B44;
+    --text:#EAEDF6; --muted:#93A0BC; --faint:#5E6A85;
+    --gain:#3DD68C; --loss:#F0544F; --acc:#C9A24B; --sig:#5E8BFF;
+    --mono:Consolas,"Cascadia Code","SF Mono",Menlo,monospace;
+  }
+  @media (prefers-color-scheme: light){
+    :root{--bg:#F4F5F9; --panel:#FFFFFF; --panel2:#ECEEF5; --line:#D9DDEA;
+      --text:#161B2A; --muted:#5E6A85; --faint:#93A0BC;
+      --gain:#0E9F63; --loss:#D33B36; --acc:#8F6E1E; --sig:#2F5FD0;}
+  }
+  :root[data-theme="dark"]{--bg:#0B0E17; --panel:#131829; --panel2:#0F1320;
+    --line:#232B44; --text:#EAEDF6; --muted:#93A0BC; --faint:#5E6A85;
+    --gain:#3DD68C; --loss:#F0544F; --acc:#C9A24B; --sig:#5E8BFF;}
+  :root[data-theme="light"]{--bg:#F4F5F9; --panel:#FFFFFF; --panel2:#ECEEF5;
+    --line:#D9DDEA; --text:#161B2A; --muted:#5E6A85; --faint:#93A0BC;
+    --gain:#0E9F63; --loss:#D33B36; --acc:#8F6E1E; --sig:#2F5FD0;}
+
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--text);margin:0;
+    font:15px/1.5 "Segoe UI",system-ui,sans-serif;padding:20px;}
+  .wrap{max-width:1060px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+  .eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--muted);font-weight:600}
+  .num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+  .bar{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+  .bar h1{font-size:17px;margin:0;font-weight:650}
+  .live{display:inline-flex;align-items:center;gap:6px;font-size:11px;
+    letter-spacing:.12em;font-weight:700;color:var(--acc);
+    border:1px solid var(--acc);border-radius:3px;padding:2px 8px}
+  .live .dot{width:7px;height:7px;border-radius:50%;background:var(--acc);
+    animation:pulse 2s infinite}
+  @keyframes pulse{50%{opacity:.35}}
+  @media (prefers-reduced-motion: reduce){.live .dot{animation:none}}
+  .asof{margin-left:auto;color:var(--faint);font-size:12px}
+
+  .strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:14px}
+  .kpi{background:var(--panel);border:1px solid var(--line);border-radius:6px;
+    padding:14px 16px;display:flex;flex-direction:column;gap:4px}
+  .kpi .v{font-size:30px;font-weight:650;line-height:1.1}
+  .kpi .d{font-size:13px;font-weight:600}
+  .up{color:var(--gain)} .down{color:var(--loss)}
+
+  .grid{display:grid;grid-template-columns:1.6fr 1fr;gap:14px}
+  @media(max-width:860px){.grid{grid-template-columns:1fr}}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:6px;
+    padding:16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+  .panel h2{font-size:13px;margin:0;font-weight:650}
+  canvas{width:100%;height:auto;display:block}
+
+  .tbl{width:100%;border-collapse:collapse;font-size:13px}
+  .tbl th{text-align:left;color:var(--faint);font-weight:600;font-size:11px;
+    letter-spacing:.1em;text-transform:uppercase;padding:4px 8px;
+    border-bottom:1px solid var(--line)}
+  .tbl td{padding:6px 8px;border-bottom:1px solid var(--line)}
+  .tbl tr:last-child td{border-bottom:none}
+  .buy{color:var(--gain);font-weight:700} .sell{color:var(--loss);font-weight:700}
+  .scroll{overflow-x:auto}
+
+  .member{display:flex;align-items:center;gap:8px;font-size:13px;
+    background:var(--panel2);border-radius:4px;padding:7px 10px;
+    justify-content:space-between}
+  .member .nm{font-weight:600}
+  .member .st{color:var(--muted);font-size:12px}
+
+  .infocard{border-left:4px solid var(--acc)}
+  .infocard .rn{color:var(--acc);font-weight:650;font-size:12px;
+    letter-spacing:.06em;text-transform:uppercase}
+  .rule{color:var(--muted);font-size:13px}
+  footer{color:var(--faint);font-size:12px;text-align:center;padding:6px 0 2px}
+</style>
+
+<div class="wrap">
+  <div class="bar">
+    <span class="live"><span class="dot"></span>PAPER SIM · LIVE RETRIAL</span>
+    <h1>Congress Copier — $1,000 Challenge</h1>
+    <span class="asof" id="asof"></span>
+  </div>
+
+  <div class="strip">
+    <div class="kpi">
+      <span class="eyebrow">Portfolio value</span>
+      <span class="v num" id="pv"></span>
+      <span class="d num" id="pd"></span>
+    </div>
+    <div class="kpi">
+      <span class="eyebrow">SPY benchmark ($1,000 same day)</span>
+      <span class="v num" id="bv"></span>
+      <span class="d num" id="bd"></span>
+    </div>
+    <div class="kpi">
+      <span class="eyebrow">Deployment</span>
+      <span class="v num" id="dep"></span>
+      <span class="d" id="depd"></span>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="panel">
+      <span class="eyebrow">Equity curve</span>
+      <h2>Copier vs SPY, from inception</h2>
+      <canvas id="eq" width="640" height="280"></canvas>
+      <div class="rule" id="eqnote"></div>
+    </div>
+
+    <div class="panel">
+      <span class="eyebrow">Follow list (bot-selected)</span>
+      <h2 id="foltitle">Members with a positive market-beating record</h2>
+      <div id="members" style="display:flex;flex-direction:column;gap:6px"></div>
+      <div class="rule">Recomputed every cycle from disclosure data — members
+        drop off automatically when their record turns negative.</div>
+    </div>
+
+    <div class="panel">
+      <span class="eyebrow">Open positions</span>
+      <h2>Currently copied trades (90-day holds)</h2>
+      <div class="scroll">
+        <table class="tbl" id="pos">
+          <thead><tr><th>Ticker</th><th>Copied from</th><th>Opened</th><th>Closes</th><th>Cost</th><th>Now</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel">
+      <span class="eyebrow">Trade log</span>
+      <h2>Every paper order, with whom it copied and why</h2>
+      <div class="scroll">
+        <table class="tbl" id="trades">
+          <thead><tr><th>Date</th><th>Side</th><th>Ticker</th><th>Price</th><th>Value</th><th>Reason</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel infocard" style="grid-column:1 / -1">
+      <span class="rn">🏛 The live retrial</span>
+      <h2 id="stratname"></h2>
+      <div class="rule" id="stratrule"></div>
+      <div class="rule" id="stratnote" style="font-weight:600"></div>
+      <div class="rule">Paper money only. Congressional disclosures arrive up
+        to 45 days after the real trade — this bot buys when the public could,
+        at the filing, never at the member's private price. Not investment
+        advice; no real orders are ever placed.</div>
+    </div>
+  </div>
+
+  <footer>Updated by <span class="num">congress_tracker.py</span> · disclosures: public STOCK Act filings · prices: Yahoo Finance</footer>
+</div>
+
+<script>
+const D = /*__DATA__*/;
+const $ = id => document.getElementById(id);
+const fmt$ = v => "$" + v.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});
+const pct = v => (v>=0?"+":"") + (v*100).toFixed(2) + "%";
+const css = getComputedStyle(document.documentElement);
+
+const cur = D.current, start = D.starting_cash;
+const ret = cur.value/start-1, bret = cur.bench/start-1;
+
+$("asof").textContent = "as of " + cur.date + " · sim day " +
+  (Math.round((new Date(cur.date)-new Date(D.created))/86400000)+1);
+$("pv").textContent = fmt$(cur.value);
+$("pd").textContent = pct(ret) + " since start";
+$("pd").className = "d num " + (ret>=0?"up":"down");
+$("bv").textContent = fmt$(cur.bench);
+$("bd").textContent = pct(bret) + " · copier " + (cur.value>=cur.bench?"ahead":"behind") +
+  " by " + fmt$(Math.abs(cur.value-cur.bench));
+$("bd").className = "d num " + (bret>=0?"up":"down");
+$("dep").textContent = D.positions.length + " positions";
+$("depd").textContent = "cash " + fmt$(D.cash) + " · following " + D.follow_count + " members";
+
+$("stratname").textContent = D.strategy.name;
+$("stratrule").textContent = "Rule: " + D.strategy.rule;
+$("stratnote").textContent = D.strategy.note;
+$("foltitle").textContent = "Top of " + D.follow_count + " followed members (by avg excess vs market)";
+
+// follow list
+const mem = $("members");
+D.follow_top.forEach(m=>{
+  const div = document.createElement("div");
+  div.className = "member";
+  div.innerHTML = "<span class='nm'>"+m.name+"</span>"+
+    "<span class='st num'>"+m.buys+" buys · <b style='color:var(--gain)'>+"+
+    m.excess_pct+"%</b></span>";
+  mem.appendChild(div);
+});
+
+// positions
+const pb = $("pos").tBodies[0];
+if (D.positions.length === 0){
+  pb.innerHTML = "<tr><td colspan='6' style='color:var(--muted)'>None yet — waiting for the first new filing from a followed member.</td></tr>";
+} else {
+  D.positions.forEach(p=>{
+    const tr = document.createElement("tr");
+    tr.innerHTML = "<td class='num'>"+p.ticker+"</td><td>"+p.filer+
+      "</td><td class='num'>"+p.open_date+"</td><td class='num'>"+p.close_date+
+      "</td><td class='num'>"+fmt$(p.cost)+"</td><td class='num'>"+fmt$(p.now)+"</td>";
+    pb.appendChild(tr);
+  });
+}
+
+// trade log
+const tb = $("trades").tBodies[0];
+if (D.trades.length === 0){
+  tb.innerHTML = "<tr><td colspan='6' style='color:var(--muted)'>No orders yet.</td></tr>";
+} else {
+  D.trades.slice().reverse().forEach(t=>{
+    const tr = document.createElement("tr");
+    tr.innerHTML = "<td class='num'>"+t.date+"</td><td class='"+
+      (t.action==="BUY"?"buy":"sell")+"'>"+t.action+"</td><td class='num'>"+t.ticker+
+      "</td><td class='num'>"+fmt$(t.price)+"</td><td class='num'>"+fmt$(t.value)+
+      "</td><td style='color:var(--muted);font-size:12px'>"+t.reason+"</td>";
+    tb.appendChild(tr);
+  });
+}
+
+// equity chart
+(function(){
+  const c=$("eq"), ctx=c.getContext("2d");
+  const H=D.history;
+  const accC=css.getPropertyValue("--acc").trim(),
+        gainC=css.getPropertyValue("--gain").trim(),
+        mutedC=css.getPropertyValue("--faint").trim();
+  function line(pts,color,w,dash){ if(pts.length<2)return;
+    ctx.strokeStyle=color;ctx.lineWidth=w;ctx.setLineDash(dash||[]);ctx.beginPath();
+    pts.forEach((p,i)=> i?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1]));
+    ctx.stroke();ctx.setLineDash([]); }
+  if(H.length<2){
+    $("eqnote").textContent="Day 1 — the curve appears after tomorrow's cycles. Both lines start at $1,000.";
+    line([[20,140],[620,140]],mutedC,1,[4,4]);
+    return;
+  }
+  const vals=H.map(h=>h.value).concat(H.map(h=>h.bench));
+  const lo=Math.min(Math.min(...vals),start)*0.995, hi=Math.max(Math.max(...vals),start)*1.005;
+  const sy=v=>265-(v-lo)/(hi-lo||1)*245, X=i=>30+i/(H.length-1)*580;
+  line([[30,sy(start)],[610,sy(start)]],mutedC,1,[4,4]);
+  line(H.map((h,i)=>[X(i),sy(h.bench)]),mutedC,1.6);
+  line(H.map((h,i)=>[X(i),sy(h.value)]),gainC,2.2);
+  $("eqnote").textContent="green: copier · grey: SPY buy&hold · dashed: $1,000 start";
+})();
+</script>

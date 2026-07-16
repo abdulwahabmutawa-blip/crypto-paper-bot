@@ -31,12 +31,17 @@ jobs:
       - name: Run stock paper-trading cycle
         run: python src/stock_tracker.py
 
+      - name: Run congress copier cycle
+        run: python src/congress_tracker.py
+
       - name: Publish dashboards to docs/ (GitHub Pages)
         run: |
           cp reports/crypto_dashboard.html docs/index.html
           cp reports/crypto_dashboard_data.json docs/crypto_dashboard_data.json
           cp reports/stock_dashboard.html docs/stocks.html
           cp reports/stock_dashboard_data.json docs/stock_dashboard_data.json
+          cp reports/congress_dashboard.html docs/congress.html
+          cp reports/congress_dashboard_data.json docs/congress_dashboard_data.json
 
       - name: Commit state + dashboard
         run: |
