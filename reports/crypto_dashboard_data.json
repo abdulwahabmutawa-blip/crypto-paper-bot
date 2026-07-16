@@ -1,75 +1,90 @@
 {
+  "generated_utc": "2026-07-16T21:24:39+00:00",
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "holding": "CASH",
-  "units": 0.0,
-  "cash": 995.9593280918743,
-  "bench_units": 0.01552055830726173,
-  "trades": [
-    {
-      "date": "2026-07-16",
-      "action": "BUY",
-      "ticker": "LINK-USD",
-      "price": 8.414,
-      "units": 118.849536,
-      "value": 1000.0,
-      "reason": "Initial entry \u2014 hottest coin (+8.8% 7d momentum)"
+  "live_ts": "2026-07-16T21:20:00+00:00",
+  "current": {
+    "date": "2026-07-16",
+    "value": 995.96,
+    "bench": 995.21,
+    "holding": "CASH"
+  },
+  "board": {
+    "BTC-USD": {
+      "price": 64122.3711,
+      "ma200": 73394.7522,
+      "gap_pct": -12.63,
+      "mom_pct": 1.47,
+      "z": 0.88,
+      "above_ma": false,
+      "rank": 6
     },
-    {
-      "date": "2026-07-16",
-      "action": "SELL",
-      "ticker": "LINK-USD",
-      "price": 8.381,
-      "units": 118.849536,
-      "value": 996.08,
-      "reason": "Signal flip"
+    "ETH-USD": {
+      "price": 1876.1,
+      "ma200": 2200.2027,
+      "gap_pct": -14.73,
+      "mom_pct": 7.54,
+      "z": 1.26,
+      "above_ma": false,
+      "rank": 7
     },
-    {
-      "date": "2026-07-16",
-      "action": "TO CASH",
-      "ticker": "\u2014",
-      "price": 0,
-      "units": 0,
-      "value": 996.08,
-      "reason": "No coin above its 200-day MA \u2014 risk-off"
+    "SOL-USD": {
+      "price": 75.87,
+      "ma200": 90.8117,
+      "gap_pct": -16.45,
+      "mom_pct": -2.79,
+      "z": -0.47,
+      "above_ma": false,
+      "rank": 2
     },
-    {
-      "date": "2026-07-16",
-      "action": "BUY",
-      "ticker": "LINK-USD",
-      "price": 8.396,
-      "units": 118.637204,
-      "value": 996.08,
-      "reason": "Strongest eligible coin (+8.6% 7d momentum)"
+    "DOGE-USD": {
+      "price": 0.073,
+      "ma200": 0.1,
+      "gap_pct": -26.97,
+      "mom_pct": 0.23,
+      "z": -0.55,
+      "above_ma": false,
+      "rank": 1
     },
-    {
-      "date": "2026-07-16",
-      "action": "SELL",
-      "ticker": "LINK-USD",
-      "price": 8.395,
-      "units": 118.637204,
-      "value": 995.96,
-      "reason": "Signal flip"
+    "AVAX-USD": {
+      "price": 6.61,
+      "ma200": 9.3236,
+      "gap_pct": -29.1,
+      "mom_pct": -1.09,
+      "z": -0.29,
+      "above_ma": false,
+      "rank": 3
     },
-    {
-      "date": "2026-07-16",
-      "action": "TO CASH",
-      "ticker": "\u2014",
-      "price": 0,
-      "units": 0,
-      "value": 995.96,
-      "reason": "All 8 coins falling on the week \u2014 cash until one rises"
+    "LINK-USD": {
+      "price": 8.436,
+      "ma200": 9.4693,
+      "gap_pct": -10.91,
+      "mom_pct": 9.11,
+      "z": 1.58,
+      "above_ma": false,
+      "rank": 8
+    },
+    "ADA-USD": {
+      "price": 0.1629,
+      "ma200": 0.2579,
+      "gap_pct": -36.83,
+      "mom_pct": -2.17,
+      "z": -0.12,
+      "above_ma": false,
+      "rank": 4
+    },
+    "XRP-USD": {
+      "price": 1.0962,
+      "ma200": 1.4358,
+      "gap_pct": -23.65,
+      "mom_pct": 0.26,
+      "z": 0.05,
+      "above_ma": false,
+      "rank": 5
     }
-  ],
-  "history": [
-    {
-      "date": "2026-07-16",
-      "value": 995.96,
-      "bench": 995.21,
-      "holding": "CASH"
-    }
-  ],
-  "last_updated_utc": "2026-07-16T21:24:39+00:00",
+  },
+  "pick": "CASH",
+  "regime": "CHOP",
   "intraday": [
     {
       "ts": "2026-07-16T18:32:57+00:00",
@@ -311,5 +326,75 @@
       "bench": 995.21,
       "holding": "CASH"
     }
-  ]
+  ],
+  "trades": [
+    {
+      "date": "2026-07-16",
+      "action": "BUY",
+      "ticker": "LINK-USD",
+      "price": 8.414,
+      "units": 118.849536,
+      "value": 1000.0,
+      "reason": "Initial entry \u2014 hottest coin (+8.8% 7d momentum)"
+    },
+    {
+      "date": "2026-07-16",
+      "action": "SELL",
+      "ticker": "LINK-USD",
+      "price": 8.381,
+      "units": 118.849536,
+      "value": 996.08,
+      "reason": "Signal flip"
+    },
+    {
+      "date": "2026-07-16",
+      "action": "TO CASH",
+      "ticker": "\u2014",
+      "price": 0,
+      "units": 0,
+      "value": 996.08,
+      "reason": "No coin above its 200-day MA \u2014 risk-off"
+    },
+    {
+      "date": "2026-07-16",
+      "action": "BUY",
+      "ticker": "LINK-USD",
+      "price": 8.396,
+      "units": 118.637204,
+      "value": 996.08,
+      "reason": "Strongest eligible coin (+8.6% 7d momentum)"
+    },
+    {
+      "date": "2026-07-16",
+      "action": "SELL",
+      "ticker": "LINK-USD",
+      "price": 8.395,
+      "units": 118.637204,
+      "value": 995.96,
+      "reason": "Signal flip"
+    },
+    {
+      "date": "2026-07-16",
+      "action": "TO CASH",
+      "ticker": "\u2014",
+      "price": 0,
+      "units": 0,
+      "value": 995.96,
+      "reason": "All 8 coins falling on the week \u2014 cash until one rises"
+    }
+  ],
+  "history": [
+    {
+      "date": "2026-07-16",
+      "value": 995.96,
+      "bench": 995.21,
+      "holding": "CASH"
+    }
+  ],
+  "strategy": {
+    "name": "Regime Switcher \u2014 two brains, one bot",
+    "rule": "BTC above its 200-day MA = TREND: ride the hottest rising 7-day-momentum coin. Below = CHOP: buy the most oversold coin (z20 < -1.25) and harvest the bounce; nothing qualifies -> cash",
+    "backtest_cagr": "+50%/yr since 2017 \u00b7 +9%/yr in the 2024+ chop",
+    "backtest_maxdd": "-93% (2017 era) \u00b7 experimental \u2014 parameters are soft"
+  }
 }

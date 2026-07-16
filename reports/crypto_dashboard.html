@@ -1,0 +1,297 @@
+<meta charset="utf-8">
+<title>Crypto Rotation — Live $1k Paper Sim</title>
+<style>
+  :root{
+    --bg:#0E0B14; --panel:#171221; --panel2:#120E1B; --line:#272036;
+    --text:#EFEAF6; --muted:#9C93AE; --faint:#675E7A;
+    --gain:#3DD68C; --loss:#F0544F; --btc:#F7931A; --sig:#8B7BFF;
+    --mono:Consolas,"Cascadia Code","SF Mono",Menlo,monospace;
+  }
+  @media (prefers-color-scheme: light){
+    :root{--bg:#F6F4FA; --panel:#FFFFFF; --panel2:#EEEAF5; --line:#DCD5E8;
+      --text:#1D1528; --muted:#675E7A; --faint:#9C93AE;
+      --gain:#0E9F63; --loss:#D33B36; --btc:#C46F06; --sig:#5B49D6;}
+  }
+  :root[data-theme="dark"]{--bg:#0E0B14; --panel:#171221; --panel2:#120E1B;
+    --line:#272036; --text:#EFEAF6; --muted:#9C93AE; --faint:#675E7A;
+    --gain:#3DD68C; --loss:#F0544F; --btc:#F7931A; --sig:#8B7BFF;}
+  :root[data-theme="light"]{--bg:#F6F4FA; --panel:#FFFFFF; --panel2:#EEEAF5;
+    --line:#DCD5E8; --text:#1D1528; --muted:#675E7A; --faint:#9C93AE;
+    --gain:#0E9F63; --loss:#D33B36; --btc:#C46F06; --sig:#5B49D6;}
+
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--text);margin:0;
+    font:15px/1.5 "Segoe UI",system-ui,sans-serif;padding:20px;}
+  .wrap{max-width:1060px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+  .eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--muted);font-weight:600}
+  .num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+  .bar{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+  .bar h1{font-size:17px;margin:0;font-weight:650}
+  .live{display:inline-flex;align-items:center;gap:6px;font-size:11px;
+    letter-spacing:.12em;font-weight:700;color:var(--btc);
+    border:1px solid var(--btc);border-radius:3px;padding:2px 8px}
+  .live .dot{width:7px;height:7px;border-radius:50%;background:var(--btc);
+    animation:pulse 2s infinite}
+  @keyframes pulse{50%{opacity:.35}}
+  @media (prefers-reduced-motion: reduce){.live .dot{animation:none}}
+  .asof{margin-left:auto;color:var(--faint);font-size:12px}
+
+  .strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:14px}
+  .kpi{background:var(--panel);border:1px solid var(--line);border-radius:6px;
+    padding:14px 16px;display:flex;flex-direction:column;gap:4px}
+  .kpi .v{font-size:30px;font-weight:650;line-height:1.1}
+  .kpi .d{font-size:13px;font-weight:600}
+  .up{color:var(--gain)} .down{color:var(--loss)}
+  .chip{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;
+    padding:2px 9px;border-radius:3px;text-transform:uppercase}
+  .chip.in{background:color-mix(in srgb,var(--gain) 16%,transparent);color:var(--gain)}
+  .chip.cash{background:color-mix(in srgb,var(--sig) 18%,transparent);color:var(--sig)}
+
+  .grid{display:grid;grid-template-columns:1.6fr 1fr;gap:14px}
+  @media(max-width:860px){.grid{grid-template-columns:1fr}}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:6px;
+    padding:16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+  .panel h2{font-size:13px;margin:0;font-weight:650}
+  canvas{width:100%;height:auto;display:block}
+
+  /* coin board */
+  .coin{display:flex;align-items:center;gap:10px;background:var(--panel2);
+    border-radius:5px;padding:10px 12px}
+  .coin .sym{font-weight:700;font-size:14px;width:44px}
+  .coin .body{flex:1;display:flex;flex-direction:column;gap:5px;min-width:0}
+  .coin .row{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
+  .track{height:7px;border-radius:4px;background:var(--bg);position:relative;overflow:hidden}
+  .track .fill{position:absolute;top:0;bottom:0;border-radius:4px}
+  .tag{font-size:10px;font-weight:700;letter-spacing:.08em;padding:2px 7px;
+    border-radius:3px;text-transform:uppercase;white-space:nowrap}
+  .tag.on{background:color-mix(in srgb,var(--gain) 16%,transparent);color:var(--gain)}
+  .tag.off{background:color-mix(in srgb,var(--faint) 20%,transparent);color:var(--muted)}
+  .tag.pick{background:color-mix(in srgb,var(--btc) 20%,transparent);color:var(--btc)}
+
+  .tbl{width:100%;border-collapse:collapse;font-size:13px}
+  .tbl th{text-align:left;color:var(--faint);font-weight:600;font-size:11px;
+    letter-spacing:.1em;text-transform:uppercase;padding:4px 8px;
+    border-bottom:1px solid var(--line)}
+  .tbl td{padding:6px 8px;border-bottom:1px solid var(--line)}
+  .tbl tr:last-child td{border-bottom:none}
+  .buy{color:var(--gain);font-weight:700} .sell{color:var(--loss);font-weight:700}
+  .neut{color:var(--sig);font-weight:700}
+  .scroll{overflow-x:auto}
+
+  .riskcard{border-left:4px solid var(--btc)}
+  .riskcard .rn{color:var(--btc);font-weight:650;font-size:12px;
+    letter-spacing:.06em;text-transform:uppercase}
+  .rule{color:var(--muted);font-size:13px}
+  .facts{display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:13px}
+  .facts div{background:var(--panel2);border-radius:4px;padding:8px 10px}
+  .facts .k{color:var(--faint);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+  footer{color:var(--faint);font-size:12px;text-align:center;padding:6px 0 2px}
+</style>
+
+<div class="wrap">
+  <div class="bar">
+    <span class="live"><span class="dot"></span>PAPER SIM · 24/7 · LIVE</span>
+    <h1>Crypto Momentum Rotation — $1,000 Challenge</h1>
+    <span class="asof" id="asof"></span>
+  </div>
+
+  <div class="strip">
+    <div class="kpi">
+      <span class="eyebrow">Portfolio value</span>
+      <span class="v num" id="pv"></span>
+      <span class="d num" id="pd"></span>
+    </div>
+    <div class="kpi">
+      <span class="eyebrow">BTC benchmark ($1,000 same day)</span>
+      <span class="v num" id="bv"></span>
+      <span class="d num" id="bd"></span>
+    </div>
+    <div class="kpi">
+      <span class="eyebrow">Current position</span>
+      <span class="v num" id="pos"></span>
+      <span class="d"><span class="chip" id="sigchip"></span></span>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="panel">
+      <span class="eyebrow">Equity curve</span>
+      <h2>Strategy vs BTC benchmark, from inception</h2>
+      <canvas id="eq" width="640" height="300"></canvas>
+      <div class="rule" id="eqnote"></div>
+    </div>
+
+    <div class="panel">
+      <span class="eyebrow">Signal board</span>
+      <h2 id="boardtitle">8 coins, ranked by the active brain</h2>
+      <div id="coins" style="display:flex;flex-direction:column;gap:8px"></div>
+      <div class="rule">Two brains: in TREND (BTC above its 200-day MA) rank
+        by 7-day momentum and ride the hottest rising coin; in CHOP rank by
+        oversold z-score and harvest bounces (z &lt; −1.25). Nothing
+        qualifies — cash.</div>
+    </div>
+
+    <div class="panel">
+      <span class="eyebrow">Trade log</span>
+      <h2>Every paper order this simulation has placed</h2>
+      <div class="scroll">
+        <table class="tbl" id="trades">
+          <thead><tr><th>Date</th><th>Side</th><th>Asset</th><th>Price</th><th>Units</th><th>Value</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel riskcard">
+      <span class="rn">₿ Extreme-risk strategy — paper money only</span>
+      <h2 id="stratname"></h2>
+      <div class="rule" id="stratrule"></div>
+      <div class="facts">
+        <div><div class="k">Backtest CAGR</div><div class="num" id="bt-cagr"></div></div>
+        <div><div class="k">Backtest max drawdown</div><div class="num" id="bt-dd"></div></div>
+        <div><div class="k">Started</div><div class="num" id="bt-start"></div></div>
+        <div><div class="k">Starting stake</div><div class="num">$1,000.00</div></div>
+      </div>
+      <div class="rule">Crypto still routinely draws down 50%+ even with the
+        trend gate, and the coin universe was chosen knowing it survived — live
+        results will likely be worse than backtests. Simulation only; not
+        investment advice; no real orders are ever placed.</div>
+    </div>
+  </div>
+
+  <footer>Updated by <span class="num">crypto_tracker.py</span> · data: Yahoo Finance daily closes · rerun the tracker to refresh this screen</footer>
+</div>
+
+<script>
+let D = {"generated_utc": "2026-07-16T21:24:39+00:00", "created": "2026-07-16", "starting_cash": 1000.0, "live_ts": "2026-07-16T21:20:00+00:00", "current": {"date": "2026-07-16", "value": 995.96, "bench": 995.21, "holding": "CASH"}, "board": {"BTC-USD": {"price": 64122.3711, "ma200": 73394.7522, "gap_pct": -12.63, "mom_pct": 1.47, "z": 0.88, "above_ma": false, "rank": 6}, "ETH-USD": {"price": 1876.1, "ma200": 2200.2027, "gap_pct": -14.73, "mom_pct": 7.54, "z": 1.26, "above_ma": false, "rank": 7}, "SOL-USD": {"price": 75.87, "ma200": 90.8117, "gap_pct": -16.45, "mom_pct": -2.79, "z": -0.47, "above_ma": false, "rank": 2}, "DOGE-USD": {"price": 0.073, "ma200": 0.1, "gap_pct": -26.97, "mom_pct": 0.23, "z": -0.55, "above_ma": false, "rank": 1}, "AVAX-USD": {"price": 6.61, "ma200": 9.3236, "gap_pct": -29.1, "mom_pct": -1.09, "z": -0.29, "above_ma": false, "rank": 3}, "LINK-USD": {"price": 8.436, "ma200": 9.4693, "gap_pct": -10.91, "mom_pct": 9.11, "z": 1.58, "above_ma": false, "rank": 8}, "ADA-USD": {"price": 0.1629, "ma200": 0.2579, "gap_pct": -36.83, "mom_pct": -2.17, "z": -0.12, "above_ma": false, "rank": 4}, "XRP-USD": {"price": 1.0962, "ma200": 1.4358, "gap_pct": -23.65, "mom_pct": 0.26, "z": 0.05, "above_ma": false, "rank": 5}}, "pick": "CASH", "regime": "CHOP", "intraday": [{"ts": "2026-07-16T18:32:57+00:00", "value": 996.67, "bench": 996.07, "holding": "LINK-USD"}, {"ts": "2026-07-16T18:34:49+00:00", "value": 995.6, "bench": 995.53, "holding": "LINK-USD"}, {"ts": "2026-07-16T18:36:55+00:00", "value": 1000.0, "bench": 1000.0, "holding": "LINK-USD"}, {"ts": "2026-07-16T18:39:04+00:00", "value": 995.13, "bench": 994.82, "holding": "LINK-USD"}, {"ts": "2026-07-16T18:41:13+00:00", "value": 1000.0, "bench": 1000.0, "holding": "LINK-USD"}, {"ts": "2026-07-16T18:43:23+00:00", "value": 995.13, "bench": 994.87, "holding": "LINK-USD"}, {"ts": "2026-07-16T18:45:28+00:00", "value": 995.13, "bench": 994.85, "holding": "LINK-USD"}, {"ts": "2026-07-16T18:47:32+00:00", "value": 995.13, "bench": 994.85, "holding": "LINK-USD"}, {"ts": "2026-07-16T18:49:37+00:00", "value": 995.13, "bench": 994.85, "holding": "LINK-USD"}, {"ts": "2026-07-16T19:20:00+00:00", "value": 995.48, "bench": 996.63, "holding": "LINK-USD"}, {"ts": "2026-07-16T19:22:09+00:00", "value": 996.43, "bench": 996.47, "holding": "LINK-USD"}, {"ts": "2026-07-16T19:32:57+00:00", "value": 996.08, "bench": 996.59, "holding": "CASH"}, {"ts": "2026-07-16T19:33:36+00:00", "value": 996.08, "bench": 996.25, "holding": "CASH"}, {"ts": "2026-07-16T19:35:41+00:00", "value": 996.08, "bench": 996.42, "holding": "CASH"}, {"ts": "2026-07-16T19:37:45+00:00", "value": 996.08, "bench": 996.06, "holding": "CASH"}, {"ts": "2026-07-16T19:39:50+00:00", "value": 996.08, "bench": 996.32, "holding": "CASH"}, {"ts": "2026-07-16T19:41:56+00:00", "value": 996.08, "bench": 996.23, "holding": "CASH"}, {"ts": "2026-07-16T19:44:00+00:00", "value": 996.08, "bench": 995.75, "holding": "CASH"}, {"ts": "2026-07-16T19:46:05+00:00", "value": 996.08, "bench": 995.79, "holding": "CASH"}, {"ts": "2026-07-16T19:48:10+00:00", "value": 996.08, "bench": 994.86, "holding": "CASH"}, {"ts": "2026-07-16T19:50:15+00:00", "value": 996.08, "bench": 995.2, "holding": "CASH"}, {"ts": "2026-07-16T19:52:20+00:00", "value": 996.08, "bench": 996.33, "holding": "CASH"}, {"ts": "2026-07-16T19:54:30+00:00", "value": 996.08, "bench": 996.39, "holding": "CASH"}, {"ts": "2026-07-16T19:56:41+00:00", "value": 996.08, "bench": 996.62, "holding": "CASH"}, {"ts": "2026-07-16T19:58:46+00:00", "value": 996.08, "bench": 996.57, "holding": "CASH"}, {"ts": "2026-07-16T20:00:51+00:00", "value": 996.08, "bench": 996.79, "holding": "CASH"}, {"ts": "2026-07-16T20:03:03+00:00", "value": 996.08, "bench": 996.57, "holding": "CASH"}, {"ts": "2026-07-16T20:03:51+00:00", "value": 996.08, "bench": 996.36, "holding": "LINK-USD"}, {"ts": "2026-07-16T20:05:55+00:00", "value": 995.72, "bench": 996.44, "holding": "LINK-USD"}, {"ts": "2026-07-16T20:08:05+00:00", "value": 995.6, "bench": 995.9, "holding": "LINK-USD"}, {"ts": "2026-07-16T20:10:15+00:00", "value": 995.84, "bench": 995.46, "holding": "LINK-USD"}, {"ts": "2026-07-16T20:12:20+00:00", "value": 995.72, "bench": 995.8, "holding": "LINK-USD"}, {"ts": "2026-07-16T20:14:26+00:00", "value": 995.48, "bench": 995.37, "holding": "LINK-USD"}, {"ts": "2026-07-16T20:16:36+00:00", "value": 995.25, "bench": 995.18, "holding": "LINK-USD"}, {"ts": "2026-07-16T20:18:27+00:00", "value": 995.96, "bench": 995.43, "holding": "CASH"}, {"ts": "2026-07-16T20:20:31+00:00", "value": 995.96, "bench": 996.38, "holding": "CASH"}, {"ts": "2026-07-16T20:22:40+00:00", "value": 995.96, "bench": 995.93, "holding": "CASH"}, {"ts": "2026-07-16T20:24:45+00:00", "value": 995.96, "bench": 995.71, "holding": "CASH"}, {"ts": "2026-07-16T20:26:55+00:00", "value": 995.96, "bench": 995.69, "holding": "CASH"}, {"ts": "2026-07-16T21:24:39+00:00", "value": 995.96, "bench": 995.21, "holding": "CASH"}], "trades": [{"date": "2026-07-16", "action": "BUY", "ticker": "LINK-USD", "price": 8.414, "units": 118.849536, "value": 1000.0, "reason": "Initial entry \u2014 hottest coin (+8.8% 7d momentum)"}, {"date": "2026-07-16", "action": "SELL", "ticker": "LINK-USD", "price": 8.381, "units": 118.849536, "value": 996.08, "reason": "Signal flip"}, {"date": "2026-07-16", "action": "TO CASH", "ticker": "\u2014", "price": 0, "units": 0, "value": 996.08, "reason": "No coin above its 200-day MA \u2014 risk-off"}, {"date": "2026-07-16", "action": "BUY", "ticker": "LINK-USD", "price": 8.396, "units": 118.637204, "value": 996.08, "reason": "Strongest eligible coin (+8.6% 7d momentum)"}, {"date": "2026-07-16", "action": "SELL", "ticker": "LINK-USD", "price": 8.395, "units": 118.637204, "value": 995.96, "reason": "Signal flip"}, {"date": "2026-07-16", "action": "TO CASH", "ticker": "\u2014", "price": 0, "units": 0, "value": 995.96, "reason": "All 8 coins falling on the week \u2014 cash until one rises"}], "history": [{"date": "2026-07-16", "value": 995.96, "bench": 995.21, "holding": "CASH"}], "strategy": {"name": "Regime Switcher \u2014 two brains, one bot", "rule": "BTC above its 200-day MA = TREND: ride the hottest rising 7-day-momentum coin. Below = CHOP: buy the most oversold coin (z20 < -1.25) and harvest the bounce; nothing qualifies -> cash", "backtest_cagr": "+50%/yr since 2017 \u00b7 +9%/yr in the 2024+ chop", "backtest_maxdd": "-93% (2017 era) \u00b7 experimental \u2014 parameters are soft"}};
+const $ = id => document.getElementById(id);
+const fmt$ = v => "$" + v.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});
+const pct = v => (v>=0?"+":"") + (v*100).toFixed(2) + "%";
+const css = getComputedStyle(document.documentElement);
+
+function line(ctx,pts,color,w=2,dash=[]){
+  if(pts.length<2) return;
+  ctx.strokeStyle=color; ctx.lineWidth=w; ctx.setLineDash(dash); ctx.beginPath();
+  pts.forEach((p,i)=> i?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1]));
+  ctx.stroke(); ctx.setLineDash([]);
+}
+
+function renderAll(){
+  const cur = D.current, start = D.starting_cash;
+  const liveVal = D.intraday && D.intraday.length ?
+    D.intraday[D.intraday.length-1] : cur;
+  const ret = liveVal.value/start-1, bret = liveVal.bench/start-1;
+
+  const liveTime = D.live_ts ? new Date(D.live_ts) : null;
+  $("asof").textContent = (liveTime ?
+    "live quote " + liveTime.toLocaleTimeString() + " · " : "") +
+    "sim day " + (Math.round((new Date(cur.date)-new Date(D.created))/86400000)+1);
+  $("pv").textContent = fmt$(liveVal.value);
+  $("pd").textContent = pct(ret) + " since start";
+  $("pd").className = "d num " + (ret>=0?"up":"down");
+  $("bv").textContent = fmt$(liveVal.bench);
+  $("bd").textContent = pct(bret) + " · strategy " +
+    (liveVal.value>=liveVal.bench?"ahead":"behind") +
+    " by " + fmt$(Math.abs(liveVal.value-liveVal.bench));
+  $("bd").className = "d num " + (bret>=0?"up":"down");
+  $("pos").textContent = cur.holding === "CASH" ? "CASH" : cur.holding.replace("-USD","");
+  const chip = $("sigchip");
+  const rg = D.regime ? " · " + D.regime + " mode" : "";
+  if (cur.holding === "CASH"){ chip.textContent = "waiting" + rg; chip.className = "chip cash"; }
+  else { chip.textContent = "in market" + rg; chip.className = "chip in"; }
+  $("boardtitle").textContent = D.regime === "CHOP"
+    ? "8 coins ranked by oversold z-score (chop brain active)"
+    : "8 coins ranked by 7-day momentum (trend brain active)";
+
+  $("stratname").textContent = D.strategy.name;
+  $("stratrule").textContent = "Rule: " + D.strategy.rule;
+  $("bt-cagr").textContent = D.strategy.backtest_cagr;
+  $("bt-dd").textContent = D.strategy.backtest_maxdd;
+  $("bt-start").textContent = D.created;
+
+  // momentum leaderboard (rank 1 = held)
+  const coinsEl = $("coins");
+  coinsEl.innerHTML = "";
+  const maxAbsMom = Math.max(...Object.values(D.board).map(b=>Math.abs(b.mom_pct)), 1);
+  Object.entries(D.board)
+    .sort((a,b)=>a[1].rank-b[1].rank)
+    .forEach(([sym,b])=>{
+      const short = sym.replace("-USD","");
+      const isPick = D.pick === sym;
+      const gpos = Math.max(0, Math.min(100, (b.mom_pct/maxAbsMom)*50+50));
+      const col = b.mom_pct>=0 ? css.getPropertyValue("--gain") : css.getPropertyValue("--loss");
+      const div = document.createElement("div");
+      div.className = "coin";
+      div.innerHTML =
+        "<span class='sym num'>#"+b.rank+" "+short+"</span>"+
+        "<div class='body'>"+
+          "<div class='row'><span class='num'>"+fmt$(b.price)+"</span>"+
+          "<span class='num'>mom7 "+(b.mom_pct>=0?"+":"")+b.mom_pct+"% · z "+
+          b.z+" · MA gap "+(b.gap_pct>=0?"+":"")+b.gap_pct+"%</span></div>"+
+          "<div class='track'><div class='fill' style='left:"+Math.min(50,gpos)+
+          "%;width:"+Math.abs(gpos-50)+"%;background:"+col+"'></div></div>"+
+        "</div>"+
+        "<span class='tag "+(isPick?"pick":
+          (D.regime==="CHOP" ? (b.z<-1.25?"on":"off") : (b.mom_pct>0?"on":"off")))+"'>"+
+          (isPick?"HELD":
+          (D.regime==="CHOP" ? (b.z<-1.25?"oversold":"no signal")
+                             : (b.mom_pct>0?"rising":"falling")))+"</span>";
+      coinsEl.appendChild(div);
+    });
+
+  // trade log
+  const tb = $("trades").tBodies[0];
+  tb.innerHTML = "";
+  D.trades.slice().reverse().forEach(t=>{
+    const cls = t.action==="BUY" ? "buy" : (t.action==="SELL" ? "sell" : "neut");
+    const tr = document.createElement("tr");
+    tr.innerHTML = "<td class='num'>"+t.date+"</td><td class='"+cls+"'>"+t.action+
+      "</td><td class='num'>"+String(t.ticker).replace("-USD","")+
+      "</td><td class='num'>"+(t.price?fmt$(t.price):"—")+
+      "</td><td class='num'>"+(t.units?t.units.toFixed(6):"—")+
+      "</td><td class='num'>"+fmt$(t.value)+"</td>";
+    tb.appendChild(tr);
+  });
+
+  // equity chart: daily history once it exists, else live intraday stream
+  const c=$("eq"), ctx=c.getContext("2d");
+  ctx.clearRect(0,0,c.width,c.height);
+  const btcC=css.getPropertyValue("--btc").trim(),
+        gainC=css.getPropertyValue("--gain").trim(),
+        mutedC=css.getPropertyValue("--faint").trim();
+  let series, label;
+  if (D.history.length>=2){ series=D.history; label="daily closes"; }
+  else if (D.intraday && D.intraday.length>=2){ series=D.intraday; label="live intraday"; }
+  else series=null;
+  if(!series){
+    $("eqnote").textContent="Streaming live — the curve appears after the next tracker cycle (~2 min).";
+    line(ctx,[[20,150],[620,150]],mutedC,1,[4,4]);
+  } else {
+    const vals=series.map(h=>h.value).concat(series.map(h=>h.bench));
+    const lo=Math.min(Math.min(...vals),start)*0.995,
+          hi=Math.max(Math.max(...vals),start)*1.005;
+    const sy=v=>285-(v-lo)/(hi-lo||1)*265, X=i=>30+i/(series.length-1)*580;
+    line(ctx,[[30,sy(start)],[610,sy(start)]],mutedC,1,[4,4]);
+    line(ctx,series.map((h,i)=>[X(i),sy(h.bench)]),btcC,1.6);
+    line(ctx,series.map((h,i)=>[X(i),sy(h.value)]),gainC,2.2);
+    ctx.fillStyle=gainC; ctx.beginPath();
+    ctx.arc(X(series.length-1),sy(series[series.length-1].value),3.5,0,7); ctx.fill();
+    $("eqnote").textContent="green: strategy · orange: BTC buy&hold · dashed: $1,000 start · showing "+label;
+  }
+}
+
+renderAll();
+
+// Auto-refresh: poll the data file the tracker rewrites (same-origin on the
+// local server; on the published artifact fetch fails silently and the page
+// simply shows the snapshot from publish time).
+async function poll(){
+  try{
+    const r = await fetch("crypto_dashboard_data.json", {cache:"no-store"});
+    if (r.ok){ D = await r.json(); renderAll(); }
+  }catch(e){/* static context (artifact) — keep snapshot */}
+}
+setInterval(poll, 60000);
+</script>
