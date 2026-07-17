@@ -43,6 +43,11 @@ jobs:
       - name: Run all-weather cycle
         run: python src/bot_allweather.py
 
+      - name: Run Grok sentinel (self-throttled, needs XAI_API_KEY secret)
+        env:
+          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+        run: python src/grok_sentinel.py
+
       - name: Publish dashboards to docs/ (GitHub Pages)
         run: |
           cp reports/crypto_dashboard.html docs/index.html
@@ -57,6 +62,7 @@ jobs:
           cp reports/commodity_dashboard_data.json docs/commodity_dashboard_data.json
           cp reports/allweather_dashboard.html docs/allweather.html
           cp reports/allweather_dashboard_data.json docs/allweather_dashboard_data.json
+          cp reports/sentinel_dashboard.html docs/sentinel.html || true
 
       - name: Commit state + dashboard
         run: |

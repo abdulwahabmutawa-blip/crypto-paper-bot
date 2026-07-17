@@ -1,0 +1,151 @@
+<meta charset="utf-8">
+<meta http-equiv="refresh" content="600">
+<title>Grok Sentinel — fleet risk officer</title>
+<style>
+  :root{--bg:#0D0B10;--panel:#171320;--panel2:#120F1A;--line:#292236;
+    --text:#EEEAF4;--muted:#A198B3;--faint:#6B6180;
+    --gain:#3DD68C;--warn:#F2B33D;--loss:#F0544F;--acc:#B689FF;
+    --mono:Consolas,"Cascadia Code",Menlo,monospace;}
+  @media (prefers-color-scheme: light){
+    :root{--bg:#F5F3F8;--panel:#FFF;--panel2:#EDEAF3;--line:#DBD5E6;
+      --text:#191423;--muted:#6B6180;--faint:#A198B3;
+      --gain:#0E9F63;--warn:#B87F14;--loss:#D33B36;--acc:#6E3FC3;}}
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--text);margin:0;
+    font:15px/1.5 "Segoe UI",system-ui,sans-serif;padding:20px;}
+  .wrap{max-width:900px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+  .eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--muted);font-weight:600}
+  .num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+  .bar{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+  .bar h1{font-size:17px;margin:0;font-weight:650}
+  .live{display:inline-flex;align-items:center;gap:6px;font-size:11px;
+    letter-spacing:.12em;font-weight:700;color:var(--acc);
+    border:1px solid var(--acc);border-radius:3px;padding:2px 8px}
+  .asof{margin-left:auto;color:var(--faint);font-size:12px}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:6px;
+    padding:16px;display:flex;flex-direction:column;gap:10px}
+  .panel h2{font-size:13px;margin:0;font-weight:650}
+  .risk{border-left:5px solid var(--gain);padding:12px 16px;border-radius:6px;
+    background:var(--panel);font-weight:650;font-size:16px}
+  .risk.caution{border-color:var(--warn)}
+  .risk.severe{border-color:var(--loss)}
+  .risk .sub{font-weight:400;font-size:13px;color:var(--muted);margin-top:4px}
+  .hype{display:flex;align-items:center;justify-content:space-between;
+    background:var(--panel2);border-radius:4px;padding:8px 12px;font-size:13px}
+  .hype .sym{font-weight:700;min-width:64px}
+  .mood{font-size:10px;font-weight:700;letter-spacing:.08em;padding:2px 8px;
+    border-radius:3px;text-transform:uppercase}
+  .mood.euphoric{background:color-mix(in srgb,var(--gain) 16%,transparent);color:var(--gain)}
+  .mood.fearful{background:color-mix(in srgb,var(--loss) 16%,transparent);color:var(--loss)}
+  .mood.mixed{background:color-mix(in srgb,var(--warn) 16%,transparent);color:var(--warn)}
+  .tbl{width:100%;border-collapse:collapse;font-size:13px}
+  .tbl th{text-align:left;color:var(--faint);font-weight:600;font-size:11px;
+    letter-spacing:.1em;text-transform:uppercase;padding:4px 8px;
+    border-bottom:1px solid var(--line)}
+  .tbl td{padding:6px 8px;border-bottom:1px solid var(--line)}
+  .tbl tr:last-child td{border-bottom:none}
+  .rule{color:var(--muted);font-size:13px}
+  .scroll{overflow-x:auto}
+  footer{color:var(--faint);font-size:12px;text-align:center;padding:6px 0 2px}
+  footer a{color:var(--acc)}
+</style>
+
+<div class="wrap">
+  <div class="bar">
+    <span class="live">📡 GROK SENTINEL</span>
+    <h1>Fleet Risk Officer + Sentiment Recorder</h1>
+    <span class="asof" id="asof"></span>
+  </div>
+
+  <div class="risk" id="riskbanner">
+    <span id="risktext"></span>
+    <div class="sub" id="mood"></div>
+  </div>
+
+  <div class="panel">
+    <span class="eyebrow">Risk alerts</span>
+    <h2>Events Grok flagged in the last scan</h2>
+    <div id="alerts" style="display:flex;flex-direction:column;gap:6px"></div>
+  </div>
+
+  <div class="panel">
+    <span class="eyebrow">Hype leaderboard</span>
+    <h2>Unusual chatter on X (recorded, NOT traded)</h2>
+    <div id="hype" style="display:flex;flex-direction:column;gap:6px"></div>
+    <div class="rule">The sentinel observes and archives sentiment so we can
+      study whether it predicts anything — no bot trades on this data yet.</div>
+  </div>
+
+  <div class="panel">
+    <span class="eyebrow">Scan history</span>
+    <h2 id="histtitle">Recent scans</h2>
+    <div class="scroll">
+      <table class="tbl" id="hist">
+        <thead><tr><th>Time (UTC)</th><th>Risk</th><th>Top hype</th><th>Mood</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div class="rule" id="budget"></div>
+  </div>
+
+  <footer><a href="fleet.html">← fleet overview</a> · scans every 8h via xAI API (prepaid, hard-capped) · advisory only, paper project</footer>
+</div>
+
+<script>
+const D = {"latest": {"risk_level": "caution", "risk_alerts": [{"headline": "Nasdaq retreats as AI spending concerns hammer chip stocks like Micron", "markets": ["stocks"], "severity": "caution"}, {"headline": "Iran tensions and Hormuz chatter weighing on risk assets", "markets": ["both"], "severity": "caution"}, {"headline": "Ostium DeFi loses $18M in oracle exploit, trading halted", "markets": ["crypto"], "severity": "caution"}], "hype": [{"symbol": "PYPL", "mood": "euphoric", "note": "Stripe-Advent $53B takeover bid premium"}, {"symbol": "BTC", "mood": "fearful", "note": "extreme fear, holding $64k on geopolitics"}, {"symbol": "MU", "mood": "mixed", "note": "big losses yet long-term favorite chatter"}, {"symbol": "ETH", "mood": "mixed", "note": "outperforms BTC on ETF inflows return"}, {"symbol": "RUNE", "mood": "euphoric", "note": "tightening bands breakout setup hype"}], "overall_mood": "Cautious fear prevails with soft inflation bounce fading into AI chip selloff, Iran tensions, and crypto extreme fear near $64k.", "ts": "2026-07-17T00:22:53+00:00"}, "scans": [{"risk_level": "caution", "risk_alerts": [{"headline": "Nasdaq retreats as AI spending concerns hammer chip stocks like Micron", "markets": ["stocks"], "severity": "caution"}, {"headline": "Iran tensions and Hormuz chatter weighing on risk assets", "markets": ["both"], "severity": "caution"}, {"headline": "Ostium DeFi loses $18M in oracle exploit, trading halted", "markets": ["crypto"], "severity": "caution"}], "hype": [{"symbol": "PYPL", "mood": "euphoric", "note": "Stripe-Advent $53B takeover bid premium"}, {"symbol": "BTC", "mood": "fearful", "note": "extreme fear, holding $64k on geopolitics"}, {"symbol": "MU", "mood": "mixed", "note": "big losses yet long-term favorite chatter"}, {"symbol": "ETH", "mood": "mixed", "note": "outperforms BTC on ETF inflows return"}, {"symbol": "RUNE", "mood": "euphoric", "note": "tightening bands breakout setup hype"}], "overall_mood": "Cautious fear prevails with soft inflation bounce fading into AI chip selloff, Iran tensions, and crypto extreme fear near $64k.", "ts": "2026-07-17T00:22:53+00:00"}], "scan_count_month": 1, "monthly_cap": 100, "interval_h": 8};
+const $ = id => document.getElementById(id);
+const L = D.latest;
+
+if (!L){
+  $("risktext").textContent = "Awaiting first scan";
+  $("mood").textContent = "The sentinel activates once the XAI_API_KEY secret is added and the next cycle runs.";
+  $("asof").textContent = "no scans yet";
+} else {
+  const lvl = L.risk_level;
+  const banner = $("riskbanner");
+  banner.className = "risk " + (lvl==="severe"?"severe":(lvl==="caution"?"caution":""));
+  $("risktext").textContent =
+    lvl==="severe" ? "🔴 SEVERE — Grok flagged a major market event" :
+    lvl==="caution" ? "🟡 CAUTION — noteworthy events on the tape" :
+    lvl==="none" ? "🟢 ALL CLEAR — no dangerous events detected" :
+    "⚪ Scan returned unparseable output";
+  $("mood").textContent = L.overall_mood || "";
+  $("asof").textContent = "last scan " + L.ts.replace("T"," ").slice(0,16) + " UTC";
+
+  const al = $("alerts");
+  if (!L.risk_alerts.length){
+    al.innerHTML = "<div class='rule'>None — quiet tape.</div>";
+  } else L.risk_alerts.forEach(a=>{
+    const d = document.createElement("div");
+    d.className = "hype";
+    d.innerHTML = "<span>"+a.headline+"</span><span class='mood "+
+      (a.severity==="severe"?"fearful":"mixed")+"'>"+a.severity+" · "+
+      (Array.isArray(a.markets)?a.markets.join("+"):a.markets)+"</span>";
+    al.appendChild(d);
+  });
+
+  const hy = $("hype");
+  if (!L.hype.length){
+    hy.innerHTML = "<div class='rule'>Nothing unusual reported.</div>";
+  } else L.hype.forEach(h=>{
+    const d = document.createElement("div");
+    d.className = "hype";
+    d.innerHTML = "<span class='sym num'>"+h.symbol+"</span><span class='rule'>"+
+      (h.note||"")+"</span><span class='mood "+h.mood+"'>"+h.mood+"</span>";
+    hy.appendChild(d);
+  });
+
+  const tb = $("hist").tBodies[0];
+  D.scans.slice().reverse().forEach(s=>{
+    const tr = document.createElement("tr");
+    tr.innerHTML = "<td class='num'>"+s.ts.replace("T"," ").slice(0,16)+
+      "</td><td>"+s.risk_level+"</td><td class='num'>"+
+      (s.hype.length? s.hype.map(h=>h.symbol).slice(0,3).join(" "):"—")+
+      "</td><td class='rule'>"+(s.overall_mood||"").slice(0,80)+"</td>";
+    tb.appendChild(tr);
+  });
+}
+$("budget").textContent = "Budget: " + D.scan_count_month + "/" +
+  D.monthly_cap + " scans this month · one scan per " + D.interval_h + "h max";
+</script>
