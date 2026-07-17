@@ -34,6 +34,31 @@ MONTHLY_CAP = 100
 STATE = config.DATA / "sentinel_state.json"
 VERDICT = config.DATA / "sentinel_verdict.json"
 
+def gather_gauges() -> dict:
+    """Quantitative fear gauges (free, no keys). Logged with every scan so
+    Grok's qualitative mood can be audited against hard numbers."""
+    g = {}
+    try:
+        import yfinance as yf
+        vix = yf.download("^VIX", period="5d", auto_adjust=True,
+                          progress=False)["Close"]
+        v = float(vix.iloc[-1].iloc[0] if hasattr(vix.iloc[-1], "iloc")
+                  else vix.iloc[-1])
+        g["vix"] = round(v, 1)
+    except Exception:
+        pass
+    try:  # crypto Fear & Greed index (alternative.me, official free API)
+        req = urllib.request.Request("https://api.alternative.me/fng/",
+                                     headers={"User-Agent": "paper-bot/1.0"})
+        d = json.load(urllib.request.urlopen(req, timeout=30))
+        item = d["data"][0]
+        g["crypto_fear_greed"] = int(item["value"])
+        g["crypto_fng_label"] = item.get("value_classification", "")
+    except Exception:
+        pass
+    return g
+
+
 def gather_context() -> str:
     """Free supplementary signals fetched directly (no API keys, no cost):
     news RSS headlines + Reddit r/wallstreetbets hot titles. Each source is
@@ -64,6 +89,37 @@ def gather_context() -> str:
             chunks.append("REDDIT r/wallstreetbets HOT: " + " | ".join(posts))
     except Exception:
         pass
+    try:  # CoinDesk RSS — crypto-native news
+        req = urllib.request.Request(
+            "https://www.coindesk.com/arc/outboundfeeds/rss/",
+            headers={"User-Agent": "paper-bot-sentinel/1.0"})
+        xml = urllib.request.urlopen(req, timeout=30).read().decode(
+            errors="replace")
+        titles = re.findall(r"<title>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</title>",
+                            xml)[1:9]
+        if titles:
+            chunks.append("CRYPTO NEWS (CoinDesk RSS): " + " | ".join(titles))
+    except Exception:
+        pass
+    try:  # StockTwits trending symbols (public endpoint, best-effort)
+        req = urllib.request.Request(
+            "https://api.stocktwits.com/api/2/trending/symbols.json",
+            headers={"User-Agent": "paper-bot-sentinel/1.0"})
+        d = json.load(urllib.request.urlopen(req, timeout=30))
+        syms = [s.get("symbol", "") for s in d.get("symbols", [])][:12]
+        if syms:
+            chunks.append("STOCKTWITS TRENDING: " + " ".join(syms))
+    except Exception:
+        pass
+    gauges = gather_gauges()
+    if gauges:
+        bits = []
+        if "vix" in gauges:
+            bits.append(f"VIX {gauges['vix']}")
+        if "crypto_fear_greed" in gauges:
+            bits.append(f"Crypto Fear&Greed {gauges['crypto_fear_greed']}/100 "
+                        f"({gauges.get('crypto_fng_label','')})")
+        chunks.append("HARD GAUGES: " + " · ".join(bits))
     return "\n".join(chunks)
 
 
@@ -187,6 +243,7 @@ def main():
         return
     scan = parse_scan(raw)
     scan["ts"] = now.isoformat(timespec="seconds")
+    scan["gauges"] = gather_gauges()   # hard numbers logged beside the vibes
     st["scans"] = (st["scans"] + [scan])[-90:]
     st["last_scan_utc"] = scan["ts"]
     st["month_count"][mkey] = st["month_count"].get(mkey, 0) + 1
