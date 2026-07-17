@@ -263,3 +263,132 @@ function scale(vals,lo,hi,a,b){ return v => b + (v-lo)/(hi-lo||1)*(a-b); }
   line(ctx,S.map((p,i)=>[X(i),sy(p.qqq)]),css.getPropertyValue("--sig").trim(),2);
 })();
 </script>
+
+<script>
+/* EN/AR toggle — translates interface labels client-side; live data text stays as generated. */
+(function(){
+const AR = [
+ ["Every paper order this simulation has placed","كل الأوامر الورقية التي نفذتها هذه المحاكاة"],
+ ["green: bot · grey: benchmark · dashed: $1,000 start","الأخضر: البوت · الرمادي: المؤشر المرجعي · المتقطع: بداية 1000$"],
+ ["SPY benchmark ($1,000 same day)","المؤشر المرجعي SPY ‏(1000$ في اليوم نفسه)"],
+ ["BTC benchmark ($1,000 same day)","المؤشر المرجعي BTC ‏(1000$ في اليوم نفسه)"],
+ ["Fleet Risk Officer + Sentiment Recorder","ضابط مخاطر الأسطول ومسجل المشاعر"],
+ ["ALL CLEAR — no dangerous events detected","الوضع آمن — لا أحداث خطرة"],
+ ["CAUTION — noteworthy events on the tape","تحذير — أحداث تستحق الانتباه"],
+ ["SEVERE — Grok flagged a major market event","خطر شديد — رصد حدث كبير في الأسواق"],
+ ["Events Grok flagged in the last scan","الأحداث المرصودة في آخر مسح"],
+ ["Unusual chatter on X (recorded, NOT traded)","ضجة غير اعتيادية على X (تسجيل فقط، دون تداول)"],
+ ["Follow list (bot-selected)","قائمة المتابعين (يختارهم البوت)"],
+ ["Currently copied trades (90-day holds)","الصفقات المنسوخة حالياً (احتفاظ 90 يوماً)"],
+ ["Backtest max drawdown","أقصى تراجع (اختبار تاريخي)"],
+ ["Backtest CAGR","العائد السنوي (اختبار تاريخي)"],
+ ["Paper money only — simulation","محاكاة بأموال افتراضية فقط"],
+ ["Momentum leaderboard","لوحة الزخم"],
+ ["Hype leaderboard","لوحة الضجة"],
+ ["Portfolio value","قيمة المحفظة"],
+ ["Current position","المركز الحالي"],
+ ["Open positions","المراكز المفتوحة"],
+ ["Equity curve","منحنى الأداء"],
+ ["Signal board","لوحة الإشارات"],
+ ["Scan history","سجل عمليات المسح"],
+ ["Risk alerts","تنبيهات المخاطر"],
+ ["Trade log","سجل الصفقات"],
+ ["Starting stake","رأس المال الابتدائي"],
+ ["Started","تاريخ البدء"],
+ ["The Bot Fleet","أسطول الروبوتات"],
+ ["Crypto Regime Switcher","مبدل أنظمة الكريبتو"],
+ ["Leveraged Stock Trend","متداول اتجاه الأسهم بالرافعة"],
+ ["Congress Copier","ناسخ صفقات الكونغرس"],
+ ["Commodity Trend","متداول اتجاه السلع"],
+ ["Mean-Reversion Mega-Caps","الارتداد إلى المتوسط — أسهم كبرى"],
+ ["All-Weather Control","المحفظة المتوازنة (مجموعة الضبط)"],
+ ["The Watcher","الرقيب"],
+ ["Hype Trader","متداول الضجة"],
+ ["edge theory","نظرية الأفضلية"],
+ ["strategy ahead by","الاستراتيجية متقدمة بمقدار "],
+ ["strategy behind by","الاستراتيجية متأخرة بمقدار "],
+ ["copier ahead by","الناسخ متقدم بمقدار "],
+ ["copier behind by","الناسخ متأخر بمقدار "],
+ ["bot ahead by","البوت متقدم بمقدار "],
+ ["bot behind by","البوت متأخر بمقدار "],
+ ["since start","منذ البداية"],
+ ["in market","في السوق"],
+ ["risk-off — waiting","وضع دفاعي — انتظار"],
+ ["waiting","انتظار"],
+ ["live quote","سعر مباشر"],
+ ["sim day","يوم المحاكاة رقم"],
+ ["as of","حتى"],
+ ["Copied from","منسوخ من"],
+ ["Opened","تاريخ الفتح"],
+ ["Closes","تاريخ الإغلاق"],
+ ["Reason","السبب"],
+ ["Ticker","الرمز"],
+ ["Asset","الأصل"],
+ ["Price","السعر"],
+ ["Units","الوحدات"],
+ ["Shares","الأسهم"],
+ ["Value","القيمة"],
+ ["Date","التاريخ"],
+ ["Side","الاتجاه"],
+ ["Time (UTC)","الوقت (UTC)"],
+ ["Top hype","الأكثر ضجة"],
+ ["Mood","المزاج"],
+ ["Risk","المخاطر"],
+ ["Deployment","التوزيع"],
+ ["below MA","تحت المتوسط"],
+ ["eligible","مؤهل"],
+ ["oversold","بيع مفرط"],
+ ["no signal","لا إشارة"],
+ ["candidate","مرشح"],
+ ["euphoric","نشوة"],
+ ["fearful","خوف"],
+ ["mixed","متباين"],
+ ["rising","صاعد"],
+ ["falling","هابط"],
+ ["stopped","موقوف"],
+ ["HELD","محتفظ به"],
+].sort((a,b)=>b[0].length-a[0].length);
+
+let lang = localStorage.getItem("fleetLang") || "en";
+
+function txNode(n){
+  let t = n.nodeValue;
+  if (!t || !t.trim()) return;
+  for (const [en, ar] of AR){
+    if (t.includes(en)) t = t.split(en).join(ar);
+  }
+  n.nodeValue = t;
+}
+function translate(root){
+  if (lang !== "ar") return;
+  const w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+  const nodes = [];
+  while (w.nextNode()) nodes.push(w.currentNode);
+  nodes.forEach(txNode);
+}
+
+const btn = document.createElement("button");
+btn.textContent = lang === "en" ? "عربي" : "EN";
+btn.title = "Switch language / تغيير اللغة";
+btn.style.cssText = "position:fixed;bottom:14px;"+(lang==="ar"?"right":"left")+
+  ":14px;z-index:999;padding:5px 14px;border-radius:5px;border:1px solid #777;"+
+  "background:rgba(25,22,35,.85);color:#eee;cursor:pointer;font:600 13px 'Segoe UI',sans-serif";
+btn.onclick = () => {
+  localStorage.setItem("fleetLang", lang === "en" ? "ar" : "en");
+  location.reload();
+};
+document.body.appendChild(btn);
+
+if (lang === "ar"){
+  document.documentElement.dir = "rtl";
+  document.documentElement.lang = "ar";
+  translate(document.body);
+  new MutationObserver(muts => {
+    muts.forEach(m => m.addedNodes.forEach(n => {
+      if (n.nodeType === 1) translate(n);
+      else if (n.nodeType === 3) txNode(n);
+    }));
+  }).observe(document.body, {childList: true, subtree: true});
+}
+})();
+</script>
