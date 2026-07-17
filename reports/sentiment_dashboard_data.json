@@ -1,28 +1,28 @@
 {
-  "generated_utc": "2026-07-17T16:04:34+00:00",
+  "generated_utc": "2026-07-17T18:33:43+00:00",
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "live_ts": "2026-07-17T16:04:34+00:00",
+  "live_ts": "2026-07-17T18:33:43+00:00",
   "current": {
     "date": "2026-07-17",
     "value": 1000.0,
-    "bench": 992.93,
-    "holding": "CASH"
+    "bench": 990.44,
+    "holding": "AAPL"
   },
   "board": [
     {
-      "sym": "NFLX",
+      "sym": "SPCX",
       "price": 0,
-      "line": "fearful \u00b7 Earnings miss sparks heavy retail sellin",
-      "tag": "fearful",
+      "line": "mixed \u00b7 Retail/Wall St underwater, fighting dip",
+      "tag": "mixed",
       "on": false,
       "pick": false,
-      "fill": -40
+      "fill": 0
     },
     {
-      "sym": "MU",
+      "sym": "NFLX",
       "price": 0,
-      "line": "fearful \u00b7 Chip rout leader amid AI CapEx fears",
+      "line": "fearful \u00b7 Plunges hard on guidance miss",
       "tag": "fearful",
       "on": false,
       "pick": false,
@@ -31,32 +31,32 @@
     {
       "sym": "DJT",
       "price": 0,
-      "line": "mixed \u00b7 Political ticker chatter amid headlines",
+      "line": "mixed \u00b7 Stocktwits trending amid politics",
       "tag": "mixed",
       "on": false,
       "pick": false,
       "fill": 0
     },
     {
-      "sym": "BULL",
+      "sym": "CELH",
       "price": 0,
-      "line": "mixed \u00b7 Trending retail discussion unusual",
+      "line": "mixed \u00b7 Retail buzz on Stocktwits",
       "tag": "mixed",
       "on": false,
       "pick": false,
       "fill": 0
     },
     {
-      "sym": "QQQ",
-      "price": 0,
-      "line": "fearful \u00b7 Tech ETF hit by broader AI unwind",
-      "tag": "fearful",
-      "on": false,
-      "pick": false,
-      "fill": -40
+      "sym": "AAPL",
+      "price": 332.27,
+      "line": "euphoric \u00b7 Surpasses Nvidia as most valuable",
+      "tag": "HELD",
+      "on": true,
+      "pick": true,
+      "fill": 40
     }
   ],
-  "board_title": "Grok's latest hype read (scan 2026-07-17T16:03, risk caution)",
+  "board_title": "Grok's latest hype read (scan 2026-07-17T18:32, risk caution)",
   "meta": {
     "title": "Hype Trader \u2014 $1,000 Challenge",
     "badge": "PAPER SIM \u00b7 SENTIMENT ON TRIAL",
@@ -77,10 +77,10 @@
       "holding": "CASH"
     },
     {
-      "ts": "2026-07-17T16:04:34+00:00",
+      "ts": "2026-07-17T18:33:43+00:00",
       "value": 1000.0,
-      "bench": 992.93,
-      "holding": "CASH"
+      "bench": 990.44,
+      "holding": "AAPL"
     }
   ],
   "trades": [
@@ -101,14 +101,23 @@
       "units": 17.6274,
       "value": 1000.0,
       "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
+    },
+    {
+      "date": "2026-07-17",
+      "action": "BUY",
+      "ticker": "AAPL",
+      "price": 332.27,
+      "units": 3.0096,
+      "value": 1000.0,
+      "reason": "Grok: AAPL euphoric \u2014 Surpasses Nvidia as most valuable (scan 2026-07-17T18:32)"
     }
   ],
   "history": [
     {
       "date": "2026-07-17",
       "value": 1000.0,
-      "bench": 992.93,
-      "holding": "CASH"
+      "bench": 990.44,
+      "holding": "AAPL"
     }
   ],
   "strategy": {
