@@ -1,0 +1,275 @@
+<meta charset="utf-8">
+<meta http-equiv="refresh" content="300">
+<title>Fleet Bot — Live $1k Paper Sim</title>
+<style>
+  :root{
+    --bg:#0C1112; --panel:#141C1E; --panel2:#101718; --line:#22302F;
+    --text:#EAF2F0; --muted:#93A8A3; --faint:#5E7370;
+    --gain:#3DD68C; --loss:#F0544F; --acc:#39B8A8; --sig:#6E9BFF;
+    --mono:Consolas,"Cascadia Code","SF Mono",Menlo,monospace;
+  }
+  @media (prefers-color-scheme: light){
+    :root{--bg:#F2F6F5; --panel:#FFFFFF; --panel2:#E9F0EE; --line:#D3DEDC;
+      --text:#15201E; --muted:#5E7370; --faint:#93A8A3;
+      --gain:#0E9F63; --loss:#D33B36; --acc:#0F7C6E; --sig:#2F5FD0;}
+  }
+  :root[data-theme="dark"]{--bg:#0C1112; --panel:#141C1E; --panel2:#101718;
+    --line:#22302F; --text:#EAF2F0; --muted:#93A8A3; --faint:#5E7370;
+    --gain:#3DD68C; --loss:#F0544F; --acc:#39B8A8; --sig:#6E9BFF;}
+  :root[data-theme="light"]{--bg:#F2F6F5; --panel:#FFFFFF; --panel2:#E9F0EE;
+    --line:#D3DEDC; --text:#15201E; --muted:#5E7370; --faint:#93A8A3;
+    --gain:#0E9F63; --loss:#D33B36; --acc:#0F7C6E; --sig:#2F5FD0;}
+
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--text);margin:0;
+    font:15px/1.5 "Segoe UI",system-ui,sans-serif;padding:20px;}
+  .wrap{max-width:1060px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+  .eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--muted);font-weight:600}
+  .num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+  .bar{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+  .bar h1{font-size:17px;margin:0;font-weight:650}
+  .live{display:inline-flex;align-items:center;gap:6px;font-size:11px;
+    letter-spacing:.12em;font-weight:700;color:var(--acc);
+    border:1px solid var(--acc);border-radius:3px;padding:2px 8px}
+  .live .dot{width:7px;height:7px;border-radius:50%;background:var(--acc);
+    animation:pulse 2s infinite}
+  @keyframes pulse{50%{opacity:.35}}
+  @media (prefers-reduced-motion: reduce){.live .dot{animation:none}}
+  .asof{margin-left:auto;color:var(--faint);font-size:12px}
+
+  .strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:14px}
+  .kpi{background:var(--panel);border:1px solid var(--line);border-radius:6px;
+    padding:14px 16px;display:flex;flex-direction:column;gap:4px}
+  .kpi .v{font-size:30px;font-weight:650;line-height:1.1}
+  .kpi .d{font-size:13px;font-weight:600}
+  .up{color:var(--gain)} .down{color:var(--loss)}
+  .chip{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;
+    padding:2px 9px;border-radius:3px;text-transform:uppercase}
+  .chip.in{background:color-mix(in srgb,var(--gain) 16%,transparent);color:var(--gain)}
+  .chip.cash{background:color-mix(in srgb,var(--sig) 18%,transparent);color:var(--sig)}
+
+  .grid{display:grid;grid-template-columns:1.6fr 1fr;gap:14px}
+  @media(max-width:860px){.grid{grid-template-columns:1fr}}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:6px;
+    padding:16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+  .panel h2{font-size:13px;margin:0;font-weight:650}
+  canvas{width:100%;height:auto;display:block}
+
+  .coin{display:flex;align-items:center;gap:10px;background:var(--panel2);
+    border-radius:5px;padding:9px 12px}
+  .coin .sym{font-weight:700;font-size:13px;min-width:52px}
+  .coin .body{flex:1;display:flex;flex-direction:column;gap:5px;min-width:0}
+  .coin .row{display:flex;justify-content:space-between;font-size:12px;
+    color:var(--muted);gap:8px;flex-wrap:wrap}
+  .track{height:7px;border-radius:4px;background:var(--bg);position:relative;overflow:hidden}
+  .track .fill{position:absolute;top:0;bottom:0;border-radius:4px}
+  .tag{font-size:10px;font-weight:700;letter-spacing:.08em;padding:2px 7px;
+    border-radius:3px;text-transform:uppercase;white-space:nowrap}
+  .tag.on{background:color-mix(in srgb,var(--gain) 16%,transparent);color:var(--gain)}
+  .tag.off{background:color-mix(in srgb,var(--faint) 20%,transparent);color:var(--muted)}
+  .tag.pick{background:color-mix(in srgb,var(--acc) 20%,transparent);color:var(--acc)}
+
+  .tbl{width:100%;border-collapse:collapse;font-size:13px}
+  .tbl th{text-align:left;color:var(--faint);font-weight:600;font-size:11px;
+    letter-spacing:.1em;text-transform:uppercase;padding:4px 8px;
+    border-bottom:1px solid var(--line)}
+  .tbl td{padding:6px 8px;border-bottom:1px solid var(--line)}
+  .tbl tr:last-child td{border-bottom:none}
+  .buy{color:var(--gain);font-weight:700} .sell{color:var(--loss);font-weight:700}
+  .neut{color:var(--sig);font-weight:700}
+  .scroll{overflow-x:auto}
+
+  .riskcard{border-left:4px solid var(--acc)}
+  .riskcard .rn{color:var(--acc);font-weight:650;font-size:12px;
+    letter-spacing:.06em;text-transform:uppercase}
+  .rule{color:var(--muted);font-size:13px}
+  .facts{display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:13px}
+  .facts div{background:var(--panel2);border-radius:4px;padding:8px 10px}
+  .facts .k{color:var(--faint);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+  footer{color:var(--faint);font-size:12px;text-align:center;padding:6px 0 2px}
+  footer a{color:var(--acc)}
+</style>
+
+<div class="wrap">
+  <div class="bar">
+    <span class="live"><span class="dot"></span><span id="badge"></span></span>
+    <h1 id="title"></h1>
+    <span class="asof" id="asof"></span>
+  </div>
+
+  <div class="strip">
+    <div class="kpi">
+      <span class="eyebrow">Portfolio value</span>
+      <span class="v num" id="pv"></span>
+      <span class="d num" id="pd"></span>
+    </div>
+    <div class="kpi">
+      <span class="eyebrow" id="benchlabel"></span>
+      <span class="v num" id="bv"></span>
+      <span class="d num" id="bd"></span>
+    </div>
+    <div class="kpi">
+      <span class="eyebrow">Current position</span>
+      <span class="v num" id="pos"></span>
+      <span class="d"><span class="chip" id="sigchip"></span></span>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="panel">
+      <span class="eyebrow">Equity curve</span>
+      <h2>Bot vs benchmark, from inception</h2>
+      <canvas id="eq" width="640" height="290"></canvas>
+      <div class="rule" id="eqnote"></div>
+    </div>
+
+    <div class="panel">
+      <span class="eyebrow">Signal board</span>
+      <h2 id="boardtitle"></h2>
+      <div id="coins" style="display:flex;flex-direction:column;gap:7px"></div>
+      <div class="rule" id="boardnote"></div>
+    </div>
+
+    <div class="panel">
+      <span class="eyebrow">Trade log</span>
+      <h2>Every paper order this simulation has placed</h2>
+      <div class="scroll">
+        <table class="tbl" id="trades">
+          <thead><tr><th>Date</th><th>Side</th><th>Asset</th><th>Price</th><th>Units</th><th>Value</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel riskcard">
+      <span class="rn">⚠ Paper money only — simulation</span>
+      <h2 id="stratname"></h2>
+      <div class="rule" id="stratrule"></div>
+      <div class="facts">
+        <div><div class="k">Backtest CAGR</div><div class="num" id="bt-cagr"></div></div>
+        <div><div class="k">Backtest max drawdown</div><div class="num" id="bt-dd"></div></div>
+        <div><div class="k">Started</div><div class="num" id="bt-start"></div></div>
+        <div><div class="k">Starting stake</div><div class="num">$1,000.00</div></div>
+      </div>
+      <div class="rule">Backtests are history, not promises. Nothing here is
+        investment advice, and no real orders are ever placed.</div>
+    </div>
+  </div>
+
+  <footer><a href="fleet.html">← fleet overview</a> · updated every ~20 min by GitHub Actions · prices: Yahoo Finance</footer>
+</div>
+
+<script>
+let D = {"generated_utc": "2026-07-17T00:40:30+00:00", "created": "2026-07-17", "starting_cash": 1000.0, "live_ts": "2026-07-17T00:40:30+00:00", "current": {"date": "2026-07-17", "value": 1000.0, "bench": 1000.0, "holding": "PYPL"}, "board": [{"sym": "PYPL", "price": 56.73, "line": "euphoric \u00b7 Stripe-Advent $53B takeover bid premium", "tag": "HELD", "on": true, "pick": true, "fill": 40}, {"sym": "BTC", "price": 0, "line": "fearful \u00b7 extreme fear, holding $64k on geopolitic", "tag": "fearful", "on": false, "pick": false, "fill": -40}, {"sym": "MU", "price": 0, "line": "mixed \u00b7 big losses yet long-term favorite chatte", "tag": "mixed", "on": false, "pick": false, "fill": 0}, {"sym": "ETH", "price": 0, "line": "mixed \u00b7 outperforms BTC on ETF inflows return", "tag": "mixed", "on": false, "pick": false, "fill": 0}, {"sym": "RUNE", "price": 0.42, "line": "euphoric \u00b7 tightening bands breakout setup hype", "tag": "candidate", "on": true, "pick": false, "fill": 40}], "board_title": "Grok's latest hype read (scan 2026-07-17T00:22, risk caution)", "meta": {"title": "Sentinel Hype Trader \u2014 $1,000 Challenge", "badge": "PAPER SIM \u00b7 SENTIMENT ON TRIAL", "bench_label": "SPY benchmark ($1,000 same day)", "board_note": "Buys the crowd's loudest euphoria, rides it while it lasts, cuts it at -10%, and refuses to trade in a severe-risk tape. Weakest-evidence strategy in the fleet \u2014 hence the strictest guards."}, "intraday": [{"ts": "2026-07-17T00:40:30+00:00", "value": 1000.0, "bench": 1000.0, "holding": "PYPL"}], "trades": [{"date": "2026-07-17", "action": "BUY", "ticker": "PYPL", "price": 56.73, "units": 17.6274, "value": 1000.0, "reason": "Grok: PYPL euphoric \u2014 Stripe-Advent $53B takeover bid premium (scan 2026-07-17T00:22)"}], "history": [{"date": "2026-07-17", "value": 1000.0, "bench": 1000.0, "holding": "PYPL"}], "strategy": {"name": "Hype Rider \u2014 sentiment as a signal, on trial", "rule": "Hold the top euphoric symbol from the Sentinel's 8-hour Grok scans while it stays euphoric; -10% hard stop; severe risk verdict -> cash", "backtest_cagr": "NONE \u2014 sentiment can't be backtested honestly; this live run IS the test", "backtest_maxdd": "unknown \u00b7 stop-loss caps single-trade loss at ~10%"}};
+const $ = id => document.getElementById(id);
+const fmt$ = v => "$" + v.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});
+const pct = v => (v>=0?"+":"") + (v*100).toFixed(2) + "%";
+const css = getComputedStyle(document.documentElement);
+
+function line(ctx,pts,color,w=2,dash=[]){
+  if(pts.length<2) return;
+  ctx.strokeStyle=color; ctx.lineWidth=w; ctx.setLineDash(dash); ctx.beginPath();
+  pts.forEach((p,i)=> i?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1]));
+  ctx.stroke(); ctx.setLineDash([]);
+}
+
+function renderAll(){
+  const cur = D.current, start = D.starting_cash;
+  const liveVal = D.intraday && D.intraday.length ? D.intraday[D.intraday.length-1] : cur;
+  const ret = liveVal.value/start-1, bret = liveVal.bench/start-1;
+
+  document.title = D.meta.title;
+  $("badge").textContent = D.meta.badge;
+  $("title").textContent = D.meta.title;
+  $("benchlabel").textContent = D.meta.bench_label;
+  $("asof").textContent = "as of " + cur.date + " · sim day " +
+    (Math.round((new Date(cur.date)-new Date(D.created))/86400000)+1);
+  $("pv").textContent = fmt$(liveVal.value);
+  $("pd").textContent = pct(ret) + " since start";
+  $("pd").className = "d num " + (ret>=0?"up":"down");
+  $("bv").textContent = fmt$(liveVal.bench);
+  $("bd").textContent = pct(bret) + " · bot " +
+    (liveVal.value>=liveVal.bench?"ahead":"behind") +
+    " by " + fmt$(Math.abs(liveVal.value-liveVal.bench));
+  $("bd").className = "d num " + (bret>=0?"up":"down");
+  $("pos").textContent = cur.holding;
+  const chip = $("sigchip");
+  if (cur.holding === "CASH"){ chip.textContent = "waiting"; chip.className = "chip cash"; }
+  else { chip.textContent = "in market"; chip.className = "chip in"; }
+
+  $("boardtitle").textContent = D.board_title;
+  $("boardnote").textContent = D.meta.board_note;
+  $("stratname").textContent = D.strategy.name;
+  $("stratrule").textContent = "Rule: " + D.strategy.rule;
+  $("bt-cagr").textContent = D.strategy.backtest_cagr;
+  $("bt-dd").textContent = D.strategy.backtest_maxdd;
+  $("bt-start").textContent = D.created;
+
+  const coinsEl = $("coins");
+  coinsEl.innerHTML = "";
+  D.board.forEach(b=>{
+    const col = (b.fill>=0 ? css.getPropertyValue("--gain") : css.getPropertyValue("--loss"));
+    const gpos = Math.max(0, Math.min(100, b.fill+50));
+    const div = document.createElement("div");
+    div.className = "coin";
+    div.innerHTML =
+      "<span class='sym num'>"+b.sym+"</span>"+
+      "<div class='body'>"+
+        "<div class='row'><span class='num'>"+fmt$(b.price)+"</span>"+
+        "<span class='num'>"+b.line+"</span></div>"+
+        "<div class='track'><div class='fill' style='left:"+Math.min(50,gpos)+
+        "%;width:"+Math.abs(gpos-50)+"%;background:"+col+"'></div></div>"+
+      "</div>"+
+      "<span class='tag "+(b.pick?"pick":(b.on?"on":"off"))+"'>"+b.tag+"</span>";
+    coinsEl.appendChild(div);
+  });
+
+  const tb = $("trades").tBodies[0];
+  tb.innerHTML = "";
+  D.trades.slice().reverse().forEach(t=>{
+    const cls = /BUY|ALLOCATE|REBAL\+/.test(t.action) ? "buy" :
+                (/SELL|REBAL-/.test(t.action) ? "sell" : "neut");
+    const tr = document.createElement("tr");
+    tr.innerHTML = "<td class='num'>"+t.date+"</td><td class='"+cls+"'>"+t.action+
+      "</td><td class='num'>"+t.ticker+
+      "</td><td class='num'>"+(t.price?fmt$(t.price):"—")+
+      "</td><td class='num'>"+(t.units?(+t.units).toFixed(4):"—")+
+      "</td><td class='num'>"+fmt$(t.value)+"</td>";
+    tb.appendChild(tr);
+  });
+
+  const c=$("eq"), ctx=c.getContext("2d");
+  ctx.clearRect(0,0,c.width,c.height);
+  const gainC=css.getPropertyValue("--gain").trim(),
+        mutedC=css.getPropertyValue("--faint").trim();
+  let series;
+  if (D.history.length>=2) series=D.history;
+  else if (D.intraday && D.intraday.length>=2) series=D.intraday;
+  else series=null;
+  if(!series){
+    $("eqnote").textContent="Day 1 — the curve appears after the next cycles.";
+    line(ctx,[[20,145],[620,145]],mutedC,1,[4,4]);
+  } else {
+    const start_ = D.starting_cash;
+    const vals=series.map(h=>h.value).concat(series.map(h=>h.bench));
+    const lo=Math.min(Math.min(...vals),start_)*0.995,
+          hi=Math.max(Math.max(...vals),start_)*1.005;
+    const sy=v=>275-(v-lo)/(hi-lo||1)*255, X=i=>30+i/(series.length-1)*580;
+    line(ctx,[[30,sy(start_)],[610,sy(start_)]],mutedC,1,[4,4]);
+    line(ctx,series.map((h,i)=>[X(i),sy(h.bench)]),mutedC,1.6);
+    line(ctx,series.map((h,i)=>[X(i),sy(h.value)]),gainC,2.2);
+    $("eqnote").textContent="green: bot · grey: benchmark · dashed: $1,000 start";
+  }
+}
+
+renderAll();
+async function poll(){
+  try{
+    const r = await fetch("sentiment_dashboard_data.json", {cache:"no-store"});
+    if (r.ok){ D = await r.json(); renderAll(); }
+  }catch(e){}
+}
+setInterval(poll, 60000);
+</script>

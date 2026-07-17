@@ -48,6 +48,9 @@ jobs:
           XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
         run: python src/grok_sentinel.py
 
+      - name: Run sentinel hype trader (no API cost — trades the scans)
+        run: python src/sentinel_trader.py
+
       - name: Publish dashboards to docs/ (GitHub Pages)
         run: |
           cp reports/crypto_dashboard.html docs/index.html
@@ -63,6 +66,8 @@ jobs:
           cp reports/allweather_dashboard.html docs/allweather.html
           cp reports/allweather_dashboard_data.json docs/allweather_dashboard_data.json
           cp reports/sentinel_dashboard.html docs/sentinel.html || true
+          cp reports/sentiment_dashboard.html docs/sentiment.html || true
+          cp reports/sentiment_dashboard_data.json docs/sentiment_dashboard_data.json || true
 
       - name: Commit state + dashboard
         run: |
