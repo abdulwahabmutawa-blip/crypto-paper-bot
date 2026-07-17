@@ -51,6 +51,9 @@ jobs:
       - name: Run sentinel hype trader (no API cost — trades the scans)
         run: python src/sentinel_trader.py
 
+      - name: Run the Hunter (cross-asset opportunist)
+        run: python src/hunter_tracker.py
+
       - name: Publish dashboards to docs/ (GitHub Pages)
         run: |
           cp reports/crypto_dashboard.html docs/index.html
@@ -68,6 +71,8 @@ jobs:
           cp reports/sentinel_dashboard.html docs/sentinel.html || true
           cp reports/sentiment_dashboard.html docs/sentiment.html || true
           cp reports/sentiment_dashboard_data.json docs/sentiment_dashboard_data.json || true
+          cp reports/hunter_dashboard.html docs/hunter.html || true
+          cp reports/hunter_dashboard_data.json docs/hunter_dashboard_data.json || true
 
       - name: Commit state + dashboard
         run: |

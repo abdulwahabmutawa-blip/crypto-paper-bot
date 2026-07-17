@@ -1,0 +1,144 @@
+{
+  "generated_utc": "2026-07-17T12:44:00+00:00",
+  "created": "2026-07-17",
+  "starting_cash": 1000.0,
+  "live_ts": "2026-07-17T12:44:00+00:00",
+  "current": {
+    "date": "2026-07-17",
+    "value": 1000.0,
+    "bench": 1000.0,
+    "holding": "PLTR"
+  },
+  "board": [
+    {
+      "sym": "PLTR",
+      "price": 134.44,
+      "line": "Palantir \u00b7 score +8.59 \u00b7 mom20 +19.0%",
+      "tag": "HELD",
+      "on": true,
+      "pick": true,
+      "fill": 50
+    },
+    {
+      "sym": "ETH",
+      "price": 1827.91,
+      "line": "Ethereum \u00b7 score +6.34 \u00b7 mom20 +16.3%",
+      "tag": "hunting",
+      "on": true,
+      "pick": false,
+      "fill": 50
+    },
+    {
+      "sym": "USO",
+      "price": 119.3,
+      "line": "Oil \u00b7 score +5.25 \u00b7 mom20 +13.1%",
+      "tag": "hunting",
+      "on": true,
+      "pick": false,
+      "fill": 50
+    },
+    {
+      "sym": "UPRO",
+      "price": 143.61,
+      "line": "3x S&P \u00b7 score +5.13 \u00b7 mom20 +8.7%",
+      "tag": "hunting",
+      "on": true,
+      "pick": false,
+      "fill": 50
+    },
+    {
+      "sym": "NVDA",
+      "price": 207.4,
+      "line": "Nvidia \u00b7 score +3.90 \u00b7 mom20 +7.7%",
+      "tag": "hunting",
+      "on": true,
+      "pick": false,
+      "fill": 50
+    },
+    {
+      "sym": "MSTR",
+      "price": 94.03,
+      "line": "MicroStrategy \u00b7 score +3.17 \u00b7 mom20 +14.2%",
+      "tag": "hunting",
+      "on": true,
+      "pick": false,
+      "fill": 47.5496927708216
+    },
+    {
+      "sym": "BTC",
+      "price": 63042.07,
+      "line": "Bitcoin \u00b7 score +2.89 \u00b7 mom20 +5.2%",
+      "tag": "hunting",
+      "on": true,
+      "pick": false,
+      "fill": 43.40541277720054
+    },
+    {
+      "sym": "COIN",
+      "price": 160.49,
+      "line": "Coinbase \u00b7 score +2.60 \u00b7 mom20 +7.7%",
+      "tag": "hunting",
+      "on": true,
+      "pick": false,
+      "fill": 38.967620133789595
+    },
+    {
+      "sym": "SOL",
+      "price": 74.37,
+      "line": "Solana \u00b7 score +2.17 \u00b7 mom20 +5.6%",
+      "tag": "hunting",
+      "on": true,
+      "pick": false,
+      "fill": 32.52142098844116
+    },
+    {
+      "sym": "TSLA",
+      "price": 391.06,
+      "line": "Tesla \u00b7 score +0.88 \u00b7 mom20 +3.0%",
+      "tag": "hunting",
+      "on": true,
+      "pick": false,
+      "fill": 13.18501775170618
+    }
+  ],
+  "board_title": "The whole market, scored by reward-per-unit-of-risk",
+  "meta": {
+    "title": "The Hunter \u2014 $1,000 Challenge",
+    "badge": "PAPER SIM \u00b7 MAXIMUM AGGRESSION",
+    "bench_label": "SPY benchmark ($1,000 same day)",
+    "board_note": "Always hunting across leveraged ETFs, high-beta stocks, crypto and commodities \u2014 all-in on the best score, 8% trailing stop, cash only when everything falls. Aggression with a seatbelt."
+  },
+  "intraday": [
+    {
+      "ts": "2026-07-17T12:44:00+00:00",
+      "value": 1000.0,
+      "bench": 1000.0,
+      "holding": "PLTR"
+    }
+  ],
+  "trades": [
+    {
+      "date": "2026-07-17",
+      "action": "BUY",
+      "ticker": "PLTR",
+      "price": 134.44,
+      "units": 7.4383,
+      "value": 1000.0,
+      "reason": "Top reward/risk score (8.59) \u2014 Palantir, all-in"
+    }
+  ],
+  "history": [
+    {
+      "date": "2026-07-17",
+      "value": 1000.0,
+      "bench": 1000.0,
+      "holding": "PLTR"
+    }
+  ],
+  "strategy": {
+    "name": "The Hunter \u2014 cross-asset opportunist",
+    "rule": "Score 14 instruments by 20-day momentum/volatility; all-in on the best (1.25x hysteresis); 8% trailing stop; cash only if every score is negative or Watcher SEVERE",
+    "backtest_cagr": "+100%/yr since 2017 \u00b7 but LAGGED SPY in 2024+ chop",
+    "backtest_maxdd": "-78% \u2014 the honest price of maximum aggression"
+  }
+}
