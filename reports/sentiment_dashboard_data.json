@@ -1,64 +1,64 @@
 {
-  "generated_utc": "2026-07-17T00:58:55+00:00",
+  "generated_utc": "2026-07-17T01:31:07+00:00",
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "live_ts": "2026-07-17T00:58:55+00:00",
+  "live_ts": "2026-07-17T01:31:07+00:00",
   "current": {
     "date": "2026-07-17",
     "value": 1000.0,
     "bench": 1000.0,
-    "holding": "PYPL"
+    "holding": "CASH"
   },
   "board": [
     {
-      "sym": "PYPL",
-      "price": 56.73,
-      "line": "euphoric \u00b7 Stripe-Advent $53B takeover bid premium",
-      "tag": "HELD",
-      "on": true,
-      "pick": true,
-      "fill": 40
-    },
-    {
-      "sym": "BTC",
+      "sym": "NFLX",
       "price": 0,
-      "line": "fearful \u00b7 extreme fear, holding $64k on geopolitic",
+      "line": "fearful \u00b7 post-earnings plunge chatter",
       "tag": "fearful",
       "on": false,
       "pick": false,
       "fill": -40
     },
     {
-      "sym": "MU",
+      "sym": "SPCX",
       "price": 0,
-      "line": "mixed \u00b7 big losses yet long-term favorite chatte",
+      "line": "fearful \u00b7 Starship abort after IPO",
+      "tag": "fearful",
+      "on": false,
+      "pick": false,
+      "fill": -40
+    },
+    {
+      "sym": "HYPE",
+      "price": 0,
+      "line": "mixed \u00b7 volatile Hyperliquid token",
       "tag": "mixed",
       "on": false,
       "pick": false,
       "fill": 0
     },
     {
-      "sym": "ETH",
+      "sym": "BTC",
       "price": 0,
-      "line": "mixed \u00b7 outperforms BTC on ETF inflows return",
-      "tag": "mixed",
+      "line": "fearful \u00b7 Fear index low near 64k",
+      "tag": "fearful",
       "on": false,
       "pick": false,
-      "fill": 0
+      "fill": -40
     },
     {
-      "sym": "RUNE",
-      "price": 0.42,
-      "line": "euphoric \u00b7 tightening bands breakout setup hype",
-      "tag": "candidate",
-      "on": true,
+      "sym": "SOFTBANK",
+      "price": 0,
+      "line": "fearful \u00b7 AI exposure sell-off",
+      "tag": "fearful",
+      "on": false,
       "pick": false,
-      "fill": 40
+      "fill": -40
     }
   ],
-  "board_title": "Grok's latest hype read (scan 2026-07-17T00:22, risk caution)",
+  "board_title": "Grok's latest hype read (scan 2026-07-17T01:13, risk caution)",
   "meta": {
-    "title": "Sentinel Hype Trader \u2014 $1,000 Challenge",
+    "title": "Hype Trader \u2014 $1,000 Challenge",
     "badge": "PAPER SIM \u00b7 SENTIMENT ON TRIAL",
     "bench_label": "SPY benchmark ($1,000 same day)",
     "board_note": "Buys the crowd's loudest euphoria, rides it while it lasts, cuts it at -10%, and refuses to trade in a severe-risk tape. Weakest-evidence strategy in the fleet \u2014 hence the strictest guards."
@@ -71,10 +71,10 @@
       "holding": "PYPL"
     },
     {
-      "ts": "2026-07-17T00:58:55+00:00",
+      "ts": "2026-07-17T01:31:07+00:00",
       "value": 1000.0,
       "bench": 1000.0,
-      "holding": "PYPL"
+      "holding": "CASH"
     }
   ],
   "trades": [
@@ -86,6 +86,15 @@
       "units": 17.6274,
       "value": 1000.0,
       "reason": "Grok: PYPL euphoric \u2014 Stripe-Advent $53B takeover bid premium (scan 2026-07-17T00:22)"
+    },
+    {
+      "date": "2026-07-17",
+      "action": "SELL",
+      "ticker": "PYPL",
+      "price": 56.73,
+      "units": 17.6274,
+      "value": 1000.0,
+      "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
     }
   ],
   "history": [
@@ -93,12 +102,12 @@
       "date": "2026-07-17",
       "value": 1000.0,
       "bench": 1000.0,
-      "holding": "PYPL"
+      "holding": "CASH"
     }
   ],
   "strategy": {
-    "name": "Hype Rider \u2014 sentiment as a signal, on trial",
-    "rule": "Hold the top euphoric symbol from the Sentinel's 8-hour Grok scans while it stays euphoric; -10% hard stop; severe risk verdict -> cash",
+    "name": "Hype Trader \u2014 rides the Watcher's reads, on trial",
+    "rule": "Hold the top euphoric symbol from the Watcher's 8-hour Grok scans while it stays euphoric; -10% hard stop; Watcher severe verdict -> cash",
     "backtest_cagr": "NONE \u2014 sentiment can't be backtested honestly; this live run IS the test",
     "backtest_maxdd": "unknown \u00b7 stop-loss caps single-trade loss at ~10%"
   }

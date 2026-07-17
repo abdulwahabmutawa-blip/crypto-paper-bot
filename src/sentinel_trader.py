@@ -96,7 +96,7 @@ def main():
 
     # 2) severe risk -> flat, no exceptions
     if severe and st["holding"] != "CASH":
-        sell("Sentinel risk verdict SEVERE — no hype positions in a crisis")
+        sell("Watcher risk verdict SEVERE — no hype positions in a crisis")
 
     # 3) decide desired holding
     blacklisted = {t for t, ts in st["stopped"].items() if ts == scan_ts}
@@ -161,7 +161,7 @@ def main():
         "board_title": f"Grok's latest hype read (scan {scan_ts[:16] or 'pending'}, "
                        f"risk {scan.get('risk_level') if scan else '—'})",
         "meta": {
-            "title": "Sentinel Hype Trader — $1,000 Challenge",
+            "title": "Hype Trader — $1,000 Challenge",
             "badge": "PAPER SIM · SENTIMENT ON TRIAL",
             "bench_label": "SPY benchmark ($1,000 same day)",
             "board_note": "Buys the crowd's loudest euphoria, rides it while "
@@ -172,10 +172,10 @@ def main():
         "intraday": st["intraday"], "trades": st["trades"][-20:],
         "history": st["history"],
         "strategy": {
-            "name": "Hype Rider — sentiment as a signal, on trial",
-            "rule": "Hold the top euphoric symbol from the Sentinel's 8-hour "
+            "name": "Hype Trader — rides the Watcher's reads, on trial",
+            "rule": "Hold the top euphoric symbol from the Watcher's 8-hour "
                     "Grok scans while it stays euphoric; -10% hard stop; "
-                    "severe risk verdict -> cash",
+                    "Watcher severe verdict -> cash",
             "backtest_cagr": "NONE — sentiment can't be backtested honestly; "
                              "this live run IS the test",
             "backtest_maxdd": "unknown · stop-loss caps single-trade loss at ~10%",

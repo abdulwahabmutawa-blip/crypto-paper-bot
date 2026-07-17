@@ -24,4 +24,4 @@ def severe() -> tuple[bool, str]:
         return False, ""
     alerts = v.get("risk_alerts") or []
     head = alerts[0].get("headline", "unspecified event") if alerts else "unspecified event"
-    return True, f"Sentinel SEVERE ({v.get('ts','')[:16]}): {head}"
+    return True, f"Watcher SEVERE ({v.get('ts','')[:16]}): {head}"
