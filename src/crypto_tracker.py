@@ -196,6 +196,11 @@ def main():
     for c, p in live.items():
         close.iloc[-1, close.columns.get_loc(c)] = p
     pick, board, regime = signal(close)
+    import sentinel_gate
+    is_severe, why = sentinel_gate.severe()
+    if is_severe and pick != "CASH":
+        print(f"[crypto-live] {why} -> forcing CASH")
+        pick = "CASH"
     st = load_state()
     if st is None:
         st = init_state(close, pick, board)

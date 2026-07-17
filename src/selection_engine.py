@@ -58,6 +58,15 @@ def run(spec, start_cash=1000.0):
     holding = st["holding"] if st else "CASH"
     pick, board, board_title = spec["signal"](close, holding)
 
+    # Sentinel override (default on; All-Weather doesn't use this engine and
+    # stays deliberately unwired as the control group).
+    if spec.get("risk_gate", True):
+        import sentinel_gate
+        is_severe, why = sentinel_gate.severe()
+        if is_severe and pick != "CASH":
+            print(f"[{key}] {why} -> forcing CASH")
+            pick = "CASH"
+
     last = close.iloc[-1]
     asof = str(close.index[-1].date())
     now = datetime.now(timezone.utc)

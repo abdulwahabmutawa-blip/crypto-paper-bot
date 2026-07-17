@@ -104,6 +104,12 @@ def main():
     filings = fresh_buy_filings(since=st["created"])
     new = [f for f in filings if f["id"] not in st["seen"]
            and f["filer_id"] in follow]
+    import sentinel_gate
+    is_severe, why = sentinel_gate.severe()
+    if is_severe and new:
+        print(f"[congress] {why} -> pausing new copies "
+              f"({len(new)} deferred; existing holds ride)")
+        new = []
 
     tickers = [p["ticker"] for p in st["positions"]] + [f["ticker"] for f in new]
     px = quotes(tickers)

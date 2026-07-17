@@ -76,6 +76,12 @@ def update(st: dict, close: pd.DataFrame) -> dict:
     asof = close.index[-1]
     ma200 = close[SIGNAL_TKR].rolling(200).mean().iloc[-1]
     in_market = bool(last[SIGNAL_TKR] > ma200)
+    # Sentinel override: leveraged positions and crisis tape don't mix.
+    import sentinel_gate
+    is_severe, why = sentinel_gate.severe()
+    if is_severe and in_market:
+        in_market = False
+        print(f"[live] {why} -> forcing safe asset")
     target = RISK_TKR if in_market else SAFE_TKR
 
     # Regime switch: sell current holding, buy target at latest close.
