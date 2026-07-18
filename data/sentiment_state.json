@@ -1,10 +1,10 @@
 {
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "holding": "AAPL",
-  "units": 3.009555393480907,
-  "cash": 0.0,
-  "entry_price": 332.2749938964844,
+  "holding": "CASH",
+  "units": 0.0,
+  "cash": 1004.4089876301285,
+  "entry_price": null,
   "bench_units": 1.332054612938296,
   "stopped": {},
   "trades": [
@@ -34,6 +34,15 @@
       "units": 3.0096,
       "value": 1000.0,
       "reason": "Grok: AAPL euphoric \u2014 Surpasses Nvidia as most valuable (scan 2026-07-17T18:32)"
+    },
+    {
+      "date": "2026-07-18",
+      "action": "SELL",
+      "ticker": "AAPL",
+      "price": 333.74,
+      "units": 3.0096,
+      "value": 1004.41,
+      "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
     }
   ],
   "history": [
@@ -42,6 +51,12 @@
       "value": 1004.41,
       "bench": 990.1,
       "holding": "AAPL"
+    },
+    {
+      "date": "2026-07-18",
+      "value": 1004.41,
+      "bench": 990.1,
+      "holding": "CASH"
     }
   ],
   "intraday": [
@@ -74,7 +89,13 @@
       "value": 1004.41,
       "bench": 990.1,
       "holding": "AAPL"
+    },
+    {
+      "ts": "2026-07-18T06:32:49+00:00",
+      "value": 1004.41,
+      "bench": 990.1,
+      "holding": "CASH"
     }
   ],
-  "last_updated_utc": "2026-07-17T23:13:04+00:00"
+  "last_updated_utc": "2026-07-18T06:32:49+00:00"
 }
