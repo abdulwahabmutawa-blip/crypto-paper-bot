@@ -1,23 +1,75 @@
 {
-  "updated_utc": "2026-07-18T11:15:00+00:00",
-  "note": "Attribution log started 2026-07-18 (day 1). Tallies are cumulative across all reports/trade_attributions.jsonl lines (daily + trade_event) and will grow each run.",
-  "total_lines_logged": 12,
+  "updated_utc": "2026-07-20T00:00:00+00:00",
+  "note": "Attribution log covers 2026-07-18 (day 1) and 2026-07-19. 07-19 was a weekend day: US equity/ETF bots (stock, allweather, commodity, congress, hunter) carried flat Friday marks with no real session, so their lines are driver 'unknown' (no session) rather than an invented cause. Only crypto-tradable names moved.",
+  "total_lines_logged": 22,
   "by_primary_driver": {
-    "none_cash":       {"profit": 0, "loss": 0, "flat": 3},
-    "market_beta":     {"profit": 0, "loss": 2, "flat": 0},
-    "macro":           {"profit": 2, "loss": 0, "flat": 0},
-    "hype_sentiment":  {"profit": 1, "loss": 0, "flat": 1},
-    "unknown":         {"profit": 0, "loss": 0, "flat": 3},
-    "sector":          {"profit": 0, "loss": 0, "flat": 0},
-    "news_idiosyncratic": {"profit": 0, "loss": 0, "flat": 0},
-    "technical":       {"profit": 0, "loss": 0, "flat": 0},
-    "fx_or_flows":     {"profit": 0, "loss": 0, "flat": 0}
+    "none_cash": {
+      "profit": 0,
+      "loss": 0,
+      "flat": 5
+    },
+    "market_beta": {
+      "profit": 0,
+      "loss": 2,
+      "flat": 0
+    },
+    "macro": {
+      "profit": 2,
+      "loss": 0,
+      "flat": 0
+    },
+    "hype_sentiment": {
+      "profit": 3,
+      "loss": 0,
+      "flat": 2
+    },
+    "unknown": {
+      "profit": 0,
+      "loss": 0,
+      "flat": 8
+    },
+    "sector": {
+      "profit": 0,
+      "loss": 0,
+      "flat": 0
+    },
+    "news_idiosyncratic": {
+      "profit": 0,
+      "loss": 0,
+      "flat": 0
+    },
+    "technical": {
+      "profit": 0,
+      "loss": 0,
+      "flat": 0
+    },
+    "fx_or_flows": {
+      "profit": 0,
+      "loss": 0,
+      "flat": 0
+    }
   },
   "by_beta_or_alpha": {
-    "beta":  {"profit": 0, "loss": 1, "flat": 0},
-    "alpha": {"profit": 2, "loss": 0, "flat": 1},
-    "mixed": {"profit": 1, "loss": 1, "flat": 0},
-    "n/a":   {"profit": 0, "loss": 0, "flat": 6}
+    "beta": {
+      "profit": 0,
+      "loss": 1,
+      "flat": 0
+    },
+    "alpha": {
+      "profit": 4,
+      "loss": 0,
+      "flat": 2
+    },
+    "mixed": {
+      "profit": 1,
+      "loss": 1,
+      "flat": 0
+    },
+    "n/a": {
+      "profit": 0,
+      "loss": 0,
+      "flat": 13
+    }
   },
-  "headline_so_far": "Day 1: the fleet's only two profitable positions (commodity/USO, sentiment/AAPL) were alpha - macro oil shock and Grok-flagged hype, both diverging sharply from the benchmark. Both losing positions (stock/TQQQ, hunter/PLTR) were market-beta or beta-leaning, i.e. the broad AI/tech selloff, not bad stock-picking. Too early to call a fleet-wide pattern from a single day."
+  "headline_so_far": "Through 2 days, the fleet's ONLY realized gains both came from the hype bot's weekend crypto round-trips (AAPL Fri, XRP-USD Sat->Sun, +$3.40) plus a fresh OXY energy-hype entry - all tagged alpha/hype_sentiment. Every equity/ETF bot has been flat-to-down and its moves are market-beta or no-session. Zero genuine alpha has come from the trend/regime/congress/mean-rev books yet; the sole edge so far is Grok-driven hype timing. Still far too small a sample (2 days) for a real verdict."
 }
