@@ -111,13 +111,20 @@ def main():
               f"({len(new)} deferred; existing holds ride)")
         new = []
 
+    import market_hours
+    if new and not market_hours.us_equities_open():
+        print(f"[congress] {len(new)} new filing(s) deferred — US market closed, "
+              f"will buy at the open")
+        new = []  # ids not yet in 'seen', so they're picked up next open cycle
+
     tickers = [p["ticker"] for p in st["positions"]] + [f["ticker"] for f in new]
     px = quotes(tickers)
 
     # 1) close matured positions
     keep = []
     for p in st["positions"]:
-        if today >= p["close_date"] and p["ticker"] in px:
+        if today >= p["close_date"] and p["ticker"] in px \
+                and market_hours.us_equities_open():
             val = p["units"] * px[p["ticker"]]
             st["cash"] += val
             st["trades"].append({"date": today, "action": "SELL",

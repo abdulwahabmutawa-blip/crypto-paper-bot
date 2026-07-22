@@ -74,16 +74,21 @@ def main():
         st["cash"], st["holding"], st["units"] = val, "CASH", 0.0
         st["high_water"] = None
 
-    # 1) trailing stop (high-water follows price up, never down)
+    import market_hours
+
+    # 1) trailing stop (high-water follows price up, never down; the sell
+    #    itself waits until the holding's market can actually fill it)
     if st["holding"] != "CASH" and st["holding"] in close.columns:
         p = float(last[st["holding"]])
         st["high_water"] = max(st["high_water"] or p, p)
-        if p / st["high_water"] - 1 <= -TRAIL:
+        if p / st["high_water"] - 1 <= -TRAIL \
+                and market_hours.can_fill(st["holding"]):
             sell(f"TRAILING STOP — fell {TRAIL:.0%} from its high-water mark")
 
     # 2) Watcher severe gate
     is_severe, why = sentinel_gate.severe()
-    if is_severe and st["holding"] != "CASH":
+    if is_severe and st["holding"] != "CASH" \
+            and market_hours.can_fill(st["holding"]):
         sell(why + " — hunter stands down in a crisis")
 
     # 3) hunt: decide the best bet
@@ -98,7 +103,12 @@ def main():
         if np.isnan(cur) or cur <= 0 or score[top] > HYST * cur:
             desired = top
 
-    if desired != st["holding"]:
+    sell_ok = st["holding"] == "CASH" or market_hours.can_fill(st["holding"])
+    buy_ok = desired == "CASH" or market_hours.can_fill(desired)
+    if desired != st["holding"] and not (sell_ok and buy_ok):
+        print(f"[{KEY}] switch {st['holding']} -> {desired} deferred — "
+              f"US market closed, will fill at the open")
+    if desired != st["holding"] and sell_ok and buy_ok:
         if st["holding"] != "CASH":
             sell(f"Outgunned — {NAMES.get(desired, desired)} now scores "
                  f">{HYST}x better on reward/risk")

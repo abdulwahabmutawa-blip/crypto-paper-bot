@@ -78,6 +78,11 @@ def run(spec, start_cash=1000.0):
               "trades": [], "history": [], "intraday": []}
         print(f"[{key}] NEW sim {asof}")
 
+    import market_hours
+    if pick != st["holding"] and not market_hours.us_equities_open():
+        print(f"[{key}] switch {st['holding']} -> {pick} deferred — "
+              f"US market closed, will fill at the open")
+        pick = st["holding"]
     if pick != st["holding"]:
         value = st["cash"] if st["holding"] == "CASH" else st["units"] * float(last[st["holding"]])
         if st["holding"] != "CASH":

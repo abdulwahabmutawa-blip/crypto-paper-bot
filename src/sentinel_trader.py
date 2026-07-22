@@ -87,15 +87,19 @@ def main():
         st["cash"], st["holding"], st["units"] = val, "CASH", 0.0
         st["entry_price"] = None
 
-    # 1) hard stop-loss
-    if st["holding"] != "CASH" and st["holding"] in px and st["entry_price"]:
+    import market_hours
+
+    # 1) hard stop-loss (fills only when the holding's market is open —
+    #    a closed market has no tradable price, so the stop waits for one)
+    if st["holding"] != "CASH" and st["holding"] in px and st["entry_price"] \
+            and market_hours.can_fill(st["holding"]):
         chg = px[st["holding"]] / st["entry_price"] - 1
         if chg <= STOP_PCT:
             st["stopped"][st["holding"]] = scan_ts
             sell(f"STOP-LOSS hit ({chg:.1%} from entry) — hype that bleeds gets cut")
 
-    # 2) severe risk -> flat, no exceptions
-    if severe and st["holding"] != "CASH":
+    # 2) severe risk -> flat, no exceptions (as soon as a fill is possible)
+    if severe and st["holding"] != "CASH" and market_hours.can_fill(st["holding"]):
         sell("Watcher risk verdict SEVERE — no hype positions in a crisis")
 
     # 3) decide desired holding
@@ -108,7 +112,12 @@ def main():
         avail = [t for t in tradeable if t not in blacklisted]
         desired = avail[0] if avail else "CASH"
 
-    if desired != st["holding"]:
+    sell_ok = st["holding"] == "CASH" or market_hours.can_fill(st["holding"])
+    buy_ok = desired == "CASH" or market_hours.can_fill(desired)
+    if desired != st["holding"] and not (sell_ok and buy_ok):
+        print(f"[{KEY}] rotation {st['holding']} -> {desired} deferred — "
+              f"US market closed, will fill at the open")
+    if desired != st["holding"] and sell_ok and buy_ok:
         if st["holding"] != "CASH":
             sell("Hype faded — symbol dropped off Grok's euphoric list")
         if desired != "CASH":

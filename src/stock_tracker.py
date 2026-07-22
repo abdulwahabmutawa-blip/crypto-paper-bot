@@ -85,6 +85,11 @@ def update(st: dict, close: pd.DataFrame) -> dict:
     target = RISK_TKR if in_market else SAFE_TKR
 
     # Regime switch: sell current holding, buy target at latest close.
+    import market_hours
+    if target != st["holding"] and not market_hours.us_equities_open():
+        print(f"[stock] switch {st['holding']} -> {target} deferred — "
+              f"US market closed, will fill at the open")
+        target = st["holding"]
     if target != st["holding"]:
         sell_px = float(last[st["holding"]])
         value = st["shares"] * sell_px
