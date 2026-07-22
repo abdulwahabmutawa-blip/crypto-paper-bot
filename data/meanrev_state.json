@@ -1,11 +1,21 @@
 {
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "holding": "CASH",
-  "units": 0.0,
-  "cash": 1000.0,
+  "holding": "WMT",
+  "units": 9.175153863659448,
+  "cash": 0.0,
   "bench_units": 1.3319835726361926,
-  "trades": [],
+  "trades": [
+    {
+      "date": "2026-07-22",
+      "action": "BUY",
+      "ticker": "WMT",
+      "price": 108.99,
+      "units": 9.1752,
+      "value": 1000.0,
+      "reason": "Most oversold mega-cap (z < -1.5) \u2014 buying the dip"
+    }
+  ],
   "history": [
     {
       "date": "2026-07-16",
@@ -30,6 +40,12 @@
       "value": 1000.0,
       "bench": 996.76,
       "holding": "CASH"
+    },
+    {
+      "date": "2026-07-22",
+      "value": 1000.0,
+      "bench": 997.75,
+      "holding": "WMT"
     }
   ],
   "intraday": [
@@ -176,7 +192,13 @@
       "value": 1000.0,
       "bench": 996.76,
       "holding": "CASH"
+    },
+    {
+      "ts": "2026-07-22T15:23:50+00:00",
+      "value": 1000.0,
+      "bench": 997.75,
+      "holding": "WMT"
     }
   ],
-  "last_updated_utc": "2026-07-22T09:17:50+00:00"
+  "last_updated_utc": "2026-07-22T15:23:50+00:00"
 }
