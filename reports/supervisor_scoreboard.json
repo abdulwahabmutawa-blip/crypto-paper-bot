@@ -1,59 +1,19 @@
 {
-  "updated_utc": "2026-07-21T00:00:00+00:00",
-  "total_judgments": 32,
-  "judgments_closed": 31,
-  "judgments_open": 1,
-  "cumulative_alpha_usd": -0.84,
-  "win_rate_closed_pct": 96.8,
-  "win_rate_note": "30 of 31 closed judgments are 'no_change' calls (alpha 0). The first genuinely-scored directional call - stock/TQQQ reduce_position_half @67.53 (07-18) - closed at -$0.84: TQQQ rose after the call, so trimming would have lagged holding full. Scored (non-no_change) win rate is therefore 0/1 so far. One judgment open: commodity/USO reduce_position_half @125.53 (07-20).",
+  "updated_utc": "2026-07-22T00:00:00+00:00",
+  "total_judgments": 40,
+  "judgments_closed": 40,
+  "judgments_open": 0,
+  "cumulative_alpha_usd": -14.93,
+  "win_rate_closed_pct": 95.0,
+  "win_rate_note": "38 of 40 closed judgments are 'no_change' calls (alpha 0). Both genuinely-scored DIRECTIONAL calls have now missed: stock/TQQQ reduce_half @67.53 (07-18, -$0.84) and commodity/USO reduce_half @125.53 (07-20, -$14.09). Both were trend/exhaustion fades that kept trending; scored (non-no_change) win rate is 0/2, cumulative directional alpha -$14.93. The lesson is explicit in today's judgments: no repeat oil-fade without demonstrated edge.",
   "per_bot": {
-    "crypto": {
-      "judgments": 4,
-      "closed": 4,
-      "open": 0,
-      "alpha_usd": 0.0
-    },
-    "stock": {
-      "judgments": 4,
-      "closed": 4,
-      "open": 0,
-      "alpha_usd": -0.84
-    },
-    "meanrev": {
-      "judgments": 4,
-      "closed": 4,
-      "open": 0,
-      "alpha_usd": 0.0
-    },
-    "allweather": {
-      "judgments": 4,
-      "closed": 4,
-      "open": 0,
-      "alpha_usd": 0.0
-    },
-    "commodity": {
-      "judgments": 4,
-      "closed": 3,
-      "open": 1,
-      "alpha_usd": 0.0
-    },
-    "congress": {
-      "judgments": 4,
-      "closed": 4,
-      "open": 0,
-      "alpha_usd": 0.0
-    },
-    "hunter": {
-      "judgments": 4,
-      "closed": 4,
-      "open": 0,
-      "alpha_usd": 0.0
-    },
-    "sentiment": {
-      "judgments": 4,
-      "closed": 4,
-      "open": 0,
-      "alpha_usd": 0.0
-    }
+    "crypto": {"judgments": 5, "closed": 5, "open": 0, "alpha_usd": 0.0},
+    "stock": {"judgments": 5, "closed": 5, "open": 0, "alpha_usd": -0.84},
+    "meanrev": {"judgments": 5, "closed": 5, "open": 0, "alpha_usd": 0.0},
+    "allweather": {"judgments": 5, "closed": 5, "open": 0, "alpha_usd": 0.0},
+    "commodity": {"judgments": 5, "closed": 5, "open": 0, "alpha_usd": -14.09},
+    "congress": {"judgments": 5, "closed": 5, "open": 0, "alpha_usd": 0.0},
+    "hunter": {"judgments": 5, "closed": 5, "open": 0, "alpha_usd": 0.0},
+    "sentiment": {"judgments": 5, "closed": 5, "open": 0, "alpha_usd": 0.0}
   }
 }
