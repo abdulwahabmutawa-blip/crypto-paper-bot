@@ -1,90 +1,90 @@
 {
- "created": "2026-07-16",
- "starting_cash": 1000.0,
- "cash": 800.0,
- "positions": [
-  {
-   "ticker": "NVDA",
-   "units": 0.485743,
-   "open_date": "2026-07-20",
-   "close_date": "2026-10-18",
-   "filer": "Cleo Fields",
-   "cost": 100.0
-  },
-  {
-   "ticker": "META",
-   "units": 0.154631,
-   "open_date": "2026-07-20",
-   "close_date": "2026-10-18",
-   "filer": "Daniel Crenshaw",
-   "cost": 100.0
+  "created": "2026-07-16",
+  "starting_cash": 1000.0,
+  "cash": 800.0,
+  "positions": [
+    {
+      "ticker": "NVDA",
+      "units": 0.485743,
+      "open_date": "2026-07-20",
+      "close_date": "2026-10-18",
+      "filer": "Cleo Fields",
+      "cost": 100.0
+    },
+    {
+      "ticker": "META",
+      "units": 0.154631,
+      "open_date": "2026-07-20",
+      "close_date": "2026-10-18",
+      "filer": "Daniel Crenshaw",
+      "cost": 100.0
+    }
+  ],
+  "seen": [
+    "house_20034894_g0",
+    "house_20035024_g7",
+    "house_20035024_g4"
+  ],
+  "trades": [
+    {
+      "date": "2026-07-20",
+      "action": "BUY",
+      "ticker": "NVDA",
+      "price": 205.87,
+      "units": 0.485743,
+      "value": 100.0,
+      "reason": "Copying Cleo Fields (+0.0% avg excess, filed 2026-07-16, $1,001 - $15,000) [restated: Saturday filing filled Monday open]"
+    },
+    {
+      "date": "2026-07-20",
+      "action": "BUY",
+      "ticker": "META",
+      "price": 646.7,
+      "units": 0.154631,
+      "value": 100.0,
+      "reason": "Copying Daniel Crenshaw (+0.5% avg excess, filed 2026-07-16, $1,001 - $15,000) [restated: Saturday filing filled Monday open]"
+    }
+  ],
+  "history": [
+    {
+      "date": "2026-07-16",
+      "value": 1000.0,
+      "bench": 1000.0
+    },
+    {
+      "date": "2026-07-17",
+      "value": 1000.0,
+      "bench": 990.1
+    },
+    {
+      "date": "2026-07-18",
+      "value": 1000.0,
+      "bench": 990.1
+    },
+    {
+      "date": "2026-07-19",
+      "value": 1000.0,
+      "bench": 990.1
+    },
+    {
+      "date": "2026-07-20",
+      "value": 1000.21,
+      "bench": 988.5
+    },
+    {
+      "date": "2026-07-21",
+      "value": 1001.87,
+      "bench": 996.75
+    },
+    {
+      "date": "2026-07-22",
+      "value": 1000.62,
+      "bench": 996.86
+    }
+  ],
+  "bench_units": 1.332054612938296,
+  "last_updated_utc": "2026-07-22T18:47:46+00:00",
+  "restatement": {
+    "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)"
   }
- ],
- "seen": [
-  "house_20034894_g0",
-  "house_20035024_g7",
-  "house_20035024_g4"
- ],
- "trades": [
-  {
-   "date": "2026-07-20",
-   "action": "BUY",
-   "ticker": "NVDA",
-   "price": 205.87,
-   "units": 0.485743,
-   "value": 100.0,
-   "reason": "Copying Cleo Fields (+0.0% avg excess, filed 2026-07-16, $1,001 - $15,000) [restated: Saturday filing filled Monday open]"
-  },
-  {
-   "date": "2026-07-20",
-   "action": "BUY",
-   "ticker": "META",
-   "price": 646.7,
-   "units": 0.154631,
-   "value": 100.0,
-   "reason": "Copying Daniel Crenshaw (+0.5% avg excess, filed 2026-07-16, $1,001 - $15,000) [restated: Saturday filing filled Monday open]"
-  }
- ],
- "history": [
-  {
-   "date": "2026-07-16",
-   "value": 1000.0,
-   "bench": 1000.0
-  },
-  {
-   "date": "2026-07-17",
-   "value": 1000.0,
-   "bench": 990.1
-  },
-  {
-   "date": "2026-07-18",
-   "value": 1000.0,
-   "bench": 990.1
-  },
-  {
-   "date": "2026-07-19",
-   "value": 1000.0,
-   "bench": 990.1
-  },
-  {
-   "date": "2026-07-20",
-   "value": 1000.21,
-   "bench": 988.5
-  },
-  {
-   "date": "2026-07-21",
-   "value": 1001.87,
-   "bench": 996.75
-  },
-  {
-   "date": "2026-07-22",
-   "value": 1002.16,
-   "bench": 997.81
-  }
- ],
- "bench_units": 1.332054612938296,
- "last_updated_utc": "2026-07-22T15:23:45+00:00",
- "restatement": {
-  "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)"
- }
 }
