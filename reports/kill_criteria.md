@@ -43,11 +43,29 @@ distinguishes them.
 
 ## R5 — Promotion (the positive case, checked at reviews)
 
-**≥ 90 trading days** live AND positive cumulative excess return vs benchmark
-AND a bootstrap test (stats-lab lesson 2 method) on its daily excess returns
-gives **p < 0.10** → eligible for doubled paper capital ($2,000) at the next
-review. Skill claims require statistical evidence, same bar we hold the
-supervisor to.
+**AMENDED 2026-07-23** — before any v2 results were examined, on external
+evidence (see specs/evidence-review-2026-07.md §5). Original rule was a
+per-bot bootstrap p < 0.10. That is wrong when 8-10 correlated bots compete
+and the best is promoted: with 10 bots, a per-bot 10% bar promotes ~1 bot by
+luck alone. Multiple testing must be corrected across the FLEET, not per bot.
+
+Promotion to doubled paper capital ($2,000) requires ALL of:
+1. **≥ 90 trading days** live, and
+2. positive cumulative excess return vs its benchmark, and
+3. bootstrap p-value on daily excess returns that survives a **Holm-Bonferroni
+   correction across every bot tested that review** (i.e. ranked p-values
+   compared against 0.10/(n), 0.10/(n-1), ... for n bots), and
+4. a **Deflated Sharpe Ratio > 0** (Bailey & López de Prado) computed with
+   the trial count set to the number of strategies the fleet has ever run —
+   including dead ones, since they were part of the search.
+
+Rationale for keeping a 0.10 family-wise base rather than 0.05: this is paper
+capital reallocation, not a publication claim; the cost of a false promotion
+is bounded and reversible via R1-R3.
+
+Corollary (recorded so it cannot be forgotten): the fleet's BEST performer at
+any review is the single least trustworthy number in the project — it is the
+maximum of many draws. Judge it by these rules, never by its rank.
 
 ## Review schedule
 
