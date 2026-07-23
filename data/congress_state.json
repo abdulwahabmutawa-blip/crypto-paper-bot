@@ -1,7 +1,7 @@
 {
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "cash": 800.0,
+  "cash": 700.0,
   "positions": [
     {
       "ticker": "NVDA",
@@ -18,12 +18,21 @@
       "close_date": "2026-10-18",
       "filer": "Daniel Crenshaw",
       "cost": 100.0
+    },
+    {
+      "ticker": "GOOG",
+      "units": 0.3124023683013035,
+      "open_date": "2026-07-23",
+      "close_date": "2026-10-21",
+      "filer": "Jerry Moran,",
+      "cost": 100.0
     }
   ],
   "seen": [
     "house_20034894_g0",
     "house_20035024_g7",
-    "house_20035024_g4"
+    "house_20035024_g4",
+    "senate_cff197e2-b90b-4b53-b97d-eecf226a1980_t0"
   ],
   "trades": [
     {
@@ -43,6 +52,15 @@
       "units": 0.154631,
       "value": 100.0,
       "reason": "Copying Daniel Crenshaw (+0.5% avg excess, filed 2026-07-16, $1,001 - $15,000) [restated: Saturday filing filled Monday open]"
+    },
+    {
+      "date": "2026-07-23",
+      "action": "BUY",
+      "ticker": "GOOG",
+      "price": 320.1,
+      "units": 0.3124,
+      "value": 100.0,
+      "reason": "Copying Jerry Moran, (+0.1% avg excess, filed 2026-07-21, $1,001 - $15,000)"
     }
   ],
   "history": [
@@ -83,12 +101,12 @@
     },
     {
       "date": "2026-07-23",
-      "value": 999.99,
-      "bench": 995.59
+      "value": 995.1,
+      "bench": 981.82
     }
   ],
   "bench_units": 1.332054612938296,
-  "last_updated_utc": "2026-07-23T13:15:44+00:00",
+  "last_updated_utc": "2026-07-23T18:02:46+00:00",
   "restatement": {
     "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)"
   }
