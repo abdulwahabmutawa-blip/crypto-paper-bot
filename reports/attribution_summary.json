@@ -1,25 +1,77 @@
 {
-  "updated_utc": "2026-07-22T00:00:00+00:00",
-  "note": "Adds the 07-21/07-22 window (supervisor did not run 07-21, so this run attributes the freshest recorded move for each bot). 13 new lines: 8 daily + 5 trade_events. Tallies count every logged line.",
-  "total_lines_logged": 47,
+  "updated_utc": "2026-07-23T07:20:00+00:00",
+  "note": "07-23 run: fleet state is STALE - no cycle since 2026-07-22 22:39 UTC. 8 daily lines appended with driver 'unknown' (crypto 'none_cash') and day_pnl 0, because no new observation exists - not because markets were flat. No new trades, so no trade_event lines.",
+  "total_lines_logged": 55,
   "by_primary_driver": {
-    "none_cash": {"profit": 0, "loss": 0, "flat": 9},
-    "market_beta": {"profit": 5, "loss": 3, "flat": 3},
-    "macro": {"profit": 4, "loss": 0, "flat": 1},
-    "hype_sentiment": {"profit": 3, "loss": 3, "flat": 6},
-    "unknown": {"profit": 0, "loss": 0, "flat": 9},
-    "sector": {"profit": 0, "loss": 0, "flat": 0},
-    "news_idiosyncratic": {"profit": 0, "loss": 0, "flat": 0},
-    "technical": {"profit": 0, "loss": 1, "flat": 0},
-    "fx_or_flows": {"profit": 0, "loss": 0, "flat": 0}
+    "none_cash": {
+      "profit": 0,
+      "loss": 0,
+      "flat": 10
+    },
+    "market_beta": {
+      "profit": 5,
+      "loss": 3,
+      "flat": 3
+    },
+    "macro": {
+      "profit": 4,
+      "loss": 0,
+      "flat": 1
+    },
+    "hype_sentiment": {
+      "profit": 3,
+      "loss": 3,
+      "flat": 6
+    },
+    "unknown": {
+      "profit": 0,
+      "loss": 0,
+      "flat": 16
+    },
+    "sector": {
+      "profit": 0,
+      "loss": 0,
+      "flat": 0
+    },
+    "news_idiosyncratic": {
+      "profit": 0,
+      "loss": 0,
+      "flat": 0
+    },
+    "technical": {
+      "profit": 0,
+      "loss": 1,
+      "flat": 0
+    },
+    "fx_or_flows": {
+      "profit": 0,
+      "loss": 0,
+      "flat": 0
+    }
   },
   "by_beta_or_alpha": {
-    "beta": {"profit": 4, "loss": 2, "flat": 3},
-    "alpha": {"profit": 6, "loss": 3, "flat": 7},
-    "mixed": {"profit": 2, "loss": 2, "flat": 0},
-    "n/a": {"profit": 0, "loss": 0, "flat": 18}
+    "beta": {
+      "profit": 4,
+      "loss": 2,
+      "flat": 3
+    },
+    "alpha": {
+      "profit": 6,
+      "loss": 3,
+      "flat": 7
+    },
+    "mixed": {
+      "profit": 2,
+      "loss": 2,
+      "flat": 0
+    },
+    "n/a": {
+      "profit": 0,
+      "loss": 0,
+      "flat": 26
+    }
   },
-  "headline_so_far": "Through ~5 sessions the pattern holds: the fleet's only durable edge is MACRO oil - the commodity bot's USO is +8.1% cumulative, genuine alpha diverging from a flat equity bench, and hunter has now piled all-in into the same oil trade (at a ~8% higher, more concentrated entry). The stock bot's biggest day (+5.5%) was pure leveraged market_beta (TQQQ = 3x QQQ's +1.85%), not skill. The hype bot keeps round-tripping Grok's euphoric names near flat and remains the worst book (-3.75%). Crypto/meanrev sit in cash (crypto now 7 straight days, bench +3.26% - approaching but not at the R4 dead-money flag). Supervisor's own directional calls are 0/2, both oil/trend fades that kept trending (-$14.93 total) - a clear signal to stop fighting strong macro trends without evidence.",
+  "headline_so_far": "Through ~5 sessions the pattern holds: the fleet's only durable edge is MACRO oil - the commodity bot's USO is +8.1% cumulative, genuine alpha diverging from a flat equity bench, and hunter has now piled all-in into the same oil trade (at a ~8% higher, more concentrated entry). The stock bot's biggest day (+5.5%) was pure leveraged market_beta (TQQQ = 3x QQQ's +1.85%), not skill. The hype bot keeps round-tripping Grok's euphoric names near flat and remains the worst book (-3.75%). Crypto/meanrev sit in cash (crypto now 7 straight days, bench +3.26% - approaching but not at the R4 dead-money flag). Supervisor's own directional calls are 0/2, both oil/trend fades that kept trending (-$14.93 total) - a clear signal to stop fighting strong macro trends without evidence. [07-23] No new data: the fleet's scheduler has effectively stopped - 4 cycles in 24h against a 20-minute schedule, and none at all on 07-23. The minute-shift to 7,27,47 deployed 07-22 did not fix the throttling; an external trigger is the remaining option.",
   "supervisor_directional_scorecard": {
     "scored_calls": 2,
     "wins": 0,
