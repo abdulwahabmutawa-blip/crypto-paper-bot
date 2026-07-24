@@ -2,9 +2,12 @@ name: paper-trade-cycle
 
 on:
   schedule:
-    - cron: "7,27,47 * * * *"  # every ~20 min on UNPOPULAR minutes — GitHub
-                               # throttles the crowded :00/:20/:40 slots hard;
-                               # odd minutes get skipped far less often
+    # GitHub throttles the scheduled QUEUE under load (we saw 7h gaps), but it
+    # cannot throttle a job that is already RUNNING. So each trigger starts a
+    # job that loops internally for ~55 min (see the "Trade loop" step). We
+    # only need the scheduler to land ~once/hour, not every 20 min. Extra
+    # start attempts on odd minutes raise the odds one lands each hour.
+    - cron: "7,27,47 * * * *"
   workflow_dispatch: {}       # manual "Run workflow" button
 
 permissions:
@@ -12,11 +15,15 @@ permissions:
 
 concurrency:
   group: bot
-  cancel-in-progress: false
+  cancel-in-progress: false   # a running loop keeps the lock; new triggers queue
+
+env:
+  XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
 
 jobs:
   trade:
     runs-on: ubuntu-latest
+    timeout-minutes: 70        # loop budget is 55 min; leave headroom
     steps:
       - uses: actions/checkout@v4
 
@@ -27,59 +34,56 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Run crypto paper-trading cycle
-        run: python src/crypto_tracker.py
-
-      - name: Run stock paper-trading cycle
-        run: python src/stock_tracker.py
-
-      - name: Run congress copier cycle
-        run: python src/congress_tracker.py
-
-      - name: Run mean-reversion cycle
-        run: python src/bot_meanrev.py
-
-      - name: Run commodity trend cycle
-        run: python src/bot_commodity.py
-
-      - name: Run all-weather cycle
-        run: python src/bot_allweather.py
-
-      - name: Run Grok sentinel (self-throttled, needs XAI_API_KEY secret)
-        env:
-          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
-        run: python src/grok_sentinel.py
-
-      - name: Run sentinel hype trader (no API cost — trades the scans)
-        run: python src/sentinel_trader.py
-
-      - name: Run the Hunter (cross-asset opportunist)
-        run: python src/hunter_tracker.py
-
-      - name: Publish dashboards to docs/ (GitHub Pages)
+      - name: Trade loop (~55 min, one cycle every ~13 min)
         run: |
-          cp reports/crypto_dashboard.html docs/index.html
-          cp reports/crypto_dashboard_data.json docs/crypto_dashboard_data.json
-          cp reports/stock_dashboard.html docs/stocks.html
-          cp reports/stock_dashboard_data.json docs/stock_dashboard_data.json
-          cp reports/congress_dashboard.html docs/congress.html
-          cp reports/congress_dashboard_data.json docs/congress_dashboard_data.json
-          cp reports/meanrev_dashboard.html docs/meanrev.html
-          cp reports/meanrev_dashboard_data.json docs/meanrev_dashboard_data.json
-          cp reports/commodity_dashboard.html docs/commodity.html
-          cp reports/commodity_dashboard_data.json docs/commodity_dashboard_data.json
-          cp reports/allweather_dashboard.html docs/allweather.html
-          cp reports/allweather_dashboard_data.json docs/allweather_dashboard_data.json
-          cp reports/sentinel_dashboard.html docs/sentinel.html || true
-          cp reports/sentiment_dashboard.html docs/sentiment.html || true
-          cp reports/sentiment_dashboard_data.json docs/sentiment_dashboard_data.json || true
-          cp reports/hunter_dashboard.html docs/hunter.html || true
-          cp reports/hunter_dashboard_data.json docs/hunter_dashboard_data.json || true
-
-      - name: Commit state + dashboard
-        run: |
+          set +e   # never let a single failed bot or push kill the loop
           git config user.name "paper-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add data/ reports/ docs/
-          git diff --cached --quiet || git commit -m "cycle: $(date -u +'%Y-%m-%d %H:%M') UTC"
-          git push
+
+          run_cycle () {
+            for s in crypto_tracker stock_tracker congress_tracker \
+                     bot_meanrev bot_commodity bot_allweather \
+                     grok_sentinel sentinel_trader hunter_tracker; do
+              python "src/$s.py" || echo "::warning::$s.py failed this cycle"
+            done
+
+            # publish dashboards
+            cp reports/crypto_dashboard.html docs/index.html
+            cp reports/crypto_dashboard_data.json docs/crypto_dashboard_data.json
+            cp reports/stock_dashboard.html docs/stocks.html
+            cp reports/stock_dashboard_data.json docs/stock_dashboard_data.json
+            cp reports/congress_dashboard.html docs/congress.html
+            cp reports/congress_dashboard_data.json docs/congress_dashboard_data.json
+            cp reports/meanrev_dashboard.html docs/meanrev.html
+            cp reports/meanrev_dashboard_data.json docs/meanrev_dashboard_data.json
+            cp reports/commodity_dashboard.html docs/commodity.html
+            cp reports/commodity_dashboard_data.json docs/commodity_dashboard_data.json
+            cp reports/allweather_dashboard.html docs/allweather.html
+            cp reports/allweather_dashboard_data.json docs/allweather_dashboard_data.json
+            cp reports/sentinel_dashboard.html docs/sentinel.html 2>/dev/null || true
+            cp reports/sentiment_dashboard.html docs/sentiment.html 2>/dev/null || true
+            cp reports/sentiment_dashboard_data.json docs/sentiment_dashboard_data.json 2>/dev/null || true
+            cp reports/hunter_dashboard.html docs/hunter.html 2>/dev/null || true
+            cp reports/hunter_dashboard_data.json docs/hunter_dashboard_data.json 2>/dev/null || true
+
+            git add data/ reports/ docs/
+            if ! git diff --cached --quiet; then
+              git commit -m "cycle: $(date -u +'%Y-%m-%d %H:%M') UTC"
+              # the supervisor also pushes to reports/; rebase before pushing so
+              # our push never rejects, then retry once if the remote moved again
+              for attempt in 1 2 3; do
+                git pull --rebase --autostash -q && git push && break
+                echo "::warning::push attempt $attempt failed, retrying"
+                sleep 5
+              done
+            fi
+          }
+
+          END=$(( $(date +%s) + 3300 ))   # run for 55 minutes
+          while [ "$(date +%s)" -lt "$END" ]; do
+            run_cycle
+            # stop early if we would overrun the budget mid-sleep
+            [ "$(date +%s)" -ge "$END" ] && break
+            sleep 780                       # ~13 min between cycles
+          done
+          echo "loop complete"
