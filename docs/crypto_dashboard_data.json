@@ -1,89 +1,89 @@
 {
-  "generated_utc": "2026-07-24T12:46:21+00:00",
+  "generated_utc": "2026-07-24T12:59:35+00:00",
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "live_ts": "2026-07-24T12:45:00+00:00",
+  "live_ts": "2026-07-24T12:55:00+00:00",
   "current": {
     "date": "2026-07-24",
-    "value": 978.78,
-    "bench": 1006.92,
-    "holding": "AVAX-USD"
+    "value": 977.21,
+    "bench": 1004.52,
+    "holding": "DOGE-USD"
   },
   "board": {
     "BTC-USD": {
-      "price": 64876.6914,
-      "ma200": 72410.5433,
-      "gap_pct": -10.4,
-      "mom_pct": 1.53,
-      "z": 0.58,
+      "price": 64722.0,
+      "ma200": 72409.7699,
+      "gap_pct": -10.62,
+      "mom_pct": 1.29,
+      "z": 0.45,
       "above_ma": false,
       "rank": 6
     },
     "ETH-USD": {
-      "price": 1876.79,
-      "ma200": 2153.1524,
-      "gap_pct": -12.84,
-      "mom_pct": 1.94,
-      "z": 0.63,
+      "price": 1870.61,
+      "ma200": 2153.1215,
+      "gap_pct": -13.12,
+      "mom_pct": 1.61,
+      "z": 0.53,
       "above_ma": false,
       "rank": 7
     },
     "SOL-USD": {
-      "price": 74.97,
-      "ma200": 88.6829,
-      "gap_pct": -15.46,
-      "mom_pct": -0.06,
-      "z": -1.19,
+      "price": 74.79,
+      "ma200": 88.682,
+      "gap_pct": -15.66,
+      "mom_pct": -0.3,
+      "z": -1.27,
       "above_ma": false,
       "rank": 3
     },
     "DOGE-USD": {
-      "price": 0.0693,
+      "price": 0.0691,
       "ma200": 0.0975,
-      "gap_pct": -28.95,
-      "mom_pct": -4.47,
-      "z": -1.9,
-      "above_ma": false,
-      "rank": 2
-    },
-    "AVAX-USD": {
-      "price": 6.23,
-      "ma200": 9.0462,
-      "gap_pct": -31.13,
-      "mom_pct": -5.32,
-      "z": -1.94,
+      "gap_pct": -29.15,
+      "mom_pct": -4.75,
+      "z": -1.98,
       "above_ma": false,
       "rank": 1
     },
+    "AVAX-USD": {
+      "price": 6.22,
+      "ma200": 9.0461,
+      "gap_pct": -31.24,
+      "mom_pct": -5.47,
+      "z": -1.98,
+      "above_ma": false,
+      "rank": 2
+    },
     "LINK-USD": {
-      "price": 8.449,
-      "ma200": 9.291,
-      "gap_pct": -9.06,
-      "mom_pct": 2.32,
-      "z": 0.8,
+      "price": 8.418,
+      "ma200": 9.2909,
+      "gap_pct": -9.39,
+      "mom_pct": 1.95,
+      "z": 0.71,
       "above_ma": false,
       "rank": 8
     },
     "ADA-USD": {
-      "price": 0.1657,
+      "price": 0.1655,
       "ma200": 0.2496,
-      "gap_pct": -33.62,
-      "mom_pct": -0.57,
-      "z": -0.41,
+      "gap_pct": -33.7,
+      "mom_pct": -0.69,
+      "z": -0.43,
       "above_ma": false,
       "rank": 4
     },
     "XRP-USD": {
-      "price": 1.1013,
+      "price": 1.0989,
       "ma200": 1.4006,
-      "gap_pct": -21.37,
-      "mom_pct": 1.16,
-      "z": -0.24,
+      "gap_pct": -21.54,
+      "mom_pct": 0.94,
+      "z": -0.34,
       "above_ma": false,
       "rank": 5
     }
   },
-  "pick": "AVAX-USD",
+  "pick": "DOGE-USD",
   "regime": "CHOP",
   "intraday": [
     {
@@ -643,6 +643,12 @@
       "value": 978.78,
       "bench": 1006.92,
       "holding": "AVAX-USD"
+    },
+    {
+      "ts": "2026-07-24T12:59:35+00:00",
+      "value": 977.21,
+      "bench": 1004.52,
+      "holding": "DOGE-USD"
     }
   ],
   "trades": [
@@ -762,6 +768,24 @@
       "units": 157.107533,
       "value": 981.92,
       "reason": "Strongest eligible coin (-5.0% 7d momentum)"
+    },
+    {
+      "date": "2026-07-24",
+      "action": "SELL",
+      "ticker": "AVAX-USD",
+      "price": 6.22,
+      "units": 157.107533,
+      "value": 977.21,
+      "reason": "Signal flip"
+    },
+    {
+      "date": "2026-07-24",
+      "action": "BUY",
+      "ticker": "DOGE-USD",
+      "price": 0.0691,
+      "units": 14141.951608,
+      "value": 977.21,
+      "reason": "Strongest eligible coin (-4.8% 7d momentum)"
     }
   ],
   "history": [
@@ -815,9 +839,9 @@
     },
     {
       "date": "2026-07-24",
-      "value": 978.78,
-      "bench": 1006.92,
-      "holding": "AVAX-USD"
+      "value": 977.21,
+      "bench": 1004.52,
+      "holding": "DOGE-USD"
     }
   ],
   "strategy": {
