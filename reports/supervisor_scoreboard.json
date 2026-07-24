@@ -1,51 +1,51 @@
 {
-  "updated_utc": "2026-07-23T07:20:00+00:00",
-  "total_judgments": 48,
-  "judgments_closed": 48,
+  "updated_utc": "2026-07-24T07:20:00+00:00",
+  "total_judgments": 56,
+  "judgments_closed": 56,
   "judgments_open": 0,
   "cumulative_alpha_usd": -14.93,
-  "win_rate_closed_pct": 95.8,
-  "win_rate_note": "46 of 48 closed judgments are 'no_change' calls (alpha 0). Both genuinely-scored DIRECTIONAL calls have missed: stock/TQQQ reduce_half @67.53 (07-18, -$0.84) and commodity/USO reduce_half @125.53 (07-20, -$14.09). Scored (non-no_change) win rate is 0/2, cumulative directional alpha -$14.93. 07-23 added 8 no_change calls made against a STALE fleet (no cycle since 07-22 22:39 UTC), which is the honest action when no new observation exists.",
+  "win_rate_closed_pct": 96.4,
+  "win_rate_note": "54 of 56 closed judgments are 'no_change' (alpha 0). The only two genuinely-scored DIRECTIONAL calls have BOTH missed: stock/TQQQ reduce_half @67.53 (07-18, -$0.84) and commodity/USO reduce_half @125.53 (07-20, -$14.09) \u2014 scored directional record 0/2, cumulative directional alpha -$14.93. Today added 8 no_change calls against a fleet that has now resumed cycling (real 07-23 closes recorded). Discipline note: my two oil/tech fades both kept trending against me, so I am deliberately not overriding on-signal trend positions without a demonstrated edge.",
   "per_bot": {
     "crypto": {
-      "judgments": 6,
-      "closed": 6,
+      "judgments": 7,
+      "closed": 7,
       "open": 0,
       "alpha_usd": 0.0
     },
     "stock": {
-      "judgments": 6,
-      "closed": 6,
+      "judgments": 7,
+      "closed": 7,
       "open": 0,
       "alpha_usd": -0.84
     },
     "meanrev": {
-      "judgments": 6,
-      "closed": 6,
+      "judgments": 7,
+      "closed": 7,
       "open": 0,
       "alpha_usd": 0.0
     },
     "allweather": {
-      "judgments": 6,
-      "closed": 6,
+      "judgments": 7,
+      "closed": 7,
       "open": 0,
       "alpha_usd": 0.0
     },
     "commodity": {
-      "judgments": 6,
-      "closed": 6,
+      "judgments": 7,
+      "closed": 7,
       "open": 0,
       "alpha_usd": -14.09
     },
     "congress": {
-      "judgments": 6,
-      "closed": 6,
+      "judgments": 7,
+      "closed": 7,
       "open": 0,
       "alpha_usd": 0.0
     },
     "hunter": {
-      "judgments": 6,
-      "closed": 6,
+      "judgments": 7,
+      "closed": 7,
       "open": 0,
       "alpha_usd": 0.0
     },
@@ -56,18 +56,19 @@
       "alpha_usd": 0.0
     },
     "hype": {
-      "judgments": 0,
-      "closed": 0,
+      "judgments": 1,
+      "closed": 1,
       "open": 0,
       "alpha_usd": 0.0
-    }
+    },
+    "_note": "'sentiment' (6) and 'hype' (now 1) are the SAME bot (sentiment_state.json / hype trader); combined 7 judgments. Naming switched to 'hype' from 07-22 on."
   },
   "driver_tally_source": "reports/attribution_summary.json",
   "fleet_snapshot_last_observed": {
-    "as_of": "2026-07-22 close",
-    "total_value_usd": 8158.71,
-    "total_pnl_usd": 158.71,
-    "total_pnl_pct": 1.98
+    "as_of": "2026-07-23 close (equities) / 2026-07-24 (crypto)",
+    "total_value_usd": 8206.04,
+    "total_pnl_usd": 206.04,
+    "total_pnl_pct": 2.58
   },
-  "operational_flag": "CRON STALL: paper-trade-cycle last ran 2026-07-22T22:39Z; 8h37m gap and zero runs on 07-23 as of 07:16Z. Schedule is 7,27,47 * * * * (~20 min); only 4 of ~72 expected runs fired in the prior 24h."
+  "operational_flag": "CRON GAPS PERSIST despite the 7,27,47 schedule change: only 13 of ~72 expected runs in the last 24h; largest gap 439 min (2026-07-23 21:43 -> 2026-07-24 05:02 UTC), plus 286/219/203/101-min gaps. All runs that DID fire succeeded (0 failures). GitHub cron throttling is not resolved \u2014 external-trigger escalation is warranted per the owner's plan."
 }
