@@ -1,50 +1,50 @@
 {
-  "generated_utc": "2026-07-24T12:06:37+00:00",
+  "generated_utc": "2026-07-24T12:19:53+00:00",
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "live_ts": "2026-07-24T12:05:00+00:00",
+  "live_ts": "2026-07-24T12:15:00+00:00",
   "current": {
     "date": "2026-07-24",
-    "value": 980.51,
-    "bench": 1008.42,
-    "holding": "DOGE-USD"
+    "value": 981.92,
+    "bench": 1008.66,
+    "holding": "AVAX-USD"
   },
   "board": {
     "BTC-USD": {
-      "price": 64972.8984,
-      "ma200": 72411.0244,
-      "gap_pct": -10.27,
-      "mom_pct": 1.68,
-      "z": 0.66,
+      "price": 64988.5391,
+      "ma200": 72411.1026,
+      "gap_pct": -10.25,
+      "mom_pct": 1.7,
+      "z": 0.67,
       "above_ma": false,
       "rank": 6
     },
     "ETH-USD": {
-      "price": 1881.14,
-      "ma200": 2153.1741,
-      "gap_pct": -12.63,
-      "mom_pct": 2.18,
-      "z": 0.69,
+      "price": 1881.49,
+      "ma200": 2153.1759,
+      "gap_pct": -12.62,
+      "mom_pct": 2.2,
+      "z": 0.7,
       "above_ma": false,
       "rank": 7
     },
     "SOL-USD": {
-      "price": 75.08,
-      "ma200": 88.6834,
-      "gap_pct": -15.34,
-      "mom_pct": 0.09,
-      "z": -1.14,
+      "price": 75.14,
+      "ma200": 88.6837,
+      "gap_pct": -15.27,
+      "mom_pct": 0.17,
+      "z": -1.12,
       "above_ma": false,
       "rank": 3
     },
     "DOGE-USD": {
-      "price": 0.0693,
+      "price": 0.0694,
       "ma200": 0.0975,
-      "gap_pct": -28.89,
-      "mom_pct": -4.39,
-      "z": -1.88,
+      "gap_pct": -28.76,
+      "mom_pct": -4.22,
+      "z": -1.83,
       "above_ma": false,
-      "rank": 1
+      "rank": 2
     },
     "AVAX-USD": {
       "price": 6.25,
@@ -53,37 +53,37 @@
       "mom_pct": -5.01,
       "z": -1.85,
       "above_ma": false,
-      "rank": 2
+      "rank": 1
     },
     "LINK-USD": {
-      "price": 8.443,
-      "ma200": 9.291,
-      "gap_pct": -9.13,
-      "mom_pct": 2.25,
-      "z": 0.78,
+      "price": 8.456,
+      "ma200": 9.2911,
+      "gap_pct": -8.99,
+      "mom_pct": 2.41,
+      "z": 0.82,
       "above_ma": false,
       "rank": 8
     },
     "ADA-USD": {
-      "price": 0.166,
+      "price": 0.1664,
       "ma200": 0.2496,
-      "gap_pct": -33.5,
-      "mom_pct": -0.39,
-      "z": -0.37,
+      "gap_pct": -33.34,
+      "mom_pct": -0.15,
+      "z": -0.32,
       "above_ma": false,
       "rank": 4
     },
     "XRP-USD": {
-      "price": 1.1019,
+      "price": 1.1026,
       "ma200": 1.4006,
-      "gap_pct": -21.33,
-      "mom_pct": 1.22,
-      "z": -0.22,
+      "gap_pct": -21.28,
+      "mom_pct": 1.28,
+      "z": -0.19,
       "above_ma": false,
       "rank": 5
     }
   },
-  "pick": "DOGE-USD",
+  "pick": "AVAX-USD",
   "regime": "CHOP",
   "intraday": [
     {
@@ -625,6 +625,12 @@
       "value": 980.51,
       "bench": 1008.42,
       "holding": "DOGE-USD"
+    },
+    {
+      "ts": "2026-07-24T12:19:53+00:00",
+      "value": 981.92,
+      "bench": 1008.66,
+      "holding": "AVAX-USD"
     }
   ],
   "trades": [
@@ -726,6 +732,24 @@
       "units": 14148.733171,
       "value": 980.51,
       "reason": "Strongest eligible coin (-4.4% 7d momentum)"
+    },
+    {
+      "date": "2026-07-24",
+      "action": "SELL",
+      "ticker": "DOGE-USD",
+      "price": 0.0694,
+      "units": 14148.733171,
+      "value": 981.92,
+      "reason": "Signal flip"
+    },
+    {
+      "date": "2026-07-24",
+      "action": "BUY",
+      "ticker": "AVAX-USD",
+      "price": 6.25,
+      "units": 157.107533,
+      "value": 981.92,
+      "reason": "Strongest eligible coin (-5.0% 7d momentum)"
     }
   ],
   "history": [
@@ -779,9 +803,9 @@
     },
     {
       "date": "2026-07-24",
-      "value": 980.51,
-      "bench": 1008.42,
-      "holding": "DOGE-USD"
+      "value": 981.92,
+      "bench": 1008.66,
+      "holding": "AVAX-USD"
     }
   ],
   "strategy": {
