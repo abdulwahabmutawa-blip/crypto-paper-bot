@@ -1,89 +1,89 @@
 {
-  "generated_utc": "2026-07-25T11:55:53+00:00",
+  "generated_utc": "2026-07-25T14:51:35+00:00",
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "live_ts": "2026-07-25T11:55:00+00:00",
+  "live_ts": "2026-07-25T14:50:00+00:00",
   "current": {
     "date": "2026-07-25",
-    "value": 980.04,
-    "bench": 993.51,
-    "holding": "DOGE-USD"
+    "value": 992.77,
+    "bench": 994.99,
+    "holding": "SOL-USD"
   },
   "board": {
     "BTC-USD": {
-      "price": 64012.4609,
-      "ma200": 72258.0695,
-      "gap_pct": -11.41,
-      "mom_pct": -1.21,
-      "z": -0.2,
+      "price": 64108.1797,
+      "ma200": 72258.5481,
+      "gap_pct": -11.28,
+      "mom_pct": -1.06,
+      "z": -0.11,
       "above_ma": false,
-      "rank": 6
+      "rank": 5
     },
     "ETH-USD": {
-      "price": 1856.66,
-      "ma200": 2145.8729,
-      "gap_pct": -13.48,
-      "mom_pct": -0.25,
-      "z": 0.26,
+      "price": 1865.6,
+      "ma200": 2145.9176,
+      "gap_pct": -13.06,
+      "mom_pct": 0.23,
+      "z": 0.4,
       "above_ma": false,
       "rank": 7
     },
     "SOL-USD": {
-      "price": 73.86,
+      "price": 73.85,
       "ma200": 88.3412,
-      "gap_pct": -16.39,
-      "mom_pct": -2.12,
+      "gap_pct": -16.4,
+      "mom_pct": -2.13,
       "z": -1.53,
-      "above_ma": false,
-      "rank": 3
-    },
-    "DOGE-USD": {
-      "price": 0.0693,
-      "ma200": 0.0971,
-      "gap_pct": -28.59,
-      "mom_pct": -4.33,
-      "z": -1.84,
       "above_ma": false,
       "rank": 1
     },
-    "AVAX-USD": {
-      "price": 6.29,
-      "ma200": 9.005,
-      "gap_pct": -30.15,
-      "mom_pct": -4.29,
-      "z": -1.56,
+    "DOGE-USD": {
+      "price": 0.0702,
+      "ma200": 0.0971,
+      "gap_pct": -27.73,
+      "mom_pct": -3.17,
+      "z": -1.45,
       "above_ma": false,
       "rank": 2
     },
+    "AVAX-USD": {
+      "price": 6.55,
+      "ma200": 9.0063,
+      "gap_pct": -27.27,
+      "mom_pct": -0.33,
+      "z": -0.09,
+      "above_ma": false,
+      "rank": 6
+    },
     "LINK-USD": {
-      "price": 8.308,
-      "ma200": 9.2618,
-      "gap_pct": -10.3,
-      "mom_pct": -0.44,
-      "z": 0.33,
+      "price": 8.347,
+      "ma200": 9.262,
+      "gap_pct": -9.88,
+      "mom_pct": 0.03,
+      "z": 0.45,
       "above_ma": false,
       "rank": 8
     },
     "ADA-USD": {
-      "price": 0.1625,
+      "price": 0.1639,
       "ma200": 0.2483,
-      "gap_pct": -34.56,
-      "mom_pct": -2.47,
-      "z": -0.82,
+      "gap_pct": -34.0,
+      "mom_pct": -1.63,
+      "z": -0.6,
       "above_ma": false,
-      "rank": 4
+      "rank": 3
     },
     "XRP-USD": {
-      "price": 1.0887,
+      "price": 1.092,
       "ma200": 1.3945,
-      "gap_pct": -21.93,
-      "mom_pct": -0.32,
-      "z": -0.7,
+      "gap_pct": -21.69,
+      "mom_pct": -0.01,
+      "z": -0.55,
       "above_ma": false,
-      "rank": 5
+      "rank": 4
     }
   },
-  "pick": "DOGE-USD",
+  "pick": "SOL-USD",
   "regime": "CHOP",
   "intraday": [
     {
@@ -769,6 +769,12 @@
       "value": 980.04,
       "bench": 993.51,
       "holding": "DOGE-USD"
+    },
+    {
+      "ts": "2026-07-25T14:51:35+00:00",
+      "value": 992.77,
+      "bench": 994.99,
+      "holding": "SOL-USD"
     }
   ],
   "trades": [
@@ -906,6 +912,24 @@
       "units": 14141.951608,
       "value": 977.21,
       "reason": "Strongest eligible coin (-4.8% 7d momentum)"
+    },
+    {
+      "date": "2026-07-25",
+      "action": "SELL",
+      "ticker": "DOGE-USD",
+      "price": 0.0702,
+      "units": 14141.951608,
+      "value": 992.77,
+      "reason": "Signal flip"
+    },
+    {
+      "date": "2026-07-25",
+      "action": "BUY",
+      "ticker": "SOL-USD",
+      "price": 73.85,
+      "units": 13.442993,
+      "value": 992.77,
+      "reason": "Strongest eligible coin (-2.1% 7d momentum)"
     }
   ],
   "history": [
@@ -965,9 +989,9 @@
     },
     {
       "date": "2026-07-25",
-      "value": 980.04,
-      "bench": 993.51,
-      "holding": "DOGE-USD"
+      "value": 992.77,
+      "bench": 994.99,
+      "holding": "SOL-USD"
     }
   ],
   "strategy": {
