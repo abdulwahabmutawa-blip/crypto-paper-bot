@@ -1,7 +1,7 @@
 {
-  "updated_utc": "2026-07-24T07:20:00+00:00",
-  "note": "07-24 run: fleet resumed cycling, so real 07-23 equity closes + 07-24 crypto move are now attributed (replacing the stale 07-23 zeros). 8 daily + 2 trade_event lines appended. Big movers: USO +5.9% (oil to $100, macro) lifted commodity & hunter; TQQQ -5.7% (3x AI-selloff beta) sank stock; SMCI +2.1% bucked the AI tape (hype). New fills DOGE (07-23 18:03 UTC, 24/7 OK) and GOOG (14:03 ET, market-hours gate held) both passed integrity.",
-  "total_lines_logged": 65,
+  "updated_utc": "2026-07-25T12:50:00+00:00",
+  "note": "07-25 run (Saturday; equities closed, so this attributes the 07-24 Friday closes plus the 07-25 crypto move). 10 lines appended: 8 daily + 2 trade_event. Two real stories: (1) OIL REVERSED - WTI -3% on a Pakistan/China-brokered US-Iran talks report took USO -2.01%, hitting commodity AND hunter with the identical position; (2) the hype bot booked its FIRST clean win, selling SMCI 28.93->30.77 (+$63.18) at 13:58 ET, 2.2% above where SMCI closed. New defect found: the crypto bot fired 8 fills in under 4 hours on 07-24 flip-flopping DOGE/AVAX at near-tied negative momentum - the rank rule has no hysteresis. All 9 audited fills passed integrity; 0 alerts.",
+  "total_lines_logged": 75,
   "by_primary_driver": {
     "none_cash": {
       "profit": 0,
@@ -9,73 +9,69 @@
       "flat": 10
     },
     "market_beta": {
-      "profit": 5,
+      "profit": 7,
       "loss": 6,
       "flat": 3
     },
     "macro": {
       "profit": 6,
-      "loss": 0,
+      "loss": 2,
       "flat": 1
-    },
-    "hype_sentiment": {
-      "profit": 4,
-      "loss": 3,
-      "flat": 6
     },
     "unknown": {
       "profit": 0,
       "loss": 1,
       "flat": 16
     },
-    "sector": {
+    "hype_sentiment": {
+      "profit": 5,
+      "loss": 4,
+      "flat": 6
+    },
+    "technical": {
       "profit": 0,
-      "loss": 1,
+      "loss": 2,
+      "flat": 1
+    },
+    "sector": {
+      "profit": 1,
+      "loss": 3,
       "flat": 0
     },
     "news_idiosyncratic": {
       "profit": 0,
       "loss": 0,
-      "flat": 0
-    },
-    "technical": {
-      "profit": 0,
-      "loss": 1,
-      "flat": 0
-    },
-    "fx_or_flows": {
-      "profit": 0,
-      "loss": 0,
-      "flat": 0
+      "flat": 1
     }
   },
   "by_beta_or_alpha": {
-    "beta": {
-      "profit": 4,
-      "loss": 3,
-      "flat": 3
+    "n/a": {
+      "profit": 1,
+      "loss": 1,
+      "flat": 28
     },
-    "alpha": {
-      "profit": 9,
+    "beta": {
+      "profit": 6,
       "loss": 4,
-      "flat": 7
+      "flat": 3
     },
     "mixed": {
       "profit": 2,
-      "loss": 5,
+      "loss": 6,
       "flat": 0
     },
-    "n/a": {
-      "profit": 0,
-      "loss": 0,
-      "flat": 26
+    "alpha": {
+      "profit": 10,
+      "loss": 7,
+      "flat": 7
     }
   },
-  "headline_so_far": "Through ~5 sessions the pattern holds: the fleet's only durable edge is MACRO oil - the commodity bot's USO is +8.1% cumulative, genuine alpha diverging from a flat equity bench, and hunter has now piled all-in into the same oil trade (at a ~8% higher, more concentrated entry). The stock bot's biggest day (+5.5%) was pure leveraged market_beta (TQQQ = 3x QQQ's +1.85%), not skill. The hype bot keeps round-tripping Grok's euphoric names near flat and remains the worst book (-3.75%). Crypto/meanrev sit in cash (crypto now 7 straight days, bench +3.26% - approaching but not at the R4 dead-money flag). Supervisor's own directional calls are 0/2, both oil/trend fades that kept trending (-$14.93 total) - a clear signal to stop fighting strong macro trends without evidence. [07-23] No new data: the fleet's scheduler has effectively stopped - 4 cycles in 24h against a 20-minute schedule, and none at all on 07-23. The minute-shift to 7,27,47 deployed 07-22 did not fix the throttling; an external trigger is the remaining option.",
+  "headline_so_far": "Through ~7 sessions the fleet is +1.61% ($8,128.50) and the story has changed in one important way: THE OIL EDGE JUST TOOK ITS FIRST REAL HIT. Commodity is still the best book (+14.6%) but gave back 2% on Friday, and hunter - which piled all-in to the same ETF at a 10% worse basis - gave back the same 2% with far less cushion. 27% of fleet capital now sits in one ETF whose entire thesis is a war premium that a single diplomacy headline can deflate; that concentration is the fleet's largest un-managed risk. The stock bot is the clearest loser (-9.8%, $902.17, within $2 of the 10% drawdown flag) and every dollar of it is 3x QQQ beta, not skill. The hype bot flipped from worst book to third-best (+5.4%) on one good exit - a single trade, not evidence. Supervisor's own directional record stays 0/2 (-$14.93); today opens 4 calls, and unlike my two losing with-trend fades, three of them fade positions the trend has already turned against. Operationally the fleet is still half-blind: 26 of ~72 runs in 24h, and on Friday the equity bots were live for ~54 minutes of a 390-minute session.",
   "supervisor_directional_scorecard": {
     "scored_calls": 2,
     "wins": 0,
     "cumulative_alpha_usd": -14.93,
-    "note": "Both losses were 'reduce_position_half' fades against intact trends (TQQQ, USO). No_change calls (38) correctly stayed out of the way."
+    "open_calls": 4,
+    "note": "Both losses were 'reduce_position_half' fades against intact trends (TQQQ @67.53, USO @125.53). The 4 calls opened 07-25 are the first test of the reverse setup: fading positions whose trend has already broken."
   }
 }
