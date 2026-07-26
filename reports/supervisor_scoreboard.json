@@ -1,17 +1,17 @@
 {
-  "updated_utc": "2026-07-25T12:50:00+00:00",
-  "total_judgments": 64,
-  "judgments_closed": 60,
+  "updated_utc": "2026-07-26T07:20:00+00:00",
+  "total_judgments": 70,
+  "judgments_closed": 66,
   "judgments_open": 4,
-  "cumulative_alpha_usd": -14.93,
-  "win_rate_closed_pct": 96.7,
-  "win_rate_note": "58 of 60 closed judgments are 'no_change' (alpha 0), so the headline win rate is close to meaningless. Scored DIRECTIONAL record is still 0/2 (-$14.93): stock/TQQQ reduce_half @67.53 (07-18, -$0.84) and commodity/USO reduce_half @125.53 (07-20, -$14.09). Today is the first run with a real open book: 4 open directional calls (crypto skip, stock reduce_half @64.00, hunter reduce_half @136.69, hype skip). Two of the three are fades of positions where the trend has now turned AGAINST the bot, which is the opposite setup to my two losses.",
+  "cumulative_alpha_usd": 16.12,
+  "win_rate_closed_pct": 97.0,
+  "win_rate_note": "62 of 66 closed judgments are no_change (alpha 0), so the headline rate is near-meaningless - read the directional record instead. DIRECTIONAL: 4 scored, 1 win / 2 losses / 1 neutral, +$16.12 net. The win (crypto skip_new_entries, +$31.05) is the first fade of a BROKEN pattern; both losses were fades of INTACT trends. 4 calls remain open, two of them (stock reduce_half @64.00, hunter reduce_half @136.69) deliberately carried from 07-25 because equities have not traded since.",
   "per_bot": {
     "crypto": {
-      "judgments": 8,
-      "closed": 7,
+      "judgments": 9,
+      "closed": 8,
       "open": 1,
-      "alpha_usd": 0.0
+      "alpha_usd": 31.05
     },
     "stock": {
       "judgments": 8,
@@ -20,26 +20,26 @@
       "alpha_usd": -0.84
     },
     "meanrev": {
-      "judgments": 8,
-      "closed": 8,
+      "judgments": 9,
+      "closed": 9,
       "open": 0,
       "alpha_usd": 0.0
     },
     "allweather": {
-      "judgments": 8,
-      "closed": 8,
+      "judgments": 9,
+      "closed": 9,
       "open": 0,
       "alpha_usd": 0.0
     },
     "commodity": {
-      "judgments": 8,
-      "closed": 8,
+      "judgments": 9,
+      "closed": 9,
       "open": 0,
       "alpha_usd": -14.09
     },
     "congress": {
-      "judgments": 8,
-      "closed": 8,
+      "judgments": 9,
+      "closed": 9,
       "open": 0,
       "alpha_usd": 0.0
     },
@@ -56,34 +56,63 @@
       "alpha_usd": 0.0
     },
     "hype": {
-      "judgments": 4,
-      "closed": 3,
+      "judgments": 5,
+      "closed": 4,
       "open": 1,
       "alpha_usd": 0.0
     },
-    "_note": "'sentiment' (4) and 'hype' (4) are the SAME bot (sentiment_state.json / hype trader); combined 8 judgments, 1 open. Naming switched to 'hype' from 07-22 on. NOTE: the 07-24 scoreboard reported this split as 6/1 = 7 total; a recount of judgments.jsonl gives 4/4 = 8, so the earlier figure was wrong and is corrected here."
+    "_note": "sentiment (4) and hype (5) are the SAME bot (sentiment_state.json); naming switched to hype from 07-22. Combined 9 judgments, 1 open."
   },
   "driver_tally_source": "reports/attribution_summary.json",
   "fleet_snapshot_last_observed": {
-    "as_of": "2026-07-24 close (equities) / 2026-07-25 12:00Z (crypto)",
-    "total_value_usd": 8128.5,
-    "total_pnl_usd": 128.5,
-    "total_pnl_pct": 1.61,
+    "as_of": "2026-07-24 close (equities) / 2026-07-26 07:00Z (crypto)",
+    "basis": "TRUE marks - units x verified closing prices, NOT the values in data/*_state.json, three of which regressed to 07-23 prices on Saturday.",
+    "total_value_usd": 8156.77,
+    "total_pnl_usd": 156.77,
+    "total_pnl_pct": 1.96,
+    "dashboards_currently_show_usd": 8172.52,
+    "overstatement_usd": 15.75,
     "per_bot_value_usd": {
-      "commodity": 1145.8,
+      "commodity": 1146.06,
       "hype": 1053.92,
       "hunter": 1052.1,
-      "meanrev": 1004.31,
+      "crypto": 1007.96,
+      "meanrev": 1004.4,
       "allweather": 997.97,
       "congress": 992.19,
-      "crypto": 980.04,
       "stock": 902.17
     }
   },
   "fill_integrity": {
-    "trades_audited_this_run": 9,
+    "trades_audited_this_run": 5,
     "alerts": 0,
-    "detail": "8 crypto fills on 07-24 (09:12Z/12:06Z/12:20Z/12:59Z, -USD so 24/7 valid) all inside that day's DOGE 0.0683-0.0700 and AVAX 6.1595-6.3094 ranges; hype SELL SMCI @30.77 filled 07-24T17:58:28Z = 13:58 ET Friday, inside regular hours and inside the 29.28-31.33 day range. Market-hours gate held on the only equity fill."
+    "detail": "All 5 new fills are crypto (-USD, 24/7 valid), so the market-hours gate does not apply. Commit-traced fill times: SELL DOGE 0.0702 + BUY SOL 73.85 at 2026-07-25T14:52:30Z; SELL SOL 74.54 + TO CASH at 18:38:42Z; BUY SOL 74.45 at 21:37:16Z. DOGE 0.0702 inside the 07-25 range 0.0692-0.0735; all SOL prices inside 73.6163-74.6442. No equity fills to test the gate against this run."
   },
-  "operational_flag": "CRON GAPS STILL NOT FIXED, and now provably damaging: only 26 of ~72 expected runs in the last 24h (36%). Four gaps >90 min: 297 min (07-24 12:59Z->17:57Z), 176 min (07-24 18:51Z->21:46Z), 386 min (07-24 22:40Z->07-25 05:05Z), 207 min (07-25 07:30Z->10:57Z). The 297-min gap swallowed the 07-24 US open (13:30Z) and the 176-min gap swallowed the close (20:00Z), so on Friday the equity bots were live for roughly 54 minutes of a 390-minute session. 0 failed runs - this is purely GitHub cron throttling. The 7,27,47 minute-shift has not worked across three consecutive days; external trigger is the remaining option."
+  "mark_integrity_alert": {
+    "severity": "high",
+    "first_seen": "2026-07-25",
+    "finding": "Bots overwrote CORRECT Friday 07-24 history marks with STALE Thursday 07-23 prices during Saturday cycles. Confirmed by diffing against the 07-25 supervisor baseline commit and against verified closes.",
+    "affected": {
+      "hunter": {
+        "was": 1052.1,
+        "now": 1073.65,
+        "error_usd": 21.55,
+        "implied_price": "USO 139.49 = the 07-23 close, not the 07-24 close of 136.69"
+      },
+      "congress": {
+        "was": 992.19,
+        "now": 994.58,
+        "error_usd": 2.39
+      },
+      "allweather": {
+        "was": 997.97,
+        "now": 997.66,
+        "error_usd": -0.31
+      }
+    },
+    "evidence": "hunter 07-25 row oscillated 1052.10 -> 1073.65 -> 1052.10 -> ... across 20 commits on 07-25 and settled on the wrong value at 21:37Z. congress 07-25 row took three distinct values (992.19 / 993.12 / 994.58) for the same closed-market day, so the instability is feed-wide, not ticker-specific.",
+    "why_it_matters": "Same failure class as the 2026-07-22 stale-fill incident. The market_hours.py gate added afterwards guards FILLS, not MARKS - a bot can still mark, and in principle signal, off a one-day-stale bar. Owner decision; supervisor does not fix.",
+    "not_a_fill_alert": "No trade was executed on a stale price this run, so this is logged separately from the fill-integrity audit."
+  },
+  "operational_flag": "WORST COVERAGE YET, plus an ongoing blackout. Only 22 of ~72 expected cycles in the last 24h (31%), down from 36% on 07-25. Gaps >90 min: 213 min (07-25 07:30Z->11:03Z), 176 min (11:56Z->14:52Z), 147 min (15:45Z->18:12Z), 152 min (19:05Z->21:37Z), and an ONGOING 516-min blackout since 07-25 22:30Z. Root cause is now visible: the paper-trade-cycle workflow only STARTS ~5x/day (last start 07-25T21:36Z) and each start loops ~6 internal cycles over ~55 min, then dies until the next accepted cron. 0 failed runs - pure GitHub cron throttling. The 7/27/47 minute-shift has now failed four consecutive days. NOTE: gh run list without a workflow filter is misleading - it is dominated by pages-build-deployment runs triggered by each data commit; the 07-26T05:06Z success at the top of that list is a Pages build, NOT a bot cycle."
 }
