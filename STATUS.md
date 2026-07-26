@@ -1,23 +1,23 @@
-# Fleet status — 2026-07-25 (UTC)
+# Fleet status — 2026-07-26 (UTC)
 
-Last cycle: 2026-07-24 22:40 UTC (run completed 22:53, success). All paper accounts, $1,000 start each.
+Last cycle: 2026-07-25 22:30 UTC (success). All paper accounts, $1,000 start each.
 
 | Bot | Holds | Value | Bench | 24h change |
 |---|---|---|---|---|
-| trend (crypto) | DOGE-USD | $978.62 | $995.29 | No change |
-| regime (stock) | TQQQ | $902.17 | $983.54 | No change |
-| congress | NVDA, META, GOOG (70% cash) | $992.19 | $984.30 | No change |
-| meanrev | WMT | $1,004.31 | $984.15 | No change |
-| commodity | USO | $1,145.80 | $984.15 | No change |
-| allweather | 5-asset basket | $997.97 | $984.30 | No change |
-| hype (sentiment) | CASH | $1,053.92 | $984.30 | Sold SMCI 07-24 (hype faded) |
-| Hunter | USO | $1,052.10 | $984.30 | No change |
-| Watcher | advisory only, no position | — | — | Scanned 07-24 17:57 UTC, risk: caution |
+| trend (crypto) | SOL-USD | $1,000.43 | $998.59 | Sold DOGE; whipsawed SOL→cash→SOL on signal flips (4 fills) |
+| regime (stock) | TQQQ | $902.17 | $983.54 | No change (market closed weekend) |
+| congress | NVDA, META, GOOG (70% cash) | $994.58 | $983.30 | No change |
+| meanrev | WMT | $1,004.31 | $984.15 | No change (market closed weekend) |
+| commodity | USO | $1,145.80 | $984.15 | No change (market closed weekend) |
+| allweather | 5-asset basket | $997.66 | $983.30 | No change (market closed weekend) |
+| hype (sentiment) | CASH | $1,053.92 | $983.30 | No change (been in cash since SMCI sale 07-24) |
+| Hunter | USO | $1,073.65 | $983.30 | No change |
+| Watcher | advisory only, no position | — | — | Scanned 07-25 14:51 UTC, risk: caution |
 
 ## Changed
-- hype: sold SMCI 07-24 → CASH ($1,053.92); "hype faded — symbol dropped off Grok's euphoric list."
-- No stop-outs. No bot errors — the last completed Actions run (finished 22:53 UTC) had every step succeed.
+- trend: sold DOGE-USD, then round-tripped SOL-USD (buy→sell→cash→buy) within hours on signal flips — 4 fills, no net directional trade, now holding SOL-USD. Known defect (no hysteresis in the rank rule), already logged by the supervisor.
+- No stop-outs. No bot errors — last completed run (22:30 UTC) succeeded.
 
 ## Needs a look
-- No cycle commits since 2026-07-24 22:40 UTC — a 6h+ gap, still ongoing as of this digest (05:03 UTC). No newer GitHub Actions run has started. This matches the known scheduler-queue throttling the self-looping workflow (added 07-24) was built to survive, but the gap already exceeds a normal hourly landing — worth a look at the Actions tab if it hasn't resumed on its own.
-- reports/supervisor_scoreboard.json still shows updated_utc 07-24T07:20 — the supervisor log hasn't refreshed since this morning; likely just its own separate cadence, not confirmed.
+- No cycle commits since 2026-07-25 22:30 UTC — gap is 6.5h+ and still ongoing as of this digest (05:04 UTC). This is the same GitHub Actions cron-throttling issue flagged yesterday, and it's now the longest single gap seen (supervisor logged four gaps >90min on 07-24 alone, up to 386 min; today's is already longer). The supervisor's own operational_flag (as of 07-25 12:50 UTC) says only 26 of ~72 expected runs landed in a 24h window — worth checking the Actions tab.
+- Watcher last scanned 14h ago (07-25 14:51 UTC) — consistent with its usual once-daily cadence, not confirmed as broken, but flagging alongside the cron gaps above.
