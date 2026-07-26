@@ -1,9 +1,9 @@
 {
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "holding": "SOL-USD",
-  "units": 13.459243354404437,
-  "cash": 0.0,
+  "holding": "CASH",
+  "units": 0.0,
+  "cash": 1007.4243650771721,
   "bench_units": 0.01552055830726173,
   "trades": [
     {
@@ -185,6 +185,24 @@
       "units": 13.459243,
       "value": 1002.04,
       "reason": "Strongest eligible coin (-1.3% 7d momentum)"
+    },
+    {
+      "date": "2026-07-26",
+      "action": "SELL",
+      "ticker": "SOL-USD",
+      "price": 74.85,
+      "units": 13.459243,
+      "value": 1007.42,
+      "reason": "Signal flip"
+    },
+    {
+      "date": "2026-07-26",
+      "action": "TO CASH",
+      "ticker": "\u2014",
+      "price": 0,
+      "units": 0,
+      "value": 1007.42,
+      "reason": "All 8 coins falling on the week \u2014 cash until one rises"
     }
   ],
   "history": [
@@ -247,9 +265,15 @@
       "value": 1000.43,
       "bench": 998.59,
       "holding": "SOL-USD"
+    },
+    {
+      "date": "2026-07-26",
+      "value": 1007.42,
+      "bench": 997.84,
+      "holding": "CASH"
     }
   ],
-  "last_updated_utc": "2026-07-25T22:30:03+00:00",
+  "last_updated_utc": "2026-07-26T07:45:20+00:00",
   "intraday": [
     {
       "ts": "2026-07-16T18:32:57+00:00",
@@ -1024,6 +1048,12 @@
       "value": 1000.43,
       "bench": 998.59,
       "holding": "SOL-USD"
+    },
+    {
+      "ts": "2026-07-26T07:45:20+00:00",
+      "value": 1007.42,
+      "bench": 997.84,
+      "holding": "CASH"
     }
   ]
 }
