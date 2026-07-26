@@ -75,16 +75,6 @@
       "bench": 990.1
     },
     {
-      "date": "2026-07-18",
-      "value": 1000.0,
-      "bench": 990.1
-    },
-    {
-      "date": "2026-07-19",
-      "value": 1000.0,
-      "bench": 990.1
-    },
-    {
       "date": "2026-07-20",
       "value": 1000.21,
       "bench": 988.5
@@ -108,21 +98,39 @@
       "date": "2026-07-24",
       "value": 992.19,
       "bench": 984.3
-    },
-    {
-      "date": "2026-07-25",
-      "value": 994.58,
-      "bench": 983.3
-    },
-    {
-      "date": "2026-07-26",
-      "value": 994.58,
-      "bench": 983.3
     }
   ],
   "bench_units": 1.332054612938296,
-  "last_updated_utc": "2026-07-26T20:55:56+00:00",
-  "restatement": {
-    "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)"
-  }
+  "last_updated_utc": "2026-07-26T21:01:15+00:00",
+  "restatement": [
+    {
+      "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)"
+    },
+    {
+      "applied_utc": "2026-07-26T20:58:47+00:00",
+      "reason": "wall-clock-keyed marks: rows written for dates with no equity bar, some carrying a stale prior-day price. Bug fixed 2026-07-26 by keying marks to the bar date.",
+      "removed_rows": [
+        {
+          "date": "2026-07-18",
+          "value": 1000.0,
+          "bench": 990.1
+        },
+        {
+          "date": "2026-07-19",
+          "value": 1000.0,
+          "bench": 990.1
+        },
+        {
+          "date": "2026-07-25",
+          "value": 994.58,
+          "bench": 983.3
+        },
+        {
+          "date": "2026-07-26",
+          "value": 994.58,
+          "bench": 983.3
+        }
+      ]
+    }
+  ]
 }

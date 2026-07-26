@@ -19,6 +19,7 @@ import pandas as pd
 import yfinance as yf
 
 import config
+import market_hours
 
 STATE = config.DATA / "stock_state.json"
 DASH = config.REPORTS / "stock_dashboard_data.json"
@@ -33,7 +34,7 @@ def fetch() -> pd.DataFrame:
     px = yf.download([SIGNAL_TKR, RISK_TKR, SAFE_TKR, BENCH_TKR],
                      period="15mo", auto_adjust=True, progress=False)
     close = px["Close"] if isinstance(px.columns, pd.MultiIndex) else px
-    return close.dropna(how="all").ffill()
+    return market_hours.trim_incomplete_bars(close.dropna(how="all")).ffill()
 
 
 def load_state() -> dict | None:
@@ -117,9 +118,16 @@ def update(st: dict, close: pd.DataFrame) -> dict:
            "signal_in_market": in_market,
            "qqq": round(float(last[SIGNAL_TKR]), 2),
            "ma200": round(float(ma200), 2)}
-    hist = [h for h in st["history"] if h["date"] != row["date"]]
-    hist.append(row)
-    st["history"] = sorted(hist, key=lambda h: h["date"])
+    # never write behind the newest mark — a regressed feed would otherwise
+    # stamp today's holdings onto a past session (2026-07-26)
+    newest = st["history"][-1]["date"] if st["history"] else ""
+    if row["date"] < newest:
+        print(f"[live] STALE BAR {row['date']} < newest mark {newest} — "
+              f"mark skipped (feed served an old bar)")
+    else:
+        hist = [h for h in st["history"] if h["date"] != row["date"]]
+        hist.append(row)
+        st["history"] = sorted(hist, key=lambda h: h["date"])
     st["last_updated_utc"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
     return st
 

@@ -21,6 +21,7 @@ import pandas as pd
 import yfinance as yf
 
 import config
+import market_hours
 
 STATE = config.DATA / "sentiment_state.json"
 SENTINEL = config.DATA / "sentinel_state.json"
@@ -38,16 +39,21 @@ def to_ticker(sym: str) -> str:
     return f"{s}-USD" if s in CRYPTO else s
 
 
-def quotes(tickers) -> dict:
+def quotes(tickers):
+    """Returns (prices, raw_frame). The caller dates its mark off the raw
+    (pre-ffill) frame via market_hours.last_real_date: a mark must be filed
+    under the session it reflects, and this book mixes crypto (which has
+    weekend bars) with an equity benchmark (which does not)."""
     tickers = sorted(set(tickers) | {BENCH})
     raw = yf.download(tickers, period="5d", auto_adjust=True, progress=False)
     close = raw["Close"] if isinstance(raw.columns, pd.MultiIndex) else raw
     if isinstance(close, pd.Series):
         close = close.to_frame(tickers[0])
-    close = close.ffill()
-    last = close.iloc[-1]
-    return {t: float(last[t]) for t in tickers
-            if t in close.columns and pd.notna(last[t])}
+    close = market_hours.trim_incomplete_bars(close)
+    filled = close.ffill()
+    last = filled.iloc[-1]
+    return ({t: float(last[t]) for t in tickers
+             if t in filled.columns and pd.notna(last[t])}, close)
 
 
 def main():
@@ -63,7 +69,7 @@ def main():
 
     st = json.loads(STATE.read_text()) if STATE.exists() else None
     if st is None:
-        px0 = quotes([])
+        px0, _ = quotes([])
         st = {"created": today, "starting_cash": START_CASH, "holding": "CASH",
               "units": 0.0, "cash": START_CASH, "entry_price": None,
               "bench_units": START_CASH / px0[BENCH],
@@ -71,7 +77,8 @@ def main():
         print(f"[{KEY}] NEW sim {today}")
 
     cand_map = {to_ticker(h["symbol"]): h for h in euphoric}
-    px = quotes(list(cand_map) + ([st["holding"]] if st["holding"] != "CASH" else []))
+    px, rawc = quotes(list(cand_map)
+                      + ([st["holding"]] if st["holding"] != "CASH" else []))
     tradeable = [t for t in cand_map if t in px]
 
     def sell(reason):
@@ -138,10 +145,22 @@ def main():
     # 4) mark to market
     val = st["cash"] if st["holding"] == "CASH" else st["units"] * px[st["holding"]]
     bench = st["bench_units"] * px[BENCH]
-    st["history"] = sorted([h for h in st["history"] if h["date"] != today]
-                           + [{"date": today, "value": round(val, 2),
-                               "bench": round(bench, 2), "holding": st["holding"]}],
-                           key=lambda h: h["date"])
+    # date the mark by the asset that determines its value (crypto trades
+    # weekends; the equity bench does not), never by the wall clock
+    priced = BENCH if st["holding"] == "CASH" else st["holding"]
+    asof = market_hours.last_real_date(rawc, priced) or str(now.date())
+    bench_asof = market_hours.last_real_date(rawc, BENCH)
+    newest = st["history"][-1]["date"] if st["history"] else ""
+    if asof < newest:
+        print(f"[{KEY}] STALE BAR {asof} < newest mark {newest} — "
+              f"mark skipped (feed served an old bar)")
+    else:
+        row = {"date": asof, "value": round(val, 2),
+               "bench": round(bench, 2), "holding": st["holding"]}
+        if bench_asof and bench_asof != asof:
+            row["bench_asof"] = bench_asof      # bench ffilled to reach here
+        st["history"] = sorted([h for h in st["history"] if h["date"] != asof]
+                               + [row], key=lambda h: h["date"])
     st["last_updated_utc"] = now.isoformat(timespec="seconds")
     st["intraday"] = [p_ for p_ in st.get("intraday", [])
                       if p_["ts"] != st["last_updated_utc"]][-1499:] + [

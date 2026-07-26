@@ -24,6 +24,7 @@ import yfinance as yf
 
 import config
 import sentinel_gate
+import market_hours
 
 UNIVERSE = ["TQQQ", "SOXL", "UPRO", "NVDA", "TSLA", "MSTR", "COIN", "PLTR",
             "BTC-USD", "ETH-USD", "SOL-USD", "USO", "GLD", "SLV"]
@@ -43,13 +44,15 @@ def fetch() -> pd.DataFrame:
     raw = yf.download(sorted(set(UNIVERSE) | {BENCH}), period="6mo",
                       auto_adjust=True, progress=False)
     close = raw["Close"] if isinstance(raw.columns, pd.MultiIndex) else raw
-    return close.dropna(how="all").ffill()
+    close = market_hours.trim_incomplete_bars(close.dropna(how="all"))
+    # both frames: filled for signals, raw for dating marks honestly
+    return close.ffill(), close
 
 
 def main():
     now = datetime.now(timezone.utc)
     today = str(now.date())
-    close = fetch()
+    close, rawc = fetch()
     last = close.iloc[-1]
 
     mom = close[UNIVERSE].pct_change(LOOK).iloc[-1]
@@ -128,10 +131,25 @@ def main():
     # 4) mark to market
     val = st["cash"] if st["holding"] == "CASH" else st["units"] * float(last[st["holding"]])
     bench = st["bench_units"] * float(last[BENCH])
-    st["history"] = sorted([h for h in st["history"] if h["date"] != today]
-                           + [{"date": today, "value": round(val, 2),
-                               "bench": round(bench, 2), "holding": st["holding"]}],
-                           key=lambda h: h["date"])
+    # Date the mark by the asset that determines its value, not by the wall
+    # clock: the feed serves stale/undelivered bars and a mark must be filed
+    # under the session it actually reflects.
+    priced = BENCH if st["holding"] == "CASH" else st["holding"]
+    asof = market_hours.last_real_date(rawc, priced) or str(now.date())
+    bench_asof = market_hours.last_real_date(rawc, BENCH)
+    newest = st["history"][-1]["date"] if st["history"] else ""
+    if asof < newest:
+        print(f"[{KEY}] STALE BAR {asof} < newest mark {newest} — "
+              f"mark skipped (feed served an old bar)")
+    else:
+        row = {"date": asof, "value": round(val, 2),
+               "bench": round(bench, 2), "holding": st["holding"]}
+        if bench_asof and bench_asof != asof:
+            # the bench was forward-filled to reach this row; label it rather
+            # than let a fabricated comparison look like a measured one
+            row["bench_asof"] = bench_asof
+        st["history"] = sorted([h for h in st["history"] if h["date"] != asof]
+                               + [row], key=lambda h: h["date"])
     st["last_updated_utc"] = now.isoformat(timespec="seconds")
     st["intraday"] = [x for x in st.get("intraday", [])
                       if x["ts"] != st["last_updated_utc"]][-1499:] + [

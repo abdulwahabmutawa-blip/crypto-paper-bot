@@ -23,13 +23,14 @@ import pandas as pd
 import yfinance as yf
 
 import config
+import market_hours
 
 
 def _fetch_daily(universe, bench):
     tickers = sorted(set(universe) | {bench})
     raw = yf.download(tickers, period="15mo", auto_adjust=True, progress=False)
     close = raw["Close"] if isinstance(raw.columns, pd.MultiIndex) else raw
-    return close.dropna(how="all").ffill()
+    return market_hours.trim_incomplete_bars(close.dropna(how="all")).ffill()
 
 
 def _fetch_live(universe, bench):
@@ -37,7 +38,7 @@ def _fetch_live(universe, bench):
     raw = yf.download(tickers, period="5d", interval="5m", auto_adjust=True,
                       progress=False)
     close = raw["Close"] if isinstance(raw.columns, pd.MultiIndex) else raw
-    close = close.ffill()
+    close = market_hours.trim_incomplete_bars(close).ffill()
     last = close.iloc[-1]
     ts = close.index[-1]
     ts = ts.tz_convert("UTC") if ts.tzinfo else ts.tz_localize("UTC")
@@ -107,10 +108,19 @@ def run(spec, start_cash=1000.0):
 
     val = st["cash"] if st["holding"] == "CASH" else st["units"] * float(last[st["holding"]])
     bench = st["bench_units"] * float(last[spec["bench"]])
-    st["history"] = sorted([h for h in st["history"] if h["date"] != asof]
-                           + [{"date": asof, "value": round(val, 2),
-                               "bench": round(bench, 2), "holding": st["holding"]}],
-                           key=lambda h: h["date"])
+    # never write behind the newest mark: if the feed has regressed to an
+    # older bar, rewriting that day would stamp TODAY's holdings onto a past
+    # session. Skip and wait for fresh data. (2026-07-26)
+    newest = st["history"][-1]["date"] if st["history"] else ""
+    if asof < newest:
+        print(f"[{spec['key']}] STALE BAR {asof} < newest mark {newest} — "
+              f"mark skipped (feed served an old bar)")
+    else:
+        st["history"] = sorted(
+            [h for h in st["history"] if h["date"] != asof]
+            + [{"date": asof, "value": round(val, 2),
+                "bench": round(bench, 2), "holding": st["holding"]}],
+            key=lambda h: h["date"])
     st["last_updated_utc"] = now.isoformat(timespec="seconds")
     st["intraday"] = [p for p in st.get("intraday", [])
                       if p["ts"] != st["last_updated_utc"]][-1499:] + [

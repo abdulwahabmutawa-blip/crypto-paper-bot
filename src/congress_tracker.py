@@ -22,6 +22,7 @@ import pandas as pd
 import yfinance as yf
 
 import config
+import market_hours
 
 STATE = config.DATA / "congress_state.json"
 BASE = ("https://raw.githubusercontent.com/kadoa-org/"
@@ -73,15 +74,21 @@ def fresh_buy_filings(since: str) -> list:
     return out
 
 
-def quotes(tickers) -> dict:
+def quotes(tickers):
+    """Returns (prices, asof) — asof is the date of the BAR the prices came
+    from, not today's date. The caller needs it: the feed intermittently
+    serves a one-day-stale bar, and a mark must be filed under the date it
+    actually belongs to."""
     tickers = sorted(set(tickers) | {BENCH})
     raw = yf.download(tickers, period="5d", auto_adjust=True, progress=False)
     close = raw["Close"] if isinstance(raw.columns, pd.MultiIndex) else raw
     if isinstance(close, pd.Series):
         close = close.to_frame(tickers[0])
-    close = close.ffill()
+    close = market_hours.trim_incomplete_bars(close).ffill()
     last = close.iloc[-1]
-    return {t: float(last[t]) for t in tickers if t in close.columns and pd.notna(last[t])}
+    return ({t: float(last[t]) for t in tickers
+             if t in close.columns and pd.notna(last[t])},
+            str(close.index[-1].date()))
 
 
 def load_state():
@@ -95,7 +102,7 @@ def main():
     follow = build_follow_list()
     st = load_state()
     if st is None:
-        px = quotes([])
+        px, _ = quotes([])
         st = {"created": today, "starting_cash": START_CASH, "cash": START_CASH,
               "positions": [], "seen": [], "trades": [], "history": [],
               "bench_units": START_CASH / px[BENCH]}
@@ -118,7 +125,7 @@ def main():
         new = []  # ids not yet in 'seen', so they're picked up next open cycle
 
     tickers = [p["ticker"] for p in st["positions"]] + [f["ticker"] for f in new]
-    px = quotes(tickers)
+    px, asof = quotes(tickers)
 
     # 1) close matured positions
     keep = []
@@ -161,10 +168,15 @@ def main():
     val = st["cash"] + sum(p["units"] * px.get(p["ticker"], p["cost"] / p["units"])
                            for p in st["positions"])
     bench = st["bench_units"] * px[BENCH]
-    st["history"] = [h for h in st["history"] if h["date"] != today]
-    st["history"].append({"date": today, "value": round(val, 2),
-                          "bench": round(bench, 2)})
-    st["history"].sort(key=lambda h: h["date"])
+    newest = st["history"][-1]["date"] if st["history"] else ""
+    if asof < newest:
+        print(f"[congress] STALE BAR {asof} < newest mark {newest} — "
+              f"mark skipped (feed served an old bar)")
+    else:
+        st["history"] = [h for h in st["history"] if h["date"] != asof]
+        st["history"].append({"date": asof, "value": round(val, 2),
+                              "bench": round(bench, 2)})
+        st["history"].sort(key=lambda h: h["date"])
     st["last_updated_utc"] = now.isoformat(timespec="seconds")
     st["seen"] = st["seen"][-5000:]
     STATE.write_text(json.dumps(st, indent=2))

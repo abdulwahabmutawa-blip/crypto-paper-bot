@@ -2,11 +2,20 @@ name: paper-trade-cycle
 
 on:
   schedule:
-    # GitHub throttles the scheduled QUEUE under load (we saw 7h gaps), but it
-    # cannot throttle a job that is already RUNNING. So each trigger starts a
-    # job that loops internally for ~55 min (see the "Trade loop" step). We
-    # only need the scheduler to land ~once/hour, not every 20 min. Extra
-    # start attempts on odd minutes raise the odds one lands each hour.
+    # GitHub throttles the scheduled QUEUE hard but cannot throttle a job that
+    # is already RUNNING, so the work lives inside a long-running loop (see the
+    # "Trade loop" step) rather than in the schedule.
+    #
+    # MEASURED 2026-07-26 over 8.6 days: of 72 requested starts/day GitHub
+    # accepts 4.33 (6.0%). Gaps between accepted starts: median 263 min, mean
+    # 324, max 675. So the loop is sized at 345 min — just under GitHub's 360
+    # min per-job cap — which covers ~82% of wall-clock instead of the ~17% a
+    # 55-minute loop managed. The remaining holes are the handful of gaps
+    # longer than 6h, which no single job can span.
+    #
+    # Requesting every 20 min is deliberate even at 6% acceptance: acceptances
+    # are unpredictable, so more attempts = a start lands sooner after the
+    # previous loop ends. The concurrency group below makes overlap harmless.
     - cron: "7,27,47 * * * *"
   workflow_dispatch: {}       # manual "Run workflow" button
 
@@ -23,7 +32,7 @@ env:
 jobs:
   trade:
     runs-on: ubuntu-latest
-    timeout-minutes: 70        # loop budget is 55 min; leave headroom
+    timeout-minutes: 355       # loop budget is 345 min; GitHub caps jobs at 360
     steps:
       - uses: actions/checkout@v4
 
@@ -34,7 +43,7 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Trade loop (~55 min, one cycle every ~13 min)
+      - name: Trade loop (~5h45m, one cycle every ~13 min)
         run: |
           set +e   # never let a single failed bot or push kill the loop
           git config user.name "paper-bot"
@@ -79,7 +88,7 @@ jobs:
             fi
           }
 
-          END=$(( $(date +%s) + 3300 ))   # run for 55 minutes
+          END=$(( $(date +%s) + 20700 ))  # run for 345 minutes (5h45m)
           while [ "$(date +%s)" -lt "$END" ]; do
             run_cycle
             # stop early if we would overrun the budget mid-sleep

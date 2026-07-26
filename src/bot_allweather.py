@@ -14,6 +14,7 @@ import pandas as pd
 import yfinance as yf
 
 import config
+import market_hours
 
 W = {"SPY": 0.30, "TLT": 0.40, "GLD": 0.15, "DBC": 0.075, "BIL": 0.075}
 BENCH = "SPY"
@@ -26,7 +27,7 @@ def quotes():
     tickers = sorted(set(W) | {BENCH})
     raw = yf.download(tickers, period="5d", auto_adjust=True, progress=False)
     close = raw["Close"] if isinstance(raw.columns, pd.MultiIndex) else raw
-    close = close.ffill()
+    close = market_hours.trim_incomplete_bars(close).ffill()
     last = close.iloc[-1]
     return {t: float(last[t]) for t in tickers}, str(close.index[-1].date())
 
