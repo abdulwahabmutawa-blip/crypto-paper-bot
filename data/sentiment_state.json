@@ -1,12 +1,14 @@
 {
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "holding": "SHIB-USD",
-  "units": 186865909.24539578,
-  "cash": 0.0,
-  "entry_price": 5.639999926643213e-06,
+  "holding": "CASH",
+  "units": 0.0,
+  "cash": 934.3295226238292,
+  "entry_price": null,
   "bench_units": 1.332054612938296,
-  "stopped": {},
+  "stopped": {
+    "SHIB-USD": "2026-07-27T00:01:08+00:00"
+  },
   "trades": [
     {
       "date": "2026-07-17",
@@ -106,6 +108,15 @@
       "units": 186865909.2454,
       "value": 1053.92,
       "reason": "Grok: SHIB euphoric \u2014 36% mystery surge on Korean volume (scan 2026-07-26T07:45)"
+    },
+    {
+      "date": "2026-07-27",
+      "action": "SELL",
+      "ticker": "SHIB-USD",
+      "price": 0.0,
+      "units": 186865909.2454,
+      "value": 934.33,
+      "reason": "STOP-LOSS hit (-11.3% from entry) \u2014 hype that bleeds gets cut"
     }
   ],
   "history": [
@@ -825,9 +836,15 @@
       "value": 994.13,
       "bench": 984.3,
       "holding": "SHIB-USD"
+    },
+    {
+      "ts": "2026-07-27T00:01:40+00:00",
+      "value": 934.33,
+      "bench": 984.3,
+      "holding": "CASH"
     }
   ],
-  "last_updated_utc": "2026-07-26T23:47:56+00:00",
+  "last_updated_utc": "2026-07-27T00:01:40+00:00",
   "restatement": {
     "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)",
     "voided_trades": [
