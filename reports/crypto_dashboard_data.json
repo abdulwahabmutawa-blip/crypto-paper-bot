@@ -1,89 +1,89 @@
 {
-  "generated_utc": "2026-07-27T14:27:12+00:00",
+  "generated_utc": "2026-07-27T14:40:26+00:00",
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "live_ts": "2026-07-27T14:25:00+00:00",
+  "live_ts": "2026-07-27T14:40:00+00:00",
   "current": {
     "date": "2026-07-27",
     "value": 1007.42,
-    "bench": 1008.09,
-    "holding": "CASH"
+    "bench": 1001.79,
+    "holding": "ADA-USD"
   },
   "board": {
     "BTC-USD": {
-      "price": 64951.7617,
-      "ma200": 71999.3507,
-      "gap_pct": -9.79,
-      "mom_pct": -0.43,
-      "z": 0.52,
+      "price": 64546.0508,
+      "ma200": 71997.3221,
+      "gap_pct": -10.35,
+      "mom_pct": -1.05,
+      "z": 0.16,
       "above_ma": false,
       "rank": 6
     },
     "ETH-USD": {
-      "price": 1943.58,
-      "ma200": 2134.0845,
-      "gap_pct": -8.93,
-      "mom_pct": 2.09,
-      "z": 1.32,
+      "price": 1926.87,
+      "ma200": 2134.001,
+      "gap_pct": -9.71,
+      "mom_pct": 1.21,
+      "z": 1.09,
       "above_ma": false,
       "rank": 8
     },
     "SOL-USD": {
-      "price": 76.02,
-      "ma200": 87.7342,
-      "gap_pct": -13.35,
-      "mom_pct": -2.28,
-      "z": -0.36,
-      "above_ma": false,
-      "rank": 3
-    },
-    "DOGE-USD": {
-      "price": 0.0719,
-      "ma200": 0.0964,
-      "gap_pct": -25.42,
-      "mom_pct": -0.36,
-      "z": -0.44,
+      "price": 75.3,
+      "ma200": 87.7306,
+      "gap_pct": -14.17,
+      "mom_pct": -3.2,
+      "z": -0.86,
       "above_ma": false,
       "rank": 2
     },
+    "DOGE-USD": {
+      "price": 0.0713,
+      "ma200": 0.0964,
+      "gap_pct": -26.02,
+      "mom_pct": -1.16,
+      "z": -0.84,
+      "above_ma": false,
+      "rank": 3
+    },
     "AVAX-USD": {
-      "price": 6.61,
-      "ma200": 8.9341,
-      "gap_pct": -26.01,
-      "mom_pct": 0.51,
-      "z": 0.35,
+      "price": 6.57,
+      "ma200": 8.9339,
+      "gap_pct": -26.46,
+      "mom_pct": -0.09,
+      "z": 0.08,
       "above_ma": false,
       "rank": 5
     },
     "LINK-USD": {
-      "price": 8.691,
-      "ma200": 9.2164,
-      "gap_pct": -5.7,
-      "mom_pct": 1.25,
-      "z": 1.2,
+      "price": 8.582,
+      "ma200": 9.2158,
+      "gap_pct": -6.88,
+      "mom_pct": -0.02,
+      "z": 0.9,
       "above_ma": false,
       "rank": 7
     },
     "ADA-USD": {
-      "price": 0.1626,
+      "price": 0.159,
       "ma200": 0.246,
-      "gap_pct": -33.9,
-      "mom_pct": -4.23,
-      "z": -0.85,
+      "gap_pct": -35.36,
+      "mom_pct": -6.35,
+      "z": -1.63,
       "above_ma": false,
       "rank": 1
     },
     "XRP-USD": {
-      "price": 1.0973,
+      "price": 1.0894,
       "ma200": 1.3841,
-      "gap_pct": -20.72,
-      "mom_pct": -1.33,
-      "z": -0.21,
+      "gap_pct": -21.29,
+      "mom_pct": -2.04,
+      "z": -0.62,
       "above_ma": false,
       "rank": 4
     }
   },
-  "pick": "CASH",
+  "pick": "ADA-USD",
   "regime": "CHOP",
   "intraday": [
     {
@@ -1207,18 +1207,15 @@
       "value": 1007.42,
       "bench": 1008.09,
       "holding": "CASH"
+    },
+    {
+      "ts": "2026-07-27T14:40:26+00:00",
+      "value": 1007.42,
+      "bench": 1001.79,
+      "holding": "ADA-USD"
     }
   ],
   "trades": [
-    {
-      "date": "2026-07-16",
-      "action": "TO CASH",
-      "ticker": "\u2014",
-      "price": 0,
-      "units": 0,
-      "value": 996.08,
-      "reason": "No coin above its 200-day MA \u2014 risk-off"
-    },
     {
       "date": "2026-07-16",
       "action": "BUY",
@@ -1389,6 +1386,15 @@
       "units": 0,
       "value": 1007.42,
       "reason": "All 8 coins falling on the week \u2014 cash until one rises"
+    },
+    {
+      "date": "2026-07-27",
+      "action": "BUY",
+      "ticker": "ADA-USD",
+      "price": 0.159,
+      "units": 6336.002296,
+      "value": 1007.42,
+      "reason": "Strongest eligible coin (-6.3% 7d momentum)"
     }
   ],
   "history": [
@@ -1461,8 +1467,8 @@
     {
       "date": "2026-07-27",
       "value": 1007.42,
-      "bench": 1008.09,
-      "holding": "CASH"
+      "bench": 1001.79,
+      "holding": "ADA-USD"
     }
   ],
   "strategy": {
