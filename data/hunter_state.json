@@ -4,7 +4,7 @@
   "holding": "USO",
   "units": 7.697,
   "cash": 0.0,
-  "high_water": 141.82000732421875,
+  "high_water": 128.0399932861328,
   "bench_units": 1.332054612938296,
   "trades": [
     {
@@ -51,6 +51,24 @@
       "units": 7.697,
       "value": 1011.53,
       "reason": "Top reward/risk (9.76) \u2014 Oil all-in [restated: premarket signal filled at 9:30 open]"
+    },
+    {
+      "date": "2026-07-27",
+      "action": "SELL",
+      "ticker": "USO",
+      "price": 128.04,
+      "units": 7.697,
+      "value": 985.52,
+      "reason": "TRAILING STOP \u2014 fell 8% from its high-water mark"
+    },
+    {
+      "date": "2026-07-27",
+      "action": "BUY",
+      "ticker": "USO",
+      "price": 128.04,
+      "units": 7.697,
+      "value": 985.52,
+      "reason": "Top reward/risk score (5.26) \u2014 Oil, all-in"
     }
   ],
   "history": [
@@ -88,6 +106,12 @@
       "date": "2026-07-24",
       "value": 1052.1,
       "bench": 984.3,
+      "holding": "USO"
+    },
+    {
+      "date": "2026-07-27",
+      "value": 985.52,
+      "bench": 991.24,
       "holding": "USO"
     }
   ],
@@ -871,9 +895,15 @@
       "value": 1073.65,
       "bench": 983.3,
       "holding": "USO"
+    },
+    {
+      "ts": "2026-07-27T13:34:36+00:00",
+      "value": 985.52,
+      "bench": 991.24,
+      "holding": "USO"
     }
   ],
-  "last_updated_utc": "2026-07-27T13:21:23+00:00",
+  "last_updated_utc": "2026-07-27T13:34:36+00:00",
   "restatement": [
     {
       "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)"
