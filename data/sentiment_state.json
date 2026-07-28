@@ -1,10 +1,10 @@
 {
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "holding": "RKLB",
-  "units": 14.137230661157727,
-  "cash": 0.0,
-  "entry_price": 66.08999633789062,
+  "holding": "CASH",
+  "units": 0.0,
+  "cash": 896.1590429821075,
+  "entry_price": null,
   "bench_units": 1.332054612938296,
   "stopped": {
     "SHIB-USD": "2026-07-27T00:01:08+00:00"
@@ -126,6 +126,15 @@
       "units": 14.1372,
       "value": 934.33,
       "reason": "Grok: RKLB euphoric \u2014 Space contract buzz, retail frenzy (scan 2026-07-27T12:01)"
+    },
+    {
+      "date": "2026-07-28",
+      "action": "SELL",
+      "ticker": "RKLB",
+      "price": 63.39,
+      "units": 14.1372,
+      "value": 896.16,
+      "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
     }
   ],
   "history": [
@@ -195,6 +204,12 @@
       "value": 946.35,
       "bench": 984.51,
       "holding": "RKLB"
+    },
+    {
+      "date": "2026-07-28",
+      "value": 896.16,
+      "bench": 983.23,
+      "holding": "CASH"
     }
   ],
   "intraday": [
@@ -1415,9 +1430,15 @@
       "value": 946.35,
       "bench": 984.51,
       "holding": "RKLB"
+    },
+    {
+      "ts": "2026-07-28T13:32:31+00:00",
+      "value": 896.16,
+      "bench": 983.23,
+      "holding": "CASH"
     }
   ],
-  "last_updated_utc": "2026-07-28T13:19:19+00:00",
+  "last_updated_utc": "2026-07-28T13:32:31+00:00",
   "restatement": {
     "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)",
     "voided_trades": [
