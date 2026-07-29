@@ -1,89 +1,89 @@
 {
-  "generated_utc": "2026-07-29T18:39:17+00:00",
+  "generated_utc": "2026-07-29T18:52:30+00:00",
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "live_ts": "2026-07-29T18:35:00+00:00",
+  "live_ts": "2026-07-29T18:50:00+00:00",
   "current": {
     "date": "2026-07-29",
-    "value": 1026.13,
-    "bench": 994.35,
-    "holding": "SOL-USD"
+    "value": 1031.69,
+    "bench": 1000.13,
+    "holding": "CASH"
   },
   "board": {
     "BTC-USD": {
-      "price": 64066.4609,
-      "ma200": 71728.4067,
-      "gap_pct": -10.68,
-      "mom_pct": -3.08,
-      "z": -0.41,
+      "price": 64438.7617,
+      "ma200": 71730.2682,
+      "gap_pct": -10.17,
+      "mom_pct": -2.51,
+      "z": -0.04,
       "above_ma": false,
       "rank": 5
     },
     "ETH-USD": {
-      "price": 1912.34,
-      "ma200": 2122.1539,
-      "gap_pct": -9.89,
-      "mom_pct": -1.09,
-      "z": 0.77,
+      "price": 1923.2,
+      "ma200": 2122.2082,
+      "gap_pct": -9.38,
+      "mom_pct": -0.53,
+      "z": 0.96,
       "above_ma": false,
       "rank": 8
     },
     "SOL-USD": {
-      "price": 73.87,
-      "ma200": 87.1052,
-      "gap_pct": -15.19,
-      "mom_pct": -5.18,
-      "z": -1.38,
+      "price": 74.27,
+      "ma200": 87.1072,
+      "gap_pct": -14.74,
+      "mom_pct": -4.67,
+      "z": -1.15,
       "above_ma": false,
       "rank": 1
     },
     "DOGE-USD": {
-      "price": 0.0707,
+      "price": 0.0709,
       "ma200": 0.0957,
-      "gap_pct": -26.15,
-      "mom_pct": -3.14,
-      "z": -1.03,
+      "gap_pct": -25.93,
+      "mom_pct": -2.85,
+      "z": -0.91,
       "above_ma": false,
       "rank": 2
     },
     "AVAX-USD": {
-      "price": 6.44,
-      "ma200": 8.8606,
-      "gap_pct": -27.32,
-      "mom_pct": -2.68,
-      "z": -0.72,
+      "price": 6.47,
+      "ma200": 8.8608,
+      "gap_pct": -26.98,
+      "mom_pct": -2.22,
+      "z": -0.52,
       "above_ma": false,
       "rank": 4
     },
     "LINK-USD": {
-      "price": 8.348,
-      "ma200": 9.1674,
-      "gap_pct": -8.94,
-      "mom_pct": -3.19,
-      "z": 0.01,
+      "price": 8.419,
+      "ma200": 9.1677,
+      "gap_pct": -8.17,
+      "mom_pct": -2.37,
+      "z": 0.28,
       "above_ma": false,
       "rank": 6
     },
     "ADA-USD": {
-      "price": 0.1656,
+      "price": 0.1677,
       "ma200": 0.2437,
-      "gap_pct": -32.05,
-      "mom_pct": -4.94,
-      "z": 0.08,
+      "gap_pct": -31.19,
+      "mom_pct": -3.74,
+      "z": 0.52,
       "above_ma": false,
       "rank": 7
     },
     "XRP-USD": {
-      "price": 1.0823,
+      "price": 1.0866,
       "ma200": 1.3738,
-      "gap_pct": -21.22,
-      "mom_pct": -5.2,
-      "z": -0.74,
+      "gap_pct": -20.91,
+      "mom_pct": -4.82,
+      "z": -0.55,
       "above_ma": false,
       "rank": 3
     }
   },
-  "pick": "SOL-USD",
+  "pick": "CASH",
   "regime": "CHOP",
   "intraday": [
     {
@@ -2179,27 +2179,15 @@
       "value": 1026.13,
       "bench": 994.35,
       "holding": "SOL-USD"
+    },
+    {
+      "ts": "2026-07-29T18:52:30+00:00",
+      "value": 1031.69,
+      "bench": 1000.13,
+      "holding": "CASH"
     }
   ],
   "trades": [
-    {
-      "date": "2026-07-24",
-      "action": "BUY",
-      "ticker": "DOGE-USD",
-      "price": 0.0691,
-      "units": 14141.951608,
-      "value": 977.21,
-      "reason": "Strongest eligible coin (-4.8% 7d momentum)"
-    },
-    {
-      "date": "2026-07-25",
-      "action": "SELL",
-      "ticker": "DOGE-USD",
-      "price": 0.0702,
-      "units": 14141.951608,
-      "value": 992.77,
-      "reason": "Signal flip"
-    },
     {
       "date": "2026-07-25",
       "action": "BUY",
@@ -2361,6 +2349,24 @@
       "units": 13.891075,
       "value": 1024.61,
       "reason": "Strongest eligible coin (-5.3% 7d momentum)"
+    },
+    {
+      "date": "2026-07-29",
+      "action": "SELL",
+      "ticker": "SOL-USD",
+      "price": 74.27,
+      "units": 13.891075,
+      "value": 1031.69,
+      "reason": "Signal flip"
+    },
+    {
+      "date": "2026-07-29",
+      "action": "TO CASH",
+      "ticker": "\u2014",
+      "price": 0,
+      "units": 0,
+      "value": 1031.69,
+      "reason": "All 8 coins falling on the week \u2014 cash until one rises"
     }
   ],
   "history": [
@@ -2444,9 +2450,9 @@
     },
     {
       "date": "2026-07-29",
-      "value": 1026.13,
-      "bench": 994.35,
-      "holding": "SOL-USD"
+      "value": 1031.69,
+      "bench": 1000.13,
+      "holding": "CASH"
     }
   ],
   "strategy": {
