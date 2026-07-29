@@ -1,10 +1,10 @@
 {
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "holding": "ETH-USD",
-  "units": 0.4812938056028595,
+  "holding": "USO",
+  "units": 7.1183133307858215,
   "cash": 0.0,
-  "high_water": 1922.9100341796875,
+  "high_water": 129.02000427246094,
   "bench_units": 1.332054612938296,
   "trades": [
     {
@@ -87,6 +87,24 @@
       "units": 0.4813,
       "value": 920.95,
       "reason": "Top reward/risk score (4.10) \u2014 Ethereum, all-in"
+    },
+    {
+      "date": "2026-07-29",
+      "action": "SELL",
+      "ticker": "ETH-USD",
+      "price": 1908.2,
+      "units": 0.4813,
+      "value": 918.4,
+      "reason": "Outgunned \u2014 Oil now scores >1.25x better on reward/risk"
+    },
+    {
+      "date": "2026-07-29",
+      "action": "BUY",
+      "ticker": "USO",
+      "price": 129.02,
+      "units": 7.1183,
+      "value": 918.4,
+      "reason": "Top reward/risk score (4.89) \u2014 Oil, all-in"
     }
   ],
   "history": [
@@ -140,9 +158,9 @@
     },
     {
       "date": "2026-07-29",
-      "value": 917.54,
-      "bench": 985.73,
-      "holding": "ETH-USD"
+      "value": 918.4,
+      "bench": 984.38,
+      "holding": "USO"
     }
   ],
   "intraday": [
@@ -1789,9 +1807,15 @@
       "value": 917.54,
       "bench": 985.73,
       "holding": "ETH-USD"
+    },
+    {
+      "ts": "2026-07-29T13:50:10+00:00",
+      "value": 918.4,
+      "bench": 984.38,
+      "holding": "USO"
     }
   ],
-  "last_updated_utc": "2026-07-29T13:37:00+00:00",
+  "last_updated_utc": "2026-07-29T13:50:10+00:00",
   "restatement": [
     {
       "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)"
