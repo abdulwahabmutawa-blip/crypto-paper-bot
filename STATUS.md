@@ -1,28 +1,29 @@
-# Fleet status — 2026-07-29 (UTC)
+# Fleet status — 2026-07-30 (UTC)
 
-Last cycle: 2026-07-29 05:06 UTC (success). All paper accounts, $1,000 start each.
+Last cycle: 2026-07-30 04:58 UTC (success). All paper accounts, $1,000 start each.
 
 | Bot | Holds | Value | Bench | 24h change |
 |---|---|---|---|---|
-| trend (crypto) | SOL-USD | $1,014.79 (asof 07-29) | $991.60 | 4 round-trips (ADA→XRP→SOL→XRP→SOL), all "signal flip" |
-| regime (stock) | TQQQ | $867.78 (asof 07-28) | $986.10 | No trade; mark keeps sliding, no stop by design |
-| congress | NVDA, META, GOOG (+$700 cash) | $991.36 (asof 07-28) | $986.87 | No change |
-| meanrev | AMZN | $1,046.88 (asof 07-28) | $986.68 | WMT → AMZN (07-28), signal flip, banked +$46.33 |
-| commodity | USO | $1,010.15 (asof 07-28) | $986.68 | No trade; mark down further, no stop by design |
-| allweather | 5-asset basket | $998.47 (asof 07-28) | $986.87 | No change |
-| hype (sentiment) | CASH | $896.16 (asof 07-28) | $986.87 | RKLB → CASH (07-28), "hype faded" |
-| Hunter | ETH-USD | $924.04 (asof 07-28) | $986.87 | USO → ETH-USD (07-28), "outgunned on reward/risk" |
-| Watcher | advisory only, no position | — | — | Scanned 2026-07-29 03:47 UTC, risk: caution |
+| trend (crypto) | SOL-USD | $1,023.74 (asof 07-30) | $992.20 | 8 trades / 3 cash round-trips (XRP→SOL→cash→SOL→cash→SOL), all "signal flip" |
+| regime (stock) | TQQQ | $814.07 (asof 07-29) | $970.93 | No trade; mark -6.2% day on Nasdaq/semis selloff |
+| congress | NVDA, META, GOOG (+$700 cash) | $987.74 (asof 07-29) | $971.68 | No change |
+| meanrev | AMZN | $1,027.88 (asof 07-29) | $971.74 | No trade; mark -1.8% day |
+| commodity | USO | $1,084.26 (asof 07-29) | $971.74 | No trade; mark +7.3% day on oil surge |
+| allweather | 5-asset basket | $990.18 (asof 07-29) | $971.68 | No change |
+| hype (sentiment) | CASH | $896.16 (asof 07-29) | $971.68 | No trade, flat |
+| Hunter | USO | $920.47 (asof 07-29) | $971.68 | ETH-USD → USO (07-29), "Oil now scores >1.25x better" |
+| Watcher | advisory only, no position | — | — | Scanned 2026-07-30 04:04 UTC, risk: caution |
 
 ## Changed
-- **trend/crypto**: unusually high turnover — 4 flips in ~24h (ADA→XRP→SOL→XRP→SOL), each logged as "signal flip"/"strongest eligible coin." Net effect roughly flat-to-up ($982.08 → $1,014.79).
-- **meanrev**: sold WMT for +$46.33 gain, rotated into AMZN (both "oversold mega-cap" signal), 07-28.
-- **Hunter**: sold USO, bought ETH-USD (07-28) — reward/risk board re-picked Ethereum over Oil.
-- **hype/sentiment**: exited RKLB (07-28, "hype faded off Grok's list"), back to 100% cash.
+- **trend/crypto**: churned hard — 8 trades, 3 full round-trips into cash and back into SOL-USD, all "signal flip" / "strongest eligible coin." Net roughly flat-to-up ($1,017.75 → $1,023.74).
+- **Hunter**: sold ETH-USD, bought USO (07-29) — reward/risk board flipped back to Oil.
+- **regime/stock**: no trade, but TQQQ mark dropped -6.2% ($867.78 → $814.07) — matches Watcher's "Dow -1,000pts on AI spend worries" scan.
+- **commodity**: no trade, but USO mark jumped +7.3% ($1,010.15 → $1,084.26) — matches Watcher's "oil surges" after Iran strikes.
+- congress, meanrev, allweather, hype: no trades, marks only.
 - No stop-loss trips, no failed cycles, no exceptions found in the 50 commits reviewed.
 
 ## Needs a look
-- **Supervisor/judgment pipeline stale**: `reports/judgments.jsonl`, `trade_attributions.jsonl`, and `supervisor_scoreboard.json` have no entries newer than 2026-07-26, even though trading cycles are committing normally through today. That side process (not the trading bots themselves) looks stuck.
-- **regime/stock (TQQQ)**: down to $867.78, worst book in the fleet (~-13% since inception), no risk overlay by design — flagging in case that's meant to change.
-- **commodity (USO)**: down from its 07-24 peak of $1,145.80 to $1,010.15 with no stop-loss trade — same "no risk overlay by design" as above, not new.
-- Two cron gaps this window (2h25m on 07-28, 6h07m 07-28→07-29) — both within the range the workflow's own comments document as expected GitHub-throttling behavior, not treated as a failure.
+- **Supervisor/judgment pipeline still stuck**: `reports/judgments.jsonl`, `trade_attributions.jsonl`, `supervisor_scoreboard.json` unchanged since 2026-07-29 12:18 UTC, even though ~38 trading cycles have committed since. Same defect flagged in yesterday's digest, not resolved.
+- **trend/crypto churn getting worse, not better**: 3 cash round-trips in this window alone (same signal-flip whipsaw noted yesterday).
+- **regime/stock (TQQQ)**: down to $814.07, worst book in the fleet (~-18.6% since inception), no stop-loss by design.
+- One cron gap of 6h07m (07-29 21:58 → 07-30 04:05 UTC) — within the range the workflow's own comments document as expected GitHub-throttling behavior, not a failure.
