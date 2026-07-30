@@ -1,41 +1,41 @@
 {
-  "updated_utc": "2026-07-26T07:20:00+00:00",
-  "note": "07-26 run (Sunday; equities closed since Fri 07-24 close, crypto live). 9 lines appended: 8 daily + 1 trade_event. The day's real finding is not P/L but DATA INTEGRITY: on Saturday the price feed intermittently served 07-23 bars instead of 07-24, and the bots rewrote already-correct history rows with those stale marks. hunter's committed value regressed 1052.10 -> 1073.65 (a Thursday USO mark), congress 992.19 -> 994.58, allweather 997.97 -> 997.66. Verified against real closes. The market-hours gate added on 07-22 guards fills, not marks, so this class of staleness is unguarded. All 5 new crypto fills passed the fill audit; 0 fill alerts.",
-  "total_lines_logged": 84,
+  "updated_utc": "2026-07-30T08:40:00+00:00",
+  "note": "07-30 run covering a three-day window (07-27 -> 07-30) because no run happened on 07-28 or 07-29. 32 lines appended: 8 dailies backfilled for 07-28, 8 backfilled for 07-29, 8 for 07-30, and 8 trade_event lines. 26 new fills audited, 0 fill-integrity alerts, and the 07-25 stale-MARK defect did not recur - all eight bot values re-derived to within $0.26 of their recorded marks.",
+  "total_lines_logged": 127,
   "by_primary_driver": {
     "none_cash": {
       "profit": 0,
       "loss": 0,
-      "flat": 11
+      "flat": 13
     },
     "market_beta": {
-      "profit": 7,
+      "profit": 8,
       "loss": 6,
-      "flat": 3
+      "flat": 4
     },
     "macro": {
-      "profit": 6,
-      "loss": 2,
+      "profit": 7,
+      "loss": 8,
       "flat": 1
     },
     "unknown": {
-      "profit": 1,
+      "profit": 4,
       "loss": 1,
-      "flat": 22
+      "flat": 34
     },
     "hype_sentiment": {
       "profit": 5,
-      "loss": 4,
+      "loss": 9,
       "flat": 6
     },
     "technical": {
-      "profit": 1,
-      "loss": 2,
-      "flat": 1
+      "profit": 7,
+      "loss": 5,
+      "flat": 2
     },
     "sector": {
       "profit": 1,
-      "loss": 3,
+      "loss": 5,
       "flat": 0
     },
     "news_idiosyncratic": {
@@ -46,34 +46,37 @@
   },
   "by_beta_or_alpha": {
     "n/a": {
-      "profit": 2,
-      "loss": 1,
-      "flat": 35
+      "profit": 7,
+      "loss": 6,
+      "flat": 50
     },
     "beta": {
-      "profit": 6,
-      "loss": 4,
-      "flat": 3
+      "profit": 7,
+      "loss": 7,
+      "flat": 4
     },
     "mixed": {
-      "profit": 2,
-      "loss": 6,
+      "profit": 3,
+      "loss": 8,
       "flat": 0
     },
     "alpha": {
-      "profit": 11,
-      "loss": 7,
+      "profit": 15,
+      "loss": 13,
       "flat": 7
     }
   },
-  "headline_so_far": "Fleet is +1.96% ($8,156.77 on true marks) through ~8 sessions, with essentially all of the last 24h's +$28 coming from the crypto bot's SOL position. Three things now matter more than the P/L. (1) The dashboards are wrong: they show $8,172.52 because hunter and congress are marked at Thursday prices, overstating the fleet by $15.75 and hunter alone by $21.55. (2) The fleet has been completely dark for 8.6 hours - no cycle since 07-25 22:30Z - and ran only 22 of ~72 expected cycles in the last 24h (31%). (3) The crypto bot churn defect got worse, not better: it now round-trips into cash and straight back into the same coin within three hours. 27% of fleet capital is still in one ETF (USO across commodity + hunter) on an unresolved war-premium thesis, and the stock bot sits $2.17 above the 10% drawdown flag on pure 3x beta. Supervisor directional record turned: 1 win, 2 losses, +$16.12 cumulative, with the win coming from the first fade of a broken trend rather than an intact one.",
+  "headline_so_far": "Fleet is -3.17% ($7,746.11 vs the $8,000 start), down $94.04 over the three days since the last supervisor run. 2026-07-29 was the fleet's worst and most explicable day: a hawkish Fed hold with three dissents FOR a hike sent the Dow down ~1,100 points, and simultaneously an Iranian missile attack on US forces plus US/Saudi strikes in Iraq put WTI up 4-6%. Those two facts split the fleet cleanly - commodity +7.34% on oil, stock -6.19% on 3x Nasdaq beta - and the spread between best and worst bot is now $270.19. Three structural findings outrank the P/L. (1) The stock bot at 814.07 is 64.07 from the R1 hard stop after a single -6.19% session, with its MA200 cushion down from 9.2% to 2.9%. (2) The hunter bot's churn is now measurably expensive: it sold USO at 119.65 on 07-28 and re-bought it at 129.02 on 07-29, paying 7.83% to get back into the position it already held, and the crypto bot round-trips coins in 13 minutes. (3) Operationally the fleet is much healthier - 110% of expected cycles in 24h versus 31% on 07-26 - but there is now a precisely repeating ~6h overnight blackout (368 min on 07-29/30, 367 min on 07-28/29) caused by the concurrency handoff, not by throttling. My own record: I was WRONG on the 07-27 oil call - the war premium re-armed instead of unwinding - and the alpha it appears to have earned is an artifact of an unreachable reference price.",
   "supervisor_directional_scorecard": {
-    "scored_calls": 4,
-    "wins": 1,
+    "scored_calls": 11,
+    "wins": 8,
     "losses": 2,
     "neutral": 1,
-    "cumulative_alpha_usd": 16.12,
+    "cumulative_alpha_usd": 379.74,
+    "wins_actionable_basis": 7,
+    "losses_actionable_basis": 3,
+    "cumulative_alpha_usd_actionable": 250.6,
     "open_calls": 4,
-    "note": "First win: 2026-07-25-crypto-1 (skip_new_entries) +$31.05 - the bot churned DOGE->SOL->cash->SOL while DOGE ran +6.3%. The two losses remain reduce_half fades WITH an intact trend (TQQQ, USO); the win was a fade of churn. 2026-07-25-hype-1 closed concordant at 0. The stock and hunter reduce_half calls are deliberately carried, not closed at 0, because equities have not traded since they were made."
+    "note": "Five judgments closed this run, all five positive on the headline basis, but the honest reading is smaller. $238.96 of the $281.36 added is ONE oil thesis logged three times, and that thesis was wrong on direction; the two hunter legs paid only because hunter itself churned in and out at bad prices, and the commodity leg is a $5.45 LOSS once scored against the price actually reachable on 07-27. The two calls I would defend without caveats are 2026-07-27-hype-1 (+38.17, reachable reference, bot bought the hype name 98 minutes after the call was written and lost 4.09%) and 2026-07-25-stock-1 (+4.23, deliberately scored at its pre-committed 07-27 close even though today's price would have credited ~+44)."
   }
 }
