@@ -1,62 +1,62 @@
 {
-  "generated_utc": "2026-07-30T09:48:49+00:00",
+  "generated_utc": "2026-07-30T15:56:23+00:00",
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "live_ts": "2026-07-30T09:48:49+00:00",
+  "live_ts": "2026-07-30T15:56:23+00:00",
   "current": {
-    "date": "2026-07-29",
+    "date": "2026-07-30",
     "value": 896.16,
-    "bench": 971.68,
-    "holding": "CASH"
+    "bench": 982.51,
+    "holding": "MSFT"
   },
   "board": [
     {
-      "sym": "RGTI",
-      "price": 13.22,
-      "line": "euphoric \u00b7 Quantum computing retail chatter spikes",
-      "tag": "candidate",
-      "on": true,
-      "pick": false,
-      "fill": 40
-    },
-    {
-      "sym": "IBRX",
-      "price": 6.83,
-      "line": "euphoric \u00b7 Biotech overnight jump trending hard",
-      "tag": "candidate",
-      "on": true,
-      "pick": false,
-      "fill": 40
-    },
-    {
       "sym": "MSFT",
-      "price": 390.54,
-      "line": "euphoric \u00b7 Jumps 8% on capex, Azure beat",
+      "price": 449.49,
+      "line": "euphoric \u00b7 Surges 15% on blowout Azure AI earnings",
+      "tag": "HELD",
+      "on": true,
+      "pick": true,
+      "fill": 40
+    },
+    {
+      "sym": "NBIS",
+      "price": 191.2,
+      "line": "euphoric \u00b7 AI cloud stock rips amid sector bounce",
       "tag": "candidate",
       "on": true,
       "pick": false,
       "fill": 40
     },
     {
-      "sym": "META",
+      "sym": "BE",
+      "price": 206.68,
+      "line": "euphoric \u00b7 Bloom Energy jumps on strong results",
+      "tag": "candidate",
+      "on": true,
+      "pick": false,
+      "fill": 40
+    },
+    {
+      "sym": "SOXS",
       "price": 0,
-      "line": "fearful \u00b7 AI costs crush after-hours sentiment",
+      "line": "fearful \u00b7 Inverse semis trending as hedge",
       "tag": "fearful",
       "on": false,
       "pick": false,
       "fill": -40
     },
     {
-      "sym": "XRP.X",
+      "sym": "BTC",
       "price": 0,
-      "line": "mixed \u00b7 Crypto retail focus amid fear",
-      "tag": "mixed",
+      "line": "fearful \u00b7 Fear & Greed at 28; Clarity drag",
+      "tag": "fearful",
       "on": false,
       "pick": false,
-      "fill": 0
+      "fill": -40
     }
   ],
-  "board_title": "Grok's latest hype read (scan 2026-07-30T04:04, risk caution)",
+  "board_title": "Grok's latest hype read (scan 2026-07-30T15:55, risk caution)",
   "meta": {
     "title": "Hype Trader \u2014 $1,000 Challenge",
     "badge": "PAPER SIM \u00b7 SENTIMENT ON TRIAL",
@@ -2097,6 +2097,12 @@
       "value": 896.16,
       "bench": 971.68,
       "holding": "CASH"
+    },
+    {
+      "ts": "2026-07-30T15:56:23+00:00",
+      "value": 896.16,
+      "bench": 982.51,
+      "holding": "MSFT"
     }
   ],
   "trades": [
@@ -2225,6 +2231,15 @@
       "units": 14.1372,
       "value": 896.16,
       "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
+    },
+    {
+      "date": "2026-07-30",
+      "action": "BUY",
+      "ticker": "MSFT",
+      "price": 449.49,
+      "units": 1.9937,
+      "value": 896.16,
+      "reason": "Grok: MSFT euphoric \u2014 Surges 15% on blowout Azure AI earnings (scan 2026-07-30T15:55)"
     }
   ],
   "history": [
@@ -2306,6 +2321,12 @@
       "value": 896.16,
       "bench": 971.68,
       "holding": "CASH"
+    },
+    {
+      "date": "2026-07-30",
+      "value": 896.16,
+      "bench": 982.51,
+      "holding": "MSFT"
     }
   ],
   "strategy": {
