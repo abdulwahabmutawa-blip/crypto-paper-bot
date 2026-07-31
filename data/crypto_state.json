@@ -1,9 +1,9 @@
 {
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "holding": "DOGE-USD",
-  "units": 14831.97390277333,
-  "cash": 0.0,
+  "holding": "CASH",
+  "units": 0.0,
+  "cash": 1039.7213705844104,
   "bench_units": 0.01552055830726173,
   "trades": [
     {
@@ -464,6 +464,24 @@
       "units": 14831.973903,
       "value": 1038.24,
       "reason": "Strongest eligible coin (+1.3% 7d momentum)"
+    },
+    {
+      "date": "2026-07-31",
+      "action": "SELL",
+      "ticker": "DOGE-USD",
+      "price": 0.0701,
+      "units": 14831.973903,
+      "value": 1039.72,
+      "reason": "Signal flip"
+    },
+    {
+      "date": "2026-07-31",
+      "action": "TO CASH",
+      "ticker": "\u2014",
+      "price": 0,
+      "units": 0,
+      "value": 1039.72,
+      "reason": "All 8 coins falling on the week \u2014 cash until one rises"
     }
   ],
   "history": [
@@ -559,12 +577,12 @@
     },
     {
       "date": "2026-07-31",
-      "value": 1038.24,
-      "bench": 997.36,
-      "holding": "DOGE-USD"
+      "value": 1039.72,
+      "bench": 998.21,
+      "holding": "CASH"
     }
   ],
-  "last_updated_utc": "2026-07-31T06:02:03+00:00",
+  "last_updated_utc": "2026-07-31T06:15:15+00:00",
   "intraday": [
     {
       "ts": "2026-07-16T18:32:57+00:00",
@@ -3145,6 +3163,12 @@
       "value": 1038.24,
       "bench": 997.36,
       "holding": "DOGE-USD"
+    },
+    {
+      "ts": "2026-07-31T06:15:15+00:00",
+      "value": 1039.72,
+      "bench": 998.21,
+      "holding": "CASH"
     }
   ]
 }
