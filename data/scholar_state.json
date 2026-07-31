@@ -1,17 +1,33 @@
 {
   "created": "2026-07-30",
   "starting_cash": 1000.0,
-  "holding": "CASH",
-  "units": 0.0,
-  "cash": 1000.0,
+  "holding": "IWM",
+  "units": 3.4096526842950676,
+  "cash": 0.0,
   "bench_units": 1.348199515095819,
-  "trades": [],
+  "trades": [
+    {
+      "date": "2026-07-31",
+      "action": "BUY",
+      "ticker": "IWM",
+      "price": 293.29,
+      "units": 3.4097,
+      "value": 1000.0,
+      "reason": "Best momentum-per-unit-risk in a confirmed uptrend"
+    }
+  ],
   "history": [
     {
       "date": "2026-07-30",
       "value": 1000.0,
       "bench": 1000.0,
       "holding": "CASH"
+    },
+    {
+      "date": "2026-07-31",
+      "value": 1000.0,
+      "bench": 1005.86,
+      "holding": "IWM"
     }
   ],
   "intraday": [
@@ -278,7 +294,14 @@
       "value": 1000.0,
       "bench": 1000.0,
       "holding": "CASH"
+    },
+    {
+      "ts": "2026-07-31T13:34:51+00:00",
+      "value": 1000.0,
+      "bench": 1005.86,
+      "holding": "IWM"
     }
   ],
-  "last_updated_utc": "2026-07-31T13:21:37+00:00"
+  "last_updated_utc": "2026-07-31T13:34:51+00:00",
+  "hwm": 293.2850036621094
 }

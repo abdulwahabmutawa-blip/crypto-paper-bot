@@ -1,104 +1,104 @@
 {
-  "generated_utc": "2026-07-31T13:21:34+00:00",
+  "generated_utc": "2026-07-31T13:34:46+00:00",
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "live_ts": "2026-07-30T19:55:00+00:00",
+  "live_ts": "2026-07-31T13:30:00+00:00",
   "current": {
-    "date": "2026-07-30",
-    "value": 1070.14,
-    "bench": 987.97,
-    "holding": "AMZN"
+    "date": "2026-07-31",
+    "value": 1215.5,
+    "bench": 994.02,
+    "holding": "PG"
   },
   "board": [
     {
       "sym": "PG",
-      "price": 143.95,
-      "line": "z -1.91",
+      "price": 141.93,
+      "line": "z -2.41",
+      "tag": "HELD",
+      "on": true,
+      "pick": true,
+      "fill": 40.17492334754857
+    },
+    {
+      "sym": "AAPL",
+      "price": 301.21,
+      "line": "z -2.11",
       "tag": "oversold",
       "on": true,
       "pick": false,
-      "fill": 31.812460941062042
-    },
-    {
-      "sym": "NVDA",
-      "price": 195.15,
-      "line": "z -1.16",
-      "tag": "normal",
-      "on": false,
-      "pick": false,
-      "fill": 19.371913459157263
-    },
-    {
-      "sym": "GOOGL",
-      "price": 333.68,
-      "line": "z -0.92",
-      "tag": "normal",
-      "on": false,
-      "pick": false,
-      "fill": 15.389287960638296
-    },
-    {
-      "sym": "AMZN",
-      "price": 236.03,
-      "line": "z -0.82",
-      "tag": "HELD",
-      "on": false,
-      "pick": true,
-      "fill": 13.728376960392655
+      "fill": 35.08905288101068
     },
     {
       "sym": "HD",
-      "price": 333.39,
-      "line": "z -0.74",
+      "price": 331.33,
+      "line": "z -1.00",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 12.370441305424608
-    },
-    {
-      "sym": "UNH",
-      "price": 421.57,
-      "line": "z -0.67",
-      "tag": "normal",
-      "on": false,
-      "pick": false,
-      "fill": 11.152403753553193
+      "fill": 16.663524534294496
     },
     {
       "sym": "WMT",
-      "price": 111.09,
+      "price": 110.17,
+      "line": "z -0.99",
+      "tag": "normal",
+      "on": false,
+      "pick": false,
+      "fill": 16.53604738439499
+    },
+    {
+      "sym": "UNH",
+      "price": 420.24,
+      "line": "z -0.86",
+      "tag": "normal",
+      "on": false,
+      "pick": false,
+      "fill": 14.412938559469287
+    },
+    {
+      "sym": "JNJ",
+      "price": 254.0,
+      "line": "z -0.59",
+      "tag": "normal",
+      "on": false,
+      "pick": false,
+      "fill": 9.839233935313802
+    },
+    {
+      "sym": "NVDA",
+      "price": 199.5,
       "line": "z -0.57",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 9.56745668712445
+      "fill": 9.507228807154766
     },
     {
-      "sym": "JNJ",
-      "price": 255.91,
+      "sym": "GOOGL",
+      "price": 341.91,
       "line": "z -0.35",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 5.902328930271359
+      "fill": 5.809873368309401
     },
     {
       "sym": "PEP",
-      "price": 140.22,
-      "line": "z +0.35",
+      "price": 138.67,
+      "line": "z -0.02",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": -5.844938250284009
+      "fill": 0.317872210326588
     },
     {
       "sym": "MRK",
-      "price": 129.79,
-      "line": "z +0.82",
+      "price": 128.87,
+      "line": "z +0.53",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": -13.646346502540515
+      "fill": -8.896965542408127
     }
   ],
   "board_title": "16 mega-caps, most oversold first (z < -1.5 = buy zone)",
@@ -2556,6 +2556,12 @@
       "value": 1070.14,
       "bench": 987.97,
       "holding": "AMZN"
+    },
+    {
+      "ts": "2026-07-31T13:34:46+00:00",
+      "value": 1215.5,
+      "bench": 994.02,
+      "holding": "PG"
     }
   ],
   "trades": [
@@ -2584,6 +2590,24 @@
       "price": 230.78,
       "units": 4.5339,
       "value": 1046.33,
+      "reason": "Most oversold mega-cap (z < -1.5) \u2014 buying the dip"
+    },
+    {
+      "date": "2026-07-31",
+      "action": "SELL",
+      "ticker": "AMZN",
+      "price": 268.09,
+      "units": 4.5339,
+      "value": 1215.5,
+      "reason": "Signal flip"
+    },
+    {
+      "date": "2026-07-31",
+      "action": "BUY",
+      "ticker": "PG",
+      "price": 141.93,
+      "units": 8.5644,
+      "value": 1215.5,
       "reason": "Most oversold mega-cap (z < -1.5) \u2014 buying the dip"
     }
   ],
@@ -2653,6 +2677,12 @@
       "value": 1070.14,
       "bench": 987.97,
       "holding": "AMZN"
+    },
+    {
+      "date": "2026-07-31",
+      "value": 1215.5,
+      "bench": 994.02,
+      "holding": "PG"
     }
   ],
   "strategy": {

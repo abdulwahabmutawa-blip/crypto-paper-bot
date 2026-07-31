@@ -1,22 +1,22 @@
 {
-  "generated_utc": "2026-07-31T13:21:37+00:00",
+  "generated_utc": "2026-07-31T13:34:51+00:00",
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "live_ts": "2026-07-31T13:21:37+00:00",
+  "live_ts": "2026-07-31T13:34:51+00:00",
   "current": {
-    "date": "2026-07-30",
-    "value": 899.37,
-    "bench": 987.97,
-    "holding": "MSFT"
+    "date": "2026-07-31",
+    "value": 913.49,
+    "bench": 993.82,
+    "holding": "AMZN"
   },
   "board": [
     {
       "sym": "AMZN",
-      "price": 235.5,
+      "price": 267.8,
       "line": "euphoric \u00b7 Surges 10-12% on AI/chip earnings beat",
-      "tag": "candidate",
+      "tag": "HELD",
       "on": true,
-      "pick": false,
+      "pick": true,
       "fill": 40
     },
     {
@@ -2517,6 +2517,12 @@
       "value": 899.37,
       "bench": 987.97,
       "holding": "MSFT"
+    },
+    {
+      "ts": "2026-07-31T13:34:51+00:00",
+      "value": 913.49,
+      "bench": 993.82,
+      "holding": "AMZN"
     }
   ],
   "trades": [
@@ -2654,6 +2660,24 @@
       "units": 1.9937,
       "value": 896.16,
       "reason": "Grok: MSFT euphoric \u2014 Surges 15% on blowout Azure AI earnings (scan 2026-07-30T15:55)"
+    },
+    {
+      "date": "2026-07-31",
+      "action": "SELL",
+      "ticker": "MSFT",
+      "price": 458.18,
+      "units": 1.9937,
+      "value": 913.49,
+      "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
+    },
+    {
+      "date": "2026-07-31",
+      "action": "BUY",
+      "ticker": "AMZN",
+      "price": 267.8,
+      "units": 3.411,
+      "value": 913.49,
+      "reason": "Grok: AMZN euphoric \u2014 Surges 10-12% on AI/chip earnings beat (scan 2026-07-31T11:48)"
     }
   ],
   "history": [
@@ -2741,6 +2765,12 @@
       "value": 899.37,
       "bench": 987.97,
       "holding": "MSFT"
+    },
+    {
+      "date": "2026-07-31",
+      "value": 913.49,
+      "bench": 993.82,
+      "holding": "AMZN"
     }
   ],
   "strategy": {
