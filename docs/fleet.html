@@ -6,56 +6,46 @@
 <meta http-equiv="refresh" content="600">
 <title>The Bot Fleet — $1,000 paper experiments</title>
 <style>
-  :root{--bg:#0A0B0E;--panel:#10141A;--panel2:#0D1116;--line:#232B36;
-    --text:#ECEFE9;--muted:#9AA69F;--faint:#5F6B66;
+  :root{--bg:#0B0C0F;--panel:rgba(255,255,255,.035);--panel2:rgba(255,255,255,.055);
+    --line:rgba(255,255,255,.14);--text:#F2F3F5;--muted:#9BA1AA;--faint:#62676F;
     --gain:#22A896;--loss:#DE5347;
-    --sadu-r:#B8432F;--sadu-s:#D9A05B;--sadu-t:#22A896;
-    --mono:Consolas,"Cascadia Code",Menlo,monospace;}
-  @media (prefers-color-scheme: light){
-    :root{--bg:#F5F0E6;--panel:#FFFDF8;--panel2:#EFE9DC;--line:#DCD3C2;
-      --text:#1C1A17;--muted:#6B665C;--faint:#9A937F;
-      --gain:#1E9585;--loss:#C8473C;}}
+    --mono:Consolas,"Cascadia Code",Menlo,monospace;
+    --glass:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.015));
+    --glint:conic-gradient(from 210deg,
+      rgba(255,255,255,.65), rgba(255,255,255,.08) 16%,
+      rgba(150,190,255,.35) 30%, rgba(255,255,255,.06) 46%,
+      rgba(255,255,255,.55) 58%, rgba(255,185,140,.32) 72%,
+      rgba(255,255,255,.07) 86%, rgba(255,255,255,.65));}
   *{box-sizing:border-box}
   body{background:var(--bg);color:var(--text);margin:0;
-    font:15px/1.5 "Segoe UI",system-ui,sans-serif;padding:0 24px 24px;
-    background-image:
-      linear-gradient(color-mix(in srgb,var(--sadu-t) 4%,transparent) 1px,transparent 1px),
-      linear-gradient(90deg,color-mix(in srgb,var(--sadu-t) 4%,transparent) 1px,transparent 1px);
-    background-size:56px 56px;}
-  .saduband{height:8px;margin:0 -24px 26px;background:
-    repeating-linear-gradient(135deg,
-      var(--sadu-r) 0 7px, var(--bg) 7px 9px,
-      var(--sadu-s) 9px 16px, var(--bg) 16px 18px,
-      var(--sadu-t) 18px 25px, var(--bg) 25px 27px);}
+    font:15px/1.5 "Segoe UI",system-ui,sans-serif;padding:34px 24px 24px;
+    background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1.4px);
+    background-size:22px 22px;}
   .wrap{max-width:880px;margin:0 auto}
-  h1{font-size:24px;margin:0 0 4px;letter-spacing:.04em;text-transform:uppercase;
-    font-weight:700}
-  h1 em{font-style:normal;color:var(--sadu-s)}
-  .sub{color:var(--muted);margin:0 0 24px;font-size:14px;max-width:640px}
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:16px}
-  a.card{display:block;background:var(--panel);border:1px solid var(--line);
-    border-radius:2px;padding:16px;text-decoration:none;color:var(--text);
-    position:relative;transition:transform .12s,border-color .12s,box-shadow .12s;
-    clip-path:polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,0 100%)}
-  a.card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;
-    background:linear-gradient(90deg,var(--sadu-r) 0 33%,var(--sadu-s) 33% 66%,
-      var(--sadu-t) 66% 100%);opacity:.85}
-  a.card:hover{transform:translateY(-3px);border-color:var(--sadu-t);
-    box-shadow:0 6px 22px color-mix(in srgb,var(--sadu-t) 22%,transparent)}
-  .emoji{font-size:22px}
-  .name{font-weight:700;margin:8px 0 3px;letter-spacing:.03em;text-transform:uppercase;
-    font-size:13px}
+  h1{font-size:24px;margin:0 0 4px;font-weight:650;letter-spacing:.01em}
+  h1 em{font-style:normal;color:var(--muted);font-weight:400}
+  .sub{color:var(--muted);margin:0 0 26px;font-size:14px;max-width:640px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:18px}
+  a.card{display:block;border-radius:22px;padding:18px;
+    text-decoration:none;color:var(--text);
+    border:1px solid transparent;
+    background:var(--glass) padding-box, var(--glint) border-box;
+    box-shadow:0 14px 34px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.05);
+    transition:transform .14s, box-shadow .14s}
+  a.card:hover{transform:translateY(-3px);
+    box-shadow:0 18px 44px rgba(0,0,0,.55), inset 0 1px 0 rgba(255,255,255,.09)}
+  .emoji{font-size:22px;filter:grayscale(35%)}
+  .name{font-weight:650;margin:9px 0 3px;font-size:14.5px}
   .desc{color:var(--muted);font-size:13px}
   .val{font-family:var(--mono);font-size:12px;color:var(--faint);margin-top:10px;
-    border-top:1px dashed var(--line);padding-top:8px}
-  footer{color:var(--faint);font-size:12px;margin-top:28px;text-align:center}
-  footer a{color:var(--sadu-t)}
+    border-top:1px solid rgba(255,255,255,.08);padding-top:8px}
+  footer{color:var(--faint);font-size:12px;margin-top:30px;text-align:center}
+  footer a{color:var(--muted)}
 </style>
 </head>
 <body>
-<div class="saduband"></div>
 <div class="wrap">
-  <h1>The Bot <em>Fleet</em></h1>
+  <h1>The Bot Fleet <em>· paper trading, live</em></h1>
   <p class="sub">A fleet of $1,000 paper-trading experiments — rival theories
   of market edge trading live on GitHub Actions, every decision on a public
   ledger. Simulation only; not investment advice.</p>

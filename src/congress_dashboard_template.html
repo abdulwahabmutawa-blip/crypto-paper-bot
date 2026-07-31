@@ -76,25 +76,33 @@
 </style>
 
 <style>
-  /* Sadu-futurism reskin (2026-08) — overrides the vars above */
-  :root, :root[data-theme="dark"]{
-    --bg:#0A0B0E; --panel:#10141A; --panel2:#0D1116; --line:#232B36;
-    --text:#ECEFE9; --muted:#9AA69F; --faint:#5F6B66;
-    --gain:#22A896; --loss:#DE5347; --acc:#D9A05B; --sig:#C9A15C; --warn:#D9A05B;}
-  @media (prefers-color-scheme: light){
-    :root{--bg:#F5F0E6; --panel:#FFFDF8; --panel2:#EFE9DC; --line:#DCD3C2;
-      --text:#1C1A17; --muted:#6B665C; --faint:#9A937F;
-      --gain:#1E9585; --loss:#C8473C; --acc:#A5731F; --sig:#8A6B1E; --warn:#A5731F;}}
-  :root[data-theme="light"]{--bg:#F5F0E6; --panel:#FFFDF8; --panel2:#EFE9DC;
-    --line:#DCD3C2; --text:#1C1A17; --muted:#6B665C; --faint:#9A937F;
-    --gain:#1E9585; --loss:#C8473C; --acc:#A5731F; --sig:#8A6B1E; --warn:#A5731F;}
-  body{background-image:
-    linear-gradient(color-mix(in srgb,#22A896 4%,transparent) 1px,transparent 1px),
-    linear-gradient(90deg,color-mix(in srgb,#22A896 4%,transparent) 1px,transparent 1px);
-    background-size:56px 56px;}
-  .saduband{height:8px;margin:-20px -20px 16px;background:
-    repeating-linear-gradient(135deg,#B8432F 0 7px,var(--bg) 7px 9px,
-    #D9A05B 9px 16px,var(--bg) 16px 18px,#22A896 18px 25px,var(--bg) 25px 27px);}
+  /* Glass reskin (2026-08) — overrides the vars above */
+  :root, :root[data-theme="dark"], :root[data-theme="light"]{
+    --bg:#0B0C0F; --panel:rgba(255,255,255,.035); --panel2:rgba(255,255,255,.055);
+    --line:rgba(255,255,255,.14); --text:#F2F3F5; --muted:#9BA1AA; --faint:#62676F;
+    --gain:#22A896; --loss:#DE5347; --acc:#E4E6EA; --sig:#9BA1AA; --warn:#D9A05B;
+    --btc:#F7931A;}
+  body{background:var(--bg);
+    background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1.4px);
+    background-size:22px 22px;}
+  .saduband{display:none}
+  .panel, .kpi, .card{border-radius:22px !important;border:1px solid transparent !important;
+    background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.015)) padding-box,
+      conic-gradient(from 210deg,
+        rgba(255,255,255,.6), rgba(255,255,255,.08) 16%,
+        rgba(150,190,255,.32) 30%, rgba(255,255,255,.06) 46%,
+        rgba(255,255,255,.5) 58%, rgba(255,185,140,.28) 72%,
+        rgba(255,255,255,.07) 86%, rgba(255,255,255,.6)) border-box !important;
+    box-shadow:0 14px 34px rgba(0,0,0,.42), inset 0 1px 0 rgba(255,255,255,.05)}
+  #thoughtspanel{border-radius:22px !important;border:1px solid transparent !important;
+    border-left:1px solid transparent !important;
+    background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.015)) padding-box,
+      conic-gradient(from 210deg,
+        rgba(255,255,255,.6), rgba(255,255,255,.08) 16%,
+        rgba(150,190,255,.32) 30%, rgba(255,255,255,.06) 46%,
+        rgba(255,255,255,.5) 58%, rgba(255,185,140,.28) 72%,
+        rgba(255,255,255,.07) 86%, rgba(255,255,255,.6)) border-box !important;
+    box-shadow:0 14px 34px rgba(0,0,0,.42), inset 0 1px 0 rgba(255,255,255,.05)}
 </style>
 <div class="saduband"></div>
 <div class="wrap">
