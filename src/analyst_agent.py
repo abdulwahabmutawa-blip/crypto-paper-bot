@@ -78,7 +78,9 @@ TOOLS = [
                     "any ticker whose recent action matters to your decision.",
      "input_schema": {"type": "object", "properties": {
          "ticker": {"type": "string", "enum": UNIVERSE},
-         "days": {"type": "integer", "minimum": 5, "maximum": 200}},
+         # no minimum/maximum — strict mode rejects numeric constraints
+         # (found by the 2026-07-31 rehearsal run); range clamped in code
+         "days": {"type": "integer"}},
          "required": ["ticker", "days"], "additionalProperties": False},
      "strict": True},
     {"name": "get_headlines",
@@ -178,7 +180,8 @@ def decide(client, context, close_raw):
                 return dict(c.input), tools_called, usage
             tools_called.append(c.name)
             if c.name == "get_price_history":
-                s = close_raw[c.input["ticker"]].dropna().tail(int(c.input["days"]))
+                days = max(5, min(200, int(c.input["days"])))
+                s = close_raw[c.input["ticker"]].dropna().tail(days)
                 body = "\n".join(f"{d.date()} {v:.2f}" for d, v in s.items())
             elif c.name == "get_headlines":
                 headline_calls += 1
