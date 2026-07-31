@@ -50,8 +50,10 @@ jobs:
           git config user.email "bot@users.noreply.github.com"
 
           run_cycle () {
-            for s in crypto_tracker stock_tracker congress_tracker \
-                     bot_meanrev bot_commodity bot_allweather \
+            # stock_tracker retired 2026-07-31 (owner decision at v2 review);
+            # its dashboard stays in docs/ as a frozen archive
+            for s in crypto_tracker congress_tracker \
+                     bot_meanrev bot_commodity bot_allweather bot_scholar \
                      grok_sentinel sentinel_trader hunter_tracker; do
               python "src/$s.py" || echo "::warning::$s.py failed this cycle"
             done
@@ -59,8 +61,8 @@ jobs:
             # publish dashboards
             cp reports/crypto_dashboard.html docs/index.html
             cp reports/crypto_dashboard_data.json docs/crypto_dashboard_data.json
-            cp reports/stock_dashboard.html docs/stocks.html
-            cp reports/stock_dashboard_data.json docs/stock_dashboard_data.json
+            cp reports/scholar_dashboard.html docs/scholar.html 2>/dev/null || true
+            cp reports/scholar_dashboard_data.json docs/scholar_dashboard_data.json 2>/dev/null || true
             cp reports/congress_dashboard.html docs/congress.html
             cp reports/congress_dashboard_data.json docs/congress_dashboard_data.json
             cp reports/meanrev_dashboard.html docs/meanrev.html

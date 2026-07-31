@@ -73,13 +73,36 @@ maximum of many draws. Judge it by these rules, never by its rank.
   far too small for any statistical verdict. Therefore: **no kills at v2
   except R1 hard-stop breaches.** v2 is for process upgrades (vol sizing,
   stops), scorecard baseline, and the insider-bot data decision.
+
+### v2 review record (2026-07-31)
+
+- **stock bot RETIRED by OWNER OVERRIDE — explicitly outside these rules.**
+  Final mark $892.30 (2026-07-30), weakest book (-10.8% vs bench -1.3%). R1
+  was NOT breached; R2/R3 need 60 trading days. The owner directed the kill
+  after seeing the standings, which the amendment rule does not permit as a
+  criteria change — so it is recorded as what it is: a discretionary owner
+  decision, not a rules-based kill. These criteria remain unamended and in
+  force for the rest of the fleet. (For the record: at ~10 trading days the
+  weakest book is mostly noise — same corollary as R5's, in the other
+  direction.)
+- **The Scholar ADDED (bot #10, synthesis of tested lessons)** — spec at
+  reports/scholar_spec.md (registered launch day; see its
+  provenance-integrity note for what the git timestamp does and does not
+  prove, and its backtest record for the v1 retraction). Enters the roster
+  under R1-R5 from day one; its clock starts 2026-07-31, so its first R2/R3
+  window is ~2026-10-24, R5 ~2026-12-05.
+- Process upgrades shipped with it: the parked trailing-stop/cooldown
+  overlay and vol-target sizing now exist in selection_engine as opt-in SPEC
+  config. Applied to the Scholar ONLY — meanrev/commodity keep running
+  unmodified so their live experiments stay uncontaminated.
 - **~2026-10-10 (first kill window):** ~60 trading days live. R2/R3 verdicts
   become eligible.
 - **~2026-11-20:** ~90 trading days. R5 promotions become eligible.
 
 ## Roster covered
 
-crypto (regime switcher), stock (TQQQ MA200), meanrev, commodity, allweather,
-congress, hunter, hype trader. The Watcher (sentinel) holds no capital and is
-judged separately via the supervisor's judgment scoreboard (60+ scored calls,
-positive cumulative alpha, per the standing agreement).
+crypto (regime switcher), meanrev, commodity, allweather, congress, hunter,
+hype trader, scholar (from 2026-07-31). Retired: stock/TQQQ MA200 (owner
+override 2026-07-31, see v2 record). The Watcher (sentinel) holds no capital
+and is judged separately via the supervisor's judgment scoreboard (60+ scored
+calls, positive cumulative alpha, per the standing agreement).

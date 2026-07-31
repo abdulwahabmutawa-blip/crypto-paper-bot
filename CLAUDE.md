@@ -4,8 +4,10 @@ Notion project page: https://app.notion.com/p/3a6632591142819289cecca55dc39533
 (Command Center → Trade Bot)
 
 ## What this is
-A 9-bot paper-trading fleet — trend, regime, congress, meanrev, commodity, allweather, hype,
-Hunter, plus a Watcher bot using Grok. Each manages **$1,000 of PAPER capital. No real money.**
+A 9-bot paper-trading fleet — crypto trend, congress, meanrev, commodity, allweather, hype,
+Hunter, Scholar (synthesis bot, added at the 2026-07-31 v2 review), plus a Watcher bot using
+Grok. The leveraged stock bot was retired 2026-07-31 by owner decision (docs/stocks.html is a
+frozen archive). Each bot manages **$1,000 of PAPER capital. No real money.**
 Runs itself on GitHub Actions; dashboards are bilingual (English/Arabic).
 
 ## Where things are
@@ -29,8 +31,10 @@ makes real-time copying impossible.
 
 ## Conventions
 - Paper only. Test before any real money. Report findings honestly even when the thesis dies.
-- A trailing-stop + re-entry-cooldown risk overlay was drafted but **is not applied** — the patch is
-  parked at `C:\Users\Hobii\claude\trading\rescued\risk-overlay-trailing-stop.patch` on the PC.
+- The trailing-stop + cooldown risk overlay and vol-target sizing now live in
+  `selection_engine.py` as opt-in SPEC keys (`risk`, `vol_target`, `signal_frame`) — used by the
+  Scholar ONLY; meanrev/commodity deliberately keep running without them (uncontaminated
+  experiments). The old parked patch on the PC is superseded.
 
 ---
 

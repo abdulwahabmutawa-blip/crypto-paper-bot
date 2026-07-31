@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="refresh" content="600">
-<title>The Bot Fleet — six $1,000 paper experiments</title>
+<title>The Bot Fleet — $1,000 paper experiments</title>
 <style>
   :root{--bg:#0B0E13;--panel:#141A23;--line:#232C3A;--text:#EAEFF5;
     --muted:#94A2B3;--faint:#5E6B7C;--gain:#3DD68C;--loss:#F0544F;
@@ -33,20 +33,22 @@
 <body>
 <div class="wrap">
   <h1>The Bot Fleet</h1>
-  <p class="sub">Six $1,000 paper-trading experiments, six theories of market
-  edge — trading live every ~20 minutes on GitHub Actions, every decision on a
-  public ledger. Simulation only; not investment advice.</p>
+  <p class="sub">A fleet of $1,000 paper-trading experiments — rival theories
+  of market edge trading live on GitHub Actions, every decision on a public
+  ledger. Simulation only; not investment advice.</p>
   <div class="grid">
     <a class="card" href="index.html"><span class="emoji">🪙</span>
       <div class="name">Crypto Regime Switcher</div>
       <div class="desc">Momentum brain in uptrends, dip-buying brain in chop —
         picked daily by BTC's 200-day tide gauge.</div>
       <div class="val">edge theory: regimes</div></a>
-    <a class="card" href="stocks.html"><span class="emoji">📈</span>
+    <a class="card" href="stocks.html" style="opacity:.55"><span class="emoji">📈</span>
       <div class="name">Leveraged Stock Trend</div>
-      <div class="desc">3x Nasdaq while QQQ holds its 200-day MA, T-bills
-        below it. The lab champion in trending markets.</div>
-      <div class="val">edge theory: trends</div></a>
+      <div class="desc">3x Nasdaq while QQQ holds its 200-day MA. Retired by
+        owner decision at the v2 review as the weakest book — no kill rule
+        was actually breached at 10 trading days; the ledger records it as a
+        discretionary call, not a rules-based kill.</div>
+      <div class="val">RETIRED 2026-07-31 · final $892 (−10.8%)</div></a>
     <a class="card" href="congress.html"><span class="emoji">🏛</span>
       <div class="name">Congress Copier</div>
       <div class="desc">Auto-follows every member of Congress with a proven
@@ -83,6 +85,12 @@
         stocks, crypto, commodities — by reward-per-risk and goes all-in on
         the best, with a trailing stop. The aggressive one.</div>
       <div class="val">edge theory: opportunism, everywhere</div></a>
+    <a class="card" href="scholar.html"><span class="emoji">🎓</span>
+      <div class="name">The Scholar</div>
+      <div class="desc">Every lesson the fleet has earned, in one strategy:
+        vol-adjusted momentum in confirmed uptrends, vol-sized positions,
+        trailing stop, anti-churn switching. No leverage.</div>
+      <div class="val">edge theory: synthesis of tested lessons</div></a>
   </div>
   <footer>Paper money · public ledger:
     <a href="https://github.com/abdulwahabmutawa-blip/crypto-paper-bot" style="color:var(--gain)">github.com/abdulwahabmutawa-blip/crypto-paper-bot</a></footer>
@@ -128,6 +136,8 @@ const AR = [
  ["The Watcher","الرقيب"],
  ["Hype Trader","متداول الضجة"],
  ["The Hunter","الصياد"],
+ ["The Scholar","العالِم"],
+ ["RETIRED","متقاعد"],
  ["MAXIMUM AGGRESSION","أقصى درجات الجرأة"],
  ["edge theory","نظرية الأفضلية"],
  ["strategy ahead by","الاستراتيجية متقدمة بمقدار "],
