@@ -1,0 +1,36 @@
+name: key-check
+
+# Manual-only: validates repo API secrets without spending anything.
+# The Anthropic check calls count_tokens (a free endpoint — no tokens billed).
+on:
+  workflow_dispatch: {}
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install anthropic
+      - name: Validate ANTHROPIC_API_KEY
+        run: |
+          python - <<'EOF'
+          import os, sys
+          import anthropic
+          if not os.environ.get("ANTHROPIC_API_KEY"):
+              print("::error::ANTHROPIC_API_KEY secret is not set")
+              sys.exit(1)
+          try:
+              r = anthropic.Anthropic().messages.count_tokens(
+                  model="claude-opus-5",
+                  messages=[{"role": "user", "content": "ping"}])
+              print(f"ANTHROPIC_API_KEY OK — auth accepted "
+                    f"(count_tokens returned {r.input_tokens} tokens, $0 billed)")
+          except anthropic.AuthenticationError:
+              print("::error::key REJECTED — check for a typo in the secret")
+              sys.exit(1)
+          EOF
