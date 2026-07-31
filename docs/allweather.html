@@ -3,23 +3,27 @@
 <title>Fleet Bot — Live $1k Paper Sim</title>
 <style>
   :root, :root[data-theme="dark"], :root[data-theme="light"]{
-    --bg:#0B0C0F; --panel:rgba(255,255,255,.035); --panel2:rgba(255,255,255,.055);
-    --line:rgba(255,255,255,.14); --text:#F2F3F5; --muted:#9BA1AA; --faint:#62676F;
-    --gain:#22A896; --loss:#DE5347; --acc:#E4E6EA; --sig:#9BA1AA;
+    --bg:#0A0A0B; --panel:rgba(255,255,255,.03); --panel2:rgba(255,255,255,.05);
+    --line:rgba(255,255,255,.14); --text:#F5F6F8; --muted:#B3B9C2; --faint:#8B919B;
+    --gain:#2BB8A5; --loss:#E25B50; --acc:#E4E6EA; --sig:#B3B9C2;
     --mono:Consolas,"Cascadia Code","SF Mono",Menlo,monospace;
-    --glass:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.015));
-    --glint:conic-gradient(from 210deg,
-      rgba(255,255,255,.6), rgba(255,255,255,.08) 16%,
-      rgba(150,190,255,.32) 30%, rgba(255,255,255,.06) 46%,
-      rgba(255,255,255,.5) 58%, rgba(255,185,140,.28) 72%,
-      rgba(255,255,255,.07) 86%, rgba(255,255,255,.6));
+    --glass:linear-gradient(180deg,#191A1F,#0E0F12);
+    --glint:conic-gradient(from 0deg,
+      rgba(255,255,255,.14), rgba(255,255,255,.9) 12%,
+      rgba(255,255,255,.10) 24%, rgba(255,205,165,.55) 35%,
+      rgba(255,255,255,.85) 40%, rgba(255,255,255,.08) 54%,
+      rgba(255,255,255,.9) 62%, rgba(165,195,255,.5) 73%,
+      rgba(255,255,255,.10) 82%, rgba(255,255,255,.88) 90%,
+      rgba(255,255,255,.14));
   }
 
   *{box-sizing:border-box}
-  body{background:var(--bg);color:var(--text);margin:0;
-    font:15px/1.5 "Segoe UI",system-ui,sans-serif;padding:22px 20px 20px;
-    background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1.4px);
-    background-size:22px 22px;}
+  body{background:radial-gradient(120% 90% at 50% 0%,#111114 0%,var(--bg) 55%) fixed;
+    color:var(--text);margin:0;
+    font:15px/1.5 "Segoe UI",system-ui,sans-serif;padding:22px 20px 20px}
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;
+    background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1.4px);
+    background-size:24px 24px}
   .wrap{max-width:1060px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
   .eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;
     color:var(--muted);font-weight:600}
@@ -37,9 +41,12 @@
   .asof{margin-left:auto;color:var(--faint);font-size:12px}
 
   .strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:14px}
-  .kpi{border-radius:20px;border:1px solid transparent;
+  .kpi{border-radius:24px;border:1.5px solid transparent;
     background:var(--glass) padding-box, var(--glint) border-box;
-    box-shadow:0 12px 30px rgba(0,0,0,.4), inset 0 1px 0 rgba(255,255,255,.05);
+    box-shadow:0 22px 44px rgba(0,0,0,.62),
+      inset 0 1px 0 rgba(255,255,255,.22),
+      inset 0 -1px 0 rgba(0,0,0,.45),
+      inset 0 0 26px rgba(255,255,255,.03);
     padding:14px 18px;display:flex;flex-direction:column;gap:4px}
   .kpi .v{font-size:30px;font-weight:650;line-height:1.1}
   .kpi .d{font-size:13px;font-weight:600}
@@ -51,9 +58,12 @@
 
   .grid{display:grid;grid-template-columns:1.6fr 1fr;gap:14px}
   @media(max-width:860px){.grid{grid-template-columns:1fr}}
-  .panel{border-radius:22px;border:1px solid transparent;
+  .panel{border-radius:26px;border:1.5px solid transparent;
     background:var(--glass) padding-box, var(--glint) border-box;
-    box-shadow:0 14px 34px rgba(0,0,0,.42), inset 0 1px 0 rgba(255,255,255,.05);
+    box-shadow:0 22px 44px rgba(0,0,0,.62),
+      inset 0 1px 0 rgba(255,255,255,.22),
+      inset 0 -1px 0 rgba(0,0,0,.45),
+      inset 0 0 26px rgba(255,255,255,.03);
     padding:18px;display:flex;flex-direction:column;gap:10px;min-width:0}
   .panel h2{font-size:13px;margin:0;font-weight:650;letter-spacing:.02em}
   .thoughtsbox .txt{color:var(--text);font-size:14px;line-height:1.65;white-space:pre-wrap}

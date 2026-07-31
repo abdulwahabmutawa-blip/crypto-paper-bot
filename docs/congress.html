@@ -78,31 +78,38 @@
 <style>
   /* Glass reskin (2026-08) — overrides the vars above */
   :root, :root[data-theme="dark"], :root[data-theme="light"]{
-    --bg:#0B0C0F; --panel:rgba(255,255,255,.035); --panel2:rgba(255,255,255,.055);
-    --line:rgba(255,255,255,.14); --text:#F2F3F5; --muted:#9BA1AA; --faint:#62676F;
-    --gain:#22A896; --loss:#DE5347; --acc:#E4E6EA; --sig:#9BA1AA; --warn:#D9A05B;
+    --bg:#0A0A0B; --panel:rgba(255,255,255,.03); --panel2:rgba(255,255,255,.05);
+    --line:rgba(255,255,255,.14); --text:#F5F6F8; --muted:#B3B9C2; --faint:#8B919B;
+    --gain:#2BB8A5; --loss:#E25B50; --acc:#E4E6EA; --sig:#B3B9C2; --warn:#D9A05B;
     --btc:#F7931A;}
-  body{background:var(--bg);
-    background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1.4px);
-    background-size:22px 22px;}
+  body{background:radial-gradient(120% 90% at 50% 0%,#111114 0%,var(--bg) 55%) fixed}
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;
+    background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1.4px);
+    background-size:24px 24px}
   .saduband{display:none}
-  .panel, .kpi, .card{border-radius:22px !important;border:1px solid transparent !important;
-    background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.015)) padding-box,
+  .panel, .kpi, .card{border-radius:26px !important;border:1.5px solid transparent !important;
+    background:linear-gradient(180deg,#191A1F,#0E0F12) padding-box,
       conic-gradient(from 210deg,
         rgba(255,255,255,.6), rgba(255,255,255,.08) 16%,
         rgba(150,190,255,.32) 30%, rgba(255,255,255,.06) 46%,
         rgba(255,255,255,.5) 58%, rgba(255,185,140,.28) 72%,
         rgba(255,255,255,.07) 86%, rgba(255,255,255,.6)) border-box !important;
-    box-shadow:0 14px 34px rgba(0,0,0,.42), inset 0 1px 0 rgba(255,255,255,.05)}
-  #thoughtspanel{border-radius:22px !important;border:1px solid transparent !important;
+    box-shadow:0 22px 44px rgba(0,0,0,.62),
+      inset 0 1px 0 rgba(255,255,255,.22),
+      inset 0 -1px 0 rgba(0,0,0,.45),
+      inset 0 0 26px rgba(255,255,255,.03)}
+  #thoughtspanel{border-radius:26px !important;border:1.5px solid transparent !important;
     border-left:1px solid transparent !important;
-    background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.015)) padding-box,
+    background:linear-gradient(180deg,#191A1F,#0E0F12) padding-box,
       conic-gradient(from 210deg,
         rgba(255,255,255,.6), rgba(255,255,255,.08) 16%,
         rgba(150,190,255,.32) 30%, rgba(255,255,255,.06) 46%,
         rgba(255,255,255,.5) 58%, rgba(255,185,140,.28) 72%,
         rgba(255,255,255,.07) 86%, rgba(255,255,255,.6)) border-box !important;
-    box-shadow:0 14px 34px rgba(0,0,0,.42), inset 0 1px 0 rgba(255,255,255,.05)}
+    box-shadow:0 22px 44px rgba(0,0,0,.62),
+      inset 0 1px 0 rgba(255,255,255,.22),
+      inset 0 -1px 0 rgba(0,0,0,.45),
+      inset 0 0 26px rgba(255,255,255,.03)}
 </style>
 <div class="saduband"></div>
 <div class="wrap">
