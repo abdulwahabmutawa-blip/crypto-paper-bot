@@ -1,8 +1,8 @@
 {
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "holding": "DOGE-USD",
-  "units": 14848.263985027012,
+  "holding": "BTC-USD",
+  "units": 0.016435095376910472,
   "cash": 0.0,
   "bench_units": 0.01552055830726173,
   "trades": [
@@ -527,6 +527,24 @@
       "units": 14848.263985,
       "value": 1034.92,
       "reason": "Strongest eligible coin (+0.2% 7d momentum)"
+    },
+    {
+      "date": "2026-07-31",
+      "action": "SELL",
+      "ticker": "DOGE-USD",
+      "price": 0.0693,
+      "units": 14848.263985,
+      "value": 1028.98,
+      "reason": "Signal flip"
+    },
+    {
+      "date": "2026-07-31",
+      "action": "BUY",
+      "ticker": "BTC-USD",
+      "price": 62608.9883,
+      "units": 0.016435,
+      "value": 1028.98,
+      "reason": "Strongest eligible coin (-2.3% 7d momentum)"
     }
   ],
   "history": [
@@ -622,12 +640,12 @@
     },
     {
       "date": "2026-07-31",
-      "value": 1027.5,
-      "bench": 980.99,
-      "holding": "DOGE-USD"
+      "value": 1028.98,
+      "bench": 971.73,
+      "holding": "BTC-USD"
     }
   ],
-  "last_updated_utc": "2026-07-31T14:01:09+00:00",
+  "last_updated_utc": "2026-07-31T14:14:21+00:00",
   "intraday": [
     {
       "ts": "2026-07-16T18:32:57+00:00",
@@ -3412,6 +3430,12 @@
       "value": 1027.5,
       "bench": 980.99,
       "holding": "DOGE-USD"
+    },
+    {
+      "ts": "2026-07-31T14:14:21+00:00",
+      "value": 1028.98,
+      "bench": 971.73,
+      "holding": "BTC-USD"
     }
   ]
 }
