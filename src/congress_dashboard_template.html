@@ -75,7 +75,34 @@
   footer{color:var(--faint);font-size:12px;text-align:center;padding:6px 0 2px}
 </style>
 
+<style>
+  /* Sadu-futurism reskin (2026-08) — overrides the vars above */
+  :root, :root[data-theme="dark"]{
+    --bg:#0A0B0E; --panel:#10141A; --panel2:#0D1116; --line:#232B36;
+    --text:#ECEFE9; --muted:#9AA69F; --faint:#5F6B66;
+    --gain:#22A896; --loss:#DE5347; --acc:#D9A05B; --sig:#C9A15C; --warn:#D9A05B;}
+  @media (prefers-color-scheme: light){
+    :root{--bg:#F5F0E6; --panel:#FFFDF8; --panel2:#EFE9DC; --line:#DCD3C2;
+      --text:#1C1A17; --muted:#6B665C; --faint:#9A937F;
+      --gain:#1E9585; --loss:#C8473C; --acc:#A5731F; --sig:#8A6B1E; --warn:#A5731F;}}
+  :root[data-theme="light"]{--bg:#F5F0E6; --panel:#FFFDF8; --panel2:#EFE9DC;
+    --line:#DCD3C2; --text:#1C1A17; --muted:#6B665C; --faint:#9A937F;
+    --gain:#1E9585; --loss:#C8473C; --acc:#A5731F; --sig:#8A6B1E; --warn:#A5731F;}
+  body{background-image:
+    linear-gradient(color-mix(in srgb,#22A896 4%,transparent) 1px,transparent 1px),
+    linear-gradient(90deg,color-mix(in srgb,#22A896 4%,transparent) 1px,transparent 1px);
+    background-size:56px 56px;}
+  .saduband{height:8px;margin:-20px -20px 16px;background:
+    repeating-linear-gradient(135deg,#B8432F 0 7px,var(--bg) 7px 9px,
+    #D9A05B 9px 16px,var(--bg) 16px 18px,#22A896 18px 25px,var(--bg) 25px 27px);}
+</style>
+<div class="saduband"></div>
 <div class="wrap">
+<div id="thoughtspanel" style="display:none;background:var(--panel);border:1px solid var(--line);border-left:3px solid #D9A05B;padding:14px 16px;margin-bottom:14px">
+ <div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700">🧠 What I'm thinking</div>
+ <div id="thoughts" style="font-size:14px;line-height:1.65;white-space:pre-wrap;margin-top:6px;color:var(--text)"></div>
+</div>
+
   <div class="bar">
     <span class="live"><span class="dot"></span>PAPER SIM · LIVE RETRIAL</span>
     <h1>Congress Copier — $1,000 Challenge</h1>
@@ -289,6 +316,7 @@ const AR = [
  ["The Hunter","الصياد"],
  ["The Scholar","العالِم"],
  ["The Analyst","المحلل"],
+ ["What I'm thinking","بمَ أفكر الآن"],
  ["LLM AGENT ON TRIAL","وكيل ذكاء اصطناعي تحت الاختبار"],
  ["SYNTHESIS BOT","بوت خلاصة الدروس"],
  ["MAXIMUM AGGRESSION","أقصى درجات الجرأة"],
@@ -378,5 +406,16 @@ if (lang === "ar"){
     }));
   }).observe(document.body, {childList: true, subtree: true});
 }
+})();
+</script>
+
+<script>
+(function(){
+  try{
+    if (typeof D !== "undefined" && D && D.thoughts){
+      document.getElementById("thoughts").textContent = D.thoughts;
+      document.getElementById("thoughtspanel").style.display = "";
+    }
+  }catch(e){}
 })();
 </script>

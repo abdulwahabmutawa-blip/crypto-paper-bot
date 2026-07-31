@@ -3,26 +3,36 @@
 <title>Fleet Bot — Live $1k Paper Sim</title>
 <style>
   :root{
-    --bg:#0C1112; --panel:#141C1E; --panel2:#101718; --line:#22302F;
-    --text:#EAF2F0; --muted:#93A8A3; --faint:#5E7370;
-    --gain:#3DD68C; --loss:#F0544F; --acc:#39B8A8; --sig:#6E9BFF;
+    --bg:#0A0B0E; --panel:#10141A; --panel2:#0D1116; --line:#232B36;
+    --text:#ECEFE9; --muted:#9AA69F; --faint:#5F6B66;
+    --gain:#22A896; --loss:#DE5347; --acc:#D9A05B; --sig:#C9A15C;
+    --sadu-r:#B8432F; --sadu-s:#D9A05B; --sadu-t:#22A896;
     --mono:Consolas,"Cascadia Code","SF Mono",Menlo,monospace;
   }
   @media (prefers-color-scheme: light){
-    :root{--bg:#F2F6F5; --panel:#FFFFFF; --panel2:#E9F0EE; --line:#D3DEDC;
-      --text:#15201E; --muted:#5E7370; --faint:#93A8A3;
-      --gain:#0E9F63; --loss:#D33B36; --acc:#0F7C6E; --sig:#2F5FD0;}
+    :root{--bg:#F5F0E6; --panel:#FFFDF8; --panel2:#EFE9DC; --line:#DCD3C2;
+      --text:#1C1A17; --muted:#6B665C; --faint:#9A937F;
+      --gain:#1E9585; --loss:#C8473C; --acc:#A5731F; --sig:#8A6B1E;}
   }
-  :root[data-theme="dark"]{--bg:#0C1112; --panel:#141C1E; --panel2:#101718;
-    --line:#22302F; --text:#EAF2F0; --muted:#93A8A3; --faint:#5E7370;
-    --gain:#3DD68C; --loss:#F0544F; --acc:#39B8A8; --sig:#6E9BFF;}
-  :root[data-theme="light"]{--bg:#F2F6F5; --panel:#FFFFFF; --panel2:#E9F0EE;
-    --line:#D3DEDC; --text:#15201E; --muted:#5E7370; --faint:#93A8A3;
-    --gain:#0E9F63; --loss:#D33B36; --acc:#0F7C6E; --sig:#2F5FD0;}
+  :root[data-theme="dark"]{--bg:#0A0B0E; --panel:#10141A; --panel2:#0D1116;
+    --line:#232B36; --text:#ECEFE9; --muted:#9AA69F; --faint:#5F6B66;
+    --gain:#22A896; --loss:#DE5347; --acc:#D9A05B; --sig:#C9A15C;}
+  :root[data-theme="light"]{--bg:#F5F0E6; --panel:#FFFDF8; --panel2:#EFE9DC;
+    --line:#DCD3C2; --text:#1C1A17; --muted:#6B665C; --faint:#9A937F;
+    --gain:#1E9585; --loss:#C8473C; --acc:#A5731F; --sig:#8A6B1E;}
 
   *{box-sizing:border-box}
   body{background:var(--bg);color:var(--text);margin:0;
-    font:15px/1.5 "Segoe UI",system-ui,sans-serif;padding:20px;}
+    font:15px/1.5 "Segoe UI",system-ui,sans-serif;padding:0 20px 20px;
+    background-image:
+      linear-gradient(color-mix(in srgb,var(--sadu-t) 4%,transparent) 1px,transparent 1px),
+      linear-gradient(90deg,color-mix(in srgb,var(--sadu-t) 4%,transparent) 1px,transparent 1px);
+    background-size:56px 56px;}
+  .saduband{height:8px;margin:0 -20px 16px;background:
+    repeating-linear-gradient(135deg,
+      var(--sadu-r) 0 7px, var(--bg) 7px 9px,
+      var(--sadu-s) 9px 16px, var(--bg) 16px 18px,
+      var(--sadu-t) 18px 25px, var(--bg) 25px 27px);}
   .wrap{max-width:1060px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
   .eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;
     color:var(--muted);font-weight:600}
@@ -40,8 +50,11 @@
   .asof{margin-left:auto;color:var(--faint);font-size:12px}
 
   .strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:14px}
-  .kpi{background:var(--panel);border:1px solid var(--line);border-radius:6px;
-    padding:14px 16px;display:flex;flex-direction:column;gap:4px}
+  .kpi{background:var(--panel);border:1px solid var(--line);border-radius:2px;
+    padding:14px 16px;display:flex;flex-direction:column;gap:4px;position:relative;
+    clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%)}
+  .kpi::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;
+    background:linear-gradient(90deg,var(--sadu-r) 0 33%,var(--sadu-s) 33% 66%,var(--sadu-t) 66% 100%);opacity:.7}
   .kpi .v{font-size:30px;font-weight:650;line-height:1.1}
   .kpi .d{font-size:13px;font-weight:600}
   .up{color:var(--gain)} .down{color:var(--loss)}
@@ -52,9 +65,12 @@
 
   .grid{display:grid;grid-template-columns:1.6fr 1fr;gap:14px}
   @media(max-width:860px){.grid{grid-template-columns:1fr}}
-  .panel{background:var(--panel);border:1px solid var(--line);border-radius:6px;
-    padding:16px;display:flex;flex-direction:column;gap:10px;min-width:0}
-  .panel h2{font-size:13px;margin:0;font-weight:650}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:2px;
+    padding:16px;display:flex;flex-direction:column;gap:10px;min-width:0;
+    clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%)}
+  .panel h2{font-size:13px;margin:0;font-weight:650;letter-spacing:.02em}
+  .thoughtsbox{border-left:3px solid var(--sadu-s)}
+  .thoughtsbox .txt{color:var(--text);font-size:14px;line-height:1.65;white-space:pre-wrap}
   canvas{width:100%;height:auto;display:block}
 
   .coin{display:flex;align-items:center;gap:10px;background:var(--panel2);
@@ -92,6 +108,7 @@
   footer a{color:var(--acc)}
 </style>
 
+<div class="saduband"></div>
 <div class="wrap">
   <div class="bar">
     <span class="live"><span class="dot"></span><span id="badge"></span></span>
@@ -115,6 +132,11 @@
       <span class="v num" id="pos"></span>
       <span class="d"><span class="chip" id="sigchip"></span></span>
     </div>
+  </div>
+
+  <div class="panel thoughtsbox" id="thoughtspanel" style="display:none">
+    <span class="eyebrow">🧠 What I'm thinking</span>
+    <div class="txt" id="thoughts"></div>
   </div>
 
   <div class="grid">
@@ -163,7 +185,114 @@
 </div>
 
 <script>
-let D = {"generated_utc": "2026-07-31T22:01:46+00:00", "created": "2026-07-31", "starting_cash": 1000.0, "live_ts": "2026-07-31T19:55:00+00:00", "current": {"date": "2026-07-31", "value": 1000.0, "bench": 1000.0, "holding": "CASH"}, "board": [{"sym": "ETH-USD", "price": 1866.52, "line": "mom30 +15.5%", "tag": "watching", "on": false, "pick": false, "fill": 15.502511796498574}, {"sym": "USO", "price": 129.18, "line": "mom30 +13.1%", "tag": "watching", "on": false, "pick": false, "fill": 13.07887102596752}, {"sym": "BTC-USD", "price": 62892.0, "line": "mom30 +4.7%", "tag": "watching", "on": false, "pick": false, "fill": 4.745125988854082}, {"sym": "SPY", "price": 746.81, "line": "mom30 +1.1%", "tag": "watching", "on": false, "pick": false, "fill": 1.078943773787655}, {"sym": "TLT", "price": 82.24, "line": "mom30 -4.4%", "tag": "watching", "on": false, "pick": false, "fill": -4.374182674196447}, {"sym": "GLD", "price": 371.53, "line": "mom30 -4.4%", "tag": "watching", "on": false, "pick": false, "fill": -4.3901176764390755}, {"sym": "QQQ", "price": 688.01, "line": "mom30 -4.7%", "tag": "watching", "on": false, "pick": false, "fill": -4.67314394919951}], "board_title": "7-instrument macro universe \u00b7 one reasoned decision per day", "meta": {"title": "The Analyst \u2014 $1,000 Challenge", "badge": "PAPER SIM \u00b7 LLM AGENT ON TRIAL", "bench_label": "SPY benchmark ($1,000 same day)", "board_note": "Awaiting first decision. The agent reasons over prices, headlines, and the Watcher, then commits a falsifiable daily decision."}, "intraday": [{"ts": "2026-07-31T22:01:46+00:00", "value": 1000.0, "bench": 1000.0, "holding": "CASH"}], "trades": [], "history": [{"date": "2026-07-31", "value": 1000.0, "bench": 1000.0, "holding": "CASH"}], "strategy": {"name": "The Analyst \u2014 LLM daily reasoner", "rule": "One decision per US trading day by claude-opus-5 over prices, headlines, and the Watcher; guardrails in code: long only, 1 position, 1 trade/day, SEVERE=cash, $750 floor; its own API bill is charged to the account", "backtest_cagr": "NO BACKTEST POSSIBLE \u2014 sentiment/reasoning has no historical replay; the live run IS the test", "backtest_maxdd": "External evidence: LLM agents show no credible net-of-cost alpha (LiveTradeBench). Expectation: ~zero. API cost so far $0.00", "note": "Glass-box experiment: every decision logs verbatim reasoning plus a falsifier the attribution log scores later. Judged by kill_criteria.md like every other bot."}};
+let D = {
+  "generated_utc": "2026-07-31T22:01:46+00:00",
+  "created": "2026-07-31",
+  "starting_cash": 1000.0,
+  "live_ts": "2026-07-31T19:55:00+00:00",
+  "current": {
+    "date": "2026-07-31",
+    "value": 1000.0,
+    "bench": 1000.0,
+    "holding": "CASH"
+  },
+  "board": [
+    {
+      "sym": "ETH-USD",
+      "price": 1866.52,
+      "line": "mom30 +15.5%",
+      "tag": "watching",
+      "on": false,
+      "pick": false,
+      "fill": 15.502511796498574
+    },
+    {
+      "sym": "USO",
+      "price": 129.18,
+      "line": "mom30 +13.1%",
+      "tag": "watching",
+      "on": false,
+      "pick": false,
+      "fill": 13.07887102596752
+    },
+    {
+      "sym": "BTC-USD",
+      "price": 62892.0,
+      "line": "mom30 +4.7%",
+      "tag": "watching",
+      "on": false,
+      "pick": false,
+      "fill": 4.745125988854082
+    },
+    {
+      "sym": "SPY",
+      "price": 746.81,
+      "line": "mom30 +1.1%",
+      "tag": "watching",
+      "on": false,
+      "pick": false,
+      "fill": 1.078943773787655
+    },
+    {
+      "sym": "TLT",
+      "price": 82.24,
+      "line": "mom30 -4.4%",
+      "tag": "watching",
+      "on": false,
+      "pick": false,
+      "fill": -4.374182674196447
+    },
+    {
+      "sym": "GLD",
+      "price": 371.53,
+      "line": "mom30 -4.4%",
+      "tag": "watching",
+      "on": false,
+      "pick": false,
+      "fill": -4.3901176764390755
+    },
+    {
+      "sym": "QQQ",
+      "price": 688.01,
+      "line": "mom30 -4.7%",
+      "tag": "watching",
+      "on": false,
+      "pick": false,
+      "fill": -4.67314394919951
+    }
+  ],
+  "board_title": "7-instrument macro universe \u00b7 one reasoned decision per day",
+  "meta": {
+    "title": "The Analyst \u2014 $1,000 Challenge",
+    "badge": "PAPER SIM \u00b7 LLM AGENT ON TRIAL",
+    "bench_label": "SPY benchmark ($1,000 same day)",
+    "board_note": "Awaiting first decision. The agent reasons over prices, headlines, and the Watcher, then commits a falsifiable daily decision."
+  },
+  "intraday": [
+    {
+      "ts": "2026-07-31T22:01:46+00:00",
+      "value": 1000.0,
+      "bench": 1000.0,
+      "holding": "CASH"
+    }
+  ],
+  "trades": [],
+  "history": [
+    {
+      "date": "2026-07-31",
+      "value": 1000.0,
+      "bench": 1000.0,
+      "holding": "CASH"
+    }
+  ],
+  "strategy": {
+    "name": "The Analyst \u2014 LLM daily reasoner",
+    "rule": "One decision per US trading day by claude-opus-5 over prices, headlines, and the Watcher; guardrails in code: long only, 1 position, 1 trade/day, SEVERE=cash, $750 floor; its own API bill is charged to the account",
+    "backtest_cagr": "NO BACKTEST POSSIBLE \u2014 sentiment/reasoning has no historical replay; the live run IS the test",
+    "backtest_maxdd": "External evidence: LLM agents show no credible net-of-cost alpha (LiveTradeBench). Expectation: ~zero. API cost so far $0.00",
+    "note": "Glass-box experiment: every decision logs verbatim reasoning plus a falsifier the attribution log scores later. Judged by kill_criteria.md like every other bot."
+  }
+};
 const $ = id => document.getElementById(id);
 const fmt$ = v => "$" + v.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});
 const pct = v => (v>=0?"+":"") + (v*100).toFixed(2) + "%";
@@ -202,6 +331,10 @@ function renderAll(){
 
   $("boardtitle").textContent = D.board_title;
   $("boardnote").textContent = D.meta.board_note;
+  if (D.thoughts){
+    $("thoughts").textContent = D.thoughts;
+    $("thoughtspanel").style.display = "";
+  }
   $("stratname").textContent = D.strategy.name;
   $("stratrule").textContent = "Rule: " + D.strategy.rule;
   $("bt-cagr").textContent = D.strategy.backtest_cagr;
@@ -322,6 +455,7 @@ const AR = [
  ["The Hunter","الصياد"],
  ["The Scholar","العالِم"],
  ["The Analyst","المحلل"],
+ ["What I'm thinking","بمَ أفكر الآن"],
  ["LLM AGENT ON TRIAL","وكيل ذكاء اصطناعي تحت الاختبار"],
  ["SYNTHESIS BOT","بوت خلاصة الدروس"],
  ["MAXIMUM AGGRESSION","أقصى درجات الجرأة"],

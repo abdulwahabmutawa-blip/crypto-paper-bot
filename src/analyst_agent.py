@@ -410,13 +410,22 @@ def main():
         "meta": {"title": "The Analyst — $1,000 Challenge",
                  "badge": "PAPER SIM · LLM AGENT ON TRIAL",
                  "bench_label": "SPY benchmark ($1,000 same day)",
-                 "board_note": (f"Latest reasoning ({last_d['date']}): "
-                                f"{last_d['decision'].get('reasoning', 'n/a')} — "
-                                f"FALSIFIER: {last_d['decision'].get('falsifier', 'n/a')}"
-                                if last_d else
-                                "Awaiting first decision. The agent reasons over "
-                                "prices, headlines, and the Watcher, then commits "
-                                "a falsifiable daily decision.")},
+                 "board_note": "Once per trading day, a Claude model reads "
+                               "prices, headlines, and the Watcher's risk scan, "
+                               "then commits one decision — with its full "
+                               "reasoning and a tripwire shown above."},
+        "thoughts": (f"My decision on {last_d['date']}: "
+                     f"{last_d['decision'].get('action', 'hold').upper()}"
+                     f"{' ' + last_d['decision'].get('ticker', '') if last_d['decision'].get('ticker') not in (None, 'NONE') else ''}"
+                     f" (conviction: {last_d['decision'].get('conviction', '?')}).\n\n"
+                     f"{last_d['decision'].get('reasoning', 'n/a')}\n\n"
+                     f"What would prove me wrong: "
+                     f"{last_d['decision'].get('falsifier', 'n/a')}"
+                     if last_d else
+                     "I haven't made my first decision yet — it comes shortly "
+                     "after the next US market open. Each day I'll explain "
+                     "exactly why I did what I did, and name the thing that "
+                     "would prove me wrong."),
         "intraday": st["intraday"], "trades": st["trades"][-20:],
         "history": st["history"],
         "strategy": {

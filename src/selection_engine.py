@@ -58,6 +58,46 @@ def _fetch_live(universe, bench):
              and pd.notna(last[t])}, ts.isoformat(timespec="seconds"))
 
 
+def _thoughts(spec, st, board, last):
+    """Plain-language 'what I'm thinking' note, generated from the bot's own
+    live rules and state — honest by construction (it IS the logic)."""
+    risk = spec.get("risk") or {}
+    lines = []
+    if st["holding"] == "CASH":
+        lines.append("I'm sitting in cash right now. "
+                     + spec.get("cash_reason", "Nothing passes my rules today") + ".")
+        if st.get("stopped"):
+            cd = risk.get("cooldown_days", 0)
+            lines.append(f"I recently sold {st['stopped']['ticker']} after it fell "
+                         f"too far, and my cooling-off rule stops me from buying "
+                         f"it back for {cd} days (so I don't catch a falling knife twice).")
+        lines.append("I'd rather wait than force a trade — patience is part of my design.")
+    else:
+        h = st["holding"]
+        px = float(last[h]) if h in last.index and last[h] == last[h] else None
+        lines.append(f"I'm holding {h}. " + spec.get("buy_reason", "It fits my rules") + ".")
+        entry = next((t["price"] for t in reversed(st["trades"])
+                      if t["action"] == "BUY" and t["ticker"] == h), None)
+        if entry and px:
+            lines.append(f"I bought at ${entry:,.2f}; it's now ${px:,.2f} "
+                         f"({(px / entry - 1) * 100:+.1f}% since I got in).")
+        if st.get("cash", 0) > 1:
+            lines.append(f"I deliberately kept ${st['cash']:,.2f} aside in cash — "
+                         f"I take smaller positions in assets that swing a lot.")
+        trail = risk.get("trailing")
+        if trail and st.get("hwm"):
+            lines.append(f"My safety net: if the price falls to "
+                         f"${st['hwm'] * (1 - trail):,.2f} ({trail:.0%} below its "
+                         f"recent high), I sell automatically — no exceptions.")
+        chal = next((b.get("sym") for b in board
+                     if b.get("on") and not b.get("pick")), None)
+        if chal:
+            lines.append(f"Closest challenger on my list is {chal}, but it would "
+                         f"need to look clearly better before I switch — jumping "
+                         f"between positions too often just burns money on trades.")
+    return " ".join(lines)
+
+
 def run(spec, start_cash=1000.0):
     key = spec["key"]
     state_path = config.DATA / f"{key}_state.json"
@@ -233,6 +273,7 @@ def run(spec, start_cash=1000.0):
         "board_title": board_title, "meta": spec["meta"],
         "intraday": st["intraday"], "trades": st["trades"][-20:],
         "history": st["history"], "strategy": spec["strategy"],
+        "thoughts": _thoughts(spec, st, board, last),
     }
     (config.REPORTS / f"{key}_dashboard_data.json").write_text(
         json.dumps(payload, indent=2))

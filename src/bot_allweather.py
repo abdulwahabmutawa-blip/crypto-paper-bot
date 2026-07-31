@@ -105,6 +105,13 @@ def main():
         },
         "intraday": st["intraday"], "trades": st["trades"][-20:],
         "history": st["history"],
+        "thoughts": "I don't think — and that's the whole point. I hold the same "
+                    "diversified mix through everything (30% stocks, 40% bonds, "
+                    "15% gold, 7.5% commodities, 7.5% T-bills) and once a month I "
+                    "top up whatever fell and trim whatever grew, back to those "
+                    "targets. I'm the control group: every clever bot in this "
+                    "fleet has to beat boring old me to prove its cleverness is "
+                    "worth anything.",
         "strategy": {
             "name": "All-Weather Control (Dalio-style)",
             "rule": "30% stocks / 40% long bonds / 15% gold / 7.5% "

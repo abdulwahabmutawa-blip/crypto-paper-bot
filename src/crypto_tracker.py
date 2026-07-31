@@ -168,6 +168,19 @@ def emit(st, board, pick, live_ts="", regime="") -> None:
         "regime": regime,
         "intraday": st.get("intraday", []),
         "trades": st["trades"][-20:], "history": st["history"],
+        "thoughts": (
+            ("Right now I'm in TREND mode: Bitcoin is above its 200-day average, "
+             "which historically means crypto is in an uptrend — so my rule is to "
+             "ride whichever coin has climbed the most this week. "
+             if "TREND" in (regime or "").upper() else
+             "Right now I'm in CHOP mode: Bitcoin is below its 200-day average, "
+             "which means the market is directionless — chasing momentum here "
+             "loses money, so instead I look for a coin that fell unusually hard "
+             "and try to catch its bounce back. ")
+            + (f"That's why I'm holding {st['holding'].replace('-USD', '')}."
+               if st["holding"] != "CASH" else
+               "Nothing qualifies at this moment, so I'm in cash — in crypto, "
+               "sitting out is often the smartest trade.")),
         "strategy": {
             "name": "Regime Switcher — two brains, one bot",
             "rule": "BTC above its 200-day MA = TREND: ride the hottest "

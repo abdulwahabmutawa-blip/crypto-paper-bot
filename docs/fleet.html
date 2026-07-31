@@ -6,33 +6,56 @@
 <meta http-equiv="refresh" content="600">
 <title>The Bot Fleet — $1,000 paper experiments</title>
 <style>
-  :root{--bg:#0B0E13;--panel:#141A23;--line:#232C3A;--text:#EAEFF5;
-    --muted:#94A2B3;--faint:#5E6B7C;--gain:#3DD68C;--loss:#F0544F;
+  :root{--bg:#0A0B0E;--panel:#10141A;--panel2:#0D1116;--line:#232B36;
+    --text:#ECEFE9;--muted:#9AA69F;--faint:#5F6B66;
+    --gain:#22A896;--loss:#DE5347;
+    --sadu-r:#B8432F;--sadu-s:#D9A05B;--sadu-t:#22A896;
     --mono:Consolas,"Cascadia Code",Menlo,monospace;}
   @media (prefers-color-scheme: light){
-    :root{--bg:#F3F5F8;--panel:#FFF;--line:#D8DEE6;--text:#161D26;
-      --muted:#5E6B7C;--faint:#94A2B3;--gain:#0E9F63;--loss:#D33B36;}}
+    :root{--bg:#F5F0E6;--panel:#FFFDF8;--panel2:#EFE9DC;--line:#DCD3C2;
+      --text:#1C1A17;--muted:#6B665C;--faint:#9A937F;
+      --gain:#1E9585;--loss:#C8473C;}}
   *{box-sizing:border-box}
   body{background:var(--bg);color:var(--text);margin:0;
-    font:15px/1.5 "Segoe UI",system-ui,sans-serif;padding:24px;}
-  .wrap{max-width:860px;margin:0 auto}
-  h1{font-size:22px;margin:0 0 4px}
-  .sub{color:var(--muted);margin:0 0 22px;font-size:14px}
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+    font:15px/1.5 "Segoe UI",system-ui,sans-serif;padding:0 24px 24px;
+    background-image:
+      linear-gradient(color-mix(in srgb,var(--sadu-t) 4%,transparent) 1px,transparent 1px),
+      linear-gradient(90deg,color-mix(in srgb,var(--sadu-t) 4%,transparent) 1px,transparent 1px);
+    background-size:56px 56px;}
+  .saduband{height:8px;margin:0 -24px 26px;background:
+    repeating-linear-gradient(135deg,
+      var(--sadu-r) 0 7px, var(--bg) 7px 9px,
+      var(--sadu-s) 9px 16px, var(--bg) 16px 18px,
+      var(--sadu-t) 18px 25px, var(--bg) 25px 27px);}
+  .wrap{max-width:880px;margin:0 auto}
+  h1{font-size:24px;margin:0 0 4px;letter-spacing:.04em;text-transform:uppercase;
+    font-weight:700}
+  h1 em{font-style:normal;color:var(--sadu-s)}
+  .sub{color:var(--muted);margin:0 0 24px;font-size:14px;max-width:640px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:16px}
   a.card{display:block;background:var(--panel);border:1px solid var(--line);
-    border-radius:8px;padding:16px;text-decoration:none;color:var(--text);
-    transition:transform .1s}
-  a.card:hover{transform:translateY(-2px);border-color:var(--muted)}
+    border-radius:2px;padding:16px;text-decoration:none;color:var(--text);
+    position:relative;transition:transform .12s,border-color .12s,box-shadow .12s;
+    clip-path:polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,0 100%)}
+  a.card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;
+    background:linear-gradient(90deg,var(--sadu-r) 0 33%,var(--sadu-s) 33% 66%,
+      var(--sadu-t) 66% 100%);opacity:.85}
+  a.card:hover{transform:translateY(-3px);border-color:var(--sadu-t);
+    box-shadow:0 6px 22px color-mix(in srgb,var(--sadu-t) 22%,transparent)}
   .emoji{font-size:22px}
-  .name{font-weight:650;margin:6px 0 2px}
+  .name{font-weight:700;margin:8px 0 3px;letter-spacing:.03em;text-transform:uppercase;
+    font-size:13px}
   .desc{color:var(--muted);font-size:13px}
-  .val{font-family:var(--mono);font-size:13px;color:var(--faint);margin-top:8px}
-  footer{color:var(--faint);font-size:12px;margin-top:26px;text-align:center}
+  .val{font-family:var(--mono);font-size:12px;color:var(--faint);margin-top:10px;
+    border-top:1px dashed var(--line);padding-top:8px}
+  footer{color:var(--faint);font-size:12px;margin-top:28px;text-align:center}
+  footer a{color:var(--sadu-t)}
 </style>
 </head>
 <body>
+<div class="saduband"></div>
 <div class="wrap">
-  <h1>The Bot Fleet</h1>
+  <h1>The Bot <em>Fleet</em></h1>
   <p class="sub">A fleet of $1,000 paper-trading experiments — rival theories
   of market edge trading live on GitHub Actions, every decision on a public
   ledger. Simulation only; not investment advice.</p>
@@ -144,6 +167,7 @@ const AR = [
  ["The Hunter","الصياد"],
  ["The Scholar","العالِم"],
  ["The Analyst","المحلل"],
+ ["What I'm thinking","بمَ أفكر الآن"],
  ["RETIRED","متقاعد"],
  ["MAXIMUM AGGRESSION","أقصى درجات الجرأة"],
  ["edge theory","نظرية الأفضلية"],

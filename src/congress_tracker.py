@@ -192,6 +192,18 @@ def main():
                       for p in st["positions"]],
         "follow_count": len(follow), "follow_top": top_follow,
         "trades": st["trades"][-25:], "history": st["history"],
+        "thoughts": (
+            (f"I'm copying {len(st['positions'])} stock buy(s) filed by members "
+             f"of Congress. I don't follow just anyone — I only trust the "
+             f"{len(follow)} members whose past filings actually beat the "
+             f"market, and I re-check that list every cycle. Each new buy they "
+             f"file, I copy with a small $100 slice and hold for 90 days. "
+             f"Full honesty: our own history test says this strategy LOSES to "
+             f"the market — I exist to re-test that finding live."
+             if st["positions"] else
+             f"No copied trades open right now — none of the {len(follow)} "
+             f"members I trust has filed a fresh stock buy lately. I only copy "
+             f"new filings, never old ones, so I wait.")),
         "strategy": {
             "name": "Congress Copier — the bot picks whom to trust",
             "rule": f"Follow every member of Congress with >= {MIN_SCORED} scored "

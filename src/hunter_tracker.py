@@ -186,6 +186,18 @@ def main():
         },
         "intraday": st["intraday"], "trades": st["trades"][-20:],
         "history": st["history"],
+        "thoughts": (
+            (f"I'm all-in on {st['holding'].replace('-USD', '')} — right now it has the "
+             f"best combination of 'going up' and 'not too wild' of the 14 things "
+             f"I watch. My safety net: if it drops "
+             f"{TRAIL:.0%} from its recent high of ${st['high_water']:,.2f} "
+             f"(that's ${st['high_water'] * (1 - TRAIL):,.2f}), I sell instantly, no "
+             f"questions asked. I only switch to something else if it looks clearly "
+             f"better than what I hold — not just slightly better."
+             if st["holding"] != "CASH" and st.get("high_water") else
+             "I'm in cash. Everything I watch is falling, or the Watcher called a "
+             "crisis — either way, an aggressive bot with no seatbelt dies fast, "
+             "so I hunt only when something is actually rising.")),
         "strategy": {
             "name": "The Hunter — cross-asset opportunist",
             "rule": "Score 14 instruments by 20-day momentum/volatility; "

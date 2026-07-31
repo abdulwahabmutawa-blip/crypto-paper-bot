@@ -199,6 +199,17 @@ def main():
         },
         "intraday": st["intraday"], "trades": st["trades"][-20:],
         "history": st["history"],
+        "thoughts": (
+            (f"I'm riding {st['holding'].replace('-USD','')} because the Watcher's "
+             f"latest scan of X and the news says the crowd is most excited about "
+             f"it right now. I know hype is the weakest evidence there is — so my "
+             f"rules are the strictest in the fleet: the moment the excitement "
+             f"fades from the scans I sell, and if I'm down 10% from my buy price "
+             f"I sell no matter what."
+             if st["holding"] != "CASH" else
+             "I'm in cash. The crowd isn't truly excited about anything on the "
+             "latest scan — and I only ever buy genuine euphoria. Chasing "
+             "lukewarm hype is how sentiment traders lose; I wait for a loud one.")),
         "strategy": {
             "name": "Hype Trader — rides the Watcher's reads, on trial",
             "rule": "Hold the top euphoric symbol from the Watcher's 8-hour "

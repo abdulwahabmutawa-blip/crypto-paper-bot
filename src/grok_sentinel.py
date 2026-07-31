@@ -195,6 +195,16 @@ def parse_scan(raw: str) -> dict:
 def render(st: dict) -> None:
     latest = st["scans"][-1] if st["scans"] else None
     payload = {
+        "thoughts": ((f"My latest sweep rated the market risk "
+                      f"'{latest.get('risk_level', '?')}'. Overall mood I'm "
+                      f"reading: {latest.get('overall_mood', 'n/a')} "
+                      f"I scan X chatter and news every ~8 hours plus hard "
+                      f"gauges like the VIX fear index; when I call SEVERE, "
+                      f"every trading bot in the fleet is forced to cash — "
+                      f"otherwise my read is advice, not an order.")
+                     if latest else
+                     "No scan on file yet — my first Grok sweep of X and the "
+                     "news will appear here."),
         "latest": latest, "scans": st["scans"][-30:],
         "scan_count_month": st["month_count"].get(
             datetime.now(timezone.utc).strftime("%Y-%m"), 0),
