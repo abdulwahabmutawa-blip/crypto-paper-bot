@@ -263,7 +263,9 @@ def main():
     # ---- once-per-trading-day decision gate ----
     today = _et_today()
     import os
-    api_key = os.environ.get("ANTHROPIC_API_KEY")
+    # .strip(): a secret pasted with a trailing newline breaks the HTTP
+    # header (found by the key-check run 2026-07-31)
+    api_key = os.environ.get("ANTHROPIC_API_KEY", "").strip() or None
     month = today[:7]
     n_month = sum(1 for d in st["decisions"] if d["date"].startswith(month))
     should_decide = (market_hours.us_equities_open()
@@ -278,7 +280,7 @@ def main():
 
     if should_decide:
         import anthropic
-        client = anthropic.Anthropic(api_key=api_key)
+        client = anthropic.Anthropic(api_key=api_key)  # api_key pre-stripped
         mom = {c: f"{float(close_raw[c].dropna().pct_change(30).iloc[-1]) * 100:+.1f}%"
                for c in UNIVERSE if close_raw[c].dropna().shape[0] > 31}
         context = (
