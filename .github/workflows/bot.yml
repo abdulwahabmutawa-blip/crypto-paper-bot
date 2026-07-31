@@ -28,6 +28,7 @@ concurrency:
 
 env:
   XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+  ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
 jobs:
   trade:
@@ -54,7 +55,7 @@ jobs:
             # its dashboard stays in docs/ as a frozen archive
             for s in crypto_tracker congress_tracker \
                      bot_meanrev bot_commodity bot_allweather bot_scholar \
-                     grok_sentinel sentinel_trader hunter_tracker; do
+                     grok_sentinel sentinel_trader hunter_tracker analyst_agent; do
               python "src/$s.py" || echo "::warning::$s.py failed this cycle"
             done
 
@@ -76,6 +77,8 @@ jobs:
             cp reports/sentiment_dashboard_data.json docs/sentiment_dashboard_data.json 2>/dev/null || true
             cp reports/hunter_dashboard.html docs/hunter.html 2>/dev/null || true
             cp reports/hunter_dashboard_data.json docs/hunter_dashboard_data.json 2>/dev/null || true
+            cp reports/analyst_dashboard.html docs/analyst.html 2>/dev/null || true
+            cp reports/analyst_dashboard_data.json docs/analyst_dashboard_data.json 2>/dev/null || true
 
             git add data/ reports/ docs/
             if ! git diff --cached --quiet; then

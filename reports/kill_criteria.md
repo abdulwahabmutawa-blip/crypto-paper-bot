@@ -95,6 +95,17 @@ maximum of many draws. Judge it by these rules, never by its rank.
   overlay and vol-target sizing now exist in selection_engine as opt-in SPEC
   config. Applied to the Scholar ONLY — meanrev/commodity keep running
   unmodified so their live experiments stay uncontaminated.
+- **THE ANALYST ADDED same day (bot #11, LLM trading agent)** — the v2
+  record above initially deferred the build; the owner reversed that
+  deferral hours later, before any Scholar results existed. Spec was
+  pre-registered 2026-07-22 (trading/specs/analyst-agent-spec.md). One
+  amendment, recorded BEFORE its first decision: model launched as
+  claude-opus-5 (spec said claude-sonnet-5 "to start"; model is a config
+  constant logged in every decision). No backtest is possible for this bot
+  by design — the live run is the test. Under R1-R5 from day one; its API
+  costs are charged inside its own account. Clock starts on its first
+  decision (needs the owner's ANTHROPIC_API_KEY repo secret; the agent
+  skips gracefully until then).
 - **~2026-10-10 (first kill window):** ~60 trading days live. R2/R3 verdicts
   become eligible.
 - **~2026-11-20:** ~90 trading days. R5 promotions become eligible.
@@ -102,7 +113,8 @@ maximum of many draws. Judge it by these rules, never by its rank.
 ## Roster covered
 
 crypto (regime switcher), meanrev, commodity, allweather, congress, hunter,
-hype trader, scholar (from 2026-07-31). Retired: stock/TQQQ MA200 (owner
-override 2026-07-31, see v2 record). The Watcher (sentinel) holds no capital
-and is judged separately via the supervisor's judgment scoreboard (60+ scored
-calls, positive cumulative alpha, per the standing agreement).
+hype trader, scholar (from 2026-07-31), analyst (from its first decision).
+Retired: stock/TQQQ MA200 (owner override 2026-07-31, see v2 record). The
+Watcher (sentinel) holds no capital and is judged separately via the
+supervisor's judgment scoreboard (60+ scored calls, positive cumulative
+alpha, per the standing agreement).

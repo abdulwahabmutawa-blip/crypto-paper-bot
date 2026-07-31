@@ -1,23 +1,24 @@
 <meta charset="utf-8">
-<title>Crypto Rotation — Live $1k Paper Sim</title>
+<meta http-equiv="refresh" content="300">
+<title>Fleet Bot — Live $1k Paper Sim</title>
 <style>
   :root{
-    --bg:#0E0B14; --panel:#171221; --panel2:#120E1B; --line:#272036;
-    --text:#EFEAF6; --muted:#9C93AE; --faint:#675E7A;
-    --gain:#3DD68C; --loss:#F0544F; --btc:#F7931A; --sig:#8B7BFF;
+    --bg:#0C1112; --panel:#141C1E; --panel2:#101718; --line:#22302F;
+    --text:#EAF2F0; --muted:#93A8A3; --faint:#5E7370;
+    --gain:#3DD68C; --loss:#F0544F; --acc:#39B8A8; --sig:#6E9BFF;
     --mono:Consolas,"Cascadia Code","SF Mono",Menlo,monospace;
   }
   @media (prefers-color-scheme: light){
-    :root{--bg:#F6F4FA; --panel:#FFFFFF; --panel2:#EEEAF5; --line:#DCD5E8;
-      --text:#1D1528; --muted:#675E7A; --faint:#9C93AE;
-      --gain:#0E9F63; --loss:#D33B36; --btc:#C46F06; --sig:#5B49D6;}
+    :root{--bg:#F2F6F5; --panel:#FFFFFF; --panel2:#E9F0EE; --line:#D3DEDC;
+      --text:#15201E; --muted:#5E7370; --faint:#93A8A3;
+      --gain:#0E9F63; --loss:#D33B36; --acc:#0F7C6E; --sig:#2F5FD0;}
   }
-  :root[data-theme="dark"]{--bg:#0E0B14; --panel:#171221; --panel2:#120E1B;
-    --line:#272036; --text:#EFEAF6; --muted:#9C93AE; --faint:#675E7A;
-    --gain:#3DD68C; --loss:#F0544F; --btc:#F7931A; --sig:#8B7BFF;}
-  :root[data-theme="light"]{--bg:#F6F4FA; --panel:#FFFFFF; --panel2:#EEEAF5;
-    --line:#DCD5E8; --text:#1D1528; --muted:#675E7A; --faint:#9C93AE;
-    --gain:#0E9F63; --loss:#D33B36; --btc:#C46F06; --sig:#5B49D6;}
+  :root[data-theme="dark"]{--bg:#0C1112; --panel:#141C1E; --panel2:#101718;
+    --line:#22302F; --text:#EAF2F0; --muted:#93A8A3; --faint:#5E7370;
+    --gain:#3DD68C; --loss:#F0544F; --acc:#39B8A8; --sig:#6E9BFF;}
+  :root[data-theme="light"]{--bg:#F2F6F5; --panel:#FFFFFF; --panel2:#E9F0EE;
+    --line:#D3DEDC; --text:#15201E; --muted:#5E7370; --faint:#93A8A3;
+    --gain:#0E9F63; --loss:#D33B36; --acc:#0F7C6E; --sig:#2F5FD0;}
 
   *{box-sizing:border-box}
   body{background:var(--bg);color:var(--text);margin:0;
@@ -30,9 +31,9 @@
   .bar{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
   .bar h1{font-size:17px;margin:0;font-weight:650}
   .live{display:inline-flex;align-items:center;gap:6px;font-size:11px;
-    letter-spacing:.12em;font-weight:700;color:var(--btc);
-    border:1px solid var(--btc);border-radius:3px;padding:2px 8px}
-  .live .dot{width:7px;height:7px;border-radius:50%;background:var(--btc);
+    letter-spacing:.12em;font-weight:700;color:var(--acc);
+    border:1px solid var(--acc);border-radius:3px;padding:2px 8px}
+  .live .dot{width:7px;height:7px;border-radius:50%;background:var(--acc);
     animation:pulse 2s infinite}
   @keyframes pulse{50%{opacity:.35}}
   @media (prefers-reduced-motion: reduce){.live .dot{animation:none}}
@@ -56,19 +57,19 @@
   .panel h2{font-size:13px;margin:0;font-weight:650}
   canvas{width:100%;height:auto;display:block}
 
-  /* coin board */
   .coin{display:flex;align-items:center;gap:10px;background:var(--panel2);
-    border-radius:5px;padding:10px 12px}
-  .coin .sym{font-weight:700;font-size:14px;width:44px}
+    border-radius:5px;padding:9px 12px}
+  .coin .sym{font-weight:700;font-size:13px;min-width:52px}
   .coin .body{flex:1;display:flex;flex-direction:column;gap:5px;min-width:0}
-  .coin .row{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
+  .coin .row{display:flex;justify-content:space-between;font-size:12px;
+    color:var(--muted);gap:8px;flex-wrap:wrap}
   .track{height:7px;border-radius:4px;background:var(--bg);position:relative;overflow:hidden}
   .track .fill{position:absolute;top:0;bottom:0;border-radius:4px}
   .tag{font-size:10px;font-weight:700;letter-spacing:.08em;padding:2px 7px;
     border-radius:3px;text-transform:uppercase;white-space:nowrap}
   .tag.on{background:color-mix(in srgb,var(--gain) 16%,transparent);color:var(--gain)}
   .tag.off{background:color-mix(in srgb,var(--faint) 20%,transparent);color:var(--muted)}
-  .tag.pick{background:color-mix(in srgb,var(--btc) 20%,transparent);color:var(--btc)}
+  .tag.pick{background:color-mix(in srgb,var(--acc) 20%,transparent);color:var(--acc)}
 
   .tbl{width:100%;border-collapse:collapse;font-size:13px}
   .tbl th{text-align:left;color:var(--faint);font-weight:600;font-size:11px;
@@ -80,20 +81,21 @@
   .neut{color:var(--sig);font-weight:700}
   .scroll{overflow-x:auto}
 
-  .riskcard{border-left:4px solid var(--btc)}
-  .riskcard .rn{color:var(--btc);font-weight:650;font-size:12px;
+  .riskcard{border-left:4px solid var(--acc)}
+  .riskcard .rn{color:var(--acc);font-weight:650;font-size:12px;
     letter-spacing:.06em;text-transform:uppercase}
   .rule{color:var(--muted);font-size:13px}
   .facts{display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:13px}
   .facts div{background:var(--panel2);border-radius:4px;padding:8px 10px}
   .facts .k{color:var(--faint);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
   footer{color:var(--faint);font-size:12px;text-align:center;padding:6px 0 2px}
+  footer a{color:var(--acc)}
 </style>
 
 <div class="wrap">
   <div class="bar">
-    <span class="live"><span class="dot"></span>PAPER SIM · 24/7 · LIVE</span>
-    <h1>Crypto Momentum Rotation — $1,000 Challenge</h1>
+    <span class="live"><span class="dot"></span><span id="badge"></span></span>
+    <h1 id="title"></h1>
     <span class="asof" id="asof"></span>
   </div>
 
@@ -104,7 +106,7 @@
       <span class="d num" id="pd"></span>
     </div>
     <div class="kpi">
-      <span class="eyebrow">BTC benchmark ($1,000 same day)</span>
+      <span class="eyebrow" id="benchlabel"></span>
       <span class="v num" id="bv"></span>
       <span class="d num" id="bd"></span>
     </div>
@@ -118,19 +120,16 @@
   <div class="grid">
     <div class="panel">
       <span class="eyebrow">Equity curve</span>
-      <h2>Strategy vs BTC benchmark, from inception</h2>
-      <canvas id="eq" width="640" height="300"></canvas>
+      <h2>Bot vs benchmark, from inception</h2>
+      <canvas id="eq" width="640" height="290"></canvas>
       <div class="rule" id="eqnote"></div>
     </div>
 
     <div class="panel">
       <span class="eyebrow">Signal board</span>
-      <h2 id="boardtitle">8 coins, ranked by the active brain</h2>
-      <div id="coins" style="display:flex;flex-direction:column;gap:8px"></div>
-      <div class="rule">Two brains: in TREND (BTC above its 200-day MA) rank
-        by 7-day momentum and ride the hottest rising coin; in CHOP rank by
-        oversold z-score and harvest bounces (z &lt; −1.25). Nothing
-        qualifies — cash.</div>
+      <h2 id="boardtitle"></h2>
+      <div id="coins" style="display:flex;flex-direction:column;gap:7px"></div>
+      <div class="rule" id="boardnote"></div>
     </div>
 
     <div class="panel">
@@ -145,7 +144,7 @@
     </div>
 
     <div class="panel riskcard">
-      <span class="rn">₿ Extreme-risk strategy — paper money only</span>
+      <span class="rn">⚠ Paper money only — simulation</span>
       <h2 id="stratname"></h2>
       <div class="rule" id="stratrule"></div>
       <div class="facts">
@@ -154,18 +153,17 @@
         <div><div class="k">Started</div><div class="num" id="bt-start"></div></div>
         <div><div class="k">Starting stake</div><div class="num">$1,000.00</div></div>
       </div>
-      <div class="rule">Crypto still routinely draws down 50%+ even with the
-        trend gate, and the coin universe was chosen knowing it survived — live
-        results will likely be worse than backtests. Simulation only; not
-        investment advice; no real orders are ever placed.</div>
+      <div class="rule" id="stratnote" style="display:none"></div>
+      <div class="rule">Backtests are history, not promises. Nothing here is
+        investment advice, and no real orders are ever placed.</div>
     </div>
   </div>
 
-  <footer>Updated by <span class="num">crypto_tracker.py</span> · data: Yahoo Finance daily closes · rerun the tracker to refresh this screen</footer>
+  <footer><a href="fleet.html">← fleet overview</a> · updated every ~20 min by GitHub Actions · prices: Yahoo Finance</footer>
 </div>
 
 <script>
-let D = /*__DATA__*/;
+let D = {"generated_utc": "2026-07-31T22:01:46+00:00", "created": "2026-07-31", "starting_cash": 1000.0, "live_ts": "2026-07-31T19:55:00+00:00", "current": {"date": "2026-07-31", "value": 1000.0, "bench": 1000.0, "holding": "CASH"}, "board": [{"sym": "ETH-USD", "price": 1866.52, "line": "mom30 +15.5%", "tag": "watching", "on": false, "pick": false, "fill": 15.502511796498574}, {"sym": "USO", "price": 129.18, "line": "mom30 +13.1%", "tag": "watching", "on": false, "pick": false, "fill": 13.07887102596752}, {"sym": "BTC-USD", "price": 62892.0, "line": "mom30 +4.7%", "tag": "watching", "on": false, "pick": false, "fill": 4.745125988854082}, {"sym": "SPY", "price": 746.81, "line": "mom30 +1.1%", "tag": "watching", "on": false, "pick": false, "fill": 1.078943773787655}, {"sym": "TLT", "price": 82.24, "line": "mom30 -4.4%", "tag": "watching", "on": false, "pick": false, "fill": -4.374182674196447}, {"sym": "GLD", "price": 371.53, "line": "mom30 -4.4%", "tag": "watching", "on": false, "pick": false, "fill": -4.3901176764390755}, {"sym": "QQQ", "price": 688.01, "line": "mom30 -4.7%", "tag": "watching", "on": false, "pick": false, "fill": -4.67314394919951}], "board_title": "7-instrument macro universe \u00b7 one reasoned decision per day", "meta": {"title": "The Analyst \u2014 $1,000 Challenge", "badge": "PAPER SIM \u00b7 LLM AGENT ON TRIAL", "bench_label": "SPY benchmark ($1,000 same day)", "board_note": "Awaiting first decision. The agent reasons over prices, headlines, and the Watcher, then commits a falsifiable daily decision."}, "intraday": [{"ts": "2026-07-31T22:01:46+00:00", "value": 1000.0, "bench": 1000.0, "holding": "CASH"}], "trades": [], "history": [{"date": "2026-07-31", "value": 1000.0, "bench": 1000.0, "holding": "CASH"}], "strategy": {"name": "The Analyst \u2014 LLM daily reasoner", "rule": "One decision per US trading day by claude-opus-5 over prices, headlines, and the Watcher; guardrails in code: long only, 1 position, 1 trade/day, SEVERE=cash, $750 floor; its own API bill is charged to the account", "backtest_cagr": "NO BACKTEST POSSIBLE \u2014 sentiment/reasoning has no historical replay; the live run IS the test", "backtest_maxdd": "External evidence: LLM agents show no credible net-of-cost alpha (LiveTradeBench). Expectation: ~zero. API cost so far $0.00", "note": "Glass-box experiment: every decision logs verbatim reasoning plus a falsifier the attribution log scores later. Judged by kill_criteria.md like every other bot."}};
 const $ = id => document.getElementById(id);
 const fmt$ = v => "$" + v.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});
 const pct = v => (v>=0?"+":"") + (v*100).toFixed(2) + "%";
@@ -180,118 +178,103 @@ function line(ctx,pts,color,w=2,dash=[]){
 
 function renderAll(){
   const cur = D.current, start = D.starting_cash;
-  const liveVal = D.intraday && D.intraday.length ?
-    D.intraday[D.intraday.length-1] : cur;
+  const liveVal = D.intraday && D.intraday.length ? D.intraday[D.intraday.length-1] : cur;
   const ret = liveVal.value/start-1, bret = liveVal.bench/start-1;
 
-  const liveTime = D.live_ts ? new Date(D.live_ts) : null;
-  $("asof").textContent = (liveTime ?
-    "live quote " + liveTime.toLocaleTimeString() + " · " : "") +
-    "sim day " + (Math.round((new Date(cur.date)-new Date(D.created))/86400000)+1);
+  document.title = D.meta.title;
+  $("badge").textContent = D.meta.badge;
+  $("title").textContent = D.meta.title;
+  $("benchlabel").textContent = D.meta.bench_label;
+  $("asof").textContent = "as of " + cur.date + " · sim day " +
+    (Math.round((new Date(cur.date)-new Date(D.created))/86400000)+1);
   $("pv").textContent = fmt$(liveVal.value);
   $("pd").textContent = pct(ret) + " since start";
   $("pd").className = "d num " + (ret>=0?"up":"down");
   $("bv").textContent = fmt$(liveVal.bench);
-  $("bd").textContent = pct(bret) + " · strategy " +
+  $("bd").textContent = pct(bret) + " · bot " +
     (liveVal.value>=liveVal.bench?"ahead":"behind") +
     " by " + fmt$(Math.abs(liveVal.value-liveVal.bench));
   $("bd").className = "d num " + (bret>=0?"up":"down");
-  $("pos").textContent = cur.holding === "CASH" ? "CASH" : cur.holding.replace("-USD","");
+  $("pos").textContent = cur.holding;
   const chip = $("sigchip");
-  const rg = D.regime ? " · " + D.regime + " mode" : "";
-  if (cur.holding === "CASH"){ chip.textContent = "waiting" + rg; chip.className = "chip cash"; }
-  else { chip.textContent = "in market" + rg; chip.className = "chip in"; }
-  $("boardtitle").textContent = D.regime === "CHOP"
-    ? "8 coins ranked by oversold z-score (chop brain active)"
-    : "8 coins ranked by 7-day momentum (trend brain active)";
+  if (cur.holding === "CASH"){ chip.textContent = "waiting"; chip.className = "chip cash"; }
+  else { chip.textContent = "in market"; chip.className = "chip in"; }
 
+  $("boardtitle").textContent = D.board_title;
+  $("boardnote").textContent = D.meta.board_note;
   $("stratname").textContent = D.strategy.name;
   $("stratrule").textContent = "Rule: " + D.strategy.rule;
   $("bt-cagr").textContent = D.strategy.backtest_cagr;
   $("bt-dd").textContent = D.strategy.backtest_maxdd;
   $("bt-start").textContent = D.created;
+  if (D.strategy.note){
+    $("stratnote").textContent = D.strategy.note;
+    $("stratnote").style.display = "";
+  }
 
-  // momentum leaderboard (rank 1 = held)
   const coinsEl = $("coins");
   coinsEl.innerHTML = "";
-  const maxAbsMom = Math.max(...Object.values(D.board).map(b=>Math.abs(b.mom_pct)), 1);
-  Object.entries(D.board)
-    .sort((a,b)=>a[1].rank-b[1].rank)
-    .forEach(([sym,b])=>{
-      const short = sym.replace("-USD","");
-      const isPick = D.pick === sym;
-      const gpos = Math.max(0, Math.min(100, (b.mom_pct/maxAbsMom)*50+50));
-      const col = b.mom_pct>=0 ? css.getPropertyValue("--gain") : css.getPropertyValue("--loss");
-      const div = document.createElement("div");
-      div.className = "coin";
-      div.innerHTML =
-        "<span class='sym num'>#"+b.rank+" "+short+"</span>"+
-        "<div class='body'>"+
-          "<div class='row'><span class='num'>"+fmt$(b.price)+"</span>"+
-          "<span class='num'>mom7 "+(b.mom_pct>=0?"+":"")+b.mom_pct+"% · z "+
-          b.z+" · MA gap "+(b.gap_pct>=0?"+":"")+b.gap_pct+"%</span></div>"+
-          "<div class='track'><div class='fill' style='left:"+Math.min(50,gpos)+
-          "%;width:"+Math.abs(gpos-50)+"%;background:"+col+"'></div></div>"+
-        "</div>"+
-        "<span class='tag "+(isPick?"pick":
-          (D.regime==="CHOP" ? (b.z<-1.25?"on":"off") : (b.mom_pct>0?"on":"off")))+"'>"+
-          (isPick?"HELD":
-          (D.regime==="CHOP" ? (b.z<-1.25?"oversold":"no signal")
-                             : (b.mom_pct>0?"rising":"falling")))+"</span>";
-      coinsEl.appendChild(div);
-    });
+  D.board.forEach(b=>{
+    const col = (b.fill>=0 ? css.getPropertyValue("--gain") : css.getPropertyValue("--loss"));
+    const gpos = Math.max(0, Math.min(100, b.fill+50));
+    const div = document.createElement("div");
+    div.className = "coin";
+    div.innerHTML =
+      "<span class='sym num'>"+b.sym+"</span>"+
+      "<div class='body'>"+
+        "<div class='row'><span class='num'>"+fmt$(b.price)+"</span>"+
+        "<span class='num'>"+b.line+"</span></div>"+
+        "<div class='track'><div class='fill' style='left:"+Math.min(50,gpos)+
+        "%;width:"+Math.abs(gpos-50)+"%;background:"+col+"'></div></div>"+
+      "</div>"+
+      "<span class='tag "+(b.pick?"pick":(b.on?"on":"off"))+"'>"+b.tag+"</span>";
+    coinsEl.appendChild(div);
+  });
 
-  // trade log
   const tb = $("trades").tBodies[0];
   tb.innerHTML = "";
   D.trades.slice().reverse().forEach(t=>{
-    const cls = t.action==="BUY" ? "buy" : (t.action==="SELL" ? "sell" : "neut");
+    const cls = /BUY|ALLOCATE|REBAL\+/.test(t.action) ? "buy" :
+                (/SELL|REBAL-/.test(t.action) ? "sell" : "neut");
     const tr = document.createElement("tr");
     tr.innerHTML = "<td class='num'>"+t.date+"</td><td class='"+cls+"'>"+t.action+
-      "</td><td class='num'>"+String(t.ticker).replace("-USD","")+
+      "</td><td class='num'>"+t.ticker+
       "</td><td class='num'>"+(t.price?fmt$(t.price):"—")+
-      "</td><td class='num'>"+(t.units?t.units.toFixed(6):"—")+
+      "</td><td class='num'>"+(t.units?(+t.units).toFixed(4):"—")+
       "</td><td class='num'>"+fmt$(t.value)+"</td>";
     tb.appendChild(tr);
   });
 
-  // equity chart: daily history once it exists, else live intraday stream
   const c=$("eq"), ctx=c.getContext("2d");
   ctx.clearRect(0,0,c.width,c.height);
-  const btcC=css.getPropertyValue("--btc").trim(),
-        gainC=css.getPropertyValue("--gain").trim(),
+  const gainC=css.getPropertyValue("--gain").trim(),
         mutedC=css.getPropertyValue("--faint").trim();
-  let series, label;
-  if (D.history.length>=2){ series=D.history; label="daily closes"; }
-  else if (D.intraday && D.intraday.length>=2){ series=D.intraday; label="live intraday"; }
+  let series;
+  if (D.history.length>=2) series=D.history;
+  else if (D.intraday && D.intraday.length>=2) series=D.intraday;
   else series=null;
   if(!series){
-    $("eqnote").textContent="Streaming live — the curve appears after the next tracker cycle (~2 min).";
-    line(ctx,[[20,150],[620,150]],mutedC,1,[4,4]);
+    $("eqnote").textContent="Day 1 — the curve appears after the next cycles.";
+    line(ctx,[[20,145],[620,145]],mutedC,1,[4,4]);
   } else {
+    const start_ = D.starting_cash;
     const vals=series.map(h=>h.value).concat(series.map(h=>h.bench));
-    const lo=Math.min(Math.min(...vals),start)*0.995,
-          hi=Math.max(Math.max(...vals),start)*1.005;
-    const sy=v=>285-(v-lo)/(hi-lo||1)*265, X=i=>30+i/(series.length-1)*580;
-    line(ctx,[[30,sy(start)],[610,sy(start)]],mutedC,1,[4,4]);
-    line(ctx,series.map((h,i)=>[X(i),sy(h.bench)]),btcC,1.6);
+    const lo=Math.min(Math.min(...vals),start_)*0.995,
+          hi=Math.max(Math.max(...vals),start_)*1.005;
+    const sy=v=>275-(v-lo)/(hi-lo||1)*255, X=i=>30+i/(series.length-1)*580;
+    line(ctx,[[30,sy(start_)],[610,sy(start_)]],mutedC,1,[4,4]);
+    line(ctx,series.map((h,i)=>[X(i),sy(h.bench)]),mutedC,1.6);
     line(ctx,series.map((h,i)=>[X(i),sy(h.value)]),gainC,2.2);
-    ctx.fillStyle=gainC; ctx.beginPath();
-    ctx.arc(X(series.length-1),sy(series[series.length-1].value),3.5,0,7); ctx.fill();
-    $("eqnote").textContent="green: strategy · orange: BTC buy&hold · dashed: $1,000 start · showing "+label;
+    $("eqnote").textContent="green: bot · grey: benchmark · dashed: $1,000 start";
   }
 }
 
 renderAll();
-
-// Auto-refresh: poll the data file the tracker rewrites (same-origin on the
-// local server; on the published artifact fetch fails silently and the page
-// simply shows the snapshot from publish time).
 async function poll(){
   try{
-    const r = await fetch("crypto_dashboard_data.json", {cache:"no-store"});
+    const r = await fetch("analyst_dashboard_data.json", {cache:"no-store"});
     if (r.ok){ D = await r.json(); renderAll(); }
-  }catch(e){/* static context (artifact) — keep snapshot */}
+  }catch(e){}
 }
 setInterval(poll, 60000);
 </script>

@@ -1,0 +1,108 @@
+{
+  "generated_utc": "2026-07-31T22:01:46+00:00",
+  "created": "2026-07-31",
+  "starting_cash": 1000.0,
+  "live_ts": "2026-07-31T19:55:00+00:00",
+  "current": {
+    "date": "2026-07-31",
+    "value": 1000.0,
+    "bench": 1000.0,
+    "holding": "CASH"
+  },
+  "board": [
+    {
+      "sym": "ETH-USD",
+      "price": 1866.52,
+      "line": "mom30 +15.5%",
+      "tag": "watching",
+      "on": false,
+      "pick": false,
+      "fill": 15.502511796498574
+    },
+    {
+      "sym": "USO",
+      "price": 129.18,
+      "line": "mom30 +13.1%",
+      "tag": "watching",
+      "on": false,
+      "pick": false,
+      "fill": 13.07887102596752
+    },
+    {
+      "sym": "BTC-USD",
+      "price": 62892.0,
+      "line": "mom30 +4.7%",
+      "tag": "watching",
+      "on": false,
+      "pick": false,
+      "fill": 4.745125988854082
+    },
+    {
+      "sym": "SPY",
+      "price": 746.81,
+      "line": "mom30 +1.1%",
+      "tag": "watching",
+      "on": false,
+      "pick": false,
+      "fill": 1.078943773787655
+    },
+    {
+      "sym": "TLT",
+      "price": 82.24,
+      "line": "mom30 -4.4%",
+      "tag": "watching",
+      "on": false,
+      "pick": false,
+      "fill": -4.374182674196447
+    },
+    {
+      "sym": "GLD",
+      "price": 371.53,
+      "line": "mom30 -4.4%",
+      "tag": "watching",
+      "on": false,
+      "pick": false,
+      "fill": -4.3901176764390755
+    },
+    {
+      "sym": "QQQ",
+      "price": 688.01,
+      "line": "mom30 -4.7%",
+      "tag": "watching",
+      "on": false,
+      "pick": false,
+      "fill": -4.67314394919951
+    }
+  ],
+  "board_title": "7-instrument macro universe \u00b7 one reasoned decision per day",
+  "meta": {
+    "title": "The Analyst \u2014 $1,000 Challenge",
+    "badge": "PAPER SIM \u00b7 LLM AGENT ON TRIAL",
+    "bench_label": "SPY benchmark ($1,000 same day)",
+    "board_note": "Awaiting first decision. The agent reasons over prices, headlines, and the Watcher, then commits a falsifiable daily decision."
+  },
+  "intraday": [
+    {
+      "ts": "2026-07-31T22:01:46+00:00",
+      "value": 1000.0,
+      "bench": 1000.0,
+      "holding": "CASH"
+    }
+  ],
+  "trades": [],
+  "history": [
+    {
+      "date": "2026-07-31",
+      "value": 1000.0,
+      "bench": 1000.0,
+      "holding": "CASH"
+    }
+  ],
+  "strategy": {
+    "name": "The Analyst \u2014 LLM daily reasoner",
+    "rule": "One decision per US trading day by claude-opus-5 over prices, headlines, and the Watcher; guardrails in code: long only, 1 position, 1 trade/day, SEVERE=cash, $750 floor; its own API bill is charged to the account",
+    "backtest_cagr": "NO BACKTEST POSSIBLE \u2014 sentiment/reasoning has no historical replay; the live run IS the test",
+    "backtest_maxdd": "External evidence: LLM agents show no credible net-of-cost alpha (LiveTradeBench). Expectation: ~zero. API cost so far $0.00",
+    "note": "Glass-box experiment: every decision logs verbatim reasoning plus a falsifier the attribution log scores later. Judged by kill_criteria.md like every other bot."
+  }
+}
