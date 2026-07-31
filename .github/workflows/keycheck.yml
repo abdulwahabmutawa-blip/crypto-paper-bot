@@ -3,7 +3,12 @@ name: key-check
 # Manual-only: validates repo API secrets without spending anything.
 # The Anthropic check calls count_tokens (a free endpoint — no tokens billed).
 on:
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      rehearsal:
+        description: "Also run a full Analyst decision rehearsal (real API call, ~$0.10, records nothing)"
+        type: boolean
+        default: false
 
 jobs:
   check:
@@ -12,10 +17,11 @@ jobs:
     env:
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
     steps:
+      - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install anthropic
+      - run: pip install -r requirements.txt
       - name: Validate ANTHROPIC_API_KEY
         run: |
           python - <<'EOF'
@@ -38,3 +44,8 @@ jobs:
               print("::error::key REJECTED — check for a typo in the secret")
               sys.exit(1)
           EOF
+      - name: Analyst decision rehearsal (records nothing)
+        if: ${{ inputs.rehearsal }}
+        env:
+          ANALYST_REHEARSAL: "1"
+        run: python src/analyst_agent.py

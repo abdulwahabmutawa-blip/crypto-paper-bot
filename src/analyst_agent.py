@@ -272,6 +272,12 @@ def main():
                      and st.get("last_decision_date") != today
                      and not st.get("benched", False)
                      and n_month < MONTHLY_DECISION_CAP)
+    # ANALYST_REHEARSAL=1: run the full decision loop for real (API and all)
+    # but record NOTHING — proves the pipeline works without waiting for the
+    # next market open. Used by the key-check workflow's rehearsal option.
+    rehearsal = os.environ.get("ANALYST_REHEARSAL") == "1"
+    if rehearsal:
+        should_decide = bool(api_key)
 
     if should_decide and not api_key:
         print("[analyst] ANTHROPIC_API_KEY not set — skipping decision "
@@ -299,6 +305,16 @@ def main():
         except Exception as e:
             print(f"[analyst] API failure: {e} -> HOLD")
         cost = usage["in"] * IN_PRICE / 1e6 + usage["out"] * OUT_PRICE / 1e6
+        if rehearsal:
+            import sentinel_gate
+            severe, _why = sentinel_gate.severe()
+            action, tkr, tag = apply_guardrails(decision, st["holding"], equity, severe)
+            print("[analyst] === REHEARSAL — nothing recorded, account untouched ===")
+            print("decision:", json.dumps(decision, indent=1, ensure_ascii=False))
+            print(f"tools called: {tools_called} · tokens {usage} · "
+                  f"API cost this run ${cost:.3f} (billed to the key, not the sim)")
+            print(f"guardrail verdict: {action} {tkr or ''} ({tag})")
+            return
         st["cash"] -= cost                       # the agent pays its own bill
         st["api_cost_usd"] = round(st["api_cost_usd"] + cost, 4)
 
