@@ -1,89 +1,89 @@
 {
-  "generated_utc": "2026-07-31T09:06:48+00:00",
+  "generated_utc": "2026-07-31T09:19:59+00:00",
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "live_ts": "2026-07-31T09:05:00+00:00",
+  "live_ts": "2026-07-31T09:15:00+00:00",
   "current": {
     "date": "2026-07-31",
-    "value": 1035.91,
-    "bench": 989.04,
-    "holding": "SOL-USD"
+    "value": 1034.92,
+    "bench": 988.04,
+    "holding": "DOGE-USD"
   },
   "board": {
     "BTC-USD": {
-      "price": 63724.3906,
-      "ma200": 71459.7615,
-      "gap_pct": -10.82,
-      "mom_pct": -0.58,
-      "z": -0.79,
+      "price": 63660.0195,
+      "ma200": 71459.4396,
+      "gap_pct": -10.91,
+      "mom_pct": -0.68,
+      "z": -0.85,
       "above_ma": false,
       "rank": 4
     },
     "ETH-USD": {
-      "price": 1887.59,
-      "ma200": 2110.1036,
-      "gap_pct": -10.55,
-      "mom_pct": 1.47,
-      "z": 0.09,
+      "price": 1884.01,
+      "ma200": 2110.0857,
+      "gap_pct": -10.71,
+      "mom_pct": 1.28,
+      "z": 0.01,
       "above_ma": false,
       "rank": 7
     },
     "SOL-USD": {
-      "price": 73.55,
-      "ma200": 86.4508,
-      "gap_pct": -14.92,
-      "mom_pct": -0.45,
-      "z": -1.32,
-      "above_ma": false,
-      "rank": 1
-    },
-    "DOGE-USD": {
-      "price": 0.0698,
-      "ma200": 0.095,
-      "gap_pct": -26.54,
-      "mom_pct": 0.39,
-      "z": -1.32,
+      "price": 73.48,
+      "ma200": 86.4504,
+      "gap_pct": -15.0,
+      "mom_pct": -0.54,
+      "z": -1.36,
       "above_ma": false,
       "rank": 2
     },
+    "DOGE-USD": {
+      "price": 0.0697,
+      "ma200": 0.095,
+      "gap_pct": -26.68,
+      "mom_pct": 0.2,
+      "z": -1.39,
+      "above_ma": false,
+      "rank": 1
+    },
     "AVAX-USD": {
-      "price": 6.46,
-      "ma200": 8.7891,
-      "gap_pct": -26.5,
-      "mom_pct": 2.59,
-      "z": -0.45,
+      "price": 6.44,
+      "ma200": 8.789,
+      "gap_pct": -26.73,
+      "mom_pct": 2.27,
+      "z": -0.58,
       "above_ma": false,
       "rank": 5
     },
     "LINK-USD": {
-      "price": 8.312,
-      "ma200": 9.1199,
-      "gap_pct": -8.86,
-      "mom_pct": -0.25,
-      "z": -0.36,
+      "price": 8.288,
+      "ma200": 9.1198,
+      "gap_pct": -9.12,
+      "mom_pct": -0.53,
+      "z": -0.47,
       "above_ma": false,
       "rank": 6
     },
     "ADA-USD": {
-      "price": 0.1706,
+      "price": 0.1707,
       "ma200": 0.2415,
-      "gap_pct": -29.36,
-      "mom_pct": 4.14,
-      "z": 1.07,
+      "gap_pct": -29.32,
+      "mom_pct": 4.2,
+      "z": 1.08,
       "above_ma": false,
       "rank": 8
     },
     "XRP-USD": {
-      "price": 1.0758,
+      "price": 1.0742,
       "ma200": 1.3639,
-      "gap_pct": -21.13,
-      "mom_pct": -1.39,
-      "z": -0.88,
+      "gap_pct": -21.24,
+      "mom_pct": -1.53,
+      "z": -0.94,
       "above_ma": false,
       "rank": 3
     }
   },
-  "pick": "SOL-USD",
+  "pick": "DOGE-USD",
   "regime": "CHOP",
   "intraday": [
     {
@@ -2749,27 +2749,15 @@
       "value": 1035.91,
       "bench": 989.04,
       "holding": "SOL-USD"
+    },
+    {
+      "ts": "2026-07-31T09:19:59+00:00",
+      "value": 1034.92,
+      "bench": 988.04,
+      "holding": "DOGE-USD"
     }
   ],
   "trades": [
-    {
-      "date": "2026-07-29",
-      "action": "BUY",
-      "ticker": "SOL-USD",
-      "price": 73.99,
-      "units": 13.943643,
-      "value": 1031.69,
-      "reason": "Strongest eligible coin (-5.0% 7d momentum)"
-    },
-    {
-      "date": "2026-07-30",
-      "action": "SELL",
-      "ticker": "SOL-USD",
-      "price": 73.46,
-      "units": 13.943643,
-      "value": 1024.3,
-      "reason": "Signal flip"
-    },
     {
       "date": "2026-07-30",
       "action": "BUY",
@@ -2931,6 +2919,24 @@
       "units": 14.084431,
       "value": 1036.75,
       "reason": "Strongest eligible coin (-0.4% 7d momentum)"
+    },
+    {
+      "date": "2026-07-31",
+      "action": "SELL",
+      "ticker": "SOL-USD",
+      "price": 73.48,
+      "units": 14.084431,
+      "value": 1034.92,
+      "reason": "Signal flip"
+    },
+    {
+      "date": "2026-07-31",
+      "action": "BUY",
+      "ticker": "DOGE-USD",
+      "price": 0.0697,
+      "units": 14848.263985,
+      "value": 1034.92,
+      "reason": "Strongest eligible coin (+0.2% 7d momentum)"
     }
   ],
   "history": [
@@ -3026,9 +3032,9 @@
     },
     {
       "date": "2026-07-31",
-      "value": 1035.91,
-      "bench": 989.04,
-      "holding": "SOL-USD"
+      "value": 1034.92,
+      "bench": 988.04,
+      "holding": "DOGE-USD"
     }
   ],
   "strategy": {
