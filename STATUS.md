@@ -1,29 +1,30 @@
-# Fleet status — 2026-07-30 (UTC)
+# Fleet status — 2026-07-31 (UTC)
 
-Last cycle: 2026-07-30 04:58 UTC (success). All paper accounts, $1,000 start each.
+Last cycle: 2026-07-31 04:56 UTC (success, 9 min before this digest). $1,000 paper start/bot.
 
 | Bot | Holds | Value | Bench | 24h change |
 |---|---|---|---|---|
-| trend (crypto) | SOL-USD | $1,023.74 (asof 07-30) | $992.20 | 8 trades / 3 cash round-trips (XRP→SOL→cash→SOL→cash→SOL), all "signal flip" |
-| regime (stock) | TQQQ | $814.07 (asof 07-29) | $970.93 | No trade; mark -6.2% day on Nasdaq/semis selloff |
-| congress | NVDA, META, GOOG (+$700 cash) | $987.74 (asof 07-29) | $971.68 | No change |
-| meanrev | AMZN | $1,027.88 (asof 07-29) | $971.74 | No trade; mark -1.8% day |
-| commodity | USO | $1,084.26 (asof 07-29) | $971.74 | No trade; mark +7.3% day on oil surge |
-| allweather | 5-asset basket | $990.18 (asof 07-29) | $971.68 | No change |
-| hype (sentiment) | CASH | $896.16 (asof 07-29) | $971.68 | No trade, flat |
-| Hunter | USO | $920.47 (asof 07-29) | $971.68 | ETH-USD → USO (07-29), "Oil now scores >1.25x better" |
-| Watcher | advisory only, no position | — | — | Scanned 2026-07-30 04:04 UTC, risk: caution |
+| trend (crypto) | SOL-USD | $1,034.73 (asof 07-31) | $997.30 | Rotated CASH → SOL-USD today 04:56 UTC, "strongest eligible coin" |
+| congress | NVDA, META, GOOG (+$700 cash) | $982.33 (asof 07-30) | $987.97 | No trade; mark -$5.41 day |
+| meanrev | AMZN | $1,070.14 (asof 07-30) | $987.97 | No trade; mark +$42.26 day |
+| commodity | USO | $1,068.67 (asof 07-30) | $987.97 | No trade; mark -$15.59 day |
+| allweather | 5-asset basket | $997.07 (asof 07-30) | $987.97 | No trade; mark +$6.89 day |
+| hype (sentiment) | MSFT | $899.37 (asof 07-30) | $987.97 | Rotated CASH → MSFT 07-30, Grok "euphoric" Azure-earnings signal |
+| Hunter | USO | $907.44 (asof 07-30) | $987.97 | No new trade (last buy 07-29); mark -$13.03 day |
+| Scholar (new) | CASH | $1,000.00 | $1,000.00 | Launched today (v2 review); still 100% cash, no entry in 8 cycles |
+| Watcher | advisory, no position | — | — | Scanned 4x today, latest 03:36 UTC: risk "caution" |
 
 ## Changed
-- **trend/crypto**: churned hard — 8 trades, 3 full round-trips into cash and back into SOL-USD, all "signal flip" / "strongest eligible coin." Net roughly flat-to-up ($1,017.75 → $1,023.74).
-- **Hunter**: sold ETH-USD, bought USO (07-29) — reward/risk board flipped back to Oil.
-- **regime/stock**: no trade, but TQQQ mark dropped -6.2% ($867.78 → $814.07) — matches Watcher's "Dow -1,000pts on AI spend worries" scan.
-- **commodity**: no trade, but USO mark jumped +7.3% ($1,010.15 → $1,084.26) — matches Watcher's "oil surges" after Iran strikes.
-- congress, meanrev, allweather, hype: no trades, marks only.
-- No stop-loss trips, no failed cycles, no exceptions found in the 50 commits reviewed.
+- **v2 review landed** (71b8a6c, 03:10 UTC): stock bot retired at final mark $892.30 (-10.8%,
+  owner override, R1 not breached, `docs/stocks.html` now a frozen archive); Scholar (bot #10)
+  launched with $1,000 cash.
+- **trend/crypto**: rotated back into SOL-USD from cash (04:56 UTC today).
+- **hype/sentiment**: rotated into MSFT (07-30) on a Grok "euphoric" signal.
+- No stop-loss trips. No failed GitHub Actions runs in the last 24h — only the usual
+  cron-throttling cancellations the workflow already documents as expected.
 
 ## Needs a look
-- **Supervisor/judgment pipeline still stuck**: `reports/judgments.jsonl`, `trade_attributions.jsonl`, `supervisor_scoreboard.json` unchanged since 2026-07-29 12:18 UTC, even though ~38 trading cycles have committed since. Same defect flagged in yesterday's digest, not resolved.
-- **trend/crypto churn getting worse, not better**: 3 cash round-trips in this window alone (same signal-flip whipsaw noted yesterday).
-- **regime/stock (TQQQ)**: down to $814.07, worst book in the fleet (~-18.6% since inception), no stop-loss by design.
-- One cron gap of 6h07m (07-29 21:58 → 07-30 04:05 UTC) — within the range the workflow's own comments document as expected GitHub-throttling behavior, not a failure.
+- **Scholar**: dashboard board tags IWM "HELD"/pick=true, but `data/scholar_state.json` shows
+  CASH and 0 trades across all 8 cycles since launch — display vs. actual-holdings mismatch,
+  worth a look (may just be a "top pick if entered" label, not a bug).
+- Nothing else broken: fleet is current, no exceptions found in this window's commits or logs.
