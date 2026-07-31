@@ -1,82 +1,35 @@
 {
-  "updated_utc": "2026-07-30T08:40:00+00:00",
-  "note": "07-30 run covering a three-day window (07-27 -> 07-30) because no run happened on 07-28 or 07-29. 32 lines appended: 8 dailies backfilled for 07-28, 8 backfilled for 07-29, 8 for 07-30, and 8 trade_event lines. 26 new fills audited, 0 fill-integrity alerts, and the 07-25 stale-MARK defect did not recur - all eight bot values re-derived to within $0.26 of their recorded marks.",
-  "total_lines_logged": 127,
+  "updated_utc": "2026-07-31T14:30:00+00:00",
+  "note": "07-31 run covering a single day (07-30 -> 07-31). 13 lines appended: 9 dailies (8 live books plus one closing line for the retired stock bot) and 4 trade_event lines for the books that traded - meanrev, hype, crypto, scholar. 10 new fills audited, 0 fill-integrity alerts.",
+  "total_lines_logged": 140,
   "by_primary_driver": {
-    "none_cash": {
-      "profit": 0,
-      "loss": 0,
-      "flat": 13
-    },
-    "market_beta": {
-      "profit": 8,
-      "loss": 6,
-      "flat": 4
-    },
-    "macro": {
-      "profit": 7,
-      "loss": 8,
-      "flat": 1
-    },
-    "unknown": {
-      "profit": 4,
-      "loss": 1,
-      "flat": 34
-    },
-    "hype_sentiment": {
-      "profit": 5,
-      "loss": 9,
-      "flat": 6
-    },
-    "technical": {
-      "profit": 7,
-      "loss": 5,
-      "flat": 2
-    },
-    "sector": {
-      "profit": 1,
-      "loss": 5,
-      "flat": 0
-    },
-    "news_idiosyncratic": {
-      "profit": 0,
-      "loss": 0,
-      "flat": 1
-    }
+    "none_cash": { "profit": 0, "loss": 0, "flat": 14 },
+    "market_beta": { "profit": 8, "loss": 8, "flat": 4 },
+    "macro": { "profit": 9, "loss": 9, "flat": 1 },
+    "unknown": { "profit": 4, "loss": 1, "flat": 34 },
+    "hype_sentiment": { "profit": 6, "loss": 9, "flat": 6 },
+    "technical": { "profit": 8, "loss": 7, "flat": 2 },
+    "sector": { "profit": 1, "loss": 5, "flat": 0 },
+    "news_idiosyncratic": { "profit": 3, "loss": 0, "flat": 1 }
   },
   "by_beta_or_alpha": {
-    "n/a": {
-      "profit": 7,
-      "loss": 6,
-      "flat": 50
-    },
-    "beta": {
-      "profit": 7,
-      "loss": 7,
-      "flat": 4
-    },
-    "mixed": {
-      "profit": 3,
-      "loss": 8,
-      "flat": 0
-    },
-    "alpha": {
-      "profit": 15,
-      "loss": 13,
-      "flat": 7
-    }
+    "n/a": { "profit": 9, "loss": 8, "flat": 51 },
+    "beta": { "profit": 7, "loss": 8, "flat": 4 },
+    "mixed": { "profit": 3, "loss": 10, "flat": 0 },
+    "alpha": { "profit": 20, "loss": 13, "flat": 7 }
   },
-  "headline_so_far": "Fleet is -3.17% ($7,746.11 vs the $8,000 start), down $94.04 over the three days since the last supervisor run. 2026-07-29 was the fleet's worst and most explicable day: a hawkish Fed hold with three dissents FOR a hike sent the Dow down ~1,100 points, and simultaneously an Iranian missile attack on US forces plus US/Saudi strikes in Iraq put WTI up 4-6%. Those two facts split the fleet cleanly - commodity +7.34% on oil, stock -6.19% on 3x Nasdaq beta - and the spread between best and worst bot is now $270.19. Three structural findings outrank the P/L. (1) The stock bot at 814.07 is 64.07 from the R1 hard stop after a single -6.19% session, with its MA200 cushion down from 9.2% to 2.9%. (2) The hunter bot's churn is now measurably expensive: it sold USO at 119.65 on 07-28 and re-bought it at 129.02 on 07-29, paying 7.83% to get back into the position it already held, and the crypto bot round-trips coins in 13 minutes. (3) Operationally the fleet is much healthier - 110% of expected cycles in 24h versus 31% on 07-26 - but there is now a precisely repeating ~6h overnight blackout (368 min on 07-29/30, 367 min on 07-28/29) caused by the concurrency handoff, not by throttling. My own record: I was WRONG on the 07-27 oil call - the war premium re-armed instead of unwinding - and the alpha it appears to have earned is an artifact of an unreachable reference price.",
+  "driver_note": "news_idiosyncratic went from 0 profit / 0 loss / 1 flat across the project's whole history to 3 profit in one day. That is not a trend, it is a single earnings week: AMZN, MSFT and GOOG all printed inside 48 hours and three separate books were positioned in them by three unrelated rules. Read it as a coincidence of calendar, not as evidence that any bot can read news.",
+  "headline_so_far": "Live fleet is +1.69% ($8,135.06 on $8,000 across 8 books) and turned positive for the first time, up $175.31 on the day against the same eight books' $7,959.75 yesterday (-0.50%). Note the previous run's headline total of $7,746.11 is NOT comparable - that roster still had stock and not scholar. Counting the retired stock bot's frozen $892.30, all-in the project is $9,027.36 on $9,000 deployed, +0.30%. One fact explains most of it: AMZN gapped +12.5% at the open on a Q2 beat (EPS $5.75 vs $1.82, AWS +37%) and meanrev happened to be holding it, +14.38% in a session, which it then sold into. That was a dip-buying rule collecting an earnings lottery ticket, not the rule working - and the same rule immediately rotated into PG, a stock that is falling for the opposite reason, having gapped -5% on its own 07-29 revenue miss. Three structural findings outrank the P/L. (1) FILL INTEGRITY IS CLEAN: five of six equity fills landed at 09:34 ET, the first cycle after the open, and every one of ten fills sat inside its day's true range - the market_hours gate is holding. (2) The overnight blackout has now repeated a third consecutive night to within 11 minutes of the same duration (357/368/367 min), and the 03:10Z commit that appears to break it is the owner's own manual push, not a cycle. (3) For the first time since 07-24 no bot is below $900 and nothing is within 15% of the R1 stop. My own record got worse and deserved to: I closed four calls for -51.53 net, and both losses were REPEATS of calls that had previously paid - the stock reduce_half (right about danger, wrong about direction, TQQQ +9.61%) and a fourth hype skip_new_entries whose whole premise was contradicted when the euphoria scanner caught two real earnings movers back to back.",
   "supervisor_directional_scorecard": {
-    "scored_calls": 11,
-    "wins": 8,
-    "losses": 2,
-    "neutral": 1,
-    "cumulative_alpha_usd": 379.74,
-    "wins_actionable_basis": 7,
-    "losses_actionable_basis": 3,
-    "cumulative_alpha_usd_actionable": 250.6,
-    "open_calls": 4,
-    "note": "Five judgments closed this run, all five positive on the headline basis, but the honest reading is smaller. $238.96 of the $281.36 added is ONE oil thesis logged three times, and that thesis was wrong on direction; the two hunter legs paid only because hunter itself churned in and out at bad prices, and the commodity leg is a $5.45 LOSS once scored against the price actually reachable on 07-27. The two calls I would defend without caveats are 2026-07-27-hype-1 (+38.17, reachable reference, bot bought the hype name 98 minutes after the call was written and lost 4.09%) and 2026-07-25-stock-1 (+4.23, deliberately scored at its pre-committed 07-27 close even though today's price would have credited ~+44)."
+    "scored_calls": 15,
+    "wins": 9,
+    "losses": 4,
+    "neutral": 2,
+    "cumulative_alpha_usd": 328.21,
+    "wins_actionable_basis": 8,
+    "losses_actionable_basis": 5,
+    "cumulative_alpha_usd_actionable": 199.07,
+    "open_calls": 3,
+    "note": "Four judgments closed this run for -51.53, the first losing run in the ledger. The pattern in both losses is the same and is now the thing to watch in my own process: a call that pays once gets repeated until it stops working. Today I broke the repeat on hype deliberately (logged as no_change with the reason) and kept it on crypto and hunter, where the defect is mechanical - documented churn at negative momentum - rather than a market view. The one new contrarian call, close_position on meanrev's PG at 142.92, is deliberately aimed at the fleet's best book on its best day, which is the standing corollary in kill_criteria.md applied to myself."
   }
 }

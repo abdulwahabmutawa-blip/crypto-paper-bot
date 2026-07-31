@@ -1,191 +1,129 @@
 {
-  "updated_utc": "2026-07-30T08:40:00+00:00",
-  "run_note": "No supervisor run happened on 07-28 or 07-29, and the 07-27 run's ledger writes were never committed. This run therefore covers a three-day window (07-27 -> 07-30), closes five judgments that had gone stale, and backfills 07-28 and 07-29 attribution rows from the bots' own history arrays (each row is marked BACKFILLED).",
-  "total_judgments": 86,
-  "judgments_closed": 82,
-  "judgments_open": 4,
+  "updated_utc": "2026-07-31T14:30:00+00:00",
+  "run_note": "Daily run covering 07-30 -> 07-31. Roster changed at the v2 review: the stock/TQQQ bot was RETIRED by owner override (not an R1-R5 kill) and The Scholar (bot #10, IWM) was launched with a fresh $1,000. The live fleet is therefore 8 books on $8,000 of capital; total capital ever deployed is $9,000 across 9 books. 13 attribution lines appended, 10 new fills audited, 0 fill-integrity alerts.",
+  "total_judgments": 94,
+  "judgments_closed": 91,
+  "judgments_open": 3,
   "open_ids": [
-    "2026-07-30-stock-1",
-    "2026-07-30-hunter-1",
-    "2026-07-30-crypto-1",
-    "2026-07-30-hype-1"
+    "2026-07-31-crypto-1",
+    "2026-07-31-hunter-1",
+    "2026-07-31-meanrev-1"
   ],
-  "cumulative_alpha_usd": 379.74,
-  "cumulative_alpha_usd_actionable": 250.6,
-  "win_rate_closed_pct": 9.8,
-  "win_rate_note": "71 of 82 closed judgments are no_change (alpha 0), so the headline rate is near-meaningless - read the directional record instead. DIRECTIONAL: 11 scored, 8W/2L/1N, +379.74 net headline. On the conservative 'actionable reference price' basis the record is 7W/3L/1N and +250.60 net. CRITICAL CAVEAT: 238.96 of this run's 281.36 alpha comes from ONE oil thesis expressed three times (2026-07-25-hunter-1, 2026-07-27-hunter-1, 2026-07-27-commodity-1). Those are not three independent wins, and the thesis itself was WRONG - oil round-tripped back up on 07-29. The hunter legs paid only because that bot churned in and out at bad prices.",
+  "cumulative_alpha_usd": 328.21,
+  "cumulative_alpha_usd_actionable": 199.07,
+  "win_rate_closed_pct": 9.9,
+  "win_rate_note": "82 of 91 closed judgments are no_change (alpha 0), so the headline rate is near-meaningless - read the directional record instead. DIRECTIONAL: 15 scored, 9W/4L/2N, +328.21 net headline. On the conservative 'actionable reference price' basis the record is 8W/5L/2N and +199.07 net. This run REMOVED 51.53 of alpha: two of the four calls closed were wrong. The standing caveat also still holds - 238.96 of the headline total comes from ONE oil thesis expressed three times, and that thesis was wrong on direction.",
+  "this_run_closures": {
+    "2026-07-30-stock-1": -39.12,
+    "2026-07-30-hunter-1": 0.0,
+    "2026-07-30-crypto-1": 6.78,
+    "2026-07-30-hype-1": -19.19,
+    "net": -51.53,
+    "lesson": "Both losses were repeat calls. The stock reduce_half was right about danger (64.07 from the R1 stop) and wrong about direction (TQQQ +9.61%); the hype skip_new_entries was a fourth-time repeat whose premise - that the euphoria scanner buys vapour - was contradicted by two genuine earnings movers. Repeating a call that has paid is the failure mode to watch in this ledger."
+  },
   "per_bot": {
-    "crypto": {
-      "judgments": 11,
-      "closed": 10,
-      "open": 1,
-      "alpha_usd": 51.92
-    },
-    "stock": {
-      "judgments": 10,
-      "closed": 9,
-      "open": 1,
-      "alpha_usd": 3.39
-    },
-    "meanrev": {
-      "judgments": 11,
-      "closed": 11,
-      "open": 0,
-      "alpha_usd": 0.0
-    },
-    "allweather": {
-      "judgments": 11,
-      "closed": 11,
-      "open": 0,
-      "alpha_usd": 0.0
-    },
-    "commodity": {
-      "judgments": 11,
-      "closed": 11,
-      "open": 0,
-      "alpha_usd": 47.79
-    },
-    "congress": {
-      "judgments": 11,
-      "closed": 11,
-      "open": 0,
-      "alpha_usd": 0.0
-    },
-    "hunter": {
-      "judgments": 10,
-      "closed": 9,
-      "open": 1,
-      "alpha_usd": 177.08
-    },
-    "sentiment": {
-      "judgments": 4,
-      "closed": 4,
-      "open": 0,
-      "alpha_usd": 0.0
-    },
-    "hype": {
-      "judgments": 7,
-      "closed": 6,
-      "open": 1,
-      "alpha_usd": 99.56
-    },
-    "_note": "sentiment (4) and hype (6) are the SAME bot (sentiment_state.json); naming switched to hype from 07-22."
+    "crypto": { "judgments": 12, "closed": 11, "open": 1, "alpha_usd": 58.7 },
+    "stock": { "judgments": 10, "closed": 10, "open": 0, "alpha_usd": -35.73, "note": "bot retired 2026-07-31; ledger closed." },
+    "meanrev": { "judgments": 12, "closed": 11, "open": 1, "alpha_usd": 0.0 },
+    "allweather": { "judgments": 12, "closed": 12, "open": 0, "alpha_usd": 0.0 },
+    "commodity": { "judgments": 12, "closed": 12, "open": 0, "alpha_usd": 47.79 },
+    "congress": { "judgments": 12, "closed": 12, "open": 0, "alpha_usd": 0.0 },
+    "hunter": { "judgments": 11, "closed": 10, "open": 1, "alpha_usd": 177.08 },
+    "sentiment": { "judgments": 4, "closed": 4, "open": 0, "alpha_usd": 0.0 },
+    "hype": { "judgments": 8, "closed": 8, "open": 0, "alpha_usd": 80.37 },
+    "scholar": { "judgments": 1, "closed": 1, "open": 0, "alpha_usd": 0.0 },
+    "_note": "sentiment (4) and hype (8) are the SAME bot (sentiment_state.json); naming switched to hype from 07-22."
   },
   "driver_tally": {
     "by_primary_driver": {
-      "none_cash": {
-        "profit": 0,
-        "loss": 0,
-        "flat": 13
-      },
-      "market_beta": {
-        "profit": 8,
-        "loss": 6,
-        "flat": 4
-      },
-      "macro": {
-        "profit": 7,
-        "loss": 8,
-        "flat": 1
-      },
-      "unknown": {
-        "profit": 4,
-        "loss": 1,
-        "flat": 34
-      },
-      "hype_sentiment": {
-        "profit": 5,
-        "loss": 9,
-        "flat": 6
-      },
-      "technical": {
-        "profit": 7,
-        "loss": 5,
-        "flat": 2
-      },
-      "sector": {
-        "profit": 1,
-        "loss": 5,
-        "flat": 0
-      },
-      "news_idiosyncratic": {
-        "profit": 0,
-        "loss": 0,
-        "flat": 1
-      }
+      "none_cash": { "profit": 0, "loss": 0, "flat": 14 },
+      "market_beta": { "profit": 8, "loss": 8, "flat": 4 },
+      "macro": { "profit": 9, "loss": 9, "flat": 1 },
+      "unknown": { "profit": 4, "loss": 1, "flat": 34 },
+      "hype_sentiment": { "profit": 6, "loss": 9, "flat": 6 },
+      "technical": { "profit": 8, "loss": 7, "flat": 2 },
+      "sector": { "profit": 1, "loss": 5, "flat": 0 },
+      "news_idiosyncratic": { "profit": 3, "loss": 0, "flat": 1 }
     },
     "by_beta_or_alpha": {
-      "n/a": {
-        "profit": 7,
-        "loss": 6,
-        "flat": 50
-      },
-      "beta": {
-        "profit": 7,
-        "loss": 7,
-        "flat": 4
-      },
-      "mixed": {
-        "profit": 3,
-        "loss": 8,
-        "flat": 0
-      },
-      "alpha": {
-        "profit": 15,
-        "loss": 13,
-        "flat": 7
-      }
+      "n/a": { "profit": 9, "loss": 8, "flat": 51 },
+      "beta": { "profit": 7, "loss": 8, "flat": 4 },
+      "mixed": { "profit": 3, "loss": 10, "flat": 0 },
+      "alpha": { "profit": 20, "loss": 13, "flat": 7 }
     },
-    "total_lines_logged": 127
+    "total_lines_logged": 140
   },
   "fleet_snapshot": {
-    "as_of": "2026-07-29 close (equities) / 2026-07-30 08:16Z (crypto)",
-    "basis": "values as recorded in data/*_state.json history, each independently re-derived from units x verified closing prices - all eight agreed within $0.26 this run",
-    "total_value_usd": 7746.11,
-    "total_pnl_usd": -253.89,
-    "total_pnl_pct": -3.17,
-    "per_bot_value_usd": {
-      "commodity": 1084.26,
-      "crypto": 1025.35,
-      "meanrev": 1027.88,
-      "allweather": 990.18,
-      "congress": 987.74,
-      "hunter": 920.47,
-      "hype": 896.16,
-      "stock": 814.07
+    "as_of": "2026-07-31 14:14Z marks (US session open, ~10:14 ET - equity marks are intraday, not closes)",
+    "basis": "values as recorded in data/*_state.json history, each independently re-derived from units x live prices",
+    "live_books": 8,
+    "live_capital_usd": 8000.0,
+    "total_value_usd": 8135.06,
+    "total_pnl_usd": 135.06,
+    "total_pnl_pct": 1.69,
+    "day_change_usd_like_for_like": 175.31,
+    "prior_day_same_roster_usd": 7959.75,
+    "all_in_including_retired": {
+      "books": 9,
+      "capital_usd": 9000.0,
+      "total_value_usd": 9027.36,
+      "total_pnl_usd": 27.36,
+      "total_pnl_pct": 0.3,
+      "note": "adds the stock bot's frozen final mark of 892.30 on its $1,000."
     },
-    "mark_check": "CLEAN. The 07-25 stale-mark defect did NOT recur: stock 14.096419 x 57.75 = 814.07 exact; commodity 8.384338 x 129.31 = 1084.19 vs 1084.26; hunter 7.118313 x 129.31 = 920.37 vs 920.47; allweather re-derived 990.15 vs 990.18; congress re-derived 987.75 vs 987.74; meanrev 4.533915 x 226.65 = 1027.62 vs 1027.88."
+    "per_bot_value_usd": {
+      "meanrev": 1223.98,
+      "commodity": 1086.57,
+      "crypto": 1028.98,
+      "allweather": 989.45,
+      "congress": 987.28,
+      "scholar": 981.67,
+      "hunter": 922.89,
+      "hype": 914.24,
+      "stock": 892.3
+    },
+    "day_change_usd": {
+      "meanrev": 153.84,
+      "commodity": 17.9,
+      "hunter": 15.45,
+      "hype": 14.87,
+      "congress": 4.95,
+      "crypto": -5.75,
+      "allweather": -7.62,
+      "scholar": -18.33,
+      "stock": null
+    },
+    "mark_check": "CLEAN, all eight live books re-derive within $3.38. meanrev 8.5643626 x 142.92 = 1223.82 vs 1223.98; commodity 8.384338 x 129.55 = 1086.19 vs 1086.57; crypto 0.016435095 x 62540.67 = 1027.86 vs 1028.98; allweather re-derived 990.59 vs 989.45; congress re-derived 988.75 vs 987.28; hunter 7.1183133 x 129.55 = 922.18 vs 922.89; hype 3.4110435 x 268.35 = 915.35 vs 914.24; scholar 3.4096527 x 288.93 = 985.05 vs 981.67. Every difference is explained by the bots marking at 14:14Z against my slightly later quotes - scholar's 3.38 is the largest and IWM's day range is 287.83-293.93, so it is well inside normal drift. No stale-mark defect."
   },
   "fill_integrity": {
-    "trades_audited_this_run": 26,
+    "trades_audited_this_run": 10,
     "alerts": 0,
-    "equity_fills_checked": 7,
-    "crypto_fills_checked": 19,
-    "detail": "All 7 equity fills landed inside 09:30-16:00 ET on a weekday and inside the day's true low-high range, so the market_hours.py gate held: USO 128.04 x2 at 07-27 09:34 ET (range 124.58-128.66); RKLB 66.09 at 07-27 09:34 ET (64.03-68.34); WMT 114.04 and AMZN 230.78 at 07-28 09:32 ET (112.84-116.03 / 228.10-233.11); RKLB 63.39 at 07-28 09:32 ET (60.05-64.95); USO 119.65 at 07-28 11:57 ET (118.48-124.55); USO 129.02 at 07-29 09:50 ET (128.01-130.30). All 19 crypto legs (ADA/XRP/SOL/DOGE/ETH) fell inside their day ranges; -USD fills are 24/7 valid so the gate does not apply.",
-    "data_quality_note": "hype's 07-27 SHIB-USD exit is recorded with price 0.0 - a precision artifact of a sub-penny token, not a bad fill. value/units implies 5.00e-6 against a 5.64e-6 entry, which reproduces the stated -11.3% stop-loss exactly. Logged as data quality, NOT as a fill alert."
+    "equity_fills_checked": 6,
+    "crypto_fills_checked": 4,
+    "detail": "All 6 equity fills landed inside 09:30-16:00 ET on a weekday and inside the day's true low-high range, so market_hours.py held. Five of the six filled at 2026-07-31 09:34 ET, the first cycle after the open, which is the gate behaving as designed: meanrev AMZN 268.09 and PG 141.93 (ranges 262.055-270.94 / 141.46-143.51); hype MSFT 458.18 and AMZN 267.80 (449.55-462.95 / 262.055-270.94); scholar IWM 293.29 (287.83-293.93). The sixth is hype's MSFT buy at 449.49 on 2026-07-30 11:56 ET (432.44-458.69). All 4 crypto legs fell inside their 07-31 ranges - SOL 73.48 at 03:47 ET, DOGE 0.0697 at 05:20 ET, DOGE 0.0693 and BTC 62608.99 both at 10:14 ET, against SOL 72.895-75.044, DOGE 0.068737-0.070849, BTC 62523.49-65271.17. -USD fills are 24/7 valid so the gate does not apply.",
+    "method_note": "True fill times taken from the commit in which each trade first appears in its state file, found by git pickaxe (git log -S) rather than by file mtime, because every state file is rewritten each cycle."
   },
   "operational_flag": {
-    "verdict": "COVERAGE FIXED, ONE RECURRING NIGHTLY BLACKOUT",
-    "coverage_24h": "79 state-file commits in the last 24h against ~72 expected (110%), up from 31% on 07-26. The 5h45m self-looping job plus the 7,27,47 cron shift solved the daytime starvation problem.",
-    "gap_over_90min": "ONE: 368 min (6h08m), 2026-07-29 21:58Z -> 2026-07-30 04:05Z.",
-    "pattern": "This is the SECOND consecutive night with an almost identical gap - 367 min on 07-28 21:40Z -> 07-29 03:47Z. A blackout that repeats to within one minute of duration in the same ~22:00Z-04:00Z window is systematic, not random throttling. Mechanism: bot.yml uses concurrency with cancel-in-progress:false, so a running 5h45m loop holds the lock and the successor run sits queued; overnight the successor is not started for ~6h. Run 30487805365 (created 07-29 20:16Z) shows updatedAt 07-30 04:04Z with no data commits in between, and 30500605056 (created 07-29 23:46Z) only began at 04:04Z.",
-    "failed_runs": "0 failures. 11 consecutive bot.yml runs since 07-26 21:05Z conclude 'cancelled', which is consistent with the 355-minute timeout-minutes cap firing at the end of the 345-minute internal loop (GitHub labels a timed-out job 'cancelled'). INFERRED, not confirmed - the runs do commit their full cycle output first.",
-    "recommendation": "The owner's pre-agreed escalation to an external trigger is now warranted, scoped to the 22:00Z-04:00Z handoff window specifically rather than the whole schedule.",
-    "gh_run_list_caveat": "gh run list WITHOUT --workflow bot.yml is dominated by pages-build-deployment runs fired by each data commit and will read as healthy 13-minute cadence even during a blackout. Gaps must be computed from data/ commit timestamps."
+    "verdict": "DAYTIME CADENCE HEALTHY, NIGHTLY BLACKOUT NOW THREE FOR THREE",
+    "coverage_24h": "75 state-file commits in the 24h to 2026-07-31 14:14Z against ~72 expected (104%), median gap 13.2 min.",
+    "gap_over_90min": "ONE: 357 min (5h57m), 2026-07-30 21:40Z -> 2026-07-31 03:37Z.",
+    "pattern": "THIRD consecutive night in the same window: 367 min (07-28 21:40Z -> 07-29 03:47Z), 368 min (07-29 21:58Z -> 07-30 04:05Z), 357 min (07-30 21:40Z -> 07-31 03:37Z). Three near-identical durations starting within 18 minutes of each other is systematic, not throttling, and matches the previously diagnosed mechanism: bot.yml runs a ~5h45m self-looping job under concurrency with cancel-in-progress:false, so the successor sits queued behind the lock. The owner's pre-agreed escalation to an external trigger, scoped to the 21:40Z-03:40Z handoff, is now warranted on three data points.",
+    "misleading_signal": "A raw data/ commit at 2026-07-31 03:10Z appears to break the gap but is NOT a cycle - it is the owner's manual v2-review push (71b8a6c). The first automated cycle after the blackout was 03:37:00Z (f270149). Measuring the gap from the 03:10Z commit understates it by 27 minutes.",
+    "secondary_gap": "42.6 min, 2026-07-31 09:20Z -> 10:02Z. Under the 90-minute threshold; noted for trend only.",
+    "failed_runs": "0 failures. 3 runs concluded 'cancelled' in the window (07-30 20:23Z, 07-30 23:45Z, 07-31 03:11Z), consistent with the 355-minute timeout cap firing at the end of the 345-minute internal loop plus the owner's push interrupting the 03:11Z run. INFERRED, not confirmed.",
+    "gh_run_list_caveat": "STILL APPLIES and bit again this run: 'gh run list' without a workflow filter is dominated by pages-build-deployment runs. 'gh run list --workflow bot.yml' returns EMPTY (the filter wants the workflow NAME, paper-trade-cycle, not the filename), so gaps must be computed from data/ commit timestamps. Both wrong methods read as healthier than the truth."
   },
   "kill_criteria_status": {
     "R1_breaches": [],
-    "R1_closest": "stock at 814.07 is 64.07 above the 750 hard stop - a single -7.9% session, i.e. QQQ -2.6%, would breach it. On 07-29 the bot lost 6.19% in one session.",
+    "R1_closest": "hype at 914.24 is 164.24 above the 750 hard stop. With the stock bot retired, nothing in the fleet is within 15% of R1 - the closest call in the project's history was stock at 814.07 on 07-29, which never breached.",
     "below_800": [],
-    "below_900_drawdown_flag": [
-      "stock 814.07 (-18.6%)",
-      "hype 896.16 (-10.4%)"
-    ],
-    "near_flag": "hunter 920.47 (-8.0%)",
-    "R4_dead_money": "none - hype has been in cash 2 consecutive sessions, far short of 30.",
-    "probation": "none - R2/R3 are not eligible until ~2026-10-10 (~60 trading days).",
-    "next_review": "2026-07-31 (v2). Per kill_criteria.md, no kills at v2 except R1 breaches."
+    "below_900_drawdown_flag": [],
+    "below_900_note": "NONE for the first time since 07-24. hunter recovered to 922.89 (-7.7%) and hype to 914.24 (-8.6%); both were flagged yesterday and both cleared on the same session, hunter on oil and hype on the MSFT leg.",
+    "R4_dead_money": "none - no bot is in cash at all today, let alone for 30 consecutive days.",
+    "probation": "none - R2/R3 are not eligible until ~2026-10-10 for the original roster and ~2026-10-24 for scholar.",
+    "roster_change": "stock/TQQQ retired 2026-07-31 by OWNER OVERRIDE, explicitly recorded in kill_criteria.md as a discretionary decision outside R1-R5 (R1 was never breached). The Scholar added as bot #10 with a fresh $1,000; its R1-R5 clock starts 2026-07-31.",
+    "next_review": "~2026-10-10 (first kill window, ~60 trading days). R5 promotions ~2026-11-20."
   },
-  "concentration_flag": "commodity 1084.26 + hunter 920.47 = 2004.73, or 25.9% of fleet capital, is back in a single ETF (USO) on the same live geopolitical driver. This is the third time this concentration has re-formed.",
+  "concentration_flag": "commodity 1086.57 + hunter 922.89 = 2009.46, or 24.7% of live fleet capital, is still in a single ETF (USO) on the same live geopolitical driver. Fourth consecutive run this concentration has been flagged. Separately, meanrev and hype both held AMZN exposure into today's earnings gap - meanrev exited into it, hype bought after it.",
   "driver_tally_source": "reports/attribution_summary.json"
 }
