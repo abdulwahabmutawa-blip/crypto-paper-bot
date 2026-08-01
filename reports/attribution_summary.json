@@ -1,35 +1,83 @@
 {
-  "updated_utc": "2026-07-31T14:30:00+00:00",
-  "note": "07-31 run covering a single day (07-30 -> 07-31). 13 lines appended: 9 dailies (8 live books plus one closing line for the retired stock bot) and 4 trade_event lines for the books that traded - meanrev, hype, crypto, scholar. 10 new fills audited, 0 fill-integrity alerts.",
-  "total_lines_logged": 140,
+  "updated_utc": "2026-08-01T09:40:00+00:00",
+  "note": "08-01 run covering a single day (07-31 -> 08-01), a Saturday. 10 lines appended: 9 dailies (all nine live books) and 1 trade_event for crypto, the only book that could trade. 6 new fills audited, 0 fill-integrity alerts. Seven of the nine dailies are market-closed carries at day_pnl 0.",
+  "total_lines_logged": 150,
   "by_primary_driver": {
-    "none_cash": { "profit": 0, "loss": 0, "flat": 14 },
-    "market_beta": { "profit": 8, "loss": 8, "flat": 4 },
-    "macro": { "profit": 9, "loss": 9, "flat": 1 },
-    "unknown": { "profit": 4, "loss": 1, "flat": 34 },
-    "hype_sentiment": { "profit": 6, "loss": 9, "flat": 6 },
-    "technical": { "profit": 8, "loss": 7, "flat": 2 },
-    "sector": { "profit": 1, "loss": 5, "flat": 0 },
-    "news_idiosyncratic": { "profit": 3, "loss": 0, "flat": 1 }
+    "none_cash": {
+      "profit": 0,
+      "loss": 0,
+      "flat": 15
+    },
+    "market_beta": {
+      "profit": 9,
+      "loss": 8,
+      "flat": 4
+    },
+    "macro": {
+      "profit": 9,
+      "loss": 9,
+      "flat": 1
+    },
+    "unknown": {
+      "profit": 4,
+      "loss": 1,
+      "flat": 41
+    },
+    "hype_sentiment": {
+      "profit": 6,
+      "loss": 9,
+      "flat": 6
+    },
+    "technical": {
+      "profit": 9,
+      "loss": 7,
+      "flat": 2
+    },
+    "sector": {
+      "profit": 1,
+      "loss": 5,
+      "flat": 0
+    },
+    "news_idiosyncratic": {
+      "profit": 3,
+      "loss": 0,
+      "flat": 1
+    }
   },
   "by_beta_or_alpha": {
-    "n/a": { "profit": 9, "loss": 8, "flat": 51 },
-    "beta": { "profit": 7, "loss": 8, "flat": 4 },
-    "mixed": { "profit": 3, "loss": 10, "flat": 0 },
-    "alpha": { "profit": 20, "loss": 13, "flat": 7 }
+    "n/a": {
+      "profit": 9,
+      "loss": 8,
+      "flat": 59
+    },
+    "beta": {
+      "profit": 8,
+      "loss": 8,
+      "flat": 4
+    },
+    "mixed": {
+      "profit": 3,
+      "loss": 10,
+      "flat": 0
+    },
+    "alpha": {
+      "profit": 21,
+      "loss": 13,
+      "flat": 7
+    }
   },
-  "driver_note": "news_idiosyncratic went from 0 profit / 0 loss / 1 flat across the project's whole history to 3 profit in one day. That is not a trend, it is a single earnings week: AMZN, MSFT and GOOG all printed inside 48 hours and three separate books were positioned in them by three unrelated rules. Read it as a coincidence of calendar, not as evidence that any bot can read news.",
-  "headline_so_far": "Live fleet is +1.69% ($8,135.06 on $8,000 across 8 books) and turned positive for the first time, up $175.31 on the day against the same eight books' $7,959.75 yesterday (-0.50%). Note the previous run's headline total of $7,746.11 is NOT comparable - that roster still had stock and not scholar. Counting the retired stock bot's frozen $892.30, all-in the project is $9,027.36 on $9,000 deployed, +0.30%. One fact explains most of it: AMZN gapped +12.5% at the open on a Q2 beat (EPS $5.75 vs $1.82, AWS +37%) and meanrev happened to be holding it, +14.38% in a session, which it then sold into. That was a dip-buying rule collecting an earnings lottery ticket, not the rule working - and the same rule immediately rotated into PG, a stock that is falling for the opposite reason, having gapped -5% on its own 07-29 revenue miss. Three structural findings outrank the P/L. (1) FILL INTEGRITY IS CLEAN: five of six equity fills landed at 09:34 ET, the first cycle after the open, and every one of ten fills sat inside its day's true range - the market_hours gate is holding. (2) The overnight blackout has now repeated a third consecutive night to within 11 minutes of the same duration (357/368/367 min), and the 03:10Z commit that appears to break it is the owner's own manual push, not a cycle. (3) For the first time since 07-24 no bot is below $900 and nothing is within 15% of the R1 stop. My own record got worse and deserved to: I closed four calls for -51.53 net, and both losses were REPEATS of calls that had previously paid - the stock reduce_half (right about danger, wrong about direction, TQQQ +9.61%) and a fourth hype skip_new_entries whose whole premise was contradicted when the euphoria scanner caught two real earnings movers back to back.",
+  "driver_note": "The 'unknown' bucket grew by 7 flats today and is now 41 flats out of 46 lines. Read it correctly: it is overwhelmingly a NO-SESSION bucket (weekends, holidays, closed markets) rather than a failure-to-explain bucket. If this tally is ever used to judge attribution quality, unknown/flat should be excluded and only unknown/profit (4) and unknown/loss (1) counted as genuine unexplained moves. Yesterday's news_idiosyncratic spike is unchanged at 3/0/1 and still reads as one earnings week, not a capability.",
+  "headline_so_far": "Live fleet is +2.05% ($9,184.24 on $9,000 across 9 books) and up $1.28 on the day - a number that means almost nothing, because 2026-08-01 is a Saturday and eight of the nine books simply carry Friday's close. The whole day's P/L is SOL drifting +0.12% overnight in the one book that trades 24/7. Note the $9,000 denominator: the standing brief still says $8,000, which predates the Analyst's 07-31 launch. Three things actually happened. (1) THE NIGHTLY BLACKOUT IS NOW FOUR FOR FOUR: 364 minutes with no bot cycle, 07-31 22:09Z to 08-01 04:13Z, joining 367/368/357 on the three previous nights - four durations inside an 11-minute band is a mechanism, not throttling, and the owner's pre-agreed escalation to an external trigger is overdue. The same disguise worked twice: an owner push at 23:32Z sits inside the gap and makes it read as 83+281 minutes instead of 364. (2) FILL INTEGRITY CLEAN but on thin evidence - all six new legs were crypto, so the market_hours gate had no equity fill to be tested against today. (3) THE ANALYST HAS STILL NEVER DECIDED: key installed 07-31 22:23Z after three failed key-check runs, zero decisions, $0.00 spent. Correct for a Saturday; a bug if Monday's session passes the same way. On my own record I went backwards again and retired two of my three live theses. The crypto churn call scored +1.34 - and the evidence review that scored it showed the churn is $18.74 AHEAD of buy-and-hold since 07-30, so I suspended the call rather than bank the win. The meanrev close_position on PG cost -13.64 when PG closed +0.37%, its first up close since the revenue miss.",
   "supervisor_directional_scorecard": {
-    "scored_calls": 15,
-    "wins": 9,
-    "losses": 4,
-    "neutral": 2,
-    "cumulative_alpha_usd": 328.21,
-    "wins_actionable_basis": 8,
-    "losses_actionable_basis": 5,
-    "cumulative_alpha_usd_actionable": 199.07,
-    "open_calls": 3,
-    "note": "Four judgments closed this run for -51.53, the first losing run in the ledger. The pattern in both losses is the same and is now the thing to watch in my own process: a call that pays once gets repeated until it stops working. Today I broke the repeat on hype deliberately (logged as no_change with the reason) and kept it on crypto and hunter, where the defect is mechanical - documented churn at negative momentum - rather than a market view. The one new contrarian call, close_position on meanrev's PG at 142.92, is deliberately aimed at the fleet's best book on its best day, which is the standing corollary in kill_criteria.md applied to myself."
+    "scored_calls": 18,
+    "wins": 10,
+    "losses": 5,
+    "neutral": 3,
+    "cumulative_alpha_usd": 315.91,
+    "wins_actionable_basis": 9,
+    "losses_actionable_basis": 6,
+    "cumulative_alpha_usd_actionable": 191.82,
+    "open_calls": 0,
+    "note": "Three judgments closed for -12.30, the second consecutive losing run. The thing worth recording is not the number but what I did with it: the one WIN was suspended rather than repeated, because checking the arithmetic properly showed the churn thesis it rests on is contradicted over any window longer than the judgment's own. Two of three live theses are now retired on evidence (crypto churn, meanrev z-score blindness); the surviving one - that hunter destroys value by re-entering above its own exits - has scored two neutrals in a row and remains untested rather than confirmed. All 9 judgments today are no_change: with US markets shut until Monday, any reference price I wrote would be unreachable, the exact defect that voided 2026-07-25-stock-1 and 2026-07-27-commodity-1."
   }
 }
