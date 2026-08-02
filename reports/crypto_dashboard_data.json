@@ -1,89 +1,89 @@
 {
-  "generated_utc": "2026-08-02T08:38:07+00:00",
+  "generated_utc": "2026-08-02T08:51:21+00:00",
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "live_ts": "2026-08-02T08:35:00+00:00",
+  "live_ts": "2026-08-02T08:50:00+00:00",
   "current": {
     "date": "2026-08-02",
     "value": 1049.51,
-    "bench": 981.96,
-    "holding": "CASH"
+    "bench": 980.03,
+    "holding": "BTC-USD"
   },
   "board": {
     "BTC-USD": {
-      "price": 63268.4883,
-      "ma200": 71124.1118,
-      "gap_pct": -11.04,
-      "mom_pct": -3.17,
-      "z": -1.18,
+      "price": 63144.0,
+      "ma200": 71123.4893,
+      "gap_pct": -11.22,
+      "mom_pct": -3.36,
+      "z": -1.29,
       "above_ma": false,
       "rank": 1
     },
     "ETH-USD": {
-      "price": 1869.01,
-      "ma200": 2095.1454,
-      "gap_pct": -10.79,
-      "mom_pct": -4.32,
-      "z": -0.63,
+      "price": 1867.22,
+      "ma200": 2095.1364,
+      "gap_pct": -10.88,
+      "mom_pct": -4.41,
+      "z": -0.68,
       "above_ma": false,
       "rank": 4
     },
     "SOL-USD": {
-      "price": 73.26,
-      "ma200": 85.7121,
-      "gap_pct": -14.53,
-      "mom_pct": -4.36,
-      "z": -1.08,
+      "price": 73.19,
+      "ma200": 85.7117,
+      "gap_pct": -14.61,
+      "mom_pct": -4.45,
+      "z": -1.11,
       "above_ma": false,
       "rank": 2
     },
     "DOGE-USD": {
       "price": 0.07,
       "ma200": 0.0942,
-      "gap_pct": -25.7,
-      "mom_pct": -4.48,
+      "gap_pct": -25.71,
+      "mom_pct": -4.5,
       "z": -0.9,
       "above_ma": false,
       "rank": 3
     },
     "AVAX-USD": {
-      "price": 6.57,
+      "price": 6.58,
       "ma200": 8.7057,
-      "gap_pct": -24.53,
-      "mom_pct": -2.44,
-      "z": 0.36,
+      "gap_pct": -24.42,
+      "mom_pct": -2.29,
+      "z": 0.42,
       "above_ma": false,
       "rank": 7
     },
     "LINK-USD": {
-      "price": 8.347,
-      "ma200": 9.0604,
-      "gap_pct": -7.87,
-      "mom_pct": -5.28,
-      "z": -0.35,
+      "price": 8.325,
+      "ma200": 9.0603,
+      "gap_pct": -8.12,
+      "mom_pct": -5.53,
+      "z": -0.47,
       "above_ma": false,
       "rank": 6
     },
     "ADA-USD": {
-      "price": 0.1855,
+      "price": 0.1852,
       "ma200": 0.2391,
-      "gap_pct": -22.42,
-      "mom_pct": 11.94,
-      "z": 2.88,
+      "gap_pct": -22.55,
+      "mom_pct": 11.76,
+      "z": 2.86,
       "above_ma": false,
       "rank": 8
     },
     "XRP-USD": {
-      "price": 1.0798,
+      "price": 1.0794,
       "ma200": 1.353,
-      "gap_pct": -20.19,
-      "mom_pct": -2.87,
-      "z": -0.6,
+      "gap_pct": -20.22,
+      "mom_pct": -2.9,
+      "z": -0.61,
       "above_ma": false,
       "rank": 5
     }
   },
-  "pick": "CASH",
+  "pick": "BTC-USD",
   "regime": "CHOP",
   "intraday": [
     {
@@ -3541,18 +3541,15 @@
       "value": 1049.51,
       "bench": 981.96,
       "holding": "CASH"
+    },
+    {
+      "ts": "2026-08-02T08:51:21+00:00",
+      "value": 1049.51,
+      "bench": 980.03,
+      "holding": "BTC-USD"
     }
   ],
   "trades": [
-    {
-      "date": "2026-07-31",
-      "action": "BUY",
-      "ticker": "DOGE-USD",
-      "price": 0.0701,
-      "units": 14831.973903,
-      "value": 1039.72,
-      "reason": "Strongest eligible coin (+1.3% 7d momentum)"
-    },
     {
       "date": "2026-07-31",
       "action": "SELL",
@@ -3723,6 +3720,15 @@
       "units": 0,
       "value": 1049.51,
       "reason": "All 8 coins falling on the week \u2014 cash until one rises"
+    },
+    {
+      "date": "2026-08-02",
+      "action": "BUY",
+      "ticker": "BTC-USD",
+      "price": 63144.0,
+      "units": 0.016621,
+      "value": 1049.51,
+      "reason": "Strongest eligible coin (-3.4% 7d momentum)"
     }
   ],
   "history": [
@@ -3831,11 +3837,11 @@
     {
       "date": "2026-08-02",
       "value": 1049.51,
-      "bench": 981.96,
-      "holding": "CASH"
+      "bench": 980.03,
+      "holding": "BTC-USD"
     }
   ],
-  "thoughts": "Right now I'm in CHOP mode: Bitcoin is below its 200-day average, which means the market is directionless \u2014 chasing momentum here loses money, so instead I look for a coin that fell unusually hard and try to catch its bounce back. Nothing qualifies at this moment, so I'm in cash \u2014 in crypto, sitting out is often the smartest trade.",
+  "thoughts": "Right now I'm in CHOP mode: Bitcoin is below its 200-day average, which means the market is directionless \u2014 chasing momentum here loses money, so instead I look for a coin that fell unusually hard and try to catch its bounce back. That's why I'm holding BTC.",
   "strategy": {
     "name": "Regime Switcher \u2014 two brains, one bot",
     "rule": "BTC above its 200-day MA = TREND: ride the hottest rising 7-day-momentum coin. Below = CHOP: buy the most oversold coin (z20 < -1.25) and harvest the bounce; nothing qualifies -> cash",
