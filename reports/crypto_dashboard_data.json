@@ -1,89 +1,89 @@
 {
-  "generated_utc": "2026-08-02T04:39:35+00:00",
+  "generated_utc": "2026-08-02T04:52:51+00:00",
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "live_ts": "2026-08-02T04:35:00+00:00",
+  "live_ts": "2026-08-02T04:50:00+00:00",
   "current": {
     "date": "2026-08-02",
-    "value": 1048.65,
-    "bench": 985.13,
-    "holding": "SOL-USD"
+    "value": 1049.51,
+    "bench": 985.44,
+    "holding": "CASH"
   },
   "board": {
     "BTC-USD": {
-      "price": 63472.4883,
-      "ma200": 71295.9618,
-      "gap_pct": -10.97,
-      "mom_pct": -1.31,
-      "z": -0.92,
+      "price": 63492.7188,
+      "ma200": 71296.0629,
+      "gap_pct": -10.94,
+      "mom_pct": -1.27,
+      "z": -0.9,
       "above_ma": false,
       "rank": 4
     },
     "ETH-USD": {
-      "price": 1877.55,
-      "ma200": 2102.7446,
-      "gap_pct": -10.71,
-      "mom_pct": 0.23,
-      "z": -0.21,
+      "price": 1877.28,
+      "ma200": 2102.7433,
+      "gap_pct": -10.72,
+      "mom_pct": 0.22,
+      "z": -0.22,
       "above_ma": false,
-      "rank": 7
+      "rank": 6
     },
     "SOL-USD": {
-      "price": 73.25,
-      "ma200": 86.0864,
-      "gap_pct": -14.91,
-      "mom_pct": -1.58,
-      "z": -1.28,
+      "price": 73.31,
+      "ma200": 86.0867,
+      "gap_pct": -14.84,
+      "mom_pct": -1.5,
+      "z": -1.25,
       "above_ma": false,
       "rank": 1
     },
     "DOGE-USD": {
-      "price": 0.0701,
+      "price": 0.0702,
       "ma200": 0.0946,
-      "gap_pct": -25.94,
-      "mom_pct": -2.24,
-      "z": -1.01,
+      "gap_pct": -25.86,
+      "mom_pct": -2.13,
+      "z": -0.96,
       "above_ma": false,
       "rank": 3
     },
     "AVAX-USD": {
-      "price": 6.33,
+      "price": 6.34,
       "ma200": 8.7467,
-      "gap_pct": -27.63,
-      "mom_pct": -6.43,
-      "z": -1.26,
+      "gap_pct": -27.52,
+      "mom_pct": -6.29,
+      "z": -1.2,
       "above_ma": false,
       "rank": 2
     },
     "LINK-USD": {
-      "price": 8.348,
+      "price": 8.359,
       "ma200": 9.0907,
-      "gap_pct": -8.17,
-      "mom_pct": -0.3,
-      "z": -0.26,
+      "gap_pct": -8.05,
+      "mom_pct": -0.17,
+      "z": -0.21,
       "above_ma": false,
-      "rank": 6
+      "rank": 7
     },
     "ADA-USD": {
-      "price": 0.1834,
+      "price": 0.1841,
       "ma200": 0.2403,
-      "gap_pct": -23.68,
-      "mom_pct": 11.4,
-      "z": 2.77,
+      "gap_pct": -23.39,
+      "mom_pct": 11.82,
+      "z": 2.83,
       "above_ma": false,
       "rank": 8
     },
     "XRP-USD": {
-      "price": 1.0799,
-      "ma200": 1.3584,
-      "gap_pct": -20.5,
-      "mom_pct": -1.59,
-      "z": -0.62,
+      "price": 1.0819,
+      "ma200": 1.3585,
+      "gap_pct": -20.36,
+      "mom_pct": -1.41,
+      "z": -0.54,
       "above_ma": false,
       "rank": 5
     }
   },
-  "pick": "SOL-USD",
+  "pick": "CASH",
   "regime": "CHOP",
   "intraday": [
     {
@@ -3433,27 +3433,15 @@
       "value": 1048.65,
       "bench": 985.13,
       "holding": "SOL-USD"
+    },
+    {
+      "ts": "2026-08-02T04:52:51+00:00",
+      "value": 1049.51,
+      "bench": 985.44,
+      "holding": "CASH"
     }
   ],
   "trades": [
-    {
-      "date": "2026-07-31",
-      "action": "SELL",
-      "ticker": "DOGE-USD",
-      "price": 0.0701,
-      "units": 14831.973903,
-      "value": 1039.72,
-      "reason": "Signal flip"
-    },
-    {
-      "date": "2026-07-31",
-      "action": "TO CASH",
-      "ticker": "\u2014",
-      "price": 0,
-      "units": 0,
-      "value": 1039.72,
-      "reason": "All 8 coins falling on the week \u2014 cash until one rises"
-    },
     {
       "date": "2026-07-31",
       "action": "BUY",
@@ -3615,6 +3603,24 @@
       "units": 14.31599,
       "value": 1048.65,
       "reason": "Strongest eligible coin (-1.6% 7d momentum)"
+    },
+    {
+      "date": "2026-08-02",
+      "action": "SELL",
+      "ticker": "SOL-USD",
+      "price": 73.31,
+      "units": 14.31599,
+      "value": 1049.51,
+      "reason": "Signal flip"
+    },
+    {
+      "date": "2026-08-02",
+      "action": "TO CASH",
+      "ticker": "\u2014",
+      "price": 0,
+      "units": 0,
+      "value": 1049.51,
+      "reason": "All 8 coins falling on the week \u2014 cash until one rises"
     }
   ],
   "history": [
@@ -3722,12 +3728,12 @@
     },
     {
       "date": "2026-08-02",
-      "value": 1048.65,
-      "bench": 985.13,
-      "holding": "SOL-USD"
+      "value": 1049.51,
+      "bench": 985.44,
+      "holding": "CASH"
     }
   ],
-  "thoughts": "Right now I'm in CHOP mode: Bitcoin is below its 200-day average, which means the market is directionless \u2014 chasing momentum here loses money, so instead I look for a coin that fell unusually hard and try to catch its bounce back. That's why I'm holding SOL.",
+  "thoughts": "Right now I'm in CHOP mode: Bitcoin is below its 200-day average, which means the market is directionless \u2014 chasing momentum here loses money, so instead I look for a coin that fell unusually hard and try to catch its bounce back. Nothing qualifies at this moment, so I'm in cash \u2014 in crypto, sitting out is often the smartest trade.",
   "strategy": {
     "name": "Regime Switcher \u2014 two brains, one bot",
     "rule": "BTC above its 200-day MA = TREND: ride the hottest rising 7-day-momentum coin. Below = CHOP: buy the most oversold coin (z20 < -1.25) and harvest the bounce; nothing qualifies -> cash",
