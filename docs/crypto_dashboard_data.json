@@ -1,89 +1,89 @@
 {
-  "generated_utc": "2026-08-02T04:13:04+00:00",
+  "generated_utc": "2026-08-02T04:26:20+00:00",
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "live_ts": "2026-08-02T04:10:00+00:00",
+  "live_ts": "2026-08-02T04:25:00+00:00",
   "current": {
     "date": "2026-08-02",
-    "value": 1045.34,
-    "bench": 985.41,
-    "holding": "AVAX-USD"
+    "value": 1048.65,
+    "bench": 985.38,
+    "holding": "CASH"
   },
   "board": {
     "BTC-USD": {
-      "price": 63490.5,
-      "ma200": 71296.0519,
+      "price": 63488.6406,
+      "ma200": 71296.0426,
       "gap_pct": -10.95,
       "mom_pct": -1.28,
-      "z": -0.9,
+      "z": -0.91,
       "above_ma": false,
       "rank": 4
     },
     "ETH-USD": {
-      "price": 1878.76,
-      "ma200": 2102.7507,
-      "gap_pct": -10.65,
-      "mom_pct": 0.3,
-      "z": -0.18,
+      "price": 1878.6,
+      "ma200": 2102.7499,
+      "gap_pct": -10.66,
+      "mom_pct": 0.29,
+      "z": -0.19,
       "above_ma": false,
       "rank": 7
     },
     "SOL-USD": {
-      "price": 73.19,
-      "ma200": 86.0861,
-      "gap_pct": -14.98,
-      "mom_pct": -1.66,
-      "z": -1.31,
+      "price": 73.35,
+      "ma200": 86.0869,
+      "gap_pct": -14.8,
+      "mom_pct": -1.45,
+      "z": -1.23,
       "above_ma": false,
-      "rank": 2
+      "rank": 1
     },
     "DOGE-USD": {
-      "price": 0.07,
+      "price": 0.0701,
       "ma200": 0.0946,
-      "gap_pct": -26.01,
-      "mom_pct": -2.32,
-      "z": -1.04,
+      "gap_pct": -25.95,
+      "mom_pct": -2.25,
+      "z": -1.02,
       "above_ma": false,
       "rank": 3
     },
     "AVAX-USD": {
-      "price": 6.32,
-      "ma200": 8.7466,
-      "gap_pct": -27.74,
-      "mom_pct": -6.58,
-      "z": -1.32,
+      "price": 6.34,
+      "ma200": 8.7467,
+      "gap_pct": -27.52,
+      "mom_pct": -6.29,
+      "z": -1.2,
       "above_ma": false,
-      "rank": 1
+      "rank": 2
     },
     "LINK-USD": {
-      "price": 8.28,
-      "ma200": 9.0903,
-      "gap_pct": -8.91,
-      "mom_pct": -1.11,
-      "z": -0.59,
+      "price": 8.309,
+      "ma200": 9.0905,
+      "gap_pct": -8.6,
+      "mom_pct": -0.76,
+      "z": -0.45,
       "above_ma": false,
       "rank": 6
     },
     "ADA-USD": {
-      "price": 0.1813,
+      "price": 0.1834,
       "ma200": 0.2403,
-      "gap_pct": -24.55,
-      "mom_pct": 10.12,
-      "z": 2.57,
+      "gap_pct": -23.68,
+      "mom_pct": 11.4,
+      "z": 2.77,
       "above_ma": false,
       "rank": 8
     },
     "XRP-USD": {
-      "price": 1.0777,
-      "ma200": 1.3584,
-      "gap_pct": -20.67,
-      "mom_pct": -1.79,
-      "z": -0.7,
+      "price": 1.0811,
+      "ma200": 1.3585,
+      "gap_pct": -20.42,
+      "mom_pct": -1.48,
+      "z": -0.57,
       "above_ma": false,
       "rank": 5
     }
   },
-  "pick": "AVAX-USD",
+  "pick": "CASH",
   "regime": "CHOP",
   "intraday": [
     {
@@ -3421,27 +3421,15 @@
       "value": 1045.34,
       "bench": 985.41,
       "holding": "AVAX-USD"
+    },
+    {
+      "ts": "2026-08-02T04:26:20+00:00",
+      "value": 1048.65,
+      "bench": 985.38,
+      "holding": "CASH"
     }
   ],
   "trades": [
-    {
-      "date": "2026-07-31",
-      "action": "SELL",
-      "ticker": "SOL-USD",
-      "price": 74.0,
-      "units": 14.030246,
-      "value": 1038.24,
-      "reason": "Signal flip"
-    },
-    {
-      "date": "2026-07-31",
-      "action": "TO CASH",
-      "ticker": "\u2014",
-      "price": 0,
-      "units": 0,
-      "value": 1038.24,
-      "reason": "All 8 coins falling on the week \u2014 cash until one rises"
-    },
     {
       "date": "2026-07-31",
       "action": "BUY",
@@ -3603,6 +3591,24 @@
       "units": 165.401624,
       "value": 1003.99,
       "reason": "Strongest eligible coin (-10.3% 7d momentum)"
+    },
+    {
+      "date": "2026-08-02",
+      "action": "SELL",
+      "ticker": "AVAX-USD",
+      "price": 6.34,
+      "units": 165.401624,
+      "value": 1048.65,
+      "reason": "Signal flip"
+    },
+    {
+      "date": "2026-08-02",
+      "action": "TO CASH",
+      "ticker": "\u2014",
+      "price": 0,
+      "units": 0,
+      "value": 1048.65,
+      "reason": "All 8 coins falling on the week \u2014 cash until one rises"
     }
   ],
   "history": [
@@ -3710,12 +3716,12 @@
     },
     {
       "date": "2026-08-02",
-      "value": 1045.34,
-      "bench": 985.41,
-      "holding": "AVAX-USD"
+      "value": 1048.65,
+      "bench": 985.38,
+      "holding": "CASH"
     }
   ],
-  "thoughts": "Right now I'm in CHOP mode: Bitcoin is below its 200-day average, which means the market is directionless \u2014 chasing momentum here loses money, so instead I look for a coin that fell unusually hard and try to catch its bounce back. That's why I'm holding AVAX.",
+  "thoughts": "Right now I'm in CHOP mode: Bitcoin is below its 200-day average, which means the market is directionless \u2014 chasing momentum here loses money, so instead I look for a coin that fell unusually hard and try to catch its bounce back. Nothing qualifies at this moment, so I'm in cash \u2014 in crypto, sitting out is often the smartest trade.",
   "strategy": {
     "name": "Regime Switcher \u2014 two brains, one bot",
     "rule": "BTC above its 200-day MA = TREND: ride the hottest rising 7-day-momentum coin. Below = CHOP: buy the most oversold coin (z20 < -1.25) and harvest the bounce; nothing qualifies -> cash",
