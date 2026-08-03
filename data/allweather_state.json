@@ -2,13 +2,13 @@
   "created": "2026-07-16",
   "starting_cash": 1000.0,
   "units": {
-    "SPY": 0.3996163838814888,
-    "TLT": 4.750029739327658,
-    "GLD": 0.41100395526084144,
-    "DBC": 2.6352776673460565,
-    "BIL": 0.8194034851988243
+    "SPY": 0.39713636232256533,
+    "TLT": 4.828928408508333,
+    "GLD": 0.40265006799384184,
+    "DBC": 2.597221190260852,
+    "BIL": 0.8145053119274531
   },
-  "last_rebalance_month": "2026-07",
+  "last_rebalance_month": "2026-08",
   "bench_units": 1.332054612938296,
   "trades": [
     {
@@ -55,6 +55,42 @@
       "units": 0.8194,
       "value": 75.0,
       "reason": "Initial allocation 7.5%"
+    },
+    {
+      "date": "2026-08-03",
+      "action": "REBAL-",
+      "ticker": "SPY",
+      "price": 749.99,
+      "units": 0.0025,
+      "value": 1.86,
+      "reason": "Monthly rebalance to 30.0%"
+    },
+    {
+      "date": "2026-08-03",
+      "action": "REBAL+",
+      "ticker": "TLT",
+      "price": 82.24,
+      "units": 0.0789,
+      "value": 6.49,
+      "reason": "Monthly rebalance to 40.0%"
+    },
+    {
+      "date": "2026-08-03",
+      "action": "REBAL-",
+      "ticker": "GLD",
+      "price": 369.86,
+      "units": 0.0084,
+      "value": 3.09,
+      "reason": "Monthly rebalance to 15.0%"
+    },
+    {
+      "date": "2026-08-03",
+      "action": "REBAL-",
+      "ticker": "DBC",
+      "price": 28.67,
+      "units": 0.0381,
+      "value": 1.09,
+      "reason": "Monthly rebalance to 7.5%"
     }
   ],
   "history": [
@@ -128,6 +164,12 @@
       "date": "2026-07-31",
       "value": 994.65,
       "bench": 995.08,
+      "holding": "5 assets"
+    },
+    {
+      "date": "2026-08-03",
+      "value": 992.83,
+      "bench": 999.03,
       "holding": "5 assets"
     }
   ],
@@ -3725,7 +3767,13 @@
       "value": 994.65,
       "bench": 995.08,
       "holding": "5 assets"
+    },
+    {
+      "ts": "2026-08-03T13:32:06+00:00",
+      "value": 992.83,
+      "bench": 999.03,
+      "holding": "5 assets"
     }
   ],
-  "last_updated_utc": "2026-08-03T13:18:51+00:00"
+  "last_updated_utc": "2026-08-03T13:32:06+00:00"
 }

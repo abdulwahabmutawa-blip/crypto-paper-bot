@@ -1,7 +1,7 @@
 {
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "cash": 700.0,
+  "cash": 600.0,
   "positions": [
     {
       "ticker": "NVDA",
@@ -26,13 +26,22 @@
       "close_date": "2026-10-21",
       "filer": "Jerry Moran,",
       "cost": 100.0
+    },
+    {
+      "ticker": "TSM",
+      "units": 0.250557997738188,
+      "open_date": "2026-08-03",
+      "close_date": "2026-11-01",
+      "filer": "Cleo Fields",
+      "cost": 100.0
     }
   ],
   "seen": [
     "house_20034894_g0",
     "house_20035024_g7",
     "house_20035024_g4",
-    "senate_cff197e2-b90b-4b53-b97d-eecf226a1980_t0"
+    "senate_cff197e2-b90b-4b53-b97d-eecf226a1980_t0",
+    "house_20035023_g0"
   ],
   "trades": [
     {
@@ -61,6 +70,15 @@
       "units": 0.3124,
       "value": 100.0,
       "reason": "Copying Jerry Moran, (+0.1% avg excess, filed 2026-07-21, $1,001 - $15,000)"
+    },
+    {
+      "date": "2026-08-03",
+      "action": "BUY",
+      "ticker": "TSM",
+      "price": 399.11,
+      "units": 0.2506,
+      "value": 100.0,
+      "reason": "Copying Cleo Fields (+0.0% avg excess, filed 2026-07-30, $1,001 - $15,000)"
     }
   ],
   "history": [
@@ -123,10 +141,15 @@
       "date": "2026-07-31",
       "value": 995.02,
       "bench": 995.08
+    },
+    {
+      "date": "2026-08-03",
+      "value": 997.71,
+      "bench": 998.97
     }
   ],
   "bench_units": 1.332054612938296,
-  "last_updated_utc": "2026-08-03T13:18:47+00:00",
+  "last_updated_utc": "2026-08-03T13:32:00+00:00",
   "restatement": [
     {
       "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)"
