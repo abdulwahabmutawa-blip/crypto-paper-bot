@@ -235,14 +235,25 @@ def apply_guardrails(decision, holding, equity, severe):
 
 def main():
     close, close_raw = selection_engine._fetch_daily(UNIVERSE, BENCH)
+    close_cal = close_raw.copy()          # calendar oracle, pre-splice
     live, live_ts = selection_engine._fetch_live(UNIVERSE, BENCH)
     for t, p in live.items():
         if t in close.columns:
             close.iloc[-1, close.columns.get_loc(t)] = p
     last = close.iloc[-1]
-    asof = str(close.index[-1].date())
 
     st = json.loads(STATE.read_text()) if STATE.exists() else None
+
+    # Date the mark by the asset that determines its value — holding a
+    # weekday-only asset (or sitting in cash against an equity benchmark)
+    # means no weekend marks, even though BTC/ETH give the frame weekend
+    # rows. See the long note in selection_engine.run(); the phantom weekend
+    # marks this prevents once froze this agent through an entire weekend.
+    value_asset = st["holding"] if st and st["holding"] != "CASH" else BENCH
+    asof = (market_hours.last_real_date(close_cal, value_asset)
+            or str(close.index[-1].date()))
+    bench_asof = market_hours.last_real_date(close_cal, BENCH)
+
     if st is None:
         if pd.isna(last[BENCH]):
             print("[analyst] no benchmark price — cannot initialize"); return
@@ -379,10 +390,13 @@ def main():
     val = st["cash"] + (0.0 if st["holding"] == "CASH"
                         else st["units"] * float(last[st["holding"]]))
     bench = st["bench_units"] * float(last[BENCH])
+    row = {"date": asof, "value": round(val, 2), "bench": round(bench, 2),
+           "holding": st["holding"]}
+    if bench_asof and bench_asof != asof:
+        row["bench_asof"] = bench_asof
     st["history"] = sorted(
-        [h for h in st["history"] if h["date"] != asof]
-        + [{"date": asof, "value": round(val, 2), "bench": round(bench, 2),
-            "holding": st["holding"]}], key=lambda h: h["date"])
+        [h for h in st["history"] if h["date"] != asof] + [row],
+        key=lambda h: h["date"])
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
     st["last_updated_utc"] = now
     st["intraday"] = [p for p in st.get("intraday", [])

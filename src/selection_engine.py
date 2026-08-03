@@ -102,6 +102,10 @@ def run(spec, start_cash=1000.0):
     key = spec["key"]
     state_path = config.DATA / f"{key}_state.json"
     close, close_raw = _fetch_daily(spec["universe"], spec["bench"])
+    # pristine pre-splice copy — the calendar oracle. Live prices are spliced
+    # into the last row below, which would make a stale equity look like it
+    # had genuine weekend data; last_real_date() must never see those.
+    close_cal = close_raw.copy()
     live, live_ts = _fetch_live(spec["universe"], spec["bench"])
     for t, p in live.items():
         if t in close.columns:
@@ -124,8 +128,21 @@ def run(spec, start_cash=1000.0):
             pick = "CASH"
 
     last = close.iloc[-1]
-    asof = str(close.index[-1].date())
     now = datetime.now(timezone.utc)
+
+    # ---- Date the mark by the asset that DETERMINES its value ----------------
+    # A bot holding an equity does not change value on a Saturday, even though
+    # a mixed crypto+equity frame HAS Saturday rows. Dating marks by the newest
+    # row wrote phantom weekend marks (identical to Friday) and then — because
+    # the monotonic guard below refuses to write behind the newest mark — froze
+    # the bot solid until the next equity session. Found 2026-08-03, after the
+    # Scholar and the Analyst sat frozen through a whole weekend.
+    # This is what market_hours.last_real_date() was built for; the engine had
+    # never adopted it (hunter/sentinel already did).
+    value_asset = holding if holding != "CASH" else spec["bench"]
+    asof = (market_hours.last_real_date(close_cal, value_asset)
+            or str(close.index[-1].date()))
+    bench_asof = market_hours.last_real_date(close_cal, spec["bench"])
 
     # ---- Freeze guards: no mutation of ANY state on a bar we can't trust ----
     # (2026-07-31 review: the old code guarded only the history mark; hwm,
@@ -139,25 +156,27 @@ def run(spec, start_cash=1000.0):
     if pd.isna(last.get(spec["bench"])):
         print(f"[{key}] benchmark {spec['bench']} has no price — cycle skipped")
         return st
-    if holding != "CASH":
-        if holding not in close.columns or pd.isna(last[holding]):
-            print(f"[{key}] held ticker {holding} has no price this cycle — "
-                  f"cycle skipped (never trade or mark on a dead column)")
-            return st
-        if not holding.endswith("-USD") and holding not in live:
-            # mixed-frame hazard (2026-07-26 twin): an undelivered equity
-            # weekday bar can hide BEHIND legitimate weekend crypto rows where
-            # tail-trimming can't reach it, and ffill would mark us a session
-            # stale. If the newest weekday row has no real data for the held
-            # equity AND the live feed didn't rescue it, freeze.
-            wk = [i for i in close_raw.index if i.weekday() < 5]
-            if wk and pd.isna(close_raw.loc[wk[-1], holding]):
-                print(f"[{key}] held equity {holding} bar undelivered — "
-                      f"cycle skipped")
-                return st
+    if holding != "CASH" and (holding not in close.columns
+                              or pd.isna(last[holding])):
+        print(f"[{key}] held ticker {holding} has no price this cycle — "
+              f"cycle skipped (never trade or mark on a dead column)")
+        return st
     if pick != "CASH" and (pick not in close.columns or pd.isna(last[pick])):
         print(f"[{key}] pick {pick} has no price — keeping {holding}")
         pick = holding
+    # Undelivered equity bar: don't TRADE on a price the feed hasn't actually
+    # delivered (the 2026-07-22 phantom-fill hazard) — but do keep marking and
+    # rendering. Freezing the whole cycle here was the second half of the
+    # 2026-08-03 lockup.
+    for t in {holding, pick} - {"CASH"}:
+        if not t.endswith("-USD") and t not in live:
+            wk = [i for i in close_cal.index if i.weekday() < 5]
+            if wk and pd.isna(close_cal.loc[wk[-1], t]):
+                if pick != holding:
+                    print(f"[{key}] {t} bar undelivered — trade deferred, "
+                          f"still marking")
+                pick = holding
+                break
 
     if st is None:
         st = {"created": asof, "starting_cash": start_cash, "holding": "CASH",
@@ -254,10 +273,12 @@ def run(spec, start_cash=1000.0):
     val = st["cash"] + (0.0 if st["holding"] == "CASH"
                         else st["units"] * float(last[st["holding"]]))
     bench = st["bench_units"] * float(last[spec["bench"]])
+    row = {"date": asof, "value": round(val, 2),
+           "bench": round(bench, 2), "holding": st["holding"]}
+    if bench_asof and bench_asof != asof:
+        row["bench_asof"] = bench_asof     # benchmark had to be forward-filled
     st["history"] = sorted(
-        [h for h in st["history"] if h["date"] != asof]
-        + [{"date": asof, "value": round(val, 2),
-            "bench": round(bench, 2), "holding": st["holding"]}],
+        [h for h in st["history"] if h["date"] != asof] + [row],
         key=lambda h: h["date"])
     st["last_updated_utc"] = now.isoformat(timespec="seconds")
     st["intraday"] = [p for p in st.get("intraday", [])

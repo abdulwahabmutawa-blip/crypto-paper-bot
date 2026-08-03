@@ -28,18 +28,6 @@
       "value": 992.72,
       "bench": 1006.85,
       "holding": "IWM"
-    },
-    {
-      "date": "2026-08-01",
-      "value": 992.72,
-      "bench": 1006.85,
-      "holding": "IWM"
-    },
-    {
-      "date": "2026-08-02",
-      "value": 992.72,
-      "bench": 1006.85,
-      "holding": "IWM"
     }
   ],
   "intraday": [
@@ -1176,8 +1164,40 @@
       "value": 992.72,
       "bench": 1006.85,
       "holding": "IWM"
+    },
+    {
+      "ts": "2026-08-03T07:54:34+00:00",
+      "value": 992.72,
+      "bench": 1006.85,
+      "holding": "IWM"
+    },
+    {
+      "ts": "2026-08-03T07:56:41+00:00",
+      "value": 992.72,
+      "bench": 1006.85,
+      "holding": "IWM"
     }
   ],
-  "last_updated_utc": "2026-08-02T21:05:14+00:00",
-  "hwm": 293.2850036621094
+  "last_updated_utc": "2026-08-03T07:56:41+00:00",
+  "hwm": 293.2850036621094,
+  "restatement": [
+    {
+      "date": "2026-08-03T07:54:16+00:00",
+      "reason": "Phantom weekend marks: rows dated Sat/Sun while the value-determining asset trades weekdays only. They duplicated Friday's value and poisoned the monotonic mark guard, freezing the bot until the next equity session. Marks are now dated by the asset that determines their value (market_hours.last_real_date).",
+      "removed_rows": [
+        {
+          "date": "2026-08-01",
+          "value": 992.72,
+          "bench": 1006.85,
+          "holding": "IWM"
+        },
+        {
+          "date": "2026-08-02",
+          "value": 992.72,
+          "bench": 1006.85,
+          "holding": "IWM"
+        }
+      ]
+    }
+  ]
 }
