@@ -1,16 +1,16 @@
 {
-  "updated_utc": "2026-08-01T09:40:00+00:00",
-  "note": "08-01 run covering a single day (07-31 -> 08-01), a Saturday. 10 lines appended: 9 dailies (all nine live books) and 1 trade_event for crypto, the only book that could trade. 6 new fills audited, 0 fill-integrity alerts. Seven of the nine dailies are market-closed carries at day_pnl 0.",
-  "total_lines_logged": 150,
+  "updated_utc": "2026-08-03T07:40:00+00:00",
+  "note": "Run covering 2026-08-01 -> 2026-08-03. THE 08-02 RUN WAS MISSED: no 08-02 daily set exists and none was invented. Only a single 08-02 crypto trade_event was backfilled, because those seven fills were new since the last run and had to be audited. 11 lines appended: 9 dailies for 08-03, 1 crypto trade_event for 08-03, 1 crypto trade_event for 08-02. 10 new fills audited, 0 fill-integrity alerts.",
+  "total_lines_logged": 161,
   "by_primary_driver": {
     "none_cash": {
       "profit": 0,
       "loss": 0,
-      "flat": 15
+      "flat": 16
     },
     "market_beta": {
       "profit": 9,
-      "loss": 8,
+      "loss": 9,
       "flat": 4
     },
     "macro": {
@@ -21,7 +21,7 @@
     "unknown": {
       "profit": 4,
       "loss": 1,
-      "flat": 41
+      "flat": 48
     },
     "hype_sentiment": {
       "profit": 6,
@@ -29,8 +29,8 @@
       "flat": 6
     },
     "technical": {
-      "profit": 9,
-      "loss": 7,
+      "profit": 10,
+      "loss": 8,
       "flat": 2
     },
     "sector": {
@@ -47,8 +47,8 @@
   "by_beta_or_alpha": {
     "n/a": {
       "profit": 9,
-      "loss": 8,
-      "flat": 59
+      "loss": 9,
+      "flat": 67
     },
     "beta": {
       "profit": 8,
@@ -56,8 +56,8 @@
       "flat": 4
     },
     "mixed": {
-      "profit": 3,
-      "loss": 10,
+      "profit": 4,
+      "loss": 11,
       "flat": 0
     },
     "alpha": {
@@ -66,8 +66,8 @@
       "flat": 7
     }
   },
-  "driver_note": "The 'unknown' bucket grew by 7 flats today and is now 41 flats out of 46 lines. Read it correctly: it is overwhelmingly a NO-SESSION bucket (weekends, holidays, closed markets) rather than a failure-to-explain bucket. If this tally is ever used to judge attribution quality, unknown/flat should be excluded and only unknown/profit (4) and unknown/loss (1) counted as genuine unexplained moves. Yesterday's news_idiosyncratic spike is unchanged at 3/0/1 and still reads as one earnings week, not a capability.",
-  "headline_so_far": "Live fleet is +2.05% ($9,184.24 on $9,000 across 9 books) and up $1.28 on the day - a number that means almost nothing, because 2026-08-01 is a Saturday and eight of the nine books simply carry Friday's close. The whole day's P/L is SOL drifting +0.12% overnight in the one book that trades 24/7. Note the $9,000 denominator: the standing brief still says $8,000, which predates the Analyst's 07-31 launch. Three things actually happened. (1) THE NIGHTLY BLACKOUT IS NOW FOUR FOR FOUR: 364 minutes with no bot cycle, 07-31 22:09Z to 08-01 04:13Z, joining 367/368/357 on the three previous nights - four durations inside an 11-minute band is a mechanism, not throttling, and the owner's pre-agreed escalation to an external trigger is overdue. The same disguise worked twice: an owner push at 23:32Z sits inside the gap and makes it read as 83+281 minutes instead of 364. (2) FILL INTEGRITY CLEAN but on thin evidence - all six new legs were crypto, so the market_hours gate had no equity fill to be tested against today. (3) THE ANALYST HAS STILL NEVER DECIDED: key installed 07-31 22:23Z after three failed key-check runs, zero decisions, $0.00 spent. Correct for a Saturday; a bug if Monday's session passes the same way. On my own record I went backwards again and retired two of my three live theses. The crypto churn call scored +1.34 - and the evidence review that scored it showed the churn is $18.74 AHEAD of buy-and-hold since 07-30, so I suspended the call rather than bank the win. The meanrev close_position on PG cost -13.64 when PG closed +0.37%, its first up close since the revenue miss.",
+  "driver_note": "The 'unknown' bucket grew from 41 to 48 flats. Read it correctly: it is overwhelmingly a NO-SESSION bucket, not a failure-to-explain bucket - 7 of this run's 8 unknown/flat lines are equity books carrying Friday's close with no session in between, and this run's brief executed at 03:13 ET, before Monday's open. If this tally is ever used to judge attribution quality, exclude unknown/flat and count only unknown/profit (4) and unknown/loss (1) as genuine unexplained moves. Standing read that survived another run: 'mixed' is 4W/11L and remains the fleet's most reliable NEGATIVE signal - a book that takes its benchmark's move and then adds a timing decision that subtracts. The 'alpha' bucket at 21W/13L is flattered: a large share of those wins are single-name earnings gaps (AMZN 07-31, MSFT 07-30) the bots held through rather than predicted.",
+  "headline_so_far": "Live fleet is +2.16% ($9,194.37 on $9,000 across 9 books), up $10.13 since the last run - and all $10.13 of it is the crypto book, because the other eight have had no session close since Friday 07-31. Four things actually happened. (1) TWO BOTS ARE SILENTLY DEAD: scholar and analyst have written no state since 2026-08-02 21:05:18Z - about 19 consecutive cycles - while all seven other books committed normally at 07:13Z. bot.yml swallows per-bot failures with '|| echo ::warning::', so this fails invisibly; the current run's log is not retrievable while in_progress. The Analyst's first-ever decision window is today's open and it is on course to miss it. (2) THE BLACKOUT DOUBLED: coverage over the last 24h is 49.1%, down from 74%, because there are now TWO ~6h gaps per day (363 min 08-02 09:31Z->15:34Z, 370 min 08-02 21:05Z->08-03 03:15Z) where there used to be one nightly. 55 bot commits against ~109 expected at the measured 13.2-min cadence. Fifth-plus consecutive flag; escalation is long overdue. (3) FILL INTEGRITY CLEAN, 10 of 10 - but all crypto again, so the market_hours gate has now gone four runs without a single equity fill to be tested against. Weak evidence, correctly labelled. (4) THE SIM CHARGES NO TRANSACTION COSTS ANYWHERE: COST=0.001 exists only in scholar_lab.py, the backtest. On 08-02 the crypto bot ran three complete round trips in one day out of a CHOP-branch z-threshold with no hysteresis and no cooldown; those six fills netted +4.47, and at a realistic 0.1%/side they would have cost ~6.30, turning the day's churn into -1.83. Every live bot's record is measured gross.",
   "supervisor_directional_scorecard": {
     "scored_calls": 18,
     "wins": 10,
@@ -77,7 +77,7 @@
     "wins_actionable_basis": 9,
     "losses_actionable_basis": 6,
     "cumulative_alpha_usd_actionable": 191.82,
-    "open_calls": 0,
-    "note": "Three judgments closed for -12.30, the second consecutive losing run. The thing worth recording is not the number but what I did with it: the one WIN was suspended rather than repeated, because checking the arithmetic properly showed the churn thesis it rests on is contradicted over any window longer than the judgment's own. Two of three live theses are now retired on evidence (crypto churn, meanrev z-score blindness); the surviving one - that hunter destroys value by re-entering above its own exits - has scored two neutrals in a row and remains untested rather than confirmed. All 9 judgments today are no_change: with US markets shut until Monday, any reference price I wrote would be unreachable, the exact defect that voided 2026-07-25-stock-1 and 2026-07-27-commodity-1."
+    "open_calls": 1,
+    "note": "Nothing closed this run - the ledger came in with zero open judgments, so there was no outcome to score and the totals are unchanged from 08-01. One new directional call: 2026-08-03-hunter-1, skip_new_entries on USO at 129.17, which finally tests the one surviving thesis (hunter destroys value re-entering above its own exits) after it scored two neutrals for lack of a trade. I declined the obvious oil call on commodity on purpose and recorded why: 238.96 of the 315.91 headline comes from ONE oil thesis expressed three times that was wrong on direction, and with WTI already -6% pre-market any close_position referenced to Friday's 129.17 would bank six points I could never have filled - the exact defect that voided 2026-07-25-stock-1 and 2026-07-27-commodity-1."
   }
 }
