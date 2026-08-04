@@ -2,13 +2,13 @@
   "created": "2026-07-16",
   "starting_cash": 1000.0,
   "units": {
-    "SPY": 0.39713636232256533,
-    "TLT": 4.828928408508333,
-    "GLD": 0.40265006799384184,
-    "DBC": 2.597221190260852,
-    "BIL": 0.8145053119274531
+    "SPY": 0.39869837473934233,
+    "TLT": 4.847650801096723,
+    "GLD": 0.4008177473653371,
+    "DBC": 2.5283501769629453,
+    "BIL": 0.8145974631590204
   },
-  "last_rebalance_month": "2026-08",
+  "last_rebalance_month": "2026-07",
   "bench_units": 1.332054612938296,
   "trades": [
     {
@@ -91,6 +91,33 @@
       "units": 0.0381,
       "value": 1.09,
       "reason": "Monthly rebalance to 7.5%"
+    },
+    {
+      "date": "2026-07-31",
+      "action": "REBAL+",
+      "ticker": "SPY",
+      "price": 747.03,
+      "units": 0.0016,
+      "value": 1.17,
+      "reason": "Monthly rebalance to 30.0%"
+    },
+    {
+      "date": "2026-07-31",
+      "action": "REBAL+",
+      "ticker": "TLT",
+      "price": 81.92,
+      "units": 0.0187,
+      "value": 1.53,
+      "reason": "Monthly rebalance to 40.0%"
+    },
+    {
+      "date": "2026-07-31",
+      "action": "REBAL-",
+      "ticker": "DBC",
+      "price": 29.45,
+      "units": 0.0689,
+      "value": 2.03,
+      "reason": "Monthly rebalance to 7.5%"
     }
   ],
   "history": [
@@ -162,7 +189,7 @@
     },
     {
       "date": "2026-07-31",
-      "value": 994.65,
+      "value": 992.8,
       "bench": 995.08,
       "holding": "5 assets"
     },
@@ -3935,7 +3962,13 @@
       "value": 996.93,
       "bench": 1009.26,
       "holding": "5 assets"
+    },
+    {
+      "ts": "2026-08-04T08:09:08+00:00",
+      "value": 992.8,
+      "bench": 995.08,
+      "holding": "5 assets"
     }
   ],
-  "last_updated_utc": "2026-08-04T01:17:48+00:00"
+  "last_updated_utc": "2026-08-04T08:09:08+00:00"
 }
