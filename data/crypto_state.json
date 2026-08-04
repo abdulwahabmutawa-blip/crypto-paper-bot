@@ -1,9 +1,9 @@
 {
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "holding": "LINK-USD",
-  "units": 130.70921224568318,
-  "cash": 0.0,
+  "holding": "CASH",
+  "units": 0.0,
+  "cash": 1072.9919233248131,
   "bench_units": 0.01552055830726173,
   "trades": [
     {
@@ -779,6 +779,24 @@
       "units": 130.709212,
       "value": 1068.55,
       "reason": "Strongest eligible coin (-2.2% 7d momentum)"
+    },
+    {
+      "date": "2026-08-04",
+      "action": "SELL",
+      "ticker": "LINK-USD",
+      "price": 8.209,
+      "units": 130.709212,
+      "value": 1072.99,
+      "reason": "Signal flip"
+    },
+    {
+      "date": "2026-08-04",
+      "action": "TO CASH",
+      "ticker": "\u2014",
+      "price": 0,
+      "units": 0,
+      "value": 1072.99,
+      "reason": "All 8 coins falling on the week \u2014 cash until one rises"
     }
   ],
   "history": [
@@ -898,12 +916,12 @@
     },
     {
       "date": "2026-08-04",
-      "value": 1062.27,
-      "bench": 984.62,
-      "holding": "LINK-USD"
+      "value": 1072.99,
+      "bench": 988.83,
+      "holding": "CASH"
     }
   ],
-  "last_updated_utc": "2026-08-04T10:40:31+00:00",
+  "last_updated_utc": "2026-08-04T10:53:43+00:00",
   "intraday": [
     {
       "ts": "2026-07-16T18:32:57+00:00",
@@ -5062,6 +5080,12 @@
       "value": 1062.27,
       "bench": 984.62,
       "holding": "LINK-USD"
+    },
+    {
+      "ts": "2026-08-04T10:53:43+00:00",
+      "value": 1072.99,
+      "bench": 988.83,
+      "holding": "CASH"
     }
   ]
 }
