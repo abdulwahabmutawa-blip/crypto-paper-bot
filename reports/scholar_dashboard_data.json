@@ -1,11 +1,11 @@
 {
-  "generated_utc": "2026-08-04T20:10:24+00:00",
+  "generated_utc": "2026-08-04T20:23:37+00:00",
   "created": "2026-07-30",
   "starting_cash": 1000.0,
   "live_ts": "2026-08-04T19:55:00+00:00",
   "current": {
     "date": "2026-08-04",
-    "value": 1028.62,
+    "value": 1028.73,
     "bench": 1039.84,
     "holding": "IWM"
   },
@@ -17,16 +17,16 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 29.710687099501794
+      "fill": 29.710687099501808
     },
     {
       "sym": "IWM",
-      "price": 301.68,
+      "price": 301.71,
       "line": "US small caps \u00b7 score +1.04 \u00b7 mom90 +20.1% \u00b7 MA gap +13.7%",
       "tag": "HELD",
       "on": true,
       "pick": true,
-      "fill": 25.89534405256509
+      "fill": 25.90750491209977
     },
     {
       "sym": "QQQ",
@@ -35,7 +35,7 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 23.30232712679395
+      "fill": 23.30232712679394
     },
     {
       "sym": "EFA",
@@ -44,7 +44,7 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 17.032327094571333
+      "fill": 17.032327094571336
     },
     {
       "sym": "EEM",
@@ -66,12 +66,12 @@
     },
     {
       "sym": "DBC",
-      "price": 28.32,
+      "price": 28.31,
       "line": "Broad commodities \u00b7 score +0.02 \u00b7 mom90 +0.5% \u00b7 MA gap +8.2%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 0.5682165277183
+      "fill": 0.5288273450161524
     },
     {
       "sym": "TLT",
@@ -80,25 +80,25 @@
       "tag": "not eligible",
       "on": false,
       "pick": false,
-      "fill": -7.604700457518171
+      "fill": -7.604718401562133
     },
     {
       "sym": "SLV",
-      "price": 53.84,
-      "line": "Silver \u00b7 score -0.35 \u00b7 mom90 -17.4% \u00b7 MA gap -15.4%",
+      "price": 53.83,
+      "line": "Silver \u00b7 score -0.35 \u00b7 mom90 -17.5% \u00b7 MA gap -15.4%",
       "tag": "not eligible",
       "on": false,
       "pick": false,
-      "fill": -8.70297325284266
+      "fill": -8.711148045321467
     },
     {
       "sym": "GLD",
-      "price": 374.1,
+      "price": 374.12,
       "line": "Gold \u00b7 score -0.40 \u00b7 mom90 -10.1% \u00b7 MA gap -9.1%",
       "tag": "not eligible",
       "on": false,
       "pick": false,
-      "fill": -10.113062796855795
+      "fill": -10.107092600070184
     },
     {
       "sym": "ETH-USD",
@@ -1860,6 +1860,12 @@
       "value": 1028.62,
       "bench": 1039.84,
       "holding": "IWM"
+    },
+    {
+      "ts": "2026-08-04T20:23:37+00:00",
+      "value": 1028.73,
+      "bench": 1039.84,
+      "holding": "IWM"
     }
   ],
   "trades": [
@@ -1894,7 +1900,7 @@
     },
     {
       "date": "2026-08-04",
-      "value": 1028.62,
+      "value": 1028.73,
       "bench": 1039.84,
       "holding": "IWM"
     }
@@ -1906,5 +1912,5 @@
     "backtest_maxdd": "-29.0% vs SPY -33.7% (2017+) but -27.6% vs SPY -18.8% in 2024+ \u00b7 0.1%/side costs included",
     "note": "Expectation after the McLean-Pontiff decay haircut: roughly SPY-like return with lower drawdown is the honest hope. Judged by kill_criteria.md like every other bot."
   },
-  "thoughts": "I'm holding IWM. Best momentum-per-unit-risk in a confirmed uptrend. I bought at $293.29; it's now $301.68 (+2.9% since I got in). My safety net: if the price falls to $272.04 (10% below its recent high), I sell automatically \u2014 no exceptions. Closest challenger on my list is SPY, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
+  "thoughts": "I'm holding IWM. Best momentum-per-unit-risk in a confirmed uptrend. I bought at $293.29; it's now $301.71 (+2.9% since I got in). My safety net: if the price falls to $272.04 (10% below its recent high), I sell automatically \u2014 no exceptions. Closest challenger on my list is SPY, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
 }
