@@ -1,7 +1,7 @@
 {
-  "updated_utc": "2026-08-03T07:40:00+00:00",
-  "note": "Run covering 2026-08-01 -> 2026-08-03. THE 08-02 RUN WAS MISSED: no 08-02 daily set exists and none was invented. Only a single 08-02 crypto trade_event was backfilled, because those seven fills were new since the last run and had to be audited. 11 lines appended: 9 dailies for 08-03, 1 crypto trade_event for 08-03, 1 crypto trade_event for 08-02. 10 new fills audited, 0 fill-integrity alerts.",
-  "total_lines_logged": 161,
+  "updated_utc": "2026-08-04T08:20:00+00:00",
+  "note": "Run covering 2026-08-03 -> 2026-08-04. 15 lines appended: 9 dailies plus 6 trade_events. This is the first run in five with EQUITY fills to audit - 21 of the 27 new fills are equities - so the market-hours gate added after the 2026-07-22 stale-fill incident got its first real test since 07-31 and passed. 27 new fills audited, 0 fill-integrity alerts. The previous run's 08-03 dailies were logged BEFORE Monday's open and are all unknown/flat by necessity; these 08-04-dated lines carry the resolved 08-03 session. Nothing was rewritten - the flat lines stay as the honest record of what was knowable at 03:13 ET.",
+  "total_lines_logged": 176,
   "by_primary_driver": {
     "none_cash": {
       "profit": 0,
@@ -9,13 +9,13 @@
       "flat": 16
     },
     "market_beta": {
-      "profit": 9,
-      "loss": 9,
+      "profit": 14,
+      "loss": 10,
       "flat": 4
     },
     "macro": {
       "profit": 9,
-      "loss": 9,
+      "loss": 11,
       "flat": 1
     },
     "unknown": {
@@ -24,22 +24,22 @@
       "flat": 48
     },
     "hype_sentiment": {
-      "profit": 6,
+      "profit": 7,
       "loss": 9,
       "flat": 6
     },
     "technical": {
-      "profit": 10,
-      "loss": 8,
-      "flat": 2
+      "profit": 11,
+      "loss": 9,
+      "flat": 3
     },
     "sector": {
-      "profit": 1,
+      "profit": 2,
       "loss": 5,
       "flat": 0
     },
     "news_idiosyncratic": {
-      "profit": 3,
+      "profit": 5,
       "loss": 0,
       "flat": 1
     }
@@ -48,36 +48,25 @@
     "n/a": {
       "profit": 9,
       "loss": 9,
-      "flat": 67
+      "flat": 68
     },
     "beta": {
-      "profit": 8,
+      "profit": 12,
       "loss": 8,
       "flat": 4
     },
     "mixed": {
-      "profit": 4,
-      "loss": 11,
+      "profit": 6,
+      "loss": 12,
       "flat": 0
     },
     "alpha": {
-      "profit": 21,
-      "loss": 13,
+      "profit": 25,
+      "loss": 16,
       "flat": 7
     }
   },
-  "driver_note": "The 'unknown' bucket grew from 41 to 48 flats. Read it correctly: it is overwhelmingly a NO-SESSION bucket, not a failure-to-explain bucket - 7 of this run's 8 unknown/flat lines are equity books carrying Friday's close with no session in between, and this run's brief executed at 03:13 ET, before Monday's open. If this tally is ever used to judge attribution quality, exclude unknown/flat and count only unknown/profit (4) and unknown/loss (1) as genuine unexplained moves. Standing read that survived another run: 'mixed' is 4W/11L and remains the fleet's most reliable NEGATIVE signal - a book that takes its benchmark's move and then adds a timing decision that subtracts. The 'alpha' bucket at 21W/13L is flattered: a large share of those wins are single-name earnings gaps (AMZN 07-31, MSFT 07-30) the bots held through rather than predicted.",
-  "headline_so_far": "Live fleet is +2.16% ($9,194.37 on $9,000 across 9 books), up $10.13 since the last run - and all $10.13 of it is the crypto book, because the other eight have had no session close since Friday 07-31. Four things actually happened. (1) TWO BOTS ARE SILENTLY DEAD: scholar and analyst have written no state since 2026-08-02 21:05:18Z - about 19 consecutive cycles - while all seven other books committed normally at 07:13Z. bot.yml swallows per-bot failures with '|| echo ::warning::', so this fails invisibly; the current run's log is not retrievable while in_progress. The Analyst's first-ever decision window is today's open and it is on course to miss it. (2) THE BLACKOUT DOUBLED: coverage over the last 24h is 49.1%, down from 74%, because there are now TWO ~6h gaps per day (363 min 08-02 09:31Z->15:34Z, 370 min 08-02 21:05Z->08-03 03:15Z) where there used to be one nightly. 55 bot commits against ~109 expected at the measured 13.2-min cadence. Fifth-plus consecutive flag; escalation is long overdue. (3) FILL INTEGRITY CLEAN, 10 of 10 - but all crypto again, so the market_hours gate has now gone four runs without a single equity fill to be tested against. Weak evidence, correctly labelled. (4) THE SIM CHARGES NO TRANSACTION COSTS ANYWHERE: COST=0.001 exists only in scholar_lab.py, the backtest. On 08-02 the crypto bot ran three complete round trips in one day out of a CHOP-branch z-threshold with no hysteresis and no cooldown; those six fills netted +4.47, and at a realistic 0.1%/side they would have cost ~6.30, turning the day's churn into -1.83. Every live bot's record is measured gross.",
-  "supervisor_directional_scorecard": {
-    "scored_calls": 18,
-    "wins": 10,
-    "losses": 5,
-    "neutral": 3,
-    "cumulative_alpha_usd": 315.91,
-    "wins_actionable_basis": 9,
-    "losses_actionable_basis": 6,
-    "cumulative_alpha_usd_actionable": 191.82,
-    "open_calls": 1,
-    "note": "Nothing closed this run - the ledger came in with zero open judgments, so there was no outcome to score and the totals are unchanged from 08-01. One new directional call: 2026-08-03-hunter-1, skip_new_entries on USO at 129.17, which finally tests the one surviving thesis (hunter destroys value re-entering above its own exits) after it scored two neutrals for lack of a trade. I declined the obvious oil call on commodity on purpose and recorded why: 238.96 of the 315.91 headline comes from ONE oil thesis expressed three times that was wrong on direction, and with WTI already -6% pre-market any close_position referenced to Friday's 129.17 would bank six points I could never have filled - the exact defect that voided 2026-07-25-stock-1 and 2026-07-27-commodity-1."
-  }
+  "driver_note": "First run in which the 'unknown' bucket did not grow - it stays at 4/1/48 because every book had a real session to explain. 'macro' took both of this run's big losses (commodity -58.86, hunter -68.18) off a single headline, and 'news_idiosyncratic' is now 5W/0L/1F across the whole ledger, the only driver bucket that has never logged a loss. That is a small sample and it is also the bucket with the strictest evidence bar, so treat it as a statement about my citation discipline before treating it as a statement about the bots.",
+  "beta_alpha_note": "'mixed' is now 6W/12L and remains the fleet's most reliable negative signal - congress supplied two more mixed lines this run and both were profits, which is the first real counter-evidence in a while. 'alpha' at 25W/16L is flattered by a single session: hype's +56.44 and crypto's BTC round trip both landed on 2026-08-03, and so did commodity's and hunter's alpha losses. One day, four alpha lines, both directions.",
+  "concentration_note": "The six-run USO concentration flag materially eased WITHOUT anyone acting on it: hunter's trailing stop took it out of oil, so single-name USO exposure fell from 22.0% of live capital to 11.1% (commodity's 1,024.23 alone). Largest single-name exposure is now meanrev's PG at 1,241.62, 13.5% of the fleet."
 }
