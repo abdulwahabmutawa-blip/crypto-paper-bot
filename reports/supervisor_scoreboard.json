@@ -1,6 +1,6 @@
 {
   "updated_utc": "2026-08-04T08:20:00+00:00",
-  "run_note": "Run covering 2026-08-03 -> 2026-08-04, executed 04:05 ET on 08-04, before Tuesday's open. The 08-03 session resolved between runs and it was the largest single-day dispersion the fleet has produced: Dow record close, S&P +1.48%, Nasdaq +2.13%, WTI -5%. 15 attribution lines appended, 27 new fills audited (21 equity, 6 crypto), 0 fill-integrity alerts, 9 judgments made (1 directional, 8 no_change), 1 judgment closed (+4.19). The fleet was FROZEN for the 6h48m before this run and resumed at 08:08:28Z, mid-analysis.",
+  "run_note": "Run covering 2026-08-03 -> 2026-08-04, executed 04:05 ET on 08-04, before Tuesday's open. The 08-03 session resolved between runs and it was the largest single-day dispersion the fleet has produced: Dow record close, S&P +1.48%, Nasdaq +2.13%, WTI -5%. 15 attribution lines appended, 27 new fills audited (21 equity, 6 crypto), 0 fill-integrity alerts, 9 judgments made (1 directional, 8 no_change), 1 judgment closed (+4.19). The fleet was FROZEN for the 6h48m before this run and resumed at 08:08:28Z, mid-analysis. AMENDED after the initial write: the fleet resumed at 08:08:28Z with only 5 of 9 bots, and the 4 that stayed silent are exactly the 4 consumers of src/selection_engine.py. See stalled_bots.fault_B_partial_freeze - that is the item to carry into the next run, not the scheduler gap.",
   "total_judgments": 121,
   "judgments_closed": 120,
   "judgments_open": 1,
@@ -126,14 +126,39 @@
     "method_note": "True fill times taken from the commit in which each trade first appears in its state file, by walking every commit of each data/*_state.json since 08-02 and diffing the trade-log length - not file mtime."
   },
   "stalled_bots": {
-    "verdict": "WHOLE-FLEET FREEZE, 6h48m, RESOLVED DURING THIS RUN - and it is a scheduler outage, NOT the per-bot freeze-guard fault the last run found",
-    "affected": "all 9 live books, identically",
-    "last_write_utc": "2026-08-04T01:17:41Z to 01:17:54Z",
-    "age_at_run": "407 minutes for every bot, spread 13 seconds",
-    "why_it_is_a_different_fault": "The 2026-08-03 staleness check exists to catch ONE bot going stale against a healthy fleet - a freeze-guard misfire. Here the age is 407 min for all nine with a 13-second spread, which is the signature of the loop process ending, not of any guard. No bot was run manually to read its console line, because doing so would WRITE data/*_state.json and this task is read-only with respect to bot state; the git and gh evidence is unambiguous without it.",
-    "root_cause": "Job 30843732433 took the concurrency lock at 18:59:17Z, ran its 355-minute loop and ended at 01:31:00Z. Job 30859366503, queued from 22:37:40Z, was cancelled at 07:26:20Z without ever running. GitHub then accepted no scheduled start until 08:08:28Z (job 30890697953, now in_progress), so the fleet was dark from the last cycle commit at 01:17:54Z until 08:08:28Z.",
-    "resolution": "Self-resolved at 2026-08-04T08:08:28Z, mid-analysis. No owner action needed and none should be taken on this instance.",
-    "prior_fault_status": "The scholar/analyst stall the last run led with is FIXED. Both wrote state on every cycle from the owner's 08-03 08:00:15Z phantom-weekend-mark fix through 01:17Z, and the Analyst went on to make its first-ever decision at 09:32 ET. That pre-registered test - 'still zero decisions after Monday 08-03's session = bug' - PASSED, and it passed because the infrastructure fault was found and fixed in time."
+    "verdict": "TWO SEPARATE FAULTS. (A) A whole-fleet 6h48m freeze from a scheduler outage, which RESOLVED at 08:08:28Z. (B) A NEW partial freeze discovered immediately after: 4 of the 9 bots did not resume with the other 5, and the four are exactly the four consumers of src/selection_engine.py.",
+    "fault_A_whole_fleet_freeze": {
+      "affected": "all 9 live books, identically",
+      "last_write_utc": "2026-08-04T01:17:41Z to 01:17:54Z",
+      "age_at_run": "407 minutes for every bot, spread 13 seconds",
+      "why_it_is_not_the_2026-08-03_fault": "The staleness check exists to catch ONE bot going stale against a healthy fleet - a freeze-guard misfire. Here the age was 407 min for all nine with a 13-second spread, the signature of the loop process ending rather than any guard firing.",
+      "root_cause": "Job 30843732433 took the concurrency lock at 18:59:17Z, ran its 355-minute loop and ended at 01:31:00Z. Job 30859366503, queued from 22:37:40Z, was cancelled at 07:26:20Z without ever running. GitHub accepted no further scheduled start until 08:08:28Z (job 30890697953), so the fleet was dark from the last cycle commit at 01:17:54Z until 08:08:28Z.",
+      "status": "RESOLVED at 2026-08-04T08:08:28Z, mid-analysis. No owner action needed on this instance; the standing fix is the external trigger (see operational_flag)."
+    },
+    "fault_B_partial_freeze": {
+      "verdict": "OPEN AND UNDIAGNOSED - HIGHEST-PRIORITY ITEM FOR THE NEXT RUN",
+      "silent": [
+        "analyst",
+        "commodity",
+        "meanrev",
+        "scholar"
+      ],
+      "writing_normally": [
+        "allweather",
+        "congress",
+        "crypto",
+        "hunter",
+        "sentiment"
+      ],
+      "evidence": "Both cycles since the fleet resumed - commits at 2026-08-04T08:09:50Z and 08:23:07Z - touched exactly five state files (allweather, congress, crypto, hunter, sentiment) plus the sentinel pair on the first. analyst, commodity, meanrev and scholar were untouched in both, so at run time their age was 429.6-429.8 min against 4.4-4.6 min for the other five - a 95x ratio, which is the exact signature step 2b of the standing brief was written to catch.",
+      "why_it_is_not_a_loop_hang": "bot.yml runs the bots in the order crypto, congress, meanrev, commodity, allweather, scholar, grok_sentinel, sentinel_trader, hunter, analyst. bot_allweather sits BETWEEN bot_commodity and bot_scholar and writes normally, and analyst_agent runs last and does not. The loop is completing; four specific bots are returning without writing.",
+      "strongest_lead": "The partition is not arbitrary - it is a code dependency. `grep -l selection_engine src/*.py` returns exactly analyst_agent.py, bot_commodity.py, bot_meanrev.py and bot_scholar.py: the four silent bots and no others. src/selection_engine.py:150-163 holds three freeze guards added at the 2026-07-31 review and reworked in the owner's 2026-08-03 08:00:15Z phantom-weekend-mark fix, each of which returns the state unmutated and prints its reason: 'STALE BAR {asof} < newest mark {newest}', 'benchmark {bench} has no price', and 'held ticker {holding} has no price this cycle'. One of those three is almost certainly firing; which one cannot be determined from git alone.",
+      "why_it_is_probably_NEW_behaviour_and_not_the_guard_working": "Checked directly rather than assumed. In the equivalent pre-market window 24 hours earlier - 2026-08-03 08:05Z to 13:25Z, i.e. AFTER the owner's fix landed at 08:00:15Z and BEFORE the 13:30Z open - every one of those cycle commits touched all nine state files. Same time of day, same pre-market condition, same code, opposite behaviour. That is what makes this a regression rather than a guard correctly declining to mark outside a session.",
+      "blocked_diagnosis": "Root cause needs the failing run's console output: the guards print exactly why they skipped, and bot.yml swallows per-bot failures with '|| echo ::warning::', so nothing surfaces in the run status. 'gh run view 30890697953 --log' returns empty while the run is in_progress - the same blocker that stopped the 08-03 diagnosis. Re-check once it completes; its 355-min cap from 08:08:28Z lands near 14:03Z.",
+      "not_run_manually_and_why": "Step 2b of the standing brief says to run the bot manually to read its console line. I did NOT do that here: src/bot_*.py and src/analyst_agent.py write data/*_state.json, and this task is read-only with respect to bot state. Reading a diagnostic is not worth writing a mark the fleet did not produce. The git evidence above identifies the affected set and the responsible module without it; only the specific branch is missing.",
+      "consequence_if_it_persists": "Their marks are currently CORRECT - all four carry accurate 2026-08-03 closes, so nothing is mismarked yet and no P/L in this brief is affected. The exposure is forward: if this is still firing at the 13:30Z open, commodity holds USO, meanrev holds PG and scholar holds IWM through a live session with no ability to mark or exit, and the Analyst misses its second-ever decision. commodity is the sharpest case - it is the fleet's undefended oil book one session after a -5.4% day.",
+      "supervisor_action": "Reported only. I do not modify bot code, workflows or state."
+    }
   },
   "operational_flag": {
     "verdict": "COVERAGE 46.8%, THIRD CONSECUTIVE DECLINE (74% -> 49.1% -> 46.8%) AND THE BLACKOUT NOW LANDS INSIDE THE US SESSION",
