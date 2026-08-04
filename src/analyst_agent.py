@@ -236,7 +236,7 @@ def apply_guardrails(decision, holding, equity, severe):
 def main():
     close, close_raw = selection_engine._fetch_daily(UNIVERSE, BENCH)
     close_cal = close_raw.copy()          # calendar oracle, pre-splice
-    live, live_ts = selection_engine._fetch_live(UNIVERSE, BENCH)
+    live, live_ts, live_raw = selection_engine._fetch_live(UNIVERSE, BENCH)
     for t, p in live.items():
         if t in close.columns:
             close.iloc[-1, close.columns.get_loc(t)] = p
@@ -250,9 +250,9 @@ def main():
     # rows. See the long note in selection_engine.run(); the phantom weekend
     # marks this prevents once froze this agent through an entire weekend.
     value_asset = st["holding"] if st and st["holding"] != "CASH" else BENCH
-    asof = (market_hours.last_real_date(close_cal, value_asset)
+    asof = (market_hours.newest_real_date(close_cal, live_raw, value_asset)
             or str(close.index[-1].date()))
-    bench_asof = market_hours.last_real_date(close_cal, BENCH)
+    bench_asof = market_hours.newest_real_date(close_cal, live_raw, BENCH)
 
     if st is None:
         if pd.isna(last[BENCH]):
@@ -264,10 +264,13 @@ def main():
               "decisions": [], "trades": [], "history": [], "intraday": []}
         print(f"[analyst] NEW sim {asof}")
 
-    # freeze guards (same discipline as the engine)
+    # Guards (same discipline as the engine): a regressed feed blocks trading
+    # and the history write, but never takes the agent offline.
     newest = st["history"][-1]["date"] if st["history"] else ""
-    if asof < newest:
-        print(f"[analyst] STALE BAR {asof} — cycle skipped"); return
+    feed_delayed = bool(asof < newest)
+    if feed_delayed:
+        print(f"[analyst] FEED DELAYED — freshest genuine price is {asof} but "
+              f"newest mark is {newest}; no decision, holding steady")
     if st["holding"] != "CASH" and pd.isna(last.get(st["holding"])):
         print(f"[analyst] held ticker has no price — cycle skipped"); return
 
@@ -283,6 +286,7 @@ def main():
     month = today[:7]
     n_month = sum(1 for d in st["decisions"] if d["date"].startswith(month))
     should_decide = (market_hours.us_equities_open()
+                     and not feed_delayed
                      and st.get("last_decision_date") != today
                      and not st.get("benched", False)
                      and n_month < MONTHLY_DECISION_CAP)
@@ -390,13 +394,16 @@ def main():
     val = st["cash"] + (0.0 if st["holding"] == "CASH"
                         else st["units"] * float(last[st["holding"]]))
     bench = st["bench_units"] * float(last[BENCH])
-    row = {"date": asof, "value": round(val, 2), "bench": round(bench, 2),
-           "holding": st["holding"]}
-    if bench_asof and bench_asof != asof:
-        row["bench_asof"] = bench_asof
-    st["history"] = sorted(
-        [h for h in st["history"] if h["date"] != asof] + [row],
-        key=lambda h: h["date"])
+    if not feed_delayed:
+        row = {"date": asof, "value": round(val, 2), "bench": round(bench, 2),
+               "holding": st["holding"]}
+        if bench_asof and bench_asof != asof:
+            row["bench_asof"] = bench_asof
+        st["history"] = sorted(
+            [h for h in st["history"] if h["date"] != asof] + [row],
+            key=lambda h: h["date"])
+    st["feed_delayed"] = feed_delayed
+    st["data_asof"] = asof
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
     st["last_updated_utc"] = now
     st["intraday"] = [p for p in st.get("intraday", [])

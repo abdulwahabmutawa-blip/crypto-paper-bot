@@ -75,6 +75,43 @@ def trim_incomplete_bars(close):
     return close
 
 
+def last_intraday_date(frame, ticker):
+    """Session date of the newest genuine INTRADAY bar for `ticker`.
+
+    Yahoo publishes daily bars on a lag: a session can be fully present in the
+    5-minute feed while its daily row is still missing or all-NaN (observed
+    2026-08-04, ~13h after Monday's close). Dating a mark purely off the daily
+    frame then labels today's real prices with Friday's date — and the
+    monotonic guard, seeing a date behind the newest mark, freezes the bot.
+
+    Equities are dated by their New York session; crypto trades 24/7 and is
+    dated by UTC, matching how the daily frames index each.
+    """
+    if ticker not in frame.columns:
+        return None
+    s = frame[ticker].dropna()
+    if not len(s):
+        return None
+    ts = s.index[-1]
+    ts = ts.tz_localize("UTC") if ts.tzinfo is None else ts
+    if str(ticker).endswith("-USD"):
+        return str(ts.tz_convert("UTC").date())
+    try:
+        from zoneinfo import ZoneInfo
+        return str(ts.tz_convert(ZoneInfo("America/New_York")).date())
+    except Exception:            # tzdata unavailable — approximate with EDT
+        return str(ts.tz_convert(timezone(timedelta(hours=-4))).date())
+
+
+def newest_real_date(daily_frame, intraday_frame, ticker):
+    """The honest date of the freshest genuine price we hold for `ticker`,
+    from whichever feed actually supplied it."""
+    a = last_real_date(daily_frame, ticker)
+    b = (last_intraday_date(intraday_frame, ticker)
+         if intraday_frame is not None else None)
+    return max([d for d in (a, b) if d], default=None)
+
+
 def last_real_date(close, ticker):
     """Date of the newest bar where `ticker` has genuine data — call on the
     PRE-ffill frame.

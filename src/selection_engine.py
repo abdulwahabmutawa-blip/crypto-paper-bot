@@ -46,16 +46,20 @@ def _fetch_daily(universe, bench):
 
 
 def _fetch_live(universe, bench):
+    """Returns (prices, live_ts, raw_5m_frame). The raw frame is kept pre-ffill
+    so callers can ask which session each price genuinely came from — the
+    daily feed lags, and that frame is the only honest record of it."""
     tickers = sorted(set(universe) | {bench})
     raw = yf.download(tickers, period="5d", interval="5m", auto_adjust=True,
                       progress=False)
     close = raw["Close"] if isinstance(raw.columns, pd.MultiIndex) else raw
-    close = market_hours.trim_incomplete_bars(close).ffill()
-    last = close.iloc[-1]
-    ts = close.index[-1]
+    trimmed = market_hours.trim_incomplete_bars(close)
+    filled = trimmed.ffill()
+    last = filled.iloc[-1]
+    ts = filled.index[-1]
     ts = ts.tz_convert("UTC") if ts.tzinfo else ts.tz_localize("UTC")
-    return ({t: float(last[t]) for t in tickers if t in close.columns
-             and pd.notna(last[t])}, ts.isoformat(timespec="seconds"))
+    return ({t: float(last[t]) for t in tickers if t in filled.columns
+             and pd.notna(last[t])}, ts.isoformat(timespec="seconds"), trimmed)
 
 
 def _thoughts(spec, st, board, last):
@@ -106,7 +110,7 @@ def run(spec, start_cash=1000.0):
     # into the last row below, which would make a stale equity look like it
     # had genuine weekend data; last_real_date() must never see those.
     close_cal = close_raw.copy()
-    live, live_ts = _fetch_live(spec["universe"], spec["bench"])
+    live, live_ts, live_raw = _fetch_live(spec["universe"], spec["bench"])
     for t, p in live.items():
         if t in close.columns:
             close.iloc[-1, close.columns.get_loc(t)] = p
@@ -139,20 +143,31 @@ def run(spec, start_cash=1000.0):
     # Scholar and the Analyst sat frozen through a whole weekend.
     # This is what market_hours.last_real_date() was built for; the engine had
     # never adopted it (hunter/sentinel already did).
+    # ...and by the freshest feed that actually supplied the price: Yahoo's
+    # daily bars lag the intraday feed by hours, so the daily frame alone
+    # dates today's real prices with yesterday's (or Friday's) date.
     value_asset = holding if holding != "CASH" else spec["bench"]
-    asof = (market_hours.last_real_date(close_cal, value_asset)
+    asof = (market_hours.newest_real_date(close_cal, live_raw, value_asset)
             or str(close.index[-1].date()))
-    bench_asof = market_hours.last_real_date(close_cal, spec["bench"])
+    bench_asof = market_hours.newest_real_date(close_cal, live_raw, spec["bench"])
 
-    # ---- Freeze guards: no mutation of ANY state on a bar we can't trust ----
+    # ---- Guards: no mutation of state we can't trust -------------------------
     # (2026-07-31 review: the old code guarded only the history mark; hwm,
     # stops, and the trade ledger could still act on stale or missing prices.)
+    #
+    # A regressed feed must NOT take the bot offline. Skipping the whole cycle
+    # here stopped marking, trading AND rendering — so a few hours of Yahoo lag
+    # looked identical to a dead bot (2026-08-03, then again 2026-08-04). We
+    # now refuse only the unsafe parts: no trade, no history row written behind
+    # the newest mark. The bot still marks its heartbeat and re-renders, and
+    # says plainly on its dashboard that its data is delayed.
+    feed_delayed = False
     if st is not None:
         newest = st["history"][-1]["date"] if st["history"] else ""
         if asof < newest:
-            print(f"[{key}] STALE BAR {asof} < newest mark {newest} — "
-                  f"cycle skipped (feed served an old bar)")
-            return st
+            feed_delayed = True
+            print(f"[{key}] FEED DELAYED — freshest genuine price is {asof} but "
+                  f"newest mark is {newest}; holding steady, not trading")
     if pd.isna(last.get(spec["bench"])):
         print(f"[{key}] benchmark {spec['bench']} has no price — cycle skipped")
         return st
@@ -161,6 +176,8 @@ def run(spec, start_cash=1000.0):
         print(f"[{key}] held ticker {holding} has no price this cycle — "
               f"cycle skipped (never trade or mark on a dead column)")
         return st
+    if feed_delayed:
+        pick = holding                      # never trade on a regressed feed
     if pick != "CASH" and (pick not in close.columns or pd.isna(last[pick])):
         print(f"[{key}] pick {pick} has no price — keeping {holding}")
         pick = holding
@@ -273,13 +290,16 @@ def run(spec, start_cash=1000.0):
     val = st["cash"] + (0.0 if st["holding"] == "CASH"
                         else st["units"] * float(last[st["holding"]]))
     bench = st["bench_units"] * float(last[spec["bench"]])
-    row = {"date": asof, "value": round(val, 2),
-           "bench": round(bench, 2), "holding": st["holding"]}
-    if bench_asof and bench_asof != asof:
-        row["bench_asof"] = bench_asof     # benchmark had to be forward-filled
-    st["history"] = sorted(
-        [h for h in st["history"] if h["date"] != asof] + [row],
-        key=lambda h: h["date"])
+    if not feed_delayed:
+        row = {"date": asof, "value": round(val, 2),
+               "bench": round(bench, 2), "holding": st["holding"]}
+        if bench_asof and bench_asof != asof:
+            row["bench_asof"] = bench_asof  # benchmark had to be forward-filled
+        st["history"] = sorted(
+            [h for h in st["history"] if h["date"] != asof] + [row],
+            key=lambda h: h["date"])
+    st["feed_delayed"] = feed_delayed
+    st["data_asof"] = asof
     st["last_updated_utc"] = now.isoformat(timespec="seconds")
     st["intraday"] = [p for p in st.get("intraday", [])
                       if p["ts"] != st["last_updated_utc"]][-1499:] + [
@@ -294,7 +314,11 @@ def run(spec, start_cash=1000.0):
         "board_title": board_title, "meta": spec["meta"],
         "intraday": st["intraday"], "trades": st["trades"][-20:],
         "history": st["history"], "strategy": spec["strategy"],
-        "thoughts": _thoughts(spec, st, board, last),
+        "thoughts": (("⏳ My price feed is running behind right now (freshest "
+                      f"confirmed price: {asof}). I'm holding steady and not "
+                      "trading until it catches up — acting on stale prices is "
+                      "how paper sims tell themselves comfortable lies.\n\n")
+                     if feed_delayed else "") + _thoughts(spec, st, board, last),
     }
     (config.REPORTS / f"{key}_dashboard_data.json").write_text(
         json.dumps(payload, indent=2))
