@@ -1,104 +1,104 @@
 {
-  "generated_utc": "2026-08-04T13:19:16+00:00",
+  "generated_utc": "2026-08-04T13:32:33+00:00",
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "live_ts": "2026-08-03T19:55:00+00:00",
+  "live_ts": "2026-08-04T13:30:00+00:00",
   "current": {
-    "date": "2026-08-03",
-    "value": 1241.62,
-    "bench": 1009.2,
+    "date": "2026-08-04",
+    "value": 1234.04,
+    "bench": 1014.61,
     "holding": "PG"
   },
   "board": [
     {
-      "sym": "AAPL",
-      "price": 303.27,
-      "line": "z -1.90",
+      "sym": "UNH",
+      "price": 410.29,
+      "line": "z -2.04",
       "tag": "oversold",
       "on": true,
       "pick": false,
-      "fill": 31.723622132247293
+      "fill": 34.0071512205177
     },
     {
-      "sym": "UNH",
-      "price": 415.42,
-      "line": "z -1.55",
+      "sym": "AAPL",
+      "price": 303.38,
+      "line": "z -1.77",
       "tag": "oversold",
       "on": true,
       "pick": false,
-      "fill": 25.831533431548216
+      "fill": 29.479935243978268
     },
     {
       "sym": "PG",
-      "price": 144.98,
-      "line": "z -1.10",
+      "price": 144.09,
+      "line": "z -1.51",
       "tag": "HELD",
-      "on": false,
+      "on": true,
       "pick": true,
-      "fill": 18.28444777338769
+      "fill": 25.11385395957177
     },
     {
       "sym": "WMT",
-      "price": 110.71,
-      "line": "z -0.76",
+      "price": 109.04,
+      "line": "z -1.48",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 12.626519044442128
+      "fill": 24.650660510737875
     },
     {
       "sym": "JNJ",
-      "price": 254.45,
-      "line": "z -0.50",
+      "price": 251.77,
+      "line": "z -0.85",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 8.319945376086356
-    },
-    {
-      "sym": "MRK",
-      "price": 127.77,
-      "line": "z +0.13",
-      "tag": "normal",
-      "on": false,
-      "pick": false,
-      "fill": -2.1651944081953327
+      "fill": 14.156076808125231
     },
     {
       "sym": "PEP",
-      "price": 139.64,
-      "line": "z +0.34",
+      "price": 137.72,
+      "line": "z -0.19",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": -5.699958327541677
-    },
-    {
-      "sym": "NVDA",
-      "price": 206.69,
-      "line": "z +0.45",
-      "tag": "normal",
-      "on": false,
-      "pick": false,
-      "fill": -7.516614603662801
-    },
-    {
-      "sym": "HD",
-      "price": 340.08,
-      "line": "z +0.51",
-      "tag": "normal",
-      "on": false,
-      "pick": false,
-      "fill": -8.419139320671283
+      "fill": 3.1672587428730727
     },
     {
       "sym": "XOM",
-      "price": 155.05,
-      "line": "z +0.86",
+      "price": 150.2,
+      "line": "z +0.07",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": -14.378298552635908
+      "fill": -1.1175076791072773
+    },
+    {
+      "sym": "CVX",
+      "price": 188.26,
+      "line": "z +0.14",
+      "tag": "normal",
+      "on": false,
+      "pick": false,
+      "fill": -2.3488586683160095
+    },
+    {
+      "sym": "MRK",
+      "price": 127.83,
+      "line": "z +0.17",
+      "tag": "normal",
+      "on": false,
+      "pick": false,
+      "fill": -2.8097393913811555
+    },
+    {
+      "sym": "KO",
+      "price": 85.37,
+      "line": "z +0.44",
+      "tag": "normal",
+      "on": false,
+      "pick": false,
+      "fill": -7.343693155307986
     }
   ],
   "board_title": "16 mega-caps, most oversold first (z < -1.5 = buy zone)",
@@ -4002,6 +4002,12 @@
       "value": 1241.62,
       "bench": 1009.2,
       "holding": "PG"
+    },
+    {
+      "ts": "2026-08-04T13:32:33+00:00",
+      "value": 1234.04,
+      "bench": 1014.61,
+      "holding": "PG"
     }
   ],
   "trades": [
@@ -4129,6 +4135,12 @@
       "value": 1241.62,
       "bench": 1009.2,
       "holding": "PG"
+    },
+    {
+      "date": "2026-08-04",
+      "value": 1234.04,
+      "bench": 1014.61,
+      "holding": "PG"
     }
   ],
   "strategy": {
@@ -4137,5 +4149,5 @@
     "backtest_cagr": "+13.9%/yr since 2010 \u00b7 +9.7%/yr 2024+",
     "backtest_maxdd": "-57% (2010 era) \u00b7 verdict MIXED \u2014 this live run decides"
   },
-  "thoughts": "I'm holding PG. Most oversold mega-cap (z < -1.5) \u2014 buying the dip. I bought at $141.93; it's now $144.98 (+2.1% since I got in). Closest challenger on my list is AAPL, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
+  "thoughts": "I'm holding PG. Most oversold mega-cap (z < -1.5) \u2014 buying the dip. I bought at $141.93; it's now $144.09 (+1.5% since I got in). Closest challenger on my list is UNH, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
 }

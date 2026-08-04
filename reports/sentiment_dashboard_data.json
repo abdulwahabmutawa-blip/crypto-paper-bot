@@ -1,27 +1,27 @@
 {
-  "generated_utc": "2026-08-04T13:19:22+00:00",
+  "generated_utc": "2026-08-04T13:32:39+00:00",
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "live_ts": "2026-08-04T13:19:22+00:00",
+  "live_ts": "2026-08-04T13:32:39+00:00",
   "current": {
-    "date": "2026-08-03",
-    "value": 982.81,
-    "bench": 1009.26,
-    "holding": "CRWV"
+    "date": "2026-08-04",
+    "value": 1026.81,
+    "bench": 1014.66,
+    "holding": "PLTR"
   },
   "board": [
     {
       "sym": "PLTR",
-      "price": 125.65,
+      "price": 148.45,
       "line": "euphoric \u00b7 blowout earnings AI commercial surge",
-      "tag": "candidate",
+      "tag": "HELD",
       "on": true,
-      "pick": false,
+      "pick": true,
       "fill": 40
     },
     {
       "sym": "SNAP",
-      "price": 5.04,
+      "price": 5.58,
       "line": "euphoric \u00b7 earnings beat strong forecast jump",
       "tag": "candidate",
       "on": true,
@@ -3981,27 +3981,15 @@
       "value": 982.81,
       "bench": 1009.26,
       "holding": "CRWV"
+    },
+    {
+      "ts": "2026-08-04T13:32:39+00:00",
+      "value": 1026.81,
+      "bench": 1014.66,
+      "holding": "PLTR"
     }
   ],
   "trades": [
-    {
-      "date": "2026-07-17",
-      "action": "SELL",
-      "ticker": "PYPL",
-      "price": 56.88,
-      "units": 17.7022,
-      "value": 1006.9,
-      "reason": "Hype faded [restated: RTH fill at 14:30 bar]"
-    },
-    {
-      "date": "2026-07-17",
-      "action": "BUY",
-      "ticker": "AAPL",
-      "price": 332.27,
-      "units": 3.0304,
-      "value": 1006.9,
-      "reason": "Grok: AAPL euphoric \u2014 surpasses Nvidia (scan 2026-07-17T18:32) [units restated for corrected cash]"
-    },
     {
       "date": "2026-07-20",
       "action": "SELL",
@@ -4163,6 +4151,24 @@
       "units": 11.46,
       "value": 981.15,
       "reason": "Grok: CRWV euphoric \u2014 AI infra name in midday big movers (scan 2026-08-03T19:44)"
+    },
+    {
+      "date": "2026-08-04",
+      "action": "SELL",
+      "ticker": "CRWV",
+      "price": 89.6,
+      "units": 11.46,
+      "value": 1026.81,
+      "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
+    },
+    {
+      "date": "2026-08-04",
+      "action": "BUY",
+      "ticker": "PLTR",
+      "price": 148.45,
+      "units": 6.9169,
+      "value": 1026.81,
+      "reason": "Grok: PLTR euphoric \u2014 blowout earnings AI commercial surge (scan 2026-08-04T08:09)"
     }
   ],
   "history": [
@@ -4262,9 +4268,15 @@
       "value": 982.81,
       "bench": 1009.26,
       "holding": "CRWV"
+    },
+    {
+      "date": "2026-08-04",
+      "value": 1026.81,
+      "bench": 1014.66,
+      "holding": "PLTR"
     }
   ],
-  "thoughts": "I'm riding CRWV because the Watcher's latest scan of X and the news says the crowd is most excited about it right now. I know hype is the weakest evidence there is \u2014 so my rules are the strictest in the fleet: the moment the excitement fades from the scans I sell, and if I'm down 10% from my buy price I sell no matter what.",
+  "thoughts": "I'm riding PLTR because the Watcher's latest scan of X and the news says the crowd is most excited about it right now. I know hype is the weakest evidence there is \u2014 so my rules are the strictest in the fleet: the moment the excitement fades from the scans I sell, and if I'm down 10% from my buy price I sell no matter what.",
   "strategy": {
     "name": "Hype Trader \u2014 rides the Watcher's reads, on trial",
     "rule": "Hold the top euphoric symbol from the Watcher's 8-hour Grok scans while it stays euphoric; -10% hard stop; Watcher severe verdict -> cash",
