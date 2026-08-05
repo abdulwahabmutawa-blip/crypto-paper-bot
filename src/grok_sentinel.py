@@ -261,7 +261,8 @@ def main():
     VERDICT.write_text(json.dumps({
         "ts": scan["ts"], "risk_level": scan["risk_level"],
         "risk_alerts": scan["risk_alerts"],
-        "note": "advisory only — no bot consumes this yet (v2 agenda)",
+        "note": "consumed by every risk-gated bot via sentinel_gate.severe(); "
+                "verdicts older than 24h are treated as UNKNOWN, not calm",
     }, indent=2))
     render(st)
     print(f"[sentinel] scan done — risk {scan['risk_level']}, "

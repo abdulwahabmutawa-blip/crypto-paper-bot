@@ -18,6 +18,8 @@ import pandas as pd
 import yfinance as yf
 
 import config
+import crypto_prices
+import risk_common
 
 STATE = config.DATA / "crypto_state.json"
 COINS = ["BTC-USD", "ETH-USD", "SOL-USD", "DOGE-USD", "AVAX-USD",
@@ -31,17 +33,31 @@ START_CASH = 1000.0
 #                     harvesting bounces; nothing oversold -> cash.
 # Only tested variant profitable in the 2024+ chop (+9.2%/yr).
 MA_N, MOM_N, Z_N, Z_ENTRY = 200, 7, 20, -1.25
+# Churn brake (audit 2026-08-05: 71 trades in 19 days, all "signal flips" —
+# with 25bps costs the bot's +6.2% became -1.1%). A challenger must beat the
+# incumbent CLEARLY, not merely rank above it.
+HYST = 1.25       # TREND: challenger momentum must be > 1.25x the incumbent's
+Z_HYST = 0.50     # CHOP: challenger z must be this much deeper than incumbent's
 
 
 def fetch() -> pd.DataFrame:
+    """Daily closes: Kraken (real exchange bars) first, Yahoo fallback."""
+    k = crypto_prices.daily(COINS)
+    if k is not None and len(k) >= MA_N:
+        return k.ffill()
+    if k is not None:
+        print(f"[crypto-live] Kraken history too short ({len(k)} rows) — Yahoo fallback")
     raw = yf.download(COINS, period="15mo", auto_adjust=True, progress=False)
     close = raw["Close"] if isinstance(raw.columns, pd.MultiIndex) else raw
     return close.dropna(how="all").ffill()
 
 
 def fetch_live() -> tuple[dict, str]:
-    """Latest intraday quote per coin (Yahoo 5-minute bars, near-real-time
-    for crypto). Returns ({coin: price}, iso_timestamp_utc)."""
+    """Latest trade per coin: Kraken ticker first, Yahoo 5m fallback.
+    Returns ({coin: price}, iso_timestamp_utc)."""
+    k = crypto_prices.live(COINS)
+    if k:
+        return k, datetime.now(timezone.utc).isoformat(timespec="seconds")
     raw = yf.download(COINS, period="1d", interval="5m", auto_adjust=True,
                       progress=False)
     close = raw["Close"] if isinstance(raw.columns, pd.MultiIndex) else raw
@@ -114,31 +130,43 @@ def init_state(close, pick, board) -> dict:
     return st
 
 
-def update(st, close, pick, board) -> dict:
+def update(st, close, pick, board, cash_reason=None) -> dict:
     asof = str(close.index[-1].date())
     # value before any switch
     cur_px = board[st["holding"]]["price"] if st["holding"] != "CASH" else None
 
     if pick != st["holding"]:
-        # liquidate current
-        value = st["cash"] if st["holding"] == "CASH" else st["units"] * cur_px
+        # liquidate current (25bps fee per side — the audit's cost model)
+        value = st["cash"]
         if st["holding"] != "CASH":
+            gross = st["units"] * cur_px
+            f = risk_common.fee(st["holding"], gross)
+            value += gross - f
+            st["costs_paid"] = round(st.get("costs_paid", 0.0) + f, 4)
             st["trades"].append({"date": asof, "action": "SELL",
-                                 "ticker": st["holding"], "price": cur_px,
+                                 "ticker": st["holding"],
+                                 "price": round(cur_px, 8),
                                  "units": round(st["units"], 6),
-                                 "value": round(value, 2),
+                                 "value": round(gross, 2),
+                                 "fee": round(f, 2),
                                  "reason": "Signal flip"})
         if pick == "CASH":
             st["holding"], st["units"], st["cash"] = "CASH", 0.0, value
             st["trades"].append({"date": asof, "action": "TO CASH", "ticker": "—",
                                  "price": 0, "units": 0, "value": round(value, 2),
-                                 "reason": "All 8 coins falling on the week — cash until one rises"})
+                                 "reason": cash_reason or
+                                 "All 8 coins falling on the week — cash until one rises"})
         else:
             px = board[pick]["price"]
-            st["holding"], st["units"], st["cash"] = pick, value / px, 0.0
+            f = risk_common.fee(pick, value)
+            spend = value - f
+            st["costs_paid"] = round(st.get("costs_paid", 0.0) + f, 4)
+            st["holding"], st["units"], st["cash"] = pick, spend / px, 0.0
             st["trades"].append({"date": asof, "action": "BUY", "ticker": pick,
-                                 "price": px, "units": round(st["units"], 6),
-                                 "value": round(value, 2),
+                                 "price": round(px, 8),
+                                 "units": round(st["units"], 6),
+                                 "value": round(spend, 2),
+                                 "fee": round(f, 2),
                                  "reason": f"Strongest eligible coin "
                                            f"({board[pick]['mom_pct']:+.1f}% 7d momentum)"})
 
@@ -168,6 +196,8 @@ def emit(st, board, pick, live_ts="", regime="") -> None:
         "regime": regime,
         "intraday": st.get("intraday", []),
         "trades": st["trades"][-20:], "history": st["history"],
+        "costs_paid": st.get("costs_paid", 0.0),
+        "frozen": st.get("frozen"),
         "thoughts": (
             ("Right now I'm in TREND mode: Bitcoin is above its 200-day average, "
              "which historically means crypto is in an uptrend — so my rule is to "
@@ -206,19 +236,60 @@ def main():
     # Override today's row with LIVE quotes so momentum, ranking, and trade
     # prices all reflect right now, not yesterday's close.
     live, live_ts = fetch_live()
+    if not live:
+        # Guard (audit 2026-08-05: this bot had none): a dead live feed means
+        # stale ranks and phantom fills — hold everything, try next cycle.
+        print("[crypto-live] no live quotes from any source — cycle skipped")
+        return
     for c, p in live.items():
         close.iloc[-1, close.columns.get_loc(c)] = p
     pick, board, regime = signal(close)
     import sentinel_gate
+    gate_state, gate_detail = sentinel_gate.status()
+    if gate_state != "ok":
+        print(f"[crypto-live] WATCHER {gate_state.upper()}: {gate_detail}")
     is_severe, why = sentinel_gate.severe()
     if is_severe and pick != "CASH":
         print(f"[crypto-live] {why} -> forcing CASH")
         pick = "CASH"
     st = load_state()
+    cash_reason = None
+    if st is not None:
+        held = st["holding"]
+        # Churn brake: don't swap coins on a marginal re-rank. The incumbent
+        # keeps its seat unless it's disqualified or clearly outgunned.
+        if pick not in ("CASH", held) and held != "CASH":
+            b_new, b_cur = board[pick], board[held]
+            if regime == "TREND":
+                if b_cur["mom_pct"] > 0 and b_new["mom_pct"] < HYST * b_cur["mom_pct"]:
+                    print(f"[crypto-live] churn brake: {pick} mom "
+                          f"{b_new['mom_pct']:+.1f}% < {HYST}x incumbent "
+                          f"{held} {b_cur['mom_pct']:+.1f}% — holding")
+                    pick = held
+            else:
+                if b_cur["z"] < Z_ENTRY and b_new["z"] > b_cur["z"] - Z_HYST:
+                    print(f"[crypto-live] churn brake: {pick} z {b_new['z']:+.2f} "
+                          f"not {Z_HYST} deeper than {held} {b_cur['z']:+.2f} — holding")
+                    pick = held
+        # R1 kill floor, code-enforced (audit 2026-08-05)
+        cur_val = st.get("cash", 0.0) if held == "CASH" \
+            else st.get("units", 0.0) * board[held]["price"]
+        if st.get("frozen"):
+            pick = "CASH"
+            cash_reason = "Book frozen at the R1 kill floor — no further trades"
+        elif risk_common.r1_breached(cur_val):
+            pick = "CASH"
+            cash_reason = risk_common.r1_reason(cur_val)
+            print(f"[crypto-live] {cash_reason}")
     if st is None:
         st = init_state(close, pick, board)
         print(f"[crypto-live] NEW sim {st['created']} — opening position: {pick}")
-    st = update(st, close, pick, board)
+    st = update(st, close, pick, board, cash_reason)
+    if cash_reason and "R1 KILL FLOOR" in cash_reason and st["holding"] == "CASH" \
+            and not st.get("frozen"):
+        st["frozen"] = {"date": st["history"][-1]["date"] if st["history"] else "",
+                        "rule": "R1 kill floor (kill_criteria.md)"}
+        print("[crypto-live] book FROZEN — un-freezing is a human decision")
     STATE.write_text(json.dumps(st, indent=2))
     emit(st, board, pick, live_ts, regime)
     print(f"[crypto-live] regime: {regime}")

@@ -22,6 +22,7 @@ import yfinance as yf
 
 import config
 import market_hours
+import risk_common
 
 STATE = config.DATA / "sentiment_state.json"
 SENTINEL = config.DATA / "sentinel_state.json"
@@ -81,18 +82,27 @@ def main():
                       + ([st["holding"]] if st["holding"] != "CASH" else []))
     tradeable = [t for t in cand_map if t in px]
 
-    def sell(reason):
+    def sell(reason) -> bool:
+        """Returns True only if the sale actually filled. A missing quote
+        used to liquidate silently AT ENTRY PRICE with no trade record —
+        P/L erased, $0 wipe if entry_price was unset (audit 2026-08-05).
+        Now: no quote, no trade, position held, loud log."""
         p = px.get(st["holding"])
         if p is None:
-            st["cash"], st["holding"], st["units"] = st["units"] * (st["entry_price"] or 0), "CASH", 0.0
-            return
-        val = st["units"] * p
+            print(f"[{KEY}] held {st['holding']} has no quote — sale deferred, "
+                  f"position kept, nothing recorded")
+            return False
+        gross = st["units"] * p
+        f = risk_common.fee(st["holding"], gross)
+        st["costs_paid"] = round(st.get("costs_paid", 0.0) + f, 4)
         st["trades"].append({"date": today, "action": "SELL",
-                             "ticker": st["holding"], "price": round(p, 2),
+                             "ticker": st["holding"], "price": round(p, 8),
                              "units": round(st["units"], 4),
-                             "value": round(val, 2), "reason": reason})
-        st["cash"], st["holding"], st["units"] = val, "CASH", 0.0
+                             "value": round(gross, 2), "fee": round(f, 2),
+                             "reason": reason})
+        st["cash"], st["holding"], st["units"] = gross - f, "CASH", 0.0
         st["entry_price"] = None
+        return True
 
     import market_hours
 
@@ -109,9 +119,25 @@ def main():
     if severe and st["holding"] != "CASH" and market_hours.can_fill(st["holding"]):
         sell("Watcher risk verdict SEVERE — no hype positions in a crisis")
 
+    # 2.5) R1 kill floor, code-enforced (audit 2026-08-05)
+    r1_hit = False
+    if not st.get("frozen"):
+        hp = px.get(st["holding"]) if st["holding"] != "CASH" else None
+        cur_val = st["cash"] if st["holding"] == "CASH" \
+            else (st["units"] * hp if hp is not None else None)
+        if cur_val is not None and risk_common.r1_breached(cur_val):
+            r1_hit = True
+            print(f"[{KEY}] {risk_common.r1_reason(cur_val)}")
+            if st["holding"] != "CASH" and market_hours.can_fill(st["holding"]):
+                sell(risk_common.r1_reason(cur_val))
+            if st["holding"] == "CASH":
+                st["frozen"] = {"date": today,
+                                "rule": "R1 kill floor (kill_criteria.md)"}
+                print(f"[{KEY}] book FROZEN — un-freezing is a human decision")
+
     # 3) decide desired holding
     blacklisted = {t for t, ts in st["stopped"].items() if ts == scan_ts}
-    if severe:
+    if severe or r1_hit or st.get("frozen"):
         desired = "CASH"
     elif st["holding"] != "CASH" and st["holding"] in tradeable:
         desired = st["holding"]                     # hype still alive -> ride it
@@ -125,24 +151,32 @@ def main():
         print(f"[{KEY}] rotation {st['holding']} -> {desired} deferred — "
               f"US market closed, will fill at the open")
     if desired != st["holding"] and sell_ok and buy_ok:
+        rotated = True
         if st["holding"] != "CASH":
-            sell("Hype faded — symbol dropped off Grok's euphoric list")
-        if desired != "CASH":
+            rotated = sell("Hype faded — symbol dropped off Grok's euphoric list")
+        if rotated and desired != "CASH":
             p = px[desired]
             h = cand_map[desired]
-            invest = st["cash"]
+            f = risk_common.fee(desired, st["cash"])
+            invest = st["cash"] - f
+            st["costs_paid"] = round(st.get("costs_paid", 0.0) + f, 4)
             st["units"] = invest / p
             st["cash"] = 0.0
             st["holding"] = desired
             st["entry_price"] = p
             st["trades"].append({"date": today, "action": "BUY",
-                                 "ticker": desired, "price": round(p, 2),
+                                 "ticker": desired, "price": round(p, 8),
                                  "units": round(st["units"], 4),
-                                 "value": round(invest, 2),
+                                 "value": round(invest, 2), "fee": round(f, 2),
                                  "reason": f"Grok: {h['symbol']} euphoric — "
                                            f"{h.get('note','')} (scan {scan_ts[:16]})"})
 
-    # 4) mark to market
+    # 4) mark to market (guard: never mark a holding that has no quote)
+    if st["holding"] != "CASH" and st["holding"] not in px:
+        print(f"[{KEY}] held {st['holding']} has no quote — mark skipped, "
+              f"state saved unchanged")
+        STATE.write_text(json.dumps(st, indent=2))
+        return
     val = st["cash"] if st["holding"] == "CASH" else st["units"] * px[st["holding"]]
     bench = st["bench_units"] * px[BENCH]
     # date the mark by the asset that determines its value (crypto trades
@@ -199,6 +233,8 @@ def main():
         },
         "intraday": st["intraday"], "trades": st["trades"][-20:],
         "history": st["history"],
+        "costs_paid": st.get("costs_paid", 0.0),
+        "frozen": st.get("frozen"),
         "thoughts": (
             (f"I'm riding {st['holding'].replace('-USD','')} because the Watcher's "
              f"latest scan of X and the news says the crowd is most excited about "

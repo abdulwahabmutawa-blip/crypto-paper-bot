@@ -11,10 +11,16 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-sys.path.insert(0, r"C:\Users\Hobii\claude\trading\crypto-paper-bot\src")
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 import config
 import market_hours
+import risk_common
 import selection_engine
+
+# Tests 1-9 predate the fee model and assert exact zero-fee cash math;
+# they run with fees off. Tests 10-11 turn them back on and test them.
+risk_common.EQUITY_BPS = 0.0
+risk_common.CRYPTO_BPS = 0.0
 
 TMP = Path(tempfile.mkdtemp())
 config.DATA = TMP / "data"; config.DATA.mkdir()
@@ -172,5 +178,37 @@ assert (config.REPORTS / "t9_dashboard.html").exists(), "must still render"
 payload = json.loads((config.REPORTS / "t9_dashboard_data.json").read_text())
 assert "feed is running behind" in payload["thoughts"], "must say so on the page"
 print("9. regressed feed OK (no trade, no bad mark, still alive + rendering)")
+
+# ---- 10. transaction costs: every fill pays its fee, ledger records it
+risk_common.EQUITY_BPS = 10.0
+FRAME["df"] = mk_frame(250, path)
+st = selection_engine.run(spec("t10", lambda c, h: "AAA"))
+fee0 = 1000 * 10 / 10_000                      # $1 on the $1,000 entry
+assert abs(st["costs_paid"] - fee0) < 1e-9, f"costs_paid {st['costs_paid']}"
+assert st["trades"][-1]["fee"] == round(fee0, 2), "fee missing from trade"
+assert abs(st["history"][-1]["value"] - (1000 - fee0)) < 0.01, \
+    "mark must reflect the fee paid"
+FRAME["df"] = mk_frame(251, path + [path[-1]])
+st = selection_engine.run(spec("t10", lambda c, h: "CASH"))
+assert st["costs_paid"] > fee0, "sell side must also pay a fee"
+assert st["trades"][-1]["reason"] != "", "exit recorded"
+print(f"10. cost model OK (fees ${st['costs_paid']:.2f} across entry+exit)")
+
+# ---- 11. R1 kill floor: breach liquidates, freezes, and stays frozen
+risk_common.EQUITY_BPS = 0.0
+crash = path + [px * 0.60]                     # position falls ~40% -> < $750
+FRAME["df"] = mk_frame(250, path)
+selection_engine.run(spec("t11", lambda c, h: "AAA"))
+FRAME["df"] = mk_frame(251, crash)
+st = selection_engine.run(spec("t11", lambda c, h: "AAA"))
+assert st["holding"] == "CASH", "R1 breach must liquidate"
+assert st.get("frozen"), "R1 breach must freeze the book"
+assert any(t["reason"].startswith("R1 KILL FLOOR") for t in st["trades"]), \
+    "liquidation must carry the R1 reason"
+FRAME["df"] = mk_frame(252, crash + [px])      # price fully recovers
+st = selection_engine.run(spec("t11", lambda c, h: "AAA"))
+assert st["holding"] == "CASH" and st.get("frozen"), \
+    "frozen book must NEVER trade again, even on recovery"
+print("11. R1 kill floor OK (liquidated, frozen, stays frozen)")
 
 print("ALL PASS")

@@ -25,11 +25,16 @@ import yfinance as yf
 import config
 import sentinel_gate
 import market_hours
+import risk_common
 
 UNIVERSE = ["TQQQ", "SOXL", "UPRO", "NVDA", "TSLA", "MSTR", "COIN", "PLTR",
             "BTC-USD", "ETH-USD", "SOL-USD", "USO", "GLD", "SLV"]
 BENCH = "SPY"
 LOOK, TRAIL, HYST = 20, 0.08, 1.25
+# Audit 2026-08-05: both trailing stops re-bought the SAME ticker the SAME
+# day at the SAME price — the stop protected nothing. A stopped ticker now
+# cools off before this bot may touch it again.
+STOP_COOLDOWN_DAYS = 5
 START_CASH = 1000.0
 KEY = "hunter"
 STATE = config.DATA / f"{KEY}_state.json"
@@ -67,37 +72,68 @@ def main():
               "trades": [], "history": [], "intraday": []}
         print(f"[{KEY}] NEW sim {today}")
 
+    # Guard (audit 2026-08-05): never act while the held ticker has no price.
+    if st["holding"] != "CASH" and (st["holding"] not in close.columns
+                                    or pd.isna(last[st["holding"]])):
+        print(f"[{KEY}] held ticker {st['holding']} has no price this cycle — "
+              f"cycle skipped (never trade or mark on a dead column)")
+        return
+
     def sell(reason):
         p = float(last[st["holding"]])
-        val = st["units"] * p
+        gross = st["units"] * p
+        f = risk_common.fee(st["holding"], gross)
+        st["costs_paid"] = round(st.get("costs_paid", 0.0) + f, 4)
         st["trades"].append({"date": today, "action": "SELL",
-                             "ticker": st["holding"], "price": round(p, 2),
+                             "ticker": st["holding"], "price": round(p, 8),
                              "units": round(st["units"], 4),
-                             "value": round(val, 2), "reason": reason})
-        st["cash"], st["holding"], st["units"] = val, "CASH", 0.0
+                             "value": round(gross, 2), "fee": round(f, 2),
+                             "reason": reason})
+        st["cash"], st["holding"], st["units"] = gross - f, "CASH", 0.0
         st["high_water"] = None
 
     import market_hours
 
     # 1) trailing stop (high-water follows price up, never down; the sell
-    #    itself waits until the holding's market can actually fill it)
+    #    itself waits until the holding's market can actually fill it).
+    #    A stop-out starts the cooldown clock for that ticker.
     if st["holding"] != "CASH" and st["holding"] in close.columns:
         p = float(last[st["holding"]])
         st["high_water"] = max(st["high_water"] or p, p)
         if p / st["high_water"] - 1 <= -TRAIL \
                 and market_hours.can_fill(st["holding"]):
+            stopped_ticker = st["holding"]
             sell(f"TRAILING STOP — fell {TRAIL:.0%} from its high-water mark")
+            st["stopped"] = {"ticker": stopped_ticker, "date": today}
 
-    # 2) Watcher severe gate
+    # 2) Watcher severe gate (surface silence — a stale Watcher is not calm)
+    gate_state, gate_detail = sentinel_gate.status()
+    if gate_state != "ok":
+        print(f"[{KEY}] WATCHER {gate_state.upper()}: {gate_detail}")
     is_severe, why = sentinel_gate.severe()
     if is_severe and st["holding"] != "CASH" \
             and market_hours.can_fill(st["holding"]):
         sell(why + " — hunter stands down in a crisis")
 
+    # 2.5) R1 kill floor, code-enforced (audit 2026-08-05: this bot was 13.5%
+    #      above the floor with nothing automated that would liquidate it)
+    r1_hit = False
+    cur_val = st["cash"] if st["holding"] == "CASH" \
+        else st["units"] * float(last[st["holding"]])
+    if not st.get("frozen") and risk_common.r1_breached(cur_val):
+        r1_hit = True
+        print(f"[{KEY}] {risk_common.r1_reason(cur_val)}")
+        if st["holding"] != "CASH" and market_hours.can_fill(st["holding"]):
+            sell(risk_common.r1_reason(cur_val))
+        if st["holding"] == "CASH":
+            st["frozen"] = {"date": today,
+                            "rule": "R1 kill floor (kill_criteria.md)"}
+            print(f"[{KEY}] book FROZEN — un-freezing is a human decision")
+
     # 3) hunt: decide the best bet
     top = score.idxmax() if len(score) else None
     desired = st["holding"]
-    if is_severe or top is None or score[top] <= 0:
+    if st.get("frozen") or r1_hit or is_severe or top is None or score[top] <= 0:
         desired = "CASH"
     elif st["holding"] == "CASH":
         desired = top
@@ -105,6 +141,21 @@ def main():
         cur = score.get(st["holding"], np.nan)
         if np.isnan(cur) or cur <= 0 or score[top] > HYST * cur:
             desired = top
+
+    # 3.5) stop-out cooldown: a freshly stopped ticker is untouchable for
+    #      STOP_COOLDOWN_DAYS — take the next-best positive score instead.
+    stop = st.get("stopped") or {}
+    if desired not in ("CASH",) and desired == stop.get("ticker"):
+        days = (pd.Timestamp(today) - pd.Timestamp(stop["date"])).days
+        if days < STOP_COOLDOWN_DAYS:
+            ranked = sorted(score.index, key=lambda x: -score[x])
+            alt = next((t for t in ranked
+                        if t != desired and float(score[t]) > 0), None)
+            print(f"[{KEY}] {desired} stopped out {days}d ago — cooling off "
+                  f"({STOP_COOLDOWN_DAYS}d); taking {alt or 'CASH'} instead")
+            desired = alt or "CASH"
+        else:
+            st.pop("stopped", None)
 
     sell_ok = st["holding"] == "CASH" or market_hours.can_fill(st["holding"])
     buy_ok = desired == "CASH" or market_hours.can_fill(desired)
@@ -117,13 +168,15 @@ def main():
                  f">{HYST}x better on reward/risk")
         if desired != "CASH":
             p = float(last[desired])
-            invest = st["cash"]
+            f = risk_common.fee(desired, st["cash"])
+            invest = st["cash"] - f
+            st["costs_paid"] = round(st.get("costs_paid", 0.0) + f, 4)
             st["units"], st["cash"] = invest / p, 0.0
             st["holding"], st["high_water"] = desired, p
             st["trades"].append({"date": today, "action": "BUY",
-                                 "ticker": desired, "price": round(p, 2),
+                                 "ticker": desired, "price": round(p, 8),
                                  "units": round(st["units"], 4),
-                                 "value": round(invest, 2),
+                                 "value": round(invest, 2), "fee": round(f, 2),
                                  "reason": f"Top reward/risk score "
                                            f"({score[desired]:.2f}) — "
                                            f"{NAMES.get(desired, desired)}, all-in"})
@@ -186,6 +239,8 @@ def main():
         },
         "intraday": st["intraday"], "trades": st["trades"][-20:],
         "history": st["history"],
+        "costs_paid": st.get("costs_paid", 0.0),
+        "frozen": st.get("frozen"),
         "thoughts": (
             (f"I'm all-in on {st['holding'].replace('-USD', '')} — right now it has the "
              f"best combination of 'going up' and 'not too wild' of the 14 things "

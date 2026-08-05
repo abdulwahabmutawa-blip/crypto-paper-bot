@@ -28,6 +28,7 @@ import yfinance as yf
 
 import config
 import market_hours
+import risk_common
 
 
 def _ann_factor(ticker: str) -> float:
@@ -126,6 +127,9 @@ def run(spec, start_cash=1000.0):
     # stays deliberately unwired as the control group).
     if spec.get("risk_gate", True):
         import sentinel_gate
+        gate_state, gate_detail = sentinel_gate.status()
+        if gate_state != "ok":
+            print(f"[{key}] WATCHER {gate_state.upper()}: {gate_detail}")
         is_severe, why = sentinel_gate.severe()
         if is_severe and pick != "CASH":
             print(f"[{key}] {why} -> forcing CASH")
@@ -202,6 +206,20 @@ def run(spec, start_cash=1000.0):
               "trades": [], "history": [], "intraday": []}
         print(f"[{key}] NEW sim {asof}")
 
+    # ---- R1 kill floor (code-enforced; audit 2026-08-05) --------------------
+    # A frozen book never trades again; a book at/below $750 liquidates now.
+    # The freeze is only recorded once the liquidation actually fills — a
+    # floor breach while the market is closed defers like any other trade.
+    r1_hit = False
+    cur_val = st["cash"] + (0.0 if st["holding"] == "CASH"
+                            else st["units"] * float(last[st["holding"]]))
+    if st.get("frozen"):
+        pick = "CASH"
+    elif risk_common.r1_breached(cur_val):
+        r1_hit = True
+        pick = "CASH"
+        print(f"[{key}] {risk_common.r1_reason(cur_val)}")
+
     # ---- Risk overlay (freqtrade pattern: risk is SPEC config, not signal code) ----
     # trailing: force CASH if price falls X% from the high-water mark since
     # entry. The stop is only RECORDED (st['stopped']) when the sell actually
@@ -212,6 +230,8 @@ def run(spec, start_cash=1000.0):
     risk = spec.get("risk") or {}
     trail = risk.get("trailing")
     sell_reason, stop_fired = "Signal flip", False
+    if r1_hit:
+        sell_reason = risk_common.r1_reason(cur_val)
     if trail and st["holding"] != "CASH":
         px = float(last[st["holding"]])
         st["hwm"] = max(st.get("hwm") or px, px)
@@ -247,11 +267,16 @@ def run(spec, start_cash=1000.0):
         value = st["cash"] + (0.0 if prev == "CASH"
                               else st["units"] * float(last[prev]))
         if prev != "CASH":
+            gross = st["units"] * float(last[prev])
+            sell_fee = risk_common.fee(prev, gross)
+            value -= sell_fee
+            st["costs_paid"] = round(st.get("costs_paid", 0.0) + sell_fee, 4)
             st["trades"].append({"date": asof, "action": "SELL",
                                  "ticker": prev,
-                                 "price": round(float(last[prev]), 2),
+                                 "price": round(float(last[prev]), 8),
                                  "units": round(st["units"], 4),
-                                 "value": round(st["units"] * float(last[prev]), 2),
+                                 "value": round(gross, 2),
+                                 "fee": round(sell_fee, 2),
                                  "reason": sell_reason})
             if stop_fired:
                 st["stopped"] = {"ticker": prev, "date": asof}
@@ -274,18 +299,27 @@ def run(spec, start_cash=1000.0):
                 v = r.rolling(90).std().iloc[-1] * (_ann_factor(pick) ** 0.5)
                 if pd.notna(v) and v > 0:
                     frac = min(1.0, vt / float(v))
-            spend = value * frac
-            st["holding"], st["units"], st["cash"] = pick, spend / p, value - spend
+            gross_spend = value * frac
+            buy_fee = risk_common.fee(pick, gross_spend)
+            spend = gross_spend - buy_fee
+            st["costs_paid"] = round(st.get("costs_paid", 0.0) + buy_fee, 4)
+            st["holding"], st["units"], st["cash"] = pick, spend / p, value - gross_spend
             if trail:
                 st["hwm"] = p
             reason = spec.get("buy_reason", "New signal pick")
             if frac < 0.999:
                 reason += f" · {frac:.0%} position (vol-targeted), rest cash"
             st["trades"].append({"date": asof, "action": "BUY", "ticker": pick,
-                                 "price": round(p, 2),
+                                 "price": round(p, 8),
                                  "units": round(st["units"], 4),
                                  "value": round(spend, 2),
+                                 "fee": round(buy_fee, 2),
                                  "reason": reason})
+
+    if r1_hit and st["holding"] == "CASH" and not st.get("frozen"):
+        st["frozen"] = {"date": asof, "value": round(cur_val, 2),
+                        "rule": "R1 kill floor (kill_criteria.md)"}
+        print(f"[{key}] book FROZEN — un-freezing is a human decision")
 
     val = st["cash"] + (0.0 if st["holding"] == "CASH"
                         else st["units"] * float(last[st["holding"]]))
@@ -314,7 +348,14 @@ def run(spec, start_cash=1000.0):
         "board_title": board_title, "meta": spec["meta"],
         "intraday": st["intraday"], "trades": st["trades"][-20:],
         "history": st["history"], "strategy": spec["strategy"],
-        "thoughts": (("⏳ My price feed is running behind right now (freshest "
+        "costs_paid": st.get("costs_paid", 0.0),
+        "frozen": st.get("frozen"),
+        "thoughts": ((f"🧊 This book is FROZEN: it hit the fleet's $"
+                      f"{risk_common.R1_FLOOR:,.0f} kill floor on "
+                      f"{st['frozen']['date']} and liquidated per the "
+                      "pre-registered rules. It will not trade again.\n\n")
+                     if st.get("frozen") else "")
+                    + (("⏳ My price feed is running behind right now (freshest "
                       f"confirmed price: {asof}). I'm holding steady and not "
                       "trading until it catches up — acting on stale prices is "
                       "how paper sims tell themselves comfortable lies.\n\n")
