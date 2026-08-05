@@ -52,12 +52,13 @@ def fetch() -> pd.DataFrame:
     return close.dropna(how="all").ffill()
 
 
-def fetch_live() -> tuple[dict, str]:
+def fetch_live() -> tuple[dict, str, dict]:
     """Latest trade per coin: Kraken ticker first, Yahoo 5m fallback.
-    Returns ({coin: price}, iso_timestamp_utc)."""
+    Returns ({coin: price}, iso_timestamp_utc, {coin: live spread bps})."""
     k = crypto_prices.live(COINS)
     if k:
-        return k, datetime.now(timezone.utc).isoformat(timespec="seconds")
+        prices, spreads = k
+        return prices, datetime.now(timezone.utc).isoformat(timespec="seconds"), spreads
     raw = yf.download(COINS, period="1d", interval="5m", auto_adjust=True,
                       progress=False)
     close = raw["Close"] if isinstance(raw.columns, pd.MultiIndex) else raw
@@ -66,7 +67,7 @@ def fetch_live() -> tuple[dict, str]:
     ts = close.index[-1]
     ts = ts.tz_convert("UTC") if ts.tzinfo else ts.tz_localize("UTC")
     return ({c: float(last[c]) for c in COINS if pd.notna(last[c])},
-            ts.isoformat(timespec="seconds"))
+            ts.isoformat(timespec="seconds"), {})
 
 
 def signal(close: pd.DataFrame) -> tuple[str, dict, str]:
@@ -140,7 +141,8 @@ def update(st, close, pick, board, cash_reason=None) -> dict:
         value = st["cash"]
         if st["holding"] != "CASH":
             gross = st["units"] * cur_px
-            f = risk_common.fee(st["holding"], gross)
+            f = risk_common.fee(st["holding"], gross,
+                                board[st["holding"]].get("spread_bps"))
             value += gross - f
             st["costs_paid"] = round(st.get("costs_paid", 0.0) + f, 4)
             st["trades"].append({"date": asof, "action": "SELL",
@@ -158,7 +160,7 @@ def update(st, close, pick, board, cash_reason=None) -> dict:
                                  "All 8 coins falling on the week — cash until one rises"})
         else:
             px = board[pick]["price"]
-            f = risk_common.fee(pick, value)
+            f = risk_common.fee(pick, value, board[pick].get("spread_bps"))
             spend = value - f
             st["costs_paid"] = round(st.get("costs_paid", 0.0) + f, 4)
             st["holding"], st["units"], st["cash"] = pick, spend / px, 0.0
@@ -235,7 +237,7 @@ def main():
     close = fetch()
     # Override today's row with LIVE quotes so momentum, ranking, and trade
     # prices all reflect right now, not yesterday's close.
-    live, live_ts = fetch_live()
+    live, live_ts, spreads = fetch_live()
     if not live:
         # Guard (audit 2026-08-05: this bot had none): a dead live feed means
         # stale ranks and phantom fills — hold everything, try next cycle.
@@ -244,6 +246,9 @@ def main():
     for c, p in live.items():
         close.iloc[-1, close.columns.get_loc(c)] = p
     pick, board, regime = signal(close)
+    for c in COINS:
+        if c in spreads:
+            board[c]["spread_bps"] = round(spreads[c], 2)
     import sentinel_gate
     gate_state, gate_detail = sentinel_gate.status()
     if gate_state != "ok":

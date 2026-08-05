@@ -16,14 +16,36 @@ than the unmodeled drag; books must feel the cost of their own churn.
 from __future__ import annotations
 
 R1_FLOOR = 750.0
-EQUITY_BPS = 10.0
-CRYPTO_BPS = 25.0
+EQUITY_BPS = 10.0        # commission-ish base, per side
+CRYPTO_BPS = 25.0        # ≈ Kraken taker tier, per side
+
+# Half the bid-ask spread is a real cost of every marketable order. Crypto
+# spreads come live from Kraken when the caller has them; equities use this
+# honest approximation table (bps of full spread, typical US session):
+EQUITY_SPREAD_BPS = {
+    "SPY": 1, "QQQ": 1, "IWM": 1, "TLT": 1, "GLD": 1, "BIL": 1, "SLV": 2,
+    "TQQQ": 3, "SOXL": 3, "UPRO": 3, "USO": 3, "DBC": 5,
+    "NVDA": 2, "TSLA": 3, "MSTR": 8, "COIN": 5, "PLTR": 4,
+    "AAPL": 1, "MSFT": 1, "AMZN": 1, "GOOG": 1, "META": 1, "WMT": 1, "PG": 1,
+}
+EQUITY_SPREAD_DEFAULT_BPS = 5.0   # unknown equity: assume mid-liquidity
+CRYPTO_SPREAD_DEFAULT_BPS = 8.0   # no live spread available: alt-coin-ish
 
 
-def fee(ticker: str, value: float) -> float:
-    """Transaction cost for one side of a fill, in dollars."""
-    bps = CRYPTO_BPS if str(ticker).endswith("-USD") else EQUITY_BPS
-    return abs(value) * bps / 10_000.0
+def fee(ticker: str, value: float, spread_bps: float | None = None) -> float:
+    """Transaction cost for one side of a fill, in dollars:
+    base (commission/taker) + half the bid-ask spread. Pass spread_bps when a
+    live measured spread exists (crypto via Kraken); otherwise the table or
+    default applies."""
+    t = str(ticker)
+    if t.endswith("-USD"):
+        base = CRYPTO_BPS
+        spread = CRYPTO_SPREAD_DEFAULT_BPS if spread_bps is None else spread_bps
+    else:
+        base = EQUITY_BPS
+        spread = EQUITY_SPREAD_BPS.get(t, EQUITY_SPREAD_DEFAULT_BPS) \
+            if spread_bps is None else spread_bps
+    return abs(value) * (base + spread / 2.0) / 10_000.0
 
 
 def r1_breached(value: float) -> bool:

@@ -62,24 +62,35 @@ def daily(coins: list[str]) -> pd.DataFrame | None:
     return df if not df.empty else None
 
 
-def live(coins: list[str]) -> dict | None:
-    """Latest trade price per coin from one Ticker call. None on failure."""
+def live(coins: list[str]) -> tuple[dict, dict] | None:
+    """One Ticker call -> ({coin: last price}, {coin: full spread in bps}).
+    The spread is a real, measured execution cost — half of it is charged on
+    every fill (risk_common.fee). None on failure."""
     pairs = [PAIRS[c] for c in coins if c in PAIRS]
     if len(pairs) != len(coins):
         return None
     res = _get(f"{BASE}/Ticker?pair={','.join(pairs)}")
     if not res:
         return None
-    # response keys are Kraken's internal names in request order is NOT
+    # response keys are Kraken's internal names and their order is NOT
     # guaranteed — match by normalized pair name instead
     def norm(k: str) -> str:
         return k.replace("XXBT", "XBT").replace("XXDG", "XDG").replace(
             "ZUSD", "USD").replace("XETH", "ETH").replace("XXRP", "XRP")
     by_pair = {norm(k): v for k, v in res.items()}
-    out = {}
+    prices, spreads = {}, {}
     for c in coins:
         v = by_pair.get(PAIRS[c])
         if not v:
             return None
-        out[c] = float(v["c"][0])  # c = [last trade price, lot volume]
-    return out
+        last = float(v["c"][0])   # c = [last trade price, lot volume]
+        prices[c] = last
+        try:
+            bid, ask = float(v["b"][0]), float(v["a"][0])
+            mid = (bid + ask) / 2.0
+            spreads[c] = max(0.0, (ask - bid) / mid * 10_000.0) if mid > 0 else None
+        except Exception:
+            spreads[c] = None
+        if spreads[c] is None:
+            spreads.pop(c)
+    return prices, spreads

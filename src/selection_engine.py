@@ -271,13 +271,21 @@ def run(spec, start_cash=1000.0):
             sell_fee = risk_common.fee(prev, gross)
             value -= sell_fee
             st["costs_paid"] = round(st.get("costs_paid", 0.0) + sell_fee, 4)
-            st["trades"].append({"date": asof, "action": "SELL",
-                                 "ticker": prev,
-                                 "price": round(float(last[prev]), 8),
-                                 "units": round(st["units"], 4),
-                                 "value": round(gross, 2),
-                                 "fee": round(sell_fee, 2),
-                                 "reason": sell_reason})
+            trade = {"date": asof, "action": "SELL",
+                     "ticker": prev,
+                     "price": round(float(last[prev]), 8),
+                     "units": round(st["units"], 4),
+                     "value": round(gross, 2),
+                     "fee": round(sell_fee, 2),
+                     "reason": sell_reason}
+            if spec.get("broker_shadow"):
+                import alpaca_broker
+                bf = alpaca_broker.shadow_fill("SELL", prev, gross)
+                if bf:
+                    trade["broker_fill"] = bf["price"]
+                    trade["fill_gap_bps"] = round(
+                        (bf["price"] / float(last[prev]) - 1) * 10_000, 2)
+            st["trades"].append(trade)
             if stop_fired:
                 st["stopped"] = {"ticker": prev, "date": asof}
         if pick == "CASH":
@@ -309,12 +317,20 @@ def run(spec, start_cash=1000.0):
             reason = spec.get("buy_reason", "New signal pick")
             if frac < 0.999:
                 reason += f" · {frac:.0%} position (vol-targeted), rest cash"
-            st["trades"].append({"date": asof, "action": "BUY", "ticker": pick,
-                                 "price": round(p, 8),
-                                 "units": round(st["units"], 4),
-                                 "value": round(spend, 2),
-                                 "fee": round(buy_fee, 2),
-                                 "reason": reason})
+            trade = {"date": asof, "action": "BUY", "ticker": pick,
+                     "price": round(p, 8),
+                     "units": round(st["units"], 4),
+                     "value": round(spend, 2),
+                     "fee": round(buy_fee, 2),
+                     "reason": reason}
+            if spec.get("broker_shadow"):
+                import alpaca_broker
+                bf = alpaca_broker.shadow_fill("BUY", pick, spend)
+                if bf:
+                    trade["broker_fill"] = bf["price"]
+                    trade["fill_gap_bps"] = round(
+                        (bf["price"] / p - 1) * 10_000, 2)
+            st["trades"].append(trade)
 
     if r1_hit and st["holding"] == "CASH" and not st.get("frozen"):
         st["frozen"] = {"date": asof, "value": round(cur_val, 2),

@@ -48,6 +48,10 @@ SPEC = {
     "signal": signal,
     "cash_reason": "Bounce harvested / nothing oversold — waiting in cash",
     "buy_reason": "Most oversold mega-cap (z < -1.5) — buying the dip",
+    # Pilot (2026-08-05): mirror every trade to an Alpaca PAPER account and
+    # record the real matching-engine fill beside the sim fill — measures the
+    # execution-realism gap per trade. No-op until Alpaca keys are configured.
+    "broker_shadow": True,
     "meta": {
         "title": "Mean-Reversion Mega-Caps — $1,000 Challenge",
         "badge": "PAPER SIM · ANTI-MOMENTUM",

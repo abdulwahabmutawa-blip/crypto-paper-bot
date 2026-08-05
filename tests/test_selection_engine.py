@@ -21,6 +21,9 @@ import selection_engine
 # they run with fees off. Tests 10-11 turn them back on and test them.
 risk_common.EQUITY_BPS = 0.0
 risk_common.CRYPTO_BPS = 0.0
+risk_common.EQUITY_SPREAD_DEFAULT_BPS = 0.0
+risk_common.CRYPTO_SPREAD_DEFAULT_BPS = 0.0
+risk_common.EQUITY_SPREAD_BPS = {}
 
 TMP = Path(tempfile.mkdtemp())
 config.DATA = TMP / "data"; config.DATA.mkdir()
@@ -210,5 +213,14 @@ st = selection_engine.run(spec("t11", lambda c, h: "AAA"))
 assert st["holding"] == "CASH" and st.get("frozen"), \
     "frozen book must NEVER trade again, even on recovery"
 print("11. R1 kill floor OK (liquidated, frozen, stays frozen)")
+
+# ---- 12. spread-aware fee: half the spread rides on top of the base
+risk_common.EQUITY_BPS = 10.0
+risk_common.CRYPTO_BPS = 25.0
+risk_common.EQUITY_SPREAD_BPS = {"ZZZ": 4}
+assert abs(risk_common.fee("ZZZ", 1000) - 1.20) < 1e-9, "table spread"
+assert abs(risk_common.fee("BTC-USD", 1000, spread_bps=2.0) - 2.60) < 1e-9, \
+    "live measured spread must override the default"
+print("12. spread fee OK (base + half-spread)")
 
 print("ALL PASS")
