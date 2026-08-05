@@ -1,97 +1,97 @@
 {
-  "generated_utc": "2026-08-05T14:17:51+00:00",
+  "generated_utc": "2026-08-05T14:32:08+00:00",
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "live_ts": "2026-08-05T14:17:51+00:00",
+  "live_ts": "2026-08-05T14:32:08+00:00",
   "current": {
     "date": "2026-08-05",
-    "value": 1081.41,
-    "bench": 1000.8,
-    "holding": "CASH"
+    "value": 1078.5,
+    "bench": 997.57,
+    "holding": "LINK-USD"
   },
   "board": {
     "BTC-USD": {
-      "price": 64482.0,
-      "ma200": 70655.679,
-      "gap_pct": -8.74,
-      "mom_pct": 0.91,
-      "z": 0.12,
+      "price": 64274.1,
+      "ma200": 70654.6395,
+      "gap_pct": -9.03,
+      "mom_pct": 0.58,
+      "z": -0.08,
       "above_ma": false,
       "rank": 6,
       "spread_bps": 0.02
     },
     "ETH-USD": {
-      "price": 1878.57,
-      "ma200": 2073.7921,
-      "gap_pct": -9.41,
-      "mom_pct": -1.55,
-      "z": -0.25,
+      "price": 1868.2,
+      "ma200": 2073.7402,
+      "gap_pct": -9.91,
+      "mom_pct": -2.1,
+      "z": -0.56,
       "above_ma": false,
       "rank": 5,
-      "spread_bps": 0.27
+      "spread_bps": 0.05
     },
     "SOL-USD": {
-      "price": 73.98,
-      "ma200": 84.6639,
-      "gap_pct": -12.62,
-      "mom_pct": 0.56,
-      "z": -0.49,
+      "price": 73.69,
+      "ma200": 84.6625,
+      "gap_pct": -12.96,
+      "mom_pct": 0.16,
+      "z": -0.64,
       "above_ma": false,
       "rank": 4,
-      "spread_bps": 1.35
+      "spread_bps": 1.36
     },
     "DOGE-USD": {
-      "price": 0.07,
+      "price": 0.0697,
       "ma200": 0.0932,
-      "gap_pct": -24.93,
-      "mom_pct": -0.12,
-      "z": -0.75,
+      "gap_pct": -25.18,
+      "mom_pct": -0.45,
+      "z": -0.9,
       "above_ma": false,
       "rank": 3,
-      "spread_bps": 0.86
+      "spread_bps": 1.52
     },
     "AVAX-USD": {
-      "price": 6.636,
-      "ma200": 8.6004,
-      "gap_pct": -22.84,
-      "mom_pct": 3.35,
-      "z": 0.8,
+      "price": 6.618,
+      "ma200": 8.6003,
+      "gap_pct": -23.05,
+      "mom_pct": 3.07,
+      "z": 0.69,
       "above_ma": false,
       "rank": 7,
-      "spread_bps": 1.51
+      "spread_bps": 3.02
     },
     "LINK-USD": {
-      "price": 8.1668,
-      "ma200": 8.9773,
-      "gap_pct": -9.03,
-      "mom_pct": -1.91,
-      "z": -1.09,
+      "price": 8.1178,
+      "ma200": 8.977,
+      "gap_pct": -9.57,
+      "mom_pct": -2.5,
+      "z": -1.31,
       "above_ma": false,
       "rank": 1,
-      "spread_bps": 6.9
+      "spread_bps": 3.86
     },
     "ADA-USD": {
-      "price": 0.1921,
+      "price": 0.1912,
       "ma200": 0.2361,
-      "gap_pct": -18.61,
-      "mom_pct": 18.57,
-      "z": 1.8,
+      "gap_pct": -19.02,
+      "mom_pct": 17.98,
+      "z": 1.74,
       "above_ma": false,
       "rank": 8,
-      "spread_bps": 3.65
+      "spread_bps": 5.18
     },
     "XRP-USD": {
-      "price": 1.0635,
+      "price": 1.0597,
       "ma200": 1.3379,
-      "gap_pct": -20.51,
-      "mom_pct": -0.83,
-      "z": -1.06,
+      "gap_pct": -20.79,
+      "mom_pct": -1.19,
+      "z": -1.19,
       "above_ma": false,
       "rank": 2,
       "spread_bps": 0.09
     }
   },
-  "pick": "CASH",
+  "pick": "LINK-USD",
   "regime": "CHOP",
   "intraday": [
     {
@@ -4731,18 +4731,15 @@
       "value": 1081.41,
       "bench": 1000.8,
       "holding": "CASH"
+    },
+    {
+      "ts": "2026-08-05T14:32:08+00:00",
+      "value": 1078.5,
+      "bench": 997.57,
+      "holding": "LINK-USD"
     }
   ],
   "trades": [
-    {
-      "date": "2026-08-03",
-      "action": "SELL",
-      "ticker": "BTC-USD",
-      "price": 63901.3203,
-      "units": 0.016712,
-      "value": 1067.89,
-      "reason": "Signal flip"
-    },
     {
       "date": "2026-08-03",
       "action": "TO CASH",
@@ -4916,6 +4913,16 @@
       "units": 0,
       "value": 1081.41,
       "reason": "All 8 coins falling on the week \u2014 cash until one rises"
+    },
+    {
+      "date": "2026-08-05",
+      "action": "BUY",
+      "ticker": "LINK-USD",
+      "price": 8.1178,
+      "units": 132.855725,
+      "value": 1078.5,
+      "fee": 2.91,
+      "reason": "Strongest eligible coin (-2.5% 7d momentum)"
     }
   ],
   "history": [
@@ -5041,14 +5048,14 @@
     },
     {
       "date": "2026-08-05",
-      "value": 1081.41,
-      "bench": 1000.8,
-      "holding": "CASH"
+      "value": 1078.5,
+      "bench": 997.57,
+      "holding": "LINK-USD"
     }
   ],
-  "costs_paid": 8.9492,
+  "costs_paid": 11.8614,
   "frozen": null,
-  "thoughts": "Right now I'm in CHOP mode: Bitcoin is below its 200-day average, which means the market is directionless \u2014 chasing momentum here loses money, so instead I look for a coin that fell unusually hard and try to catch its bounce back. Nothing qualifies at this moment, so I'm in cash \u2014 in crypto, sitting out is often the smartest trade.",
+  "thoughts": "Right now I'm in CHOP mode: Bitcoin is below its 200-day average, which means the market is directionless \u2014 chasing momentum here loses money, so instead I look for a coin that fell unusually hard and try to catch its bounce back. That's why I'm holding LINK.",
   "strategy": {
     "name": "Regime Switcher \u2014 two brains, one bot",
     "rule": "BTC above its 200-day MA = TREND: ride the hottest rising 7-day-momentum coin. Below = CHOP: buy the most oversold coin (z20 < -1.25) and harvest the bounce; nothing qualifies -> cash",
