@@ -1,28 +1,35 @@
 {
-  "ts": "2026-08-05T06:16:14+00:00",
+  "ts": "2026-08-05T14:17:58+00:00",
   "risk_level": "caution",
   "risk_alerts": [
     {
-      "headline": "Michael Burry warns of major top and possible 1987-type fall despite records",
+      "headline": "BofA CEO: Situational Awareness meltdown a warning shot for leveraged markets",
+      "markets": [
+        "both"
+      ],
+      "severity": "caution"
+    },
+    {
+      "headline": "Fed's Kashkari: now is time to start slowly raising rates",
+      "markets": [
+        "both"
+      ],
+      "severity": "caution"
+    },
+    {
+      "headline": "SpaceX plunges 9-12% on AI capex surge and lockup fears",
       "markets": [
         "stocks"
       ],
       "severity": "caution"
     },
     {
-      "headline": "SpaceX AI spending unnerves Wall Street amid revenue beat and BTC losses",
-      "markets": [
-        "stocks"
-      ],
-      "severity": "caution"
-    },
-    {
-      "headline": "AMD strong revenue/data center growth but stock drops on outlook/Musk Nvidia shift",
+      "headline": "Michael Burry warns of possible major top and 1987-type fall",
       "markets": [
         "stocks"
       ],
       "severity": "caution"
     }
   ],
-  "note": "advisory only \u2014 no bot consumes this yet (v2 agenda)"
+  "note": "consumed by every risk-gated bot via sentinel_gate.severe(); verdicts older than 24h are treated as UNKNOWN, not calm"
 }
