@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-08-05T07:36:18+00:00",
+  "generated_utc": "2026-08-05T07:49:42+00:00",
   "created": "2026-07-30",
   "starting_cash": 1000.0,
   "live_ts": "2026-08-04T19:55:00+00:00",
@@ -17,7 +17,7 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 29.71068709950182
+      "fill": 29.710687099501808
     },
     {
       "sym": "IWM",
@@ -26,7 +26,7 @@
       "tag": "HELD",
       "on": true,
       "pick": true,
-      "fill": 25.907504912099792
+      "fill": 25.90750491209978
     },
     {
       "sym": "QQQ",
@@ -35,7 +35,7 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 23.30232712679395
+      "fill": 23.30232712679394
     },
     {
       "sym": "EFA",
@@ -44,7 +44,7 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 17.032327094571336
+      "fill": 17.032327094571333
     },
     {
       "sym": "EEM",
@@ -80,7 +80,7 @@
       "tag": "not eligible",
       "on": false,
       "pick": false,
-      "fill": -7.604730135594765
+      "fill": -7.604718401562134
     },
     {
       "sym": "SLV",
@@ -1956,6 +1956,12 @@
       "value": 1028.73,
       "bench": 1039.84,
       "holding": "IWM"
+    },
+    {
+      "ts": "2026-08-05T07:49:42+00:00",
+      "value": 1028.73,
+      "bench": 1039.84,
+      "holding": "IWM"
     }
   ],
   "trades": [
@@ -2002,5 +2008,7 @@
     "backtest_maxdd": "-29.0% vs SPY -33.7% (2017+) but -27.6% vs SPY -18.8% in 2024+ \u00b7 0.1%/side costs included",
     "note": "Expectation after the McLean-Pontiff decay haircut: roughly SPY-like return with lower drawdown is the honest hope. Judged by kill_criteria.md like every other bot."
   },
+  "costs_paid": 0.0,
+  "frozen": null,
   "thoughts": "I'm holding IWM. Best momentum-per-unit-risk in a confirmed uptrend. I bought at $293.29; it's now $301.71 (+2.9% since I got in). My safety net: if the price falls to $272.04 (10% below its recent high), I sell automatically \u2014 no exceptions. Closest challenger on my list is SPY, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
 }
