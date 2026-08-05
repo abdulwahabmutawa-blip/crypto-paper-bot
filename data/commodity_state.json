@@ -1,8 +1,8 @@
 {
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "holding": "USO",
-  "units": 8.384338292493224,
+  "holding": "DBC",
+  "units": 33.98433622016377,
   "cash": 0.0,
   "bench_units": 1.3319835726361926,
   "trades": [
@@ -13,6 +13,26 @@
       "price": 119.27,
       "units": 8.3843,
       "value": 1000.0,
+      "reason": "Strongest commodity above its 200-day MA"
+    },
+    {
+      "date": "2026-08-05",
+      "action": "SELL",
+      "ticker": "USO",
+      "price": 115.66670227,
+      "units": 8.3843,
+      "value": 969.79,
+      "fee": 1.12,
+      "reason": "Signal flip"
+    },
+    {
+      "date": "2026-08-05",
+      "action": "BUY",
+      "ticker": "DBC",
+      "price": 28.46789932,
+      "units": 33.9843,
+      "value": 967.46,
+      "fee": 1.21,
       "reason": "Strongest commodity above its 200-day MA"
     }
   ],
@@ -100,6 +120,12 @@
       "value": 970.49,
       "bench": 1027.33,
       "holding": "USO"
+    },
+    {
+      "date": "2026-08-05",
+      "value": 967.46,
+      "bench": 1032.9,
+      "holding": "DBC"
     }
   ],
   "intraday": [
@@ -4398,9 +4424,16 @@
       "value": 970.49,
       "bench": 1027.33,
       "holding": "USO"
+    },
+    {
+      "ts": "2026-08-05T13:36:34+00:00",
+      "value": 967.46,
+      "bench": 1032.9,
+      "holding": "DBC"
     }
   ],
-  "last_updated_utc": "2026-08-05T13:23:11+00:00",
+  "last_updated_utc": "2026-08-05T13:36:34+00:00",
   "feed_delayed": false,
-  "data_asof": "2026-08-04"
+  "data_asof": "2026-08-05",
+  "costs_paid": 2.3261
 }

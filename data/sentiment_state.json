@@ -1,10 +1,10 @@
 {
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "holding": "PLTR",
-  "units": 6.916902011265812,
-  "cash": 0.0,
-  "entry_price": 148.4499969482422,
+  "holding": "CASH",
+  "units": 0.0,
+  "cash": 1132.6998091040052,
+  "entry_price": null,
   "bench_units": 1.332054612938296,
   "stopped": {
     "SHIB-USD": "2026-07-27T00:01:08+00:00"
@@ -216,6 +216,16 @@
       "units": 6.9169,
       "value": 1026.81,
       "reason": "Grok: PLTR euphoric \u2014 blowout earnings AI commercial surge (scan 2026-08-04T08:09)"
+    },
+    {
+      "date": "2026-08-05",
+      "action": "SELL",
+      "ticker": "PLTR",
+      "price": 163.95500183,
+      "units": 6.9169,
+      "value": 1134.06,
+      "fee": 1.36,
+      "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
     }
   ],
   "history": [
@@ -321,6 +331,12 @@
       "value": 1125.1,
       "bench": 1027.45,
       "holding": "PLTR"
+    },
+    {
+      "date": "2026-08-05",
+      "value": 1132.7,
+      "bench": 1033.0,
+      "holding": "CASH"
     }
   ],
   "intraday": [
@@ -4625,9 +4641,15 @@
       "value": 1125.1,
       "bench": 1027.45,
       "holding": "PLTR"
+    },
+    {
+      "ts": "2026-08-05T13:36:37+00:00",
+      "value": 1132.7,
+      "bench": 1033.0,
+      "holding": "CASH"
     }
   ],
-  "last_updated_utc": "2026-08-05T13:23:14+00:00",
+  "last_updated_utc": "2026-08-05T13:36:37+00:00",
   "restatement": {
     "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)",
     "voided_trades": [
@@ -4705,5 +4727,6 @@
       }
     ],
     "voided_reason": "signal faded before any real fill was possible (market closed the whole window) \u2014 trades could never have existed"
-  }
+  },
+  "costs_paid": 1.3609
 }

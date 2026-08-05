@@ -1,10 +1,10 @@
 {
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "holding": "PLTR",
-  "units": 5.829150448870042,
+  "holding": "SLV",
+  "units": 17.05152920299935,
   "cash": 0.0,
-  "high_water": 163.76080322265625,
+  "high_water": 55.91999816894531,
   "bench_units": 1.332054612938296,
   "trades": [
     {
@@ -159,6 +159,26 @@
       "units": 5.8292,
       "value": 864.84,
       "reason": "Top reward/risk score (2.23) \u2014 Palantir, all-in"
+    },
+    {
+      "date": "2026-08-05",
+      "action": "SELL",
+      "ticker": "PLTR",
+      "price": 163.95500183,
+      "units": 5.8292,
+      "value": 955.72,
+      "fee": 1.15,
+      "reason": "Outgunned \u2014 Silver now scores >1.25x better on reward/risk"
+    },
+    {
+      "date": "2026-08-05",
+      "action": "BUY",
+      "ticker": "SLV",
+      "price": 55.91999817,
+      "units": 17.0515,
+      "value": 953.52,
+      "fee": 1.05,
+      "reason": "Top reward/risk score (5.69) \u2014 Silver, all-in"
     }
   ],
   "history": [
@@ -239,6 +259,12 @@
       "value": 948.17,
       "bench": 1027.45,
       "holding": "PLTR"
+    },
+    {
+      "date": "2026-08-05",
+      "value": 953.52,
+      "bench": 1032.78,
+      "holding": "SLV"
     }
   ],
   "intraday": [
@@ -4543,9 +4569,15 @@
       "value": 948.17,
       "bench": 1027.45,
       "holding": "PLTR"
+    },
+    {
+      "ts": "2026-08-05T13:36:39+00:00",
+      "value": 953.52,
+      "bench": 1032.78,
+      "holding": "SLV"
     }
   ],
-  "last_updated_utc": "2026-08-05T13:23:15+00:00",
+  "last_updated_utc": "2026-08-05T13:36:39+00:00",
   "restatement": [
     {
       "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)"
@@ -4580,5 +4612,6 @@
         }
       ]
     }
-  ]
+  ],
+  "costs_paid": 2.1969
 }
