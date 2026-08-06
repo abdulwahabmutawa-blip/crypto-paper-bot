@@ -1,10 +1,10 @@
 {
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "holding": "CASH",
-  "units": 0.0,
-  "cash": 1132.6998091040052,
-  "entry_price": null,
+  "holding": "SOUN",
+  "units": 175.93840817176587,
+  "cash": 0.0,
+  "entry_price": 6.429999828338623,
   "bench_units": 1.332054612938296,
   "stopped": {
     "SHIB-USD": "2026-07-27T00:01:08+00:00"
@@ -226,6 +226,16 @@
       "value": 1134.06,
       "fee": 1.36,
       "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
+    },
+    {
+      "date": "2026-08-06",
+      "action": "BUY",
+      "ticker": "SOUN",
+      "price": 6.42999983,
+      "units": 175.9384,
+      "value": 1131.28,
+      "fee": 1.42,
+      "reason": "Grok: SOUN euphoric \u2014 AI voice stock retail trending (scan 2026-08-06T08:05)"
     }
   ],
   "history": [
@@ -334,9 +344,9 @@
     },
     {
       "date": "2026-08-05",
-      "value": 1132.7,
+      "value": 1131.28,
       "bench": 1025.4,
-      "holding": "CASH"
+      "holding": "SOUN"
     }
   ],
   "intraday": [
@@ -5073,9 +5083,15 @@
       "value": 1132.7,
       "bench": 1025.4,
       "holding": "CASH"
+    },
+    {
+      "ts": "2026-08-06T13:41:22+00:00",
+      "value": 1131.28,
+      "bench": 1025.4,
+      "holding": "SOUN"
     }
   ],
-  "last_updated_utc": "2026-08-06T13:27:59+00:00",
+  "last_updated_utc": "2026-08-06T13:41:22+00:00",
   "restatement": {
     "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)",
     "voided_trades": [
@@ -5154,5 +5170,5 @@
     ],
     "voided_reason": "signal faded before any real fill was possible (market closed the whole window) \u2014 trades could never have existed"
   },
-  "costs_paid": 1.3609
+  "costs_paid": 2.7768
 }
