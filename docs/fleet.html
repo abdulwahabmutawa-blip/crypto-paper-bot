@@ -55,6 +55,21 @@
   details.retired[open] summary::after{transform:rotate(180deg)}
   details.retired .grid{margin-top:16px}
   details.retired a.card{opacity:.62}
+  .netbox{border-radius:26px;padding:18px 22px;margin:0 0 22px;
+    border:1.5px solid transparent;
+    background:var(--glass) padding-box, var(--glint) border-box;
+    box-shadow:0 22px 44px rgba(0,0,0,.62),
+      inset 0 1px 0 rgba(255,255,255,.22),
+      inset 0 -1px 0 rgba(0,0,0,.45),
+      inset 0 0 26px rgba(255,255,255,.03);
+    display:flex;flex-direction:column;gap:4px}
+  .netbox .eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--muted);font-weight:600}
+  .netbox .v{font-family:var(--mono);font-variant-numeric:tabular-nums;
+    font-size:30px;font-weight:650;line-height:1.15}
+  .netbox .sub2{font-family:var(--mono);font-variant-numeric:tabular-nums;
+    font-size:12px;color:var(--faint)}
+  .up{color:var(--gain)} .down{color:var(--loss)}
   .emoji{font-size:22px;filter:grayscale(35%)}
   .name{font-weight:650;margin:9px 0 3px;font-size:14.5px}
   .desc{color:var(--muted);font-size:13px}
@@ -66,10 +81,17 @@
 </head>
 <body>
 <div class="wrap">
+  <div class="netbox">
+    <span class="eyebrow">Fleet net profit / loss</span>
+    <span class="v" id="netv">—</span>
+    <span class="sub2" id="netsub">loading live bot values…</span>
+  </div>
+
   <h1>The Bot Fleet <em>· paper trading, live</em></h1>
   <p class="sub">A fleet of $1,000 paper-trading experiments — rival theories
   of market edge trading live on GitHub Actions, every decision on a public
   ledger. Simulation only; not investment advice.</p>
+
   <div class="grid">
     <a class="card" href="index.html"><span class="emoji">🪙</span>
       <div class="name">Crypto Regime Switcher</div>
@@ -142,10 +164,63 @@
     <a href="https://github.com/abdulwahabmutawa-blip/crypto-paper-bot" style="color:var(--gain)">github.com/abdulwahabmutawa-blip/crypto-paper-bot</a></footer>
 </div>
 <script>
+/* Fleet net P&L — sums the same per-bot dashboard JSONs the bot pages read.
+   Active books only; retired books are excluded from the headline. */
+(function(){
+const ACTIVE = ["crypto","congress","commodity","meanrev","allweather",
+                "sentiment","hunter","scholar","analyst"];
+const fmt$ = v => (v<0?"-$":"$") + Math.abs(v).toLocaleString("en-US",
+  {minimumFractionDigits:2, maximumFractionDigits:2});
+
+async function load(name){
+  const r = await fetch(name+"_dashboard_data.json", {cache:"no-store"});
+  if(!r.ok) throw new Error(name);
+  const d = await r.json();
+  const live = (d.intraday && d.intraday.length)
+    ? d.intraday[d.intraday.length-1] : d.current;
+  return {staked: d.starting_cash, value: live.value};
+}
+
+async function renderNet(){
+  const got = await Promise.all(ACTIVE.map(n => load(n).catch(() => null)));
+  const ok = got.filter(Boolean);
+  if(!ok.length){ document.getElementById("netsub").textContent =
+    "fleet totals unavailable — per-bot pages still live"; return; }
+
+  const staked = ok.reduce((a,b) => a + b.staked, 0);
+  const value  = ok.reduce((a,b) => a + b.value, 0);
+  const net    = value - staked;
+  const pct    = staked ? net/staked : 0;
+
+  const v = document.getElementById("netv");
+  const sign = net>=0 ? "+" : "−";
+  v.textContent = sign + fmt$(Math.abs(net)) + "  ·  " +
+    sign + (Math.abs(pct)*100).toFixed(2) + "%";
+  v.className = "v " + (net>=0 ? "up" : "down");
+
+  const missing = got.length - ok.length;
+  document.getElementById("netsub").textContent =
+    fmt$(value) + " across " + ok.length + " active books · " +
+    fmt$(staked) + " staked" +
+    (missing ? " · " + missing + " book(s) unreadable" : "");
+}
+renderNet();
+setInterval(renderNet, 300000);
+})();
+</script>
+
+<script>
 /* EN/AR toggle — translates interface labels client-side; live data text stays as generated. */
 (function(){
 const AR = [
  ["Every paper order this simulation has placed","كل الأوامر الورقية التي نفذتها هذه المحاكاة"],
+ ["fleet totals unavailable — per-bot pages still live","إجمالي الأسطول غير متاح — صفحات البوتات ما زالت تعمل"],
+ ["Fleet net profit / loss","صافي ربح/خسارة الأسطول"],
+ ["loading live bot values…","جارٍ تحميل قيم البوتات…"],
+ ["book(s) unreadable","سجل غير مقروء"],
+ ["active books","سجلات نشطة"],
+ ["staked","رأس مال مستثمر"],
+ ["across","عبر"],
  ["green: bot · grey: benchmark · dashed: $1,000 start","الأخضر: البوت · الرمادي: المؤشر المرجعي · المتقطع: بداية 1000$"],
  ["SPY benchmark ($1,000 same day)","المؤشر المرجعي SPY ‏(1000$ في اليوم نفسه)"],
  ["BTC benchmark ($1,000 same day)","المؤشر المرجعي BTC ‏(1000$ في اليوم نفسه)"],
