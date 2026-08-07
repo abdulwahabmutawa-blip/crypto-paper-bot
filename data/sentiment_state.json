@@ -1,10 +1,10 @@
 {
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "holding": "SOUN",
-  "units": 175.93840817176587,
+  "holding": "NET",
+  "units": 4.0498249995935005,
   "cash": 0.0,
-  "entry_price": 6.429999828338623,
+  "entry_price": 318.94500732421875,
   "bench_units": 1.332054612938296,
   "stopped": {
     "SHIB-USD": "2026-07-27T00:01:08+00:00"
@@ -236,6 +236,26 @@
       "value": 1131.28,
       "fee": 1.42,
       "reason": "Grok: SOUN euphoric \u2014 AI voice stock retail trending (scan 2026-08-06T08:05)"
+    },
+    {
+      "date": "2026-08-07",
+      "action": "SELL",
+      "ticker": "SOUN",
+      "price": 7.36000013,
+      "units": 175.9384,
+      "value": 1294.91,
+      "fee": 1.62,
+      "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
+    },
+    {
+      "date": "2026-08-07",
+      "action": "BUY",
+      "ticker": "NET",
+      "price": 318.94500732,
+      "units": 4.0498,
+      "value": 1291.67,
+      "fee": 1.62,
+      "reason": "Grok: NET euphoric \u2014 Surges 15%+ on strong outlook raise (scan 2026-08-07T10:47)"
     }
   ],
   "history": [
@@ -353,6 +373,12 @@
       "value": 1245.64,
       "bench": 1023.76,
       "holding": "SOUN"
+    },
+    {
+      "date": "2026-08-07",
+      "value": 1291.67,
+      "bench": 1028.23,
+      "holding": "NET"
     }
   ],
   "intraday": [
@@ -5329,9 +5355,15 @@
       "value": 1245.64,
       "bench": 1023.76,
       "holding": "SOUN"
+    },
+    {
+      "ts": "2026-08-07T13:44:03+00:00",
+      "value": 1291.67,
+      "bench": 1028.23,
+      "holding": "NET"
     }
   ],
-  "last_updated_utc": "2026-08-07T13:29:59+00:00",
+  "last_updated_utc": "2026-08-07T13:44:03+00:00",
   "restatement": {
     "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)",
     "voided_trades": [
@@ -5410,5 +5442,5 @@
     ],
     "voided_reason": "signal faded before any real fill was possible (market closed the whole window) \u2014 trades could never have existed"
   },
-  "costs_paid": 2.7768
+  "costs_paid": 6.012
 }

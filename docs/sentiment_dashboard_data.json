@@ -1,13 +1,13 @@
 {
-  "generated_utc": "2026-08-07T13:29:59+00:00",
+  "generated_utc": "2026-08-07T13:44:03+00:00",
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "live_ts": "2026-08-07T13:29:59+00:00",
+  "live_ts": "2026-08-07T13:44:03+00:00",
   "current": {
-    "date": "2026-08-06",
-    "value": 1245.64,
-    "bench": 1023.76,
-    "holding": "SOUN"
+    "date": "2026-08-07",
+    "value": 1291.67,
+    "bench": 1028.23,
+    "holding": "NET"
   },
   "board": [
     {
@@ -21,11 +21,11 @@
     },
     {
       "sym": "NET",
-      "price": 284.43,
+      "price": 318.95,
       "line": "euphoric \u00b7 Surges 15%+ on strong outlook raise",
-      "tag": "candidate",
+      "tag": "HELD",
       "on": true,
-      "pick": false,
+      "pick": true,
       "fill": 40
     },
     {
@@ -39,7 +39,7 @@
     },
     {
       "sym": "TEAM",
-      "price": 110.17,
+      "price": 143.19,
       "line": "euphoric \u00b7 Jumps 28%+ after strong results guide",
       "tag": "candidate",
       "on": true,
@@ -5037,27 +5037,15 @@
       "value": 1245.64,
       "bench": 1023.76,
       "holding": "SOUN"
+    },
+    {
+      "ts": "2026-08-07T13:44:03+00:00",
+      "value": 1291.67,
+      "bench": 1028.23,
+      "holding": "NET"
     }
   ],
   "trades": [
-    {
-      "date": "2026-07-21",
-      "action": "SELL",
-      "ticker": "AEHR",
-      "price": 83.25,
-      "units": 12.0061,
-      "value": 999.51,
-      "reason": "Hype faded [restated: after-hours signal filled next open]"
-    },
-    {
-      "date": "2026-07-21",
-      "action": "BUY",
-      "ticker": "XRP-USD",
-      "price": 1.14,
-      "units": 876.7632,
-      "value": 999.51,
-      "reason": "Grok: XRP euphoric \u2014 triangle breakout (scan 2026-07-21T09:39) [restated: cash available 13:30 UTC after AEHR sale]"
-    },
     {
       "date": "2026-07-22",
       "action": "SELL",
@@ -5221,6 +5209,26 @@
       "value": 1131.28,
       "fee": 1.42,
       "reason": "Grok: SOUN euphoric \u2014 AI voice stock retail trending (scan 2026-08-06T08:05)"
+    },
+    {
+      "date": "2026-08-07",
+      "action": "SELL",
+      "ticker": "SOUN",
+      "price": 7.36000013,
+      "units": 175.9384,
+      "value": 1294.91,
+      "fee": 1.62,
+      "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
+    },
+    {
+      "date": "2026-08-07",
+      "action": "BUY",
+      "ticker": "NET",
+      "price": 318.94500732,
+      "units": 4.0498,
+      "value": 1291.67,
+      "fee": 1.62,
+      "reason": "Grok: NET euphoric \u2014 Surges 15%+ on strong outlook raise (scan 2026-08-07T10:47)"
     }
   ],
   "history": [
@@ -5338,11 +5346,17 @@
       "value": 1245.64,
       "bench": 1023.76,
       "holding": "SOUN"
+    },
+    {
+      "date": "2026-08-07",
+      "value": 1291.67,
+      "bench": 1028.23,
+      "holding": "NET"
     }
   ],
-  "costs_paid": 2.7768,
+  "costs_paid": 6.012,
   "frozen": null,
-  "thoughts": "I'm riding SOUN because the Watcher's latest scan of X and the news says the crowd is most excited about it right now. I know hype is the weakest evidence there is \u2014 so my rules are the strictest in the fleet: the moment the excitement fades from the scans I sell, and if I'm down 10% from my buy price I sell no matter what.",
+  "thoughts": "I'm riding NET because the Watcher's latest scan of X and the news says the crowd is most excited about it right now. I know hype is the weakest evidence there is \u2014 so my rules are the strictest in the fleet: the moment the excitement fades from the scans I sell, and if I'm down 10% from my buy price I sell no matter what.",
   "strategy": {
     "name": "Hype Trader \u2014 rides the Watcher's reads, on trial",
     "rule": "Hold the top euphoric symbol from the Watcher's 8-hour Grok scans while it stays euphoric; -10% hard stop; Watcher severe verdict -> cash",
