@@ -1,72 +1,24 @@
 {
-  "updated_utc": "2026-08-04T08:20:00+00:00",
-  "note": "Run covering 2026-08-03 -> 2026-08-04. 15 lines appended: 9 dailies plus 6 trade_events. This is the first run in five with EQUITY fills to audit - 21 of the 27 new fills are equities - so the market-hours gate added after the 2026-07-22 stale-fill incident got its first real test since 07-31 and passed. 27 new fills audited, 0 fill-integrity alerts. The previous run's 08-03 dailies were logged BEFORE Monday's open and are all unknown/flat by necessity; these 08-04-dated lines carry the resolved 08-03 session. Nothing was rewritten - the flat lines stay as the honest record of what was knowable at 03:13 ET.",
-  "total_lines_logged": 176,
+  "updated_utc": "2026-08-08T12:50:00+00:00",
+  "note": "Run covering 2026-08-04 -> 2026-08-08, executed 08:50 ET Saturday. FOUR-DAY GAP since the previous run, so this pass audited the whole 08-04 through 08-07 window rather than a single session: 19 lines appended (9 dailies, 9 trade_events, 1 sentinel daily), 33 new fills audited (14 equity, 19 crypto). ONE SIM-INTEGRITY ALERT, the first since the 07-22 stale-fill incident: hype trader's 08-06 SOUN buy filled at 6.43, exactly the prior session's close and about 13% below anything that traded at the 09:42 ET fill moment. Equity marks in this run are Friday 08-07 closes; crypto marks are 08-08. Note the fleet baseline is now $9,000 across 9 active bots, not the $8,000 in the original spec - stock/TQQQ was retired 07-31 and scholar plus analyst were added.",
+  "total_lines_logged": 195,
   "by_primary_driver": {
-    "none_cash": {
-      "profit": 0,
-      "loss": 0,
-      "flat": 16
-    },
-    "market_beta": {
-      "profit": 14,
-      "loss": 10,
-      "flat": 4
-    },
-    "macro": {
-      "profit": 9,
-      "loss": 11,
-      "flat": 1
-    },
-    "unknown": {
-      "profit": 4,
-      "loss": 1,
-      "flat": 48
-    },
-    "hype_sentiment": {
-      "profit": 7,
-      "loss": 9,
-      "flat": 6
-    },
-    "technical": {
-      "profit": 11,
-      "loss": 9,
-      "flat": 3
-    },
-    "sector": {
-      "profit": 2,
-      "loss": 5,
-      "flat": 0
-    },
-    "news_idiosyncratic": {
-      "profit": 5,
-      "loss": 0,
-      "flat": 1
-    }
+    "market_beta": {"profit": 19, "loss": 10, "flat": 4},
+    "technical": {"profit": 11, "loss": 12, "flat": 3},
+    "macro": {"profit": 9, "loss": 11, "flat": 1},
+    "hype_sentiment": {"profit": 7, "loss": 10, "flat": 6},
+    "news_idiosyncratic": {"profit": 7, "loss": 1, "flat": 1},
+    "sector": {"profit": 7, "loss": 5, "flat": 0},
+    "unknown": {"profit": 5, "loss": 1, "flat": 48},
+    "none_cash": {"profit": 0, "loss": 0, "flat": 17}
   },
   "by_beta_or_alpha": {
-    "n/a": {
-      "profit": 9,
-      "loss": 9,
-      "flat": 68
-    },
-    "beta": {
-      "profit": 12,
-      "loss": 8,
-      "flat": 4
-    },
-    "mixed": {
-      "profit": 6,
-      "loss": 12,
-      "flat": 0
-    },
-    "alpha": {
-      "profit": 25,
-      "loss": 16,
-      "flat": 7
-    }
+    "alpha": {"profit": 33, "loss": 19, "flat": 7},
+    "beta": {"profit": 16, "loss": 8, "flat": 4},
+    "mixed": {"profit": 6, "loss": 13, "flat": 0},
+    "n/a": {"profit": 10, "loss": 10, "flat": 69}
   },
-  "driver_note": "First run in which the 'unknown' bucket did not grow - it stays at 4/1/48 because every book had a real session to explain. 'macro' took both of this run's big losses (commodity -58.86, hunter -68.18) off a single headline, and 'news_idiosyncratic' is now 5W/0L/1F across the whole ledger, the only driver bucket that has never logged a loss. That is a small sample and it is also the bucket with the strictest evidence bar, so treat it as a statement about my citation discipline before treating it as a statement about the bots.",
-  "beta_alpha_note": "'mixed' is now 6W/12L and remains the fleet's most reliable negative signal - congress supplied two more mixed lines this run and both were profits, which is the first real counter-evidence in a while. 'alpha' at 25W/16L is flattered by a single session: hype's +56.44 and crypto's BTC round trip both landed on 2026-08-03, and so did commodity's and hunter's alpha losses. One day, four alpha lines, both directions.",
-  "concentration_note": "The six-run USO concentration flag materially eased WITHOUT anyone acting on it: hunter's trailing stop took it out of oil, so single-name USO exposure fell from 22.0% of live capital to 11.1% (commodity's 1,024.23 alone). Largest single-name exposure is now meanrev's PG at 1,241.62, 13.5% of the fleet."
+  "driver_note": "Tally recomputed from scratch over all 195 lines rather than incremented, so it supersedes any earlier drift. Two things changed shape this run. sector moved from 2-5 to 7-5 on the back of silver and gold - it had been the fleet's worst driver and is now roughly even. news_idiosyncratic stays the standout at 7 profit / 1 loss, but the sample is small and it is the driver most at risk of hindsight labelling, so I hold it to a citation every time. hype_sentiment is now net negative at 7-10 and that is BEFORE correcting for the SOUN phantom fill, which manufactured a profit the bot could not have earned; on a corrected basis it is 6-11.",
+  "beta_alpha_note": "alpha at 33-19 looks like skill and mostly is not - it is dominated by single-asset all-in books (hunter in SLV, hype in one name, crypto in one coin) whose deviation from a broad bench is concentration, not edge. mixed remains the worst bucket at 6-13, which continues to say that bots half-tracking their bench and half-diverging get the drawbacks of both.",
+  "concentration_note": "Six of nine bots are all-in on a single asset (commodity DBC, crypto XRP, hunter SLV, meanrev UNH, scholar IWM, sentiment NET). Fleet-level day moves are therefore driven by whichever one or two names happen to run, and Friday was silver: hunter's +2.95% was 28.13 of the fleet's day, while hype's single NET position cost -29.60. congress at 59% cash is the only structurally diversified book and it is diversified into nothing."
 }
