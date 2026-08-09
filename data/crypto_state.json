@@ -1,9 +1,9 @@
 {
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "holding": "XRP-USD",
-  "units": 1022.1459866134904,
-  "cash": 0.0,
+  "holding": "CASH",
+  "units": 0.0,
+  "cash": 1059.1300325644663,
   "bench_units": 0.01552055830726173,
   "trades": [
     {
@@ -1005,6 +1005,25 @@
       "value": 1062.21,
       "fee": 2.7,
       "reason": "Strongest eligible coin (-1.9% 7d momentum)"
+    },
+    {
+      "date": "2026-08-09",
+      "action": "SELL",
+      "ticker": "XRP-USD",
+      "price": 1.0388,
+      "units": 1022.145987,
+      "value": 1061.81,
+      "fee": 2.68,
+      "reason": "Signal flip"
+    },
+    {
+      "date": "2026-08-09",
+      "action": "TO CASH",
+      "ticker": "\u2014",
+      "price": 0,
+      "units": 0,
+      "value": 1059.13,
+      "reason": "All 8 coins falling on the week \u2014 cash until one rises"
     }
   ],
   "history": [
@@ -1151,9 +1170,15 @@
       "value": 1061.7,
       "bench": 1007.35,
       "holding": "XRP-USD"
+    },
+    {
+      "date": "2026-08-09",
+      "value": 1059.13,
+      "bench": 1007.28,
+      "holding": "CASH"
     }
   ],
-  "last_updated_utc": "2026-08-08T23:55:49+00:00",
+  "last_updated_utc": "2026-08-09T00:09:12+00:00",
   "intraday": [
     {
       "ts": "2026-07-16T18:32:57+00:00",
@@ -6896,7 +6921,13 @@
       "value": 1061.7,
       "bench": 1007.35,
       "holding": "XRP-USD"
+    },
+    {
+      "ts": "2026-08-09T00:09:12+00:00",
+      "value": 1059.13,
+      "bench": 1007.28,
+      "holding": "CASH"
     }
   ],
-  "costs_paid": 28.4906
+  "costs_paid": 31.1658
 }
