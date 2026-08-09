@@ -1,105 +1,58 @@
 {
-  "updated_utc": "2026-08-08T12:50:00+00:00",
-  "run_note": "Run covering 2026-08-04 -> 2026-08-08, executed 08:50 ET Saturday. Four days elapsed since the previous run, so this pass audited the full window: 33 new fills (14 equity, 19 crypto), 19 attribution lines, 2 judgments made, 1 closed. Two things lead this run. FIRST, a SIM-INTEGRITY ALERT on hype trader's 08-06 SOUN buy - the first confirmed bad fill since the 07-22 incident, and a different fault from that one: the market-hours gate worked (fill was 09:42 ET on a Thursday), the PRICE was stale. SECOND, my own 2026-08-04-hunter-1 judgment closed at -115.62, my largest loss, and it failed on its stated mechanism rather than on luck - see per_bot.hunter. Fleet baseline is $9,000 across 9 active bots, NOT the $8,000 in the original task spec: stock/TQQQ retired 07-31, scholar and analyst added.",
-  "total_judgments": 130,
-  "judgments_closed": 128,
-  "judgments_open": 2,
-  "open_ids": ["2026-08-08-sentiment-1", "2026-08-08-crypto-1"],
-  "cumulative_alpha_usd": 204.48,
-  "cumulative_alpha_usd_actionable": 80.39,
-  "win_rate_closed_pct": 8.6,
-  "win_rate_note": "108 of 128 closed judgments are no_change (alpha 0), so the headline rate is near-meaningless - read the directional record. DIRECTIONAL: 20 scored, 11W/6L/3N, +204.48 net headline. On the conservative actionable-reference-price basis: +80.39. THIS RUN: one closure, 2026-08-04-hunter-1, a -115.62 loss - larger in absolute terms than my best win (+131.16) and enough to cut cumulative actionable alpha by 59%. Eleven wins against six losses still reads positive, but the loss distribution is now clearly fatter on the downside and every one of the six losses is the same trade shape: betting against a momentum bot's next entry.",
-  "this_run_closures": [
-    {
-      "id": "2026-08-04-hunter-1",
-      "action": "skip_new_entries",
-      "asset": "UPRO",
-      "alpha": -115.62,
-      "verdict": "loss",
-      "summary": "Bot left UPRO at 148.65 leaving 864.84, then rotated PLTR (148.37 -> 163.955) and into SLV at 55.92, marking 980.46 on Friday: +115.62 taken vs 0.00 sitting in cash. Mechanism disproved, not merely unlucky - I predicted entries within 1% of the day's high and both landed near the day's LOW (PLTR 7th percentile, SLV 13th). Thesis retired."
-    }
-  ],
+ "updated_utc": "2026-08-09T08:15:00+00:00",
+ "run_note": "Run covering 2026-08-08 -> 2026-08-09, executed 08:15 UTC Sunday. A weekend session: US equity markets were shut both days, so eight of the nine trading bots have no new mark and still carry their 2026-08-07 closes. Crypto is the only live book. TWO OPERATIONAL FINDINGS LEAD THIS RUN. FIRST, a FLEET-WIDE FREEZE: every bot's last_updated_utc is 2026-08-09T03:16:51Z, 4h49m stale at review time, and the paper-trade-cycle run that owns the loop still shows in_progress on GitHub, so nothing reads as failed. This is uniform across all ten state files, which rules out the per-bot freeze-guard misfire pattern from 2026-08-03 and points at the runner. I did NOT run the bot manually to read its guard line, because uniform staleness is already inconsistent with a per-bot guard and a local run would mutate state files I am required not to touch. SECOND, an earlier same-day cron gap of 362 minutes (2026-08-08T15:40:06Z to 21:42:07Z). No SIM-INTEGRITY ALERT this run: all nine new fills verified clean. Fleet baseline is $9,000 across 9 active bots, NOT the $8,000 in the original task spec: stock/TQQQ retired 07-31, scholar and analyst added.",
+ "total_judgments": 139,
+ "judgments_closed": 137,
+ "judgments_open": 2,
+ "open_ids": [
+  "2026-08-08-sentiment-1",
+  "2026-08-09-crypto-1"
+ ],
+ "cumulative_alpha_usd": 211.91,
+ "cumulative_alpha_usd_actionable": 87.82,
+ "win_rate_closed_pct": 8.8,
+ "win_rate_note": "116 of 137 closed judgments are no_change (alpha 0), so the headline rate is near-meaningless - read the directional record. DIRECTIONAL: 21 scored, 12W/6L/3N, +211.91 net headline, +87.82 on the conservative actionable-reference-price basis. THIS RUN: one closure, 2026-08-08-crypto-1, a +7.43 win. Small in dollars but it is the first judgment in this fleet to close on pure arithmetic rather than on price direction: the bot paid 10.73 in fees to capture 0.73 of price edge, so the loss I predicted was the fee bill itself. Worth stating plainly against my own record - five of my six losses are the same trade shape as this win, betting against a momentum bot's next entry, and the difference here is that the cost side is measurable instead of forecast.",
+ "this_run_closures": [
+  {
+   "id": "2026-08-08-crypto-1",
+   "action": "skip_new_entries",
+   "asset": "XRP-USD",
+   "alpha": 7.43,
+   "verdict": "win",
+   "summary": "Trigger fired. XRP flipped at 00:09Z leaving 1059.13 in cash; the bot took the entry I said to skip (1.0344), flipped again (1.0351) and re-entered (1.0341), marking 1051.70. Actual -7.43 vs 0.00 in cash. Mechanism confirmed: fees on 08-09 were 10.73 against 0.73 of net trading gain. Caveat: cash also dodged a small XRP down-move, so roughly 8.05 of the 7.43 is the fee component alone."
+  }
+ ],
+ "per_bot": {
+  "crypto": "Directional record now 5 calls, +67.47 cumulative. The churn thesis is the only one in this fleet with a measurable mechanism rather than a forecast: costs_paid is 39.21 on a 1051.70 book, i.e. 3.7% of starting capital spent on frictions in 24 days, and the bot has now re-entered XRP three times inside six hours at prices within 0.5% of each other. Re-issued as 2026-08-09-crypto-1 at 1.0341.",
+  "hunter": "Entry-timing thesis stays retired after the 08-08 disproof. Six directional calls, +65.65 cumulative, but the record is confounded by the market-hours gate forcing every equity fill into the first cycle after 09:30 ET. No further calls on this bot's entry timing.",
+  "sentiment": "2026-08-08-sentiment-1 (close NET at 300.27) stays open - NET has not traded since Friday's close, which IS the reference price, so there is nothing to score. Note the book's headline 1216.04 is still overstated by roughly $185 from the 08-06 SOUN phantom fill flagged last run; that correction has not been made and the bot's real value is nearer 1031.",
+  "analyst": "Reasoning validation on the 08-07 HOLD: reasoning_validated true, falsifier_fired false, and it was right for the reason it stated rather than by accident. api_cost 0.2771 over 4 billed decisions, 0.069 average, no runaway. Not a judgment target while it holds its own benchmark - calling its position would be calling SPY.",
+  "fleet_ops": "Two distinct availability faults this run and they are not the same thing. (1) FREEZE: no state write since 03:16:51Z, 4h49m and counting, while the owning workflow run still reads in_progress - the green-checkmark trap the daily gap arithmetic exists to catch. (2) CRON GAP: 362 minutes on 08-08 between 15:40:06Z and 21:42:07Z. Separately, the Grok watcher has not scanned in 45.5 hours, so the fleet's SEVERE auto-exit has been unarmed for two days. All three are reported, none touched."
+ },
+ "fleet_snapshot_usd": {
+  "baseline": 9000.0,
+  "total": 9571.31,
+  "pnl": 571.31,
+  "pnl_pct": 6.35,
+  "note": "Eight books are marked at their 2026-08-07 closes (weekend), crypto at its frozen 03:16Z mark of 1051.70. Adjusted for the unreconciled SOUN phantom fill in sentiment the honest total is nearer 9386 / +386. Live XRP at review time is 1.037 against the frozen 1.0341 mark, so crypto's true book is about 1054.75.",
   "per_bot": {
-    "hunter": "Thesis retired this run after seven instances (4 paid, 3 cost). The re-entry-discipline claim rested on entries clustering near the day's high on the first cycle after a blackout; the 08-04 and 08-05 entries were both near the day's low and both worked. Root confound: the market-hours gate forces every equity fill into the first cycle after 09:30 ET, so post-blackout and post-open are the same fills on most days. I was reading a scheduler artefact as strategy behaviour. No further calls on this bot's entry timing.",
-    "sentiment": "First directional call against this bot since 07-30. It has now made four hype rotations in the window; three were genuine and two of those were good (CRWV->PLTR caught earnings for +10.4% in a session). The NET entry is the outlier on quality: bought at the 88th percentile of the day's range into an already-reported 15% surge, -5.85% by the close. SEPARATELY AND MORE IMPORTANTLY: this book's headline 1216.04 includes roughly 185 of profit from the corrupt SOUN fill and should be read as about 1031.",
-    "crypto": "Churn thesis resumed after a week suspended, on new evidence rather than a new opinion. The owner shipped a cost model between runs; costs_paid is now an explicit field and reads 23.10 on this book. The 08-05 LINK cycles are the clean demonstration: eleven legs moved the book 1078.77 -> 1077.80 while paying 14.70 in fees. That is a strategy paying to stand still, and it is now measurable instead of hypothetical.",
-    "analyst": "Reasoning validated true and falsifier did not fire, for the second consecutive review. api_cost_usd 0.2771 across 5 decisions = about 0.055 each, inside the expected 0.05-0.30 band, no runaway. One defect worth the owner's eye: the 08-05 decision was an agent_error that defaulted to HOLD at zero tokens. The guardrail did exactly its job, but one malformed response in five is a 20% rate on a small sample.",
-    "meanrev": "Second time this bot has settled an argument against me. It sold PG at 147.09, completing the mean reversion I bet against on 07-31, then rotated to UNH. No open thesis against it.",
-    "commodity": "Trails its bench by 4.7pp cumulatively (983.00 vs 1029.78) and is the second-weakest book. Not yet an R3 case on the pre-registered 60-trading-day window; flagging it as one to test at the next scheduled review, not now.",
-    "congress": "Five reviews running, same finding: 59% cash makes selection irrelevant. Not a defect, but the bot cannot generate a scoreable divergence until the book is more than half deployed.",
-    "allweather": "Sixteen judgments, zero scoreable divergences, and none expected while the allocation is static.",
-    "scholar": "Six trading days live. First real test is the pre-registered ~2026-10-24 R2/R3 window."
-  },
-  "per_bot_note": "Entries are standing observations carried between runs, not per-day results. Per-day numbers live in fleet_snapshot and in trade_attributions.jsonl.",
-  "fleet_snapshot": {
-    "as_of": "equity marks 2026-08-07 close; crypto marks 2026-08-08",
-    "baseline_usd": 9000,
-    "total_value_usd": 9584.55,
-    "total_pnl_usd": 584.55,
-    "total_pnl_pct": 6.5,
-    "total_value_adjusted_for_bad_fill_usd": 9399.8,
-    "adjustment_note": "About 185 of hype trader's book is profit from the 08-06 SOUN fill that could not have been executed. On a corrected basis the fleet is +399.80 (+4.44%), not +584.55.",
-    "bots": {
-      "meanrev": {"value": 1248.69, "day_pnl": 9.42, "day_pct": 0.76, "bench_day_pct": 0.6, "holding": "UNH"},
-      "sentiment": {"value": 1216.04, "day_pnl": -29.6, "day_pct": -2.38, "bench_day_pct": 0.61, "holding": "NET", "flag": "headline value overstated by ~185, see fill_integrity"},
-      "crypto": {"value": 1064.94, "day_pnl": 16.31, "day_pct": 1.56, "bench_day_pct": 0.12, "holding": "XRP-USD"},
-      "analyst": {"value": 1030.6, "day_pnl": 6.06, "day_pct": 0.59, "bench_day_pct": 0.6, "holding": "SPY"},
-      "scholar": {"value": 1028.01, "day_pnl": 11.1, "day_pct": 1.09, "bench_day_pct": 0.6, "holding": "IWM"},
-      "allweather": {"value": 1016.8, "day_pnl": 6.71, "day_pct": 0.66, "bench_day_pct": 0.61, "holding": "SPY/TLT/GLD/DBC/BIL"},
-      "congress": {"value": 1016.01, "day_pnl": 2.23, "day_pct": 0.22, "bench_day_pct": 0.61, "holding": "NVDA/META/GOOG/TSM + 600 cash"},
-      "commodity": {"value": 983.0, "day_pnl": 2.21, "day_pct": 0.23, "bench_day_pct": 0.6, "holding": "DBC"},
-      "hunter": {"value": 980.46, "day_pnl": 28.13, "day_pct": 2.95, "bench_day_pct": 0.61, "holding": "SLV"}
-    },
-    "retired": {"stock": {"final_mark": 892.3, "retired_on": "2026-07-31", "note": "excluded from all totals"}}
-  },
-  "fill_integrity": {
-    "fills_audited_this_run": 33,
-    "equity_fills": 14,
-    "crypto_fills": 19,
-    "alerts": 1,
-    "alert_detail": {
-      "bot": "sentiment",
-      "trade": "BUY SOUN 6.42999983 on 2026-08-06",
-      "fault": "stale price, NOT a market-hours breach",
-      "time_check": "PASS - first appears in commit 2026-08-06T13:42:18Z = 09:42:18 ET Thursday, inside US regular hours",
-      "price_check": "FAIL - SOUN 08-06 daily range 7.0000-8.1900; the 09:30 ET 15-minute bar was L=7.50 H=8.18 and the 09:45 bar L=7.30. The recorded 6.43 is about 13% below anything tradeable at the fill moment and is an exact match for SOUN's 08-05 close of 6.4300.",
-      "impact_usd": 184.75,
-      "impact_detail": "Recorded round trip 1131.28 -> 1294.91 = +160.59 net of 3.04 fees. At the most favourable achievable 08-06 fill of 7.50 the same trade returns -24.16. The 08-07 SELL leg at 7.36 is itself valid; the corruption is only on the buy.",
-      "scope": "Isolated. I checked all 14 equity fills against the prior session's close and SOUN is the only one that matches, so this is not a wholesale regression of the price path. Every other fill this window passed both checks.",
-      "owner_action": "Reported only, per read-only mandate. The market-hours gate is not the culprit and does not need touching; the question is why the hype bot's quote fetch returned a prior close for SOUN on that cycle."
-    },
-    "minor_variance_not_an_alert": "One crypto leg, LINK-USD at 8.0663 on 08-05, sits 0.0051 (0.06%) below Yahoo's daily low of 8.0714. For a 24/7 multi-venue asset that is inside vendor disagreement and I am recording it rather than calling it."
-  },
-  "stalled_bots": {
-    "status": "none",
-    "detail": "All 9 active bots reported last_updated_utc within 7.5-7.7 minutes of the run, a tight cluster with no outlier. The partial-freeze fault carried over from the 08-04 run (the 4 consumers of src/selection_engine.py going silent) did not recur in this window.",
-    "sentinel_staleness": "The non-trading watcher is a separate matter and IS stale: sentinel_verdict.json is timestamped 2026-08-07T10:47:38Z, about 26 hours old, past its own 24-hour freshness rule. Every risk-gated bot is therefore reading UNKNOWN rather than a live signal, which means the fleet's SEVERE auto-exit is currently unarmed. Not a trading loss today, but it is the safety net and it is down."
-  },
-  "operational_flag": {
-    "cron_gaps": "PERSISTING AND WORSE. Five gaps over 90 minutes in the last 24h: 101.0 min (08-07 16:25:44Z->18:06:41Z), 122.8 min (->20:09:28Z), 129.0 min (->22:18:26Z), 115.9 min (08-08 06:26:01Z->08:21:57Z), 102.5 min (->10:04:28Z), plus a 74.5 min gap below threshold. Nominal cadence is now about 13.4 minutes, so a 129-minute gap is roughly 10 missed cycles.",
-    "market_hours_impact": "The 08-07 16:25Z->22:18Z sequence is the one that matters: that spans 12:25-18:18 ET, so the fleet was blind for two multi-hour stretches during Friday afternoon trading while holding nine live equity positions.",
-    "escalation": "This is the third consecutive review where gaps exceed the 90-minute threshold despite the 07-22 move to minutes 7/27/47. The owner's own escalation trigger - move to an external trigger rather than GitHub cron - is met on the evidence.",
-    "workflow_failures": "1 failed run at 2026-08-08T11:39:12Z and 3 cancelled runs (04:18:48Z, 06:26:01Z, 08:21:57Z) in the last 24h. The cancellations sit exactly at the start of three of the gaps above, so cancellation and gap are likely the same event rather than two problems."
-  },
-  "kill_criteria_status": {
-    "R1_hard_stop_750": "No breach. Lowest active book is hunter at 980.46.",
-    "below_800_watch": "None.",
-    "below_900_drawdown": "None among active bots. Retired stock/TQQQ finished at 892.30 and is excluded.",
-    "R4_dead_money": "No bot meets the >30 consecutive trading days fully in cash test. congress is 59% cash but partially deployed and its sleeves are on 90-day hold clocks, so it does not qualify.",
-    "R2_R3_note": "Both are scheduled-review rules, not daily ones. Carrying forward for the next scheduled review: commodity trails its bench by 4.7pp (983.00 vs 1029.78) and hunter by 4.96pp (980.46 vs 1030.02). Neither has the 60-trading-day window yet.",
-    "probation": "None currently on probation."
-  },
-  "concentration_flag": "Six of nine bots are all-in on a single asset. Friday's fleet result was essentially two positions: silver (+28.13 via hunter) and NET (-29.60 via hype).",
-  "driver_tally_source": "reports/attribution_summary.json, recomputed from scratch over all 195 lines this run rather than incremented.",
-  "analyst_validation": {
-    "decisions_reviewed": 5,
-    "reasoning_validated": "true for the 08-03 buy and the subsequent holds. The stated thesis was trend continuation with SPY above its ~742 50-day zone, and SPY closed higher in four of five sessions from 757.67 to 773.26. Its 08-03 rejection of USO on the grounds that the Iran catalyst had already fired also held up a second time: USO fell 5.2% the next session.",
-    "falsifier_fired": "false. All three pre-committed triggers - two closes below 728.00, a single close below 747.03 before 08-21, and Watcher SEVERE - were untouched; SPY's lowest close in the window was 757.67.",
-    "right_for_right_reason": true,
-    "api_cost_usd": 0.2771,
-    "api_cost_per_decision": 0.055,
-    "api_cost_verdict": "plausible, inside the 0.05-0.30 expected band, no runaway loop",
-    "defect": "The 08-05 decision recorded action hold with error 'agent_error - malformed/no decision, defaulting to HOLD', zero tokens, zero cost. The guardrail behaved exactly as specified and the fail-safe is the right one. Noting the rate rather than the incident: one in five."
-  },
-  "sentiment_input": "sentinel_verdict.json risk_level 'caution' as of 2026-08-07T10:47:38Z, flagging an Iran/Hormuz oil headwind and the pending July jobs report. STALE at 26 hours and therefore treated as UNKNOWN by the gate, not as calm."
+   "meanrev": 1248.69,
+   "sentiment": 1216.04,
+   "crypto": 1051.7,
+   "analyst": 1030.6,
+   "scholar": 1028.01,
+   "allweather": 1016.8,
+   "congress": 1016.01,
+   "commodity": 983.0,
+   "hunter": 980.46
+  }
+ },
+ "kill_criteria_status": {
+  "R1_breaches": [],
+  "below_800": [],
+  "below_900": [],
+  "R4_dead_money": [],
+  "on_probation": [],
+  "note": "No R1 hard-stop breach. Weakest books are hunter 980.46 and commodity 983.00, both comfortably above the $750 line and above $900. Congress holds 59% cash but is partially deployed, so R4 (100% cash) does not apply. R2/R3 are scheduled-review checks, not daily ones."
+ }
 }
