@@ -1,41 +1,41 @@
 {
-  "generated_utc": "2026-08-09T02:36:32+00:00",
+  "generated_utc": "2026-08-09T02:49:55+00:00",
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "live_ts": "2026-08-09T02:36:32+00:00",
+  "live_ts": "2026-08-09T02:49:55+00:00",
   "current": {
     "date": "2026-08-09",
-    "value": 1054.49,
-    "bench": 1005.42,
-    "holding": "CASH"
+    "value": 1051.8,
+    "bench": 1004.88,
+    "holding": "XRP-USD"
   },
   "board": {
     "BTC-USD": {
-      "price": 64779.8,
-      "ma200": 70131.0865,
-      "gap_pct": -7.63,
-      "mom_pct": 2.02,
-      "z": 0.42,
+      "price": 64744.9,
+      "ma200": 70130.912,
+      "gap_pct": -7.68,
+      "mom_pct": 1.96,
+      "z": 0.38,
       "above_ma": false,
       "rank": 5,
       "spread_bps": 0.02
     },
     "ETH-USD": {
-      "price": 1914.09,
-      "ma200": 2050.2262,
-      "gap_pct": -6.64,
-      "mom_pct": 1.66,
-      "z": 0.6,
+      "price": 1912.93,
+      "ma200": 2050.2204,
+      "gap_pct": -6.7,
+      "mom_pct": 1.6,
+      "z": 0.56,
       "above_ma": false,
       "rank": 6,
-      "spread_bps": 0.05
+      "spread_bps": 0.37
     },
     "SOL-USD": {
-      "price": 75.9,
-      "ma200": 83.5232,
-      "gap_pct": -9.13,
-      "mom_pct": 3.21,
-      "z": 0.82,
+      "price": 75.8,
+      "ma200": 83.5228,
+      "gap_pct": -9.25,
+      "mom_pct": 3.07,
+      "z": 0.77,
       "above_ma": false,
       "rank": 7,
       "spread_bps": 2.64
@@ -43,29 +43,29 @@
     "DOGE-USD": {
       "price": 0.07,
       "ma200": 0.092,
-      "gap_pct": -23.97,
-      "mom_pct": -1.05,
-      "z": -0.39,
+      "gap_pct": -23.99,
+      "mom_pct": -1.08,
+      "z": -0.4,
       "above_ma": false,
       "rank": 2,
-      "spread_bps": 0.54
+      "spread_bps": 1.26
     },
     "AVAX-USD": {
-      "price": 6.483,
+      "price": 6.472,
       "ma200": 8.4786,
-      "gap_pct": -23.54,
-      "mom_pct": -0.93,
-      "z": -0.08,
+      "gap_pct": -23.67,
+      "mom_pct": -1.1,
+      "z": -0.15,
       "above_ma": false,
       "rank": 4,
       "spread_bps": 3.09
     },
     "LINK-USD": {
-      "price": 8.2973,
+      "price": 8.29,
       "ma200": 8.8886,
-      "gap_pct": -6.65,
-      "mom_pct": -0.87,
-      "z": -0.25,
+      "gap_pct": -6.73,
+      "mom_pct": -0.96,
+      "z": -0.28,
       "above_ma": false,
       "rank": 3,
       "spread_bps": 0.01
@@ -73,25 +73,25 @@
     "ADA-USD": {
       "price": 0.1986,
       "ma200": 0.2328,
-      "gap_pct": -14.66,
-      "mom_pct": 4.9,
-      "z": 1.31,
+      "gap_pct": -14.7,
+      "mom_pct": 4.85,
+      "z": 1.3,
       "above_ma": false,
       "rank": 8,
-      "spread_bps": 1.21
+      "spread_bps": 1.86
     },
     "XRP-USD": {
-      "price": 1.0352,
+      "price": 1.0341,
       "ma200": 1.3195,
-      "gap_pct": -21.54,
-      "mom_pct": -4.65,
-      "z": -1.24,
+      "gap_pct": -21.63,
+      "mom_pct": -4.75,
+      "z": -1.27,
       "above_ma": false,
       "rank": 1,
-      "spread_bps": 0.1
+      "spread_bps": 0.97
     }
   },
-  "pick": "CASH",
+  "pick": "XRP-USD",
   "regime": "CHOP",
   "intraday": [
     {
@@ -5907,19 +5907,15 @@
       "value": 1054.49,
       "bench": 1005.42,
       "holding": "CASH"
+    },
+    {
+      "ts": "2026-08-09T02:49:55+00:00",
+      "value": 1051.8,
+      "bench": 1004.88,
+      "holding": "XRP-USD"
     }
   ],
   "trades": [
-    {
-      "date": "2026-08-05",
-      "action": "SELL",
-      "ticker": "LINK-USD",
-      "price": 8.1593,
-      "units": 132.543805,
-      "value": 1081.46,
-      "fee": 2.81,
-      "reason": "Signal flip"
-    },
     {
       "date": "2026-08-05",
       "action": "TO CASH",
@@ -6102,6 +6098,16 @@
       "units": 0,
       "value": 1054.49,
       "reason": "All 8 coins falling on the week \u2014 cash until one rises"
+    },
+    {
+      "date": "2026-08-09",
+      "action": "BUY",
+      "ticker": "XRP-USD",
+      "price": 1.0341,
+      "units": 1017.11652,
+      "value": 1051.8,
+      "fee": 2.69,
+      "reason": "Strongest eligible coin (-4.8% 7d momentum)"
     }
   ],
   "history": [
@@ -6251,14 +6257,14 @@
     },
     {
       "date": "2026-08-09",
-      "value": 1054.49,
-      "bench": 1005.42,
-      "holding": "CASH"
+      "value": 1051.8,
+      "bench": 1004.88,
+      "holding": "XRP-USD"
     }
   ],
-  "costs_paid": 36.5232,
+  "costs_paid": 39.2106,
   "frozen": null,
-  "thoughts": "Right now I'm in CHOP mode: Bitcoin is below its 200-day average, which means the market is directionless \u2014 chasing momentum here loses money, so instead I look for a coin that fell unusually hard and try to catch its bounce back. Nothing qualifies at this moment, so I'm in cash \u2014 in crypto, sitting out is often the smartest trade.",
+  "thoughts": "Right now I'm in CHOP mode: Bitcoin is below its 200-day average, which means the market is directionless \u2014 chasing momentum here loses money, so instead I look for a coin that fell unusually hard and try to catch its bounce back. That's why I'm holding XRP.",
   "strategy": {
     "name": "Regime Switcher \u2014 two brains, one bot",
     "rule": "BTC above its 200-day MA = TREND: ride the hottest rising 7-day-momentum coin. Below = CHOP: buy the most oversold coin (z20 < -1.25) and harvest the bounce; nothing qualifies -> cash",
