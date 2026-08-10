@@ -1,9 +1,11 @@
 """LIVE crypto $1,000 paper sim — YOLO 2.0 momentum rotation, 8 coins.
 
 Rule (user choice, lesson from the grid in test_absmom.py applied):
-Always 100% in the coin with the hottest 7-day momentum — but never hold a
-falling one. If all 8 have negative weekly momentum, sit in cash until
-something rises. Live quotes, 24/7 market.
+Always 100% in the coin with the hottest 7-day momentum; if all 8 have
+negative weekly momentum, sit in cash. Exits carry a dead-band (churn fix
+2026-08-10): a seat is kept through small wobbles — TREND until momentum
+clearly breaks (< -2%), CHOP until the bounce is harvested (z back to
+-0.25) — so boundary noise stops churning fees. Live quotes, 24/7 market.
 
 State: data/crypto_state.json.  Screen: reports/crypto_dashboard.html.
 Run any time:  python src/crypto_tracker.py
@@ -38,6 +40,17 @@ MA_N, MOM_N, Z_N, Z_ENTRY = 200, 7, 20, -1.25
 # incumbent CLEARLY, not merely rank above it.
 HYST = 1.25       # TREND: challenger momentum must be > 1.25x the incumbent's
 Z_HYST = 0.50     # CHOP: challenger z must be this much deeper than incumbent's
+# Exit dead-band (churn fix 2026-08-10): entry and exit shared one knife-edge
+# threshold, so a coin wobbling at the boundary was sold and rebought every
+# cycle — 15 legs / $26.52 of fees on 08-10 alone, ~51bps per round trip to
+# capture ~20bps of noise. A seat earned at z < Z_ENTRY (CHOP) or mom > 0
+# (TREND) is only surrendered when the trade clearly completes or clearly
+# fails; sentinel-severe and the R1 floor still force CASH regardless.
+Z_EXIT = -0.25    # CHOP: hold the bounce until z recovers to here
+MOM_EXIT = -2.0   # TREND: tolerate a wobble; exit only on a clear break (pct)
+MOM_MARGIN = 2.0  # TREND: a wobbling incumbent (mom <= 0) only loses its seat
+                  # to a challenger leading by this many points — the 1.25x
+                  # ratio test is meaningless across zero/negative momentum
 
 
 def fetch() -> pd.DataFrame:
@@ -104,11 +117,62 @@ def signal(close: pd.DataFrame) -> tuple[str, dict, str]:
     return pick, board, regime
 
 
+def exit_brake(pick: str, held: str, board: dict, seat_regime: str) -> str:
+    """Dead-band on the position->CASH boundary. signal() says CASH the moment
+    the held coin slips back across the entry threshold; this keeps the seat
+    until the move clearly completes (CHOP: z >= Z_EXIT) or clearly fails
+    (TREND: mom <= MOM_EXIT). seat_regime is the regime the seat was EARNED
+    under (state's entry_regime), not the regime of the moment — a TREND buy
+    that crashes just as BTC crosses its MA must not inherit CHOP's
+    dip-holding patience. Pure decision — caller handles logging and the
+    sentinel/R1 overrides, which must always win."""
+    if pick != "CASH" or held == "CASH":
+        return pick
+    b = board[held]
+    if seat_regime == "TREND":
+        if b["mom_pct"] > MOM_EXIT:
+            return held
+    else:
+        # ponytail: no per-coin failure stop in CHOP — a single-coin crash in
+        # a calm market rides to the R1 book floor ($750). Add a
+        # drawdown-from-entry stop if that ever actually happens.
+        if b["z"] < Z_EXIT:
+            return held
+    return pick
+
+
+def swap_brake(pick: str, held: str, board: dict, regime: str) -> str:
+    """Coin->coin hysteresis (review 2026-08-10: the original gates defended
+    an incumbent only while it still cleared the ENTRY threshold, so a seat
+    the exit brake keeps through the dead band could be flipped away by a
+    challenger 0.01 past entry — same fee bleed, swap door). The incumbent
+    keeps its seat unless it has fallen past the dead-band exit or the
+    challenger is clearly better. Judged in the CURRENT regime: that is the
+    metric the challenger was ranked by."""
+    if pick in ("CASH", held) or held == "CASH":
+        return pick
+    b_new, b_cur = board[pick], board[held]
+    if regime == "TREND":
+        if b_cur["mom_pct"] > MOM_EXIT:
+            # challenger must clear BOTH bars: the 1.25x ratio (dominates for
+            # hot incumbents, mom > 8) and an absolute MOM_MARGIN lead
+            # (dominates below — a bare ratio gave sub-fee protection at low
+            # momentum and made rising incumbents easier to unseat than
+            # wobbling ones)
+            bar = max(HYST * b_cur["mom_pct"], b_cur["mom_pct"] + MOM_MARGIN)
+            if b_new["mom_pct"] < bar:
+                return held
+    else:
+        if b_cur["z"] < Z_EXIT and b_new["z"] > b_cur["z"] - Z_HYST:
+            return held
+    return pick
+
+
 def load_state():
     return json.loads(STATE.read_text()) if STATE.exists() else None
 
 
-def init_state(close, pick, board) -> dict:
+def init_state(close, pick, board, regime="TREND") -> dict:
     asof = str(close.index[-1].date())
     st = {
         "created": asof, "starting_cash": START_CASH,
@@ -119,19 +183,25 @@ def init_state(close, pick, board) -> dict:
     if pick != "CASH":
         px = board[pick]["price"]
         st["holding"], st["units"], st["cash"] = pick, START_CASH / px, 0.0
+        st["entry_regime"] = regime
         st["trades"].append({"date": asof, "action": "BUY", "ticker": pick,
                              "price": px, "units": round(st["units"], 6),
                              "value": START_CASH,
-                             "reason": f"Initial entry — strongest eligible coin "
-                                       f"({board[pick]['mom_pct']:+.1f}% 7d momentum)"})
+                             "reason": (f"Initial entry — most oversold coin "
+                                        f"(z {board[pick]['z']:+.2f})"
+                                        if regime == "CHOP" else
+                                        f"Initial entry — strongest eligible coin "
+                                        f"({board[pick]['mom_pct']:+.1f}% 7d momentum)")})
     else:
         st["trades"].append({"date": asof, "action": "HOLD CASH", "ticker": "—",
                              "price": 0, "units": 0, "value": START_CASH,
-                             "reason": "All 8 coins falling on the week — cash until one rises"})
+                             "reason": ("Nothing oversold enough (z < -1.25) — cash"
+                                        if regime == "CHOP" else
+                                        "All 8 coins falling on the week — cash until one rises")})
     return st
 
 
-def update(st, close, pick, board, cash_reason=None) -> dict:
+def update(st, close, pick, board, cash_reason=None, regime="TREND") -> dict:
     asof = str(close.index[-1].date())
     # value before any switch
     cur_px = board[st["holding"]]["price"] if st["holding"] != "CASH" else None
@@ -154,23 +224,30 @@ def update(st, close, pick, board, cash_reason=None) -> dict:
                                  "reason": "Signal flip"})
         if pick == "CASH":
             st["holding"], st["units"], st["cash"] = "CASH", 0.0, value
+            st.pop("entry_regime", None)
             st["trades"].append({"date": asof, "action": "TO CASH", "ticker": "—",
                                  "price": 0, "units": 0, "value": round(value, 2),
                                  "reason": cash_reason or
-                                 "All 8 coins falling on the week — cash until one rises"})
+                                 ("Bounce harvested or nothing oversold enough — cash"
+                                  if regime == "CHOP" else
+                                  "All 8 coins falling on the week — cash until one rises")})
         else:
             px = board[pick]["price"]
             f = risk_common.fee(pick, value, board[pick].get("spread_bps"))
             spend = value - f
             st["costs_paid"] = round(st.get("costs_paid", 0.0) + f, 4)
             st["holding"], st["units"], st["cash"] = pick, spend / px, 0.0
+            st["entry_regime"] = regime
             st["trades"].append({"date": asof, "action": "BUY", "ticker": pick,
                                  "price": round(px, 8),
                                  "units": round(st["units"], 6),
                                  "value": round(spend, 2),
                                  "fee": round(f, 2),
-                                 "reason": f"Strongest eligible coin "
-                                           f"({board[pick]['mom_pct']:+.1f}% 7d momentum)"})
+                                 "reason": (f"Most oversold coin (z {board[pick]['z']:+.2f}) "
+                                            f"— buying the dip"
+                                            if regime == "CHOP" else
+                                            f"Strongest eligible coin "
+                                            f"({board[pick]['mom_pct']:+.1f}% 7d momentum)")})
 
     val = st["cash"] if st["holding"] == "CASH" else st["units"] * board[st["holding"]]["price"]
     bench = st["bench_units"] * board[BENCH]["price"]
@@ -209,7 +286,9 @@ def emit(st, board, pick, live_ts="", regime="") -> None:
              "which means the market is directionless — chasing momentum here "
              "loses money, so instead I look for a coin that fell unusually hard "
              "and try to catch its bounce back. ")
-            + (f"That's why I'm holding {st['holding'].replace('-USD', '')}."
+            + (f"That's why I'm holding {st['holding'].replace('-USD', '')}. "
+               "I keep my seat through small wobbles instead of paying fees "
+               "on every flicker."
                if st["holding"] != "CASH" else
                "Nothing qualifies at this moment, so I'm in cash — in crypto, "
                "sitting out is often the smartest trade.")),
@@ -218,7 +297,9 @@ def emit(st, board, pick, live_ts="", regime="") -> None:
             "rule": "BTC above its 200-day MA = TREND: ride the hottest "
                     "rising 7-day-momentum coin. Below = CHOP: buy the most "
                     "oversold coin (z20 < -1.25) and harvest the bounce; "
-                    "nothing qualifies -> cash",
+                    "nothing qualifies -> cash. Exits use a dead-band (hold "
+                    "until mom < -2% / z back to -0.25) so boundary wobbles "
+                    "don't churn fees",
             "backtest_cagr": "+50%/yr since 2017 · +9%/yr in the 2024+ chop",
             "backtest_maxdd": "-93% (2017 era) · experimental — parameters are soft",
         },
@@ -254,28 +335,47 @@ def main():
     if gate_state != "ok":
         print(f"[crypto-live] WATCHER {gate_state.upper()}: {gate_detail}")
     is_severe, why = sentinel_gate.severe()
-    if is_severe and pick != "CASH":
-        print(f"[crypto-live] {why} -> forcing CASH")
-        pick = "CASH"
-    st = load_state()
     cash_reason = None
+    if is_severe:
+        # label ANY severe-cycle liquidation with the Watcher's reason — also
+        # the case where signal() itself said CASH and the exit brake is
+        # bypassed (cash_reason is only consumed when a TO CASH is written)
+        cash_reason = why
+        if pick != "CASH":
+            print(f"[crypto-live] {why} -> forcing CASH")
+            pick = "CASH"
+    st = load_state()
     if st is not None:
         held = st["holding"]
+        # The regime this seat was earned under. Legacy state predating
+        # entry_regime gets its provenance FROZEN at first sight (setdefault,
+        # persisted below) — a floating fallback would relabel the seat on a
+        # regime flip and judge a CHOP dip by TREND's momentum stop.
+        if held != "CASH":
+            st.setdefault("entry_regime", regime)
+        seat_regime = st.get("entry_regime") or regime
         # Churn brake: don't swap coins on a marginal re-rank. The incumbent
         # keeps its seat unless it's disqualified or clearly outgunned.
-        if pick not in ("CASH", held) and held != "CASH":
-            b_new, b_cur = board[pick], board[held]
-            if regime == "TREND":
-                if b_cur["mom_pct"] > 0 and b_new["mom_pct"] < HYST * b_cur["mom_pct"]:
-                    print(f"[crypto-live] churn brake: {pick} mom "
-                          f"{b_new['mom_pct']:+.1f}% < {HYST}x incumbent "
-                          f"{held} {b_cur['mom_pct']:+.1f}% — holding")
-                    pick = held
-            else:
-                if b_cur["z"] < Z_ENTRY and b_new["z"] > b_cur["z"] - Z_HYST:
-                    print(f"[crypto-live] churn brake: {pick} z {b_new['z']:+.2f} "
-                          f"not {Z_HYST} deeper than {held} {b_cur['z']:+.2f} — holding")
-                    pick = held
+        kept = swap_brake(pick, held, board, regime)
+        if kept != pick:
+            print(f"[crypto-live] churn brake: {pick} "
+                  f"(mom {board[pick]['mom_pct']:+.1f}%, z {board[pick]['z']:+.2f}) "
+                  f"not clearly better than incumbent {held} "
+                  f"(mom {board[held]['mom_pct']:+.1f}%, z {board[held]['z']:+.2f}) "
+                  f"— holding")
+            pick = kept
+        # Exit dead-band: signal() flips to CASH at the same threshold it
+        # entered on — never surrender the seat on a boundary wobble. A
+        # sentinel-severe CASH is an order, not a wobble; it passes through.
+        if pick == "CASH" and held != "CASH" and not is_severe:
+            if exit_brake(pick, held, board, seat_regime) == held:
+                b = board[held]
+                metric = (f"mom {b['mom_pct']:+.1f}% > {MOM_EXIT:+.1f}%"
+                          if seat_regime == "TREND" else
+                          f"z {b['z']:+.2f} < {Z_EXIT:+.2f}")
+                print(f"[crypto-live] exit brake: {held} {metric} — "
+                      f"inside dead-band, holding")
+                pick = held
         # R1 kill floor, code-enforced (audit 2026-08-05)
         cur_val = st.get("cash", 0.0) if held == "CASH" \
             else st.get("units", 0.0) * board[held]["price"]
@@ -287,9 +387,9 @@ def main():
             cash_reason = risk_common.r1_reason(cur_val)
             print(f"[crypto-live] {cash_reason}")
     if st is None:
-        st = init_state(close, pick, board)
+        st = init_state(close, pick, board, regime)
         print(f"[crypto-live] NEW sim {st['created']} — opening position: {pick}")
-    st = update(st, close, pick, board, cash_reason)
+    st = update(st, close, pick, board, cash_reason, regime)
     if cash_reason and "R1 KILL FLOOR" in cash_reason and st["holding"] == "CASH" \
             and not st.get("frozen"):
         st["frozen"] = {"date": st["history"][-1]["date"] if st["history"] else "",
