@@ -1,24 +1,24 @@
-# Fleet status — 2026-08-09 (UTC)
+# Fleet status — 2026-08-10 (UTC)
 
-Last cycle commit: 2026-08-09 03:16 UTC. $1,000 paper start/bot, no real money.
+Last cycle commit: 2026-08-10 02:33 UTC. $1,000 paper start/bot, no real money.
 
 | Bot | Holds | Value (asof) | 24h change |
 |---|---|---|---|
-| trend (crypto) | XRP-USD | $1,051.80 (08-09 03:16) | Whipsawed: SELL→CASH→BUY XRP-USD ×3 on signal flips, ~$16 total fees, still net XRP-USD |
-| congress | NVDA, META, GOOG, TSM (+$600 cash) | $1,016.01 (08-07) | No trade (weekend, no new filings) |
-| meanrev | UNH | $1,248.69 (08-07) | No trade (weekend) |
-| commodity | DBC | $983.00 (08-07) | No trade (weekend) |
-| allweather | 5-asset basket | $1,016.80 (08-07) | No trade (weekend) |
-| hype (sentiment) | NET | $1,216.04 (08-07) | No trade (weekend) |
-| Hunter | SLV | $980.46 (08-07) | No trade (weekend) |
-| Scholar | IWM | $1,028.01 (08-07) | No trade (weekend) |
-| Analyst | SPY | $1,030.60 (08-07) | No trade (weekend) |
-| Watcher | advisory, no position | — | Still stale — last successful scan 08-07 10:47 UTC (46h+) |
+| trend (crypto) | XRP-USD | $1,043.77 (08-10) | Whipsawed: SELL→CASH→BUY XRP-USD ×6 on signal flips since 08-09, ~$32 total fees, net still XRP-USD |
+| congress | NVDA, META, GOOG, TSM (+$600 cash) | $1,016.01 (08-07) | No trade |
+| meanrev | UNH | $1,248.69 (08-07) | No trade |
+| commodity | DBC | $983.00 (08-07) | No trade |
+| allweather | 5-asset basket | $1,016.80 (08-07) | No trade |
+| hype (sentiment) | NET | $1,216.04 (08-07) | No trade |
+| Hunter | SLV | $980.46 (08-07) | No trade |
+| Scholar | IWM | $1,028.01 (08-07) | No trade |
+| Analyst | SPY | $1,030.60 (08-07) | No trade |
+| Watcher | advisory, no position | — | Still stale — last successful scan 08-07 10:47 UTC |
 
 ## Changed
-- **trend/crypto** churned XRP-USD 3x in ~13h (signal-flip SELL → CASH → BUY, repeated), paying ~$16 in fees across the round trips. Still holding XRP-USD as of the last cycle. Worth watching if the whipsaw continues.
-- Equity bots (congress, meanrev, commodity, allweather, hype, Hunter, Scholar, Analyst) unchanged — expected, markets closed for the weekend.
+- **trend/crypto** churned XRP-USD 6x since 08-09 (repeated SELL → CASH → BUY on signal flips), paying ~$32 in fees across the round trips. Still holding XRP-USD as of the last cycle.
+- Equity bots (congress, meanrev, commodity, allweather, hype, Hunter, Scholar, Analyst) all unchanged — no trades, values still marked to Friday 08-07 close (no new equity bar yet).
 
 ## Needs a look
-- **Watcher is still broken.** Last successful scan is unchanged from yesterday's report: 2026-08-07 10:47 UTC (46+ hours ago), despite an 8h self-throttle interval. Yesterday's digest traced this to xAI API credits exhausted (HTTP 403 in job logs); nothing in the data suggests it has recovered. Risk-gated bots treat sentinel verdicts older than 24h as UNKNOWN — that threshold has now been crossed.
-- **Current cycle appears stuck.** GitHub Actions run 31285348405 has had its "Trade loop" step `in_progress` since 2026-08-09 03:30 UTC — over 1h40m with zero new cycle commits, versus the normal ~13 min cadence. Live job logs aren't downloadable while running, so the cause isn't confirmed from here; if it doesn't self-resolve or timeout soon, check the Actions run directly.
+- **Watcher is still broken, now going on 3 days.** Last successful scan is unchanged from both the last two days' reports: 2026-08-07 10:47 UTC, now ~66 hours stale. The bot has run cycles since (files last touched 08-09 09:47 UTC) without producing a new scan. Risk-gated bots have been treating the sentinel verdict as UNKNOWN well past the 24h threshold this whole time.
+- Cron gaps of several hours between cycles on 08-09 and again just now (last commit 02:33 UTC, ~2.5h ago as of this digest) — per the workflow's own notes this is expected GitHub Actions scheduling throttling, not a new fault, so not flagged as broken.
