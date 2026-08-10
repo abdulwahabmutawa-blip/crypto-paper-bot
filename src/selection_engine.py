@@ -235,7 +235,9 @@ def run(spec, start_cash=1000.0):
     if trail and st["holding"] != "CASH":
         px = float(last[st["holding"]])
         st["hwm"] = max(st.get("hwm") or px, px)
-        if px <= st["hwm"] * (1 - trail):
+        if px <= st["hwm"] * (1 - trail) and not r1_hit:
+            # not r1_hit: when one gap trips both, the ledger must say R1 —
+            # the kill floor is the reason the book is actually dying
             sell_reason = (f"TRAILING STOP — fell {trail:.0%} from high-water "
                            f"${st['hwm']:,.2f}")
             stop_fired = True

@@ -91,7 +91,12 @@ def main():
     # the audit's cost model; frozen books never rebalance). All targets are
     # computed from the SAME pre-fee value, then the total fee shrinks the
     # book proportionally — mid-loop mutation skewed later tickers' weights.
-    if not st.get("frozen") and asof[:7] != st["last_rebalance_month"]:
+    # Strict > (fleet review 2026-08-10): a stale out-of-order bar from a
+    # PRIOR month (07-31 arrived after the 08-03 rebalance) re-triggered `!=`
+    # and flipped last_rebalance_month backward, causing two unscripted
+    # rebalances. YYYY-MM compares correctly as strings; the control must
+    # trade exactly once a month as pre-registered.
+    if not st.get("frozen") and asof[:7] > st["last_rebalance_month"]:
         total_fee = 0.0
         for t, w in W.items():
             delta = val * w / px[t] - st["units"][t]

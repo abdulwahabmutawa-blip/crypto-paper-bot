@@ -17,8 +17,11 @@ invalidated the first backtest for exactly this).
 """
 from __future__ import annotations
 
+import json
+
 import pandas as pd
 
+import config
 import selection_engine
 
 UNIV = ["SPY", "QQQ", "IWM", "EFA", "EEM", "TLT",
@@ -60,6 +63,23 @@ def signal(raw: pd.DataFrame, holding: str):
         pick = top
     else:
         pick = holding
+
+    # Fleet review 2026-08-10: evidence capture, not more trading. Persist the
+    # challenger-vs-holding score each day so the 1.25x hysteresis can be
+    # judged from the bot's own record at the 90-day review. Each ~13-min run
+    # overwrites today's row (converges to end-of-day state); bot.yml commits
+    # data/ wholesale. Any I/O failure is inert — trading logic untouched.
+    try:
+        d = str(raw.index[-1].date())
+        p = config.DATA / "scholar_signal_log.json"
+        log = json.loads(p.read_text()) if p.exists() else {}
+        log[d] = {"holding": holding, "pick": pick, "top": top,
+                  "top_score": round(stats[top][4], 4) if top else None,
+                  "held_score": round(stats[holding][4], 4)
+                  if holding in stats else None}
+        p.write_text(json.dumps(log))
+    except Exception:
+        pass
 
     board = []
     for c in sorted(stats, key=lambda c: -stats[c][4]):

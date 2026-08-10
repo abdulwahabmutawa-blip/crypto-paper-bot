@@ -89,6 +89,10 @@ def main():
                              "units": round(st["units"], 4),
                              "value": round(gross, 2), "fee": round(f, 2),
                              "reason": reason})
+        # Fleet review 2026-08-10: EVERY exit starts the cooldown clock, not
+        # just stop-outs — the ledger's 2nd-biggest loss (-$62.92) was a
+        # next-day rebuy of USO at 7.8% ABOVE its own "Outgunned" exit price.
+        st["stopped"] = {"ticker": st["holding"], "date": today}
         st["cash"], st["holding"], st["units"] = gross - f, "CASH", 0.0
         st["high_water"] = None
 
@@ -102,9 +106,7 @@ def main():
         st["high_water"] = max(st["high_water"] or p, p)
         if p / st["high_water"] - 1 <= -TRAIL \
                 and market_hours.can_fill(st["holding"]):
-            stopped_ticker = st["holding"]
             sell(f"TRAILING STOP — fell {TRAIL:.0%} from its high-water mark")
-            st["stopped"] = {"ticker": stopped_ticker, "date": today}
 
     # 2) Watcher severe gate (surface silence — a stale Watcher is not calm)
     gate_state, gate_detail = sentinel_gate.status()
@@ -142,18 +144,26 @@ def main():
         if np.isnan(cur) or cur <= 0 or score[top] > HYST * cur:
             desired = top
 
-    # 3.5) stop-out cooldown: a freshly stopped ticker is untouchable for
+    # 3.5) exit cooldown: a ticker exited for ANY reason is untouchable for
     #      STOP_COOLDOWN_DAYS — take the next-best positive score instead.
     stop = st.get("stopped") or {}
     if desired not in ("CASH",) and desired == stop.get("ticker"):
         days = (pd.Timestamp(today) - pd.Timestamp(stop["date"])).days
         if days < STOP_COOLDOWN_DAYS:
-            ranked = sorted(score.index, key=lambda x: -score[x])
-            alt = next((t for t in ranked
-                        if t != desired and float(score[t]) > 0), None)
-            print(f"[{KEY}] {desired} stopped out {days}d ago — cooling off "
-                  f"({STOP_COOLDOWN_DAYS}d); taking {alt or 'CASH'} instead")
-            desired = alt or "CASH"
+            if st["holding"] != "CASH":
+                # holding a live seat: keep it — substituting the next-best
+                # name here would switch seats without the 1.25x hysteresis
+                # bar and record a false "Outgunned" reason for it
+                print(f"[{KEY}] {desired} exited {days}d ago — cooling off "
+                      f"({STOP_COOLDOWN_DAYS}d); keeping {st['holding']}")
+                desired = st["holding"]
+            else:
+                ranked = sorted(score.index, key=lambda x: -score[x])
+                alt = next((t for t in ranked
+                            if t != desired and float(score[t]) > 0), None)
+                print(f"[{KEY}] {desired} exited {days}d ago — cooling off "
+                      f"({STOP_COOLDOWN_DAYS}d); taking {alt or 'CASH'} instead")
+                desired = alt or "CASH"
         else:
             st.pop("stopped", None)
 

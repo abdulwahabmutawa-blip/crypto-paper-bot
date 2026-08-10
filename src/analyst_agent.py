@@ -321,7 +321,17 @@ def main():
         try:
             decision, tools_called, usage = decide(client, context, close_raw)
         except Exception as e:
-            print(f"[analyst] API failure: {e} -> HOLD")
+            # Fleet review 2026-08-10: one retry. A transient API error on a
+            # falsifier-fire day (2026-08-05, 0 tokens used) silently became a
+            # forced HOLD — the one edge this bot claims is exit discipline,
+            # so a single blip must not be able to cancel an exit.
+            print(f"[analyst] API failure: {e} — retrying once in 30s")
+            import time
+            time.sleep(30)
+            try:
+                decision, tools_called, usage = decide(client, context, close_raw)
+            except Exception as e2:
+                print(f"[analyst] API failure on retry: {e2} -> HOLD")
         cost = usage["in"] * IN_PRICE / 1e6 + usage["out"] * OUT_PRICE / 1e6
         if rehearsal:
             import sentinel_gate

@@ -45,6 +45,10 @@ SPEC = {
     "signal": signal,
     "cash_reason": "No commodity above its 200-day MA — in T-bill-style cash",
     "buy_reason": "Strongest commodity above its 200-day MA",
+    # Fleet review 2026-08-10: USO ran +14.6% then round-tripped to a realized
+    # -3.0% because the lagging MA/momentum flip was the only exit. 10% trail
+    # from high-water locks in trend gains; entry rule untouched.
+    "risk": {"trailing": 0.10, "cooldown_days": 5},
     "meta": {
         "title": "Commodity Trend — $1,000 Challenge",
         "badge": "PAPER SIM · 4TH ASSET CLASS",

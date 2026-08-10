@@ -52,6 +52,11 @@ SPEC = {
     # record the real matching-engine fill beside the sim fill — measures the
     # execution-realism gap per trade. No-op until Alpaca keys are configured.
     "broker_shadow": True,
+    # Fleet review 2026-08-10: SPEC pre-registers a -57%-class max drawdown but
+    # carried no stop at all; 12% trail is 4x the worst excursion any position
+    # has shown (994 intraday marks, worst -2.94%) so it alters no past trade,
+    # only fences the falling-knife tail before the $750 R1 freeze.
+    "risk": {"trailing": 0.12, "cooldown_days": 5},
     "meta": {
         "title": "Mean-Reversion Mega-Caps — $1,000 Challenge",
         "badge": "PAPER SIM · ANTI-MOMENTUM",

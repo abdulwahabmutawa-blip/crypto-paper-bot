@@ -51,6 +51,9 @@ MOM_EXIT = -2.0   # TREND: tolerate a wobble; exit only on a clear break (pct)
 MOM_MARGIN = 2.0  # TREND: a wobbling incumbent (mom <= 0) only loses its seat
                   # to a challenger leading by this many points — the 1.25x
                   # ratio test is meaningless across zero/negative momentum
+STOP_PCT = -10.0  # failure stop (fleet review 2026-08-10): a seat this far
+                  # below entry is a failed trade, not a dip worth patience —
+                  # exit, and don't rebuy that coin until z resets past Z_EXIT
 
 
 def fetch() -> pd.DataFrame:
@@ -184,6 +187,7 @@ def init_state(close, pick, board, regime="TREND") -> dict:
         px = board[pick]["price"]
         st["holding"], st["units"], st["cash"] = pick, START_CASH / px, 0.0
         st["entry_regime"] = regime
+        st["entry_price"] = px
         st["trades"].append({"date": asof, "action": "BUY", "ticker": pick,
                              "price": px, "units": round(st["units"], 6),
                              "value": START_CASH,
@@ -225,6 +229,7 @@ def update(st, close, pick, board, cash_reason=None, regime="TREND") -> dict:
         if pick == "CASH":
             st["holding"], st["units"], st["cash"] = "CASH", 0.0, value
             st.pop("entry_regime", None)
+            st.pop("entry_price", None)
             st["trades"].append({"date": asof, "action": "TO CASH", "ticker": "—",
                                  "price": 0, "units": 0, "value": round(value, 2),
                                  "reason": cash_reason or
@@ -238,6 +243,7 @@ def update(st, close, pick, board, cash_reason=None, regime="TREND") -> dict:
             st["costs_paid"] = round(st.get("costs_paid", 0.0) + f, 4)
             st["holding"], st["units"], st["cash"] = pick, spend / px, 0.0
             st["entry_regime"] = regime
+            st["entry_price"] = px
             st["trades"].append({"date": asof, "action": "BUY", "ticker": pick,
                                  "price": round(px, 8),
                                  "units": round(st["units"], 6),
@@ -375,6 +381,32 @@ def main():
                           f"z {b['z']:+.2f} < {Z_EXIT:+.2f}")
                 print(f"[crypto-live] exit brake: {held} {metric} — "
                       f"inside dead-band, holding")
+                pick = held
+        # Failure stop (fleet review 2026-08-10): CHOP has a completion exit
+        # but had no failure exit — a dip that keeps dying was held toward the
+        # $750 floor. Runs after the brakes (it overrides their patience) and
+        # before R1/frozen (which still override everything).
+        asof_d = str(close.index[-1].date())
+        if held != "CASH" and not is_severe:
+            st.setdefault("entry_price", board[held]["price"])
+            if board[held]["price"] <= st["entry_price"] * (1 + STOP_PCT / 100):
+                pick = "CASH"
+                cash_reason = (f"Failure stop: {held} {STOP_PCT:.0f}% from "
+                               f"entry — dip did not bounce")
+                st["stopped_coin"] = {"coin": held, "date": asof_d}
+                print(f"[crypto-live] {cash_reason}")
+        # Re-entry guard: the marker clears once the coin's z resets past
+        # Z_EXIT on a LATER day (checking only at pick time would blacklist
+        # it forever in CHOP; clearing same-day would let a TREND grind-down
+        # with z~0 rebuy at the sell price the very next cycle).
+        sc = st.get("stopped_coin")
+        if sc:
+            if board[sc["coin"]]["z"] >= Z_EXIT and asof_d > sc["date"]:
+                st.pop("stopped_coin", None)
+            elif pick == sc["coin"]:
+                print(f"[crypto-live] {pick} is a stopped failed dip "
+                      f"(z {board[pick]['z']:+.2f}, stopped {sc['date']}) — "
+                      f"keeping current seat")
                 pick = held
         # R1 kill floor, code-enforced (audit 2026-08-05)
         cur_val = st.get("cash", 0.0) if held == "CASH" \

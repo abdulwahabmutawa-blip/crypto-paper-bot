@@ -142,7 +142,14 @@ def main():
     elif st["holding"] != "CASH" and st["holding"] in tradeable:
         desired = st["holding"]                     # hype still alive -> ride it
     else:
-        avail = [t for t in tradeable if t not in blacklisted]
+        # Fleet review 2026-08-10: no NEW entries on weekends. Sat/Sun the
+        # fillable universe collapses to crypto-only, where the only weekend
+        # entry ever made (SHIB 07-26, a Saturday "mystery surge") became the
+        # worst trade on the ledger (-11.35%, gapped through the -10% stop).
+        # Existing holdings still ride; stop/severe/R1 above are untouched;
+        # euphoria that survives to Monday's scan still gets bought.
+        avail = ([] if now.weekday() >= 5 else
+                 [t for t in tradeable if t not in blacklisted])
         desired = avail[0] if avail else "CASH"
 
     sell_ok = st["holding"] == "CASH" or market_hours.can_fill(st["holding"])

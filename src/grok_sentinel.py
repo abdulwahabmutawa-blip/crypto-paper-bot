@@ -210,6 +210,19 @@ def render(st: dict) -> None:
             datetime.now(timezone.utc).strftime("%Y-%m"), 0),
         "monthly_cap": MONTHLY_CAP, "interval_h": SCAN_INTERVAL_H,
     }
+    # Fleet review 2026-08-10: self-surveillance. A dead risk officer must be
+    # impossible to miss — the 08-07..08-10 outage ran 3+ days unannounced.
+    if st.get("last_scan_utc"):
+        age_h = (datetime.now(timezone.utc)
+                 - datetime.fromisoformat(st["last_scan_utc"])
+                 ).total_seconds() / 3600
+        if age_h > 24:
+            payload["stale_hours"] = round(age_h, 1)
+            payload["thoughts"] = (
+                f"WATCHER OFFLINE {age_h:.0f}h — last scan "
+                f"{st['last_scan_utc']}; scans are failing (key/credits/API); "
+                f"fleet risk gate is running on UNKNOWN.\n\n"
+                + payload["thoughts"])
     template = (config.ROOT / "src" / "sentinel_template.html").read_text(
         encoding="utf-8")
     (config.REPORTS / "sentinel_dashboard.html").write_text(
@@ -223,9 +236,20 @@ def main():
     st = json.loads(STATE.read_text()) if STATE.exists() else \
         {"scans": [], "month_count": {}, "last_scan_utc": None}
 
+    def _stale_alarm(source):
+        # ::error:: renders as a GitHub Actions run annotation even though
+        # bot.yml swallows the exit code — a dead Watcher gets a red banner.
+        if st.get("last_scan_utc"):
+            age = (now - datetime.fromisoformat(st["last_scan_utc"])
+                   ).total_seconds() / 3600
+            if age > 24:
+                print(f"::error::[sentinel] {source}; verdict {age:.0f}h "
+                      f"stale — Watcher offline")
+
     if not os.environ.get("XAI_API_KEY", "").strip():
         print("[sentinel] XAI_API_KEY not set — skipping scan (add the repo "
               "secret to activate). Rendering last known state.")
+        _stale_alarm("XAI_API_KEY not set")
         render(st)
         return
 
@@ -249,6 +273,15 @@ def main():
     except urllib.error.HTTPError as e:
         print(f"[sentinel] xAI HTTP {e.code}: "
               f"{e.read().decode(errors='replace')[:300]}")
+        _stale_alarm(f"xAI HTTP {e.code}")
+        render(st)
+        return
+    except Exception as e:
+        # URLError / socket timeout / JSONDecodeError — the failure modes
+        # that crashed BEFORE both alarms and let the 08-07 outage run
+        # unannounced. Same loud-skip treatment as HTTPError.
+        print(f"[sentinel] scan failed: {type(e).__name__}: {e}")
+        _stale_alarm(type(e).__name__)
         render(st)
         return
     scan = parse_scan(raw)

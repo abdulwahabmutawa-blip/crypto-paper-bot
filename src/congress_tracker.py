@@ -23,6 +23,7 @@ import yfinance as yf
 
 import config
 import market_hours
+import risk_common
 
 STATE = config.DATA / "congress_state.json"
 BASE = ("https://raw.githubusercontent.com/kadoa-org/"
@@ -111,6 +112,11 @@ def main():
     filings = fresh_buy_filings(since=st["created"])
     new = [f for f in filings if f["id"] not in st["seen"]
            and f["filer_id"] in follow]
+    # Fleet review 2026-08-10: this was the only tracker outside the fleet's
+    # iron-rule module — fee-free fills and no code-enforced R1 floor. Wired
+    # to risk_common below; past fills stay as-filed, fees from now on.
+    if st.get("frozen"):
+        new = []          # frozen book copies nothing; marking still runs
     import sentinel_gate
     is_severe, why = sentinel_gate.severe()
     if is_severe and new:
@@ -127,16 +133,31 @@ def main():
     tickers = [p["ticker"] for p in st["positions"]] + [f["ticker"] for f in new]
     px, asof = quotes(tickers)
 
+    # R1 pre-gate: a book at/under the floor never opens NEW copies — the
+    # full check at 3.5 still liquidates; this just closes the ordering hole
+    # where a deferred breach could buy a slot on its own freeze cycle.
+    if new:
+        pre_val = st["cash"] + sum(p["units"] * px.get(p["ticker"],
+                                   p["cost"] / p["units"])
+                                   for p in st["positions"])
+        if risk_common.r1_breached(pre_val):
+            print(f"[congress] {risk_common.r1_reason(pre_val)} — "
+                  f"new copies blocked")
+            new = []
+
     # 1) close matured positions
     keep = []
     for p in st["positions"]:
         if today >= p["close_date"] and p["ticker"] in px \
                 and market_hours.us_equities_open():
             val = p["units"] * px[p["ticker"]]
-            st["cash"] += val
+            f = risk_common.fee(p["ticker"], val)
+            st["cash"] += val - f
+            st["costs_paid"] = round(st.get("costs_paid", 0.0) + f, 4)
             st["trades"].append({"date": today, "action": "SELL",
                                  "ticker": p["ticker"], "price": round(px[p["ticker"]], 2),
                                  "units": p["units"], "value": round(val, 2),
+                                 "fee": round(f, 2),
                                  "reason": f"90-day hold complete (copied {p['filer']})"})
         else:
             keep.append(p)
@@ -151,8 +172,10 @@ def main():
         if invest < 1:
             break
         price = px[f["ticker"]]
-        units = invest / price
+        fee = risk_common.fee(f["ticker"], invest)
+        units = (invest - fee) / price
         st["cash"] -= invest
+        st["costs_paid"] = round(st.get("costs_paid", 0.0) + fee, 4)
         close_d = str((now + pd.Timedelta(days=HOLD_DAYS)).date())
         st["positions"].append({"ticker": f["ticker"], "units": units,
                                 "open_date": today, "close_date": close_d,
@@ -160,6 +183,7 @@ def main():
         st["trades"].append({"date": today, "action": "BUY",
                              "ticker": f["ticker"], "price": round(price, 2),
                              "units": round(units, 4), "value": round(invest, 2),
+                             "fee": round(fee, 2),
                              "reason": f"Copying {f['filer']} "
                                        f"({follow[f['filer_id']]['excess_pct']:+.1f}% avg excess, "
                                        f"filed {f['filing_date']}, {f['amount']})"})
@@ -167,6 +191,46 @@ def main():
     # 3) mark to market
     val = st["cash"] + sum(p["units"] * px.get(p["ticker"], p["cost"] / p["units"])
                            for p in st["positions"])
+
+    # 3.5) R1 kill floor, code-enforced (fleet review 2026-08-10). A breach
+    #      while the market is closed defers to the next open cycle, like
+    #      every other equity book — no phantom fills at stale prices.
+    if not st.get("frozen") and risk_common.r1_breached(val):
+        reason = risk_common.r1_reason(val)
+        print(f"[congress] {reason}")
+        if market_hours.us_equities_open():
+            # sell only what has a quote; an unquoted position defers, and the
+            # freeze waits until every position is actually sold (a no-quote
+            # wipe with no ledger row is the audit-2026-08-05 '$0 wipe' bug)
+            unsold = []
+            for p in st["positions"]:
+                if p["ticker"] not in px:
+                    unsold.append(p)
+                    continue
+                pv = p["units"] * px[p["ticker"]]
+                f_ = risk_common.fee(p["ticker"], pv)
+                st["cash"] += pv - f_
+                st["costs_paid"] = round(st.get("costs_paid", 0.0) + f_, 4)
+                st["trades"].append({"date": today, "action": "SELL",
+                                     "ticker": p["ticker"],
+                                     "price": round(px[p["ticker"]], 2),
+                                     "units": p["units"],
+                                     "value": round(pv, 2), "fee": round(f_, 2),
+                                     "reason": reason})
+            st["positions"] = unsold
+            if not unsold:
+                st["frozen"] = {"date": today,
+                                "rule": "R1 kill floor (kill_criteria.md)"}
+                print("[congress] book FROZEN — un-freezing is a human decision")
+                val = st["cash"]
+            else:
+                print(f"[congress] {len(unsold)} position(s) have no quote — "
+                      f"their liquidation and the freeze defer to next cycle")
+                val = st["cash"] + sum(p["units"] * px.get(p["ticker"],
+                                       p["cost"] / p["units"]) for p in unsold)
+        else:
+            print("[congress] liquidation deferred — US market closed")
+
     bench = st["bench_units"] * px[BENCH]
     newest = st["history"][-1]["date"] if st["history"] else ""
     if asof < newest:
