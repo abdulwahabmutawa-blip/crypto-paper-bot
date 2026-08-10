@@ -1,44 +1,45 @@
 {
- "updated_utc": "2026-08-09T08:15:00+00:00",
- "run_note": "Run covering 2026-08-08 -> 2026-08-09, executed 08:15 UTC Sunday. A weekend session: US equity markets were shut both days, so eight of the nine trading bots have no new mark and still carry their 2026-08-07 closes. Crypto is the only live book. TWO OPERATIONAL FINDINGS LEAD THIS RUN. FIRST, a FLEET-WIDE FREEZE: every bot's last_updated_utc is 2026-08-09T03:16:51Z, 4h49m stale at review time, and the paper-trade-cycle run that owns the loop still shows in_progress on GitHub, so nothing reads as failed. This is uniform across all ten state files, which rules out the per-bot freeze-guard misfire pattern from 2026-08-03 and points at the runner. I did NOT run the bot manually to read its guard line, because uniform staleness is already inconsistent with a per-bot guard and a local run would mutate state files I am required not to touch. SECOND, an earlier same-day cron gap of 362 minutes (2026-08-08T15:40:06Z to 21:42:07Z). No SIM-INTEGRITY ALERT this run: all nine new fills verified clean. Fleet baseline is $9,000 across 9 active bots, NOT the $8,000 in the original task spec: stock/TQQQ retired 07-31, scholar and analyst added.",
- "total_judgments": 139,
- "judgments_closed": 137,
+ "updated_utc": "2026-08-10T09:15:00+00:00",
+ "run_note": "Run covering 2026-08-09 -> 2026-08-10, executed 09:15 UTC Monday, US pre-market. Eight books still carry their 2026-08-07 closes because there has been no equity session since; crypto is the only live book. NO SIM-INTEGRITY ALERT and no R1 breach: all 13 new fills verified clean on both price-range and timing. THE FINDING THIS RUN IS A ROOT CAUSE, NOT A SYMPTOM, AND IT IS TWO SEPARATE FAULTS. (1) THE 6-HOUR BLACKOUTS ARE NOT CRON THROTTLING. Three blackouts of 363.7, 363.1 and 362.5 minutes in 30 hours, plus the 362-minute one logged on 08-08: four events all within 2 minutes of each other in length is a mechanism, not GitHub randomness. I read the workflow logs. Every other ~5h48m loop acquires the concurrency lock, hits 'CONFLICT (content)' on 15+ data/*.json files during its first 'git pull --rebase --autostash' about 50 seconds in, never resolves it, and then spends the ENTIRE remaining 5h47m with conflict markers in the state files - every bot dying on json.decoder.JSONDecodeError every cycle, 'set +e' swallowing all of it, and the job finally reporting SUCCESS having written nothing. Confirmed in 2 of 2 logs read (runs 31341480880 and 31317721748: 45-48 CONFLICTs, 29-48 JSON decode failures each). The runs alternate write/silent/write/silent, so real fleet uptime is about 50% of wall-clock, not the ~82% the workflow header claims. No corrupt state ever reached the repo - the poisoned runner cannot push - so this is an availability fault, not an integrity one. (2) THE GROK WATCHER IS OUT OF CREDITS. Verbatim from the same logs: xAI HTTP 403 'has either used all available credits or reached its monthly spending limit'. That is why sentinel_verdict.json has been frozen at 2026-08-07T10:47:38Z for 70.4 hours, and it is an account-level block rather than a runner problem because it also failed during today's healthy 08:35/08:49/09:02Z cycles. Fleet baseline is $9,000 across 9 active bots (stock/TQQQ retired 07-31; scholar and analyst added). Reported only, nothing touched.",
+ "total_judgments": 148,
+ "judgments_closed": 146,
  "judgments_open": 2,
  "open_ids": [
   "2026-08-08-sentiment-1",
-  "2026-08-09-crypto-1"
+  "2026-08-10-crypto-1"
  ],
- "cumulative_alpha_usd": 211.91,
- "cumulative_alpha_usd_actionable": 87.82,
- "win_rate_closed_pct": 8.8,
- "win_rate_note": "116 of 137 closed judgments are no_change (alpha 0), so the headline rate is near-meaningless - read the directional record. DIRECTIONAL: 21 scored, 12W/6L/3N, +211.91 net headline, +87.82 on the conservative actionable-reference-price basis. THIS RUN: one closure, 2026-08-08-crypto-1, a +7.43 win. Small in dollars but it is the first judgment in this fleet to close on pure arithmetic rather than on price direction: the bot paid 10.73 in fees to capture 0.73 of price edge, so the loss I predicted was the fee bill itself. Worth stating plainly against my own record - five of my six losses are the same trade shape as this win, betting against a momentum bot's next entry, and the difference here is that the cost side is measurable instead of forecast.",
+ "cumulative_alpha_usd": 217.64,
+ "cumulative_alpha_usd_actionable": 93.55,
+ "win_rate_closed_pct": 8.9,
+ "win_rate_note": "124 of 146 closed judgments are no_change (alpha 0), so the headline rate is near-meaningless - read the directional record. DIRECTIONAL: 22 scored, 13W/6L/3N, +217.64 net headline, +93.55 on the conservative actionable-reference-price basis. THIS RUN: one closure, 2026-08-09-crypto-1, a +5.73 win, and it is the cleanest scoring event in this ledger to date because both endpoints are CASH - no mark-to-market noise on either side of the comparison. It also inverts the usual story: the crypto bot's price selection over the four round trips was GOOD, +15.46 gross, and it still lost 5.73 because fees were 21.19. I have now won this same call twice on the fee mechanism after losing five times betting against momentum entries on direction, which is the distinction worth keeping.",
  "this_run_closures": [
   {
-   "id": "2026-08-08-crypto-1",
+   "id": "2026-08-09-crypto-1",
    "action": "skip_new_entries",
    "asset": "XRP-USD",
-   "alpha": 7.43,
+   "alpha": 5.73,
    "verdict": "win",
-   "summary": "Trigger fired. XRP flipped at 00:09Z leaving 1059.13 in cash; the bot took the entry I said to skip (1.0344), flipped again (1.0351) and re-entered (1.0341), marking 1051.70. Actual -7.43 vs 0.00 in cash. Mechanism confirmed: fees on 08-09 were 10.73 against 0.73 of net trading gain. Caveat: cash also dodged a small XRP down-move, so roughly 8.05 of the 7.43 is the fee component alone."
+   "summary": "Flip came at 1.0350 leaving 1050.02 in cash; the bot took the 1.0324 entry I said to skip and ran three more round trips (1.0336/1.0312, 1.0319/1.0293, 1.0383/1.0296, 1.0340), ending in cash at 1044.29. Actual -5.73 vs 0.00 for cash. Gross price edge across the four round trips was +15.46 against 21.19 of fees, so the entries were right and the strategy still lost."
   }
  ],
  "per_bot": {
-  "crypto": "Directional record now 5 calls, +67.47 cumulative. The churn thesis is the only one in this fleet with a measurable mechanism rather than a forecast: costs_paid is 39.21 on a 1051.70 book, i.e. 3.7% of starting capital spent on frictions in 24 days, and the bot has now re-entered XRP three times inside six hours at prices within 0.5% of each other. Re-issued as 2026-08-09-crypto-1 at 1.0341.",
-  "hunter": "Entry-timing thesis stays retired after the 08-08 disproof. Six directional calls, +65.65 cumulative, but the record is confounded by the market-hours gate forcing every equity fill into the first cycle after 09:30 ET. No further calls on this bot's entry timing.",
-  "sentiment": "2026-08-08-sentiment-1 (close NET at 300.27) stays open - NET has not traded since Friday's close, which IS the reference price, so there is nothing to score. Note the book's headline 1216.04 is still overstated by roughly $185 from the 08-06 SOUN phantom fill flagged last run; that correction has not been made and the bot's real value is nearer 1031.",
-  "analyst": "Reasoning validation on the 08-07 HOLD: reasoning_validated true, falsifier_fired false, and it was right for the reason it stated rather than by accident. api_cost 0.2771 over 4 billed decisions, 0.069 average, no runaway. Not a judgment target while it holds its own benchmark - calling its position would be calling SPY.",
-  "fleet_ops": "Two distinct availability faults this run and they are not the same thing. (1) FREEZE: no state write since 03:16:51Z, 4h49m and counting, while the owning workflow run still reads in_progress - the green-checkmark trap the daily gap arithmetic exists to catch. (2) CRON GAP: 362 minutes on 08-08 between 15:40:06Z and 21:42:07Z. Separately, the Grok watcher has not scanned in 45.5 hours, so the fleet's SEVERE auto-exit has been unarmed for two days. All three are reported, none touched."
+  "crypto": "Directional record now 6 calls, +73.20 cumulative. Re-issued as 2026-08-10-crypto-1 at XRP 1.0335 with the bot flat in cash. The number that changed this run is the burn RATE, not the burn: costs_paid went 39.21 to 63.10 in 25 hours, so 23.89 of a 63.10 lifetime fee bill was spent in one day, against roughly 1.6/day over the preceding 24 days. At 24/day the bot returns its entire lifetime +44.29 in under two days. 13 fills audited this run, all clean.",
+  "sentiment": "2026-08-08-sentiment-1 (close NET at 300.27) stays OPEN and is now a stronger call than when I made it, for a reason I did not have at the time: with xAI credits exhausted, the bot's only exit rule - 'hype faded, symbol dropped off Grok's euphoric list' - cannot fire. It is structurally locked into a position that is already -5.85% from its 318.945 entry. Zero trading days have elapsed since the call, so there is nothing to score. Book headline 1216.04 remains overstated by roughly $185 from the unreconciled 08-06 SOUN fill; true value nearer 1031.",
+  "analyst": "No decision since 08-07 and correctly so - no session. api_cost_usd unchanged at 0.2771 over 4 billed decisions, 0.069 average, no runaway. Validation note that matters more than the position: falsifier (3), 'Watcher SEVERE -> auto-exit to CASH', has been unobservable for three days because the Watcher is offline. The agent restates all three triggers each day as though all three are live. Not a judgment target while it holds its own benchmark.",
+  "commodity": "Logged, not called. Its 08-05 USO-to-DBC rotation is running about 1.2pp behind the asset it sold (USO +2.70% vs DBC +1.51% since the flip) on top of 2.33 in paid fees. Backward-looking, so it gets an attribution line rather than a manufactured forward judgment. Second-weakest book at 983.00, 4.7pp behind bench - an R3 conversation for a scheduled review.",
+  "hunter": "Entry-timing thesis stays retired after the 08-08 disproof. Six directional calls, +65.65 cumulative. SLV has run +9.8% in five sessions, which is exactly the setup that produced my losses betting against momentum entries, so no call.",
+  "fleet_ops": "Two root causes found this run, both in the workflow logs, both reported and untouched. (1) REBASE-CONFLICT POISONING: every other ~5h48m loop dies on an unresolved 'git pull --rebase --autostash' conflict across 15+ data/*.json files ~50s after start, then burns the full job with every bot failing on JSON decode errors, and reports SUCCESS. Four ~362-minute blackouts now logged (08-08 15:40-21:42Z, 08-09 03:16-09:20Z, 08-09 14:55-20:58Z, 08-10 02:33-08:35Z). Real uptime ~50%, not the ~82% the workflow header assumes. The 'more attempts = a start lands sooner' mitigation from 07-22 does not help, because the problem is not acceptance - a job IS running through every blackout. (2) XAI CREDITS EXHAUSTED: HTTP 403 permission-denied on every sentinel call, watcher frozen 70.4h, SEVERE auto-exit unarmed fleet-wide for three days."
  },
  "fleet_snapshot_usd": {
   "baseline": 9000.0,
-  "total": 9571.31,
-  "pnl": 571.31,
-  "pnl_pct": 6.35,
-  "note": "Eight books are marked at their 2026-08-07 closes (weekend), crypto at its frozen 03:16Z mark of 1051.70. Adjusted for the unreconciled SOUN phantom fill in sentiment the honest total is nearer 9386 / +386. Live XRP at review time is 1.037 against the frozen 1.0341 mark, so crypto's true book is about 1054.75.",
+  "total": 9563.9,
+  "pnl": 563.9,
+  "pnl_pct": 6.27,
+  "note": "Eight books marked at their 2026-08-07 closes (no equity session since), crypto at its live 09:02Z mark of 1044.29. The only change since the last review is crypto, -7.41. Adjusted for the unreconciled SOUN phantom fill in sentiment the honest total is nearer 9379 / +379.",
   "per_bot": {
    "meanrev": 1248.69,
    "sentiment": 1216.04,
-   "crypto": 1051.7,
+   "crypto": 1044.29,
    "analyst": 1030.6,
    "scholar": 1028.01,
    "allweather": 1016.8,
@@ -53,6 +54,10 @@
   "below_900": [],
   "R4_dead_money": [],
   "on_probation": [],
-  "note": "No R1 hard-stop breach. Weakest books are hunter 980.46 and commodity 983.00, both comfortably above the $750 line and above $900. Congress holds 59% cash but is partially deployed, so R4 (100% cash) does not apply. R2/R3 are scheduled-review checks, not daily ones."
+  "note": "No R1 hard-stop breach. Weakest books are hunter 980.46 and commodity 983.00, both far above the $750 line and above $900. Congress holds 59% cash but is partially deployed, so R4 (100% cash) does not apply. R2/R3 are scheduled-review checks, not daily ones."
+ },
+ "staleness_check": {
+  "verdict": "clean at review time",
+  "note": "All nine trading bots wrote at 2026-08-10T09:02:1x-09:02:2xZ, ages clustered 10.6-10.8 minutes against a ~13-minute cycle. No bot is an outlier, so no freeze-guard misfire. stock_state.json is 15,093 minutes stale and correctly excluded - retired 07-31 at a final mark of 892.30. The real availability problem is fleet-wide and intermittent (see fleet_ops), not per-bot."
  }
 }

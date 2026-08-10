@@ -1,12 +1,12 @@
 {
- "updated_utc": "2026-08-09T08:15:00+00:00",
- "note": "Run covering 2026-08-08 -> 2026-08-09, executed 08:15 UTC Sunday. 12 lines appended (9 dailies, 2 trade_events, 1 sentinel daily). 9 new fills audited, all crypto, ALL CLEAN - no SIM-INTEGRITY ALERT this run. US equity markets were closed both weekend days, so eight books carry a zero day move and are logged with driver 'unknown' and an explicit statement that the market was shut, rather than a manufactured cause. The 08-06 SOUN phantom fill flagged last run remains unreconciled and still inflates the hype book by roughly $185.",
- "total_lines_logged": 207,
+ "updated_utc": "2026-08-10T09:15:00+00:00",
+ "note": "Run covering 2026-08-09 -> 2026-08-10, executed 09:15 UTC Monday pre-market. 11 lines appended (9 bot dailies, 1 crypto trade_event, 1 sentinel daily). 13 new fills audited, all XRP-USD, ALL CLEAN - no SIM-INTEGRITY ALERT. There has been no US equity session since the 2026-08-07 close, so eight books are logged with driver 'unknown' and an explicit statement that the market was shut, rather than a manufactured cause. Two root causes were found in the workflow logs this run and both are recorded in the evidence fields verbatim: the rebase-conflict poisoning that produces the ~362-minute blackouts, and the xAI HTTP 403 credit exhaustion that has frozen the Grok watcher for 70.4 hours.",
+ "total_lines_logged": 218,
  "by_primary_driver": {
   "unknown": {
    "profit": 5,
    "loss": 1,
-   "flat": 56
+   "flat": 64
   },
   "market_beta": {
    "profit": 19,
@@ -15,7 +15,7 @@
   },
   "technical": {
    "profit": 11,
-   "loss": 14,
+   "loss": 16,
    "flat": 3
   },
   "hype_sentiment": {
@@ -31,7 +31,7 @@
   "none_cash": {
    "profit": 0,
    "loss": 0,
-   "flat": 18
+   "flat": 19
   },
   "sector": {
    "profit": 7,
@@ -47,7 +47,7 @@
  "by_beta_or_alpha": {
   "alpha": {
    "profit": 33,
-   "loss": 21,
+   "loss": 23,
    "flat": 7
   },
   "beta": {
@@ -63,9 +63,9 @@
   "n/a": {
    "profit": 10,
    "loss": 10,
-   "flat": 78
+   "flat": 87
   }
  },
- "driver_note": "Tally recomputed from scratch over all 207 lines. Only one real data point was added this run, so the shape barely moved: 'technical' went 11-12 to 11-14 on the crypto churn, which now makes it the worst-scoring driver in the fleet at 11 profit / 14 loss. That is the honest reading - 'technical' here is overwhelmingly the crypto bot's signal-flip rule, and it is losing on fees rather than on direction. 'unknown' flat count jumps 48 to 56 purely because eight closed-market days were logged honestly instead of being attributed to a driver. news_idiosyncratic stays the standout at 7-1 on a small sample and I keep holding it to a citation every time. hype_sentiment stays 7-10, or 6-11 once the SOUN phantom profit is stripped out.",
- "beta_alpha_note": "alpha 33-21 after the crypto loss landed in the alpha bucket. The label keeps flattering the fleet: it is driven by single-asset all-in books (hunter in SLV, hype in one name, crypto in one coin) where any divergence from a broad benchmark reads as alpha by construction. The crypto line is the clean counter-example - it diverged from BTC by 0.87pp on the day and every basis point of that divergence was fees, which is divergence without skill."
+ "driver_note": "Only one bot had a live day, so the shape barely moved, but the move it made is the point. 'technical' went 11-14 to 11-16 and is now decisively the worst-scoring driver in the fleet. 'technical' in this ledger is overwhelmingly one thing - the crypto bot's signal-flip rule - and today produced the cleanest evidence yet that it loses on COST rather than on direction: across the four round trips scored this run the rule's price selection made +15.46 gross and the book still finished -5.73 after 21.19 of fees. A driver bucket that is right about price and wrong about money is exactly the case where a naive win/loss tally would mislead, so it is worth stating explicitly. 'unknown' flat count jumps 56 to 64 purely because eight closed-market days were logged honestly instead of being attributed to a cause. news_idiosyncratic stays the standout at 7-1 on a small sample and I keep holding it to a citation every time. hype_sentiment stays 7-10, or 6-11 once the SOUN phantom profit is stripped out.",
+ "beta_alpha_note": "alpha 33-23 after the crypto loss landed in the alpha bucket again. The label keeps flattering the fleet: it is driven by single-asset all-in books (hunter in SLV, hype in one name, crypto in one coin) where any divergence from a broad benchmark reads as alpha by construction. Crypto remains the clean counter-example - it diverged from its benchmark by 0.51pp on the day and every basis point of that divergence was fees, which is divergence without skill. The n/a flat count now dominates the table at 87, which is an honest artefact of reviewing a mostly-equity fleet across a long market closure and should not be read as the fleet being idle."
 }
