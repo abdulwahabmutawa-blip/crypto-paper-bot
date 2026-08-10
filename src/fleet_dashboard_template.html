@@ -94,6 +94,12 @@
   .neut{color:var(--sig);font-weight:700}
   .scroll{overflow-x:auto}
 
+  .rangebtns{margin-left:auto;display:flex;gap:4px}
+  .rbtn{font:600 11px var(--mono);color:var(--muted);
+    background:rgba(128,128,128,.12);border:1px solid var(--line);
+    border-radius:5px;padding:2px 9px;cursor:pointer}
+  .rbtn.on{color:var(--text);border-color:var(--faint)}
+
   .riskcard{border-left:4px solid var(--acc)}
   .riskcard .rn{color:var(--acc);font-weight:650;font-size:12px;
     letter-spacing:.06em;text-transform:uppercase}
@@ -137,7 +143,13 @@
 
   <div class="grid">
     <div class="panel">
-      <span class="eyebrow">Equity curve</span>
+      <div style="display:flex;align-items:center;gap:8px">
+        <span class="eyebrow">Equity curve</span>
+        <div class="rangebtns">
+          <button class="rbtn on" data-r="D" title="Daily">D</button>
+          <button class="rbtn" data-r="W" title="Weekly">W</button>
+        </div>
+      </div>
       <h2>Bot vs benchmark, from inception</h2>
       <canvas id="eq" width="640" height="290"></canvas>
       <div class="rule" id="eqnote"></div>
@@ -192,6 +204,75 @@ function line(ctx,pts,color,w=2,dash=[]){
   ctx.strokeStyle=color; ctx.lineWidth=w; ctx.setLineDash(dash); ctx.beginPath();
   pts.forEach((p,i)=> i?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1]));
   ctx.stroke(); ctx.setLineDash([]);
+}
+
+/* --- axis-labeled equity chart (D = daily points, W = weekly closes) --- */
+let eqMode = "D";
+function niceStep(raw){
+  const p = Math.pow(10, Math.floor(Math.log10(raw || 1)));
+  for (const m of [1,2,2.5,5,10]) if (m*p >= raw) return m*p;
+  return 10*p;
+}
+function weekly(series){
+  const out = [], idx = {};
+  series.forEach(h => {
+    const d = new Date((h.date || h.ts).slice(0,10) + "T00:00:00");
+    const mon = new Date(d); mon.setDate(d.getDate() - ((d.getDay()+6)%7));
+    const k = mon.toISOString().slice(0,10);
+    if (k in idx) out[idx[k]] = h;      // last point of the week wins
+    else { idx[k] = out.length; out.push(h); }
+  });
+  return out;
+}
+function eqLabel(h){
+  if (h.date) return new Date(h.date + "T00:00:00")
+    .toLocaleDateString("en-US", {month:"short", day:"numeric"});
+  return new Date(h.ts)
+    .toLocaleTimeString("en-US", {hour:"2-digit", minute:"2-digit", hour12:false});
+}
+function drawEq(c, series, start, botC, benchC, labelC){
+  const ctx = c.getContext("2d");
+  ctx.clearRect(0,0,c.width,c.height);
+  const L=58, R=14, T=10, B=26, W=c.width-L-R, H=c.height-T-B;
+  const vals = series.map(h=>h.value).concat(series.map(h=>h.bench));
+  const lo0 = Math.min(Math.min(...vals), start),
+        hi0 = Math.max(Math.max(...vals), start);
+  const pad = (hi0-lo0 || start*0.01)*0.06, lo = lo0-pad, hi = hi0+pad;
+  const sy = v => T+H-(v-lo)/(hi-lo)*H;
+  const sx = i => L+(series.length<2 ? W/2 : i/(series.length-1)*W);
+  ctx.font = "11px Consolas,Menlo,monospace";
+  // Y axis: gridlines + dollar labels
+  let step = niceStep((hi-lo)/5);
+  if ((hi-lo)/step < 3.5) step /= 2;
+  ctx.textAlign = "right"; ctx.textBaseline = "middle";
+  for (let v = Math.ceil(lo/step)*step; v <= hi+1e-9; v += step){
+    const y = sy(v);
+    ctx.strokeStyle = "rgba(128,128,128,.15)"; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(L,y); ctx.lineTo(L+W,y); ctx.stroke();
+    ctx.fillStyle = labelC;
+    ctx.fillText("$"+Math.round(v).toLocaleString("en-US"), L-8, y);
+  }
+  // X axis: date (or intraday time) labels
+  ctx.textAlign = "center"; ctx.textBaseline = "top";
+  const n = series.length, ticks = Math.min(6, n);
+  let prev = "";
+  for (let t = 0; t < ticks; t++){
+    const i = Math.round(t*(n-1)/Math.max(ticks-1,1));
+    const lab = eqLabel(series[i]);
+    if (lab === prev) continue;
+    prev = lab;
+    const x = sx(i);
+    ctx.strokeStyle = "rgba(128,128,128,.3)"; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(x,T+H); ctx.lineTo(x,T+H+4); ctx.stroke();
+    ctx.fillStyle = labelC;
+    ctx.fillText(lab, Math.max(L+16, Math.min(x, L+W-16)), T+H+8);
+  }
+  // series lines + live dot
+  line(ctx, [[L,sy(start)],[L+W,sy(start)]], labelC, 1, [4,4]);
+  line(ctx, series.map((h,i)=>[sx(i),sy(h.bench)]), benchC, 1.6);
+  line(ctx, series.map((h,i)=>[sx(i),sy(h.value)]), botC, 2.2);
+  ctx.fillStyle = botC; ctx.beginPath();
+  ctx.arc(sx(n-1), sy(series[n-1].value), 3.5, 0, 7); ctx.fill();
 }
 
 function renderAll(){
@@ -267,8 +348,7 @@ function renderAll(){
     tb.appendChild(tr);
   });
 
-  const c=$("eq"), ctx=c.getContext("2d");
-  ctx.clearRect(0,0,c.width,c.height);
+  const c=$("eq");
   const gainC=css.getPropertyValue("--gain").trim(),
         mutedC=css.getPropertyValue("--faint").trim();
   let series;
@@ -276,20 +356,23 @@ function renderAll(){
   else if (D.intraday && D.intraday.length>=2) series=D.intraday;
   else series=null;
   if(!series){
+    const ctx=c.getContext("2d");
+    ctx.clearRect(0,0,c.width,c.height);
     $("eqnote").textContent="Day 1 — the curve appears after the next cycles.";
     line(ctx,[[20,145],[620,145]],mutedC,1,[4,4]);
   } else {
-    const start_ = D.starting_cash;
-    const vals=series.map(h=>h.value).concat(series.map(h=>h.bench));
-    const lo=Math.min(Math.min(...vals),start_)*0.995,
-          hi=Math.max(Math.max(...vals),start_)*1.005;
-    const sy=v=>275-(v-lo)/(hi-lo||1)*255, X=i=>30+i/(series.length-1)*580;
-    line(ctx,[[30,sy(start_)],[610,sy(start_)]],mutedC,1,[4,4]);
-    line(ctx,series.map((h,i)=>[X(i),sy(h.bench)]),mutedC,1.6);
-    line(ctx,series.map((h,i)=>[X(i),sy(h.value)]),gainC,2.2);
-    $("eqnote").textContent="green: bot · grey: benchmark · dashed: $1,000 start";
+    drawEq(c, eqMode==="W" ? weekly(series) : series,
+           D.starting_cash, gainC, mutedC, mutedC);
+    $("eqnote").textContent="green: bot · grey: benchmark · dashed: $1,000 start" +
+      (eqMode==="W" ? " · weekly closes" : "");
   }
 }
+
+document.querySelectorAll(".rbtn").forEach(b => b.onclick = () => {
+  eqMode = b.dataset.r;
+  document.querySelectorAll(".rbtn").forEach(x => x.classList.toggle("on", x === b));
+  renderAll();
+});
 
 renderAll();
 async function poll(){

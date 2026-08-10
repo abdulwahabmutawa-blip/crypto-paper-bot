@@ -62,6 +62,11 @@
   .tbl tr:last-child td{border-bottom:none}
   .buy{color:var(--gain);font-weight:700} .sell{color:var(--loss);font-weight:700}
   .scroll{overflow-x:auto}
+  .rangebtns{margin-left:auto;display:flex;gap:4px}
+  .rbtn{font:600 11px var(--mono);color:var(--muted);
+    background:rgba(128,128,128,.12);border:1px solid var(--line);
+    border-radius:5px;padding:2px 9px;cursor:pointer}
+  .rbtn.on{color:var(--text);border-color:var(--faint)}
 
   .member{display:flex;align-items:center;gap:8px;font-size:13px;
     background:var(--panel2);border-radius:4px;padding:7px 10px;
@@ -145,7 +150,13 @@
 
   <div class="grid">
     <div class="panel">
-      <span class="eyebrow">Equity curve</span>
+      <div style="display:flex;align-items:center;gap:8px">
+        <span class="eyebrow">Equity curve</span>
+        <div class="rangebtns">
+          <button class="rbtn on" data-r="D" title="Daily">D</button>
+          <button class="rbtn" data-r="W" title="Weekly">W</button>
+        </div>
+      </div>
       <h2>Copier vs SPY, from inception</h2>
       <canvas id="eq" width="640" height="280"></canvas>
       <div class="rule" id="eqnote"></div>
@@ -263,30 +274,99 @@ if (D.trades.length === 0){
   });
 }
 
-// equity chart
-(function(){
-  const c=$("eq"), ctx=c.getContext("2d");
-  const H=D.history;
-  const accC=css.getPropertyValue("--acc").trim(),
-        gainC=css.getPropertyValue("--gain").trim(),
+// equity chart (D = daily points, W = weekly closes), with $/date axes
+function line(ctx,pts,color,w=2,dash=[]){
+  if(pts.length<2) return;
+  ctx.strokeStyle=color; ctx.lineWidth=w; ctx.setLineDash(dash); ctx.beginPath();
+  pts.forEach((p,i)=> i?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1]));
+  ctx.stroke(); ctx.setLineDash([]);
+}
+let eqMode = "D";
+function niceStep(raw){
+  const p = Math.pow(10, Math.floor(Math.log10(raw || 1)));
+  for (const m of [1,2,2.5,5,10]) if (m*p >= raw) return m*p;
+  return 10*p;
+}
+function weekly(series){
+  const out = [], idx = {};
+  series.forEach(h => {
+    const d = new Date((h.date || h.ts).slice(0,10) + "T00:00:00");
+    const mon = new Date(d); mon.setDate(d.getDate() - ((d.getDay()+6)%7));
+    const k = mon.toISOString().slice(0,10);
+    if (k in idx) out[idx[k]] = h;      // last point of the week wins
+    else { idx[k] = out.length; out.push(h); }
+  });
+  return out;
+}
+function eqLabel(h){
+  if (h.date) return new Date(h.date + "T00:00:00")
+    .toLocaleDateString("en-US", {month:"short", day:"numeric"});
+  return new Date(h.ts)
+    .toLocaleTimeString("en-US", {hour:"2-digit", minute:"2-digit", hour12:false});
+}
+function drawEq(c, series, start_, botC, benchC, labelC){
+  const ctx = c.getContext("2d");
+  ctx.clearRect(0,0,c.width,c.height);
+  const L=58, R=14, T=10, B=26, W=c.width-L-R, H=c.height-T-B;
+  const vals = series.map(h=>h.value).concat(series.map(h=>h.bench));
+  const lo0 = Math.min(Math.min(...vals), start_),
+        hi0 = Math.max(Math.max(...vals), start_);
+  const pad = (hi0-lo0 || start_*0.01)*0.06, lo = lo0-pad, hi = hi0+pad;
+  const sy = v => T+H-(v-lo)/(hi-lo)*H;
+  const sx = i => L+(series.length<2 ? W/2 : i/(series.length-1)*W);
+  ctx.font = "11px Consolas,Menlo,monospace";
+  let step = niceStep((hi-lo)/5);
+  if ((hi-lo)/step < 3.5) step /= 2;
+  ctx.textAlign = "right"; ctx.textBaseline = "middle";
+  for (let v = Math.ceil(lo/step)*step; v <= hi+1e-9; v += step){
+    const y = sy(v);
+    ctx.strokeStyle = "rgba(128,128,128,.15)"; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(L,y); ctx.lineTo(L+W,y); ctx.stroke();
+    ctx.fillStyle = labelC;
+    ctx.fillText("$"+Math.round(v).toLocaleString("en-US"), L-8, y);
+  }
+  ctx.textAlign = "center"; ctx.textBaseline = "top";
+  const n = series.length, ticks = Math.min(6, n);
+  let prev = "";
+  for (let t = 0; t < ticks; t++){
+    const i = Math.round(t*(n-1)/Math.max(ticks-1,1));
+    const lab = eqLabel(series[i]);
+    if (lab === prev) continue;
+    prev = lab;
+    const x = sx(i);
+    ctx.strokeStyle = "rgba(128,128,128,.3)"; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(x,T+H); ctx.lineTo(x,T+H+4); ctx.stroke();
+    ctx.fillStyle = labelC;
+    ctx.fillText(lab, Math.max(L+16, Math.min(x, L+W-16)), T+H+8);
+  }
+  line(ctx, [[L,sy(start_)],[L+W,sy(start_)]], labelC, 1, [4,4]);
+  line(ctx, series.map((h,i)=>[sx(i),sy(h.bench)]), benchC, 1.6);
+  line(ctx, series.map((h,i)=>[sx(i),sy(h.value)]), botC, 2.2);
+  ctx.fillStyle = botC; ctx.beginPath();
+  ctx.arc(sx(n-1), sy(series[n-1].value), 3.5, 0, 7); ctx.fill();
+}
+function drawChart(){
+  const c=$("eq");
+  const gainC=css.getPropertyValue("--gain").trim(),
         mutedC=css.getPropertyValue("--faint").trim();
-  function line(pts,color,w,dash){ if(pts.length<2)return;
-    ctx.strokeStyle=color;ctx.lineWidth=w;ctx.setLineDash(dash||[]);ctx.beginPath();
-    pts.forEach((p,i)=> i?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1]));
-    ctx.stroke();ctx.setLineDash([]); }
-  if(H.length<2){
+  const H0=D.history;
+  if(H0.length<2){
+    const ctx=c.getContext("2d");
+    ctx.clearRect(0,0,c.width,c.height);
     $("eqnote").textContent="Day 1 — the curve appears after tomorrow's cycles. Both lines start at $1,000.";
-    line([[20,140],[620,140]],mutedC,1,[4,4]);
+    line(ctx,[[20,140],[620,140]],mutedC,1,[4,4]);
     return;
   }
-  const vals=H.map(h=>h.value).concat(H.map(h=>h.bench));
-  const lo=Math.min(Math.min(...vals),start)*0.995, hi=Math.max(Math.max(...vals),start)*1.005;
-  const sy=v=>265-(v-lo)/(hi-lo||1)*245, X=i=>30+i/(H.length-1)*580;
-  line([[30,sy(start)],[610,sy(start)]],mutedC,1,[4,4]);
-  line(H.map((h,i)=>[X(i),sy(h.bench)]),mutedC,1.6);
-  line(H.map((h,i)=>[X(i),sy(h.value)]),gainC,2.2);
-  $("eqnote").textContent="green: copier · grey: SPY buy&hold · dashed: $1,000 start";
-})();
+  drawEq(c, eqMode==="W" ? weekly(H0) : H0, start, gainC, mutedC, mutedC);
+  $("eqnote").textContent="green: copier · grey: SPY buy&hold · dashed: $1,000 start" +
+    (eqMode==="W" ? " · weekly closes" : "");
+}
+drawChart();
+document.querySelectorAll(".rbtn").forEach(b => b.onclick = () => {
+  eqMode = b.dataset.r;
+  document.querySelectorAll(".rbtn").forEach(x => x.classList.toggle("on", x === b));
+  drawChart();
+});
 </script>
 
 <script>
