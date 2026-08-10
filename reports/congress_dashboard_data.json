@@ -1,11 +1,11 @@
 {
-  "generated_utc": "2026-08-10T14:11:23+00:00",
+  "generated_utc": "2026-08-10T20:15:29+00:00",
   "created": "2026-07-16",
   "starting_cash": 1000.0,
   "current": {
     "date": "2026-08-10",
-    "value": 1016.31,
-    "bench": 1031.06
+    "value": 1013.68,
+    "bench": 1029.72
   },
   "cash": 600.0,
   "positions": [
@@ -16,7 +16,7 @@
       "close_date": "2026-10-18",
       "filer": "Cleo Fields",
       "cost": 100.0,
-      "now": 107.73
+      "now": 105.67
     },
     {
       "ticker": "META",
@@ -25,7 +25,7 @@
       "close_date": "2026-10-18",
       "filer": "Daniel Crenshaw",
       "cost": 100.0,
-      "now": 92.48
+      "now": 91.99
     },
     {
       "ticker": "GOOG",
@@ -34,7 +34,7 @@
       "close_date": "2026-10-21",
       "filer": "Jerry Moran,",
       "cost": 100.0,
-      "now": 110.32
+      "now": 111.17
     },
     {
       "ticker": "TSM",
@@ -43,69 +43,69 @@
       "close_date": "2026-11-01",
       "filer": "Cleo Fields",
       "cost": 100.0,
-      "now": 105.78
+      "now": 104.85
     }
   ],
-  "follow_count": 41,
+  "follow_count": 40,
   "follow_top": [
     {
-      "name": "Sheldon Whitehouse",
-      "excess_pct": 6.86,
-      "buys": 409
-    },
-    {
       "name": "Roger W. Marshall",
-      "excess_pct": 6.82,
+      "excess_pct": 6.74,
       "buys": 44
     },
     {
-      "name": "Thomas Suozzi",
-      "excess_pct": 2.14,
-      "buys": 272
+      "name": "Sheldon Whitehouse",
+      "excess_pct": 6.73,
+      "buys": 409
     },
     {
       "name": "Barbara J Comstock",
-      "excess_pct": 2.11,
+      "excess_pct": 2.1,
       "buys": 31
     },
     {
+      "name": "Thomas Suozzi",
+      "excess_pct": 2.08,
+      "buys": 272
+    },
+    {
       "name": "Rub\u00e9n Hinojosa",
-      "excess_pct": 1.88,
+      "excess_pct": 1.94,
       "buys": 23
     },
     {
       "name": "Ron L Wyden",
-      "excess_pct": 1.8,
+      "excess_pct": 1.75,
       "buys": 170
     },
     {
       "name": "Nancy Pelosi",
-      "excess_pct": 1.17,
+      "excess_pct": 1.14,
       "buys": 105
     },
     {
       "name": "John F Reed",
-      "excess_pct": 1.13,
+      "excess_pct": 1.12,
       "buys": 58
     },
     {
-      "name": "Pete Sessions",
-      "excess_pct": 1.03,
-      "buys": 170
-    },
-    {
       "name": "Suzan K. DelBene",
-      "excess_pct": 1.01,
+      "excess_pct": 1.03,
       "buys": 62
     },
     {
+      "name": "Pete Sessions",
+      "excess_pct": 1.01,
+      "buys": 170
+    },
+    {
       "name": "Thomas J. Rooney",
-      "excess_pct": 0.85,
+      "excess_pct": 0.84,
       "buys": 139
     },
     {
       "name": "Daniel S Sullivan",
-      "excess_pct": 0.85,
+      "excess_pct": 0.84,
       "buys": 24
     }
   ],
@@ -235,11 +235,11 @@
     },
     {
       "date": "2026-08-10",
-      "value": 1016.31,
-      "bench": 1031.06
+      "value": 1013.68,
+      "bench": 1029.72
     }
   ],
-  "thoughts": "I'm copying 4 stock buy(s) filed by members of Congress. I don't follow just anyone \u2014 I only trust the 41 members whose past filings actually beat the market, and I re-check that list every cycle. Each new buy they file, I copy with a small $100 slice and hold for 90 days. Full honesty: our own history test says this strategy LOSES to the market \u2014 I exist to re-test that finding live.",
+  "thoughts": "I'm copying 4 stock buy(s) filed by members of Congress. I don't follow just anyone \u2014 I only trust the 40 members whose past filings actually beat the market, and I re-check that list every cycle. Each new buy they file, I copy with a small $100 slice and hold for 90 days. Full honesty: our own history test says this strategy LOSES to the market \u2014 I exist to re-test that finding live.",
   "strategy": {
     "name": "Congress Copier \u2014 the bot picks whom to trust",
     "rule": "Follow every member of Congress with >= 10 scored buys and a positive market-beating record (recomputed every cycle). Copy their new BUY filings with $100 slots, hold 90 days. Benchmark: SPY.",

@@ -62,6 +62,11 @@
   .tbl tr:last-child td{border-bottom:none}
   .buy{color:var(--gain);font-weight:700} .sell{color:var(--loss);font-weight:700}
   .scroll{overflow-x:auto}
+  .rangebtns{margin-left:auto;display:flex;gap:4px}
+  .rbtn{font:600 11px var(--mono);color:var(--muted);
+    background:rgba(128,128,128,.12);border:1px solid var(--line);
+    border-radius:5px;padding:2px 9px;cursor:pointer}
+  .rbtn.on{color:var(--text);border-color:var(--faint)}
 
   .member{display:flex;align-items:center;gap:8px;font-size:13px;
     background:var(--panel2);border-radius:4px;padding:7px 10px;
@@ -145,7 +150,13 @@
 
   <div class="grid">
     <div class="panel">
-      <span class="eyebrow">Equity curve</span>
+      <div style="display:flex;align-items:center;gap:8px">
+        <span class="eyebrow">Equity curve</span>
+        <div class="rangebtns">
+          <button class="rbtn on" data-r="D" title="Daily">D</button>
+          <button class="rbtn" data-r="W" title="Weekly">W</button>
+        </div>
+      </div>
       <h2>Copier vs SPY, from inception</h2>
       <canvas id="eq" width="640" height="280"></canvas>
       <div class="rule" id="eqnote"></div>
@@ -197,7 +208,7 @@
 </div>
 
 <script>
-const D = {"generated_utc": "2026-08-10T14:11:23+00:00", "created": "2026-07-16", "starting_cash": 1000.0, "current": {"date": "2026-08-10", "value": 1016.31, "bench": 1031.06}, "cash": 600.0, "positions": [{"ticker": "NVDA", "units": 0.4857, "open_date": "2026-07-20", "close_date": "2026-10-18", "filer": "Cleo Fields", "cost": 100.0, "now": 107.73}, {"ticker": "META", "units": 0.1546, "open_date": "2026-07-20", "close_date": "2026-10-18", "filer": "Daniel Crenshaw", "cost": 100.0, "now": 92.48}, {"ticker": "GOOG", "units": 0.3124, "open_date": "2026-07-23", "close_date": "2026-10-21", "filer": "Jerry Moran,", "cost": 100.0, "now": 110.32}, {"ticker": "TSM", "units": 0.2506, "open_date": "2026-08-03", "close_date": "2026-11-01", "filer": "Cleo Fields", "cost": 100.0, "now": 105.78}], "follow_count": 41, "follow_top": [{"name": "Sheldon Whitehouse", "excess_pct": 6.86, "buys": 409}, {"name": "Roger W. Marshall", "excess_pct": 6.82, "buys": 44}, {"name": "Thomas Suozzi", "excess_pct": 2.14, "buys": 272}, {"name": "Barbara J Comstock", "excess_pct": 2.11, "buys": 31}, {"name": "Rub\u00e9n Hinojosa", "excess_pct": 1.88, "buys": 23}, {"name": "Ron L Wyden", "excess_pct": 1.8, "buys": 170}, {"name": "Nancy Pelosi", "excess_pct": 1.17, "buys": 105}, {"name": "John F Reed", "excess_pct": 1.13, "buys": 58}, {"name": "Pete Sessions", "excess_pct": 1.03, "buys": 170}, {"name": "Suzan K. DelBene", "excess_pct": 1.01, "buys": 62}, {"name": "Thomas J. Rooney", "excess_pct": 0.85, "buys": 139}, {"name": "Daniel S Sullivan", "excess_pct": 0.85, "buys": 24}], "trades": [{"date": "2026-07-20", "action": "BUY", "ticker": "NVDA", "price": 205.87, "units": 0.485743, "value": 100.0, "reason": "Copying Cleo Fields (+0.0% avg excess, filed 2026-07-16, $1,001 - $15,000) [restated: Saturday filing filled Monday open]"}, {"date": "2026-07-20", "action": "BUY", "ticker": "META", "price": 646.7, "units": 0.154631, "value": 100.0, "reason": "Copying Daniel Crenshaw (+0.5% avg excess, filed 2026-07-16, $1,001 - $15,000) [restated: Saturday filing filled Monday open]"}, {"date": "2026-07-23", "action": "BUY", "ticker": "GOOG", "price": 320.1, "units": 0.3124, "value": 100.0, "reason": "Copying Jerry Moran, (+0.1% avg excess, filed 2026-07-21, $1,001 - $15,000)"}, {"date": "2026-08-03", "action": "BUY", "ticker": "TSM", "price": 399.11, "units": 0.2506, "value": 100.0, "reason": "Copying Cleo Fields (+0.0% avg excess, filed 2026-07-30, $1,001 - $15,000)"}], "history": [{"date": "2026-07-16", "value": 1000.0, "bench": 1000.0}, {"date": "2026-07-17", "value": 1000.0, "bench": 990.1}, {"date": "2026-07-20", "value": 1000.21, "bench": 988.5}, {"date": "2026-07-21", "value": 1001.87, "bench": 996.75}, {"date": "2026-07-22", "value": 999.99, "bench": 995.59}, {"date": "2026-07-23", "value": 994.58, "bench": 983.3}, {"date": "2026-07-24", "value": 992.19, "bench": 984.3}, {"date": "2026-07-27", "value": 989.31, "bench": 984.51}, {"date": "2026-07-28", "value": 991.36, "bench": 986.87}, {"date": "2026-07-29", "value": 987.74, "bench": 971.68}, {"date": "2026-07-30", "value": 982.33, "bench": 987.97}, {"date": "2026-07-31", "value": 995.02, "bench": 995.08}, {"date": "2026-08-03", "value": 1009.76, "bench": 1009.26}, {"date": "2026-08-04", "value": 1015.65, "bench": 1027.45}, {"date": "2026-08-05", "value": 1013.76, "bench": 1025.4}, {"date": "2026-08-06", "value": 1013.78, "bench": 1023.76}, {"date": "2026-08-07", "value": 1016.01, "bench": 1030.02}, {"date": "2026-08-10", "value": 1016.31, "bench": 1031.06}], "thoughts": "I'm copying 4 stock buy(s) filed by members of Congress. I don't follow just anyone \u2014 I only trust the 41 members whose past filings actually beat the market, and I re-check that list every cycle. Each new buy they file, I copy with a small $100 slice and hold for 90 days. Full honesty: our own history test says this strategy LOSES to the market \u2014 I exist to re-test that finding live.", "strategy": {"name": "Congress Copier \u2014 the bot picks whom to trust", "rule": "Follow every member of Congress with >= 10 scored buys and a positive market-beating record (recomputed every cycle). Copy their new BUY filings with $100 slots, hold 90 days. Benchmark: SPY.", "note": "Backtest verdict was that copying Congress LOSES to SPY \u2014 this bot is the forward, live retrial of that finding."}};
+const D = {"generated_utc": "2026-08-10T20:15:29+00:00", "created": "2026-07-16", "starting_cash": 1000.0, "current": {"date": "2026-08-10", "value": 1013.68, "bench": 1029.72}, "cash": 600.0, "positions": [{"ticker": "NVDA", "units": 0.4857, "open_date": "2026-07-20", "close_date": "2026-10-18", "filer": "Cleo Fields", "cost": 100.0, "now": 105.67}, {"ticker": "META", "units": 0.1546, "open_date": "2026-07-20", "close_date": "2026-10-18", "filer": "Daniel Crenshaw", "cost": 100.0, "now": 91.99}, {"ticker": "GOOG", "units": 0.3124, "open_date": "2026-07-23", "close_date": "2026-10-21", "filer": "Jerry Moran,", "cost": 100.0, "now": 111.17}, {"ticker": "TSM", "units": 0.2506, "open_date": "2026-08-03", "close_date": "2026-11-01", "filer": "Cleo Fields", "cost": 100.0, "now": 104.85}], "follow_count": 40, "follow_top": [{"name": "Roger W. Marshall", "excess_pct": 6.74, "buys": 44}, {"name": "Sheldon Whitehouse", "excess_pct": 6.73, "buys": 409}, {"name": "Barbara J Comstock", "excess_pct": 2.1, "buys": 31}, {"name": "Thomas Suozzi", "excess_pct": 2.08, "buys": 272}, {"name": "Rub\u00e9n Hinojosa", "excess_pct": 1.94, "buys": 23}, {"name": "Ron L Wyden", "excess_pct": 1.75, "buys": 170}, {"name": "Nancy Pelosi", "excess_pct": 1.14, "buys": 105}, {"name": "John F Reed", "excess_pct": 1.12, "buys": 58}, {"name": "Suzan K. DelBene", "excess_pct": 1.03, "buys": 62}, {"name": "Pete Sessions", "excess_pct": 1.01, "buys": 170}, {"name": "Thomas J. Rooney", "excess_pct": 0.84, "buys": 139}, {"name": "Daniel S Sullivan", "excess_pct": 0.84, "buys": 24}], "trades": [{"date": "2026-07-20", "action": "BUY", "ticker": "NVDA", "price": 205.87, "units": 0.485743, "value": 100.0, "reason": "Copying Cleo Fields (+0.0% avg excess, filed 2026-07-16, $1,001 - $15,000) [restated: Saturday filing filled Monday open]"}, {"date": "2026-07-20", "action": "BUY", "ticker": "META", "price": 646.7, "units": 0.154631, "value": 100.0, "reason": "Copying Daniel Crenshaw (+0.5% avg excess, filed 2026-07-16, $1,001 - $15,000) [restated: Saturday filing filled Monday open]"}, {"date": "2026-07-23", "action": "BUY", "ticker": "GOOG", "price": 320.1, "units": 0.3124, "value": 100.0, "reason": "Copying Jerry Moran, (+0.1% avg excess, filed 2026-07-21, $1,001 - $15,000)"}, {"date": "2026-08-03", "action": "BUY", "ticker": "TSM", "price": 399.11, "units": 0.2506, "value": 100.0, "reason": "Copying Cleo Fields (+0.0% avg excess, filed 2026-07-30, $1,001 - $15,000)"}], "history": [{"date": "2026-07-16", "value": 1000.0, "bench": 1000.0}, {"date": "2026-07-17", "value": 1000.0, "bench": 990.1}, {"date": "2026-07-20", "value": 1000.21, "bench": 988.5}, {"date": "2026-07-21", "value": 1001.87, "bench": 996.75}, {"date": "2026-07-22", "value": 999.99, "bench": 995.59}, {"date": "2026-07-23", "value": 994.58, "bench": 983.3}, {"date": "2026-07-24", "value": 992.19, "bench": 984.3}, {"date": "2026-07-27", "value": 989.31, "bench": 984.51}, {"date": "2026-07-28", "value": 991.36, "bench": 986.87}, {"date": "2026-07-29", "value": 987.74, "bench": 971.68}, {"date": "2026-07-30", "value": 982.33, "bench": 987.97}, {"date": "2026-07-31", "value": 995.02, "bench": 995.08}, {"date": "2026-08-03", "value": 1009.76, "bench": 1009.26}, {"date": "2026-08-04", "value": 1015.65, "bench": 1027.45}, {"date": "2026-08-05", "value": 1013.76, "bench": 1025.4}, {"date": "2026-08-06", "value": 1013.78, "bench": 1023.76}, {"date": "2026-08-07", "value": 1016.01, "bench": 1030.02}, {"date": "2026-08-10", "value": 1013.68, "bench": 1029.72}], "thoughts": "I'm copying 4 stock buy(s) filed by members of Congress. I don't follow just anyone \u2014 I only trust the 40 members whose past filings actually beat the market, and I re-check that list every cycle. Each new buy they file, I copy with a small $100 slice and hold for 90 days. Full honesty: our own history test says this strategy LOSES to the market \u2014 I exist to re-test that finding live.", "strategy": {"name": "Congress Copier \u2014 the bot picks whom to trust", "rule": "Follow every member of Congress with >= 10 scored buys and a positive market-beating record (recomputed every cycle). Copy their new BUY filings with $100 slots, hold 90 days. Benchmark: SPY.", "note": "Backtest verdict was that copying Congress LOSES to SPY \u2014 this bot is the forward, live retrial of that finding."}};
 const $ = id => document.getElementById(id);
 const fmt$ = v => "$" + v.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});
 const pct = v => (v>=0?"+":"") + (v*100).toFixed(2) + "%";
@@ -263,30 +274,99 @@ if (D.trades.length === 0){
   });
 }
 
-// equity chart
-(function(){
-  const c=$("eq"), ctx=c.getContext("2d");
-  const H=D.history;
-  const accC=css.getPropertyValue("--acc").trim(),
-        gainC=css.getPropertyValue("--gain").trim(),
+// equity chart (D = daily points, W = weekly closes), with $/date axes
+function line(ctx,pts,color,w=2,dash=[]){
+  if(pts.length<2) return;
+  ctx.strokeStyle=color; ctx.lineWidth=w; ctx.setLineDash(dash); ctx.beginPath();
+  pts.forEach((p,i)=> i?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1]));
+  ctx.stroke(); ctx.setLineDash([]);
+}
+let eqMode = "D";
+function niceStep(raw){
+  const p = Math.pow(10, Math.floor(Math.log10(raw || 1)));
+  for (const m of [1,2,2.5,5,10]) if (m*p >= raw) return m*p;
+  return 10*p;
+}
+function weekly(series){
+  const out = [], idx = {};
+  series.forEach(h => {
+    const d = new Date((h.date || h.ts).slice(0,10) + "T00:00:00");
+    const mon = new Date(d); mon.setDate(d.getDate() - ((d.getDay()+6)%7));
+    const k = mon.toISOString().slice(0,10);
+    if (k in idx) out[idx[k]] = h;      // last point of the week wins
+    else { idx[k] = out.length; out.push(h); }
+  });
+  return out;
+}
+function eqLabel(h){
+  if (h.date) return new Date(h.date + "T00:00:00")
+    .toLocaleDateString("en-US", {month:"short", day:"numeric"});
+  return new Date(h.ts)
+    .toLocaleTimeString("en-US", {hour:"2-digit", minute:"2-digit", hour12:false});
+}
+function drawEq(c, series, start_, botC, benchC, labelC){
+  const ctx = c.getContext("2d");
+  ctx.clearRect(0,0,c.width,c.height);
+  const L=58, R=14, T=10, B=26, W=c.width-L-R, H=c.height-T-B;
+  const vals = series.map(h=>h.value).concat(series.map(h=>h.bench));
+  const lo0 = Math.min(Math.min(...vals), start_),
+        hi0 = Math.max(Math.max(...vals), start_);
+  const pad = (hi0-lo0 || start_*0.01)*0.06, lo = lo0-pad, hi = hi0+pad;
+  const sy = v => T+H-(v-lo)/(hi-lo)*H;
+  const sx = i => L+(series.length<2 ? W/2 : i/(series.length-1)*W);
+  ctx.font = "11px Consolas,Menlo,monospace";
+  let step = niceStep((hi-lo)/5);
+  if ((hi-lo)/step < 3.5) step /= 2;
+  ctx.textAlign = "right"; ctx.textBaseline = "middle";
+  for (let v = Math.ceil(lo/step)*step; v <= hi+1e-9; v += step){
+    const y = sy(v);
+    ctx.strokeStyle = "rgba(128,128,128,.15)"; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(L,y); ctx.lineTo(L+W,y); ctx.stroke();
+    ctx.fillStyle = labelC;
+    ctx.fillText("$"+Math.round(v).toLocaleString("en-US"), L-8, y);
+  }
+  ctx.textAlign = "center"; ctx.textBaseline = "top";
+  const n = series.length, ticks = Math.min(6, n);
+  let prev = "";
+  for (let t = 0; t < ticks; t++){
+    const i = Math.round(t*(n-1)/Math.max(ticks-1,1));
+    const lab = eqLabel(series[i]);
+    if (lab === prev) continue;
+    prev = lab;
+    const x = sx(i);
+    ctx.strokeStyle = "rgba(128,128,128,.3)"; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(x,T+H); ctx.lineTo(x,T+H+4); ctx.stroke();
+    ctx.fillStyle = labelC;
+    ctx.fillText(lab, Math.max(L+16, Math.min(x, L+W-16)), T+H+8);
+  }
+  line(ctx, [[L,sy(start_)],[L+W,sy(start_)]], labelC, 1, [4,4]);
+  line(ctx, series.map((h,i)=>[sx(i),sy(h.bench)]), benchC, 1.6);
+  line(ctx, series.map((h,i)=>[sx(i),sy(h.value)]), botC, 2.2);
+  ctx.fillStyle = botC; ctx.beginPath();
+  ctx.arc(sx(n-1), sy(series[n-1].value), 3.5, 0, 7); ctx.fill();
+}
+function drawChart(){
+  const c=$("eq");
+  const gainC=css.getPropertyValue("--gain").trim(),
         mutedC=css.getPropertyValue("--faint").trim();
-  function line(pts,color,w,dash){ if(pts.length<2)return;
-    ctx.strokeStyle=color;ctx.lineWidth=w;ctx.setLineDash(dash||[]);ctx.beginPath();
-    pts.forEach((p,i)=> i?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1]));
-    ctx.stroke();ctx.setLineDash([]); }
-  if(H.length<2){
+  const H0=D.history;
+  if(H0.length<2){
+    const ctx=c.getContext("2d");
+    ctx.clearRect(0,0,c.width,c.height);
     $("eqnote").textContent="Day 1 — the curve appears after tomorrow's cycles. Both lines start at $1,000.";
-    line([[20,140],[620,140]],mutedC,1,[4,4]);
+    line(ctx,[[20,140],[620,140]],mutedC,1,[4,4]);
     return;
   }
-  const vals=H.map(h=>h.value).concat(H.map(h=>h.bench));
-  const lo=Math.min(Math.min(...vals),start)*0.995, hi=Math.max(Math.max(...vals),start)*1.005;
-  const sy=v=>265-(v-lo)/(hi-lo||1)*245, X=i=>30+i/(H.length-1)*580;
-  line([[30,sy(start)],[610,sy(start)]],mutedC,1,[4,4]);
-  line(H.map((h,i)=>[X(i),sy(h.bench)]),mutedC,1.6);
-  line(H.map((h,i)=>[X(i),sy(h.value)]),gainC,2.2);
-  $("eqnote").textContent="green: copier · grey: SPY buy&hold · dashed: $1,000 start";
-})();
+  drawEq(c, eqMode==="W" ? weekly(H0) : H0, start, gainC, mutedC, mutedC);
+  $("eqnote").textContent="green: copier · grey: SPY buy&hold · dashed: $1,000 start" +
+    (eqMode==="W" ? " · weekly closes" : "");
+}
+drawChart();
+document.querySelectorAll(".rbtn").forEach(b => b.onclick = () => {
+  eqMode = b.dataset.r;
+  document.querySelectorAll(".rbtn").forEach(x => x.classList.toggle("on", x === b));
+  drawChart();
+});
 </script>
 
 <script>
