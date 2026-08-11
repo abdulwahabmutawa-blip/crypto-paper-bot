@@ -1,21 +1,21 @@
 {
- "updated_utc": "2026-08-10T09:15:00+00:00",
- "note": "Run covering 2026-08-09 -> 2026-08-10, executed 09:15 UTC Monday pre-market. 11 lines appended (9 bot dailies, 1 crypto trade_event, 1 sentinel daily). 13 new fills audited, all XRP-USD, ALL CLEAN - no SIM-INTEGRITY ALERT. There has been no US equity session since the 2026-08-07 close, so eight books are logged with driver 'unknown' and an explicit statement that the market was shut, rather than a manufactured cause. Two root causes were found in the workflow logs this run and both are recorded in the evidence fields verbatim: the rebase-conflict poisoning that produces the ~362-minute blackouts, and the xAI HTTP 403 credit exhaustion that has frozen the Grok watcher for 70.4 hours.",
- "total_lines_logged": 218,
+ "updated_utc": "2026-08-11T08:15:00+00:00",
+ "note": "Run covering 2026-08-10 -> 2026-08-11, executed 08:15 UTC Tuesday pre-market. 11 lines appended (9 bot dailies, 1 crypto trade_event, 1 sentinel daily). 4 new fills audited, all XRP-USD, ALL CLEAN - no SIM-INTEGRITY ALERT. First live US equity session since 2026-08-07, so this is the first run in four where the equity books produce real attribution instead of honest 'unknown' flats.",
+ "total_lines_logged": 229,
  "by_primary_driver": {
   "unknown": {
-   "profit": 5,
+   "profit": 6,
    "loss": 1,
    "flat": 64
   },
   "market_beta": {
    "profit": 19,
    "loss": 10,
-   "flat": 5
+   "flat": 6
   },
   "technical": {
    "profit": 11,
-   "loss": 16,
+   "loss": 17,
    "flat": 3
   },
   "hype_sentiment": {
@@ -24,48 +24,58 @@
    "flat": 6
   },
   "macro": {
-   "profit": 9,
+   "profit": 12,
    "loss": 11,
    "flat": 1
   },
   "none_cash": {
    "profit": 0,
    "loss": 0,
-   "flat": 19
+   "flat": 20
   },
   "sector": {
    "profit": 7,
-   "loss": 5,
+   "loss": 6,
    "flat": 0
   },
   "news_idiosyncratic": {
-   "profit": 7,
-   "loss": 1,
+   "profit": 8,
+   "loss": 3,
    "flat": 1
   }
  },
  "by_beta_or_alpha": {
   "alpha": {
-   "profit": 33,
-   "loss": 23,
+   "profit": 37,
+   "loss": 26,
    "flat": 7
   },
   "beta": {
    "profit": 16,
    "loss": 8,
-   "flat": 5
+   "flat": 6
   },
   "mixed": {
-   "profit": 6,
-   "loss": 13,
+   "profit": 7,
+   "loss": 14,
    "flat": 0
   },
   "n/a": {
    "profit": 10,
    "loss": 10,
-   "flat": 87
+   "flat": 88
   }
  },
- "driver_note": "Only one bot had a live day, so the shape barely moved, but the move it made is the point. 'technical' went 11-14 to 11-16 and is now decisively the worst-scoring driver in the fleet. 'technical' in this ledger is overwhelmingly one thing - the crypto bot's signal-flip rule - and today produced the cleanest evidence yet that it loses on COST rather than on direction: across the four round trips scored this run the rule's price selection made +15.46 gross and the book still finished -5.73 after 21.19 of fees. A driver bucket that is right about price and wrong about money is exactly the case where a naive win/loss tally would mislead, so it is worth stating explicitly. 'unknown' flat count jumps 56 to 64 purely because eight closed-market days were logged honestly instead of being attributed to a cause. news_idiosyncratic stays the standout at 7-1 on a small sample and I keep holding it to a citation every time. hype_sentiment stays 7-10, or 6-11 once the SOUN phantom profit is stripped out.",
- "beta_alpha_note": "alpha 33-23 after the crypto loss landed in the alpha bucket again. The label keeps flattering the fleet: it is driven by single-asset all-in books (hunter in SLV, hype in one name, crypto in one coin) where any divergence from a broad benchmark reads as alpha by construction. Crypto remains the clean counter-example - it diverged from its benchmark by 0.51pp on the day and every basis point of that divergence was fees, which is divergence without skill. The n/a flat count now dominates the table at 87, which is an honest artefact of reviewing a mostly-equity fleet across a long market closure and should not be read as the fleet being idle."
+ "driver_note": "'macro' flipped positive for the first time, 9-11 to 12-11, and it did so in one session through three unrelated bots: commodity (DBC +3.46%), hunter (SLV +3.32%) and allweather (+0.08%) all made money off the same two macro facts - the 2026-08-07 weak US jobs report repricing Fed easing, and the Hormuz/Jazan oil spike. That is a correlation warning, not three independent wins: a third of the fleet is currently one macro bet. 'technical' fell again, 11-16 to 11-17, and remains the worst driver in the ledger; it is still overwhelmingly the crypto bot's signal-flip rule. 'news_idiosyncratic' is now 8-3 but the quality of those attributions is uneven - today's NET line is logged at confidence LOW on purpose because the only dated 08-10 event was a dilutive convertible offering and press coverage of it contradicts the +3.47% the stock actually printed. Where the cited cause does not explain the sign, I logged that rather than picking the story that fit.",
+ "analyst_validation_running": {
+  "decisions_total": 6,
+  "validated": 5,
+  "unvalidatable": 1,
+  "reasoning_validated_true": 4,
+  "reasoning_validated_false": 0,
+  "falsifiers_fired": 0,
+  "api_cost_usd": 0.3403,
+  "cost_per_decision_usd": 0.057,
+  "note": "The 2026-08-05 entry is an 'agent_error - malformed/no decision, defaulting to HOLD' stub with zero tokens and nothing to validate. The four real holds all stated the same trend-intact thesis and price confirmed it each time, so no right-for-the-wrong-reason cases yet. One factual error is now on the record against it: the 08-10 note declined to rotate into oil and gold on the stated ground of 'no dated catalyst for either' when dated catalysts existed and were in that day's news. Cost growth is plausible and flat."
+ }
 }
