@@ -1,27 +1,56 @@
 {
- "updated_utc": "2026-08-11T08:15:00+00:00",
- "run_note": "Run covering 2026-08-10 -> 2026-08-11, executed 08:15 UTC Tuesday, US pre-market (04:15 ET). NO SIM-INTEGRITY ALERT and no R1 breach. Four new fills, all XRP-USD, all verified clean on price-range (24/7 asset, so the market-hours gate does not apply). No frozen bots: all nine trading books wrote state within a 12-second window at 07:58:50-07:59:02Z. This is the first run in four with a live US session to attribute, and the session had a single dominant driver: the 2026-08-07 weak US jobs report plus the Hormuz escalation lifted the whole commodity and metals complex while SPY was flat, which is why the fleet's three best days (commodity +3.46%, sentiment +3.44%, hunter +3.32%) came from three unrelated strategies. THE ~6-HOUR BLACKOUT IS NOT FIXED AND IS NOW THE LONGEST-RUNNING OPEN FAULT: three more events since the last review at 362.5, 364.1 and 368.1 minutes (2026-08-10 02:33->08:35, 2026-08-10 14:11->20:15, 2026-08-11 01:50->07:59). Seven events in four days, every one within 6 minutes of the same length, which continues to rule out GitHub cron randomness and matches the rebase-conflict poisoning diagnosed last review. Real fleet uptime is about 50% of wall-clock. THE GROK WATCHER IS STILL DARK, now 93.2 hours, on xAI credit exhaustion - so every risk-gated bot has run the entire Hormuz escalation with no live severe-risk veto, and the hype bot's exit rule is structurally unable to fire. Fleet baseline is $9,000 across 9 active bots (stock/TQQQ retired 07-31). Reported only, nothing touched.",
- "total_judgments": 157,
- "judgments_closed": 156,
- "judgments_open": 1,
+ "updated_utc": "2026-08-12T08:03:00+00:00",
+ "run_note": "Run covering 2026-08-11 -> 2026-08-12, executed 08:03 UTC Wednesday, US pre-market (04:03 ET). NO R1 BREACH and NO SIM-INTEGRITY ALERT: the only two new fills are hunter's SLV->PLTR rotation, both first appearing in commit 31f81b9 at 2026-08-11T13:34:32Z = 09:34:32 ET Tuesday, inside US regular hours, at prices inside the day's range (SLV 58.50 in 58.16-58.99; PLTR 174.8786 in 172.72-177.94). THE HEADLINE IS THAT LAST REVIEW'S REBASE-CONFLICT DIAGNOSIS IS NOW PROVEN, NOT INFERRED. Run 31548925913's log shows the exact mechanism: at 2026-08-12T01:34:24Z the loop's rebase hit CONFLICT (content) across every dashboard file, could not apply commit 7ee1c8c, and all three push retries died on 'Pulling is not possible because you have unmerged files'. The unmerged working tree poisoned data/*.json, and from 01:47:50Z every one of the nine trading bots raised JSONDecodeError on its own state file - 225 crashes across 25 consecutive cycles until 07:14:59Z, ending only when a fresh checkout at 07:29Z reset the tree. THE FLEET WAS DEAD FOR 5H42M AND THE RUN'S CONCLUSION IS 'success': each crash is swallowed as a ##[warning], the exit code stays 0, and the dashboards simply stop advancing. Green checkmarks, dead fleet. Cost this time was limited because the window was overnight ET - no equity fill was possible - but crypto trades 24/7 and ran 5h42m of live tape with no exit and no stop. IMPORTANT CORRECTION TO LAST REVIEW: not every ~6h gap is this bug. The 2026-08-11 13:34Z->19:43Z window was the DOCUMENTED architectural hole - run 31459784322 ran 07:58:13Z to 13:47:34Z, a clean 349-minute loop-cap exit with one isolated cycle failure - so the fleet has two independent ~6h failure modes that produce identical-looking gaps, and only one of them is a bug. Real uptime remains near 50% of wall-clock either way. THE GROK WATCHER IS STILL DARK, now 118 hours, confirmed cause 'xAI HTTP 403: your team has either used all available credits or reached its monthly spending limit' - NOT the monthly cap, which sits at 15 of 100. Two consequences are now concrete rather than theoretical: the hype bot's exit rule is structurally unfirable and it has held NET five days on a 1-2 day strategy, and the Analyst's 'auto-exit on Watcher SEVERE' is a dead switch it re-cites as live in every decision. NEW THIS RUN: congress published a wrong day P/L - it marked NVDA and TSM at 08-11 closes but META and GOOG at 08-10 closes, and GOOG fell 3.38%, so its reported +0.88 was really about -2.49. Not a SIM-INTEGRITY ALERT (no trade occurred) but its dashboard is overstated by about $3.35, and it is the only bot of nine whose mark fails to reconcile. Reported only, nothing touched.",
+ "total_judgments": 166,
+ "judgments_closed": 164,
+ "judgments_open": 2,
  "open_ids": [
-  "2026-08-11-crypto-1"
+  "2026-08-12-sentiment-1",
+  "2026-08-12-crypto-1"
  ],
  "cumulative_alpha_usd": 209.46,
  "cumulative_alpha_usd_actionable": 85.37,
- "win_rate_closed_pct": 9.0,
- "win_rate_note": "132 of 156 closed judgments are no_change (alpha 0), so the headline rate is near-meaningless - read the directional record. DIRECTIONAL: 24 scored, 14W/7L/3N, +209.46 net headline, +85.37 on the conservative actionable-reference-price basis. THIS RUN: two closures, one of each sign, and both carry a caveat recorded against myself. 2026-08-10-crypto-1 closed +33.63, my largest single win and the seventh straight win in the crypto churn family - but the decomposition says only 7.96 of it was the fee burn I actually argued; the other 25.67 was XRP falling 2.9% on a Senate CLARITY Act delay I did not forecast. Right for mostly the wrong reason. 2026-08-08-sentiment-1 closed -41.81, my second-largest loss, on a reachable reference with no excuse: I read the 08-07 gap-and-fade as a spent catalyst when it was a post-earnings fade. Five of my seven directional losses are now calls against a momentum or hype entry. The distinction that survives the whole sample: telling a hype bot to STAY IN CASH has worked (07-26 +61.39, 07-27 +38.17); telling it to EXIT a position it already holds on my read of entry quality has not.",
+ "win_rate_closed_pct": 8.5,
+ "win_rate_note": "132 of 165 closed judgments are no_change (alpha 0), so the headline rate is near-meaningless - read the directional record. DIRECTIONAL: 25 scored, 14W/7L/4N, +209.46 net headline, +85.37 on the conservative actionable-reference-price basis (unchanged, no directional call closed with a P/L this run). THIS RUN: one closure, and it is a NEUTRAL I am recording against myself rather than quietly dropping. 2026-08-11-crypto-1 expired 0/0/0 because the crypto bot stopped churning - it held the same XRP position for two days, so the fee claim never got a test. That is the honest reading of a call whose family is 7W/0L: it only fires when the bot misbehaves, and it scores nothing when the bot behaves. Two calls left open today. The sentiment one is the interesting one, because I am knowingly re-entering a call type I am 0-for-1 on here and 2-for-7 on across the hype family, on a different argument - mechanism (the exit rule cannot execute) rather than valuation. If it loses, the lesson is that I dressed a price view in mechanism language, and I have written that test down in advance so I cannot rewrite it afterwards.",
  "by_bot": {
+  "allweather": {
+   "judgments": 20,
+   "closed": 20,
+   "open": 0,
+   "alpha_usd": 0.0,
+   "note": "All no_change; a fixed-weight portfolio between rebalances gives me nothing scoreable."
+  },
+  "analyst": {
+   "judgments": 8,
+   "closed": 8,
+   "open": 0,
+   "alpha_usd": 0.0,
+   "note": "All no_change since it was added 07-31."
+  },
+  "commodity": {
+   "judgments": 20,
+   "closed": 20,
+   "open": 0,
+   "alpha_usd": 47.79,
+   "note": "Headline flattered by the unreachable 136.69 reference on 2026-07-27; the DBC rotation I criticised for five sessions returned +3.46% today."
+  },
+  "congress": {
+   "judgments": 20,
+   "closed": 20,
+   "open": 0,
+   "alpha_usd": 0.0,
+   "note": "All no_change; the standing issue is sizing (600 of 1,014 idle), which is an owner decision, not a scoreable action."
+  },
   "crypto": {
-   "judgments": 19,
-   "closed": 18,
+   "judgments": 20,
+   "closed": 19,
    "open": 1,
    "alpha_usd": 106.83,
-   "note": "The churn call is 7W/0L and the only repeatable edge in this ledger, but the 2026-08-11 re-issue is deliberately narrowed to the fee argument only after today's decomposition showed 76% of the last win was direction."
+   "note": "The churn call is 7W/0L/1N. The 2026-08-11 re-issue expired NEUTRAL, not won: the bot stopped churning and held XRP two days, so the fee claim was never tested. Re-issued today unchanged. Seven wins on a call that only fires when the bot misbehaves is an edge that disappears the moment the bot behaves."
   },
   "hunter": {
-   "judgments": 18,
-   "closed": 18,
+   "judgments": 19,
+   "closed": 19,
    "open": 0,
    "alpha_usd": 65.65,
    "note": "Headline positive only because of the 07-27 USO call (+131.16, flattered by an unreachable reference). The 08-04 UPRO/PLTR/SLV call cost -115.62 and SLV has since added another +3.32% day. I stopped advising against this bot."
@@ -33,19 +62,26 @@
    "alpha_usd": 80.37,
    "note": "All from stay-in-cash calls in July; the label predates the rename to 'sentiment'."
   },
-  "sentiment": {
-   "judgments": 8,
-   "closed": 8,
+  "meanrev": {
+   "judgments": 20,
+   "closed": 20,
    "open": 0,
-   "alpha_usd": -41.81,
-   "note": "One directional call under this label, the 08-08 NET close, and it was wrong by 41.81."
+   "alpha_usd": -13.64,
+   "note": "One directional call, the 07-31 PG close, and it was wrong."
   },
-  "commodity": {
-   "judgments": 19,
-   "closed": 19,
+  "scholar": {
+   "judgments": 9,
+   "closed": 9,
    "open": 0,
-   "alpha_usd": 47.79,
-   "note": "Headline flattered by the unreachable 136.69 reference on 2026-07-27; the DBC rotation I criticised for five sessions returned +3.46% today."
+   "alpha_usd": 0.0,
+   "note": "All no_change since it was added 07-31."
+  },
+  "sentiment": {
+   "judgments": 9,
+   "closed": 8,
+   "open": 1,
+   "alpha_usd": -41.81,
+   "note": "1 closed at -41.81. Today's second call is deliberately argued on MECHANISM (the Grok exit rule cannot fire while the Watcher is dead on xAI 403) rather than on my read of NET, because the price-view version of this call is 0-for-1 here and 2-for-7 across the hype family. If it loses anyway, that is evidence the mechanism argument is also just a price view wearing a better hat."
   },
   "stock": {
    "judgments": 10,
@@ -53,57 +89,49 @@
    "open": 0,
    "alpha_usd": -35.73,
    "note": "Bot retired by owner 2026-07-31; ledger frozen."
-  },
-  "meanrev": {
-   "judgments": 19,
-   "closed": 19,
-   "open": 0,
-   "alpha_usd": -13.64,
-   "note": "One directional call, the 07-31 PG close, and it was wrong."
-  },
-  "allweather": {
-   "judgments": 19,
-   "closed": 19,
-   "open": 0,
-   "alpha_usd": 0.0,
-   "note": "All no_change; a fixed-weight portfolio between rebalances gives me nothing scoreable."
-  },
-  "congress": {
-   "judgments": 19,
-   "closed": 19,
-   "open": 0,
-   "alpha_usd": 0.0,
-   "note": "All no_change; the standing issue is sizing (600 of 1,014 idle), which is an owner decision, not a scoreable action."
-  },
-  "scholar": {
-   "judgments": 8,
-   "closed": 8,
-   "open": 0,
-   "alpha_usd": 0.0,
-   "note": "All no_change since it was added 07-31."
-  },
-  "analyst": {
-   "judgments": 7,
-   "closed": 7,
-   "open": 0,
-   "alpha_usd": 0.0,
-   "note": "All no_change since it was added 07-31."
   }
  },
  "driver_tally_note": "Full rolling tally lives in reports/attribution_summary.json.",
  "fleet_snapshot_at_run": {
-  "basis": "Eight equity books carry their 2026-08-10 US closes; crypto is marked live at 2026-08-11T07:58Z. Baseline $9,000 across 9 active bots.",
-  "meanrev": 1253.66,
-  "sentiment": 1257.84,
-  "analyst": 1030.47,
-  "scholar": 1022.83,
-  "allweather": 1017.59,
-  "commodity": 1016.98,
-  "congress": 1013.68,
-  "hunter": 1013.03,
-  "crypto": 1010.05,
-  "total": 9636.13,
-  "total_pnl_usd": 636.13,
-  "total_pnl_pct": 7.07
- }
+  "basis": "Nine equity/crypto books. Eight equity books carry their 2026-08-11 US closes; crypto is marked live at 2026-08-12T07:55Z. Baseline $9,000 across 9 active bots (stock/TQQQ retired 07-31 at a final $892.30 and excluded). CAVEAT: the congress figure is the bot's own published mark and is overstated by about $3.35 - see its attribution line.",
+  "meanrev": 1233.78,
+  "sentiment": 1243.17,
+  "analyst": 1026.96,
+  "scholar": 1026.27,
+  "crypto": 1026.06,
+  "commodity": 1018.85,
+  "allweather": 1016.72,
+  "congress": 1014.56,
+  "hunter": 995.57,
+  "total": 9601.94,
+  "total_pnl_usd": 601.94,
+  "total_pnl_pct": 6.69,
+  "fleet_day_pnl_usd": -53.12
+ },
+ "open_faults": [
+  {
+   "fault": "rebase-conflict state poisoning",
+   "severity": "critical",
+   "status": "PROVEN this run",
+   "detail": "Loop rebase leaves data/*.json unmerged; all 9 bots then crash on json.loads every cycle until a fresh checkout. Last event 2026-08-12 01:47:50Z-07:14:59Z, 25 cycles, 225 crashes. Run conclusion still reports 'success' because each crash is only a ##[warning]. Evidence: run 31548925913 log."
+  },
+  {
+   "fault": "Grok Watcher offline",
+   "severity": "high",
+   "status": "118h and counting",
+   "detail": "xAI HTTP 403, credits or spend limit exhausted since 2026-08-07T10:47:38Z. Monthly cap is NOT the cause (15 of 100). Disables the hype bot's only exit rule and the Analyst's Watcher-SEVERE auto-exit."
+  },
+  {
+   "fault": "congress stale leg marks",
+   "severity": "medium",
+   "status": "NEW this run",
+   "detail": "META and GOOG marked at prior-day closes while NVDA and TSM were current; published day P/L overstated by about $3.35 on a 3.38% GOOG decline."
+  },
+  {
+   "fault": "~6h scheduling holes at loop-cap exit",
+   "severity": "medium",
+   "status": "architectural, documented",
+   "detail": "Distinct from the poisoning bug. A 345-minute loop ends and GitHub accepts the next start hours later; 2026-08-11 13:34Z->19:43Z was this, and it covered 09:34-15:43 ET, nearly the whole Tuesday session."
+  }
+ ]
 }

@@ -1,81 +1,70 @@
 {
- "updated_utc": "2026-08-11T08:15:00+00:00",
- "note": "Run covering 2026-08-10 -> 2026-08-11, executed 08:15 UTC Tuesday pre-market. 11 lines appended (9 bot dailies, 1 crypto trade_event, 1 sentinel daily). 4 new fills audited, all XRP-USD, ALL CLEAN - no SIM-INTEGRITY ALERT. First live US equity session since 2026-08-07, so this is the first run in four where the equity books produce real attribution instead of honest 'unknown' flats.",
- "total_lines_logged": 229,
+ "updated_utc": "2026-08-12T08:03:00+00:00",
+ "note": "Run covering 2026-08-11 -> 2026-08-12, executed 08:03 UTC Wednesday pre-market. 11 lines appended (9 bot dailies, 1 hunter trade_event, 1 sentinel daily). 2 new fills audited, both hunter, BOTH CLEAN on market-hours and price-range - no SIM-INTEGRITY ALERT. A real US session with a single macro spine (US-Iran Hormuz impasse ahead of inflation data) but genuinely dispersed outcomes, because the index move was small enough that single-name news dominated.",
+ "total_lines_logged": 240,
  "by_primary_driver": {
-  "unknown": {
-   "profit": 6,
-   "loss": 1,
-   "flat": 64
-  },
-  "market_beta": {
-   "profit": 19,
-   "loss": 10,
-   "flat": 6
-  },
-  "technical": {
-   "profit": 11,
-   "loss": 17,
-   "flat": 3
-  },
   "hype_sentiment": {
    "profit": 7,
    "loss": 10,
    "flat": 6
   },
   "macro": {
-   "profit": 12,
+   "profit": 13,
+   "loss": 12,
+   "flat": 1
+  },
+  "market_beta": {
+   "profit": 19,
    "loss": 11,
+   "flat": 6
+  },
+  "news_idiosyncratic": {
+   "profit": 9,
+   "loss": 4,
    "flat": 1
   },
   "none_cash": {
    "profit": 0,
    "loss": 0,
-   "flat": 20
+   "flat": 21
   },
   "sector": {
-   "profit": 7,
+   "profit": 8,
    "loss": 6,
    "flat": 0
   },
-  "news_idiosyncratic": {
-   "profit": 8,
+  "technical": {
+   "profit": 11,
+   "loss": 19,
+   "flat": 3
+  },
+  "unknown": {
+   "profit": 6,
    "loss": 3,
-   "flat": 1
+   "flat": 64
   }
  },
  "by_beta_or_alpha": {
   "alpha": {
-   "profit": 37,
-   "loss": 26,
+   "profit": 39,
+   "loss": 31,
    "flat": 7
   },
   "beta": {
    "profit": 16,
-   "loss": 8,
+   "loss": 9,
    "flat": 6
   },
   "mixed": {
-   "profit": 7,
-   "loss": 14,
+   "profit": 8,
+   "loss": 15,
    "flat": 0
   },
   "n/a": {
    "profit": 10,
    "loss": 10,
-   "flat": 88
+   "flat": 89
   }
  },
- "driver_note": "'macro' flipped positive for the first time, 9-11 to 12-11, and it did so in one session through three unrelated bots: commodity (DBC +3.46%), hunter (SLV +3.32%) and allweather (+0.08%) all made money off the same two macro facts - the 2026-08-07 weak US jobs report repricing Fed easing, and the Hormuz/Jazan oil spike. That is a correlation warning, not three independent wins: a third of the fleet is currently one macro bet. 'technical' fell again, 11-16 to 11-17, and remains the worst driver in the ledger; it is still overwhelmingly the crypto bot's signal-flip rule. 'news_idiosyncratic' is now 8-3 but the quality of those attributions is uneven - today's NET line is logged at confidence LOW on purpose because the only dated 08-10 event was a dilutive convertible offering and press coverage of it contradicts the +3.47% the stock actually printed. Where the cited cause does not explain the sign, I logged that rather than picking the story that fit.",
- "analyst_validation_running": {
-  "decisions_total": 6,
-  "validated": 5,
-  "unvalidatable": 1,
-  "reasoning_validated_true": 4,
-  "reasoning_validated_false": 0,
-  "falsifiers_fired": 0,
-  "api_cost_usd": 0.3403,
-  "cost_per_decision_usd": 0.057,
-  "note": "The 2026-08-05 entry is an 'agent_error - malformed/no decision, defaulting to HOLD' stub with zero tokens and nothing to validate. The four real holds all stated the same trend-intact thesis and price confirmed it each time, so no right-for-the-wrong-reason cases yet. One factual error is now on the record against it: the 08-10 note declined to rotate into oil and gold on the stated ground of 'no dated catalyst for either' when dated catalysts existed and were in that day's news. Cost growth is plausible and flat."
- }
+ "driver_note": "'unknown' did real work today and I want that on the record: two of the fleet's nine dailies (crypto -0.28%, sentiment -1.17%) got driver 'unknown' with confidence low because I searched and found no asset-specific catalyst, and inventing one would have been the easy lie. 'sector' earned its entry honestly for once - scholar's +0.34% is directly explained by a cited fact, the Russell 2000 gaining while large caps fell, rather than by my inference. 'technical' takes another loss via hunter, whose -1.72% decomposes cleanly into an exited leg (-15.16 as silver gave back Monday's spike) plus $2.30 of round-trip fees - a rotation rule paying friction to change its mind, which is the same pathology that makes 'technical' the worst driver in this ledger. The correlation warning from last run PARTLY unwound: commodity (+0.18%) and hunter (-1.72%) had been one macro bet together via the metals/energy complex, and they separated today when hunter rotated out of silver into PLTR - so the fleet is less concentrated than yesterday, by accident rather than by design. Attribution quality caveat that applies to the whole day: congress's line is the first in this ledger where I am asserting the BOT'S OWN NUMBER IS WRONG, on arithmetic from its dashboard file rather than on a view about the market."
 }
