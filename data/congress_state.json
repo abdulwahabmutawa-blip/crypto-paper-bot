@@ -1,7 +1,7 @@
 {
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "cash": 600.0,
+  "cash": 0.0,
   "positions": [
     {
       "ticker": "NVDA",
@@ -34,6 +34,54 @@
       "close_date": "2026-11-01",
       "filer": "Cleo Fields",
       "cost": 100.0
+    },
+    {
+      "ticker": "ADBE",
+      "units": 0.3719530026186814,
+      "open_date": "2026-08-13",
+      "close_date": "2026-11-11",
+      "filer": "Rohit Khanna",
+      "cost": 100.0
+    },
+    {
+      "ticker": "PYPL",
+      "units": 1.6649995662876538,
+      "open_date": "2026-08-13",
+      "close_date": "2026-11-11",
+      "filer": "Rohit Khanna",
+      "cost": 100.0
+    },
+    {
+      "ticker": "CSCO",
+      "units": 0.8908661087883193,
+      "open_date": "2026-08-13",
+      "close_date": "2026-11-11",
+      "filer": "Rohit Khanna",
+      "cost": 100.0
+    },
+    {
+      "ticker": "PLTR",
+      "units": 0.5604309242278095,
+      "open_date": "2026-08-13",
+      "close_date": "2026-11-11",
+      "filer": "Rohit Khanna",
+      "cost": 100.0
+    },
+    {
+      "ticker": "AVGO",
+      "units": 0.2376773690708095,
+      "open_date": "2026-08-13",
+      "close_date": "2026-11-11",
+      "filer": "Rohit Khanna",
+      "cost": 100.0
+    },
+    {
+      "ticker": "MSFT",
+      "units": 0.2010546291999635,
+      "open_date": "2026-08-13",
+      "close_date": "2026-11-11",
+      "filer": "Rohit Khanna",
+      "cost": 100.0
     }
   ],
   "seen": [
@@ -41,7 +89,14 @@
     "house_20035024_g7",
     "house_20035024_g4",
     "senate_cff197e2-b90b-4b53-b97d-eecf226a1980_t0",
-    "house_20035023_g0"
+    "house_20035023_g0",
+    "house_9116267_g176",
+    "house_9116267_g156",
+    "house_9116267_g147",
+    "house_9116267_g146",
+    "house_9116267_g141",
+    "house_9116267_g137",
+    "house_9116267_g133"
   ],
   "trades": [
     {
@@ -79,6 +134,66 @@
       "units": 0.2506,
       "value": 100.0,
       "reason": "Copying Cleo Fields (+0.0% avg excess, filed 2026-07-30, $1,001 - $15,000)"
+    },
+    {
+      "date": "2026-08-13",
+      "action": "BUY",
+      "ticker": "ADBE",
+      "price": 268.52,
+      "units": 0.372,
+      "value": 100.0,
+      "fee": 0.12,
+      "reason": "Copying Rohit Khanna (+0.0% avg excess, filed 2026-08-07, $1,001 - $15,000)"
+    },
+    {
+      "date": "2026-08-13",
+      "action": "BUY",
+      "ticker": "PYPL",
+      "price": 59.99,
+      "units": 1.665,
+      "value": 100.0,
+      "fee": 0.12,
+      "reason": "Copying Rohit Khanna (+0.0% avg excess, filed 2026-08-07, $1,001 - $15,000)"
+    },
+    {
+      "date": "2026-08-13",
+      "action": "BUY",
+      "ticker": "CSCO",
+      "price": 112.11,
+      "units": 0.8909,
+      "value": 100.0,
+      "fee": 0.12,
+      "reason": "Copying Rohit Khanna (+0.0% avg excess, filed 2026-08-07, $1,001 - $15,000)"
+    },
+    {
+      "date": "2026-08-13",
+      "action": "BUY",
+      "ticker": "PLTR",
+      "price": 178.22,
+      "units": 0.5604,
+      "value": 100.0,
+      "fee": 0.12,
+      "reason": "Copying Rohit Khanna (+0.0% avg excess, filed 2026-08-07, $1,001 - $15,000)"
+    },
+    {
+      "date": "2026-08-13",
+      "action": "BUY",
+      "ticker": "AVGO",
+      "price": 420.21,
+      "units": 0.2377,
+      "value": 100.0,
+      "fee": 0.12,
+      "reason": "Copying Rohit Khanna (+0.0% avg excess, filed 2026-08-07, $1,001 - $15,000)"
+    },
+    {
+      "date": "2026-08-13",
+      "action": "BUY",
+      "ticker": "MSFT",
+      "price": 496.86,
+      "units": 0.2011,
+      "value": 100.0,
+      "fee": 0.1,
+      "reason": "Copying Rohit Khanna (+0.0% avg excess, filed 2026-08-07, $1,001 - $15,000)"
     }
   ],
   "history": [
@@ -181,10 +296,15 @@
       "date": "2026-08-12",
       "value": 1012.84,
       "bench": 1029.0
+    },
+    {
+      "date": "2026-08-13",
+      "value": 1016.35,
+      "bench": 1035.87
     }
   ],
   "bench_units": 1.332054612938296,
-  "last_updated_utc": "2026-08-13T12:33:25+00:00",
+  "last_updated_utc": "2026-08-13T18:42:50+00:00",
   "restatement": [
     {
       "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)"
@@ -215,5 +335,6 @@
         }
       ]
     }
-  ]
+  ],
+  "costs_paid": 0.725
 }
