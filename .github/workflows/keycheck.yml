@@ -16,6 +16,7 @@ jobs:
     timeout-minutes: 5
     env:
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -42,6 +43,28 @@ jobs:
                     f"(count_tokens returned {r.input_tokens} tokens, $0 billed)")
           except anthropic.AuthenticationError:
               print("::error::key REJECTED — check for a typo in the secret")
+              sys.exit(1)
+          EOF
+      - name: Validate XAI_API_KEY (Watcher billing probe)
+        run: |
+          python - <<'EOF'
+          import json, os, sys, urllib.error, urllib.request
+          key = os.environ.get("XAI_API_KEY", "").strip()
+          if not key:
+              print("::error::XAI_API_KEY secret is not set")
+              sys.exit(1)
+          req = urllib.request.Request(
+              "https://api.x.ai/v1/models",
+              headers={"Authorization": f"Bearer {key}"})
+          try:
+              with urllib.request.urlopen(req, timeout=30) as r:
+                  n = len(json.load(r).get("data", []))
+              print(f"XAI_API_KEY OK — auth + billing accepted "
+                    f"({n} models listed, $0 billed). Watcher will scan "
+                    f"on its next due cycle.")
+          except urllib.error.HTTPError as e:
+              body = e.read().decode(errors="replace")[:300]
+              print(f"::error::xAI HTTP {e.code}: {body}")
               sys.exit(1)
           EOF
       - name: Analyst decision rehearsal (records nothing)
