@@ -1,22 +1,70 @@
 {
- "updated_utc": "2026-08-13T12:35:00+00:00",
- "note": "Run covering 2026-08-12 -> 2026-08-13, executed 12:35 UTC Thursday, US pre-market (08:35 ET). 10 lines appended (9 bot dailies, 1 sentinel daily). ZERO trade_event lines because the fleet executed ZERO trades in 24h - verified by diffing every trades[] array against the 2026-08-12 supervisor commit, all nine unchanged. NO SIM-INTEGRITY ALERT is possible with no fills, and I am recording that as a vacuous pass, not a clean bill of health. The infrastructure story is the day: two blackouts of 6h09m (08-12 13:04-19:14Z) and 5h55m (08-13 01:02-06:57Z) left the fleet dark 12h04m of the last 24h, ~50% uptime for a second consecutive day against the workflow's own 82% design target, and the first hole covered 09:04-15:14 ET, about 88% of the 08-12 US regular session. That is now two consecutive sessions in which equity bots could not evaluate a signal for nearly the whole day.",
- "total_lines_logged": 250,
+ "updated_utc": "2026-08-14T14:05:00+00:00",
+ "note": "Run covering 2026-08-13 -> 2026-08-14, executed 14:05 UTC Friday, 35 minutes into the US session. 12 lines appended (10 dailies incl. sentinel, 2 trade_events). SEVEN FILLS TO AUDIT after a zero-trade day, and ALL SEVEN PASS: congress's six Rohit Khanna buys first appear in commit 2026-08-13T18:43:21Z (14:43 ET, in hours) with every price inside that day's Yahoo range, and the hype bot's NET sale first appears 2026-08-14T13:36:59Z (09:36 ET, six minutes after the open) at 328.06 against a 322.44-331.83 range. No SIM-INTEGRITY ALERT, and this time the pass is real rather than vacuous. STALENESS CLEAN: all nine states within 18.0-18.6 minutes. The day's substance is that the owner shipped Track A at 01:45Z and it closed three of my four open faults inside one commit - the hype bot's unfirable exit, the Analyst's stale-verdict misreporting, and the swallow-and-continue behaviour that let 225 JSONDecodeErrors report green. The 12:04Z 'failure' is the third of those working: state_preflight caught a git conflict in data/ and aborted the loop RED instead of trading on poisoned state. It cost 90 minutes of darkness, which is the honest price of fail-loud at 6% cron acceptance.",
+ "total_lines_logged": 262,
  "by_primary_driver": {
-  "hype_sentiment": {"profit": 7, "loss": 10, "flat": 6},
-  "macro": {"profit": 13, "loss": 12, "flat": 1},
-  "market_beta": {"profit": 21, "loss": 11, "flat": 6},
-  "news_idiosyncratic": {"profit": 9, "loss": 5, "flat": 1},
-  "none_cash": {"profit": 0, "loss": 0, "flat": 22},
-  "sector": {"profit": 10, "loss": 6, "flat": 0},
-  "technical": {"profit": 11, "loss": 21, "flat": 3},
-  "unknown": {"profit": 8, "loss": 3, "flat": 64}
+  "hype_sentiment": {
+   "profit": 7,
+   "loss": 10,
+   "flat": 6
+  },
+  "macro": {
+   "profit": 13,
+   "loss": 12,
+   "flat": 1
+  },
+  "market_beta": {
+   "profit": 23,
+   "loss": 12,
+   "flat": 7
+  },
+  "news_idiosyncratic": {
+   "profit": 9,
+   "loss": 5,
+   "flat": 1
+  },
+  "none_cash": {
+   "profit": 0,
+   "loss": 0,
+   "flat": 23
+  },
+  "sector": {
+   "profit": 10,
+   "loss": 6,
+   "flat": 0
+  },
+  "technical": {
+   "profit": 12,
+   "loss": 21,
+   "flat": 3
+  },
+  "unknown": {
+   "profit": 9,
+   "loss": 8,
+   "flat": 64
+  }
  },
  "by_beta_or_alpha": {
-  "alpha": {"profit": 42, "loss": 33, "flat": 7},
-  "beta": {"profit": 19, "loss": 9, "flat": 6},
-  "mixed": {"profit": 8, "loss": 16, "flat": 0},
-  "n/a": {"profit": 10, "loss": 10, "flat": 90}
+  "alpha": {
+   "profit": 43,
+   "loss": 36,
+   "flat": 7
+  },
+  "beta": {
+   "profit": 21,
+   "loss": 9,
+   "flat": 7
+  },
+  "mixed": {
+   "profit": 8,
+   "loss": 17,
+   "flat": 0
+  },
+  "n/a": {
+   "profit": 11,
+   "loss": 12,
+   "flat": 91
+  }
  },
- "driver_note": "'technical' extends its record as the worst driver in this ledger, now 11W/21L, and both of today's losses are its signature failure: crypto held XRP into a break of the $1.00 shelf because a RELATIVE rank rule keeps the least-bad loser (XRP's own 7d momentum is -2.95%), and hunter gave back 2.23% on a PLTR it entered one session after a 39.8% weekly run. 'unknown' took two more entries and both were profits I declined to explain - meanrev +0.86% and sentiment +1.46% with no dated catalyst found for either, and inventing one would have flattered the log. TWO SELF-CORRECTIONS ON THE RECORD. First, my 08-12 commodity line credited the Hormuz energy bid; today's arithmetic disproves it, because DBC rose 0.47% on a day USO FELL 0.24% and GLD rose 0.99%, so the metals and ags legs paid and the energy leg did not. I have reclassified it macro -> sector. Second, the congress stale-mark fault I raised on 08-12 is RESOLVED: all four legs now reconcile to 1,012.85 against 1,012.84 published, which also means the -1.72 printed today is the correction of yesterday's overstatement and the true economic change was +1.64. Dispersion was almost entirely single-name: SPY moved +0.25% and the fleet's spread ran from hunter -2.23% to sentiment +1.46%. Fleet day P/L +1.95 on a 9,607 book is as close to nothing as this ledger has recorded."
+ "driver_note": "'unknown' took four entries today and I want that on the record as a choice, not a gap. Congress lost 0.44% on a day SPY gained 0.07% with the damage in AVGO -3.98% and ADBE -2.99%; a search surfaced an SK Hynix HBM story that would have explained it neatly, and I refused it because NVDA rose 0.28% and MSFT rose 0.21% on the same tape - a sector story that spares the sector's largest names is not a sector story. Commodity, hunter and the NET fade got the same treatment for the same reason: no dated catalyst, so no invented one. 'technical' takes one entry and it is a fair one - meanrev's UNH bounced after three lower closes, which is literally its z-score thesis, and it beat SPY doing it. The mark timing matters for reading every equity line today: the fleet's 08-14 marks were taken at 13:36Z, six minutes into the session, so the printed day moves are overnight gaps plus six minutes and the sub-0.1% ones are noise. Crypto is the exception, marked 24/7, and it is the cleanest read on the board: -0.60% against a bench -1.11%, a relative-rank rule doing exactly what it is built to do in a falling complex."
 }
