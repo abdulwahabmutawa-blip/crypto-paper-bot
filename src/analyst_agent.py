@@ -126,12 +126,23 @@ def _headlines():
 
 
 def _watcher():
-    p = config.DATA / "sentinel_verdict.json"
-    if not p.exists():
+    """Staleness-honest Watcher snapshot (context AND read_watcher tool).
+    A stale verdict is reported as UNKNOWN, never as its last risk_level:
+    on 08-11 the agent cited a 96h-old 'caution' as if current — the old
+    version of this function returned raw fields with no age and even the
+    wrong key names (alerts/scanned_at don't exist in the verdict file)."""
+    import sentinel_gate
+    if not sentinel_gate.VERDICT.exists():
         return {"risk_level": "unknown", "note": "no Watcher scan on file"}
-    v = json.loads(p.read_text())
-    return {k: v.get(k) for k in ("risk_level", "alerts", "overall_mood",
-                                  "scanned_at") if k in v}
+    v = json.loads(sentinel_gate.VERDICT.read_text())
+    gate_state, gate_detail = sentinel_gate.status()
+    if gate_state != "ok":
+        return {"risk_level": "unknown",
+                "note": f"Watcher {gate_state}: {gate_detail} — treat as "
+                        f"UNKNOWN, not calm",
+                "last_known": {"risk_level": v.get("risk_level"),
+                               "ts": v.get("ts")}}
+    return {k: v.get(k) for k in ("risk_level", "risk_alerts", "ts") if k in v}
 
 
 def _recent_record(st, close):
@@ -210,7 +221,7 @@ def decide(client, context, close_raw):
     return None, tools_called, usage
 
 
-def apply_guardrails(decision, holding, equity, severe):
+def apply_guardrails(decision, holding, equity, severe, tools_called=()):
     """Agent proposes, code disposes. Returns (action, ticker, reason_tag).
     action in {'buy','cash','hold'}; every rule here is unwaivable."""
     if equity < R1_FLOOR:
@@ -219,18 +230,26 @@ def apply_guardrails(decision, holding, equity, severe):
         return "cash", None, "WATCHER SEVERE — forced flat, agent's opinion ignored"
     if not decision:
         return "hold", None, "agent_error — malformed/no decision, defaulting to HOLD"
+    # Receipt check (supervisor fault 08-13): prose claiming Watcher state
+    # without a read_watcher call that cycle gets tagged in the permanent
+    # record. The context snapshot is now staleness-honest, so the claim
+    # isn't blocked — but an unreceipted claim must be visible forever.
+    receipt = ""
+    if re.search(r"watcher|sentinel", str(decision.get("reasoning", "")), re.I) \
+            and "read_watcher" not in tools_called:
+        receipt = " · UNRECEIPTED WATCHER CLAIM (read_watcher not called)"
     act, tkr = decision.get("action"), decision.get("ticker")
     if act == "buy":
         if tkr not in UNIVERSE:
-            return "hold", None, "agent_error — invalid ticker, HOLD"
+            return "hold", None, "agent_error — invalid ticker, HOLD" + receipt
         if tkr == holding:
-            return "hold", None, "already holding — treated as HOLD"
-        return "buy", tkr, "agent decision"
+            return "hold", None, "already holding — treated as HOLD" + receipt
+        return "buy", tkr, "agent decision" + receipt
     if act == "sell":
         if holding == "CASH":
-            return "hold", None, "nothing to sell — treated as HOLD"
-        return "cash", None, "agent decision"
-    return "hold", None, "agent decision"
+            return "hold", None, "nothing to sell — treated as HOLD" + receipt
+        return "cash", None, "agent decision" + receipt
+    return "hold", None, "agent decision" + receipt
 
 
 def main():
@@ -336,7 +355,8 @@ def main():
         if rehearsal:
             import sentinel_gate
             severe, _why = sentinel_gate.severe()
-            action, tkr, tag = apply_guardrails(decision, st["holding"], equity, severe)
+            action, tkr, tag = apply_guardrails(decision, st["holding"], equity,
+                                                severe, tools_called)
             print("[analyst] === REHEARSAL — nothing recorded, account untouched ===")
             print("decision:", json.dumps(decision, indent=1, ensure_ascii=False))
             print(f"tools called: {tools_called} · tokens {usage} · "
@@ -350,7 +370,8 @@ def main():
         severe, _why = sentinel_gate.severe()
         equity = st["cash"] + (0.0 if st["holding"] == "CASH"
                                else st["units"] * float(last[st["holding"]]))
-        action, tkr, tag = apply_guardrails(decision, st["holding"], equity, severe)
+        action, tkr, tag = apply_guardrails(decision, st["holding"], equity,
+                                            severe, tools_called)
         if equity < R1_FLOOR:
             st["benched"] = True
 

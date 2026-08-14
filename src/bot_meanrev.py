@@ -52,6 +52,11 @@ SPEC = {
     # record the real matching-engine fill beside the sim fill — measures the
     # execution-realism gap per trade. No-op until Alpaca keys are configured.
     "broker_shadow": True,
+    # Live-pilot candidate (GO_LIVE_PLAN 08-14 A5): dry-run order intents via
+    # live_guard only, nothing sent. Borderline fee-fit at pilot size:
+    # ~7 trades/mo ≈ 26%/yr at IBKR's $1 minimum — the fee_reality report
+    # decides whether it stays a candidate.
+    "live_pilot": True,
     # Fleet review 2026-08-10: SPEC pre-registers a -57%-class max drawdown but
     # carried no stop at all; 12% trail is 4x the worst excursion any position
     # has shown (994 intraday marks, worst -2.94%) so it alters no past trade,

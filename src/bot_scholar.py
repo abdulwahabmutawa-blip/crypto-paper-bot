@@ -103,6 +103,9 @@ SPEC = {
     "signal_frame": "raw",
     "risk": {"trailing": 0.10, "cooldown_days": 5},
     "vol_target": 0.20,
+    # Live-pilot candidate (GO_LIVE_PLAN 08-14 A5): the fee-fit template —
+    # ~1 trade/mo ≈ 0.6%/mo at IBKR's $1 minimum. Dry-run intents only.
+    "live_pilot": True,
     "cash_reason": "Nothing in a confirmed uptrend — standing aside in cash",
     "buy_reason": "Best momentum-per-unit-risk in a confirmed uptrend",
     "meta": {

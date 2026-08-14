@@ -48,6 +48,26 @@ def fee(ticker: str, value: float, spread_bps: float | None = None) -> float:
     return abs(value) * (base + spread / 2.0) / 10_000.0
 
 
+# ---- Live-pilot venue fees (IBKR Fixed tier, US stocks) ---------------------
+# The paper model above (10bps) flatters a small real account: IBKR Fixed is
+# $0.005/share with a $1 MINIMUM per order, capped at 1% of trade value. On a
+# $325 full-book order the $1 minimum dominates: ~0.31% per side — 3x the
+# paper model's 10bps. Any live-pilot cost math must use THIS, not fee().
+IBKR_PER_SHARE = 0.005
+IBKR_MIN_ORDER = 1.0
+IBKR_MAX_PCT = 0.01
+
+
+def ibkr_fee(ticker: str, value: float, units: float) -> float:
+    """One side, IBKR Fixed tier: commission (per-share, $1 min, 1%-of-value
+    cap) + half the bid-ask spread from the table above. Equities only —
+    the live pilot has no crypto lane (Kuwait prohibition, research 08-13)."""
+    commission = min(max(abs(units) * IBKR_PER_SHARE, IBKR_MIN_ORDER),
+                     abs(value) * IBKR_MAX_PCT)
+    spread = EQUITY_SPREAD_BPS.get(str(ticker), EQUITY_SPREAD_DEFAULT_BPS)
+    return commission + abs(value) * (spread / 2.0) / 10_000.0
+
+
 def r1_breached(value: float) -> bool:
     return value <= R1_FLOOR
 

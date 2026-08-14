@@ -287,6 +287,9 @@ def run(spec, start_cash=1000.0):
                     trade["broker_fill"] = bf["price"]
                     trade["fill_gap_bps"] = round(
                         (bf["price"] / float(last[prev]) - 1) * 10_000, 2)
+            if spec.get("live_pilot"):
+                import ibkr_broker
+                ibkr_broker.pilot_order("SELL", prev, gross, st["units"], value)
             st["trades"].append(trade)
             if stop_fired:
                 st["stopped"] = {"ticker": prev, "date": asof}
@@ -332,6 +335,9 @@ def run(spec, start_cash=1000.0):
                     trade["broker_fill"] = bf["price"]
                     trade["fill_gap_bps"] = round(
                         (bf["price"] / p - 1) * 10_000, 2)
+            if spec.get("live_pilot"):
+                import ibkr_broker
+                ibkr_broker.pilot_order("BUY", pick, spend, st["units"], value)
             st["trades"].append(trade)
 
     if r1_hit and st["holding"] == "CASH" and not st.get("frozen"):

@@ -23,6 +23,7 @@ import yfinance as yf
 import config
 import market_hours
 import risk_common
+import sentinel_gate
 
 STATE = config.DATA / "sentiment_state.json"
 SENTINEL = config.DATA / "sentinel_state.json"
@@ -38,6 +39,21 @@ CRYPTO = set(("BTC ETH SOL DOGE XRP ADA AVAX LINK RUNE SHIB PEPE BNB TON "
 def to_ticker(sym: str) -> str:
     s = sym.upper().lstrip("$")
     return f"{s}-USD" if s in CRYPTO else s
+
+
+def scan_age_hours(scan: dict | None) -> float | None:
+    """Age of a Grok scan in hours; None = unreadable/absent."""
+    return sentinel_gate._age_hours(scan) if scan else None
+
+
+def scan_is_stale(scan: dict | None) -> bool:
+    """A scan older than the gate's 24h window is not evidence of anything.
+    This bot's whole thesis is 'ride the CURRENT euphoria'; with no fresh scan
+    the euphoria state is unknowable, and holding on a dead feed is exactly
+    the silent-open failure the 08-05 audit flagged in the Watcher itself
+    (found live 08-07..08-13: scans died and NET rode untended for 6 days)."""
+    age = scan_age_hours(scan)
+    return age is None or age > sentinel_gate.MAX_AGE_H
 
 
 def quotes(tickers):
@@ -65,6 +81,12 @@ def main():
     scan = sent["scans"][-1] if sent["scans"] else None
     scan_ts = scan["ts"] if scan else ""
     severe = bool(scan and scan.get("risk_level") == "severe")
+    stale = scan_is_stale(scan)
+    stale_h = scan_age_hours(scan)
+    if stale:
+        print(f"[{KEY}] SCANS STALE — newest Grok scan is "
+              f"{'missing' if stale_h is None else f'{stale_h:.0f}h old'} "
+              f"(> {sentinel_gate.MAX_AGE_H:.0f}h): no entries, exit holding")
     hype = (scan or {}).get("hype", [])
     euphoric = [h for h in hype if h.get("mood") == "euphoric"]
 
@@ -119,6 +141,14 @@ def main():
     if severe and st["holding"] != "CASH" and market_hours.can_fill(st["holding"]):
         sell("Watcher risk verdict SEVERE — no hype positions in a crisis")
 
+    # 2.2) stale scans -> flat. The exit rule is 'sell when hype fades', but a
+    # dead feed can't report fading — so staleness IS the fade signal. Without
+    # this, a dead Grok key left the book riding NET blind for 6 days (08-07..
+    # 08-13) while the dashboard claimed the crowd was still euphoric.
+    if stale and st["holding"] != "CASH" and market_hours.can_fill(st["holding"]):
+        sell(f"Grok scans stale ({stale_h:.0f}h) — hype unverifiable, "
+             f"flying blind is not a strategy")
+
     # 2.5) R1 kill floor, code-enforced (audit 2026-08-05)
     r1_hit = False
     if not st.get("frozen"):
@@ -137,7 +167,7 @@ def main():
 
     # 3) decide desired holding
     blacklisted = {t for t, ts in st["stopped"].items() if ts == scan_ts}
-    if severe or r1_hit or st.get("frozen"):
+    if severe or stale or r1_hit or st.get("frozen"):
         desired = "CASH"
     elif st["holding"] != "CASH" and st["holding"] in tradeable:
         desired = st["holding"]                     # hype still alive -> ride it
@@ -227,8 +257,11 @@ def main():
         "generated_utc": st["last_updated_utc"], "created": st["created"],
         "starting_cash": START_CASH, "live_ts": st["last_updated_utc"],
         "current": st["history"][-1], "board": board,
-        "board_title": f"Grok's latest hype read (scan {scan_ts[:16] or 'pending'}, "
-                       f"risk {scan.get('risk_level') if scan else '—'})",
+        "board_title": (f"Grok's latest hype read (scan {scan_ts[:16] or 'pending'}, "
+                        f"risk {scan.get('risk_level') if scan else '—'})"
+                        + (f" · ⚠️ STALE {stale_h:.0f}h — trading suspended"
+                           if stale and stale_h is not None else
+                           (" · ⚠️ NO SCAN — trading suspended" if stale else ""))),
         "meta": {
             "title": "Hype Trader — $1,000 Challenge",
             "badge": "PAPER SIM · SENTIMENT ON TRIAL",
@@ -243,7 +276,12 @@ def main():
         "costs_paid": st.get("costs_paid", 0.0),
         "frozen": st.get("frozen"),
         "thoughts": (
-            (f"I'm riding {st['holding'].replace('-USD','')} because the Watcher's "
+            (f"⚠️ My Grok scans are "
+             f"{'missing' if stale_h is None else f'{stale_h:.0f} hours old'} — "
+             f"my whole strategy is riding CURRENT euphoria, and with a dead "
+             f"feed I can't know if the hype is alive. Rules say: exit, sit in "
+             f"cash, buy nothing until a fresh scan arrives.\n\n" if stale else "")
+            + (f"I'm riding {st['holding'].replace('-USD','')} because the Watcher's "
              f"latest scan of X and the news says the crowd is most excited about "
              f"it right now. I know hype is the weakest evidence there is — so my "
              f"rules are the strictest in the fleet: the moment the excitement "

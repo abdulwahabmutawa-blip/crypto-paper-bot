@@ -31,6 +31,9 @@ env:
   ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
   ALPACA_API_KEY_ID: ${{ secrets.ALPACA_API_KEY_ID }}
   ALPACA_API_SECRET_KEY: ${{ secrets.ALPACA_API_SECRET_KEY }}
+  # LIVE=1 enables DRY-RUN order-intent logging only (live_guard + jsonl);
+  # nothing is ever sent anywhere — see src/ibkr_broker.py activation ladder.
+  LIVE: "1"
 
 jobs:
   trade:
@@ -53,13 +56,31 @@ jobs:
           git config user.email "bot@users.noreply.github.com"
 
           run_cycle () {
+            # FAIL-LOUD (08-12 incident: 225 swallowed JSONDecodeErrors looked
+            # green): corrupted state aborts the LOOP with a red run and a
+            # committed red flag — a broken fleet must never look healthy.
+            if ! python src/state_preflight.py; then
+              git add docs/red_flag.json
+              git commit -m "RED FLAG: corrupted state — loop aborted" || true
+              git pull --rebase --autostash -q && git push
+              echo "::error::state preflight failed — aborting loop"
+              exit 1
+            fi
+
             # stock_tracker retired 2026-07-31 (owner decision at v2 review);
             # its dashboard stays in docs/ as a frozen archive
+            fails=0
             for s in crypto_tracker congress_tracker \
                      bot_meanrev bot_commodity bot_allweather bot_scholar \
                      grok_sentinel sentinel_trader hunter_tracker analyst_agent; do
-              python "src/$s.py" || echo "::warning::$s.py failed this cycle"
+              python "src/$s.py" || { echo "::warning::$s.py failed this cycle"; fails=$((fails+1)); }
             done
+            # one bot failing is a transient; ALL bots failing is systemic —
+            # abort loudly instead of warning ten times and committing anyway
+            if [ "$fails" -ge 10 ]; then
+              echo "::error::every bot failed this cycle — systemic fault, aborting loop"
+              exit 1
+            fi
 
             # publish dashboards
             cp reports/crypto_dashboard.html docs/index.html

@@ -81,6 +81,21 @@
 </head>
 <body>
 <div class="wrap">
+  <div id="redflag" style="display:none;background:#3a0d12;border:1px solid #e5484d;
+    color:#ffd7d9;border-radius:12px;padding:14px 18px;margin:0 0 18px;
+    font-weight:600;line-height:1.5"></div>
+  <script>
+  /* Fail-loud surface (08-12 incident): the loop commits docs/red_flag.json
+     and aborts when state is corrupt — this banner makes that impossible to
+     miss from the fleet page. 404 = healthy = banner stays hidden. */
+  fetch("red_flag.json",{cache:"no-store"}).then(r=>r.ok?r.json():null)
+    .then(f=>{ if(!f) return;
+      const el=document.getElementById("redflag");
+      el.textContent="🚨 "+(f.what||"State corruption — loop aborted")+" ("+
+        (f.ts||"")+") — "+(f.failures||[]).map(x=>x.file).join(", ");
+      el.style.display="block";
+    }).catch(()=>{});
+  </script>
   <div class="netbox">
     <span class="eyebrow">Fleet net profit / loss</span>
     <span class="v" id="netv">—</span>
