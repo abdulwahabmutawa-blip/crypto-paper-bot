@@ -23,6 +23,7 @@ import urllib.parse
 import urllib.request
 
 HOST = "https://api.binance.com"
+FHOST = "https://fapi.binance.com"      # USDT-M futures, also keyless
 UA = "paper-bot-fleet/1.0"
 
 # Weight budget we hold ourselves to per minute — deliberately a fraction of
@@ -77,9 +78,10 @@ def _get(path: str, params: dict | None = None, weight: int = 1,
                       "stopping this cycle")
                 return None
             if e.code == 429 and attempt < retries:
-                wait = int(e.headers.get("Retry-After", "5") or 5)
+                ra = e.headers.get("Retry-After", "5") or "5"
+                wait = int(ra) if str(ra).isdigit() else 5
                 print(f"[binance-data] 429 rate limited — backing off {wait}s")
-                time.sleep(wait)
+                time.sleep(min(wait, 60))
                 continue
             print(f"[binance-data] {path} HTTP {e.code}")
             return None
@@ -116,20 +118,30 @@ def price(symbol: str) -> float | None:
 
 
 def prices(symbols) -> dict[str, float]:
-    """Spot prices for several symbols in ONE call (weight 4 for a list)."""
+    """Spot prices for several symbols in one call — with a per-symbol
+    fallback, because Binance 400s the ENTIRE batch (-1121) if even one
+    symbol is unknown, and the symbols this fleet asks about are exactly
+    the delisting-prone tail (audit 08-15: one delisted coin froze every
+    price lookup, stalling the scout's whole learning loop and the paper
+    twin's stop-losses)."""
     syms = [s for s in dict.fromkeys(symbols)]
     if not syms:
         return {}
     d = _get("/api/v3/ticker/price",
              {"symbols": json.dumps(syms, separators=(",", ":"))}, weight=4)
-    if not isinstance(d, list):
-        return {}
     out = {}
-    for row in d:
-        try:
-            out[row["symbol"]] = float(row["price"])
-        except Exception:
-            pass
+    if isinstance(d, list):
+        for row in d:
+            try:
+                out[row["symbol"]] = float(row["price"])
+            except Exception:
+                pass
+        return out
+    # batch refused — resolve individually (bounded), skipping the bad ones
+    for s in syms[:30]:
+        p = price(s)
+        if p:
+            out[s] = p
     return out
 
 
@@ -154,22 +166,82 @@ def klines(symbol: str, interval: str = "5m", limit: int = 60) -> list[list]:
     return d if isinstance(d, list) else []
 
 
+def _fget(path: str, params: dict | None = None, weight: int = 1):
+    """GET a keyless USDT-M FUTURES public endpoint. Same never-raises
+    contract as _get. Futures has its own weight bucket, so this does not
+    compete with the spot scan's budget."""
+    _throttle(weight)
+    qs = urllib.parse.urlencode(params or {})
+    url = f"{FHOST}{path}" + (f"?{qs}" if qs else "")
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": UA})
+        with urllib.request.urlopen(req, timeout=15) as r:
+            return json.load(r)
+    except Exception as e:
+        print(f"[binance-data] futures {path} failed: {e}")
+        return None
+
+
+def funding_extremes() -> dict[str, float]:
+    """symbol -> last funding rate, for every USDT-M perp (one weight-1
+    call). Extreme funding = crowded positioning: very positive means longs
+    are paying heavily (over-eager crowd, fragile to a long squeeze), very
+    negative means shorts are paying (capitulation, a reversion tailwind).
+    Keys are spot-style ('BTCUSDT') so callers can join on symbol."""
+    d = _fget("/fapi/v1/premiumIndex", weight=1)
+    out = {}
+    if isinstance(d, list):
+        for row in d:
+            try:
+                out[row["symbol"]] = float(row["lastFundingRate"])
+            except Exception:
+                pass
+    return out
+
+
+def open_interest_drop(symbol: str) -> float | None:
+    """Fraction OI has fallen from its recent peak over the last ~2h of 5m
+    samples. A liquidation CASCADE clears open interest as it self-
+    extinguishes (published: OI drops 25-70%, cascade decays within ~1h),
+    whereas an information-driven collapse keeps OI roughly intact. So a
+    LARGE positive drop here means "the forced selling is spent, a bounce is
+    mechanically plausible"; a near-zero drop on a big price fall means "the
+    reason is fundamental — do not catch it". None if unavailable (no perp,
+    or the call failed) so the caller can treat it as unknown, not as safe.
+    """
+    d = _fget("/futures/data/openInterestHist",
+              {"symbol": symbol, "period": "5m", "limit": 24}, weight=1)
+    if not isinstance(d, list) or len(d) < 6:
+        return None
+    try:
+        oi = [float(x["sumOpenInterest"]) for x in d]
+    except Exception:
+        return None
+    peak = max(oi) or 1e-12
+    return (peak - oi[-1]) / peak
+
+
 def candle_series(rows: list[list]) -> dict[str, list[float]]:
     """Unpack klines into named float series (empty lists if malformed)."""
     out = {"close": [], "high": [], "low": [], "volume": [], "quote": [],
            "trades": [], "taker_buy": []}
     for r in rows:
+        # parse-then-commit (audit 08-15): a row that fails halfway must not
+        # leave partial appends behind, or the parallel series desync and
+        # every [-2] "closed bar" index reads a DIFFERENT bar per series
         try:
-            out["high"].append(float(r[2]))
-            out["low"].append(float(r[3]))
-            out["close"].append(float(r[4]))
-            out["volume"].append(float(r[5]))
-            out["quote"].append(float(r[7]))
-            out["trades"].append(float(r[8]))
-            # index 10 = taker buy quote volume: the aggressive-buy share of
-            # the bar, which is how much of the move was market buyers
-            # lifting offers rather than passive fills
-            out["taker_buy"].append(float(r[10]))
+            vals = (float(r[2]), float(r[3]), float(r[4]), float(r[5]),
+                    float(r[7]), float(r[8]),
+                    # index 10 = taker buy quote volume: how much of the bar
+                    # was market buyers lifting offers vs passive fills
+                    float(r[10]))
         except Exception:
             continue
+        out["high"].append(vals[0])
+        out["low"].append(vals[1])
+        out["close"].append(vals[2])
+        out["volume"].append(vals[3])
+        out["quote"].append(vals[4])
+        out["trades"].append(vals[5])
+        out["taker_buy"].append(vals[6])
     return out

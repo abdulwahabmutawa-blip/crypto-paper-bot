@@ -59,6 +59,11 @@ STALL_MIN_GAIN = 0.03   # ...unless it is at least this far ahead
 SCOUT_STOP_PCT = -0.06
 SCOUT_STALL_H = 2.0
 SCOUT_MAX_HOLD_H = 8.0
+# Re-entry cooldown after ANY protective exit (audit 08-15: the old
+# blacklist was keyed on the Watcher's scan_ts — meaningless for scout
+# entries, and only the hard stop set it, so a trailing-stopped coin could
+# be rebought the very next 5-minute cycle while still crashing).
+COOLDOWN_H = 3.0
 # Crypto trades 24/7 — the weekday-only rule was inherited from a book whose
 # universe collapsed to crypto-only at weekends while equities were shut.
 # That reasoning does not transfer to a crypto-native book: weekend hype is
@@ -149,39 +154,58 @@ def main():
         print(f"[{KEY}] could not read balances — cycle skipped")
         return
 
-    # Crash recovery, from the LEDGER — never from the balance sheet.
+    # LEDGER RECONCILIATION, every cycle — never from the balance sheet.
     #
-    # The first version scanned every non-USDT balance and adopted the
-    # largest as its seat. On a dedicated account that is harmless; on the
-    # owner's real account (23 assets: PEPE, SOL, SUI, STRK...) it would
-    # have adopted coins the bot never bought and then sold them on a hype
-    # exit. THE BOT MANAGES ONLY WHAT THE BOT BOUGHT. The ledger is the
-    # record of that, so recovery reads the ledger: a fill BUY with no
-    # later exit for the same symbol is a genuinely orphaned seat.
-    if not st["held_symbol"] and binance_live.LEDGER.exists():
-        last_buy = None
+    # THE BOT MANAGES ONLY WHAT THE BOT BOUGHT (the account holds ~23 other
+    # coins). The ledger is the record of that. Audit 08-15 rewrote this
+    # from a recover-only-when-stateless scan into a full reconciliation,
+    # closing two critical holes:
+    #   * a SELL whose "fill" line landed but whose "exit" line (or the
+    #     state write) was lost to a crash left the old scan re-adopting an
+    #     ALREADY-SOLD seat — whose next exit would sell the owner's own
+    #     holding of that coin up to `units`. A SELL fill now closes the
+    #     seat in the scan, and a state seat the ledger says is closed is
+    #     cleared loudly (the phantom-seat self-heal).
+    #   * an unconfirmed order (POST timed out after the exchange accepted
+    #     it) is surfaced as a marker the owner can see in the ledger.
+    ledger_open = None          # last BUY fill with no closing SELL/exit
+    if binance_live.LEDGER.exists():
         for line in binance_live.LEDGER.read_text(encoding="utf-8").splitlines():
             try:
                 e = json.loads(line)
             except Exception:
                 continue
             if e.get("event") == "fill" and e.get("action") == "BUY":
-                last_buy = e
-            elif e.get("event") == "exit" and last_buy \
-                    and e.get("symbol") == last_buy.get("symbol"):
-                last_buy = None
-        if last_buy:
-            st["held_symbol"] = last_buy["symbol"]
-            st["entry_price"] = last_buy.get("price")
-            st["units"] = last_buy.get("qty", 0.0)
-            st["hwm"] = last_buy.get("price")
-            st["entry_time"] = last_buy.get("ts")
-            st["entry_scan_ts"], st["entry_source"] = scan_ts, "recovered"
-            binance_live.log({"event": "recovered_from_ledger",
-                              "symbol": st["held_symbol"],
-                              "units": st["units"]})
-            print(f"[{KEY}] recovered unfinished seat {st['held_symbol']} "
-                  f"from the ledger (state file had lost it)")
+                ledger_open = e
+            elif ledger_open and e.get("symbol") == ledger_open.get("symbol") \
+                    and (e.get("event") == "exit"
+                         or (e.get("event") == "fill"
+                             and e.get("action") == "SELL")):
+                ledger_open = None
+    if st["held_symbol"] and (not ledger_open
+                              or ledger_open.get("symbol") != st["held_symbol"]):
+        binance_live.log({"event": "reconciled_closed_seat",
+                          "symbol": st["held_symbol"],
+                          "note": "ledger says this seat was already sold; "
+                                  "state file was stale (crash window)"})
+        print(f"[{KEY}] RECONCILED: ledger says {st['held_symbol']} was "
+              f"already closed — clearing the stale seat")
+        st["held_symbol"] = st["entry_price"] = st["entry_scan_ts"] = None
+        st["entry_source"] = None
+        st["units"] = 0.0
+        st.pop("hwm", None)
+        st.pop("entry_time", None)
+    if not st["held_symbol"] and ledger_open:
+        st["held_symbol"] = ledger_open["symbol"]
+        st["entry_price"] = ledger_open.get("price")
+        st["units"] = ledger_open.get("qty", 0.0)
+        st["hwm"] = ledger_open.get("price")
+        st["entry_time"] = ledger_open.get("ts")
+        st["entry_scan_ts"], st["entry_source"] = scan_ts, "recovered"
+        binance_live.log({"event": "recovered_from_ledger",
+                          "symbol": st["held_symbol"], "units": st["units"]})
+        print(f"[{KEY}] recovered unfinished seat {st['held_symbol']} "
+              f"from the ledger (state file had lost it)")
 
     held = st["held_symbol"]
 
@@ -260,13 +284,14 @@ def main():
                 held_h = None
 
         if p and entry and p / entry - 1 <= stop_pct:
-            st["stopped"][held] = scan_ts
+            st["stopped"][held] = now.isoformat(timespec="seconds")
             if sell(f"STOP-LOSS ({(p / entry - 1):.1%} from entry) — "
                     f"hype that bleeds gets cut"):
                 held = None
         # trailing stop: the pump gave back too much of its peak. THIS is the
         # exit that gets the book out before a hype crash instead of after.
         if held and p and hwm and p / hwm - 1 <= TRAIL_PCT:
+            st["stopped"][held] = now.isoformat(timespec="seconds")
             if sell(f"TRAILING STOP ({(p / hwm - 1):.1%} off the "
                     f"{hwm:.8g} peak) — riding it down is not the strategy"):
                 held = None
@@ -274,6 +299,7 @@ def main():
         # paid by now is decay, and every hour held is a hour of exposure.
         if held and p and entry and held_h is not None and held_h >= stall_h \
                 and p / entry - 1 < STALL_MIN_GAIN:
+            st["stopped"][held] = now.isoformat(timespec="seconds")
             if sell(f"STALLED ({held_h:.1f}h in, only "
                     f"{(p / entry - 1):+.1%}) — the pump never came"):
                 held = None
@@ -315,21 +341,32 @@ def main():
                  and (WEEKEND_ENTRIES or now.weekday() < 5)
                  and entries_today < MAX_ENTRIES_PER_DAY)
     if can_enter:
+        # time-based cooldown: a coin exited by ANY protective rule stays
+        # untouchable for COOLDOWN_H regardless of which source re-suggests
+        # it — and expired entries are pruned so the dict cannot grow forever
+        def _in_cooldown(ts_str) -> bool:
+            try:
+                return (now - datetime.fromisoformat(ts_str)
+                        ).total_seconds() / 3600.0 < COOLDOWN_H
+            except Exception:
+                return False    # legacy scan_ts values: not parseable = expired
+        st["stopped"] = {s: ts for s, ts in st.get("stopped", {}).items()
+                         if _in_cooldown(ts)}
+        blacklisted = set(st["stopped"])
+
         pick, source = None, None
         if fresh:
-            blacklisted = {s for s, ts in st["stopped"].items() if ts == scan_ts}
             for c in crypto_candidates(scan):
                 sym = c.replace("-USD", "") + "USDT"
                 if sym not in blacklisted and binance_live.price(sym):
                     pick, source = sym, "watcher"
                     break
-        # The Scout: fast, quantitative, every 10 min across all ~670 pairs.
+        # The Scout: fast, quantitative, every cycle across all ~670 pairs.
         # It supersedes the old naive top-24h-gainer fallback, which happily
         # bought a coin that pumped six hours ago and was already rolling
         # over (the live COWUSDT case: +49% on the day, -6.5% in the hour, on
         # BELOW-average volume). The Scout requires the move to be alive now.
         if pick is None:
-            blacklisted = {s for s, ts in st["stopped"].items() if ts == scan_ts}
             for c in scout_candidates():
                 if c["symbol"] in blacklisted:
                     continue

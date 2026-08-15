@@ -30,11 +30,13 @@ tmp_ks = Path(tempfile.mkdtemp()) / "KILL_SWITCH"
 orig_ks = bl.KILL_SWITCH
 bl.KILL_SWITCH = tmp_ks
 try:
-    # book cap blocks BOTH sides once the book outgrows the lottery
+    # book cap blocks BUYs once the book outgrows the lottery...
     why = bl.guard("BUY", "PEPEUSDT", {"USDT": 25.0}, None)
     assert why and "BOOK CAP" in why, why
-    why = bl.guard("SELL", "PEPEUSDT", {"USDT": 25.0}, None)
-    assert why and "BOOK CAP" in why, "cap must block an over-cap book entirely"
+    # ...but NEVER a SELL: a protective exit of an over-cap (pumped) position
+    # must always be allowed, or the stop-loss dies exactly at peak profit
+    assert bl.guard("SELL", "PEPEUSDT", {"USDT": 25.0}, None) is None, \
+        "cap must NOT block a de-risking SELL"
 
     # dust: below the exchange minimum there is nothing to do
     why = bl.guard("BUY", "PEPEUSDT", {"USDT": 3.0}, None)
@@ -57,14 +59,17 @@ try:
             "sanity: the whole free balance really is over the cap"
         # with units passed, a normal cycle is allowed; without, it trips
         assert bl.guard("SELL", "PEPEUSDT", bals, "PEPEUSDT", 100.0) is None
-        assert "BOOK CAP" in (bl.guard("SELL", "PEPEUSDT", bals, "PEPEUSDT") or "")
+        # the whole-balance valuation (no units) is over cap for a BUY
+        assert "BOOK CAP" in (bl.guard("BUY", "PEPEUSDT", bals, "PEPEUSDT") or "")
     finally:
         bl.price = orig_price
 
-    # kill switch beats everything
+    # kill switch beats everything — including a de-risking SELL
     tmp_ks.write_text("stop")
     why = bl.guard("BUY", "PEPEUSDT", {"USDT": 11.0}, None)
     assert why and "KILL SWITCH" in why, why
+    why = bl.guard("SELL", "PEPEUSDT", {"USDT": 11.0}, "PEPEUSDT", 100.0)
+    assert why and "KILL SWITCH" in why, "kill switch must stop everything"
 finally:
     bl.KILL_SWITCH = orig_ks
     for k in ("BINANCE_LIVE_API_KEY", "BINANCE_LIVE_API_SECRET", "LOTTERY_LIVE"):

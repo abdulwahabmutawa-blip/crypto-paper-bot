@@ -48,7 +48,9 @@ SENTINEL = config.DATA / "sentinel_state.json"
 BENCH = "BTC-USD"
 START_CASH = 1000.0
 STOP_PCT = -0.10
-ENTRY_FRESH_H = 9.0          # entries only on a genuinely fresh scan
+ENTRY_FRESH_H = 3.0          # entries only on a genuinely fresh scan —
+                             # calibrated to the 2h Watcher cadence (was 9,
+                             # a leftover from the 8h era: audit 08-15)
 MAX_ENTRIES_PER_DAY = 1
 KEY = "hypecrypto"
 
@@ -62,19 +64,30 @@ def crypto_candidates(scan: dict | None) -> list[str]:
     Fallback for older scans: euphoric entries of the mixed hype list that
     match the known-coin set. Tradability is enforced downstream by the
     Binance price lookup both books now share, never here."""
+    import re as _re
+
+    def _base(sym) -> str:
+        """'PEPE', '$pepe', 'PEPE-USD', 'PEPE-USDT', 'PEPEUSDT', 'PEPE/USDT'
+        all -> 'PEPE'. The old '-USD' replace turned 'PEPE-USDT' into
+        'PEPET' — a phantom coin (audit 08-15)."""
+        s = str(sym or "").upper().lstrip("$").strip()
+        return _re.sub(r"[-/]?(USDT|USDC|USD)$", "", s)
+
     out = []
-    for h in (scan or {}).get("crypto_hype", []):
-        if h.get("mood") != "euphoric":
+    ch = (scan or {}).get("crypto_hype")
+    for h in (ch if isinstance(ch, list) else []):
+        if not isinstance(h, dict) or h.get("mood") != "euphoric":
             continue
-        s = str(h.get("symbol", "")).upper().lstrip("$").replace("-USD", "")
+        s = _base(h.get("symbol"))
         if s and s.isalnum():
             out.append(f"{s}-USD")
     if out:
         return out
-    for h in (scan or {}).get("hype", []):
-        if h.get("mood") != "euphoric":
+    hy = (scan or {}).get("hype")
+    for h in (hy if isinstance(hy, list) else []):
+        if not isinstance(h, dict) or h.get("mood") != "euphoric":
             continue
-        s = str(h.get("symbol", "")).upper().lstrip("$")
+        s = _base(h.get("symbol"))
         if s in CRYPTO:
             out.append(f"{s}-USD")
     return out
@@ -158,7 +171,9 @@ def main():
 
     # 3) stale scans -> flat (the 08-07..08-13 lesson, inherited at birth)
     if stale and st["holding"] != "CASH":
-        sell(f"Grok scans stale ({age_h:.0f}h) — hype unverifiable, exiting")
+        sell(f"Grok scans "
+             f"{'missing' if age_h is None else f'stale ({age_h:.0f}h)'} — "
+             f"hype unverifiable, exiting")
 
     # 4) hype faded — only judged by a scan NEWER than the entry scan
     if (st["holding"] != "CASH" and not stale and scan_ts
@@ -182,12 +197,13 @@ def main():
                                 "rule": "R1 kill floor (kill_criteria.md)"}
                 print(f"[{KEY}] book FROZEN — un-freezing is a human decision")
 
-    # 6) entry — one per day, fresh scan only, weekdays only, not blacklisted
+    # 6) entry — one per day, fresh scan only, not blacklisted. Crypto is
+    # 24/7: the weekday gate contradicted this book's own pre-registered
+    # spec and is gone (audit 08-15; the live lottery dropped it same day)
     blacklisted = {t for t, ts in st["stopped"].items() if ts == scan_ts}
     entries_today = st.get("entries", {}).get(today, 0)
     can_enter = (st["holding"] == "CASH" and not (severe or stale or r1_hit)
                  and not st.get("frozen") and fresh
-                 and now.weekday() < 5
                  and entries_today < MAX_ENTRIES_PER_DAY)
     if can_enter:
         avail = [t for t in tradeable if t not in blacklisted]
@@ -225,6 +241,12 @@ def main():
     # 7) mark to market — crypto has a bar every day; guard missing quotes
     if st["holding"] != "CASH" and st["holding"] not in px:
         print(f"[{KEY}] held {st['holding']} has no quote — mark skipped")
+        STATE.write_text(json.dumps(st, indent=2))
+        return
+    # Binance can return {} (outage / geo-block): a CASH book must not
+    # KeyError on the benchmark — mark flat and re-render (audit 08-15)
+    if BENCH not in px:
+        print(f"[{KEY}] no benchmark price this cycle — mark skipped")
         STATE.write_text(json.dumps(st, indent=2))
         return
     val = st["cash"] if st["holding"] == "CASH" else st["units"] * px[st["holding"]]

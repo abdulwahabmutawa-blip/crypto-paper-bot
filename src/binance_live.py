@@ -151,7 +151,12 @@ def guard(action: str, symbol: str, bals: dict, held_symbol: str | None,
     if KILL_SWITCH.exists():
         return "KILL SWITCH file present"
     val = managed_value(bals, held_symbol, units)
-    if val > BOOK_CAP_USD:
+    # The cap blocks BUYs only (audit 08-15): a SELL of an over-cap book
+    # REDUCES exposure, and blocking it would kill every protective exit at
+    # the exact moment a position pumps past $20 — stop, trail and stall
+    # would all go dead at peak profit. "The lottery can never become the
+    # pilot" needs new money blocked, not old money trapped.
+    if action == "BUY" and val > BOOK_CAP_USD:
         return (f"BOOK CAP — managed value ${val:.2f} > ${BOOK_CAP_USD:.0f}. "
                 f"This is the lottery book, not the pilot; raising the cap "
                 f"is a reviewed commit (GO_LIVE_PLAN Track C guards real "
@@ -167,13 +172,31 @@ def market(action: str, symbol: str, quote_qty: float | None = None,
            qty: float | None = None) -> dict | None:
     """One real market order. Caller passes quoteOrderQty for BUY (spend
     USDT) or quantity for SELL. Returns avg-fill dict or None."""
+    # Defense in depth (audit 08-15): arming enforced HERE, not only by the
+    # caller. With keys present but LOTTERY_LIVE!=1 this function must be
+    # inert no matter who imports it or what future code calls it.
+    if not armed():
+        log({"event": "refused", "action": action.upper(), "symbol": symbol,
+             "reason": "not armed (LOTTERY_LIVE != 1) — market() is inert"})
+        print(f"[lottery-live] market() called while not armed — refused")
+        return None
     params = {"symbol": symbol, "side": action.upper(), "type": "MARKET"}
     if action.upper() == "BUY":
         params["quoteOrderQty"] = round(min(quote_qty or 0.0, BOOK_CAP_USD), 2)
     else:
         params["quantity"] = f"{qty:.8f}".rstrip("0").rstrip(".")
     resp = _call("POST", "/v3/order", params, signed=True)
-    fills = (resp or {}).get("fills") or []
+    if resp is None:
+        # The order may have EXECUTED with the response lost in transit
+        # (timeout after the exchange accepted it). Leave a loud marker so
+        # the next cycle's ledger reconciliation looks for an untracked
+        # position instead of trusting the void.
+        log({"event": "order_unconfirmed", "action": action.upper(),
+             "symbol": symbol,
+             "note": "POST returned nothing — order MAY have filled; "
+                     "reconcile against balances next cycle"})
+        return None
+    fills = resp.get("fills") or []
     tq = sum(float(f["qty"]) for f in fills)
     if tq <= 0:
         log({"event": "order_no_fill", "action": action, "symbol": symbol,

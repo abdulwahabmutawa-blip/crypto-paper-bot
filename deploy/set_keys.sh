@@ -33,11 +33,14 @@ if [ -z "$KEY" ] || [ -z "$SECRET" ]; then
 fi
 
 umask 077
-printf 'BINANCE_LIVE_API_KEY=%s\nBINANCE_LIVE_API_SECRET=%s\nLOTTERY_LIVE=1\n' \
+# DISARMED until the verification below passes (audit 08-15: writing
+# LOTTERY_LIVE=1 first meant a failed verify left the box armed with a
+# possibly-broken key)
+printf 'BINANCE_LIVE_API_KEY=%s\nBINANCE_LIVE_API_SECRET=%s\nLOTTERY_LIVE=0\n' \
   "$KEY" "$SECRET" > "$ENV_FILE"
 chmod 600 "$ENV_FILE"
 chown root:root "$ENV_FILE"
-echo "Saved to $ENV_FILE (readable by root only). LOTTERY_LIVE=1."
+echo "Saved to $ENV_FILE (readable by root only). Not armed yet."
 
 echo
 echo "== verifying the key against the real Binance API (read-only) =="
@@ -46,6 +49,9 @@ sudo -u tradebot env "BINANCE_LIVE_API_KEY=$KEY" "BINANCE_LIVE_API_SECRET=$SECRE
 rc=$?
 echo
 if [ $rc -eq 0 ]; then
+  # verification passed — NOW arm
+  sed -i 's/^LOTTERY_LIVE=0$/LOTTERY_LIVE=1/' "$ENV_FILE"
+  echo "ARMED: LOTTERY_LIVE=1 written (verification passed)."
   cat <<'EOF'
 All good. Next, run ONE cycle and read what it says:
 
@@ -57,12 +63,10 @@ If that looks right, go live every 10 minutes:
     systemctl enable --now lottery.timer
 EOF
 else
-  cat <<'EOF'
-Verification did NOT pass — do not arm yet. Most likely causes:
-  * this server's IP is not on the key's whitelist (add 168.119.103.198
-    under Binance -> API Management -> Edit restrictions), or
-  * withdrawals are still enabled (turn them OFF and re-run this), or
-  * the key/secret was pasted with a character missing.
+  cat <<EOF
+Verification did NOT pass — the box stays DISARMED (LOTTERY_LIVE=0).
+The verify output above names the exact cause and fix. This server's IP
+(for the whitelist) is: $(curl -fsS4 https://ifconfig.me 2>/dev/null || echo "run: curl ifconfig.me")
 Fix, then re-run this same command.
 EOF
 fi

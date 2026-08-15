@@ -35,13 +35,11 @@ env:
   # in src/binance_broker.py — a mainnet key cannot trade through it)
   BINANCE_TESTNET_API_KEY: ${{ secrets.BINANCE_TESTNET_API_KEY }}
   BINANCE_TESTNET_API_SECRET: ${{ secrets.BINANCE_TESTNET_API_SECRET }}
-  # LOTTERY BOOK (real money, ~$11, $20 hard cap in src/binance_live.py):
-  # armed ONLY when the owner sets both secrets AND the LOTTERY_LIVE repo
-  # variable to "1". Trade-only key, withdrawals disabled — see
-  # BINANCE_LOTTERY_SETUP.md.
-  BINANCE_LIVE_API_KEY: ${{ secrets.BINANCE_LIVE_API_KEY }}
-  BINANCE_LIVE_API_SECRET: ${{ secrets.BINANCE_LIVE_API_SECRET }}
-  LOTTERY_LIVE: ${{ vars.LOTTERY_LIVE }}
+  # REAL-MONEY KEYS DO NOT EXIST HERE, BY DESIGN (audit 08-15, critical):
+  # the lottery book runs on the VPS alone. Two hosts trading one account
+  # is a double-order machine, so this workflow is kept structurally unable
+  # to trade — no BINANCE_LIVE_* passthrough, no LOTTERY_LIVE, and
+  # lottery_live.py is not in the roster below.
   # LIVE=1 enables DRY-RUN order-intent logging only (live_guard + jsonl);
   # nothing is ever sent anywhere — see src/ibkr_broker.py activation ladder.
   LIVE: "1"
@@ -73,7 +71,13 @@ jobs:
             if ! python src/state_preflight.py; then
               git add docs/red_flag.json
               git commit -m "RED FLAG: corrupted state — loop aborted" || true
-              git pull --rebase --autostash -q && git push
+              # the flag must actually reach the dashboard — retry like the
+              # cycle push does, and clear a wedged rebase between attempts
+              for attempt in 1 2 3; do
+                git pull --rebase --autostash -q && git push && break
+                git rebase --abort 2>/dev/null
+                sleep 5
+              done
               echo "::error::state preflight failed — aborting loop"
               exit 1
             fi
@@ -84,12 +88,12 @@ jobs:
             for s in crypto_tracker congress_tracker \
                      bot_meanrev bot_commodity bot_allweather bot_scholar \
                      grok_sentinel sentinel_trader hunter_tracker analyst_agent \
-                     hype_crypto_tracker lottery_live; do
+                     hype_crypto_tracker; do
               python "src/$s.py" || { echo "::warning::$s.py failed this cycle"; fails=$((fails+1)); }
             done
             # one bot failing is a transient; ALL bots failing is systemic —
-            # abort loudly instead of warning twelve times and committing anyway
-            if [ "$fails" -ge 12 ]; then
+            # abort loudly instead of warning eleven times and committing anyway
+            if [ "$fails" -ge 11 ]; then
               echo "::error::every bot failed this cycle — systemic fault, aborting loop"
               exit 1
             fi
@@ -124,6 +128,10 @@ jobs:
               # our push never rejects, then retry once if the remote moved again
               for attempt in 1 2 3; do
                 git pull --rebase --autostash -q && git push && break
+                # a conflicted rebase left half-done would poison every later
+                # cycle of this 345-min job (the 08-12 incident's root) —
+                # abort it before retrying so each attempt starts clean
+                git rebase --abort 2>/dev/null
                 echo "::warning::push attempt $attempt failed, retrying"
                 sleep 5
               done

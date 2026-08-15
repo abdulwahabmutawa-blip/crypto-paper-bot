@@ -64,10 +64,21 @@ evidence before.
 from __future__ import annotations
 
 import json
+import os
 from datetime import datetime, timedelta, timezone
 
 import binance_data
 import config
+
+
+def _atomic_write(path, text: str) -> None:
+    """Write-then-rename so a reader never sees a truncated file and a
+    mid-write death never destroys the old one (audit 08-15: the signals
+    file is read by a real-money bot every cycle, and the log rewrite held
+    the entire learning history in a truncate-then-write window)."""
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text(text, encoding="utf-8")
+    os.replace(tmp, path)
 
 SIGNALS = config.DATA / "scout_signals.json"
 LOG = config.DATA / "scout_log.jsonl"
@@ -190,7 +201,7 @@ def market_wide_surge(tickers: list[dict], now: datetime) -> dict[str, float]:
             expected = qv * (gap_min / (24 * 60))     # this coin's own pace
             if expected > 0:
                 out[sym] = traded / expected
-    SNAPSHOT.write_text(json.dumps(
+    _atomic_write(SNAPSHOT, json.dumps(
         {"ts": now.isoformat(timespec="seconds"), "rows": rows}))
     return out
 
@@ -379,7 +390,18 @@ def resolve_outcomes(now: datetime) -> dict:
     """Look up what actually happened to earlier candidates and rebuild the
     scorecard. This is the whole learning loop: flagged -> waited -> priced.
     A candidate counts as a HIT if it was up at all at that horizon, net of
-    a round trip at Binance's 10bps-per-side spot tier."""
+    a round trip at Binance's 10bps-per-side spot tier.
+
+    Integrity rules (audit 08-15):
+      * a horizon resolved LATER than 1.5x its window gets a None sentinel,
+        never a fake return — after downtime, stamping ret_1h with a
+        48-hour price move would poison every hit rate the weights obey;
+      * a symbol whose price cannot be fetched 3 cycles running while OTHER
+        symbols price fine (proves connectivity) is marked dead — usually a
+        delisting — so it stops re-entering pending forever;
+      * the log rewrite happens only when something actually changed, and
+        atomically.
+    """
     if not LOG.exists():
         return load_scorecard()
     rows = []
@@ -389,36 +411,52 @@ def resolve_outcomes(now: datetime) -> dict:
         except Exception:
             continue
     rows = rows[-4000:]
-    # only resolve what is old enough and not yet resolved
+    changed = False
     pending = {}
     for r in rows:
+        if r.get("dead"):
+            continue
         try:
             ts = datetime.fromisoformat(r["ts"])
         except Exception:
             continue
         age_h = (now - ts).total_seconds() / 3600.0
         for h in HORIZONS_H:
-            if age_h >= h and f"ret_{h}h" not in r:
+            if f"ret_{h}h" in r:
+                continue
+            if age_h > h * 1.5:
+                r[f"ret_{h}h"] = None      # too late to be a real {h}h return
+                changed = True
+            elif age_h >= h:
                 pending.setdefault(r["symbol"], []).append((r, h))
     if pending:
         px = binance_data.prices(list(pending)[:100])
         for sym, items in pending.items():
             p_now = px.get(sym)
-            if not p_now:
-                continue
-            for r, h in items:
-                if r.get("price"):
-                    r[f"ret_{h}h"] = round(p_now / r["price"] - 1.0, 5)
-        LOG.write_text("\n".join(json.dumps(r) for r in rows) + "\n",
-                       encoding="utf-8")
+            if p_now:
+                for r, h in items:
+                    if r.get("price"):
+                        r[f"ret_{h}h"] = round(p_now / r["price"] - 1.0, 5)
+                        changed = True
+            elif px:
+                # others priced fine -> this symbol itself is the problem
+                for r, _h in items:
+                    r["px_miss"] = r.get("px_miss", 0) + 1
+                    if r["px_miss"] >= 3:
+                        r["dead"] = True
+                    changed = True
+    if changed:
+        _atomic_write(LOG, "\n".join(json.dumps(r) for r in rows) + "\n")
 
     card = {"signals": {}, "updated": now.isoformat(timespec="seconds")}
     round_trip = 0.002      # 10bps per side at Binance spot
     for sig in ("ignition", "breakout", "reversion"):
         entry = {}
         for h in HORIZONS_H:
+            # `is not None`: sentinels are excluded, a legitimate 0.0 counts
             rets = [r[f"ret_{h}h"] for r in rows
-                    if r.get("signal") == sig and f"ret_{h}h" in r]
+                    if r.get("signal") == sig
+                    and r.get(f"ret_{h}h") is not None]
             if rets:
                 entry[f"n_{h}h"] = len(rets)
                 entry[f"hit_rate_{h}h"] = round(
@@ -428,7 +466,7 @@ def resolve_outcomes(now: datetime) -> dict:
                     sorted(rets)[len(rets) // 2], 5)
         if entry:
             card["signals"][sig] = entry
-    SCORECARD.write_text(json.dumps(card, indent=2))
+    _atomic_write(SCORECARD, json.dumps(card, indent=2))
     return card
 
 
@@ -455,7 +493,7 @@ def scan(now: datetime | None = None) -> dict:
               f"no idiosyncratic signal is trustworthy in a market-wide dump")
         out = {"ts": now.isoformat(timespec="seconds"), "candidates": [],
                "veto": f"BTC {btc_1h:+.1%}/1h"}
-        SIGNALS.write_text(json.dumps(out, indent=2))
+        _atomic_write(SIGNALS, json.dumps(out, indent=2))
         return out
 
     tickers = []
@@ -534,6 +572,36 @@ def scan(now: datetime | None = None) -> dict:
 
     cands.sort(key=lambda c: -c["score"])
     cands = cands[:TOP_N]
+
+    # KNIFE-FILTER UPGRADE (research-flagged as the biggest single win):
+    # a reversion is only a dip if the forced selling is spent. On the top
+    # reversion candidates only (bounded API cost — 2 futures calls each),
+    # confirm the liquidation cascade has cleared open interest and that
+    # funding shows shorts capitulating. If OI is intact on a big drop, the
+    # cause is fundamental (exploit/news) — drop the candidate entirely.
+    funding = binance_data.funding_extremes()
+    checked = 0
+    kept = []
+    for c in cands:
+        if c["signal"] == "reversion" and checked < 3:
+            checked += 1
+            oi_drop = binance_data.open_interest_drop(c["symbol"])
+            fr = funding.get(c["symbol"])
+            c["oi_drop"] = round(oi_drop, 3) if oi_drop is not None else None
+            c["funding"] = round(fr, 5) if fr is not None else None
+            # OI known AND barely moved on a hard fall = knife, not dip
+            if oi_drop is not None and oi_drop < 0.10:
+                c["dropped"] = "OI intact — forced selling not spent, likely fundamental"
+                continue
+            # shorts capitulating (very negative funding) is a real tailwind
+            if oi_drop is not None and oi_drop >= 0.25:
+                c["score"] = round(c["score"] * 1.15, 4)
+                c["why"] += f" · OI −{oi_drop:.0%} (cascade clearing)"
+            if fr is not None and fr <= -0.005:
+                c["why"] += f" · funding {fr:.2%} (shorts paying)"
+        kept.append(c)
+    kept.sort(key=lambda c: -c["score"])
+    cands = kept
     log_candidates(cands, now)
 
     out = {
@@ -543,7 +611,7 @@ def scan(now: datetime | None = None) -> dict:
         "scorecard": card.get("signals", {}),
         "note": "READ-ONLY scout. Ranked opinion only — the book decides.",
     }
-    SIGNALS.write_text(json.dumps(out, indent=2))
+    _atomic_write(SIGNALS, json.dumps(out, indent=2))
     return out
 
 

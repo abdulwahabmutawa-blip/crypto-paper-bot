@@ -59,12 +59,17 @@ jobs:
           try:
               with urllib.request.urlopen(req, timeout=30) as r:
                   n = len(json.load(r).get("data", []))
-              print(f"XAI_API_KEY OK — auth + billing accepted "
-                    f"({n} models listed, $0 billed). Watcher will scan "
-                    f"on its next due cycle.")
+              # /v1/models checks AUTH only — it is free and does not touch
+              # billing, so it cannot prove credits exist. A scan spends
+              # credits; only that reveals a 403 spending-limit block.
+              print(f"XAI_API_KEY OK — auth accepted ({n} models listed, "
+                    f"$0 billed). NOTE: this does not verify credits/spending "
+                    f"limit; a scan is the only real billing test.")
           except urllib.error.HTTPError as e:
               body = e.read().decode(errors="replace")[:300]
-              print(f"::error::xAI HTTP {e.code}: {body}")
+              hint = (" — auth OK but CREDITS/SPENDING LIMIT block scans"
+                      if e.code == 403 else "")
+              print(f"::error::xAI HTTP {e.code}{hint}: {body}")
               sys.exit(1)
           EOF
       - name: Analyst decision rehearsal (records nothing)

@@ -20,9 +20,12 @@ Environment=HOME=/opt/tradebot
 # QUOTED as one assignment: systemd splits unquoted Environment= on spaces,
 # so without quotes GIT_SSH_COMMAND became just "ssh" and every push kept
 # failing host-key verification even after the key moved to /opt.
-Environment="GIT_SSH_COMMAND=ssh -i /opt/tradebot/.ssh/id_ed25519 -o UserKnownHostsFile=/opt/tradebot/.ssh/known_hosts -o StrictHostKeyChecking=accept-new"
+Environment="GIT_SSH_COMMAND=ssh -i /opt/tradebot/.ssh/id_ed25519 -o UserKnownHostsFile=/opt/tradebot/.ssh/known_hosts -o StrictHostKeyChecking=accept-new -o ConnectTimeout=10 -o ServerAliveInterval=15 -o ServerAliveCountMax=3"
 ExecStart=/opt/tradebot/cloud-bot/deploy/lottery_runner.sh
-TimeoutStartSec=600
+# every network call inside the runner is timeout-bound (git 60s, API 20s),
+# so this ceiling is slack, not a cliff a hung call can drag a SIGTERM onto
+# mid-order (audit 08-15)
+TimeoutStartSec=900
 
 # a cycle must not outlive its window or two can overlap
 Restart=no

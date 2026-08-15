@@ -1,0 +1,4 @@
+# Append-only ledgers from two writers (Actions + VPS): union-merge keeps
+# both sides' lines instead of conflicting — order within a merge window is
+# not meaningful for these files, presence is.
+*.jsonl merge=union
