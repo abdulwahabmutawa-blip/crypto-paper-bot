@@ -1,13 +1,31 @@
 {
-  "ts": "2026-08-15T19:51:39+00:00",
-  "scanned": 76,
-  "candidates": [],
+  "ts": "2026-08-15T19:56:51+00:00",
+  "scanned": 74,
+  "candidates": [
+    {
+      "symbol": "WLDUSDT",
+      "signal": "ignition",
+      "score": 0.6953,
+      "raw_score": 0.6953,
+      "weight": 1.0,
+      "price": 0.3524,
+      "why": "trades 4.8x and volume 12.7x the prior 4h, 67% taker-buy, $306,849 burst \u2014 while price has only moved +0.5%",
+      "chg_24h": 0.0179,
+      "vol_surge": 12.69,
+      "chg_1h": 0.0051,
+      "market_surge": 1.62
+    }
+  ],
   "scorecard": {
     "ignition": {
       "n_1h": 10,
       "hit_rate_1h": 0.0,
       "mean_ret_1h": -0.00372,
-      "median_ret_1h": -0.00194
+      "median_ret_1h": -0.00194,
+      "n_4h": 1,
+      "hit_rate_4h": 0.0,
+      "mean_ret_4h": -0.00788,
+      "median_ret_4h": -0.00788
     },
     "breakout": {
       "n_1h": 2,
@@ -20,10 +38,10 @@
       "hit_rate_1h": 0.0,
       "mean_ret_1h": -0.0131,
       "median_ret_1h": -0.0069,
-      "n_4h": 2,
+      "n_4h": 3,
       "hit_rate_4h": 0.0,
-      "mean_ret_4h": -0.05105,
-      "median_ret_4h": -0.04791
+      "mean_ret_4h": -0.05182,
+      "median_ret_4h": -0.05338
     }
   },
   "note": "READ-ONLY scout. Ranked opinion only \u2014 the book decides."
