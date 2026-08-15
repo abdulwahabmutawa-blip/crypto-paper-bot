@@ -180,15 +180,24 @@ this shape:
  "risk_level": "none" | "caution" | "severe",
  "risk_alerts": [{"headline": "...", "markets": ["crypto"|"stocks"|"both"], "severity": "caution"|"severe"}],
  "hype": [{"symbol": "TICKER", "mood": "euphoric"|"fearful"|"mixed", "note": "under 12 words"}],
+ "crypto_hype": [{"symbol": "COIN", "mood": "euphoric"|"fearful"|"mixed", "note": "under 12 words"}],
  "overall_mood": "one sentence on overall market mood"
 }
 
 Rules: "severe" is reserved for events like a major exchange collapse, war
 outbreak involving major powers, emergency central-bank action, or trading
 halts — not ordinary volatility. List at most 8 hype entries, most unusual
-chatter first. When crypto chatter exists, always include the top crypto
-candidates (coins) with their mood — a hype-crypto book trades only those.
-Empty risk_alerts list is a perfectly good answer."""
+chatter first.
+
+"crypto_hype" is a DEDICATED crypto section (a crypto book trades only from
+it): up to 6 coins with the loudest unusual chatter or volume RIGHT NOW,
+most explosive first. Coins only (bare symbol like PEPE, SOL — no pairs),
+prefer ones spot-tradeable on major exchanges such as Binance. Cross-check
+the BINANCE 24H TOP MOVERS and COINGECKO TRENDING signals above against the
+X/news chatter you find: a coin corroborated by both price action AND crowd
+noise outranks one with noise alone. "euphoric" is reserved for genuine
+crowd mania, not any green candle. Empty lists are perfectly good answers —
+never invent hype to fill the quota."""
 
 
 def call_grok() -> str:
@@ -227,11 +236,12 @@ def parse_scan(raw: str) -> dict:
         d.setdefault("risk_level", "unparsed")
         d.setdefault("risk_alerts", [])
         d.setdefault("hype", [])
+        d.setdefault("crypto_hype", [])
         d.setdefault("overall_mood", "")
         return d
     except Exception:
         return {"risk_level": "unparsed", "risk_alerts": [], "hype": [],
-                "overall_mood": raw[:300]}
+                "crypto_hype": [], "overall_mood": raw[:300]}
 
 
 def render(st: dict) -> None:

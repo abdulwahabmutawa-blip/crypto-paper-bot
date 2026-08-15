@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lottery Book — live</title>
+<style>
+  :root{--bg:#0b0b0e;--card:#16161c;--line:#26262f;--ink:#e8e8ef;--dim:#9a9aab;
+        --win:#3fb950;--loss:#f85149;--gold:#e3b341}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font:16px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;
+       -webkit-text-size-adjust:100%}
+  .wrap{max-width:680px;margin:0 auto;padding:20px 16px 60px}
+  h1{font-size:20px;margin:0 0 2px}
+  .sub{color:var(--dim);font-size:13px;margin:0 0 20px}
+  .big{background:var(--card);border:1px solid var(--line);border-radius:16px;
+       padding:22px;text-align:center;margin-bottom:16px}
+  .big .v{font-size:44px;font-weight:700;letter-spacing:-1px}
+  .big .l{color:var(--dim);font-size:12px;text-transform:uppercase;
+          letter-spacing:.08em}
+  .seat{font-size:15px;margin-top:8px}
+  .pill{display:inline-block;padding:3px 10px;border-radius:999px;
+        background:#20202a;border:1px solid var(--line);font-size:13px}
+  .cap{color:var(--dim);font-size:12px;margin-top:6px}
+  table{width:100%;border-collapse:collapse;margin-top:8px;font-size:14px}
+  td,th{text-align:left;padding:9px 6px;border-bottom:1px solid var(--line)}
+  th{color:var(--dim);font-weight:600;font-size:12px;text-transform:uppercase}
+  .win{color:var(--win)} .loss{color:var(--loss)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;
+        padding:16px 18px;margin-bottom:16px}
+  .card h2{font-size:13px;text-transform:uppercase;letter-spacing:.08em;
+           color:var(--dim);margin:0 0 8px}
+  .mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;
+        color:var(--dim);word-break:break-all}
+  .foot{color:var(--dim);font-size:12px;text-align:center;margin-top:24px}
+  a{color:var(--gold)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>🎰 Lottery Book <span style="color:var(--gold)">· real money</span></h1>
+  <p class="sub">~$11 on Binance spot, $20 hard cap. Odds favor burn — this
+     page is the honest record either way.</p>
+
+  <div class="big">
+    <div class="l">book value</div>
+    <div class="v" id="val">—</div>
+    <div class="seat" id="seat"></div>
+    <div class="cap" id="cap"></div>
+  </div>
+
+  <div class="card">
+    <h2>closed trades</h2>
+    <table id="trades"><tbody><tr><td class="mono">loading…</td></tr></tbody></table>
+  </div>
+
+  <div class="card">
+    <h2>recent activity</h2>
+    <div id="ledger" class="mono">loading…</div>
+  </div>
+
+  <p class="foot">Auto-updates as the bot commits. Pull to refresh ·
+     <span id="ts"></span></p>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const money=n=>"$"+Number(n||0).toFixed(2);
+async function load(){
+  try{
+    const st=await fetch("lottery.json",{cache:"no-store"}).then(r=>r.json());
+    $("val").textContent=money(st.last_value_usd);
+    if(st.held_symbol){
+      $("seat").innerHTML='holding <span class="pill">'+st.held_symbol+
+        "</span> · "+(st.units||0)+" units";
+    }else{
+      $("seat").innerHTML='<span class="pill">CASH — waiting for a signal</span>';
+    }
+    $("cap").textContent="hard cap $20 · frozen: "+(st.frozen?"yes":"no");
+    const rs=(st.realized||[]).slice().reverse();
+    $("trades").innerHTML="<thead><tr><th>date</th><th>coin</th><th>P/L</th>"+
+      "<th>why</th></tr></thead><tbody>"+(rs.length?rs.map(r=>{
+        const p=r.pnl_pct, c=p>0?"win":(p<0?"loss":"");
+        return "<tr><td>"+(r.date||"")+"</td><td>"+(r.symbol||"")+
+          '</td><td class="'+c+'">'+(p==null?"—":(p>0?"+":"")+p+"%")+
+          "</td><td>"+(r.reason||"").slice(0,40)+"</td></tr>";
+      }).join(""):"<tr><td colspan=4>no closed trades yet</td></tr>")+"</tbody>";
+  }catch(e){ $("val").textContent="no data yet"; }
+  try{
+    const txt=await fetch("lottery_ledger.jsonl",{cache:"no-store"}).then(r=>r.text());
+    const lines=txt.trim().split("\n").filter(Boolean).slice(-8).reverse();
+    $("ledger").innerHTML=lines.map(l=>{
+      const e=JSON.parse(l);
+      return (e.ts||"").slice(5,16)+"  "+(e.event||"")+"  "+
+        (e.symbol||"")+"  "+(e.reason||e.msg||e.action||"");
+    }).join("<br>")||"nothing yet";
+  }catch(e){ $("ledger").textContent="ledger not published yet"; }
+  $("ts").textContent=new Date().toLocaleString();
+}
+load(); setInterval(load,60000);
+</script>
+</body>
+</html>

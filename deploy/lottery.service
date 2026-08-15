@@ -17,7 +17,10 @@ Environment=GIT_TERMINAL_PROMPT=0
 # out of the hidden /home. First deployment shipped with the deploy key in
 # /home/tradebot/.ssh and every push failed with Permission denied.
 Environment=HOME=/opt/tradebot
-Environment=GIT_SSH_COMMAND=ssh -i /opt/tradebot/.ssh/id_ed25519 -o UserKnownHostsFile=/opt/tradebot/.ssh/known_hosts -o StrictHostKeyChecking=accept-new
+# QUOTED as one assignment: systemd splits unquoted Environment= on spaces,
+# so without quotes GIT_SSH_COMMAND became just "ssh" and every push kept
+# failing host-key verification even after the key moved to /opt.
+Environment="GIT_SSH_COMMAND=ssh -i /opt/tradebot/.ssh/id_ed25519 -o UserKnownHostsFile=/opt/tradebot/.ssh/known_hosts -o StrictHostKeyChecking=accept-new"
 ExecStart=/opt/tradebot/cloud-bot/deploy/lottery_runner.sh
 TimeoutStartSec=600
 

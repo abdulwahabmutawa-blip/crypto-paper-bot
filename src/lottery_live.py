@@ -13,12 +13,18 @@ Selector (mechanical, no discretion anywhere):
      with > $20M quote volume (stables excluded) — "buy what is already
      exploding", the maximal-variance mechanical rule.
 
-Exits, priority order: -10% hard stop (24/7) -> Watcher SEVERE -> scans
-stale > 24h (only if Watcher-sourced entry... no: a blind risk officer
-grounds the whole book, fallback entries included) -> hype faded on a newer
-scan (Watcher entries only; fallback entries exit when the coin drops out
-of the top-10 24h gainers). One new entry per UTC day, weekdays only
-(the SHIB Saturday lesson; flip WEEKEND_ENTRIES to change). Full-balance
+Exits run EVERY cycle (~10 min) off live Binance prices, because Grok scans
+land at most every 8h and anything gated on a fresh scan reacts long after
+a pump has rolled over. Price is free, instant and 24/7, so price owns the
+fast exits and the Watcher owns the slow qualitative ones:
+  1. -10% hard stop from entry
+  2. -15% trailing stop from the high-water mark  <- the anti-crash exit
+  3. stalled: 6h in and under +3% — the pump never came
+  4. max hold 24h — hype has a half-life, never marry a coin
+  5. momentum gone: no longer a top-25 24h mover
+  6. Watcher SEVERE, or scans stale > 24h (a blind risk officer grounds it)
+  7. hype faded on a NEWER scan (Watcher-sourced entries)
+Up to 3 entries per UTC day, any day — crypto trades 24/7. Full-balance
 sizing: this book YOLOs its whole (capped) balance by design.
 
 THE BOT MANAGES ONLY WHAT THE BOT BOUGHT. This runs on the owner's real
@@ -41,9 +47,17 @@ from hype_crypto_tracker import crypto_candidates, ENTRY_FRESH_H
 
 STATE = config.DATA / "lottery_state.json"
 SENTINEL = config.DATA / "sentinel_state.json"
-STOP_PCT = -0.10
-WEEKEND_ENTRIES = False
-MAX_ENTRIES_PER_DAY = 1
+STOP_PCT = -0.10        # hard stop from entry
+TRAIL_PCT = -0.15       # from the high-water mark: gives back at most this
+MAX_HOLD_H = 24.0       # hype has a half-life; do not marry a coin
+STALL_H = 6.0           # flat-to-down this long = the pump is over
+STALL_MIN_GAIN = 0.03   # ...unless it is at least this far ahead
+# Crypto trades 24/7 — the weekday-only rule was inherited from a book whose
+# universe collapsed to crypto-only at weekends while equities were shut.
+# That reasoning does not transfer to a crypto-native book: weekend hype is
+# real hype, and every exit already runs 24/7 anyway.
+WEEKEND_ENTRIES = True
+MAX_ENTRIES_PER_DAY = 3
 STABLES = {"USDC", "FDUSD", "TUSD", "DAI", "EUR", "USDP", "BUSD"}
 KEY = "lottery"
 
@@ -131,6 +145,8 @@ def main():
             st["held_symbol"] = last_buy["symbol"]
             st["entry_price"] = last_buy.get("price")
             st["units"] = last_buy.get("qty", 0.0)
+            st["hwm"] = last_buy.get("price")
+            st["entry_time"] = last_buy.get("ts")
             st["entry_scan_ts"], st["entry_source"] = scan_ts, "recovered"
             binance_live.log({"event": "recovered_from_ledger",
                               "symbol": st["held_symbol"],
@@ -184,15 +200,59 @@ def main():
         st["held_symbol"] = st["entry_price"] = st["entry_scan_ts"] = None
         st["entry_source"] = None
         st["units"] = 0.0
+        st.pop("hwm", None)
+        st.pop("entry_time", None)
         return True
 
     # ---- exits ----
+    # These run EVERY cycle (~10 min) off live Binance prices, deliberately
+    # not off the Watcher: Grok scans arrive at most every 8h, so anything
+    # gated on a new scan reacts hours after a pump has already rolled over.
+    # Price is free, instant, and 24/7 — so price carries the fast exits and
+    # the Watcher carries the slow, qualitative ones.
     if held:
         p = binance_live.price(held)
-        if p and st.get("entry_price") and p / st["entry_price"] - 1 <= STOP_PCT:
+        entry = st.get("entry_price")
+
+        # high-water mark, updated live
+        if p:
+            st["hwm"] = max(float(st.get("hwm") or p), p)
+        hwm = float(st.get("hwm") or 0)
+        held_h = None
+        if st.get("entry_time"):
+            try:
+                held_h = (now - datetime.fromisoformat(
+                    st["entry_time"])).total_seconds() / 3600.0
+            except Exception:
+                held_h = None
+
+        if p and entry and p / entry - 1 <= STOP_PCT:
             st["stopped"][held] = scan_ts
-            if sell(f"STOP-LOSS ({(p / st['entry_price'] - 1):.1%}) — "
+            if sell(f"STOP-LOSS ({(p / entry - 1):.1%} from entry) — "
                     f"hype that bleeds gets cut"):
+                held = None
+        # trailing stop: the pump gave back too much of its peak. THIS is the
+        # exit that gets the book out before a hype crash instead of after.
+        if held and p and hwm and p / hwm - 1 <= TRAIL_PCT:
+            if sell(f"TRAILING STOP ({(p / hwm - 1):.1%} off the "
+                    f"{hwm:.8g} peak) — riding it down is not the strategy"):
+                held = None
+        # stall: hours in, still not meaningfully ahead. Hype that has not
+        # paid by now is decay, and every hour held is a hour of exposure.
+        if held and p and entry and held_h is not None and held_h >= STALL_H \
+                and p / entry - 1 < STALL_MIN_GAIN:
+            if sell(f"STALLED ({held_h:.0f}h in, only "
+                    f"{(p / entry - 1):+.1%}) — the pump never came"):
+                held = None
+        # hard time cap: never marry a coin
+        if held and held_h is not None and held_h >= MAX_HOLD_H:
+            if sell(f"MAX HOLD ({held_h:.0f}h) — hype has a half-life"):
+                held = None
+        # momentum decay, checked every cycle for EVERY entry (free public
+        # data): once it is no longer among the day's real movers, the trade
+        # thesis is gone whatever the last Grok scan said.
+        if held and not in_top_gainers(held, n=25):
+            if sell("MOMENTUM GONE — no longer a top-25 24h mover"):
                 held = None
         if held and severe:
             if sell("Watcher SEVERE — lottery closes in a crisis"):
@@ -249,6 +309,9 @@ def main():
                     # exact filled quantity: the ONLY amount this bot may
                     # ever sell back (the account holds other coins)
                     st["units"] = fill["qty"]
+                    # seeds the trailing stop and the hold clock
+                    st["hwm"] = fill["price"]
+                    st["entry_time"] = now.isoformat(timespec="seconds")
                     st["entry_scan_ts"], st["entry_source"] = scan_ts, source
                     st.setdefault("entries", {})
                     st["entries"] = {d: c for d, c in st["entries"].items()

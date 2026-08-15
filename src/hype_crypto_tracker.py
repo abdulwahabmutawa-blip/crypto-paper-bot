@@ -54,9 +54,24 @@ KEY = "hypecrypto"
 
 
 def crypto_candidates(scan: dict | None) -> list[str]:
-    """Euphoric symbols from the scan that map to real crypto tickers,
-    in the scan's own order (most unusual chatter first)."""
+    """Euphoric crypto candidates, most explosive first.
+
+    Preferred source: the Watcher's DEDICATED crypto_hype section (added
+    2026-08-15) — its symbols are coins by construction, so no whitelist
+    filter applies and a memecoin outside the CRYPTO set still qualifies.
+    Fallback for older scans: euphoric entries of the mixed hype list that
+    match the known-coin set. Tradability is enforced downstream by each
+    consumer's own price source (yfinance for the paper twin, Binance for
+    the lottery), never here."""
     out = []
+    for h in (scan or {}).get("crypto_hype", []):
+        if h.get("mood") != "euphoric":
+            continue
+        s = str(h.get("symbol", "")).upper().lstrip("$").replace("-USD", "")
+        if s and s.isalnum():
+            out.append(f"{s}-USD")
+    if out:
+        return out
     for h in (scan or {}).get("hype", []):
         if h.get("mood") != "euphoric":
             continue
@@ -179,8 +194,12 @@ def main():
         if avail:
             pick = avail[0]
             p = px[pick]
-            h = next(h for h in scan.get("hype", [])
-                     if to_ticker(str(h.get("symbol", ""))) == pick)
+            base = pick.replace("-USD", "")
+            h = next((h for h in (scan.get("crypto_hype", [])
+                                  + scan.get("hype", []))
+                      if str(h.get("symbol", "")).upper().lstrip("$")
+                      .replace("-USD", "") == base),
+                     {"symbol": base, "note": ""})
             f = risk_common.binance_fee(st["cash"])
             invest = st["cash"] - f
             st["costs_paid"] = round(st.get("costs_paid", 0.0) + f, 4)
@@ -229,8 +248,10 @@ def main():
 
     # 8) dashboard (shared fleet template)
     board = []
-    for h in (scan or {}).get("hype", []):
-        t = to_ticker(str(h.get("symbol", "")))
+    board_src = (scan or {}).get("crypto_hype") or (scan or {}).get("hype", [])
+    for h in board_src:
+        s = str(h.get("symbol", "")).upper().lstrip("$").replace("-USD", "")
+        t = f"{s}-USD" if (scan or {}).get("crypto_hype") else to_ticker(s)
         if not t.endswith("-USD"):
             continue
         mood = h.get("mood", "mixed")

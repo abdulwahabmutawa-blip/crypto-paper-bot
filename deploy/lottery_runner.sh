@@ -18,7 +18,13 @@ git pull --rebase --autostash -q || echo "[runner] pull failed — running on ca
 python3 src/lottery_live.py
 rc=$?
 
-git add data/lottery_state.json data/lottery_ledger.jsonl 2>/dev/null
+# publish the book where GitHub Pages can serve it (data/ is not served):
+# state verbatim, ledger trimmed to the last 100 lines for the phone page
+cp -f data/lottery_state.json docs/lottery.json 2>/dev/null || true
+[ -f data/lottery_ledger.jsonl ] && tail -100 data/lottery_ledger.jsonl > docs/lottery_ledger.jsonl
+
+git add data/lottery_state.json data/lottery_ledger.jsonl \
+        docs/lottery.json docs/lottery_ledger.jsonl 2>/dev/null
 if ! git diff --cached --quiet; then
   git commit -q -m "lottery: $(date -u +'%Y-%m-%d %H:%M') UTC"
   for attempt in 1 2 3; do
