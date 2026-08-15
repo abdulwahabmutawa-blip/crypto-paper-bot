@@ -21,9 +21,11 @@ of the top-10 24h gainers). One new entry per UTC day, weekdays only
 (the SHIB Saturday lesson; flip WEEKEND_ENTRIES to change). Full-balance
 sizing: this book YOLOs its whole (capped) balance by design.
 
-State (data/lottery_state.json) records entries/exits; POSITION TRUTH IS
-THE EXCHANGE — balances are re-read every cycle, and an untracked position
-(crash between fill and state write) is adopted, never re-bought over.
+THE BOT MANAGES ONLY WHAT THE BOT BOUGHT. This runs on the owner's real
+account, which already holds ~23 other coins; the bot records the exact
+filled quantity of its own seat and can never sell more than that, and it
+never adopts a balance it did not buy. Crash recovery reads the LEDGER (a
+BUY fill with no matching exit), not the balance sheet.
 REAL MONEY. Not investment advice — the opposite: the odds are printed on
 the ticket.
 """
@@ -96,50 +98,72 @@ def main():
 
     st = json.loads(STATE.read_text()) if STATE.exists() else {
         "created": today, "held_symbol": None, "entry_price": None,
-        "entry_scan_ts": None, "entry_source": None, "stopped": {},
-        "entries": {}, "realized": []}
+        "units": 0.0, "entry_scan_ts": None, "entry_source": None,
+        "stopped": {}, "entries": {}, "realized": []}
 
     bals = binance_live.balances()
     if not bals:
         print(f"[{KEY}] could not read balances — cycle skipped")
         return
 
-    # adopt an orphan position (crash between fill and state write): largest
-    # non-USDT asset worth more than the exchange minimum becomes the seat
-    if not st["held_symbol"]:
-        cand = None
-        for asset, qty in bals.items():
-            if asset in ("USDT",) or asset in STABLES:
+    # Crash recovery, from the LEDGER — never from the balance sheet.
+    #
+    # The first version scanned every non-USDT balance and adopted the
+    # largest as its seat. On a dedicated account that is harmless; on the
+    # owner's real account (23 assets: PEPE, SOL, SUI, STRK...) it would
+    # have adopted coins the bot never bought and then sold them on a hype
+    # exit. THE BOT MANAGES ONLY WHAT THE BOT BOUGHT. The ledger is the
+    # record of that, so recovery reads the ledger: a fill BUY with no
+    # later exit for the same symbol is a genuinely orphaned seat.
+    if not st["held_symbol"] and binance_live.LEDGER.exists():
+        last_buy = None
+        for line in binance_live.LEDGER.read_text(encoding="utf-8").splitlines():
+            try:
+                e = json.loads(line)
+            except Exception:
                 continue
-            p = binance_live.price(asset + "USDT")
-            if p and qty * p >= binance_live.MIN_ORDER_USDT:
-                v = qty * p
-                if cand is None or v > cand[1]:
-                    cand = (asset + "USDT", v, p)
-        if cand:
-            st["held_symbol"], st["entry_price"] = cand[0], cand[2]
-            st["entry_scan_ts"], st["entry_source"] = scan_ts, "adopted"
-            binance_live.log({"event": "adopted_orphan", "symbol": cand[0],
-                              "value": round(cand[1], 2)})
-            print(f"[{KEY}] adopted untracked position {cand[0]} "
-                  f"(${cand[1]:.2f})")
+            if e.get("event") == "fill" and e.get("action") == "BUY":
+                last_buy = e
+            elif e.get("event") == "exit" and last_buy \
+                    and e.get("symbol") == last_buy.get("symbol"):
+                last_buy = None
+        if last_buy:
+            st["held_symbol"] = last_buy["symbol"]
+            st["entry_price"] = last_buy.get("price")
+            st["units"] = last_buy.get("qty", 0.0)
+            st["entry_scan_ts"], st["entry_source"] = scan_ts, "recovered"
+            binance_live.log({"event": "recovered_from_ledger",
+                              "symbol": st["held_symbol"],
+                              "units": st["units"]})
+            print(f"[{KEY}] recovered unfinished seat {st['held_symbol']} "
+                  f"from the ledger (state file had lost it)")
 
     held = st["held_symbol"]
 
     def sell(reason: str) -> bool:
         base = held[:-4]
         qty_free = bals.get(base, 0.0)
+        # Sell ONLY what this bot bought. Selling the whole free balance
+        # would liquidate coins the owner already held in the same account
+        # (they hold 23 assets) — the bot's units are the ceiling, the
+        # exchange balance only caps it lower if something is missing.
+        owned = float(st.get("units") or 0.0)
+        sellable = min(owned, qty_free) if owned > 0 else 0.0
+        if owned <= 0:
+            print(f"[{KEY}] no recorded units for {held} — refusing to sell "
+                  f"a balance this bot did not buy")
+            return False
         # mainnet lot steps (binance_broker's cache is testnet's — different)
         info = binance_live._call("GET", "/v3/exchangeInfo", {"symbol": held})
         step = 0.0
         for f in ((info or {}).get("symbols") or [{}])[0].get("filters", []):
             if f.get("filterType") == "LOT_SIZE":
                 step = float(f.get("stepSize", 0) or 0)
-        qty = int(qty_free / step) * step if step > 0 else qty_free
+        qty = int(sellable / step) * step if step > 0 else sellable
         if qty <= 0:
             print(f"[{KEY}] nothing sellable in {base} — skip")
             return False
-        why = binance_live.guard("SELL", held, bals, held)
+        why = binance_live.guard("SELL", held, bals, held, owned)
         if why:
             binance_live.log({"event": "refused", "action": "SELL",
                               "symbol": held, "reason": why})
@@ -159,6 +183,7 @@ def main():
                           "pnl_pct": round(pnl, 2) if pnl is not None else None})
         st["held_symbol"] = st["entry_price"] = st["entry_scan_ts"] = None
         st["entry_source"] = None
+        st["units"] = 0.0
         return True
 
     # ---- exits ----
@@ -221,6 +246,9 @@ def main():
                 fill = binance_live.market("BUY", pick, quote_qty=spend)
                 if fill:
                     st["held_symbol"], st["entry_price"] = pick, fill["price"]
+                    # exact filled quantity: the ONLY amount this bot may
+                    # ever sell back (the account holds other coins)
+                    st["units"] = fill["qty"]
                     st["entry_scan_ts"], st["entry_source"] = scan_ts, source
                     st.setdefault("entries", {})
                     st["entries"] = {d: c for d, c in st["entries"].items()
@@ -228,7 +256,7 @@ def main():
                     st["entries"][today] = entries_today + 1
 
     val = binance_live.managed_value(binance_live.balances() or bals,
-                                     st["held_symbol"])
+                                     st["held_symbol"], st.get("units"))
     st["last_value_usd"] = round(val, 2)
     st["last_updated_utc"] = now.isoformat(timespec="seconds")
     STATE.write_text(json.dumps(st, indent=2))

@@ -43,6 +43,24 @@ try:
     # the real ~$11 book passes
     assert bl.guard("BUY", "PEPEUSDT", {"USDT": 11.0}, None) is None
 
+    # the bot's book is its OWN units, not the owner's whole holding of the
+    # same coin. Owner holds 1,000,000 PEPE; the bot bought 100. Valuing the
+    # free balance would price the book at the owner's stack and trip the cap
+    # (and, worse, imply the bot may sell it).
+    orig_price = bl.price
+    bl.price = lambda sym: 0.00002        # PEPE-ish
+    try:
+        bals = {"USDT": 1.0, "PEPE": 1_000_000.0}
+        assert bl.managed_value(bals, "PEPEUSDT", units=100.0) < 2.0, \
+            "book must count only the bot's units"
+        assert bl.managed_value(bals, "PEPEUSDT") > 20.0, \
+            "sanity: the whole free balance really is over the cap"
+        # with units passed, a normal cycle is allowed; without, it trips
+        assert bl.guard("SELL", "PEPEUSDT", bals, "PEPEUSDT", 100.0) is None
+        assert "BOOK CAP" in (bl.guard("SELL", "PEPEUSDT", bals, "PEPEUSDT") or "")
+    finally:
+        bl.price = orig_price
+
     # kill switch beats everything
     tmp_ks.write_text("stop")
     why = bl.guard("BUY", "PEPEUSDT", {"USDT": 11.0}, None)

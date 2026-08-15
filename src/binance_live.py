@@ -126,13 +126,15 @@ def price(symbol: str) -> float | None:
         return None
 
 
-def managed_value(bals: dict[str, float], held_symbol: str | None) -> float:
-    """USDT + the tracked position's market value. Other dust ignored —
-    this module manages ONE lottery seat, not the whole account."""
+def managed_value(bals: dict[str, float], held_symbol: str | None,
+                  units: float | None = None) -> float:
+    """Free USDT + the value of the units THIS BOT holds. `units` matters on
+    an account that also holds the owner's own coins: valuing the whole free
+    balance of the same asset would count their holdings as the bot's book."""
     v = bals.get("USDT", 0.0)
     if held_symbol:
         base = held_symbol[:-4]
-        qty = bals.get(base, 0.0)
+        qty = bals.get(base, 0.0) if units is None else min(units, bals.get(base, 0.0))
         if qty > 0:
             p = price(held_symbol)
             if p:
@@ -140,11 +142,12 @@ def managed_value(bals: dict[str, float], held_symbol: str | None) -> float:
     return v
 
 
-def guard(action: str, symbol: str, bals: dict, held_symbol: str | None) -> str | None:
+def guard(action: str, symbol: str, bals: dict, held_symbol: str | None,
+          units: float | None = None) -> str | None:
     """Returns a refusal reason, or None = clear to proceed."""
     if KILL_SWITCH.exists():
         return "KILL SWITCH file present"
-    val = managed_value(bals, held_symbol)
+    val = managed_value(bals, held_symbol, units)
     if val > BOOK_CAP_USD:
         return (f"BOOK CAP — managed value ${val:.2f} > ${BOOK_CAP_USD:.0f}. "
                 f"This is the lottery book, not the pilot; raising the cap "
