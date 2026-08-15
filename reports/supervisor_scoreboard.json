@@ -1,58 +1,74 @@
 {
- "updated_utc": "2026-08-14T14:05:00+00:00",
- "run_note": "Run covering 2026-08-13 -> 2026-08-14, executed 14:05 UTC Friday (10:05 ET), 35 minutes into the US session. NO R1 BREACH - and for the first time every one of the nine active books is above its 1,000 start, the weakest being crypto at 1,008.95, some 258.95 above the 750 line. NO SIM-INTEGRITY ALERT, and unlike the last two runs this is a real pass rather than a vacuous one: seven fills came due for audit and all seven cleared both tests. Congress's six Rohit Khanna buys first appear in commit 2026-08-13T18:43:21Z = 14:43 ET Thursday, inside regular hours, each at a price inside that day's actual range (ADBE 268.52 in 255.85-271.88; PYPL 59.99 in 59.01-60.76; CSCO 112.11 in 111.48-115.95; PLTR 178.22 in 172.33-179.91; AVGO 420.21 in 411.41-424.92; MSFT 496.86 in 493.01-501.34). The hype bot's NET sale first appears 2026-08-14T13:36:59Z = 09:36:59 ET, six minutes after the open, at 328.06 against a 322.44-331.83 day range. The market-hours gate held on both. STALENESS CHECK CLEAN: all nine states last_updated within 18.0-18.6 minutes, tightly clustered, no freeze-guard misfire. THE DAY'S HEADLINE IS THE OWNER'S TRACK A COMMIT at 2026-08-14T01:45:55Z, which closed three of my four open faults in one push. (1) The hype bot's exit is no longer structurally unfirable - a Grok scan older than 24h now forces an exit and blocks entries, and it fired this morning, selling NET at 328.06 after six days riding a dead signal; NET is 322.45 an hour later, so the guard is already about 22 dollars ahead of holding. (2) The Analyst's _watcher() no longer reports a stale verdict's last risk_level, which was the root cause of the 08-11 and 08-12 'caution' misstatements, and unreceipted Watcher claims now get a permanent tag in the decision record. (3) src/state_preflight.py aborts the loop RED on corrupt state instead of swallowing it - and the 12:04:36Z run marked 'failure' is that guard working, catching an unresolved git conflict in data/ and refusing to trade on it. That failure is a feature, but it is not free: it cost 90 minutes of darkness because an aborted loop must wait for the next cron, and at 6% cron acceptance that is the standing price of fail-loud. UPTIME IS STILL THE UNFIXED FAULT AND IT IS DAY THREE. Measured from cycle commits rather than green checkmarks, the fleet was dark 08-13 13:52Z->18:43Z (4h51m, the tail of a 6h09m hole that opened at 12:33Z), 08-14 00:20Z->06:29Z (6h09m) and 08-14 12:06Z->13:36Z (1h30m): about 12h30m of the last 24h, roughly 48% uptime against the workflow's own 82% design target, for a third consecutive day. The 08-13 US session was dark from 13:52Z to 18:43Z, about 75% of regular hours, the third consecutive session lost this way. Run-creation gaps confirm it independently: 188 min on 08-13 15:33->18:41Z, then 156, 108, 96, 102 and 91 minute gaps across 08-14. The escalation condition I recorded on 08-13 is unchanged - an external trigger is the only lever left. ONE NEW CONCERN, no alert: congress emptied its entire 600 dollars of idle cash into six legs from a single filer on a single 08-07 disclosure, and its own log scores that filer at '+0.0% avg excess'. It is now 100% invested with every leg locked to 2026-11-11 and no stop, and three of the six are down hard on day two (AVGO -3.98%, ADBE -2.99%, CSCO -1.72%). THE GROK WATCHER IS DARK 171 HOURS, unchanged, but its damage is now bounded rather than silent - the owner turned its staleness into an action instead of a blind spot. Consequence to watch: the hype bot is 100% cash and cannot re-enter while the scan is stale, so its R4 dead-money clock starts today at day 1.",
- "total_judgments": 184,
- "judgments_closed": 183,
- "judgments_open": 1,
+ "updated_utc": "2026-08-15T11:20:00+00:00",
+ "run_note": "Run covering the COMPLETE 2026-08-14 session (Friday), executed 11:20 UTC Saturday 08-15 with US markets shut. Last run fired at 14:05Z Friday, 35 minutes into the session, so every equity number it printed was an overnight gap plus six minutes; these are the first full-session marks and several moved a long way (hunter 1017.59 -> 990.45, meanrev 1228.15 -> 1232.58). NO R1 BREACH: weakest book is hunter at 990.45, some 240.45 above the 750 line, and it is the only one of the nine below its 1,000 start. NO SIM-INTEGRITY ALERT, and this run's pass is vacuous by construction and I am labelling it as such - ZERO trades executed since the last run across all nine bots, verified by comparing trade-array lengths against commit 16343f6 (allweather 14, analyst 1, commodity 3, congress 10, crypto 134, hunter 21, meanrev 7, scholar 1, sentiment 28, all unchanged), so there were no fills to audit. STALENESS CHECK CLEAN: all nine states last_updated within 3 minutes of each other at 11:13Z, no freeze-guard misfire. TWO CRITICAL FAULTS CLOSED THIS RUN, both by recovery rather than by anything I did. (1) THE GROK WATCHER IS BACK. It resumed at 2026-08-14T23:54:57Z after 181.1 hours dark on the xAI 403, roughly ten hours after my last brief, and has scanned twice (08-14 23:54Z, 08-15 08:04Z). Current verdict risk_level 'none', zero alerts, VIX 14.2, crypto F&G 34. The euphoric list is rotating again (IOVA/BRK.B then DXYZ/LUNR), which is the direct disproof of the frozen-list failure I logged on 08-12 and 08-13. Two downstream consequences: the hype bot's staleness block releases, so $1,326.92 of cash is free to deploy Monday, and the Analyst's third falsifier ('Watcher SEVERE') stops being a dead switch for the first time since 08-07. (2) UPTIME IS FIXED, AT LEAST FOR A DAY. Measured the same way as the last three briefs - from cycle commits, not green checkmarks - the fleet ran 98 cycles in the last 24h with only four holes over 20 minutes (90 min at 08-14 12:06-13:36Z, then 28, 31 and 28 min). That is 178 dark minutes in a 1,427-minute span = 87.6% uptime, against a 48% reading for three consecutive days and an 82% design target. The single 90-minute hole was the 12:04Z preflight abort already reported last run; SINCE that run the largest gap is 31 minutes. No gap exceeds the 90-minute cron-gap threshold. I am recording this as fixed-pending-confirmation, not fixed: one clean day after three broken ones. ONE NEW HEALTH FINDING, not an alert: 4 workflow failures in the last 24h and all share one cause - 'state preflight failed - aborting loop' on an unresolved git merge conflict, every time in reports/*_dashboard* files. The guard is behaving correctly (it refuses to trade on poisoned state) but the conflicts are recurring, and each trip costs a cron cycle. Worth the owner's attention as a write-contention problem in the dashboard push, not a trading problem. THE DAY'S P/L STORY IS ONE NAME. The fleet lost 31.99 on Friday and congress alone lost 13.23, of which AVGO's -5.94% was 5.90. That drop has a dated, name-specific cause I could not find yesterday and can now cite: BofA downgraded Broadcom's issuer and bond ratings over the AI XPV chip-financing vehicle built with Apollo and Blackstone, estimating up to $370B senior debt by mid-2029, alongside an actively-exploited VMware vCenter flaw. That retroactively supports my 08-14 refusal to import the AI-sector story - NVDA was -0.06% and MSFT -0.30% on the same tape. Hunter was the worst book at -2.78%, all of it PLTR giving back Thursday's +4.66% with no catalyst I could find, and its leg has flipped from +22.37 to -4.77.",
+ "total_judgments": 194,
+ "judgments_closed": 191,
+ "judgments_open": 3,
  "open_ids": [
-  "2026-08-14-congress-1"
+  "2026-08-15-sentiment-1",
+  "2026-08-15-congress-1",
+  "2026-08-15-congress-2"
  ],
- "cumulative_alpha_usd": 191.31,
- "cumulative_alpha_usd_actionable": 67.22,
- "win_rate_closed_pct": 7.7,
- "win_rate_note": "149 of 183 closed judgments are no_change (alpha 0), so the headline rate stays near-meaningless - read the directional record. DIRECTIONAL: 27 scored, 14W/8L/5N, +191.31 headline, +67.22 on the conservative actionable-reference-price basis. THIS RUN: one closure, neutral, and it ends a family. 2026-08-13-crypto-1 expired NEUTRAL for the third day running because the bot has not flipped since 08-10 and costs_paid is still frozen at 71.0619, so I have RETIRED the churn call at 7W/0L/3N rather than issue it a sixth time - three untested filings in a row is ledger padding, not analysis. One new open call, and it is my first directional bet since 08-12: close congress's CSCO at 111.52, argued structurally (a 90-day forced hold with no stop on a name bought during its own -8% earnings gap-down) and logged at LOW conviction because price views in this fleet are 2W/8L for me. Recorded against myself this run: the 08-12 NET call is worse than its scored -18.15 looked. I referenced 306.97; the bot's new guard exited at 328.06 today, so following me would have cost roughly 85 dollars across 4.05 units. The mechanism half of that call was right both times and my timing was wrong both times, which is now a pattern rather than an incident.",
+ "cumulative_alpha_usd": 191.17,
+ "cumulative_alpha_usd_actionable": 67.08,
+ "win_rate_closed_pct": 7.3,
+ "win_rate_note": "162 of 191 closed judgments are no_change (alpha 0), so the headline rate stays near-meaningless - read the directional record. DIRECTIONAL: 29 scored, 14W/9L/6N, +191.17 headline, +67.08 on the conservative actionable-reference-price basis. THIS RUN: one closure, one loss, and it is a small one - the 08-14 CSCO call scored -0.14 because CSCO closed 111.68 against my 111.52 reference. I am re-filing it once (filing 2 of a maximum 3) because a flat session does not touch a structural thesis, and retiring it if it goes neutral again. Three open calls, my largest directional exposure since 08-08: skip_new_entries on sentiment with the Watcher restored, and close_position on congress's AVGO and CSCO. The sentiment call is deliberately the cash-side of the trade, because my hype stay-in-cash record is 7-0 (+80.37) while my hype price views are 2W/8L - I am playing the half of that family I can actually hit. DECLINED TODAY, and recording it so the omission is on the record rather than invisible: a close_position call on hunter's PLTR. The leg flipped from +22.37 to -4.77 and the temptation was real, but the bot's own 5-day cooldown expires 08-16, so its rank rule re-evaluates Monday before my advice could bind. Advising a close one session ahead of the bot's own scheduled decision is front-running its calendar, not judgment. NOTE ON WEEKEND SCORING: the three open calls are all equities filed on a Saturday. Sunday's run cannot score them - prices will be identical - so they will close mechanically neutral unless I hold them to Monday. I am counting each as ONE filing regardless of how many weekend closures it passes through, so the ledger does not inflate on days the market is shut.",
  "by_bot": {
+  "crypto": {
+   "judgments": 23,
+   "closed": 23,
+   "open": 0,
+   "alpha_usd": 106.83,
+   "note": "The churn family stays RETIRED at 7W/0L/3N. Fifth consecutive run with costs_paid frozen at 71.0619 - the claim is dormant, not disproved, and it returns only if the bot resumes flipping."
+  },
+  "stock": {
+   "judgments": 10,
+   "closed": 10,
+   "open": 0,
+   "alpha_usd": -35.73,
+   "note": "Bot retired by owner 2026-07-31; ledger frozen."
+  },
+  "meanrev": {
+   "judgments": 23,
+   "closed": 23,
+   "open": 0,
+   "alpha_usd": -13.64,
+   "note": "One directional call, the 07-31 PG close, and it was wrong."
+  },
   "allweather": {
-   "judgments": 22,
-   "closed": 22,
+   "judgments": 23,
+   "closed": 23,
    "open": 0,
    "alpha_usd": 0.0,
    "note": "All no_change; a fixed-weight portfolio between rebalances gives me nothing scoreable."
   },
-  "analyst": {
-   "judgments": 10,
-   "closed": 10,
-   "open": 0,
-   "alpha_usd": 0.0,
-   "note": "All no_change since 07-31. Two more decisions validated today (08-12, 08-13) and both fail on stated reasoning while profiting on SPY beta - the 08-13 one is the second unreceipted Watcher claim in three decisions. The root cause was fixed in code today and its 08-14 decision is the first with the Watcher correctly reported STALE/UNKNOWN and every quoted close exact; credit the fix, not the agent, and validate it next run."
-  },
   "commodity": {
-   "judgments": 22,
-   "closed": 22,
+   "judgments": 23,
+   "closed": 23,
    "open": 0,
    "alpha_usd": 47.79,
-   "note": "Headline flattered by the unreachable 136.69 reference on 2026-07-27. DBC is +43.06 since the 08-05 rotation and my 08-12 energy attribution stays retracted."
+   "note": "Headline flattered by the unreachable 136.69 reference on 2026-07-27. DBC is +52.07 since the 08-05 rotation and my 08-12 energy attribution stays retracted."
   },
   "congress": {
-   "judgments": 22,
-   "closed": 21,
-   "open": 1,
-   "alpha_usd": 0.0,
-   "note": "First non-no_change call on this bot: close CSCO at 111.52, logged at low conviction and against my own poor directional record. The standing sizing issue is resolved by force rather than by design - cash is now 0 because it put all 600 idle dollars into one filer's batch on one day."
+   "judgments": 24,
+   "closed": 22,
+   "open": 2,
+   "alpha_usd": -0.14,
+   "note": "Two open calls, both structural and both low-conviction: close AVGO at 392.99 (dated BofA credit downgrade of the AI XPV vehicle, no stop, locked to 11-11) and a single re-file of the CSCO call at 111.68 after it scored -0.14 on a flat session. The CSCO thesis is on filing 2 of a self-imposed maximum 3."
   },
-  "crypto": {
+  "hunter": {
    "judgments": 22,
    "closed": 22,
    "open": 0,
-   "alpha_usd": 106.83,
-   "note": "The churn family is RETIRED at 7W/0L/3N. Three consecutive neutral expiries with costs_paid frozen at 71.0619 means the claim is dormant, not disproved; re-filing it a sixth time would have padded the ledger. It returns only if the bot resumes flipping."
-  },
-  "hunter": {
-   "judgments": 21,
-   "closed": 21,
-   "open": 0,
    "alpha_usd": 65.65,
-   "note": "Headline positive only because of the 07-27 USO call (+131.16, flattered by an unreachable reference); the 08-04 UPRO call cost -115.62. Still standing down, though its own table has ranked SLV and GLD above PLTR for days and both beat it again today."
+   "note": "Headline positive only because of the 07-27 USO call (+131.16, flattered by an unreachable reference); the 08-04 UPRO call cost -115.62. Declined a close_position call on PLTR today despite the leg flipping to -4.77, because the bot's own 5-day cooldown expires 08-16 and its rank rule acts before I could."
+  },
+  "sentiment": {
+   "judgments": 12,
+   "closed": 11,
+   "open": 1,
+   "alpha_usd": -59.96,
+   "note": "0-for-2 on price views (-41.81 on 08-08, -18.15 on 08-12), 2W/8L across the whole hype family. Today's call is the cash-side version instead: skip_new_entries with the Watcher restored and $1,326.92 about to be deployed into names already up 4-12% in three sessions. Stay-in-cash calls on this family are 7-0."
   },
   "hype": {
    "judgments": 11,
@@ -61,100 +77,93 @@
    "alpha_usd": 80.37,
    "note": "All from stay-in-cash calls in July; the label predates the rename to 'sentiment'."
   },
-  "meanrev": {
-   "judgments": 22,
-   "closed": 22,
-   "open": 0,
-   "alpha_usd": -13.64,
-   "note": "One directional call, the 07-31 PG close, and it was wrong."
-  },
   "scholar": {
-   "judgments": 11,
-   "closed": 11,
+   "judgments": 12,
+   "closed": 12,
    "open": 0,
    "alpha_usd": 0.0,
    "note": "All no_change since it was added 07-31."
   },
-  "sentiment": {
+  "analyst": {
    "judgments": 11,
    "closed": 11,
    "open": 0,
-   "alpha_usd": -59.96,
-   "note": "0-for-2 (-41.81 on 08-08, -18.15 on 08-12) and 2W/8L across the whole hype family. The 08-12 NET call now scores worse than its logged -18.15: I referenced 306.97 and the bot's own guard exited at 328.06 today, so acting on my advice would have cost about 85 dollars across 4.05 units. Right mechanism, wrong timing, twice."
-  },
-  "stock": {
-   "judgments": 10,
-   "closed": 10,
-   "open": 0,
-   "alpha_usd": -35.73,
-   "note": "Bot retired by owner 2026-07-31; ledger frozen."
+   "alpha_usd": 0.0,
+   "note": "All no_change since 07-31. The 08-14 decision is the FIRST to pass reasoning validation: read_watcher receipted, Watcher correctly reported STALE/UNKNOWN, historical closes exact, and it tightened its own cut line from 747.03 to 755.00 before the old one expired. One caveat recorded - it still labelled a same-day intraday print (777.84) as the 08-14 close, which actually printed 776.34; fourth run in a row for that specific defect, and the owner's fix did not touch it."
   }
  },
- "driver_tally_note": "Full rolling tally lives in reports/attribution_summary.json. Worst driver remains 'technical'.",
+ "driver_tally_note": "Full rolling tally lives in reports/attribution_summary.json. Worst driver remains 'technical' at 13 profit / 22 loss.",
  "fleet_snapshot_at_run": {
-  "basis": "Nine books, all marked 2026-08-14T13:36Z = 09:36 ET, six minutes into the session, so equity day moves are overnight gaps plus six minutes and anything under 0.1% is noise. Crypto is marked live and continuously. Baseline 9,000 across 9 active bots (stock/TQQQ retired 07-31 at a final 892.30 and excluded); the 8,000 figure in the task spec predates the Scholar and Analyst additions.",
+  "basis": "Nine books at their FINAL 2026-08-14 (Friday) closing marks - the first complete-session read, unlike the last run's 09:36-ET intraday marks. Crypto is the exception and carries a live 2026-08-15 mark because it trades 24/7; the eight equity books correctly stop at Friday, so there is no phantom weekend mark. Baseline 9,000 across 9 active bots (stock/TQQQ retired 07-31 at a final 892.30 and excluded); the 8,000 figure in the task spec predates the Scholar and Analyst additions.",
   "sentiment": 1326.92,
-  "meanrev": 1228.15,
-  "analyst": 1036.59,
-  "scholar": 1034.86,
-  "allweather": 1020.39,
-  "hunter": 1017.59,
-  "congress": 1014.35,
-  "commodity": 1010.52,
-  "crypto": 1008.95,
-  "total": 9698.32,
-  "total_pnl_usd": 698.32,
-  "total_pnl_pct": 7.76,
-  "fleet_day_pnl_usd": -21.95
+  "meanrev": 1232.58,
+  "analyst": 1034.53,
+  "scholar": 1040.22,
+  "allweather": 1018.6,
+  "hunter": 990.45,
+  "congress": 1005.63,
+  "commodity": 1019.53,
+  "crypto": 1009.45,
+  "total": 9677.91,
+  "total_pnl_usd": 677.91,
+  "total_pnl_pct": 7.53,
+  "fleet_day_pnl_usd": -31.99,
+  "fleet_day_note": "9,709.90 -> 9,677.91. Crypto's leg spans 08-14 -> 08-15 while the other eight span 08-13 -> 08-14 close."
  },
  "open_faults": [
   {
+   "fault": "Grok Watcher offline",
+   "severity": "resolved",
+   "status": "CLOSED this run",
+   "detail": "Dark 2026-08-07T10:47:38Z -> 2026-08-14T23:54:57Z = 181.1 hours on an xAI HTTP 403. Resumed on its own about ten hours after the last brief and has scanned twice since; 52 scans total, month_count 2026-08 = 17 of 100 so the cap was never the cause. Verdict now risk_level 'none', VIX 14.2, crypto F&G 34. Euphoric list rotating (IOVA/BRK.B -> DXYZ/LUNR), so the frozen-list failure is gone. The owner's Track A staleness guards were never wasted - they bounded the damage while it was dark and they release cleanly now that it is back."
+  },
+  {
    "fault": "fleet uptime ~48% vs 82% design target",
-   "severity": "critical",
-   "status": "THIRD CONSECUTIVE DAY, unchanged",
-   "detail": "Measured from cycle commits: dark 08-13 13:52Z->18:43Z (tail of a 6h09m hole from 12:33Z), 08-14 00:20Z->06:29Z (6h09m) and 08-14 12:06Z->13:36Z (1h30m) = ~12h30m of 24h. Run-creation gaps corroborate: 188 min (08-13 15:33->18:41Z), 156, 108, 96, 102, 91 min. Same two stacked causes as 08-13 - dropped cron creation plus multi-hour dispatch queueing, under a 345-min job cap that means no loop can span a >6h hole. ESCALATION CONDITION MET for a second day; an external trigger is the only lever inside the owner's control."
+   "severity": "resolved-pending-confirmation",
+   "status": "FIXED for one full day after three broken ones",
+   "detail": "98 cycle commits in the last 24h; holes over 20 min are 90 (08-14 12:06-13:36Z, the preflight abort already reported), 28 (08-14 19:12-19:40Z), 31 (08-15 01:15-01:46Z) and 28 (08-15 07:22-07:50Z). 178 dark minutes across a 1,427-minute span = 87.6% uptime, above the 82% target. Since the last supervisor run the largest gap is 31 minutes. GitHub run-creation corroborates: 135 runs in 24h, largest creation gap 89 minutes and that is the same preflight event. Needs two more clean days before I call it fixed outright."
   },
   {
    "fault": "US session coverage loss",
-   "severity": "critical",
-   "status": "third consecutive session",
-   "detail": "08-13's hole covered 13:52-18:43Z = 09:52-14:43 ET, about 75% of regular hours, after 08-12's ~88% and 08-11's near-full-session loss. The 08-14 session is covered so far: the fleet returned at 13:36Z, six minutes after the open, and the hype bot's exit fired on that first cycle - it would have been another 90 minutes late had the preflight abort run any longer."
+   "severity": "resolved-pending-confirmation",
+   "status": "Friday 08-14 was the first covered session in four",
+   "detail": "The 08-14 regular session (13:30-20:00Z) had one 28-minute hole at 19:12-19:40Z and was otherwise continuous, roughly 93% coverage, against ~25% on 08-13 and ~12% on 08-12. Next test is Monday 08-17."
   },
   {
-   "fault": "Grok Watcher offline",
-   "severity": "high",
-   "status": "171h, damage now BOUNDED (was: proven and silent)",
-   "detail": "xAI HTTP 403 since 2026-08-07T10:47:38Z; monthly cap still not the cause (15 of 100 in 2026-08). Track A converted the outage from a hidden failure into an explicit one: stale scans now force the hype bot to cash and block its entries, and the Analyst reads UNKNOWN with an age instead of the last known level. The fix does not restore the signal - the hype bot is now structurally in cash until the owner restores xAI credit, and its R4 dead-money clock starts today at day 1."
+   "fault": "recurring git merge conflicts in reports/*_dashboard*",
+   "severity": "medium",
+   "status": "NEW this run",
+   "detail": "All 4 workflow failures in the last 24h (08-14 12:04Z, 08-14 18:34Z, 08-15 00:01Z, 08-15 06:53Z) fail identically: 'state preflight failed - aborting loop' after 'Pulling is not possible because you have unmerged files', with the unmerged paths being reports/sentiment_dashboard.html and reports/sentiment_dashboard_data.json. The guard is doing the right thing by refusing to trade on poisoned state, but this is now a repeating write-contention problem in the dashboard push rather than a one-off, and each trip costs a cron cycle. Not an integrity alert - no state file was corrupted and no bad fill was recorded. Owner's call; I do not touch src/ or .github/."
   },
   {
    "fault": "congress single-filer concentration",
    "severity": "medium",
-   "status": "NEW this run",
-   "detail": "On 08-13 the copier deployed its entire 600 of idle cash into six legs from one filer, Rohit Khanna, off one 2026-08-07 disclosure, and its own trade log scores that filer at '+0.0% avg excess'. Cash is now 0, every leg is locked to 2026-11-11 with no stop, and three are down hard on day two (AVGO -3.98%, ADBE -2.99%, CSCO -1.72%). The old 600-idle sizing complaint is resolved by force rather than by design. Fills are clean - this is a rule-quality concern, not an integrity one."
+   "status": "WORSENED, thesis now tested",
+   "detail": "The six Rohit Khanna legs opened 08-13 off one 2026-08-07 disclosure from a filer its own log scores at '+0.0% avg excess' are now two days old and five of six are red. AVGO -5.94% on Friday alone took 5.90 of the book's 13.23 loss. Cash is 0, every leg is locked to 2026-11-11 with no stop. I have filed close_position calls on the two worst (AVGO, CSCO) so the concern is now scoreable rather than just stated. Fills remain clean - this is rule quality, not integrity."
   },
   {
-   "fault": "Analyst asserts unfetched tool facts",
+   "fault": "Analyst labels intraday prints as closes",
    "severity": "low",
-   "status": "ROOT CAUSE FIXED in code today; one unexplained instance remains",
-   "detail": "Validated two more decisions this run. 08-12 called read_watcher and was handed a five-day-old 'caution' by the tool itself - that path is now fixed (_watcher() reports UNKNOWN with age, never the last risk_level). 08-13 is not covered by that fix: tools_called was ['get_price_history'] only and it still asserted 'Watcher is caution, not SEVERE', the second unreceipted claim in three decisions; the new permanent-tag mechanism should catch a repeat. Both decisions also carried small close misquotes (773.14 vs 772.49; 777.64 vs 777.88). Today's 08-14 decision is clean on both counts. Reasoning quality only - no exit is within 3% of spot. API cost healthy: 0.5916 lifetime over 10 decisions."
+   "status": "NARROWED - the Watcher half is fixed and verified, this half is not",
+   "detail": "The 08-14 decision PASSED validation on the axis I have been failing it on for three runs: read_watcher receipted, Watcher reported STALE at 170.8h and classified UNKNOWN not 'caution', all historical closes exact, and it voluntarily tightened its cut line from 747.03 to 755.00 before the old test expired. What remains is narrower and separate: it quoted '8/14 777.84' as a close when 08-14 closed 776.34, the fourth decision running to state a same-day intraday print as a close. Non-decisive - both cut lines sit 2.7% and 6.2% below spot - and the owner's 01:45Z fix did not address it. API cost healthy and flat: 0.5916 lifetime over 10 decisions, unchanged (no weekend decision), mean 0.0592."
   },
   {
    "fault": "fail-loud abort costs a cron cycle",
-   "severity": "medium",
-   "status": "NEW this run, a tradeoff rather than a bug",
-   "detail": "state_preflight.py did its job at 12:04:36Z, catching an unresolved git conflict in data/ and aborting the loop RED rather than trading on poisoned state - the correct behaviour and a direct fix for the 08-12 incident where 225 swallowed JSONDecodeErrors reported green. The cost is that an aborted loop cannot restart itself and must wait for GitHub to create and dispatch the next run, which took 90 minutes. Worth flagging only because it compounds the uptime fault: a guard trip now buys darkness."
-  },
-  {
-   "fault": "rebase-conflict state poisoning",
-   "severity": "resolved",
-   "status": "CLOSED this run",
-   "detail": "The swallow-and-continue behaviour that hid the 08-12 event is gone: the preflight aborts RED on corrupt data/*.json, commits docs/red_flag.json, fleet.html shows a banner, and an all-bots-failed cycle aborts instead of warning ten times and committing anyway. Observed working at 12:04:36Z today."
+   "severity": "low",
+   "status": "downgraded from medium - the cost fell with the cron improvement",
+   "detail": "Still true in principle: an aborted loop cannot restart itself. But with cron acceptance restored the three aborts since the 12:04Z one cost 28, 31 and 28 minutes rather than 90. The tradeoff is now cheap. It becomes expensive again only if cron acceptance degrades."
   },
   {
    "fault": "hype bot riding a dead signal",
    "severity": "resolved",
-   "status": "CLOSED this run",
-   "detail": "Raised 08-12 and confirmed 08-13: the euphoric list was frozen with NET on it, so the only stated exit could never evaluate true. Track A added a 24h staleness rule and it fired at 13:36:59Z today, selling NET at 328.06 after six days of a 1-2 day strategy. The leg finished +33.64 net of fees and NET is 322.45 an hour later."
+   "status": "CLOSED 08-14, confirmed 08-15",
+   "detail": "The 24h staleness rule fired at 13:36:59Z on 08-14, exiting NET at 328.06 for +33.64 net of fees. With the Watcher back the guard has now demonstrated the other half of its behaviour: it releases cleanly. The bot is free to re-enter Monday."
+  },
+  {
+   "fault": "rebase-conflict state poisoning",
+   "severity": "resolved",
+   "status": "CLOSED 08-14",
+   "detail": "state_preflight aborts RED on corrupt data/*.json instead of swallowing errors. Observed working four times in 24h."
   }
  ]
 }

@@ -1,7 +1,7 @@
 {
- "updated_utc": "2026-08-14T14:05:00+00:00",
- "note": "Run covering 2026-08-13 -> 2026-08-14, executed 14:05 UTC Friday, 35 minutes into the US session. 12 lines appended (10 dailies incl. sentinel, 2 trade_events). SEVEN FILLS TO AUDIT after a zero-trade day, and ALL SEVEN PASS: congress's six Rohit Khanna buys first appear in commit 2026-08-13T18:43:21Z (14:43 ET, in hours) with every price inside that day's Yahoo range, and the hype bot's NET sale first appears 2026-08-14T13:36:59Z (09:36 ET, six minutes after the open) at 328.06 against a 322.44-331.83 range. No SIM-INTEGRITY ALERT, and this time the pass is real rather than vacuous. STALENESS CLEAN: all nine states within 18.0-18.6 minutes. The day's substance is that the owner shipped Track A at 01:45Z and it closed three of my four open faults inside one commit - the hype bot's unfirable exit, the Analyst's stale-verdict misreporting, and the swallow-and-continue behaviour that let 225 JSONDecodeErrors report green. The 12:04Z 'failure' is the third of those working: state_preflight caught a git conflict in data/ and aborted the loop RED instead of trading on poisoned state. It cost 90 minutes of darkness, which is the honest price of fail-loud at 6% cron acceptance.",
- "total_lines_logged": 262,
+ "updated_utc": "2026-08-15T11:20:00+00:00",
+ "note": "Run covering the complete 2026-08-14 session, executed 11:20 UTC Saturday with US markets shut. 10 lines appended (9 bot dailies plus sentinel); ZERO trade_event lines because zero trades executed fleet-wide since the last run - verified against trade-array lengths at commit 16343f6, not assumed. The fill-integrity pass is therefore vacuous and labelled as such. The two headline facts are recoveries: the Grok Watcher resumed at 2026-08-14T23:54:57Z after 181.1 hours dark, and fleet uptime measured from cycle commits came in at 87.6% over 24h after three consecutive days near 48%. Attribution-wise the day was one name - AVGO -5.94% on a dated BofA credit downgrade of its AI XPV financing vehicle, which did 45% of congress's 13.23 loss and which I could not source yesterday. That is a driver upgraded from 'unknown' to 'news_idiosyncratic' on evidence, which is the direction this log is supposed to move.",
+ "total_lines_logged": 272,
  "by_primary_driver": {
   "hype_sentiment": {
    "profit": 7,
@@ -14,19 +14,19 @@
    "flat": 1
   },
   "market_beta": {
-   "profit": 23,
-   "loss": 12,
+   "profit": 25,
+   "loss": 14,
    "flat": 7
   },
   "news_idiosyncratic": {
    "profit": 9,
-   "loss": 5,
+   "loss": 6,
    "flat": 1
   },
   "none_cash": {
    "profit": 0,
-   "loss": 0,
-   "flat": 23
+   "loss": 1,
+   "flat": 24
   },
   "sector": {
    "profit": 10,
@@ -34,37 +34,37 @@
    "flat": 0
   },
   "technical": {
-   "profit": 12,
-   "loss": 21,
+   "profit": 13,
+   "loss": 22,
    "flat": 3
   },
   "unknown": {
-   "profit": 9,
+   "profit": 10,
    "loss": 8,
    "flat": 64
   }
  },
  "by_beta_or_alpha": {
   "alpha": {
-   "profit": 43,
-   "loss": 36,
+   "profit": 45,
+   "loss": 38,
    "flat": 7
   },
   "beta": {
    "profit": 21,
-   "loss": 9,
+   "loss": 11,
    "flat": 7
   },
   "mixed": {
-   "profit": 8,
+   "profit": 10,
    "loss": 17,
    "flat": 0
   },
   "n/a": {
    "profit": 11,
-   "loss": 12,
-   "flat": 91
+   "loss": 13,
+   "flat": 92
   }
  },
- "driver_note": "'unknown' took four entries today and I want that on the record as a choice, not a gap. Congress lost 0.44% on a day SPY gained 0.07% with the damage in AVGO -3.98% and ADBE -2.99%; a search surfaced an SK Hynix HBM story that would have explained it neatly, and I refused it because NVDA rose 0.28% and MSFT rose 0.21% on the same tape - a sector story that spares the sector's largest names is not a sector story. Commodity, hunter and the NET fade got the same treatment for the same reason: no dated catalyst, so no invented one. 'technical' takes one entry and it is a fair one - meanrev's UNH bounced after three lower closes, which is literally its z-score thesis, and it beat SPY doing it. The mark timing matters for reading every equity line today: the fleet's 08-14 marks were taken at 13:36Z, six minutes into the session, so the printed day moves are overnight gaps plus six minutes and the sub-0.1% ones are noise. Crypto is the exception, marked 24/7, and it is the cleanest read on the board: -0.60% against a bench -1.11%, a relative-rank rule doing exactly what it is built to do in a falling complex."
+ "driver_note": "'unknown' took 3 of today's 10 lines (hunter's PLTR reversal, commodity's DBC gain, and it would have taken congress too had the AVGO story not surfaced). Two calls I want on the record. First, congress moves from 'unknown' on 08-14 to 'news_idiosyncratic' on 08-15 because the evidence arrived, not because the story got more attractive - and the specific evidence (BofA on the AI XPV vehicle, plus a VMware vCenter exploit) is single-name credit, which confirms rather than reverses my 08-14 refusal of the AI-sector framing. Second, hunter stays 'technical' rather than borrowing that same AVGO story: PLTR fell 2.78% on a day NVDA fell 0.06%, so an AI de-rating does not explain it, and I found no dated PLTR catalyst. 'Technical' here means a failed gap-up and nothing more. Scholar is logged 'mixed' rather than 'beta' for a specific reason worth repeating: the book tracked IWM to the basis point (+0.524% vs +0.524%), so it is pure beta to what it holds, and reads as alpha only because its recorded bench is not IWM. That is a benchmark artifact, not skill, and calling it alpha outright would flatter the bot."
 }
