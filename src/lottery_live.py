@@ -193,6 +193,7 @@ def main():
         st["held_symbol"] = st["entry_price"] = st["entry_scan_ts"] = None
         st["entry_source"] = None
         st["units"] = 0.0
+        st["spent_usd"] = None
         st.pop("hwm", None)
         st.pop("entry_time", None)
     if not st["held_symbol"] and ledger_open:
@@ -241,18 +242,29 @@ def main():
         fill = binance_live.market("SELL", held, qty=qty)
         if not fill:
             return False
-        pnl = ((fill["price"] / st["entry_price"] - 1) * 100
-               if st.get("entry_price") else None)
-        st["realized"].append({"date": today, "symbol": held,
-                               "exit": fill["price"],
-                               "entry": st.get("entry_price"),
-                               "pnl_pct": round(pnl, 2) if pnl is not None else None,
-                               "reason": reason})
+        entry_px = st.get("entry_price")
+        exit_px = fill["price"]
+        u = float(st.get("units") or 0.0)
+        pnl = ((exit_px / entry_px - 1) * 100) if entry_px else None
+        spent = round(entry_px * u, 4) if entry_px else None
+        got = round(exit_px * fill["qty"], 4)
+        pnl_usd = round(got - spent, 4) if spent is not None else None
+        rec = {"symbol": held,
+               "entry_time": st.get("entry_time"),
+               "exit_time": now.isoformat(timespec="seconds"),
+               "entry_price": entry_px, "exit_price": exit_px,
+               "units": round(u, 8), "spent_usd": spent, "got_usd": got,
+               "pnl_pct": round(pnl, 2) if pnl is not None else None,
+               "pnl_usd": pnl_usd, "reason": reason,
+               "date": today, "exit": exit_px, "entry": entry_px}
+        st["realized"].append(rec)
         binance_live.log({"event": "exit", "symbol": held, "reason": reason,
-                          "pnl_pct": round(pnl, 2) if pnl is not None else None})
+                          "entry_price": entry_px, "exit_price": exit_px,
+                          "pnl_pct": rec["pnl_pct"], "pnl_usd": pnl_usd})
         st["held_symbol"] = st["entry_price"] = st["entry_scan_ts"] = None
         st["entry_source"] = None
         st["units"] = 0.0
+        st["spent_usd"] = None
         st.pop("hwm", None)
         st.pop("entry_time", None)
         return True
@@ -391,6 +403,7 @@ def main():
                     # exact filled quantity: the ONLY amount this bot may
                     # ever sell back (the account holds other coins)
                     st["units"] = fill["qty"]
+                    st["spent_usd"] = round(fill["price"] * fill["qty"], 4)
                     # seeds the trailing stop and the hold clock
                     st["hwm"] = fill["price"]
                     st["entry_time"] = now.isoformat(timespec="seconds")
@@ -404,6 +417,27 @@ def main():
                                      st["held_symbol"], st.get("units"))
     st["last_value_usd"] = round(val, 2)
     st["last_updated_utc"] = now.isoformat(timespec="seconds")
+
+    # live snapshot of the OPEN position for the dashboard: what it cost, what
+    # it is worth now, and the unrealized P/L — the numbers the owner asked to
+    # see on their phone
+    if st.get("held_symbol"):
+        cur = binance_live.price(st["held_symbol"])
+        u = float(st.get("units") or 0.0)
+        spent = st.get("spent_usd")
+        now_val = round(cur * u, 4) if cur else None
+        st["open_position"] = {
+            "symbol": st["held_symbol"], "entry_time": st.get("entry_time"),
+            "entry_price": st.get("entry_price"), "current_price": cur,
+            "units": round(u, 8), "spent_usd": spent, "value_usd": now_val,
+            "pnl_usd": (round(now_val - spent, 4)
+                        if (now_val is not None and spent is not None) else None),
+            "pnl_pct": (round((cur / st["entry_price"] - 1) * 100, 2)
+                        if (cur and st.get("entry_price")) else None),
+            "source": st.get("entry_source"),
+        }
+    else:
+        st["open_position"] = None
     STATE.write_text(json.dumps(st, indent=2))
     print(f"[{KEY}] {today} seat={st['held_symbol'] or 'CASH'} "
           f"book ${val:.2f} (cap ${binance_live.BOOK_CAP_USD:.0f}) — "

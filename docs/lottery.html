@@ -51,6 +51,11 @@
   </div>
 
   <div class="card">
+    <h2>current position</h2>
+    <div id="open" class="mono">loading…</div>
+  </div>
+
+  <div class="card">
     <h2>closed trades</h2>
     <table id="trades"><tbody><tr><td class="mono">loading…</td></tr></tbody></table>
   </div>
@@ -70,26 +75,51 @@
 </div>
 <script>
 const $=id=>document.getElementById(id);
-const money=n=>"$"+Number(n||0).toFixed(2);
+const money=n=>(n==null?"—":"$"+Number(n).toFixed(n>=1?2:6));
+const esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>"&#"+c.charCodeAt(0)+";");
+const px=n=>(n==null?"—":Number(n)>=1?Number(n).toFixed(4):Number(n).toPrecision(4));
+const when=t=>{ if(!t) return "—"; const d=new Date(t);
+  return d.toLocaleString([], {month:"short",day:"numeric",hour:"2-digit",minute:"2-digit"}); };
+const dur=(a,b)=>{ if(!a) return ""; const m=Math.round(((b?new Date(b):new Date())-new Date(a))/60000);
+  return m<60? m+"min": (m/60).toFixed(1)+"h"; };
 async function load(){
   try{
     const st=await fetch("lottery.json",{cache:"no-store"}).then(r=>r.json());
     $("val").textContent=money(st.last_value_usd);
-    if(st.held_symbol){
-      $("seat").innerHTML='holding <span class="pill">'+st.held_symbol+
-        "</span> · "+(st.units||0)+" units";
+    const op=st.open_position;
+    if(op && op.symbol){
+      $("seat").innerHTML='holding <span class="pill">'+esc(op.symbol)+"</span>";
+      const cls=op.pnl_pct>0?"win":(op.pnl_pct<0?"loss":"");
+      $("open").innerHTML=
+        "coin        "+esc(op.symbol)+"  ("+esc(op.source||"")+")<br>"+
+        "entered     "+esc(when(op.entry_time))+"  ("+esc(dur(op.entry_time))+" ago)<br>"+
+        "entry price  "+px(op.entry_price)+"<br>"+
+        "now price    "+px(op.current_price)+"<br>"+
+        "units        "+esc(op.units)+"<br>"+
+        "spent        "+money(op.spent_usd)+"<br>"+
+        "worth now    "+money(op.value_usd)+"<br>"+
+        '<b class="'+cls+'">P/L          '+money(op.pnl_usd)+
+        "  ("+(op.pnl_pct>0?"+":"")+esc(op.pnl_pct)+"%)</b>";
     }else{
       $("seat").innerHTML='<span class="pill">CASH — waiting for a signal</span>';
+      $("open").textContent="in cash — no open position";
     }
     $("cap").textContent="hard cap $20 · frozen: "+(st.frozen?"yes":"no");
     const rs=(st.realized||[]).slice().reverse();
-    $("trades").innerHTML="<thead><tr><th>date</th><th>coin</th><th>P/L</th>"+
-      "<th>why</th></tr></thead><tbody>"+(rs.length?rs.map(r=>{
-        const p=r.pnl_pct, c=p>0?"win":(p<0?"loss":"");
-        return "<tr><td>"+(r.date||"")+"</td><td>"+(r.symbol||"")+
-          '</td><td class="'+c+'">'+(p==null?"—":(p>0?"+":"")+p+"%")+
-          "</td><td>"+(r.reason||"").slice(0,40)+"</td></tr>";
-      }).join(""):"<tr><td colspan=4>no closed trades yet</td></tr>")+"</tbody>";
+    $("trades").innerHTML="<thead><tr><th>coin</th><th>in→out</th>"+
+      "<th>price</th><th>P/L</th><th>why</th></tr></thead><tbody>"+
+      (rs.length?rs.map(r=>{
+        const p=(r.pnl_pct==null?null:r.pnl_pct), c=p>0?"win":(p<0?"loss":"");
+        const held=dur(r.entry_time, r.exit_time);
+        return "<tr><td>"+esc(r.symbol)+"</td>"+
+          "<td>"+esc(when(r.entry_time))+"<br>"+esc(when(r.exit_time))+
+            (held?" <span style='color:var(--dim)'>("+esc(held)+")</span>":"")+"</td>"+
+          "<td>"+px(r.entry_price!=null?r.entry_price:r.entry)+"<br>"+
+            px(r.exit_price!=null?r.exit_price:r.exit)+"</td>"+
+          '<td class="'+c+'">'+(p==null?"—":(p>0?"+":"")+p+"%")+
+            (r.pnl_usd!=null?"<br>"+money(r.pnl_usd):"")+"</td>"+
+          "<td>"+esc((r.reason||"").slice(0,32))+"</td></tr>";
+      }).join(""):"<tr><td colspan=5>no closed trades yet</td></tr>")+"</tbody>";
   }catch(e){ $("val").textContent="no data yet"; }
   try{
     const sc=await fetch("scout.json",{cache:"no-store"}).then(r=>r.json());
