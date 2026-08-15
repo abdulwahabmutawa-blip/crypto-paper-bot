@@ -424,7 +424,11 @@ def main():
     if st.get("held_symbol"):
         cur = binance_live.price(st["held_symbol"])
         u = float(st.get("units") or 0.0)
+        # fall back to entry_price * units for seats opened before spent_usd
+        # was recorded (pre-08-15 fills, or ledger-recovered ones)
         spent = st.get("spent_usd")
+        if spent is None and st.get("entry_price") and u:
+            spent = round(st["entry_price"] * u, 4)
         now_val = round(cur * u, 4) if cur else None
         st["open_position"] = {
             "symbol": st["held_symbol"], "entry_time": st.get("entry_time"),
