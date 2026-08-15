@@ -39,7 +39,9 @@ from datetime import datetime, timezone
 
 import config
 
-BASE = "https://api.binance.com/api"
+HOST = "https://api.binance.com"
+BASE = HOST + "/api"          # spot trading endpoints (/v3/...)
+# key-permission endpoints live under /sapi and are passed as full paths
 BOOK_CAP_USD = 20.0
 MIN_ORDER_USDT = 5.0          # Binance spot minimum notional (typical pairs)
 LEDGER = config.DATA / "lottery_ledger.jsonl"
@@ -84,7 +86,8 @@ def _call(method: str, path: str, params: dict | None = None,
         params["signature"] = hmac.new(keys[1].encode(), qs.encode(),
                                        hashlib.sha256).hexdigest()
     qs = urllib.parse.urlencode(params)
-    url = f"{BASE}{path}" + (f"?{qs}" if qs and method == "GET" else "")
+    root = HOST if path.startswith("/sapi") else BASE
+    url = f"{root}{path}" + (f"?{qs}" if qs and method == "GET" else "")
     data = qs.encode() if method != "GET" and qs else None
     req = urllib.request.Request(url, method=method, data=data, headers=headers)
     try:

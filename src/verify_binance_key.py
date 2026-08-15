@@ -72,22 +72,58 @@ def main() -> int:
             print("secret was pasted whole.")
         return 1
 
-    perms = acct.get("permissions", [])
-    can_trade = acct.get("canTrade")
-    can_withdraw = acct.get("canWithdraw")
     print()
     print("KEY IS GENUINE — the real Binance API accepted this signature.")
-    print(f"  permissions : {perms}")
-    print(f"  canTrade    : {can_trade}")
-    print(f"  canWithdraw : {can_withdraw}"
-          + ("   <-- TURN THIS OFF: a trading bot must never hold a "
-             "withdrawal-enabled key" if can_withdraw else "   (correct)"))
+    print(f"  account permissions : {acct.get('permissions', [])}")
+    print(f"  account canTrade    : {acct.get('canTrade')}")
+
+    # THE KEY's permissions, which is what actually matters here.
+    # /v3/account's canWithdraw describes the ACCOUNT (is it allowed to
+    # withdraw at all), not this API key — checking it flagged a correctly
+    # configured key as dangerous. /sapi/v1/account/apiRestrictions is the
+    # endpoint that answers "what may this key do".
+    r = binance_live._call("GET", "/sapi/v1/account/apiRestrictions",
+                           signed=True)
+    print()
+    if not isinstance(r, dict):
+        print("  KEY PERMISSIONS: could not be read "
+              f"({binance_live.LAST_ERROR.get('msg', 'no detail')}).")
+        print("  Confirm by eye in Binance -> API Management that")
+        print("  'Enable Withdrawals' is unticked before arming.")
+        return 1
+
+    withdraw = bool(r.get("enableWithdrawals"))
+    spot = bool(r.get("enableSpotAndMarginTrading"))
+    futures = bool(r.get("enableFutures"))
+    transfer = bool(r.get("enableInternalTransfer"))
+    ip_locked = bool(r.get("ipRestrict"))
+    print("  KEY permissions (this is the one that matters):")
+    print(f"    spot trading      : {spot}" + ("" if spot else "   <-- must be ON to trade"))
+    print(f"    withdrawals       : {withdraw}"
+          + ("   <-- TURN OFF: a bot key must never move coins out"
+             if withdraw else "   (correct)"))
+    print(f"    internal transfer : {transfer}"
+          + ("   <-- turn off: also moves funds" if transfer else "   (correct)"))
+    print(f"    futures           : {futures}"
+          + ("   <-- turn off: not used here" if futures else "   (correct)"))
+    print(f"    IP restricted     : {ip_locked}"
+          + ("   (correct)" if ip_locked else "   <-- lock to this server's IP"))
+
     held = [(b["asset"], float(b["free"])) for b in acct["balances"]
             if float(b.get("free", 0) or 0) > 0]
+    usdt = next((f for a, f in held if a == "USDT"), 0.0)
+    print()
+    print(f"  free USDT (what the bot can spend): {usdt:.2f}")
+    if usdt < 5:
+        print("    note: under Binance's ~$5 minimum order — the bot will")
+        print("    refuse to buy until there is more USDT.")
     print(f"  assets with a free balance: {len(held)}")
     for asset, free in sorted(held, key=lambda x: -x[1])[:8]:
         print(f"    {asset:<8} {free:.8f}".rstrip("0").rstrip("."))
-    if can_withdraw:
+
+    if withdraw or transfer:
+        return 1
+    if not spot:
         return 1
     return 0
 
