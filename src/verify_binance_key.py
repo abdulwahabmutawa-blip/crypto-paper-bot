@@ -35,16 +35,41 @@ def main() -> int:
 
     acct = binance_live._call("GET", "/v3/account", signed=True)
     if not acct or "balances" not in acct:
+        err = binance_live.LAST_ERROR
+        code = err.get("code")
         print()
         print("KEY NOT ACCEPTED by the real Binance API.")
-        print("Two possible causes, in order of likelihood:")
-        print("  1. This IP is not whitelisted on the key (fix: add it in")
-        print("     Binance -> API Management -> Edit restrictions).")
-        print("  2. The key did not come from Binance at all. If the site")
-        print("     that issued it was not binance.com, assume phishing:")
-        print("     from a trusted device type binance.com directly, change")
-        print("     the password, revoke all API keys, review sessions and")
-        print("     withdrawal whitelists.")
+        print(f"Binance said: code {code} — {err.get('msg', '(no message)')}")
+        print()
+        if code == -1022:
+            print("DIAGNOSIS: the API key was recognised, but the SECRET does")
+            print("not match it. The key itself is genuine and registered.")
+            print()
+            print("Binance shows a key's Secret ONLY ONCE, on the screen where")
+            print("you create it — revisiting API Management never shows it")
+            print("again. If that screen is gone, the secret cannot be")
+            print("recovered.")
+            print()
+            print("FIX: create a NEW API key, and copy the Secret immediately")
+            print("while it is on screen. Then re-run this setup. Delete the")
+            print("old key afterwards so nothing unused stays enabled.")
+        elif code in (-2015, -2014):
+            print("DIAGNOSIS: the key/IP/permission combination was rejected.")
+            print("  * add this server's IP to the key's trusted-IP list, and")
+            print("  * make sure 'Enable Spot & Margin Trading' is ticked.")
+            print("  * a brand-new whitelist entry can take a minute to apply.")
+        elif code == -1021:
+            print("DIAGNOSIS: this server's clock drifted outside Binance's")
+            print("accepted window. Fix: timedatectl set-ntp true")
+        elif code == -2008:
+            print("DIAGNOSIS: Binance does not recognise this API key at all.")
+            print("If the site that issued it was not binance.com, treat it as")
+            print("phishing: from a trusted device type binance.com directly,")
+            print("change the password, revoke all keys, review sessions and")
+            print("withdrawal whitelists.")
+        else:
+            print("Check the key's permissions, the IP whitelist, and that the")
+            print("secret was pasted whole.")
         return 1
 
     perms = acct.get("permissions", [])

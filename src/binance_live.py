@@ -45,6 +45,12 @@ MIN_ORDER_USDT = 5.0          # Binance spot minimum notional (typical pairs)
 LEDGER = config.DATA / "lottery_ledger.jsonl"
 KILL_SWITCH = config.DATA / "KILL_SWITCH"
 
+# Last API error, so callers can diagnose precisely instead of guessing.
+# Binance's error codes are specific and each points at a different fix;
+# a generic "check your key or IP" message sent the first real setup
+# chasing the wrong problem.
+LAST_ERROR: dict = {}
+
 
 def _keys() -> tuple[str, str] | None:
     k = os.environ.get("BINANCE_LIVE_API_KEY", "").strip()
@@ -85,6 +91,14 @@ def _call(method: str, path: str, params: dict | None = None,
         return json.load(urllib.request.urlopen(req, timeout=20))
     except urllib.error.HTTPError as e:
         body = e.read().decode(errors="replace")[:200]
+        try:
+            parsed = json.loads(body)
+            LAST_ERROR.clear()
+            LAST_ERROR.update({"http": e.code, "code": parsed.get("code"),
+                               "msg": parsed.get("msg", "")})
+        except Exception:
+            LAST_ERROR.clear()
+            LAST_ERROR.update({"http": e.code, "code": None, "msg": body})
         print(f"[lottery-live] {method} {path} -> HTTP {e.code}: {body}")
         log({"event": "api_error", "path": path, "code": e.code, "body": body})
         return None
