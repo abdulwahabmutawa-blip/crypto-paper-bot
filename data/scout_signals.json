@@ -1,7 +1,28 @@
 {
-  "ts": "2026-08-15T16:42:29+00:00",
-  "scanned": 77,
-  "candidates": [],
-  "scorecard": {},
+  "ts": "2026-08-15T16:48:29+00:00",
+  "scanned": 78,
+  "candidates": [
+    {
+      "symbol": "PUMPUSDT",
+      "signal": "ignition",
+      "score": 0.6031,
+      "raw_score": 0.6031,
+      "weight": 1.0,
+      "price": 0.002836,
+      "why": "trades 5.1x and volume 7.0x the prior 4h, 61% taker-buy, $104,497 burst \u2014 while price has only moved +1.1%",
+      "chg_24h": 0.0107,
+      "vol_surge": 6.96,
+      "chg_1h": 0.0114,
+      "market_surge": 1.24
+    }
+  ],
+  "scorecard": {
+    "reversion": {
+      "n_1h": 2,
+      "hit_rate_1h": 0.0,
+      "mean_ret_1h": -0.01745,
+      "median_ret_1h": -0.01423
+    }
+  },
   "note": "READ-ONLY scout. Ranked opinion only \u2014 the book decides."
 }
