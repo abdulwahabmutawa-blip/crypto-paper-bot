@@ -1,27 +1,35 @@
-# Fleet status — 2026-08-14 (UTC)
+# Fleet status — 2026-08-15 (UTC)
 
-Last cycle commit: 2026-08-14 00:20 UTC — none since (~4h47m gap as of this digest, see below). $1,000 paper capital/bot, no real money.
+Last cycle: 2026-08-15 04:55 UTC. 9 books, $1,000 paper capital each, no real money.
 
-| Bot | Holds | Value (asof) | 24h change |
+| Bot | Holds | 24h change | Value (asof) |
 |---|---|---|---|
-| trend (crypto) | XRP-USD | $1,015.69 (08-14) | No trade — held flat |
-| congress | 10 positions: NVDA, META, GOOG, TSM + new ADBE, PYPL, CSCO, PLTR, AVGO, MSFT | $1,018.86 (08-13) | **Bought 6 new (Rohit Khanna disclosures, 08-13) — cash 600→0** |
-| meanrev | UNH | $1,224.88 (08-13) | No trade |
-| commodity | DBC | $1,011.54 (08-13) | No trade |
-| allweather | 5-asset basket | $1,020.27 (08-13) | No trade |
-| hype (sentiment) | NET | $1,339.80 (08-13) | No trade |
-| Hunter | PLTR | $1,018.73 (08-13) | No trade — 5-day cooldown active |
-| Scholar | IWM | $1,034.76 (08-13) | No trade |
-| Analyst (regime) | SPY | $1,036.57 (08-13) | No trade |
-| Watcher | advisory, no position | — | Still stale — last scan 08-07 10:47 UTC |
+| crypto (trend) | XRP-USD | No trade | $1,011.56 (08-15) |
+| congress | 10 positions: NVDA/META/GOOG/TSM/ADBE/PYPL/CSCO/PLTR/AVGO/MSFT | No trade | $1,005.63 (08-14) |
+| meanrev | UNH | No trade | $1,232.58 (08-14) |
+| commodity | DBC | No trade | $1,019.53 (08-14) |
+| allweather | 5-asset basket | No trade | $1,018.60 (08-14) |
+| hype (sentiment) | CASH | **Sold NET → cash** | $1,326.92 (08-14) |
+| Hunter | PLTR | No trade | $990.45 (08-14) |
+| Scholar | IWM | No trade | $1,040.22 (08-14) |
+| Analyst | SPY | No trade | $1,034.53 (08-14) |
 
 ## Changed
-- **Congress fully deployed**: bought ADBE, PYPL, CSCO, PLTR, AVGO, MSFT (all Rohit Khanna, 08-13) — cash 600→0, 10 positions now.
-- No position changes on any other bot this 24h window.
-- **~6h10m cycle gap, 08-13 12:33 → 18:43 UTC.** GH Actions confirms: a run started 12:06 UTC hung and was cancelled at 18:42; a second run started 15:33 UTC was also cancelled at 18:41; a fresh run started 18:41 UTC succeeded and cycles resumed 18:43. Same shape as the recurring blackout flagged in prior days' supervisor notes.
-- Code change landed (not a bot data change): commit `6c66ff8` "guards: staleness honesty, fail-loud loop, live-pilot dry-run rail" — adds a preflight abort on corrupt `data/*.json` (writes `docs/red_flag.json`, none present now — fleet not RED), makes Watcher-staleness reporting honest (UNKNOWN+age instead of stale risk_level), and a dry-run-only live-pilot rail for meanrev/scholar. `LIVE` flag is off; no `data/live_orders_dryrun.jsonl` exists yet, so nothing has fired through it.
+- **Hype bot sold NET → CASH** (08-14, $328.06, net $1,328.59): reason logged as
+  "Grok scans stale (171h) — hype unverifiable, flying blind is not a strategy."
+- **Watcher (Grok risk scanner) came back online 08-14 23:54 UTC** — first fresh
+  scan since 08-07 10:47 UTC (~7.5 days dark). Only one fresh scan landed so far.
+- Two owner (non-cycle) commits landed: a crypto-lane Binance testnet shadow
+  feature, and an XAI_API_KEY billing probe — timing suggests the probe is
+  tied to the Watcher outage above.
+- No position changes on the other 7 bots.
 
 ## Needs a look
-- **Possible active blackout right now.** Last cycle commit 2026-08-14 00:20 UTC (~4h47m ago). GitHub Actions run `31756159700` (schedule-triggered) has been `in_progress` since 00:05 UTC with its last update at 00:33 UTC — no progress in ~4.5h. Same shape as the 12:06–18:41 hang the day before; unresolved as of this digest.
-- **Watcher (Grok sentinel) still dark.** Last successful scan unchanged at 2026-08-07 10:47 UTC (~162 hours stale, xAI credit exhaustion per prior supervisor note). Risk-gated bots (hype, Analyst) still running with no live severe-risk veto. Unclear whether today's staleness-honesty fix (`6c66ff8`) has propagated into a live decision record yet — worth checking next cycle.
-- Supervisor log (2026-08-13) flagged that the analyst bot's 08-11 decision asserted "Watcher remains caution" while only `get_price_history` was in its `tools_called` — i.e. it reported a tool fact it never fetched, against a source already 96h dark at the time. Logged for awareness; the staleness-honesty guard above targets this class of bug.
+- Hype bot exited to cash on stale-Grok grounds; the Watcher has since
+  recovered (see above) but hype hasn't re-entered on fresh data yet — worth
+  checking it re-engages normally next cycle.
+- Two cycle-cadence gaps this window: ~28 min (19:12→19:40 UTC) and ~31 min
+  (01:15→01:46 UTC) vs the usual ~13 min. Both self-recovered, no data loss.
+- Otherwise clean: 48 cycle commits landed in 24h, no exceptions found in
+  state/report files. 8 of 9 books above their $1,000 start; weakest is
+  Hunter at $990.45.
