@@ -1,26 +1,45 @@
 {
-  "ts": "2026-08-15T16:48:29+00:00",
-  "scanned": 78,
+  "ts": "2026-08-15T16:54:19+00:00",
+  "scanned": 79,
   "candidates": [
     {
-      "symbol": "PUMPUSDT",
+      "symbol": "WLDUSDT",
       "signal": "ignition",
-      "score": 0.6031,
-      "raw_score": 0.6031,
+      "score": 0.8762,
+      "raw_score": 0.8762,
       "weight": 1.0,
-      "price": 0.002836,
-      "why": "trades 5.1x and volume 7.0x the prior 4h, 61% taker-buy, $104,497 burst \u2014 while price has only moved +1.1%",
-      "chg_24h": 0.0107,
-      "vol_surge": 6.96,
-      "chg_1h": 0.0114,
-      "market_surge": 1.24
+      "price": 0.3493,
+      "why": "trades 8.6x and volume 23.7x the prior 4h, 83% taker-buy, $396,968 burst \u2014 while price has only moved +1.0%",
+      "chg_24h": 0.0181,
+      "vol_surge": 23.67,
+      "chg_1h": 0.0104,
+      "market_surge": 2.83
+    },
+    {
+      "symbol": "BICOUSDT",
+      "signal": "reversion",
+      "score": 0.3624,
+      "raw_score": 0.3624,
+      "weight": 1.0,
+      "price": 0.02157,
+      "why": "down -14% on the day (bottom decile of the market), now +0.6% over 15m with 2 green candles",
+      "chg_24h": -0.1385,
+      "vol_surge": 0.27,
+      "chg_1h": -0.0078,
+      "market_surge": 0.0
     }
   ],
   "scorecard": {
-    "reversion": {
-      "n_1h": 2,
+    "ignition": {
+      "n_1h": 1,
       "hit_rate_1h": 0.0,
-      "mean_ret_1h": -0.01745,
+      "mean_ret_1h": -0.00263,
+      "median_ret_1h": -0.00263
+    },
+    "reversion": {
+      "n_1h": 3,
+      "hit_rate_1h": 0.0,
+      "mean_ret_1h": -0.01393,
       "median_ret_1h": -0.01423
     }
   },
