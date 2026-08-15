@@ -1,9 +1,11 @@
 [Unit]
-Description=Run the lottery book every 10 minutes
+Description=Run the lottery book every 5 minutes
 
 [Timer]
 OnBootSec=2min
-OnUnitActiveSec=10min
+# 5 min (was 10): the research is blunt that volume events resolve in
+# minutes — halving the cycle halves the exit lag at ~5% of the API budget
+OnUnitActiveSec=5min
 # spread starts a little so every cycle doesn't hit Binance on the same second
 RandomizedDelaySec=45
 AccuracySec=30s

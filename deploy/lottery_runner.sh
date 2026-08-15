@@ -15,16 +15,22 @@ cd "$REPO" || { echo "repo not found: $REPO"; exit 1; }
 # pull is a warning, never a reason to skip the cycle: exits must still run
 git pull --rebase --autostash -q || echo "[runner] pull failed — running on cached state"
 
+# the Scout first: it writes data/scout_signals.json, which the book reads
+# this same cycle — fresh signals, not last cycle's leftovers
+python3 src/binance_scout.py || echo "[runner] scout failed — book falls back to Watcher-only"
+
 python3 src/lottery_live.py
 rc=$?
 
 # publish the book where GitHub Pages can serve it (data/ is not served):
 # state verbatim, ledger trimmed to the last 100 lines for the phone page
 cp -f data/lottery_state.json docs/lottery.json 2>/dev/null || true
+cp -f data/scout_signals.json docs/scout.json 2>/dev/null || true
 [ -f data/lottery_ledger.jsonl ] && tail -100 data/lottery_ledger.jsonl > docs/lottery_ledger.jsonl
 
 git add data/lottery_state.json data/lottery_ledger.jsonl \
-        docs/lottery.json docs/lottery_ledger.jsonl 2>/dev/null
+        data/scout_signals.json data/scout_scorecard.json data/scout_log.jsonl \
+        docs/lottery.json docs/scout.json docs/lottery_ledger.jsonl 2>/dev/null
 if ! git diff --cached --quiet; then
   git commit -q -m "lottery: $(date -u +'%Y-%m-%d %H:%M') UTC"
   for attempt in 1 2 3; do

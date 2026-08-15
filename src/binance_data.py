@@ -27,7 +27,13 @@ UA = "paper-bot-fleet/1.0"
 
 # Weight budget we hold ourselves to per minute — deliberately a fraction of
 # Binance's own, so a scan can never be the reason the fleet gets banned.
-SELF_BUDGET_1M = 400
+# Binance's own spot cap is 6000 request-weight/minute. A full scan costs
+# ~100 (exchangeInfo + all-symbol ticker) + 2 per kline call, so even 90
+# symbols lands near 280 — under 5% of the cap. This self-budget sits at a
+# quarter of Binance's, which leaves room to widen the scan considerably
+# before rate limits become the binding constraint (they are not today; the
+# 10-minute cadence is).
+SELF_BUDGET_1M = 1500
 USED_WEIGHT = {"value": 0, "minute": 0}
 
 # Leveraged tokens and stable/wrapped pairs are excluded from every scan:
@@ -151,7 +157,7 @@ def klines(symbol: str, interval: str = "5m", limit: int = 60) -> list[list]:
 def candle_series(rows: list[list]) -> dict[str, list[float]]:
     """Unpack klines into named float series (empty lists if malformed)."""
     out = {"close": [], "high": [], "low": [], "volume": [], "quote": [],
-           "trades": []}
+           "trades": [], "taker_buy": []}
     for r in rows:
         try:
             out["high"].append(float(r[2]))
@@ -160,6 +166,10 @@ def candle_series(rows: list[list]) -> dict[str, list[float]]:
             out["volume"].append(float(r[5]))
             out["quote"].append(float(r[7]))
             out["trades"].append(float(r[8]))
+            # index 10 = taker buy quote volume: the aggressive-buy share of
+            # the bar, which is how much of the move was market buyers
+            # lifting offers rather than passive fills
+            out["taker_buy"].append(float(r[10]))
         except Exception:
             continue
     return out

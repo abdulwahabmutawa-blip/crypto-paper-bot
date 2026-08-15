@@ -47,11 +47,18 @@ from hype_crypto_tracker import crypto_candidates, ENTRY_FRESH_H
 
 STATE = config.DATA / "lottery_state.json"
 SENTINEL = config.DATA / "sentinel_state.json"
-STOP_PCT = -0.10        # hard stop from entry
+STOP_PCT = -0.10        # hard stop from entry (Watcher-sourced hype rides)
 TRAIL_PCT = -0.15       # from the high-water mark: gives back at most this
 MAX_HOLD_H = 24.0       # hype has a half-life; do not marry a coin
 STALL_H = 6.0           # flat-to-down this long = the pump is over
 STALL_MIN_GAIN = 0.03   # ...unless it is at least this far ahead
+# Scout-sourced entries are volume events, and the research is unambiguous
+# that those resolve in MINUTES to a few hours, not days — a burst that has
+# not paid quickly is noise being held for no stated reason. So scout trades
+# run on a faster clock than Watcher hype rides:
+SCOUT_STOP_PCT = -0.06
+SCOUT_STALL_H = 2.0
+SCOUT_MAX_HOLD_H = 8.0
 # Crypto trades 24/7 — the weekday-only rule was inherited from a book whose
 # universe collapsed to crypto-only at weekends while equities were shut.
 # That reasoning does not transfer to a crypto-native book: weekend hype is
@@ -60,6 +67,28 @@ WEEKEND_ENTRIES = True
 MAX_ENTRIES_PER_DAY = 3
 STABLES = {"USDC", "FDUSD", "TUSD", "DAI", "EUR", "USDP", "BUSD"}
 KEY = "lottery"
+
+
+def scout_candidates(max_age_min: float = 30.0) -> list[dict]:
+    """The Scout's ranked opinion, if it is fresh enough to act on.
+
+    Read-only handoff through a file: the Scout cannot trade and this book
+    cannot scan, so neither can break the other. A stale signals file (the
+    Scout crashed, or the cycle is running without it) yields an empty list
+    rather than a stale trade — the same rule the Watcher gets."""
+    p = config.DATA / "scout_signals.json"
+    if not p.exists():
+        return []
+    try:
+        d = json.loads(p.read_text())
+        age = (datetime.now(timezone.utc)
+               - datetime.fromisoformat(d["ts"])).total_seconds() / 60.0
+    except Exception:
+        return []
+    if age > max_age_min:
+        print(f"[{KEY}] scout signals {age:.0f}min old — ignoring")
+        return []
+    return d.get("candidates") or []
 
 
 def top_gainer() -> tuple[str, float] | None:
@@ -213,6 +242,10 @@ def main():
     if held:
         p = binance_live.price(held)
         entry = st.get("entry_price")
+        is_scout = str(st.get("entry_source") or "").startswith("scout:")
+        stop_pct = SCOUT_STOP_PCT if is_scout else STOP_PCT
+        stall_h = SCOUT_STALL_H if is_scout else STALL_H
+        max_hold = SCOUT_MAX_HOLD_H if is_scout else MAX_HOLD_H
 
         # high-water mark, updated live
         if p:
@@ -226,7 +259,7 @@ def main():
             except Exception:
                 held_h = None
 
-        if p and entry and p / entry - 1 <= STOP_PCT:
+        if p and entry and p / entry - 1 <= stop_pct:
             st["stopped"][held] = scan_ts
             if sell(f"STOP-LOSS ({(p / entry - 1):.1%} from entry) — "
                     f"hype that bleeds gets cut"):
@@ -239,19 +272,23 @@ def main():
                 held = None
         # stall: hours in, still not meaningfully ahead. Hype that has not
         # paid by now is decay, and every hour held is a hour of exposure.
-        if held and p and entry and held_h is not None and held_h >= STALL_H \
+        if held and p and entry and held_h is not None and held_h >= stall_h \
                 and p / entry - 1 < STALL_MIN_GAIN:
-            if sell(f"STALLED ({held_h:.0f}h in, only "
+            if sell(f"STALLED ({held_h:.1f}h in, only "
                     f"{(p / entry - 1):+.1%}) — the pump never came"):
                 held = None
         # hard time cap: never marry a coin
-        if held and held_h is not None and held_h >= MAX_HOLD_H:
+        if held and held_h is not None and held_h >= max_hold:
             if sell(f"MAX HOLD ({held_h:.0f}h) — hype has a half-life"):
                 held = None
-        # momentum decay, checked every cycle for EVERY entry (free public
-        # data): once it is no longer among the day's real movers, the trade
-        # thesis is gone whatever the last Grok scan said.
-        if held and not in_top_gainers(held, n=25):
+        # Momentum decay — ONLY for entries whose thesis was "it is a top
+        # mover" (gainer/adopted/scout:breakout). An ignition entry has by
+        # definition NOT moved yet, so judging it by top-25 membership would
+        # sell it one cycle after buying, every time; its stall clock covers
+        # the fizzle case. Watcher hype rides are judged by scans, not rank.
+        src = str(st.get("entry_source") or "")
+        if held and (src in ("gainer", "adopted") or src == "scout:breakout") \
+                and not in_top_gainers(held, n=25):
             if sell("MOMENTUM GONE — no longer a top-25 24h mover"):
                 held = None
         if held and severe:
@@ -270,10 +307,6 @@ def main():
             if held not in hype_now:
                 if sell("Hype faded — coin off a newer euphoric scan"):
                     held = None
-        if held and st.get("entry_source") in ("gainer", "adopted") \
-                and not in_top_gainers(held):
-            if sell("Momentum faded — coin out of the top-10 24h gainers"):
-                held = None
 
     # ---- entry ----
     bals = binance_live.balances() or bals
@@ -290,11 +323,23 @@ def main():
                 if sym not in blacklisted and binance_live.price(sym):
                     pick, source = sym, "watcher"
                     break
+        # The Scout: fast, quantitative, every 10 min across all ~670 pairs.
+        # It supersedes the old naive top-24h-gainer fallback, which happily
+        # bought a coin that pumped six hours ago and was already rolling
+        # over (the live COWUSDT case: +49% on the day, -6.5% in the hour, on
+        # BELOW-average volume). The Scout requires the move to be alive now.
         if pick is None:
-            tg = top_gainer()
-            if tg and tg[0] not in {s for s, ts in st["stopped"].items()
-                                    if ts == scan_ts}:
-                pick, source = tg[0], "gainer"
+            blacklisted = {s for s, ts in st["stopped"].items() if ts == scan_ts}
+            for c in scout_candidates():
+                if c["symbol"] in blacklisted:
+                    continue
+                if binance_live.price(c["symbol"]):
+                    pick = c["symbol"]
+                    source = f"scout:{c['signal']}"
+                    print(f"[{KEY}] scout says {c['symbol']} "
+                          f"({c['signal']}, score {c.get('score')}): "
+                          f"{c.get('why', '')}")
+                    break
         if pick:
             why = binance_live.guard("BUY", pick, bals, None)
             if why:
