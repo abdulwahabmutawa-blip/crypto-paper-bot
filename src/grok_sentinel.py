@@ -101,6 +101,46 @@ def gather_context() -> str:
             chunks.append("CRYPTO NEWS (CoinDesk RSS): " + " | ".join(titles))
     except Exception:
         pass
+    try:  # CoinGecko trending coins (free public API, crypto-native crowd)
+        req = urllib.request.Request(
+            "https://api.coingecko.com/api/v3/search/trending",
+            headers={"User-Agent": "paper-bot-sentinel/1.0"})
+        d = json.load(urllib.request.urlopen(req, timeout=30))
+        coins = [f"{c['item'].get('symbol','').upper()}"
+                 f"(#{c['item'].get('market_cap_rank','?')})"
+                 for c in d.get("coins", [])][:7]
+        if coins:
+            chunks.append("COINGECKO TRENDING SEARCHES: " + " ".join(coins))
+    except Exception:
+        pass
+    try:  # Binance 24h top USDT movers (public market DATA, no key, no auth)
+        req = urllib.request.Request(
+            "https://api.binance.com/api/v3/ticker/24hr",
+            headers={"User-Agent": "paper-bot-sentinel/1.0"})
+        d = json.load(urllib.request.urlopen(req, timeout=30))
+        usdt = [t for t in d if t.get("symbol", "").endswith("USDT")
+                and float(t.get("quoteVolume", 0) or 0) > 20_000_000]
+        movers = sorted(usdt, key=lambda t: float(t.get("priceChangePercent", 0)),
+                        reverse=True)[:6]
+        if movers:
+            chunks.append("BINANCE 24H TOP MOVERS (>$20M vol): " + " | ".join(
+                f"{t['symbol'][:-4]} {float(t['priceChangePercent']):+.1f}%"
+                for t in movers))
+    except Exception:
+        pass
+    try:  # Reddit r/CryptoCurrency hot — crypto-native crowd chatter
+        req = urllib.request.Request(
+            "https://www.reddit.com/r/CryptoCurrency/hot.json?limit=12",
+            headers={"User-Agent": "paper-bot-sentinel/1.0 (research)"})
+        data = json.load(urllib.request.urlopen(req, timeout=30))
+        posts = [f"{c['data'].get('title','')[:80]} "
+                 f"(+{c['data'].get('score',0)})"
+                 for c in data.get("data", {}).get("children", [])
+                 if not c["data"].get("stickied")][:8]
+        if posts:
+            chunks.append("REDDIT r/CryptoCurrency HOT: " + " | ".join(posts))
+    except Exception:
+        pass
     try:  # StockTwits trending symbols (public endpoint, best-effort)
         req = urllib.request.Request(
             "https://api.stocktwits.com/api/2/trending/symbols.json",
@@ -145,8 +185,10 @@ this shape:
 
 Rules: "severe" is reserved for events like a major exchange collapse, war
 outbreak involving major powers, emergency central-bank action, or trading
-halts — not ordinary volatility. List at most 5 hype entries, most unusual
-chatter first. Empty risk_alerts list is a perfectly good answer."""
+halts — not ordinary volatility. List at most 8 hype entries, most unusual
+chatter first. When crypto chatter exists, always include the top crypto
+candidates (coins) with their mood — a hype-crypto book trades only those.
+Empty risk_alerts list is a perfectly good answer."""
 
 
 def call_grok() -> str:

@@ -1,0 +1,26 @@
+[Unit]
+Description=Lottery book — one cycle (real Binance spot, $20 hard cap)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=tradebot
+WorkingDirectory=/opt/tradebot/cloud-bot
+# Keys live ONLY here, 600, owned by root — never in git, never in the unit
+EnvironmentFile=/etc/lottery.env
+ExecStart=/opt/tradebot/cloud-bot/deploy/lottery_runner.sh
+TimeoutStartSec=600
+
+# a cycle must not outlive its window or two can overlap
+Restart=no
+
+# hardening: the bot needs network + its own repo, nothing else
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+ReadWritePaths=/opt/tradebot
+
+[Install]
+WantedBy=multi-user.target

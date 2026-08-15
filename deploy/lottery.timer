@@ -1,0 +1,13 @@
+[Unit]
+Description=Run the lottery book every 10 minutes
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=10min
+# spread starts a little so every cycle doesn't hit Binance on the same second
+RandomizedDelaySec=45
+AccuracySec=30s
+Persistent=false
+
+[Install]
+WantedBy=timers.target
