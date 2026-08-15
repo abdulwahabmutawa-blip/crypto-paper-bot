@@ -1,6 +1,35 @@
 {
-  "ts": "2026-08-15T08:04:18+00:00",
-  "risk_level": "none",
-  "risk_alerts": [],
+  "ts": "2026-08-15T15:42:40+00:00",
+  "risk_level": "caution",
+  "risk_alerts": [
+    {
+      "headline": "Iran ship strikes and Hormuz tensions with oil price pressure",
+      "markets": [
+        "both"
+      ],
+      "severity": "caution"
+    },
+    {
+      "headline": "Strategic petroleum reserve depletion nearing cavern damage concerns",
+      "markets": [
+        "stocks"
+      ],
+      "severity": "caution"
+    },
+    {
+      "headline": "SEC delays/cancels crypto rules vote and tokenization progress stalls",
+      "markets": [
+        "crypto"
+      ],
+      "severity": "caution"
+    },
+    {
+      "headline": "Strategy (MicroStrategy) BTC sales and MSCI index exclusion threats",
+      "markets": [
+        "crypto"
+      ],
+      "severity": "caution"
+    }
+  ],
   "note": "consumed by every risk-gated bot via sentinel_gate.severe(); verdicts older than 24h are treated as UNKNOWN, not calm"
 }
