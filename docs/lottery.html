@@ -56,6 +56,11 @@
   </div>
 
   <div class="card">
+    <h2>scout — what looks abnormal right now</h2>
+    <div id="scout" class="mono">loading…</div>
+  </div>
+
+  <div class="card">
     <h2>recent activity</h2>
     <div id="ledger" class="mono">loading…</div>
   </div>
@@ -87,12 +92,27 @@ async function load(){
       }).join(""):"<tr><td colspan=4>no closed trades yet</td></tr>")+"</tbody>";
   }catch(e){ $("val").textContent="no data yet"; }
   try{
+    const sc=await fetch("scout.json",{cache:"no-store"}).then(r=>r.json());
+    const cs=sc.candidates||[];
+    const age=Math.round((Date.now()-new Date(sc.ts).getTime())/60000);
+    document.getElementById("scout").textContent="";
+    const esc=s=>String(s).replace(/[&<>"']/g,c=>"&#"+c.charCodeAt(0)+";");
+    document.getElementById("scout").innerHTML=
+      (sc.veto?("⛔ market veto: "+esc(sc.veto)+"<br>"):"")+
+      (cs.length?cs.map(c=>esc(c.signal)+"  "+esc(c.symbol)+"  score "+
+        esc(c.score)+"<br><span style='color:var(--dim)'>"+esc(c.why||"")+
+        "</span>").join("<br>"):"nothing abnormal — scanning "+
+        esc(sc.scanned||0)+" pairs")+
+      "<br><span style='color:var(--dim)'>scan "+age+"min ago</span>";
+  }catch(e){ document.getElementById("scout").textContent="scout not published yet"; }
+  try{
     const txt=await fetch("lottery_ledger.jsonl",{cache:"no-store"}).then(r=>r.text());
     const lines=txt.trim().split("\n").filter(Boolean).slice(-8).reverse();
+    const esc2=s=>String(s).replace(/[&<>"']/g,c=>"&#"+c.charCodeAt(0)+";");
     $("ledger").innerHTML=lines.map(l=>{
       const e=JSON.parse(l);
-      return (e.ts||"").slice(5,16)+"  "+(e.event||"")+"  "+
-        (e.symbol||"")+"  "+(e.reason||e.msg||e.action||"");
+      return esc2((e.ts||"").slice(5,16)+"  "+(e.event||"")+"  "+
+        (e.symbol||"")+"  "+(e.reason||e.msg||e.action||""));
     }).join("<br>")||"nothing yet";
   }catch(e){ $("ledger").textContent="ledger not published yet"; }
   $("ts").textContent=new Date().toLocaleString();
