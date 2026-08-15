@@ -1,29 +1,49 @@
 {
   "created": "2026-08-15",
-  "held_symbol": "LINKUSDT",
-  "entry_price": 9.462,
-  "units": 1.1,
-  "entry_scan_ts": "2026-08-15T08:04:18+00:00",
-  "entry_source": "gainer",
-  "stopped": {},
-  "entries": {
-    "2026-08-15": 1
+  "held_symbol": "COWUSDT",
+  "entry_price": 0.1391,
+  "units": 75.4,
+  "entry_scan_ts": "2026-08-15T19:46:17+00:00",
+  "entry_source": "watcher",
+  "stopped": {
+    "LINKUSDT": "2026-08-15T21:14:17+00:00"
   },
-  "realized": [],
-  "last_value_usd": 10.59,
-  "last_updated_utc": "2026-08-15T21:09:06+00:00",
-  "hwm": 9.63,
-  "entry_time": "2026-08-15T15:09:09+00:00",
+  "entries": {
+    "2026-08-15": 2
+  },
+  "realized": [
+    {
+      "symbol": "LINKUSDT",
+      "entry_time": "2026-08-15T15:09:09+00:00",
+      "exit_time": "2026-08-15T21:14:17+00:00",
+      "entry_price": 9.462,
+      "exit_price": 9.562,
+      "units": 1.1,
+      "spent_usd": 10.4082,
+      "got_usd": 10.4226,
+      "pnl_pct": 1.06,
+      "pnl_usd": 0.0144,
+      "reason": "STALLED (6.1h in, only +1.1%) \u2014 the pump never came",
+      "date": "2026-08-15",
+      "exit": 9.562,
+      "entry": 9.462
+    }
+  ],
+  "last_value_usd": 10.47,
+  "last_updated_utc": "2026-08-15T21:14:17+00:00",
   "open_position": {
-    "symbol": "LINKUSDT",
-    "entry_time": "2026-08-15T15:09:09+00:00",
-    "entry_price": 9.462,
-    "current_price": 9.558,
-    "units": 1.1,
-    "spent_usd": 10.4082,
-    "value_usd": 10.5138,
-    "pnl_usd": 0.1056,
-    "pnl_pct": 1.01,
-    "source": "gainer"
-  }
+    "symbol": "COWUSDT",
+    "entry_time": "2026-08-15T21:14:17+00:00",
+    "entry_price": 0.1391,
+    "current_price": 0.1389,
+    "units": 75.4,
+    "spent_usd": 10.4881,
+    "value_usd": 10.4731,
+    "pnl_usd": -0.015,
+    "pnl_pct": -0.14,
+    "source": "watcher"
+  },
+  "spent_usd": 10.4881,
+  "hwm": 0.1391,
+  "entry_time": "2026-08-15T21:14:17+00:00"
 }
