@@ -16,6 +16,8 @@ set -a
 # shellcheck disable=SC1091
 . /etc/lottery.env
 set +a
+# same git identity the service uses (key lives under /opt, not /home)
+export GIT_SSH_COMMAND="ssh -i /opt/tradebot/.ssh/id_ed25519 -o UserKnownHostsFile=/opt/tradebot/.ssh/known_hosts -o StrictHostKeyChecking=accept-new"
 
 echo "== updating code"
 sudo -u tradebot git -C "$DIR" pull -q --rebase --autostash 2>/dev/null || \

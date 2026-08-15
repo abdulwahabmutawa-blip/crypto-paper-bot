@@ -37,11 +37,25 @@ sed -i 's/^#\?PermitRootLogin.*/PermitRootLogin prohibit-password/; s/^#\?Passwo
 systemctl restart ssh
 
 say "deploy key"
-KEYFILE=/home/$USER_NAME/.ssh/id_ed25519
+# Lives under /opt/tradebot, NOT /home: the systemd unit runs with
+# ProtectHome=true, which hides /home entirely — a key there works from a
+# root shell and then fails inside the service (first deploy did exactly
+# that: every push died on 'known_hosts: Permission denied').
+SSH_DIR=/opt/tradebot/.ssh
+KEYFILE=$SSH_DIR/id_ed25519
+install -d -m 700 -o "$USER_NAME" -g "$USER_NAME" "$SSH_DIR"
+# migrate a key from the old /home location if one exists
+if [ ! -f "$KEYFILE" ] && [ -f "/home/$USER_NAME/.ssh/id_ed25519" ]; then
+  mv "/home/$USER_NAME/.ssh/id_ed25519" "$KEYFILE"
+  mv "/home/$USER_NAME/.ssh/id_ed25519.pub" "$KEYFILE.pub" 2>/dev/null || true
+  chown "$USER_NAME:$USER_NAME" "$KEYFILE" "$KEYFILE.pub" 2>/dev/null || true
+fi
 if [ ! -f "$KEYFILE" ]; then
-  sudo -u "$USER_NAME" install -d -m 700 "/home/$USER_NAME/.ssh"
   sudo -u "$USER_NAME" ssh-keygen -t ed25519 -N "" -q -f "$KEYFILE"
 fi
+# pre-seed GitHub's host key so accept-new never needs a prompt
+sudo -u "$USER_NAME" bash -c "ssh-keyscan -t ed25519 github.com 2>/dev/null >> $SSH_DIR/known_hosts; sort -u $SSH_DIR/known_hosts -o $SSH_DIR/known_hosts"
+export GIT_SSH_COMMAND="ssh -i $KEYFILE -o UserKnownHostsFile=$SSH_DIR/known_hosts -o StrictHostKeyChecking=accept-new"
 
 say "repo"
 if [ ! -d "$DIR/.git" ]; then
@@ -59,7 +73,10 @@ chmod +x "$DIR/deploy/lottery_runner.sh"
 # Capture first, grep second: `ssh -T git@github.com` ALWAYS exits 1 (GitHub
 # grants no shell), and under `set -o pipefail` that non-zero status wins the
 # pipeline even when grep matches — which silently kept this on HTTPS.
-GH_PROBE=$(sudo -u "$USER_NAME" ssh -o StrictHostKeyChecking=accept-new \
+# Probe with the same identity/known_hosts the service will use.
+GH_PROBE=$(sudo -u "$USER_NAME" ssh -i "$KEYFILE" \
+             -o UserKnownHostsFile="$SSH_DIR/known_hosts" \
+             -o StrictHostKeyChecking=accept-new \
              -o BatchMode=yes -T git@github.com 2>&1 || true)
 if printf '%s' "$GH_PROBE" | grep -q "successfully authenticated"; then
   sudo -u "$USER_NAME" git -C "$DIR" remote set-url origin "$REPO_SSH"

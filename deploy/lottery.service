@@ -11,6 +11,13 @@ WorkingDirectory=/opt/tradebot/cloud-bot
 EnvironmentFile=/etc/lottery.env
 # no TTY here: git must fail fast instead of waiting on a credential prompt
 Environment=GIT_TERMINAL_PROMPT=0
+# ProtectHome=true (below) hides /home from this service — deliberately.
+# So the service's git credentials live under /opt/tradebot/.ssh (inside
+# ReadWritePaths), and HOME points there too, keeping git's config lookups
+# out of the hidden /home. First deployment shipped with the deploy key in
+# /home/tradebot/.ssh and every push failed with Permission denied.
+Environment=HOME=/opt/tradebot
+Environment=GIT_SSH_COMMAND=ssh -i /opt/tradebot/.ssh/id_ed25519 -o UserKnownHostsFile=/opt/tradebot/.ssh/known_hosts -o StrictHostKeyChecking=accept-new
 ExecStart=/opt/tradebot/cloud-bot/deploy/lottery_runner.sh
 TimeoutStartSec=600
 
