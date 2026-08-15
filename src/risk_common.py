@@ -48,6 +48,17 @@ def fee(ticker: str, value: float, spread_bps: float | None = None) -> float:
     return abs(value) * (base + spread / 2.0) / 10_000.0
 
 
+# Binance spot standard tier (no BNB discount): 10bps per side. The honest
+# best-case crypto venue tier for pilot-size fee math — vs the 25bps Kraken
+# model above. Used by fee_reality for the crypto lane.
+BINANCE_SPOT_BPS = 10.0
+
+
+def binance_fee(value: float, spread_bps: float | None = None) -> float:
+    spread = CRYPTO_SPREAD_DEFAULT_BPS if spread_bps is None else spread_bps
+    return abs(value) * (BINANCE_SPOT_BPS + spread / 2.0) / 10_000.0
+
+
 # ---- Live-pilot venue fees (IBKR Fixed tier, US stocks) ---------------------
 # The paper model above (10bps) flatters a small real account: IBKR Fixed is
 # $0.005/share with a $1 MINIMUM per order, capped at 1% of trade value. On a

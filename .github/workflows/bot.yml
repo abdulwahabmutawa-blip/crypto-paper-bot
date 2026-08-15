@@ -31,6 +31,10 @@ env:
   ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
   ALPACA_API_KEY_ID: ${{ secrets.ALPACA_API_KEY_ID }}
   ALPACA_API_SECRET_KEY: ${{ secrets.ALPACA_API_SECRET_KEY }}
+  # Binance SPOT TESTNET shadow (fake funds; base URL hardcoded to testnet
+  # in src/binance_broker.py — a mainnet key cannot trade through it)
+  BINANCE_TESTNET_API_KEY: ${{ secrets.BINANCE_TESTNET_API_KEY }}
+  BINANCE_TESTNET_API_SECRET: ${{ secrets.BINANCE_TESTNET_API_SECRET }}
   # LIVE=1 enables DRY-RUN order-intent logging only (live_guard + jsonl);
   # nothing is ever sent anywhere — see src/ibkr_broker.py activation ladder.
   LIVE: "1"

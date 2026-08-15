@@ -226,6 +226,13 @@ def update(st, close, pick, board, cash_reason=None, regime="TREND") -> dict:
                                  "value": round(gross, 2),
                                  "fee": round(f, 2),
                                  "reason": "Signal flip"})
+            # Binance TESTNET shadow (plumbing realism; no-op without keys)
+            import binance_broker
+            bf = binance_broker.shadow_fill("SELL", st["holding"], gross)
+            if bf:
+                st["trades"][-1]["testnet_fill"] = round(bf["price"], 8)
+                st["trades"][-1]["fill_gap_bps"] = round(
+                    (bf["price"] / cur_px - 1) * 10_000, 2)
         if pick == "CASH":
             st["holding"], st["units"], st["cash"] = "CASH", 0.0, value
             st.pop("entry_regime", None)
@@ -254,6 +261,13 @@ def update(st, close, pick, board, cash_reason=None, regime="TREND") -> dict:
                                             if regime == "CHOP" else
                                             f"Strongest eligible coin "
                                             f"({board[pick]['mom_pct']:+.1f}% 7d momentum)")})
+            # Binance TESTNET shadow (plumbing realism; no-op without keys)
+            import binance_broker
+            bf = binance_broker.shadow_fill("BUY", pick, spend)
+            if bf:
+                st["trades"][-1]["testnet_fill"] = round(bf["price"], 8)
+                st["trades"][-1]["fill_gap_bps"] = round(
+                    (bf["price"] / px - 1) * 10_000, 2)
 
     val = st["cash"] if st["holding"] == "CASH" else st["units"] * board[st["holding"]]["price"]
     bench = st["bench_units"] * board[BENCH]["price"]

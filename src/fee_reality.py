@@ -33,22 +33,27 @@ def main():
         if not trades or "history" not in st:
             continue
         days = max(1, len({h["date"] for h in st.get("history", [])}))
-        crypto = any(str(t.get("ticker", "")).endswith("-USD") for t in trades)
         paper_fees = sum(t.get("fee", 0.0) for t in trades)
         pilot_fees = 0.0
+        n_crypto = 0
         for t in trades:
             v = float(t["value"]) * SCALE
             u = float(t.get("units", 0.0)) * SCALE
-            if crypto:
-                # no crypto lane in the pilot; shown for scale honesty only
-                pilot_fees += risk_common.fee(t["ticker"], v)
+            # per-TRADE venue: crypto legs at Binance spot 10bps (best-case
+            # tier, lane still Track-C-gated), equity legs at IBKR Fixed
+            if str(t.get("ticker", "")).endswith("-USD"):
+                pilot_fees += risk_common.binance_fee(v)
+                n_crypto += 1
             else:
                 pilot_fees += risk_common.ibkr_fee(t["ticker"], v, u)
         ann = pilot_fees / PILOT * (365.0 / days) * 100.0
+        lane = ("crypto @ Binance 10bps" if n_crypto == len(trades) else
+                ("equity" if n_crypto == 0 else
+                 f"mixed ({n_crypto}/{len(trades)} crypto)"))
         rows.append({"bot": key, "trades": len(trades), "days": days,
                      "paper_fees_1000": paper_fees,
                      "pilot_fees_325": pilot_fees, "annualized_pct": ann,
-                     "lane": "CRYPTO (no pilot lane)" if crypto else "equity"})
+                     "lane": lane})
 
     rows.sort(key=lambda r: r["annualized_pct"])
     lines = [
