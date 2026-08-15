@@ -55,9 +55,13 @@ sudo -u "$USER_NAME" git -C "$DIR" config user.name "lottery-bot"
 sudo -u "$USER_NAME" git -C "$DIR" config user.email "bot@users.noreply.github.com"
 chmod +x "$DIR/deploy/lottery_runner.sh"
 
-# if the deploy key is already registered on GitHub, publish over SSH
-if sudo -u "$USER_NAME" ssh -o StrictHostKeyChecking=accept-new -o BatchMode=yes \
-     -T git@github.com 2>&1 | grep -q "successfully authenticated"; then
+# If the deploy key is already registered on GitHub, publish over SSH.
+# Capture first, grep second: `ssh -T git@github.com` ALWAYS exits 1 (GitHub
+# grants no shell), and under `set -o pipefail` that non-zero status wins the
+# pipeline even when grep matches — which silently kept this on HTTPS.
+GH_PROBE=$(sudo -u "$USER_NAME" ssh -o StrictHostKeyChecking=accept-new \
+             -o BatchMode=yes -T git@github.com 2>&1 || true)
+if printf '%s' "$GH_PROBE" | grep -q "successfully authenticated"; then
   sudo -u "$USER_NAME" git -C "$DIR" remote set-url origin "$REPO_SSH"
   PUBLISH="yes — deploy key active, the ledger will push to GitHub"
 else
