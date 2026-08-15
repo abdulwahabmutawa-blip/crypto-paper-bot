@@ -51,65 +51,31 @@ Write down the server's **IPv4 address**. That is the address you whitelist.
 
 ---
 
-## STEP 2 — first login and hardening
+## STEP 2 — one paste does the whole install
 
-From PowerShell (replace `SERVER_IP`):
-
-```bash
-ssh root@SERVER_IP
-```
-
-Then on the server, paste this block as one go:
+SSH in (`ssh root@SERVER_IP` from PowerShell) and run exactly this:
 
 ```bash
-apt update && apt -y upgrade
-apt -y install python3-pip python3-venv git ufw unattended-upgrades
-adduser --disabled-password --gecos "" tradebot
-install -d -o tradebot -g tradebot /opt/tradebot
-ufw allow OpenSSH && ufw --force enable
-systemctl enable --now unattended-upgrades
-sed -i 's/^#\?PermitRootLogin.*/PermitRootLogin prohibit-password/; s/^#\?PasswordAuthentication.*/PasswordAuthentication no/' /etc/ssh/sshd_config
-systemctl restart ssh
+bash <(curl -fsSL https://raw.githubusercontent.com/abdulwahabmutawa-blip/crypto-paper-bot/main/deploy/bootstrap.sh)
 ```
 
-That gives you: patched box, key-only SSH, firewall allowing SSH only, an
-unprivileged `tradebot` user, automatic security updates.
+It patches the box, locks SSH to keys only, enables the firewall, creates
+the unprivileged `tradebot` user, clones the repo, installs dependencies
+and the systemd units, generates a deploy key, and prints:
+
+- **the server's IP** (what you whitelist on the Binance key), and
+- **the deploy key** to paste into GitHub → repo → Settings → Deploy keys →
+  *Allow write access*.
+
+It arms nothing: no key is written and the timer stays off. Re-running it is
+safe — after you add the deploy key, run it a second time and it switches
+the remote to SSH so the ledger publishes to GitHub.
+
+Steps 3–5 below are what the script leaves for you.
 
 ---
 
-## STEP 3 — let the server talk to GitHub
-
-The VPS must pull the repo and push its ledger. Use a **deploy key** — an
-SSH key that grants access to this one repository and nothing else in your
-account.
-
-On the server:
-
-```bash
-sudo -u tradebot ssh-keygen -t ed25519 -N "" -f /home/tradebot/.ssh/id_ed25519
-sudo -u tradebot cat /home/tradebot/.ssh/id_ed25519.pub
-```
-
-Copy that public line. In the browser: GitHub → your `crypto-paper-bot`
-repo → **Settings → Deploy keys → Add deploy key** → paste it → tick
-**Allow write access** → Add.
-
-Back on the server, clone and install:
-
-```bash
-sudo -u tradebot git clone git@github.com:abdulwahabmutawa-blip/crypto-paper-bot.git /opt/tradebot/cloud-bot
-cd /opt/tradebot/cloud-bot
-sudo -u tradebot git config user.name "lottery-bot"
-sudo -u tradebot git config user.email "bot@users.noreply.github.com"
-pip3 install --break-system-packages -r requirements.txt
-chmod +x deploy/lottery_runner.sh
-```
-
-(First `git clone` will ask to trust GitHub's host key — type `yes`.)
-
----
-
-## STEP 4 — whitelist the IP on the API key
+## STEP 3 — whitelist the IP on the API key
 
 In the Binance app or on `binance.com` → **API Management** → edit your key:
 
@@ -124,7 +90,7 @@ Binance may e-mail a confirmation link; click it or the change won't apply.
 
 ---
 
-## STEP 5 — put the keys on the server (never in git)
+## STEP 4 — put the keys on the server (never in git)
 
 Keys live in one root-owned file that git has never heard of:
 
@@ -151,7 +117,7 @@ Rules that keep this safe:
 
 ---
 
-## STEP 6 — verify before arming
+## STEP 5 — verify before arming
 
 ```bash
 sudo -u tradebot env $(sudo cat /etc/lottery.env | xargs) \
@@ -165,12 +131,11 @@ turn withdrawals off and re-run.
 
 ---
 
-## STEP 7 — install the timer
+## STEP 6 — go live
+
+The units are already installed by the bootstrap; this just starts them.
 
 ```bash
-sudo cp /opt/tradebot/cloud-bot/deploy/lottery.service /etc/systemd/system/
-sudo cp /opt/tradebot/cloud-bot/deploy/lottery.timer /etc/systemd/system/
-sudo systemctl daemon-reload
 sudo systemctl start lottery.service      # one manual cycle, watch it
 sudo systemctl status lottery.service --no-pager
 ```

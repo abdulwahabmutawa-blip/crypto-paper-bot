@@ -9,6 +9,8 @@ User=tradebot
 WorkingDirectory=/opt/tradebot/cloud-bot
 # Keys live ONLY here, 600, owned by root — never in git, never in the unit
 EnvironmentFile=/etc/lottery.env
+# no TTY here: git must fail fast instead of waiting on a credential prompt
+Environment=GIT_TERMINAL_PROMPT=0
 ExecStart=/opt/tradebot/cloud-bot/deploy/lottery_runner.sh
 TimeoutStartSec=600
 
