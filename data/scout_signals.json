@@ -1,26 +1,12 @@
 {
-  "ts": "2026-08-15T17:53:06+00:00",
+  "ts": "2026-08-15T17:58:49+00:00",
   "scanned": 75,
-  "candidates": [
-    {
-      "symbol": "BCHUSDT",
-      "signal": "ignition",
-      "score": 0.7562,
-      "raw_score": 0.7562,
-      "weight": 1.0,
-      "price": 205.0,
-      "why": "trades 5.4x and volume 31.2x the prior 4h, 86% taker-buy, $867,806 burst \u2014 while price has only moved -1.0%",
-      "chg_24h": 0.0119,
-      "vol_surge": 31.23,
-      "chg_1h": -0.0097,
-      "market_surge": 12.42
-    }
-  ],
+  "candidates": [],
   "scorecard": {
     "ignition": {
-      "n_1h": 6,
+      "n_1h": 7,
       "hit_rate_1h": 0.0,
-      "mean_ret_1h": -0.0037,
+      "mean_ret_1h": -0.00293,
       "median_ret_1h": -0.00194
     },
     "breakout": {
@@ -30,10 +16,10 @@
       "median_ret_1h": 0.06492
     },
     "reversion": {
-      "n_1h": 5,
+      "n_1h": 6,
       "hit_rate_1h": 0.0,
-      "mean_ret_1h": -0.01526,
-      "median_ret_1h": -0.01423
+      "mean_ret_1h": -0.0131,
+      "median_ret_1h": -0.0069
     }
   },
   "note": "READ-ONLY scout. Ranked opinion only \u2014 the book decides."
