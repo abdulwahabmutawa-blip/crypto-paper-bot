@@ -15,13 +15,15 @@ DIR=/opt/tradebot/cloud-bot
 [ "$(id -u)" -eq 0 ] || { echo "run this as root (you are root if you just ssh'd in)"; exit 1; }
 
 echo
-echo "Paste your Binance API KEY, then press Enter:"
+echo "Paste your Binance API KEY and press Enter (this one IS visible):"
 read -r KEY
 echo
-echo "Paste your Binance API SECRET, then press Enter."
-echo "(nothing will appear on screen as you paste — that is deliberate)"
+echo "Now paste your Binance API SECRET and PRESS ENTER."
+echo "The screen stays blank while you paste — that is deliberate, the"
+echo "characters are still going in. It will look frozen until you press"
+echo "Enter, so press Enter even if nothing appeared."
 read -rs SECRET
-echo
+echo "  (received ${#SECRET} characters)"
 
 KEY="${KEY//[[:space:]]/}"
 SECRET="${SECRET//[[:space:]]/}"
