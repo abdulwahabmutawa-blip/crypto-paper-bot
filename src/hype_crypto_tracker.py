@@ -11,7 +11,7 @@ Rules (all mechanical, none waivable):
   * ENTRY: top euphoric crypto from the LATEST scan, and only while that scan
     is fresh (<= 9h old): stale hype is not hype. Max ONE new entry per UTC
     day (fee math: worst case ~30 sides/month ≈ 4%/month at Binance tier).
-    No weekend entries (the SHIB Saturday lesson was a crypto lesson).
+    Crypto is 24/7, so entries run every day of the week.
   * EXIT, in priority order: hard stop -10% from entry (any time, 24/7);
     Watcher SEVERE -> flat; scans stale >24h -> flat (flying blind is not a
     strategy); symbol absent from the euphoric list of a scan NEWER than the
@@ -24,6 +24,10 @@ Rules (all mechanical, none waivable):
   * Every fill is shadowed to the Binance SPOT TESTNET (binance_broker) —
     plumbing realism from day one.
 
+Prices come from BINANCE public data (binance_data), not Yahoo: this is the
+paper twin of a real Binance book, so it must mark and fill against the same
+venue the live order meets, and cover the same universe of coins.
+
 Benchmark: $1,000 BTC buy-and-hold (crypto book, crypto bar).
 Promotion to real money: Track C gate only (GO_LIVE_PLAN_2026-08-14.md) —
 4+ weeks, net-positive after fees, ahead of benchmark, zero silent failures.
@@ -34,13 +38,9 @@ from __future__ import annotations
 import json
 from datetime import datetime, timezone
 
-import pandas as pd
-import yfinance as yf
-
+import binance_data
 import config
-import market_hours
 import risk_common
-import sentinel_gate
 from sentinel_trader import CRYPTO, scan_age_hours, scan_is_stale, to_ticker
 
 STATE = config.DATA / "hypecrypto_state.json"
@@ -60,9 +60,8 @@ def crypto_candidates(scan: dict | None) -> list[str]:
     2026-08-15) — its symbols are coins by construction, so no whitelist
     filter applies and a memecoin outside the CRYPTO set still qualifies.
     Fallback for older scans: euphoric entries of the mixed hype list that
-    match the known-coin set. Tradability is enforced downstream by each
-    consumer's own price source (yfinance for the paper twin, Binance for
-    the lottery), never here."""
+    match the known-coin set. Tradability is enforced downstream by the
+    Binance price lookup both books now share, never here."""
     out = []
     for h in (scan or {}).get("crypto_hype", []):
         if h.get("mood") != "euphoric":
@@ -82,16 +81,17 @@ def crypto_candidates(scan: dict | None) -> list[str]:
 
 
 def quotes(tickers):
-    tickers = sorted(set(tickers) | {BENCH})
-    raw = yf.download(tickers, period="5d", auto_adjust=True, progress=False)
-    close = raw["Close"] if isinstance(raw.columns, pd.MultiIndex) else raw
-    if isinstance(close, pd.Series):
-        close = close.to_frame(tickers[0])
-    close = market_hours.trim_incomplete_bars(close)
-    filled = close.ffill()
-    last = filled.iloc[-1]
-    return ({t: float(last[t]) for t in tickers
-             if t in filled.columns and pd.notna(last[t])}, close)
+    """Live Binance spot prices, keyed by the fleet's '-USD' style ticker.
+
+    Binance, not Yahoo: this book is the paper twin of a real Binance book,
+    so it must fill at the prices the real order would meet and cover the
+    same universe. Yahoo quotes drift from Binance and omit most of the
+    coins the Watcher surfaces, which made the twin uncomparable to the
+    live book — and an uncomparable twin is not evidence of anything."""
+    wanted = sorted(set(list(tickers) + [BENCH]))
+    sym_of = {t: binance_data.to_symbol(t) for t in wanted}
+    got = binance_data.prices(sym_of.values())
+    return {t: got[s] for t, s in sym_of.items() if s in got}
 
 
 def main():
@@ -109,7 +109,7 @@ def main():
 
     st = json.loads(STATE.read_text()) if STATE.exists() else None
     if st is None:
-        px0, _ = quotes([])
+        px0 = quotes([])
         if BENCH not in px0:
             print(f"[{KEY}] no benchmark price — cannot initialize")
             return
@@ -120,7 +120,7 @@ def main():
               "intraday": []}
         print(f"[{KEY}] NEW sim {today}")
 
-    px, rawc = quotes(cands + ([st["holding"]] if st["holding"] != "CASH" else []))
+    px = quotes(cands + ([st["holding"]] if st["holding"] != "CASH" else []))
     tradeable = [t for t in cands if t in px]
 
     def sell(reason) -> bool:
@@ -229,8 +229,9 @@ def main():
         return
     val = st["cash"] if st["holding"] == "CASH" else st["units"] * px[st["holding"]]
     bench = st["bench_units"] * px[BENCH]
-    priced = BENCH if st["holding"] == "CASH" else st["holding"]
-    asof = market_hours.last_real_date(rawc, priced) or today
+    # crypto trades 24/7 — every UTC day is a real trading day, so the
+    # equity-calendar dance (last_real_date / bench_asof) does not apply
+    asof = today
     newest = st["history"][-1]["date"] if st["history"] else ""
     if asof < newest:
         print(f"[{KEY}] STALE BAR {asof} < {newest} — mark skipped")

@@ -29,8 +29,14 @@ import config
 
 BASE = "https://api.x.ai/v1"
 MODEL = "grok-4.5"
-SCAN_INTERVAL_H = 8
-MONTHLY_CAP = 100
+# 2h cadence (2026-08-15, owner decision): hype-riding books were reacting to
+# fade up to 8h late, which is an eternity in a pump. 12 scans/day * 31 = 372,
+# so the cap sits at 400. This is ~4x the previous credit burn and the Watcher
+# serves the whole fleet, not just the crypto books — if credits run out the
+# gate reads UNKNOWN fleet-wide and every risk-gated bot stops entering, so
+# the balance matters more now than it did at 8h.
+SCAN_INTERVAL_H = 2
+MONTHLY_CAP = 400
 STATE = config.DATA / "sentinel_state.json"
 VERDICT = config.DATA / "sentinel_verdict.json"
 
