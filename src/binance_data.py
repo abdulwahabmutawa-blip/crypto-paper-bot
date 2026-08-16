@@ -221,6 +221,22 @@ def open_interest_drop(symbol: str) -> float | None:
     return (peak - oi[-1]) / peak
 
 
+def long_short_ratio(symbol: str) -> float | None:
+    """Latest 1h global long/short ACCOUNT ratio for a USDT-M perp (free,
+    keyless). >1 = more accounts long than short. Very high readings mean
+    the crowd is already all-in long — late-entry fuel is spent and the
+    squeeze risk points down. None if no perp exists or the call failed:
+    unknown, not neutral."""
+    d = _fget("/futures/data/globalLongShortAccountRatio",
+              {"symbol": symbol, "period": "1h", "limit": 1}, weight=1)
+    if not isinstance(d, list) or not d:
+        return None
+    try:
+        return float(d[-1]["longShortRatio"])
+    except Exception:
+        return None
+
+
 def candle_series(rows: list[list]) -> dict[str, list[float]]:
     """Unpack klines into named float series (empty lists if malformed)."""
     out = {"close": [], "high": [], "low": [], "volume": [], "quote": [],

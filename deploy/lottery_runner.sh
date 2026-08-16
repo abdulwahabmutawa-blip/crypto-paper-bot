@@ -32,8 +32,9 @@ if ! python3 src/state_preflight.py; then
   exit 1
 fi
 
-# 3) the Scout first: it writes data/scout_signals.json, which the book
-#    reads this same cycle — fresh signals, not last cycle's leftovers
+# 3) heat map first (cross-source social agreement), then the Scout which
+#    consumes it — both write files the book reads this same cycle
+python3 src/social_heat.py || echo "[runner] heat map failed — scout runs without the heat surface"
 python3 src/binance_scout.py || echo "[runner] scout failed — book falls back to Watcher-only"
 
 python3 src/lottery_live.py
@@ -48,6 +49,7 @@ cp -f data/scout_signals.json docs/scout.json 2>/dev/null || true
 # stage per-file: one missing pathspec must not abort the whole add
 for f in data/lottery_state.json data/lottery_ledger.jsonl \
          data/scout_signals.json data/scout_scorecard.json data/scout_log.jsonl \
+         data/social_heat.json \
          docs/lottery.json docs/scout.json docs/lottery_ledger.jsonl; do
   git add "$f" 2>/dev/null || true
 done

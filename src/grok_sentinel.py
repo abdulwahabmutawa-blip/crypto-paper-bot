@@ -157,6 +157,84 @@ def gather_context() -> str:
             chunks.append("STOCKTWITS TRENDING: " + " ".join(syms))
     except Exception:
         pass
+    try:  # cross-source heat map (social_heat.py on the VPS's 10-min clock):
+        # pre-counted agreement across independent surfaces — the strongest
+        # lead in this whole context block when it fires
+        hf = config.DATA / "social_heat.json"
+        d = json.loads(hf.read_text())
+        age_h = (datetime.now(timezone.utc)
+                 - datetime.fromisoformat(d["ts"])).total_seconds() / 3600.0
+        hot = [h for h in d.get("heat", []) if h.get("surfaces", 0) >= 2]
+        if hot and age_h <= 2.0:
+            bits = []
+            for h in hot[:6]:
+                b = (f"{h['symbol']} {h['surfaces']} surfaces "
+                     f"({'+'.join(h.get('sources', []))})")
+                if h.get("funding") is not None:
+                    b += f" funding {h['funding']:+.3%}"
+                if h.get("long_short") is not None:
+                    b += f" L/S {h['long_short']}"
+                bits.append(b)
+            chunks.append(f"CROSS-SOURCE HEAT ({age_h:.1f}h old, mechanical "
+                          f"count of independent surfaces): "
+                          + " | ".join(bits))
+    except Exception:
+        pass
+    try:  # perp funding extremes — hard numbers on crowd positioning (free,
+        # keyless). Longs paying heavily = over-eager crowd, fragile.
+        req = urllib.request.Request(
+            "https://fapi.binance.com/fapi/v1/premiumIndex",
+            headers={"User-Agent": "paper-bot-sentinel/1.0"})
+        d = json.load(urllib.request.urlopen(req, timeout=30))
+        rates = []
+        for row in d if isinstance(d, list) else []:
+            s = row.get("symbol", "")
+            try:
+                r = float(row.get("lastFundingRate", 0) or 0)
+            except Exception:
+                continue
+            if s.endswith("USDT") and abs(r) >= 0.0005:
+                rates.append((s[:-4], r))
+        if rates:
+            rates.sort(key=lambda x: -x[1])
+            top = [f"{s} {r:+.3%}" for s, r in rates[:4]]
+            bot = [f"{s} {r:+.3%}" for s, r in rates[-3:] if r < 0]
+            line = "PERP FUNDING EXTREMES — longs paying: " + ", ".join(top)
+            if bot:
+                line += " · shorts paying: " + ", ".join(bot)
+            chunks.append(line)
+    except Exception:
+        pass
+    try:  # CryptoPanic hot news with community votes (free developer token;
+        # silently absent without CRYPTOPANIC_TOKEN)
+        token = os.environ.get("CRYPTOPANIC_TOKEN", "").strip()
+        if token:
+            for url in (
+                "https://cryptopanic.com/api/developer/v2/posts/"
+                f"?auth_token={token}&public=true&filter=hot",
+                "https://cryptopanic.com/api/v1/posts/"
+                f"?auth_token={token}&public=true&filter=hot",
+            ):
+                try:
+                    req = urllib.request.Request(
+                        url, headers={"User-Agent": "paper-bot-sentinel/1.0"})
+                    d = json.load(urllib.request.urlopen(req, timeout=30))
+                    posts = []
+                    for p in d.get("results", [])[:8]:
+                        cur = ",".join(
+                            str(c.get("code", "")) for c in
+                            (p.get("currencies") or p.get("instruments")
+                             or [])[:3])
+                        posts.append(f"{p.get('title', '')[:90]}"
+                                     + (f" [{cur}]" if cur else ""))
+                    if posts:
+                        chunks.append("CRYPTOPANIC HOT NEWS: "
+                                      + " | ".join(posts))
+                        break
+                except Exception:
+                    continue
+    except Exception:
+        pass
     gauges = gather_gauges()
     if gauges:
         bits = []

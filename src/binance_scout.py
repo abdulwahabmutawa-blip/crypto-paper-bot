@@ -44,6 +44,14 @@ THREE SIGNALS, in the order a move actually unfolds:
               cause is usually an exploit, an unlock, or a delisting, and
               none of those bounce on a schedule.
 
+  HEAT      — (2026-08-16, owner request) social_heat.py's cross-source
+              agreement: the same coin trending on 3+ INDEPENDENT surfaces
+              at once (CoinGecko, Reddit, StockTwits, Binance movers, the
+              Watcher's X read, CryptoPanic). One surface is noise and any
+              one is gameable; simultaneous agreement is the crowd actually
+              arriving. Price/volume features are not required here — the
+              claim is social, and the gate decides if the claim pays.
+
 WHAT IT DELIBERATELY DOES NOT DO: predict. It has no view on where anything
 is going. It reports what is measurably unusual this minute and lets the
 book's own stops decide how long to stay.
@@ -100,6 +108,9 @@ SIGNALS = config.DATA / "scout_signals.json"
 LOG = config.DATA / "scout_log.jsonl"
 SCORECARD = config.DATA / "scout_scorecard.json"
 SNAPSHOT = config.DATA / "scout_snapshot.json"
+HEAT_FILE = config.DATA / "social_heat.json"
+
+SIGNAL_TYPES = ("ignition", "breakout", "reversion", "heat")
 
 # Thresholds below are tagged [EVIDENCE] where a published study supports the
 # number, and [JUDGEMENT] where it is a defensible guess. Research pass
@@ -208,6 +219,12 @@ RESIGNAL_COOLDOWN_H = 3.0   # [EVIDENCE — log autopsy 08-16] BICO was flagged
 # before the real-money book may act on its candidates:
 MIN_ACT_SAMPLES = 12        # [JUDGEMENT] fewer is a coin-flip streak
 MIN_ACT_HIT_4H = 0.40
+
+# ---- heat (cross-source social agreement, from social_heat.py) --------------
+HEAT_MIN_SURFACES = 3       # [JUDGEMENT] 1 surface is noise, 2 is a maybe,
+                            # 3 independent surfaces at once is the pattern
+                            # worth logging — the gate decides if it pays
+HEAT_FRESH_MIN = 45.0       # stale heat is yesterday's crowd
 
 
 def _pct(a: float, b: float) -> float:
@@ -488,6 +505,52 @@ def signal_actionable(card: dict, signal: str) -> tuple[bool, str]:
     return True, ""
 
 
+def heat_candidates(tickers_by_sym: dict[str, dict], card: dict,
+                    now: datetime) -> list[dict]:
+    """Candidates from cross-source social agreement (social_heat.py).
+
+    No price/volume gate of its own beyond the universe filters the ticker
+    already passed — the claim being tested is purely social, and mixing in
+    momentum conditions here would make the scorecard unreadable (whose edge
+    was it?). The gate machinery decides whether the social claim pays."""
+    if not HEAT_FILE.exists():
+        return []
+    try:
+        d = json.loads(HEAT_FILE.read_text())
+        age_min = (now - datetime.fromisoformat(d["ts"])
+                   ).total_seconds() / 60.0
+    except Exception:
+        return []
+    if age_min > HEAT_FRESH_MIN:
+        return []
+    out = []
+    for h in d.get("heat") or []:
+        if h.get("surfaces", 0) < HEAT_MIN_SURFACES:
+            continue
+        sym = h["symbol"] + "USDT"
+        t = tickers_by_sym.get(sym)
+        if not t:            # not spot-tradeable / failed universe filters
+            continue
+        raw = min(h["surfaces"], 5) / 5.0
+        w = signal_weight(card, "heat")
+        why = (f"lit up on {h['surfaces']} independent surfaces at once "
+               f"({'+'.join(h.get('sources', []))})")
+        if h.get("funding") is not None:
+            why += f" · funding {h['funding']:+.3%}"
+        if h.get("long_short") is not None:
+            why += f" · L/S {h['long_short']}"
+        out.append({
+            "symbol": sym, "signal": "heat",
+            "score": round(raw * w, 4), "raw_score": round(raw, 4),
+            "weight": round(w, 3), "price": float(t.get("lastPrice", 0) or 0),
+            "why": why,
+            "chg_24h": round(float(t.get("priceChangePercent", 0) or 0) / 100.0, 4),
+            "vol_surge": None, "chg_1h": None,
+            "market_surge": h["surfaces"],
+        })
+    return out
+
+
 def recently_flagged(rows: list[dict], symbol: str, signal: str,
                      now: datetime) -> bool:
     """True if this (symbol, signal) was already flagged inside the
@@ -590,7 +653,7 @@ def resolve_outcomes(now: datetime) -> tuple[dict, list[dict]]:
     card = {"signals": {}, "ruleset": RULESET,
             "updated": now.isoformat(timespec="seconds")}
     live = [r for r in rows if r.get("ruleset") == RULESET]
-    for sig in ("ignition", "breakout", "reversion"):
+    for sig in SIGNAL_TYPES:
         entry = {}
         for h in HORIZONS_H:
             # `is not None`: sentinels are excluded, a legitimate 0.0 counts
@@ -690,6 +753,11 @@ def scan(now: datetime | None = None) -> dict:
                 "market_surge": f["market_surge"],
             })
 
+    # the heat layer: social agreement candidates join the same ranking,
+    # cooldown, gate, and logging as every price-driven signal
+    cands.extend(heat_candidates({t["symbol"]: t for t in tickers},
+                                 card, now))
+
     cands.sort(key=lambda c: -c["score"])
     cands = cands[:TOP_N]
 
@@ -738,7 +806,7 @@ def scan(now: datetime | None = None) -> dict:
     # THE GATE: stamp every candidate with whether its signal type has
     # EARNED the right to real money under the current ruleset
     gate = {}
-    for sig in ("ignition", "breakout", "reversion"):
+    for sig in SIGNAL_TYPES:
         ok, why_not = signal_actionable(card, sig)
         gate[sig] = "actionable" if ok else why_not
     for c in cands:

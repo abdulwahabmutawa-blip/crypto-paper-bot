@@ -28,6 +28,9 @@ concurrency:
 
 env:
   XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+  # CryptoPanic free developer token — feeds the sentinel's news context.
+  # Optional: everything degrades gracefully while the secret is unset.
+  CRYPTOPANIC_TOKEN: ${{ secrets.CRYPTOPANIC_TOKEN }}
   ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
   ALPACA_API_KEY_ID: ${{ secrets.ALPACA_API_KEY_ID }}
   ALPACA_API_SECRET_KEY: ${{ secrets.ALPACA_API_SECRET_KEY }}
