@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-16T13:10:31+00:00",
-  "scanned": 52,
+  "ts": "2026-08-16T13:16:13+00:00",
+  "scanned": 53,
   "ruleset": 2,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "REUSDT",
+      "signal": "ignition",
+      "score": 0.8639,
+      "raw_score": 0.8639,
+      "weight": 1.0,
+      "price": 0.4469,
+      "why": "trades 27.0x and volume 20.3x the prior 4h, 60% taker-buy, $100,479 burst \u2014 while price has only moved -1.5%",
+      "chg_24h": -0.0016,
+      "vol_surge": 20.29,
+      "chg_1h": -0.0148,
+      "market_surge": 9.93,
+      "actionable": false,
+      "status": "probation \u2014 4/12 resolved 4h samples under ruleset 2"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 4/12 resolved 4h samples under ruleset 2",
     "breakout": "probation \u2014 0/12 resolved 4h samples under ruleset 2",
