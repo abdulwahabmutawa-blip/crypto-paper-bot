@@ -17,3 +17,5 @@
 {"ts": "2026-08-16T02:46:33+00:00", "event": "api_error", "path": "/v3/ticker/price", "code": 400, "body": "{\"code\":-1121,\"msg\":\"Invalid symbol.\"}"}
 {"ts": "2026-08-16T04:10:48+00:00", "event": "api_error", "path": "/v3/order", "code": 400, "body": "{\"code\":-2010,\"msg\":\"Account has insufficient balance for requested action.\"}"}
 {"ts": "2026-08-16T04:10:48+00:00", "event": "order_unconfirmed", "action": "BUY", "symbol": "JSTUSDT", "note": "POST returned nothing \u2014 order MAY have filled; reconcile against balances next cycle"}
+{"ts": "2026-08-16T04:16:34+00:00", "event": "api_error", "path": "/v3/order", "code": 400, "body": "{\"code\":-2010,\"msg\":\"Account has insufficient balance for requested action.\"}"}
+{"ts": "2026-08-16T04:16:34+00:00", "event": "order_unconfirmed", "action": "BUY", "symbol": "JSTUSDT", "note": "POST returned nothing \u2014 order MAY have filled; reconcile against balances next cycle"}
