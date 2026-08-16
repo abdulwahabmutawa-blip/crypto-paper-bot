@@ -1,14 +1,15 @@
 {
-  "ts": "2026-08-16T12:32:29+00:00",
+  "ts": "2026-08-16T12:37:49+00:00",
   "sources": {
     "coingecko": [
       "CHIP",
-      "PENGU",
       "SUI",
       "SOL",
+      "PENGU",
       "LINK",
       "ONDO",
-      "CRV"
+      "BTC",
+      "KAITO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -27,13 +28,23 @@
   },
   "heat": [
     {
+      "symbol": "BTC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 2.4e-05,
+      "long_short": 2.05
+    },
+    {
       "symbol": "CHIP",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "watcher"
       ],
-      "funding": -0.000368,
+      "funding": -0.00036,
       "long_short": 1.33
     },
     {
@@ -52,23 +63,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -4.7e-05
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 2.5e-05
-    },
-    {
-      "symbol": "CRV",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 2.8e-05
+      "funding": -3.1e-05
     },
     {
       "symbol": "ETH",
@@ -84,7 +79,15 @@
       "sources": [
         "movers"
       ],
-      "funding": -2.2e-05
+      "funding": -1.5e-05
+    },
+    {
+      "symbol": "KAITO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -0.000536
     },
     {
       "symbol": "LINK",
@@ -92,7 +95,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.1e-05
+      "funding": 4.3e-05
     },
     {
       "symbol": "ONDO",
@@ -116,7 +119,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.1e-05
+      "funding": 5e-05
     },
     {
       "symbol": "XPL",
@@ -124,7 +127,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.0
+      "funding": 1e-06
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
