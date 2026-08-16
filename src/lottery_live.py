@@ -261,6 +261,13 @@ def main():
         binance_live.log({"event": "exit", "symbol": held, "reason": reason,
                           "entry_price": entry_px, "exit_price": exit_px,
                           "pnl_pct": rec["pnl_pct"], "pnl_usd": pnl_usd})
+        # EVERY exit stamps the re-entry cooldown, not just the stop family
+        # (audit 08-16: the hype-faded exit didn't stamp it, so when Grok
+        # flip-flopped on CHIP the book sold at 0.02827 and re-bought the
+        # SAME coin at 0.03007 two hours later — a -6.4% whipsaw plus two
+        # rounds of fees. Whatever the exit reason, the thesis on this coin
+        # just ended; 3h of distance applies to all of them.)
+        st["stopped"][held] = now.isoformat(timespec="seconds")
         st["held_symbol"] = st["entry_price"] = st["entry_scan_ts"] = None
         st["entry_source"] = None
         st["units"] = 0.0
@@ -296,14 +303,12 @@ def main():
                 held_h = None
 
         if p and entry and p / entry - 1 <= stop_pct:
-            st["stopped"][held] = now.isoformat(timespec="seconds")
             if sell(f"STOP-LOSS ({(p / entry - 1):.1%} from entry) — "
                     f"hype that bleeds gets cut"):
                 held = None
         # trailing stop: the pump gave back too much of its peak. THIS is the
         # exit that gets the book out before a hype crash instead of after.
         if held and p and hwm and p / hwm - 1 <= TRAIL_PCT:
-            st["stopped"][held] = now.isoformat(timespec="seconds")
             if sell(f"TRAILING STOP ({(p / hwm - 1):.1%} off the "
                     f"{hwm:.8g} peak) — riding it down is not the strategy"):
                 held = None
@@ -311,7 +316,6 @@ def main():
         # paid by now is decay, and every hour held is a hour of exposure.
         if held and p and entry and held_h is not None and held_h >= stall_h \
                 and p / entry - 1 < STALL_MIN_GAIN:
-            st["stopped"][held] = now.isoformat(timespec="seconds")
             if sell(f"STALLED ({held_h:.1f}h in, only "
                     f"{(p / entry - 1):+.1%}) — the pump never came"):
                 held = None
@@ -367,10 +371,26 @@ def main():
         blacklisted = set(st["stopped"])
 
         pick, source = None, None
+        # Grok names coins, not exchange pairs — some have no Binance spot
+        # listing at all (the ANSEM class). Probing the same dead symbol
+        # every cycle wrote one Invalid-symbol ledger line per cycle for
+        # four hours (08-16). Remember the misses PER SCAN: one probe, one
+        # error line, then silence until a new scan names new coins.
+        np = st.get("no_pair") or {}
+        if np.get("scan_ts") != scan_ts:
+            np = {"scan_ts": scan_ts, "syms": []}
+        st["no_pair"] = np
         if fresh:
             for c in crypto_candidates(scan):
                 sym = c.replace("-USD", "") + "USDT"
-                if sym in blacklisted or not binance_live.price(sym):
+                if sym in blacklisted or sym in np["syms"]:
+                    continue
+                binance_live.LAST_ERROR.clear()
+                if not binance_live.price(sym):
+                    if binance_live.LAST_ERROR.get("code") == -1121:
+                        np["syms"].append(sym)
+                        print(f"[{KEY}] {sym} has no Binance spot pair — "
+                              f"muted for the rest of this scan")
                     continue
                 # the guard that was missing from this path: COW and CHIP
                 # were both Watcher picks bought after their pump was over

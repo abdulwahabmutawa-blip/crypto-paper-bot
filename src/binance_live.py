@@ -164,24 +164,34 @@ def guard(action: str, symbol: str, bals: dict, held_symbol: str | None,
 # price — so lateness must be enforced mechanically at the moment of
 # purchase, for EVERY source. The scout's paper record agrees: REDUSDT +27%
 # on the day at entry, -18.8% after.
-MAX_CHG_24H_AT_ENTRY = 0.25   # [EVIDENCE] losers entered +27..+37% into the
-                              # day; the winner entered +7.9%. Same cap the
-                              # scout's breakout rule uses (BRK_MAX_24H).
-MIN_CHG_1H_AT_ENTRY = 0.0     # [EVIDENCE] COW was already FALLING at entry
-                              # (-2.3%/1h). An explosion's current hour is
-                              # green; buying a red hour is riding down.
+MAX_RUNUP_24H_AT_ENTRY = 0.25  # [EVIDENCE] measured from the 24h LOW, not
+                               # close-to-close: CHIP's second entry (15:30)
+                               # dodged a close-to-close cap because the
+                               # price FALLING after the pump shrank the day
+                               # change — exactly when the coin was most
+                               # spent. Run-up from the low doesn't decay:
+                               # COW +37.6%, CHIP +29.2% then +27% — all
+                               # losers, all refused. LINK +8.0% — the one
+                               # winner — passes.
+MIN_CHG_1H_AT_ENTRY = 0.0      # [EVIDENCE] COW was FALLING at entry
+                               # (-2.3%/1h). An explosion's current hour is
+                               # green; buying a red hour is riding down.
+                               # Kept at 0.0, not higher: a genuinely early
+                               # (ignition-style) entry has a flat hour by
+                               # definition, and the run-up cap above does
+                               # the heavy lifting.
 
 
-def late_entry(chg_24h: float | None, chg_1h: float | None) -> str | None:
+def late_entry(runup_24h: float | None, chg_1h: float | None) -> str | None:
     """Pure verdict: refusal reason if this entry is chasing a spent move.
     None values mean the data could not be fetched — refuse too: this book
     goes all-in per entry, and 'unknown' is not a number it can afford."""
-    if chg_24h is None or chg_1h is None:
+    if runup_24h is None or chg_1h is None:
         return "LATE-ENTRY GUARD — price context unavailable; not buying blind"
-    if chg_24h > MAX_CHG_24H_AT_ENTRY:
-        return (f"LATE — already {chg_24h:+.1%} on the day (cap "
-                f"{MAX_CHG_24H_AT_ENTRY:+.0%}): the pump this hype describes "
-                f"has already happened")
+    if runup_24h > MAX_RUNUP_24H_AT_ENTRY:
+        return (f"LATE — already {runup_24h:+.1%} off its 24h low (cap "
+                f"{MAX_RUNUP_24H_AT_ENTRY:+.0%}): the pump this hype "
+                f"describes has already happened")
     if chg_1h < MIN_CHG_1H_AT_ENTRY:
         return (f"LATE — {chg_1h:+.1%} in the last hour: the move is rolling "
                 f"over, hype arrived after the top")
@@ -190,10 +200,12 @@ def late_entry(chg_24h: float | None, chg_1h: float | None) -> str | None:
 
 def late_entry_check(symbol: str) -> str | None:
     """Fetch the two numbers late_entry() judges. Two public GETs."""
-    chg_24h = None
+    runup_24h = None
     t = _call("GET", "/v3/ticker/24hr", {"symbol": symbol})
     try:
-        chg_24h = float(t["priceChangePercent"]) / 100.0
+        last, low = float(t["lastPrice"]), float(t["lowPrice"])
+        if low > 0:
+            runup_24h = last / low - 1.0
     except Exception:
         pass
     chg_1h = None
@@ -204,7 +216,7 @@ def late_entry_check(symbol: str) -> str | None:
         chg_1h = last / first - 1.0
     except Exception:
         pass
-    return late_entry(chg_24h, chg_1h)
+    return late_entry(runup_24h, chg_1h)
 
 
 def market(action: str, symbol: str, quote_qty: float | None = None,
