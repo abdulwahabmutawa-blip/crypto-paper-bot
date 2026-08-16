@@ -1,8 +1,39 @@
 {
-  "ts": "2026-08-16T09:43:15+00:00",
+  "ts": "2026-08-16T09:49:09+00:00",
   "scanned": 53,
   "ruleset": 2,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ENAUSDT",
+      "signal": "ignition",
+      "score": 0.7911,
+      "raw_score": 0.7911,
+      "weight": 1.0,
+      "price": 0.0834,
+      "why": "trades 5.6x and volume 14.3x the prior 4h, 91% taker-buy, $83,460 burst \u2014 while price has only moved +0.4%",
+      "chg_24h": -0.02,
+      "vol_surge": 14.34,
+      "chg_1h": 0.0036,
+      "market_surge": 7.72,
+      "actionable": false,
+      "status": "probation \u2014 0/12 resolved 4h samples under ruleset 2"
+    },
+    {
+      "symbol": "WLDUSDT",
+      "signal": "ignition",
+      "score": 0.5977,
+      "raw_score": 0.5977,
+      "weight": 1.0,
+      "price": 0.3485,
+      "why": "trades 4.7x and volume 6.2x the prior 4h, 67% taker-buy, $102,604 burst \u2014 while price has only moved +0.5%",
+      "chg_24h": 0.009,
+      "vol_surge": 6.19,
+      "chg_1h": 0.0049,
+      "market_surge": 2.2,
+      "actionable": false,
+      "status": "probation \u2014 0/12 resolved 4h samples under ruleset 2"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 0/12 resolved 4h samples under ruleset 2",
     "breakout": "probation \u2014 0/12 resolved 4h samples under ruleset 2",
