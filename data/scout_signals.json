@@ -1,39 +1,8 @@
 {
-  "ts": "2026-08-16T13:05:00+00:00",
+  "ts": "2026-08-16T13:10:31+00:00",
   "scanned": 52,
   "ruleset": 2,
-  "candidates": [
-    {
-      "symbol": "ETHFIUSDT",
-      "signal": "ignition",
-      "score": 0.8448,
-      "raw_score": 0.8448,
-      "weight": 1.0,
-      "price": 0.4933,
-      "why": "trades 21.2x and volume 25.6x the prior 4h, 62% taker-buy, $188,589 burst \u2014 while price has only moved +2.4%",
-      "chg_24h": 0.0243,
-      "vol_surge": 25.56,
-      "chg_1h": 0.0237,
-      "market_surge": 12.06,
-      "actionable": false,
-      "status": "probation \u2014 4/12 resolved 4h samples under ruleset 2"
-    },
-    {
-      "symbol": "ETHFIUSDT",
-      "signal": "breakout",
-      "score": 0.7471,
-      "raw_score": 0.7471,
-      "weight": 1.0,
-      "price": 0.4933,
-      "why": "trades 21.2x, volume 25.6x, 62% taker-buy, +2.4% in an hour, at 89% of its 24h range",
-      "chg_24h": 0.0243,
-      "vol_surge": 25.56,
-      "chg_1h": 0.0237,
-      "market_surge": 12.06,
-      "actionable": false,
-      "status": "probation \u2014 0/12 resolved 4h samples under ruleset 2"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 4/12 resolved 4h samples under ruleset 2",
     "breakout": "probation \u2014 0/12 resolved 4h samples under ruleset 2",
@@ -42,14 +11,20 @@
   },
   "scorecard": {
     "ignition": {
-      "n_1h": 8,
-      "hit_rate_1h": 0.625,
-      "mean_ret_1h": 0.02416,
-      "median_ret_1h": 0.00705,
+      "n_1h": 9,
+      "hit_rate_1h": 0.556,
+      "mean_ret_1h": 0.0181,
+      "median_ret_1h": 0.00298,
       "n_4h": 4,
       "hit_rate_4h": 0.5,
       "mean_ret_4h": 0.01073,
       "median_ret_4h": 0.00494
+    },
+    "breakout": {
+      "n_1h": 2,
+      "hit_rate_1h": 0.5,
+      "mean_ret_1h": -0.00443,
+      "median_ret_1h": 0.02156
     }
   },
   "note": "READ-ONLY scout. Ranked opinion only \u2014 the book decides."
