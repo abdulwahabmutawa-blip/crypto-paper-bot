@@ -182,6 +182,32 @@ MIN_CHG_1H_AT_ENTRY = 0.0      # [EVIDENCE] COW was FALLING at entry
                                # the heavy lifting.
 
 
+def exit_params(source: str | None) -> dict:
+    """Seat policy by entry source — the explosion study (08-16, n=109)
+    split the prey into species with incompatible clocks:
+
+      hype spikes  — fast, half-life measured in hours: 24h max hold,
+                     6h stall. (Watcher/heat/adopted seats.)
+      scout bursts — volume events that resolve in minutes-to-hours:
+                     8h max, 2h stall, tighter stop.
+      grinds       — the study's actual money: median 11 DAYS trough to
+                     peak, 67/109 took 10+. A 24h clock structurally
+                     cannot hold one; the old exits would have force-sold
+                     every grind on day one. 14d max hold, NO stall clock
+                     (a grind's early days LOOK stalled by design), the
+                     trailing stop is the primary exit.
+    """
+    src = source or ""
+    if src == "scout:revival":
+        return {"kind": "grind", "stop_pct": -0.10, "stall_h": None,
+                "max_hold_h": 336.0}
+    if src.startswith("scout:"):
+        return {"kind": "burst", "stop_pct": -0.06, "stall_h": 2.0,
+                "max_hold_h": 8.0}
+    return {"kind": "hype", "stop_pct": -0.10, "stall_h": 6.0,
+            "max_hold_h": 24.0}
+
+
 def late_entry(runup_24h: float | None, chg_1h: float | None) -> str | None:
     """Pure verdict: refusal reason if this entry is chasing a spent move.
     None values mean the data could not be fetched — refuse too: this book

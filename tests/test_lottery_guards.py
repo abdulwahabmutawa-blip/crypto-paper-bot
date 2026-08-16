@@ -104,6 +104,20 @@ assert why and "blind" in why
 why = bl.late_entry(0.10, None)
 assert why and "blind" in why
 
+# --- per-seat exit clocks (explosion study: grinds take a median 11 DAYS) ---
+g = bl.exit_params("scout:revival")
+assert g["kind"] == "grind" and g["stall_h"] is None, \
+    "a grind's early days LOOK stalled — it must not have a stall clock"
+assert g["max_hold_h"] == 336.0, "a 24h clock force-sells every 11-day grind"
+b = bl.exit_params("scout:ignition")
+assert b["kind"] == "burst" and b["max_hold_h"] == 8.0 \
+    and b["stop_pct"] == -0.06
+h = bl.exit_params("watcher")
+assert h["kind"] == "hype" and h["max_hold_h"] == 24.0 \
+    and h["stall_h"] == 6.0
+assert bl.exit_params(None)["kind"] == "hype", \
+    "an unknown seat gets the strictest familiar clock, never the longest"
+
 # --- tripwires: these asserts fail any casual edit that widens the blast
 # radius. Changing them is a deliberate reviewed act, which is the point.
 assert not hasattr(bl, "BOOK_CAP_USD"), \

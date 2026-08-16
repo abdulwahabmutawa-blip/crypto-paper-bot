@@ -202,4 +202,48 @@ try:
 finally:
     sc.LOG, sc.SCORECARD = orig_log, orig_card
 
+# --- REVIVAL: the explosion-study profile (n=109), day one only --------------
+REV = dict(age_ok=True, chg_24h=0.05, week_chg=-0.15, med_pre_qv=400_000.0,
+           today_qv=2_000_000.0, runup_30d=0.08, wave=False)
+assert sc.revival_verdict(dict(REV)), "the textbook study profile must fire"
+# was not beaten down last week -> wrong species (58/73 exploders fell first)
+assert sc.revival_verdict(dict(REV, week_chg=-0.02)) is None
+# was not quiet -> the crowd was already here
+assert sc.revival_verdict(dict(REV, med_pre_qv=3_000_000.0)) is None
+# volume has not actually arrived (under 3x its own week)
+assert sc.revival_verdict(dict(REV, today_qv=700_000.0)) is None
+# already +30% off the 30d low -> not day one, this is the chase the
+# retention data punishes (-29% median for peak buyers)
+assert sc.revival_verdict(dict(REV, runup_30d=0.30)) is None
+# not turning today (flat) or already gone (+20% day) -> outside the window
+assert sc.revival_verdict(dict(REV, chg_24h=0.005)) is None
+assert sc.revival_verdict(dict(REV, chg_24h=0.20)) is None
+# young listing -> different trade (bStocks class), excluded by design
+assert sc.revival_verdict(dict(REV, age_ok=False)) is None
+# a wave day makes the same profile louder, never quieter
+s_calm, _ = sc.revival_verdict(dict(REV))
+s_wave, why_wave = sc.revival_verdict(dict(REV, wave=True, wave_count=80,
+                                           wave_base=30.0))
+assert s_wave > s_calm and "WAVE DAY" in why_wave
+
+# --- breadth: no wave calls without a baseline, 2x median = wave -------------
+ok, base = sc.wave_call(100, [30] * 5)
+assert not ok and base is None, "short history must never call a wave"
+ok, base = sc.wave_call(65, [30, 28, 33, 30, 29, 31, 30, 32, 28, 30, 31, 29])
+assert ok and base == 30.0, (ok, base)
+ok, _ = sc.wave_call(45, [30, 28, 33, 30, 29, 31, 30, 32, 28, 30, 31, 29])
+assert not ok, "1.5x the baseline is a breeze, not a wave"
+
+# --- revival is judged on its OWN clock (24h), not the sprint clock ----------
+assert "revival" in sc.SIGNAL_TYPES
+card24 = {"signals": {"revival": {
+    "n_4h": 30, "hit_rate_4h": 0.10, "mean_ret_4h": -0.02,      # bad sprint
+    "n_24h": 30, "hit_rate_24h": 0.55, "mean_ret_24h": 0.03}}}  # good marathon
+ok, _ = sc.signal_actionable(card24, "revival")
+assert ok, "a grind signal with a winning 24h record must arm despite 4h noise"
+ok, why = sc.signal_actionable({"signals": {"revival": {
+    "n_4h": 30, "hit_rate_4h": 0.9, "mean_ret_4h": 0.05}}}, "revival")
+assert not ok and "24h" in why, \
+    "4h samples alone must not arm a signal judged at 24h"
+
 print("test_scout: ALL PASS")

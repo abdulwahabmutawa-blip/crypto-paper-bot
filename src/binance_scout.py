@@ -52,6 +52,19 @@ THREE SIGNALS, in the order a move actually unfolds:
               arriving. Price/volume features are not required here — the
               claim is social, and the gate decides if the claim pays.
 
+  REVIVAL   — (2026-08-16, from the explosion study: every Binance coin
+              that ran +50% in the prior month, n=109) the measured profile
+              of a move's DAY ONE, not its peak: an old coin (>6mo listed —
+              69/109 exploders were >1y) that FELL last week (58/73 were
+              down, median -12%), trading QUIETLY (median $0.3M/day;
+              77/88 sat below this scout's own $2M floor, which is why
+              revival scans its own lighter tier), whose volume is
+              ARRIVING TODAY (3x+ its own week) while the price has just
+              turned but not yet run (<20% off its 30d low; the study's
+              peak-buyers ate a median -29%, its trough-buyers kept +29%).
+              On WAVE DAYS — 35 of 109 troughs were the SAME day (07-29),
+              breadth is the tide — revival scores get louder.
+
 WHAT IT DELIBERATELY DOES NOT DO: predict. It has no view on where anything
 is going. It reports what is measurably unusual this minute and lets the
 book's own stops decide how long to stay.
@@ -109,8 +122,9 @@ LOG = config.DATA / "scout_log.jsonl"
 SCORECARD = config.DATA / "scout_scorecard.json"
 SNAPSHOT = config.DATA / "scout_snapshot.json"
 HEAT_FILE = config.DATA / "social_heat.json"
+BREADTH_FILE = config.DATA / "breadth.json"
 
-SIGNAL_TYPES = ("ignition", "breakout", "reversion", "heat")
+SIGNAL_TYPES = ("ignition", "breakout", "reversion", "heat", "revival")
 
 # Thresholds below are tagged [EVIDENCE] where a published study supports the
 # number, and [JUDGEMENT] where it is a defensible guess. Research pass
@@ -218,13 +232,50 @@ RESIGNAL_COOLDOWN_H = 3.0   # [EVIDENCE — log autopsy 08-16] BICO was flagged
 # THE GATE — what a signal type must show (current ruleset, rolling window)
 # before the real-money book may act on its candidates:
 MIN_ACT_SAMPLES = 12        # [JUDGEMENT] fewer is a coin-flip streak
-MIN_ACT_HIT_4H = 0.40
+MIN_ACT_HIT = 0.40
+# Each signal is judged on ITS OWN clock: benching a days-scale grind
+# signal on 4h outcomes would test a marathoner over a sprint distance.
+ACT_HORIZON_H = {"revival": 24}     # everything else defaults to 4
 
 # ---- heat (cross-source social agreement, from social_heat.py) --------------
 HEAT_MIN_SURFACES = 3       # [JUDGEMENT] 1 surface is noise, 2 is a maybe,
                             # 3 independent surfaces at once is the pattern
                             # worth logging — the gate decides if it pays
 HEAT_FRESH_MIN = 45.0       # stale heat is yesterday's crowd
+
+# ---- revival (explosion study 2026-08-16, n=109 +50% runs in 31 days) -------
+# Every number below is read off that dataset, not guessed.
+REV2_MIN_AGE_D = 181            # [EVIDENCE] 69/109 exploders were >1y listed;
+                                # new listings behave differently (bStocks)
+                                # and are a different trade
+REV2_QV_FLOOR = 250_000         # [JUDGEMENT] a $40 all-in exit is <0.05% of
+                                # $250k/day — exitable; the $2M main floor
+                                # was calibrated for clean exits at size the
+                                # book does not have, and it blinded the
+                                # scout to 77/88 of the month's exploders
+REV2_MAX_PRE_QV = 1_500_000     # [EVIDENCE] quiet before the run: median
+                                # pre-run volume was $0.3M/day
+REV2_MIN_WEEK_FALL = -0.08      # [EVIDENCE] 58/73 fell the week before the
+                                # trough, median -11.8%
+REV2_MIN_VOL_ARRIVAL = 3.0      # [EVIDENCE] day-1 volume arrival; peak days
+                                # ran 25.8x, but day one is the catchable
+                                # moment — 3x a quiet week is already loud
+REV2_MAX_RUNUP_30D = 0.20       # [EVIDENCE] the money was made low: trough
+                                # buyers kept +29% median, peak buyers ate
+                                # -29%. Past +20% off the low is not day one.
+REV2_TURN_MIN = 0.02            # turning today...
+REV2_TURN_MAX = 0.15            # ...but not already gone
+REV2_KLINE_BUDGET = 12          # bounded probes per cycle
+
+# ---- breadth (the wave-day tide) --------------------------------------------
+BREADTH_MIN_CHG = 0.10          # a coin counts as "moving" at +10% on the day
+BREADTH_MIN_QV = 300_000        # with enough volume to be a real print
+BREADTH_WAVE_RATIO = 2.0        # [EVIDENCE-anchored] 07-29 put 35 of 109
+                                # troughs on ONE day — wave days exist and
+                                # they are when revival profiles fire en
+                                # masse. 2x the trailing week's median count
+                                # of movers = the tide is in.
+BREADTH_MIN_HISTORY = 12        # no wave calls until the baseline is real
 
 
 def _pct(a: float, b: float) -> float:
@@ -493,16 +544,155 @@ def signal_actionable(card: dict, signal: str) -> tuple[bool, str]:
     record decays. Weights fine-tune the ranking; this decides whether real
     money listens at all."""
     s = (card.get("signals") or {}).get(signal) or {}
-    n = s.get("n_4h", 0)
+    h = ACT_HORIZON_H.get(signal, 4)
+    n = s.get(f"n_{h}h", 0)
     if n < MIN_ACT_SAMPLES:
-        return False, (f"probation — {n}/{MIN_ACT_SAMPLES} resolved 4h "
+        return False, (f"probation — {n}/{MIN_ACT_SAMPLES} resolved {h}h "
                        f"samples under ruleset {RULESET}")
-    hit = s.get("hit_rate_4h", 0.0)
-    mean = s.get("mean_ret_4h", 0.0)
-    if hit < MIN_ACT_HIT_4H or mean <= ROUND_TRIP:
+    hit = s.get(f"hit_rate_{h}h", 0.0)
+    mean = s.get(f"mean_ret_{h}h", 0.0)
+    if hit < MIN_ACT_HIT or mean <= ROUND_TRIP:
         return False, (f"benched — hit {hit:.0%}, mean {mean:+.2%} over "
-                       f"last {n}: not beating the round trip")
+                       f"last {n} at {h}h: not beating the round trip")
     return True, ""
+
+
+def wave_call(count: int, history: list[int]) -> tuple[bool, float | None]:
+    """Is today a wave day? Pure: count of movers now vs the trailing
+    baseline. No call without a real baseline — the first days of history
+    must not all look like waves."""
+    if len(history) < BREADTH_MIN_HISTORY:
+        return False, None
+    hs = sorted(history)
+    base = hs[len(hs) // 2] or 1
+    return count >= BREADTH_WAVE_RATIO * base, float(base)
+
+
+def breadth_state(raw_tickers: list[dict], now: datetime) -> dict:
+    """Count the market's movers (+10% on real volume), keep 7 days of
+    history, and call wave days. The study's single loudest fact: 35 of 109
+    explosion troughs landed on ONE calendar day."""
+    count = 0
+    for t in raw_tickers:
+        try:
+            if (float(t.get("priceChangePercent", 0) or 0) / 100.0
+                    >= BREADTH_MIN_CHG
+                    and float(t.get("quoteVolume", 0) or 0) >= BREADTH_MIN_QV):
+                count += 1
+        except Exception:
+            continue
+    hist = []
+    if BREADTH_FILE.exists():
+        try:
+            hist = json.loads(BREADTH_FILE.read_text()).get("history") or []
+        except Exception:
+            hist = []
+    cutoff = (now - timedelta(days=7)).isoformat(timespec="seconds")
+    hist = [h for h in hist if h.get("ts", "") >= cutoff]
+    wave, base = wave_call(count, [h["n"] for h in hist])
+    hist.append({"ts": now.isoformat(timespec="seconds"), "n": count})
+    _atomic_write(BREADTH_FILE, json.dumps(
+        {"history": hist[-1200:], "count": count,
+         "baseline": base, "wave": wave}))
+    return {"count": count, "baseline": base, "wave": wave}
+
+
+def revival_verdict(f: dict) -> tuple[float, str] | None:
+    """Pure verdict on a precomputed revival profile (see the constants —
+    every threshold is read off the explosion study, n=109)."""
+    if not f.get("age_ok"):
+        return None
+    if not (REV2_TURN_MIN <= f["chg_24h"] <= REV2_TURN_MAX):
+        return None
+    if f["week_chg"] > REV2_MIN_WEEK_FALL:
+        return None                      # was not beaten down — wrong species
+    if f["med_pre_qv"] > REV2_MAX_PRE_QV or f["med_pre_qv"] <= 0:
+        return None                      # was not quiet
+    arrival = f["today_qv"] / f["med_pre_qv"]
+    if arrival < REV2_MIN_VOL_ARRIVAL:
+        return None                      # the crowd has not actually arrived
+    if f["runup_30d"] > REV2_MAX_RUNUP_30D:
+        return None                      # not day one any more
+    score = min(abs(f["week_chg"]) / 0.30, 1.0) * 0.35 \
+        + min(arrival / 10.0, 1.0) * 0.35 \
+        + (1.0 - f["runup_30d"] / REV2_MAX_RUNUP_30D) * 0.30
+    why = (f"revival day-one: fell {f['week_chg']:+.0%} last week on "
+           f"${f['med_pre_qv'] / 1e6:.2f}M/day quiet, volume arriving "
+           f"{arrival:.1f}x today, only {f['runup_30d']:+.0%} off its 30d "
+           f"low")
+    if f.get("wave"):
+        score = min(score * 1.25, 1.0)
+        why += " — ON A WAVE DAY (breadth {:.0f} vs {:.0f} base)".format(
+            f.get("wave_count", 0), f.get("wave_base") or 0)
+    return score, why
+
+
+def revival_candidates(raw_tickers: list[dict], card: dict, breadth: dict,
+                       now: datetime) -> list[dict]:
+    """Day-one grind candidates from the quiet tier the main floor cannot
+    see. Bounded: ticker-level prefilter first, at most REV2_KLINE_BUDGET
+    daily-kline probes per cycle."""
+    short = []
+    for t in raw_tickers:
+        try:
+            chg = float(t.get("priceChangePercent", 0) or 0) / 100.0
+            qv = float(t.get("quoteVolume", 0) or 0)
+            if not (REV2_TURN_MIN <= chg <= REV2_TURN_MAX):
+                continue
+            if qv < REV2_QV_FLOOR:
+                continue
+            bid, ask = float(t["bidPrice"]), float(t["askPrice"])
+            mid = (bid + ask) / 2.0
+            if mid <= 0 or (ask - bid) / mid * 10_000 > MAX_SPREAD_BPS:
+                continue
+            short.append((chg, t))
+        except Exception:
+            continue
+    short.sort(key=lambda x: -x[0])
+
+    out = []
+    probes = 0
+    for chg, t in short:
+        if probes >= REV2_KLINE_BUDGET:
+            break
+        sym = t["symbol"]
+        probes += 1
+        rows = binance_data.klines(sym, "1d", REV2_MIN_AGE_D)
+        if len(rows) < REV2_MIN_AGE_D:      # younger than the dino floor
+            continue
+        try:
+            closes = [float(r[4]) for r in rows]
+            lows = [float(r[3]) for r in rows]
+            qvs = [float(r[7]) for r in rows]
+            last = float(t.get("lastPrice", 0) or 0)
+            pre_qv = sorted(qvs[-8:-1])
+            f = {
+                "age_ok": True, "chg_24h": chg,
+                "week_chg": closes[-2] / closes[-9] - 1.0,
+                "med_pre_qv": pre_qv[len(pre_qv) // 2],
+                "today_qv": qvs[-1],
+                "runup_30d": last / min(lows[-31:]) - 1.0,
+                "wave": breadth.get("wave"),
+                "wave_count": breadth.get("count"),
+                "wave_base": breadth.get("baseline"),
+            }
+        except Exception:
+            continue
+        hit = revival_verdict(f)
+        if not hit:
+            continue
+        raw_score, why = hit
+        w = signal_weight(card, "revival")
+        out.append({
+            "symbol": sym, "signal": "revival",
+            "score": round(raw_score * w, 4),
+            "raw_score": round(raw_score, 4), "weight": round(w, 3),
+            "price": last, "why": why,
+            "chg_24h": round(f["chg_24h"], 4),
+            "vol_surge": round(f["today_qv"] / f["med_pre_qv"], 1),
+            "chg_1h": None, "market_surge": None,
+        })
+    return out
 
 
 def heat_candidates(tickers_by_sym: dict[str, dict], card: dict,
@@ -680,6 +870,14 @@ def scan(now: datetime | None = None) -> dict:
     card, history = resolve_outcomes(now)
 
     raw = binance_data.all_tickers_24h()
+    raw_tradeable = [t for t in raw
+                     if binance_data.is_tradeable_pair(t.get("symbol", ""))]
+    # breadth runs BEFORE the veto so its history never gaps — wave days and
+    # BTC-dump days are different phenomena and both need honest baselines
+    breadth = breadth_state(raw_tradeable, now)
+    if breadth.get("wave"):
+        print(f"[scout] WAVE DAY — {breadth['count']} movers vs "
+              f"~{breadth['baseline']:.0f} baseline; the tide is in")
 
     # MARKET-WIDE VETO: the reversal literature is cross-sectional, not
     # directional. When BTC itself is falling, a coin being down is market
@@ -757,6 +955,9 @@ def scan(now: datetime | None = None) -> dict:
     # cooldown, gate, and logging as every price-driven signal
     cands.extend(heat_candidates({t["symbol"]: t for t in tickers},
                                  card, now))
+    # the revival layer: day-one grind profiles from the quiet tier below
+    # the main volume floor (where 77/88 of the month's exploders lived)
+    cands.extend(revival_candidates(raw_tradeable, card, breadth, now))
 
     cands.sort(key=lambda c: -c["score"])
     cands = cands[:TOP_N]
@@ -821,6 +1022,7 @@ def scan(now: datetime | None = None) -> dict:
         "ruleset": RULESET,
         "candidates": cands,
         "gate": gate,
+        "breadth": breadth,
         "scorecard": card.get("signals", {}),
         "note": "READ-ONLY scout. Ranked opinion only — the book decides.",
     }

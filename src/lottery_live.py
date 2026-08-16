@@ -59,18 +59,13 @@ from hype_crypto_tracker import crypto_candidates, ENTRY_FRESH_H
 
 STATE = config.DATA / "lottery_state.json"
 SENTINEL = config.DATA / "sentinel_state.json"
-STOP_PCT = -0.10        # hard stop from entry (Watcher-sourced hype rides)
+# Per-seat stop/stall/max-hold live in binance_live.exit_params(): the
+# explosion study split the prey into species with incompatible clocks —
+# hype spikes (hours), scout bursts (minutes-to-hours), and wave grinds
+# (median 11 DAYS trough->peak, which the old universal 24h clock would
+# force-sell on day one, guaranteeing the book could never hold a winner).
 TRAIL_PCT = -0.15       # from the high-water mark: gives back at most this
-MAX_HOLD_H = 24.0       # hype has a half-life; do not marry a coin
-STALL_H = 6.0           # flat-to-down this long = the pump is over
-STALL_MIN_GAIN = 0.03   # ...unless it is at least this far ahead
-# Scout-sourced entries are volume events, and the research is unambiguous
-# that those resolve in MINUTES to a few hours, not days — a burst that has
-# not paid quickly is noise being held for no stated reason. So scout trades
-# run on a faster clock than Watcher hype rides:
-SCOUT_STOP_PCT = -0.06
-SCOUT_STALL_H = 2.0
-SCOUT_MAX_HOLD_H = 8.0
+STALL_MIN_GAIN = 0.03   # stalled unless at least this far ahead
 # Re-entry cooldown after ANY protective exit (audit 08-15: the old
 # blacklist was keyed on the Watcher's scan_ts — meaningless for scout
 # entries, and only the hard stop set it, so a trailing-stopped coin could
@@ -285,10 +280,10 @@ def main():
     if held:
         p = binance_live.price(held)
         entry = st.get("entry_price")
-        is_scout = str(st.get("entry_source") or "").startswith("scout:")
-        stop_pct = SCOUT_STOP_PCT if is_scout else STOP_PCT
-        stall_h = SCOUT_STALL_H if is_scout else STALL_H
-        max_hold = SCOUT_MAX_HOLD_H if is_scout else MAX_HOLD_H
+        ep = binance_live.exit_params(str(st.get("entry_source") or ""))
+        stop_pct = ep["stop_pct"]
+        stall_h = ep["stall_h"]          # None = no stall clock (grind seat)
+        max_hold = ep["max_hold_h"]
 
         # high-water mark, updated live
         if p:
@@ -314,7 +309,8 @@ def main():
                 held = None
         # stall: hours in, still not meaningfully ahead. Hype that has not
         # paid by now is decay, and every hour held is a hour of exposure.
-        if held and p and entry and held_h is not None and held_h >= stall_h \
+        if held and p and entry and stall_h is not None \
+                and held_h is not None and held_h >= stall_h \
                 and p / entry - 1 < STALL_MIN_GAIN:
             if sell(f"STALLED ({held_h:.1f}h in, only "
                     f"{(p / entry - 1):+.1%}) — the pump never came"):
