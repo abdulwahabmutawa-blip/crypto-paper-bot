@@ -1,8 +1,54 @@
 {
-  "ts": "2026-08-16T11:59:30+00:00",
-  "scanned": 51,
+  "ts": "2026-08-16T12:05:21+00:00",
+  "scanned": 52,
   "ruleset": 2,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "HEIUSDT",
+      "signal": "ignition",
+      "score": 0.8063,
+      "raw_score": 0.8063,
+      "weight": 1.0,
+      "price": 0.1414,
+      "why": "trades 13.3x and volume 15.5x the prior 4h, 61% taker-buy, $185,909 burst \u2014 while price has only moved +3.9%",
+      "chg_24h": 0.0611,
+      "vol_surge": 15.5,
+      "chg_1h": 0.0389,
+      "market_surge": 13.49,
+      "actionable": false,
+      "status": "probation \u2014 3/12 resolved 4h samples under ruleset 2"
+    },
+    {
+      "symbol": "HEIUSDT",
+      "signal": "breakout",
+      "score": 0.7946,
+      "raw_score": 0.7946,
+      "weight": 1.0,
+      "price": 0.1414,
+      "why": "trades 13.3x, volume 15.5x, 61% taker-buy, +3.9% in an hour, at 88% of its 24h range",
+      "chg_24h": 0.0611,
+      "vol_surge": 15.5,
+      "chg_1h": 0.0389,
+      "market_surge": 13.49,
+      "actionable": false,
+      "status": "probation \u2014 0/12 resolved 4h samples under ruleset 2"
+    },
+    {
+      "symbol": "WLFIUSDT",
+      "signal": "breakout",
+      "score": 0.7724,
+      "raw_score": 0.7724,
+      "weight": 1.0,
+      "price": 0.0603,
+      "why": "trades 20.7x, volume 25.1x, 77% taker-buy, +2.2% in an hour, at 98% of its 24h range",
+      "chg_24h": 0.0673,
+      "vol_surge": 25.14,
+      "chg_1h": 0.022,
+      "market_surge": 19.84,
+      "actionable": false,
+      "status": "probation \u2014 0/12 resolved 4h samples under ruleset 2"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 3/12 resolved 4h samples under ruleset 2",
     "breakout": "probation \u2014 0/12 resolved 4h samples under ruleset 2",
