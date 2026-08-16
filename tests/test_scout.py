@@ -225,6 +225,12 @@ s_calm, _ = sc.revival_verdict(dict(REV))
 s_wave, why_wave = sc.revival_verdict(dict(REV, wave=True, wave_count=80,
                                            wave_base=30.0))
 assert s_wave > s_calm and "WAVE DAY" in why_wave
+# the serial-exploder prior: history is the strongest single regularity in
+# the 2y study (87% of exploders repeated; TUT's +1,990% was its ninth)
+s_serial, why_serial = sc.revival_verdict(dict(REV, serial_n=9))
+assert s_serial > s_calm and "serial exploder: 9 runs" in why_serial
+s_once, _ = sc.revival_verdict(dict(REV, serial_n=1))
+assert s_once == s_calm, "a single prior event is not yet a habit"
 
 # --- breadth: no wave calls without a baseline, 2x median = wave -------------
 ok, base = sc.wave_call(100, [30] * 5)

@@ -216,11 +216,16 @@ HORIZONS_H = (1, 4, 24)
 MIN_SAMPLES_TO_TRUST = 30
 WEIGHT_FLOOR, WEIGHT_CEIL = 0.5, 1.5
 ROUND_TRIP = 0.002          # 10bps per side at Binance spot
-RULESET = 2                 # bump when signal RULES change: rows from other
+RULESET = 3                 # bump when signal RULES change: rows from other
                             # rulesets stop feeding the card, so new rules
                             # are judged only on their own record — old
                             # failures can't damn them, old wins can't
-                            # launder them
+                            # launder them. v3 (2026-08-16 evening, owner
+                            # approved): 2y-study calibration — revival
+                            # quiet-ceiling $1.5M->$4M, serial-exploder
+                            # prior. Bumped while every v2 record was hours
+                            # old, deliberately: resetting an empty ledger
+                            # is free, resetting a week-old one is not.
 ROLL_WINDOW = 30            # rolling resolved samples per signal/horizon:
                             # the card tracks what a signal IS, not what it
                             # once was, so a benched signal can earn its way
@@ -253,8 +258,11 @@ REV2_QV_FLOOR = 250_000         # [JUDGEMENT] a $40 all-in exit is <0.05% of
                                 # was calibrated for clean exits at size the
                                 # book does not have, and it blinded the
                                 # scout to 77/88 of the month's exploders
-REV2_MAX_PRE_QV = 1_500_000     # [EVIDENCE] quiet before the run: median
-                                # pre-run volume was $0.3M/day
+REV2_MAX_PRE_QV = 4_000_000     # [EVIDENCE] quiet before the run — 2y study
+                                # (n=1,908): median pre-run $1.76M/day, 75%
+                                # under $5M. The recent month's $0.3M was
+                                # the extreme, not the norm; $4M covers the
+                                # fat middle without admitting loud names.
 REV2_MIN_WEEK_FALL = -0.08      # [EVIDENCE] 58/73 fell the week before the
                                 # trough, median -11.8%
 REV2_MIN_VOL_ARRIVAL = 3.0      # [EVIDENCE] day-1 volume arrival; peak days
@@ -266,6 +274,13 @@ REV2_MAX_RUNUP_30D = 0.20       # [EVIDENCE] the money was made low: trough
 REV2_TURN_MIN = 0.02            # turning today...
 REV2_TURN_MAX = 0.15            # ...but not already gone
 REV2_KLINE_BUDGET = 12          # bounded probes per cycle
+SERIAL_FILE = config.DATA / "explosion_history.json"
+SERIAL_MIN_N = 2                # [EVIDENCE — 2y study] 87% of exploders
+                                # exploded 2+ times (RSR 13x, ZEC 11x; TUT's
+                                # +1,990% was its NINTH). History is the
+                                # strongest single prior the study found.
+SERIAL_BOOST_PER = 0.04         # +4% score per prior event...
+SERIAL_BOOST_CAP = 1.40         # ...capped at +40% (10 events)
 
 # ---- breadth (the wave-day tide) --------------------------------------------
 BREADTH_MIN_CHG = 0.10          # a coin counts as "moving" at +10% on the day
@@ -620,6 +635,12 @@ def revival_verdict(f: dict) -> tuple[float, str] | None:
            f"${f['med_pre_qv'] / 1e6:.2f}M/day quiet, volume arriving "
            f"{arrival:.1f}x today, only {f['runup_30d']:+.0%} off its 30d "
            f"low")
+    # the serial-exploder prior: coins that have done this before do it
+    # again — the strongest single regularity in the 2y study
+    n_prior = int(f.get("serial_n") or 0)
+    if n_prior >= SERIAL_MIN_N:
+        score *= min(1.0 + n_prior * SERIAL_BOOST_PER, SERIAL_BOOST_CAP)
+        why += f" · serial exploder: {n_prior} runs in 2y"
     if f.get("wave"):
         score = min(score * 1.25, 1.0)
         why += " — ON A WAVE DAY (breadth {:.0f} vs {:.0f} base)".format(
@@ -627,11 +648,23 @@ def revival_verdict(f: dict) -> tuple[float, str] | None:
     return score, why
 
 
+def serial_counts() -> dict[str, int]:
+    """Per-symbol explosion counts from the 2y study snapshot (committed as
+    data/explosion_history.json; regenerate from trading-research). Missing
+    file = empty prior, never an error."""
+    try:
+        d = json.loads(SERIAL_FILE.read_text())
+        return {s: v.get("n", 0) for s, v in (d.get("symbols") or {}).items()}
+    except Exception:
+        return {}
+
+
 def revival_candidates(raw_tickers: list[dict], card: dict, breadth: dict,
                        now: datetime) -> list[dict]:
     """Day-one grind candidates from the quiet tier the main floor cannot
     see. Bounded: ticker-level prefilter first, at most REV2_KLINE_BUDGET
     daily-kline probes per cycle."""
+    serial = serial_counts()
     short = []
     for t in raw_tickers:
         try:
@@ -675,6 +708,7 @@ def revival_candidates(raw_tickers: list[dict], card: dict, breadth: dict,
                 "wave": breadth.get("wave"),
                 "wave_count": breadth.get("count"),
                 "wave_base": breadth.get("baseline"),
+                "serial_n": serial.get(sym, 0),
             }
         except Exception:
             continue

@@ -30,7 +30,8 @@ land at most every 8h and anything gated on a fresh scan reacts long after
 a pump has rolled over. Price is free, instant and 24/7, so price owns the
 fast exits and the Watcher owns the slow qualitative ones:
   1. -10% hard stop from entry
-  2. -15% trailing stop from the high-water mark  <- the anti-crash exit
+  2. progressive trailing stop from the high-water mark (-15% while small,
+     tightening to -8% past +100% — binance_live.trail_pct)  <- anti-crash
   3. stalled: 6h in and under +3% — the pump never came
   4. max hold 24h — hype has a half-life, never marry a coin
   5. momentum gone: no longer a top-25 24h mover
@@ -62,9 +63,11 @@ SENTINEL = config.DATA / "sentinel_state.json"
 # Per-seat stop/stall/max-hold live in binance_live.exit_params(): the
 # explosion study split the prey into species with incompatible clocks —
 # hype spikes (hours), scout bursts (minutes-to-hours), and wave grinds
-# (median 11 DAYS trough->peak, which the old universal 24h clock would
-# force-sell on day one, guaranteeing the book could never hold a winner).
-TRAIL_PCT = -0.15       # from the high-water mark: gives back at most this
+# (median 26 DAYS trough->peak at 2y scale, which the old universal 24h
+# clock would force-sell on day one, guaranteeing the book could never
+# hold a winner). The trailing stop is PROGRESSIVE — binance_live.
+# trail_pct(): -15% while small, -10% past +50%, -8% past +100% — because
+# the study's retention gradient says big gains die most completely.
 STALL_MIN_GAIN = 0.03   # stalled unless at least this far ahead
 # Re-entry cooldown after ANY protective exit (audit 08-15: the old
 # blacklist was keyed on the Watcher's scan_ts — meaningless for scout
@@ -303,9 +306,13 @@ def main():
                 held = None
         # trailing stop: the pump gave back too much of its peak. THIS is the
         # exit that gets the book out before a hype crash instead of after.
-        if held and p and hwm and p / hwm - 1 <= TRAIL_PCT:
+        # Progressive: the more the ride has paid, the tighter the leash.
+        tp = binance_live.trail_pct((hwm / entry - 1) if (entry and hwm)
+                                    else None)
+        if held and p and hwm and p / hwm - 1 <= tp:
             if sell(f"TRAILING STOP ({(p / hwm - 1):.1%} off the "
-                    f"{hwm:.8g} peak) — riding it down is not the strategy"):
+                    f"{hwm:.8g} peak, leash {tp:.0%}) — riding it down is "
+                    f"not the strategy"):
                 held = None
         # stall: hours in, still not meaningfully ahead. Hype that has not
         # paid by now is decay, and every hour held is a hour of exposure.

@@ -199,13 +199,30 @@ def exit_params(source: str | None) -> dict:
     """
     src = source or ""
     if src == "scout:revival":
+        # 28d: the 2y study (n=1,908) put the MEDIAN grind at 26 days
+        # trough->peak — the first 14d cap would still have amputated
+        # half the winners it was built to hold
         return {"kind": "grind", "stop_pct": -0.10, "stall_h": None,
-                "max_hold_h": 336.0}
+                "max_hold_h": 672.0}
     if src.startswith("scout:"):
         return {"kind": "burst", "stop_pct": -0.06, "stall_h": 2.0,
                 "max_hold_h": 8.0}
     return {"kind": "hype", "stop_pct": -0.10, "stall_h": 6.0,
             "max_hold_h": 24.0}
+
+
+def trail_pct(gain: float | None) -> float:
+    """Progressive trailing stop: the more a ride has paid, the tighter it
+    is held. The 2y study's retention gradient is monotonic — +50-100%
+    events kept -24% at 30d, +500%+ kept -58%: the bigger the pump, the
+    more completely it dies, so protecting a big gain matters more than
+    stretching for its tail. gain = high-water-mark / entry - 1."""
+    g = gain or 0.0
+    if g >= 1.0:
+        return -0.08
+    if g >= 0.5:
+        return -0.10
+    return -0.15
 
 
 def late_entry(runup_24h: float | None, chg_1h: float | None) -> str | None:

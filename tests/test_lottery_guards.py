@@ -108,7 +108,14 @@ assert why and "blind" in why
 g = bl.exit_params("scout:revival")
 assert g["kind"] == "grind" and g["stall_h"] is None, \
     "a grind's early days LOOK stalled — it must not have a stall clock"
-assert g["max_hold_h"] == 336.0, "a 24h clock force-sells every 11-day grind"
+assert g["max_hold_h"] == 672.0, \
+    "2y median grind is 26 DAYS — a shorter clock amputates the winners"
+
+# progressive trail: the bigger the gain, the tighter the leash
+assert bl.trail_pct(0.0) == -0.15 and bl.trail_pct(None) == -0.15
+assert bl.trail_pct(0.6) == -0.10, "past +50% the leash tightens"
+assert bl.trail_pct(1.5) == -0.08, "past +100% tighter still (+500% events " \
+    "kept only -58% at 30d — big gains die most completely)"
 b = bl.exit_params("scout:ignition")
 assert b["kind"] == "burst" and b["max_hold_h"] == 8.0 \
     and b["stop_pct"] == -0.06

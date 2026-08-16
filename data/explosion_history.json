@@ -1,0 +1,2447 @@
+{
+ "asof": "2026-08-16",
+ "definition": "close >= +50% above trailing-30d low close, daily, 2024-08..2026-08, episodes merged (gap<=5d)",
+ "note": "static snapshot from the 2y explosion study; regenerate periodically from trading-research/detect_events.py",
+ "symbols": {
+  "RSRUSDT": {
+   "n": 13,
+   "max_mag": 3.72,
+   "last": "2025-10-15"
+  },
+  "ZECUSDT": {
+   "n": 11,
+   "max_mag": 16.45,
+   "last": "2026-07-15"
+  },
+  "LQTYUSDT": {
+   "n": 10,
+   "max_mag": 2.44,
+   "last": "2025-07-17"
+  },
+  "FETUSDT": {
+   "n": 10,
+   "max_mag": 1.4,
+   "last": "2026-03-25"
+  },
+  "LISTAUSDT": {
+   "n": 10,
+   "max_mag": 1.13,
+   "last": "2026-08-12"
+  },
+  "TUTUSDT": {
+   "n": 9,
+   "max_mag": 19.9,
+   "last": "2026-08-09"
+  },
+  "SYNUSDT": {
+   "n": 9,
+   "max_mag": 18.91,
+   "last": "2026-08-05"
+  },
+  "TNSRUSDT": {
+   "n": 9,
+   "max_mag": 6.38,
+   "last": "2026-06-21"
+  },
+  "DUSKUSDT": {
+   "n": 9,
+   "max_mag": 4.93,
+   "last": "2026-04-17"
+  },
+  "BROCCOLI714USDT": {
+   "n": 9,
+   "max_mag": 2.64,
+   "last": "2026-08-09"
+  },
+  "BOMEUSDT": {
+   "n": 9,
+   "max_mag": 2.07,
+   "last": "2026-08-09"
+  },
+  "WLDUSDT": {
+   "n": 9,
+   "max_mag": 1.86,
+   "last": "2026-06-16"
+  },
+  "MUBARAKUSDT": {
+   "n": 9,
+   "max_mag": 1.85,
+   "last": "2026-08-09"
+  },
+  "FIDAUSDT": {
+   "n": 9,
+   "max_mag": 1.58,
+   "last": "2026-06-15"
+  },
+  "GPSUSDT": {
+   "n": 9,
+   "max_mag": 1.54,
+   "last": "2026-07-02"
+  },
+  "BANANAS31USDT": {
+   "n": 8,
+   "max_mag": 5.75,
+   "last": "2026-08-09"
+  },
+  "XVGUSDT": {
+   "n": 8,
+   "max_mag": 5.34,
+   "last": "2026-01-24"
+  },
+  "PNUTUSDT": {
+   "n": 8,
+   "max_mag": 3.58,
+   "last": "2026-05-10"
+  },
+  "DEGOUSDT": {
+   "n": 8,
+   "max_mag": 3.38,
+   "last": "2026-03-16"
+  },
+  "AIXBTUSDT": {
+   "n": 8,
+   "max_mag": 2.44,
+   "last": "2026-05-09"
+  },
+  "PEOPLEUSDT": {
+   "n": 8,
+   "max_mag": 2.36,
+   "last": "2026-08-09"
+  },
+  "PEPEUSDT": {
+   "n": 8,
+   "max_mag": 2.35,
+   "last": "2026-01-04"
+  },
+  "LUMIAUSDT": {
+   "n": 8,
+   "max_mag": 2.14,
+   "last": "2026-07-07"
+  },
+  "PONDUSDT": {
+   "n": 8,
+   "max_mag": 1.62,
+   "last": "2026-07-01"
+  },
+  "FIOUSDT": {
+   "n": 8,
+   "max_mag": 1.54,
+   "last": "2026-02-28"
+  },
+  "ACHUSDT": {
+   "n": 8,
+   "max_mag": 1.52,
+   "last": "2026-05-08"
+  },
+  "BERAUSDT": {
+   "n": 8,
+   "max_mag": 1.48,
+   "last": "2026-02-11"
+  },
+  "ROSEUSDT": {
+   "n": 8,
+   "max_mag": 1.4,
+   "last": "2026-01-21"
+  },
+  "AGLDUSDT": {
+   "n": 8,
+   "max_mag": 1.4,
+   "last": "2026-06-26"
+  },
+  "ACTUSDT": {
+   "n": 8,
+   "max_mag": 1.37,
+   "last": "2026-06-29"
+  },
+  "ALTUSDT": {
+   "n": 8,
+   "max_mag": 1.34,
+   "last": "2025-07-27"
+  },
+  "BBUSDT": {
+   "n": 8,
+   "max_mag": 1.27,
+   "last": "2025-09-24"
+  },
+  "NEARUSDT": {
+   "n": 8,
+   "max_mag": 1.23,
+   "last": "2026-06-15"
+  },
+  "DYMUSDT": {
+   "n": 8,
+   "max_mag": 1.15,
+   "last": "2026-05-23"
+  },
+  "RPLUSDT": {
+   "n": 8,
+   "max_mag": 0.99,
+   "last": "2026-07-04"
+  },
+  "DEXEUSDT": {
+   "n": 7,
+   "max_mag": 6.82,
+   "last": "2026-07-12"
+  },
+  "ENAUSDT": {
+   "n": 7,
+   "max_mag": 3.69,
+   "last": "2026-04-17"
+  },
+  "RESOLVUSDT": {
+   "n": 7,
+   "max_mag": 3.28,
+   "last": "2026-07-06"
+  },
+  "PORTALUSDT": {
+   "n": 7,
+   "max_mag": 3.25,
+   "last": "2026-08-16"
+  },
+  "ORDIUSDT": {
+   "n": 7,
+   "max_mag": 2.96,
+   "last": "2026-04-16"
+  },
+  "ETHFIUSDT": {
+   "n": 7,
+   "max_mag": 2.4,
+   "last": "2026-07-06"
+  },
+  "HEIUSDT": {
+   "n": 7,
+   "max_mag": 2.34,
+   "last": "2026-08-05"
+  },
+  "GUNUSDT": {
+   "n": 7,
+   "max_mag": 2.21,
+   "last": "2026-04-20"
+  },
+  "BONKUSDT": {
+   "n": 7,
+   "max_mag": 2.16,
+   "last": "2026-01-13"
+  },
+  "PIVXUSDT": {
+   "n": 7,
+   "max_mag": 1.87,
+   "last": "2026-06-27"
+  },
+  "BEAMXUSDT": {
+   "n": 7,
+   "max_mag": 1.62,
+   "last": "2025-07-22"
+  },
+  "AIUSDT": {
+   "n": 7,
+   "max_mag": 1.61,
+   "last": "2026-05-14"
+  },
+  "RIFUSDT": {
+   "n": 7,
+   "max_mag": 1.56,
+   "last": "2026-07-09"
+  },
+  "CATIUSDT": {
+   "n": 7,
+   "max_mag": 1.47,
+   "last": "2026-06-27"
+  },
+  "TRUUSDT": {
+   "n": 7,
+   "max_mag": 1.42,
+   "last": "2026-04-11"
+  },
+  "BLURUSDT": {
+   "n": 7,
+   "max_mag": 1.39,
+   "last": "2026-07-06"
+  },
+  "APEUSDT": {
+   "n": 7,
+   "max_mag": 1.3,
+   "last": "2026-04-24"
+  },
+  "MANTAUSDT": {
+   "n": 7,
+   "max_mag": 1.3,
+   "last": "2025-11-20"
+  },
+  "BANANAUSDT": {
+   "n": 7,
+   "max_mag": 1.26,
+   "last": "2026-07-28"
+  },
+  "ARUSDT": {
+   "n": 7,
+   "max_mag": 1.23,
+   "last": "2026-05-08"
+  },
+  "REZUSDT": {
+   "n": 7,
+   "max_mag": 1.23,
+   "last": "2026-05-10"
+  },
+  "CTSIUSDT": {
+   "n": 7,
+   "max_mag": 1.2,
+   "last": "2026-04-15"
+  },
+  "PYTHUSDT": {
+   "n": 7,
+   "max_mag": 1.13,
+   "last": "2026-07-16"
+  },
+  "ALICEUSDT": {
+   "n": 7,
+   "max_mag": 1.07,
+   "last": "2026-06-20"
+  },
+  "ARKMUSDT": {
+   "n": 7,
+   "max_mag": 0.96,
+   "last": "2025-07-22"
+  },
+  "AXLUSDT": {
+   "n": 7,
+   "max_mag": 0.91,
+   "last": "2026-05-04"
+  },
+  "NEIROUSDT": {
+   "n": 6,
+   "max_mag": 6.54,
+   "last": "2026-04-16"
+  },
+  "USUALUSDT": {
+   "n": 6,
+   "max_mag": 5.59,
+   "last": "2025-11-25"
+  },
+  "DASHUSDT": {
+   "n": 6,
+   "max_mag": 5.03,
+   "last": "2026-05-07"
+  },
+  "BICOUSDT": {
+   "n": 6,
+   "max_mag": 4.53,
+   "last": "2026-08-08"
+  },
+  "PENGUUSDT": {
+   "n": 6,
+   "max_mag": 4.1,
+   "last": "2026-05-05"
+  },
+  "STGUSDT": {
+   "n": 6,
+   "max_mag": 3.29,
+   "last": "2026-06-11"
+  },
+  "PHAUSDT": {
+   "n": 6,
+   "max_mag": 3.25,
+   "last": "2026-05-26"
+  },
+  "RAYUSDT": {
+   "n": 6,
+   "max_mag": 3.16,
+   "last": "2025-08-28"
+  },
+  "TURBOUSDT": {
+   "n": 6,
+   "max_mag": 3.13,
+   "last": "2025-12-02"
+  },
+  "ACEUSDT": {
+   "n": 6,
+   "max_mag": 3.02,
+   "last": "2026-08-14"
+  },
+  "TLMUSDT": {
+   "n": 6,
+   "max_mag": 2.94,
+   "last": "2026-07-05"
+  },
+  "WIFUSDT": {
+   "n": 6,
+   "max_mag": 2.77,
+   "last": "2026-01-13"
+  },
+  "OMNIUSDT": {
+   "n": 6,
+   "max_mag": 2.57,
+   "last": "2025-07-29"
+  },
+  "HFTUSDT": {
+   "n": 6,
+   "max_mag": 2.51,
+   "last": "2026-08-06"
+  },
+  "COWUSDT": {
+   "n": 6,
+   "max_mag": 2.5,
+   "last": "2026-03-05"
+  },
+  "OMUSDT": {
+   "n": 6,
+   "max_mag": 2.37,
+   "last": "2026-02-22"
+  },
+  "KAITOUSDT": {
+   "n": 6,
+   "max_mag": 2.33,
+   "last": "2026-07-27"
+  },
+  "TSTUSDT": {
+   "n": 6,
+   "max_mag": 2.24,
+   "last": "2026-08-09"
+  },
+  "FXSUSDT": {
+   "n": 6,
+   "max_mag": 1.9,
+   "last": "2025-07-19"
+  },
+  "IOUSDT": {
+   "n": 6,
+   "max_mag": 1.88,
+   "last": "2026-05-30"
+  },
+  "TAOUSDT": {
+   "n": 6,
+   "max_mag": 1.84,
+   "last": "2026-03-25"
+  },
+  "VANRYUSDT": {
+   "n": 6,
+   "max_mag": 1.83,
+   "last": "2026-07-06"
+  },
+  "UNIUSDT": {
+   "n": 6,
+   "max_mag": 1.74,
+   "last": "2026-07-30"
+  },
+  "CETUSUSDT": {
+   "n": 6,
+   "max_mag": 1.7,
+   "last": "2026-05-10"
+  },
+  "RDNTUSDT": {
+   "n": 6,
+   "max_mag": 1.65,
+   "last": "2025-10-12"
+  },
+  "LDOUSDT": {
+   "n": 6,
+   "max_mag": 1.54,
+   "last": "2026-07-22"
+  },
+  "PROMUSDT": {
+   "n": 6,
+   "max_mag": 1.54,
+   "last": "2026-08-12"
+  },
+  "EIGENUSDT": {
+   "n": 6,
+   "max_mag": 1.47,
+   "last": "2026-06-22"
+  },
+  "MEMEUSDT": {
+   "n": 6,
+   "max_mag": 1.47,
+   "last": "2025-08-22"
+  },
+  "GTCUSDT": {
+   "n": 6,
+   "max_mag": 1.45,
+   "last": "2026-05-11"
+  },
+  "FLUXUSDT": {
+   "n": 6,
+   "max_mag": 1.43,
+   "last": "2026-05-10"
+  },
+  "SSVUSDT": {
+   "n": 6,
+   "max_mag": 1.42,
+   "last": "2026-05-11"
+  },
+  "BELUSDT": {
+   "n": 6,
+   "max_mag": 1.42,
+   "last": "2026-07-06"
+  },
+  "STRKUSDT": {
+   "n": 6,
+   "max_mag": 1.42,
+   "last": "2026-05-08"
+  },
+  "ZROUSDT": {
+   "n": 6,
+   "max_mag": 1.39,
+   "last": "2026-03-24"
+  },
+  "COTIUSDT": {
+   "n": 6,
+   "max_mag": 1.39,
+   "last": "2026-07-29"
+  },
+  "REDUSDT": {
+   "n": 6,
+   "max_mag": 1.36,
+   "last": "2026-04-07"
+  },
+  "JTOUSDT": {
+   "n": 6,
+   "max_mag": 1.3,
+   "last": "2026-06-28"
+  },
+  "STRAXUSDT": {
+   "n": 6,
+   "max_mag": 1.28,
+   "last": "2026-06-10"
+  },
+  "RAREUSDT": {
+   "n": 6,
+   "max_mag": 1.28,
+   "last": "2026-04-17"
+  },
+  "THEUSDT": {
+   "n": 6,
+   "max_mag": 1.27,
+   "last": "2026-01-13"
+  },
+  "ARKUSDT": {
+   "n": 6,
+   "max_mag": 1.25,
+   "last": "2025-07-21"
+  },
+  "DODOUSDT": {
+   "n": 6,
+   "max_mag": 1.25,
+   "last": "2026-08-05"
+  },
+  "FTTUSDT": {
+   "n": 6,
+   "max_mag": 1.22,
+   "last": "2025-07-20"
+  },
+  "SYSUSDT": {
+   "n": 6,
+   "max_mag": 1.22,
+   "last": "2026-05-26"
+  },
+  "TRBUSDT": {
+   "n": 6,
+   "max_mag": 1.2,
+   "last": "2026-04-16"
+  },
+  "GMTUSDT": {
+   "n": 6,
+   "max_mag": 1.12,
+   "last": "2026-01-10"
+  },
+  "PENDLEUSDT": {
+   "n": 6,
+   "max_mag": 1.12,
+   "last": "2026-05-11"
+  },
+  "IMXUSDT": {
+   "n": 6,
+   "max_mag": 1.06,
+   "last": "2025-09-28"
+  },
+  "PHBUSDT": {
+   "n": 6,
+   "max_mag": 1.06,
+   "last": "2026-04-18"
+  },
+  "CYBERUSDT": {
+   "n": 6,
+   "max_mag": 1.05,
+   "last": "2025-08-12"
+  },
+  "WUSDT": {
+   "n": 6,
+   "max_mag": 1.04,
+   "last": "2025-10-06"
+  },
+  "1000SATSUSDT": {
+   "n": 6,
+   "max_mag": 0.83,
+   "last": "2026-04-16"
+  },
+  "FORMUSDT": {
+   "n": 6,
+   "max_mag": 0.72,
+   "last": "2026-05-04"
+  },
+  "ALPACAUSDT": {
+   "n": 5,
+   "max_mag": 18.29,
+   "last": "2025-04-30"
+  },
+  "HIFIUSDT": {
+   "n": 5,
+   "max_mag": 8.34,
+   "last": "2025-09-13"
+  },
+  "NFPUSDT": {
+   "n": 5,
+   "max_mag": 4.68,
+   "last": "2026-07-01"
+  },
+  "CRVUSDT": {
+   "n": 5,
+   "max_mag": 4.56,
+   "last": "2025-07-26"
+  },
+  "ENJUSDT": {
+   "n": 5,
+   "max_mag": 4.02,
+   "last": "2026-04-15"
+  },
+  "SCRTUSDT": {
+   "n": 5,
+   "max_mag": 3.46,
+   "last": "2026-04-26"
+  },
+  "ONEUSDT": {
+   "n": 5,
+   "max_mag": 3.28,
+   "last": "2025-07-20"
+  },
+  "DGBUSDT": {
+   "n": 5,
+   "max_mag": 2.99,
+   "last": "2026-07-27"
+  },
+  "CFXUSDT": {
+   "n": 5,
+   "max_mag": 2.6,
+   "last": "2025-07-30"
+  },
+  "ARDRUSDT": {
+   "n": 5,
+   "max_mag": 2.44,
+   "last": "2025-07-23"
+  },
+  "PROSUSDT": {
+   "n": 5,
+   "max_mag": 2.4,
+   "last": "2025-04-15"
+  },
+  "DOGSUSDT": {
+   "n": 5,
+   "max_mag": 2.25,
+   "last": "2026-05-07"
+  },
+  "PIXELUSDT": {
+   "n": 5,
+   "max_mag": 2.14,
+   "last": "2026-03-11"
+  },
+  "AAVEUSDT": {
+   "n": 5,
+   "max_mag": 1.99,
+   "last": "2026-07-11"
+  },
+  "DYDXUSDT": {
+   "n": 5,
+   "max_mag": 1.97,
+   "last": "2026-06-30"
+  },
+  "VICUSDT": {
+   "n": 5,
+   "max_mag": 1.97,
+   "last": "2026-08-03"
+  },
+  "DCRUSDT": {
+   "n": 5,
+   "max_mag": 1.89,
+   "last": "2026-02-27"
+  },
+  "NILUSDT": {
+   "n": 5,
+   "max_mag": 1.85,
+   "last": "2026-08-15"
+  },
+  "SAGAUSDT": {
+   "n": 5,
+   "max_mag": 1.83,
+   "last": "2026-05-12"
+  },
+  "1000CATUSDT": {
+   "n": 5,
+   "max_mag": 1.76,
+   "last": "2026-08-08"
+  },
+  "NMRUSDT": {
+   "n": 5,
+   "max_mag": 1.71,
+   "last": "2025-08-27"
+  },
+  "1MBABYDOGEUSDT": {
+   "n": 5,
+   "max_mag": 1.69,
+   "last": "2025-07-21"
+  },
+  "PARTIUSDT": {
+   "n": 5,
+   "max_mag": 1.65,
+   "last": "2026-05-11"
+  },
+  "ZKUSDT": {
+   "n": 5,
+   "max_mag": 1.61,
+   "last": "2025-11-05"
+  },
+  "ORCAUSDT": {
+   "n": 5,
+   "max_mag": 1.61,
+   "last": "2026-04-30"
+  },
+  "ANIMEUSDT": {
+   "n": 5,
+   "max_mag": 1.59,
+   "last": "2026-01-14"
+  },
+  "C98USDT": {
+   "n": 5,
+   "max_mag": 1.59,
+   "last": "2026-02-14"
+  },
+  "GLMRUSDT": {
+   "n": 5,
+   "max_mag": 1.58,
+   "last": "2026-04-25"
+  },
+  "LPTUSDT": {
+   "n": 5,
+   "max_mag": 1.56,
+   "last": "2025-05-30"
+  },
+  "API3USDT": {
+   "n": 5,
+   "max_mag": 1.54,
+   "last": "2025-08-21"
+  },
+  "RENDERUSDT": {
+   "n": 5,
+   "max_mag": 1.48,
+   "last": "2026-04-07"
+  },
+  "ARBUSDT": {
+   "n": 5,
+   "max_mag": 1.48,
+   "last": "2025-08-23"
+  },
+  "CHRUSDT": {
+   "n": 5,
+   "max_mag": 1.39,
+   "last": "2026-05-12"
+  },
+  "SCRUSDT": {
+   "n": 5,
+   "max_mag": 1.38,
+   "last": "2025-08-20"
+  },
+  "BATUSDT": {
+   "n": 5,
+   "max_mag": 1.36,
+   "last": "2025-12-11"
+  },
+  "WOOUSDT": {
+   "n": 5,
+   "max_mag": 1.33,
+   "last": "2026-01-13"
+  },
+  "SEIUSDT": {
+   "n": 5,
+   "max_mag": 1.23,
+   "last": "2025-07-15"
+  },
+  "GHSTUSDT": {
+   "n": 5,
+   "max_mag": 1.19,
+   "last": "2026-02-10"
+  },
+  "CELOUSDT": {
+   "n": 5,
+   "max_mag": 1.15,
+   "last": "2025-10-06"
+  },
+  "USTCUSDT": {
+   "n": 5,
+   "max_mag": 1.14,
+   "last": "2026-05-05"
+  },
+  "STEEMUSDT": {
+   "n": 5,
+   "max_mag": 1.13,
+   "last": "2026-03-17"
+  },
+  "CHESSUSDT": {
+   "n": 5,
+   "max_mag": 1.11,
+   "last": "2025-07-03"
+  },
+  "TIAUSDT": {
+   "n": 5,
+   "max_mag": 1.09,
+   "last": "2026-05-14"
+  },
+  "ADXUSDT": {
+   "n": 5,
+   "max_mag": 1.02,
+   "last": "2025-11-10"
+  },
+  "RUNEUSDT": {
+   "n": 5,
+   "max_mag": 0.99,
+   "last": "2026-05-11"
+  },
+  "STXUSDT": {
+   "n": 5,
+   "max_mag": 0.96,
+   "last": "2026-01-13"
+  },
+  "METISUSDT": {
+   "n": 5,
+   "max_mag": 0.94,
+   "last": "2026-04-17"
+  },
+  "CTKUSDT": {
+   "n": 5,
+   "max_mag": 0.92,
+   "last": "2025-07-22"
+  },
+  "ARPAUSDT": {
+   "n": 5,
+   "max_mag": 0.86,
+   "last": "2026-01-19"
+  },
+  "PSGUSDT": {
+   "n": 5,
+   "max_mag": 0.77,
+   "last": "2026-05-28"
+  },
+  "BABYUSDT": {
+   "n": 5,
+   "max_mag": 0.65,
+   "last": "2026-06-15"
+  },
+  "BANKUSDT": {
+   "n": 4,
+   "max_mag": 9.97,
+   "last": "2026-07-26"
+  },
+  "STOUSDT": {
+   "n": 4,
+   "max_mag": 7.38,
+   "last": "2026-04-01"
+  },
+  "XLMUSDT": {
+   "n": 4,
+   "max_mag": 5.19,
+   "last": "2026-06-18"
+  },
+  "OGUSDT": {
+   "n": 4,
+   "max_mag": 5.16,
+   "last": "2026-05-10"
+  },
+  "AUCTIONUSDT": {
+   "n": 4,
+   "max_mag": 5.11,
+   "last": "2026-01-25"
+  },
+  "VOXELUSDT": {
+   "n": 4,
+   "max_mag": 4.74,
+   "last": "2025-09-13"
+  },
+  "ZENUSDT": {
+   "n": 4,
+   "max_mag": 4.57,
+   "last": "2026-01-16"
+  },
+  "TROYUSDT": {
+   "n": 4,
+   "max_mag": 4.35,
+   "last": "2025-01-01"
+  },
+  "BSWUSDT": {
+   "n": 4,
+   "max_mag": 4.12,
+   "last": "2025-04-30"
+  },
+  "BIOUSDT": {
+   "n": 4,
+   "max_mag": 3.94,
+   "last": "2026-05-03"
+  },
+  "IOTAUSDT": {
+   "n": 4,
+   "max_mag": 3.79,
+   "last": "2025-07-17"
+  },
+  "SUSHIUSDT": {
+   "n": 4,
+   "max_mag": 3.48,
+   "last": "2025-07-21"
+  },
+  "HOMEUSDT": {
+   "n": 4,
+   "max_mag": 3.29,
+   "last": "2026-08-13"
+  },
+  "EPICUSDT": {
+   "n": 4,
+   "max_mag": 2.86,
+   "last": "2026-08-07"
+  },
+  "ALPINEUSDT": {
+   "n": 4,
+   "max_mag": 2.8,
+   "last": "2025-09-29"
+  },
+  "DIAUSDT": {
+   "n": 4,
+   "max_mag": 2.73,
+   "last": "2025-10-27"
+  },
+  "ASRUSDT": {
+   "n": 4,
+   "max_mag": 2.72,
+   "last": "2026-01-15"
+  },
+  "SNXUSDT": {
+   "n": 4,
+   "max_mag": 2.67,
+   "last": "2026-02-22"
+  },
+  "JASMYUSDT": {
+   "n": 4,
+   "max_mag": 2.55,
+   "last": "2026-01-08"
+  },
+  "MAGICUSDT": {
+   "n": 4,
+   "max_mag": 2.43,
+   "last": "2025-08-09"
+  },
+  "VTHOUSDT": {
+   "n": 4,
+   "max_mag": 2.27,
+   "last": "2025-04-14"
+  },
+  "STPTUSDT": {
+   "n": 4,
+   "max_mag": 2.23,
+   "last": "2025-05-09"
+  },
+  "IDEXUSDT": {
+   "n": 4,
+   "max_mag": 2.15,
+   "last": "2025-07-26"
+  },
+  "ICPUSDT": {
+   "n": 4,
+   "max_mag": 2.1,
+   "last": "2026-05-08"
+  },
+  "THETAUSDT": {
+   "n": 4,
+   "max_mag": 2.09,
+   "last": "2026-04-20"
+  },
+  "XNOUSDT": {
+   "n": 4,
+   "max_mag": 2.08,
+   "last": "2026-07-20"
+  },
+  "SUIUSDT": {
+   "n": 4,
+   "max_mag": 2.08,
+   "last": "2025-07-27"
+  },
+  "BMTUSDT": {
+   "n": 4,
+   "max_mag": 1.99,
+   "last": "2026-08-09"
+  },
+  "MOVRUSDT": {
+   "n": 4,
+   "max_mag": 1.92,
+   "last": "2026-04-17"
+  },
+  "OSMOUSDT": {
+   "n": 4,
+   "max_mag": 1.9,
+   "last": "2026-06-07"
+  },
+  "DENTUSDT": {
+   "n": 4,
+   "max_mag": 1.89,
+   "last": "2026-02-26"
+  },
+  "HIGHUSDT": {
+   "n": 4,
+   "max_mag": 1.85,
+   "last": "2026-04-18"
+  },
+  "MDTUSDT": {
+   "n": 4,
+   "max_mag": 1.78,
+   "last": "2025-07-25"
+  },
+  "LOKAUSDT": {
+   "n": 4,
+   "max_mag": 1.76,
+   "last": "2025-07-18"
+  },
+  "1INCHUSDT": {
+   "n": 4,
+   "max_mag": 1.75,
+   "last": "2025-11-09"
+  },
+  "HOTUSDT": {
+   "n": 4,
+   "max_mag": 1.67,
+   "last": "2025-07-21"
+  },
+  "1000CHEEMSUSDT": {
+   "n": 4,
+   "max_mag": 1.67,
+   "last": "2026-05-10"
+  },
+  "CAKEUSDT": {
+   "n": 4,
+   "max_mag": 1.65,
+   "last": "2025-10-07"
+  },
+  "SKLUSDT": {
+   "n": 4,
+   "max_mag": 1.64,
+   "last": "2025-08-14"
+  },
+  "HMSTRUSDT": {
+   "n": 4,
+   "max_mag": 1.63,
+   "last": "2026-07-06"
+  },
+  "FTMUSDT": {
+   "n": 4,
+   "max_mag": 1.62,
+   "last": "2024-12-15"
+  },
+  "SUPERUSDT": {
+   "n": 4,
+   "max_mag": 1.61,
+   "last": "2025-07-17"
+  },
+  "FISUSDT": {
+   "n": 4,
+   "max_mag": 1.53,
+   "last": "2025-07-26"
+  },
+  "EGLDUSDT": {
+   "n": 4,
+   "max_mag": 1.52,
+   "last": "2025-07-22"
+  },
+  "KERNELUSDT": {
+   "n": 4,
+   "max_mag": 1.5,
+   "last": "2026-04-04"
+  },
+  "ATAUSDT": {
+   "n": 4,
+   "max_mag": 1.47,
+   "last": "2025-07-22"
+  },
+  "XAIUSDT": {
+   "n": 4,
+   "max_mag": 1.45,
+   "last": "2025-05-13"
+  },
+  "MAVUSDT": {
+   "n": 4,
+   "max_mag": 1.45,
+   "last": "2025-11-22"
+  },
+  "MBOXUSDT": {
+   "n": 4,
+   "max_mag": 1.42,
+   "last": "2025-07-21"
+  },
+  "PUMPUSDT": {
+   "n": 4,
+   "max_mag": 1.42,
+   "last": "2026-08-13"
+  },
+  "INJUSDT": {
+   "n": 4,
+   "max_mag": 1.42,
+   "last": "2026-06-01"
+  },
+  "FLOKIUSDT": {
+   "n": 4,
+   "max_mag": 1.42,
+   "last": "2026-01-05"
+  },
+  "BANDUSDT": {
+   "n": 4,
+   "max_mag": 1.34,
+   "last": "2025-08-23"
+  },
+  "TKOUSDT": {
+   "n": 4,
+   "max_mag": 1.34,
+   "last": "2025-08-23"
+  },
+  "EDUUSDT": {
+   "n": 4,
+   "max_mag": 1.31,
+   "last": "2026-04-20"
+  },
+  "FIROUSDT": {
+   "n": 4,
+   "max_mag": 1.31,
+   "last": "2025-01-07"
+  },
+  "JOEUSDT": {
+   "n": 4,
+   "max_mag": 1.3,
+   "last": "2026-04-07"
+  },
+  "ALCXUSDT": {
+   "n": 4,
+   "max_mag": 1.27,
+   "last": "2026-03-07"
+  },
+  "ILVUSDT": {
+   "n": 4,
+   "max_mag": 1.26,
+   "last": "2025-08-06"
+  },
+  "AEVOUSDT": {
+   "n": 4,
+   "max_mag": 1.23,
+   "last": "2025-07-15"
+  },
+  "MINAUSDT": {
+   "n": 4,
+   "max_mag": 1.21,
+   "last": "2025-11-07"
+  },
+  "GMXUSDT": {
+   "n": 4,
+   "max_mag": 1.21,
+   "last": "2025-08-09"
+  },
+  "BURGERUSDT": {
+   "n": 4,
+   "max_mag": 1.15,
+   "last": "2025-03-02"
+  },
+  "SOLVUSDT": {
+   "n": 4,
+   "max_mag": 1.11,
+   "last": "2026-04-29"
+  },
+  "TUSDT": {
+   "n": 4,
+   "max_mag": 1.11,
+   "last": "2026-07-12"
+  },
+  "HOOKUSDT": {
+   "n": 4,
+   "max_mag": 1.07,
+   "last": "2025-07-21"
+  },
+  "TRUMPUSDT": {
+   "n": 4,
+   "max_mag": 1.06,
+   "last": "2025-11-10"
+  },
+  "SAPIENUSDT": {
+   "n": 4,
+   "max_mag": 1.05,
+   "last": "2026-05-14"
+  },
+  "YGGUSDT": {
+   "n": 4,
+   "max_mag": 1.04,
+   "last": "2025-09-13"
+  },
+  "NOTUSDT": {
+   "n": 4,
+   "max_mag": 1.03,
+   "last": "2026-05-07"
+  },
+  "SANTOSUSDT": {
+   "n": 4,
+   "max_mag": 1.0,
+   "last": "2026-01-16"
+  },
+  "OPUSDT": {
+   "n": 4,
+   "max_mag": 0.99,
+   "last": "2026-05-08"
+  },
+  "VELODROMEUSDT": {
+   "n": 4,
+   "max_mag": 0.99,
+   "last": "2026-07-03"
+  },
+  "DATAUSDT": {
+   "n": 4,
+   "max_mag": 0.98,
+   "last": "2025-07-21"
+  },
+  "UMAUSDT": {
+   "n": 4,
+   "max_mag": 0.97,
+   "last": "2025-10-13"
+  },
+  "GLMUSDT": {
+   "n": 4,
+   "max_mag": 0.96,
+   "last": "2026-01-13"
+  },
+  "IDUSDT": {
+   "n": 4,
+   "max_mag": 0.93,
+   "last": "2026-07-06"
+  },
+  "CUSDT": {
+   "n": 4,
+   "max_mag": 0.85,
+   "last": "2026-04-21"
+  },
+  "XPLUSDT": {
+   "n": 4,
+   "max_mag": 0.84,
+   "last": "2026-06-17"
+  },
+  "WBETHUSDT": {
+   "n": 4,
+   "max_mag": 0.82,
+   "last": "2025-08-13"
+  },
+  "HEMIUSDT": {
+   "n": 4,
+   "max_mag": 0.78,
+   "last": "2026-08-15"
+  },
+  "OPENUSDT": {
+   "n": 4,
+   "max_mag": 0.77,
+   "last": "2026-06-14"
+  },
+  "ETHUSDT": {
+   "n": 4,
+   "max_mag": 0.76,
+   "last": "2025-08-13"
+  },
+  "PLUMEUSDT": {
+   "n": 4,
+   "max_mag": 0.69,
+   "last": "2026-05-09"
+  },
+  "SOLUSDT": {
+   "n": 4,
+   "max_mag": 0.69,
+   "last": "2025-07-22"
+  },
+  "BNXUSDT": {
+   "n": 3,
+   "max_mag": 11.19,
+   "last": "2025-03-17"
+  },
+  "FUNUSDT": {
+   "n": 3,
+   "max_mag": 6.38,
+   "last": "2025-07-14"
+  },
+  "XRPUSDT": {
+   "n": 3,
+   "max_mag": 4.42,
+   "last": "2025-07-22"
+  },
+  "CTXCUSDT": {
+   "n": 3,
+   "max_mag": 4.28,
+   "last": "2024-12-14"
+  },
+  "LAYERUSDT": {
+   "n": 3,
+   "max_mag": 4.25,
+   "last": "2026-05-10"
+  },
+  "CVXUSDT": {
+   "n": 3,
+   "max_mag": 4.13,
+   "last": "2025-07-26"
+  },
+  "ALGOUSDT": {
+   "n": 3,
+   "max_mag": 3.65,
+   "last": "2026-04-03"
+  },
+  "VIRTUALUSDT": {
+   "n": 3,
+   "max_mag": 3.63,
+   "last": "2026-01-06"
+  },
+  "DOGEUSDT": {
+   "n": 3,
+   "max_mag": 3.46,
+   "last": "2025-07-20"
+  },
+  "NOMUSDT": {
+   "n": 3,
+   "max_mag": 3.43,
+   "last": "2026-07-03"
+  },
+  "GIGGLEUSDT": {
+   "n": 3,
+   "max_mag": 3.35,
+   "last": "2026-07-31"
+  },
+  "SANDUSDT": {
+   "n": 3,
+   "max_mag": 3.11,
+   "last": "2026-01-22"
+  },
+  "COOKIEUSDT": {
+   "n": 3,
+   "max_mag": 3.05,
+   "last": "2026-08-09"
+  },
+  "WCTUSDT": {
+   "n": 3,
+   "max_mag": 3.01,
+   "last": "2025-11-17"
+  },
+  "KDAUSDT": {
+   "n": 3,
+   "max_mag": 2.91,
+   "last": "2025-07-19"
+  },
+  "BAKEUSDT": {
+   "n": 3,
+   "max_mag": 2.84,
+   "last": "2025-09-12"
+  },
+  "EDENUSDT": {
+   "n": 3,
+   "max_mag": 2.82,
+   "last": "2026-08-13"
+  },
+  "ADAUSDT": {
+   "n": 3,
+   "max_mag": 2.77,
+   "last": "2025-07-22"
+  },
+  "SUNUSDT": {
+   "n": 3,
+   "max_mag": 2.76,
+   "last": "2025-09-20"
+  },
+  "SOMIUSDT": {
+   "n": 3,
+   "max_mag": 2.67,
+   "last": "2026-01-24"
+  },
+  "AXSUSDT": {
+   "n": 3,
+   "max_mag": 2.65,
+   "last": "2026-01-23"
+  },
+  "FLMUSDT": {
+   "n": 3,
+   "max_mag": 2.63,
+   "last": "2025-11-01"
+  },
+  "GALAUSDT": {
+   "n": 3,
+   "max_mag": 2.5,
+   "last": "2025-07-21"
+  },
+  "KITEUSDT": {
+   "n": 3,
+   "max_mag": 2.46,
+   "last": "2026-05-18"
+  },
+  "KAIAUSDT": {
+   "n": 3,
+   "max_mag": 2.45,
+   "last": "2026-01-24"
+  },
+  "VIDTUSDT": {
+   "n": 3,
+   "max_mag": 2.42,
+   "last": "2025-04-04"
+  },
+  "ATMUSDT": {
+   "n": 3,
+   "max_mag": 2.34,
+   "last": "2026-07-14"
+  },
+  "EOSUSDT": {
+   "n": 3,
+   "max_mag": 2.34,
+   "last": "2025-05-10"
+  },
+  "ZBTUSDT": {
+   "n": 3,
+   "max_mag": 2.23,
+   "last": "2026-08-06"
+  },
+  "ENSUSDT": {
+   "n": 3,
+   "max_mag": 2.21,
+   "last": "2025-07-27"
+  },
+  "LUNCUSDT": {
+   "n": 3,
+   "max_mag": 2.2,
+   "last": "2026-05-05"
+  },
+  "YFIUSDT": {
+   "n": 3,
+   "max_mag": 2.11,
+   "last": "2026-07-06"
+  },
+  "QNTUSDT": {
+   "n": 3,
+   "max_mag": 1.96,
+   "last": "2025-05-28"
+  },
+  "COMPUSDT": {
+   "n": 3,
+   "max_mag": 1.96,
+   "last": "2026-04-17"
+  },
+  "MANAUSDT": {
+   "n": 3,
+   "max_mag": 1.95,
+   "last": "2025-05-10"
+  },
+  "DFUSDT": {
+   "n": 3,
+   "max_mag": 1.92,
+   "last": "2026-02-10"
+  },
+  "LUNAUSDT": {
+   "n": 3,
+   "max_mag": 1.89,
+   "last": "2025-12-10"
+  },
+  "MLNUSDT": {
+   "n": 3,
+   "max_mag": 1.87,
+   "last": "2025-10-19"
+  },
+  "BIFIUSDT": {
+   "n": 3,
+   "max_mag": 1.86,
+   "last": "2025-12-26"
+  },
+  "LINKUSDT": {
+   "n": 3,
+   "max_mag": 1.85,
+   "last": "2025-08-22"
+  },
+  "ONTUSDT": {
+   "n": 3,
+   "max_mag": 1.85,
+   "last": "2026-04-01"
+  },
+  "WINUSDT": {
+   "n": 3,
+   "max_mag": 1.77,
+   "last": "2026-08-03"
+  },
+  "COSUSDT": {
+   "n": 3,
+   "max_mag": 1.76,
+   "last": "2026-03-14"
+  },
+  "NKNUSDT": {
+   "n": 3,
+   "max_mag": 1.71,
+   "last": "2026-02-09"
+  },
+  "GRTUSDT": {
+   "n": 3,
+   "max_mag": 1.57,
+   "last": "2025-07-20"
+  },
+  "CGPTUSDT": {
+   "n": 3,
+   "max_mag": 1.54,
+   "last": "2026-05-15"
+  },
+  "PUNDIXUSDT": {
+   "n": 3,
+   "max_mag": 1.54,
+   "last": "2025-10-23"
+  },
+  "SPELLUSDT": {
+   "n": 3,
+   "max_mag": 1.54,
+   "last": "2025-01-28"
+  },
+  "FILUSDT": {
+   "n": 3,
+   "max_mag": 1.48,
+   "last": "2026-05-08"
+  },
+  "CHZUSDT": {
+   "n": 3,
+   "max_mag": 1.46,
+   "last": "2026-01-17"
+  },
+  "CKBUSDT": {
+   "n": 3,
+   "max_mag": 1.45,
+   "last": "2025-07-26"
+  },
+  "POLUSDT": {
+   "n": 3,
+   "max_mag": 1.44,
+   "last": "2026-01-10"
+  },
+  "ICXUSDT": {
+   "n": 3,
+   "max_mag": 1.38,
+   "last": "2025-06-09"
+  },
+  "AVAXUSDT": {
+   "n": 3,
+   "max_mag": 1.38,
+   "last": "2025-09-18"
+  },
+  "SHELLUSDT": {
+   "n": 3,
+   "max_mag": 1.35,
+   "last": "2025-11-02"
+  },
+  "AVNTUSDT": {
+   "n": 3,
+   "max_mag": 1.32,
+   "last": "2025-12-29"
+  },
+  "MITOUSDT": {
+   "n": 3,
+   "max_mag": 1.31,
+   "last": "2026-06-17"
+  },
+  "DOLOUSDT": {
+   "n": 3,
+   "max_mag": 1.28,
+   "last": "2026-01-12"
+  },
+  "TWTUSDT": {
+   "n": 3,
+   "max_mag": 1.27,
+   "last": "2025-10-07"
+  },
+  "BNTUSDT": {
+   "n": 3,
+   "max_mag": 1.26,
+   "last": "2025-07-21"
+  },
+  "INITUSDT": {
+   "n": 3,
+   "max_mag": 1.26,
+   "last": "2026-02-16"
+  },
+  "PYRUSDT": {
+   "n": 3,
+   "max_mag": 1.25,
+   "last": "2025-11-08"
+  },
+  "GASUSDT": {
+   "n": 3,
+   "max_mag": 1.22,
+   "last": "2025-04-16"
+  },
+  "FORTHUSDT": {
+   "n": 3,
+   "max_mag": 1.21,
+   "last": "2025-05-03"
+  },
+  "HUMAUSDT": {
+   "n": 3,
+   "max_mag": 1.21,
+   "last": "2026-04-23"
+  },
+  "TONUSDT": {
+   "n": 3,
+   "max_mag": 1.2,
+   "last": "2026-06-01"
+  },
+  "QUICKUSDT": {
+   "n": 3,
+   "max_mag": 1.14,
+   "last": "2024-12-08"
+  },
+  "FFUSDT": {
+   "n": 3,
+   "max_mag": 1.09,
+   "last": "2026-06-01"
+  },
+  "SAHARAUSDT": {
+   "n": 3,
+   "max_mag": 1.08,
+   "last": "2026-05-13"
+  },
+  "OGNUSDT": {
+   "n": 3,
+   "max_mag": 1.05,
+   "last": "2026-03-11"
+  },
+  "RLCUSDT": {
+   "n": 3,
+   "max_mag": 1.03,
+   "last": "2025-08-27"
+  },
+  "IQUSDT": {
+   "n": 3,
+   "max_mag": 1.02,
+   "last": "2025-04-17"
+  },
+  "CFGUSDT": {
+   "n": 3,
+   "max_mag": 1.01,
+   "last": "2026-05-21"
+  },
+  "LSKUSDT": {
+   "n": 3,
+   "max_mag": 0.99,
+   "last": "2025-11-30"
+  },
+  "HARDUSDT": {
+   "n": 3,
+   "max_mag": 0.99,
+   "last": "2025-03-06"
+  },
+  "XVSUSDT": {
+   "n": 3,
+   "max_mag": 0.95,
+   "last": "2025-05-10"
+  },
+  "MORPHOUSDT": {
+   "n": 3,
+   "max_mag": 0.93,
+   "last": "2026-03-12"
+  },
+  "REQUSDT": {
+   "n": 3,
+   "max_mag": 0.89,
+   "last": "2026-04-18"
+  },
+  "DARUSDT": {
+   "n": 3,
+   "max_mag": 0.88,
+   "last": "2025-01-06"
+  },
+  "RONINUSDT": {
+   "n": 3,
+   "max_mag": 0.87,
+   "last": "2025-05-22"
+  },
+  "XECUSDT": {
+   "n": 3,
+   "max_mag": 0.87,
+   "last": "2026-07-18"
+  },
+  "REIUSDT": {
+   "n": 3,
+   "max_mag": 0.87,
+   "last": "2025-07-25"
+  },
+  "ACXUSDT": {
+   "n": 3,
+   "max_mag": 0.86,
+   "last": "2026-03-11"
+  },
+  "CREAMUSDT": {
+   "n": 3,
+   "max_mag": 0.86,
+   "last": "2025-04-16"
+  },
+  "APTUSDT": {
+   "n": 3,
+   "max_mag": 0.84,
+   "last": "2024-12-06"
+  },
+  "MOVEUSDT": {
+   "n": 3,
+   "max_mag": 0.83,
+   "last": "2025-07-21"
+  },
+  "GNSUSDT": {
+   "n": 3,
+   "max_mag": 0.82,
+   "last": "2025-07-17"
+  },
+  "WINGUSDT": {
+   "n": 3,
+   "max_mag": 0.76,
+   "last": "2025-04-26"
+  },
+  "LAUSDT": {
+   "n": 3,
+   "max_mag": 0.73,
+   "last": "2026-07-26"
+  },
+  "BNSOLUSDT": {
+   "n": 3,
+   "max_mag": 0.7,
+   "last": "2025-07-22"
+  },
+  "GNOUSDT": {
+   "n": 3,
+   "max_mag": 0.67,
+   "last": "2025-07-21"
+  },
+  "SXTUSDT": {
+   "n": 3,
+   "max_mag": 0.64,
+   "last": "2026-07-11"
+  },
+  "PORTOUSDT": {
+   "n": 3,
+   "max_mag": 0.63,
+   "last": "2026-07-14"
+  },
+  "ZKCUSDT": {
+   "n": 3,
+   "max_mag": 0.59,
+   "last": "2026-01-25"
+  },
+  "HBARUSDT": {
+   "n": 2,
+   "max_mag": 7.64,
+   "last": "2025-07-27"
+  },
+  "HYPERUSDT": {
+   "n": 2,
+   "max_mag": 5.28,
+   "last": "2026-04-25"
+  },
+  "ALLOUSDT": {
+   "n": 2,
+   "max_mag": 5.25,
+   "last": "2026-07-24"
+  },
+  "SPKUSDT": {
+   "n": 2,
+   "max_mag": 4.9,
+   "last": "2026-04-23"
+  },
+  "ENSOUSDT": {
+   "n": 2,
+   "max_mag": 3.91,
+   "last": "2026-08-06"
+  },
+  "CLVUSDT": {
+   "n": 2,
+   "max_mag": 3.37,
+   "last": "2025-01-22"
+  },
+  "VETUSDT": {
+   "n": 2,
+   "max_mag": 3.02,
+   "last": "2025-05-10"
+  },
+  "DUSDT": {
+   "n": 2,
+   "max_mag": 2.98,
+   "last": "2026-04-04"
+  },
+  "AMPUSDT": {
+   "n": 2,
+   "max_mag": 2.46,
+   "last": "2024-12-08"
+  },
+  "KSMUSDT": {
+   "n": 2,
+   "max_mag": 2.44,
+   "last": "2025-05-12"
+  },
+  "SLFUSDT": {
+   "n": 2,
+   "max_mag": 2.4,
+   "last": "2025-09-12"
+  },
+  "ESPUSDT": {
+   "n": 2,
+   "max_mag": 2.37,
+   "last": "2026-07-26"
+  },
+  "SNTUSDT": {
+   "n": 2,
+   "max_mag": 2.12,
+   "last": "2025-04-16"
+  },
+  "XTZUSDT": {
+   "n": 2,
+   "max_mag": 2.02,
+   "last": "2025-07-20"
+  },
+  "CELRUSDT": {
+   "n": 2,
+   "max_mag": 2.0,
+   "last": "2025-05-13"
+  },
+  "MASKUSDT": {
+   "n": 2,
+   "max_mag": 1.97,
+   "last": "2025-06-04"
+  },
+  "DOTUSDT": {
+   "n": 2,
+   "max_mag": 1.84,
+   "last": "2025-05-10"
+  },
+  "HIVEUSDT": {
+   "n": 2,
+   "max_mag": 1.81,
+   "last": "2025-01-06"
+  },
+  "QTUMUSDT": {
+   "n": 2,
+   "max_mag": 1.74,
+   "last": "2025-08-24"
+  },
+  "BARDUSDT": {
+   "n": 2,
+   "max_mag": 1.72,
+   "last": "2026-03-05"
+  },
+  "IOSTUSDT": {
+   "n": 2,
+   "max_mag": 1.71,
+   "last": "2025-07-20"
+  },
+  "FLOWUSDT": {
+   "n": 2,
+   "max_mag": 1.55,
+   "last": "2026-03-10"
+  },
+  "AWEUSDT": {
+   "n": 2,
+   "max_mag": 1.55,
+   "last": "2026-02-18"
+  },
+  "SNXXBUSDT": {
+   "n": 2,
+   "max_mag": 1.47,
+   "last": "2026-08-16"
+  },
+  "SIGNUSDT": {
+   "n": 2,
+   "max_mag": 1.46,
+   "last": "2026-03-23"
+  },
+  "EULUSDT": {
+   "n": 2,
+   "max_mag": 1.43,
+   "last": "2026-07-26"
+  },
+  "KAVAUSDT": {
+   "n": 2,
+   "max_mag": 1.43,
+   "last": "2025-11-10"
+  },
+  "SLPUSDT": {
+   "n": 2,
+   "max_mag": 1.32,
+   "last": "2025-07-23"
+  },
+  "KNCUSDT": {
+   "n": 2,
+   "max_mag": 1.32,
+   "last": "2025-07-12"
+  },
+  "REUSDT": {
+   "n": 2,
+   "max_mag": 1.3,
+   "last": "2026-07-24"
+  },
+  "LTOUSDT": {
+   "n": 2,
+   "max_mag": 1.29,
+   "last": "2025-04-30"
+  },
+  "BTTCUSDT": {
+   "n": 2,
+   "max_mag": 1.27,
+   "last": "2024-12-03"
+  },
+  "PERPUSDT": {
+   "n": 2,
+   "max_mag": 1.27,
+   "last": "2025-05-13"
+  },
+  "LITUSDT": {
+   "n": 2,
+   "max_mag": 1.27,
+   "last": "2025-02-01"
+  },
+  "RVNUSDT": {
+   "n": 2,
+   "max_mag": 1.2,
+   "last": "2025-06-12"
+  },
+  "SUSDT": {
+   "n": 2,
+   "max_mag": 1.19,
+   "last": "2025-07-21"
+  },
+  "ETCUSDT": {
+   "n": 2,
+   "max_mag": 1.17,
+   "last": "2025-07-20"
+  },
+  "MKRUSDT": {
+   "n": 2,
+   "max_mag": 1.16,
+   "last": "2025-02-27"
+  },
+  "POLYXUSDT": {
+   "n": 2,
+   "max_mag": 1.14,
+   "last": "2025-07-22"
+  },
+  "NULSUSDT": {
+   "n": 2,
+   "max_mag": 1.13,
+   "last": "2024-12-04"
+  },
+  "ALPHAUSDT": {
+   "n": 2,
+   "max_mag": 1.13,
+   "last": "2024-12-08"
+  },
+  "CVCUSDT": {
+   "n": 2,
+   "max_mag": 1.12,
+   "last": "2024-12-15"
+  },
+  "VITEUSDT": {
+   "n": 2,
+   "max_mag": 1.11,
+   "last": "2024-12-08"
+  },
+  "SXPUSDT": {
+   "n": 2,
+   "max_mag": 1.09,
+   "last": "2024-12-04"
+  },
+  "AUDIOUSDT": {
+   "n": 2,
+   "max_mag": 1.09,
+   "last": "2026-04-17"
+  },
+  "LTCUSDT": {
+   "n": 2,
+   "max_mag": 1.08,
+   "last": "2024-12-06"
+  },
+  "ONGUSDT": {
+   "n": 2,
+   "max_mag": 1.07,
+   "last": "2026-04-04"
+  },
+  "NTRNUSDT": {
+   "n": 2,
+   "max_mag": 1.05,
+   "last": "2024-12-06"
+  },
+  "LEVERUSDT": {
+   "n": 2,
+   "max_mag": 1.03,
+   "last": "2025-04-26"
+  },
+  "MMTUSDT": {
+   "n": 2,
+   "max_mag": 1.0,
+   "last": "2026-07-30"
+  },
+  "JUVUSDT": {
+   "n": 2,
+   "max_mag": 0.99,
+   "last": "2025-08-15"
+  },
+  "SHIBUSDT": {
+   "n": 2,
+   "max_mag": 0.98,
+   "last": "2024-12-04"
+  },
+  "ZAMAUSDT": {
+   "n": 2,
+   "max_mag": 0.98,
+   "last": "2026-07-28"
+  },
+  "VIBUSDT": {
+   "n": 2,
+   "max_mag": 0.97,
+   "last": "2025-04-26"
+  },
+  "METUSDT": {
+   "n": 2,
+   "max_mag": 0.97,
+   "last": "2026-07-03"
+  },
+  "TFUELUSDT": {
+   "n": 2,
+   "max_mag": 0.95,
+   "last": "2024-12-04"
+  },
+  "SENTUSDT": {
+   "n": 2,
+   "max_mag": 0.94,
+   "last": "2026-06-16"
+  },
+  "UFTUSDT": {
+   "n": 2,
+   "max_mag": 0.92,
+   "last": "2024-12-08"
+  },
+  "BCHUSDT": {
+   "n": 2,
+   "max_mag": 0.89,
+   "last": "2025-05-08"
+  },
+  "ONDOUSDT": {
+   "n": 2,
+   "max_mag": 0.86,
+   "last": "2026-05-08"
+  },
+  "ERNUSDT": {
+   "n": 2,
+   "max_mag": 0.86,
+   "last": "2025-03-10"
+  },
+  "GUSDT": {
+   "n": 2,
+   "max_mag": 0.81,
+   "last": "2026-03-16"
+  },
+  "KORUBUSDT": {
+   "n": 2,
+   "max_mag": 0.8,
+   "last": "2026-08-16"
+  },
+  "QKCUSDT": {
+   "n": 2,
+   "max_mag": 0.78,
+   "last": "2025-07-30"
+  },
+  "STORJUSDT": {
+   "n": 2,
+   "max_mag": 0.78,
+   "last": "2024-12-06"
+  },
+  "KMNOUSDT": {
+   "n": 2,
+   "max_mag": 0.77,
+   "last": "2025-10-05"
+  },
+  "IOTXUSDT": {
+   "n": 2,
+   "max_mag": 0.76,
+   "last": "2024-12-03"
+  },
+  "RADUSDT": {
+   "n": 2,
+   "max_mag": 0.76,
+   "last": "2026-05-11"
+  },
+  "AERGOUSDT": {
+   "n": 2,
+   "max_mag": 0.76,
+   "last": "2024-12-11"
+  },
+  "PROVEUSDT": {
+   "n": 2,
+   "max_mag": 0.74,
+   "last": "2025-10-24"
+  },
+  "0GUSDT": {
+   "n": 2,
+   "max_mag": 0.74,
+   "last": "2026-01-24"
+  },
+  "LAZIOUSDT": {
+   "n": 2,
+   "max_mag": 0.68,
+   "last": "2024-10-30"
+  },
+  "VANAUSDT": {
+   "n": 2,
+   "max_mag": 0.65,
+   "last": "2025-03-21"
+  },
+  "MEUSDT": {
+   "n": 2,
+   "max_mag": 0.64,
+   "last": "2025-05-10"
+  },
+  "ZKPUSDT": {
+   "n": 2,
+   "max_mag": 0.62,
+   "last": "2026-04-28"
+  },
+  "BARUSDT": {
+   "n": 2,
+   "max_mag": 0.57,
+   "last": "2025-05-05"
+  },
+  "ASTERUSDT": {
+   "n": 2,
+   "max_mag": 0.57,
+   "last": "2026-02-14"
+  },
+  "ROBOUSDT": {
+   "n": 2,
+   "max_mag": 0.54,
+   "last": "2026-08-14"
+  },
+  "AVAUSDT": {
+   "n": 1,
+   "max_mag": 5.42,
+   "last": "2024-12-12"
+  },
+  "UTKUSDT": {
+   "n": 1,
+   "max_mag": 3.51,
+   "last": "2024-12-15"
+  },
+  "KATUSDT": {
+   "n": 1,
+   "max_mag": 2.14,
+   "last": "2026-04-24"
+  },
+  "NEOUSDT": {
+   "n": 1,
+   "max_mag": 1.96,
+   "last": "2024-12-03"
+  },
+  "LRCUSDT": {
+   "n": 1,
+   "max_mag": 1.91,
+   "last": "2024-12-06"
+  },
+  "ZILUSDT": {
+   "n": 1,
+   "max_mag": 1.81,
+   "last": "2024-12-06"
+  },
+  "AMBUSDT": {
+   "n": 1,
+   "max_mag": 1.79,
+   "last": "2024-12-08"
+  },
+  "HAEDALUSDT": {
+   "n": 1,
+   "max_mag": 1.73,
+   "last": "2025-07-16"
+  },
+  "ZRXUSDT": {
+   "n": 1,
+   "max_mag": 1.73,
+   "last": "2024-12-08"
+  },
+  "TRXUSDT": {
+   "n": 1,
+   "max_mag": 1.71,
+   "last": "2024-12-03"
+  },
+  "WRXUSDT": {
+   "n": 1,
+   "max_mag": 1.68,
+   "last": "2024-12-13"
+  },
+  "ATOMUSDT": {
+   "n": 1,
+   "max_mag": 1.65,
+   "last": "2024-12-06"
+  },
+  "ANKRUSDT": {
+   "n": 1,
+   "max_mag": 1.56,
+   "last": "2024-12-05"
+  },
+  "AXTIBUSDT": {
+   "n": 1,
+   "max_mag": 1.43,
+   "last": "2026-08-09"
+  },
+  "ELFUSDT": {
+   "n": 1,
+   "max_mag": 1.41,
+   "last": "2024-11-25"
+  },
+  "WAXPUSDT": {
+   "n": 1,
+   "max_mag": 1.41,
+   "last": "2024-12-04"
+  },
+  "ACAUSDT": {
+   "n": 1,
+   "max_mag": 1.38,
+   "last": "2024-12-12"
+  },
+  "OXTUSDT": {
+   "n": 1,
+   "max_mag": 1.37,
+   "last": "2024-12-05"
+  },
+  "JSTUSDT": {
+   "n": 1,
+   "max_mag": 1.36,
+   "last": "2024-12-03"
+  },
+  "LINAUSDT": {
+   "n": 1,
+   "max_mag": 1.35,
+   "last": "2024-12-08"
+  },
+  "QIUSDT": {
+   "n": 1,
+   "max_mag": 1.31,
+   "last": "2024-12-08"
+  },
+  "BLZUSDT": {
+   "n": 1,
+   "max_mag": 1.3,
+   "last": "2024-12-08"
+  },
+  "BALUSDT": {
+   "n": 1,
+   "max_mag": 1.29,
+   "last": "2024-12-08"
+  },
+  "ATUSDT": {
+   "n": 1,
+   "max_mag": 1.25,
+   "last": "2025-12-28"
+  },
+  "OPNUSDT": {
+   "n": 1,
+   "max_mag": 1.17,
+   "last": "2026-06-04"
+  },
+  "IRISUSDT": {
+   "n": 1,
+   "max_mag": 1.09,
+   "last": "2024-11-29"
+  },
+  "OPGUSDT": {
+   "n": 1,
+   "max_mag": 1.06,
+   "last": "2026-06-14"
+  },
+  "MTLUSDT": {
+   "n": 1,
+   "max_mag": 1.06,
+   "last": "2024-12-08"
+  },
+  "AAOIBUSDT": {
+   "n": 1,
+   "max_mag": 1.02,
+   "last": "2026-08-15"
+  },
+  "WANUSDT": {
+   "n": 1,
+   "max_mag": 1.01,
+   "last": "2024-12-08"
+  },
+  "POWRUSDT": {
+   "n": 1,
+   "max_mag": 0.98,
+   "last": "2024-12-07"
+  },
+  "A2ZUSDT": {
+   "n": 1,
+   "max_mag": 0.98,
+   "last": "2025-08-07"
+  },
+  "KMDUSDT": {
+   "n": 1,
+   "max_mag": 0.95,
+   "last": "2024-12-08"
+  },
+  "SCUSDT": {
+   "n": 1,
+   "max_mag": 0.95,
+   "last": "2024-12-06"
+  },
+  "STMXUSDT": {
+   "n": 1,
+   "max_mag": 0.94,
+   "last": "2024-12-06"
+  },
+  "COMBOUSDT": {
+   "n": 1,
+   "max_mag": 0.93,
+   "last": "2024-12-13"
+  },
+  "FARMUSDT": {
+   "n": 1,
+   "max_mag": 0.9,
+   "last": "2024-12-08"
+  },
+  "NEWTUSDT": {
+   "n": 1,
+   "max_mag": 0.88,
+   "last": "2025-07-24"
+  },
+  "MBLUSDT": {
+   "n": 1,
+   "max_mag": 0.87,
+   "last": "2024-12-04"
+  },
+  "PDAUSDT": {
+   "n": 1,
+   "max_mag": 0.86,
+   "last": "2024-12-08"
+  },
+  "ASTRUSDT": {
+   "n": 1,
+   "max_mag": 0.85,
+   "last": "2024-12-04"
+  },
+  "ASTUSDT": {
+   "n": 1,
+   "max_mag": 0.85,
+   "last": "2024-12-08"
+  },
+  "NBISBUSDT": {
+   "n": 1,
+   "max_mag": 0.84,
+   "last": "2026-08-14"
+  },
+  "CHIPUSDT": {
+   "n": 1,
+   "max_mag": 0.84,
+   "last": "2026-04-22"
+  },
+  "MVLLBUSDT": {
+   "n": 1,
+   "max_mag": 0.81,
+   "last": "2026-08-13"
+  },
+  "BADGERUSDT": {
+   "n": 1,
+   "max_mag": 0.8,
+   "last": "2024-12-08"
+  },
+  "YBUSDT": {
+   "n": 1,
+   "max_mag": 0.79,
+   "last": "2025-10-29"
+  },
+  "RENUSDT": {
+   "n": 1,
+   "max_mag": 0.78,
+   "last": "2024-11-24"
+  },
+  "AKROUSDT": {
+   "n": 1,
+   "max_mag": 0.72,
+   "last": "2024-12-04"
+  },
+  "CRWVBUSDT": {
+   "n": 1,
+   "max_mag": 0.72,
+   "last": "2026-08-13"
+  },
+  "MUUBUSDT": {
+   "n": 1,
+   "max_mag": 0.69,
+   "last": "2026-08-16"
+  },
+  "SNDKBUSDT": {
+   "n": 1,
+   "max_mag": 0.65,
+   "last": "2026-08-16"
+  },
+  "INTWBUSDT": {
+   "n": 1,
+   "max_mag": 0.64,
+   "last": "2026-08-13"
+  },
+  "SKYUSDT": {
+   "n": 1,
+   "max_mag": 0.63,
+   "last": "2025-12-25"
+  },
+  "AIGENSYNUSDT": {
+   "n": 1,
+   "max_mag": 0.62,
+   "last": "2026-06-30"
+  },
+  "HOLOUSDT": {
+   "n": 1,
+   "max_mag": 0.6,
+   "last": "2026-05-12"
+  },
+  "ERAUSDT": {
+   "n": 1,
+   "max_mag": 0.6,
+   "last": "2026-07-22"
+  },
+  "SOXLBUSDT": {
+   "n": 1,
+   "max_mag": 0.58,
+   "last": "2026-08-13"
+  },
+  "NEXOUSDT": {
+   "n": 1,
+   "max_mag": 0.58,
+   "last": "2024-12-04"
+  },
+  "NXPCUSDT": {
+   "n": 1,
+   "max_mag": 0.58,
+   "last": "2025-12-06"
+  },
+  "FRAXUSDT": {
+   "n": 1,
+   "max_mag": 0.57,
+   "last": "2026-01-18"
+  },
+  "LITEBUSDT": {
+   "n": 1,
+   "max_mag": 0.56,
+   "last": "2026-08-12"
+  },
+  "BIGTIMEUSDT": {
+   "n": 1,
+   "max_mag": 0.55,
+   "last": "2025-07-21"
+  },
+  "SOPHUSDT": {
+   "n": 1,
+   "max_mag": 0.53,
+   "last": "2025-12-19"
+  },
+  "FUSDT": {
+   "n": 1,
+   "max_mag": 0.52,
+   "last": "2025-12-25"
+  }
+ }
+}
