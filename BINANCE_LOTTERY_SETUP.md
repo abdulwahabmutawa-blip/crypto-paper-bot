@@ -1,20 +1,24 @@
-# Lottery book — arming the real ~$11 (owner-only steps)
+# Lottery book — arming the real money (owner-only steps)
 
-Real money, deliberately tiny: `src/binance_live.py` hard-caps the managed
-book at **$20**. If it ever sees more, every order halts and the ledger
-red-flags. This book is NOT the Track C pilot and cannot silently become it.
+Real money: `src/binance_live.py` spends the account's full free USDT
+balance on every BUY. The original **$20 hard cap** was removed by owner
+decision on 2026-08-16 after a manual top-up — every order now risks
+whatever USDT actually sits in this account. This book is NOT the Track C
+pilot, but with no cap it no longer stops itself from growing into one; that
+line is on the owner now, not the code.
 
 The odds, printed on the ticket: documented base rates for small-account
-pump-chasing say **losing the $11 is the expected outcome**. Arm it knowing
-that.
+pump-chasing say **losing the stake is the expected outcome**. Arm it
+knowing that — and know there is no ceiling on the stake anymore.
 
 ## Arm (two deliberate acts, both yours)
 
 1. Binance app/site → **Account → API Management → Create API**:
    - Enable **Reading** and **Spot & Margin Trading** ONLY.
-   - **Withdrawals: OFF** (leave unchecked — non-negotiable; a leaked
-     trade-only key can lose the $11 on bad trades but cannot drain the
-     account).
+   - **Withdrawals: OFF** (leave unchecked — non-negotiable; with no book
+     cap, a leaked trade-only key can now lose the account's FULL balance on
+     bad trades — withdrawals-off is the only thing stopping it from also
+     being drained outright).
    - IP whitelist: GitHub Actions has no fixed IPs; leaving it unrestricted
      is the tradeoff for a trade-only key. Never enable withdrawals on an
      unrestricted key.
@@ -42,6 +46,6 @@ stale scans / SEVERE. Every fill and refusal appends to
 ## Never
 
 - Never enable withdrawals on this key.
-- Never raise `BOOK_CAP_USD` because the book got lucky — real capital goes
-  through the Track C gate (GO_LIVE_PLAN_2026-08-14.md), not through a cap
-  edit on the slot machine.
+- There is no cap left to accidentally raise (removed 2026-08-16) — the
+  remaining discipline is manual: don't leave more in this account than
+  you're willing to see this bot lose entirely.

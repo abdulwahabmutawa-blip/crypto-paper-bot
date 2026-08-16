@@ -30,13 +30,12 @@ tmp_ks = Path(tempfile.mkdtemp()) / "KILL_SWITCH"
 orig_ks = bl.KILL_SWITCH
 bl.KILL_SWITCH = tmp_ks
 try:
-    # book cap blocks BUYs once the book outgrows the lottery...
-    why = bl.guard("BUY", "PEPEUSDT", {"USDT": 25.0}, None)
-    assert why and "BOOK CAP" in why, why
-    # ...but NEVER a SELL: a protective exit of an over-cap (pumped) position
-    # must always be allowed, or the stop-loss dies exactly at peak profit
+    # no book cap (owner decision 2026-08-16): a large free balance no
+    # longer blocks a BUY — the bot spends whatever USDT is actually there
+    assert bl.guard("BUY", "PEPEUSDT", {"USDT": 25.0}, None) is None, \
+        "no cap: a large balance must not block a BUY"
     assert bl.guard("SELL", "PEPEUSDT", {"USDT": 25.0}, None) is None, \
-        "cap must NOT block a de-risking SELL"
+        "a de-risking SELL must always be allowed"
 
     # dust: below the exchange minimum there is nothing to do
     why = bl.guard("BUY", "PEPEUSDT", {"USDT": 3.0}, None)
@@ -47,20 +46,20 @@ try:
 
     # the bot's book is its OWN units, not the owner's whole holding of the
     # same coin. Owner holds 1,000,000 PEPE; the bot bought 100. Valuing the
-    # free balance would price the book at the owner's stack and trip the cap
-    # (and, worse, imply the bot may sell it).
+    # free balance would price the book at the owner's stack (and, worse,
+    # imply the bot may sell it) — this must stay true even with no cap to
+    # trip, since managed_value() still drives the dashboard's book value.
     orig_price = bl.price
     bl.price = lambda sym: 0.00002        # PEPE-ish
     try:
-        bals = {"USDT": 1.0, "PEPE": 1_000_000.0}
-        assert bl.managed_value(bals, "PEPEUSDT", units=100.0) < 2.0, \
+        bals = {"USDT": 10.0, "PEPE": 1_000_000.0}
+        assert bl.managed_value(bals, "PEPEUSDT", units=100.0) < 11.0, \
             "book must count only the bot's units"
         assert bl.managed_value(bals, "PEPEUSDT") > 20.0, \
-            "sanity: the whole free balance really is over the cap"
-        # with units passed, a normal cycle is allowed; without, it trips
+            "sanity: the whole free balance really is that large"
         assert bl.guard("SELL", "PEPEUSDT", bals, "PEPEUSDT", 100.0) is None
-        # the whole-balance valuation (no units) is over cap for a BUY
-        assert "BOOK CAP" in (bl.guard("BUY", "PEPEUSDT", bals, "PEPEUSDT") or "")
+        assert bl.guard("BUY", "PEPEUSDT", bals, "PEPEUSDT") is None, \
+            "no cap: even the owner's whole PEPE stack must not block a BUY"
     finally:
         bl.price = orig_price
 
@@ -77,7 +76,8 @@ finally:
 
 # --- tripwires: these asserts fail any casual edit that widens the blast
 # radius. Changing them is a deliberate reviewed act, which is the point.
-assert bl.BOOK_CAP_USD == 20.0, "book cap moved — that is a reviewed decision"
+assert not hasattr(bl, "BOOK_CAP_USD"), \
+    "BOOK_CAP_USD reappeared — removing it was a reviewed decision (2026-08-16)"
 assert bl.BASE.startswith("https://api.binance.com"), "mainnet host changed"
 assert "testnet.binance.vision" in binance_broker.BASE, \
     "the shadow broker must stay on testnet"

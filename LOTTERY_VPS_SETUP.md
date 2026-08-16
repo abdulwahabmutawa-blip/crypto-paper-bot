@@ -11,9 +11,10 @@ fleet and the Watcher** (no real keys ever live there). **The VPS runs only
 Actions publishes fresh Watcher scans, the VPS reads them and publishes its
 ledger back.
 
-The book is capped at **$20** in `src/binance_live.py`. Expected outcome of
-pump-chasing at this size is loss of the stake; the cap and the ledger make
-that honest rather than surprising.
+There is no book cap — `src/binance_live.py` spends the account's full free
+USDT on every BUY (the original $20 cap was removed 2026-08-16 by owner
+decision). Expected outcome of pump-chasing is loss of the stake, whatever
+the stake currently is; the ledger makes that honest rather than surprising.
 
 ---
 
@@ -80,8 +81,9 @@ Steps 3–5 below are what the script leaves for you.
 In the Binance app or on `binance.com` → **API Management** → edit your key:
 
 - Permissions: **Enable Reading** + **Enable Spot & Margin Trading**.
-- **Enable Withdrawals: OFF.** Non-negotiable. A stolen trade-only key can
-  lose the $11 on bad trades; it cannot move coins out of the account.
+- **Enable Withdrawals: OFF.** Non-negotiable. With no book cap, a stolen
+  trade-only key can lose the account's full balance on bad trades; it
+  still cannot move coins out of the account.
 - Futures / Margin Loan / Universal Transfer: **OFF**.
 - IP access restriction: **Restrict access to trusted IPs only** → enter the
   server's IPv4 from Step 1 → Confirm → Save.

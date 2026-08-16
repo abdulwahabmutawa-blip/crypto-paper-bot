@@ -1,10 +1,11 @@
-"""Lottery Live — the owner's explicitly-sacrificial ~$11 real-money book.
+"""Lottery Live — the owner's explicitly-sacrificial real-money book.
 
 Bot #13, and deliberately NOT the pilot: real Binance spot, one seat,
-BOOK CAP $20 enforced in binance_live.py, armed only by the owner's keys +
-LOTTERY_LIVE=1. Pre-registered 2026-08-15 with the owner's stated intent
-verbatim: "explode or burn — mostly explode". The documented base rate says
-burn; this file makes the attempt mechanical, capped, and honest.
+armed only by the owner's keys + LOTTERY_LIVE=1. Pre-registered 2026-08-15
+with the owner's stated intent verbatim: "explode or burn — mostly
+explode". The documented base rate says burn; this file makes the attempt
+mechanical and honest. NO BOOK CAP as of 2026-08-16 (owner decision): every
+BUY spends the account's full free USDT balance — see binance_live.py.
 
 Selector (mechanical, no discretion anywhere):
   1. Watcher's euphoric CRYPTO symbols (same source as the hypecrypto paper
@@ -396,7 +397,7 @@ def main():
                                   "symbol": pick, "reason": why})
                 print(f"[{KEY}] BUY refused: {why}")
             else:
-                spend = min(bals.get("USDT", 0.0), binance_live.BOOK_CAP_USD)
+                spend = bals.get("USDT", 0.0)
                 fill = binance_live.market("BUY", pick, quote_qty=spend)
                 if fill:
                     st["held_symbol"], st["entry_price"] = pick, fill["price"]
@@ -444,7 +445,7 @@ def main():
         st["open_position"] = None
     STATE.write_text(json.dumps(st, indent=2))
     print(f"[{KEY}] {today} seat={st['held_symbol'] or 'CASH'} "
-          f"book ${val:.2f} (cap ${binance_live.BOOK_CAP_USD:.0f}) — "
+          f"book ${val:.2f} (no cap) — "
           f"ticket odds printed in the docstring")
 
 
