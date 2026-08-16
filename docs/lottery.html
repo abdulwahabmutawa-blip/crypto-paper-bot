@@ -40,8 +40,8 @@
 <body>
 <div class="wrap">
   <h1>🎰 Lottery Book <span style="color:var(--gold)">· real money</span></h1>
-  <p class="sub">~$11 on Binance spot, $20 hard cap. Odds favor burn — this
-     page is the honest record either way.</p>
+  <p class="sub">Real money on Binance spot — no cap, every entry goes all in.
+     Odds favor burn — this page is the honest record either way.</p>
 
   <div class="big">
     <div class="l">book value</div>
@@ -104,7 +104,7 @@ async function load(){
       $("seat").innerHTML='<span class="pill">CASH — waiting for a signal</span>';
       $("open").textContent="in cash — no open position";
     }
-    $("cap").textContent="hard cap $20 · frozen: "+(st.frozen?"yes":"no");
+    $("cap").textContent="no cap — all in by owner decision"+(st.frozen?" · FROZEN":"");
     const rs=(st.realized||[]).slice().reverse();
     $("trades").innerHTML="<thead><tr><th>coin</th><th>in→out</th>"+
       "<th>price</th><th>P/L</th><th>why</th></tr></thead><tbody>"+

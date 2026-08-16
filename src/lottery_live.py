@@ -26,7 +26,7 @@ fast exits and the Watcher owns the slow qualitative ones:
   6. Watcher SEVERE, or scans stale > 24h (a blind risk officer grounds it)
   7. hype faded on a NEWER scan (Watcher-sourced entries)
 Up to 3 entries per UTC day, any day — crypto trades 24/7. Full-balance
-sizing: this book YOLOs its whole (capped) balance by design.
+sizing: this book YOLOs its whole balance by design.
 
 THE BOT MANAGES ONLY WHAT THE BOT BOUGHT. This runs on the owner's real
 account, which already holds ~23 other coins; the bot records the exact

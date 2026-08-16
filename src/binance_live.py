@@ -14,7 +14,7 @@ lottery book.
     variable LOTTERY_LIVE="1". Missing either -> inert no-op.
   * Key hygiene (owner-side, documented in BINANCE_LOTTERY_SETUP.md):
     spot-trade-only API key, WITHDRAWALS DISABLED. A leaked trade-only key
-    can lose the $11 on bad trades; it cannot drain the account.
+    can lose the full USDT balance on bad trades; it cannot withdraw.
   * KILL SWITCH: the same data/KILL_SWITCH file live_guard honors blocks
     every mainnet order here too.
   * Every order and every refusal is appended to data/lottery_ledger.jsonl
@@ -22,7 +22,7 @@ lottery book.
 
 Expected outcome, stated where it can't be unseen: the documented base rate
 for small-account pump-chasing is loss of principal. This module makes the
-attempt honest, capped, and auditable — it does not make it a good idea.
+attempt honest and auditable — it does not make it a good idea.
 """
 from __future__ import annotations
 
@@ -169,15 +169,28 @@ def market(action: str, symbol: str, quote_qty: float | None = None,
         return None
     params = {"symbol": symbol, "side": action.upper(), "type": "MARKET"}
     if action.upper() == "BUY":
-        params["quoteOrderQty"] = round(quote_qty or 0.0, 2)
+        # FLOOR to the cent, never round: an all-in BUY passes the exact
+        # free balance, and round() half-up asked Binance for more than the
+        # account held (free 9.2995 -> order 9.30 -> five straight -2010
+        # rejections, 08-16). Flooring leaves at most one cent behind.
+        params["quoteOrderQty"] = f"{int((quote_qty or 0.0) * 100) / 100:.2f}"
     else:
         params["quantity"] = f"{qty:.8f}".rstrip("0").rstrip(".")
+    LAST_ERROR.clear()
     resp = _call("POST", "/v3/order", params, signed=True)
     if resp is None:
-        # The order may have EXECUTED with the response lost in transit
-        # (timeout after the exchange accepted it). Leave a loud marker so
-        # the next cycle's ledger reconciliation looks for an untracked
-        # position instead of trusting the void.
+        if LAST_ERROR.get("code") is not None:
+            # Binance answered with a definitive error code: the order was
+            # REJECTED, full stop. Logging these as "may have filled" sent
+            # the 08-16 digest hunting phantom positions five times over.
+            log({"event": "order_rejected", "action": action.upper(),
+                 "symbol": symbol, "code": LAST_ERROR.get("code"),
+                 "msg": LAST_ERROR.get("msg", "")})
+            return None
+        # No response and no error body — the order may have EXECUTED with
+        # the response lost in transit (timeout after the exchange accepted
+        # it). Leave a loud marker so the next cycle's ledger reconciliation
+        # looks for an untracked position instead of trusting the void.
         log({"event": "order_unconfirmed", "action": action.upper(),
              "symbol": symbol,
              "note": "POST returned nothing — order MAY have filled; "
