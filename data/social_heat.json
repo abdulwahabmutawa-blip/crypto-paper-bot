@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-16T15:13:29+00:00",
+  "ts": "2026-08-16T15:18:59+00:00",
   "sources": {
     "coingecko": [
       "CHIP",
@@ -7,11 +7,11 @@
       "PENGU",
       "PLUME",
       "ETH",
-      "LINK",
-      "PUMP",
+      "FET",
       "AERO",
+      "LINK",
       "LIT",
-      "ONDO",
+      "PUMP",
       "SUI"
     ],
     "reddit": [],
@@ -20,7 +20,9 @@
       "ALLO",
       "BTC"
     ],
-    "watcher": [],
+    "watcher": [
+      "CHIP"
+    ],
     "cryptopanic": []
   },
   "heat": [
@@ -33,6 +35,16 @@
       ],
       "funding": 4.5e-05,
       "long_short": 2.07
+    },
+    {
+      "symbol": "CHIP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "watcher"
+      ],
+      "funding": -1.7e-05,
+      "long_short": 1.4
     },
     {
       "symbol": "AERO",
@@ -48,15 +60,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -8.5e-05
-    },
-    {
-      "symbol": "CHIP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -2.3e-05
+      "funding": -8.8e-05
     },
     {
       "symbol": "ETH",
@@ -64,7 +68,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.4e-05
+      "funding": 3.3e-05
+    },
+    {
+      "symbol": "FET",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -9e-05
     },
     {
       "symbol": "LINK",
@@ -83,14 +95,6 @@
       "funding": 3.5e-05
     },
     {
-      "symbol": "ONDO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
@@ -104,7 +108,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.3e-05
+      "funding": 3.2e-05
     },
     {
       "symbol": "PUMP",
