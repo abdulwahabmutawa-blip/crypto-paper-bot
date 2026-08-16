@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-16T14:40:00+00:00",
-  "scanned": 55,
+  "ts": "2026-08-16T14:45:31+00:00",
+  "scanned": 56,
   "ruleset": 2,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ZAMAUSDT",
+      "signal": "ignition",
+      "score": 0.6806,
+      "raw_score": 0.6806,
+      "weight": 1.0,
+      "price": 0.04093,
+      "why": "trades 4.3x and volume 20.9x the prior 4h, 71% taker-buy, $53,342 burst \u2014 while price has only moved -0.8%",
+      "chg_24h": -0.0545,
+      "vol_surge": 20.92,
+      "chg_1h": -0.0075,
+      "market_surge": 4.98,
+      "actionable": false,
+      "status": "probation \u2014 6/12 resolved 4h samples under ruleset 2"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 6/12 resolved 4h samples under ruleset 2",
     "breakout": "probation \u2014 0/12 resolved 4h samples under ruleset 2",
