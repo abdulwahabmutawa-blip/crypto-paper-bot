@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-16T14:18:28+00:00",
-  "scanned": 53,
+  "ts": "2026-08-16T14:24:12+00:00",
+  "scanned": 51,
   "ruleset": 2,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "LINKUSDT",
+      "signal": "ignition",
+      "score": 0.7562,
+      "raw_score": 0.7562,
+      "weight": 1.0,
+      "price": 9.351,
+      "why": "trades 6.0x and volume 15.7x the prior 4h, 66% taker-buy, $577,541 burst \u2014 while price has only moved -0.0%",
+      "chg_24h": -0.0136,
+      "vol_surge": 15.73,
+      "chg_1h": -0.0001,
+      "market_surge": 0.53,
+      "actionable": false,
+      "status": "probation \u2014 6/12 resolved 4h samples under ruleset 2"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 6/12 resolved 4h samples under ruleset 2",
     "breakout": "probation \u2014 0/12 resolved 4h samples under ruleset 2",
