@@ -1,52 +1,29 @@
 {
-  "ts": "2026-08-16T06:21:19+00:00",
-  "scanned": 71,
+  "ts": "2026-08-16T06:26:42+00:00",
+  "scanned": 54,
+  "ruleset": 2,
   "candidates": [
     {
-      "symbol": "ROBOUSDT",
+      "symbol": "XAIUSDT",
       "signal": "ignition",
-      "score": 0.657,
-      "raw_score": 0.657,
+      "score": 0.8915,
+      "raw_score": 0.8915,
       "weight": 1.0,
-      "price": 0.01391,
-      "why": "trades 5.0x and volume 8.7x the prior 4h, 68% taker-buy, $54,074 burst \u2014 while price has only moved +1.2%",
-      "chg_24h": -0.2296,
-      "vol_surge": 8.75,
-      "chg_1h": 0.0124,
-      "market_surge": 0.0
+      "price": 0.00709,
+      "why": "trades 13.0x and volume 14.7x the prior 4h, 61% taker-buy, $59,400 burst \u2014 while price has only moved +0.4%",
+      "chg_24h": 0.0808,
+      "vol_surge": 14.68,
+      "chg_1h": 0.0042,
+      "market_surge": 7.79,
+      "actionable": false,
+      "status": "probation \u2014 0/12 resolved 4h samples under ruleset 2"
     }
   ],
-  "scorecard": {
-    "ignition": {
-      "n_1h": 34,
-      "hit_rate_1h": 0.294,
-      "mean_ret_1h": -0.00072,
-      "median_ret_1h": 0.0,
-      "n_4h": 29,
-      "hit_rate_4h": 0.241,
-      "mean_ret_4h": -8e-05,
-      "median_ret_4h": -0.00138
-    },
-    "breakout": {
-      "n_1h": 3,
-      "hit_rate_1h": 0.333,
-      "mean_ret_1h": -0.05192,
-      "median_ret_1h": -0.07393,
-      "n_4h": 3,
-      "hit_rate_4h": 0.0,
-      "mean_ret_4h": -0.08222,
-      "median_ret_4h": -0.05607
-    },
-    "reversion": {
-      "n_1h": 9,
-      "hit_rate_1h": 0.111,
-      "mean_ret_1h": -0.01042,
-      "median_ret_1h": -0.0069,
-      "n_4h": 7,
-      "hit_rate_4h": 0.0,
-      "mean_ret_4h": -0.05018,
-      "median_ret_4h": -0.05418
-    }
+  "gate": {
+    "ignition": "probation \u2014 0/12 resolved 4h samples under ruleset 2",
+    "breakout": "probation \u2014 0/12 resolved 4h samples under ruleset 2",
+    "reversion": "probation \u2014 0/12 resolved 4h samples under ruleset 2"
   },
+  "scorecard": {},
   "note": "READ-ONLY scout. Ranked opinion only \u2014 the book decides."
 }
