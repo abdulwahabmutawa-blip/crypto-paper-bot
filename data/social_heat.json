@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-16T21:17:39+00:00",
+  "ts": "2026-08-16T21:22:49+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
@@ -18,17 +18,29 @@
       "ALLO",
       "PLUME"
     ],
-    "watcher": [],
+    "watcher": [
+      "CHIP"
+    ],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "CHIP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "watcher"
+      ],
+      "funding": -7e-06,
+      "long_short": 1.38
+    },
     {
       "symbol": "ALLO",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -9.8e-05
+      "funding": -0.000104
     },
     {
       "symbol": "BTC",
@@ -36,15 +48,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "CHIP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -7e-06
+      "funding": 4.9e-05
     },
     {
       "symbol": "COW",
@@ -52,7 +56,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.001195
+      "funding": -0.001211
     },
     {
       "symbol": "FET",
@@ -60,7 +64,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.5e-05
+      "funding": 4e-05
     },
     {
       "symbol": "ONDO",
@@ -76,7 +80,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.4e-05
+      "funding": 3.1e-05
     },
     {
       "symbol": "PENGU",
@@ -84,7 +88,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.5e-05
+      "funding": 1.7e-05
     },
     {
       "symbol": "PLUME",
@@ -92,7 +96,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -6.5e-05
+      "funding": -6.4e-05
     },
     {
       "symbol": "PORTAL",
@@ -100,7 +104,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000853
+      "funding": -0.000872
     },
     {
       "symbol": "TAO",
