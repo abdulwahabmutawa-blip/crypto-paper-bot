@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-16T11:25:31+00:00",
-  "scanned": 53,
+  "ts": "2026-08-16T11:31:16+00:00",
+  "scanned": 54,
   "ruleset": 2,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "PORTALUSDT",
+      "signal": "ignition",
+      "score": 0.6878,
+      "raw_score": 0.6878,
+      "weight": 1.0,
+      "price": 0.01237,
+      "why": "trades 6.6x and volume 10.4x the prior 4h, 64% taker-buy, $98,339 burst \u2014 while price has only moved +3.4%",
+      "chg_24h": 0.088,
+      "vol_surge": 10.44,
+      "chg_1h": 0.0343,
+      "market_surge": 9.59,
+      "actionable": false,
+      "status": "probation \u2014 2/12 resolved 4h samples under ruleset 2"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 2/12 resolved 4h samples under ruleset 2",
     "breakout": "probation \u2014 0/12 resolved 4h samples under ruleset 2",
