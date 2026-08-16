@@ -9,10 +9,14 @@ BUY spends the account's full free USDT balance — see binance_live.py.
 
 Selector (mechanical, no discretion anywhere):
   1. Watcher's euphoric CRYPTO symbols (same source as the hypecrypto paper
-     twin), freshest scan only (<= 9h);
-  2. fallback when the Watcher lists none: Binance's top 24h USDT gainer
-     with > $20M quote volume (stables excluded) — "buy what is already
-     exploding", the maximal-variance mechanical rule.
+     twin), freshest scan only (<= 3h — ENTRY_FRESH_H, shared with the
+     twin);
+  2. the Scout's ranked signals — but ONLY candidates whose signal type has
+     EARNED the `actionable` flag on the Scout's own scorecard (see
+     binance_scout.signal_actionable). Unproven signals are logged and
+     displayed, never traded: the 08-16 autopsy showed every scout signal
+     type losing to fees at the book's horizon, so real money waits for a
+     signal type to prove itself under the current ruleset.
 
 Exits run EVERY cycle (~10 min) off live Binance prices, because Grok scans
 land at most every 8h and anything gated on a fresh scan reacts long after
@@ -382,6 +386,16 @@ def main():
         if pick is None:
             for c in scout_candidates():
                 if c["symbol"] in blacklisted:
+                    continue
+                # THE GATE (autopsy 08-16): a signal type trades only after
+                # its own scorecard shows it beating fees under the current
+                # ruleset. Benched candidates still teach — the scout
+                # resolves outcomes from its log, not from our fills.
+                if c.get("actionable", True) is False:
+                    print(f"[{KEY}] scout {c['symbol']} ({c['signal']}) is "
+                          f"on the bench — "
+                          f"{c.get('status', 'unproven signal')}; logged "
+                          f"for learning, not traded")
                     continue
                 if binance_live.price(c["symbol"]):
                     pick = c["symbol"]

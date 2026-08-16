@@ -128,4 +128,78 @@ try:
 finally:
     sc.SNAPSHOT = orig
 
+# --- RULESET v2: the 08-16 log-autopsy rules ---------------------------------
+# breakout must not chase a blow-off: the two chased entries (+18.5%/h and
+# +8.8%/h) were the book's worst scout losses (-18.8%, -5.6% at 4h)
+assert sc.score_breakout(F(vol_surge=6.0, trade_surge=5.0, taker_buy_frac=0.7,
+                           chg_1h=0.185, chg_24h=0.269,
+                           range_pos=0.98)) is None, \
+    "REDUSDT class: +18.5% in an hour is a blow-off, not an entry"
+assert sc.score_breakout(F(vol_surge=6.0, trade_surge=5.0, taker_buy_frac=0.7,
+                           chg_1h=0.05, chg_24h=0.30,
+                           range_pos=0.9)) is None, \
+    "a day that already paid +30% is late, not 'about to'"
+assert sc.score_breakout(F(vol_surge=6.0, trade_surge=5.0, taker_buy_frac=0.7,
+                           chg_1h=0.05, chg_24h=0.15, range_pos=0.9)), \
+    "a moderate, confirmed move must still fire"
+
+# the range floor: pegged/tracker assets (XAUT, QQQB, U...) sail through
+# every volume filter and can never pay the round trip — 9 of the first 48
+# picks were exactly this
+assert not sc.universe_ok({"symbol": "XAUTUSDT", "quoteVolume": "9000000",
+                           "count": "9000", "highPrice": "3400.1",
+                           "lowPrice": "3399.0", "bidPrice": "3399.5",
+                           "askPrice": "3399.6"}), \
+    "a peg must not enter the universe"
+assert sc.universe_ok({"symbol": "AAAUSDT", "quoteVolume": "9000000",
+                       "count": "9000", "highPrice": "1.10",
+                       "lowPrice": "1.00", "bidPrice": "1.04",
+                       "askPrice": "1.0401"}), \
+    "a liquid coin that actually moves must pass"
+
+# --- the gate: probation -> earned -> benched --------------------------------
+ok, why = sc.signal_actionable({"signals": {}}, "ignition")
+assert not ok and "probation" in why, "no record under current rules = probation"
+ok, _ = sc.signal_actionable({"signals": {"ignition": {
+    "n_4h": 30, "hit_rate_4h": 0.55, "mean_ret_4h": 0.012}}}, "ignition")
+assert ok, "a signal that beats fees over a real sample must arm"
+ok, why = sc.signal_actionable({"signals": {"ignition": {
+    "n_4h": 30, "hit_rate_4h": 0.24, "mean_ret_4h": -0.0007}}}, "ignition")
+assert not ok and "benched" in why, \
+    "the live 08-16 record (24% hit, negative mean) must NOT be tradeable"
+
+# --- re-signal cooldown: one event, one log row ------------------------------
+hist = [{"ts": "2026-08-15T12:00:00+00:00", "symbol": "BICOUSDT",
+         "signal": "reversion"}]
+t0 = datetime(2026, 8, 15, 12, 40, tzinfo=timezone.utc)
+assert sc.recently_flagged(hist, "BICOUSDT", "reversion", t0), \
+    "40 minutes later is the same event"
+t1 = datetime(2026, 8, 15, 16, 0, tzinfo=timezone.utc)
+assert not sc.recently_flagged(hist, "BICOUSDT", "reversion", t1), \
+    "4 hours later is a fresh look"
+assert not sc.recently_flagged(hist, "BICOUSDT", "ignition", t0), \
+    "a different signal type is a different claim"
+
+# --- ruleset segregation: old rules' outcomes must not feed the new card -----
+tmp_dir = Path(tempfile.mkdtemp())
+orig_log, orig_card = sc.LOG, sc.SCORECARD
+sc.LOG, sc.SCORECARD = tmp_dir / "log.jsonl", tmp_dir / "card.json"
+try:
+    old = {"ts": "2026-08-15T10:00:00+00:00", "symbol": "AUSDT",
+           "signal": "ignition", "price": 1.0,
+           "ret_1h": 0.05, "ret_4h": 0.05, "ret_24h": 0.05}   # no ruleset tag
+    new = {"ts": "2026-08-16T10:00:00+00:00", "symbol": "BUSDT",
+           "signal": "ignition", "price": 1.0, "ruleset": sc.RULESET,
+           "ret_1h": -0.05, "ret_4h": -0.05, "ret_24h": -0.05}
+    sc.LOG.write_text("\n".join([json.dumps(old)] * 20
+                                + [json.dumps(new)] * 3) + "\n")
+    card, rows = sc.resolve_outcomes(datetime(2026, 8, 18, 11, 0,
+                                              tzinfo=timezone.utc))
+    ign = card["signals"]["ignition"]
+    assert ign["n_4h"] == 3 and ign["hit_rate_4h"] == 0.0, \
+        f"20 old-ruleset wins must not launder the new rules' record: {ign}"
+    assert len(rows) == 23, "resolve must still return the full history"
+finally:
+    sc.LOG, sc.SCORECARD = orig_log, orig_card
+
 print("test_scout: ALL PASS")

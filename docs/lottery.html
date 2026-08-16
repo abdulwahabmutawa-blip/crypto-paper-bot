@@ -130,7 +130,9 @@ async function load(){
     document.getElementById("scout").innerHTML=
       (sc.veto?("⛔ market veto: "+esc(sc.veto)+"<br>"):"")+
       (cs.length?cs.map(c=>esc(c.signal)+"  "+esc(c.symbol)+"  score "+
-        esc(c.score)+"<br><span style='color:var(--dim)'>"+esc(c.why||"")+
+        esc(c.score)+(c.actionable===false?
+          "  <span style='color:var(--gold)'>⏳ unproven — watch only</span>":"")+
+        "<br><span style='color:var(--dim)'>"+esc(c.why||"")+
         "</span>").join("<br>"):"nothing abnormal — scanning "+
         esc(sc.scanned||0)+" pairs")+
       "<br><span style='color:var(--dim)'>scan "+age+"min ago</span>";
