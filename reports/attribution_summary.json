@@ -1,11 +1,11 @@
 {
- "updated_utc": "2026-08-15T11:20:00+00:00",
- "note": "Run covering the complete 2026-08-14 session, executed 11:20 UTC Saturday with US markets shut. 10 lines appended (9 bot dailies plus sentinel); ZERO trade_event lines because zero trades executed fleet-wide since the last run - verified against trade-array lengths at commit 16343f6, not assumed. The fill-integrity pass is therefore vacuous and labelled as such. The two headline facts are recoveries: the Grok Watcher resumed at 2026-08-14T23:54:57Z after 181.1 hours dark, and fleet uptime measured from cycle commits came in at 87.6% over 24h after three consecutive days near 48%. Attribution-wise the day was one name - AVGO -5.94% on a dated BofA credit downgrade of its AI XPV financing vehicle, which did 45% of congress's 13.23 loss and which I could not source yesterday. That is a driver upgraded from 'unknown' to 'news_idiosyncratic' on evidence, which is the direction this log is supposed to move.",
- "total_lines_logged": 272,
+ "updated_utc": "2026-08-16T17:45:00+00:00",
+ "note": "Sunday 2026-08-16, US markets shut. 17 lines appended: 12 bot dailies (now including bot #12 hypecrypto and bot #13 lottery) plus 5 trade_event lines, all five on the lottery book. READ THE TALLY WITH THIS CAVEAT: 8 of today's 12 daily lines are equity books with NO 2026-08-16 session at all, logged flat under driver 'unknown'. The schema has no 'no_session' driver, and I would rather say that plainly than invent one or silently skip the lines. Those 8 inflate 'unknown/flat' from 64 to 71 and carry no information about why anything moved. The 9 informative lines are crypto, hypecrypto, sentinel and the six lottery lines. FILL AUDIT NON-VACUOUS AND PASSING: the nine paper books traded zero (trade-array lengths unchanged), but the lottery book put through 9 real fills, and all 9 verified inside Binance mainnet 1-minute ranges within +/-5 minutes of their recorded timestamps. THE DAY'S DRIVER STORY IS hype_sentiment, which went 1 profit / 4 loss on the lottery legs and is now the fleet's worst driver by rate at 8/14. That is the first time it has passed 'technical' (13/22), and it happened the day a real-money hype book started trading.",
+ "total_lines_logged": 289,
  "by_primary_driver": {
   "hype_sentiment": {
-   "profit": 7,
-   "loss": 10,
+   "profit": 8,
+   "loss": 14,
    "flat": 6
   },
   "macro": {
@@ -15,7 +15,7 @@
   },
   "market_beta": {
    "profit": 25,
-   "loss": 14,
+   "loss": 15,
    "flat": 7
   },
   "news_idiosyncratic": {
@@ -26,7 +26,7 @@
   "none_cash": {
    "profit": 0,
    "loss": 1,
-   "flat": 24
+   "flat": 27
   },
   "sector": {
    "profit": 10,
@@ -40,19 +40,19 @@
   },
   "unknown": {
    "profit": 10,
-   "loss": 8,
-   "flat": 64
+   "loss": 9,
+   "flat": 71
   }
  },
  "by_beta_or_alpha": {
   "alpha": {
-   "profit": 45,
-   "loss": 38,
+   "profit": 46,
+   "loss": 42,
    "flat": 7
   },
   "beta": {
    "profit": 21,
-   "loss": 11,
+   "loss": 12,
    "flat": 7
   },
   "mixed": {
@@ -62,9 +62,9 @@
   },
   "n/a": {
    "profit": 11,
-   "loss": 13,
-   "flat": 92
+   "loss": 14,
+   "flat": 102
   }
  },
- "driver_note": "'unknown' took 3 of today's 10 lines (hunter's PLTR reversal, commodity's DBC gain, and it would have taken congress too had the AVGO story not surfaced). Two calls I want on the record. First, congress moves from 'unknown' on 08-14 to 'news_idiosyncratic' on 08-15 because the evidence arrived, not because the story got more attractive - and the specific evidence (BofA on the AI XPV vehicle, plus a VMware vCenter exploit) is single-name credit, which confirms rather than reverses my 08-14 refusal of the AI-sector framing. Second, hunter stays 'technical' rather than borrowing that same AVGO story: PLTR fell 2.78% on a day NVDA fell 0.06%, so an AI de-rating does not explain it, and I found no dated PLTR catalyst. 'Technical' here means a failed gap-up and nothing more. Scholar is logged 'mixed' rather than 'beta' for a specific reason worth repeating: the book tracked IWM to the basis point (+0.524% vs +0.524%), so it is pure beta to what it holds, and reads as alpha only because its recorded bench is not IWM. That is a benchmark artifact, not skill, and calling it alpha outright would flatter the bot."
+ "driver_note": "Three calls I want on the record. FIRST, the eight no-session lines. I logged them as required but I am not going to pretend a shut market is a flat result: their day_pnl is zero by construction, and I have said so in each line's explanation and marked them 'unknown/n/a' rather than borrowing a driver they did not earn. SECOND, the lottery book's four losing legs are logged 'alpha', not 'beta', and that is deliberate: BTC was +0.10% and ETH +0.09% over the same 24h, so nothing about a flat crypto tape explains -11.21% on COW or -7.67% on CHIP. Those are single-name hype moves and the book owns them. THIRD, UUSDT is logged 'unknown', not 'hype_sentiment', because there is no hype story to tell about an asset whose entire day range is 0.03% - the honest reading is that the screen misfired, and I have filed that as a signal-quality fault rather than dressing it up as a market call. On the CHIP re-entry I am claiming no forecast: the evidence is that the bot's own LATE guard refused the buy twice and then let it through six minutes later, and that price is now below the level it sold at. That is a documented contradiction between two of its own rules, which is a stronger thing to say than a guess about where a meme coin goes next."
 }
