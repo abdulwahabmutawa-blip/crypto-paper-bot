@@ -1,12 +1,26 @@
 {
-  "ts": "2026-08-16T01:06:19+00:00",
-  "scanned": 71,
-  "candidates": [],
+  "ts": "2026-08-16T01:11:51+00:00",
+  "scanned": 69,
+  "candidates": [
+    {
+      "symbol": "UUSDT",
+      "signal": "ignition",
+      "score": 0.957,
+      "raw_score": 0.957,
+      "weight": 1.0,
+      "price": 1.0004,
+      "why": "trades 11.2x and volume 18.5x the prior 4h, 83% taker-buy, $333,048 burst \u2014 while price has only moved -0.0%",
+      "chg_24h": 0.0,
+      "vol_surge": 18.48,
+      "chg_1h": -0.0001,
+      "market_surge": 5.87
+    }
+  ],
   "scorecard": {
     "ignition": {
-      "n_1h": 19,
-      "hit_rate_1h": 0.211,
-      "mean_ret_1h": -0.00103,
+      "n_1h": 21,
+      "hit_rate_1h": 0.238,
+      "mean_ret_1h": -0.00162,
       "median_ret_1h": -0.0002,
       "n_4h": 13,
       "hit_rate_4h": 0.154,
@@ -24,9 +38,9 @@
       "median_ret_4h": -0.00217
     },
     "reversion": {
-      "n_1h": 6,
+      "n_1h": 7,
       "hit_rate_1h": 0.0,
-      "mean_ret_1h": -0.0131,
+      "mean_ret_1h": -0.0118,
       "median_ret_1h": -0.0069,
       "n_4h": 6,
       "hit_rate_4h": 0.0,
