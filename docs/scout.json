@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-16T14:56:30+00:00",
-  "scanned": 51,
+  "ts": "2026-08-16T15:02:21+00:00",
+  "scanned": 56,
   "ruleset": 2,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "UNIUSDT",
+      "signal": "ignition",
+      "score": 0.885,
+      "raw_score": 0.885,
+      "weight": 1.0,
+      "price": 3.3,
+      "why": "trades 11.0x and volume 14.2x the prior 4h, 61% taker-buy, $110,402 burst \u2014 while price has only moved +0.7%",
+      "chg_24h": 0.0141,
+      "vol_surge": 14.19,
+      "chg_1h": 0.0067,
+      "market_surge": 8.97,
+      "actionable": false,
+      "status": "probation \u2014 7/12 resolved 4h samples under ruleset 2"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 7/12 resolved 4h samples under ruleset 2",
     "breakout": "probation \u2014 0/12 resolved 4h samples under ruleset 2",
