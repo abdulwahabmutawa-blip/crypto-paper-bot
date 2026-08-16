@@ -26,3 +26,4 @@
 {"ts": "2026-08-16T04:39:49+00:00", "event": "api_error", "path": "/v3/order", "code": 400, "body": "{\"code\":-2010,\"msg\":\"Account has insufficient balance for requested action.\"}"}
 {"ts": "2026-08-16T04:39:49+00:00", "event": "order_unconfirmed", "action": "BUY", "symbol": "ZAMAUSDT", "note": "POST returned nothing \u2014 order MAY have filled; reconcile against balances next cycle"}
 {"ts": "2026-08-16T05:25:21+00:00", "event": "refused", "action": "BUY", "symbol": "XAUTUSDT", "reason": "BOOK CAP \u2014 managed value $24.46 > $20. This is the lottery book, not the pilot; raising the cap is a reviewed commit (GO_LIVE_PLAN Track C guards real capital)"}
+{"ts": "2026-08-16T05:30:58+00:00", "event": "refused", "action": "BUY", "symbol": "QQQBUSDT", "reason": "BOOK CAP \u2014 managed value $44.46 > $20. This is the lottery book, not the pilot; raising the cap is a reviewed commit (GO_LIVE_PLAN Track C guards real capital)"}
