@@ -32,10 +32,20 @@ if ! python3 src/state_preflight.py; then
   exit 1
 fi
 
-# 3) heat map first (cross-source social agreement), then the Scout which
-#    consumes it — both write files the book reads this same cycle
+# 3) the Watcher first (needs XAI_API_KEY in /etc/lottery.env; without it
+#    this is a graceful one-line skip). Self-throttled to its 2h cadence,
+#    so most cycles it costs a second. Running it HERE frees scans from
+#    GitHub Actions' ~6% scheduler-acceptance — the reason the Watcher
+#    went silent for hours at a time. Actions still runs it too as a
+#    backup; the shared last_scan_utc throttle dedupes the two hosts, and
+#    a rare same-window race costs one overwritten scan, nothing worse.
+python3 src/grok_sentinel.py || echo "[runner] watcher scan failed — riding the last committed scan"
+# then the heat map (cross-source social agreement), then the Scout which
+# consumes both — all write files the book reads this same cycle
 python3 src/social_heat.py || echo "[runner] heat map failed — scout runs without the heat surface"
 python3 src/binance_scout.py || echo "[runner] scout failed — book falls back to Watcher-only"
+# publish the sentinel dashboard the same way the Actions loop does
+cp -f reports/sentinel_dashboard.html docs/sentinel.html 2>/dev/null || true
 
 python3 src/lottery_live.py
 rc=$?
@@ -49,7 +59,9 @@ cp -f data/scout_signals.json docs/scout.json 2>/dev/null || true
 # stage per-file: one missing pathspec must not abort the whole add
 for f in data/lottery_state.json data/lottery_ledger.jsonl \
          data/scout_signals.json data/scout_scorecard.json data/scout_log.jsonl \
-         data/social_heat.json \
+         data/social_heat.json data/breadth.json \
+         data/sentinel_state.json data/sentinel_verdict.json \
+         docs/sentinel.html \
          docs/lottery.json docs/scout.json docs/lottery_ledger.jsonl; do
   git add "$f" 2>/dev/null || true
 done
