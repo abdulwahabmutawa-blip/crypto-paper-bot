@@ -1,12 +1,12 @@
 {
   "created": "2026-08-15",
-  "held_symbol": "COWUSDT",
-  "entry_price": 0.1391,
-  "units": 75.4,
-  "entry_scan_ts": "2026-08-15T19:46:17+00:00",
-  "entry_source": "watcher",
+  "held_symbol": null,
+  "entry_price": null,
+  "units": 0.0,
+  "entry_scan_ts": null,
+  "entry_source": null,
   "stopped": {
-    "LINKUSDT": "2026-08-15T21:14:17+00:00"
+    "COWUSDT": "2026-08-16T02:02:26+00:00"
   },
   "entries": {
     "2026-08-15": 2
@@ -27,23 +27,26 @@
       "date": "2026-08-15",
       "exit": 9.562,
       "entry": 9.462
+    },
+    {
+      "symbol": "COWUSDT",
+      "entry_time": "2026-08-15T21:14:17+00:00",
+      "exit_time": "2026-08-16T02:02:26+00:00",
+      "entry_price": 0.1391,
+      "exit_price": 0.1235,
+      "units": 75.4,
+      "spent_usd": 10.4881,
+      "got_usd": 9.2995,
+      "pnl_pct": -11.21,
+      "pnl_usd": -1.1886,
+      "reason": "STOP-LOSS (-11.2% from entry) \u2014 hype that bleeds gets cut",
+      "date": "2026-08-16",
+      "exit": 0.1235,
+      "entry": 0.1391
     }
   ],
-  "last_value_usd": 9.44,
-  "last_updated_utc": "2026-08-16T01:56:27+00:00",
-  "open_position": {
-    "symbol": "COWUSDT",
-    "entry_time": "2026-08-15T21:14:17+00:00",
-    "entry_price": 0.1391,
-    "current_price": 0.1253,
-    "units": 75.4,
-    "spent_usd": 10.4881,
-    "value_usd": 9.4476,
-    "pnl_usd": -1.0405,
-    "pnl_pct": -9.92,
-    "source": "watcher"
-  },
-  "spent_usd": 10.4881,
-  "hwm": 0.1422,
-  "entry_time": "2026-08-15T21:14:17+00:00"
+  "last_value_usd": 9.3,
+  "last_updated_utc": "2026-08-16T02:02:26+00:00",
+  "open_position": null,
+  "spent_usd": null
 }
