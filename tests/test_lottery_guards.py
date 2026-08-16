@@ -74,6 +74,29 @@ finally:
     for k in ("BINANCE_LIVE_API_KEY", "BINANCE_LIVE_API_SECRET", "LOTTERY_LIVE"):
         os.environ.pop(k, None)
 
+# --- late-entry guard: the book's four real trades, as fixtures ------------
+# COW (watcher): +37.3% on the day, -2.3% in the hour, bought 9h after its
+# local top -> -11.2%. BOTH rules must catch it.
+why = bl.late_entry(0.373, -0.023)
+assert why and "LATE" in why, "the COW entry must be refused"
+# CHIP (watcher): +27.8% on the day AT the local top, hour still green ->
+# -7.8% within 90 minutes. The day-cap alone must catch it.
+why = bl.late_entry(0.278, 0.057)
+assert why and "LATE" in why, "the CHIP entry must be refused"
+# LINK: +7.9% on the day, flat hour -> the book's only winner. Must pass.
+assert bl.late_entry(0.079, 0.001) is None, \
+    "the LINK entry was fine and must stay allowed"
+# early-stage move: modestly up on the day, accelerating -> the target trade
+assert bl.late_entry(0.10, 0.03) is None
+# below the day-cap but red on the hour: hype arrived after the top
+why = bl.late_entry(0.10, -0.01)
+assert why and "rolling over" in why
+# unknown price context: this book goes all-in per entry — never buy blind
+why = bl.late_entry(None, 0.02)
+assert why and "blind" in why
+why = bl.late_entry(0.10, None)
+assert why and "blind" in why
+
 # --- tripwires: these asserts fail any casual edit that widens the blast
 # radius. Changing them is a deliberate reviewed act, which is the point.
 assert not hasattr(bl, "BOOK_CAP_USD"), \

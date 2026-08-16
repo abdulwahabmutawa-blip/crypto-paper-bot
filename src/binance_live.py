@@ -155,6 +155,58 @@ def guard(action: str, symbol: str, bals: dict, held_symbol: str | None,
     return None
 
 
+# ---- late-entry guard (trade autopsy 2026-08-16, all 4 real trades) ---------
+# The book's only real losses were LATE entries into already-run hype, both
+# from the WATCHER path, which had no price checks at all: COW bought +37%
+# into its day, NINE HOURS after its local top, falling -2.3%/h at entry
+# (-11.2%); CHIP bought +28% into its day AT the local top (-7.8% within
+# 90min). Grok's "euphoric" is inherently trailing — crowd noise peaks after
+# price — so lateness must be enforced mechanically at the moment of
+# purchase, for EVERY source. The scout's paper record agrees: REDUSDT +27%
+# on the day at entry, -18.8% after.
+MAX_CHG_24H_AT_ENTRY = 0.25   # [EVIDENCE] losers entered +27..+37% into the
+                              # day; the winner entered +7.9%. Same cap the
+                              # scout's breakout rule uses (BRK_MAX_24H).
+MIN_CHG_1H_AT_ENTRY = 0.0     # [EVIDENCE] COW was already FALLING at entry
+                              # (-2.3%/1h). An explosion's current hour is
+                              # green; buying a red hour is riding down.
+
+
+def late_entry(chg_24h: float | None, chg_1h: float | None) -> str | None:
+    """Pure verdict: refusal reason if this entry is chasing a spent move.
+    None values mean the data could not be fetched — refuse too: this book
+    goes all-in per entry, and 'unknown' is not a number it can afford."""
+    if chg_24h is None or chg_1h is None:
+        return "LATE-ENTRY GUARD — price context unavailable; not buying blind"
+    if chg_24h > MAX_CHG_24H_AT_ENTRY:
+        return (f"LATE — already {chg_24h:+.1%} on the day (cap "
+                f"{MAX_CHG_24H_AT_ENTRY:+.0%}): the pump this hype describes "
+                f"has already happened")
+    if chg_1h < MIN_CHG_1H_AT_ENTRY:
+        return (f"LATE — {chg_1h:+.1%} in the last hour: the move is rolling "
+                f"over, hype arrived after the top")
+    return None
+
+
+def late_entry_check(symbol: str) -> str | None:
+    """Fetch the two numbers late_entry() judges. Two public GETs."""
+    chg_24h = None
+    t = _call("GET", "/v3/ticker/24hr", {"symbol": symbol})
+    try:
+        chg_24h = float(t["priceChangePercent"]) / 100.0
+    except Exception:
+        pass
+    chg_1h = None
+    k = _call("GET", "/v3/klines",
+              {"symbol": symbol, "interval": "5m", "limit": 13})
+    try:
+        first, last = float(k[0][4]), float(k[-1][4])
+        chg_1h = last / first - 1.0
+    except Exception:
+        pass
+    return late_entry(chg_24h, chg_1h)
+
+
 def market(action: str, symbol: str, quote_qty: float | None = None,
            qty: float | None = None) -> dict | None:
     """One real market order. Caller passes quoteOrderQty for BUY (spend

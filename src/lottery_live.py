@@ -17,6 +17,13 @@ Selector (mechanical, no discretion anywhere):
      displayed, never traded: the 08-16 autopsy showed every scout signal
      type losing to fees at the book's horizon, so real money waits for a
      signal type to prove itself under the current ruleset.
+  3. EVERY pick, from any source, then passes the LATE-ENTRY GUARD at the
+     moment of purchase (binance_live.late_entry): already +25% on the day,
+     or red on the hour, means the pump being described already happened —
+     the trade autopsy of this book's first four real entries (COW -11.2%
+     bought 9h after its top; CHIP -7.8% bought AT its top) is the
+     evidence. Grok's "euphoric" trails price by construction; the guard
+     is what turns "the crowd is loud" into "and the move is still alive".
 
 Exits run EVERY cycle (~10 min) off live Binance prices, because Grok scans
 land at most every 8h and anything gated on a fresh scan reacts long after
@@ -101,23 +108,11 @@ def scout_candidates(max_age_min: float = 30.0) -> list[dict]:
     return d.get("candidates") or []
 
 
-def top_gainer() -> tuple[str, float] | None:
-    """Fallback selector: top 24h USDT gainer, > $20M volume, no stables.
-    Public data endpoint — works unarmed too."""
-    d = binance_live._call("GET", "/v3/ticker/24hr")
-    if not isinstance(d, list):
-        return None
-    best = None
-    for t in d:
-        s = t.get("symbol", "")
-        if not s.endswith("USDT") or s[:-4] in STABLES:
-            continue
-        if float(t.get("quoteVolume", 0) or 0) < 20_000_000:
-            continue
-        chg = float(t.get("priceChangePercent", 0) or 0)
-        if best is None or chg > best[1]:
-            best = (s, chg)
-    return best
+# top_gainer() removed 2026-08-16: the naive top-24h-gainer fallback was
+# dead code since the Scout superseded it, and its one live pick (the LINK
+# entry) plus its philosophy ("buy whatever already ran the furthest") is
+# exactly the late-chasing the autopsy showed losing. in_top_gainers stays —
+# the momentum-decay EXIT is a different question from entry selection.
 
 
 def in_top_gainers(symbol: str, n: int = 10) -> bool:
@@ -375,9 +370,18 @@ def main():
         if fresh:
             for c in crypto_candidates(scan):
                 sym = c.replace("-USD", "") + "USDT"
-                if sym not in blacklisted and binance_live.price(sym):
-                    pick, source = sym, "watcher"
-                    break
+                if sym in blacklisted or not binance_live.price(sym):
+                    continue
+                # the guard that was missing from this path: COW and CHIP
+                # were both Watcher picks bought after their pump was over
+                late = binance_live.late_entry_check(sym)
+                if late:
+                    binance_live.log({"event": "refused", "action": "BUY",
+                                      "symbol": sym, "reason": late})
+                    print(f"[{KEY}] {sym} (watcher) refused: {late}")
+                    continue
+                pick, source = sym, "watcher"
+                break
         # The Scout: fast, quantitative, every cycle across all ~670 pairs.
         # It supersedes the old naive top-24h-gainer fallback, which happily
         # bought a coin that pumped six hours ago and was already rolling
@@ -397,13 +401,20 @@ def main():
                           f"{c.get('status', 'unproven signal')}; logged "
                           f"for learning, not traded")
                     continue
-                if binance_live.price(c["symbol"]):
-                    pick = c["symbol"]
-                    source = f"scout:{c['signal']}"
-                    print(f"[{KEY}] scout says {c['symbol']} "
-                          f"({c['signal']}, score {c.get('score')}): "
-                          f"{c.get('why', '')}")
-                    break
+                if not binance_live.price(c["symbol"]):
+                    continue
+                late = binance_live.late_entry_check(c["symbol"])
+                if late:
+                    binance_live.log({"event": "refused", "action": "BUY",
+                                      "symbol": c["symbol"], "reason": late})
+                    print(f"[{KEY}] {c['symbol']} (scout) refused: {late}")
+                    continue
+                pick = c["symbol"]
+                source = f"scout:{c['signal']}"
+                print(f"[{KEY}] scout says {c['symbol']} "
+                      f"({c['signal']}, score {c.get('score')}): "
+                      f"{c.get('why', '')}")
+                break
         if pick:
             why = binance_live.guard("BUY", pick, bals, None)
             if why:
