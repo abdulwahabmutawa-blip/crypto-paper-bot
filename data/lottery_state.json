@@ -1,11 +1,13 @@
 {
   "created": "2026-08-15",
-  "held_symbol": "UUSDT",
-  "entry_price": 1.0004,
-  "units": 44.0,
-  "entry_scan_ts": "2026-08-15T23:48:37+00:00",
-  "entry_source": "scout:ignition",
-  "stopped": {},
+  "held_symbol": null,
+  "entry_price": null,
+  "units": 0.0,
+  "entry_scan_ts": null,
+  "entry_source": null,
+  "stopped": {
+    "UUSDT": "2026-08-16T08:13:15+00:00"
+  },
   "entries": {
     "2026-08-16": 1
   },
@@ -41,23 +43,26 @@
       "date": "2026-08-16",
       "exit": 0.1235,
       "entry": 0.1391
+    },
+    {
+      "symbol": "UUSDT",
+      "entry_time": "2026-08-16T06:09:47+00:00",
+      "exit_time": "2026-08-16T08:13:15+00:00",
+      "entry_price": 1.0004,
+      "exit_price": 1.0003,
+      "units": 44.0,
+      "spent_usd": 44.0176,
+      "got_usd": 44.0132,
+      "pnl_pct": -0.01,
+      "pnl_usd": -0.0044,
+      "reason": "STALLED (2.1h in, only -0.0%) \u2014 the pump never came",
+      "date": "2026-08-16",
+      "exit": 1.0003,
+      "entry": 1.0004
     }
   ],
   "last_value_usd": 44.46,
-  "last_updated_utc": "2026-08-16T08:07:44+00:00",
-  "open_position": {
-    "symbol": "UUSDT",
-    "entry_time": "2026-08-16T06:09:47+00:00",
-    "entry_price": 1.0004,
-    "current_price": 1.0004,
-    "units": 44.0,
-    "spent_usd": 44.0176,
-    "value_usd": 44.0176,
-    "pnl_usd": 0.0,
-    "pnl_pct": 0.0,
-    "source": "scout:ignition"
-  },
-  "spent_usd": 44.0176,
-  "hwm": 1.0004,
-  "entry_time": "2026-08-16T06:09:47+00:00"
+  "last_updated_utc": "2026-08-16T08:13:15+00:00",
+  "open_position": null,
+  "spent_usd": null
 }
