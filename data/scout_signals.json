@@ -1,66 +1,20 @@
 {
-  "ts": "2026-08-16T20:32:31+00:00",
-  "scanned": 56,
-  "ruleset": 2,
-  "candidates": [
-    {
-      "symbol": "XAIUSDT",
-      "signal": "ignition",
-      "score": 0.8875,
-      "raw_score": 0.8875,
-      "weight": 1.0,
-      "price": 0.00737,
-      "why": "trades 13.6x and volume 11.1x the prior 4h, 63% taker-buy, $69,271 burst \u2014 while price has only moved +0.8%",
-      "chg_24h": 0.0759,
-      "vol_surge": 11.07,
-      "chg_1h": 0.0082,
-      "market_surge": 0.0,
-      "actionable": true
-    }
-  ],
+  "ts": "2026-08-16T20:38:21+00:00",
+  "scanned": 57,
+  "ruleset": 3,
+  "candidates": [],
   "gate": {
-    "ignition": "actionable",
-    "breakout": "probation \u2014 4/12 resolved 4h samples under ruleset 2",
-    "reversion": "probation \u2014 0/12 resolved 4h samples under ruleset 2",
-    "heat": "probation \u2014 1/12 resolved 4h samples under ruleset 2",
-    "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 2"
+    "ignition": "probation \u2014 0/12 resolved 4h samples under ruleset 3",
+    "breakout": "probation \u2014 0/12 resolved 4h samples under ruleset 3",
+    "reversion": "probation \u2014 0/12 resolved 4h samples under ruleset 3",
+    "heat": "probation \u2014 0/12 resolved 4h samples under ruleset 3",
+    "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 13,
-    "baseline": null,
+    "count": 14,
+    "baseline": 11.0,
     "wave": false
   },
-  "scorecard": {
-    "ignition": {
-      "n_1h": 21,
-      "hit_rate_1h": 0.524,
-      "mean_ret_1h": 0.0086,
-      "median_ret_1h": 0.0022,
-      "n_4h": 18,
-      "hit_rate_4h": 0.5,
-      "mean_ret_4h": 0.00667,
-      "median_ret_4h": 0.0024
-    },
-    "breakout": {
-      "n_1h": 5,
-      "hit_rate_1h": 0.4,
-      "mean_ret_1h": 0.00052,
-      "median_ret_1h": -0.00162,
-      "n_4h": 4,
-      "hit_rate_4h": 0.5,
-      "mean_ret_4h": -0.00573,
-      "median_ret_4h": 0.00417
-    },
-    "heat": {
-      "n_1h": 1,
-      "hit_rate_1h": 0.0,
-      "mean_ret_1h": -0.0211,
-      "median_ret_1h": -0.0211,
-      "n_4h": 1,
-      "hit_rate_4h": 0.0,
-      "mean_ret_4h": 0.00102,
-      "median_ret_4h": 0.00102
-    }
-  },
+  "scorecard": {},
   "note": "READ-ONLY scout. Ranked opinion only \u2014 the book decides."
 }
