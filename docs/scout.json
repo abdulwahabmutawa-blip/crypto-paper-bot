@@ -1,8 +1,39 @@
 {
-  "ts": "2026-08-17T02:49:16+00:00",
-  "scanned": 66,
+  "ts": "2026-08-17T02:54:30+00:00",
+  "scanned": 68,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "TAOUSDT",
+      "signal": "ignition",
+      "score": 0.8056,
+      "raw_score": 0.8056,
+      "weight": 1.0,
+      "price": 198.1,
+      "why": "trades 7.4x and volume 18.2x the prior 4h, 72% taker-buy, $91,738 burst \u2014 while price has only moved +0.9%",
+      "chg_24h": 0.0056,
+      "vol_surge": 18.2,
+      "chg_1h": 0.0087,
+      "market_surge": 1.2,
+      "actionable": false,
+      "status": "probation \u2014 3/12 resolved 4h samples under ruleset 3"
+    },
+    {
+      "symbol": "INJUSDT",
+      "signal": "ignition",
+      "score": 0.7353,
+      "raw_score": 0.7353,
+      "weight": 1.0,
+      "price": 4.135,
+      "why": "trades 5.7x and volume 15.8x the prior 4h, 75% taker-buy, $65,699 burst \u2014 while price has only moved +1.2%",
+      "chg_24h": -0.0053,
+      "vol_surge": 15.82,
+      "chg_1h": 0.012,
+      "market_surge": 1.94,
+      "actionable": false,
+      "status": "probation \u2014 3/12 resolved 4h samples under ruleset 3"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 3/12 resolved 4h samples under ruleset 3",
     "breakout": "probation \u2014 0/12 resolved 4h samples under ruleset 3",
