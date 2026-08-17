@@ -1,23 +1,8 @@
 {
-  "ts": "2026-08-17T12:51:33+00:00",
-  "scanned": 76,
+  "ts": "2026-08-17T12:57:03+00:00",
+  "scanned": 77,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "SNDKBUSDT",
-      "signal": "ignition",
-      "score": 0.7254,
-      "raw_score": 0.6595,
-      "weight": 1.1,
-      "price": 1696.43,
-      "why": "trades 4.6x and volume 7.6x the prior 4h, 84% taker-buy, $596,023 burst \u2014 while price has only moved -0.9%",
-      "chg_24h": 0.0253,
-      "vol_surge": 7.6,
-      "chg_1h": -0.0091,
-      "market_surge": 8.55,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "probation \u2014 5/12 resolved 4h samples under ruleset 3",
@@ -26,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 11,
+    "count": 10,
     "baseline": 13.0,
     "wave": false
   },
