@@ -1,8 +1,23 @@
 {
-  "ts": "2026-08-17T19:17:03+00:00",
+  "ts": "2026-08-17T19:22:11+00:00",
   "scanned": 83,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ETHFIUSDT",
+      "signal": "ignition",
+      "score": 1.0442,
+      "raw_score": 0.9216,
+      "weight": 1.133,
+      "price": 0.5011,
+      "why": "trades 10.1x and volume 12.9x the prior 4h, 79% taker-buy, $120,185 burst \u2014 while price has only moved +1.0%",
+      "chg_24h": -0.0136,
+      "vol_surge": 12.93,
+      "chg_1h": 0.0101,
+      "market_surge": 11.56,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "benched \u2014 hit 50%, mean +0.07% over last 12 at 4h: not beating the round trip",
