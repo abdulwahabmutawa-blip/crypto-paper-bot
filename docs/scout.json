@@ -1,32 +1,17 @@
 {
-  "ts": "2026-08-17T12:33:58+00:00",
-  "scanned": 75,
+  "ts": "2026-08-17T12:40:12+00:00",
+  "scanned": 76,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "MUBUSDT",
-      "signal": "ignition",
-      "score": 0.8584,
-      "raw_score": 0.7576,
-      "weight": 1.133,
-      "price": 1001.81,
-      "why": "trades 6.3x and volume 13.8x the prior 4h, 63% taker-buy, $107,103 burst \u2014 while price has only moved +0.0%",
-      "chg_24h": 0.0243,
-      "vol_surge": 13.81,
-      "chg_1h": 0.0004,
-      "market_surge": 4.36,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "probation \u2014 5/12 resolved 4h samples under ruleset 3",
     "reversion": "probation \u2014 0/12 resolved 4h samples under ruleset 3",
-    "heat": "probation \u2014 3/12 resolved 4h samples under ruleset 3",
+    "heat": "probation \u2014 4/12 resolved 4h samples under ruleset 3",
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 11,
+    "count": 12,
     "baseline": 13.0,
     "wave": false
   },
@@ -37,9 +22,9 @@
       "mean_ret_1h": 0.0026,
       "median_ret_1h": 0.00066,
       "n_4h": 30,
-      "hit_rate_4h": 0.633,
-      "mean_ret_4h": 0.00784,
-      "median_ret_4h": 0.00436
+      "hit_rate_4h": 0.6,
+      "mean_ret_4h": 0.0077,
+      "median_ret_4h": 0.00414
     },
     "breakout": {
       "n_1h": 6,
@@ -56,10 +41,10 @@
       "hit_rate_1h": 0.0,
       "mean_ret_1h": -0.04002,
       "median_ret_1h": -0.02503,
-      "n_4h": 3,
-      "hit_rate_4h": 0.333,
-      "mean_ret_4h": -0.05723,
-      "median_ret_4h": -0.09898
+      "n_4h": 4,
+      "hit_rate_4h": 0.5,
+      "mean_ret_4h": -0.02658,
+      "median_ret_4h": 0.05281
     }
   },
   "note": "READ-ONLY scout. Ranked opinion only \u2014 the book decides."
