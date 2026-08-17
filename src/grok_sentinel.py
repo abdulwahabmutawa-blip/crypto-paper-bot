@@ -120,8 +120,11 @@ def gather_context() -> str:
     except Exception:
         pass
     try:  # Binance 24h top USDT movers (public market DATA, no key, no auth)
+        # data-api.binance.vision, not api.binance.com: the latter answers
+        # HTTP 451 to US IPs and this runs on GitHub's US-hosted runners, so
+        # the movers block was silently missing from every scan made there.
         req = urllib.request.Request(
-            "https://api.binance.com/api/v3/ticker/24hr",
+            "https://data-api.binance.vision/api/v3/ticker/24hr",
             headers={"User-Agent": "paper-bot-sentinel/1.0"})
         d = json.load(urllib.request.urlopen(req, timeout=30))
         usdt = [t for t in d if t.get("symbol", "").endswith("USDT")

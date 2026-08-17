@@ -22,7 +22,17 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
-HOST = "https://api.binance.com"
+# SPOT HOSTS, IN ORDER (fix 2026-08-17). api.binance.com answers HTTP 451 to
+# US IPs and GitHub's hosted runners are US-hosted, so every spot call from
+# Actions returned None — which is exactly how hype-crypto froze silently
+# from 2026-08-15 (it could not price its BTC-USD benchmark, so every cycle
+# skipped). data-api.binance.vision is Binance's public market-data mirror:
+# same paths, same payloads, no keys, no geo-block. It leads; the main host
+# is the fallback for when the mirror itself is down.
+HOSTS = ("https://data-api.binance.vision", "https://api.binance.com")
+HOST = HOSTS[-1]                        # kept for anything referencing it
+# Futures has no public mirror. Only the scout and heat map call it, and
+# both run on the VPS (not geo-blocked), so this stays as-is.
 FHOST = "https://fapi.binance.com"      # USDT-M futures, also keyless
 UA = "paper-bot-fleet/1.0"
 
@@ -61,36 +71,46 @@ def _get(path: str, params: dict | None = None, weight: int = 1,
     a market-data outage can never take a book down."""
     _throttle(weight)
     qs = urllib.parse.urlencode(params or {})
-    url = f"{HOST}{path}" + (f"?{qs}" if qs else "")
-    for attempt in range(retries + 1):
-        try:
-            req = urllib.request.Request(url, headers={"User-Agent": UA})
-            with urllib.request.urlopen(req, timeout=20) as r:
-                used = r.headers.get("X-MBX-USED-WEIGHT-1M")
-                if used and used.isdigit():
-                    USED_WEIGHT["value"] = max(USED_WEIGHT["value"], int(used))
-                return json.load(r)
-        except urllib.error.HTTPError as e:
-            # 429 = rate limited, 418 = banned for ignoring 429. Back off hard
-            # and never retry a 418 — that only lengthens the ban.
-            if e.code == 418:
-                print("[binance-data] HTTP 418 — IP banned for rate abuse; "
-                      "stopping this cycle")
+    for host in HOSTS:
+        url = f"{host}{path}" + (f"?{qs}" if qs else "")
+        for attempt in range(retries + 1):
+            try:
+                req = urllib.request.Request(url, headers={"User-Agent": UA})
+                with urllib.request.urlopen(req, timeout=20) as r:
+                    used = r.headers.get("X-MBX-USED-WEIGHT-1M")
+                    if used and used.isdigit():
+                        USED_WEIGHT["value"] = max(USED_WEIGHT["value"],
+                                                   int(used))
+                    return json.load(r)
+            except urllib.error.HTTPError as e:
+                # 451 = geo-blocked. Not a transient fault: it will never
+                # succeed from this IP, so try the next host immediately
+                # rather than spending the retry budget on a legal block.
+                if e.code == 451:
+                    print(f"[binance-data] {host} geo-blocked (451) "
+                          f"— trying next host")
+                    break
+                # 429 = rate limited, 418 = banned for ignoring 429. Back off
+                # hard and never retry a 418 — that only lengthens the ban.
+                if e.code == 418:
+                    print("[binance-data] HTTP 418 — IP banned for rate "
+                          "abuse; stopping this cycle")
+                    return None
+                if e.code == 429 and attempt < retries:
+                    ra = e.headers.get("Retry-After", "5") or "5"
+                    wait = int(ra) if str(ra).isdigit() else 5
+                    print(f"[binance-data] 429 rate limited — backing off "
+                          f"{wait}s")
+                    time.sleep(min(wait, 60))
+                    continue
+                print(f"[binance-data] {path} HTTP {e.code}")
                 return None
-            if e.code == 429 and attempt < retries:
-                ra = e.headers.get("Retry-After", "5") or "5"
-                wait = int(ra) if str(ra).isdigit() else 5
-                print(f"[binance-data] 429 rate limited — backing off {wait}s")
-                time.sleep(min(wait, 60))
-                continue
-            print(f"[binance-data] {path} HTTP {e.code}")
-            return None
-        except Exception as e:
-            if attempt < retries:
-                time.sleep(1 + attempt)
-                continue
-            print(f"[binance-data] {path} failed: {e}")
-            return None
+            except Exception as e:
+                if attempt < retries:
+                    time.sleep(1 + attempt)
+                    continue
+                print(f"[binance-data] {path} failed on {host}: {e}")
+                break        # fall through to the next host
     return None
 
 
