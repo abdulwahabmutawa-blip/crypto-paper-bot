@@ -1,33 +1,17 @@
 {
-  "ts": "2026-08-17T03:16:13+00:00",
+  "ts": "2026-08-17T03:22:01+00:00",
   "scanned": 67,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ZECUSDT",
-      "signal": "ignition",
-      "score": 0.7826,
-      "raw_score": 0.7826,
-      "weight": 1.0,
-      "price": 493.77,
-      "why": "trades 6.5x and volume 12.5x the prior 4h, 77% taker-buy, $556,749 burst \u2014 while price has only moved +0.7%",
-      "chg_24h": 0.0139,
-      "vol_surge": 12.46,
-      "chg_1h": 0.0075,
-      "market_surge": 4.75,
-      "actionable": false,
-      "status": "probation \u2014 3/12 resolved 4h samples under ruleset 3"
-    }
-  ],
+  "candidates": [],
   "gate": {
-    "ignition": "probation \u2014 3/12 resolved 4h samples under ruleset 3",
+    "ignition": "probation \u2014 4/12 resolved 4h samples under ruleset 3",
     "breakout": "probation \u2014 0/12 resolved 4h samples under ruleset 3",
     "reversion": "probation \u2014 0/12 resolved 4h samples under ruleset 3",
     "heat": "probation \u2014 0/12 resolved 4h samples under ruleset 3",
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 13,
+    "count": 12,
     "baseline": 11.0,
     "wave": false
   },
@@ -37,9 +21,9 @@
       "hit_rate_1h": 0.538,
       "mean_ret_1h": 0.01111,
       "median_ret_1h": 0.00665,
-      "n_4h": 3,
-      "hit_rate_4h": 1.0,
-      "mean_ret_4h": 0.01235,
+      "n_4h": 4,
+      "hit_rate_4h": 0.75,
+      "mean_ret_4h": 0.00778,
       "median_ret_4h": 0.00436
     },
     "breakout": {
