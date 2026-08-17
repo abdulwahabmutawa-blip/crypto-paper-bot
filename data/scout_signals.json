@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-17T15:55:02+00:00",
+  "ts": "2026-08-17T16:00:33+00:00",
   "scanned": 83,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "TSTUSDT",
-      "signal": "breakout",
-      "score": 0.8884,
-      "raw_score": 0.8884,
-      "weight": 1.0,
-      "price": 0.0153,
-      "why": "trades 12.7x, volume 14.7x, 82% taker-buy, +5.6% in an hour, at 82% of its 24h range",
-      "chg_24h": 0.0631,
-      "vol_surge": 14.69,
-      "chg_1h": 0.0559,
-      "market_surge": 0.0,
-      "actionable": false,
-      "status": "probation \u2014 6/12 resolved 4h samples under ruleset 3"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "probation \u2014 6/12 resolved 4h samples under ruleset 3",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 15,
+    "count": 16,
     "baseline": 13.0,
     "wave": false
   },
