@@ -1,27 +1,27 @@
 {
-  "ts": "2026-08-17T13:52:14+00:00",
+  "ts": "2026-08-17T13:57:29+00:00",
   "sources": {
     "coingecko": [
       "GPS",
       "PENGU",
-      "LINK",
-      "CHIP",
-      "LIT",
-      "BTC",
       "PUMP",
-      "SUI",
-      "ONDO",
+      "LIT",
+      "CHIP",
+      "BTC",
+      "LINK",
+      "ACE",
       "SOL",
-      "PORTAL",
-      "MORPHO"
+      "ONDO",
+      "UNI",
+      "PORTAL"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "GPS",
       "ACE",
-      "PORTAL",
       "TUT",
+      "PORTAL",
       "SNDKB",
       "ZEC",
       "ALLO",
@@ -32,13 +32,23 @@
   },
   "heat": [
     {
+      "symbol": "ACE",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -0.003694,
+      "long_short": 1.11
+    },
+    {
       "symbol": "GPS",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": -4.4e-05,
+      "funding": -3.8e-05,
       "long_short": 0.63
     },
     {
@@ -48,16 +58,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": -7.4e-05,
+      "funding": -6.9e-05,
       "long_short": 0.98
-    },
-    {
-      "symbol": "ACE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -0.003765
     },
     {
       "symbol": "ALLO",
@@ -65,7 +67,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4e-05
+      "funding": 4.3e-05
     },
     {
       "symbol": "BTC",
@@ -89,7 +91,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 5.8e-05
+      "funding": 5.4e-05
     },
     {
       "symbol": "LINK",
@@ -97,18 +99,10 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4e-05
+      "funding": 3.9e-05
     },
     {
       "symbol": "LIT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "MORPHO",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -121,7 +115,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.3e-05
+      "funding": 2.5e-05
     },
     {
       "symbol": "PENGU",
@@ -129,7 +123,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -4.9e-05
+      "funding": -5e-05
     },
     {
       "symbol": "PUMP",
@@ -137,7 +131,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.3e-05
+      "funding": -2.8e-05
     },
     {
       "symbol": "SNDKB",
@@ -155,20 +149,20 @@
       "funding": -1e-06
     },
     {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 4.6e-05
-    },
-    {
       "symbol": "TUT",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 3.8e-05
+      "funding": 4.2e-05
+    },
+    {
+      "symbol": "UNI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -5.7e-05
     },
     {
       "symbol": "ZEC",
