@@ -1,21 +1,23 @@
 {
-  "ts": "2026-08-17T10:23:59+00:00",
+  "ts": "2026-08-17T10:30:09+00:00",
   "sources": {
     "coingecko": [
-      "PENGU",
       "PUMP",
+      "PENGU",
       "SUI",
       "ETH",
       "AAVE",
       "ONDO",
-      "GPS",
       "LINK",
-      "XAUT"
+      "ACE",
+      "BTC",
+      "SOL"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "PORTAL",
+      "ACE",
       "TUT",
       "ZEC",
       "ALLO",
@@ -32,13 +34,33 @@
   },
   "heat": [
     {
+      "symbol": "ACE",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -0.008046,
+      "long_short": 1.45
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 4.4e-05,
+      "long_short": 2.0
+    },
+    {
       "symbol": "ETH",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 3.3e-05,
+      "funding": 3.4e-05,
       "long_short": 2.47
     },
     {
@@ -48,7 +70,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -4.5e-05,
+      "funding": -3.1e-05,
       "long_short": 0.85
     },
     {
@@ -58,8 +80,17 @@
         "coingecko",
         "watcher"
       ],
-      "funding": -3.2e-05,
+      "funding": -3.3e-05,
       "long_short": 1.29
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 2.9e-05
     },
     {
       "symbol": "AAVE",
@@ -67,7 +98,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.5e-05
+      "funding": -2.7e-05
     },
     {
       "symbol": "ALLO",
@@ -75,15 +106,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -4.1e-05
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 4.4e-05
+      "funding": -4.6e-05
     },
     {
       "symbol": "CHIP",
@@ -91,15 +114,7 @@
       "sources": [
         "watcher"
       ],
-      "funding": -0.000103
-    },
-    {
-      "symbol": "GPS",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -0.000136
+      "funding": -8.4e-05
     },
     {
       "symbol": "LINK",
@@ -107,7 +122,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.5e-05
+      "funding": 8.4e-05
     },
     {
       "symbol": "ONDO",
@@ -115,7 +130,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.5e-05
+      "funding": 2.2e-05
     },
     {
       "symbol": "PENGU",
@@ -123,15 +138,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -4.9e-05
-    },
-    {
-      "symbol": "SOL",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 3e-05
+      "funding": -6.1e-05
     },
     {
       "symbol": "SUI",
@@ -147,15 +154,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 3.6e-05
-    },
-    {
-      "symbol": "XAUT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -2.5e-05
+      "funding": 3.3e-05
     },
     {
       "symbol": "ZEC",
