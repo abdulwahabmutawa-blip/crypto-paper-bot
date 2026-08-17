@@ -1,8 +1,23 @@
 {
-  "ts": "2026-08-17T12:28:31+00:00",
-  "scanned": 76,
+  "ts": "2026-08-17T12:33:58+00:00",
+  "scanned": 75,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "MUBUSDT",
+      "signal": "ignition",
+      "score": 0.8584,
+      "raw_score": 0.7576,
+      "weight": 1.133,
+      "price": 1001.81,
+      "why": "trades 6.3x and volume 13.8x the prior 4h, 63% taker-buy, $107,103 burst \u2014 while price has only moved +0.0%",
+      "chg_24h": 0.0243,
+      "vol_surge": 13.81,
+      "chg_1h": 0.0004,
+      "market_surge": 4.36,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "probation \u2014 5/12 resolved 4h samples under ruleset 3",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 13,
+    "count": 11,
     "baseline": 13.0,
     "wave": false
   },
