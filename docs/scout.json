@@ -1,8 +1,39 @@
 {
-  "ts": "2026-08-16T23:59:57+00:00",
-  "scanned": 64,
+  "ts": "2026-08-17T00:05:31+00:00",
+  "scanned": 61,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ONGUSDT",
+      "signal": "ignition",
+      "score": 0.9046,
+      "raw_score": 0.9046,
+      "weight": 1.0,
+      "price": 0.05421,
+      "why": "trades 12.7x and volume 15.5x the prior 4h, 69% taker-buy, $107,079 burst \u2014 while price has only moved +0.8%",
+      "chg_24h": 0.0798,
+      "vol_surge": 15.46,
+      "chg_1h": 0.0076,
+      "market_surge": 3.49,
+      "actionable": false,
+      "status": "probation \u2014 0/12 resolved 4h samples under ruleset 3"
+    },
+    {
+      "symbol": "APTUSDT",
+      "signal": "ignition",
+      "score": 0.7663,
+      "raw_score": 0.7663,
+      "weight": 1.0,
+      "price": 0.519,
+      "why": "trades 7.3x and volume 8.2x the prior 4h, 73% taker-buy, $69,565 burst \u2014 while price has only moved -0.6%",
+      "chg_24h": -0.0335,
+      "vol_surge": 8.21,
+      "chg_1h": -0.0057,
+      "market_surge": 4.82,
+      "actionable": false,
+      "status": "probation \u2014 0/12 resolved 4h samples under ruleset 3"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 0/12 resolved 4h samples under ruleset 3",
     "breakout": "probation \u2014 0/12 resolved 4h samples under ruleset 3",
@@ -11,7 +42,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 10,
+    "count": 9,
     "baseline": 11.0,
     "wave": false
   },

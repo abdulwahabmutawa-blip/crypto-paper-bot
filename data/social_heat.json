@@ -1,15 +1,16 @@
 {
-  "ts": "2026-08-16T23:59:55+00:00",
+  "ts": "2026-08-17T00:05:29+00:00",
   "sources": {
     "coingecko": [
       "PORTAL",
       "BTC",
+      "WLFI",
       "ETH",
-      "PENGU",
-      "SOL",
-      "LINK",
+      "XRP",
       "LIT",
-      "XRP"
+      "LINK",
+      "PLUME",
+      "SOL"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -30,8 +31,8 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.000271,
-      "long_short": 0.95
+      "funding": -0.000249,
+      "long_short": 0.94
     },
     {
       "symbol": "BTC",
@@ -39,7 +40,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.8e-05
+      "funding": 4e-05
     },
     {
       "symbol": "ETH",
@@ -47,7 +48,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.7e-05
+      "funding": 2.8e-05
     },
     {
       "symbol": "LINK",
@@ -66,7 +67,7 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PENGU",
+      "symbol": "PLUME",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -79,7 +80,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -4.7e-05
+      "funding": -4.9e-05
+    },
+    {
+      "symbol": "WLFI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "XRP",
@@ -87,7 +96,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.00012
+      "funding": -0.000121
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
