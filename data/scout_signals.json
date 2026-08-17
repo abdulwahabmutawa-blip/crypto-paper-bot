@@ -1,20 +1,20 @@
 {
-  "ts": "2026-08-17T01:01:50+00:00",
-  "scanned": 64,
+  "ts": "2026-08-17T01:07:41+00:00",
+  "scanned": 63,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "ONGUSDT",
-      "signal": "breakout",
-      "score": 0.6366,
-      "raw_score": 0.6366,
+      "symbol": "ARBUSDT",
+      "signal": "ignition",
+      "score": 0.8627,
+      "raw_score": 0.8627,
       "weight": 1.0,
-      "price": 0.05554,
-      "why": "trades 5.2x, volume 6.7x, 67% taker-buy, +3.1% in an hour, at 97% of its 24h range",
-      "chg_24h": 0.1483,
-      "vol_surge": 6.67,
-      "chg_1h": 0.031,
-      "market_surge": 2.1,
+      "price": 0.0746,
+      "why": "trades 10.5x and volume 13.1x the prior 4h, 60% taker-buy, $68,367 burst \u2014 while price has only moved +1.5%",
+      "chg_24h": 0.0247,
+      "vol_surge": 13.08,
+      "chg_1h": 0.015,
+      "market_surge": 7.82,
       "actionable": false,
       "status": "probation \u2014 0/12 resolved 4h samples under ruleset 3"
     }
@@ -27,15 +27,15 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 14,
+    "count": 12,
     "baseline": 11.0,
     "wave": false
   },
   "scorecard": {
     "ignition": {
-      "n_1h": 4,
-      "hit_rate_1h": 0.5,
-      "mean_ret_1h": 0.00853,
+      "n_1h": 6,
+      "hit_rate_1h": 0.667,
+      "mean_ret_1h": 0.01939,
       "median_ret_1h": 0.01686
     },
     "heat": {
