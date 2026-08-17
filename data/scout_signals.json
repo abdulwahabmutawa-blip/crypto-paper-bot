@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-17T00:22:30+00:00",
-  "scanned": 62,
+  "ts": "2026-08-17T00:28:10+00:00",
+  "scanned": 64,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SNDKBUSDT",
+      "signal": "ignition",
+      "score": 0.897,
+      "raw_score": 0.897,
+      "weight": 1.0,
+      "price": 1673.11,
+      "why": "trades 11.4x and volume 19.5x the prior 4h, 69% taker-buy, $65,748 burst \u2014 while price has only moved +1.0%",
+      "chg_24h": 0.0112,
+      "vol_surge": 19.51,
+      "chg_1h": 0.0098,
+      "market_surge": 5.03,
+      "actionable": false,
+      "status": "probation \u2014 0/12 resolved 4h samples under ruleset 3"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 0/12 resolved 4h samples under ruleset 3",
     "breakout": "probation \u2014 0/12 resolved 4h samples under ruleset 3",
@@ -21,6 +37,12 @@
       "hit_rate_1h": 0.5,
       "mean_ret_1h": 0.00853,
       "median_ret_1h": 0.01686
+    },
+    "heat": {
+      "n_1h": 1,
+      "hit_rate_1h": 0.0,
+      "mean_ret_1h": -0.0667,
+      "median_ret_1h": -0.0667
     }
   },
   "note": "READ-ONLY scout. Ranked opinion only \u2014 the book decides."
