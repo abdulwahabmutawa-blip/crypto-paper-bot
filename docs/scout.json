@@ -1,38 +1,8 @@
 {
-  "ts": "2026-08-17T13:36:13+00:00",
-  "scanned": 78,
+  "ts": "2026-08-17T13:41:23+00:00",
+  "scanned": 79,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "MSTRBUSDT",
-      "signal": "ignition",
-      "score": 0.9225,
-      "raw_score": 0.8646,
-      "weight": 1.067,
-      "price": 95.83,
-      "why": "trades 27.7x and volume 48.7x the prior 4h, 65% taker-buy, $873,715 burst \u2014 while price has only moved +1.9%",
-      "chg_24h": 0.0202,
-      "vol_surge": 48.68,
-      "chg_1h": 0.0195,
-      "market_surge": 44.3,
-      "actionable": true
-    },
-    {
-      "symbol": "CRCLBUSDT",
-      "signal": "breakout",
-      "score": 0.8065,
-      "raw_score": 0.8065,
-      "weight": 1.0,
-      "price": 74.0,
-      "why": "trades 32.7x, volume 79.4x, 76% taker-buy, +3.4% in an hour, at 114% of its 24h range",
-      "chg_24h": 0.0215,
-      "vol_surge": 79.4,
-      "chg_1h": 0.0335,
-      "market_surge": 0.0,
-      "actionable": false,
-      "status": "probation \u2014 6/12 resolved 4h samples under ruleset 3"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "probation \u2014 6/12 resolved 4h samples under ruleset 3",
@@ -41,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 11,
+    "count": 12,
     "baseline": 13.0,
     "wave": false
   },
