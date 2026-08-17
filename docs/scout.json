@@ -1,39 +1,8 @@
 {
-  "ts": "2026-08-17T14:03:13+00:00",
-  "scanned": 81,
+  "ts": "2026-08-17T14:08:33+00:00",
+  "scanned": 82,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "EULUSDT",
-      "signal": "breakout",
-      "score": 0.7774,
-      "raw_score": 0.7774,
-      "weight": 1.0,
-      "price": 1.218,
-      "why": "trades 28.9x, volume 35.6x, 77% taker-buy, +2.4% in an hour, at 90% of its 24h range",
-      "chg_24h": 0.0832,
-      "vol_surge": 35.6,
-      "chg_1h": 0.0235,
-      "market_surge": 0.0,
-      "actionable": false,
-      "status": "probation \u2014 6/12 resolved 4h samples under ruleset 3"
-    },
-    {
-      "symbol": "SNDKBUSDT",
-      "signal": "breakout",
-      "score": 0.5997,
-      "raw_score": 0.5997,
-      "weight": 1.0,
-      "price": 1770.01,
-      "why": "trades 4.4x, volume 5.7x, 65% taker-buy, +4.0% in an hour, at 89% of its 24h range",
-      "chg_24h": 0.0717,
-      "vol_surge": 5.73,
-      "chg_1h": 0.0401,
-      "market_surge": 6.27,
-      "actionable": false,
-      "status": "probation \u2014 6/12 resolved 4h samples under ruleset 3"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "probation \u2014 6/12 resolved 4h samples under ruleset 3",
@@ -42,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 11,
     "baseline": 13.0,
     "wave": false
   },
