@@ -66,8 +66,30 @@ jobs:
           set +e   # never let a single failed bot or push kill the loop
           git config user.name "paper-bot"
           git config user.email "bot@users.noreply.github.com"
+          # A git network call with no deadline is the one thing in this loop
+          # that can block forever (RCA 2026-08-17: runs #278 and #290 both
+          # went silent mid-cycle and recovered ONLY when the 355-min budget
+          # killed them — the signature of a hang, not a crash). Belt and
+          # braces alongside the timeout wrappers below.
+          git config http.lowSpeedLimit 1000
+          git config http.lowSpeedTime 30
+          export GIT_TERMINAL_PROMPT=0 GIT_ASKPASS=/bin/true
 
           run_cycle () {
+            # DEADMAN: if nothing has been published in 40 minutes the loop is
+            # wedged in a way that is not worth diagnosing live. Exit so the
+            # `bot` concurrency lock is released and the next scheduled run
+            # starts clean — a 7-minute gap instead of a 5h45m blackout.
+            now=$(date +%s)
+            if [ $(( now - ${LAST_PUSH:-$now} )) -gt 2400 ]; then
+              echo "::error::no successful push in 40min — exiting to release the lock"
+              exit 1
+            fi
+            # heal anything a previous kill left behind (mirrors
+            # deploy/lottery_runner.sh, the sibling that has never wedged)
+            git rebase --abort 2>/dev/null
+            git merge --abort 2>/dev/null
+            find .git -maxdepth 1 -name index.lock -mmin +10 -delete 2>/dev/null
             # FAIL-LOUD (08-12 incident: 225 swallowed JSONDecodeErrors looked
             # green): corrupted state aborts the LOOP with a red run and a
             # committed red flag — a broken fleet must never look healthy.
@@ -77,7 +99,8 @@ jobs:
               # the flag must actually reach the dashboard — retry like the
               # cycle push does, and clear a wedged rebase between attempts
               for attempt in 1 2 3; do
-                git pull --rebase --autostash -q && git push && break
+                timeout -k 10 60 git pull --rebase --autostash -X theirs -q \
+                  && timeout -k 10 60 git push -q && break
                 git rebase --abort 2>/dev/null
                 sleep 5
               done
@@ -92,7 +115,13 @@ jobs:
                      bot_meanrev bot_commodity bot_allweather bot_scholar \
                      grok_sentinel sentinel_trader hunter_tracker analyst_agent \
                      hype_crypto_tracker; do
-              python "src/$s.py" || { echo "::warning::$s.py failed this cycle"; fails=$((fails+1)); }
+              # 7-minute ceiling per bot: urlopen(timeout=) is a per-read
+              # deadline, not a total one, and several bots make agentic or
+              # unpinned-library calls that can stall far longer than that
+              # (grok_sentinel 300s, yfinance with no timeout at all, the
+              # Anthropic SDK's 600s default x retries).
+              timeout -k 30 420 python "src/$s.py" \
+                || { echo "::warning::$s.py failed or timed out this cycle"; fails=$((fails+1)); }
             done
             # one bot failing is a transient; ALL bots failing is systemic —
             # abort loudly instead of warning eleven times and committing anyway
@@ -124,13 +153,16 @@ jobs:
             cp reports/hypecrypto_dashboard.html docs/hypecrypto.html 2>/dev/null || true
             cp reports/hypecrypto_dashboard_data.json docs/hypecrypto_dashboard_data.json 2>/dev/null || true
 
-            git add data/ reports/ docs/
+            git add data/ reports/ docs/ \
+              || echo "::error::git add failed — this cycle will not publish"
             if ! git diff --cached --quiet; then
               git commit -m "cycle: $(date -u +'%Y-%m-%d %H:%M') UTC"
               # the supervisor also pushes to reports/; rebase before pushing so
               # our push never rejects, then retry once if the remote moved again
+              pushed=0
               for attempt in 1 2 3; do
-                git pull --rebase --autostash -q && git push && break
+                timeout -k 10 60 git pull --rebase --autostash -X theirs -q \
+                  && timeout -k 10 60 git push -q && { pushed=1; break; }
                 # a conflicted rebase left half-done would poison every later
                 # cycle of this 345-min job (the 08-12 incident's root) —
                 # abort it before retrying so each attempt starts clean
@@ -138,14 +170,32 @@ jobs:
                 echo "::warning::push attempt $attempt failed, retrying"
                 sleep 5
               done
+              # A silent push failure is how a wedged loop keeps looking
+              # healthy. Say it loudly and record the liveness timestamp the
+              # deadman above reads.
+              if [ "$pushed" = 1 ]; then
+                LAST_PUSH=$(date +%s)
+              else
+                echo "::error::push failed 3x — cycle NOT published"
+              fi
+            else
+              # nothing to publish is a normal, healthy outcome (a quiet
+              # weekend cycle) — it must still count as liveness, or the
+              # deadman would fire on a working fleet
+              LAST_PUSH=$(date +%s)
             fi
           }
 
-          END=$(( $(date +%s) + 20700 ))  # run for 345 minutes (5h45m)
+          START=$(date +%s)
+          END=$(( START + 20700 ))          # run for 345 minutes (5h45m)
+          LAST_PUSH=$START
           while [ "$(date +%s)" -lt "$END" ]; do
             run_cycle
-            # stop early if we would overrun the budget mid-sleep
-            [ "$(date +%s)" -ge "$END" ] && break
+            # Break rather than sleep past the budget: a trailing sleep 780
+            # pushed total wall time to ~358 min against a 355-min job
+            # timeout, so a normal finish looked identical to a hang.
+            left=$(( END - $(date +%s) ))
+            [ "$left" -lt 780 ] && break
             sleep 780                       # ~13 min between cycles
           done
           echo "loop complete"
