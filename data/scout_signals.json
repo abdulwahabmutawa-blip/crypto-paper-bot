@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-17T18:55:04+00:00",
-  "scanned": 82,
+  "ts": "2026-08-17T19:00:33+00:00",
+  "scanned": 83,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "POLUSDT",
+      "signal": "breakout",
+      "score": 0.7661,
+      "raw_score": 0.7661,
+      "weight": 1.0,
+      "price": 0.08313,
+      "why": "trades 5.7x, volume 11.5x, 65% taker-buy, +5.5% in an hour, at 83% of its 24h range",
+      "chg_24h": 0.1073,
+      "vol_surge": 11.5,
+      "chg_1h": 0.0554,
+      "market_surge": 5.63,
+      "actionable": false,
+      "status": "probation \u2014 11/12 resolved 4h samples under ruleset 3"
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "probation \u2014 11/12 resolved 4h samples under ruleset 3",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 15,
+    "count": 17,
     "baseline": 13.0,
     "wave": false
   },
