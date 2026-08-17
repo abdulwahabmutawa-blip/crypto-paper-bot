@@ -45,6 +45,52 @@ try:
 except ValueError as e:
     assert "refuses" in str(e)
 
+# GEO-BLOCK FALLBACK. api.binance.com returns HTTP 451 to US IPs and
+# GitHub's runners are US-hosted — that froze hype-crypto on 2026-08-15 and
+# killed the Oracle's first scheduled run. A 451 must move to the next host
+# immediately (retrying a legal block is pure delay), and the mirror must be
+# tried FIRST so the common case never touches the blocked host.
+assert config.BINANCE_HOSTS[0] == "https://data-api.binance.vision", \
+    "the non-geo-blocked mirror must lead"
+assert "api.binance.com" in config.BINANCE_HOSTS[1]
+
+_calls = []
+
+
+class _FakeHTTPError(Exception):
+    def __init__(self, code):
+        self.code = code
+
+
+def _fake_urlopen(req, timeout=30):
+    _calls.append(req.full_url)
+    if "data-api.binance.vision" in req.full_url:
+        raise fetch.urllib.error.HTTPError(req.full_url, 451, "blocked",
+                                           None, None)
+    class _R:
+        def __enter__(self_inner):
+            return self_inner
+        def __exit__(self_inner, *a):
+            return False
+        def read(self_inner):
+            return b'{"ok": true}'
+    return _R()
+
+
+_orig_urlopen = fetch.urllib.request.urlopen
+_orig_load = fetch.json.load
+try:
+    fetch.urllib.request.urlopen = _fake_urlopen
+    fetch.json.load = lambda r: {"ok": True}
+    out = fetch._get("/api/v3/klines", {"symbol": "AAAUSDT"})
+    assert out == {"ok": True}, out
+    assert len(_calls) == 2, f"451 must not be retried, got {_calls}"
+    assert "data-api.binance.vision" in _calls[0]
+    assert "api.binance.com" in _calls[1]
+finally:
+    fetch.urllib.request.urlopen = _orig_urlopen
+    fetch.json.load = _orig_load
+
 # --- universe rule -----------------------------------------------------------
 assert universe.eligible_symbol("PEPEUSDT", "TRADING")
 assert not universe.eligible_symbol("PEPEUSDT", "BREAK"), "halted pair"

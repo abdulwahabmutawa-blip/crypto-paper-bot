@@ -49,6 +49,43 @@ jobs:
       - name: Verify chain before publishing
         run: python -m oracle.run verify
 
+      # An unattended experiment must record its own failures somewhere the
+      # owner can see without digging through job logs. Runner reachability
+      # is the first thing to check: api.binance.com geo-blocks US IPs with
+      # HTTP 451, which is what froze hype-crypto and killed cycle #1.
+      - name: Record failure diagnostics
+        if: failure()
+        shell: bash
+        run: |
+          set +e
+          mkdir -p oracle/data/reports
+          {
+            echo "cycle #${{ github.run_number }} FAILED at $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+            echo "commit: ${{ github.sha }}"
+            echo "host reachability from this runner:"
+            python - <<'PY'
+          import urllib.request, urllib.error
+          for h in ("https://data-api.binance.vision", "https://api.binance.com"):
+              try:
+                  urllib.request.urlopen(urllib.request.Request(
+                      h + "/api/v3/ping",
+                      headers={"User-Agent": "oracle/1.0"}), timeout=20)
+                  print(f"  {h}: OK")
+              except urllib.error.HTTPError as e:
+                  print(f"  {h}: HTTP {e.code}"
+                        + (" (geo-blocked)" if e.code == 451 else ""))
+              except Exception as e:
+                  print(f"  {h}: {type(e).__name__}: {e}")
+          PY
+          } > oracle/data/reports/last_failure.txt 2>&1
+          cat oracle/data/reports/last_failure.txt
+          git config user.name "oracle-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add oracle/data/reports/last_failure.txt
+          git commit -q -m "oracle: cycle #${{ github.run_number }} failed — diagnostics"
+          git pull --rebase --autostash -q && git push -q
+          exit 0
+
       - name: Commit the record
         shell: bash
         run: |

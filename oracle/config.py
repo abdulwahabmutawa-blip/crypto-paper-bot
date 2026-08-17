@@ -64,5 +64,12 @@ MIN_NEFF_FOR_CLAIM = 100
 BANNED_METRICS = ("auc", "roc", "precision", "recall", "hit_rate", "f1")
 
 # ---- data source ------------------------------------------------------------
-BINANCE_HOST = "https://api.binance.com"
+# ORDER MATTERS. api.binance.com geo-blocks US IPs with HTTP 451, and
+# GitHub's hosted runners are US-hosted — which is why hype-crypto froze on
+# 2026-08-15 and why the Oracle's first scheduled run failed. data-api
+# .binance.vision is Binance's public market-data mirror: same paths, same
+# payloads (verified identical: 3,681 symbols, byte-equal klines), no keys,
+# no geo-block. It leads; the main host is the fallback for when the mirror
+# is down.
+BINANCE_HOSTS = ("https://data-api.binance.vision", "https://api.binance.com")
 USER_AGENT = "oracle-predict-only/1.0"
