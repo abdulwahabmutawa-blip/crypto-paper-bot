@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-17T02:26:01+00:00",
+  "ts": "2026-08-17T02:32:07+00:00",
   "scanned": 64,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "PORTALUSDT",
+      "signal": "heat",
+      "score": 0.6,
+      "raw_score": 0.6,
+      "weight": 1.0,
+      "price": 0.0196,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding -0.031% \u00b7 L/S 0.95",
+      "chg_24h": 0.8015,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
+      "actionable": false,
+      "status": "probation \u2014 0/12 resolved 4h samples under ruleset 3"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 3/12 resolved 4h samples under ruleset 3",
     "breakout": "probation \u2014 0/12 resolved 4h samples under ruleset 3",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 14,
+    "count": 15,
     "baseline": 11.0,
     "wave": false
   },
