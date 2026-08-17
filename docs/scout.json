@@ -1,8 +1,38 @@
 {
-  "ts": "2026-08-17T13:41:23+00:00",
-  "scanned": 79,
+  "ts": "2026-08-17T13:46:33+00:00",
+  "scanned": 78,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SOXLBUSDT",
+      "signal": "ignition",
+      "score": 0.7223,
+      "raw_score": 0.677,
+      "weight": 1.067,
+      "price": 151.83,
+      "why": "trades 7.4x and volume 6.3x the prior 4h, 71% taker-buy, $52,139 burst \u2014 while price has only moved +2.1%",
+      "chg_24h": 0.05,
+      "vol_surge": 6.33,
+      "chg_1h": 0.0208,
+      "market_surge": 6.87,
+      "actionable": true
+    },
+    {
+      "symbol": "SOXLBUSDT",
+      "signal": "breakout",
+      "score": 0.6801,
+      "raw_score": 0.6801,
+      "weight": 1.0,
+      "price": 151.83,
+      "why": "trades 7.4x, volume 6.3x, 71% taker-buy, +2.1% in an hour, at 89% of its 24h range",
+      "chg_24h": 0.05,
+      "vol_surge": 6.33,
+      "chg_1h": 0.0208,
+      "market_surge": 6.87,
+      "actionable": false,
+      "status": "probation \u2014 6/12 resolved 4h samples under ruleset 3"
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "probation \u2014 6/12 resolved 4h samples under ruleset 3",
@@ -11,7 +41,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 11,
     "baseline": 13.0,
     "wave": false
   },
@@ -19,7 +49,7 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.333,
-      "mean_ret_1h": 0.00155,
+      "mean_ret_1h": 0.00094,
       "median_ret_1h": 0.00066,
       "n_4h": 30,
       "hit_rate_4h": 0.567,
