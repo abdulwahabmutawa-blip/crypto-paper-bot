@@ -1,11 +1,13 @@
 {
   "created": "2026-08-15",
-  "held_symbol": "SNDKBUSDT",
-  "entry_price": 1736.6300000000003,
-  "units": 0.0225,
-  "entry_scan_ts": "2026-08-16T23:21:52+00:00",
-  "entry_source": "scout:ignition",
-  "stopped": {},
+  "held_symbol": null,
+  "entry_price": null,
+  "units": 0.0,
+  "entry_scan_ts": null,
+  "entry_source": null,
+  "stopped": {
+    "SNDKBUSDT": "2026-08-17T07:51:38+00:00"
+  },
   "entries": {
     "2026-08-17": 1
   },
@@ -89,27 +91,33 @@
       "date": "2026-08-16",
       "exit": 0.028809999999999995,
       "entry": 0.030070000000000003
+    },
+    {
+      "symbol": "SNDKBUSDT",
+      "entry_time": "2026-08-17T05:46:55+00:00",
+      "exit_time": "2026-08-17T07:51:38+00:00",
+      "entry_price": 1736.6300000000003,
+      "exit_price": 1741.55,
+      "units": 0.0225,
+      "spent_usd": 39.0742,
+      "got_usd": 39.0107,
+      "pnl_pct": 0.28,
+      "pnl_usd": -0.0635,
+      "reason": "STALLED (2.1h in, only +0.3%) \u2014 the pump never came",
+      "date": "2026-08-17",
+      "exit": 1741.55,
+      "entry": 1736.6300000000003
     }
   ],
-  "last_value_usd": 39.19,
-  "last_updated_utc": "2026-08-17T07:45:56+00:00",
-  "open_position": {
-    "symbol": "SNDKBUSDT",
-    "entry_time": "2026-08-17T05:46:55+00:00",
-    "entry_price": 1736.6300000000003,
-    "current_price": 1739.7,
-    "units": 0.0225,
-    "spent_usd": 39.0742,
-    "value_usd": 39.1433,
-    "pnl_usd": 0.0691,
-    "pnl_pct": 0.18,
-    "source": "scout:ignition"
-  },
-  "spent_usd": 39.0742,
+  "last_value_usd": 39.06,
+  "last_updated_utc": "2026-08-17T07:51:38+00:00",
+  "open_position": null,
+  "spent_usd": null,
   "no_pair": {
-    "scan_ts": "2026-08-16T23:21:52+00:00",
-    "syms": []
-  },
-  "hwm": 1745.9,
-  "entry_time": "2026-08-17T05:46:55+00:00"
+    "scan_ts": "2026-08-17T06:39:22+00:00",
+    "syms": [
+      "HYPEUSDT",
+      "BTWUSDT"
+    ]
+  }
 }
