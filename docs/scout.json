@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-17T14:36:13+00:00",
-  "scanned": 79,
+  "ts": "2026-08-17T14:42:23+00:00",
+  "scanned": 78,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "HEMIUSDT",
+      "signal": "breakout",
+      "score": 0.9036,
+      "raw_score": 0.9036,
+      "weight": 1.0,
+      "price": 0.00695,
+      "why": "trades 20.1x, volume 22.1x, 66% taker-buy, +7.1% in an hour, at 95% of its 24h range",
+      "chg_24h": 0.1583,
+      "vol_surge": 22.09,
+      "chg_1h": 0.0709,
+      "market_surge": 9.5,
+      "actionable": false,
+      "status": "probation \u2014 6/12 resolved 4h samples under ruleset 3"
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "probation \u2014 6/12 resolved 4h samples under ruleset 3",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 15,
+    "count": 16,
     "baseline": 13.0,
     "wave": false
   },
