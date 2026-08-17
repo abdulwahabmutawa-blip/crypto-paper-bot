@@ -1,33 +1,17 @@
 {
-  "ts": "2026-08-17T09:32:51+00:00",
-  "scanned": 73,
+  "ts": "2026-08-17T09:38:41+00:00",
+  "scanned": 72,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "DEXEUSDT",
-      "signal": "breakout",
-      "score": 0.7076,
-      "raw_score": 0.7076,
-      "weight": 1.0,
-      "price": 1.98,
-      "why": "trades 6.1x, volume 7.5x, 62% taker-buy, +3.9% in an hour, at 96% of its 24h range",
-      "chg_24h": 0.019,
-      "vol_surge": 7.5,
-      "chg_1h": 0.0388,
-      "market_surge": 5.47,
-      "actionable": false,
-      "status": "probation \u2014 4/12 resolved 4h samples under ruleset 3"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "probation \u2014 4/12 resolved 4h samples under ruleset 3",
     "reversion": "probation \u2014 0/12 resolved 4h samples under ruleset 3",
-    "heat": "probation \u2014 2/12 resolved 4h samples under ruleset 3",
+    "heat": "probation \u2014 3/12 resolved 4h samples under ruleset 3",
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 13,
     "baseline": 13.0,
     "wave": false
   },
@@ -35,7 +19,7 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.4,
-      "mean_ret_1h": 0.0044,
+      "mean_ret_1h": 0.00448,
       "median_ret_1h": 0.00098,
       "n_4h": 22,
       "hit_rate_4h": 0.727,
@@ -53,14 +37,14 @@
       "median_ret_4h": 0.04843
     },
     "heat": {
-      "n_1h": 3,
+      "n_1h": 4,
       "hit_rate_1h": 0.0,
-      "mean_ret_1h": -0.04554,
-      "median_ret_1h": -0.0449,
-      "n_4h": 2,
-      "hit_rate_4h": 0.5,
-      "mean_ret_4h": -0.03635,
-      "median_ret_4h": 0.05281
+      "mean_ret_1h": -0.04002,
+      "median_ret_1h": -0.02503,
+      "n_4h": 3,
+      "hit_rate_4h": 0.333,
+      "mean_ret_4h": -0.05723,
+      "median_ret_4h": -0.09898
     }
   },
   "note": "READ-ONLY scout. Ranked opinion only \u2014 the book decides."
