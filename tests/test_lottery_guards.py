@@ -74,35 +74,59 @@ finally:
     for k in ("BINANCE_LIVE_API_KEY", "BINANCE_LIVE_API_SECRET", "LOTTERY_LIVE"):
         os.environ.pop(k, None)
 
+# --- 2026-08-17: the three real trades, with MEASURED context --------------
+# CHIP 09:21 — the bad one. The guard refused it three times as it fell
+# (-7.8%, -6.6%, -5.9% on the hour) then bought when the crash bar aged out
+# of the 60-minute window. Measured -7.60% below its 2h high at that entry.
+why = bl.late_entry(0.11, 0.001, -0.076, 0.202)
+assert why and "ROLLED OVER" in why, f"the 09:21 CHIP entry must be refused: {why}"
+# ...and it must stay refused even when the hourly window reads POSITIVE,
+# which is exactly the artifact that let it through
+why = bl.late_entry(0.11, 0.02, -0.076, 0.202)
+assert why and "ROLLED OVER" in why, "a rolled-over coin must not be rescued by a green hour"
+
+# LTC 10:47 — clean entry, but its whole 24h range was 1.67%: a round trip
+# costs ~0.2% and a burst seat closes within 8h, so it could not pay.
+why = bl.late_entry(0.01, 0.002, -0.002, 0.0167)
+assert why and "NO ROOM" in why, f"the LTC entry must be refused: {why}"
+
+# SNDKB 05:46 — process-correct (drawdown -0.86%, range 10.26%). It must
+# still be allowed: the fix targets the two bad trades, not all trading.
+assert bl.late_entry(0.05, 0.005, -0.0086, 0.1026) is None, \
+    "the SNDKB entry was defensible and must stay allowed"
+
 # --- late-entry guard: the book's real trades, as fixtures -----------------
 # Measured as RUN-UP FROM THE 24H LOW — close-to-close decays as a pump
 # rolls over, which is how CHIP's second entry dodged the first cap.
 # COW (watcher): +37.6% off its low, -2.3% in the hour, bought 9h after its
 # top -> -11.2%. BOTH rules must catch it.
-why = bl.late_entry(0.376, -0.023)
+why = bl.late_entry(0.376, -0.023, -0.02, 0.40)
 assert why and "LATE" in why, "the COW entry must be refused"
 # CHIP round 1 (watcher): +29.2% off its low, bought AT the local top ->
 # -7.7%. The run-up cap alone must catch it.
-why = bl.late_entry(0.292, 0.057)
+why = bl.late_entry(0.292, 0.057, -0.005, 0.30)
 assert why and "LATE" in why, "the CHIP entry must be refused"
 # CHIP round 2 (watcher, the 15:30 whipsaw re-buy 6.4% above its own exit):
 # day-change had decayed under the old cap, but run-up off the low had not.
 # THIS fixture is why the guard measures from the low.
-why = bl.late_entry(0.274, 0.001)
+why = bl.late_entry(0.274, 0.001, -0.02, 0.28)
 assert why and "LATE" in why, "the CHIP re-buy must be refused"
 # LINK: +8.0% off its low, flat hour -> the book's only winner. Must pass.
-assert bl.late_entry(0.080, 0.001) is None, \
+assert bl.late_entry(0.080, 0.001, -0.01, 0.10) is None, \
     "the LINK entry was fine and must stay allowed"
 # early-stage move: modestly up, accelerating -> the target trade
-assert bl.late_entry(0.10, 0.03) is None
-# below the run-up cap but red on the hour: hype arrived after the top
-why = bl.late_entry(0.10, -0.01)
+assert bl.late_entry(0.10, 0.03, -0.005, 0.12) is None
+# below the run-up cap but red on the hour: hype arrived after the top. The
+# drawdown here (-2%) is inside the floor, so it is the HOURLY rule being
+# tested, not the new one.
+why = bl.late_entry(0.10, -0.01, -0.02, 0.12)
 assert why and "rolling over" in why
-# unknown price context: this book goes all-in per entry — never buy blind
-why = bl.late_entry(None, 0.02)
-assert why and "blind" in why
-why = bl.late_entry(0.10, None)
-assert why and "blind" in why
+# unknown price context: this book goes all-in per entry — never buy blind.
+# Every input is required; any missing one refuses.
+for args in ((None, 0.02, -0.01, 0.12), (0.10, None, -0.01, 0.12),
+             (0.10, 0.02, None, 0.12), (0.10, 0.02, -0.01, None)):
+    why = bl.late_entry(*args)
+    assert why and "blind" in why, args
 
 # --- per-seat exit clocks (explosion study: grinds take a median 11 DAYS) ---
 g = bl.exit_params("scout:revival")

@@ -180,6 +180,27 @@ MIN_CHG_1H_AT_ENTRY = 0.0      # [EVIDENCE] COW was FALLING at entry
                                # (ignition-style) entry has a flat hour by
                                # definition, and the run-up cap above does
                                # the heavy lifting.
+MAX_DRAWDOWN_2H = -0.04        # [EVIDENCE — 08-17 CHIP] chg_1h compares two
+                               # ENDPOINTS of a rolling window, so a crash
+                               # bar simply ages out of it. The guard
+                               # refused CHIP three times as it fell
+                               # (-7.8%, -6.6%, -5.9%) and then bought it at
+                               # 09:21 when the drop rolled past the 60-min
+                               # edge — the coin had not recovered, the
+                               # measurement just stopped seeing the fall.
+                               # Distance below the recent HIGH has no such
+                               # cliff: it decays gradually instead of
+                               # flipping. CHIP was -7.6% below its 2h high
+                               # at that entry; the two trades that were
+                               # process-correct sat at -0.9% and -0.2%.
+MIN_RANGE_24H_AT_ENTRY = 0.05  # [EVIDENCE — 08-17 LTC] a round trip costs
+                               # ~0.2% in fees plus spread, and a burst seat
+                               # is closed within 8h. LTC was bought with a
+                               # 1.67% 24h range: even a perfect exit could
+                               # not pay for the trade, and it closed -$0.06
+                               # on a 2h stall. The other two entries had
+                               # 20.2% and 10.3% of room. This is a
+                               # necessary condition, not a sufficient one.
 
 
 def exit_params(source: str | None) -> dict:
@@ -225,16 +246,29 @@ def trail_pct(gain: float | None) -> float:
     return -0.15
 
 
-def late_entry(runup_24h: float | None, chg_1h: float | None) -> str | None:
-    """Pure verdict: refusal reason if this entry is chasing a spent move.
-    None values mean the data could not be fetched — refuse too: this book
-    goes all-in per entry, and 'unknown' is not a number it can afford."""
-    if runup_24h is None or chg_1h is None:
+def late_entry(runup_24h: float | None, chg_1h: float | None,
+               dd_2h: float | None, range_24h: float | None) -> str | None:
+    """Pure verdict: refusal reason if this entry is chasing a spent move or
+    reaching for one too small to pay for itself.
+
+    Every input is required. None means the data could not be fetched, and
+    this book goes all-in per entry — 'unknown' is not a number it can
+    afford, so unknown refuses."""
+    if runup_24h is None or chg_1h is None or dd_2h is None \
+            or range_24h is None:
         return "LATE-ENTRY GUARD — price context unavailable; not buying blind"
+    if range_24h < MIN_RANGE_24H_AT_ENTRY:
+        return (f"NO ROOM — 24h range is only {range_24h:.1%} (floor "
+                f"{MIN_RANGE_24H_AT_ENTRY:.0%}): a round trip costs ~0.2% "
+                f"and this cannot pay for itself inside the hold")
     if runup_24h > MAX_RUNUP_24H_AT_ENTRY:
         return (f"LATE — already {runup_24h:+.1%} off its 24h low (cap "
                 f"{MAX_RUNUP_24H_AT_ENTRY:+.0%}): the pump this hype "
                 f"describes has already happened")
+    if dd_2h <= MAX_DRAWDOWN_2H:
+        return (f"ROLLED OVER — {dd_2h:+.1%} below its 2h high (floor "
+                f"{MAX_DRAWDOWN_2H:+.0%}): it just fell, and an hourly "
+                f"window would lose that as the drop ages out")
     if chg_1h < MIN_CHG_1H_AT_ENTRY:
         return (f"LATE — {chg_1h:+.1%} in the last hour: the move is rolling "
                 f"over, hype arrived after the top")
@@ -242,24 +276,34 @@ def late_entry(runup_24h: float | None, chg_1h: float | None) -> str | None:
 
 
 def late_entry_check(symbol: str) -> str | None:
-    """Fetch the two numbers late_entry() judges. Two public GETs."""
-    runup_24h = None
+    """Fetch the four numbers late_entry() judges. Two public GETs."""
+    runup_24h = range_24h = None
     t = _call("GET", "/v3/ticker/24hr", {"symbol": symbol})
     try:
-        last, low = float(t["lastPrice"]), float(t["lowPrice"])
+        last = float(t["lastPrice"])
+        low, high = float(t["lowPrice"]), float(t["highPrice"])
         if low > 0:
             runup_24h = last / low - 1.0
+            range_24h = high / low - 1.0
     except Exception:
         pass
-    chg_1h = None
+    chg_1h = dd_2h = None
+    # 24 five-minute bars = 2 hours: the last 13 give the hourly change, the
+    # whole window gives the distance below the recent high
     k = _call("GET", "/v3/klines",
-              {"symbol": symbol, "interval": "5m", "limit": 13})
+              {"symbol": symbol, "interval": "5m", "limit": 24})
     try:
-        first, last = float(k[0][4]), float(k[-1][4])
-        chg_1h = last / first - 1.0
+        closes = [float(r[4]) for r in k]
+        highs = [float(r[2]) for r in k]
+        last = closes[-1]
+        if len(closes) >= 13:
+            chg_1h = last / closes[-13] - 1.0
+        peak = max(highs)
+        if peak > 0:
+            dd_2h = last / peak - 1.0
     except Exception:
         pass
-    return late_entry(runup_24h, chg_1h)
+    return late_entry(runup_24h, chg_1h, dd_2h, range_24h)
 
 
 def market(action: str, symbol: str, quote_qty: float | None = None,
