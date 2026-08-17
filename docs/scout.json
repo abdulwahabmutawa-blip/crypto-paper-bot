@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-17T14:59:03+00:00",
+  "ts": "2026-08-17T15:04:22+00:00",
   "scanned": 79,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "KAITOUSDT",
+      "signal": "breakout",
+      "score": 0.6712,
+      "raw_score": 0.6712,
+      "weight": 1.0,
+      "price": 0.3684,
+      "why": "trades 4.8x, volume 7.8x, 64% taker-buy, +3.9% in an hour, at 93% of its 24h range",
+      "chg_24h": 0.0497,
+      "vol_surge": 7.76,
+      "chg_1h": 0.0386,
+      "market_surge": 2.52,
+      "actionable": false,
+      "status": "probation \u2014 6/12 resolved 4h samples under ruleset 3"
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "probation \u2014 6/12 resolved 4h samples under ruleset 3",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 15,
+    "count": 14,
     "baseline": 13.0,
     "wave": false
   },
@@ -23,14 +39,14 @@
       "median_ret_1h": 0.00116,
       "n_4h": 30,
       "hit_rate_4h": 0.567,
-      "mean_ret_4h": 0.00573,
+      "mean_ret_4h": 0.00587,
       "median_ret_4h": 0.00414
     },
     "breakout": {
-      "n_1h": 8,
-      "hit_rate_1h": 0.375,
-      "mean_ret_1h": -0.00609,
-      "median_ret_1h": -0.00404,
+      "n_1h": 10,
+      "hit_rate_1h": 0.5,
+      "mean_ret_1h": -0.00088,
+      "median_ret_1h": 0.00338,
       "n_4h": 6,
       "hit_rate_4h": 0.333,
       "mean_ret_4h": 0.0096,
