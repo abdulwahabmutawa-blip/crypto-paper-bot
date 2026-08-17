@@ -1,13 +1,14 @@
 {
   "created": "2026-08-15",
-  "held_symbol": "LTCUSDT",
-  "entry_price": 44.19,
-  "units": 0.868,
-  "entry_scan_ts": "2026-08-17T10:43:28+00:00",
-  "entry_source": "scout:ignition",
+  "held_symbol": null,
+  "entry_price": null,
+  "units": 0.0,
+  "entry_scan_ts": null,
+  "entry_source": null,
   "stopped": {
     "SNDKBUSDT": "2026-08-17T07:51:38+00:00",
-    "CHIPUSDT": "2026-08-17T10:47:55+00:00"
+    "CHIPUSDT": "2026-08-17T10:47:55+00:00",
+    "LTCUSDT": "2026-08-17T12:52:59+00:00"
   },
   "entries": {
     "2026-08-17": 3
@@ -124,29 +125,32 @@
       "date": "2026-08-17",
       "exit": 0.02996,
       "entry": 0.030429999999999995
+    },
+    {
+      "symbol": "LTCUSDT",
+      "entry_time": "2026-08-17T10:47:55+00:00",
+      "exit_time": "2026-08-17T12:52:59+00:00",
+      "entry_price": 44.19,
+      "exit_price": 44.17000000000001,
+      "units": 0.868,
+      "spent_usd": 38.3569,
+      "got_usd": 38.2954,
+      "pnl_pct": -0.05,
+      "pnl_usd": -0.0615,
+      "reason": "STALLED (2.1h in, only -0.0%) \u2014 the pump never came",
+      "date": "2026-08-17",
+      "exit": 44.17000000000001,
+      "entry": 44.19
     }
   ],
-  "last_value_usd": 38.31,
-  "last_updated_utc": "2026-08-17T12:46:25+00:00",
-  "open_position": {
-    "symbol": "LTCUSDT",
-    "entry_time": "2026-08-17T10:47:55+00:00",
-    "entry_price": 44.19,
-    "current_price": 44.19,
-    "units": 0.868,
-    "spent_usd": 38.3569,
-    "value_usd": 38.3569,
-    "pnl_usd": 0.0,
-    "pnl_pct": 0.0,
-    "source": "scout:ignition"
-  },
-  "spent_usd": 38.3569,
+  "last_value_usd": 38.26,
+  "last_updated_utc": "2026-08-17T12:52:59+00:00",
+  "open_position": null,
+  "spent_usd": null,
   "no_pair": {
     "scan_ts": "2026-08-17T10:43:28+00:00",
     "syms": [
       "HYPEUSDT"
     ]
-  },
-  "hwm": 44.27,
-  "entry_time": "2026-08-17T10:47:55+00:00"
+  }
 }
