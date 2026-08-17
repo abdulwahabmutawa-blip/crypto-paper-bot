@@ -1,19 +1,18 @@
 {
-  "ts": "2026-08-17T01:30:09+00:00",
+  "ts": "2026-08-17T01:35:59+00:00",
   "sources": {
     "coingecko": [
       "SEI",
       "PENGU",
       "APT",
       "PORTAL",
-      "UNI",
+      "ICP",
+      "LINK",
       "PEPE",
       "QNT",
       "BTC",
-      "LINK",
-      "WLFI",
-      "ICP",
-      "SUI"
+      "AVAX",
+      "PUMP"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -36,7 +35,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.000293,
+      "funding": -0.000316,
       "long_short": 1.01
     },
     {
@@ -46,7 +45,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 5.8e-05,
+      "funding": 5.9e-05,
       "long_short": 2.22
     },
     {
@@ -55,7 +54,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.9e-05
+      "funding": -1.5e-05
+    },
+    {
+      "symbol": "AVAX",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 4e-05
     },
     {
       "symbol": "ETH",
@@ -63,7 +70,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 5.3e-05
+      "funding": 5.8e-05
     },
     {
       "symbol": "ICP",
@@ -71,7 +78,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -7.3e-05
+      "funding": -7.4e-05
     },
     {
       "symbol": "LINK",
@@ -87,7 +94,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.4e-05
+      "funding": 1.6e-05
     },
     {
       "symbol": "PEPE",
@@ -97,12 +104,20 @@
       ]
     },
     {
+      "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 2.6e-05
+    },
+    {
       "symbol": "QNT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -1.3e-05
+      "funding": -7e-06
     },
     {
       "symbol": "SEI",
@@ -110,31 +125,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.00022
-    },
-    {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -3e-06
-    },
-    {
-      "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -4.5e-05
-    },
-    {
-      "symbol": "WLFI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": -0.000221
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
