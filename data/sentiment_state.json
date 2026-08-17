@@ -1,13 +1,14 @@
 {
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "holding": "NLST",
-  "units": 203.57390857930497,
-  "cash": 0.0,
-  "entry_price": 6.510000228881836,
+  "holding": "CASH",
+  "units": 0.0,
+  "cash": 1181.285941700673,
+  "entry_price": null,
   "bench_units": 1.332054612938296,
   "stopped": {
-    "SHIB-USD": "2026-07-27T00:01:08+00:00"
+    "SHIB-USD": "2026-07-27T00:01:08+00:00",
+    "NLST": "2026-08-17T18:05:32+00:00"
   },
   "trades": [
     {
@@ -276,6 +277,16 @@
       "value": 1325.27,
       "fee": 1.66,
       "reason": "Grok: NLST euphoric \u2014 Patent settlement buzz (scan 2026-08-17T18:05)"
+    },
+    {
+      "date": "2026-08-17",
+      "action": "SELL",
+      "ticker": "NLST",
+      "price": 5.80999994,
+      "units": 203.5739,
+      "value": 1182.76,
+      "fee": 1.48,
+      "reason": "STOP-LOSS hit (-10.8% from entry) \u2014 hype that bleeds gets cut"
     }
   ],
   "history": [
@@ -432,9 +443,9 @@
     },
     {
       "date": "2026-08-17",
-      "value": 1221.44,
-      "bench": 1030.08,
-      "holding": "NLST"
+      "value": 1181.29,
+      "bench": 1030.46,
+      "holding": "CASH"
     }
   ],
   "intraday": [
@@ -9251,9 +9262,15 @@
       "value": 1221.44,
       "bench": 1030.08,
       "holding": "NLST"
+    },
+    {
+      "ts": "2026-08-17T18:47:19+00:00",
+      "value": 1181.29,
+      "bench": 1030.46,
+      "holding": "CASH"
     }
   ],
-  "last_updated_utc": "2026-08-17T18:33:49+00:00",
+  "last_updated_utc": "2026-08-17T18:47:19+00:00",
   "restatement": {
     "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)",
     "voided_trades": [
@@ -9332,5 +9349,5 @@
     ],
     "voided_reason": "signal faded before any real fill was possible (market closed the whole window) \u2014 trades could never have existed"
   },
-  "costs_paid": 9.3314
+  "costs_paid": 10.8099
 }
