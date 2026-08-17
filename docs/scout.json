@@ -1,37 +1,8 @@
 {
-  "ts": "2026-08-17T08:13:25+00:00",
-  "scanned": 70,
+  "ts": "2026-08-17T08:18:50+00:00",
+  "scanned": 71,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "SPCXBUSDT",
-      "signal": "ignition",
-      "score": 0.9183,
-      "raw_score": 0.9183,
-      "weight": 1.0,
-      "price": 142.13,
-      "why": "trades 11.4x and volume 21.0x the prior 4h, 74% taker-buy, $332,199 burst \u2014 while price has only moved -0.7%",
-      "chg_24h": 0.0134,
-      "vol_surge": 21.01,
-      "chg_1h": -0.0071,
-      "market_surge": 6.54,
-      "actionable": true
-    },
-    {
-      "symbol": "INJUSDT",
-      "signal": "ignition",
-      "score": 0.872,
-      "raw_score": 0.872,
-      "weight": 1.0,
-      "price": 4.087,
-      "why": "trades 21.9x and volume 62.5x the prior 4h, 67% taker-buy, $610,469 burst \u2014 while price has only moved -1.8%",
-      "chg_24h": -0.0085,
-      "vol_surge": 62.45,
-      "chg_1h": -0.0178,
-      "market_surge": 45.06,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "probation \u2014 4/12 resolved 4h samples under ruleset 3",
