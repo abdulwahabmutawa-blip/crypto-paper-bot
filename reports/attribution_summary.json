@@ -1,21 +1,21 @@
 {
- "updated_utc": "2026-08-16T17:45:00+00:00",
- "note": "Sunday 2026-08-16, US markets shut. 17 lines appended: 12 bot dailies (now including bot #12 hypecrypto and bot #13 lottery) plus 5 trade_event lines, all five on the lottery book. READ THE TALLY WITH THIS CAVEAT: 8 of today's 12 daily lines are equity books with NO 2026-08-16 session at all, logged flat under driver 'unknown'. The schema has no 'no_session' driver, and I would rather say that plainly than invent one or silently skip the lines. Those 8 inflate 'unknown/flat' from 64 to 71 and carry no information about why anything moved. The 9 informative lines are crypto, hypecrypto, sentinel and the six lottery lines. FILL AUDIT NON-VACUOUS AND PASSING: the nine paper books traded zero (trade-array lengths unchanged), but the lottery book put through 9 real fills, and all 9 verified inside Binance mainnet 1-minute ranges within +/-5 minutes of their recorded timestamps. THE DAY'S DRIVER STORY IS hype_sentiment, which went 1 profit / 4 loss on the lottery legs and is now the fleet's worst driver by rate at 8/14. That is the first time it has passed 'technical' (13/22), and it happened the day a real-money hype book started trading.",
- "total_lines_logged": 289,
+ "updated_utc": "2026-08-17T15:45:00+00:00",
+ "note": "Monday 2026-08-17. 15 lines appended: 12 bot dailies plus 3 trade_event lines, all three on the real-money lottery book. READ THE TALLY WITH A NEW CAVEAT: eight of the twelve daily lines carry day_pnl that the BOT NEVER RECORDED. The fleet loop froze at 12:18Z, 72 minutes before the US open, so those eight books have no 08-17 mark at all. Rather than log eight zeros on a day the market plainly moved, I reconstructed each book's value from its own unit counts and 15:28Z quotes, validated the method by reproducing every 08-14 recorded mark to the cent (allweather landed on 1018.60 exactly), and stamped 'supervisor-reconstructed, not a bot mark' into the evidence field of every affected line. Crypto's line is a real bot mark, but from 12:18Z. FILL AUDIT NON-VACUOUS AND PASSING: the nine paper books traded zero — today that is an outage, not restraint — while the lottery book put through 6 fills across 3 round trips, all verified inside Binance mainnet 1-minute ranges within +/-5 minutes of their timestamps, plus the 08-16 CHIP exit that landed after my last run. THE DAY'S DRIVER STORY IS A ROTATION AND A SCREEN THAT KEEPS MISFIRING. Software fell and semis rallied (IGV -1.42% vs SMH +2.01%) on a flat index, which is why 'sector' takes congress's loss and why AVGO and CSCO both rose against my two open calls. 'hype_sentiment' took four more losses, all on the lottery book, and now sits at 8 profit / 18 loss — decisively the fleet's worst driver, ahead of 'technical' at 13/22.",
+ "total_lines_logged": 304,
  "by_primary_driver": {
   "hype_sentiment": {
    "profit": 8,
-   "loss": 14,
+   "loss": 18,
    "flat": 6
   },
   "macro": {
-   "profit": 13,
+   "profit": 15,
    "loss": 12,
    "flat": 1
   },
   "market_beta": {
-   "profit": 25,
-   "loss": 15,
+   "profit": 26,
+   "loss": 17,
    "flat": 7
   },
   "news_idiosyncratic": {
@@ -26,11 +26,11 @@
   "none_cash": {
    "profit": 0,
    "loss": 1,
-   "flat": 27
+   "flat": 30
   },
   "sector": {
    "profit": 10,
-   "loss": 6,
+   "loss": 7,
    "flat": 0
   },
   "technical": {
@@ -39,32 +39,32 @@
    "flat": 3
   },
   "unknown": {
-   "profit": 10,
-   "loss": 9,
+   "profit": 11,
+   "loss": 10,
    "flat": 71
   }
  },
  "by_beta_or_alpha": {
   "alpha": {
-   "profit": 46,
-   "loss": 42,
+   "profit": 48,
+   "loss": 47,
    "flat": 7
   },
   "beta": {
-   "profit": 21,
-   "loss": 12,
+   "profit": 22,
+   "loss": 14,
    "flat": 7
   },
   "mixed": {
-   "profit": 10,
-   "loss": 17,
+   "profit": 11,
+   "loss": 18,
    "flat": 0
   },
   "n/a": {
    "profit": 11,
    "loss": 14,
-   "flat": 102
+   "flat": 105
   }
  },
- "driver_note": "Three calls I want on the record. FIRST, the eight no-session lines. I logged them as required but I am not going to pretend a shut market is a flat result: their day_pnl is zero by construction, and I have said so in each line's explanation and marked them 'unknown/n/a' rather than borrowing a driver they did not earn. SECOND, the lottery book's four losing legs are logged 'alpha', not 'beta', and that is deliberate: BTC was +0.10% and ETH +0.09% over the same 24h, so nothing about a flat crypto tape explains -11.21% on COW or -7.67% on CHIP. Those are single-name hype moves and the book owns them. THIRD, UUSDT is logged 'unknown', not 'hype_sentiment', because there is no hype story to tell about an asset whose entire day range is 0.03% - the honest reading is that the screen misfired, and I have filed that as a signal-quality fault rather than dressing it up as a market call. On the CHIP re-entry I am claiming no forecast: the evidence is that the bot's own LATE guard refused the buy twice and then let it through six minutes later, and that price is now below the level it sold at. That is a documented contradiction between two of its own rules, which is a stronger thing to say than a guess about where a meme coin goes next."
+ "driver_note": "Four calls I want on the record. FIRST, the reconstruction. I could have logged eight flat lines and stayed literally true to 'what the bot recorded'; that would have hidden a 15.37 equity drawdown behind an outage and told the owner nothing. I reconstructed instead, proved the method against known marks, and labelled every reconstructed figure. SECOND, meanrev is logged 'unknown', not 'news_idiosyncratic'. UNH fell 1.66% while XLV rose 0.19% and SPY was flat, so the move is clearly name-specific — but I searched and found no dated catalyst, and 'I know it was idiosyncratic' is not the same as 'I know why'. Unknown with low confidence is the honest entry. THIRD, hunter's +0.73% on PLTR is also 'unknown' for the same reason, even though an AI-momentum story would have written itself: PLTR rose while its own software sector fell 1.42%, which is a divergence I cannot source. FOURTH, all three lottery legs are 'alpha', not 'beta': BTC was +1.14% over the same 24 hours, so a firm crypto tape explains none of three consecutive losing round trips. Two of the three lost money on fees alone after gross moves of +0.28% and -0.05% — the STALLED rule is paying the spread twice to learn nothing, and it did it on real capital."
 }
