@@ -116,7 +116,7 @@ def run(pause: float = 0.05) -> int:
     for run_id, questions in sorted(by_run.items()):
         path = config.RESOLUTIONS / f"{run_id}.jsonl"
         # Append, never rewrite: a run may resolve across several passes.
-        with path.open("a", encoding="utf-8") as fh:
+        with path.open("a", encoding="utf-8", newline="\n") as fh:
             for q in questions:
                 r = resolve_one(q)
                 fh.write(json.dumps(r, sort_keys=True) + "\n")

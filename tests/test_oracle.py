@@ -194,6 +194,15 @@ try:
     ok, probs = ledger.verify()
     assert ok, probs
 
+    # ARTIFACTS MUST BE LF ON EVERY PLATFORM. Python translates "\n" to
+    # "\r\n" on Windows and git normalises it back on commit, so a record
+    # written on Windows hashed different bytes than CI checked out — which
+    # broke chain verification on day one. A record that only verifies on
+    # the machine that wrote it proves nothing. Checked here on the output
+    # of the real writer, before the tamper simulation below rewrites it.
+    assert b"\r\n" not in config.CHAIN.read_bytes(), \
+        "ledger.append must write LF or the chain will not verify off-platform"
+
     # edit a historical record: verification must catch it
     f1.write_text('{"x":999}\n', encoding="utf-8")
     ok, probs = ledger.verify()
@@ -205,7 +214,7 @@ try:
     bad = json.loads(lines[0])
     bad["n_records"] = 42
     config.CHAIN.write_text(json.dumps(bad, sort_keys=True) + "\n"
-                            + lines[1] + "\n", encoding="utf-8")
+                            + lines[1] + "\n", encoding="utf-8", newline="\n")
     ok, probs = ledger.verify()
     assert not ok and any("entry hash mismatch" in p for p in probs), probs
 finally:

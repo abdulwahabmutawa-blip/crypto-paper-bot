@@ -120,6 +120,23 @@ pairs, the premise of a reasoning-based forecaster is falsified), and a
 shadow net-of-cost P&L at 31bps plus spread (an edge that exists only in
 untradable microcaps is a true result with no use).
 
+## Chain restarts (log)
+
+Kill criterion 5 says an unexplained chain break forfeits the record and
+restarts from zero. An EXPLAINED break is logged here and also restarts —
+patching recorded hashes would be exactly the quiet edit the chain exists
+to prevent.
+
+- **2026-08-17, restart 1.** The first record was written on Windows, where
+  Python translates `\n` to `\r\n`; git normalised it back to `\n` on
+  commit, so CI checked out different bytes than the chain had hashed and
+  verification failed (runs #2 and #3). Cause was a platform bug in the
+  writer, not tampering. Nothing had resolved (windows would have closed
+  2026-09-16), so no evidential content was lost — only a few hours of
+  sampling. Fixed by forcing `newline="\n"` on every artifact write, adding
+  `.gitattributes` (`oracle/data/** -text`), and a test asserting artifacts
+  contain no CRLF. Chain regenerated from seq 1.
+
 ## Honest expected outcome
 
 **A well-documented null is the overwhelmingly likely result**, and this

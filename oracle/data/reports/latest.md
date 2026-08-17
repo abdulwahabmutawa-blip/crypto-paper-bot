@@ -1,6 +1,6 @@
 # Oracle scoreboard
 
-generation `gen-000-baserate` · forecaster `baserate_v1` · 2026-08-17T11:26:31+00:00
+generation `gen-000-baserate` · forecaster `baserate_v1` · 2026-08-17T11:42:52+00:00
 
 - predictions written: **295**
 - resolved and scored: **0**

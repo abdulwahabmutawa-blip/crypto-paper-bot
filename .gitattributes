@@ -1,4 +1,9 @@
-# Append-only ledgers from two writers (Actions + VPS): union-merge keeps
-# both sides' lines instead of conflicting — order within a merge window is
-# not meaningful for these files, presence is.
-*.jsonl merge=union
+# The Oracle's record is hash-chained: its files are hashed byte-for-byte
+# and re-verified in CI. Any end-of-line translation changes those bytes and
+# breaks verification for reasons that have nothing to do with tampering.
+# `-text` tells git never to convert them on checkout or commit.
+oracle/data/** -text
+
+# Shell scripts run on the Linux VPS and must stay LF regardless of the
+# platform they were edited on.
+*.sh text eol=lf

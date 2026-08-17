@@ -144,8 +144,9 @@ def run(limit: int | None = None) -> Path:
         "slate": slate,
         "rejected": built["rejected"],
     }
+    # newline="\n" everywhere — see the note in ledger.append()
     snap_path.write_text(json.dumps(snap, sort_keys=True, indent=1),
-                         encoding="utf-8")
+                         encoding="utf-8", newline="\n")
     snap_hash = ledger.sha256_file(snap_path)
 
     day_dir = config.PREDICTIONS / now.strftime("%Y-%m-%d")
@@ -153,7 +154,7 @@ def run(limit: int | None = None) -> Path:
     pred_path = day_dir / f"{run_id}.jsonl"
 
     p = round(built["base_rate"], 6)
-    with pred_path.open("w", encoding="utf-8") as fh:
+    with pred_path.open("w", encoding="utf-8", newline="\n") as fh:
         for s in slate:
             w_start = s["ref_close_time_ms"] + 1
             w_end = s["ref_close_time_ms"] + config.HORIZON_DAYS * DAY_MS

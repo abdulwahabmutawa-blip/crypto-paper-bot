@@ -72,7 +72,12 @@ def append(kind: str, path: Path, n_records: int, extra: dict | None = None
         **(extra or {}),
     }
     entry["chain_self"] = sha256_text(_canonical(entry))
-    with config.CHAIN.open("a", encoding="utf-8") as fh:
+    # newline="\n" on EVERY artifact write, without exception: Python
+    # translates "\n" to "\r\n" on Windows, git normalises it back to "\n"
+    # on commit, and the chain then hashes different bytes than CI checks
+    # out — which broke verification on day one. The record must be
+    # byte-identical on every platform or it proves nothing.
+    with config.CHAIN.open("a", encoding="utf-8", newline="\n") as fh:
         fh.write(json.dumps(entry, sort_keys=True) + "\n")
     return entry
 

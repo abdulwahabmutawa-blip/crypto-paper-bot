@@ -216,9 +216,10 @@ def run() -> dict:
     s = compute()
     day = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     sp = config.SCORES / f"{day}.json"
-    sp.write_text(json.dumps(s, sort_keys=True, indent=1), encoding="utf-8")
+    sp.write_text(json.dumps(s, sort_keys=True, indent=1),
+                  encoding="utf-8", newline="\n")
     rp = config.REPORTS / "latest.md"
-    rp.write_text(report(s), encoding="utf-8")
+    rp.write_text(report(s), encoding="utf-8", newline="\n")
     ledger.append("scores", sp, s.get("n_scored", 0))
     print(report(s))
     return s
