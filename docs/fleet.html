@@ -188,8 +188,13 @@
 /* Fleet net P&L — sums the same per-bot dashboard JSONs the bot pages read.
    Active books only; retired books are excluded from the headline. */
 (function(){
+// EVERY new paper book must be added here or its money silently vanishes
+// from the fleet total — hypecrypto launched 2026-08-15 and was missing for
+// two days. Name = the docs/<name>_dashboard_data.json prefix. Paper books
+// only: the lottery book is real money on a different scale and is never
+// mixed into this figure.
 const ACTIVE = ["crypto","congress","commodity","meanrev","allweather",
-                "sentiment","hunter","scholar","analyst"];
+                "sentiment","hypecrypto","hunter","scholar","analyst"];
 const fmt$ = v => (v<0?"-$":"$") + Math.abs(v).toLocaleString("en-US",
   {minimumFractionDigits:2, maximumFractionDigits:2});
 
