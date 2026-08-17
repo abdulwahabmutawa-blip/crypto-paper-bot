@@ -1,38 +1,8 @@
 {
-  "ts": "2026-08-17T08:35:03+00:00",
-  "scanned": 73,
+  "ts": "2026-08-17T08:41:11+00:00",
+  "scanned": 72,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "MSTRBUSDT",
-      "signal": "ignition",
-      "score": 0.6074,
-      "raw_score": 0.6074,
-      "weight": 1.0,
-      "price": 93.97,
-      "why": "trades 4.8x and volume 6.2x the prior 4h, 70% taker-buy, $109,878 burst \u2014 while price has only moved -0.6%",
-      "chg_24h": -0.001,
-      "vol_surge": 6.22,
-      "chg_1h": -0.0055,
-      "market_surge": 13.73,
-      "actionable": true
-    },
-    {
-      "symbol": "PORTALUSDT",
-      "signal": "heat",
-      "score": 0.6,
-      "raw_score": 0.6,
-      "weight": 1.0,
-      "price": 0.01622,
-      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding -0.024% \u00b7 L/S 0.86",
-      "chg_24h": 0.3781,
-      "vol_surge": null,
-      "chg_1h": null,
-      "market_surge": 3,
-      "actionable": false,
-      "status": "probation \u2014 2/12 resolved 4h samples under ruleset 3"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "probation \u2014 4/12 resolved 4h samples under ruleset 3",
@@ -41,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 11,
+    "count": 13,
     "baseline": 13.0,
     "wave": false
   },
