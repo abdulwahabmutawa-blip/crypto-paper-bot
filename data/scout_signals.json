@@ -1,23 +1,8 @@
 {
-  "ts": "2026-08-17T15:32:04+00:00",
-  "scanned": 82,
+  "ts": "2026-08-17T15:37:33+00:00",
+  "scanned": 84,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ADAUSDT",
-      "signal": "ignition",
-      "score": 0.628,
-      "raw_score": 0.5885,
-      "weight": 1.067,
-      "price": 0.1746,
-      "why": "trades 4.4x and volume 6.1x the prior 4h, 70% taker-buy, $205,809 burst \u2014 while price has only moved +0.6%",
-      "chg_24h": -0.0141,
-      "vol_surge": 6.07,
-      "chg_1h": 0.0058,
-      "market_surge": 3.71,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "probation \u2014 6/12 resolved 4h samples under ruleset 3",
@@ -26,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 15,
+    "count": 16,
     "baseline": 13.0,
     "wave": false
   },
