@@ -1,10 +1,10 @@
 {
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "holding": "CASH",
-  "units": 0.0,
-  "cash": 1326.9248475050265,
-  "entry_price": null,
+  "holding": "NLST",
+  "units": 203.57390857930497,
+  "cash": 0.0,
+  "entry_price": 6.510000228881836,
   "bench_units": 1.332054612938296,
   "stopped": {
     "SHIB-USD": "2026-07-27T00:01:08+00:00"
@@ -266,6 +266,16 @@
       "value": 1328.59,
       "fee": 1.66,
       "reason": "Grok scans stale (171h) \u2014 hype unverifiable, flying blind is not a strategy"
+    },
+    {
+      "date": "2026-08-17",
+      "action": "BUY",
+      "ticker": "NLST",
+      "price": 6.51000023,
+      "units": 203.5739,
+      "value": 1325.27,
+      "fee": 1.66,
+      "reason": "Grok: NLST euphoric \u2014 Patent settlement buzz (scan 2026-08-17T18:05)"
     }
   ],
   "history": [
@@ -419,6 +429,12 @@
       "value": 1326.92,
       "bench": 1034.13,
       "holding": "CASH"
+    },
+    {
+      "date": "2026-08-17",
+      "value": 1325.27,
+      "bench": 1030.44,
+      "holding": "NLST"
     }
   ],
   "intraday": [
@@ -9217,9 +9233,15 @@
       "value": 1326.92,
       "bench": 1034.13,
       "holding": "CASH"
+    },
+    {
+      "ts": "2026-08-17T18:06:31+00:00",
+      "value": 1325.27,
+      "bench": 1030.44,
+      "holding": "NLST"
     }
   ],
-  "last_updated_utc": "2026-08-17T12:18:22+00:00",
+  "last_updated_utc": "2026-08-17T18:06:31+00:00",
   "restatement": {
     "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)",
     "voided_trades": [
@@ -9298,5 +9320,5 @@
     ],
     "voided_reason": "signal faded before any real fill was possible (market closed the whole window) \u2014 trades could never have existed"
   },
-  "costs_paid": 7.6727
+  "costs_paid": 9.3314
 }

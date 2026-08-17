@@ -1,55 +1,37 @@
 {
-  "generated_utc": "2026-08-17T12:18:22+00:00",
+  "generated_utc": "2026-08-17T18:06:32+00:00",
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "live_ts": "2026-08-17T12:18:22+00:00",
+  "live_ts": "2026-08-17T18:06:32+00:00",
   "current": {
-    "date": "2026-08-14",
-    "value": 990.45,
-    "bench": 1034.13,
-    "holding": "PLTR"
+    "date": "2026-08-17",
+    "value": 986.35,
+    "bench": 1030.41,
+    "holding": "SLV"
   },
   "board": [
     {
-      "sym": "NVDA",
-      "price": 225.16,
-      "line": "Nvidia \u00b7 score +7.69 \u00b7 mom20 +14.6%",
-      "tag": "hunting",
-      "on": true,
-      "pick": false,
-      "fill": 50
-    },
-    {
-      "sym": "UPRO",
-      "price": 156.63,
-      "line": "3x S&P \u00b7 score +6.58 \u00b7 mom20 +14.9%",
-      "tag": "hunting",
-      "on": true,
-      "pick": false,
-      "fill": 50
-    },
-    {
-      "sym": "TSLA",
-      "price": 342.27,
-      "line": "Tesla \u00b7 score +5.95 \u00b7 mom20 +10.7%",
-      "tag": "hunting",
-      "on": true,
-      "pick": false,
-      "fill": 50
-    },
-    {
       "sym": "SLV",
-      "price": 58.48,
-      "line": "Silver \u00b7 score +5.66 \u00b7 mom20 +10.5%",
-      "tag": "hunting",
+      "price": 59.5,
+      "line": "Silver \u00b7 score +8.64 \u00b7 mom20 +15.1%",
+      "tag": "HELD",
       "on": true,
-      "pick": false,
+      "pick": true,
       "fill": 50
     },
     {
       "sym": "GLD",
-      "price": 401.48,
-      "line": "Gold \u00b7 score +5.53 \u00b7 mom20 +7.2%",
+      "price": 404.67,
+      "line": "Gold \u00b7 score +7.76 \u00b7 mom20 +9.6%",
+      "tag": "hunting",
+      "on": true,
+      "pick": false,
+      "fill": 50
+    },
+    {
+      "sym": "NVDA",
+      "price": 225.63,
+      "line": "Nvidia \u00b7 score +7.66 \u00b7 mom20 +14.5%",
       "tag": "hunting",
       "on": true,
       "pick": false,
@@ -57,8 +39,17 @@
     },
     {
       "sym": "TQQQ",
-      "price": 76.79,
-      "line": "3x Nasdaq \u00b7 score +5.42 \u00b7 mom20 +21.1%",
+      "price": 76.43,
+      "line": "3x Nasdaq \u00b7 score +6.35 \u00b7 mom20 +24.2%",
+      "tag": "hunting",
+      "on": true,
+      "pick": false,
+      "fill": 50
+    },
+    {
+      "sym": "TSLA",
+      "price": 339.69,
+      "line": "Tesla \u00b7 score +5.82 \u00b7 mom20 +10.5%",
       "tag": "hunting",
       "on": true,
       "pick": false,
@@ -66,39 +57,48 @@
     },
     {
       "sym": "PLTR",
-      "price": 174.04,
-      "line": "Palantir \u00b7 score +4.43 \u00b7 mom20 +32.3%",
-      "tag": "HELD",
+      "price": 173.72,
+      "line": "Palantir \u00b7 score +5.74 \u00b7 mom20 +40.6%",
+      "tag": "hunting",
       "on": true,
-      "pick": true,
+      "pick": false,
+      "fill": 50
+    },
+    {
+      "sym": "UPRO",
+      "price": 154.96,
+      "line": "3x S&P \u00b7 score +5.61 \u00b7 mom20 +12.9%",
+      "tag": "hunting",
+      "on": true,
+      "pick": false,
       "fill": 50
     },
     {
       "sym": "SOXL",
-      "price": 144.95,
-      "line": "3x Semis \u00b7 score +1.41 \u00b7 mom20 +13.1%",
+      "price": 153.18,
+      "line": "3x Semis \u00b7 score +4.65 \u00b7 mom20 +39.8%",
       "tag": "hunting",
       "on": true,
       "pick": false,
-      "fill": 21.204603091485527
+      "fill": 50
     },
     {
       "sym": "USO",
-      "price": 126.6,
-      "line": "Oil \u00b7 score +0.47 \u00b7 mom20 +1.5%",
+      "price": 130.22,
+      "line": "Oil \u00b7 score +2.60 \u00b7 mom20 +8.1%",
       "tag": "hunting",
       "on": true,
       "pick": false,
-      "fill": 6.9838404165432175
+      "fill": 38.96415519010585
     },
     {
       "sym": "SOL",
-      "price": 74.54,
-      "line": "Solana \u00b7 score +0.41 \u00b7 mom20 +0.5%",
+      "price": 75.87,
+      "line": "Solana \u00b7 score +2.15 \u00b7 mom20 +2.9%",
       "tag": "hunting",
       "on": true,
       "pick": false,
-      "fill": 6.0762263656073126
+      "fill": 32.27472595985824
     }
   ],
   "board_title": "The whole market, scored by reward-per-unit-of-risk",
@@ -8904,27 +8904,15 @@
       "value": 990.45,
       "bench": 1034.13,
       "holding": "PLTR"
+    },
+    {
+      "ts": "2026-08-17T18:06:32+00:00",
+      "value": 986.35,
+      "bench": 1030.41,
+      "holding": "SLV"
     }
   ],
   "trades": [
-    {
-      "date": "2026-07-20",
-      "action": "SELL",
-      "ticker": "PLTR",
-      "price": 131.88,
-      "units": 7.4383,
-      "value": 980.96,
-      "reason": "Outgunned \u2014 Ethereum scores >1.25x better [restated: premarket signal filled at 7/20 open]"
-    },
-    {
-      "date": "2026-07-20",
-      "action": "BUY",
-      "ticker": "ETH-USD",
-      "price": 1866.21,
-      "units": 0.52564,
-      "value": 980.96,
-      "reason": "Top reward/risk \u2014 Ethereum all-in [restated: cash available 13:30 UTC after PLTR sale]"
-    },
     {
       "date": "2026-07-22",
       "action": "SELL",
@@ -9090,6 +9078,26 @@
       "value": 995.22,
       "fee": 1.2,
       "reason": "Top reward/risk score (5.55) \u2014 Palantir, all-in"
+    },
+    {
+      "date": "2026-08-17",
+      "action": "SELL",
+      "ticker": "PLTR",
+      "price": 173.71839905,
+      "units": 5.6909,
+      "value": 988.62,
+      "fee": 1.19,
+      "reason": "Outgunned \u2014 Silver now scores >1.25x better on reward/risk"
+    },
+    {
+      "date": "2026-08-17",
+      "action": "BUY",
+      "ticker": "SLV",
+      "price": 59.5,
+      "units": 16.5772,
+      "value": 986.35,
+      "fee": 1.09,
+      "reason": "Top reward/risk score (8.64) \u2014 Silver, all-in"
     }
   ],
   "history": [
@@ -9218,11 +9226,17 @@
       "value": 990.45,
       "bench": 1034.13,
       "holding": "PLTR"
+    },
+    {
+      "date": "2026-08-17",
+      "value": 986.35,
+      "bench": 1030.41,
+      "holding": "SLV"
     }
   ],
-  "costs_paid": 4.4899,
+  "costs_paid": 6.7624,
   "frozen": null,
-  "thoughts": "I'm all-in on PLTR \u2014 right now it has the best combination of 'going up' and 'not too wild' of the 14 things I watch. My safety net: if it drops 8% from its recent high of $179.67 (that's $165.30), I sell instantly, no questions asked. I only switch to something else if it looks clearly better than what I hold \u2014 not just slightly better.",
+  "thoughts": "I'm all-in on SLV \u2014 right now it has the best combination of 'going up' and 'not too wild' of the 14 things I watch. My safety net: if it drops 8% from its recent high of $59.50 (that's $54.74), I sell instantly, no questions asked. I only switch to something else if it looks clearly better than what I hold \u2014 not just slightly better.",
   "strategy": {
     "name": "The Hunter \u2014 cross-asset opportunist",
     "rule": "Score 14 instruments by 20-day momentum/volatility; all-in on the best (1.25x hysteresis); 8% trailing stop; cash only if every score is negative or Watcher SEVERE",

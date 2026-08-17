@@ -1,21 +1,40 @@
 {
   "created": "2026-08-15",
   "starting_cash": 1000.0,
-  "holding": "CASH",
-  "units": 0.0,
-  "cash": 1000.0,
-  "entry_price": null,
-  "entry_scan_ts": null,
+  "holding": "GPS-USD",
+  "units": 61001.83262064753,
+  "cash": 0.0,
+  "entry_price": 0.01637,
+  "entry_scan_ts": "2026-08-17T18:05:32+00:00",
   "bench_units": 0.01588152678794818,
   "stopped": {},
-  "entries": {},
-  "trades": [],
+  "entries": {
+    "2026-08-17": 1
+  },
+  "trades": [
+    {
+      "date": "2026-08-17",
+      "action": "BUY",
+      "ticker": "GPS-USD",
+      "price": 0.01637,
+      "units": 61001.832621,
+      "value": 998.6,
+      "fee": 1.4,
+      "reason": "Grok: GPS euphoric \u2014 Binance top +62% volume spike (scan 2026-08-17T18:05)"
+    }
+  ],
   "history": [
     {
       "date": "2026-08-15",
       "value": 1000.0,
       "bench": 1000.53,
       "holding": "CASH"
+    },
+    {
+      "date": "2026-08-17",
+      "value": 998.6,
+      "bench": 1021.76,
+      "holding": "GPS-USD"
     }
   ],
   "intraday": [
@@ -72,7 +91,14 @@
       "value": 1000.0,
       "bench": 1000.53,
       "holding": "CASH"
+    },
+    {
+      "ts": "2026-08-17T18:06:52+00:00",
+      "value": 998.6,
+      "bench": 1021.76,
+      "holding": "GPS-USD"
     }
   ],
-  "last_updated_utc": "2026-08-15T15:29:21+00:00"
+  "last_updated_utc": "2026-08-17T18:06:52+00:00",
+  "costs_paid": 1.4
 }
