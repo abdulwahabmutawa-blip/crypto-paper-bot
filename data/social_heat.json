@@ -1,16 +1,17 @@
 {
-  "ts": "2026-08-17T22:11:19+00:00",
+  "ts": "2026-08-17T22:16:59+00:00",
   "sources": {
     "coingecko": [
       "BTC",
-      "PENGU",
       "SOL",
       "ETH",
+      "PENGU",
       "XRP",
+      "LIT",
       "PUMP",
       "POL",
-      "LIT",
-      "CFG"
+      "ONDO",
+      "PAXG"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,25 +23,24 @@
       "ALLO",
       "ZEC",
       "SPCXB",
-      "XPL"
+      "BTC"
     ],
     "watcher": [
       "GPS",
-      "TUT",
-      "ACE"
+      "TUT"
     ],
     "cryptopanic": []
   },
   "heat": [
     {
-      "symbol": "ACE",
+      "symbol": "BTC",
       "surfaces": 2,
       "sources": [
-        "movers",
-        "watcher"
+        "coingecko",
+        "movers"
       ],
-      "funding": -0.002712,
-      "long_short": 1.4
+      "funding": 3.3e-05,
+      "long_short": 1.54
     },
     {
       "symbol": "GPS",
@@ -49,7 +49,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -9.2e-05,
+      "funding": -9.4e-05,
       "long_short": 0.62
     },
     {
@@ -63,28 +63,20 @@
       "long_short": 1.31
     },
     {
+      "symbol": "ACE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -0.002689
+    },
+    {
       "symbol": "ALLO",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 3e-06
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 3.7e-05
-    },
-    {
-      "symbol": "CFG",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": -1e-06
     },
     {
       "symbol": "ETH",
@@ -92,7 +84,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 4.9e-05
     },
     {
       "symbol": "LIT",
@@ -100,7 +92,23 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.7e-05
+      "funding": -5e-06
+    },
+    {
+      "symbol": "ONDO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 4.6e-05
+    },
+    {
+      "symbol": "PAXG",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 3.9e-05
     },
     {
       "symbol": "PENGU",
@@ -108,7 +116,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.8e-05
+      "funding": 3.5e-05
     },
     {
       "symbol": "POL",
@@ -124,7 +132,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7e-06
+      "funding": 1e-05
     },
     {
       "symbol": "SNDKB",
@@ -139,7 +147,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1e-06
+      "funding": 1e-06
     },
     {
       "symbol": "SPCXB",
@@ -147,14 +155,6 @@
       "sources": [
         "movers"
       ]
-    },
-    {
-      "symbol": "XPL",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "XRP",
