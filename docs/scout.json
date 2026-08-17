@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-17T09:27:02+00:00",
-  "scanned": 72,
+  "ts": "2026-08-17T09:32:51+00:00",
+  "scanned": 73,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "DEXEUSDT",
+      "signal": "breakout",
+      "score": 0.7076,
+      "raw_score": 0.7076,
+      "weight": 1.0,
+      "price": 1.98,
+      "why": "trades 6.1x, volume 7.5x, 62% taker-buy, +3.9% in an hour, at 96% of its 24h range",
+      "chg_24h": 0.019,
+      "vol_surge": 7.5,
+      "chg_1h": 0.0388,
+      "market_surge": 5.47,
+      "actionable": false,
+      "status": "probation \u2014 4/12 resolved 4h samples under ruleset 3"
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "probation \u2014 4/12 resolved 4h samples under ruleset 3",
