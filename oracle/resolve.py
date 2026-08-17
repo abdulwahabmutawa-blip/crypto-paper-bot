@@ -113,19 +113,21 @@ def run(pause: float = 0.05) -> int:
 
     import time
     total = 0
+    # One file per resolution PASS, never appended to. A run can resolve
+    # across several passes (a symbol's data may be briefly unavailable),
+    # and appending to a file the chain already committed to would break
+    # verification — the same flaw that killed cycle #2 on the scores file.
+    # Chained artifacts are write-once; passes get new names.
+    stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")[:-4]
     for run_id, questions in sorted(by_run.items()):
-        path = config.RESOLUTIONS / f"{run_id}.jsonl"
-        # Append, never rewrite: a run may resolve across several passes.
-        with path.open("a", encoding="utf-8", newline="\n") as fh:
+        path = config.RESOLUTIONS / f"{run_id}__{stamp}.jsonl"
+        with path.open("w", encoding="utf-8", newline="\n") as fh:
             for q in questions:
                 r = resolve_one(q)
                 fh.write(json.dumps(r, sort_keys=True) + "\n")
                 total += 1
                 time.sleep(pause)
-        n_lines = sum(1 for line in path.read_text(encoding="utf-8"
-                                                   ).splitlines()
-                      if line.strip())
-        ledger.append("resolutions", path, n_lines, {"run_id": run_id})
+        ledger.append("resolutions", path, len(questions), {"run_id": run_id})
         print(f"[oracle] resolved {len(questions)} from {run_id}")
     print(f"[oracle] {total} resolutions written")
     return total

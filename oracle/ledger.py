@@ -58,8 +58,25 @@ def head() -> str:
 
 def append(kind: str, path: Path, n_records: int, extra: dict | None = None
            ) -> dict:
-    """Commit a produced file to the chain. Returns the new entry."""
+    """Commit a produced file to the chain. Returns the new entry.
+
+    CHAINED FILES ARE WRITE-ONCE. Re-chaining a path whose bytes changed is
+    refused loudly here, at the write site, rather than surfacing hours
+    later as an unexplained verification failure — which is how cycle #2
+    died (the scores file was keyed by date and got rewritten by a second
+    run the same day). A rolling recomputation needs a new filename.
+    """
     chain = read_chain()
+    rel = str(path.relative_to(config.ROOT)).replace("\\", "/")
+    for prior in chain:
+        if prior.get("path") == rel:
+            if prior.get("file_sha256") != sha256_file(path):
+                raise ValueError(
+                    f"refusing to re-chain {rel}: it is already in the chain "
+                    f"at seq {prior.get('seq')} with different content. "
+                    f"Chained artifacts are write-once — give this one a new "
+                    f"filename instead of rewriting it.")
+            return prior          # identical rewrite: already recorded
     entry = {
         "seq": len(chain) + 1,
         "ts": datetime.now(timezone.utc).isoformat(timespec="seconds"),

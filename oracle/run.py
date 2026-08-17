@@ -31,6 +31,45 @@ def main(argv: list[str] | None = None) -> int:
         # a fired kill criterion must be loud and must fail the job
         return 2 if s.get("verdict", "").__contains__("KILL") else 0
 
+    if cmd == "smoke":
+        # Full pipeline against the REAL network into a scratch directory,
+        # committing nothing. This exists because the first two scheduled
+        # cycles failed for reasons no offline test could catch — a runner
+        # geo-block, then a write-once violation — and each round trip cost
+        # a manual re-run. CI now exercises the real path on every push.
+        import tempfile
+        from pathlib import Path
+        import oracle.config as config
+        tmp = Path(tempfile.mkdtemp())
+        for name in ("DATA", "PREDICTIONS", "RESOLUTIONS", "SNAPSHOTS",
+                     "LEDGER_DIR", "SCORES", "REPORTS", "ROOT"):
+            setattr(config, name, tmp if name in ("DATA", "ROOT")
+                    else tmp / name.lower())
+        config.CHAIN = config.LEDGER_DIR / "chain.jsonl"
+        for d in (config.PREDICTIONS, config.RESOLUTIONS, config.SNAPSHOTS,
+                  config.LEDGER_DIR, config.SCORES, config.REPORTS):
+            d.mkdir(parents=True, exist_ok=True)
+
+        import oracle.predict as predict
+        import oracle.resolve as resolve
+        import oracle.score as score
+        import oracle.ledger as ledger
+        print(f"[oracle] smoke: scratch dir {tmp}")
+        predict.run(limit=25)
+        resolve.run()
+        # twice on purpose: scoring the same day twice is what broke the
+        # chain in cycle #2, so the smoke test must repeat it
+        score.run()
+        score.run()
+        ok, problems = ledger.verify()
+        if not ok:
+            print("[oracle] SMOKE FAILED — chain did not verify")
+            for p in problems:
+                print(f"  - {p}")
+            return 1
+        print(f"[oracle] smoke OK — {len(ledger.read_chain())} chain entries")
+        return 0
+
     if cmd == "verify":
         import oracle.ledger as ledger
         ok, problems = ledger.verify()

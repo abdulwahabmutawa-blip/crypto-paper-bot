@@ -214,8 +214,16 @@ def report(scores: dict) -> str:
 
 def run() -> dict:
     s = compute()
-    day = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    sp = config.SCORES / f"{day}.json"
+    # WRITE-ONCE filename. Scores were keyed by DATE, so a second scoring
+    # run on the same day rewrote a file the chain had already committed to
+    # — which is exactly how cycle #2 failed verification. Chained files are
+    # immutable; a rolling recomputation therefore needs a new name every
+    # time, not a new body in the same name.
+    # millisecond precision: two runs inside the same second would collide
+    # on the filename, and if their contents differed the write-once guard
+    # would (correctly) refuse and abort the cycle
+    stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")[:-4]
+    sp = config.SCORES / f"{stamp}.json"
     sp.write_text(json.dumps(s, sort_keys=True, indent=1),
                   encoding="utf-8", newline="\n")
     rp = config.REPORTS / "latest.md"

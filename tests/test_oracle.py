@@ -231,10 +231,13 @@ try:
     config.ROOT = tmp2
     config.CHAIN = tmp2 / "chain.jsonl"
     f1 = tmp2 / "a.jsonl"
-    f1.write_text('{"x":1}\n', encoding="utf-8")
+    # newline="\n" here too: a CRLF fixture would hash differently than the
+    # same fixture rewritten later, and the test would accuse the code of a
+    # content change it never made
+    f1.write_text('{"x":1}\n', encoding="utf-8", newline="\n")
     e1 = ledger.append("predictions", f1, 1)
     f2 = tmp2 / "b.jsonl"
-    f2.write_text('{"x":2}\n', encoding="utf-8")
+    f2.write_text('{"x":2}\n', encoding="utf-8", newline="\n")
     e2 = ledger.append("resolutions", f2, 1)
     assert e2["chain_prev"] == e1["chain_self"]
     ok, probs = ledger.verify()
@@ -249,13 +252,29 @@ try:
     assert b"\r\n" not in config.CHAIN.read_bytes(), \
         "ledger.append must write LF or the chain will not verify off-platform"
 
+    # CHAINED FILES ARE WRITE-ONCE. Cycle #2 died because scores were keyed
+    # by date, so a second run the same day rewrote a file the chain had
+    # already committed to. The refusal must fire at the write site, loudly,
+    # not hours later as an unexplained verification failure.
+    f1.write_text('{"x":2}\n', encoding="utf-8", newline="\n")
+    try:
+        ledger.append("predictions", f1, 1)
+        raise AssertionError("re-chaining changed content must be refused")
+    except ValueError as e:
+        assert "write-once" in str(e), e
+    f1.write_text('{"x":1}\n', encoding="utf-8", newline="\n")
+    # an identical rewrite is harmless and must NOT create a duplicate entry
+    n_before = len(ledger.read_chain())
+    again = ledger.append("predictions", f1, 1)
+    assert again["seq"] == e1["seq"] and len(ledger.read_chain()) == n_before
+
     # edit a historical record: verification must catch it
-    f1.write_text('{"x":999}\n', encoding="utf-8")
+    f1.write_text('{"x":999}\n', encoding="utf-8", newline="\n")
     ok, probs = ledger.verify()
     assert not ok and any("CONTENT CHANGED" in p for p in probs), probs
 
     # edit the ledger line itself: also caught
-    f1.write_text('{"x":1}\n', encoding="utf-8")
+    f1.write_text('{"x":1}\n', encoding="utf-8", newline="\n")
     lines = config.CHAIN.read_text(encoding="utf-8").splitlines()
     bad = json.loads(lines[0])
     bad["n_records"] = 42

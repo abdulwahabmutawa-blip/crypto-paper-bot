@@ -42,6 +42,14 @@ jobs:
       - name: Hash-chain integrity
         run: python -m oracle.run verify
 
+      # The real network path on a real runner, into a scratch dir that is
+      # never committed. Both scheduled cycles so far failed for reasons no
+      # offline test could see (a US geo-block, then a write-once
+      # violation), each costing a manual re-run to discover. This catches
+      # that class on push instead.
+      - name: Full pipeline smoke (real network, scratch dir)
+        run: python -m oracle.run smoke
+
       - name: Append-only guard
         shell: bash
         run: |
