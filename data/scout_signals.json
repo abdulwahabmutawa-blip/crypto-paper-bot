@@ -1,20 +1,34 @@
 {
-  "ts": "2026-08-17T06:53:01+00:00",
+  "ts": "2026-08-17T06:58:52+00:00",
   "scanned": 68,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "DASHUSDT",
+      "symbol": "ICPUSDT",
       "signal": "ignition",
-      "score": 0.889,
-      "raw_score": 0.889,
+      "score": 0.8514,
+      "raw_score": 0.8514,
       "weight": 1.0,
-      "price": 30.52,
-      "why": "trades 12.9x and volume 35.8x the prior 4h, 62% taker-buy, $54,562 burst \u2014 while price has only moved +0.6%",
+      "price": 2.311,
+      "why": "trades 8.4x and volume 11.3x the prior 4h, 77% taker-buy, $60,096 burst \u2014 while price has only moved +1.2%",
       "chg_24h": 0.028,
-      "vol_surge": 35.78,
-      "chg_1h": 0.0059,
-      "market_surge": 2.29,
+      "vol_surge": 11.35,
+      "chg_1h": 0.0118,
+      "market_surge": 1.51,
+      "actionable": true
+    },
+    {
+      "symbol": "WLDUSDT",
+      "signal": "ignition",
+      "score": 0.7972,
+      "raw_score": 0.7972,
+      "weight": 1.0,
+      "price": 0.3607,
+      "why": "trades 7.4x and volume 36.7x the prior 4h, 62% taker-buy, $1,025,329 burst \u2014 while price has only moved -0.2%",
+      "chg_24h": 0.0395,
+      "vol_surge": 36.7,
+      "chg_1h": -0.0017,
+      "market_surge": 15.78,
       "actionable": true
     }
   ],
@@ -36,9 +50,9 @@
       "hit_rate_1h": 0.435,
       "mean_ret_1h": 0.0061,
       "median_ret_1h": 0.00102,
-      "n_4h": 17,
-      "hit_rate_4h": 0.765,
-      "mean_ret_4h": 0.01207,
+      "n_4h": 19,
+      "hit_rate_4h": 0.737,
+      "mean_ret_4h": 0.01115,
       "median_ret_4h": 0.0052
     },
     "breakout": {
