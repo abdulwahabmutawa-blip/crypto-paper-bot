@@ -1,37 +1,8 @@
 {
-  "ts": "2026-08-17T06:58:52+00:00",
-  "scanned": 68,
+  "ts": "2026-08-17T07:04:31+00:00",
+  "scanned": 70,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ICPUSDT",
-      "signal": "ignition",
-      "score": 0.8514,
-      "raw_score": 0.8514,
-      "weight": 1.0,
-      "price": 2.311,
-      "why": "trades 8.4x and volume 11.3x the prior 4h, 77% taker-buy, $60,096 burst \u2014 while price has only moved +1.2%",
-      "chg_24h": 0.028,
-      "vol_surge": 11.35,
-      "chg_1h": 0.0118,
-      "market_surge": 1.51,
-      "actionable": true
-    },
-    {
-      "symbol": "WLDUSDT",
-      "signal": "ignition",
-      "score": 0.7972,
-      "raw_score": 0.7972,
-      "weight": 1.0,
-      "price": 0.3607,
-      "why": "trades 7.4x and volume 36.7x the prior 4h, 62% taker-buy, $1,025,329 burst \u2014 while price has only moved -0.2%",
-      "chg_24h": 0.0395,
-      "vol_surge": 36.7,
-      "chg_1h": -0.0017,
-      "market_surge": 15.78,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "probation \u2014 4/12 resolved 4h samples under ruleset 3",
