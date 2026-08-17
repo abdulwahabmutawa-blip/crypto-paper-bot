@@ -1,37 +1,22 @@
 {
-  "ts": "2026-08-17T01:13:31+00:00",
-  "scanned": 64,
+  "ts": "2026-08-17T01:19:06+00:00",
+  "scanned": 65,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "NEARUSDT",
-      "signal": "ignition",
-      "score": 0.886,
-      "raw_score": 0.886,
+      "symbol": "ONTUSDT",
+      "signal": "breakout",
+      "score": 0.8329,
+      "raw_score": 0.8329,
       "weight": 1.0,
-      "price": 1.611,
-      "why": "trades 9.2x and volume 14.8x the prior 4h, 74% taker-buy, $158,532 burst \u2014 while price has only moved +0.6%",
-      "chg_24h": -0.0019,
-      "vol_surge": 14.75,
-      "chg_1h": 0.0062,
-      "market_surge": 0.0,
+      "price": 0.04055,
+      "why": "trades 27.9x, volume 33.1x, 64% taker-buy, +4.9% in an hour, at 96% of its 24h range",
+      "chg_24h": 0.0787,
+      "vol_surge": 33.13,
+      "chg_1h": 0.0494,
+      "market_surge": 15.47,
       "actionable": false,
-      "status": "probation \u2014 1/12 resolved 4h samples under ruleset 3"
-    },
-    {
-      "symbol": "AVAXUSDT",
-      "signal": "ignition",
-      "score": 0.571,
-      "raw_score": 0.571,
-      "weight": 1.0,
-      "price": 6.344,
-      "why": "trades 4.0x and volume 6.4x the prior 4h, 64% taker-buy, $89,624 burst \u2014 while price has only moved +0.4%",
-      "chg_24h": 0.0019,
-      "vol_surge": 6.41,
-      "chg_1h": 0.0044,
-      "market_surge": 0.0,
-      "actionable": false,
-      "status": "probation \u2014 1/12 resolved 4h samples under ruleset 3"
+      "status": "probation \u2014 0/12 resolved 4h samples under ruleset 3"
     }
   ],
   "gate": {
@@ -42,25 +27,25 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 11,
+    "count": 10,
     "baseline": 11.0,
     "wave": false
   },
   "scorecard": {
     "ignition": {
-      "n_1h": 6,
-      "hit_rate_1h": 0.667,
-      "mean_ret_1h": 0.01939,
-      "median_ret_1h": 0.01686,
+      "n_1h": 7,
+      "hit_rate_1h": 0.571,
+      "mean_ret_1h": 0.01194,
+      "median_ret_1h": 0.01156,
       "n_4h": 1,
       "hit_rate_4h": 1.0,
       "mean_ret_4h": 0.00436,
       "median_ret_4h": 0.00436
     },
     "breakout": {
-      "n_1h": 1,
+      "n_1h": 2,
       "hit_rate_1h": 0.0,
-      "mean_ret_1h": -0.02648,
+      "mean_ret_1h": -0.02962,
       "median_ret_1h": -0.02648
     },
     "heat": {
