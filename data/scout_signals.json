@@ -1,63 +1,22 @@
 {
-  "ts": "2026-08-17T15:49:03+00:00",
+  "ts": "2026-08-17T15:55:02+00:00",
   "scanned": 83,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "NILUSDT",
-      "signal": "ignition",
-      "score": 0.9207,
-      "raw_score": 0.8629,
-      "weight": 1.067,
-      "price": 0.04767,
-      "why": "trades 12.7x and volume 16.9x the prior 4h, 68% taker-buy, $67,566 burst \u2014 while price has only moved +2.3%",
-      "chg_24h": 0.02,
-      "vol_surge": 16.92,
-      "chg_1h": 0.0227,
-      "market_surge": 6.09,
-      "actionable": true
-    },
-    {
-      "symbol": "UNIUSDT",
-      "signal": "ignition",
-      "score": 0.8054,
-      "raw_score": 0.7549,
-      "weight": 1.067,
-      "price": 3.297,
-      "why": "trades 4.9x and volume 16.0x the prior 4h, 84% taker-buy, $204,714 burst \u2014 while price has only moved +0.1%",
-      "chg_24h": -0.0066,
-      "vol_surge": 16.02,
-      "chg_1h": 0.0009,
+      "symbol": "TSTUSDT",
+      "signal": "breakout",
+      "score": 0.8884,
+      "raw_score": 0.8884,
+      "weight": 1.0,
+      "price": 0.0153,
+      "why": "trades 12.7x, volume 14.7x, 82% taker-buy, +5.6% in an hour, at 82% of its 24h range",
+      "chg_24h": 0.0631,
+      "vol_surge": 14.69,
+      "chg_1h": 0.0559,
       "market_surge": 0.0,
-      "actionable": true
-    },
-    {
-      "symbol": "SKHYBUSDT",
-      "signal": "ignition",
-      "score": 0.7605,
-      "raw_score": 0.7127,
-      "weight": 1.067,
-      "price": 175.29,
-      "why": "trades 5.1x and volume 7.9x the prior 4h, 96% taker-buy, $371,985 burst \u2014 while price has only moved -1.1%",
-      "chg_24h": 0.0466,
-      "vol_surge": 7.9,
-      "chg_1h": -0.0106,
-      "market_surge": 17.37,
-      "actionable": true
-    },
-    {
-      "symbol": "TAOUSDT",
-      "signal": "ignition",
-      "score": 0.701,
-      "raw_score": 0.657,
-      "weight": 1.067,
-      "price": 197.3,
-      "why": "trades 5.3x and volume 6.3x the prior 4h, 79% taker-buy, $128,252 burst \u2014 while price has only moved +0.4%",
-      "chg_24h": -0.0005,
-      "vol_surge": 6.32,
-      "chg_1h": 0.0041,
-      "market_surge": 2.13,
-      "actionable": true
+      "actionable": false,
+      "status": "probation \u2014 6/12 resolved 4h samples under ruleset 3"
     }
   ],
   "gate": {
@@ -68,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 16,
+    "count": 15,
     "baseline": 13.0,
     "wave": false
   },
@@ -79,9 +38,9 @@
       "mean_ret_1h": 0.00295,
       "median_ret_1h": 0.00116,
       "n_4h": 30,
-      "hit_rate_4h": 0.567,
-      "mean_ret_4h": 0.00731,
-      "median_ret_4h": 0.00414
+      "hit_rate_4h": 0.533,
+      "mean_ret_4h": 0.00717,
+      "median_ret_4h": 0.00318
     },
     "breakout": {
       "n_1h": 11,
