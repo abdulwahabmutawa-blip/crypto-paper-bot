@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-17T07:51:02+00:00",
-  "scanned": 69,
+  "ts": "2026-08-17T07:56:32+00:00",
+  "scanned": 71,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "CHIPUSDT",
-      "signal": "breakout",
-      "score": 0.7121,
-      "raw_score": 0.7121,
-      "weight": 1.0,
-      "price": 0.03258,
-      "why": "trades 6.1x, volume 8.0x, 65% taker-buy, +3.4% in an hour, at 96% of its 24h range",
-      "chg_24h": 0.1717,
-      "vol_surge": 8.04,
-      "chg_1h": 0.0336,
-      "market_surge": 2.35,
-      "actionable": false,
-      "status": "probation \u2014 4/12 resolved 4h samples under ruleset 3"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "probation \u2014 4/12 resolved 4h samples under ruleset 3",
@@ -27,16 +11,16 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 14,
+    "count": 13,
     "baseline": 13.0,
     "wave": false
   },
   "scorecard": {
     "ignition": {
-      "n_1h": 24,
-      "hit_rate_1h": 0.458,
-      "mean_ret_1h": 0.00599,
-      "median_ret_1h": 0.00116,
+      "n_1h": 25,
+      "hit_rate_1h": 0.44,
+      "mean_ret_1h": 0.00578,
+      "median_ret_1h": 0.00102,
       "n_4h": 20,
       "hit_rate_4h": 0.75,
       "mean_ret_4h": 0.01273,
