@@ -1,33 +1,17 @@
 {
-  "ts": "2026-08-17T19:00:33+00:00",
-  "scanned": 83,
+  "ts": "2026-08-17T19:06:13+00:00",
+  "scanned": 82,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "POLUSDT",
-      "signal": "breakout",
-      "score": 0.7661,
-      "raw_score": 0.7661,
-      "weight": 1.0,
-      "price": 0.08313,
-      "why": "trades 5.7x, volume 11.5x, 65% taker-buy, +5.5% in an hour, at 83% of its 24h range",
-      "chg_24h": 0.1073,
-      "vol_surge": 11.5,
-      "chg_1h": 0.0554,
-      "market_surge": 5.63,
-      "actionable": false,
-      "status": "probation \u2014 11/12 resolved 4h samples under ruleset 3"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
-    "breakout": "probation \u2014 11/12 resolved 4h samples under ruleset 3",
+    "breakout": "benched \u2014 hit 50%, mean +0.07% over last 12 at 4h: not beating the round trip",
     "reversion": "probation \u2014 0/12 resolved 4h samples under ruleset 3",
     "heat": "probation \u2014 4/12 resolved 4h samples under ruleset 3",
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 17,
+    "count": 16,
     "baseline": 13.0,
     "wave": false
   },
@@ -47,9 +31,9 @@
       "hit_rate_1h": 0.462,
       "mean_ret_1h": -0.00051,
       "median_ret_1h": 0.00054,
-      "n_4h": 11,
-      "hit_rate_4h": 0.545,
-      "mean_ret_4h": 0.00753,
+      "n_4h": 12,
+      "hit_rate_4h": 0.5,
+      "mean_ret_4h": 0.00073,
       "median_ret_4h": 0.00365
     },
     "heat": {
