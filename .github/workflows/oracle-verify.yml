@@ -1,0 +1,70 @@
+name: oracle-verify
+
+# The Oracle's credibility rests on records nobody can quietly change.
+# This workflow is the enforcement: it re-runs the offline guarantees, it
+# rebuilds the hash chain, and it FAILS THE BUILD if any historical
+# prediction or resolution was modified or deleted.
+#
+# Pre-registration that relies on human discipline drifts by default — not
+# from dishonesty, but because a well-meaning "fix" months in looks harmless
+# at the time. The mechanism is the control, not the intention.
+
+on:
+  push:
+    paths:
+      - 'oracle/**'
+      - 'tests/test_oracle.py'
+      - '.github/workflows/oracle-verify.yml'
+  pull_request:
+    paths:
+      - 'oracle/**'
+      - 'tests/test_oracle.py'
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0          # the append-only diff needs history
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Offline guarantees (cannot trade, cannot look ahead)
+        run: python tests/test_oracle.py
+
+      - name: Hash-chain integrity
+        run: python -m oracle.run verify
+
+      - name: Append-only guard
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE="${{ github.event.before || github.event.pull_request.base.sha || '' }}"
+          if [ -z "$BASE" ] || [ "$BASE" = "0000000000000000000000000000000000000000" ]; then
+            echo "no usable base commit (first push or new branch) — nothing to compare"
+            exit 0
+          fi
+          if ! git cat-file -e "$BASE^{commit}" 2>/dev/null; then
+            echo "::error::base commit $BASE is missing from history."
+            echo "That is what a force-push looks like. Kill criterion 5:"
+            echo "the record forfeits and restarts from a fresh chain."
+            exit 1
+          fi
+          CHANGED="$(git diff --name-status --diff-filter=MD "$BASE" HEAD -- \
+            oracle/data/predictions oracle/data/resolutions)"
+          if [ -n "$CHANGED" ]; then
+            echo "::error::historical records were modified or deleted:"
+            echo "$CHANGED"
+            echo ""
+            echo "Predictions and resolutions are append-only. Editing one"
+            echo "destroys the evidential value of every score derived from it."
+            exit 1
+          fi
+          echo "append-only guard: clean"

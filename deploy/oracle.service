@@ -1,0 +1,16 @@
+[Unit]
+# One Oracle cycle: predict, resolve what is due, score, publish, commit.
+# Predict and resolve run as SEPARATE processes on purpose — the resolver
+# must not be able to see anything the forecaster held in memory.
+Description=Oracle predict-only forecasting cycle
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=tradebot
+WorkingDirectory=/opt/tradebot/cloud-bot
+# NO EnvironmentFile: the Oracle holds no keys and must never be able to
+# trade. /etc/lottery.env is deliberately NOT loaded here.
+ExecStart=/usr/bin/env bash deploy/oracle_runner.sh
+TimeoutStartSec=3600

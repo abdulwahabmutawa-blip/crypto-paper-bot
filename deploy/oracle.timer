@@ -1,0 +1,13 @@
+[Unit]
+Description=Daily Oracle cycle (00:20 UTC, after the daily kline closes)
+
+[Timer]
+# Daily, not per-cycle: the question is a 30-day horizon off a daily close,
+# so anything more frequent adds overlapping near-duplicate questions
+# without adding independent evidence.
+OnCalendar=*-*-* 00:20:00 UTC
+Persistent=true
+RandomizedDelaySec=300
+
+[Install]
+WantedBy=timers.target
