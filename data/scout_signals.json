@@ -1,20 +1,35 @@
 {
-  "ts": "2026-08-17T00:11:30+00:00",
-  "scanned": 66,
+  "ts": "2026-08-17T00:17:12+00:00",
+  "scanned": 63,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "TUTUSDT",
-      "signal": "breakout",
-      "score": 0.7376,
-      "raw_score": 0.7376,
+      "symbol": "PROMUSDT",
+      "signal": "ignition",
+      "score": 0.8686,
+      "raw_score": 0.8686,
       "weight": 1.0,
-      "price": 0.0355,
-      "why": "trades 4.8x, volume 8.5x, 67% taker-buy, +5.5% in an hour, at 100% of its 24h range",
-      "chg_24h": 0.0614,
-      "vol_surge": 8.53,
-      "chg_1h": 0.055,
-      "market_surge": 2.27,
+      "price": 2.197,
+      "why": "trades 47.4x and volume 40.8x the prior 4h, 77% taker-buy, $86,248 burst \u2014 while price has only moved +3.0%",
+      "chg_24h": 0.0226,
+      "vol_surge": 40.79,
+      "chg_1h": 0.0295,
+      "market_surge": 12.12,
+      "actionable": false,
+      "status": "probation \u2014 0/12 resolved 4h samples under ruleset 3"
+    },
+    {
+      "symbol": "PROMUSDT",
+      "signal": "breakout",
+      "score": 0.7962,
+      "raw_score": 0.7962,
+      "weight": 1.0,
+      "price": 2.197,
+      "why": "trades 47.4x, volume 40.8x, 77% taker-buy, +3.0% in an hour, at 84% of its 24h range",
+      "chg_24h": 0.0226,
+      "vol_surge": 40.79,
+      "chg_1h": 0.0295,
+      "market_surge": 12.12,
       "actionable": false,
       "status": "probation \u2014 0/12 resolved 4h samples under ruleset 3"
     }
@@ -27,7 +42,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 9,
+    "count": 11,
     "baseline": 11.0,
     "wave": false
   },
