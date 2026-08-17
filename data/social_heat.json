@@ -1,16 +1,17 @@
 {
-  "ts": "2026-08-17T01:52:39+00:00",
+  "ts": "2026-08-17T01:58:19+00:00",
   "sources": {
     "coingecko": [
       "SEI",
+      "PORTAL",
       "PENGU",
       "APT",
-      "ICP",
-      "PORTAL",
-      "LINK",
-      "PEPE",
       "BTC",
-      "SUI"
+      "ICP",
+      "LINK",
+      "PUMP",
+      "SUI",
+      "SOL"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -33,7 +34,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.000357,
+      "funding": -0.000341,
       "long_short": 1.01
     },
     {
@@ -52,7 +53,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -6e-06
+      "funding": -1.2e-05
     },
     {
       "symbol": "ETH",
@@ -60,7 +61,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 5.5e-05
+      "funding": 5.4e-05
     },
     {
       "symbol": "ICP",
@@ -68,7 +69,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -7.9e-05
+      "funding": -8.7e-05
     },
     {
       "symbol": "LINK",
@@ -84,14 +85,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.1e-05
+      "funding": 2.2e-05
     },
     {
-      "symbol": "PEPE",
+      "symbol": "PUMP",
       "surfaces": 1,
       "sources": [
         "coingecko"
-      ]
+      ],
+      "funding": 3.4e-05
     },
     {
       "symbol": "SEI",
@@ -99,7 +101,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000243
+      "funding": -0.00025
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -5.3e-05
     },
     {
       "symbol": "SUI",
@@ -107,7 +117,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3e-06
+      "funding": -1e-06
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
