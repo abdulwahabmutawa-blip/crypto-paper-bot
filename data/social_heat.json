@@ -1,15 +1,16 @@
 {
-  "ts": "2026-08-17T19:22:06+00:00",
+  "ts": "2026-08-17T19:28:09+00:00",
   "sources": {
     "coingecko": [
       "TUT",
       "PENGU",
+      "SOL",
       "BTC",
       "PUMP",
-      "SOL",
-      "LIT",
+      "POL",
       "ETHFI",
-      "XRP"
+      "LIT",
+      "ACE"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -32,6 +33,17 @@
   },
   "heat": [
     {
+      "symbol": "ACE",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": -0.002665,
+      "long_short": 1.34
+    },
+    {
       "symbol": "TUT",
       "surfaces": 3,
       "sources": [
@@ -41,16 +53,6 @@
       ],
       "funding": 5e-05,
       "long_short": 1.24
-    },
-    {
-      "symbol": "ACE",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": -0.002702,
-      "long_short": 1.34
     },
     {
       "symbol": "BTC",
@@ -69,7 +71,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -7e-05,
+      "funding": -6.1e-05,
       "long_short": 0.64
     },
     {
@@ -94,7 +96,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -8e-05
+      "funding": -7.5e-05
     },
     {
       "symbol": "PENGU",
@@ -102,7 +104,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -7e-06
+      "funding": 1e-06
+    },
+    {
+      "symbol": "POL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "PUMP",
@@ -110,7 +120,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.1e-05
+      "funding": -1.5e-05
     },
     {
       "symbol": "SNDKB",
@@ -133,14 +143,6 @@
       "sources": [
         "movers"
       ]
-    },
-    {
-      "symbol": "XRP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 1.1e-05
     },
     {
       "symbol": "ZEC",
