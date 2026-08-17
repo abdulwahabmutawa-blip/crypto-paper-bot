@@ -1,0 +1,73 @@
+name: oracle-cycle
+
+# The daily Oracle cycle. Runs HERE rather than on the VPS because the
+# Oracle needs no credentials — public market data only — so there is
+# nothing to protect and no reason to require SSH access to schedule it.
+#
+# Daily, not per-cycle: the question is a 30-day horizon off a daily close,
+# so more frequent runs would only add overlapping near-duplicate questions
+# without adding independent evidence. A skipped day costs one day of
+# sampling and nothing else, which is why GitHub's unreliable scheduler is
+# acceptable here and is not acceptable for the trading loop.
+
+on:
+  schedule:
+    - cron: "20 0 * * *"      # 00:20 UTC, after the daily kline closes
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: oracle
+  cancel-in-progress: false
+
+jobs:
+  cycle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # predict and resolve are separate processes on purpose: the resolver
+      # must not be able to see anything the forecaster held in memory
+      - name: Predict
+        run: python -m oracle.run predict
+
+      - name: Resolve what is due
+        run: python -m oracle.run resolve
+
+      - name: Score
+        run: python -m oracle.run score
+
+      # A record whose chain does not verify must never be published.
+      # That is pre-committed kill criterion 5, not a transient error.
+      - name: Verify chain before publishing
+        run: python -m oracle.run verify
+
+      - name: Commit the record
+        shell: bash
+        run: |
+          set -uo pipefail
+          git config user.name "oracle-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add oracle/data
+          if git diff --cached --quiet; then
+            echo "nothing new to commit"
+            exit 0
+          fi
+          git commit -m "oracle: $(date -u +'%Y-%m-%d %H:%M') UTC"
+          # the VPS lottery loop pushes to this repo too — rebase, retry,
+          # and never leave a half-done rebase behind for the next run
+          for attempt in 1 2 3; do
+            git pull --rebase --autostash -q && git push && exit 0
+            git rebase --abort 2>/dev/null || true
+            echo "::warning::push attempt $attempt failed, retrying"
+            sleep 5
+          done
+          echo "::error::could not publish the record after 3 attempts"
+          exit 1

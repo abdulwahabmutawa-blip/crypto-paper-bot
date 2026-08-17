@@ -155,3 +155,16 @@ python -m oracle.run resolve    # resolve everything past its deadline
 python -m oracle.run score      # scores + the countdown report
 python -m oracle.run verify     # rebuild and check the hash chain
 ```
+
+## Where it runs
+
+**GitHub Actions, daily at 00:20 UTC** (`.github/workflows/oracle-cycle.yml`).
+The Oracle needs no credentials — public market data only — so there is
+nothing to protect and no reason to put it on the VPS beside the keys. A
+skipped day costs one day of sampling and nothing else, which is why the
+scheduler's unreliability is tolerable here and is not tolerable for the
+trading loop.
+
+`deploy/oracle.{service,timer}` exist as an optional VPS alternative. Run
+only ONE of the two — both writing predictions would double-count the
+record.
