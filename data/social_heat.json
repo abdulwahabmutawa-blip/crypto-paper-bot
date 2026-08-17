@@ -1,13 +1,14 @@
 {
-  "ts": "2026-08-17T23:29:19+00:00",
+  "ts": "2026-08-17T23:34:59+00:00",
   "sources": {
     "coingecko": [
-      "PENGU",
       "PUMP",
       "LIT",
       "RENDER",
-      "AVAX",
-      "UNI"
+      "BTC",
+      "LINK",
+      "SUI",
+      "PENGU"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -29,13 +30,23 @@
   },
   "heat": [
     {
+      "symbol": "BTC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.52
+    },
+    {
       "symbol": "GPS",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": -3.9e-05,
+      "funding": -3.8e-05,
       "long_short": 0.6
     },
     {
@@ -54,7 +65,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.002276
+      "funding": -0.002245
     },
     {
       "symbol": "ALLO",
@@ -62,23 +73,15 @@
       "sources": [
         "movers"
       ],
-      "funding": -2.7e-05
+      "funding": -1.8e-05
     },
     {
-      "symbol": "AVAX",
+      "symbol": "LINK",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -8.4e-05
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 4.7e-05
+      "funding": -1.2e-05
     },
     {
       "symbol": "LIT",
@@ -94,7 +97,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.6e-05
+      "funding": 1.1e-05
     },
     {
       "symbol": "PUMP",
@@ -102,7 +105,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 4.4e-05
     },
     {
       "symbol": "RENDER",
@@ -127,12 +130,12 @@
       ]
     },
     {
-      "symbol": "UNI",
+      "symbol": "SUI",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 9.4e-05
+      "funding": 5.4e-05
     },
     {
       "symbol": "ZEC",
