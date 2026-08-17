@@ -1,8 +1,37 @@
 {
-  "ts": "2026-08-17T23:46:03+00:00",
-  "scanned": 77,
+  "ts": "2026-08-17T23:51:24+00:00",
+  "scanned": 78,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "APTUSDT",
+      "signal": "ignition",
+      "score": 0.8083,
+      "raw_score": 0.7576,
+      "weight": 1.067,
+      "price": 0.531,
+      "why": "trades 5.6x and volume 9.9x the prior 4h, 77% taker-buy, $65,002 burst \u2014 while price has only moved +0.2%",
+      "chg_24h": 0.0251,
+      "vol_surge": 9.92,
+      "chg_1h": 0.0019,
+      "market_surge": 1.81,
+      "actionable": true
+    },
+    {
+      "symbol": "WLDUSDT",
+      "signal": "ignition",
+      "score": 0.6951,
+      "raw_score": 0.6514,
+      "weight": 1.067,
+      "price": 0.3427,
+      "why": "trades 6.2x and volume 6.3x the prior 4h, 63% taker-buy, $178,364 burst \u2014 while price has only moved -0.4%",
+      "chg_24h": -0.039,
+      "vol_surge": 6.3,
+      "chg_1h": -0.0038,
+      "market_surge": 0.24,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "benched \u2014 hit 43%, mean -0.28% over last 14 at 4h: not beating the round trip",
