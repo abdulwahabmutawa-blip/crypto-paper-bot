@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-18T03:04:33+00:00",
-  "scanned": 81,
+  "ts": "2026-08-18T03:10:03+00:00",
+  "scanned": 82,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "TUTUSDT",
+      "signal": "heat",
+      "score": 0.6,
+      "raw_score": 0.6,
+      "weight": 1.0,
+      "price": 0.04827,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.005% \u00b7 L/S 1.25",
+      "chg_24h": 0.4102,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
+      "actionable": false,
+      "status": "probation \u2014 8/12 resolved 4h samples under ruleset 3"
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "benched \u2014 hit 43%, mean -0.28% over last 14 at 4h: not beating the round trip",
@@ -11,20 +27,20 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 9,
+    "count": 8,
     "baseline": 13.0,
     "wave": false
   },
   "scorecard": {
     "ignition": {
       "n_1h": 30,
-      "hit_rate_1h": 0.367,
-      "mean_ret_1h": 0.0014,
-      "median_ret_1h": 0.00057,
+      "hit_rate_1h": 0.333,
+      "mean_ret_1h": 0.0001,
+      "median_ret_1h": 0.0,
       "n_4h": 30,
-      "hit_rate_4h": 0.5,
-      "mean_ret_4h": 0.00711,
-      "median_ret_4h": 0.00376,
+      "hit_rate_4h": 0.467,
+      "mean_ret_4h": 0.00578,
+      "median_ret_4h": 0.00174,
       "n_24h": 19,
       "hit_rate_24h": 0.684,
       "mean_ret_24h": 0.02267,
