@@ -1,23 +1,8 @@
 {
-  "ts": "2026-08-18T01:52:04+00:00",
-  "scanned": 74,
+  "ts": "2026-08-18T01:58:04+00:00",
+  "scanned": 77,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "SPCXBUSDT",
-      "signal": "ignition",
-      "score": 0.6539,
-      "raw_score": 0.633,
-      "weight": 1.033,
-      "price": 144.74,
-      "why": "trades 6.2x and volume 6.1x the prior 4h, 63% taker-buy, $59,968 burst \u2014 while price has only moved -0.8%",
-      "chg_24h": 0.0227,
-      "vol_surge": 6.06,
-      "chg_1h": -0.0085,
-      "market_surge": 0.76,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "benched \u2014 hit 43%, mean -0.28% over last 14 at 4h: not beating the round trip",
@@ -26,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 14,
+    "count": 13,
     "baseline": 13.0,
     "wave": false
   },
