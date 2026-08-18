@@ -1,39 +1,8 @@
 {
-  "ts": "2026-08-18T00:38:04+00:00",
+  "ts": "2026-08-18T00:44:04+00:00",
   "scanned": 75,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "SKHYBUSDT",
-      "signal": "breakout",
-      "score": 0.7982,
-      "raw_score": 0.7982,
-      "weight": 1.0,
-      "price": 176.64,
-      "why": "trades 11.1x, volume 17.0x, 84% taker-buy, +2.5% in an hour, at 84% of its 24h range",
-      "chg_24h": 0.0508,
-      "vol_surge": 16.97,
-      "chg_1h": 0.0255,
-      "market_surge": 1.49,
-      "actionable": false,
-      "status": "benched \u2014 hit 43%, mean -0.28% over last 14 at 4h: not beating the round trip"
-    },
-    {
-      "symbol": "GPSUSDT",
-      "signal": "heat",
-      "score": 0.6,
-      "raw_score": 0.6,
-      "weight": 1.0,
-      "price": 0.01661,
-      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.000% \u00b7 L/S 0.59",
-      "chg_24h": 0.4937,
-      "vol_surge": null,
-      "chg_1h": null,
-      "market_surge": 3,
-      "actionable": false,
-      "status": "probation \u2014 7/12 resolved 4h samples under ruleset 3"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "benched \u2014 hit 43%, mean -0.28% over last 14 at 4h: not beating the round trip",
@@ -42,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 16,
+    "count": 15,
     "baseline": 13.0,
     "wave": false
   },
