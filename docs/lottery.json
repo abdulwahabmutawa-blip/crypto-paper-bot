@@ -1,13 +1,15 @@
 {
   "created": "2026-08-15",
-  "held_symbol": "CHIPUSDT",
-  "entry_price": 0.02793,
-  "units": 1369.0,
-  "entry_scan_ts": "2026-08-17T22:10:48+00:00",
+  "held_symbol": "EDENUSDT",
+  "entry_price": 0.049800000000000004,
+  "units": 775.9,
+  "entry_scan_ts": "2026-08-18T00:14:59+00:00",
   "entry_source": "scout:ignition",
-  "stopped": {},
+  "stopped": {
+    "CHIPUSDT": "2026-08-18T02:10:49+00:00"
+  },
   "entries": {
-    "2026-08-18": 1
+    "2026-08-18": 2
   },
   "realized": [
     {
@@ -137,29 +139,45 @@
       "date": "2026-08-17",
       "exit": 44.17000000000001,
       "entry": 44.19
+    },
+    {
+      "symbol": "CHIPUSDT",
+      "entry_time": "2026-08-18T00:10:46+00:00",
+      "exit_time": "2026-08-18T02:10:49+00:00",
+      "entry_price": 0.02793,
+      "exit_price": 0.028260197368421048,
+      "units": 1369.0,
+      "spent_usd": 38.2362,
+      "got_usd": 38.6599,
+      "pnl_pct": 1.18,
+      "pnl_usd": 0.4237,
+      "reason": "STALLED (2.0h in, only +1.2%) \u2014 the pump never came",
+      "date": "2026-08-18",
+      "exit": 0.028260197368421048,
+      "entry": 0.02793
     }
   ],
-  "last_value_usd": 38.56,
-  "last_updated_utc": "2026-08-18T02:05:31+00:00",
+  "last_value_usd": 38.61,
+  "last_updated_utc": "2026-08-18T02:10:49+00:00",
   "open_position": {
-    "symbol": "CHIPUSDT",
-    "entry_time": "2026-08-18T00:10:46+00:00",
-    "entry_price": 0.02793,
-    "current_price": 0.02816,
-    "units": 1369.0,
-    "spent_usd": 38.2362,
-    "value_usd": 38.551,
-    "pnl_usd": 0.3148,
-    "pnl_pct": 0.82,
+    "symbol": "EDENUSDT",
+    "entry_time": "2026-08-18T02:10:49+00:00",
+    "entry_price": 0.049800000000000004,
+    "current_price": 0.0498,
+    "units": 775.9,
+    "spent_usd": 38.6398,
+    "value_usd": 38.6398,
+    "pnl_usd": 0.0,
+    "pnl_pct": -0.0,
     "source": "scout:ignition"
   },
-  "spent_usd": 38.2362,
+  "spent_usd": 38.6398,
   "no_pair": {
-    "scan_ts": "2026-08-17T22:10:48+00:00",
+    "scan_ts": "2026-08-18T00:14:59+00:00",
     "syms": [
-      "ANSEMUSDT"
+      "HYPEUSDT"
     ]
   },
-  "hwm": 0.02816,
-  "entry_time": "2026-08-18T00:10:46+00:00"
+  "hwm": 0.049800000000000004,
+  "entry_time": "2026-08-18T02:10:49+00:00"
 }

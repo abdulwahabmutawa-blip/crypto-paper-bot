@@ -1,20 +1,34 @@
 {
-  "ts": "2026-08-18T02:04:05+00:00",
-  "scanned": 77,
+  "ts": "2026-08-18T02:09:24+00:00",
+  "scanned": 76,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "DRAMBUSDT",
+      "symbol": "GPSUSDT",
       "signal": "ignition",
-      "score": 0.9219,
-      "raw_score": 0.8924,
-      "weight": 1.033,
-      "price": 59.79,
-      "why": "trades 51.2x and volume 129.4x the prior 4h, 75% taker-buy, $142,711 burst \u2014 while price has only moved -1.8%",
-      "chg_24h": 0.0282,
-      "vol_surge": 129.43,
-      "chg_1h": -0.0184,
-      "market_surge": 7.06,
+      "score": 0.7864,
+      "raw_score": 0.7864,
+      "weight": 1.0,
+      "price": 0.01669,
+      "why": "trades 7.8x and volume 11.3x the prior 4h, 73% taker-buy, $347,136 burst \u2014 while price has only moved +2.3%",
+      "chg_24h": 0.4088,
+      "vol_surge": 11.33,
+      "chg_1h": 0.0227,
+      "market_surge": 3.22,
+      "actionable": true
+    },
+    {
+      "symbol": "EDENUSDT",
+      "signal": "ignition",
+      "score": 0.713,
+      "raw_score": 0.713,
+      "weight": 1.0,
+      "price": 0.04975,
+      "why": "trades 7.3x and volume 14.0x the prior 4h, 65% taker-buy, $72,273 burst \u2014 while price has only moved +3.7%",
+      "chg_24h": 0.1613,
+      "vol_surge": 13.98,
+      "chg_1h": 0.0367,
+      "market_surge": 2.09,
       "actionable": true
     }
   ],
@@ -26,7 +40,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 13,
+    "count": 12,
     "baseline": 13.0,
     "wave": false
   },
@@ -37,8 +51,8 @@
       "mean_ret_1h": 0.00224,
       "median_ret_1h": 0.0006,
       "n_4h": 30,
-      "hit_rate_4h": 0.533,
-      "mean_ret_4h": 0.00885,
+      "hit_rate_4h": 0.5,
+      "mean_ret_4h": 0.00711,
       "median_ret_4h": 0.00376,
       "n_24h": 13,
       "hit_rate_24h": 0.923,
