@@ -1,10 +1,10 @@
 {
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "holding": "CASH",
-  "units": 0.0,
-  "cash": 1181.285941700673,
-  "entry_price": null,
+  "holding": "AMLX",
+  "units": 39.6442652156503,
+  "cash": 0.0,
+  "entry_price": 29.759899139404297,
   "bench_units": 1.332054612938296,
   "stopped": {
     "SHIB-USD": "2026-07-27T00:01:08+00:00",
@@ -287,6 +287,16 @@
       "value": 1182.76,
       "fee": 1.48,
       "reason": "STOP-LOSS hit (-10.8% from entry) \u2014 hype that bleeds gets cut"
+    },
+    {
+      "date": "2026-08-18",
+      "action": "BUY",
+      "ticker": "AMLX",
+      "price": 29.75989914,
+      "units": 39.6443,
+      "value": 1179.81,
+      "fee": 1.48,
+      "reason": "Grok: AMLX euphoric \u2014 Sharp after-hours pop chatter (scan 2026-08-18T12:29)"
     }
   ],
   "history": [
@@ -446,15 +456,15 @@
       "value": 1181.29,
       "bench": 1029.24,
       "holding": "CASH"
+    },
+    {
+      "date": "2026-08-18",
+      "value": 1179.81,
+      "bench": 1023.89,
+      "holding": "AMLX"
     }
   ],
   "intraday": [
-    {
-      "ts": "2026-07-24T21:47:20+00:00",
-      "value": 1053.92,
-      "bench": 984.3,
-      "holding": "CASH"
-    },
     {
       "ts": "2026-07-24T22:00:30+00:00",
       "value": 1053.92,
@@ -9448,9 +9458,15 @@
       "value": 1181.29,
       "bench": 1034.13,
       "holding": "CASH"
+    },
+    {
+      "ts": "2026-08-18T13:37:18+00:00",
+      "value": 1179.81,
+      "bench": 1023.89,
+      "holding": "AMLX"
     }
   ],
-  "last_updated_utc": "2026-08-18T13:23:51+00:00",
+  "last_updated_utc": "2026-08-18T13:37:18+00:00",
   "restatement": {
     "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)",
     "voided_trades": [
@@ -9529,5 +9545,5 @@
     ],
     "voided_reason": "signal faded before any real fill was possible (market closed the whole window) \u2014 trades could never have existed"
   },
-  "costs_paid": 10.8099
+  "costs_paid": 12.2865
 }
