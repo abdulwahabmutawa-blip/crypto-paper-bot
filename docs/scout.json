@@ -1,17 +1,35 @@
 {
-  "ts": "2026-08-18T23:21:04+00:00",
-  "scanned": 81,
+  "ts": "2026-08-18T23:27:03+00:00",
+  "scanned": 80,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SNXXBUSDT",
+      "signal": "reversion",
+      "score": 0.3919,
+      "raw_score": 0.3919,
+      "weight": 1.0,
+      "price": 15.04,
+      "why": "down -24% on the day (bottom decile of the market), now +0.7% over 15m with 3 green candles",
+      "chg_24h": -0.2351,
+      "vol_surge": 8.59,
+      "chg_1h": -0.0234,
+      "market_surge": 2.33,
+      "oi_drop": null,
+      "funding": null,
+      "actionable": false,
+      "status": "probation \u2014 8/12 resolved 4h samples under ruleset 3"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 23%, mean -1.76% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 33%, mean -0.84% over last 21 at 4h: not beating the round trip",
-    "reversion": "probation \u2014 6/12 resolved 4h samples under ruleset 3",
+    "reversion": "probation \u2014 8/12 resolved 4h samples under ruleset 3",
     "heat": "benched \u2014 hit 44%, mean -1.22% over last 16 at 4h: not beating the round trip",
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 11,
+    "count": 10,
     "baseline": 12.0,
     "wave": false
   },
@@ -19,8 +37,8 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.333,
-      "mean_ret_1h": -0.00127,
-      "median_ret_1h": -0.00095,
+      "mean_ret_1h": -0.00116,
+      "median_ret_1h": -0.00026,
       "n_4h": 30,
       "hit_rate_4h": 0.233,
       "mean_ret_4h": -0.01765,
@@ -49,10 +67,10 @@
       "hit_rate_1h": 0.333,
       "mean_ret_1h": -0.00521,
       "median_ret_1h": -0.00542,
-      "n_4h": 6,
-      "hit_rate_4h": 0.333,
-      "mean_ret_4h": -0.02065,
-      "median_ret_4h": -0.01471
+      "n_4h": 8,
+      "hit_rate_4h": 0.25,
+      "mean_ret_4h": -0.02093,
+      "median_ret_4h": -0.01725
     },
     "heat": {
       "n_1h": 17,
