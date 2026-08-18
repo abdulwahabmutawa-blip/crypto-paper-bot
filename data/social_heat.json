@@ -1,15 +1,15 @@
 {
-  "ts": "2026-08-18T11:43:29+00:00",
+  "ts": "2026-08-18T11:48:52+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
       "ETH",
       "GALA",
-      "ONDO",
       "SOL",
-      "XRP",
-      "COMP",
+      "ONDO",
+      "LIT",
       "GPS",
+      "RED",
       "ETHFI"
     ],
     "reddit": [],
@@ -20,7 +20,9 @@
       "GPS",
       "SPCXB",
       "BTC",
-      "SOL"
+      "SOL",
+      "TRX",
+      "RLUSD"
     ],
     "watcher": [
       "TUT",
@@ -38,7 +40,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -7.2e-05,
+      "funding": -6.6e-05,
       "long_short": 0.58
     },
     {
@@ -48,7 +50,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 2.4e-05,
+      "funding": 2.6e-05,
       "long_short": 2.33
     },
     {
@@ -67,7 +69,7 @@
       "sources": [
         "watcher"
       ],
-      "funding": -0.002659
+      "funding": -0.002561
     },
     {
       "symbol": "ALLO",
@@ -83,15 +85,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 7.7e-05
-    },
-    {
-      "symbol": "COMP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 9.9e-05
+      "funding": 7.9e-05
     },
     {
       "symbol": "ETH",
@@ -99,7 +93,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.6e-05
+      "funding": 1.7e-05
     },
     {
       "symbol": "ETHFI",
@@ -115,7 +109,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000237
+      "funding": -0.000249
+    },
+    {
+      "symbol": "LIT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 2.7e-05
     },
     {
       "symbol": "ONDO",
@@ -123,7 +125,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.2e-05
+      "funding": 2.4e-05
     },
     {
       "symbol": "PUMP",
@@ -134,6 +136,21 @@
       "funding": 2.8e-05
     },
     {
+      "symbol": "RED",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -0.00631
+    },
+    {
+      "symbol": "RLUSD",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
+    },
+    {
       "symbol": "SPCXB",
       "surfaces": 1,
       "sources": [
@@ -141,12 +158,12 @@
       ]
     },
     {
-      "symbol": "XRP",
+      "symbol": "TRX",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
-      "funding": -1.8e-05
+      "funding": 8.6e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."

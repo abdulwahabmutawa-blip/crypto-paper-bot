@@ -1,37 +1,24 @@
 {
-  "ts": "2026-08-18T11:43:33+00:00",
-  "scanned": 75,
+  "ts": "2026-08-18T11:48:56+00:00",
+  "scanned": 74,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "DRAMBUSDT",
-      "signal": "ignition",
-      "score": 0.6837,
-      "raw_score": 0.9767,
-      "weight": 0.7,
-      "price": 57.15,
-      "why": "trades 22.3x and volume 34.9x the prior 4h, 98% taker-buy, $75,647 burst \u2014 while price has only moved +0.7%",
-      "chg_24h": -0.0454,
-      "vol_surge": 34.89,
-      "chg_1h": 0.0072,
-      "market_surge": 0.0,
+      "symbol": "KORUBUSDT",
+      "signal": "reversion",
+      "score": 0.3054,
+      "raw_score": 0.3054,
+      "weight": 1.0,
+      "price": 20.29,
+      "why": "down -13% on the day (bottom decile of the market), now +0.9% over 15m with 3 green candles",
+      "chg_24h": -0.1278,
+      "vol_surge": 1.01,
+      "chg_1h": 0.009,
+      "market_surge": 0.87,
+      "oi_drop": null,
+      "funding": null,
       "actionable": false,
-      "status": "benched \u2014 hit 20%, mean -1.03% over last 30 at 4h: not beating the round trip"
-    },
-    {
-      "symbol": "VIRTUALUSDT",
-      "signal": "ignition",
-      "score": 0.5865,
-      "raw_score": 0.8379,
-      "weight": 0.7,
-      "price": 0.5862,
-      "why": "trades 8.1x and volume 14.3x the prior 4h, 78% taker-buy, $68,835 burst \u2014 while price has only moved +1.2%",
-      "chg_24h": 0.0425,
-      "vol_surge": 14.29,
-      "chg_1h": 0.0121,
-      "market_surge": 3.35,
-      "actionable": false,
-      "status": "benched \u2014 hit 20%, mean -1.03% over last 30 at 4h: not beating the round trip"
+      "status": "probation \u2014 0/12 resolved 4h samples under ruleset 3"
     }
   ],
   "gate": {
@@ -42,7 +29,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 11,
+    "count": 10,
     "baseline": 13.0,
     "wave": false
   },
@@ -58,7 +45,7 @@
       "median_ret_4h": -0.00631,
       "n_24h": 30,
       "hit_rate_24h": 0.467,
-      "mean_ret_24h": -0.00359,
+      "mean_ret_24h": -0.00351,
       "median_ret_24h": 0.0
     },
     "breakout": {
