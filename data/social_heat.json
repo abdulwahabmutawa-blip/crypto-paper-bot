@@ -1,12 +1,13 @@
 {
-  "ts": "2026-08-18T01:34:17+00:00",
+  "ts": "2026-08-18T01:40:09+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
+      "BTC",
       "PUMP",
       "SOL",
-      "BTC",
-      "OCEAN",
+      "POL",
+      "ACE",
       "ETH"
     ],
     "reddit": [],
@@ -30,13 +31,23 @@
   },
   "heat": [
     {
+      "symbol": "ACE",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -0.004354,
+      "long_short": 1.36
+    },
+    {
       "symbol": "BTC",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 5.3e-05,
+      "funding": 5.2e-05,
       "long_short": 1.46
     },
     {
@@ -46,7 +57,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -7.1e-05,
+      "funding": -9.3e-05,
       "long_short": 0.61
     },
     {
@@ -56,7 +67,7 @@
         "coingecko",
         "watcher"
       ],
-      "funding": 3.6e-05,
+      "funding": 4e-05,
       "long_short": 0.71
     },
     {
@@ -70,20 +81,12 @@
       "long_short": 1.41
     },
     {
-      "symbol": "ACE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -0.004266
-    },
-    {
       "symbol": "ALLO",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 3.3e-05
+      "funding": 3.4e-05
     },
     {
       "symbol": "ETH",
@@ -91,15 +94,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.2e-05
+      "funding": 5.1e-05
     },
     {
-      "symbol": "OCEAN",
+      "symbol": "POL",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0
+      "funding": 5e-05
     },
     {
       "symbol": "PUMP",
@@ -107,7 +110,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.8e-05
+      "funding": -3.3e-05
     },
     {
       "symbol": "SNDKB",
@@ -122,7 +125,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.4e-05
+      "funding": 1.1e-05
     },
     {
       "symbol": "SPCXB",
