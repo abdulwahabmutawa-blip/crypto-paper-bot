@@ -1,24 +1,22 @@
 {
-  "ts": "2026-08-18T23:27:03+00:00",
-  "scanned": 80,
+  "ts": "2026-08-18T23:33:04+00:00",
+  "scanned": 79,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "SNXXBUSDT",
-      "signal": "reversion",
-      "score": 0.3919,
-      "raw_score": 0.3919,
-      "weight": 1.0,
-      "price": 15.04,
-      "why": "down -24% on the day (bottom decile of the market), now +0.7% over 15m with 3 green candles",
-      "chg_24h": -0.2351,
-      "vol_surge": 8.59,
-      "chg_1h": -0.0234,
-      "market_surge": 2.33,
-      "oi_drop": null,
-      "funding": null,
+      "symbol": "FETUSDT",
+      "signal": "ignition",
+      "score": 0.6346,
+      "raw_score": 0.8658,
+      "weight": 0.733,
+      "price": 0.1224,
+      "why": "trades 18.0x and volume 17.5x the prior 4h, 60% taker-buy, $150,907 burst \u2014 while price has only moved +1.4%",
+      "chg_24h": -0.0194,
+      "vol_surge": 17.46,
+      "chg_1h": 0.0141,
+      "market_surge": 7.16,
       "actionable": false,
-      "status": "probation \u2014 8/12 resolved 4h samples under ruleset 3"
+      "status": "benched \u2014 hit 23%, mean -1.76% over last 30 at 4h: not beating the round trip"
     }
   ],
   "gate": {
@@ -29,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 10,
+    "count": 11,
     "baseline": 12.0,
     "wave": false
   },
