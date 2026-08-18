@@ -1,10 +1,26 @@
 {
-  "ts": "2026-08-18T06:19:51+00:00",
-  "scanned": 79,
+  "ts": "2026-08-18T06:25:25+00:00",
+  "scanned": 81,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "PENGUUSDT",
+      "signal": "ignition",
+      "score": 0.5744,
+      "raw_score": 0.7489,
+      "weight": 0.767,
+      "price": 0.006021,
+      "why": "trades 6.4x and volume 10.0x the prior 4h, 65% taker-buy, $76,640 burst \u2014 while price has only moved +0.7%",
+      "chg_24h": 0.0092,
+      "vol_surge": 9.96,
+      "chg_1h": 0.0065,
+      "market_surge": 6.11,
+      "actionable": false,
+      "status": "benched \u2014 hit 27%, mean -0.94% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
-    "ignition": "benched \u2014 hit 30%, mean -0.85% over last 30 at 4h: not beating the round trip",
+    "ignition": "benched \u2014 hit 27%, mean -0.94% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 40%, mean -0.57% over last 15 at 4h: not beating the round trip",
     "reversion": "probation \u2014 0/12 resolved 4h samples under ruleset 3",
     "heat": "probation \u2014 9/12 resolved 4h samples under ruleset 3",
@@ -22,9 +38,9 @@
       "mean_ret_1h": -0.00099,
       "median_ret_1h": 0.0,
       "n_4h": 30,
-      "hit_rate_4h": 0.3,
-      "mean_ret_4h": -0.00852,
-      "median_ret_4h": -0.00524,
+      "hit_rate_4h": 0.267,
+      "mean_ret_4h": -0.00942,
+      "median_ret_4h": -0.0067,
       "n_24h": 24,
       "hit_rate_24h": 0.625,
       "mean_ret_24h": 0.0196,
