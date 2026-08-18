@@ -1,26 +1,8 @@
 {
-  "ts": "2026-08-18T11:48:56+00:00",
-  "scanned": 74,
+  "ts": "2026-08-18T11:54:30+00:00",
+  "scanned": 73,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "KORUBUSDT",
-      "signal": "reversion",
-      "score": 0.3054,
-      "raw_score": 0.3054,
-      "weight": 1.0,
-      "price": 20.29,
-      "why": "down -13% on the day (bottom decile of the market), now +0.9% over 15m with 3 green candles",
-      "chg_24h": -0.1278,
-      "vol_surge": 1.01,
-      "chg_1h": 0.009,
-      "market_surge": 0.87,
-      "oi_drop": null,
-      "funding": null,
-      "actionable": false,
-      "status": "probation \u2014 0/12 resolved 4h samples under ruleset 3"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 20%, mean -1.03% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 35%, mean -0.83% over last 17 at 4h: not beating the round trip",
@@ -44,9 +26,9 @@
       "mean_ret_4h": -0.01031,
       "median_ret_4h": -0.00631,
       "n_24h": 30,
-      "hit_rate_24h": 0.467,
-      "mean_ret_24h": -0.00351,
-      "median_ret_24h": 0.0
+      "hit_rate_24h": 0.433,
+      "mean_ret_24h": -0.00513,
+      "median_ret_24h": -0.00337
     },
     "breakout": {
       "n_1h": 17,
