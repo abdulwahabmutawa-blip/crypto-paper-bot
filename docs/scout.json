@@ -1,22 +1,39 @@
 {
-  "ts": "2026-08-18T21:57:43+00:00",
-  "scanned": 78,
+  "ts": "2026-08-18T22:03:13+00:00",
+  "scanned": 79,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "ACEUSDT",
-      "signal": "heat",
-      "score": 0.6,
-      "raw_score": 0.6,
+      "symbol": "PUMPUSDT",
+      "signal": "breakout",
+      "score": 0.673,
+      "raw_score": 0.673,
       "weight": 1.0,
-      "price": 0.2266,
-      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding -0.275% \u00b7 L/S 0.98",
-      "chg_24h": 0.4145,
-      "vol_surge": null,
-      "chg_1h": null,
-      "market_surge": 3,
+      "price": 0.002969,
+      "why": "trades 4.7x, volume 8.7x, 63% taker-buy, +3.8% in an hour, at 93% of its 24h range",
+      "chg_24h": 0.0702,
+      "vol_surge": 8.72,
+      "chg_1h": 0.0381,
+      "market_surge": 4.3,
       "actionable": false,
-      "status": "benched \u2014 hit 47%, mean -1.23% over last 15 at 4h: not beating the round trip"
+      "status": "benched \u2014 hit 35%, mean -0.76% over last 20 at 4h: not beating the round trip"
+    },
+    {
+      "symbol": "SOXLBUSDT",
+      "signal": "reversion",
+      "score": 0.3088,
+      "raw_score": 0.3088,
+      "weight": 1.0,
+      "price": 127.71,
+      "why": "down -16% on the day (bottom decile of the market), now +0.4% over 15m with 3 green candles",
+      "chg_24h": -0.162,
+      "vol_surge": 3.01,
+      "chg_1h": -0.0028,
+      "market_surge": 5.5,
+      "oi_drop": null,
+      "funding": null,
+      "actionable": false,
+      "status": "probation \u2014 5/12 resolved 4h samples under ruleset 3"
     }
   ],
   "gate": {
