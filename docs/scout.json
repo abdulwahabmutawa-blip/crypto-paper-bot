@@ -1,8 +1,23 @@
 {
-  "ts": "2026-08-18T01:58:04+00:00",
+  "ts": "2026-08-18T02:04:05+00:00",
   "scanned": 77,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "DRAMBUSDT",
+      "signal": "ignition",
+      "score": 0.9219,
+      "raw_score": 0.8924,
+      "weight": 1.033,
+      "price": 59.79,
+      "why": "trades 51.2x and volume 129.4x the prior 4h, 75% taker-buy, $142,711 burst \u2014 while price has only moved -1.8%",
+      "chg_24h": 0.0282,
+      "vol_surge": 129.43,
+      "chg_1h": -0.0184,
+      "market_surge": 7.06,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "benched \u2014 hit 43%, mean -0.28% over last 14 at 4h: not beating the round trip",
@@ -19,15 +34,15 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.4,
-      "mean_ret_1h": 0.00255,
+      "mean_ret_1h": 0.00224,
       "median_ret_1h": 0.0006,
       "n_4h": 30,
       "hit_rate_4h": 0.533,
       "mean_ret_4h": 0.00885,
       "median_ret_4h": 0.00376,
-      "n_24h": 12,
-      "hit_rate_24h": 0.917,
-      "mean_ret_24h": 0.03745,
+      "n_24h": 13,
+      "hit_rate_24h": 0.923,
+      "mean_ret_24h": 0.04248,
       "median_ret_24h": 0.01496
     },
     "breakout": {
