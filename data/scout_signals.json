@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-18T07:03:23+00:00",
-  "scanned": 81,
+  "ts": "2026-08-18T07:09:22+00:00",
+  "scanned": 83,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ALICEUSDT",
+      "signal": "breakout",
+      "score": 0.9061,
+      "raw_score": 0.9061,
+      "weight": 1.0,
+      "price": 0.1361,
+      "why": "trades 29.4x, volume 30.9x, 62% taker-buy, +7.4% in an hour, at 83% of its 24h range",
+      "chg_24h": 0.0295,
+      "vol_surge": 30.94,
+      "chg_1h": 0.0742,
+      "market_surge": 1.97,
+      "actionable": false,
+      "status": "benched \u2014 hit 40%, mean -0.57% over last 15 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 23%, mean -1.00% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 40%, mean -0.57% over last 15 at 4h: not beating the round trip",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 11,
+    "count": 12,
     "baseline": 13.0,
     "wave": false
   },
