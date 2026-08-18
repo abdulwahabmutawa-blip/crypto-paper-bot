@@ -1,22 +1,37 @@
 {
-  "ts": "2026-08-18T11:37:53+00:00",
-  "scanned": 73,
+  "ts": "2026-08-18T11:43:33+00:00",
+  "scanned": 75,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "GPSUSDT",
-      "signal": "heat",
-      "score": 0.6,
-      "raw_score": 0.6,
-      "weight": 1.0,
-      "price": 0.01753,
-      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding -0.009% \u00b7 L/S 0.58",
-      "chg_24h": 0.0324,
-      "vol_surge": null,
-      "chg_1h": null,
-      "market_surge": 3,
+      "symbol": "DRAMBUSDT",
+      "signal": "ignition",
+      "score": 0.6837,
+      "raw_score": 0.9767,
+      "weight": 0.7,
+      "price": 57.15,
+      "why": "trades 22.3x and volume 34.9x the prior 4h, 98% taker-buy, $75,647 burst \u2014 while price has only moved +0.7%",
+      "chg_24h": -0.0454,
+      "vol_surge": 34.89,
+      "chg_1h": 0.0072,
+      "market_surge": 0.0,
       "actionable": false,
-      "status": "probation \u2014 10/12 resolved 4h samples under ruleset 3"
+      "status": "benched \u2014 hit 20%, mean -1.03% over last 30 at 4h: not beating the round trip"
+    },
+    {
+      "symbol": "VIRTUALUSDT",
+      "signal": "ignition",
+      "score": 0.5865,
+      "raw_score": 0.8379,
+      "weight": 0.7,
+      "price": 0.5862,
+      "why": "trades 8.1x and volume 14.3x the prior 4h, 78% taker-buy, $68,835 burst \u2014 while price has only moved +1.2%",
+      "chg_24h": 0.0425,
+      "vol_surge": 14.29,
+      "chg_1h": 0.0121,
+      "market_surge": 3.35,
+      "actionable": false,
+      "status": "benched \u2014 hit 20%, mean -1.03% over last 30 at 4h: not beating the round trip"
     }
   ],
   "gate": {
@@ -27,7 +42,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 10,
+    "count": 11,
     "baseline": 13.0,
     "wave": false
   },
