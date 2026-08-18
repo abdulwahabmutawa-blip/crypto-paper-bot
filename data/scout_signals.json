@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-18T09:18:25+00:00",
-  "scanned": 82,
+  "ts": "2026-08-18T09:24:05+00:00",
+  "scanned": 83,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ARBUSDT",
+      "signal": "ignition",
+      "score": 0.5884,
+      "raw_score": 0.8406,
+      "weight": 0.7,
+      "price": 0.0753,
+      "why": "trades 8.6x and volume 22.0x the prior 4h, 63% taker-buy, $123,324 burst \u2014 while price has only moved +0.4%",
+      "chg_24h": 0.008,
+      "vol_surge": 22.03,
+      "chg_1h": 0.004,
+      "market_surge": 1.45,
+      "actionable": false,
+      "status": "benched \u2014 hit 20%, mean -1.04% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 20%, mean -1.04% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 40%, mean -0.57% over last 15 at 4h: not beating the round trip",
@@ -19,16 +35,16 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.233,
-      "mean_ret_1h": -0.00333,
+      "mean_ret_1h": -0.00403,
       "median_ret_1h": -0.00047,
       "n_4h": 30,
       "hit_rate_4h": 0.2,
       "mean_ret_4h": -0.01042,
       "median_ret_4h": -0.00631,
       "n_24h": 30,
-      "hit_rate_24h": 0.567,
-      "mean_ret_24h": 0.01258,
-      "median_ret_24h": 0.00804
+      "hit_rate_24h": 0.533,
+      "mean_ret_24h": -0.00032,
+      "median_ret_24h": 0.00662
     },
     "breakout": {
       "n_1h": 17,
