@@ -1,21 +1,20 @@
 {
-  "ts": "2026-08-18T12:39:59+00:00",
+  "ts": "2026-08-18T12:45:29+00:00",
   "sources": {
     "coingecko": [
-      "ETH",
       "LINK",
+      "ETH",
       "SUI",
+      "BTC",
       "PEPE",
       "SOL",
-      "PUMP",
-      "GALA",
-      "UNI"
+      "GALA"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "TUT",
       "ACE",
+      "TUT",
       "GPS",
       "ALLO",
       "SPCXB",
@@ -30,13 +29,23 @@
   },
   "heat": [
     {
+      "symbol": "BTC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 7.8e-05,
+      "long_short": 1.51
+    },
+    {
       "symbol": "SOL",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 5.8e-05,
+      "funding": 6e-05,
       "long_short": 2.3
     },
     {
@@ -55,7 +64,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.002173
+      "funding": -0.002161
     },
     {
       "symbol": "ALLO",
@@ -64,14 +73,6 @@
         "movers"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 7.9e-05
     },
     {
       "symbol": "ETH",
@@ -87,7 +88,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000337
+      "funding": -0.000345
     },
     {
       "symbol": "GPS",
@@ -95,7 +96,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -2.6e-05
+      "funding": -1.6e-05
     },
     {
       "symbol": "LINK",
@@ -103,7 +104,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.7e-05
+      "funding": 1.8e-05
     },
     {
       "symbol": "PEPE",
@@ -111,14 +112,6 @@
       "sources": [
         "coingecko"
       ]
-    },
-    {
-      "symbol": "PUMP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 3.6e-05
     },
     {
       "symbol": "SPCXB",
@@ -133,15 +126,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.00017
-    },
-    {
-      "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 9e-06
+      "funding": -0.000172
     },
     {
       "symbol": "XAUT",
@@ -149,7 +134,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 1.4e-05
+      "funding": 1.5e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
