@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-18T21:41:23+00:00",
+  "ts": "2026-08-18T21:47:14+00:00",
   "scanned": 79,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ONDOUSDT",
+      "signal": "ignition",
+      "score": 0.6235,
+      "raw_score": 0.8907,
+      "weight": 0.7,
+      "price": 0.3254,
+      "why": "trades 13.6x and volume 19.4x the prior 4h, 67% taker-buy, $91,809 burst \u2014 while price has only moved -1.1%",
+      "chg_24h": -0.026,
+      "vol_surge": 19.43,
+      "chg_1h": -0.0106,
+      "market_surge": 0.15,
+      "actionable": false,
+      "status": "benched \u2014 hit 20%, mean -1.61% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 20%, mean -1.61% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 35%, mean -0.76% over last 20 at 4h: not beating the round trip",
