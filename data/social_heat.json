@@ -1,26 +1,27 @@
 {
-  "ts": "2026-08-18T12:51:17+00:00",
+  "ts": "2026-08-18T12:56:59+00:00",
   "sources": {
     "coingecko": [
-      "LINK",
       "ETH",
       "SUI",
-      "BTC",
+      "LINK",
       "PEPE",
       "SOL",
-      "GALA"
+      "BTC",
+      "GALA",
+      "ACE"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "TUT",
-      "ACE",
       "GPS",
+      "ACE",
       "ALLO",
       "SPCXB",
       "SOL",
       "BTC",
-      "XAUT"
+      "TRX"
     ],
     "watcher": [
       "TUT"
@@ -28,6 +29,16 @@
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "ACE",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -0.0022,
+      "long_short": 1.09
+    },
     {
       "symbol": "BTC",
       "surfaces": 2,
@@ -45,7 +56,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 6.4e-05,
+      "funding": 6.8e-05,
       "long_short": 2.3
     },
     {
@@ -57,14 +68,6 @@
       ],
       "funding": 5e-05,
       "long_short": 1.32
-    },
-    {
-      "symbol": "ACE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -0.002162
     },
     {
       "symbol": "ALLO",
@@ -88,7 +91,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.00035
+      "funding": -0.000355
     },
     {
       "symbol": "GPS",
@@ -96,7 +99,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -2e-06
+      "funding": 5e-06
     },
     {
       "symbol": "LINK",
@@ -104,7 +107,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.8e-05
+      "funding": 2.2e-05
     },
     {
       "symbol": "PEPE",
@@ -129,12 +132,12 @@
       "funding": -0.000173
     },
     {
-      "symbol": "XAUT",
+      "symbol": "TRX",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 1.9e-05
+      "funding": 4.8e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
