@@ -1,15 +1,16 @@
 {
-  "ts": "2026-08-18T21:52:31+00:00",
+  "ts": "2026-08-18T21:57:39+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
-      "ETHFI",
       "TAO",
-      "AERO",
       "SOL",
-      "BTC",
+      "ETHFI",
       "SUI",
-      "ONDO"
+      "AERO",
+      "ACE",
+      "PEPE",
+      "RENDER"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -29,23 +30,14 @@
   "heat": [
     {
       "symbol": "ACE",
-      "surfaces": 2,
+      "surfaces": 3,
       "sources": [
+        "coingecko",
         "movers",
         "watcher"
       ],
-      "funding": -0.002746,
+      "funding": -0.002752,
       "long_short": 0.98
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-06,
-      "long_short": 1.35
     },
     {
       "symbol": "SOL",
@@ -63,7 +55,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2e-05
+      "funding": -2.1e-05
     },
     {
       "symbol": "ALLO",
@@ -74,12 +66,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-06
+    },
+    {
       "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 2.1e-05
+      "funding": 2.2e-05
     },
     {
       "symbol": "ETHFI",
@@ -90,12 +90,11 @@
       "funding": 5e-05
     },
     {
-      "symbol": "ONDO",
+      "symbol": "PEPE",
       "surfaces": 1,
       "sources": [
         "coingecko"
-      ],
-      "funding": -6e-06
+      ]
     },
     {
       "symbol": "PUMP",
@@ -103,7 +102,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.1e-05
+      "funding": 3.6e-05
+    },
+    {
+      "symbol": "RENDER",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 4.9e-05
     },
     {
       "symbol": "SUI",
@@ -111,7 +118,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.2e-05
+      "funding": -1.6e-05
     },
     {
       "symbol": "TAO",

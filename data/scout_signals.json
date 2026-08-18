@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-18T21:52:35+00:00",
+  "ts": "2026-08-18T21:57:43+00:00",
   "scanned": 78,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ACEUSDT",
+      "signal": "heat",
+      "score": 0.6,
+      "raw_score": 0.6,
+      "weight": 1.0,
+      "price": 0.2266,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding -0.275% \u00b7 L/S 0.98",
+      "chg_24h": 0.4145,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
+      "actionable": false,
+      "status": "benched \u2014 hit 47%, mean -1.23% over last 15 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 20%, mean -1.61% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 35%, mean -0.76% over last 20 at 4h: not beating the round trip",
@@ -18,9 +34,9 @@
   "scorecard": {
     "ignition": {
       "n_1h": 30,
-      "hit_rate_1h": 0.233,
-      "mean_ret_1h": -0.00652,
-      "median_ret_1h": -0.00494,
+      "hit_rate_1h": 0.267,
+      "mean_ret_1h": -0.00616,
+      "median_ret_1h": -0.00474,
       "n_4h": 30,
       "hit_rate_4h": 0.2,
       "mean_ret_4h": -0.01609,
