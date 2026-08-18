@@ -1,8 +1,39 @@
 {
-  "ts": "2026-08-18T13:58:24+00:00",
+  "ts": "2026-08-18T14:04:04+00:00",
   "scanned": 76,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SOXSBUSDT",
+      "signal": "breakout",
+      "score": 0.7888,
+      "raw_score": 0.7888,
+      "weight": 1.0,
+      "price": 43.71,
+      "why": "trades 13.3x, volume 70.8x, 87% taker-buy, +2.1% in an hour, at 91% of its 24h range",
+      "chg_24h": 0.1457,
+      "vol_surge": 70.77,
+      "chg_1h": 0.0205,
+      "market_surge": 0.0,
+      "actionable": false,
+      "status": "benched \u2014 hit 35%, mean -0.83% over last 17 at 4h: not beating the round trip"
+    },
+    {
+      "symbol": "NEARUSDT",
+      "signal": "ignition",
+      "score": 0.3819,
+      "raw_score": 0.5456,
+      "weight": 0.7,
+      "price": 1.624,
+      "why": "trades 4.1x and volume 5.4x the prior 4h, 66% taker-buy, $113,639 burst \u2014 while price has only moved +0.8%",
+      "chg_24h": -0.0158,
+      "vol_surge": 5.44,
+      "chg_1h": 0.0081,
+      "market_surge": 1.24,
+      "actionable": false,
+      "status": "benched \u2014 hit 20%, mean -0.81% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 20%, mean -0.81% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 35%, mean -0.83% over last 17 at 4h: not beating the round trip",
@@ -39,9 +70,9 @@
       "hit_rate_4h": 0.353,
       "mean_ret_4h": -0.00832,
       "median_ret_4h": -0.02441,
-      "n_24h": 8,
-      "hit_rate_24h": 0.25,
-      "mean_ret_24h": -0.01472,
+      "n_24h": 10,
+      "hit_rate_24h": 0.2,
+      "mean_ret_24h": -0.01966,
       "median_ret_24h": -0.03889
     },
     "reversion": {
