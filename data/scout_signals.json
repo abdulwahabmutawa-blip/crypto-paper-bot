@@ -1,8 +1,26 @@
 {
-  "ts": "2026-08-18T19:16:03+00:00",
-  "scanned": 75,
+  "ts": "2026-08-18T19:21:07+00:00",
+  "scanned": 76,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SNXXBUSDT",
+      "signal": "reversion",
+      "score": 0.3051,
+      "raw_score": 0.3051,
+      "weight": 1.0,
+      "price": 15.37,
+      "why": "down -18% on the day (bottom decile of the market), now +0.5% over 15m with 2 green candles",
+      "chg_24h": -0.1751,
+      "vol_surge": 2.49,
+      "chg_1h": 0.0046,
+      "market_surge": 0.02,
+      "oi_drop": null,
+      "funding": null,
+      "actionable": false,
+      "status": "probation \u2014 3/12 resolved 4h samples under ruleset 3"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 23%, mean -1.52% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 35%, mean -0.76% over last 20 at 4h: not beating the round trip",
@@ -19,7 +37,7 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.233,
-      "mean_ret_1h": -0.00519,
+      "mean_ret_1h": -0.00532,
       "median_ret_1h": -0.0026,
       "n_4h": 30,
       "hit_rate_4h": 0.233,
