@@ -1,10 +1,10 @@
 {
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "holding": "SLV",
-  "units": 16.57724953721729,
+  "holding": "NVDA",
+  "units": 4.357967014111757,
   "cash": 0.0,
-  "high_water": 59.599998474121094,
+  "high_water": 219.13499450683594,
   "bench_units": 1.332054612938296,
   "trades": [
     {
@@ -219,6 +219,26 @@
       "value": 986.35,
       "fee": 1.09,
       "reason": "Top reward/risk score (8.64) \u2014 Silver, all-in"
+    },
+    {
+      "date": "2026-08-18",
+      "action": "SELL",
+      "ticker": "SLV",
+      "price": 57.73500061,
+      "units": 16.5772,
+      "value": 957.09,
+      "fee": 1.05,
+      "reason": "Outgunned \u2014 Nvidia now scores >1.25x better on reward/risk"
+    },
+    {
+      "date": "2026-08-18",
+      "action": "BUY",
+      "ticker": "NVDA",
+      "price": 219.13499451,
+      "units": 4.358,
+      "value": 954.98,
+      "fee": 1.05,
+      "reason": "Top reward/risk score (8.49) \u2014 Nvidia, all-in"
     }
   ],
   "history": [
@@ -356,18 +376,12 @@
     },
     {
       "date": "2026-08-18",
-      "value": 960.32,
-      "bench": 1022.7,
-      "holding": "SLV"
+      "value": 954.98,
+      "bench": 1022.74,
+      "holding": "NVDA"
     }
   ],
   "intraday": [
-    {
-      "ts": "2026-07-25T07:17:01+00:00",
-      "value": 1073.65,
-      "bench": 984.3,
-      "holding": "USO"
-    },
     {
       "ts": "2026-07-25T07:30:13+00:00",
       "value": 1052.1,
@@ -9361,9 +9375,15 @@
       "value": 960.32,
       "bench": 1022.7,
       "holding": "SLV"
+    },
+    {
+      "ts": "2026-08-18T15:12:34+00:00",
+      "value": 954.98,
+      "bench": 1022.74,
+      "holding": "NVDA"
     }
   ],
-  "last_updated_utc": "2026-08-18T14:59:07+00:00",
+  "last_updated_utc": "2026-08-18T15:12:34+00:00",
   "restatement": [
     {
       "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)"
@@ -9399,9 +9419,9 @@
       ]
     }
   ],
-  "costs_paid": 6.7624,
+  "costs_paid": 8.8668,
   "stopped": {
-    "ticker": "PLTR",
-    "date": "2026-08-17"
+    "ticker": "SLV",
+    "date": "2026-08-18"
   }
 }
