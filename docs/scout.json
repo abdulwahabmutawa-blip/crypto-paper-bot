@@ -1,33 +1,17 @@
 {
-  "ts": "2026-08-18T07:09:22+00:00",
+  "ts": "2026-08-18T07:14:33+00:00",
   "scanned": 83,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ALICEUSDT",
-      "signal": "breakout",
-      "score": 0.9061,
-      "raw_score": 0.9061,
-      "weight": 1.0,
-      "price": 0.1361,
-      "why": "trades 29.4x, volume 30.9x, 62% taker-buy, +7.4% in an hour, at 83% of its 24h range",
-      "chg_24h": 0.0295,
-      "vol_surge": 30.94,
-      "chg_1h": 0.0742,
-      "market_surge": 1.97,
-      "actionable": false,
-      "status": "benched \u2014 hit 40%, mean -0.57% over last 15 at 4h: not beating the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 23%, mean -1.00% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 40%, mean -0.57% over last 15 at 4h: not beating the round trip",
     "reversion": "probation \u2014 0/12 resolved 4h samples under ruleset 3",
-    "heat": "probation \u2014 9/12 resolved 4h samples under ruleset 3",
+    "heat": "probation \u2014 10/12 resolved 4h samples under ruleset 3",
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 11,
     "baseline": 13.0,
     "wave": false
   },
@@ -65,9 +49,9 @@
       "hit_rate_1h": 0.1,
       "mean_ret_1h": -0.03138,
       "median_ret_1h": -0.02503,
-      "n_4h": 9,
-      "hit_rate_4h": 0.444,
-      "mean_ret_4h": -0.01678,
+      "n_4h": 10,
+      "hit_rate_4h": 0.4,
+      "mean_ret_4h": -0.02352,
       "median_ret_4h": -0.00519,
       "n_24h": 3,
       "hit_rate_24h": 0.0,
