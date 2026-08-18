@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-18T14:21:04+00:00",
-  "scanned": 76,
+  "ts": "2026-08-18T14:26:33+00:00",
+  "scanned": 78,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "UNIUSDT",
+      "signal": "ignition",
+      "score": 0.6814,
+      "raw_score": 0.9735,
+      "weight": 0.7,
+      "price": 3.297,
+      "why": "trades 11.3x and volume 18.8x the prior 4h, 92% taker-buy, $247,278 burst \u2014 while price has only moved +0.2%",
+      "chg_24h": 0.0055,
+      "vol_surge": 18.83,
+      "chg_1h": 0.0021,
+      "market_surge": 10.97,
+      "actionable": false,
+      "status": "benched \u2014 hit 20%, mean -0.81% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 20%, mean -0.81% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 35%, mean -0.83% over last 17 at 4h: not beating the round trip",
@@ -18,9 +34,9 @@
   "scorecard": {
     "ignition": {
       "n_1h": 30,
-      "hit_rate_1h": 0.2,
-      "mean_ret_1h": -0.00367,
-      "median_ret_1h": -0.002,
+      "hit_rate_1h": 0.233,
+      "mean_ret_1h": -0.00395,
+      "median_ret_1h": -0.00047,
       "n_4h": 30,
       "hit_rate_4h": 0.2,
       "mean_ret_4h": -0.00808,
@@ -31,9 +47,9 @@
       "median_ret_24h": -0.00512
     },
     "breakout": {
-      "n_1h": 18,
-      "hit_rate_1h": 0.444,
-      "mean_ret_1h": -0.00171,
+      "n_1h": 19,
+      "hit_rate_1h": 0.474,
+      "mean_ret_1h": -0.00108,
       "median_ret_1h": 0.00054,
       "n_4h": 17,
       "hit_rate_4h": 0.353,
