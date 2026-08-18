@@ -1,14 +1,15 @@
 {
-  "ts": "2026-08-18T02:53:19+00:00",
+  "ts": "2026-08-18T02:59:09+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
-      "CFG",
+      "XRP",
+      "TAO",
       "BTC",
       "SOL",
-      "TAO",
-      "UNI",
-      "GPS"
+      "SUI",
+      "CFG",
+      "LIT"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -16,10 +17,10 @@
       "TUT",
       "GPS",
       "ALLO",
-      "ZEC",
       "ACE",
-      "SPCXB",
+      "ZEC",
       "BTC",
+      "SPCXB",
       "XAUT"
     ],
     "watcher": [
@@ -30,25 +31,24 @@
   },
   "heat": [
     {
-      "symbol": "GPS",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": -0.000141,
-      "long_short": 0.56
-    },
-    {
       "symbol": "BTC",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 4.4e-05,
+      "funding": 4.3e-05,
       "long_short": 1.46
+    },
+    {
+      "symbol": "GPS",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": -0.00014,
+      "long_short": 0.56
     },
     {
       "symbol": "TUT",
@@ -66,7 +66,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.004435
+      "funding": -0.004438
     },
     {
       "symbol": "ALLO",
@@ -74,10 +74,18 @@
       "sources": [
         "movers"
       ],
-      "funding": -5e-06
+      "funding": -8e-06
     },
     {
       "symbol": "CFG",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "LIT",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -90,7 +98,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.1e-05
+      "funding": 4e-06
     },
     {
       "symbol": "SOL",
@@ -98,7 +106,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.9e-05
+      "funding": 2e-05
     },
     {
       "symbol": "SPCXB",
@@ -108,20 +116,20 @@
       ]
     },
     {
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -2.8e-05
+    },
+    {
       "symbol": "TAO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -7e-06
-    },
-    {
-      "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -1.6e-05
+      "funding": -1.4e-05
     },
     {
       "symbol": "XAUT",
@@ -130,6 +138,14 @@
         "movers"
       ],
       "funding": -5.3e-05
+    },
+    {
+      "symbol": "XRP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -3.9e-05
     },
     {
       "symbol": "ZEC",
