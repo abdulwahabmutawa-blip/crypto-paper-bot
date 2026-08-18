@@ -1,17 +1,33 @@
 {
-  "ts": "2026-08-18T22:19:32+00:00",
-  "scanned": 81,
+  "ts": "2026-08-18T22:25:34+00:00",
+  "scanned": 80,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "WLDUSDT",
+      "signal": "ignition",
+      "score": 0.5152,
+      "raw_score": 0.736,
+      "weight": 0.7,
+      "price": 0.3223,
+      "why": "trades 6.3x and volume 9.2x the prior 4h, 64% taker-buy, $104,133 burst \u2014 while price has only moved -0.2%",
+      "chg_24h": -0.0675,
+      "vol_surge": 9.17,
+      "chg_1h": -0.0019,
+      "market_surge": 0.24,
+      "actionable": false,
+      "status": "benched \u2014 hit 20%, mean -1.65% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
-    "ignition": "benched \u2014 hit 20%, mean -1.62% over last 30 at 4h: not beating the round trip",
+    "ignition": "benched \u2014 hit 20%, mean -1.65% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 35%, mean -0.76% over last 20 at 4h: not beating the round trip",
     "reversion": "probation \u2014 5/12 resolved 4h samples under ruleset 3",
     "heat": "benched \u2014 hit 47%, mean -1.23% over last 15 at 4h: not beating the round trip",
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 10,
     "baseline": 12.0,
     "wave": false
   },
@@ -23,8 +39,8 @@
       "median_ret_1h": -0.0026,
       "n_4h": 30,
       "hit_rate_4h": 0.2,
-      "mean_ret_4h": -0.01616,
-      "median_ret_4h": -0.00574,
+      "mean_ret_4h": -0.01649,
+      "median_ret_4h": -0.00834,
       "n_24h": 30,
       "hit_rate_24h": 0.233,
       "mean_ret_24h": -0.03498,
