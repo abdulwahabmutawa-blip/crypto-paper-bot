@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-18T11:21:22+00:00",
-  "scanned": 73,
+  "ts": "2026-08-18T11:27:23+00:00",
+  "scanned": 75,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "XRPUSDT",
+      "signal": "ignition",
+      "score": 0.5197,
+      "raw_score": 0.7424,
+      "weight": 0.7,
+      "price": 1.0003,
+      "why": "trades 7.5x and volume 7.7x the prior 4h, 65% taker-buy, $694,471 burst \u2014 while price has only moved +0.5%",
+      "chg_24h": -0.0008,
+      "vol_surge": 7.66,
+      "chg_1h": 0.0049,
+      "market_surge": 3.4,
+      "actionable": false,
+      "status": "benched \u2014 hit 20%, mean -1.03% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 20%, mean -1.03% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 35%, mean -0.83% over last 17 at 4h: not beating the round trip",
