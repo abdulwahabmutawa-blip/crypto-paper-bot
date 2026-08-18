@@ -1,8 +1,39 @@
 {
-  "ts": "2026-08-18T18:59:24+00:00",
-  "scanned": 75,
+  "ts": "2026-08-18T19:05:07+00:00",
+  "scanned": 76,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SOXLBUSDT",
+      "signal": "ignition",
+      "score": 0.699,
+      "raw_score": 0.9536,
+      "weight": 0.733,
+      "price": 125.78,
+      "why": "trades 22.7x and volume 149.6x the prior 4h, 99% taker-buy, $643,321 burst \u2014 while price has only moved +1.7%",
+      "chg_24h": -0.1757,
+      "vol_surge": 149.59,
+      "chg_1h": 0.0174,
+      "market_surge": 22.31,
+      "actionable": false,
+      "status": "benched \u2014 hit 23%, mean -1.52% over last 30 at 4h: not beating the round trip"
+    },
+    {
+      "symbol": "HEIUSDT",
+      "signal": "ignition",
+      "score": 0.403,
+      "raw_score": 0.5498,
+      "weight": 0.733,
+      "price": 0.1405,
+      "why": "trades 5.0x and volume 7.4x the prior 4h, 63% taker-buy, $82,142 burst \u2014 while price has only moved +3.7%",
+      "chg_24h": 0.0725,
+      "vol_surge": 7.35,
+      "chg_1h": 0.0369,
+      "market_surge": 3.82,
+      "actionable": false,
+      "status": "benched \u2014 hit 23%, mean -1.52% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 23%, mean -1.52% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 35%, mean -0.76% over last 20 at 4h: not beating the round trip",
@@ -39,10 +70,10 @@
       "hit_rate_4h": 0.35,
       "mean_ret_4h": -0.00755,
       "median_ret_4h": -0.02018,
-      "n_24h": 13,
-      "hit_rate_24h": 0.154,
-      "mean_ret_24h": -0.0273,
-      "median_ret_24h": -0.05094
+      "n_24h": 14,
+      "hit_rate_24h": 0.143,
+      "mean_ret_24h": -0.02616,
+      "median_ret_24h": -0.04444
     },
     "reversion": {
       "n_1h": 5,
