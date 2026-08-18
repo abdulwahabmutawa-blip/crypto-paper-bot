@@ -1,8 +1,39 @@
 {
-  "ts": "2026-08-18T19:49:00+00:00",
+  "ts": "2026-08-18T19:54:13+00:00",
   "scanned": 76,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "MRVLBUSDT",
+      "signal": "ignition",
+      "score": 0.666,
+      "raw_score": 0.9086,
+      "weight": 0.733,
+      "price": 214.63,
+      "why": "trades 8.3x and volume 91.2x the prior 4h, 95% taker-buy, $85,796 burst \u2014 while price has only moved +0.4%",
+      "chg_24h": -0.0892,
+      "vol_surge": 91.17,
+      "chg_1h": 0.0039,
+      "market_surge": 9.1,
+      "actionable": false,
+      "status": "benched \u2014 hit 23%, mean -1.52% over last 30 at 4h: not beating the round trip"
+    },
+    {
+      "symbol": "MUBUSDT",
+      "signal": "ignition",
+      "score": 0.6237,
+      "raw_score": 0.8508,
+      "weight": 0.733,
+      "price": 936.3,
+      "why": "trades 7.2x and volume 13.5x the prior 4h, 87% taker-buy, $176,349 burst \u2014 while price has only moved +0.2%",
+      "chg_24h": -0.0736,
+      "vol_surge": 13.49,
+      "chg_1h": 0.0016,
+      "market_surge": 3.62,
+      "actionable": false,
+      "status": "benched \u2014 hit 23%, mean -1.52% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 23%, mean -1.52% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 35%, mean -0.76% over last 20 at 4h: not beating the round trip",
