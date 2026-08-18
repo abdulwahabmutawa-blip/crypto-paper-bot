@@ -1,23 +1,8 @@
 {
-  "ts": "2026-08-18T00:15:24+00:00",
-  "scanned": 78,
+  "ts": "2026-08-18T00:21:04+00:00",
+  "scanned": 76,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "KORUBUSDT",
-      "signal": "ignition",
-      "score": 0.9921,
-      "raw_score": 0.9604,
-      "weight": 1.033,
-      "price": 23.37,
-      "why": "trades 28.3x and volume 97.3x the prior 4h, 99% taker-buy, $178,270 burst \u2014 while price has only moved -1.4%",
-      "chg_24h": 0.0657,
-      "vol_surge": 97.3,
-      "chg_1h": -0.0143,
-      "market_surge": 13.55,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "benched \u2014 hit 43%, mean -0.28% over last 14 at 4h: not beating the round trip",
@@ -40,10 +25,10 @@
       "hit_rate_4h": 0.533,
       "mean_ret_4h": 0.00885,
       "median_ret_4h": 0.00376,
-      "n_24h": 6,
-      "hit_rate_24h": 1.0,
-      "mean_ret_24h": 0.07417,
-      "median_ret_24h": 0.02084
+      "n_24h": 7,
+      "hit_rate_24h": 0.857,
+      "mean_ret_24h": 0.04771,
+      "median_ret_24h": 0.01496
     },
     "breakout": {
       "n_1h": 14,
@@ -54,9 +39,9 @@
       "hit_rate_4h": 0.429,
       "mean_ret_4h": -0.00282,
       "median_ret_4h": -0.00303,
-      "n_24h": 1,
-      "hit_rate_24h": 1.0,
-      "mean_ret_24h": 0.33437,
+      "n_24h": 2,
+      "hit_rate_24h": 0.5,
+      "mean_ret_24h": 0.11166,
       "median_ret_24h": 0.33437
     },
     "heat": {
