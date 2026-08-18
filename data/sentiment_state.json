@@ -1,10 +1,10 @@
 {
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "holding": "AMLX",
-  "units": 39.6442652156503,
-  "cash": 0.0,
-  "entry_price": 29.759899139404297,
+  "holding": "CASH",
+  "units": 0.0,
+  "cash": 1231.9893889822179,
+  "entry_price": null,
   "bench_units": 1.332054612938296,
   "stopped": {
     "SHIB-USD": "2026-07-27T00:01:08+00:00",
@@ -297,6 +297,16 @@
       "value": 1179.81,
       "fee": 1.48,
       "reason": "Grok: AMLX euphoric \u2014 Sharp after-hours pop chatter (scan 2026-08-18T12:29)"
+    },
+    {
+      "date": "2026-08-18",
+      "action": "SELL",
+      "ticker": "AMLX",
+      "price": 31.11499977,
+      "units": 39.6443,
+      "value": 1233.53,
+      "fee": 1.54,
+      "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
     }
   ],
   "history": [
@@ -459,18 +469,12 @@
     },
     {
       "date": "2026-08-18",
-      "value": 1241.71,
-      "bench": 1023.33,
-      "holding": "AMLX"
+      "value": 1231.99,
+      "bench": 1024.26,
+      "holding": "CASH"
     }
   ],
   "intraday": [
-    {
-      "ts": "2026-07-24T22:40:06+00:00",
-      "value": 1053.92,
-      "bench": 984.3,
-      "holding": "CASH"
-    },
     {
       "ts": "2026-07-25T06:37:19+00:00",
       "value": 1053.92,
@@ -9464,9 +9468,15 @@
       "value": 1241.71,
       "bench": 1023.33,
       "holding": "AMLX"
+    },
+    {
+      "ts": "2026-08-18T14:32:07+00:00",
+      "value": 1231.99,
+      "bench": 1024.26,
+      "holding": "CASH"
     }
   ],
-  "last_updated_utc": "2026-08-18T14:17:53+00:00",
+  "last_updated_utc": "2026-08-18T14:32:07+00:00",
   "restatement": {
     "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)",
     "voided_trades": [
@@ -9545,5 +9555,5 @@
     ],
     "voided_reason": "signal faded before any real fill was possible (market closed the whole window) \u2014 trades could never have existed"
   },
-  "costs_paid": 12.2865
+  "costs_paid": 13.8284
 }
