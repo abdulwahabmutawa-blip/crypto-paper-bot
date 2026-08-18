@@ -1,13 +1,11 @@
 {
-  "ts": "2026-08-18T01:23:29+00:00",
+  "ts": "2026-08-18T01:29:09+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
-      "BTC",
-      "SOL",
       "PUMP",
-      "BICO",
-      "GPS",
+      "SOL",
+      "BTC",
       "OCEAN",
       "ETH"
     ],
@@ -32,17 +30,6 @@
   },
   "heat": [
     {
-      "symbol": "GPS",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": -5.8e-05,
-      "long_short": 0.61
-    },
-    {
       "symbol": "BTC",
       "surfaces": 2,
       "sources": [
@@ -53,13 +40,23 @@
       "long_short": 1.46
     },
     {
+      "symbol": "GPS",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": -6.3e-05,
+      "long_short": 0.61
+    },
+    {
       "symbol": "PENGU",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "watcher"
       ],
-      "funding": 2.2e-05,
+      "funding": 2.8e-05,
       "long_short": 0.71
     },
     {
@@ -78,7 +75,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.004031
+      "funding": -0.004193
     },
     {
       "symbol": "ALLO",
@@ -86,15 +83,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.4e-05
-    },
-    {
-      "symbol": "BICO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -0.004279
+      "funding": 4e-05
     },
     {
       "symbol": "ETH",
@@ -118,7 +107,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.3e-05
+      "funding": -2.1e-05
     },
     {
       "symbol": "SNDKB",
@@ -133,7 +122,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.9e-05
+      "funding": 1.6e-05
     },
     {
       "symbol": "SPCXB",
