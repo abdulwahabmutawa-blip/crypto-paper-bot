@@ -1,16 +1,16 @@
 {
-  "ts": "2026-08-18T03:21:09+00:00",
+  "ts": "2026-08-18T03:26:59+00:00",
   "sources": {
     "coingecko": [
+      "BTC",
       "PENGU",
+      "PUMP",
       "SUI",
       "TAO",
-      "BTC",
-      "TUT",
+      "LIT",
+      "PEPE",
       "MORPHO",
-      "ETH",
-      "XRP",
-      "CFG"
+      "XRP"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -31,17 +31,6 @@
   },
   "heat": [
     {
-      "symbol": "TUT",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.25
-    },
-    {
       "symbol": "BTC",
       "surfaces": 2,
       "sources": [
@@ -58,8 +47,18 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.000116,
+      "funding": -0.000109,
       "long_short": 0.6
+    },
+    {
+      "symbol": "TUT",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.25
     },
     {
       "symbol": "ALLO",
@@ -67,23 +66,15 @@
       "sources": [
         "movers"
       ],
-      "funding": -1.5e-05
+      "funding": -8e-06
     },
     {
-      "symbol": "CFG",
+      "symbol": "LIT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "ETH",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 1.7e-05
+      "funding": 4.6e-05
     },
     {
       "symbol": "MORPHO",
@@ -99,7 +90,22 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3e-06
+      "funding": 5e-06
+    },
+    {
+      "symbol": "PEPE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ]
+    },
+    {
+      "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 8e-06
     },
     {
       "symbol": "SPCXB",
@@ -114,7 +120,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -3.2e-05
+      "funding": -4e-05
     },
     {
       "symbol": "TAO",
@@ -122,7 +128,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -3.2e-05
+      "funding": -3.9e-05
     },
     {
       "symbol": "XAUT",
@@ -130,7 +136,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -5.5e-05
+      "funding": -5.6e-05
     },
     {
       "symbol": "XRP",
@@ -138,7 +144,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -5.7e-05
+      "funding": -6.3e-05
     },
     {
       "symbol": "ZEC",
