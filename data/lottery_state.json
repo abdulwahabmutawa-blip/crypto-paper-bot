@@ -1,15 +1,16 @@
 {
   "created": "2026-08-15",
-  "held_symbol": "EDENUSDT",
-  "entry_price": 0.049800000000000004,
-  "units": 775.9,
-  "entry_scan_ts": "2026-08-18T00:14:59+00:00",
-  "entry_source": "scout:ignition",
+  "held_symbol": "GPSUSDT",
+  "entry_price": 0.0174,
+  "units": 2255.7,
+  "entry_scan_ts": "2026-08-18T04:19:07+00:00",
+  "entry_source": "watcher",
   "stopped": {
-    "CHIPUSDT": "2026-08-18T02:10:49+00:00"
+    "CHIPUSDT": "2026-08-18T02:10:49+00:00",
+    "EDENUSDT": "2026-08-18T04:23:55+00:00"
   },
   "entries": {
-    "2026-08-18": 2
+    "2026-08-18": 3
   },
   "realized": [
     {
@@ -155,29 +156,43 @@
       "date": "2026-08-18",
       "exit": 0.028260197368421048,
       "entry": 0.02793
+    },
+    {
+      "symbol": "EDENUSDT",
+      "entry_time": "2026-08-18T02:10:49+00:00",
+      "exit_time": "2026-08-18T04:23:55+00:00",
+      "entry_price": 0.049800000000000004,
+      "exit_price": 0.05069,
+      "units": 775.9,
+      "spent_usd": 38.6398,
+      "got_usd": 39.2898,
+      "pnl_pct": 1.79,
+      "pnl_usd": 0.65,
+      "reason": "STALLED (2.2h in, only +1.8%) \u2014 the pump never came",
+      "date": "2026-08-18",
+      "exit": 0.05069,
+      "entry": 0.049800000000000004
     }
   ],
-  "last_value_usd": 40.03,
-  "last_updated_utc": "2026-08-18T04:18:23+00:00",
+  "last_value_usd": 39.22,
+  "last_updated_utc": "2026-08-18T04:23:55+00:00",
   "open_position": {
-    "symbol": "EDENUSDT",
-    "entry_time": "2026-08-18T02:10:49+00:00",
-    "entry_price": 0.049800000000000004,
-    "current_price": 0.05164,
-    "units": 775.9,
-    "spent_usd": 38.6398,
-    "value_usd": 40.0675,
-    "pnl_usd": 1.4277,
-    "pnl_pct": 3.69,
-    "source": "scout:ignition"
+    "symbol": "GPSUSDT",
+    "entry_time": "2026-08-18T04:23:55+00:00",
+    "entry_price": 0.0174,
+    "current_price": 0.01739,
+    "units": 2255.7,
+    "spent_usd": 39.2492,
+    "value_usd": 39.2266,
+    "pnl_usd": -0.0226,
+    "pnl_pct": -0.06,
+    "source": "watcher"
   },
-  "spent_usd": 38.6398,
+  "spent_usd": 39.2492,
   "no_pair": {
-    "scan_ts": "2026-08-18T00:14:59+00:00",
-    "syms": [
-      "HYPEUSDT"
-    ]
+    "scan_ts": "2026-08-18T04:19:07+00:00",
+    "syms": []
   },
-  "hwm": 0.0521,
-  "entry_time": "2026-08-18T02:10:49+00:00"
+  "hwm": 0.0174,
+  "entry_time": "2026-08-18T04:23:55+00:00"
 }

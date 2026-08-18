@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-18T04:16:59+00:00",
+  "ts": "2026-08-18T04:22:29+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
@@ -21,14 +21,14 @@
       "ALLO",
       "TUT",
       "ZEC",
-      "SPCXB",
       "BTC",
+      "SPCXB",
       "SNDKB",
       "SOL"
     ],
     "watcher": [
       "GPS",
-      "TUT"
+      "PENGU"
     ],
     "cryptopanic": []
   },
@@ -40,7 +40,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 3.9e-05,
+      "funding": 3.8e-05,
       "long_short": 1.55
     },
     {
@@ -50,18 +50,18 @@
         "movers",
         "watcher"
       ],
-      "funding": -8e-05,
+      "funding": -8.1e-05,
       "long_short": 0.59
     },
     {
-      "symbol": "TUT",
+      "symbol": "PENGU",
       "surfaces": 2,
       "sources": [
-        "movers",
+        "coingecko",
         "watcher"
       ],
-      "funding": 5e-05,
-      "long_short": 1.28
+      "funding": -5e-06,
+      "long_short": 0.71
     },
     {
       "symbol": "ZEC",
@@ -79,7 +79,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 3.3e-05
+      "funding": 3.8e-05
     },
     {
       "symbol": "FET",
@@ -87,7 +87,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.8e-05
+      "funding": 5.1e-05
     },
     {
       "symbol": "GALA",
@@ -95,7 +95,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -6.8e-05
+      "funding": -7.1e-05
     },
     {
       "symbol": "LINK",
@@ -103,7 +103,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -3e-05
+      "funding": -3.1e-05
     },
     {
       "symbol": "LIT",
@@ -111,15 +111,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.8e-05
-    },
-    {
-      "symbol": "PENGU",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 4e-06
+      "funding": -2.6e-05
     },
     {
       "symbol": "PUMP",
@@ -127,7 +119,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.2e-05
+      "funding": 1.1e-05
     },
     {
       "symbol": "SNDKB",
@@ -142,7 +134,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 9e-06
+      "funding": 6e-06
     },
     {
       "symbol": "SPCXB",
@@ -157,7 +149,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -5.9e-05
+      "funding": -5.8e-05
     },
     {
       "symbol": "TAO",
@@ -165,7 +157,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -6.7e-05
+      "funding": -6.5e-05
+    },
+    {
+      "symbol": "TUT",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "UNI",
@@ -173,7 +173,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -9e-06
+      "funding": -1.2e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
