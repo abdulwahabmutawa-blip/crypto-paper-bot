@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-18T10:25:29+00:00",
+  "ts": "2026-08-18T10:31:09+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
@@ -21,14 +21,14 @@
       "ALLO",
       "ACE",
       "BTC",
-      "SOL",
       "SPCXB",
-      "ETH"
+      "SOL",
+      "TRX"
     ],
     "watcher": [
-      "ACE",
       "TUT",
-      "GPS"
+      "GPS",
+      "ACE"
     ],
     "cryptopanic": []
   },
@@ -40,18 +40,8 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.00411,
+      "funding": -0.003989,
       "long_short": 1.06
-    },
-    {
-      "symbol": "ETH",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 7e-06,
-      "long_short": 2.55
     },
     {
       "symbol": "GPS",
@@ -60,7 +50,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.000127,
+      "funding": -0.000129,
       "long_short": 0.58
     },
     {
@@ -70,7 +60,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -2.4e-05,
+      "funding": -2.1e-05,
       "long_short": 2.32
     },
     {
@@ -97,7 +87,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.4e-05
+      "funding": 3.6e-05
     },
     {
       "symbol": "BTC",
@@ -113,7 +103,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.00014
+      "funding": -0.000126
+    },
+    {
+      "symbol": "ETH",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 7e-06
     },
     {
       "symbol": "LIT",
@@ -136,7 +134,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.5e-05
+      "funding": 1.9e-05
     },
     {
       "symbol": "S",
@@ -144,7 +142,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -7e-06
+      "funding": -6e-06
     },
     {
       "symbol": "SPCXB",
@@ -159,7 +157,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.1e-05
+      "funding": 3.4e-05
+    },
+    {
+      "symbol": "TRX",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 9.1e-05
     },
     {
       "symbol": "UNI",
@@ -167,7 +173,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.5e-05
+      "funding": 4e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
