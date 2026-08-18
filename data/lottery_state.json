@@ -1,13 +1,14 @@
 {
   "created": "2026-08-15",
-  "held_symbol": "GPSUSDT",
-  "entry_price": 0.0174,
-  "units": 2255.7,
-  "entry_scan_ts": "2026-08-18T04:19:07+00:00",
-  "entry_source": "watcher",
+  "held_symbol": null,
+  "entry_price": null,
+  "units": 0.0,
+  "entry_scan_ts": null,
+  "entry_source": null,
   "stopped": {
     "CHIPUSDT": "2026-08-18T02:10:49+00:00",
-    "EDENUSDT": "2026-08-18T04:23:55+00:00"
+    "EDENUSDT": "2026-08-18T04:23:55+00:00",
+    "GPSUSDT": "2026-08-18T10:26:55+00:00"
   },
   "entries": {
     "2026-08-18": 3
@@ -172,27 +173,30 @@
       "date": "2026-08-18",
       "exit": 0.05069,
       "entry": 0.049800000000000004
+    },
+    {
+      "symbol": "GPSUSDT",
+      "entry_time": "2026-08-18T04:23:55+00:00",
+      "exit_time": "2026-08-18T10:26:55+00:00",
+      "entry_price": 0.0174,
+      "exit_price": 0.01739,
+      "units": 2255.7,
+      "spent_usd": 39.2492,
+      "got_usd": 39.1866,
+      "pnl_pct": -0.06,
+      "pnl_usd": -0.0626,
+      "reason": "STALLED (6.1h in, only +0.0%) \u2014 the pump never came",
+      "date": "2026-08-18",
+      "exit": 0.01739,
+      "entry": 0.0174
     }
   ],
-  "last_value_usd": 38.86,
-  "last_updated_utc": "2026-08-18T10:21:26+00:00",
-  "open_position": {
-    "symbol": "GPSUSDT",
-    "entry_time": "2026-08-18T04:23:55+00:00",
-    "entry_price": 0.0174,
-    "current_price": 0.01724,
-    "units": 2255.7,
-    "spent_usd": 39.2492,
-    "value_usd": 38.8883,
-    "pnl_usd": -0.3609,
-    "pnl_pct": -0.92,
-    "source": "watcher"
-  },
-  "spent_usd": 39.2492,
+  "last_value_usd": 39.16,
+  "last_updated_utc": "2026-08-18T10:26:55+00:00",
+  "open_position": null,
+  "spent_usd": null,
   "no_pair": {
     "scan_ts": "2026-08-18T04:19:07+00:00",
     "syms": []
-  },
-  "hwm": 0.01759,
-  "entry_time": "2026-08-18T04:23:55+00:00"
+  }
 }
