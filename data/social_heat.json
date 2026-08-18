@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-18T16:38:29+00:00",
+  "ts": "2026-08-18T16:44:19+00:00",
   "sources": {
     "coingecko": [
       "SUI",
@@ -18,7 +18,6 @@
     "stocktwits": [],
     "movers": [
       "ACE",
-      "GPS",
       "ALLO",
       "SOL",
       "TRX",
@@ -39,7 +38,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.001305,
+      "funding": -0.001287,
       "long_short": 0.89
     },
     {
@@ -49,7 +48,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 3.4e-05,
+      "funding": 3.5e-05,
       "long_short": 1.38
     },
     {
@@ -59,18 +58,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 5.1e-05,
+      "funding": 5.4e-05,
       "long_short": 2.34
-    },
-    {
-      "symbol": "GPS",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": 9e-06,
-      "long_short": 0.54
     },
     {
       "symbol": "SOL",
@@ -107,12 +96,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "GPS",
+      "surfaces": 1,
+      "sources": [
+        "watcher"
+      ],
+      "funding": -0.0
+    },
+    {
       "symbol": "KAITO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -0.00027
+      "funding": -0.000273
     },
     {
       "symbol": "PENDLE",
@@ -120,7 +117,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.5e-05
+      "funding": -1.7e-05
     },
     {
       "symbol": "PUMP",
@@ -136,7 +133,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.3e-05
+      "funding": -6e-06
     },
     {
       "symbol": "TAO",
@@ -152,7 +149,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 2.9e-05
+      "funding": 3.3e-05
     },
     {
       "symbol": "XRP",
@@ -160,7 +157,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8e-05
+      "funding": 8.2e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
