@@ -1,47 +1,38 @@
-# Fleet status — 2026-08-17 (UTC)
+# Fleet status — 2026-08-18 (UTC)
 
-Last paper-fleet "cycle:" commit: 00:29:58 UTC (~4h35m before this digest — see below).
-10 paper books ($1,000 each, no real money) + 1 REAL-MONEY book (Lottery, no cap
-as of owner decision 08-16).
+Main loop healthy: continuous cycle commits every ~13min from 2026-08-17 23:32
+through 05:00 today (Actions run #309, still in progress). 10 paper books
+($1,000 each, no real money) + 1 REAL-MONEY book (Lottery, no cap since 08-16).
 
 | Bot | Holds | 24h change | Value (asof) |
 |---|---|---|---|
-| crypto (trend) | XRP-USD | No trade | $997.37 (08-17) |
-| congress | 10 positions | No trade | $1,005.63 (08-14) |
-| meanrev | UNH | No trade | $1,232.58 (08-14) |
-| commodity | DBC | No trade | $1,019.53 (08-14) |
-| allweather | 5-asset basket | No trade | $1,018.60 (08-14) |
-| hype (sentiment) | CASH | No trade | $1,326.92 (08-14) |
-| hype-crypto | CASH | **frozen** | $1,000.00 (08-15) |
-| Hunter | PLTR | No trade | $990.45 (08-14) |
-| Scholar | IWM | No trade | $1,040.22 (08-14) |
-| Analyst | SPY | No trade | $1,034.53 (08-14) |
-| **Lottery (REAL $)** | CASH (flat) | No open position | **$39.16** (08-17 05:00) |
+| crypto (trend) | XRP-USD | No trade | $1,000.39 (08-18) |
+| congress | 10 positions | No trade | $994.23 (08-17) |
+| meanrev | UNH | No trade | $1,213.41 (08-17) |
+| commodity | DBC | No trade | $1,038.90 (08-17) |
+| allweather | 5-asset basket | No trade | $1,016.88 (08-17) |
+| hype (sentiment) | CASH | Bought NLST, stopped out same day | $1,181.29 (08-17) |
+| hype-crypto | GPS-USD | **Back trading** — entered GPS-USD | $1,026.05 (08-18) |
+| Hunter | SLV | Rotated PLTR → SLV | $987.51 (08-17) |
+| Scholar | IWM | No trade | $1,036.70 (08-17) |
+| Analyst | SPY | No trade | $1,029.63 (08-17) |
+| **Lottery (REAL $)** | GPSUSDT (open) | 3 entries, 2 stopped/rolled | **$37.57** (08-18 05:03) |
 
 ## Changed
-- Main paper fleet went dark: last cycle commit 00:29:58 UTC. GH Actions run
-  #278 has been "in_progress" since 00:43:31 UTC (~4h20m as of this digest)
-  and has pushed **zero** cycle commits in that time, despite a ~13-min
-  documented cadence. This is the same symptom the Fleet Supervisor flagged
-  HIGH severity on 08-16 (loop computes cycles but `git push` dies on rebase
-  conflicts against `data/*_state.json`; loop still exits "success"). Not
-  confirmed as the same cause this run (didn't pull job console logs), but
-  the fingerprint matches exactly.
-- Watcher/Sentinel: last scan 23:21 UTC 08-16 (~5.7h ago) — consistent with
-  the same stuck loop above, not a separate fault.
-- hype-crypto still frozen: last write 2026-08-15 15:29 UTC (Binance HTTP 451
-  geo-blocks the GH runner from pricing its BTC-USD benchmark). Unresolved,
-  now 37h+ stale.
-- Lottery (real $): flat since 19:20 UTC 08-16. Correctly refused ~15 chase
-  BUYs on PORTALUSDT today ("already +50–75% off 24h low, cap +25%") — guard
-  working as designed, no bug.
-- No position changes on the other 9 books (weekend/pre-open); no exceptions
-  in their state files.
+- **hype-crypto is trading again**: frozen on CASH since 2026-08-15 (Binance
+  451 geo-block), resumed 08-17 18:05 and entered GPS-USD — no code change
+  visible in this window, so treat as self-resolved rather than confirmed fixed.
+- Hunter rotated PLTR → SLV (08-17): silver scored >1.25x better reward/risk.
+- hype (sentiment) bought NLST on a Grok "euphoric" scan (08-17 18:05), then
+  stop-loss hit the same day at -10.8% — guard working as designed.
+- Lottery (real $): 3 entries today. CHIPUSDT and EDENUSDT both exited
+  (stalled/small moves), now holding GPSUSDT, -4.25% unrealized. Lifetime
+  realized P&L across 10 closed trades: -$6.10.
+- No position changes on crypto, congress, meanrev, commodity, allweather,
+  Scholar, or Analyst; no exceptions in any state file.
 
 ## Needs a look
-- Main fleet loop (run #278, https://github.com/abdulwahabmutawa-blip/crypto-paper-bot/actions/runs/31980578475)
-  appears stuck or silently discarding cycles — 4h20m active with no commits.
-  Worth checking its console log directly, or waiting for the ~355-min budget
-  to expire and seeing if the next run recovers.
-- hype-crypto: no auto-recovery expected from the Binance 451 geo-block
-  without a code/hosting change.
+Nothing. One scheduling note for context, not a fault: Actions run #309 has
+been alive since 23:32 UTC (~5.5h) and will hit its 355-min budget soon —
+normal per the documented GitHub-throttling behavior, next loop should pick
+up within the usual gap.
