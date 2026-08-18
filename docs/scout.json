@@ -1,23 +1,8 @@
 {
-  "ts": "2026-08-18T01:00:24+00:00",
-  "scanned": 76,
+  "ts": "2026-08-18T01:06:24+00:00",
+  "scanned": 74,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "DODOUSDT",
-      "signal": "ignition",
-      "score": 0.9035,
-      "raw_score": 0.8747,
-      "weight": 1.033,
-      "price": 0.0224,
-      "why": "trades 7.6x and volume 177.9x the prior 4h, 96% taker-buy, $324,807 burst \u2014 while price has only moved +0.7%",
-      "chg_24h": -0.004,
-      "vol_surge": 177.92,
-      "chg_1h": 0.0072,
-      "market_surge": 0.0,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "benched \u2014 hit 43%, mean -0.28% over last 14 at 4h: not beating the round trip",
@@ -26,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 15,
+    "count": 14,
     "baseline": 13.0,
     "wave": false
   },
@@ -54,10 +39,10 @@
       "hit_rate_4h": 0.429,
       "mean_ret_4h": -0.00282,
       "median_ret_4h": -0.00303,
-      "n_24h": 2,
-      "hit_rate_24h": 0.5,
-      "mean_ret_24h": 0.11166,
-      "median_ret_24h": 0.33437
+      "n_24h": 3,
+      "hit_rate_24h": 0.667,
+      "mean_ret_24h": 0.08326,
+      "median_ret_24h": 0.02647
     },
     "heat": {
       "n_1h": 8,
