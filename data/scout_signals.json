@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-18T21:13:07+00:00",
-  "scanned": 80,
+  "ts": "2026-08-18T21:18:23+00:00",
+  "scanned": 79,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "LINKUSDT",
+      "signal": "ignition",
+      "score": 0.49,
+      "raw_score": 0.7001,
+      "weight": 0.7,
+      "price": 9.507,
+      "why": "trades 5.3x and volume 8.4x the prior 4h, 73% taker-buy, $188,315 burst \u2014 while price has only moved +0.2%",
+      "chg_24h": -0.0008,
+      "vol_surge": 8.45,
+      "chg_1h": 0.0024,
+      "market_surge": 2.57,
+      "actionable": false,
+      "status": "benched \u2014 hit 20%, mean -1.61% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 20%, mean -1.61% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 35%, mean -0.76% over last 20 at 4h: not beating the round trip",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 11,
     "baseline": 12.0,
     "wave": false
   },
@@ -63,9 +79,9 @@
       "hit_rate_4h": 0.467,
       "mean_ret_4h": -0.01235,
       "median_ret_4h": -0.00519,
-      "n_24h": 7,
-      "hit_rate_24h": 0.286,
-      "mean_ret_24h": -0.03803,
+      "n_24h": 8,
+      "hit_rate_24h": 0.25,
+      "mean_ret_24h": -0.04632,
       "median_ret_24h": -0.10234
     }
   },
