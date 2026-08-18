@@ -1,69 +1,8 @@
 {
-  "ts": "2026-08-18T14:32:24+00:00",
-  "scanned": 77,
+  "ts": "2026-08-18T14:37:34+00:00",
+  "scanned": 79,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "BTCUSDT",
-      "signal": "ignition",
-      "score": 0.6399,
-      "raw_score": 0.9141,
-      "weight": 0.7,
-      "price": 64866.76,
-      "why": "trades 11.0x and volume 25.1x the prior 4h, 78% taker-buy, $34,492,811 burst \u2014 while price has only moved +1.2%",
-      "chg_24h": 0.0181,
-      "vol_surge": 25.12,
-      "chg_1h": 0.012,
-      "market_surge": 0.0,
-      "actionable": false,
-      "status": "benched \u2014 hit 20%, mean -0.81% over last 30 at 4h: not beating the round trip"
-    },
-    {
-      "symbol": "XRPUSDT",
-      "signal": "ignition",
-      "score": 0.626,
-      "raw_score": 0.8943,
-      "weight": 0.7,
-      "price": 1.0033,
-      "why": "trades 9.9x and volume 9.5x the prior 4h, 72% taker-buy, $966,547 burst \u2014 while price has only moved +0.7%",
-      "chg_24h": 0.0025,
-      "vol_surge": 9.46,
-      "chg_1h": 0.0069,
-      "market_surge": 5.17,
-      "actionable": false,
-      "status": "benched \u2014 hit 20%, mean -0.81% over last 30 at 4h: not beating the round trip"
-    },
-    {
-      "symbol": "ACEUSDT",
-      "signal": "heat",
-      "score": 0.6,
-      "raw_score": 0.6,
-      "weight": 1.0,
-      "price": 0.2333,
-      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding -0.202% \u00b7 L/S 0.95",
-      "chg_24h": 0.2523,
-      "vol_surge": null,
-      "chg_1h": null,
-      "market_surge": 3,
-      "actionable": false,
-      "status": "benched \u2014 hit 42%, mean -1.60% over last 12 at 4h: not beating the round trip"
-    },
-    {
-      "symbol": "FETUSDT",
-      "signal": "ignition",
-      "score": 0.5794,
-      "raw_score": 0.8278,
-      "weight": 0.7,
-      "price": 0.1229,
-      "why": "trades 7.4x and volume 12.5x the prior 4h, 79% taker-buy, $74,309 burst \u2014 while price has only moved +0.7%",
-      "chg_24h": 0.0066,
-      "vol_surge": 12.54,
-      "chg_1h": 0.0066,
-      "market_surge": 1.25,
-      "actionable": false,
-      "status": "benched \u2014 hit 20%, mean -0.81% over last 30 at 4h: not beating the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 20%, mean -0.81% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 35%, mean -0.83% over last 17 at 4h: not beating the round trip",
@@ -72,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 13,
+    "count": 12,
     "baseline": 13.0,
     "wave": false
   },
@@ -80,8 +19,8 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.2,
-      "mean_ret_1h": -0.00523,
-      "median_ret_1h": -0.002,
+      "mean_ret_1h": -0.00794,
+      "median_ret_1h": -0.00498,
       "n_4h": 30,
       "hit_rate_4h": 0.2,
       "mean_ret_4h": -0.00808,
