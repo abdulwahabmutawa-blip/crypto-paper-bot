@@ -1,29 +1,13 @@
 {
-  "ts": "2026-08-18T12:23:13+00:00",
-  "scanned": 73,
+  "ts": "2026-08-18T12:28:34+00:00",
+  "scanned": 74,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "SKHYBUSDT",
-      "signal": "ignition",
-      "score": 0.4609,
-      "raw_score": 0.691,
-      "weight": 0.667,
-      "price": 162.3,
-      "why": "trades 4.8x and volume 7.3x the prior 4h, 94% taker-buy, $103,820 burst \u2014 while price has only moved -0.8%",
-      "chg_24h": -0.0583,
-      "vol_surge": 7.35,
-      "chg_1h": -0.0083,
-      "market_surge": 1.35,
-      "actionable": false,
-      "status": "benched \u2014 hit 17%, mean -1.11% over last 30 at 4h: not beating the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 17%, mean -1.11% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 35%, mean -0.83% over last 17 at 4h: not beating the round trip",
     "reversion": "probation \u2014 0/12 resolved 4h samples under ruleset 3",
-    "heat": "probation \u2014 11/12 resolved 4h samples under ruleset 3",
+    "heat": "benched \u2014 hit 42%, mean -1.60% over last 12 at 4h: not beating the round trip",
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
@@ -35,8 +19,8 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.2,
-      "mean_ret_1h": -0.00498,
-      "median_ret_1h": -0.00498,
+      "mean_ret_1h": -0.00457,
+      "median_ret_1h": -0.00318,
       "n_4h": 30,
       "hit_rate_4h": 0.167,
       "mean_ret_4h": -0.01112,
@@ -71,9 +55,9 @@
       "hit_rate_1h": 0.083,
       "mean_ret_1h": -0.03336,
       "median_ret_1h": -0.02503,
-      "n_4h": 11,
-      "hit_rate_4h": 0.455,
-      "mean_ret_4h": -0.01618,
+      "n_4h": 12,
+      "hit_rate_4h": 0.417,
+      "mean_ret_4h": -0.01601,
       "median_ret_4h": -0.00519,
       "n_24h": 4,
       "hit_rate_24h": 0.0,
