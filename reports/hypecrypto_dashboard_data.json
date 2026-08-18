@@ -1,46 +1,28 @@
 {
-  "generated_utc": "2026-08-18T12:15:57+00:00",
+  "generated_utc": "2026-08-18T12:30:12+00:00",
   "created": "2026-08-15",
   "starting_cash": 1000.0,
-  "live_ts": "2026-08-18T12:15:57+00:00",
+  "live_ts": "2026-08-18T12:30:12+00:00",
   "current": {
     "date": "2026-08-18",
-    "value": 1111.45,
-    "bench": 1020.94,
-    "holding": "GPS-USD"
+    "value": 1107.74,
+    "bench": 1021.15,
+    "holding": "TUT-USD"
   },
   "board": [
     {
       "sym": "TUT",
-      "price": 0.0433,
-      "line": "euphoric \u00b7 Binance top mover high volume",
-      "tag": "candidate",
-      "on": true,
-      "pick": false,
-      "fill": 40
-    },
-    {
-      "sym": "GPS",
-      "price": 0.0182,
-      "line": "euphoric \u00b7 strong gains trending volume",
+      "price": 0.0439,
+      "line": "euphoric \u00b7 Top Binance mover +21%; volume spike",
       "tag": "HELD",
       "on": true,
       "pick": true,
       "fill": 40
     },
     {
-      "sym": "ACE",
-      "price": 0.2005,
-      "line": "euphoric \u00b7 top gainer crowd pumps",
-      "tag": "candidate",
-      "on": true,
-      "pick": false,
-      "fill": 40
-    },
-    {
-      "sym": "ALLO",
-      "price": 0,
-      "line": "mixed \u00b7 Binance mover moderate buzz",
+      "sym": "GPS",
+      "price": 0.0182,
+      "line": "mixed \u00b7 Multi-surface heat; funding negative",
       "tag": "mixed",
       "on": false,
       "pick": false,
@@ -49,23 +31,41 @@
     {
       "sym": "PUMP",
       "price": 0,
-      "line": "mixed \u00b7 CoinGecko trending searches",
+      "line": "mixed \u00b7 Volume surge hold; Coingecko trend",
       "tag": "mixed",
       "on": false,
       "pick": false,
       "fill": 0
     },
     {
-      "sym": "VVV",
+      "sym": "SUI",
       "price": 0,
-      "line": "euphoric \u00b7 trending revenue jump hype",
-      "tag": "euphoric",
-      "on": true,
+      "line": "mixed \u00b7 Trending searches; recent lag",
+      "tag": "mixed",
+      "on": false,
       "pick": false,
-      "fill": 40
+      "fill": 0
+    },
+    {
+      "sym": "BTC",
+      "price": 64298.01,
+      "line": "mixed \u00b7 Holds 64k; outperforms stocks briefly",
+      "tag": "mixed",
+      "on": false,
+      "pick": false,
+      "fill": 0
+    },
+    {
+      "sym": "SOL",
+      "price": 0,
+      "line": "mixed \u00b7 OI pickup; slight green mover",
+      "tag": "mixed",
+      "on": false,
+      "pick": false,
+      "fill": 0
     }
   ],
-  "board_title": "Grok's crypto hype read (scan 2026-08-18T10:25)",
+  "board_title": "Grok's crypto hype read (scan 2026-08-18T12:29)",
   "meta": {
     "title": "Hype Crypto \u2014 $1,000 Challenge",
     "badge": "PAPER + TESTNET SHADOW \u00b7 CRYPTO HYPE ON TRIAL",
@@ -588,6 +588,12 @@
       "value": 1111.45,
       "bench": 1020.94,
       "holding": "GPS-USD"
+    },
+    {
+      "ts": "2026-08-18T12:30:12+00:00",
+      "value": 1107.74,
+      "bench": 1021.15,
+      "holding": "TUT-USD"
     }
   ],
   "trades": [
@@ -600,6 +606,26 @@
       "value": 998.6,
       "fee": 1.4,
       "reason": "Grok: GPS euphoric \u2014 Binance top +62% volume spike (scan 2026-08-17T18:05)"
+    },
+    {
+      "date": "2026-08-18",
+      "action": "SELL",
+      "ticker": "GPS-USD",
+      "price": 0.01821,
+      "units": 61001.832621,
+      "value": 1110.84,
+      "fee": 1.56,
+      "reason": "Hype faded \u2014 coin dropped off a newer euphoric scan"
+    },
+    {
+      "date": "2026-08-18",
+      "action": "BUY",
+      "ticker": "TUT-USD",
+      "price": 0.04387,
+      "units": 25250.403187,
+      "value": 1107.74,
+      "fee": 1.55,
+      "reason": "Grok: TUT euphoric \u2014 Top Binance mover +21%; volume spike (scan 2026-08-18T12:29)"
     }
   ],
   "history": [
@@ -617,14 +643,14 @@
     },
     {
       "date": "2026-08-18",
-      "value": 1111.45,
-      "bench": 1020.94,
-      "holding": "GPS-USD"
+      "value": 1107.74,
+      "bench": 1021.15,
+      "holding": "TUT-USD"
     }
   ],
-  "costs_paid": 1.4,
+  "costs_paid": 4.5082,
   "frozen": null,
-  "thoughts": "I'm riding GPS from the 2026-08-17T18:05 scan. My exit is mechanical: a newer scan without it, -10% from entry, or a blind/severe Watcher \u2014 whichever comes first.",
+  "thoughts": "I'm riding TUT from the 2026-08-18T12:29 scan. My exit is mechanical: a newer scan without it, -10% from entry, or a blind/severe Watcher \u2014 whichever comes first.",
   "strategy": {
     "name": "Hype Crypto \u2014 sentiment pattern, crypto venue, on trial",
     "rule": "Top euphoric crypto from a fresh Watcher scan; 1 entry/day max; -10% hard stop; exit on newer scan without the coin, stale scans, or SEVERE; Binance-tier fees",
