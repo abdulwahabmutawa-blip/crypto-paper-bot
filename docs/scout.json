@@ -1,20 +1,20 @@
 {
-  "ts": "2026-08-18T03:15:33+00:00",
-  "scanned": 81,
+  "ts": "2026-08-18T03:21:13+00:00",
+  "scanned": 82,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "XLMUSDT",
+      "symbol": "APTUSDT",
       "signal": "ignition",
-      "score": 0.5661,
-      "raw_score": 0.5855,
+      "score": 0.8267,
+      "raw_score": 0.8549,
       "weight": 0.967,
-      "price": 0.1544,
-      "why": "trades 5.0x and volume 6.5x the prior 4h, 61% taker-buy, $64,519 burst \u2014 while price has only moved -1.3%",
-      "chg_24h": -0.0252,
-      "vol_surge": 6.52,
-      "chg_1h": -0.0128,
-      "market_surge": 2.73,
+      "price": 0.52,
+      "why": "trades 9.5x and volume 23.8x the prior 4h, 69% taker-buy, $84,666 burst \u2014 while price has only moved -1.9%",
+      "chg_24h": -0.0095,
+      "vol_surge": 23.78,
+      "chg_1h": -0.0189,
+      "market_surge": 4.54,
       "actionable": true
     }
   ],
@@ -26,24 +26,24 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 8,
+    "count": 9,
     "baseline": 13.0,
     "wave": false
   },
   "scorecard": {
     "ignition": {
       "n_1h": 30,
-      "hit_rate_1h": 0.3,
-      "mean_ret_1h": -0.00029,
-      "median_ret_1h": -0.00082,
+      "hit_rate_1h": 0.267,
+      "mean_ret_1h": -0.0013,
+      "median_ret_1h": -0.00105,
       "n_4h": 30,
       "hit_rate_4h": 0.467,
       "mean_ret_4h": 0.00578,
       "median_ret_4h": 0.00174,
-      "n_24h": 19,
-      "hit_rate_24h": 0.684,
-      "mean_ret_24h": 0.02267,
-      "median_ret_24h": 0.00804
+      "n_24h": 20,
+      "hit_rate_24h": 0.7,
+      "mean_ret_24h": 0.02333,
+      "median_ret_24h": 0.0082
     },
     "breakout": {
       "n_1h": 15,
