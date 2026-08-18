@@ -1,46 +1,46 @@
 {
-  "generated_utc": "2026-08-18T16:19:47+00:00",
+  "generated_utc": "2026-08-18T16:33:56+00:00",
   "created": "2026-08-15",
   "starting_cash": 1000.0,
-  "live_ts": "2026-08-18T16:19:47+00:00",
+  "live_ts": "2026-08-18T16:33:56+00:00",
   "current": {
     "date": "2026-08-18",
-    "value": 1106.47,
-    "bench": 1028.01,
-    "holding": "TUT-USD"
+    "value": 1085.76,
+    "bench": 1028.06,
+    "holding": "CASH"
   },
   "board": [
     {
       "sym": "ACE",
-      "price": 0.2313,
-      "line": "euphoric \u00b7 Binance +24% vol spike gaming unlock",
+      "price": 0.2354,
+      "line": "euphoric \u00b7 Binance +33% volume surge gaming",
       "tag": "candidate",
       "on": true,
       "pick": false,
-      "fill": 40
-    },
-    {
-      "sym": "TUT",
-      "price": 0.0438,
-      "line": "euphoric \u00b7 Top mover +18% high volume",
-      "tag": "HELD",
-      "on": true,
-      "pick": true,
       "fill": 40
     },
     {
       "sym": "GPS",
-      "price": 0.0175,
-      "line": "euphoric \u00b7 Binance gainer strong retail flow",
+      "price": 0.0176,
+      "line": "euphoric \u00b7 trader targets hit volume spike",
       "tag": "candidate",
       "on": true,
       "pick": false,
       "fill": 40
     },
     {
-      "sym": "VVV",
+      "sym": "ALLO",
       "price": 0,
-      "line": "mixed \u00b7 Coingecko trending search heat",
+      "line": "mixed \u00b7 AI narrative mover +8%",
+      "tag": "mixed",
+      "on": false,
+      "pick": false,
+      "fill": 0
+    },
+    {
+      "sym": "SUI",
+      "price": 0,
+      "line": "mixed \u00b7 CoinGecko trending mild bid",
       "tag": "mixed",
       "on": false,
       "pick": false,
@@ -49,23 +49,23 @@
     {
       "sym": "PUMP",
       "price": 0,
-      "line": "mixed \u00b7 Trending meme/Solana chatter",
+      "line": "mixed \u00b7 trending search retail noise",
       "tag": "mixed",
       "on": false,
       "pick": false,
       "fill": 0
     },
     {
-      "sym": "TAO",
-      "price": 0,
-      "line": "mixed \u00b7 AI narrative trending searches",
+      "sym": "BTC",
+      "price": 64733.16,
+      "line": "mixed \u00b7 holds 64k yields oil drag",
       "tag": "mixed",
       "on": false,
       "pick": false,
       "fill": 0
     }
   ],
-  "board_title": "Grok's crypto hype read (scan 2026-08-18T14:31)",
+  "board_title": "Grok's crypto hype read (scan 2026-08-18T16:33)",
   "meta": {
     "title": "Hype Crypto \u2014 $1,000 Challenge",
     "badge": "PAPER + TESTNET SHADOW \u00b7 CRYPTO HYPE ON TRIAL",
@@ -696,6 +696,12 @@
       "value": 1106.47,
       "bench": 1028.01,
       "holding": "TUT-USD"
+    },
+    {
+      "ts": "2026-08-18T16:33:56+00:00",
+      "value": 1085.76,
+      "bench": 1028.06,
+      "holding": "CASH"
     }
   ],
   "trades": [
@@ -728,6 +734,16 @@
       "value": 1107.74,
       "fee": 1.55,
       "reason": "Grok: TUT euphoric \u2014 Top Binance mover +21%; volume spike (scan 2026-08-18T12:29)"
+    },
+    {
+      "date": "2026-08-18",
+      "action": "SELL",
+      "ticker": "TUT-USD",
+      "price": 0.04306,
+      "units": 25250.403187,
+      "value": 1087.28,
+      "fee": 1.52,
+      "reason": "Hype faded \u2014 coin dropped off a newer euphoric scan"
     }
   ],
   "history": [
@@ -745,14 +761,14 @@
     },
     {
       "date": "2026-08-18",
-      "value": 1106.47,
-      "bench": 1028.01,
-      "holding": "TUT-USD"
+      "value": 1085.76,
+      "bench": 1028.06,
+      "holding": "CASH"
     }
   ],
-  "costs_paid": 4.5082,
+  "costs_paid": 6.0304,
   "frozen": null,
-  "thoughts": "I'm riding TUT from the 2026-08-18T12:29 scan. My exit is mechanical: a newer scan without it, -10% from entry, or a blind/severe Watcher \u2014 whichever comes first.",
+  "thoughts": "I'm in cash. I buy only the freshest euphoric crypto (scan under 9h old), one entry a day, never on weekends \u2014 lukewarm or aging hype is how small accounts bleed out in fees.",
   "strategy": {
     "name": "Hype Crypto \u2014 sentiment pattern, crypto venue, on trial",
     "rule": "Top euphoric crypto from a fresh Watcher scan; 1 entry/day max; -10% hard stop; exit on newer scan without the coin, stale scans, or SEVERE; Binance-tier fees",
