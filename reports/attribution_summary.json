@@ -1,21 +1,24 @@
 {
- "updated_utc": "2026-08-17T15:45:00+00:00",
- "note": "Monday 2026-08-17. 15 lines appended: 12 bot dailies plus 3 trade_event lines, all three on the real-money lottery book. READ THE TALLY WITH A NEW CAVEAT: eight of the twelve daily lines carry day_pnl that the BOT NEVER RECORDED. The fleet loop froze at 12:18Z, 72 minutes before the US open, so those eight books have no 08-17 mark at all. Rather than log eight zeros on a day the market plainly moved, I reconstructed each book's value from its own unit counts and 15:28Z quotes, validated the method by reproducing every 08-14 recorded mark to the cent (allweather landed on 1018.60 exactly), and stamped 'supervisor-reconstructed, not a bot mark' into the evidence field of every affected line. Crypto's line is a real bot mark, but from 12:18Z. FILL AUDIT NON-VACUOUS AND PASSING: the nine paper books traded zero — today that is an outage, not restraint — while the lottery book put through 6 fills across 3 round trips, all verified inside Binance mainnet 1-minute ranges within +/-5 minutes of their timestamps, plus the 08-16 CHIP exit that landed after my last run. THE DAY'S DRIVER STORY IS A ROTATION AND A SCREEN THAT KEEPS MISFIRING. Software fell and semis rallied (IGV -1.42% vs SMH +2.01%) on a flat index, which is why 'sector' takes congress's loss and why AVGO and CSCO both rose against my two open calls. 'hype_sentiment' took four more losses, all on the lottery book, and now sits at 8 profit / 18 loss — decisively the fleet's worst driver, ahead of 'technical' at 13/22.",
- "total_lines_logged": 304,
+ "updated_utc": "2026-08-18T10:15:00+00:00",
+ "note": "Tuesday 2026-08-18, 10:15Z, pre-open. 18 lines appended: 13 bot dailies plus 5 trade_event lines. THE FREEZE IS OVER and it broke at the worst possible moment for one bot. The loop restarted 2026-08-17T18:06:54Z after 5h49m dark, and in that single first cycle four books acted at once: sentiment bought NLST, hunter rotated PLTR into SLV, hypecrypto took the first trade of its life, and every equity book finally marked the 08-17 close. TALLY BOOKKEEPING, READ THIS FIRST: my 08-17 lines for the eight equity books plus hypecrypto carried supervisor-RECONSTRUCTED values because the bots never marked that session. Today's lines carry the bots' real 08-17 closes for the same session. Rather than count that session twice, I have EXCLUDED those nine superseded 08-17 daily lines from the tally below and recomputed the whole thing from source: 322 lines logged, 313 counted. Every superseded line stays in the file, marked as reconstructed, so the record of what I believed at the time is intact. HOW GOOD WAS THE RECONSTRUCTION: direction right on 7 of 8, size honest on 6 of 8. allweather reconstructed +0.33 against a real -1.72, congress -6.45 against a real -11.40 (the software names kept falling into the close), commodity +10.03 against a real +19.37, meanrev -20.67 against -19.17, scholar -4.88 against -3.52, analyst -0.96 against -4.90, hunter +7.23 against -2.94 (it rotated after I looked). The one I got badly wrong is sentiment: I logged 0.00 for a book that then lost 145.63 in the 41 minutes after the restart. FILL AUDIT NON-VACUOUS AND PASSING: nine new fills audited (sentiment NLST buy and sell, hunter PLTR sell and SLV buy, hypecrypto GPS buy, lottery CHIP round trip, EDEN round trip, GPS buy). All four equity fills landed 14:06-14:47 ET, inside US regular hours, at prices inside their 08-17 ranges; all five crypto fills sit inside Binance mainnet 1-minute ranges. No SIM-INTEGRITY ALERT. THE DAY'S DRIVER STORY: a macro shock the fleet was long in one place and short in another. Hormuz transits stopped, crude held above 82, the 30-year yield hit a 19-year high; commodity made 19.37 on it, allweather's TLT sleeve lost 3.35 to it, hunter rotated into silver on the back of it. Separately, software and mega-cap tech fell (IGV -2.01% vs SMH +1.06%) and congress owns more of the losing side. 'hype_sentiment' took its three best lines in weeks (two lottery timer wins plus hypecrypto's first trade) and improved to 13/21, which means 'technical' is now the fleet's worst driver at 13/24 for the first time.",
+ "total_lines_logged": 322,
+ "lines_counted_in_tally": 313,
+ "superseded_lines_excluded": 9,
+ "superseded_note": "The 2026-08-17 daily lines for meanrev, allweather, commodity, congress, hunter, sentiment, scholar, analyst and hypecrypto are excluded from the tally because today's lines cover the same session with the bots' real marks. They remain in trade_attributions.jsonl.",
  "by_primary_driver": {
   "hype_sentiment": {
-   "profit": 8,
-   "loss": 18,
+   "profit": 13,
+   "loss": 21,
    "flat": 6
   },
   "macro": {
-   "profit": 15,
-   "loss": 12,
+   "profit": 14,
+   "loss": 13,
    "flat": 1
   },
   "market_beta": {
    "profit": 26,
-   "loss": 17,
+   "loss": 18,
    "flat": 7
   },
   "news_idiosyncratic": {
@@ -26,7 +29,7 @@
   "none_cash": {
    "profit": 0,
    "loss": 1,
-   "flat": 30
+   "flat": 29
   },
   "sector": {
    "profit": 10,
@@ -35,36 +38,37 @@
   },
   "technical": {
    "profit": 13,
-   "loss": 22,
+   "loss": 24,
    "flat": 3
   },
   "unknown": {
-   "profit": 11,
+   "profit": 10,
    "loss": 10,
    "flat": 71
   }
  },
  "by_beta_or_alpha": {
   "alpha": {
-   "profit": 48,
-   "loss": 47,
+   "profit": 52,
+   "loss": 52,
    "flat": 7
   },
   "beta": {
    "profit": 22,
-   "loss": 14,
+   "loss": 15,
    "flat": 7
   },
   "mixed": {
-   "profit": 11,
-   "loss": 18,
+   "profit": 10,
+   "loss": 19,
    "flat": 0
   },
   "n/a": {
    "profit": 11,
    "loss": 14,
-   "flat": 105
+   "flat": 104
   }
  },
- "driver_note": "Four calls I want on the record. FIRST, the reconstruction. I could have logged eight flat lines and stayed literally true to 'what the bot recorded'; that would have hidden a 15.37 equity drawdown behind an outage and told the owner nothing. I reconstructed instead, proved the method against known marks, and labelled every reconstructed figure. SECOND, meanrev is logged 'unknown', not 'news_idiosyncratic'. UNH fell 1.66% while XLV rose 0.19% and SPY was flat, so the move is clearly name-specific — but I searched and found no dated catalyst, and 'I know it was idiosyncratic' is not the same as 'I know why'. Unknown with low confidence is the honest entry. THIRD, hunter's +0.73% on PLTR is also 'unknown' for the same reason, even though an AI-momentum story would have written itself: PLTR rose while its own software sector fell 1.42%, which is a divergence I cannot source. FOURTH, all three lottery legs are 'alpha', not 'beta': BTC was +1.14% over the same 24 hours, so a firm crypto tape explains none of three consecutive losing round trips. Two of the three lost money on fees alone after gross moves of +0.28% and -0.05% — the STALLED rule is paying the spread twice to learn nothing, and it did it on real capital."
+ "driver_note": "Three things on the record. FIRST, the worst-driver crown changed hands and I want to be clear it is a ratio, not a verdict: hype_sentiment is 13 profit / 21 loss (38.2%) and technical is 13 / 24 (35.1%). Hype improved today only because the lottery book's STALLED timer cut two positions that happened to be slightly up; that is the same rule that produced three losses yesterday by cutting positions that happened to be slightly down. One day of luck in a timer is not evidence about a strategy. SECOND, meanrev is logged 'unknown' for the second consecutive day. UNH fell 1.52% against a flat healthcare sector, so the move is plainly name-specific, but the only story I could find on the date is a fund-filings piece whose own text says the filings cover 0.006% of shares and are not Monday trades. Naming that as the cause would be fabrication. THIRD, hypecrypto's line is logged hype_sentiment with medium confidence, not high: the position's +5.3% is unambiguously divergence from the tape rather than beta, but I cannot cite what actually moved GPS, only that a hype screen picked it.",
+ "cross_book_observation": "The fleet ran an accidental controlled experiment today. The paper bot hypecrypto and the real-money lottery book both bought GPS off the same Grok euphoria signal. hypecrypto filled at 0.01637 at 18:06Z on 08-17 and is +5.3%; lottery filled at 0.0174 at 04:24Z on 08-18, ten hours and 6.3% later, and is -0.92%. Same coin, same signal source, opposite results, and the entire difference is entry latency. The lottery book's own LATE guard had refused GPS two hours before it bought, on the grounds that the pump had already happened."
 }
