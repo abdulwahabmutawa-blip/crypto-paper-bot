@@ -1,23 +1,8 @@
 {
-  "ts": "2026-08-18T04:00:33+00:00",
-  "scanned": 82,
+  "ts": "2026-08-18T04:06:24+00:00",
+  "scanned": 83,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "GOOGLBUSDT",
-      "signal": "ignition",
-      "score": 0.8339,
-      "raw_score": 0.9266,
-      "weight": 0.9,
-      "price": 343.12,
-      "why": "trades 12.3x and volume 42.6x the prior 4h, 71% taker-buy, $74,324 burst \u2014 while price has only moved +0.1%",
-      "chg_24h": -0.0158,
-      "vol_surge": 42.6,
-      "chg_1h": 0.0007,
-      "market_surge": 7.21,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "benched \u2014 hit 43%, mean -0.28% over last 14 at 4h: not beating the round trip",
@@ -40,9 +25,9 @@
       "hit_rate_4h": 0.4,
       "mean_ret_4h": 0.0021,
       "median_ret_4h": -0.00182,
-      "n_24h": 20,
-      "hit_rate_24h": 0.7,
-      "mean_ret_24h": 0.02333,
+      "n_24h": 21,
+      "hit_rate_24h": 0.714,
+      "mean_ret_24h": 0.02384,
       "median_ret_24h": 0.0082
     },
     "breakout": {
