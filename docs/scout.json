@@ -1,35 +1,33 @@
 {
-  "ts": "2026-08-18T15:32:23+00:00",
-  "scanned": 79,
+  "ts": "2026-08-18T15:38:14+00:00",
+  "scanned": 78,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "KORUBUSDT",
-      "signal": "reversion",
-      "score": 0.46,
-      "raw_score": 0.46,
+      "symbol": "GPSUSDT",
+      "signal": "heat",
+      "score": 0.6,
+      "raw_score": 0.6,
       "weight": 1.0,
-      "price": 18.55,
-      "why": "down -25% on the day (bottom decile of the market), now +1.1% over 15m with 2 green candles",
-      "chg_24h": -0.2525,
-      "vol_surge": 1.8,
-      "chg_1h": -0.0473,
-      "market_surge": 0.29,
-      "oi_drop": null,
-      "funding": null,
+      "price": 0.01771,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding -0.000% \u00b7 L/S 0.56",
+      "chg_24h": 0.0932,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
       "actionable": false,
-      "status": "probation \u2014 1/12 resolved 4h samples under ruleset 3"
+      "status": "benched \u2014 hit 46%, mean -1.40% over last 13 at 4h: not beating the round trip"
     }
   ],
   "gate": {
     "ignition": "benched \u2014 hit 20%, mean -0.55% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 33%, mean -0.90% over last 18 at 4h: not beating the round trip",
     "reversion": "probation \u2014 1/12 resolved 4h samples under ruleset 3",
-    "heat": "benched \u2014 hit 42%, mean -1.60% over last 12 at 4h: not beating the round trip",
+    "heat": "benched \u2014 hit 46%, mean -1.40% over last 13 at 4h: not beating the round trip",
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 11,
     "baseline": 13.0,
     "wave": false
   },
@@ -37,8 +35,8 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.233,
-      "mean_ret_1h": -0.00561,
-      "median_ret_1h": -0.00318,
+      "mean_ret_1h": -0.00516,
+      "median_ret_1h": -0.002,
       "n_4h": 30,
       "hit_rate_4h": 0.2,
       "mean_ret_4h": -0.00545,
@@ -73,13 +71,13 @@
       "median_ret_4h": -0.01471
     },
     "heat": {
-      "n_1h": 13,
-      "hit_rate_1h": 0.154,
-      "mean_ret_1h": -0.02794,
-      "median_ret_1h": -0.02503,
-      "n_4h": 12,
-      "hit_rate_4h": 0.417,
-      "mean_ret_4h": -0.01601,
+      "n_1h": 14,
+      "hit_rate_1h": 0.143,
+      "mean_ret_1h": -0.02729,
+      "median_ret_1h": -0.02343,
+      "n_4h": 13,
+      "hit_rate_4h": 0.462,
+      "mean_ret_4h": -0.01399,
       "median_ret_4h": -0.00519,
       "n_24h": 4,
       "hit_rate_24h": 0.0,
