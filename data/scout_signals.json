@@ -1,17 +1,33 @@
 {
-  "ts": "2026-08-18T23:04:03+00:00",
-  "scanned": 81,
+  "ts": "2026-08-18T23:09:34+00:00",
+  "scanned": 82,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "MUBUSDT",
+      "signal": "ignition",
+      "score": 0.6207,
+      "raw_score": 0.8468,
+      "weight": 0.733,
+      "price": 933.42,
+      "why": "trades 6.6x and volume 11.2x the prior 4h, 99% taker-buy, $88,069 burst \u2014 while price has only moved -0.5%",
+      "chg_24h": -0.0831,
+      "vol_surge": 11.24,
+      "chg_1h": -0.0049,
+      "market_surge": 2.71,
+      "actionable": false,
+      "status": "benched \u2014 hit 23%, mean -1.76% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
-    "ignition": "benched \u2014 hit 20%, mean -1.71% over last 30 at 4h: not beating the round trip",
+    "ignition": "benched \u2014 hit 23%, mean -1.76% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 33%, mean -0.84% over last 21 at 4h: not beating the round trip",
     "reversion": "probation \u2014 6/12 resolved 4h samples under ruleset 3",
     "heat": "benched \u2014 hit 44%, mean -1.22% over last 16 at 4h: not beating the round trip",
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 10,
     "baseline": 12.0,
     "wave": false
   },
@@ -22,13 +38,13 @@
       "mean_ret_1h": -0.00127,
       "median_ret_1h": -0.00095,
       "n_4h": 30,
-      "hit_rate_4h": 0.2,
-      "mean_ret_4h": -0.01707,
-      "median_ret_4h": -0.01058,
+      "hit_rate_4h": 0.233,
+      "mean_ret_4h": -0.01765,
+      "median_ret_4h": -0.01094,
       "n_24h": 30,
       "hit_rate_24h": 0.233,
-      "mean_ret_24h": -0.03498,
-      "median_ret_24h": -0.01756
+      "mean_ret_24h": -0.0379,
+      "median_ret_24h": -0.02737
     },
     "breakout": {
       "n_1h": 22,
