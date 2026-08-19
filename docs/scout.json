@@ -1,33 +1,17 @@
 {
-  "ts": "2026-08-19T00:51:54+00:00",
-  "scanned": 77,
+  "ts": "2026-08-19T00:57:34+00:00",
+  "scanned": 78,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "SNDKBUSDT",
-      "signal": "ignition",
-      "score": 0.5016,
-      "raw_score": 0.8846,
-      "weight": 0.567,
-      "price": 1603.23,
-      "why": "trades 12.1x and volume 11.0x the prior 4h, 63% taker-buy, $532,519 burst \u2014 while price has only moved +0.9%",
-      "chg_24h": -0.113,
-      "vol_surge": 10.97,
-      "chg_1h": 0.0088,
-      "market_surge": 3.14,
-      "actionable": false,
-      "status": "benched \u2014 hit 7%, mean -1.94% over last 30 at 4h: not beating the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
-    "ignition": "benched \u2014 hit 7%, mean -1.94% over last 30 at 4h: not beating the round trip",
+    "ignition": "benched \u2014 hit 7%, mean -1.86% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 33%, mean -0.84% over last 21 at 4h: not beating the round trip",
     "reversion": "probation \u2014 8/12 resolved 4h samples under ruleset 3",
     "heat": "benched \u2014 hit 44%, mean -1.22% over last 16 at 4h: not beating the round trip",
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 11,
+    "count": 10,
     "baseline": 12.0,
     "wave": false
   },
@@ -39,8 +23,8 @@
       "median_ret_1h": -0.00096,
       "n_4h": 30,
       "hit_rate_4h": 0.067,
-      "mean_ret_4h": -0.01939,
-      "median_ret_4h": -0.01094,
+      "mean_ret_4h": -0.01859,
+      "median_ret_4h": -0.01058,
       "n_24h": 30,
       "hit_rate_24h": 0.133,
       "mean_ret_24h": -0.05768,
