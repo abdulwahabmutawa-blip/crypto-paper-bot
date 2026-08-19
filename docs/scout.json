@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-19T01:20:04+00:00",
-  "scanned": 78,
+  "ts": "2026-08-19T01:25:24+00:00",
+  "scanned": 77,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ATOMUSDT",
+      "signal": "ignition",
+      "score": 0.5302,
+      "raw_score": 0.8837,
+      "weight": 0.6,
+      "price": 1.428,
+      "why": "trades 12.7x and volume 23.0x the prior 4h, 63% taker-buy, $56,974 burst \u2014 while price has only moved +1.0%",
+      "chg_24h": 0.0042,
+      "vol_surge": 23.0,
+      "chg_1h": 0.0099,
+      "market_surge": 6.59,
+      "actionable": false,
+      "status": "benched \u2014 hit 10%, mean -1.41% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 10%, mean -1.41% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 33%, mean -0.84% over last 21 at 4h: not beating the round trip",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 10,
+    "count": 11,
     "baseline": 12.0,
     "wave": false
   },
@@ -19,8 +35,8 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.367,
-      "mean_ret_1h": -0.00103,
-      "median_ret_1h": -0.00026,
+      "mean_ret_1h": -0.00119,
+      "median_ret_1h": -0.00095,
       "n_4h": 30,
       "hit_rate_4h": 0.1,
       "mean_ret_4h": -0.01409,
