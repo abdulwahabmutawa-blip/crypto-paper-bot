@@ -1,29 +1,30 @@
 {
-  "ts": "2026-08-19T20:09:59+00:00",
+  "ts": "2026-08-19T20:15:59+00:00",
   "sources": {
     "coingecko": [
       "LIT",
-      "BTC",
       "ETH",
+      "BTC",
       "XRP",
       "SOL",
-      "LINK",
       "PUMP",
+      "LINK",
       "PEPE",
+      "TAO",
+      "ZEC",
       "INJ",
-      "ONDO",
-      "ZEC"
+      "ONDO"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "RE",
       "HEMI",
+      "RE",
       "WLD",
-      "ETH",
       "PUMP",
+      "ETH",
       "ZEC",
-      "XPL",
+      "XRP",
       "LINK"
     ],
     "watcher": [
@@ -60,7 +61,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -6.5e-05,
+      "funding": -6e-05,
       "long_short": 1.7
     },
     {
@@ -70,7 +71,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 6e-06,
+      "funding": -0.0,
       "long_short": 1.41
     },
     {
@@ -80,8 +81,17 @@
         "movers",
         "watcher"
       ],
-      "funding": -2.9e-05,
+      "funding": -3.6e-05,
       "long_short": 0.48
+    },
+    {
+      "symbol": "XRP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "ZEC",
@@ -106,7 +116,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.6e-05
+      "funding": 2.1e-05
     },
     {
       "symbol": "LIT",
@@ -114,7 +124,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000182
+      "funding": -0.000162
     },
     {
       "symbol": "ONDO",
@@ -122,7 +132,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.9e-05
+      "funding": 4.6e-05
     },
     {
       "symbol": "PEPE",
@@ -140,26 +150,18 @@
       "funding": 0.0001
     },
     {
-      "symbol": "WLD",
+      "symbol": "TAO",
       "surfaces": 1,
       "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "XPL",
-      "surfaces": 1,
-      "sources": [
-        "movers"
+        "coingecko"
       ],
       "funding": 5e-05
     },
     {
-      "symbol": "XRP",
+      "symbol": "WLD",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
       "funding": 0.0001
     }
