@@ -248,6 +248,11 @@ def main():
         got = round(exit_px * fill["qty"], 4)
         pnl_usd = round(got - spent, 4) if spent is not None else None
         rec = {"symbol": held,
+               # source recorded since 08-19: the per-source review had to
+               # reconstruct it from git history of the state file, and the
+               # answer (watcher 0/6 -$7.90, scout +$0.94) was too important
+               # to keep excavating
+               "source": st.get("entry_source"),
                "entry_time": st.get("entry_time"),
                "exit_time": now.isoformat(timespec="seconds"),
                "entry_price": entry_px, "exit_price": exit_px,
@@ -257,6 +262,7 @@ def main():
                "date": today, "exit": exit_px, "entry": entry_px}
         st["realized"].append(rec)
         binance_live.log({"event": "exit", "symbol": held, "reason": reason,
+                          "source": st.get("entry_source"),
                           "entry_price": entry_px, "exit_price": exit_px,
                           "pnl_pct": rec["pnl_pct"], "pnl_usd": pnl_usd})
         # EVERY exit stamps the re-entry cooldown, not just the stop family
