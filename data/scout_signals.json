@@ -1,8 +1,37 @@
 {
-  "ts": "2026-08-19T12:06:33+00:00",
-  "scanned": 75,
+  "ts": "2026-08-19T12:12:23+00:00",
+  "scanned": 74,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "HEIUSDT",
+      "signal": "ignition",
+      "score": 0.8766,
+      "raw_score": 0.8766,
+      "weight": 1.0,
+      "price": 0.1475,
+      "why": "trades 20.0x and volume 22.8x the prior 4h, 66% taker-buy, $335,581 burst \u2014 while price has only moved +1.5%",
+      "chg_24h": 0.141,
+      "vol_surge": 22.8,
+      "chg_1h": 0.0151,
+      "market_surge": 10.69,
+      "actionable": true
+    },
+    {
+      "symbol": "SNXXBUSDT",
+      "signal": "ignition",
+      "score": 0.6749,
+      "raw_score": 0.6749,
+      "weight": 1.0,
+      "price": 15.77,
+      "why": "trades 4.8x and volume 7.0x the prior 4h, 92% taker-buy, $418,840 burst \u2014 while price has only moved +1.0%",
+      "chg_24h": -0.0796,
+      "vol_surge": 6.96,
+      "chg_1h": 0.0096,
+      "market_surge": 5.44,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "benched \u2014 hit 32%, mean -2.18% over last 25 at 4h: not beating the round trip",
