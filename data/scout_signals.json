@@ -1,8 +1,37 @@
 {
-  "ts": "2026-08-19T13:30:34+00:00",
-  "scanned": 76,
+  "ts": "2026-08-19T13:35:44+00:00",
+  "scanned": 74,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "MRVLBUSDT",
+      "signal": "ignition",
+      "score": 0.9616,
+      "raw_score": 0.9309,
+      "weight": 1.033,
+      "price": 239.68,
+      "why": "trades 32.1x and volume 110.6x the prior 4h, 76% taker-buy, $320,312 burst \u2014 while price has only moved -0.3%",
+      "chg_24h": 0.0711,
+      "vol_surge": 110.61,
+      "chg_1h": -0.0034,
+      "market_surge": 22.63,
+      "actionable": true
+    },
+    {
+      "symbol": "TSLABUSDT",
+      "signal": "ignition",
+      "score": 0.8309,
+      "raw_score": 0.8044,
+      "weight": 1.033,
+      "price": 340.23,
+      "why": "trades 6.8x and volume 16.0x the prior 4h, 79% taker-buy, $180,831 burst \u2014 while price has only moved +0.7%",
+      "chg_24h": 0.0131,
+      "vol_surge": 16.02,
+      "chg_1h": 0.0071,
+      "market_surge": 7.75,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "benched \u2014 hit 32%, mean -2.18% over last 25 at 4h: not beating the round trip",
@@ -18,9 +47,9 @@
   "scorecard": {
     "ignition": {
       "n_1h": 30,
-      "hit_rate_1h": 0.367,
-      "mean_ret_1h": 0.00737,
-      "median_ret_1h": 0.00137,
+      "hit_rate_1h": 0.333,
+      "mean_ret_1h": 0.00674,
+      "median_ret_1h": 0.00056,
       "n_4h": 30,
       "hit_rate_4h": 0.533,
       "mean_ret_4h": 0.00572,
