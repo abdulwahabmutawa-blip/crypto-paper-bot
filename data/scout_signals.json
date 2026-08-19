@@ -1,33 +1,17 @@
 {
-  "ts": "2026-08-19T04:30:33+00:00",
+  "ts": "2026-08-19T04:35:44+00:00",
   "scanned": 73,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "TSLABUSDT",
-      "signal": "ignition",
-      "score": 0.6276,
-      "raw_score": 0.9409,
-      "weight": 0.667,
-      "price": 335.91,
-      "why": "trades 38.3x and volume 68.3x the prior 4h, 76% taker-buy, $51,495 burst \u2014 while price has only moved +0.0%",
-      "chg_24h": -0.004,
-      "vol_surge": 68.34,
-      "chg_1h": 0.0001,
-      "market_surge": 6.04,
-      "actionable": false,
-      "status": "benched \u2014 hit 17%, mean -0.66% over last 30 at 4h: not beating the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 17%, mean -0.66% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 35%, mean -2.12% over last 23 at 4h: not beating the round trip",
-    "reversion": "benched \u2014 hit 33%, mean -1.07% over last 12 at 4h: not beating the round trip",
+    "reversion": "benched \u2014 hit 31%, mean -0.98% over last 13 at 4h: not beating the round trip",
     "heat": "benched \u2014 hit 47%, mean -1.03% over last 17 at 4h: not beating the round trip",
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 10,
+    "count": 9,
     "baseline": 12.0,
     "wave": false
   },
@@ -65,9 +49,9 @@
       "hit_rate_1h": 0.4,
       "mean_ret_1h": -0.0036,
       "median_ret_1h": -0.00542,
-      "n_4h": 12,
-      "hit_rate_4h": 0.333,
-      "mean_ret_4h": -0.01073,
+      "n_4h": 13,
+      "hit_rate_4h": 0.308,
+      "mean_ret_4h": -0.00979,
       "median_ret_4h": -0.00821
     },
     "heat": {
