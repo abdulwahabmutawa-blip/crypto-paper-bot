@@ -1,43 +1,12 @@
 {
-  "ts": "2026-08-19T03:22:57+00:00",
+  "ts": "2026-08-19T03:28:33+00:00",
   "scanned": 73,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "LINKUSDT",
-      "signal": "ignition",
-      "score": 0.5834,
-      "raw_score": 0.8747,
-      "weight": 0.667,
-      "price": 9.64,
-      "why": "trades 15.0x and volume 23.7x the prior 4h, 63% taker-buy, $500,108 burst \u2014 while price has only moved +1.3%",
-      "chg_24h": 0.0302,
-      "vol_surge": 23.74,
-      "chg_1h": 0.0135,
-      "market_surge": 7.25,
-      "actionable": false,
-      "status": "benched \u2014 hit 17%, mean -0.59% over last 30 at 4h: not beating the round trip"
-    },
-    {
-      "symbol": "UNIUSDT",
-      "signal": "ignition",
-      "score": 0.4323,
-      "raw_score": 0.6481,
-      "weight": 0.667,
-      "price": 3.303,
-      "why": "trades 4.7x and volume 7.6x the prior 4h, 71% taker-buy, $78,088 burst \u2014 while price has only moved +0.4%",
-      "chg_24h": 0.0129,
-      "vol_surge": 7.56,
-      "chg_1h": 0.0036,
-      "market_surge": 3.23,
-      "actionable": false,
-      "status": "benched \u2014 hit 17%, mean -0.59% over last 30 at 4h: not beating the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 17%, mean -0.59% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 36%, mean -0.64% over last 22 at 4h: not beating the round trip",
-    "reversion": "probation \u2014 9/12 resolved 4h samples under ruleset 3",
+    "reversion": "probation \u2014 10/12 resolved 4h samples under ruleset 3",
     "heat": "benched \u2014 hit 47%, mean -1.03% over last 17 at 4h: not beating the round trip",
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
@@ -80,10 +49,10 @@
       "hit_rate_1h": 0.429,
       "mean_ret_1h": 0.00137,
       "median_ret_1h": 0.00065,
-      "n_4h": 9,
-      "hit_rate_4h": 0.333,
-      "mean_ret_4h": -0.01825,
-      "median_ret_4h": -0.01725
+      "n_4h": 10,
+      "hit_rate_4h": 0.3,
+      "mean_ret_4h": -0.01656,
+      "median_ret_4h": -0.01471
     },
     "heat": {
       "n_1h": 18,
