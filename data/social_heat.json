@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-19T23:27:19+00:00",
+  "ts": "2026-08-19T23:33:09+00:00",
   "sources": {
     "coingecko": [
       "ETH",
@@ -19,10 +19,10 @@
       "TRUMP",
       "HEMI",
       "ETH",
-      "PEPE",
       "WLD",
-      "UNI",
-      "SOL"
+      "PEPE",
+      "ZEC",
+      "UNI"
     ],
     "watcher": [
       "ETH",
@@ -45,24 +45,13 @@
       "long_short": 2.54
     },
     {
-      "symbol": "SOL",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": 0.0001,
-      "long_short": 2.0
-    },
-    {
       "symbol": "BTC",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "watcher"
       ],
-      "funding": 9.8e-05,
+      "funding": 9.9e-05,
       "long_short": 1.1
     },
     {
@@ -74,6 +63,16 @@
       ],
       "funding": 5e-05,
       "long_short": 0.89
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "watcher"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.0
     },
     {
       "symbol": "ADA",
@@ -105,7 +104,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.5e-05
+      "funding": 2.1e-05
     },
     {
       "symbol": "PEPE",
@@ -120,7 +119,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.2e-05
+      "funding": -1.9e-05
     },
     {
       "symbol": "RE",
@@ -128,7 +127,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.5e-05
+      "funding": 5e-05
     },
     {
       "symbol": "TRUMP",
@@ -159,6 +158,14 @@
       "surfaces": 1,
       "sources": [
         "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 1,
+      "sources": [
+        "movers"
       ],
       "funding": 0.0001
     }
