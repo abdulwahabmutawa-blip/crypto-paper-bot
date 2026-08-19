@@ -1,22 +1,22 @@
 {
-  "ts": "2026-08-19T07:33:19+00:00",
+  "ts": "2026-08-19T07:39:09+00:00",
   "sources": {
     "coingecko": [
-      "PUMP",
       "ONDO",
       "SOL",
+      "PUMP",
+      "BTC",
       "GALA",
-      "PLUME",
       "BNB",
-      "SKY",
-      "LIT"
+      "PLUME",
+      "TAO"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "ACE",
-      "SOL",
       "ALLO",
+      "SOL",
       "ETH",
       "XRP",
       "BTC"
@@ -34,8 +34,18 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.001921,
+      "funding": -0.001826,
       "long_short": 0.85
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 4.2e-05,
+      "long_short": 1.55
     },
     {
       "symbol": "SOL",
@@ -44,7 +54,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 8.3e-05,
+      "funding": 8.4e-05,
       "long_short": 2.1
     },
     {
@@ -53,7 +63,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 3.4e-05
+      "funding": 4.2e-05
     },
     {
       "symbol": "BNB",
@@ -64,20 +74,12 @@
       "funding": 2.4e-05
     },
     {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 4.1e-05
-    },
-    {
       "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 1.8e-05
+      "funding": 2.1e-05
     },
     {
       "symbol": "GALA",
@@ -85,15 +87,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000151
-    },
-    {
-      "symbol": "LIT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -2.5e-05
+      "funding": -0.000152
     },
     {
       "symbol": "ONDO",
@@ -101,7 +95,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1e-06
+      "funding": -2e-06
     },
     {
       "symbol": "PLUME",
@@ -117,15 +111,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.4e-05
+      "funding": 4.6e-05
     },
     {
-      "symbol": "SKY",
+      "symbol": "TAO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 4.1e-05
     },
     {
       "symbol": "XRP",
@@ -133,7 +127,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.6e-05
+      "funding": 4.9e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
