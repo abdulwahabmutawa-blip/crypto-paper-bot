@@ -1,49 +1,20 @@
 {
-  "ts": "2026-08-19T21:24:34+00:00",
-  "scanned": 107,
+  "ts": "2026-08-19T21:30:24+00:00",
+  "scanned": 108,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "ETHFIUSDT",
-      "signal": "ignition",
-      "score": 0.9242,
-      "raw_score": 0.7701,
-      "weight": 1.2,
-      "price": 0.5164,
-      "why": "trades 9.2x and volume 8.9x the prior 4h, 61% taker-buy, $78,060 burst \u2014 while price has only moved +2.9%",
-      "chg_24h": 0.0815,
-      "vol_surge": 8.85,
-      "chg_1h": 0.0291,
-      "market_surge": 2.39,
-      "actionable": true
-    },
-    {
-      "symbol": "ETHFIUSDT",
+      "symbol": "XLMUSDT",
       "signal": "breakout",
-      "score": 0.7116,
-      "raw_score": 0.7627,
+      "score": 0.6195,
+      "raw_score": 0.664,
       "weight": 0.933,
-      "price": 0.5164,
-      "why": "trades 9.2x, volume 8.9x, 61% taker-buy, +2.9% in an hour, at 89% of its 24h range",
-      "chg_24h": 0.0815,
-      "vol_surge": 8.85,
-      "chg_1h": 0.0291,
-      "market_surge": 2.39,
-      "actionable": false,
-      "status": "benched \u2014 hit 43%, mean -0.54% over last 30 at 4h: not beating the round trip"
-    },
-    {
-      "symbol": "ONDOUSDT",
-      "signal": "breakout",
-      "score": 0.6776,
-      "raw_score": 0.7263,
-      "weight": 0.933,
-      "price": 0.351,
-      "why": "trades 5.7x, volume 12.2x, 87% taker-buy, +2.8% in an hour, at 90% of its 24h range",
-      "chg_24h": 0.0684,
-      "vol_surge": 12.22,
-      "chg_1h": 0.0281,
-      "market_surge": 7.03,
+      "price": 0.1721,
+      "why": "trades 4.6x, volume 9.2x, 72% taker-buy, +3.2% in an hour, at 96% of its 24h range",
+      "chg_24h": 0.1176,
+      "vol_surge": 9.23,
+      "chg_1h": 0.0318,
+      "market_surge": 5.06,
       "actionable": false,
       "status": "benched \u2014 hit 43%, mean -0.54% over last 30 at 4h: not beating the round trip"
     }
@@ -56,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 60,
+    "count": 64,
     "baseline": 12.0,
     "wave": true
   },
@@ -64,7 +35,7 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.567,
-      "mean_ret_1h": 0.00366,
+      "mean_ret_1h": 0.00395,
       "median_ret_1h": 0.00368,
       "n_4h": 30,
       "hit_rate_4h": 0.7,
@@ -72,7 +43,7 @@
       "median_ret_4h": 0.01054,
       "n_24h": 30,
       "hit_rate_24h": 0.533,
-      "mean_ret_24h": 0.01985,
+      "mean_ret_24h": 0.00939,
       "median_ret_24h": 0.00308
     },
     "breakout": {
