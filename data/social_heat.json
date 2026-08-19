@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-19T22:49:09+00:00",
+  "ts": "2026-08-19T22:54:59+00:00",
   "sources": {
     "coingecko": [
       "ETH",
@@ -19,11 +19,11 @@
       "RE",
       "HEMI",
       "ETH",
-      "LINK",
       "PEPE",
+      "LINK",
       "UNI",
       "SOL",
-      "XRP"
+      "ZEC"
     ],
     "watcher": [
       "ETH",
@@ -95,15 +95,6 @@
       ]
     },
     {
-      "symbol": "XRP",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "AERO",
       "surfaces": 1,
       "sources": [
@@ -117,7 +108,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -4.2e-05
+      "funding": -3.1e-05
     },
     {
       "symbol": "PUMP",
@@ -125,7 +116,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.6e-05
+      "funding": -1.4e-05
     },
     {
       "symbol": "RE",
@@ -145,6 +136,22 @@
     },
     {
       "symbol": "UNI",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "XRP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
         "movers"
