@@ -1,35 +1,37 @@
 {
-  "ts": "2026-08-19T13:35:44+00:00",
-  "scanned": 74,
+  "ts": "2026-08-19T13:41:24+00:00",
+  "scanned": 78,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "MRVLBUSDT",
-      "signal": "ignition",
-      "score": 0.9616,
-      "raw_score": 0.9309,
-      "weight": 1.033,
-      "price": 239.68,
-      "why": "trades 32.1x and volume 110.6x the prior 4h, 76% taker-buy, $320,312 burst \u2014 while price has only moved -0.3%",
-      "chg_24h": 0.0711,
-      "vol_surge": 110.61,
-      "chg_1h": -0.0034,
-      "market_surge": 22.63,
-      "actionable": true
+      "symbol": "SOXSBUSDT",
+      "signal": "breakout",
+      "score": 0.9239,
+      "raw_score": 0.9239,
+      "weight": 1.0,
+      "price": 45.47,
+      "why": "trades 25.6x, volume 25.6x, 89% taker-buy, +6.3% in an hour, at 81% of its 24h range",
+      "chg_24h": 0.0649,
+      "vol_surge": 25.64,
+      "chg_1h": 0.0629,
+      "market_surge": 0.0,
+      "actionable": false,
+      "status": "benched \u2014 hit 32%, mean -2.18% over last 25 at 4h: not beating the round trip"
     },
     {
-      "symbol": "TSLABUSDT",
-      "signal": "ignition",
-      "score": 0.8309,
-      "raw_score": 0.8044,
-      "weight": 1.033,
-      "price": 340.23,
-      "why": "trades 6.8x and volume 16.0x the prior 4h, 79% taker-buy, $180,831 burst \u2014 while price has only moved +0.7%",
-      "chg_24h": 0.0131,
-      "vol_surge": 16.02,
-      "chg_1h": 0.0071,
-      "market_surge": 7.75,
-      "actionable": true
+      "symbol": "CRCLBUSDT",
+      "signal": "breakout",
+      "score": 0.8529,
+      "raw_score": 0.8529,
+      "weight": 1.0,
+      "price": 76.72,
+      "why": "trades 27.4x, volume 49.5x, 69% taker-buy, +5.3% in an hour, at 83% of its 24h range",
+      "chg_24h": 0.0469,
+      "vol_surge": 49.51,
+      "chg_1h": 0.0527,
+      "market_surge": 13.2,
+      "actionable": false,
+      "status": "benched \u2014 hit 32%, mean -2.18% over last 25 at 4h: not beating the round trip"
     }
   ],
   "gate": {
@@ -55,9 +57,9 @@
       "mean_ret_4h": 0.00572,
       "median_ret_4h": 0.00342,
       "n_24h": 30,
-      "hit_rate_24h": 0.367,
-      "mean_ret_24h": -0.01591,
-      "median_ret_24h": -0.00086
+      "hit_rate_24h": 0.3,
+      "mean_ret_24h": -0.0192,
+      "median_ret_24h": -0.00454
     },
     "breakout": {
       "n_1h": 26,
