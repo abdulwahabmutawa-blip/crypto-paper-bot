@@ -1,13 +1,13 @@
 {
-  "ts": "2026-08-19T16:44:09+00:00",
+  "ts": "2026-08-19T16:49:51+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "ETH",
       "SOL",
-      "LIT",
-      "TAO",
       "SUI",
+      "TAO",
+      "LIT",
       "ZEC",
       "PUMP",
       "XRP",
@@ -18,12 +18,12 @@
     "movers": [
       "HEMI",
       "RE",
-      "ETH",
       "ZEC",
-      "XRP",
+      "ETH",
       "SOL",
+      "XRP",
       "BTC",
-      "WLD"
+      "SUI"
     ],
     "watcher": [
       "HEMI"
@@ -68,8 +68,18 @@
         "coingecko",
         "movers"
       ],
-      "funding": 7e-05,
+      "funding": 7.2e-05,
       "long_short": 1.83
+    },
+    {
+      "symbol": "SUI",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 9.8e-05,
+      "long_short": 1.74
     },
     {
       "symbol": "XRP",
@@ -78,8 +88,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 4.4e-05,
-      "long_short": 2.76
+      "funding": 4.5e-05
     },
     {
       "symbol": "ZEC",
@@ -88,7 +97,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 5e-05
+      "funding": 5.7e-05
     },
     {
       "symbol": "LIT",
@@ -96,7 +105,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000153
+      "funding": -0.000171
     },
     {
       "symbol": "PEPE",
@@ -122,28 +131,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 9.9e-05
-    },
-    {
       "symbol": "TAO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "WLD",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -6.6e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
