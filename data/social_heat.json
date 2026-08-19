@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-19T23:16:20+00:00",
+  "ts": "2026-08-19T23:21:47+00:00",
   "sources": {
     "coingecko": [
       "ETH",
@@ -22,7 +22,7 @@
       "WLD",
       "PEPE",
       "UNI",
-      "SOL"
+      "ZEC"
     ],
     "watcher": [
       "ETH",
@@ -45,17 +45,6 @@
       "long_short": 2.54
     },
     {
-      "symbol": "SOL",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": 0.0001,
-      "long_short": 2.0
-    },
-    {
       "symbol": "BTC",
       "surfaces": 2,
       "sources": [
@@ -74,6 +63,16 @@
       ],
       "funding": 5e-05,
       "long_short": 0.89
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "watcher"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.0
     },
     {
       "symbol": "AERO",
@@ -97,7 +96,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1e-06
+      "funding": 6e-06
     },
     {
       "symbol": "PEPE",
@@ -120,7 +119,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 5e-05
+      "funding": 4.4e-05
     },
     {
       "symbol": "SUI",
@@ -159,6 +158,14 @@
       "surfaces": 1,
       "sources": [
         "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 1,
+      "sources": [
+        "movers"
       ],
       "funding": 0.0001
     }
