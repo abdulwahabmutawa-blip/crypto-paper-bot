@@ -1,74 +1,91 @@
 {
- "updated_utc": "2026-08-18T10:15:00+00:00",
- "note": "Tuesday 2026-08-18, 10:15Z, pre-open. 18 lines appended: 13 bot dailies plus 5 trade_event lines. THE FREEZE IS OVER and it broke at the worst possible moment for one bot. The loop restarted 2026-08-17T18:06:54Z after 5h49m dark, and in that single first cycle four books acted at once: sentiment bought NLST, hunter rotated PLTR into SLV, hypecrypto took the first trade of its life, and every equity book finally marked the 08-17 close. TALLY BOOKKEEPING, READ THIS FIRST: my 08-17 lines for the eight equity books plus hypecrypto carried supervisor-RECONSTRUCTED values because the bots never marked that session. Today's lines carry the bots' real 08-17 closes for the same session. Rather than count that session twice, I have EXCLUDED those nine superseded 08-17 daily lines from the tally below and recomputed the whole thing from source: 322 lines logged, 313 counted. Every superseded line stays in the file, marked as reconstructed, so the record of what I believed at the time is intact. HOW GOOD WAS THE RECONSTRUCTION: direction right on 7 of 8, size honest on 6 of 8. allweather reconstructed +0.33 against a real -1.72, congress -6.45 against a real -11.40 (the software names kept falling into the close), commodity +10.03 against a real +19.37, meanrev -20.67 against -19.17, scholar -4.88 against -3.52, analyst -0.96 against -4.90, hunter +7.23 against -2.94 (it rotated after I looked). The one I got badly wrong is sentiment: I logged 0.00 for a book that then lost 145.63 in the 41 minutes after the restart. FILL AUDIT NON-VACUOUS AND PASSING: nine new fills audited (sentiment NLST buy and sell, hunter PLTR sell and SLV buy, hypecrypto GPS buy, lottery CHIP round trip, EDEN round trip, GPS buy). All four equity fills landed 14:06-14:47 ET, inside US regular hours, at prices inside their 08-17 ranges; all five crypto fills sit inside Binance mainnet 1-minute ranges. No SIM-INTEGRITY ALERT. THE DAY'S DRIVER STORY: a macro shock the fleet was long in one place and short in another. Hormuz transits stopped, crude held above 82, the 30-year yield hit a 19-year high; commodity made 19.37 on it, allweather's TLT sleeve lost 3.35 to it, hunter rotated into silver on the back of it. Separately, software and mega-cap tech fell (IGV -2.01% vs SMH +1.06%) and congress owns more of the losing side. 'hype_sentiment' took its three best lines in weeks (two lottery timer wins plus hypecrypto's first trade) and improved to 13/21, which means 'technical' is now the fleet's worst driver at 13/24 for the first time.",
- "total_lines_logged": 322,
- "lines_counted_in_tally": 313,
+ "updated_utc": "2026-08-19T08:04:00+00:00",
+ "note": "Wednesday 2026-08-19, 08:04Z, before the US open. 19 lines appended: 12 bot dailies plus 7 trade_event lines. NO R1 BREACH, NO SIM-INTEGRITY ALERT, NO FROZEN BOT, NO CRON GAP - the cleanest infrastructure day in the ledger. 110 loop cycles in 24 hours, median gap 13.4 minutes, MAXIMUM gap 14.4 minutes, every bot's state age within 0.2 minutes of every other. I am not reporting a cron gap and I am showing the arithmetic that says so: the raw GitHub run-start series again looks alarming (largest interval 109.3 minutes, and 52 of 60 runs read 'cancelled') and again is an artifact of the long-running-loop design where each scheduled run cancels the previous one still cycling. The thing that matters is the commit cadence on data/*_state.json and there is no hole in it. FILL AUDIT NON-VACUOUS AND PASSING: nine new fills audited. The five equity legs (sentiment AMLX buy 13:37:41Z, sell 14:32:14Z, buy 18:36:33Z; hunter SLV sell and NVDA buy both 15:12:39Z) land at 09:37-14:36 ET on a Tuesday, inside US regular hours, at prices inside their 08-18 ranges. The four crypto fills (hypecrypto GPS sell, TUT buy, TUT sell, ACE buy) and the three lottery fills all sit inside Binance mainnet 1-minute ranges within +/-5 minutes of their timestamps. THE DAY'S DRIVER STORY: a 19-year-high 30-year yield (5.34% intraday) drove a semiconductor rout - the Philadelphia Semiconductor Index -4.98%, Nasdaq -1.33% - and the fleet was long that side in two books (congress -12.02 across TSM/META/AVGO/NVDA, hunter -29.89 after rotating into silver one day before the same yield print crushed it). Precious metals swapped roles with bonds inside allweather. Against all of that, one book made the fleet's whole day on a real dated catalyst: AMLX +63.8% on Phase 3 LUCIDITY hitting its primary endpoint. THE FINDING WORTH THE OWNER'S TIME is what that book did with it: its 'hype faded' exit rule sold the whole position 55 minutes in and rebought 2.61 higher four hours later, surrendering 3.16 units and 111.07 dollars of a 210-dollar move, because the rule keys on a name leaving a scan rather than on the thesis breaking, and unlike hunter it has no cooldown on a name it just exited. A CORRECTION I OWE THE ANALYST: I filed a fault against it yesterday for 'asserting Watcher readings it never fetched'. I read the source today. src/analyst_agent.py line 335 injects the full verdict into its prompt as 'Watcher latest: {...}' and the _watcher() docstring says 'context AND read_watcher tool', so citing it without a tool call is correct behaviour; the guardrail at line 238 that flags it is a false positive and has now fired two days running. The agent's quoted content also matched the current scan verbatim. That fault is WITHDRAWN. The separate defect - labelling an intraday print as a close, third session running - stands. DRIVER TALLY: 'hype_sentiment' gave back yesterday's improvement and fell to 14 profit / 26 loss (35.0%), retaking the worst-driver spot from 'technical' at 13 / 24 (35.1%) by one tenth of a point. That margin is noise and I am reporting it as noise: the two are indistinguishable and both are bad. 'unknown' grew again on meanrev's third unattributed session - that is the tally doing its job, not a gap in the work.",
+ "total_lines_logged": 341,
+ "lines_counted_in_tally": 332,
  "superseded_lines_excluded": 9,
- "superseded_note": "The 2026-08-17 daily lines for meanrev, allweather, commodity, congress, hunter, sentiment, scholar, analyst and hypecrypto are excluded from the tally because today's lines cover the same session with the bots' real marks. They remain in trade_attributions.jsonl.",
+ "superseded_note": "The 2026-08-17 daily lines for meanrev, allweather, commodity, congress, hunter, sentiment, scholar, analyst and hypecrypto stay excluded from the tally because the 2026-08-18 lines cover that same session with the bots' real marks. They remain in trade_attributions.jsonl.",
  "by_primary_driver": {
   "hype_sentiment": {
-   "profit": 13,
-   "loss": 21,
-   "flat": 6
+   "profit": 14,
+   "loss": 26,
+   "flat": 6,
+   "profit_rate_pct": 35.0
   },
   "macro": {
    "profit": 14,
-   "loss": 13,
-   "flat": 1
+   "loss": 17,
+   "flat": 1,
+   "profit_rate_pct": 45.2
   },
   "market_beta": {
-   "profit": 26,
-   "loss": 18,
-   "flat": 7
+   "profit": 27,
+   "loss": 20,
+   "flat": 7,
+   "profit_rate_pct": 57.4
   },
   "news_idiosyncratic": {
-   "profit": 9,
+   "profit": 12,
    "loss": 6,
-   "flat": 1
+   "flat": 1,
+   "profit_rate_pct": 66.7
   },
   "none_cash": {
    "profit": 0,
    "loss": 1,
-   "flat": 29
+   "flat": 30,
+   "profit_rate_pct": 0.0
   },
   "sector": {
    "profit": 10,
-   "loss": 7,
-   "flat": 0
+   "loss": 8,
+   "flat": 0,
+   "profit_rate_pct": 55.6
   },
   "technical": {
    "profit": 13,
    "loss": 24,
-   "flat": 3
+   "flat": 3,
+   "profit_rate_pct": 35.1
   },
   "unknown": {
    "profit": 10,
-   "loss": 10,
-   "flat": 71
+   "loss": 11,
+   "flat": 71,
+   "profit_rate_pct": 47.6
   }
  },
  "by_beta_or_alpha": {
   "alpha": {
-   "profit": 52,
-   "loss": 52,
-   "flat": 7
+   "profit": 56,
+   "loss": 61,
+   "flat": 7,
+   "profit_rate_pct": 47.9
   },
   "beta": {
    "profit": 22,
-   "loss": 15,
-   "flat": 7
+   "loss": 17,
+   "flat": 7,
+   "profit_rate_pct": 56.4
   },
   "mixed": {
-   "profit": 10,
-   "loss": 19,
-   "flat": 0
+   "profit": 11,
+   "loss": 21,
+   "flat": 0,
+   "profit_rate_pct": 34.4
   },
   "n/a": {
    "profit": 11,
    "loss": 14,
-   "flat": 104
+   "flat": 105,
+   "profit_rate_pct": 44.0
   }
  },
- "driver_note": "Three things on the record. FIRST, the worst-driver crown changed hands and I want to be clear it is a ratio, not a verdict: hype_sentiment is 13 profit / 21 loss (38.2%) and technical is 13 / 24 (35.1%). Hype improved today only because the lottery book's STALLED timer cut two positions that happened to be slightly up; that is the same rule that produced three losses yesterday by cutting positions that happened to be slightly down. One day of luck in a timer is not evidence about a strategy. SECOND, meanrev is logged 'unknown' for the second consecutive day. UNH fell 1.52% against a flat healthcare sector, so the move is plainly name-specific, but the only story I could find on the date is a fund-filings piece whose own text says the filings cover 0.006% of shares and are not Monday trades. Naming that as the cause would be fabrication. THIRD, hypecrypto's line is logged hype_sentiment with medium confidence, not high: the position's +5.3% is unambiguously divergence from the tape rather than beta, but I cannot cite what actually moved GPS, only that a hype screen picked it.",
- "cross_book_observation": "The fleet ran an accidental controlled experiment today. The paper bot hypecrypto and the real-money lottery book both bought GPS off the same Grok euphoria signal. hypecrypto filled at 0.01637 at 18:06Z on 08-17 and is +5.3%; lottery filled at 0.0174 at 04:24Z on 08-18, ten hours and 6.3% later, and is -0.92%. Same coin, same signal source, opposite results, and the entire difference is entry latency. The lottery book's own LATE guard had refused GPS two hours before it bought, on the grounds that the pump had already happened."
+ "worst_driver": "hype_sentiment",
+ "worst_driver_note": "hype_sentiment 14 profit / 26 loss = 35.0%; technical 13 / 24 = 35.1%. The gap is 0.1pp, which is noise - treat them as tied for worst. hype_sentiment gave back yesterday's improvement because four of today's six hype lines are losses (hypecrypto's ACE entry and TUT round trip, lottery's PUMP round trip and GPS close).",
+ "confidence_mix": {
+  "high": 270,
+  "medium": 43,
+  "low": 19
+ }
 }

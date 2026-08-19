@@ -1,25 +1,24 @@
 {
- "updated_utc": "2026-08-18T10:15:00+00:00",
- "run_note": "Tuesday 2026-08-18, 10:15Z, before the US open. NO R1 BREACH AND NO SIM-INTEGRITY ALERT. THE HEADLINE IS THAT THE FLEET-WIDE FREEZE IS OVER: the loop restarted 2026-08-17T18:06:54Z after 5h49m dark (12:18Z to 18:06Z) and has run clean since. Every bot's state age now clusters at 11.6-11.8 minutes against a 13.4-minute cadence, the tightest reading in a week, and the real marking cadence over the last 24h has a MEDIAN gap of 13.5 minutes and a MAXIMUM non-freeze gap of 14.7 minutes. That last number matters because the raw GitHub run-start arithmetic looks alarming and is misleading: the largest interval between run STARTS in 24h is 105.7 minutes (08-18 00:00Z to 01:46Z) and 107 of 120 runs show 'cancelled'. Both are artifacts of the long-running-loop design, where each scheduled run cancels the previous one that is still cycling. I checked the thing that actually matters, the commit cadence on data/*_state.json, and there is no hole. I am NOT reporting a cron gap today. One workflow failure exists in the window, 2026-08-15T06:53:35Z, outside 24h and not recurring. WHAT THE RESTART COST: in the first cycle back, four books acted simultaneously and one of them detonated. sentiment bought NLST all-in at 6.51 within one second of the restart on a 'patent settlement buzz' tag, and its own -10% stop cut it 41 minutes later at 5.81 for -145.63, an 11% loss on the fleet's largest book, chasing a Samsung settlement that was announced twelve days earlier on 2026-08-05 and had already tripled the stock. NLST then closed 6.03, above the exit, so the stop sold near the low as well. That single trade is most of the fleet's day. FILL AUDIT NON-VACUOUS AND PASSING: nine new fills, all verified. The four equity legs (sentiment NLST buy 18:06:54Z and sell 18:47:25Z, hunter PLTR sell and SLV buy both 18:06:54Z) land at 14:06-14:47 ET, inside US regular hours, at prices inside their 08-17 ranges. The five crypto fills (hypecrypto GPS buy; lottery CHIP round trip, EDEN round trip, GPS buy) all sit inside Binance mainnet 1-minute ranges within +/-5 minutes of their timestamps. No market-hours breach, no out-of-range price. TWO BOTS CAME BACK FROM THE DEAD AND BOTH TRADED: hypecrypto, frozen 48 hours on the Binance 451 fault, took the first trade of its life at 18:06:54Z and is the fleet's third-best book at 1062.65; the Watcher's cadence is back to 1.8 hours against a 2-hour design. NEW FAULT THIS RUN, and it is a reasoning fault, not an outage: the Analyst's own guardrail tagged its 08-17 decision 'UNRECEIPTED WATCHER CLAIM (read_watcher not called)' - it asserted the Watcher's risk level in its stated reasoning without calling the tool that returns it - and in the same decision it labelled an intraday print as a close for the second time (quoted 'SPY closed 773.55 on 8/17'; the close was 772.67). MY OWN SCORING: one closure, my largest win to date, +145.64, and it was a stay-in-cash call on the hype book, which is now 8-0 on that exact call while my hype price views sit at 2W/8L. I am not treating that as skill at picking hype stocks; it is a single repeated observation that this strategy loses money when it acts.",
- "total_judgments": 225,
- "judgments_closed": 222,
- "judgments_open": 3,
+ "updated_utc": "2026-08-19T08:04:00+00:00",
+ "run_note": "Wednesday 2026-08-19, 08:04Z, before the US open. NO R1 BREACH, NO SIM-INTEGRITY ALERT, NO FROZEN BOT AND NO CRON GAP - infrastructure is the cleanest it has been in this ledger. 110 loop cycles in the last 24 hours with a MEDIAN state-commit gap of 13.4 minutes and a MAXIMUM of 14.4; all eleven live bots' state ages sit within 0.2 minutes of each other. As on previous runs the raw GitHub run-start arithmetic is misleading and I am showing why rather than reporting a phantom gap: the largest interval between paper-trade-cycle run STARTS in 24h is 109.3 minutes and 52 of 60 runs read 'cancelled', both artifacts of the long-running-loop design where each scheduled run cancels the previous one still cycling. Four genuine workflow failures exist in the window (deploy-pages, 06:59Z-07:08Z) on a docs-deploy workflow the owner added TODAY; it has been green for eleven consecutive runs since 07:13Z and never touched trading. FILL AUDIT NON-VACUOUS AND PASSING: nine new fills. The five equity legs (sentiment AMLX buy 13:37:41Z, sell 14:32:14Z, buy 18:36:33Z; hunter SLV sell and NVDA buy both 15:12:39Z) land at 09:37-14:36 ET on a Tuesday, inside regular hours, at prices inside their 08-18 ranges. The four hypecrypto crypto fills and three lottery fills all sit inside Binance mainnet 1-minute ranges within +/-5 minutes. THE DAY: a 19-year-high 30-year yield (5.34% intraday) drove a semiconductor rout (Philadelphia Semiconductor Index -4.98%, Nasdaq -1.33%) and the fleet was long that side twice - congress -12.02 across TSM/META/AVGO/NVDA, hunter -29.89 after rotating into silver one day before the same print crushed it. One book made the fleet's whole day for a real reason: sentiment +99.54 on AMLX +63.8% after Phase 3 LUCIDITY met its FDA-agreed primary endpoint. THE FINDING WORTH THE OWNER'S TIME is what that book did with it: its 'hype faded' rule sold the entire position 55 minutes into a 63% day because the ticker left a scan, then rebought 2.61 higher four hours later, surrendering 3.16 units and 111.07 dollars of a 210-dollar move. The rule keys on scan membership, not on the thesis breaking, and unlike hunter this book has NO cooldown on a name it just exited. A CORRECTION I OWE THE ANALYST: I filed a fault yesterday for 'asserting Watcher readings it never fetched'. I read the source. Line 335 of src/analyst_agent.py injects the verdict into its prompt as 'Watcher latest: {...}' and the _watcher() docstring says 'context AND read_watcher tool', so the guardrail at line 238 is a false positive that has now fired two days running; the agent's quoted content also matched the current scan verbatim. WITHDRAWN. MY OWN SCORING WAS THE WORST OF THIS LEDGER: three closures, three losses, -158.97 in one run, cutting cumulative alpha from 335.59 to 176.63. Two of the three were one thesis on one coin (GPS) where I was RIGHT about direction - GPS is -29% today - and still lost, because both bots exited above my reference before the collapse. The third, the sentiment stay-in-cash call at -99.54, had a faulty premise and not merely a bad outcome: I scored it against an 08:24Z scan the bot never used.",
+ "total_judgments": 236,
+ "judgments_closed": 234,
+ "judgments_open": 2,
  "open_ids": [
-  "2026-08-18-hypecrypto-1",
-  "2026-08-18-lottery-1",
-  "2026-08-18-sentiment-1"
+  "2026-08-19-sentiment-1",
+  "2026-08-19-hunter-1"
  ],
- "cumulative_alpha_usd": 335.59,
- "cumulative_alpha_usd_actionable": 211.5,
- "win_rate_closed_pct": 7.2,
- "win_rate_note": "178 of 222 closed judgments are no_change (alpha 0), so the headline rate carries no information - read the directional record. DIRECTIONAL: 34 scored, 16W/11L/7N, +335.59 headline, +211.50 on the conservative actionable-reference-price basis (the 07-27 hunter USO call at +131.16 rests on a reference I could not have traded). THIS RUN: one closure and eleven filings - eight no_change plus THREE directional, of which two are one thesis on one coin. Two things on the record. FIRST, the +145.64 win is real but it is not a stock-picking win: I said the hype book should not open new positions, it opened one, and the position lost 11% in 41 minutes. Eight for eight on that call now. SECOND, I have filed close_position on GPS in BOTH hypecrypto and lottery. That is deliberately ONE call scored twice, not two independent judgments, and I have said so in both rationales so the record cannot be read as two hits if it works.",
+ "cumulative_alpha_usd": 176.63,
+ "cumulative_alpha_usd_actionable": 52.54,
+ "win_rate_closed_pct": 6.8,
+ "win_rate_note": "197 of 234 closed judgments are no_change (alpha 0), so the headline rate carries no information - read the directional record. DIRECTIONAL: 37 scored, 16W/14L/7N, +176.63 headline, +52.54 on the conservative actionable-reference basis (the 07-27 hunter USO call at +131.16 rests on a reference I could not have traded). THIS RUN: three closures, three losses, -158.97, my worst run. Read 2026-08-18-hypecrypto-1 and 2026-08-18-lottery-1 as ONE thesis scored twice on the same coin. The family records that matter: stay-in-cash calls on the hype book fell to 8-1 and hype-name PRICE views fell to 2W/10L. Those two records point in opposite directions and both are now well-sampled: telling this strategy to sit still has worked, telling it what a coin will do has not.",
  "by_bot": {
   "crypto": {
-   "judgments": 26,
-   "closed": 26,
+   "judgments": 27,
+   "closed": 27,
    "open": 0,
    "alpha_usd": 106.83,
-   "note": "The churn family stays RETIRED at 7W/0L/3N; costs_paid frozen at 71.0619 for an eighth run. Holds XRP through its loss of the $1 handle; the Watcher now tags XRP 'fearful' but the bot's weekly-momentum rule, which is what should decide this, has not flipped. Only book whose 08-18 mark is a real 24/7 partial-day mark."
+   "note": "The churn family stays RETIRED at 7W/0L/3N; costs_paid frozen at 71.0619 for a ninth run. XRP took the dollar handle back (+1.21% over 24h against BTC +0.28%). Only book besides hypecrypto carrying a genuine 08-19 mark."
   },
   "stock": {
    "judgments": 10,
@@ -29,200 +28,166 @@
    "note": "Bot retired by owner 2026-07-31 at a final 892.30; ledger frozen and excluded from all totals."
   },
   "meanrev": {
-   "judgments": 26,
-   "closed": 26,
+   "judgments": 27,
+   "closed": 27,
    "open": 0,
    "alpha_usd": -13.64,
-   "note": "One directional call ever, the 07-31 PG close, and it lost. UNH is now 3.66% below its 08-04 entry after a second straight unattributed decline. Filed no_change again rather than a price view on a move I cannot explain; two days of 'unknown' on the same name is a limit of my evidence, not a story I am withholding."
+   "note": "Fleet's largest book at 1208.32. Third straight unattributed decline and today the divergence widened: UNH -0.43% while XLV rose 1.60%, a 2.03pp gap to its own sector. Position -4.07% below the 08-04 entry. Driver stays 'unknown' with low confidence; I will not invent a cause for the third day running."
   },
   "allweather": {
-   "judgments": 26,
-   "closed": 26,
+   "judgments": 27,
+   "closed": 27,
    "open": 0,
    "alpha_usd": 0.0,
-   "note": "All no_change; a fixed-weight portfolio between rebalances gives me nothing scoreable. Its sleeves did exactly what they exist for today: TLT -3.35 on a 19-year-high 30-year yield, offset by GLD +1.61 and DBC +1.45, net -1.72 on a day SPY fell 0.47%."
+   "note": "All no_change; a fixed-weight portfolio between rebalances gives me nothing scoreable. Sleeves swapped roles from yesterday: GLD -2.79 and SPY -2.06 against TLT +1.50 on the 19-year-high yield print, net -3.55 on a day SPY fell 0.68%."
   },
   "commodity": {
-   "judgments": 26,
-   "closed": 26,
+   "judgments": 27,
+   "closed": 27,
    "open": 0,
    "alpha_usd": 47.79,
-   "note": "Headline still flattered by the unreachable 136.69 reference on 2026-07-27. Best paper book of the session at +19.37 and the only bot today whose gain has a dated, citable cause: Hormuz transits collapsed to zero on Sunday against 31 the prior weekend. DBC +58.90 since the 08-05 rotation."
+   "note": "Beat its benchmark by 0.40pp on a red day and is +55.84 on DBC since the 08-05 rotation. Headline alpha still flattered by the unreachable 136.69 reference on 2026-07-27."
   },
   "congress": {
-   "judgments": 26,
-   "closed": 26,
+   "judgments": 27,
+   "closed": 27,
    "open": 0,
-   "alpha_usd": -1.4,
-   "note": "Both prior directional calls closed as losses on 08-17 and I have stopped filing judgments on this book. The single-filer fault stands: six Rohit Khanna legs from one 2026-08-07 disclosure, no stops, locked to 11-11. Today it lost 11.40 as software and mega-cap tech sold off; my 08-17 reconstruction under-called that by 4.95 because the losing names kept falling into the close. Now the fleet's second-lowest book at 994.23."
+   "alpha_usd": -1.39,
+   "note": "Today's -12.02 was semis, not the single-filer concentration I have logged for weeks: TSM -4.40, META -3.91, AVGO -2.95, NVDA -2.56, against ADBE +3.38. Every leg is locked to a 90-day close_date with no stop, so the bot cannot act on any of it. Filing nothing."
   },
   "hunter": {
-   "judgments": 25,
+   "judgments": 26,
    "closed": 25,
-   "open": 0,
+   "open": 1,
    "alpha_usd": 65.65,
-   "note": "The rotation I declined to pre-empt three separate times fired on its own in the first cycle after the restart: PLTR out at 173.72, SLV in at 59.50, on a reward/risk score of 8.64 against 5.55. Both legs are onside after one session (PLTR closed 172.55, SLV closed 59.57) and the day's -2.94 is essentially the 2.28 of fees. Declining those three exits cost me nothing and the bot's own rule did the work. Lowest book in the fleet at 987.51."
+   "note": "Fleet's lowest book at 957.62 and the only one whose loss is a rule pattern rather than a tape: the reward/risk ranker cleared its 1.25x hysteresis bar twice in two sessions (PLTR out, SLV in and out, NVDA in). The SLV leg was a one-trading-day holding that lost 31.42, and 4.38 of fees went with the pair. Both fills were well timed inside their days. skip_new_entries filed at 957.62. Still 207.62 above the R1 hard stop."
   },
   "sentiment": {
-   "judgments": 14,
-   "closed": 13,
+   "judgments": 15,
+   "closed": 14,
    "open": 1,
-   "alpha_usd": 85.68,
-   "note": "MY BEST CALL SINCE THE FLEET STARTED, and it was a stay-in-cash call, again. +145.64 alpha: the loop restarted at 18:06:54Z and the bot bought NLST within one second, all-in at 6.51 on a Grok 'patent settlement buzz' tag, then hit its own -10% stop 41 minutes later at 5.81. NLST closed 6.03, above the exit, so the stop sold near the low too. The Samsung settlement it chased was announced 2026-08-05 and had already taken the stock from the mid-$2s to about $6. Stay-in-cash calls on this family are 8-0 (+226.01 including the hype-era lines); my hype price views remain 2W/8L. The book fell from largest in the fleet to second largest, 1326.92 -> 1181.29."
+   "alpha_usd": -13.86,
+   "note": "MY WORST DAY IN THIS LEDGER AND THE PREMISE WAS FAULTY, NOT JUST THE OUTCOME: the 08-18 stay-in-cash call scored -99.54. I argued the 08:24Z Watcher list carried no euphoric equity name; the bot acted on the 12:29Z scan five hours newer, which named AMLX, and AMLX had a real dated catalyst (Phase 3 LUCIDITY hit its FDA-agreed primary endpoint, +63.8%). Scoring a forward call against a scan that goes stale before the bot can act on it is a method error and it is mine. Stay-in-cash on this family: 8-1. Separately, the book's OWN rule cost it 111.07: it sold the whole AMLX position 55 minutes in on 'symbol dropped off the euphoric list' and rebought 2.61 higher, surrendering 8.0% of the units. New call filed today against the 350M USD offering, at low conviction and against a 2W/10L price-view record."
   },
   "hype": {
    "judgments": 11,
    "closed": 11,
    "open": 0,
-   "alpha_usd": 80.37,
-   "note": "All from stay-in-cash calls in July; the label predates the rename to 'sentiment'."
+   "alpha_usd": 80.37
   },
   "scholar": {
+   "judgments": 16,
+   "closed": 16,
+   "open": 0,
+   "alpha_usd": 0.0,
+   "note": "Pure IWM beta, one trade ever (07-31). -1.25% against IWM -1.26%. Nothing scoreable."
+  },
+  "analyst": {
    "judgments": 15,
    "closed": 15,
    "open": 0,
    "alpha_usd": 0.0,
-   "note": "All no_change since it was added 07-31. Holds IWM, -3.52 today, pure small-cap beta that beat SPY by 13bp."
-  },
-  "analyst": {
-   "judgments": 14,
-   "closed": 14,
-   "open": 0,
-   "alpha_usd": 0.0,
-   "note": "All no_change since 07-31. REASONING VALIDATION UNBLOCKED after four blocked days: the 08-14 decision validates TRUE (it argued the only way to close a 0.5% entry-lag gap was to keep the beta and stop paying churn; it delivered exactly benchmark beta, -0.47% against -0.47%, with zero trades) and its falsifier correctly did not fire. But TWO defects offset that. It quoted 'SPY closed 773.55 on 8/17' when 08-17 closed 772.67, which is the intraday-print-as-close fault confirmed for a second time, this run at 18:06Z = 14:06 ET. And its own guardrail tagged the 08-17 decision 'UNRECEIPTED WATCHER CLAIM (read_watcher not called)': it cited the Watcher's risk level in its reasoning without calling the tool that returns it. Right conclusion, unreceipted evidence, which is exactly the failure mode this validation step exists to catch. api_cost_usd 0.5916 -> 0.6608 over 10 -> 11 decisions, 0.0692 this decision, inside the 0.05-0.30 band."
+   "note": "FAULT WITHDRAWN. I filed 'asserts Watcher readings it never fetched' on 08-18; src/analyst_agent.py line 335 injects the verdict straight into its prompt ('Watcher latest: {...}') and the _watcher() docstring says 'context AND read_watcher tool', so the guardrail at line 238 is a false positive that has now fired two days running. Its quoted content matched the 12:29Z scan verbatim. What stands: it wrote 'SPY closed 768.46 on 8/18' in a decision committed at 09:37 ET, seven minutes after the open, for the third session in a row. 08-17 decision validated: reasoning_validated TRUE, falsifier_fired FALSE and correctly so. api_cost 0.6608 -> 0.7326, 0.0718 for one decision, in band."
   },
   "hypecrypto": {
-   "judgments": 3,
-   "closed": 2,
-   "open": 1,
-   "alpha_usd": 0.0,
-   "note": "Bot #12 came alive. The 48-hour Binance-451 freeze cleared when the job restarted at 18:06:54Z on 08-17 and it bought GPS-USD all-in in the same cycle. Now the fleet's third-best book at 1062.65, +5.4% today, entirely from a microcap diverging from a flat crypto tape. First directional judgment filed against it today, to close."
+   "judgments": 4,
+   "closed": 4,
+   "open": 0,
+   "alpha_usd": -59.09,
+   "note": "Its rules beat my views two sessions running: it exited GPS at 0.01821, 5.6% above the price I told it to take, and exited TUT at 0.04306, now 4.8% above the market. My 08-18 close call scored -59.09, my single worst. I have stopped filing price views on this book. Standing fact instead: 5 trades in 3 days, costs_paid 7.5505 = 0.76% of the book. Lifetime +59.87."
   },
   "lottery": {
-   "judgments": 3,
-   "closed": 2,
-   "open": 1,
-   "alpha_usd": 0.04,
-   "note": "Bot #13, REAL MONEY on Binance mainnet from the owner's VPS. FIRST PROFITABLE DAY: 38.26 -> 38.86, two round trips both closed by the STALLED timer for +1.07 realized, open GPS leg -0.36. Do not over-read it: the same timer produced three losses yesterday, and BTC was +1.35% over the window, so roughly half the gain is tape. The guard-then-buy contradiction repeated on a NEW name: the LATE guard refused GPSUSDT at 02:10:54Z as '+44.7% off its 24h low, the pump has already happened', then the bot bought it at 04:23:58Z, higher, and it is the one losing leg."
+   "judgments": 4,
+   "closed": 4,
+   "open": 0,
+   "alpha_usd": -0.3,
+   "note": "REAL MONEY, ~40 dollar base, not in any paper total. My 08-18 close call scored -0.34: the bot's STALLED timer beat my reference by 0.9% and, more to the point, got out six hours before GPS fell 29%. The whipsaw fault I carried since 08-16 did not appear today. Book 38.34, flat in USDT, 1 of 3 daily entries spent."
   }
  },
- "driver_tally_note": "Full rolling tally lives in reports/attribution_summary.json, recomputed from source this run rather than incremented, and with nine superseded 08-17 lines excluded so the 08-17 session is not counted twice (313 of 322 lines counted). The worst-driver crown changed hands: 'hype_sentiment' improved to 13 profit / 21 loss (38.2%) on three good lines, so 'technical' at 13 / 24 (35.1%) is now marginally worse. Read that as a ratio artifact, not a finding - hype improved because a real-money timer happened to cut two winners today after cutting three losers yesterday.",
+ "driver_tally_note": "Full rolling tally lives in reports/attribution_summary.json, recomputed from source this run rather than incremented, with the nine superseded 08-17 daily lines still excluded so that session is not counted twice (332 of 341 lines counted). The worst-driver spot changed hands back: 'hype_sentiment' fell to 14 profit / 26 loss (35.0%) against 'technical' at 13 / 24 (35.1%). A 0.1pp margin is noise; treat them as tied for worst. 'unknown' grew again on meanrev's third unattributed session, which is the tally working, not a gap in the work.",
  "fleet_snapshot_at_run": {
-  "basis": "TEN paper books, baseline 10,000. This is up from the nine-book / 9,000 baseline used through 08-17: hypecrypto (bot #12) took its first trade on 2026-08-17 and is now a live book rather than a frozen one, so it joins the total. stock/TQQQ stays retired (final 892.30, 07-31) and excluded. Bot #13 lottery is REAL MONEY on a ~$38 base and is not part of any paper total. All figures below are the bots' own recorded marks, not reconstructions: for the eight equity books the latest mark is the 2026-08-17 close (the US market has not opened on 08-18 at the time of this run); crypto and hypecrypto carry genuine 08-18 partial-day marks.",
+  "basis": "TEN paper books, baseline 10,000. stock/TQQQ stays retired (final 892.30, 07-31) and excluded. Bot #13 lottery is REAL MONEY on a ~38 dollar base and is not part of any paper total. All figures are the bots' own recorded marks, not reconstructions: for the eight equity books the latest mark is the 2026-08-18 close (the US market has not opened on 08-19 at the time of this run); crypto and hypecrypto carry genuine 08-19 partial-day marks.",
   "recorded": {
-   "meanrev": 1213.41,
-   "sentiment": 1181.29,
-   "hypecrypto": 1062.65,
-   "commodity": 1038.9,
-   "scholar": 1036.7,
-   "analyst": 1029.63,
-   "allweather": 1016.88,
-   "crypto": 1001.5,
-   "congress": 994.23,
-   "hunter": 987.51,
-   "total": 10562.7
+   "sentiment": 1280.83,
+   "meanrev": 1208.32,
+   "hypecrypto": 1059.87,
+   "commodity": 1035.84,
+   "scholar": 1023.78,
+   "analyst": 1022.51,
+   "allweather": 1013.33,
+   "crypto": 1009.75,
+   "congress": 982.21,
+   "hunter": 957.62,
+   "total": 10594.06
   },
-  "total_pnl_usd": 562.7,
-  "total_pnl_pct": 5.63,
-  "fleet_day_pnl_usd": -99.84,
-  "fleet_day_note": "10,662.54 (my 08-17 live reconstruction plus hypecrypto at 1,000) -> 10,562.70 recorded. sentiment alone is -145.63 of that; hypecrypto +62.65 and commodity +19.37 pay back most of the rest. The dashboards and reality now agree again - yesterday's 12.35 overstatement is gone because the bots marked.",
+  "total_pnl_usd": 594.06,
+  "total_pnl_pct": 5.94,
+  "fleet_day_pnl_usd": 1.41,
+  "fleet_day_note": "10,592.65 -> 10,594.06, up 1.41. The flattest fleet day on record and it is arithmetic coincidence, not calm: sentiment +99.54 on the AMLX Phase 3 news almost exactly cancels hunter -29.89, hypecrypto -25.89, scholar -12.92, congress -12.02, analyst -7.12, meanrev -5.09, allweather -3.55 and commodity -3.06. Eight of ten books lost money, crypto gained 1.41, and the tenth paid for all of them.",
   "day_changes": {
-   "sentiment": -145.63,
-   "meanrev": -19.17,
-   "congress": -11.4,
-   "crypto": -8.15,
-   "analyst": -4.9,
-   "scholar": -3.52,
-   "hunter": -2.94,
-   "allweather": -1.72,
-   "commodity": 19.37,
-   "hypecrypto": 54.29
+   "sentiment": 99.54,
+   "crypto": 1.41,
+   "commodity": -3.06,
+   "allweather": -3.55,
+   "meanrev": -5.09,
+   "analyst": -7.12,
+   "congress": -12.02,
+   "scholar": -12.92,
+   "hypecrypto": -25.89,
+   "hunter": -29.89
   },
-  "kill_criteria": "No R1 breach: lowest book is hunter at 987.51, 237.51 above the 750 hard stop. No book below 900, none below 800, none on probation. R4 not triggered: no bot is anywhere near 30 consecutive days in cash.",
+  "kill_criteria": "No R1 breach: lowest book is hunter at 957.62, 207.62 above the 750 hard stop. No book below 900, none below 800, none on probation. R4 not triggered: every book is invested, none anywhere near 30 consecutive days in cash.",
   "lottery_real_money": {
-   "book_value_usd": 38.86,
-   "day_pnl_usd": 0.6,
-   "realized_today_usd": 1.0737,
-   "round_trips": 2,
-   "wins": 2,
-   "losses": 0,
-   "open_leg": "GPSUSDT -0.36 (-0.92%)",
-   "fills_verified": 5,
-   "entries_today": "3 of 3 (cap reached)"
-  }
+   "book_value_usd": 38.34,
+   "day_pnl_usd": -0.52,
+   "position": "flat in USDT",
+   "entries_used_today": "1 of 3",
+   "note": "GPS closed 08-18T10:26:55Z at 0.01739 for -0.0626 on the STALLED timer, six hours before GPS fell 29%. PUMP round trip 01:04Z-04:53Z lost 0.7752. All three fills verified inside Binance 1-minute ranges."
+  },
+  "prior_total": 10592.65
  },
  "open_faults": [
   {
-   "fault": "fleet-wide freeze (12:18Z-18:06Z on 08-17) — RESOLVED, structural exposure unfixed",
+   "fault": "sentiment's 'hype faded' exit has no cooldown and keys on scan membership, not on the thesis",
    "severity": "high",
-   "status": "RESOLVED this run; root cause still present in bot.yml",
-   "detail": "The loop restarted 2026-08-17T18:06:54Z after 5h49m dark and has cycled cleanly for 16 hours since: median state-commit gap 13.5 minutes, maximum 14.7 minutes, all eleven bots within 0.2 minutes of each other on age. The outage is over. What is NOT fixed is the exposure that produced it: .github/workflows/bot.yml iterates the bots serially with no per-bot timeout and no watchdog, so one network call that never returns freezes the whole fleet silently while the run stays green. It cost 5h49m and, because the restart dumped four bots into the market in one cycle 20 minutes before the close, it is also the proximate setting for the day's 145.63 loss. Owner's call; I do not touch workflows."
+   "status": "NEW this run - quantified, 111.07 on a single day",
+   "detail": "On 2026-08-18 the book bought AMLX at 29.7599 (09:37 ET), sold ALL 39.6443 units at 31.115 (10:32 ET) because the ticker left Grok's euphoric list, then rebought only 36.4804 units at 33.7291 (14:36 ET) when a newer scan named the same stock with the actual catalyst. AMLX closed 35.11. Holding through would have been 1391.90; the book has 1280.83. Cost 111.07 (3.08 fees, 108.0 price give-up) and 8.0% of the position, on the fleet's best day. hunter solves exactly this with STOP_COOLDOWN on any exited ticker (src/hunter_tracker.py: every exit starts the clock); this book has no equivalent. Owner's call; I do not touch bot code."
   },
   {
-   "fault": "Analyst asserts Watcher readings it never fetched",
+   "fault": "hunter's reward/risk ranker rotates the whole book on consecutive sessions",
    "severity": "medium",
-   "status": "NEW this run — caught by the bot's own guardrail, not by me",
-   "detail": "guardrail_tag on the 2026-08-17 decision: 'agent decision - UNRECEIPTED WATCHER CLAIM (read_watcher not called)'. The decision text states 'Watcher is caution, not SEVERE' and lists three of its items, but tools_called is ['get_price_history'] only. The claim happened to be correct, which is worse rather than better: an agent that reproduces a plausible risk reading from memory will eventually reproduce a stale one and act on it. Its third pre-committed trigger is 'Watcher SEVERE -> immediate exit to CASH', so this is the exact input its own falsifier depends on. Credit where due: the guardrail caught this and stamped it."
+   "status": "NEW this run",
+   "detail": "PLTR sold and SLV bought 2026-08-17T18:06:54Z; SLV sold and NVDA bought 2026-08-18T15:12:39Z. Silver was held for one trading day and lost 31.42; fees across the pair were 4.38 on a 957.62 book. The 1.25x hysteresis bar and the STOP_COOLDOWN both exist and both did their jobs - the cooldown only blocks re-buying a name just exited, and nothing dampens how often the ranking itself flips. Filed as 2026-08-19-hunter-1 (skip_new_entries at 957.62) so it is scoreable rather than just asserted."
   },
   {
    "fault": "Analyst labels intraday prints as closes",
    "severity": "low",
-   "status": "carried — CONFIRMED for a second time after four days untested",
-   "detail": "The 08-17 decision quotes 'SPY closed 773.55 on 8/17'; the actual 08-17 close was 772.67. The decision ran at 18:06Z = 14:06 ET, so it read a mid-session print and called it a close, exactly as the 08-14 line did ('8/14 777.84' when 08-14 closed 776.34). Harmless at these distances from its 755.00 and 728.00 triggers; it stops being harmless the day a trigger is near."
+   "status": "carried - CONFIRMED for a THIRD consecutive session",
+   "detail": "The 08-18 decision states 'SPY closed 768.46 on 8/18'; it was committed 2026-08-18T13:37:41Z = 09:37 ET, seven minutes after the open, and the actual 08-18 close was 767.45. Same defect on 08-14 (quoted 777.84 against a 776.34 close) and 08-17 (773.55 against 772.67). Harmless to the P/L, because none of its triggers is within 1.5% of these numbers, and corrosive to the record: its falsifiers are written in terms of CLOSES below 755.00 and 728.00, so a systematic close/intraday confusion is a fault in the exact vocabulary its exit rule depends on."
   },
   {
-   "fault": "lottery LATE guard refuses a coin, then the bot buys it anyway",
-   "severity": "medium",
-   "status": "carried and GENERALISED — no longer a CHIP-specific quirk",
-   "detail": "Today the same pattern ran on a new name. The LATE guard refused GPSUSDT at 2026-08-18T02:10:54Z as 'already +44.7% off its 24h low (cap +25%): the pump this hype describes has already happened', and the bot bought GPS at 04:23:58Z, higher, on the next scan. It is the only losing leg on the book right now. Three CHIP occurrences over 08-16 and 08-17 plus this one make four, so the fault is in how the guard's inputs refresh between scans, not in any one ticker. The 08-16 cooldown commit 833c3dfe did not address it."
+   "fault": "bot.yml has no per-bot timeout and no watchdog",
+   "severity": "high",
+   "status": "carried - exposure unfixed, no incident in 48 hours",
+   "detail": "The workflow iterates the bots serially, so one network call that never returns freezes the whole fleet silently while the run stays green - the mechanism behind the 5h49m outage on 08-17 and the 11-hour freeze on 08-03. Nothing has fired since: 110 clean cycles in the last 24 hours, max gap 14.4 minutes. The exposure is structural and unchanged. Owner's call; I do not touch workflows."
   },
   {
-   "fault": "lottery hype screen surfaces assets with no lottery payoff shape",
+   "fault": "Analyst guardrail 'UNRECEIPTED WATCHER CLAIM' is a false positive",
    "severity": "low",
-   "status": "carried — no recurrence today",
-   "detail": "Yesterday's LTCUSDT entry (a top-10 major) and the 08-16 pegged UUSDT entry are the same defect class. Today's three entries (CHIP, EDEN, GPS) are all genuine microcaps, so the screen behaved. Stays open because it is unfixed, not because it fired."
+   "status": "NEW this run - this REPLACES and WITHDRAWS the fault I filed on 08-18",
+   "detail": "I reported yesterday that the Analyst 'asserts Watcher readings it never fetched'. That was wrong. src/analyst_agent.py line 335 injects the full verdict into the prompt as 'Watcher latest: {...}', and the _watcher() docstring states the snapshot serves 'context AND read_watcher tool'. The check at line 238 fires whenever the word 'watcher' appears in reasoning without a read_watcher call, which the design makes unnecessary. It has now stamped two consecutive decisions (08-17, 08-18) with a defect that is not one. I also verified the content: the 08-18 claim of '30y yield 5.33%, AI-correction chatter' matches the 2026-08-18T12:29:22Z scan verbatim, and that was the current verdict when the agent ran at 13:37Z. A guardrail that cries wolf on correct behaviour trains the reader to ignore it."
   },
   {
-   "fault": "lottery client logs hard rejections as 'order MAY have filled'",
+   "fault": "meanrev's UNH thesis has been wrong for three weeks with no explainable cause",
    "severity": "medium",
-   "status": "carried — no recurrence, second clean day",
-   "detail": "The five 08-16 entries matched /v3/order 400 -2010 'insufficient balance' rejections and were logged as ambiguous. Today's ledger contains one /v3/ticker/price 400 -1121 'Invalid symbol' error, correctly logged as api_error rather than as a fill, and no phantom position. Unfixed, not firing."
+   "status": "carried - third consecutive unattributed session, divergence widening",
+   "detail": "UNH is -4.07% below the 08-04 'most oversold mega-cap' entry at 410.66. On 08-18 it fell 0.43% while its own sector (XLV) rose 1.60% - a 2.03pp gap, the widest of the three days, and the third session where search returned no dated catalyst. I keep filing driver 'unknown' at low confidence rather than a story. Recording it as an open fault so the pattern is visible at the next review even though no individual day justifies a judgment."
   },
   {
-   "fault": "congress single-filer concentration",
+   "fault": "supervisor method error: judgments scored against scans the bot will not use",
    "severity": "medium",
-   "status": "carried — I no longer file judgments against it",
-   "detail": "Six Rohit Khanna legs from one 2026-08-07 disclosure by a filer its own log scores '+0.0% avg excess', cash 0, every leg locked to 2026-11-11 with no stop. Four of the six (ADBE, MSFT, PYPL, PLTR) were the book's biggest losers today. I bet against two of these legs and lost twice, so this stays a structural complaint rather than a trade."
-  },
-  {
-   "fault": "Watcher 'crypto' section is null",
-   "severity": "low",
-   "status": "carried",
-   "detail": "The crypto field added by the 08-15 commit is still absent from the 08-18T08:24Z scan, while crypto_hype is populating normally (ACE, TUT and GPS tagged euphoric). Downstream bots are not starved; the dedicated section simply does not fill."
-  },
-  {
-   "fault": "Watcher cadence slipped to 4.8h",
-   "severity": "resolved",
-   "status": "CLOSED — cadence restored with the loop",
-   "detail": "last_scan_utc 2026-08-18T08:24:19Z, 1.8 hours old at 10:10Z against a 2-hour design cadence. 77 scans lifetime, month_count 2026-08 = 42."
-  },
-  {
-   "fault": "bot #12 hypecrypto frozen on Binance HTTP 451",
-   "severity": "resolved",
-   "status": "CLOSED after 48 hours",
-   "detail": "The owner's fix 9f64b5ea (routing spot data through Binance's mirror) took effect when the job restarted at 18:06Z on 08-17. The bot marked, benched and traded in that same cycle and has cycled normally for 16 hours since. It is now a live book and joins the paper total, which is why the fleet baseline moves from 9,000 to 10,000 this run."
-  },
-  {
-   "fault": "fleet uptime collapsing — three consecutive days of degradation",
-   "severity": "resolved-pending-confirmation",
-   "status": "DID NOT recur; the 24h picture is clean",
-   "detail": "Since the 18:06Z restart there is no marking hole at all: median state-commit gap 13.5 minutes, largest 14.7 minutes. The overnight throttling window that produced 6h11m gaps on the two previous nights did not produce one last night. I explicitly checked and am NOT reporting a cron gap. Caveat: the raw run-start arithmetic still shows a 105.7-minute maximum interval and 107 of 120 runs 'cancelled', which is the long-running-loop design rather than lost coverage - do not read those numbers as outages, and do not read one good night as a fix."
-  },
-  {
-   "fault": "lottery book cap removed; size went 4.2x on real capital",
-   "severity": "low",
-   "status": "carried — owner decision, recorded not disputed",
-   "detail": "Trade size stayed at the ~$39 level across all three of today's entries. MAX_ENTRIES_PER_DAY still 3 and today's 3 are spent."
+   "status": "NEW this run - this one is mine",
+   "detail": "My 2026-08-18 stay-in-cash call on sentiment argued from the 08:24Z Watcher list carrying no euphoric equity name. The bot acted on the 12:29Z scan, five hours newer, which named AMLX - a stock with a real dated catalyst that day. The call lost 99.54, my largest. The Watcher scans roughly every two hours and I file before the US open, so ANY stay-in-cash call I make reasons from a list that will be replaced two to five times before the bot can act. Fix on my side, not the fleet's: either state the call as conditional on the scan set at fill time, or stop filing pre-open calls that depend on scan contents."
   }
  ]
 }
