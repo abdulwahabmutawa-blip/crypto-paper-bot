@@ -1,37 +1,8 @@
 {
-  "ts": "2026-08-19T12:51:36+00:00",
-  "scanned": 78,
+  "ts": "2026-08-19T12:57:00+00:00",
+  "scanned": 79,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ETHUSDT",
-      "signal": "ignition",
-      "score": 0.9428,
-      "raw_score": 0.9127,
-      "weight": 1.033,
-      "price": 1937.3,
-      "why": "trades 10.5x and volume 21.7x the prior 4h, 73% taker-buy, $13,720,071 burst \u2014 while price has only moved +0.7%",
-      "chg_24h": 0.0187,
-      "vol_surge": 21.74,
-      "chg_1h": 0.0075,
-      "market_surge": 9.34,
-      "actionable": true
-    },
-    {
-      "symbol": "SOLUSDT",
-      "signal": "ignition",
-      "score": 0.9308,
-      "raw_score": 0.9011,
-      "weight": 1.033,
-      "price": 78.5,
-      "why": "trades 32.2x and volume 49.3x the prior 4h, 73% taker-buy, $12,111,616 burst \u2014 while price has only moved +1.2%",
-      "chg_24h": 0.0272,
-      "vol_surge": 49.27,
-      "chg_1h": 0.0123,
-      "market_surge": 28.12,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "benched \u2014 hit 32%, mean -2.18% over last 25 at 4h: not beating the round trip",
@@ -40,15 +11,15 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 10,
+    "count": 11,
     "baseline": 11.0,
     "wave": false
   },
   "scorecard": {
     "ignition": {
       "n_1h": 30,
-      "hit_rate_1h": 0.267,
-      "mean_ret_1h": 0.00335,
+      "hit_rate_1h": 0.3,
+      "mean_ret_1h": 0.00386,
       "median_ret_1h": 0.00013,
       "n_4h": 30,
       "hit_rate_4h": 0.533,
