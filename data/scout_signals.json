@@ -1,29 +1,29 @@
 {
-  "ts": "2026-08-19T01:54:03+00:00",
+  "ts": "2026-08-19T02:00:03+00:00",
   "scanned": 74,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "MORPHOUSDT",
-      "signal": "ignition",
-      "score": 0.6011,
-      "raw_score": 0.9012,
-      "weight": 0.667,
-      "price": 2.049,
-      "why": "trades 16.6x and volume 14.9x the prior 4h, 75% taker-buy, $51,911 burst \u2014 while price has only moved -1.5%",
-      "chg_24h": -0.0247,
-      "vol_surge": 14.87,
-      "chg_1h": -0.0149,
-      "market_surge": 7.78,
+      "symbol": "ACEUSDT",
+      "signal": "heat",
+      "score": 0.6,
+      "raw_score": 0.6,
+      "weight": 1.0,
+      "price": 0.2313,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding -0.201% \u00b7 L/S 0.91",
+      "chg_24h": 0.4593,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
       "actionable": false,
-      "status": "benched \u2014 hit 17%, mean -0.60% over last 30 at 4h: not beating the round trip"
+      "status": "benched \u2014 hit 47%, mean -1.03% over last 17 at 4h: not beating the round trip"
     }
   ],
   "gate": {
     "ignition": "benched \u2014 hit 17%, mean -0.60% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 33%, mean -0.84% over last 21 at 4h: not beating the round trip",
     "reversion": "probation \u2014 8/12 resolved 4h samples under ruleset 3",
-    "heat": "benched \u2014 hit 44%, mean -1.22% over last 16 at 4h: not beating the round trip",
+    "heat": "benched \u2014 hit 47%, mean -1.03% over last 17 at 4h: not beating the round trip",
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
@@ -75,9 +75,9 @@
       "hit_rate_1h": 0.235,
       "mean_ret_1h": -0.02117,
       "median_ret_1h": -0.01886,
-      "n_4h": 16,
-      "hit_rate_4h": 0.438,
-      "mean_ret_4h": -0.01219,
+      "n_4h": 17,
+      "hit_rate_4h": 0.471,
+      "mean_ret_4h": -0.01025,
       "median_ret_4h": -0.00519,
       "n_24h": 9,
       "hit_rate_24h": 0.333,
