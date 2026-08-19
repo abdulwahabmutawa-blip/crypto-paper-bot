@@ -1,8 +1,23 @@
 {
-  "ts": "2026-08-19T23:44:33+00:00",
+  "ts": "2026-08-19T23:50:16+00:00",
   "scanned": 112,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "JSTUSDT",
+      "signal": "ignition",
+      "score": 0.8664,
+      "raw_score": 0.722,
+      "weight": 1.2,
+      "price": 0.1055,
+      "why": "trades 7.2x and volume 6.8x the prior 4h, 82% taker-buy, $90,699 burst \u2014 while price has only moved +1.6%",
+      "chg_24h": -0.0164,
+      "vol_surge": 6.83,
+      "chg_1h": 0.0162,
+      "market_surge": 8.57,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "benched \u2014 hit 43%, mean -0.34% over last 30 at 4h: not beating the round trip",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 42,
+    "count": 41,
     "baseline": 12.0,
     "wave": true
   },
@@ -19,7 +34,7 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.533,
-      "mean_ret_1h": 0.00273,
+      "mean_ret_1h": 0.00341,
       "median_ret_1h": 0.00344,
       "n_4h": 30,
       "hit_rate_4h": 0.7,
