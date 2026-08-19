@@ -1,17 +1,18 @@
 {
-  "ts": "2026-08-19T13:52:19+00:00",
+  "ts": "2026-08-19T13:57:20+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
       "LINK",
       "XRP",
+      "ETH",
       "SOL",
-      "PEPE",
+      "CFG",
+      "AAVE",
       "BTC",
-      "TAO",
-      "ZEC",
-      "SUI",
-      "ETH"
+      "PEPE",
+      "GALA",
+      "ETHFI"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,9 +22,9 @@
       "PLUME",
       "XRP",
       "ETH",
-      "BTC",
       "XAUT",
-      "DOGE"
+      "PAXG",
+      "BTC"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -46,7 +47,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 9.5e-05,
+      "funding": 9.4e-05,
       "long_short": 2.17
     },
     {
@@ -56,7 +57,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 4.7e-05,
+      "funding": 4.4e-05,
       "long_short": 2.04
     },
     {
@@ -66,26 +67,40 @@
         "coingecko",
         "movers"
       ],
-      "funding": 8.1e-05,
+      "funding": 8.2e-05,
       "long_short": 3.3
     },
     {
-      "symbol": "ZEC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": -3e-05,
-      "long_short": 0.72
-    },
-    {
-      "symbol": "DOGE",
+      "symbol": "AAVE",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
-      "funding": 8.4e-05
+      "funding": 9.4e-05
+    },
+    {
+      "symbol": "CFG",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 3e-06
+    },
+    {
+      "symbol": "ETHFI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 2e-06
+    },
+    {
+      "symbol": "GALA",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 9.2e-05
     },
     {
       "symbol": "LINK",
@@ -93,7 +108,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0001
+      "funding": 9.7e-05
+    },
+    {
+      "symbol": "PAXG",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "PEPE",
@@ -116,23 +139,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.6e-05
-    },
-    {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": -2.4e-05
     },
     {
       "symbol": "XAUT",
@@ -141,6 +148,14 @@
         "movers"
       ],
       "funding": 2.4e-05
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -3.2e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
