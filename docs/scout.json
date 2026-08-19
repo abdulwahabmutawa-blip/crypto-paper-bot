@@ -1,8 +1,38 @@
 {
-  "ts": "2026-08-19T09:57:24+00:00",
-  "scanned": 73,
+  "ts": "2026-08-19T10:03:24+00:00",
+  "scanned": 74,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ATOMUSDT",
+      "signal": "ignition",
+      "score": 0.899,
+      "raw_score": 0.899,
+      "weight": 1.0,
+      "price": 1.407,
+      "why": "trades 13.3x and volume 37.4x the prior 4h, 61% taker-buy, $56,041 burst \u2014 while price has only moved -0.1%",
+      "chg_24h": 0.0181,
+      "vol_surge": 37.39,
+      "chg_1h": -0.0014,
+      "market_surge": 4.67,
+      "actionable": true
+    },
+    {
+      "symbol": "MUBARAKUSDT",
+      "signal": "breakout",
+      "score": 0.7508,
+      "raw_score": 0.7508,
+      "weight": 1.0,
+      "price": 0.01894,
+      "why": "trades 11.5x, volume 5.2x, 64% taker-buy, +5.1% in an hour, at 92% of its 24h range",
+      "chg_24h": 0.1335,
+      "vol_surge": 5.23,
+      "chg_1h": 0.0511,
+      "market_surge": 0.0,
+      "actionable": false,
+      "status": "benched \u2014 hit 35%, mean -2.12% over last 23 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "benched \u2014 hit 35%, mean -2.12% over last 23 at 4h: not beating the round trip",
