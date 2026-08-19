@@ -1,14 +1,13 @@
 {
-  "ts": "2026-08-19T10:30:59+00:00",
+  "ts": "2026-08-19T10:36:11+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
       "LINK",
-      "ETH",
-      "SUI",
       "BTC",
-      "SOL",
-      "AAVE"
+      "SUI",
+      "HBAR",
+      "XPL"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,7 +19,7 @@
       "ETH",
       "XRP",
       "BTC",
-      "BNB"
+      "SKHYB"
     ],
     "watcher": [
       "ACE"
@@ -35,7 +34,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.002163,
+      "funding": -0.002136,
       "long_short": 1.03
     },
     {
@@ -45,36 +44,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 4.3e-05,
+      "funding": 4.2e-05,
       "long_short": 1.58
-    },
-    {
-      "symbol": "ETH",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5.7e-05,
-      "long_short": 2.22
-    },
-    {
-      "symbol": "SOL",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 8.1e-05,
-      "long_short": 2.06
-    },
-    {
-      "symbol": "AAVE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5.1e-05
     },
     {
       "symbol": "ALLO",
@@ -85,12 +56,20 @@
       "funding": 5e-05
     },
     {
-      "symbol": "BNB",
+      "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 4.8e-05
+      "funding": 5.6e-05
+    },
+    {
+      "symbol": "HBAR",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 4.3e-05
     },
     {
       "symbol": "LINK",
@@ -114,7 +93,22 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9e-06
+      "funding": 1.3e-05
+    },
+    {
+      "symbol": "SKHYB",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 8e-05
     },
     {
       "symbol": "SUI",
@@ -122,7 +116,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.3e-05
+      "funding": 6.1e-05
+    },
+    {
+      "symbol": "XPL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 3.9e-05
     },
     {
       "symbol": "XRP",
