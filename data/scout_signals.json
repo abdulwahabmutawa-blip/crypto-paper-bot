@@ -1,10 +1,28 @@
 {
-  "ts": "2026-08-19T01:03:23+00:00",
-  "scanned": 77,
+  "ts": "2026-08-19T01:08:33+00:00",
+  "scanned": 78,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SOXLBUSDT",
+      "signal": "reversion",
+      "score": 0.3691,
+      "raw_score": 0.3691,
+      "weight": 1.0,
+      "price": 128.76,
+      "why": "down -15% on the day (bottom decile of the market), now +1.2% over 15m with 2 green candles",
+      "chg_24h": -0.1546,
+      "vol_surge": 0.82,
+      "chg_1h": 0.0332,
+      "market_surge": 1.49,
+      "oi_drop": null,
+      "funding": null,
+      "actionable": false,
+      "status": "probation \u2014 8/12 resolved 4h samples under ruleset 3"
+    }
+  ],
   "gate": {
-    "ignition": "benched \u2014 hit 7%, mean -1.86% over last 30 at 4h: not beating the round trip",
+    "ignition": "benched \u2014 hit 10%, mean -1.52% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 33%, mean -0.84% over last 21 at 4h: not beating the round trip",
     "reversion": "probation \u2014 8/12 resolved 4h samples under ruleset 3",
     "heat": "benched \u2014 hit 44%, mean -1.22% over last 16 at 4h: not beating the round trip",
@@ -18,13 +36,13 @@
   "scorecard": {
     "ignition": {
       "n_1h": 30,
-      "hit_rate_1h": 0.3,
-      "mean_ret_1h": -0.00193,
-      "median_ret_1h": -0.00096,
+      "hit_rate_1h": 0.333,
+      "mean_ret_1h": -0.00155,
+      "median_ret_1h": -0.00095,
       "n_4h": 30,
-      "hit_rate_4h": 0.067,
-      "mean_ret_4h": -0.01859,
-      "median_ret_4h": -0.01058,
+      "hit_rate_4h": 0.1,
+      "mean_ret_4h": -0.01518,
+      "median_ret_4h": -0.00554,
       "n_24h": 30,
       "hit_rate_24h": 0.1,
       "mean_ret_24h": -0.05945,
