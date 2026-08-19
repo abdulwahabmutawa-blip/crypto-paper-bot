@@ -1,10 +1,10 @@
 {
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "holding": "AMLX",
-  "units": 36.48035164716341,
+  "holding": "MRNA",
+  "units": 11.371011174523536,
   "cash": 0.0,
-  "entry_price": 33.72909927368164,
+  "entry_price": 116.70999908447266,
   "bench_units": 1.332054612938296,
   "stopped": {
     "SHIB-USD": "2026-07-27T00:01:08+00:00",
@@ -317,6 +317,26 @@
       "value": 1230.45,
       "fee": 1.54,
       "reason": "Grok: AMLX euphoric \u2014 Phase 3 trial success huge surge (scan 2026-08-18T18:35)"
+    },
+    {
+      "date": "2026-08-19",
+      "action": "SELL",
+      "ticker": "AMLX",
+      "price": 36.46989822,
+      "units": 36.4804,
+      "value": 1330.43,
+      "fee": 1.66,
+      "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
+    },
+    {
+      "date": "2026-08-19",
+      "action": "BUY",
+      "ticker": "MRNA",
+      "price": 116.70999908,
+      "units": 11.371,
+      "value": 1327.11,
+      "fee": 1.66,
+      "reason": "Grok: MRNA euphoric \u2014 Phase 3 cancer vaccine success, +50% surge (scan 2026-08-19T11:46)"
     }
   ],
   "history": [
@@ -482,15 +502,15 @@
       "value": 1280.83,
       "bench": 1022.29,
       "holding": "AMLX"
+    },
+    {
+      "date": "2026-08-19",
+      "value": 1327.11,
+      "bench": 1025.7,
+      "holding": "MRNA"
     }
   ],
   "intraday": [
-    {
-      "ts": "2026-07-27T17:45:22+00:00",
-      "value": 913.97,
-      "bench": 981.34,
-      "holding": "RKLB"
-    },
     {
       "ts": "2026-07-27T18:01:34+00:00",
       "value": 920.9,
@@ -9484,9 +9504,15 @@
       "value": 1280.83,
       "bench": 1022.29,
       "holding": "AMLX"
+    },
+    {
+      "ts": "2026-08-19T13:34:41+00:00",
+      "value": 1327.11,
+      "bench": 1025.7,
+      "holding": "MRNA"
     }
   ],
-  "last_updated_utc": "2026-08-19T13:21:13+00:00",
+  "last_updated_utc": "2026-08-19T13:34:41+00:00",
   "restatement": {
     "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)",
     "voided_trades": [
@@ -9565,5 +9591,5 @@
     ],
     "voided_reason": "signal faded before any real fill was possible (market closed the whole window) \u2014 trades could never have existed"
   },
-  "costs_paid": 15.3684
+  "costs_paid": 18.6924
 }

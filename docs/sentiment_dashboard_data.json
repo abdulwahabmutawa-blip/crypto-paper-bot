@@ -1,22 +1,22 @@
 {
-  "generated_utc": "2026-08-19T13:21:13+00:00",
+  "generated_utc": "2026-08-19T13:34:41+00:00",
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "live_ts": "2026-08-19T13:21:13+00:00",
+  "live_ts": "2026-08-19T13:34:41+00:00",
   "current": {
-    "date": "2026-08-18",
-    "value": 1280.83,
-    "bench": 1022.29,
-    "holding": "AMLX"
+    "date": "2026-08-19",
+    "value": 1327.11,
+    "bench": 1025.7,
+    "holding": "MRNA"
   },
   "board": [
     {
       "sym": "MRNA",
-      "price": 62.96,
+      "price": 116.71,
       "line": "euphoric \u00b7 Phase 3 cancer vaccine success, +50% sur",
-      "tag": "candidate",
+      "tag": "HELD",
       "on": true,
-      "pick": false,
+      "pick": true,
       "fill": 40
     },
     {
@@ -55,12 +55,6 @@
     "board_note": "Buys the crowd's loudest euphoria, rides it while it lasts, cuts it at -10%, and refuses to trade in a severe-risk tape. Weakest-evidence strategy in the fleet \u2014 hence the strictest guards."
   },
   "intraday": [
-    {
-      "ts": "2026-07-27T17:45:22+00:00",
-      "value": 913.97,
-      "bench": 981.34,
-      "holding": "RKLB"
-    },
     {
       "ts": "2026-07-27T18:01:34+00:00",
       "value": 920.9,
@@ -9054,27 +9048,15 @@
       "value": 1280.83,
       "bench": 1022.29,
       "holding": "AMLX"
+    },
+    {
+      "ts": "2026-08-19T13:34:41+00:00",
+      "value": 1327.11,
+      "bench": 1025.7,
+      "holding": "MRNA"
     }
   ],
   "trades": [
-    {
-      "date": "2026-07-28",
-      "action": "SELL",
-      "ticker": "RKLB",
-      "price": 63.39,
-      "units": 14.1372,
-      "value": 896.16,
-      "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
-    },
-    {
-      "date": "2026-07-30",
-      "action": "BUY",
-      "ticker": "MSFT",
-      "price": 449.49,
-      "units": 1.9937,
-      "value": 896.16,
-      "reason": "Grok: MSFT euphoric \u2014 Surges 15% on blowout Azure AI earnings (scan 2026-07-30T15:55)"
-    },
     {
       "date": "2026-07-31",
       "action": "SELL",
@@ -9246,6 +9228,26 @@
       "value": 1230.45,
       "fee": 1.54,
       "reason": "Grok: AMLX euphoric \u2014 Phase 3 trial success huge surge (scan 2026-08-18T18:35)"
+    },
+    {
+      "date": "2026-08-19",
+      "action": "SELL",
+      "ticker": "AMLX",
+      "price": 36.46989822,
+      "units": 36.4804,
+      "value": 1330.43,
+      "fee": 1.66,
+      "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
+    },
+    {
+      "date": "2026-08-19",
+      "action": "BUY",
+      "ticker": "MRNA",
+      "price": 116.70999908,
+      "units": 11.371,
+      "value": 1327.11,
+      "fee": 1.66,
+      "reason": "Grok: MRNA euphoric \u2014 Phase 3 cancer vaccine success, +50% surge (scan 2026-08-19T11:46)"
     }
   ],
   "history": [
@@ -9411,11 +9413,17 @@
       "value": 1280.83,
       "bench": 1022.29,
       "holding": "AMLX"
+    },
+    {
+      "date": "2026-08-19",
+      "value": 1327.11,
+      "bench": 1025.7,
+      "holding": "MRNA"
     }
   ],
-  "costs_paid": 15.3684,
+  "costs_paid": 18.6924,
   "frozen": null,
-  "thoughts": "I'm riding AMLX because the Watcher's latest scan of X and the news says the crowd is most excited about it right now. I know hype is the weakest evidence there is \u2014 so my rules are the strictest in the fleet: the moment the excitement fades from the scans I sell, and if I'm down 10% from my buy price I sell no matter what.",
+  "thoughts": "I'm riding MRNA because the Watcher's latest scan of X and the news says the crowd is most excited about it right now. I know hype is the weakest evidence there is \u2014 so my rules are the strictest in the fleet: the moment the excitement fades from the scans I sell, and if I'm down 10% from my buy price I sell no matter what.",
   "strategy": {
     "name": "Hype Trader \u2014 rides the Watcher's reads, on trial",
     "rule": "Hold the top euphoric symbol from the Watcher's 8-hour Grok scans while it stays euphoric; -10% hard stop; Watcher severe verdict -> cash",
