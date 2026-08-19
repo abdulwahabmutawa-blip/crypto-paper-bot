@@ -1,35 +1,20 @@
 {
-  "ts": "2026-08-19T21:13:34+00:00",
-  "scanned": 107,
+  "ts": "2026-08-19T21:19:05+00:00",
+  "scanned": 109,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "AAVEUSDT",
+      "symbol": "PUMPUSDT",
       "signal": "breakout",
-      "score": 0.766,
-      "raw_score": 0.821,
+      "score": 0.6786,
+      "raw_score": 0.7273,
       "weight": 0.933,
-      "price": 97.05,
-      "why": "trades 18.4x, volume 28.4x, 70% taker-buy, +4.2% in an hour, at 95% of its 24h range",
-      "chg_24h": 0.0975,
-      "vol_surge": 28.45,
-      "chg_1h": 0.042,
-      "market_surge": 10.03,
-      "actionable": false,
-      "status": "benched \u2014 hit 43%, mean -0.54% over last 30 at 4h: not beating the round trip"
-    },
-    {
-      "symbol": "DOGEUSDT",
-      "signal": "breakout",
-      "score": 0.7435,
-      "raw_score": 0.7969,
-      "weight": 0.933,
-      "price": 0.07571,
-      "why": "trades 17.1x, volume 21.7x, 67% taker-buy, +3.6% in an hour, at 98% of its 24h range",
-      "chg_24h": 0.0757,
-      "vol_surge": 21.73,
-      "chg_1h": 0.0361,
-      "market_surge": 8.19,
+      "price": 0.003216,
+      "why": "trades 7.8x, volume 19.4x, 60% taker-buy, +2.1% in an hour, at 90% of its 24h range",
+      "chg_24h": 0.11,
+      "vol_surge": 19.41,
+      "chg_1h": 0.0206,
+      "market_surge": 2.32,
       "actionable": false,
       "status": "benched \u2014 hit 43%, mean -0.54% over last 30 at 4h: not beating the round trip"
     }
@@ -42,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 55,
+    "count": 49,
     "baseline": 12.0,
     "wave": true
   },
@@ -57,9 +42,9 @@
       "mean_ret_4h": 0.0085,
       "median_ret_4h": 0.01054,
       "n_24h": 30,
-      "hit_rate_24h": 0.5,
-      "mean_ret_24h": 0.01445,
-      "median_ret_24h": 0.00202
+      "hit_rate_24h": 0.533,
+      "mean_ret_24h": 0.01985,
+      "median_ret_24h": 0.00308
     },
     "breakout": {
       "n_1h": 30,
