@@ -1,33 +1,17 @@
 {
-  "ts": "2026-08-19T05:26:34+00:00",
-  "scanned": 73,
+  "ts": "2026-08-19T05:32:23+00:00",
+  "scanned": 75,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "SUIUSDT",
-      "signal": "ignition",
-      "score": 0.4635,
-      "raw_score": 0.6621,
-      "weight": 0.7,
-      "price": 0.6568,
-      "why": "trades 4.6x and volume 8.9x the prior 4h, 64% taker-buy, $142,427 burst \u2014 while price has only moved +0.1%",
-      "chg_24h": 0.0161,
-      "vol_surge": 8.88,
-      "chg_1h": 0.0008,
-      "market_surge": 0.0,
-      "actionable": false,
-      "status": "benched \u2014 hit 20%, mean -0.58% over last 30 at 4h: not beating the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
-    "ignition": "benched \u2014 hit 20%, mean -0.58% over last 30 at 4h: not beating the round trip",
+    "ignition": "benched \u2014 hit 23%, mean -0.51% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 35%, mean -2.12% over last 23 at 4h: not beating the round trip",
     "reversion": "benched \u2014 hit 29%, mean -1.04% over last 14 at 4h: not beating the round trip",
     "heat": "benched \u2014 hit 47%, mean -1.03% over last 17 at 4h: not beating the round trip",
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 10,
+    "count": 13,
     "baseline": 12.0,
     "wave": false
   },
@@ -35,12 +19,12 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.333,
-      "mean_ret_1h": -0.00056,
+      "mean_ret_1h": -0.00054,
       "median_ret_1h": 0.00019,
       "n_4h": 30,
-      "hit_rate_4h": 0.2,
-      "mean_ret_4h": -0.00584,
-      "median_ret_4h": -0.00338,
+      "hit_rate_4h": 0.233,
+      "mean_ret_4h": -0.00512,
+      "median_ret_4h": -0.00331,
       "n_24h": 30,
       "hit_rate_24h": 0.2,
       "mean_ret_24h": -0.05941,
