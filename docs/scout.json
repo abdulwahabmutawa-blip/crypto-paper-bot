@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-19T20:39:14+00:00",
-  "scanned": 104,
+  "ts": "2026-08-19T20:45:06+00:00",
+  "scanned": 103,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "TRUMPUSDT",
-      "signal": "breakout",
-      "score": 0.6104,
-      "raw_score": 0.6542,
-      "weight": 0.933,
-      "price": 1.538,
-      "why": "trades 4.4x, volume 5.6x, 74% taker-buy, +5.3% in an hour, at 98% of its 24h range",
-      "chg_24h": 0.1056,
-      "vol_surge": 5.6,
-      "chg_1h": 0.0534,
-      "market_surge": 9.67,
-      "actionable": false,
-      "status": "benched \u2014 hit 43%, mean -0.54% over last 30 at 4h: not beating the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "benched \u2014 hit 43%, mean -0.54% over last 30 at 4h: not beating the round trip",
@@ -35,8 +19,8 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.533,
-      "mean_ret_1h": 0.00301,
-      "median_ret_1h": 0.00368,
+      "mean_ret_1h": 0.0028,
+      "median_ret_1h": 0.0036,
       "n_4h": 30,
       "hit_rate_4h": 0.7,
       "mean_ret_4h": 0.0085,
