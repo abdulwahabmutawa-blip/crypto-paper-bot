@@ -1,22 +1,22 @@
 {
-  "ts": "2026-08-19T08:00:26+00:00",
-  "scanned": 71,
+  "ts": "2026-08-19T08:06:13+00:00",
+  "scanned": 70,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "ACEUSDT",
-      "signal": "heat",
-      "score": 0.6,
-      "raw_score": 0.6,
+      "symbol": "KORUBUSDT",
+      "signal": "breakout",
+      "score": 0.8661,
+      "raw_score": 0.8661,
       "weight": 1.0,
-      "price": 0.2206,
-      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding -0.157% \u00b7 L/S 0.85",
-      "chg_24h": 0.1401,
-      "vol_surge": null,
-      "chg_1h": null,
-      "market_surge": 3,
+      "price": 20.14,
+      "why": "trades 10.5x, volume 11.3x, 70% taker-buy, +5.6% in an hour, at 89% of its 24h range",
+      "chg_24h": -0.0064,
+      "vol_surge": 11.28,
+      "chg_1h": 0.0561,
+      "market_surge": 1.36,
       "actionable": false,
-      "status": "benched \u2014 hit 50%, mean -0.70% over last 18 at 4h: not beating the round trip"
+      "status": "benched \u2014 hit 35%, mean -2.12% over last 23 at 4h: not beating the round trip"
     }
   ],
   "gate": {
@@ -35,21 +35,21 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.333,
-      "mean_ret_1h": 0.00374,
-      "median_ret_1h": 0.00013,
+      "mean_ret_1h": 0.00333,
+      "median_ret_1h": -0.00039,
       "n_4h": 30,
       "hit_rate_4h": 0.333,
       "mean_ret_4h": -0.00124,
       "median_ret_4h": -0.0007,
       "n_24h": 30,
       "hit_rate_24h": 0.233,
-      "mean_ret_24h": -0.05815,
+      "mean_ret_24h": -0.05817,
       "median_ret_24h": -0.03125
     },
     "breakout": {
-      "n_1h": 23,
-      "hit_rate_1h": 0.478,
-      "mean_ret_1h": 5e-05,
+      "n_1h": 24,
+      "hit_rate_1h": 0.458,
+      "mean_ret_1h": -5e-05,
       "median_ret_1h": 0.00054,
       "n_4h": 23,
       "hit_rate_4h": 0.348,
