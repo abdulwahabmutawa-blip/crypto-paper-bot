@@ -1,13 +1,13 @@
 {
-  "ts": "2026-08-19T08:50:26+00:00",
+  "ts": "2026-08-19T08:55:29+00:00",
   "sources": {
     "coingecko": [
+      "PUMP",
       "SOL",
       "ETH",
-      "PUMP",
-      "ONDO",
-      "BTC",
       "LINK",
+      "ONDO",
+      "POL",
       "CFG"
     ],
     "reddit": [],
@@ -35,18 +35,8 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.001614,
+      "funding": -0.001633,
       "long_short": 0.94
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 4.7e-05,
-      "long_short": 1.57
     },
     {
       "symbol": "ETH",
@@ -55,7 +45,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 4.9e-05,
+      "funding": 5.1e-05,
       "long_short": 2.21
     },
     {
@@ -74,7 +64,15 @@
       "sources": [
         "movers"
       ],
-      "funding": 3.1e-05
+      "funding": 2.8e-05
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 4.8e-05
     },
     {
       "symbol": "CFG",
@@ -90,7 +88,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.1e-05
+      "funding": 7.5e-05
     },
     {
       "symbol": "ONDO",
@@ -98,7 +96,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.3e-05
+      "funding": 2.1e-05
+    },
+    {
+      "symbol": "POL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -1.8e-05
     },
     {
       "symbol": "PUMP",
@@ -121,7 +127,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 6.2e-05
+      "funding": 6.3e-05
     },
     {
       "symbol": "ZEC",
@@ -129,7 +135,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -4e-06
+      "funding": -1e-06
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
