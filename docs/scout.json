@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-19T08:12:04+00:00",
-  "scanned": 70,
+  "ts": "2026-08-19T08:17:34+00:00",
+  "scanned": 68,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "KORUBUSDT",
+      "signal": "ignition",
+      "score": 0.4166,
+      "raw_score": 0.5001,
+      "weight": 0.833,
+      "price": 19.82,
+      "why": "trades 4.2x and volume 5.3x the prior 4h, 66% taker-buy, $138,018 burst \u2014 while price has only moved +2.6%",
+      "chg_24h": -0.025,
+      "vol_surge": 5.28,
+      "chg_1h": 0.0264,
+      "market_surge": 2.15,
+      "actionable": false,
+      "status": "benched \u2014 hit 33%, mean -0.12% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 33%, mean -0.12% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 35%, mean -2.12% over last 23 at 4h: not beating the round trip",
@@ -12,7 +28,7 @@
   },
   "breadth": {
     "count": 8,
-    "baseline": 12.0,
+    "baseline": 11.0,
     "wave": false
   },
   "scorecard": {
@@ -26,9 +42,9 @@
       "mean_ret_4h": -0.00124,
       "median_ret_4h": -0.0007,
       "n_24h": 30,
-      "hit_rate_24h": 0.233,
-      "mean_ret_24h": -0.05817,
-      "median_ret_24h": -0.03125
+      "hit_rate_24h": 0.267,
+      "mean_ret_24h": -0.05676,
+      "median_ret_24h": -0.02062
     },
     "breakout": {
       "n_1h": 24,
@@ -63,10 +79,10 @@
       "hit_rate_4h": 0.5,
       "mean_ret_4h": -0.00697,
       "median_ret_4h": 0.01027,
-      "n_24h": 10,
-      "hit_rate_24h": 0.3,
-      "mean_ret_24h": -0.0424,
-      "median_ret_24h": -0.10234
+      "n_24h": 11,
+      "hit_rate_24h": 0.273,
+      "mean_ret_24h": -0.06473,
+      "median_ret_24h": -0.10433
     }
   },
   "note": "READ-ONLY scout. Ranked opinion only \u2014 the book decides."
