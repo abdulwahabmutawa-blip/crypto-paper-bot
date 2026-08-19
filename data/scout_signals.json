@@ -1,8 +1,37 @@
 {
-  "ts": "2026-08-19T18:01:03+00:00",
-  "scanned": 103,
+  "ts": "2026-08-19T18:06:43+00:00",
+  "scanned": 100,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ROBOUSDT",
+      "signal": "ignition",
+      "score": 0.991,
+      "raw_score": 0.9009,
+      "weight": 1.1,
+      "price": 0.01307,
+      "why": "trades 11.2x and volume 30.8x the prior 4h, 79% taker-buy, $112,036 burst \u2014 while price has only moved +1.9%",
+      "chg_24h": -0.0053,
+      "vol_surge": 30.78,
+      "chg_1h": 0.0187,
+      "market_surge": 0.14,
+      "actionable": true
+    },
+    {
+      "symbol": "CAKEUSDT",
+      "signal": "ignition",
+      "score": 0.7884,
+      "raw_score": 0.7168,
+      "weight": 1.1,
+      "price": 1.58,
+      "why": "trades 5.4x and volume 14.2x the prior 4h, 60% taker-buy, $191,455 burst \u2014 while price has only moved +0.1%",
+      "chg_24h": 0.0639,
+      "vol_surge": 14.25,
+      "chg_1h": 0.0006,
+      "market_surge": 10.52,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "benched \u2014 hit 41%, mean -1.38% over last 29 at 4h: not beating the round trip",
@@ -11,7 +40,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 18,
+    "count": 17,
     "baseline": 11.0,
     "wave": false
   },
@@ -23,7 +52,7 @@
       "median_ret_1h": 0.00417,
       "n_4h": 30,
       "hit_rate_4h": 0.6,
-      "mean_ret_4h": 0.01024,
+      "mean_ret_4h": 0.01088,
       "median_ret_4h": 0.00457,
       "n_24h": 30,
       "hit_rate_24h": 0.4,
