@@ -1,30 +1,48 @@
 {
-  "ts": "2026-08-19T04:18:33+00:00",
+  "ts": "2026-08-19T04:24:23+00:00",
   "scanned": 72,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "KORUBUSDT",
+      "signal": "reversion",
+      "score": 0.3416,
+      "raw_score": 0.3416,
+      "weight": 1.0,
+      "price": 17.85,
+      "why": "down -17% on the day (bottom decile of the market), now +0.8% over 15m with 2 green candles",
+      "chg_24h": -0.1664,
+      "vol_surge": 0.68,
+      "chg_1h": -0.0017,
+      "market_surge": 0.08,
+      "oi_drop": null,
+      "funding": null,
+      "actionable": false,
+      "status": "probation \u2014 10/12 resolved 4h samples under ruleset 3"
+    }
+  ],
   "gate": {
-    "ignition": "benched \u2014 hit 17%, mean -0.64% over last 30 at 4h: not beating the round trip",
+    "ignition": "benched \u2014 hit 17%, mean -0.67% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 36%, mean -0.64% over last 22 at 4h: not beating the round trip",
     "reversion": "probation \u2014 10/12 resolved 4h samples under ruleset 3",
     "heat": "benched \u2014 hit 47%, mean -1.03% over last 17 at 4h: not beating the round trip",
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 8,
+    "count": 9,
     "baseline": 12.0,
     "wave": false
   },
   "scorecard": {
     "ignition": {
       "n_1h": 30,
-      "hit_rate_1h": 0.367,
-      "mean_ret_1h": -0.0003,
+      "hit_rate_1h": 0.333,
+      "mean_ret_1h": -0.00029,
       "median_ret_1h": 0.00019,
       "n_4h": 30,
       "hit_rate_4h": 0.167,
-      "mean_ret_4h": -0.00642,
-      "median_ret_4h": -0.00338,
+      "mean_ret_4h": -0.00667,
+      "median_ret_4h": -0.00352,
       "n_24h": 30,
       "hit_rate_24h": 0.2,
       "mean_ret_24h": -0.05941,
