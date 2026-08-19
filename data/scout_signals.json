@@ -1,8 +1,23 @@
 {
-  "ts": "2026-08-19T22:33:03+00:00",
-  "scanned": 112,
+  "ts": "2026-08-19T22:38:18+00:00",
+  "scanned": 111,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "GRAMUSDT",
+      "signal": "ignition",
+      "score": 0.7791,
+      "raw_score": 0.6493,
+      "weight": 1.2,
+      "price": 1.365,
+      "why": "trades 4.3x and volume 7.3x the prior 4h, 81% taker-buy, $157,816 burst \u2014 while price has only moved -0.3%",
+      "chg_24h": 0.0326,
+      "vol_surge": 7.29,
+      "chg_1h": -0.0029,
+      "market_surge": 7.72,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "benched \u2014 hit 43%, mean -0.54% over last 30 at 4h: not beating the round trip",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 42,
+    "count": 43,
     "baseline": 12.0,
     "wave": true
   },
@@ -19,7 +34,7 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.533,
-      "mean_ret_1h": 0.00262,
+      "mean_ret_1h": 0.0028,
       "median_ret_1h": 0.00344,
       "n_4h": 30,
       "hit_rate_4h": 0.7,
