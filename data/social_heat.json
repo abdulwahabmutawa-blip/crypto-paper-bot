@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-19T08:17:29+00:00",
+  "ts": "2026-08-19T08:22:49+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
@@ -17,9 +17,10 @@
     "movers": [
       "ACE",
       "SOL",
-      "XRP",
-      "ETH",
       "SKHYB",
+      "ETH",
+      "XRP",
+      "SPCXB",
       "BTC",
       "TRX"
     ],
@@ -36,7 +37,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.001495,
+      "funding": -0.001505,
       "long_short": 0.94
     },
     {
@@ -46,7 +47,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 3.8e-05,
+      "funding": 3.9e-05,
       "long_short": 1.57
     },
     {
@@ -56,7 +57,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 3.1e-05,
+      "funding": 3.3e-05,
       "long_short": 2.21
     },
     {
@@ -66,7 +67,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 9.2e-05,
+      "funding": 9.1e-05,
       "long_short": 2.09
     },
     {
@@ -75,7 +76,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -5e-06
+      "funding": -1e-06
     },
     {
       "symbol": "POL",
@@ -83,7 +84,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.5e-05
+      "funding": -1.6e-05
     },
     {
       "symbol": "PUMP",
@@ -91,10 +92,17 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.3e-05
+      "funding": 3.1e-05
     },
     {
       "symbol": "SKHYB",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
+    },
+    {
+      "symbol": "SPCXB",
       "surfaces": 1,
       "sources": [
         "movers"
@@ -106,7 +114,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2e-06
+      "funding": 6e-06
     },
     {
       "symbol": "TAO",
@@ -114,7 +122,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.2e-05
+      "funding": 1.1e-05
     },
     {
       "symbol": "TRX",
@@ -122,7 +130,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -1.4e-05
+      "funding": -1.3e-05
     },
     {
       "symbol": "VIRTUAL",
@@ -130,7 +138,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.8e-05
+      "funding": 2.6e-05
     },
     {
       "symbol": "XRP",
@@ -138,7 +146,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 5.3e-05
+      "funding": 5.4e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
