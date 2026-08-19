@@ -1,8 +1,112 @@
 {
-  "ts": "2026-08-19T20:51:16+00:00",
-  "scanned": 99,
+  "ts": "2026-08-19T20:57:17+00:00",
+  "scanned": 105,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SOXLBUSDT",
+      "signal": "ignition",
+      "score": 1.156,
+      "raw_score": 0.9633,
+      "weight": 1.2,
+      "price": 122.04,
+      "why": "trades 17.2x and volume 53.0x the prior 4h, 97% taker-buy, $181,417 burst \u2014 while price has only moved +1.2%",
+      "chg_24h": -0.0477,
+      "vol_surge": 53.03,
+      "chg_1h": 0.0116,
+      "market_surge": 1.81,
+      "actionable": true
+    },
+    {
+      "symbol": "MUBUSDT",
+      "signal": "ignition",
+      "score": 1.1535,
+      "raw_score": 0.9612,
+      "weight": 1.2,
+      "price": 940.1,
+      "why": "trades 9.5x and volume 32.6x the prior 4h, 96% taker-buy, $146,634 burst \u2014 while price has only moved +0.3%",
+      "chg_24h": 0.0014,
+      "vol_surge": 32.62,
+      "chg_1h": 0.0032,
+      "market_surge": 1.94,
+      "actionable": true
+    },
+    {
+      "symbol": "LDOUSDT",
+      "signal": "breakout",
+      "score": 0.7383,
+      "raw_score": 0.7913,
+      "weight": 0.933,
+      "price": 0.334,
+      "why": "trades 15.1x, volume 13.2x, 68% taker-buy, +3.4% in an hour, at 95% of its 24h range",
+      "chg_24h": 0.0993,
+      "vol_surge": 13.23,
+      "chg_1h": 0.0337,
+      "market_surge": 2.03,
+      "actionable": false,
+      "status": "benched \u2014 hit 43%, mean -0.54% over last 30 at 4h: not beating the round trip"
+    },
+    {
+      "symbol": "TAOUSDT",
+      "signal": "breakout",
+      "score": 0.7137,
+      "raw_score": 0.765,
+      "weight": 0.933,
+      "price": 204.8,
+      "why": "trades 9.1x, volume 8.7x, 65% taker-buy, +2.7% in an hour, at 101% of its 24h range",
+      "chg_24h": 0.0718,
+      "vol_surge": 8.71,
+      "chg_1h": 0.0271,
+      "market_surge": 7.15,
+      "actionable": false,
+      "status": "benched \u2014 hit 43%, mean -0.54% over last 30 at 4h: not beating the round trip"
+    },
+    {
+      "symbol": "UNIUSDT",
+      "signal": "breakout",
+      "score": 0.7071,
+      "raw_score": 0.7579,
+      "weight": 0.933,
+      "price": 3.629,
+      "why": "trades 13.1x, volume 17.1x, 65% taker-buy, +2.5% in an hour, at 99% of its 24h range",
+      "chg_24h": 0.0988,
+      "vol_surge": 17.11,
+      "chg_1h": 0.0249,
+      "market_surge": 3.75,
+      "actionable": false,
+      "status": "benched \u2014 hit 43%, mean -0.54% over last 30 at 4h: not beating the round trip"
+    },
+    {
+      "symbol": "PENGUUSDT",
+      "signal": "breakout",
+      "score": 0.7069,
+      "raw_score": 0.7576,
+      "weight": 0.933,
+      "price": 0.006465,
+      "why": "trades 20.4x, volume 20.9x, 71% taker-buy, +2.1% in an hour, at 100% of its 24h range",
+      "chg_24h": 0.0704,
+      "vol_surge": 20.87,
+      "chg_1h": 0.0207,
+      "market_surge": 4.43,
+      "actionable": false,
+      "status": "benched \u2014 hit 43%, mean -0.54% over last 30 at 4h: not beating the round trip"
+    },
+    {
+      "symbol": "OPUSDT",
+      "signal": "breakout",
+      "score": 0.703,
+      "raw_score": 0.7535,
+      "weight": 0.933,
+      "price": 0.0887,
+      "why": "trades 28.8x, volume 29.3x, 60% taker-buy, +2.7% in an hour, at 97% of its 24h range",
+      "chg_24h": 0.083,
+      "vol_surge": 29.26,
+      "chg_1h": 0.0266,
+      "market_surge": 0.0,
+      "actionable": false,
+      "status": "benched \u2014 hit 43%, mean -0.54% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "benched \u2014 hit 43%, mean -0.54% over last 30 at 4h: not beating the round trip",
@@ -11,7 +115,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 37,
+    "count": 33,
     "baseline": 11.0,
     "wave": true
   },
@@ -26,9 +130,9 @@
       "mean_ret_4h": 0.0085,
       "median_ret_4h": 0.01054,
       "n_24h": 30,
-      "hit_rate_24h": 0.4,
-      "mean_ret_24h": -0.00467,
-      "median_ret_24h": -0.00216
+      "hit_rate_24h": 0.467,
+      "mean_ret_24h": 0.00248,
+      "median_ret_24h": 0.00146
     },
     "breakout": {
       "n_1h": 30,
