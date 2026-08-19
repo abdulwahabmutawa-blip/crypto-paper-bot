@@ -1,35 +1,20 @@
 {
-  "ts": "2026-08-19T00:06:53+00:00",
-  "scanned": 78,
+  "ts": "2026-08-19T00:12:23+00:00",
+  "scanned": 80,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "QQQBUSDT",
+      "symbol": "ENAUSDT",
       "signal": "ignition",
-      "score": 0.5283,
-      "raw_score": 0.9317,
+      "score": 0.3755,
+      "raw_score": 0.6623,
       "weight": 0.567,
-      "price": 716.05,
-      "why": "trades 53.5x and volume 582.3x the prior 4h, 74% taker-buy, $57,039 burst \u2014 while price has only moved -0.2%",
-      "chg_24h": -0.0213,
-      "vol_surge": 582.29,
-      "chg_1h": -0.0016,
-      "market_surge": 3.0,
-      "actionable": false,
-      "status": "benched \u2014 hit 7%, mean -1.94% over last 30 at 4h: not beating the round trip"
-    },
-    {
-      "symbol": "LAUSDT",
-      "signal": "ignition",
-      "score": 0.5104,
-      "raw_score": 0.9001,
-      "weight": 0.567,
-      "price": 0.0571,
-      "why": "trades 10.2x and volume 12.2x the prior 4h, 72% taker-buy, $52,583 burst \u2014 while price has only moved +1.2%",
-      "chg_24h": 0.1466,
-      "vol_surge": 12.2,
-      "chg_1h": 0.0124,
-      "market_surge": 6.16,
+      "price": 0.0823,
+      "why": "trades 4.2x and volume 11.6x the prior 4h, 67% taker-buy, $91,397 burst \u2014 while price has only moved -1.0%",
+      "chg_24h": -0.0096,
+      "vol_surge": 11.55,
+      "chg_1h": -0.0096,
+      "market_surge": 1.95,
       "actionable": false,
       "status": "benched \u2014 hit 7%, mean -1.94% over last 30 at 4h: not beating the round trip"
     }
@@ -50,16 +35,16 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.333,
-      "mean_ret_1h": -0.00116,
-      "median_ret_1h": -0.00026,
+      "mean_ret_1h": -0.00159,
+      "median_ret_1h": -0.00095,
       "n_4h": 30,
       "hit_rate_4h": 0.067,
       "mean_ret_4h": -0.01939,
       "median_ret_4h": -0.01094,
       "n_24h": 30,
       "hit_rate_24h": 0.167,
-      "mean_ret_24h": -0.03901,
-      "median_ret_24h": -0.02737
+      "mean_ret_24h": -0.04677,
+      "median_ret_24h": -0.0277
     },
     "breakout": {
       "n_1h": 22,
