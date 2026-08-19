@@ -1,8 +1,38 @@
 {
-  "ts": "2026-08-19T14:36:24+00:00",
-  "scanned": 80,
+  "ts": "2026-08-19T14:42:06+00:00",
+  "scanned": 81,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "EDENUSDT",
+      "signal": "breakout",
+      "score": 0.8084,
+      "raw_score": 0.8084,
+      "weight": 1.0,
+      "price": 0.06106,
+      "why": "trades 6.5x, volume 14.4x, 60% taker-buy, +6.2% in an hour, at 88% of its 24h range",
+      "chg_24h": 0.1641,
+      "vol_surge": 14.4,
+      "chg_1h": 0.0625,
+      "market_surge": 14.79,
+      "actionable": false,
+      "status": "benched \u2014 hit 35%, mean -1.98% over last 26 at 4h: not beating the round trip"
+    },
+    {
+      "symbol": "DOTUSDT",
+      "signal": "ignition",
+      "score": 0.7452,
+      "raw_score": 0.6984,
+      "weight": 1.067,
+      "price": 0.774,
+      "why": "trades 5.1x and volume 7.4x the prior 4h, 85% taker-buy, $128,794 burst \u2014 while price has only moved +0.1%",
+      "chg_24h": 0.0361,
+      "vol_surge": 7.38,
+      "chg_1h": 0.0013,
+      "market_surge": 7.13,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "benched \u2014 hit 35%, mean -1.98% over last 26 at 4h: not beating the round trip",
@@ -11,7 +41,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 11,
     "baseline": 11.0,
     "wave": false
   },
@@ -31,10 +61,10 @@
       "median_ret_24h": -0.00155
     },
     "breakout": {
-      "n_1h": 26,
-      "hit_rate_1h": 0.462,
-      "mean_ret_1h": 0.00026,
-      "median_ret_1h": 0.00054,
+      "n_1h": 28,
+      "hit_rate_1h": 0.5,
+      "mean_ret_1h": 0.00144,
+      "median_ret_1h": 0.00338,
       "n_4h": 26,
       "hit_rate_4h": 0.346,
       "mean_ret_4h": -0.01981,
