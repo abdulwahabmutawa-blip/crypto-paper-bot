@@ -1,36 +1,22 @@
 {
-  "ts": "2026-08-19T14:42:06+00:00",
-  "scanned": 81,
+  "ts": "2026-08-19T14:47:43+00:00",
+  "scanned": 82,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "EDENUSDT",
+      "symbol": "ZECUSDT",
       "signal": "breakout",
-      "score": 0.8084,
-      "raw_score": 0.8084,
+      "score": 0.7176,
+      "raw_score": 0.7176,
       "weight": 1.0,
-      "price": 0.06106,
-      "why": "trades 6.5x, volume 14.4x, 60% taker-buy, +6.2% in an hour, at 88% of its 24h range",
-      "chg_24h": 0.1641,
-      "vol_surge": 14.4,
-      "chg_1h": 0.0625,
-      "market_surge": 14.79,
+      "price": 527.14,
+      "why": "trades 5.9x, volume 11.1x, 77% taker-buy, +2.9% in an hour, at 98% of its 24h range",
+      "chg_24h": 0.0408,
+      "vol_surge": 11.12,
+      "chg_1h": 0.0289,
+      "market_surge": 10.07,
       "actionable": false,
       "status": "benched \u2014 hit 35%, mean -1.98% over last 26 at 4h: not beating the round trip"
-    },
-    {
-      "symbol": "DOTUSDT",
-      "signal": "ignition",
-      "score": 0.7452,
-      "raw_score": 0.6984,
-      "weight": 1.067,
-      "price": 0.774,
-      "why": "trades 5.1x and volume 7.4x the prior 4h, 85% taker-buy, $128,794 burst \u2014 while price has only moved +0.1%",
-      "chg_24h": 0.0361,
-      "vol_surge": 7.38,
-      "chg_1h": 0.0013,
-      "market_surge": 7.13,
-      "actionable": true
     }
   ],
   "gate": {
@@ -41,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 11,
+    "count": 13,
     "baseline": 11.0,
     "wave": false
   },
@@ -49,8 +35,8 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.433,
-      "mean_ret_1h": 0.00461,
-      "median_ret_1h": 0.00142,
+      "mean_ret_1h": 0.00473,
+      "median_ret_1h": 0.00164,
       "n_4h": 30,
       "hit_rate_4h": 0.567,
       "mean_ret_4h": 0.00627,
@@ -61,9 +47,9 @@
       "median_ret_24h": -0.00155
     },
     "breakout": {
-      "n_1h": 28,
-      "hit_rate_1h": 0.5,
-      "mean_ret_1h": 0.00144,
+      "n_1h": 29,
+      "hit_rate_1h": 0.517,
+      "mean_ret_1h": 0.0027,
       "median_ret_1h": 0.00338,
       "n_4h": 26,
       "hit_rate_4h": 0.346,
