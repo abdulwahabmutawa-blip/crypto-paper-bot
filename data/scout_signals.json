@@ -1,39 +1,8 @@
 {
-  "ts": "2026-08-19T07:01:33+00:00",
+  "ts": "2026-08-19T07:07:02+00:00",
   "scanned": 72,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ENAUSDT",
-      "signal": "breakout",
-      "score": 0.7582,
-      "raw_score": 0.7582,
-      "weight": 1.0,
-      "price": 0.0853,
-      "why": "trades 10.1x, volume 21.0x, 72% taker-buy, +2.0% in an hour, at 94% of its 24h range",
-      "chg_24h": 0.0277,
-      "vol_surge": 20.97,
-      "chg_1h": 0.0203,
-      "market_surge": 0.24,
-      "actionable": false,
-      "status": "benched \u2014 hit 35%, mean -2.12% over last 23 at 4h: not beating the round trip"
-    },
-    {
-      "symbol": "LDOUSDT",
-      "signal": "ignition",
-      "score": 0.7282,
-      "raw_score": 0.9103,
-      "weight": 0.8,
-      "price": 0.3086,
-      "why": "trades 46.0x and volume 87.7x the prior 4h, 82% taker-buy, $148,794 burst \u2014 while price has only moved +1.7%",
-      "chg_24h": 0.0192,
-      "vol_surge": 87.71,
-      "chg_1h": 0.0175,
-      "market_surge": 0.0,
-      "actionable": false,
-      "status": "benched \u2014 hit 30%, mean -0.17% over last 30 at 4h: not beating the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 30%, mean -0.17% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 35%, mean -2.12% over last 23 at 4h: not beating the round trip",
@@ -42,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 8,
+    "count": 10,
     "baseline": 12.0,
     "wave": false
   },
