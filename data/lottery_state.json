@@ -1,12 +1,13 @@
 {
   "created": "2026-08-15",
-  "held_symbol": "DEXEUSDT",
-  "entry_price": 1.852,
-  "units": 19.03,
-  "entry_scan_ts": "2026-08-19T13:48:41+00:00",
-  "entry_source": "scout:ignition",
+  "held_symbol": null,
+  "entry_price": null,
+  "units": 0.0,
+  "entry_scan_ts": null,
+  "entry_source": null,
   "stopped": {
-    "ACEUSDT": "2026-08-19T13:53:49+00:00"
+    "ACEUSDT": "2026-08-19T13:53:49+00:00",
+    "DEXEUSDT": "2026-08-19T20:23:10+00:00"
   },
   "entries": {
     "2026-08-19": 3
@@ -220,27 +221,31 @@
       "date": "2026-08-19",
       "exit": 0.2065,
       "entry": 0.2241
+    },
+    {
+      "symbol": "DEXEUSDT",
+      "source": "scout:ignition",
+      "entry_time": "2026-08-19T15:11:59+00:00",
+      "exit_time": "2026-08-19T20:23:10+00:00",
+      "entry_price": 1.852,
+      "exit_price": 1.9050000000000002,
+      "units": 19.03,
+      "spent_usd": 35.2436,
+      "got_usd": 36.2141,
+      "pnl_pct": 2.86,
+      "pnl_usd": 0.9705,
+      "reason": "STALLED (5.2h in, only +2.9%) \u2014 the pump never came",
+      "date": "2026-08-19",
+      "exit": 1.9050000000000002,
+      "entry": 1.852
     }
   ],
-  "last_value_usd": 36.4,
-  "last_updated_utc": "2026-08-19T20:17:36+00:00",
-  "open_position": {
-    "symbol": "DEXEUSDT",
-    "entry_time": "2026-08-19T15:11:59+00:00",
-    "entry_price": 1.852,
-    "current_price": 1.914,
-    "units": 19.03,
-    "spent_usd": 35.2436,
-    "value_usd": 36.4234,
-    "pnl_usd": 1.1798,
-    "pnl_pct": 3.35,
-    "source": "scout:ignition"
-  },
-  "spent_usd": 35.2436,
+  "last_value_usd": 36.19,
+  "last_updated_utc": "2026-08-19T20:23:10+00:00",
+  "open_position": null,
+  "spent_usd": null,
   "no_pair": {
     "scan_ts": "2026-08-19T13:48:41+00:00",
     "syms": []
-  },
-  "hwm": 1.979,
-  "entry_time": "2026-08-19T15:11:59+00:00"
+  }
 }
