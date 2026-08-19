@@ -1,23 +1,8 @@
 {
-  "ts": "2026-08-19T16:27:24+00:00",
-  "scanned": 95,
+  "ts": "2026-08-19T16:33:00+00:00",
+  "scanned": 97,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "SUIUSDT",
-      "signal": "ignition",
-      "score": 0.7092,
-      "raw_score": 0.6448,
-      "weight": 1.1,
-      "price": 0.6915,
-      "why": "trades 5.5x and volume 7.6x the prior 4h, 65% taker-buy, $794,632 burst \u2014 while price has only moved -1.2%",
-      "chg_24h": 0.058,
-      "vol_surge": 7.65,
-      "chg_1h": -0.0123,
-      "market_surge": 6.62,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "benched \u2014 hit 35%, mean -1.98% over last 26 at 4h: not beating the round trip",
@@ -26,9 +11,9 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 21,
+    "count": 22,
     "baseline": 11.0,
-    "wave": false
+    "wave": true
   },
   "scorecard": {
     "ignition": {
@@ -38,7 +23,7 @@
       "median_ret_1h": 0.00741,
       "n_4h": 30,
       "hit_rate_4h": 0.6,
-      "mean_ret_4h": 0.00844,
+      "mean_ret_4h": 0.00945,
       "median_ret_4h": 0.00362,
       "n_24h": 30,
       "hit_rate_24h": 0.4,
