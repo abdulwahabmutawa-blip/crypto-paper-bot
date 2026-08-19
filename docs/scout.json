@@ -1,8 +1,26 @@
 {
-  "ts": "2026-08-19T12:18:13+00:00",
+  "ts": "2026-08-19T12:23:38+00:00",
   "scanned": 73,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "NBISBUSDT",
+      "signal": "reversion",
+      "score": 0.5298,
+      "raw_score": 0.5298,
+      "weight": 1.0,
+      "price": 235.0,
+      "why": "down -14% on the day (bottom decile of the market), now +1.6% over 15m with 4 green candles",
+      "chg_24h": -0.1368,
+      "vol_surge": 0.88,
+      "chg_1h": -0.0309,
+      "market_surge": 1.56,
+      "oi_drop": null,
+      "funding": null,
+      "actionable": false,
+      "status": "benched \u2014 hit 42%, mean -0.05% over last 19 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "benched \u2014 hit 32%, mean -2.18% over last 25 at 4h: not beating the round trip",
@@ -27,7 +45,7 @@
       "median_ret_4h": 0.00223,
       "n_24h": 30,
       "hit_rate_24h": 0.4,
-      "mean_ret_24h": -0.02659,
+      "mean_ret_24h": -0.02375,
       "median_ret_24h": 0.0
     },
     "breakout": {
