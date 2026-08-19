@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-19T00:12:23+00:00",
+  "ts": "2026-08-19T00:18:15+00:00",
   "scanned": 80,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ENAUSDT",
-      "signal": "ignition",
-      "score": 0.3755,
-      "raw_score": 0.6623,
-      "weight": 0.567,
-      "price": 0.0823,
-      "why": "trades 4.2x and volume 11.6x the prior 4h, 67% taker-buy, $91,397 burst \u2014 while price has only moved -1.0%",
-      "chg_24h": -0.0096,
-      "vol_surge": 11.55,
-      "chg_1h": -0.0096,
-      "market_surge": 1.95,
-      "actionable": false,
-      "status": "benched \u2014 hit 7%, mean -1.94% over last 30 at 4h: not beating the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 7%, mean -1.94% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 33%, mean -0.84% over last 21 at 4h: not beating the round trip",
@@ -42,9 +26,9 @@
       "mean_ret_4h": -0.01939,
       "median_ret_4h": -0.01094,
       "n_24h": 30,
-      "hit_rate_24h": 0.167,
-      "mean_ret_24h": -0.04677,
-      "median_ret_24h": -0.0277
+      "hit_rate_24h": 0.133,
+      "mean_ret_24h": -0.05768,
+      "median_ret_24h": -0.03335
     },
     "breakout": {
       "n_1h": 22,
