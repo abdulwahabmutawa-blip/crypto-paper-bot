@@ -1,17 +1,32 @@
 {
-  "ts": "2026-08-19T19:09:33+00:00",
-  "scanned": 103,
+  "ts": "2026-08-19T19:15:11+00:00",
+  "scanned": 102,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ASTERUSDT",
+      "signal": "ignition",
+      "score": 0.7364,
+      "raw_score": 0.631,
+      "weight": 1.167,
+      "price": 0.61,
+      "why": "trades 6.4x and volume 5.5x the prior 4h, 62% taker-buy, $146,728 burst \u2014 while price has only moved +0.7%",
+      "chg_24h": 0.0133,
+      "vol_surge": 5.49,
+      "chg_1h": 0.0066,
+      "market_surge": 8.68,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
-    "breakout": "benched \u2014 hit 43%, mean -1.50% over last 30 at 4h: not beating the round trip",
+    "breakout": "benched \u2014 hit 47%, mean -1.29% over last 30 at 4h: not beating the round trip",
     "reversion": "benched \u2014 hit 40%, mean -0.14% over last 20 at 4h: not beating the round trip",
     "heat": "benched \u2014 hit 53%, mean -0.62% over last 19 at 4h: not beating the round trip",
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 16,
+    "count": 15,
     "baseline": 11.0,
     "wave": false
   },
@@ -19,11 +34,11 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.533,
-      "mean_ret_1h": -0.00064,
+      "mean_ret_1h": 0.00219,
       "median_ret_1h": 0.00368,
       "n_4h": 30,
-      "hit_rate_4h": 0.6,
-      "mean_ret_4h": 0.01108,
+      "hit_rate_4h": 0.667,
+      "mean_ret_4h": 0.01545,
       "median_ret_4h": 0.01054,
       "n_24h": 30,
       "hit_rate_24h": 0.4,
@@ -36,9 +51,9 @@
       "mean_ret_1h": 0.00598,
       "median_ret_1h": 0.01032,
       "n_4h": 30,
-      "hit_rate_4h": 0.433,
-      "mean_ret_4h": -0.01504,
-      "median_ret_4h": -0.00303,
+      "hit_rate_4h": 0.467,
+      "mean_ret_4h": -0.01287,
+      "median_ret_4h": 0.00184,
       "n_24h": 21,
       "hit_rate_24h": 0.238,
       "mean_ret_24h": -0.03442,
