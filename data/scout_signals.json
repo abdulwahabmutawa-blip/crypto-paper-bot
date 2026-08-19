@@ -1,47 +1,17 @@
 {
-  "ts": "2026-08-19T18:46:23+00:00",
-  "scanned": 100,
+  "ts": "2026-08-19T18:52:24+00:00",
+  "scanned": 103,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "GIGGLEUSDT",
-      "signal": "ignition",
-      "score": 0.7757,
-      "raw_score": 0.7052,
-      "weight": 1.1,
-      "price": 34.48,
-      "why": "trades 8.3x and volume 6.4x the prior 4h, 68% taker-buy, $114,907 burst \u2014 while price has only moved +2.3%",
-      "chg_24h": 0.0325,
-      "vol_surge": 6.43,
-      "chg_1h": 0.0225,
-      "market_surge": 13.63,
-      "actionable": true
-    },
-    {
-      "symbol": "GIGGLEUSDT",
-      "signal": "breakout",
-      "score": 0.6367,
-      "raw_score": 0.7074,
-      "weight": 0.9,
-      "price": 34.48,
-      "why": "trades 8.3x, volume 6.4x, 68% taker-buy, +2.3% in an hour, at 84% of its 24h range",
-      "chg_24h": 0.0325,
-      "vol_surge": 6.43,
-      "chg_1h": 0.0225,
-      "market_surge": 13.63,
-      "actionable": false,
-      "status": "benched \u2014 hit 40%, mean -1.55% over last 30 at 4h: not beating the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
-    "breakout": "benched \u2014 hit 40%, mean -1.55% over last 30 at 4h: not beating the round trip",
+    "breakout": "benched \u2014 hit 40%, mean -1.86% over last 30 at 4h: not beating the round trip",
     "reversion": "benched \u2014 hit 40%, mean -0.14% over last 20 at 4h: not beating the round trip",
     "heat": "benched \u2014 hit 53%, mean -0.62% over last 19 at 4h: not beating the round trip",
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 17,
+    "count": 16,
     "baseline": 11.0,
     "wave": false
   },
@@ -67,7 +37,7 @@
       "median_ret_1h": 0.01032,
       "n_4h": 30,
       "hit_rate_4h": 0.4,
-      "mean_ret_4h": -0.01549,
+      "mean_ret_4h": -0.01857,
       "median_ret_4h": -0.01172,
       "n_24h": 21,
       "hit_rate_24h": 0.238,

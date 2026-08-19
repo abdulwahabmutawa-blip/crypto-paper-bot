@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-19T18:46:19+00:00",
+  "ts": "2026-08-19T18:52:19+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -20,10 +20,10 @@
       "RE",
       "ETH",
       "ZEC",
-      "WLD",
       "XRP",
+      "WLD",
       "SOL",
-      "PLUME"
+      "BTC"
     ],
     "watcher": [
       "HEMI"
@@ -31,6 +31,16 @@
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "BTC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.1
+    },
     {
       "symbol": "ETH",
       "surfaces": 2,
@@ -72,20 +82,12 @@
       "long_short": 2.64
     },
     {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "INJ",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -3e-06
+      "funding": -6e-06
     },
     {
       "symbol": "LINK",
@@ -93,7 +95,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -3.4e-05
+      "funding": -3.9e-05
     },
     {
       "symbol": "LIT",
@@ -101,7 +103,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000353
+      "funding": -0.000354
     },
     {
       "symbol": "PEPE",
@@ -109,14 +111,6 @@
       "sources": [
         "coingecko"
       ]
-    },
-    {
-      "symbol": "PLUME",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 3.6e-05
     },
     {
       "symbol": "PUMP",
@@ -132,7 +126,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 3e-06
+      "funding": 1e-05
     },
     {
       "symbol": "SUI",
