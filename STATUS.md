@@ -1,38 +1,42 @@
-# Fleet status — 2026-08-18 (UTC)
+# Fleet status — 2026-08-19 (UTC)
 
-Main loop healthy: continuous cycle commits every ~13min from 2026-08-17 23:32
-through 05:00 today (Actions run #309, still in progress). 10 paper books
-($1,000 each, no real money) + 1 REAL-MONEY book (Lottery, no cap since 08-16).
+10 paper books ($1,000 each, no real money) + 1 REAL-MONEY book (Lottery,
+VPS-run, no cap since 08-16).
 
 | Bot | Holds | 24h change | Value (asof) |
 |---|---|---|---|
-| crypto (trend) | XRP-USD | No trade | $1,000.39 (08-18) |
-| congress | 10 positions | No trade | $994.23 (08-17) |
-| meanrev | UNH | No trade | $1,213.41 (08-17) |
-| commodity | DBC | No trade | $1,038.90 (08-17) |
-| allweather | 5-asset basket | No trade | $1,016.88 (08-17) |
-| hype (sentiment) | CASH | Bought NLST, stopped out same day | $1,181.29 (08-17) |
-| hype-crypto | GPS-USD | **Back trading** — entered GPS-USD | $1,026.05 (08-18) |
-| Hunter | SLV | Rotated PLTR → SLV | $987.51 (08-17) |
-| Scholar | IWM | No trade | $1,036.70 (08-17) |
-| Analyst | SPY | No trade | $1,029.63 (08-17) |
-| **Lottery (REAL $)** | GPSUSDT (open) | 3 entries, 2 stopped/rolled | **$37.57** (08-18 05:03) |
+| crypto (trend) | XRP-USD | No trade | $1,005.93 (08-19) |
+| congress | 10 positions | No trade | $982.21 (08-18) |
+| meanrev | UNH | No trade | $1,208.32 (08-18) |
+| commodity | DBC | No trade | $1,035.84 (08-18) |
+| allweather | 5-asset basket | No trade (not rebalance week) | $1,013.33 (08-18) |
+| hype (sentiment) | AMLX | Exited AMLX on faded hype, re-bought same day on new Grok signal | $1,280.83 (08-18) |
+| hype-crypto | ACE-USD | Churned: GPS-USD → TUT-USD → ACE-USD | $1,076.59 (08-19) |
+| Hunter | NVDA | Rotated SLV → NVDA (better reward/risk score) | $957.62 (08-18) |
+| Scholar | IWM | No trade | $1,023.78 (08-18) |
+| Analyst | SPY | No trade | $1,022.51 (08-18) |
+| **Lottery (REAL $)** | CASH | 1 entry (PUMPUSDT), stopped out same day (-$0.78) | $38.34 (08-19 05:05) |
 
 ## Changed
-- **hype-crypto is trading again**: frozen on CASH since 2026-08-15 (Binance
-  451 geo-block), resumed 08-17 18:05 and entered GPS-USD — no code change
-  visible in this window, so treat as self-resolved rather than confirmed fixed.
-- Hunter rotated PLTR → SLV (08-17): silver scored >1.25x better reward/risk.
-- hype (sentiment) bought NLST on a Grok "euphoric" scan (08-17 18:05), then
-  stop-loss hit the same day at -10.8% — guard working as designed.
-- Lottery (real $): 3 entries today. CHIPUSDT and EDENUSDT both exited
-  (stalled/small moves), now holding GPSUSDT, -4.25% unrealized. Lifetime
-  realized P&L across 10 closed trades: -$6.10.
+- hype-crypto churned three times today: GPS-USD → TUT-USD → ACE-USD, all on
+  Grok "euphoric" scans.
+- hype (sentiment): AMLX exited on faded hype then re-bought hours later on a
+  fresh Grok signal (Phase 3 trial chatter) — same symbol, two round-trips.
+- Hunter rotated SLV → NVDA (Nvidia scored >1.25x better reward/risk).
+- Lottery (real $): 1 entry (PUMPUSDT), stopped out same day — "hype faded."
+  Lifetime realized P&L across 12 closed trades: -$6.94.
 - No position changes on crypto, congress, meanrev, commodity, allweather,
-  Scholar, or Analyst; no exceptions in any state file.
+  Scholar, or Analyst.
 
 ## Needs a look
-Nothing. One scheduling note for context, not a fault: Actions run #309 has
-been alive since 23:32 UTC (~5.5h) and will hit its 355-min budget soon —
-normal per the documented GitHub-throttling behavior, next loop should pick
-up within the usual gap.
+- **origin/main was force-pushed today** (~02:01 UTC), discarding all git
+  history before that point (previously back to at least 08-14). Bot state
+  files (trade history, positions) are unaffected — this digest is built
+  from current state, not git log — but I can only verify cycle-commit
+  cadence for the last ~3h, not the full 24h. Cause unknown; flagging since
+  it's outside the bots' normal behavior.
+- Analyst's decision guardrail has flagged "UNRECEIPTED WATCHER CLAIM
+  (read_watcher not called)" on both 08-17 and 08-18 decisions — new as of
+  08-17 (not present 08-11 through 08-14). Bot's reasoning still references
+  Watcher's status and it's holding SPY as before, so no visible trading
+  impact, but the guardrail miss is now 2 days running.
