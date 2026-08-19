@@ -1,28 +1,13 @@
 {
-  "ts": "2026-08-19T11:54:57+00:00",
-  "scanned": 75,
+  "ts": "2026-08-19T12:01:03+00:00",
+  "scanned": 73,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "MSTRBUSDT",
-      "signal": "ignition",
-      "score": 0.8374,
-      "raw_score": 0.8374,
-      "weight": 1.0,
-      "price": 92.99,
-      "why": "trades 6.1x and volume 9.8x the prior 4h, 100% taker-buy, $85,801 burst \u2014 while price has only moved +0.1%",
-      "chg_24h": -0.0389,
-      "vol_surge": 9.82,
-      "chg_1h": 0.0008,
-      "market_surge": 3.97,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "benched \u2014 hit 33%, mean -2.08% over last 24 at 4h: not beating the round trip",
     "reversion": "benched \u2014 hit 42%, mean -0.05% over last 19 at 4h: not beating the round trip",
-    "heat": "benched \u2014 hit 50%, mean -0.70% over last 18 at 4h: not beating the round trip",
+    "heat": "benched \u2014 hit 53%, mean -0.62% over last 19 at 4h: not beating the round trip",
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
@@ -78,10 +63,10 @@
       "hit_rate_1h": 0.316,
       "mean_ret_1h": -0.01665,
       "median_ret_1h": -0.00996,
-      "n_4h": 18,
-      "hit_rate_4h": 0.5,
-      "mean_ret_4h": -0.00697,
-      "median_ret_4h": 0.01027,
+      "n_4h": 19,
+      "hit_rate_4h": 0.526,
+      "mean_ret_4h": -0.00624,
+      "median_ret_4h": 0.0068,
       "n_24h": 13,
       "hit_rate_24h": 0.308,
       "mean_ret_24h": -0.07367,
