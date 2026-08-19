@@ -1,16 +1,17 @@
 {
-  "ts": "2026-08-19T19:15:06+00:00",
+  "ts": "2026-08-19T19:20:49+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "ETH",
-      "PUMP",
       "SOL",
-      "XRP",
+      "PUMP",
       "LINK",
+      "XRP",
+      "INJ",
+      "ONDO",
       "AAVE",
-      "LIT",
-      "INJ"
+      "LIT"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -18,11 +19,11 @@
       "HEMI",
       "RE",
       "ETH",
+      "PUMP",
       "ZEC",
       "WLD",
       "XRP",
-      "SOL",
-      "PLUME"
+      "SOL"
     ],
     "watcher": [
       "HEMI"
@@ -49,6 +50,16 @@
       ],
       "funding": 5e-05,
       "long_short": 0.89
+    },
+    {
+      "symbol": "PUMP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 3e-05,
+      "long_short": 1.43
     },
     {
       "symbol": "SOL",
@@ -92,7 +103,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.0
+      "funding": 4e-06
     },
     {
       "symbol": "LINK",
@@ -100,7 +111,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -4.8e-05
+      "funding": -5.1e-05
     },
     {
       "symbol": "LIT",
@@ -108,23 +119,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000345
+      "funding": -0.000319
     },
     {
-      "symbol": "PLUME",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 4.8e-05
-    },
-    {
-      "symbol": "PUMP",
+      "symbol": "ONDO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 4e-05
+      "funding": 5e-05
     },
     {
       "symbol": "RE",
@@ -132,7 +135,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 1.3e-05
+      "funding": 1.7e-05
     },
     {
       "symbol": "WLD",
