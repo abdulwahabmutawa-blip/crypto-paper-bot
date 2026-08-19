@@ -1,20 +1,49 @@
 {
-  "ts": "2026-08-19T21:19:05+00:00",
-  "scanned": 109,
+  "ts": "2026-08-19T21:24:34+00:00",
+  "scanned": 107,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "PUMPUSDT",
+      "symbol": "ETHFIUSDT",
+      "signal": "ignition",
+      "score": 0.9242,
+      "raw_score": 0.7701,
+      "weight": 1.2,
+      "price": 0.5164,
+      "why": "trades 9.2x and volume 8.9x the prior 4h, 61% taker-buy, $78,060 burst \u2014 while price has only moved +2.9%",
+      "chg_24h": 0.0815,
+      "vol_surge": 8.85,
+      "chg_1h": 0.0291,
+      "market_surge": 2.39,
+      "actionable": true
+    },
+    {
+      "symbol": "ETHFIUSDT",
       "signal": "breakout",
-      "score": 0.6786,
-      "raw_score": 0.7273,
+      "score": 0.7116,
+      "raw_score": 0.7627,
       "weight": 0.933,
-      "price": 0.003216,
-      "why": "trades 7.8x, volume 19.4x, 60% taker-buy, +2.1% in an hour, at 90% of its 24h range",
-      "chg_24h": 0.11,
-      "vol_surge": 19.41,
-      "chg_1h": 0.0206,
-      "market_surge": 2.32,
+      "price": 0.5164,
+      "why": "trades 9.2x, volume 8.9x, 61% taker-buy, +2.9% in an hour, at 89% of its 24h range",
+      "chg_24h": 0.0815,
+      "vol_surge": 8.85,
+      "chg_1h": 0.0291,
+      "market_surge": 2.39,
+      "actionable": false,
+      "status": "benched \u2014 hit 43%, mean -0.54% over last 30 at 4h: not beating the round trip"
+    },
+    {
+      "symbol": "ONDOUSDT",
+      "signal": "breakout",
+      "score": 0.6776,
+      "raw_score": 0.7263,
+      "weight": 0.933,
+      "price": 0.351,
+      "why": "trades 5.7x, volume 12.2x, 87% taker-buy, +2.8% in an hour, at 90% of its 24h range",
+      "chg_24h": 0.0684,
+      "vol_surge": 12.22,
+      "chg_1h": 0.0281,
+      "market_surge": 7.03,
       "actionable": false,
       "status": "benched \u2014 hit 43%, mean -0.54% over last 30 at 4h: not beating the round trip"
     }
@@ -27,7 +56,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 49,
+    "count": 60,
     "baseline": 12.0,
     "wave": true
   },
