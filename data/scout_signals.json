@@ -1,23 +1,8 @@
 {
-  "ts": "2026-08-19T20:04:19+00:00",
+  "ts": "2026-08-19T20:10:04+00:00",
   "scanned": 103,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "SNXXBUSDT",
-      "signal": "ignition",
-      "score": 0.775,
-      "raw_score": 0.6286,
-      "weight": 1.233,
-      "price": 14.74,
-      "why": "trades 4.1x and volume 8.8x the prior 4h, 75% taker-buy, $166,600 burst \u2014 while price has only moved +1.7%",
-      "chg_24h": -0.0452,
-      "vol_surge": 8.81,
-      "chg_1h": 0.0173,
-      "market_surge": 0.81,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "benched \u2014 hit 43%, mean -0.54% over last 30 at 4h: not beating the round trip",
@@ -38,12 +23,12 @@
       "median_ret_1h": 0.00284,
       "n_4h": 30,
       "hit_rate_4h": 0.733,
-      "mean_ret_4h": 0.01479,
-      "median_ret_4h": 0.0138,
+      "mean_ret_4h": 0.01218,
+      "median_ret_4h": 0.01234,
       "n_24h": 30,
-      "hit_rate_24h": 0.367,
-      "mean_ret_24h": -0.00544,
-      "median_ret_24h": -0.00347
+      "hit_rate_24h": 0.4,
+      "mean_ret_24h": -0.00467,
+      "median_ret_24h": -0.00216
     },
     "breakout": {
       "n_1h": 30,

@@ -1,18 +1,18 @@
 {
-  "ts": "2026-08-19T20:04:15+00:00",
+  "ts": "2026-08-19T20:09:59+00:00",
   "sources": {
     "coingecko": [
       "LIT",
       "BTC",
       "ETH",
-      "SOL",
       "XRP",
-      "PUMP",
+      "SOL",
       "LINK",
+      "PUMP",
+      "PEPE",
       "INJ",
       "ONDO",
-      "ZEC",
-      "PEPE"
+      "ZEC"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,11 +20,11 @@
       "RE",
       "HEMI",
       "WLD",
-      "PUMP",
       "ETH",
+      "PUMP",
       "ZEC",
       "XPL",
-      "SOL"
+      "LINK"
     ],
     "watcher": [
       "HEMI",
@@ -54,13 +54,23 @@
       "long_short": 0.87
     },
     {
+      "symbol": "LINK",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -6.5e-05,
+      "long_short": 1.7
+    },
+    {
       "symbol": "PUMP",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 8e-06,
+      "funding": 6e-06,
       "long_short": 1.41
     },
     {
@@ -70,18 +80,8 @@
         "movers",
         "watcher"
       ],
-      "funding": -1.2e-05,
+      "funding": -2.9e-05,
       "long_short": 0.48
-    },
-    {
-      "symbol": "SOL",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.74
     },
     {
       "symbol": "ZEC",
@@ -106,15 +106,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.7e-05
-    },
-    {
-      "symbol": "LINK",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -6.6e-05
+      "funding": 1.6e-05
     },
     {
       "symbol": "LIT",
@@ -122,7 +114,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.00021
+      "funding": -0.000182
     },
     {
       "symbol": "ONDO",
@@ -130,7 +122,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 4.9e-05
     },
     {
       "symbol": "PEPE",
@@ -138,6 +130,14 @@
       "sources": [
         "coingecko"
       ]
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "WLD",
