@@ -1,15 +1,15 @@
 {
   "created": "2026-08-15",
-  "held_symbol": null,
-  "entry_price": null,
-  "units": 0.0,
-  "entry_scan_ts": null,
-  "entry_source": null,
+  "held_symbol": "DEXEUSDT",
+  "entry_price": 1.852,
+  "units": 19.03,
+  "entry_scan_ts": "2026-08-19T13:48:41+00:00",
+  "entry_source": "scout:ignition",
   "stopped": {
     "ACEUSDT": "2026-08-19T13:53:49+00:00"
   },
   "entries": {
-    "2026-08-19": 2
+    "2026-08-19": 3
   },
   "realized": [
     {
@@ -222,12 +222,25 @@
       "entry": 0.2241
     }
   ],
-  "last_value_usd": 35.26,
-  "last_updated_utc": "2026-08-19T15:06:41+00:00",
-  "open_position": null,
-  "spent_usd": null,
+  "last_value_usd": 35.22,
+  "last_updated_utc": "2026-08-19T15:11:59+00:00",
+  "open_position": {
+    "symbol": "DEXEUSDT",
+    "entry_time": "2026-08-19T15:11:59+00:00",
+    "entry_price": 1.852,
+    "current_price": 1.852,
+    "units": 19.03,
+    "spent_usd": 35.2436,
+    "value_usd": 35.2436,
+    "pnl_usd": 0.0,
+    "pnl_pct": 0.0,
+    "source": "scout:ignition"
+  },
+  "spent_usd": 35.2436,
   "no_pair": {
     "scan_ts": "2026-08-19T13:48:41+00:00",
     "syms": []
-  }
+  },
+  "hwm": 1.852,
+  "entry_time": "2026-08-19T15:11:59+00:00"
 }
