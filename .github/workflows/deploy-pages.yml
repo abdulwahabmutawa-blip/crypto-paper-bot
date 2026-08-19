@@ -40,13 +40,20 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # enablement: true asks the Pages API to switch the site's build
-      # source to "GitHub Actions" if it is still on the legacy branch
-      # build. If the API refuses, the one-time manual fallback is:
-      # Settings -> Pages -> Build and deployment -> Source -> GitHub Actions
+      # Flip the site's build source to "GitHub Actions" if it is still on
+      # the legacy branch build. configure-pages' enablement only CREATES a
+      # site; it does not change an existing one's build_type (verified
+      # 06:57 UTC: the legacy Jekyll build still ran beside this workflow).
+      # The workflow token has pages:write, which the update endpoint
+      # accepts. Best-effort: if the API refuses, the one-time manual
+      # fallback is Settings -> Pages -> Source -> GitHub Actions.
+      - name: Ensure build source is GitHub Actions
+        run: |
+          curl -sS -X PUT             -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}"             -H "Accept: application/vnd.github+json"             "https://api.github.com/repos/${{ github.repository }}/pages"             -d '{"build_type":"workflow"}'             -o /tmp/pages.json -w "pages API: HTTP %{http_code}
+" || true
+          cat /tmp/pages.json 2>/dev/null | head -c 400 || true
+
       - uses: actions/configure-pages@v5
-        with:
-          enablement: true
 
       - uses: actions/upload-pages-artifact@v3
         with:
