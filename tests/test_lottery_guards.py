@@ -149,6 +149,35 @@ assert h["kind"] == "hype" and h["max_hold_h"] == 24.0 \
 assert bl.exit_params(None)["kind"] == "hype", \
     "an unknown seat gets the strictest familiar clock, never the longest"
 
+# --- watcher earn-in (owner decision 08-19: 0-for-7, -$10.95) ---------------
+# pairing: the twin's actual sequence at the time of the order
+twin = [
+    {"action": "BUY", "ticker": "GPS-USD", "price": 0.016370},
+    {"action": "SELL", "ticker": "GPS-USD", "price": 0.018210},   # +11.24%
+    {"action": "BUY", "ticker": "TUT-USD", "price": 0.043870},
+    {"action": "SELL", "ticker": "TUT-USD", "price": 0.043060},   # -1.85%
+    {"action": "BUY", "ticker": "ACE-USD", "price": 0.226900},
+    {"action": "SELL", "ticker": "ACE-USD", "price": 0.206100},   # -9.17%
+]
+rts = bl.twin_round_trips(twin)
+assert len(rts) == 3 and abs(rts[0] - 0.1124) < 0.002, rts
+ok, why = bl.watcher_earned(rts)
+assert not ok and "unproven" in why,     "3 resolved trips is not a record — the watcher stays benched"
+# a SELL with no matching BUY must not crash or count
+assert bl.twin_round_trips([{"action": "SELL", "ticker": "X", "price": 1}]) == []
+# a qualifying record arms it — mechanically, no human in the loop
+good = [0.11, -0.02, 0.05, -0.01, 0.08, 0.03]          # 4/6 wins, mean > 0
+ok, why = bl.watcher_earned(good)
+assert ok and "earned" in why, why
+# enough trips but a losing record stays benched
+bad = [0.11, -0.05, -0.06, -0.04, -0.09, -0.02]        # 1/6 wins
+ok, why = bl.watcher_earned(bad)
+assert not ok and "does not justify" in why, why
+# only the rolling window counts: ancient wins cannot carry a rotten present
+stale_glory = [0.5] * 10 + [-0.05] * 10
+ok, _ = bl.watcher_earned(stale_glory)
+assert not ok, "ten old wins must not arm a signal that lost its last ten"
+
 # --- tripwires: these asserts fail any casual edit that widens the blast
 # radius. Changing them is a deliberate reviewed act, which is the point.
 assert not hasattr(bl, "BOOK_CAP_USD"), \

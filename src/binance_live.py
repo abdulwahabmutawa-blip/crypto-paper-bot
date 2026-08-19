@@ -232,6 +232,59 @@ def exit_params(source: str | None) -> dict:
             "max_hold_h": 24.0}
 
 
+# ---- watcher earn-in (OWNER DECISION 2026-08-19: "fix it. I don't want
+# this to happen") ------------------------------------------------------------
+# The Watcher's real-money record at the moment of the order: 0 wins in 7
+# entries, -$10.95 — every dollar this book has ever lost. Every scout
+# signal must EARN actionability on a resolved record; the Watcher was the
+# one path trading on trust. No longer: watcher ENTRIES are benched until
+# the PAPER TWIN (hypecrypto — the same signal, unguarded, $1,000 paper)
+# shows a rolling record that beats the bar below. Re-arming is mechanical
+# and automatic in both directions; neither fear nor hope gets a vote.
+# The Watcher keeps its risk-officer roles (SEVERE exits, staleness
+# grounding, hype-faded exits) — only its power to OPEN real positions is
+# gated.
+WATCHER_EARN_WINDOW = 10       # judge the twin's last N round trips
+WATCHER_EARN_MIN_N = 6         # fewer resolved trips = unproven = benched
+WATCHER_EARN_MIN_WINS = 0.40   # same bar the scout gate uses
+
+
+def twin_round_trips(trades: list[dict]) -> list[float]:
+    """Pair the twin's BUY->SELL rows per ticker, in order, into realized
+    round-trip returns (fractions). Unmatched rows are ignored."""
+    open_pos: dict = {}
+    out: list[float] = []
+    for t in trades or []:
+        try:
+            if t.get("action") == "BUY":
+                open_pos[t["ticker"]] = float(t["price"])
+            elif t.get("action") == "SELL" and t.get("ticker") in open_pos:
+                buy = open_pos.pop(t["ticker"])
+                if buy > 0:
+                    out.append(float(t["price"]) / buy - 1.0)
+        except Exception:
+            continue
+    return out
+
+
+def watcher_earned(round_trips: list[float]) -> tuple[bool, str]:
+    """(armed, reason). Armed only when the twin's rolling record clears
+    the bar; unproven or failing records stay benched."""
+    window = round_trips[-WATCHER_EARN_WINDOW:]
+    n = len(window)
+    if n < WATCHER_EARN_MIN_N:
+        return False, (f"benched — twin has {n}/{WATCHER_EARN_MIN_N} "
+                       f"resolved round trips; unproven signals do not "
+                       f"spend real money (owner decision 08-19)")
+    wins = sum(1 for r in window if r > 0)
+    mean = sum(window) / n
+    if wins / n < WATCHER_EARN_MIN_WINS or mean <= 0:
+        return False, (f"benched — twin last {n}: {wins} wins, "
+                       f"mean {mean:+.2%}; the paper record does not "
+                       f"justify real money")
+    return True, (f"earned — twin last {n}: {wins} wins, mean {mean:+.2%}")
+
+
 def trail_pct(gain: float | None) -> float:
     """Progressive trailing stop: the more a ride has paid, the tighter it
     is held. The 2y study's retention gradient is monotonic — +50-100%

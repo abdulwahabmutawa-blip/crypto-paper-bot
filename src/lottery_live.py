@@ -10,7 +10,11 @@ BUY spends the account's full free USDT balance — see binance_live.py.
 Selector (mechanical, no discretion anywhere):
   1. Watcher's euphoric CRYPTO symbols (same source as the hypecrypto paper
      twin), freshest scan only (<= 3h — ENTRY_FRESH_H, shared with the
-     twin);
+     twin) — and ONLY while the watcher path has EARNED entry rights on the
+     twin's rolling paper record (binance_live.watcher_earned; owner
+     decision 2026-08-19 after the path went 0-for-7 for -$10.95, every
+     loss this book had ever taken). The Watcher's risk-officer roles are
+     untouched; only its power to open real positions is gated.;
   2. the Scout's ranked signals — but ONLY candidates whose signal type has
      EARNED the `actionable` flag on the Scout's own scorecard (see
      binance_scout.signal_actionable). Unproven signals are logged and
@@ -380,6 +384,19 @@ def main():
         blacklisted = set(st["stopped"])
 
         pick, source = None, None
+        # OWNER DECISION 2026-08-19: watcher entries only when the paper
+        # twin's rolling record has earned them (see binance_live). The
+        # bench announces itself once per cycle rather than spamming the
+        # ledger with a standing condition.
+        twin_p = config.DATA / "hypecrypto_state.json"
+        try:
+            twin_trades = json.loads(twin_p.read_text()).get("trades", [])
+        except Exception:
+            twin_trades = []
+        watcher_ok, watcher_why = binance_live.watcher_earned(
+            binance_live.twin_round_trips(twin_trades))
+        if fresh and not watcher_ok:
+            print(f"[{KEY}] watcher entries {watcher_why}")
         # Grok names coins, not exchange pairs — some have no Binance spot
         # listing at all (the ANSEM class). Probing the same dead symbol
         # every cycle wrote one Invalid-symbol ledger line per cycle for
@@ -389,7 +406,7 @@ def main():
         if np.get("scan_ts") != scan_ts:
             np = {"scan_ts": scan_ts, "syms": []}
         st["no_pair"] = np
-        if fresh:
+        if fresh and watcher_ok:
             for c in crypto_candidates(scan):
                 sym = c.replace("-USD", "") + "USDT"
                 if sym in blacklisted or sym in np["syms"]:
