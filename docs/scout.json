@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-19T08:39:43+00:00",
-  "scanned": 68,
+  "ts": "2026-08-19T08:45:04+00:00",
+  "scanned": 71,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "SOLUSDT",
-      "signal": "ignition",
-      "score": 0.7078,
-      "raw_score": 0.8164,
-      "weight": 0.867,
-      "price": 77.44,
-      "why": "trades 7.1x and volume 10.2x the prior 4h, 78% taker-buy, $2,328,767 burst \u2014 while price has only moved +0.6%",
-      "chg_24h": 0.018,
-      "vol_surge": 10.22,
-      "chg_1h": 0.006,
-      "market_surge": 5.45,
-      "actionable": false,
-      "status": "benched \u2014 hit 37%, mean -0.10% over last 30 at 4h: not beating the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 37%, mean -0.10% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 35%, mean -2.12% over last 23 at 4h: not beating the round trip",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 8,
+    "count": 9,
     "baseline": 11.0,
     "wave": false
   },
