@@ -299,6 +299,39 @@ def trail_pct(gain: float | None) -> float:
     return -0.15
 
 
+# ---- profit ratchet (exit audit 2026-08-19, all 14 real trades) --------------
+# The book's winners peak between +4% and +8% (MFE: COW +4.3, CHIP +4.5,
+# EDEN +6.0, ACE +6.1, DEXE +7.6) — and then round-trip, because the
+# trailing leash (-15%) only tightens after gains of +50% that never
+# happen at this horizon. Result: avg win +1.72% vs avg loss -3.42%, and
+# three trades that were UP +4-6% mid-ride ended -7.9% to -11.2%.
+# The ratchet closes that hole: once a ride has paid, it is never again
+# allowed to go red; once it has paid well, half the peak is locked.
+RATCHET_ARM = 0.04       # MFE >= +4%: lock breakeven-plus-fees
+RATCHET_LOCK = 0.005     # ...at entry +0.5% (covers the round trip)
+RATCHET_ARM2 = 0.08      # MFE >= +8%: lock half the peak gain
+RATCHET_KEEP2 = 0.5
+
+
+def ratchet_stop(entry: float | None, hwm: float | None) -> float | None:
+    """Price floor earned by the ride so far, or None if not armed.
+    Applied on top of (never instead of) the hard stop and trailing stop.
+
+    Replayed on the actual record: COW (-11.2%) exits +0.5%, CHIP-1 (-7.7%)
+    exits +0.5%, ACE (-7.9%) exits +0.5%, DEXE (+2.9%) exits ~+3.8%. Small
+    sample, fitted in hindsight — which is why the ledger tags these exits
+    RATCHET so the rule builds its own attributable record.
+    """
+    if not entry or not hwm or entry <= 0:
+        return None
+    mfe = hwm / entry - 1.0
+    if mfe >= RATCHET_ARM2:
+        return entry * (1.0 + mfe * RATCHET_KEEP2)
+    if mfe >= RATCHET_ARM:
+        return entry * (1.0 + RATCHET_LOCK)
+    return None
+
+
 def late_entry(runup_24h: float | None, chg_1h: float | None,
                dd_2h: float | None, range_24h: float | None) -> str | None:
     """Pure verdict: refusal reason if this entry is chasing a spent move or

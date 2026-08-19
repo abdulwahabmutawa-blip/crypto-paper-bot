@@ -149,6 +149,26 @@ assert h["kind"] == "hype" and h["max_hold_h"] == 24.0 \
 assert bl.exit_params(None)["kind"] == "hype", \
     "an unknown seat gets the strictest familiar clock, never the longest"
 
+# --- profit ratchet: a ride that paid never goes red (exit audit 08-19) -----
+# below +4% MFE: unarmed — a scratch may still become a stop-loss (LINK
+# peaked +1.8%; ratcheting there would churn every wiggle)
+assert bl.ratchet_stop(1.0, 1.018) is None
+assert bl.ratchet_stop(None, 1.1) is None and bl.ratchet_stop(1.0, None) is None
+# COW peaked +4.3% then fell to -11.2%. Armed: floor = entry +0.5%.
+f = bl.ratchet_stop(0.1391, 0.1391 * 1.043)
+assert f is not None and abs(f / 0.1391 - 1.005) < 1e-6,     "COW must exit at +0.5%, not -11.2%"
+# ACE peaked +6.1% then fell to -7.9%. Same lock.
+f = bl.ratchet_stop(0.2241, 0.2241 * 1.061)
+assert f is not None and abs(f / 0.2241 - 1.005) < 1e-6
+# DEXE peaked +7.6%: still stage-1 (under +8%)
+f = bl.ratchet_stop(1.852, 1.852 * 1.076)
+assert abs(f / 1.852 - 1.005) < 1e-6
+# past +8% MFE, half the peak is locked: peak +10% -> floor +5%
+f = bl.ratchet_stop(1.0, 1.10)
+assert abs(f - 1.05) < 1e-9, f
+# the floor NEVER loosens as hwm rises (monotone in hwm)
+assert bl.ratchet_stop(1.0, 1.20) > bl.ratchet_stop(1.0, 1.10)
+
 # --- watcher earn-in (owner decision 08-19: 0-for-7, -$10.95) ---------------
 # pairing: the twin's actual sequence at the time of the order
 twin = [

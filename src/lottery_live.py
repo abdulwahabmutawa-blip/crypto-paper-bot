@@ -314,6 +314,17 @@ def main():
             if sell(f"STOP-LOSS ({(p / entry - 1):.1%} from entry) — "
                     f"hype that bleeds gets cut"):
                 held = None
+        # PROFIT RATCHET (exit audit 08-19): a ride that has paid never goes
+        # red again; a ride that paid well keeps half its peak. This is the
+        # asymmetry fix — winners peaked +4..8% and were round-tripping into
+        # -8..-11% losses while the trailing leash waited for gains that
+        # never come at this horizon.
+        floor = binance_live.ratchet_stop(entry, hwm)
+        if held and p and floor and p <= floor:
+            if sell(f"RATCHET ({(p / entry - 1):+.1%} vs peak "
+                    f"{(hwm / entry - 1):+.1%}) — a ride that paid never "
+                    f"goes red again"):
+                held = None
         # trailing stop: the pump gave back too much of its peak. THIS is the
         # exit that gets the book out before a hype crash instead of after.
         # Progressive: the more the ride has paid, the tighter the leash.
