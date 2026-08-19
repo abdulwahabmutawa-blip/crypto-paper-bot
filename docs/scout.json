@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-19T00:18:15+00:00",
-  "scanned": 80,
+  "ts": "2026-08-19T00:24:13+00:00",
+  "scanned": 78,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "WLFIUSDT",
+      "signal": "ignition",
+      "score": 0.5145,
+      "raw_score": 0.9074,
+      "weight": 0.567,
+      "price": 0.0607,
+      "why": "trades 10.5x and volume 70.5x the prior 4h, 66% taker-buy, $67,333 burst \u2014 while price has only moved +0.3%",
+      "chg_24h": 0.0016,
+      "vol_surge": 70.5,
+      "chg_1h": 0.0033,
+      "market_surge": 0.0,
+      "actionable": false,
+      "status": "benched \u2014 hit 7%, mean -1.94% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 7%, mean -1.94% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 33%, mean -0.84% over last 21 at 4h: not beating the round trip",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 11,
+    "count": 10,
     "baseline": 12.0,
     "wave": false
   },
