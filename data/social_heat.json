@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-19T06:06:29+00:00",
+  "ts": "2026-08-19T06:12:09+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
@@ -15,9 +15,8 @@
       "ALLO",
       "SOL",
       "ETH",
-      "XRP",
       "TRX",
-      "BTC"
+      "XRP"
     ],
     "watcher": [
       "ACE"
@@ -32,18 +31,8 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.002732,
+      "funding": -0.00272,
       "long_short": 0.84
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 2.9e-05,
-      "long_short": 1.5
     },
     {
       "symbol": "SOL",
@@ -52,7 +41,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 8.3e-05,
+      "funding": 7.9e-05,
       "long_short": 2.11
     },
     {
@@ -64,12 +53,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 2.9e-05
+    },
+    {
       "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -6e-06
+      "funding": -9e-06
     },
     {
       "symbol": "FET",
@@ -77,7 +74,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0001
+      "funding": 9.6e-05
     },
     {
       "symbol": "MET",
@@ -85,7 +82,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.9e-05
+      "funding": 3.2e-05
     },
     {
       "symbol": "PUMP",
@@ -93,7 +90,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.8e-05
+      "funding": 5e-05
     },
     {
       "symbol": "TRX",
@@ -109,7 +106,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.5e-05
+      "funding": 4.1e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
