@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-19T17:28:19+00:00",
+  "ts": "2026-08-19T17:33:58+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -19,12 +19,12 @@
     "movers": [
       "HEMI",
       "RE",
-      "ZEC",
       "ETH",
+      "ZEC",
+      "PLUME",
       "SOL",
       "XRP",
-      "NEAR",
-      "PLUME"
+      "BTC"
     ],
     "watcher": [
       "HEMI"
@@ -32,6 +32,16 @@
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "BTC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.15
+    },
     {
       "symbol": "ETH",
       "surfaces": 2,
@@ -69,7 +79,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 6.7e-05,
+      "funding": 7.1e-05,
       "long_short": 2.63
     },
     {
@@ -79,16 +89,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 8.3e-05,
-      "long_short": 0.62
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": 8.8e-05
     },
     {
       "symbol": "INJ",
@@ -96,7 +97,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.4e-05
+      "funding": 1e-05
     },
     {
       "symbol": "LINK",
@@ -104,7 +105,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.1e-05
+      "funding": -1.9e-05
     },
     {
       "symbol": "LIT",
@@ -112,15 +113,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000287
-    },
-    {
-      "symbol": "NEAR",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
+      "funding": -0.000303
     },
     {
       "symbol": "PLUME",
@@ -128,7 +121,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 2.3e-05
+      "funding": 1.7e-05
     },
     {
       "symbol": "PUMP",
@@ -144,7 +137,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.5e-05
+      "funding": 3.9e-05
     },
     {
       "symbol": "SUI",
