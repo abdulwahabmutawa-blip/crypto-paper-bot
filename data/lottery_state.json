@@ -1,11 +1,13 @@
 {
   "created": "2026-08-15",
-  "held_symbol": "PUMPUSDT",
-  "entry_price": 0.0030780000000000004,
-  "units": 12719.0,
-  "entry_scan_ts": "2026-08-19T00:41:16+00:00",
-  "entry_source": "watcher",
-  "stopped": {},
+  "held_symbol": null,
+  "entry_price": null,
+  "units": 0.0,
+  "entry_scan_ts": null,
+  "entry_source": null,
+  "stopped": {
+    "PUMPUSDT": "2026-08-19T04:53:30+00:00"
+  },
   "entries": {
     "2026-08-19": 1
   },
@@ -185,27 +187,30 @@
       "date": "2026-08-18",
       "exit": 0.01739,
       "entry": 0.0174
+    },
+    {
+      "symbol": "PUMPUSDT",
+      "entry_time": "2026-08-19T01:04:45+00:00",
+      "exit_time": "2026-08-19T04:53:30+00:00",
+      "entry_price": 0.0030780000000000004,
+      "exit_price": 0.003020136864473477,
+      "units": 12719.0,
+      "spent_usd": 39.1491,
+      "got_usd": 38.3739,
+      "pnl_pct": -1.88,
+      "pnl_usd": -0.7752,
+      "reason": "Hype faded \u2014 coin off a newer euphoric scan",
+      "date": "2026-08-19",
+      "exit": 0.003020136864473477,
+      "entry": 0.0030780000000000004
     }
   ],
-  "last_value_usd": 38.3,
-  "last_updated_utc": "2026-08-19T04:47:56+00:00",
-  "open_position": {
-    "symbol": "PUMPUSDT",
-    "entry_time": "2026-08-19T01:04:45+00:00",
-    "entry_price": 0.0030780000000000004,
-    "current_price": 0.003014,
-    "units": 12719.0,
-    "spent_usd": 39.1491,
-    "value_usd": 38.3351,
-    "pnl_usd": -0.814,
-    "pnl_pct": -2.08,
-    "source": "watcher"
-  },
-  "spent_usd": 39.1491,
+  "last_value_usd": 38.34,
+  "last_updated_utc": "2026-08-19T04:53:30+00:00",
+  "open_position": null,
+  "spent_usd": null,
   "no_pair": {
-    "scan_ts": "2026-08-19T00:41:16+00:00",
+    "scan_ts": "2026-08-19T04:45:30+00:00",
     "syms": []
-  },
-  "hwm": 0.003105,
-  "entry_time": "2026-08-19T01:04:45+00:00"
+  }
 }
