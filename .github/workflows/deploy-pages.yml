@@ -1,0 +1,56 @@
+name: deploy-pages
+
+# Custom Pages deployment, replacing the built-in Jekyll branch build.
+#
+# WHY (2026-08-17..19): the repo takes ~10+ pushes/hour (VPS lottery cycles
+# every ~6 min, fleet cycles every ~13, oracle daily), and the built-in
+# build ran on EVERY one of them. Roughly a third failed with HTTP 429 —
+# GitHub rate-limiting the download of its own jekyll-build-pages action —
+# each failure emailing the owner. The dashboards are static HTML/JSON;
+# Jekyll was never doing anything here.
+#
+# This workflow: (a) skips Jekyll entirely and uploads docs/ as-is,
+# (b) only triggers when docs/ actually changed — oracle/data-only commits
+# no longer rebuild anything, (c) collapses bursts: a newer push cancels
+# the superseded deploy (cancelled runs do not email; only failures do).
+# Same URLs, same site — only the build pipeline changes.
+
+on:
+  push:
+    branches: [main]
+    paths: ['docs/**']
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      # enablement: true asks the Pages API to switch the site's build
+      # source to "GitHub Actions" if it is still on the legacy branch
+      # build. If the API refuses, the one-time manual fallback is:
+      # Settings -> Pages -> Build and deployment -> Source -> GitHub Actions
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
