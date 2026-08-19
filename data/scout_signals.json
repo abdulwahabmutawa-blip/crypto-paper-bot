@@ -1,8 +1,54 @@
 {
-  "ts": "2026-08-19T14:59:24+00:00",
-  "scanned": 84,
+  "ts": "2026-08-19T15:05:14+00:00",
+  "scanned": 85,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "AAVEUSDT",
+      "signal": "breakout",
+      "score": 0.6837,
+      "raw_score": 0.6837,
+      "weight": 1.0,
+      "price": 92.23,
+      "why": "trades 6.0x, volume 10.2x, 60% taker-buy, +2.8% in an hour, at 105% of its 24h range",
+      "chg_24h": 0.0294,
+      "vol_surge": 10.18,
+      "chg_1h": 0.028,
+      "market_surge": 10.04,
+      "actionable": false,
+      "status": "benched \u2014 hit 35%, mean -1.98% over last 26 at 4h: not beating the round trip"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "signal": "breakout",
+      "score": 0.674,
+      "raw_score": 0.674,
+      "weight": 1.0,
+      "price": 1999.11,
+      "why": "trades 5.0x, volume 8.7x, 69% taker-buy, +3.2% in an hour, at 109% of its 24h range",
+      "chg_24h": 0.0392,
+      "vol_surge": 8.72,
+      "chg_1h": 0.0316,
+      "market_surge": 20.93,
+      "actionable": false,
+      "status": "benched \u2014 hit 35%, mean -1.98% over last 26 at 4h: not beating the round trip"
+    },
+    {
+      "symbol": "SUIUSDT",
+      "signal": "breakout",
+      "score": 0.6638,
+      "raw_score": 0.6638,
+      "weight": 1.0,
+      "price": 0.6777,
+      "why": "trades 5.6x, volume 6.7x, 76% taker-buy, +3.0% in an hour, at 112% of its 24h range",
+      "chg_24h": 0.0287,
+      "vol_surge": 6.73,
+      "chg_1h": 0.0298,
+      "market_surge": 4.42,
+      "actionable": false,
+      "status": "benched \u2014 hit 35%, mean -1.98% over last 26 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "benched \u2014 hit 35%, mean -1.98% over last 26 at 4h: not beating the round trip",
@@ -11,16 +57,16 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 14,
+    "count": 15,
     "baseline": 11.0,
     "wave": false
   },
   "scorecard": {
     "ignition": {
       "n_1h": 30,
-      "hit_rate_1h": 0.433,
-      "mean_ret_1h": 0.00473,
-      "median_ret_1h": 0.00164,
+      "hit_rate_1h": 0.467,
+      "mean_ret_1h": 0.00554,
+      "median_ret_1h": 0.00167,
       "n_4h": 30,
       "hit_rate_4h": 0.567,
       "mean_ret_4h": 0.00627,
