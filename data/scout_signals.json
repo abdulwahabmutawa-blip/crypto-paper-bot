@@ -1,20 +1,34 @@
 {
-  "ts": "2026-08-19T12:46:17+00:00",
-  "scanned": 77,
+  "ts": "2026-08-19T12:51:36+00:00",
+  "scanned": 78,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "ZECUSDT",
+      "symbol": "ETHUSDT",
       "signal": "ignition",
-      "score": 0.6122,
-      "raw_score": 0.5927,
+      "score": 0.9428,
+      "raw_score": 0.9127,
       "weight": 1.033,
-      "price": 512.41,
-      "why": "trades 4.5x and volume 5.7x the prior 4h, 79% taker-buy, $275,248 burst \u2014 while price has only moved +1.1%",
-      "chg_24h": 0.017,
-      "vol_surge": 5.66,
-      "chg_1h": 0.0107,
-      "market_surge": 2.72,
+      "price": 1937.3,
+      "why": "trades 10.5x and volume 21.7x the prior 4h, 73% taker-buy, $13,720,071 burst \u2014 while price has only moved +0.7%",
+      "chg_24h": 0.0187,
+      "vol_surge": 21.74,
+      "chg_1h": 0.0075,
+      "market_surge": 9.34,
+      "actionable": true
+    },
+    {
+      "symbol": "SOLUSDT",
+      "signal": "ignition",
+      "score": 0.9308,
+      "raw_score": 0.9011,
+      "weight": 1.033,
+      "price": 78.5,
+      "why": "trades 32.2x and volume 49.3x the prior 4h, 73% taker-buy, $12,111,616 burst \u2014 while price has only moved +1.2%",
+      "chg_24h": 0.0272,
+      "vol_surge": 49.27,
+      "chg_1h": 0.0123,
+      "market_surge": 28.12,
       "actionable": true
     }
   ],
@@ -26,7 +40,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 11,
+    "count": 10,
     "baseline": 11.0,
     "wave": false
   },
