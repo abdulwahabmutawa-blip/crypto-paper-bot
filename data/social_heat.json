@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-19T17:49:49+00:00",
+  "ts": "2026-08-19T17:55:29+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -23,9 +23,9 @@
       "ZEC",
       "ETH",
       "WLD",
-      "XRP",
       "SOL",
-      "NEAR"
+      "XRP",
+      "BTC"
     ],
     "watcher": [
       "HEMI"
@@ -33,6 +33,16 @@
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "BTC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.15
+    },
     {
       "symbol": "ETH",
       "surfaces": 2,
@@ -69,15 +79,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.6e-05
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": -1.2e-05
     },
     {
       "symbol": "INJ",
@@ -85,7 +87,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.4e-05
+      "funding": 1.5e-05
     },
     {
       "symbol": "LINK",
@@ -93,7 +95,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.7e-05
+      "funding": -1.9e-05
     },
     {
       "symbol": "LIT",
@@ -101,15 +103,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000315
-    },
-    {
-      "symbol": "NEAR",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
+      "funding": -0.00032
     },
     {
       "symbol": "ONDO",
@@ -149,7 +143,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.2e-05
+      "funding": -1.1e-05
     },
     {
       "symbol": "WLD",
@@ -157,7 +151,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 6.6e-05
+      "funding": 7.7e-05
     },
     {
       "symbol": "XLM",
@@ -173,7 +167,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 8.2e-05
+      "funding": 8.3e-05
     },
     {
       "symbol": "ZEC",
