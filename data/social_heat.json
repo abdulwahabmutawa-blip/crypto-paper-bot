@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-19T22:04:19+00:00",
+  "ts": "2026-08-19T22:09:59+00:00",
   "sources": {
     "coingecko": [
       "ETH",
@@ -10,7 +10,9 @@
       "LINK",
       "UNI",
       "TAO",
+      "PEPE",
       "CFG",
+      "ONDO",
       "DOT"
     ],
     "reddit": [],
@@ -19,11 +21,11 @@
       "RE",
       "HEMI",
       "ETH",
-      "WLD",
       "XRP",
       "LINK",
+      "WLD",
       "ZEC",
-      "PEPE"
+      "SOL"
     ],
     "watcher": [
       "ETH",
@@ -44,6 +46,17 @@
       ],
       "funding": 0.0001,
       "long_short": 2.65
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.06
     },
     {
       "symbol": "BTC",
@@ -72,18 +85,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 7.4e-05,
+      "funding": 8.2e-05,
       "long_short": 1.87
-    },
-    {
-      "symbol": "SOL",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "watcher"
-      ],
-      "funding": 0.0001,
-      "long_short": 2.06
     },
     {
       "symbol": "CFG",
@@ -91,7 +94,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000117
+      "funding": -0.000121
     },
     {
       "symbol": "DOT",
@@ -110,10 +113,18 @@
       "funding": -8e-05
     },
     {
+      "symbol": "ONDO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "PEPE",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ]
     },
     {
@@ -122,7 +133,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.2e-05
+      "funding": 7e-06
     },
     {
       "symbol": "RE",
@@ -130,7 +141,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 2.5e-05
+      "funding": 2.9e-05
     },
     {
       "symbol": "TAO",
