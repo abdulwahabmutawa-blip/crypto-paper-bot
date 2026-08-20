@@ -1,33 +1,17 @@
 {
-  "ts": "2026-08-20T14:44:04+00:00",
-  "scanned": 126,
+  "ts": "2026-08-20T14:49:24+00:00",
+  "scanned": 127,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "WBETHUSDT",
-      "signal": "ignition",
-      "score": 0.7807,
-      "raw_score": 0.7807,
-      "weight": 1.0,
-      "price": 2513.38,
-      "why": "trades 4.7x and volume 49.3x the prior 4h, 99% taker-buy, $188,081 burst \u2014 while price has only moved +0.2%",
-      "chg_24h": 0.1741,
-      "vol_surge": 49.28,
-      "chg_1h": 0.0016,
-      "market_surge": 0.0,
-      "actionable": false,
-      "status": "benched \u2014 hit 50%, mean +0.33% over last 30 at 4h: not beating the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
-    "ignition": "benched \u2014 hit 50%, mean +0.33% over last 30 at 4h: not beating the round trip",
+    "ignition": "benched \u2014 hit 47%, mean +0.15% over last 30 at 4h: not beating the round trip",
     "breakout": "actionable",
     "reversion": "benched \u2014 hit 43%, mean +0.04% over last 21 at 4h: not beating the round trip",
     "heat": "benched \u2014 hit 46%, mean -0.62% over last 28 at 4h: not beating the round trip",
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 69,
+    "count": 66,
     "baseline": 13.0,
     "wave": true
   },
@@ -38,9 +22,9 @@
       "mean_ret_1h": 0.00618,
       "median_ret_1h": 0.00019,
       "n_4h": 30,
-      "hit_rate_4h": 0.5,
-      "mean_ret_4h": 0.00327,
-      "median_ret_4h": 0.00246,
+      "hit_rate_4h": 0.467,
+      "mean_ret_4h": 0.00149,
+      "median_ret_4h": 0.0003,
       "n_24h": 30,
       "hit_rate_24h": 0.8,
       "mean_ret_24h": 0.04565,
@@ -57,7 +41,7 @@
       "median_ret_4h": 0.0176,
       "n_24h": 30,
       "hit_rate_24h": 0.4,
-      "mean_ret_24h": -0.02639,
+      "mean_ret_24h": -0.03557,
       "median_ret_24h": -0.01447
     },
     "reversion": {

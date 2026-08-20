@@ -1,16 +1,15 @@
 {
-  "ts": "2026-08-20T14:43:59+00:00",
+  "ts": "2026-08-20T14:49:19+00:00",
   "sources": {
     "coingecko": [
       "XRP",
+      "PUMP",
       "LIT",
       "BTC",
-      "PUMP",
+      "ETH",
       "SOL",
       "PEPE",
-      "ETH",
-      "ONDO",
-      "LINK"
+      "AERO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -18,10 +17,10 @@
       "BOME",
       "ACE",
       "XRP",
-      "PEPE",
       "RE",
-      "ETH",
+      "PEPE",
       "PUMP",
+      "ETH",
       "ENA"
     ],
     "watcher": [
@@ -92,7 +91,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 3.1e-05
+      "funding": 3e-05
     },
     {
       "symbol": "ACE",
@@ -100,7 +99,15 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.00144
+      "funding": -0.001438
+    },
+    {
+      "symbol": "AERO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 8e-06
     },
     {
       "symbol": "BTC",
@@ -117,22 +124,6 @@
         "movers"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "LINK",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 4e-05
-    },
-    {
-      "symbol": "ONDO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -3e-05
     },
     {
       "symbol": "RE",
