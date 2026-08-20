@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-20T07:54:52+00:00",
+  "ts": "2026-08-20T08:00:29+00:00",
   "sources": {
     "coingecko": [
       "LIT",
@@ -9,9 +9,9 @@
       "BOME",
       "PEPE",
       "PUMP",
+      "SUI",
       "UNI",
-      "RENDER",
-      "PENDLE"
+      "SOL"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -63,7 +63,7 @@
         "watcher"
       ],
       "funding": 0.0001,
-      "long_short": 1.01
+      "long_short": 1.0
     },
     {
       "symbol": "RE",
@@ -76,14 +76,23 @@
       "long_short": 0.43
     },
     {
+      "symbol": "SOL",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.05
+    },
+    {
       "symbol": "TRUMP",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": 5e-05,
-      "long_short": 1.74
+      "funding": 5e-05
     },
     {
       "symbol": "BOME",
@@ -117,14 +126,6 @@
       "funding": 0.0001
     },
     {
-      "symbol": "PENDLE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "PUMP",
       "surfaces": 1,
       "sources": [
@@ -133,18 +134,10 @@
       "funding": -7.2e-05
     },
     {
-      "symbol": "RENDER",
+      "symbol": "SUI",
       "surfaces": 1,
       "sources": [
         "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "SOL",
-      "surfaces": 1,
-      "sources": [
-        "movers"
       ],
       "funding": 0.0001
     },
@@ -154,7 +147,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.3e-05
+      "funding": 7.6e-05
     },
     {
       "symbol": "WLD",

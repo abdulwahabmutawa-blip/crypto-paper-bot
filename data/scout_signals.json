@@ -1,37 +1,8 @@
 {
-  "ts": "2026-08-20T07:54:58+00:00",
+  "ts": "2026-08-20T08:00:36+00:00",
   "scanned": 120,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ICPUSDT",
-      "signal": "ignition",
-      "score": 0.9563,
-      "raw_score": 0.7174,
-      "weight": 1.333,
-      "price": 2.313,
-      "why": "trades 5.8x and volume 9.5x the prior 4h, 70% taker-buy, $81,310 burst \u2014 while price has only moved +1.0%",
-      "chg_24h": 0.0451,
-      "vol_surge": 9.46,
-      "chg_1h": 0.01,
-      "market_surge": 2.8,
-      "actionable": true
-    },
-    {
-      "symbol": "FILUSDT",
-      "signal": "ignition",
-      "score": 0.9449,
-      "raw_score": 0.7088,
-      "weight": 1.333,
-      "price": 0.6695,
-      "why": "trades 4.7x and volume 10.6x the prior 4h, 74% taker-buy, $80,840 burst \u2014 while price has only moved -0.6%",
-      "chg_24h": 0.0537,
-      "vol_surge": 10.61,
-      "chg_1h": -0.0058,
-      "market_surge": 2.71,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -40,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 57,
+    "count": 59,
     "baseline": 12.0,
     "wave": true
   },
@@ -96,10 +67,10 @@
       "hit_rate_4h": 0.435,
       "mean_ret_4h": -0.00813,
       "median_ret_4h": -0.00365,
-      "n_24h": 18,
-      "hit_rate_24h": 0.222,
-      "mean_ret_24h": -0.10397,
-      "median_ret_24h": -0.13588
+      "n_24h": 19,
+      "hit_rate_24h": 0.211,
+      "mean_ret_24h": -0.10671,
+      "median_ret_24h": -0.15357
     }
   },
   "note": "READ-ONLY scout. Ranked opinion only \u2014 the book decides."
