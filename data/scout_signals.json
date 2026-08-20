@@ -1,21 +1,22 @@
 {
-  "ts": "2026-08-20T18:02:24+00:00",
-  "scanned": 119,
+  "ts": "2026-08-20T18:08:13+00:00",
+  "scanned": 121,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "ALLOUSDT",
-      "signal": "breakout",
-      "score": 0.7537,
-      "raw_score": 0.6281,
-      "weight": 1.2,
-      "price": 0.3261,
-      "why": "trades 4.2x, volume 5.4x, 61% taker-buy, +5.7% in an hour, at 99% of its 24h range",
-      "chg_24h": 0.1057,
-      "vol_surge": 5.39,
-      "chg_1h": 0.0571,
-      "market_surge": 5.11,
-      "actionable": true
+      "symbol": "PUMPUSDT",
+      "signal": "heat",
+      "score": 0.5802,
+      "raw_score": 0.6,
+      "weight": 0.967,
+      "price": 0.003733,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.005% \u00b7 L/S 1.36",
+      "chg_24h": 0.1934,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
+      "actionable": false,
+      "status": "benched \u2014 hit 47%, mean -0.12% over last 30 at 4h: not beating the round trip"
     }
   ],
   "gate": {
@@ -26,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 54,
+    "count": 53,
     "baseline": 13.0,
     "wave": true
   },
@@ -34,7 +35,7 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.4,
-      "mean_ret_1h": 0.00404,
+      "mean_ret_1h": 0.00415,
       "median_ret_1h": 0.0,
       "n_4h": 30,
       "hit_rate_4h": 0.467,
@@ -42,7 +43,7 @@
       "median_ret_4h": 0.0003,
       "n_24h": 30,
       "hit_rate_24h": 0.933,
-      "mean_ret_24h": 0.06325,
+      "mean_ret_24h": 0.06401,
       "median_ret_24h": 0.06631
     },
     "breakout": {
@@ -52,7 +53,7 @@
       "median_ret_1h": 0.00324,
       "n_4h": 30,
       "hit_rate_4h": 0.7,
-      "mean_ret_4h": 0.0342,
+      "mean_ret_4h": 0.03483,
       "median_ret_4h": 0.0176,
       "n_24h": 30,
       "hit_rate_24h": 0.9,
