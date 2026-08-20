@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-20T13:53:04+00:00",
+  "ts": "2026-08-20T13:58:34+00:00",
   "scanned": 126,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "\u5e01\u5b89\u4eba\u751fUSDT",
-      "signal": "revival",
-      "score": 0.3804,
-      "raw_score": 0.3804,
-      "weight": 1.0,
-      "price": 0.4822,
-      "why": "revival day-one: fell -10% last week on $1.58M/day quiet, volume arriving 4.3x today, only +18% off its 30d low \u2014 ON A WAVE DAY (breadth 89 vs 13 base)",
-      "chg_24h": 0.1314,
-      "vol_surge": 4.3,
-      "chg_1h": null,
-      "market_surge": null,
-      "actionable": false,
-      "status": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 57%, mean +0.47% over last 30 at 4h: not beating the round trip",
     "breakout": "actionable",
@@ -27,16 +11,16 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 89,
+    "count": 92,
     "baseline": 13.0,
     "wave": true
   },
   "scorecard": {
     "ignition": {
       "n_1h": 30,
-      "hit_rate_1h": 0.467,
-      "mean_ret_1h": 0.00946,
-      "median_ret_1h": 0.0015,
+      "hit_rate_1h": 0.433,
+      "mean_ret_1h": 0.00924,
+      "median_ret_1h": 0.0003,
       "n_4h": 30,
       "hit_rate_4h": 0.567,
       "mean_ret_4h": 0.00475,
