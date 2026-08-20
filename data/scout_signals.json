@@ -1,23 +1,8 @@
 {
-  "ts": "2026-08-20T09:21:14+00:00",
-  "scanned": 119,
+  "ts": "2026-08-20T09:27:04+00:00",
+  "scanned": 120,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "PENDLEUSDT",
-      "signal": "ignition",
-      "score": 0.9726,
-      "raw_score": 0.7296,
-      "weight": 1.333,
-      "price": 1.491,
-      "why": "trades 5.7x and volume 9.7x the prior 4h, 67% taker-buy, $82,096 burst \u2014 while price has only moved -0.3%",
-      "chg_24h": 0.1463,
-      "vol_surge": 9.74,
-      "chg_1h": -0.0033,
-      "market_surge": 2.98,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -26,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 94,
+    "count": 95,
     "baseline": 12.0,
     "wave": true
   },
@@ -34,11 +19,11 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.6,
-      "mean_ret_1h": 0.00608,
+      "mean_ret_1h": 0.00525,
       "median_ret_1h": 0.00521,
       "n_4h": 30,
       "hit_rate_4h": 0.833,
-      "mean_ret_4h": 0.01428,
+      "mean_ret_4h": 0.01469,
       "median_ret_4h": 0.01056,
       "n_24h": 30,
       "hit_rate_24h": 0.9,
@@ -48,12 +33,12 @@
     "breakout": {
       "n_1h": 30,
       "hit_rate_1h": 0.5,
-      "mean_ret_1h": 0.00996,
-      "median_ret_1h": 0.00539,
+      "mean_ret_1h": 0.00765,
+      "median_ret_1h": 0.00805,
       "n_4h": 30,
       "hit_rate_4h": 0.4,
-      "mean_ret_4h": 0.00731,
-      "median_ret_4h": -0.00283,
+      "mean_ret_4h": 0.00611,
+      "median_ret_4h": -0.00419,
       "n_24h": 25,
       "hit_rate_24h": 0.32,
       "mean_ret_24h": -0.0379,
