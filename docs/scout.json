@@ -1,23 +1,8 @@
 {
-  "ts": "2026-08-20T07:14:33+00:00",
+  "ts": "2026-08-20T07:20:04+00:00",
   "scanned": 117,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "AVAXUSDT",
-      "signal": "ignition",
-      "score": 0.7824,
-      "raw_score": 0.587,
-      "weight": 1.333,
-      "price": 6.801,
-      "why": "trades 4.5x and volume 6.3x the prior 4h, 69% taker-buy, $179,690 burst \u2014 while price has only moved +0.9%",
-      "chg_24h": 0.0682,
-      "vol_surge": 6.32,
-      "chg_1h": 0.0095,
-      "market_surge": 1.7,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -26,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 59,
+    "count": 54,
     "baseline": 12.0,
     "wave": true
   },
