@@ -17,6 +17,7 @@ import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+import oracle.comparators as comparators
 import oracle.config as config
 import oracle.fetch as fetch
 import oracle.ledger as ledger
@@ -89,6 +90,10 @@ def build_slate(limit: int | None = None, pause: float = 0.05) -> dict:
         windows_total += w
         ref = rows[-1]
         qv30 = sorted(float(r[7]) for r in rows[-30:])
+        # trailing 30d return from CLOSED candles only (rows already
+        # excludes the forming day) — feeds momo_v1; eligible_history
+        # guarantees >=90 rows so [-31] always exists
+        c_now, c_then = float(rows[-1][4]), float(rows[-31][4])
         slate.append({
             "symbol": sym,
             "ref_open_time_ms": int(ref[0]),
@@ -97,6 +102,7 @@ def build_slate(limit: int | None = None, pause: float = 0.05) -> dict:
             "listed_days": len(rows),
             "median_qv_30d": round(qv30[len(qv30) // 2], 2),
             "own_hits": h, "own_windows": w,
+            "ret_30d": round(c_now / c_then - 1.0, 6) if c_then > 0 else 0.0,
         })
         time.sleep(pause)
 
@@ -113,6 +119,13 @@ def run(limit: int | None = None) -> Path:
     slate = built["slate"]
     if not slate:
         raise SystemExit("[oracle] empty slate — refusing to write a run")
+
+    # Phase-1 comparators (added 08-20, additive only): four naive
+    # forecasters recorded ALONGSIDE the baseline on the same rows. The
+    # question, the baseline and its probability are untouched — this does
+    # not open a new generation; it widens what September can conclude.
+    comp_probs, comp_meta = comparators.probabilities(
+        slate, built["base_rate"])
 
     # T0 is the latest reference close on the slate; windows are measured
     # from each symbol's own reference candle.
@@ -143,6 +156,7 @@ def run(limit: int | None = None) -> Path:
         # reviewer can recompute both without trusting a re-fetch.
         "slate": slate,
         "rejected": built["rejected"],
+        "comparators": comp_meta,
     }
     # newline="\n" everywhere — see the note in ledger.append()
     snap_path.write_text(json.dumps(snap, sort_keys=True, indent=1),
@@ -192,7 +206,11 @@ def run(limit: int | None = None) -> Path:
                     "listed_days": s["listed_days"],
                     "median_qv_30d": s["median_qv_30d"],
                     "own_hits": s["own_hits"], "own_windows": s["own_windows"],
+                    "ret_30d": s["ret_30d"],
                 },
+                # phase-1 comparators (see oracle/comparators.py): scored
+                # against the SAME resolution via the same paired statistic
+                "comparators": comp_probs[s["symbol"]],
                 "universe_rule": config.UNIVERSE_RULE,
                 "snapshot_sha256": snap_hash,
                 "created_utc": now.isoformat(timespec="seconds"),

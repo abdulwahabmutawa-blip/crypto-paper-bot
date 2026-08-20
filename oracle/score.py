@@ -102,6 +102,9 @@ def compute() -> dict:
             "p": float(p["probability"]),
             "p_base": float(p["baseline_p_base_rate"]),
             "y": int(r["outcome"]),
+            # phase-1 comparators (08-20+ runs only; absent on the first
+            # four runs — each comparator is scored on the rows it has)
+            "comps": p.get("comparators") or {},
         })
 
     n = len(rows)
@@ -152,6 +155,46 @@ def compute() -> dict:
         "n_required_note": ("nominal paired n; multiply by "
                             "(1+(m-1)*rho) for the clustered reality"),
     })
+    # ---- phase-1 comparators, same paired discipline --------------------
+    # Each comparator is measured on the subset of rows that carry its
+    # probability (runs from 08-20 on), paired against the baseline on
+    # those same rows. Measurements always; verdicts only past n_eff.
+    comp_ids = sorted({fid for r in rows for fid in r["comps"]})
+    comp_out = {}
+    for fid in comp_ids:
+        sub = [r for r in rows if fid in r["comps"]]
+        cn = len(sub)
+        cd = [(r["p_base"] - r["y"]) ** 2
+              - (float(r["comps"][fid]) - r["y"]) ** 2 for r in sub]
+        c_mean = sum(cd) / cn
+        c_var = (sum((x - c_mean) ** 2 for x in cd) / (cn - 1)) if cn > 1 \
+            else 0.0
+        cgroups: dict[str, list[int]] = {}
+        for r in sub:
+            cgroups.setdefault(r["run_id"], []).append(r["y"])
+        c_rho, c_mbar = intraclass_rho(list(cgroups.values()))
+        c_neff = cn / (1 + max(0.0, (c_mbar - 1)) * c_rho) if c_mbar \
+            else float(cn)
+        entry = {
+            "n": cn,
+            "brier": round(sum((float(r["comps"][fid]) - r["y"]) ** 2
+                               for r in sub) / cn, 6),
+            "paired_mean_d_vs_baseline": round(c_mean, 8),
+            "n_eff": round(c_neff, 1),
+        }
+        if c_neff >= config.MIN_NEFF_FOR_CLAIM and c_var > 0:
+            c_se = math.sqrt(c_var / c_neff)
+            lo, hi = c_mean - 1.645 * c_se, c_mean + 1.645 * c_se
+            entry["paired_d_90ci"] = [round(lo, 8), round(hi, 8)]
+            entry["verdict"] = ("beats baseline" if lo > 0 else
+                                "worse than baseline" if hi < 0 else
+                                "indistinguishable from baseline")
+        else:
+            entry["verdict"] = None
+        comp_out[fid] = entry
+    if comp_out:
+        out["comparators"] = comp_out
+
     if n_eff < config.MIN_NEFF_FOR_CLAIM:
         out["status"] = "NO CONCLUSION IS STATISTICALLY POSSIBLE YET"
         out["verdict"] = None
@@ -203,6 +246,15 @@ def report(scores: dict) -> str:
     else:
         L += [f"> **verdict: {scores['verdict']}** "
               f"(90% CI {scores['paired_d_90ci']})", ""]
+    if scores.get("comparators"):
+        L += ["## Comparators (phase 1 — paired vs baseline on shared "
+              "resolutions)", ""]
+        for fid, c in sorted(scores["comparators"].items()):
+            v = c["verdict"] or "no verdict yet"
+            L.append(f"- `{fid}`: n {c['n']} (n_eff {c['n_eff']}), Brier "
+                     f"{c['brier']:.6f}, paired d "
+                     f"{c['paired_mean_d_vs_baseline']:+.8f} — {v}")
+        L.append("")
     if scores.get("n_required_for_target"):
         L += [f"Nominal paired n for a 0.02 BSS at 80% power: "
               f"**{scores['n_required_for_target']:,}** "
