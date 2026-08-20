@@ -1,17 +1,33 @@
 {
-  "ts": "2026-08-20T14:09:44+00:00",
-  "scanned": 126,
+  "ts": "2026-08-20T14:15:24+00:00",
+  "scanned": 125,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "MEGAUSDT",
+      "signal": "ignition",
+      "score": 0.66,
+      "raw_score": 0.66,
+      "weight": 1.0,
+      "price": 0.03892,
+      "why": "trades 5.7x and volume 7.4x the prior 4h, 69% taker-buy, $158,344 burst \u2014 while price has only moved +1.0%",
+      "chg_24h": 0.2173,
+      "vol_surge": 7.37,
+      "chg_1h": 0.0101,
+      "market_surge": 9.69,
+      "actionable": false,
+      "status": "benched \u2014 hit 50%, mean +0.33% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
-    "ignition": "benched \u2014 hit 53%, mean +0.42% over last 30 at 4h: not beating the round trip",
+    "ignition": "benched \u2014 hit 50%, mean +0.33% over last 30 at 4h: not beating the round trip",
     "breakout": "actionable",
     "reversion": "benched \u2014 hit 43%, mean +0.04% over last 21 at 4h: not beating the round trip",
-    "heat": "benched \u2014 hit 48%, mean -0.64% over last 27 at 4h: not beating the round trip",
+    "heat": "benched \u2014 hit 46%, mean -0.62% over last 28 at 4h: not beating the round trip",
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 85,
+    "count": 89,
     "baseline": 13.0,
     "wave": true
   },
@@ -22,9 +38,9 @@
       "mean_ret_1h": 0.00924,
       "median_ret_1h": 0.0003,
       "n_4h": 30,
-      "hit_rate_4h": 0.533,
-      "mean_ret_4h": 0.0042,
-      "median_ret_4h": 0.00745,
+      "hit_rate_4h": 0.5,
+      "mean_ret_4h": 0.00327,
+      "median_ret_4h": 0.00246,
       "n_24h": 30,
       "hit_rate_24h": 0.8,
       "mean_ret_24h": 0.04557,
@@ -61,11 +77,11 @@
     "heat": {
       "n_1h": 30,
       "hit_rate_1h": 0.367,
-      "mean_ret_1h": -0.0072,
+      "mean_ret_1h": -0.00588,
       "median_ret_1h": -0.00133,
-      "n_4h": 27,
-      "hit_rate_4h": 0.481,
-      "mean_ret_4h": -0.00635,
+      "n_4h": 28,
+      "hit_rate_4h": 0.464,
+      "mean_ret_4h": -0.00619,
       "median_ret_4h": -0.00079,
       "n_24h": 19,
       "hit_rate_24h": 0.211,

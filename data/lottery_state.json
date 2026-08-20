@@ -1,11 +1,13 @@
 {
   "created": "2026-08-15",
-  "held_symbol": "CFGUSDT",
-  "entry_price": 0.1334719475655431,
-  "units": 267.0,
-  "entry_scan_ts": "2026-08-20T08:53:15+00:00",
-  "entry_source": "scout:ignition",
-  "stopped": {},
+  "held_symbol": null,
+  "entry_price": null,
+  "units": 0.0,
+  "entry_scan_ts": null,
+  "entry_source": null,
+  "stopped": {
+    "CFGUSDT": "2026-08-20T14:16:55+00:00"
+  },
   "entries": {
     "2026-08-20": 4
   },
@@ -286,28 +288,32 @@
       "date": "2026-08-20",
       "exit": 0.02951,
       "entry": 0.02971
+    },
+    {
+      "symbol": "CFGUSDT",
+      "source": "scout:ignition",
+      "entry_time": "2026-08-20T10:12:54+00:00",
+      "exit_time": "2026-08-20T14:16:55+00:00",
+      "entry_price": 0.1334719475655431,
+      "exit_price": 0.1338,
+      "units": 267.0,
+      "spent_usd": 35.637,
+      "got_usd": 35.6845,
+      "pnl_pct": 0.25,
+      "pnl_usd": 0.0475,
+      "reason": "STALLED (4.1h in, only +0.3%) \u2014 the pump never came",
+      "date": "2026-08-20",
+      "exit": 0.1338,
+      "entry": 0.1334719475655431
     }
   ],
-  "last_value_usd": 35.72,
-  "last_updated_utc": "2026-08-20T14:11:14+00:00",
-  "open_position": {
-    "symbol": "CFGUSDT",
-    "entry_time": "2026-08-20T10:12:54+00:00",
-    "entry_price": 0.1334719475655431,
-    "current_price": 0.1339,
-    "units": 267.0,
-    "spent_usd": 35.637,
-    "value_usd": 35.7513,
-    "pnl_usd": 0.1143,
-    "pnl_pct": 0.32,
-    "source": "scout:ignition"
-  },
-  "spent_usd": 35.637,
+  "last_value_usd": 35.66,
+  "last_updated_utc": "2026-08-20T14:16:55+00:00",
+  "open_position": null,
+  "spent_usd": null,
   "no_pair": {
     "scan_ts": "2026-08-20T08:53:15+00:00",
     "syms": []
   },
-  "wave_bonus_date": "2026-08-20",
-  "hwm": 0.1343,
-  "entry_time": "2026-08-20T10:12:54+00:00"
+  "wave_bonus_date": "2026-08-20"
 }
