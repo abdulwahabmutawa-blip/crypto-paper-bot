@@ -1,8 +1,79 @@
 {
-  "ts": "2026-08-20T13:24:26+00:00",
-  "scanned": 125,
+  "ts": "2026-08-20T13:30:24+00:00",
+  "scanned": 122,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "COINBUSDT",
+      "signal": "ignition",
+      "score": 0.9409,
+      "raw_score": 0.8554,
+      "weight": 1.1,
+      "price": 171.24,
+      "why": "trades 7.6x and volume 10.5x the prior 4h, 97% taker-buy, $63,286 burst \u2014 while price has only moved +1.6%",
+      "chg_24h": 0.1514,
+      "vol_surge": 10.53,
+      "chg_1h": 0.016,
+      "market_surge": 0.0,
+      "actionable": true
+    },
+    {
+      "symbol": "SKHYBUSDT",
+      "signal": "ignition",
+      "score": 0.9265,
+      "raw_score": 0.8423,
+      "weight": 1.1,
+      "price": 163.16,
+      "why": "trades 13.5x and volume 24.0x the prior 4h, 64% taker-buy, $432,586 burst \u2014 while price has only moved +2.7%",
+      "chg_24h": -0.0032,
+      "vol_surge": 24.02,
+      "chg_1h": 0.027,
+      "market_surge": 0.0,
+      "actionable": true
+    },
+    {
+      "symbol": "PROMUSDT",
+      "signal": "ignition",
+      "score": 0.872,
+      "raw_score": 0.7927,
+      "weight": 1.1,
+      "price": 2.094,
+      "why": "trades 9.3x and volume 8.2x the prior 4h, 61% taker-buy, $79,974 burst \u2014 while price has only moved +1.5%",
+      "chg_24h": 0.0476,
+      "vol_surge": 8.24,
+      "chg_1h": 0.015,
+      "market_surge": 8.22,
+      "actionable": true
+    },
+    {
+      "symbol": "SPCXBUSDT",
+      "signal": "ignition",
+      "score": 0.8591,
+      "raw_score": 0.781,
+      "weight": 1.1,
+      "price": 136.97,
+      "why": "trades 7.1x and volume 31.5x the prior 4h, 64% taker-buy, $1,546,418 burst \u2014 while price has only moved +0.6%",
+      "chg_24h": -0.0395,
+      "vol_surge": 31.52,
+      "chg_1h": 0.0059,
+      "market_surge": 5.28,
+      "actionable": true
+    },
+    {
+      "symbol": "GPSUSDT",
+      "signal": "ignition",
+      "score": 0.7972,
+      "raw_score": 0.7247,
+      "weight": 1.1,
+      "price": 0.01197,
+      "why": "trades 8.0x and volume 11.1x the prior 4h, 60% taker-buy, $97,457 burst \u2014 while price has only moved +3.8%",
+      "chg_24h": -0.0229,
+      "vol_surge": 11.12,
+      "chg_1h": 0.0382,
+      "market_surge": 3.61,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +82,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 90,
+    "count": 88,
     "baseline": 13.0,
     "wave": true
   },
@@ -27,13 +98,13 @@
       "median_ret_4h": 0.00745,
       "n_24h": 30,
       "hit_rate_24h": 0.8,
-      "mean_ret_24h": 0.04917,
-      "median_ret_24h": 0.0673
+      "mean_ret_24h": 0.05116,
+      "median_ret_24h": 0.07358
     },
     "breakout": {
       "n_1h": 30,
       "hit_rate_1h": 0.533,
-      "mean_ret_1h": 0.01227,
+      "mean_ret_1h": 0.01274,
       "median_ret_1h": 0.00263,
       "n_4h": 30,
       "hit_rate_4h": 0.6,
