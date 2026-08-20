@@ -1,18 +1,17 @@
 {
-  "ts": "2026-08-20T05:43:59+00:00",
+  "ts": "2026-08-20T05:49:59+00:00",
   "sources": {
     "coingecko": [
-      "ETH",
       "BTC",
       "PEPE",
+      "ETH",
       "LIT",
       "AERO",
       "SOL",
       "SUI",
-      "ONDO",
+      "CRV",
       "SEI",
-      "ENA",
-      "INJ"
+      "XRP"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,11 +19,11 @@
       "RE",
       "TRUMP",
       "ETH",
-      "HEMI",
       "CRCLB",
       "WLD",
+      "HEMI",
       "PEPE",
-      "XRP"
+      "SOL"
     ],
     "watcher": [
       "ETH",
@@ -71,8 +70,18 @@
         "movers",
         "watcher"
       ],
-      "funding": -1.6e-05,
+      "funding": -8e-06,
       "long_short": 0.45
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.02
     },
     {
       "symbol": "TRUMP",
@@ -81,8 +90,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 5e-05,
-      "long_short": 1.72
+      "funding": 5e-05
     },
     {
       "symbol": "AERO",
@@ -100,12 +108,12 @@
       ]
     },
     {
-      "symbol": "ENA",
+      "symbol": "CRV",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 0.0001
     },
     {
       "symbol": "HEMI",
@@ -116,14 +124,6 @@
       "funding": 5e-05
     },
     {
-      "symbol": "INJ",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 4.4e-05
-    },
-    {
       "symbol": "LIT",
       "surfaces": 1,
       "sources": [
@@ -132,23 +132,7 @@
       "funding": 5e-05
     },
     {
-      "symbol": "ONDO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "SEI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "SOL",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -175,7 +159,7 @@
       "symbol": "XRP",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
       "funding": 0.0001
     }
