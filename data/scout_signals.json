@@ -1,20 +1,20 @@
 {
-  "ts": "2026-08-20T09:38:20+00:00",
-  "scanned": 121,
+  "ts": "2026-08-20T09:44:14+00:00",
+  "scanned": 118,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "BIOUSDT",
+      "symbol": "SOXLBUSDT",
       "signal": "ignition",
-      "score": 0.7175,
-      "raw_score": 0.5383,
+      "score": 1.0291,
+      "raw_score": 0.772,
       "weight": 1.333,
-      "price": 0.03278,
-      "why": "trades 5.1x and volume 5.3x the prior 4h, 61% taker-buy, $312,296 burst \u2014 while price has only moved +2.0%",
-      "chg_24h": 0.3075,
-      "vol_surge": 5.34,
-      "chg_1h": 0.0199,
-      "market_surge": 8.1,
+      "price": 122.34,
+      "why": "trades 5.7x and volume 12.8x the prior 4h, 92% taker-buy, $111,770 burst \u2014 while price has only moved +1.4%",
+      "chg_24h": -0.0438,
+      "vol_surge": 12.84,
+      "chg_1h": 0.014,
+      "market_surge": 1.41,
       "actionable": true
     }
   ],
@@ -26,7 +26,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 96,
+    "count": 100,
     "baseline": 12.0,
     "wave": true
   },
@@ -34,7 +34,7 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.6,
-      "mean_ret_1h": 0.00524,
+      "mean_ret_1h": 0.00527,
       "median_ret_1h": 0.00641,
       "n_4h": 30,
       "hit_rate_4h": 0.833,
@@ -47,9 +47,9 @@
     },
     "breakout": {
       "n_1h": 30,
-      "hit_rate_1h": 0.5,
-      "mean_ret_1h": 0.00747,
-      "median_ret_1h": 0.00805,
+      "hit_rate_1h": 0.467,
+      "mean_ret_1h": 0.00532,
+      "median_ret_1h": 0.0014,
       "n_4h": 30,
       "hit_rate_4h": 0.4,
       "mean_ret_4h": 0.00611,
@@ -74,9 +74,9 @@
       "median_ret_24h": -0.0187
     },
     "heat": {
-      "n_1h": 26,
-      "hit_rate_1h": 0.346,
-      "mean_ret_1h": -0.01196,
+      "n_1h": 27,
+      "hit_rate_1h": 0.333,
+      "mean_ret_1h": -0.01156,
       "median_ret_1h": -0.0049,
       "n_4h": 25,
       "hit_rate_4h": 0.48,
