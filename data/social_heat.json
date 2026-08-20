@@ -1,27 +1,27 @@
 {
-  "ts": "2026-08-20T22:21:39+00:00",
+  "ts": "2026-08-20T22:27:19+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
-      "BTC",
-      "ETH",
       "XRP",
+      "BTC",
       "SOL",
-      "SUI",
       "AERO",
-      "ENA"
+      "TAO",
+      "SUI",
+      "ONDO"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "ACE",
       "BOME",
-      "PUMP",
+      "ACE",
       "ENA",
+      "PUMP",
       "XRP",
       "PEPE",
       "XPL",
-      "DOGE"
+      "XLM"
     ],
     "watcher": [
       "XRP",
@@ -32,17 +32,6 @@
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "ENA",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": 5e-05,
-      "long_short": 2.02
-    },
     {
       "symbol": "PUMP",
       "surfaces": 3,
@@ -66,6 +55,16 @@
       "long_short": 2.71
     },
     {
+      "symbol": "ENA",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": 5e-05,
+      "long_short": 2.02
+    },
+    {
       "symbol": "PEPE",
       "surfaces": 2,
       "sources": [
@@ -79,7 +78,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000391
+      "funding": -0.000375
     },
     {
       "symbol": "AERO",
@@ -103,23 +102,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.7e-05
+      "funding": 2.8e-05
     },
     {
-      "symbol": "DOGE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "ETH",
+      "symbol": "ONDO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 8.5e-05
+      "funding": -8.5e-05
     },
     {
       "symbol": "SOL",
@@ -134,6 +125,22 @@
       "surfaces": 1,
       "sources": [
         "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "TAO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 2.2e-05
+    },
+    {
+      "symbol": "XLM",
+      "surfaces": 1,
+      "sources": [
+        "movers"
       ],
       "funding": 0.0001
     },
