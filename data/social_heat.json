@@ -1,19 +1,19 @@
 {
-  "ts": "2026-08-20T01:34:29+00:00",
+  "ts": "2026-08-20T01:40:09+00:00",
   "sources": {
     "coingecko": [
-      "ETH",
       "LINK",
+      "ETH",
       "BTC",
-      "PUMP",
       "SUI",
-      "TRUMP",
       "AERO",
-      "SOL",
-      "XRP",
-      "PEPE",
       "LIT",
-      "RE"
+      "PUMP",
+      "PEPE",
+      "ONDO",
+      "UNI",
+      "DOGE",
+      "LINEA"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -47,24 +47,13 @@
       "long_short": 2.5
     },
     {
-      "symbol": "TRUMP",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.81
-    },
-    {
       "symbol": "BTC",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "watcher"
       ],
-      "funding": 8.3e-05,
+      "funding": 8.4e-05,
       "long_short": 1.07
     },
     {
@@ -76,23 +65,24 @@
       ]
     },
     {
-      "symbol": "RE",
+      "symbol": "TRUMP",
       "surfaces": 2,
       "sources": [
-        "coingecko",
-        "movers"
+        "movers",
+        "watcher"
       ],
       "funding": 5e-05,
-      "long_short": 0.51
+      "long_short": 1.81
     },
     {
-      "symbol": "XRP",
+      "symbol": "UNI",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 0.0001
+      "funding": 0.0001,
+      "long_short": 1.0
     },
     {
       "symbol": "AERO",
@@ -103,10 +93,26 @@
       "funding": 5e-05
     },
     {
+      "symbol": "DOGE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "HEMI",
       "surfaces": 1,
       "sources": [
         "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "LINEA",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
       ],
       "funding": 5e-05
     },
@@ -127,20 +133,28 @@
       "funding": 5e-05
     },
     {
+      "symbol": "ONDO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 4.7e-05
+    },
+    {
       "symbol": "PUMP",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -2.5e-05
+      "funding": -3.2e-05
     },
     {
-      "symbol": "SOL",
+      "symbol": "RE",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
-      "funding": 0.0001
+      "funding": 5e-05
     },
     {
       "symbol": "SUI",
@@ -151,7 +165,7 @@
       "funding": 0.0001
     },
     {
-      "symbol": "UNI",
+      "symbol": "WLD",
       "surfaces": 1,
       "sources": [
         "movers"
@@ -159,7 +173,7 @@
       "funding": 0.0001
     },
     {
-      "symbol": "WLD",
+      "symbol": "XRP",
       "surfaces": 1,
       "sources": [
         "movers"
