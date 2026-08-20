@@ -1,42 +1,40 @@
-# Fleet status — 2026-08-19 (UTC)
+# Fleet status — 2026-08-20 (UTC)
 
-10 paper books ($1,000 each, no real money) + 1 REAL-MONEY book (Lottery,
-VPS-run, no cap since 08-16).
+10 paper books ($1,000 each, no real money) + 1 REAL-MONEY book (Lottery, VPS-run).
 
 | Bot | Holds | 24h change | Value (asof) |
 |---|---|---|---|
-| crypto (trend) | XRP-USD | No trade | $1,005.93 (08-19) |
-| congress | 10 positions | No trade | $982.21 (08-18) |
-| meanrev | UNH | No trade | $1,208.32 (08-18) |
-| commodity | DBC | No trade | $1,035.84 (08-18) |
-| allweather | 5-asset basket | No trade (not rebalance week) | $1,013.33 (08-18) |
-| hype (sentiment) | AMLX | Exited AMLX on faded hype, re-bought same day on new Grok signal | $1,280.83 (08-18) |
-| hype-crypto | ACE-USD | Churned: GPS-USD → TUT-USD → ACE-USD | $1,076.59 (08-19) |
-| Hunter | NVDA | Rotated SLV → NVDA (better reward/risk score) | $957.62 (08-18) |
-| Scholar | IWM | No trade | $1,023.78 (08-18) |
-| Analyst | SPY | No trade | $1,022.51 (08-18) |
-| **Lottery (REAL $)** | CASH | 1 entry (PUMPUSDT), stopped out same day (-$0.78) | $38.34 (08-19 05:05) |
+| crypto (trend) | LINK-USD | Sold XRP-USD (signal flip) → cash → bought LINK-USD | $1,008.78 (08-20) |
+| congress | 10 positions | No trade | $983.63 (08-19) |
+| meanrev | UNH | No trade | $1,192.09 (08-19) |
+| commodity | DBC | No trade | $1,044.68 (08-19) |
+| allweather | 5-asset basket | No trade (not rebalance week) | $1,027.45 (08-19) |
+| hype (sentiment) | MRNA | Churned AMLX (buy/sell/buy/sell) → bought MRNA | $1,982.88 (08-19) |
+| hype-crypto | ETH-USD | Churned ACE-USD → ETH-USD | $981.01 (08-20) |
+| Hunter | NVDA | No trade | $948.12 (08-19) |
+| Scholar | IWM | No trade | $1,028.79 (08-19) |
+| Analyst | SPY | No trade | $1,024.70 (08-19) |
+| **Lottery (REAL $)** | CASH | 2 entries (ALGOUSDT, ASTERUSDT), both stopped out | $35.95 (08-20 05:05) |
 
 ## Changed
-- hype-crypto churned three times today: GPS-USD → TUT-USD → ACE-USD, all on
-  Grok "euphoric" scans.
-- hype (sentiment): AMLX exited on faded hype then re-bought hours later on a
-  fresh Grok signal (Phase 3 trial chatter) — same symbol, two round-trips.
-- Hunter rotated SLV → NVDA (Nvidia scored >1.25x better reward/risk).
-- Lottery (real $): 1 entry (PUMPUSDT), stopped out same day — "hype faded."
-  Lifetime realized P&L across 12 closed trades: -$6.94.
-- No position changes on crypto, congress, meanrev, commodity, allweather,
-  Scholar, or Analyst.
+- crypto: SELL XRP-USD (signal flip) → cash → BUY LINK-USD (+23.4% 7d momentum).
+- hype-crypto: churned ACE-USD → ETH-USD (Grok: ETH euphoric, 17% surge/risk-on).
+- hype (sentiment): AMLX round-tripped again — sold "hype faded" 55 min after AMLX's
+  +63.8% FDA Phase-3 pop, rebought ~$2.61 higher 4h later (per supervisor log, this
+  exit-rule pattern cost ~$111 of that move) — then rotated out of AMLX into MRNA on
+  a fresh "+50% surge" Grok signal. Big value jump ($1,280.83→$1,982.88) is the AMLX
+  pop plus the MRNA entry, not an anomaly.
+- Lottery (real $): 2 new entries, both stopped out same session (+$0.27 / -$0.43).
+  Lifetime realized P&L: -$9.19 across 16 closed trades.
+- No position changes on congress, meanrev, commodity, allweather, Hunter, Scholar,
+  or Analyst.
 
 ## Needs a look
-- **origin/main was force-pushed today** (~02:01 UTC), discarding all git
-  history before that point (previously back to at least 08-14). Bot state
-  files (trade history, positions) are unaffected — this digest is built
-  from current state, not git log — but I can only verify cycle-commit
-  cadence for the last ~3h, not the full 24h. Cause unknown; flagging since
-  it's outside the bots' normal behavior.
-- Analyst's decision guardrail has flagged "UNRECEIPTED WATCHER CLAIM
-  (read_watcher not called)" on both 08-17 and 08-18 decisions — new as of
-  08-17 (not present 08-11 through 08-14). Bot's reasoning still references
-  Watcher's status and it's holding SPY as before, so no visible trading
-  impact, but the guardrail miss is now 2 days running.
+- Nothing broken. All 110 cycle commits in the last 24h landed on a steady ~13–14 min
+  cadence (max gap 14.4 min) — no missed cron windows, no frozen bots.
+- docs Pages-deploy workflow failed 4x (06:59–07:08 UTC yesterday) while the owner was
+  iterating on its YAML; green on every run since 07:13 UTC and never touched trading —
+  no action needed.
+- Analyst's "unreceipted Watcher claim" guardrail flag (08-17/08-18, noted yesterday)
+  was investigated by the supervisor and withdrawn: false positive in the guardrail
+  check itself, not a bot fault. Resolved.
