@@ -1,15 +1,15 @@
 {
-  "ts": "2026-08-20T17:45:29+00:00",
+  "ts": "2026-08-20T17:51:08+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "PUMP",
       "XRP",
-      "ETH",
       "LIT",
+      "ETH",
       "LINK",
-      "INJ",
-      "PEPE"
+      "PENDLE",
+      "AVAX"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -18,8 +18,8 @@
       "BOME",
       "XRP",
       "ENA",
-      "PEPE",
       "PUMP",
+      "PEPE",
       "TRUMP",
       "XLM"
     ],
@@ -33,15 +33,6 @@
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "PEPE",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ]
-    },
     {
       "symbol": "PUMP",
       "surfaces": 3,
@@ -71,7 +62,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.00164,
+      "funding": -0.001655,
       "long_short": 0.98
     },
     {
@@ -85,12 +76,28 @@
       "long_short": 0.83
     },
     {
+      "symbol": "PEPE",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ]
+    },
+    {
+      "symbol": "AVAX",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 4.5e-05
+      "funding": 4.3e-05
     },
     {
       "symbol": "ENA",
@@ -109,20 +116,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "INJ",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "LINK",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -1.8e-05
+      "funding": -2.2e-05
     },
     {
       "symbol": "LIT",
@@ -131,6 +130,14 @@
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "PENDLE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "TRUMP",
