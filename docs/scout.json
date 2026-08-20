@@ -1,23 +1,8 @@
 {
-  "ts": "2026-08-20T21:31:21+00:00",
-  "scanned": 122,
+  "ts": "2026-08-20T21:36:35+00:00",
+  "scanned": 120,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "MORPHOUSDT",
-      "signal": "ignition",
-      "score": 0.6465,
-      "raw_score": 0.6465,
-      "weight": 1.0,
-      "price": 2.355,
-      "why": "trades 5.2x and volume 7.6x the prior 4h, 66% taker-buy, $71,664 burst \u2014 while price has only moved +0.6%",
-      "chg_24h": 0.0715,
-      "vol_surge": 7.61,
-      "chg_1h": 0.0064,
-      "market_surge": 4.59,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -26,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 27,
+    "count": 31,
     "baseline": 13.0,
     "wave": true
   },
@@ -42,7 +27,7 @@
       "median_ret_4h": 0.00594,
       "n_24h": 30,
       "hit_rate_24h": 0.9,
-      "mean_ret_24h": 0.06204,
+      "mean_ret_24h": 0.06173,
       "median_ret_24h": 0.06303
     },
     "breakout": {
