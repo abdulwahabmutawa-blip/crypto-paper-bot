@@ -1,18 +1,17 @@
 {
-  "ts": "2026-08-20T04:41:29+00:00",
+  "ts": "2026-08-20T04:47:29+00:00",
   "sources": {
     "coingecko": [
+      "ETH",
       "BTC",
       "AERO",
-      "ETH",
       "PEPE",
       "PUMP",
-      "FET",
-      "SUI",
       "LIT",
-      "UNI",
-      "TRUMP",
-      "DOGE"
+      "FET",
+      "SOL",
+      "SUI",
+      "UNI"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,8 +20,8 @@
       "HEMI",
       "TRUMP",
       "ETH",
-      "CRCLB",
       "PEPE",
+      "CRCLB",
       "WLD",
       "SOL"
     ],
@@ -56,17 +55,6 @@
       ]
     },
     {
-      "symbol": "TRUMP",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.7
-    },
-    {
       "symbol": "BTC",
       "surfaces": 2,
       "sources": [
@@ -75,6 +63,26 @@
       ],
       "funding": 0.0001,
       "long_short": 1.05
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.98
+    },
+    {
+      "symbol": "TRUMP",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.7
     },
     {
       "symbol": "AERO",
@@ -90,14 +98,6 @@
       "sources": [
         "movers"
       ]
-    },
-    {
-      "symbol": "DOGE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "FET",
@@ -129,7 +129,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -4.5e-05
+      "funding": -4.1e-05
     },
     {
       "symbol": "RE",
@@ -137,15 +137,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 1.7e-05
-    },
-    {
-      "symbol": "SOL",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
+      "funding": 1.9e-05
     },
     {
       "symbol": "SUI",
