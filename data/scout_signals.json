@@ -1,13 +1,28 @@
 {
-  "ts": "2026-08-20T14:55:07+00:00",
-  "scanned": 126,
+  "ts": "2026-08-20T15:00:37+00:00",
+  "scanned": 127,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "MORPHOUSDT",
+      "signal": "breakout",
+      "score": 0.9632,
+      "raw_score": 0.8501,
+      "weight": 1.133,
+      "price": 2.288,
+      "why": "trades 14.3x, volume 19.4x, 67% taker-buy, +5.3% in an hour, at 104% of its 24h range",
+      "chg_24h": 0.0837,
+      "vol_surge": 19.35,
+      "chg_1h": 0.0529,
+      "market_surge": 11.75,
+      "actionable": true
+    }
+  ],
   "gate": {
-    "ignition": "benched \u2014 hit 47%, mean +0.15% over last 30 at 4h: not beating the round trip",
+    "ignition": "benched \u2014 hit 47%, mean +0.32% over last 30 at 4h: not beating the round trip",
     "breakout": "actionable",
     "reversion": "benched \u2014 hit 43%, mean +0.04% over last 21 at 4h: not beating the round trip",
-    "heat": "benched \u2014 hit 46%, mean -0.62% over last 28 at 4h: not beating the round trip",
+    "heat": "benched \u2014 hit 45%, mean -0.60% over last 29 at 4h: not beating the round trip",
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
@@ -23,7 +38,7 @@
       "median_ret_1h": 0.00019,
       "n_4h": 30,
       "hit_rate_4h": 0.467,
-      "mean_ret_4h": 0.00149,
+      "mean_ret_4h": 0.00315,
       "median_ret_4h": 0.0003,
       "n_24h": 30,
       "hit_rate_24h": 0.8,
@@ -63,10 +78,10 @@
       "hit_rate_1h": 0.367,
       "mean_ret_1h": -0.00588,
       "median_ret_1h": -0.00133,
-      "n_4h": 28,
-      "hit_rate_4h": 0.464,
-      "mean_ret_4h": -0.00619,
-      "median_ret_4h": -0.00079,
+      "n_4h": 29,
+      "hit_rate_4h": 0.448,
+      "mean_ret_4h": -0.00604,
+      "median_ret_4h": -0.00191,
       "n_24h": 19,
       "hit_rate_24h": 0.211,
       "mean_ret_24h": -0.10671,
