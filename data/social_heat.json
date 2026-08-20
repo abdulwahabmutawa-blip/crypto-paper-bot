@@ -1,31 +1,31 @@
 {
-  "ts": "2026-08-20T10:00:04+00:00",
+  "ts": "2026-08-20T10:05:57+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "ETH",
       "LIT",
       "BOME",
-      "PEPE",
-      "SOL",
-      "PUMP",
       "XRP",
-      "VIRTUAL",
-      "LINK",
-      "ONDO",
-      "ADA"
+      "PUMP",
+      "SOL",
+      "PEPE",
+      "ENA",
+      "ADA",
+      "INJ",
+      "FET"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "RE",
+      "TRUMP",
       "PEPE",
       "ETH",
       "CRCLB",
-      "TRUMP",
-      "HEMI",
       "XRP",
-      "WLD"
+      "WLD",
+      "SOL"
     ],
     "watcher": [
       "RE",
@@ -46,7 +46,7 @@
         "watcher"
       ],
       "funding": 0.0001,
-      "long_short": 2.4
+      "long_short": 2.42
     },
     {
       "symbol": "PEPE",
@@ -65,7 +65,7 @@
         "watcher"
       ],
       "funding": 0.0001,
-      "long_short": 1.08
+      "long_short": 1.03
     },
     {
       "symbol": "RE",
@@ -74,8 +74,18 @@
         "movers",
         "watcher"
       ],
-      "funding": -3.5e-05,
-      "long_short": 0.5
+      "funding": -3.1e-05,
+      "long_short": 0.49
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.03
     },
     {
       "symbol": "TRUMP",
@@ -84,8 +94,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 5e-05,
-      "long_short": 1.91
+      "funding": 5e-05
     },
     {
       "symbol": "XRP",
@@ -102,7 +111,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.4e-05
+      "funding": -2e-05
     },
     {
       "symbol": "BOME",
@@ -120,20 +129,28 @@
       ]
     },
     {
-      "symbol": "HEMI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "LINK",
+      "symbol": "ENA",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5.1e-05
+      "funding": 5e-05
+    },
+    {
+      "symbol": "FET",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "INJ",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 2e-05
     },
     {
       "symbol": "LIT",
@@ -144,36 +161,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "ONDO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -5.3e-05
-    },
-    {
       "symbol": "PUMP",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -3.6e-05
-    },
-    {
-      "symbol": "SOL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "VIRTUAL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": -3.3e-05
     },
     {
       "symbol": "WLD",
