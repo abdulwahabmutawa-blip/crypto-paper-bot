@@ -1,20 +1,20 @@
 {
-  "ts": "2026-08-20T08:06:31+00:00",
-  "scanned": 119,
+  "ts": "2026-08-20T08:12:14+00:00",
+  "scanned": 118,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "SPCXBUSDT",
+      "symbol": "ZECUSDT",
       "signal": "ignition",
-      "score": 0.8773,
-      "raw_score": 0.6581,
+      "score": 0.7139,
+      "raw_score": 0.5355,
       "weight": 1.333,
-      "price": 139.04,
-      "why": "trades 5.1x and volume 7.6x the prior 4h, 72% taker-buy, $64,837 burst \u2014 while price has only moved -0.7%",
-      "chg_24h": -0.0301,
-      "vol_surge": 7.6,
-      "chg_1h": -0.0067,
-      "market_surge": 0.35,
+      "price": 564.24,
+      "why": "trades 4.3x and volume 5.3x the prior 4h, 62% taker-buy, $761,435 burst \u2014 while price has only moved +1.1%",
+      "chg_24h": 0.1182,
+      "vol_surge": 5.32,
+      "chg_1h": 0.0107,
+      "market_surge": 3.12,
       "actionable": true
     }
   ],
@@ -22,11 +22,11 @@
     "ignition": "actionable",
     "breakout": "actionable",
     "reversion": "benched \u2014 hit 40%, mean -0.14% over last 20 at 4h: not beating the round trip",
-    "heat": "benched \u2014 hit 44%, mean -0.81% over last 23 at 4h: not beating the round trip",
+    "heat": "benched \u2014 hit 46%, mean -0.74% over last 24 at 4h: not beating the round trip",
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 56,
+    "count": 75,
     "baseline": 12.0,
     "wave": true
   },
@@ -48,7 +48,7 @@
     "breakout": {
       "n_1h": 30,
       "hit_rate_1h": 0.467,
-      "mean_ret_1h": 0.00728,
+      "mean_ret_1h": 0.00888,
       "median_ret_1h": 0.0014,
       "n_4h": 30,
       "hit_rate_4h": 0.4,
@@ -74,14 +74,14 @@
       "median_ret_24h": -0.0187
     },
     "heat": {
-      "n_1h": 25,
-      "hit_rate_1h": 0.32,
-      "mean_ret_1h": -0.01275,
-      "median_ret_1h": -0.00732,
-      "n_4h": 23,
-      "hit_rate_4h": 0.435,
-      "mean_ret_4h": -0.00813,
-      "median_ret_4h": -0.00365,
+      "n_1h": 26,
+      "hit_rate_1h": 0.346,
+      "mean_ret_1h": -0.01196,
+      "median_ret_1h": -0.0049,
+      "n_4h": 24,
+      "hit_rate_4h": 0.458,
+      "mean_ret_4h": -0.00736,
+      "median_ret_4h": -0.00079,
       "n_24h": 19,
       "hit_rate_24h": 0.211,
       "mean_ret_24h": -0.10671,
