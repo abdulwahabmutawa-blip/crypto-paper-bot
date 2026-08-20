@@ -1,8 +1,39 @@
 {
-  "ts": "2026-08-20T00:00:49+00:00",
-  "scanned": 112,
+  "ts": "2026-08-20T00:06:33+00:00",
+  "scanned": 113,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "MORPHOUSDT",
+      "signal": "breakout",
+      "score": 0.7408,
+      "raw_score": 0.794,
+      "weight": 0.933,
+      "price": 2.244,
+      "why": "trades 15.1x, volume 52.4x, 81% taker-buy, +2.6% in an hour, at 91% of its 24h range",
+      "chg_24h": 0.0732,
+      "vol_surge": 52.38,
+      "chg_1h": 0.0261,
+      "market_surge": 18.18,
+      "actionable": false,
+      "status": "benched \u2014 hit 43%, mean -0.34% over last 30 at 4h: not beating the round trip"
+    },
+    {
+      "symbol": "TRUMPUSDT",
+      "signal": "heat",
+      "score": 0.6,
+      "raw_score": 0.6,
+      "weight": 1.0,
+      "price": 1.777,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.005% \u00b7 L/S 1.73",
+      "chg_24h": 0.263,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
+      "actionable": false,
+      "status": "benched \u2014 hit 53%, mean -0.62% over last 19 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "benched \u2014 hit 43%, mean -0.34% over last 30 at 4h: not beating the round trip",
@@ -11,7 +42,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 42,
+    "count": 50,
     "baseline": 12.0,
     "wave": true
   },
@@ -23,8 +54,8 @@
       "median_ret_1h": 0.00344,
       "n_4h": 30,
       "hit_rate_4h": 0.7,
-      "mean_ret_4h": 0.01201,
-      "median_ret_4h": 0.01054,
+      "mean_ret_4h": 0.01191,
+      "median_ret_4h": 0.00946,
       "n_24h": 30,
       "hit_rate_24h": 0.633,
       "mean_ret_24h": 0.02479,
