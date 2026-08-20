@@ -1,17 +1,18 @@
 {
-  "ts": "2026-08-20T03:04:09+00:00",
+  "ts": "2026-08-20T03:09:12+00:00",
   "sources": {
     "coingecko": [
       "BTC",
-      "SUI",
       "AERO",
       "LINK",
+      "SUI",
+      "ETH",
+      "LIT",
       "ONDO",
       "PUMP",
-      "ETH",
       "XRP",
-      "LIT",
-      "TAO"
+      "TAO",
+      "SOL"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -23,7 +24,7 @@
       "WLD",
       "PEPE",
       "SOL",
-      "XRP"
+      "ZEC"
     ],
     "watcher": [
       "BTC",
@@ -52,7 +53,7 @@
         "coingecko",
         "watcher"
       ],
-      "funding": 9.7e-05,
+      "funding": 0.0001,
       "long_short": 1.05
     },
     {
@@ -64,6 +65,16 @@
       ]
     },
     {
+      "symbol": "SOL",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.98
+    },
+    {
       "symbol": "TRUMP",
       "surfaces": 2,
       "sources": [
@@ -72,16 +83,6 @@
       ],
       "funding": 5e-05,
       "long_short": 1.7
-    },
-    {
-      "symbol": "XRP",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 2.67
     },
     {
       "symbol": "AERO",
@@ -105,7 +106,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.9e-05
+      "funding": 6.2e-05
     },
     {
       "symbol": "LIT",
@@ -129,7 +130,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.7e-05
+      "funding": -1.6e-05
     },
     {
       "symbol": "RE",
@@ -138,14 +139,6 @@
         "movers"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "SOL",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "SUI",
@@ -165,6 +158,22 @@
     },
     {
       "symbol": "WLD",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "XRP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
         "movers"
