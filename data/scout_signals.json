@@ -1,20 +1,20 @@
 {
-  "ts": "2026-08-20T14:38:16+00:00",
-  "scanned": 125,
+  "ts": "2026-08-20T14:44:04+00:00",
+  "scanned": 126,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "ZAMAUSDT",
+      "symbol": "WBETHUSDT",
       "signal": "ignition",
-      "score": 0.6911,
-      "raw_score": 0.6911,
+      "score": 0.7807,
+      "raw_score": 0.7807,
       "weight": 1.0,
-      "price": 0.04637,
-      "why": "trades 5.0x and volume 9.0x the prior 4h, 72% taker-buy, $101,328 burst \u2014 while price has only moved -0.6%",
-      "chg_24h": 0.0984,
-      "vol_surge": 8.99,
-      "chg_1h": -0.0056,
-      "market_surge": 1.34,
+      "price": 2513.38,
+      "why": "trades 4.7x and volume 49.3x the prior 4h, 99% taker-buy, $188,081 burst \u2014 while price has only moved +0.2%",
+      "chg_24h": 0.1741,
+      "vol_surge": 49.28,
+      "chg_1h": 0.0016,
+      "market_surge": 0.0,
       "actionable": false,
       "status": "benched \u2014 hit 50%, mean +0.33% over last 30 at 4h: not beating the round trip"
     }
@@ -27,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 70,
+    "count": 69,
     "baseline": 13.0,
     "wave": true
   },
@@ -35,7 +35,7 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.367,
-      "mean_ret_1h": 0.00665,
+      "mean_ret_1h": 0.00618,
       "median_ret_1h": 0.00019,
       "n_4h": 30,
       "hit_rate_4h": 0.5,
@@ -43,7 +43,7 @@
       "median_ret_4h": 0.00246,
       "n_24h": 30,
       "hit_rate_24h": 0.8,
-      "mean_ret_24h": 0.04557,
+      "mean_ret_24h": 0.04565,
       "median_ret_24h": 0.0597
     },
     "breakout": {
@@ -55,9 +55,9 @@
       "hit_rate_4h": 0.633,
       "mean_ret_4h": 0.02795,
       "median_ret_4h": 0.0176,
-      "n_24h": 29,
-      "hit_rate_24h": 0.414,
-      "mean_ret_24h": -0.0232,
+      "n_24h": 30,
+      "hit_rate_24h": 0.4,
+      "mean_ret_24h": -0.02639,
       "median_ret_24h": -0.01447
     },
     "reversion": {
@@ -87,6 +87,12 @@
       "hit_rate_24h": 0.211,
       "mean_ret_24h": -0.10671,
       "median_ret_24h": -0.15357
+    },
+    "revival": {
+      "n_1h": 1,
+      "hit_rate_1h": 1.0,
+      "mean_ret_1h": 0.00915,
+      "median_ret_1h": 0.00915
     }
   },
   "note": "READ-ONLY scout. Ranked opinion only \u2014 the book decides."
