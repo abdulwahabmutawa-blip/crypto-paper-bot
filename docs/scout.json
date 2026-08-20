@@ -1,17 +1,32 @@
 {
-  "ts": "2026-08-20T23:01:34+00:00",
-  "scanned": 118,
+  "ts": "2026-08-20T23:07:14+00:00",
+  "scanned": 119,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "PENDLEUSDT",
+      "signal": "breakout",
+      "score": 0.9012,
+      "raw_score": 0.7954,
+      "weight": 1.133,
+      "price": 1.518,
+      "why": "trades 22.0x, volume 84.2x, 81% taker-buy, +2.6% in an hour, at 96% of its 24h range",
+      "chg_24h": 0.0645,
+      "vol_surge": 84.24,
+      "chg_1h": 0.0264,
+      "market_surge": 10.66,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
     "reversion": "benched \u2014 hit 46%, mean +0.33% over last 22 at 4h: not beating the round trip",
-    "heat": "benched \u2014 hit 50%, mean -0.01% over last 30 at 4h: not beating the round trip",
+    "heat": "benched \u2014 hit 53%, mean +0.37% over last 30 at 4h: not beating the round trip",
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 35,
+    "count": 36,
     "baseline": 13.0,
     "wave": true
   },
@@ -64,9 +79,9 @@
       "mean_ret_1h": -0.00036,
       "median_ret_1h": 0.00228,
       "n_4h": 30,
-      "hit_rate_4h": 0.5,
-      "mean_ret_4h": -8e-05,
-      "median_ret_4h": 0.00214,
+      "hit_rate_4h": 0.533,
+      "mean_ret_4h": 0.00369,
+      "median_ret_4h": 0.00348,
       "n_24h": 21,
       "hit_rate_24h": 0.286,
       "mean_ret_24h": -0.09492,
