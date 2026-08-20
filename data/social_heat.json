@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-20T05:37:59+00:00",
+  "ts": "2026-08-20T05:43:59+00:00",
   "sources": {
     "coingecko": [
       "ETH",
@@ -18,13 +18,13 @@
     "stocktwits": [],
     "movers": [
       "RE",
-      "ETH",
       "TRUMP",
-      "CRCLB",
+      "ETH",
       "HEMI",
+      "CRCLB",
       "WLD",
       "PEPE",
-      "SOL"
+      "XRP"
     ],
     "watcher": [
       "ETH",
@@ -71,18 +71,8 @@
         "movers",
         "watcher"
       ],
-      "funding": -2.3e-05,
+      "funding": -1.6e-05,
       "long_short": 0.45
-    },
-    {
-      "symbol": "SOL",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 2.02
     },
     {
       "symbol": "TRUMP",
@@ -91,7 +81,8 @@
         "movers",
         "watcher"
       ],
-      "funding": 5e-05
+      "funding": 5e-05,
+      "long_short": 1.72
     },
     {
       "symbol": "AERO",
@@ -130,7 +121,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.2e-05
+      "funding": 4.4e-05
     },
     {
       "symbol": "LIT",
@@ -157,6 +148,14 @@
       "funding": 0.0001
     },
     {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "SUI",
       "surfaces": 1,
       "sources": [
@@ -166,6 +165,14 @@
     },
     {
       "symbol": "WLD",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "XRP",
       "surfaces": 1,
       "sources": [
         "movers"
