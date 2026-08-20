@@ -1,16 +1,15 @@
 {
-  "ts": "2026-08-20T18:41:19+00:00",
+  "ts": "2026-08-20T18:47:09+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "SOL",
-      "PUMP",
       "ENA",
-      "XRP",
+      "PUMP",
       "ETH",
-      "MORPHO",
-      "LIT",
-      "ZEC"
+      "LINK",
+      "ZEC",
+      "MORPHO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -46,24 +45,13 @@
       "long_short": 1.36
     },
     {
-      "symbol": "XRP",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": 0.0001,
-      "long_short": 2.52
-    },
-    {
       "symbol": "ACE",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": -0.001689,
+      "funding": -0.001665,
       "long_short": 0.96
     },
     {
@@ -93,7 +81,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 0.0001
+      "funding": 0.0001,
+      "long_short": 2.27
     },
     {
       "symbol": "PEPE",
@@ -104,6 +93,15 @@
       ]
     },
     {
+      "symbol": "XRP",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
@@ -112,12 +110,12 @@
       "funding": 3e-05
     },
     {
-      "symbol": "LIT",
+      "symbol": "LINK",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": -3.2e-05
     },
     {
       "symbol": "MORPHO",
@@ -149,7 +147,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.3e-05
+      "funding": 2.8e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
