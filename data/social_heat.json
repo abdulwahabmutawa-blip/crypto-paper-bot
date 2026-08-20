@@ -1,17 +1,14 @@
 {
-  "ts": "2026-08-20T23:51:09+00:00",
+  "ts": "2026-08-20T23:56:59+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
       "LINK",
-      "XRP",
-      "ENA",
-      "SOL",
-      "ONG",
       "BTC",
-      "ETH",
-      "TAO",
-      "LIT"
+      "XRP",
+      "AERO",
+      "ENA",
+      "TAO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -47,17 +44,6 @@
       "long_short": 2.01
     },
     {
-      "symbol": "ONG",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": -0.02,
-      "long_short": 0.92
-    },
-    {
       "symbol": "PUMP",
       "surfaces": 3,
       "sources": [
@@ -90,12 +76,30 @@
       "long_short": 0.9
     },
     {
+      "symbol": "ONG",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": -0.02,
+      "long_short": 0.92
+    },
+    {
       "symbol": "ACE",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -0.000272
+      "funding": -0.000265
+    },
+    {
+      "symbol": "AERO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "BTC",
@@ -103,15 +107,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.8e-05
-    },
-    {
-      "symbol": "ETH",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 9.1e-05
+      "funding": 4.9e-05
     },
     {
       "symbol": "LINK",
@@ -119,15 +115,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.4e-05
-    },
-    {
-      "symbol": "LIT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": 3.6e-05
     },
     {
       "symbol": "PEPE",
@@ -137,20 +125,12 @@
       ]
     },
     {
-      "symbol": "SOL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "TAO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 1.6e-05
+      "funding": 2.5e-05
     },
     {
       "symbol": "XPL",
