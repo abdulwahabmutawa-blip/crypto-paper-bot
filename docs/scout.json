@@ -1,51 +1,8 @@
 {
-  "ts": "2026-08-20T11:55:10+00:00",
-  "scanned": 124,
+  "ts": "2026-08-20T12:00:15+00:00",
+  "scanned": 122,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "MUBUSDT",
-      "signal": "ignition",
-      "score": 1.1923,
-      "raw_score": 0.8944,
-      "weight": 1.333,
-      "price": 932.71,
-      "why": "trades 10.4x and volume 16.1x the prior 4h, 73% taker-buy, $133,408 burst \u2014 while price has only moved -1.6%",
-      "chg_24h": 0.0001,
-      "vol_surge": 16.09,
-      "chg_1h": -0.0157,
-      "market_surge": 2.23,
-      "actionable": true
-    },
-    {
-      "symbol": "ROBOUSDT",
-      "signal": "breakout",
-      "score": 0.7901,
-      "raw_score": 0.7901,
-      "weight": 1.0,
-      "price": 0.01351,
-      "why": "trades 17.3x, volume 23.6x, 85% taker-buy, +2.3% in an hour, at 99% of its 24h range",
-      "chg_24h": 0.019,
-      "vol_surge": 23.63,
-      "chg_1h": 0.0227,
-      "market_surge": 6.88,
-      "actionable": true
-    },
-    {
-      "symbol": "NEIROUSDT",
-      "signal": "ignition",
-      "score": 0.7412,
-      "raw_score": 0.5561,
-      "weight": 1.333,
-      "price": 7.821e-05,
-      "why": "trades 4.6x and volume 5.7x the prior 4h, 64% taker-buy, $156,045 burst \u2014 while price has only moved +1.2%",
-      "chg_24h": 0.2507,
-      "vol_surge": 5.7,
-      "chg_1h": 0.0124,
-      "market_surge": 11.95,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -54,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 107,
+    "count": 95,
     "baseline": 13.0,
     "wave": true
   },
@@ -62,7 +19,7 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.5,
-      "mean_ret_1h": 0.00265,
+      "mean_ret_1h": 0.00545,
       "median_ret_1h": 0.00297,
       "n_4h": 30,
       "hit_rate_4h": 0.833,
