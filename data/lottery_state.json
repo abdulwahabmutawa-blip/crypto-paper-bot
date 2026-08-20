@@ -1,11 +1,13 @@
 {
   "created": "2026-08-15",
-  "held_symbol": "ALGOUSDT",
-  "entry_price": 0.0821,
-  "units": 440.0,
-  "entry_scan_ts": "2026-08-20T00:01:22+00:00",
-  "entry_source": "scout:ignition",
-  "stopped": {},
+  "held_symbol": null,
+  "entry_price": null,
+  "units": 0.0,
+  "entry_scan_ts": null,
+  "entry_source": null,
+  "stopped": {
+    "ALGOUSDT": "2026-08-20T02:14:48+00:00"
+  },
   "entries": {
     "2026-08-20": 1
   },
@@ -235,27 +237,31 @@
       "date": "2026-08-19",
       "exit": 1.9050000000000002,
       "entry": 1.852
+    },
+    {
+      "symbol": "ALGOUSDT",
+      "source": "scout:ignition",
+      "entry_time": "2026-08-20T00:13:59+00:00",
+      "exit_time": "2026-08-20T02:14:48+00:00",
+      "entry_price": 0.0821,
+      "exit_price": 0.08290000000000002,
+      "units": 440.0,
+      "spent_usd": 36.124,
+      "got_usd": 36.3931,
+      "pnl_pct": 0.97,
+      "pnl_usd": 0.2691,
+      "reason": "STALLED (2.0h in, only +1.0%) \u2014 the pump never came",
+      "date": "2026-08-20",
+      "exit": 0.08290000000000002,
+      "entry": 0.0821
     }
   ],
-  "last_value_usd": 36.37,
-  "last_updated_utc": "2026-08-20T02:09:11+00:00",
-  "open_position": {
-    "symbol": "ALGOUSDT",
-    "entry_time": "2026-08-20T00:13:59+00:00",
-    "entry_price": 0.0821,
-    "current_price": 0.0826,
-    "units": 440.0,
-    "spent_usd": 36.124,
-    "value_usd": 36.344,
-    "pnl_usd": 0.22,
-    "pnl_pct": 0.61,
-    "source": "scout:ignition"
-  },
-  "spent_usd": 36.124,
+  "last_value_usd": 36.42,
+  "last_updated_utc": "2026-08-20T02:14:48+00:00",
+  "open_position": null,
+  "spent_usd": null,
   "no_pair": {
-    "scan_ts": "2026-08-20T00:01:22+00:00",
+    "scan_ts": "2026-08-20T02:03:40+00:00",
     "syms": []
-  },
-  "hwm": 0.0828,
-  "entry_time": "2026-08-20T00:13:59+00:00"
+  }
 }
