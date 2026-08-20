@@ -270,6 +270,16 @@ def exit_params(source: str | None) -> dict:
         # half the winners it was built to hold
         return {"kind": "grind", "stop_pct": -0.10, "stall_h": None,
                 "max_hold_h": 672.0, "momentum_exit": momentum_exit}
+    if src == "scout:ignition":
+        # Ignition's OWN scorecard: +1.47% mean at 4h but +4.67% at 24h
+        # (90% hit, n=30) — the edge lives at the day scale, and the old
+        # 8h clock exited at hour 5 of a 24-hour move (DEXE stalled out at
+        # +2.9% of what its cohort averages +4.7%). The sentiment equities
+        # bot — the fleet's top earner — holds while its thesis holds;
+        # this is that lesson, calibrated by our own numbers. Breakout
+        # does NOT get this: its 24h record is NEGATIVE (-3.79%).
+        return {"kind": "burst", "stop_pct": -0.06, "stall_h": 4.0,
+                "max_hold_h": 24.0, "momentum_exit": momentum_exit}
     if src.startswith("scout:"):
         return {"kind": "burst", "stop_pct": -0.06, "stall_h": 2.0,
                 "max_hold_h": 8.0, "momentum_exit": momentum_exit}

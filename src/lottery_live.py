@@ -140,6 +140,7 @@ def main():
 
     sent = json.loads(SENTINEL.read_text()) if SENTINEL.exists() else {"scans": []}
     scan = sent["scans"][-1] if sent["scans"] else None
+    prev_scan = sent["scans"][-2] if len(sent.get("scans", [])) > 1 else None
     scan_ts = scan["ts"] if scan else ""
     age_h = scan_age_hours(scan)
     stale = scan_is_stale(scan)
@@ -455,7 +456,7 @@ def main():
             np = {"scan_ts": scan_ts, "syms": []}
         st["no_pair"] = np
         if fresh and watcher_ok:
-            for c in crypto_candidates(scan):
+            for c in crypto_candidates(scan, prev_scan):
                 sym = c.replace("-USD", "") + "USDT"
                 if sym in blacklisted or sym in np["syms"]:
                     continue

@@ -141,8 +141,14 @@ assert bl.trail_pct(0.6) == -0.10, "past +50% the leash tightens"
 assert bl.trail_pct(1.5) == -0.08, "past +100% tighter still (+500% events " \
     "kept only -58% at 30d — big gains die most completely)"
 b = bl.exit_params("scout:ignition")
-assert b["kind"] == "burst" and b["max_hold_h"] == 8.0 \
-    and b["stop_pct"] == -0.06
+# ignition earned the day-scale clock: its own scorecard shows +4.67% mean
+# at 24h (90% hit, n=30) vs +1.47% at 4h - an 8h clock exited at hour 5
+# of a 24-hour edge (the sentiment bot lesson, calibrated by our numbers)
+assert b["kind"] == "burst" and b["max_hold_h"] == 24.0 \
+    and b["stall_h"] == 4.0 and b["stop_pct"] == -0.06
+# breakout does NOT get it: its 24h record is NEGATIVE (-3.79%)
+bb = bl.exit_params("scout:breakout")
+assert bb["max_hold_h"] == 8.0 and bb["stall_h"] == 2.0
 h = bl.exit_params("watcher")
 assert h["kind"] == "hype" and h["max_hold_h"] == 24.0 \
     and h["stall_h"] == 6.0

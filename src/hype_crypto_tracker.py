@@ -55,8 +55,17 @@ MAX_ENTRIES_PER_DAY = 1
 KEY = "hypecrypto"
 
 
-def crypto_candidates(scan: dict | None) -> list[str]:
-    """Euphoric crypto candidates, most explosive first.
+def crypto_candidates(scan: dict | None,
+                      prev_scan: dict | None = None) -> list[str]:
+    """Euphoric crypto candidates — EARLY-stage first, repeats dropped.
+
+    Timing fix 2026-08-20 (the watcher went 0-for-7 on real money buying
+    hype after the fact): (a) entries prefer stage=="early" coins (the
+    prompt now separates hype FORMING from hype being celebrated);
+    (b) NOVELTY — a coin already flagged in the PREVIOUS scan is dropped:
+    persistent euphoria is late by definition (ACE sat on the list for
+    days while collapsing). The sentiment equities bot wins by holding
+    while hype persists; entries still come from its first appearance.
 
     Preferred source: the Watcher's DEDICATED crypto_hype section (added
     2026-08-15) — its symbols are coins by construction, so no whitelist
@@ -73,15 +82,27 @@ def crypto_candidates(scan: dict | None) -> list[str]:
         s = str(sym or "").upper().lstrip("$").strip()
         return _re.sub(r"[-/]?(USDT|USDC|USD)$", "", s)
 
-    out = []
+    prev_syms = set()
+    pch = (prev_scan or {}).get("crypto_hype")
+    for h in (pch if isinstance(pch, list) else []):
+        if isinstance(h, dict):
+            b = _base(h.get("symbol"))
+            if b:
+                prev_syms.add(b)
+
+    early, other = [], []
     ch = (scan or {}).get("crypto_hype")
     for h in (ch if isinstance(ch, list) else []):
         if not isinstance(h, dict) or h.get("mood") != "euphoric":
             continue
         s = _base(h.get("symbol"))
-        if s and s.isalnum():
-            out.append(f"{s}-USD")
-    if out:
+        if not (s and s.isalnum()):
+            continue
+        if s in prev_syms:
+            continue          # novelty: seen last scan = already late
+        (early if h.get("stage") == "early" else other).append(f"{s}-USD")
+    out = early + other
+    if out or isinstance(ch, list):
         return out
     hy = (scan or {}).get("hype")
     for h in (hy if isinstance(hy, list) else []):
@@ -118,7 +139,14 @@ def main():
     stale = scan_is_stale(scan)
     fresh = age_h is not None and age_h <= ENTRY_FRESH_H
     severe = bool(scan and scan.get("risk_level") == "severe")
-    cands = crypto_candidates(scan)
+    # TWO lists, deliberately (timing fix 08-20): the HOLD judgment uses the
+    # full current euphoric set — a coin still euphoric must not be ejected
+    # just because it is no longer NEW. Only ENTRIES use the novelty+early
+    # filtered list. Collapsing these into one list would sell every
+    # position exactly one scan after entry.
+    prev_scan = sent["scans"][-2] if len(sent.get("scans", [])) > 1 else None
+    cands = crypto_candidates(scan)                  # hold set (exit basis)
+    entry_cands = crypto_candidates(scan, prev_scan)  # entries only
 
     st = json.loads(STATE.read_text()) if STATE.exists() else None
     if st is None:
@@ -206,7 +234,8 @@ def main():
                  and not st.get("frozen") and fresh
                  and entries_today < MAX_ENTRIES_PER_DAY)
     if can_enter:
-        avail = [t for t in tradeable if t not in blacklisted]
+        avail = [t for t in entry_cands
+                 if t in px and t not in blacklisted]
         if avail:
             pick = avail[0]
             p = px[pick]

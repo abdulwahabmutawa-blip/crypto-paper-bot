@@ -277,14 +277,21 @@ halts — not ordinary volatility. List at most 8 hype entries, most unusual
 chatter first.
 
 "crypto_hype" is a DEDICATED crypto section (a crypto book trades only from
-it): up to 6 coins with the loudest unusual chatter or volume RIGHT NOW,
-most explosive first. Coins only (bare symbol like PEPE, SOL — no pairs),
-prefer ones spot-tradeable on major exchanges such as Binance. Cross-check
-the BINANCE 24H TOP MOVERS and COINGECKO TRENDING signals above against the
-X/news chatter you find: a coin corroborated by both price action AND crowd
-noise outranks one with noise alone. "euphoric" is reserved for genuine
-crowd mania, not any green candle. Empty lists are perfectly good answers —
-never invent hype to fill the quota."""
+it): up to 6 coins, each tagged with a "stage" field:
+  "stage": "early"  — chatter is GROWING but still niche: rising mention
+     counts, smaller accounts, a dated upcoming catalyst (unlock, listing,
+     mainnet, product launch, court date), and the price has NOT already
+     exploded (roughly less than +15% on the day). This is the find that
+     matters most — hype you can see FORMING, not hype being celebrated.
+  "stage": "peaked" — the move already happened and the crowd is cheering
+     it (up big on the day, victory-lap posts). Still list these — they
+     are needed to know when hype fades — but they are exits, not entries.
+List EARLY coins first. Coins only (bare symbol like PEPE, SOL — no
+pairs), prefer ones spot-tradeable on major exchanges such as Binance.
+"euphoric" is reserved for genuine crowd mania, not any green candle. A
+coin that is already a BINANCE 24H TOP MOVER is by definition "peaked",
+never "early". Empty lists are perfectly good answers — never invent hype
+to fill the quota, and never promote a peaked coin to early to fill it."""
 
 
 def call_grok() -> str:
