@@ -203,6 +203,40 @@ MIN_RANGE_24H_AT_ENTRY = 0.05  # [EVIDENCE — 08-17 LTC] a round trip costs
                                # necessary condition, not a sufficient one.
 
 
+# ---- owner-accepted finish lines and wave rule (2026-08-20) -----------------
+# Pre-committed by the owner at the 08-20 review, so that 2am after a red
+# candle never gets to decide:
+#   * FLOOR: if the book's managed value is below $25, NO new entries — the
+#     experiment stops and gets a full post-mortem instead of a slow bleed.
+#     Exits still run: a floor breach must never trap an open seat.
+#   * WAVE BONUS: a breadth wave-day grants ONE extra daily entry. The
+#     08-20 wave found the budget already spent on scratch trades hours
+#     before breadth fired; explosions cluster on wave days (64% within a
+#     day of a mass-trough in the 2y study), so the scarcest resource must
+#     not be exhaustible by the quietest hours. Pre-registered at the
+#     review, not invented mid-wave.
+BOOK_FLOOR_USD = 25.0
+BASE_ENTRIES_PER_DAY = 3
+WAVE_BONUS_ENTRIES = 1
+
+
+def book_floor_reason(value_usd: float | None) -> str | None:
+    """Refusal reason when the owner's pre-committed floor is breached."""
+    if value_usd is None:
+        return None          # unknown value must not halt the book by itself
+    if value_usd < BOOK_FLOOR_USD:
+        return (f"BOOK FLOOR — value ${value_usd:.2f} is below the "
+                f"owner's pre-committed ${BOOK_FLOOR_USD:.0f} stop line: "
+                f"no new entries; post-mortem due")
+    return None
+
+
+def entry_budget(wave_active_today: bool) -> int:
+    """Daily entry allowance: base, plus one on a breadth wave-day."""
+    return BASE_ENTRIES_PER_DAY + (WAVE_BONUS_ENTRIES if wave_active_today
+                                   else 0)
+
+
 def exit_params(source: str | None) -> dict:
     """Seat policy by entry source — the explosion study (08-16, n=109)
     split the prey into species with incompatible clocks:

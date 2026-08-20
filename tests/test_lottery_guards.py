@@ -149,6 +149,16 @@ assert h["kind"] == "hype" and h["max_hold_h"] == 24.0 \
 assert bl.exit_params(None)["kind"] == "hype", \
     "an unknown seat gets the strictest familiar clock, never the longest"
 
+# --- owner-accepted finish lines + wave rule (08-20 review) ------------------
+# floor: below $25 no new entries; unknown value must NOT halt by itself
+why = bl.book_floor_reason(24.99)
+assert why and "FLOOR" in why and "post-mortem" in why
+assert bl.book_floor_reason(25.01) is None
+assert bl.book_floor_reason(None) is None,     "a failed value read is a data problem, not a stop signal"
+# wave bonus: base 3, +1 on a breadth wave-day
+assert bl.entry_budget(False) == 3
+assert bl.entry_budget(True) == 4
+
 # --- momentum exit is per-thesis (bug fix 08-20) -----------------------------
 # The entry guard demands a coin that has NOT already run far; judging a
 # fresh breakout seat by 24h leaderboards therefore ejected it minutes

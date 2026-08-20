@@ -380,9 +380,43 @@ def main():
     # ---- entry ----
     bals = binance_live.balances() or bals
     entries_today = st.get("entries", {}).get(today, 0)
+
+    # WAVE-DAY ENTRY BONUS (owner-accepted 08-20): a breadth wave grants one
+    # extra entry for that UTC day. Read from the scout's breadth file,
+    # trusted only while fresh; once observed, the bonus sticks for the day
+    # even if breadth dips back (a wave that started still happened).
+    try:
+        _bd = json.loads((config.DATA / "breadth.json").read_text())
+        _hist = _bd.get("history") or []
+        _fresh = _hist and (now - datetime.fromisoformat(_hist[-1]["ts"])
+                            ).total_seconds() < 1800
+        if _fresh and _bd.get("wave"):
+            if st.get("wave_bonus_date") != today:
+                print(f"[{KEY}] WAVE DAY — entry budget +1 for {today}")
+            st["wave_bonus_date"] = today
+    except Exception:
+        pass
+    budget = binance_live.entry_budget(st.get("wave_bonus_date") == today)
+
+    # BOOK FLOOR (owner-accepted 08-20): below $25 the experiment stops
+    # taking entries and owes its owner a post-mortem, not a slower bleed.
+    # Exits above still ran — a breach never traps an open seat.
+    _val_now = binance_live.managed_value(bals, st.get("held_symbol"),
+                                          st.get("units"))
+    floor_why = binance_live.book_floor_reason(_val_now)
+    if floor_why and not st.get("floor_flagged"):
+        st["floor_flagged"] = True
+        binance_live.log({"event": "floor_breached", "value": round(_val_now, 2),
+                          "reason": floor_why})
+    if not floor_why:
+        st.pop("floor_flagged", None)
+
     can_enter = (held is None and not (severe or stale)
+                 and floor_why is None
                  and (WEEKEND_ENTRIES or now.weekday() < 5)
-                 and entries_today < MAX_ENTRIES_PER_DAY)
+                 and entries_today < budget)
+    if floor_why and held is None:
+        print(f"[{KEY}] {floor_why}")
     if can_enter:
         # time-based cooldown: a coin exited by ANY protective rule stays
         # untouchable for COOLDOWN_H regardless of which source re-suggests
