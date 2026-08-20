@@ -1,15 +1,16 @@
 {
-  "ts": "2026-08-20T13:12:55+00:00",
+  "ts": "2026-08-20T13:18:19+00:00",
   "sources": {
     "coingecko": [
-      "XRP",
-      "ETH",
       "BTC",
+      "ETH",
+      "XRP",
       "LIT",
       "SOL",
       "PUMP",
       "BOME",
       "TAO",
+      "PEPE",
       "LINK",
       "ONDO"
     ],
@@ -58,6 +59,15 @@
       "long_short": 2.42
     },
     {
+      "symbol": "PEPE",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ]
+    },
+    {
       "symbol": "XRP",
       "surfaces": 3,
       "sources": [
@@ -77,14 +87,6 @@
       ],
       "funding": 5e-05,
       "long_short": 2.04
-    },
-    {
-      "symbol": "PEPE",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ]
     },
     {
       "symbol": "BTC",
@@ -108,7 +110,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.6e-05
+      "funding": 4.4e-05
     },
     {
       "symbol": "ONDO",
@@ -116,7 +118,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -4.7e-05
+      "funding": -4.9e-05
     },
     {
       "symbol": "PUMP",
@@ -124,7 +126,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.5e-05
+      "funding": 4e-05
     },
     {
       "symbol": "RE",
