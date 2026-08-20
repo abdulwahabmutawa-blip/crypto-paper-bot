@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-20T17:11:59+00:00",
+  "ts": "2026-08-20T17:17:19+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
@@ -7,7 +7,8 @@
       "XRP",
       "LIT",
       "ETH",
-      "PEPE",
+      "INJ",
+      "LINK",
       "SOL"
     ],
     "reddit": [],
@@ -17,10 +18,10 @@
       "BOME",
       "XRP",
       "PEPE",
-      "TRUMP",
       "ENA",
+      "TRUMP",
       "DOGE",
-      "PUMP"
+      "XPL"
     ],
     "watcher": [
       "XRP",
@@ -32,26 +33,6 @@
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "PEPE",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ]
-    },
-    {
-      "symbol": "PUMP",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.38
-    },
     {
       "symbol": "XRP",
       "surfaces": 3,
@@ -70,7 +51,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.001432,
+      "funding": -0.001513,
       "long_short": 0.98
     },
     {
@@ -84,12 +65,30 @@
       "long_short": 0.83
     },
     {
+      "symbol": "PEPE",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ]
+    },
+    {
+      "symbol": "PUMP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "watcher"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.38
+    },
+    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5.9e-05
+      "funding": 5.6e-05
     },
     {
       "symbol": "DOGE",
@@ -116,6 +115,22 @@
       "funding": 0.0001
     },
     {
+      "symbol": "INJ",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "LINK",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -7e-06
+    },
+    {
       "symbol": "LIT",
       "surfaces": 1,
       "sources": [
@@ -133,6 +148,14 @@
     },
     {
       "symbol": "TRUMP",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "XPL",
       "surfaces": 1,
       "sources": [
         "movers"
