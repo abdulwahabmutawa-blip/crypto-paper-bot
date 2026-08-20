@@ -1,36 +1,21 @@
 {
-  "ts": "2026-08-20T07:37:15+00:00",
+  "ts": "2026-08-20T07:43:04+00:00",
   "scanned": 121,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "SKHYBUSDT",
+      "symbol": "NEIROUSDT",
       "signal": "ignition",
-      "score": 0.9395,
-      "raw_score": 0.7048,
+      "score": 1.1711,
+      "raw_score": 0.8786,
       "weight": 1.333,
-      "price": 163.89,
-      "why": "trades 5.4x and volume 8.3x the prior 4h, 75% taker-buy, $130,307 burst \u2014 while price has only moved -0.3%",
-      "chg_24h": 0.0063,
-      "vol_surge": 8.28,
-      "chg_1h": -0.0027,
-      "market_surge": 0.94,
+      "price": 7.072e-05,
+      "why": "trades 14.6x and volume 18.9x the prior 4h, 61% taker-buy, $78,043 burst \u2014 while price has only moved -1.0%",
+      "chg_24h": 0.1247,
+      "vol_surge": 18.94,
+      "chg_1h": -0.0095,
+      "market_surge": 3.59,
       "actionable": true
-    },
-    {
-      "symbol": "BBUSDT",
-      "signal": "reversion",
-      "score": 0.4031,
-      "raw_score": 0.4031,
-      "weight": 1.0,
-      "price": 0.00879,
-      "why": "down -19% on the day (bottom decile of the market), now +0.7% over 15m with 3 green candles",
-      "chg_24h": -0.1906,
-      "vol_surge": 0.4,
-      "chg_1h": -0.0222,
-      "market_surge": 0.15,
-      "actionable": false,
-      "status": "benched \u2014 hit 40%, mean -0.14% over last 20 at 4h: not beating the round trip"
     }
   ],
   "gate": {
@@ -41,7 +26,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 52,
+    "count": 51,
     "baseline": 12.0,
     "wave": true
   },
