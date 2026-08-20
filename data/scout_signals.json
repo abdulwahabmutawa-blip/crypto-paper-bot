@@ -1,39 +1,8 @@
 {
-  "ts": "2026-08-20T13:02:01+00:00",
+  "ts": "2026-08-20T13:07:24+00:00",
   "scanned": 126,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "BOMEUSDT",
-      "signal": "heat",
-      "score": 0.6,
-      "raw_score": 0.6,
-      "weight": 1.0,
-      "price": 0.001232,
-      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.005% \u00b7 L/S 0.86",
-      "chg_24h": 0.5977,
-      "vol_surge": null,
-      "chg_1h": null,
-      "market_surge": 3,
-      "actionable": false,
-      "status": "benched \u2014 hit 48%, mean -0.64% over last 27 at 4h: not beating the round trip"
-    },
-    {
-      "symbol": "XRPUSDT",
-      "signal": "heat",
-      "score": 0.6,
-      "raw_score": 0.6,
-      "weight": 1.0,
-      "price": 1.1912,
-      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.010% \u00b7 L/S 2.74",
-      "chg_24h": 0.1786,
-      "vol_surge": null,
-      "chg_1h": null,
-      "market_surge": 3,
-      "actionable": false,
-      "status": "benched \u2014 hit 48%, mean -0.64% over last 27 at 4h: not beating the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -42,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 80,
+    "count": 89,
     "baseline": 13.0,
     "wave": true
   },
@@ -50,16 +19,16 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.467,
-      "mean_ret_1h": 0.01023,
+      "mean_ret_1h": 0.01015,
       "median_ret_1h": 0.0015,
       "n_4h": 30,
-      "hit_rate_4h": 0.667,
-      "mean_ret_4h": 0.01103,
+      "hit_rate_4h": 0.633,
+      "mean_ret_4h": 0.01084,
       "median_ret_4h": 0.00781,
       "n_24h": 30,
       "hit_rate_24h": 0.833,
-      "mean_ret_24h": 0.05766,
-      "median_ret_24h": 0.07407
+      "mean_ret_24h": 0.05283,
+      "median_ret_24h": 0.0673
     },
     "breakout": {
       "n_1h": 30,
@@ -68,7 +37,7 @@
       "median_ret_1h": 0.00263,
       "n_4h": 30,
       "hit_rate_4h": 0.6,
-      "mean_ret_4h": 0.0232,
+      "mean_ret_4h": 0.02443,
       "median_ret_4h": 0.00651,
       "n_24h": 26,
       "hit_rate_24h": 0.346,
