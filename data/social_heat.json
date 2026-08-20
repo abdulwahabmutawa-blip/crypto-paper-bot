@@ -1,16 +1,16 @@
 {
-  "ts": "2026-08-20T04:03:02+00:00",
+  "ts": "2026-08-20T04:08:21+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "SUI",
       "ETH",
-      "AERO",
       "PEPE",
+      "AERO",
       "PUMP",
-      "LINK",
       "UNI",
-      "AAVE"
+      "ETHFI",
+      "INJ"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -74,14 +74,6 @@
       "long_short": 1.7
     },
     {
-      "symbol": "AAVE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "AERO",
       "surfaces": 1,
       "sources": [
@@ -97,6 +89,14 @@
       ]
     },
     {
+      "symbol": "ETHFI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 1e-05
+    },
+    {
       "symbol": "HEMI",
       "surfaces": 1,
       "sources": [
@@ -105,12 +105,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "LINK",
+      "symbol": "INJ",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 4.9e-05
+      "funding": 6.8e-05
     },
     {
       "symbol": "PUMP",
@@ -118,7 +118,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -3.9e-05
+      "funding": -4.7e-05
     },
     {
       "symbol": "RE",
@@ -126,7 +126,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 2.7e-05
+      "funding": 2.8e-05
     },
     {
       "symbol": "SOL",
