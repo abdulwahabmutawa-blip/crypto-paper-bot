@@ -1,8 +1,38 @@
 {
-  "ts": "2026-08-20T19:16:41+00:00",
-  "scanned": 122,
+  "ts": "2026-08-20T19:22:21+00:00",
+  "scanned": 121,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ICPUSDT",
+      "signal": "ignition",
+      "score": 0.9379,
+      "raw_score": 0.908,
+      "weight": 1.033,
+      "price": 2.374,
+      "why": "trades 10.5x and volume 23.4x the prior 4h, 70% taker-buy, $495,357 burst \u2014 while price has only moved +0.7%",
+      "chg_24h": 0.0622,
+      "vol_surge": 23.4,
+      "chg_1h": 0.0068,
+      "market_surge": 3.33,
+      "actionable": true
+    },
+    {
+      "symbol": "\u5e01\u5b89\u4eba\u751fUSDT",
+      "signal": "revival",
+      "score": 0.4275,
+      "raw_score": 0.4275,
+      "weight": 1.0,
+      "price": 0.4716,
+      "why": "revival day-one: fell -10% last week on $1.58M/day quiet, volume arriving 4.3x today, only +15% off its 30d low \u2014 ON A WAVE DAY (breadth 48 vs 13 base)",
+      "chg_24h": 0.1258,
+      "vol_surge": 4.3,
+      "chg_1h": null,
+      "market_surge": null,
+      "actionable": false,
+      "status": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,16 +41,16 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 52,
+    "count": 48,
     "baseline": 13.0,
     "wave": true
   },
   "scorecard": {
     "ignition": {
       "n_1h": 30,
-      "hit_rate_1h": 0.4,
-      "mean_ret_1h": 0.00415,
-      "median_ret_1h": 0.0,
+      "hit_rate_1h": 0.367,
+      "mean_ret_1h": 0.00272,
+      "median_ret_1h": -0.00148,
       "n_4h": 30,
       "hit_rate_4h": 0.533,
       "mean_ret_4h": 0.01409,
