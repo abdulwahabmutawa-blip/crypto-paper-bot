@@ -1,30 +1,29 @@
 {
-  "ts": "2026-08-20T14:15:19+00:00",
+  "ts": "2026-08-20T14:21:09+00:00",
   "sources": {
     "coingecko": [
+      "XRP",
       "BTC",
       "LIT",
-      "XRP",
       "PUMP",
       "ETH",
+      "PEPE",
       "ADA",
-      "SUI",
+      "AERO",
       "XLM",
-      "TAO",
-      "LINK",
-      "AERO"
+      "SUI"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "BOME",
       "XRP",
-      "PEPE",
-      "PUMP",
-      "ACE",
       "RE",
+      "PEPE",
       "ETH",
-      "TRUMP"
+      "PUMP",
+      "TRUMP",
+      "ENA"
     ],
     "watcher": [
       "BOME",
@@ -46,6 +45,15 @@
       ],
       "funding": 0.0001,
       "long_short": 2.42
+    },
+    {
+      "symbol": "PEPE",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ]
     },
     {
       "symbol": "XRP",
@@ -79,14 +87,6 @@
       "long_short": 2.2
     },
     {
-      "symbol": "PEPE",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ]
-    },
-    {
       "symbol": "PUMP",
       "surfaces": 2,
       "sources": [
@@ -96,20 +96,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "ACE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -0.001535
-    },
-    {
       "symbol": "ADA",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 8.2e-05
+      "funding": 8.9e-05
     },
     {
       "symbol": "AERO",
@@ -117,7 +109,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 3.4e-05
     },
     {
       "symbol": "BTC",
@@ -128,12 +120,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "LINK",
+      "symbol": "ENA",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
-      "funding": 3.2e-05
+      "funding": 5e-05
     },
     {
       "symbol": "RE",
@@ -150,14 +142,6 @@
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "TRUMP",
