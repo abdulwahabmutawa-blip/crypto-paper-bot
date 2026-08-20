@@ -1,32 +1,17 @@
 {
-  "ts": "2026-08-20T17:40:14+00:00",
-  "scanned": 120,
+  "ts": "2026-08-20T17:45:34+00:00",
+  "scanned": 121,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "WIFUSDT",
-      "signal": "breakout",
-      "score": 0.7829,
-      "raw_score": 0.6524,
-      "weight": 1.2,
-      "price": 0.1655,
-      "why": "trades 5.4x, volume 7.5x, 63% taker-buy, +2.9% in an hour, at 99% of its 24h range",
-      "chg_24h": 0.1808,
-      "vol_surge": 7.51,
-      "chg_1h": 0.0286,
-      "market_surge": 8.04,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
-    "ignition": "benched \u2014 hit 43%, mean +0.53% over last 30 at 4h: not beating the round trip",
+    "ignition": "actionable",
     "breakout": "actionable",
     "reversion": "benched \u2014 hit 46%, mean +0.33% over last 22 at 4h: not beating the round trip",
     "heat": "benched \u2014 hit 47%, mean -0.12% over last 30 at 4h: not beating the round trip",
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 61,
+    "count": 58,
     "baseline": 13.0,
     "wave": true
   },
@@ -37,9 +22,9 @@
       "mean_ret_1h": 0.00404,
       "median_ret_1h": 0.0,
       "n_4h": 30,
-      "hit_rate_4h": 0.433,
-      "mean_ret_4h": 0.0053,
-      "median_ret_4h": -0.00108,
+      "hit_rate_4h": 0.467,
+      "mean_ret_4h": 0.00752,
+      "median_ret_4h": 0.0003,
       "n_24h": 30,
       "hit_rate_24h": 0.933,
       "mean_ret_24h": 0.06325,
@@ -91,7 +76,11 @@
       "n_1h": 2,
       "hit_rate_1h": 0.5,
       "mean_ret_1h": -0.00268,
-      "median_ret_1h": 0.00915
+      "median_ret_1h": 0.00915,
+      "n_4h": 1,
+      "hit_rate_4h": 1.0,
+      "mean_ret_4h": 0.04248,
+      "median_ret_4h": 0.04248
     }
   },
   "note": "READ-ONLY scout. Ranked opinion only \u2014 the book decides."
