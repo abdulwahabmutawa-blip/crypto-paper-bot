@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-20T02:58:59+00:00",
+  "ts": "2026-08-20T03:04:09+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -23,7 +23,7 @@
       "WLD",
       "PEPE",
       "SOL",
-      "UNI"
+      "XRP"
     ],
     "watcher": [
       "BTC",
@@ -43,7 +43,7 @@
         "watcher"
       ],
       "funding": 0.0001,
-      "long_short": 2.44
+      "long_short": 2.38
     },
     {
       "symbol": "BTC",
@@ -52,8 +52,8 @@
         "coingecko",
         "watcher"
       ],
-      "funding": 9.5e-05,
-      "long_short": 1.06
+      "funding": 9.7e-05,
+      "long_short": 1.05
     },
     {
       "symbol": "PEPE",
@@ -71,7 +71,17 @@
         "watcher"
       ],
       "funding": 5e-05,
-      "long_short": 1.75
+      "long_short": 1.7
+    },
+    {
+      "symbol": "XRP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.67
     },
     {
       "symbol": "AERO",
@@ -95,7 +105,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.3e-05
+      "funding": 6.9e-05
     },
     {
       "symbol": "LIT",
@@ -111,7 +121,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.1e-05
+      "funding": 3.4e-05
     },
     {
       "symbol": "PUMP",
@@ -119,7 +129,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.6e-05
+      "funding": -1.7e-05
     },
     {
       "symbol": "RE",
@@ -154,26 +164,10 @@
       "funding": 5e-05
     },
     {
-      "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "WLD",
       "surfaces": 1,
       "sources": [
         "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "XRP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
       ],
       "funding": 0.0001
     }
