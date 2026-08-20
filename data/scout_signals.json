@@ -1,17 +1,33 @@
 {
-  "ts": "2026-08-20T22:04:35+00:00",
-  "scanned": 124,
+  "ts": "2026-08-20T22:10:26+00:00",
+  "scanned": 122,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "XRPUSDT",
+      "signal": "heat",
+      "score": 0.6,
+      "raw_score": 0.6,
+      "weight": 1.0,
+      "price": 1.2567,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.010% \u00b7 L/S 2.71",
+      "chg_24h": 0.1143,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
+      "actionable": false,
+      "status": "benched \u2014 hit 50%, mean -0.01% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
     "reversion": "benched \u2014 hit 46%, mean +0.33% over last 22 at 4h: not beating the round trip",
-    "heat": "benched \u2014 hit 47%, mean -0.07% over last 30 at 4h: not beating the round trip",
+    "heat": "benched \u2014 hit 50%, mean -0.01% over last 30 at 4h: not beating the round trip",
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 31,
+    "count": 33,
     "baseline": 13.0,
     "wave": true
   },
@@ -60,16 +76,16 @@
     },
     "heat": {
       "n_1h": 30,
-      "hit_rate_1h": 0.433,
-      "mean_ret_1h": -0.00183,
-      "median_ret_1h": 0.00058,
+      "hit_rate_1h": 0.467,
+      "mean_ret_1h": -0.00146,
+      "median_ret_1h": 0.00091,
       "n_4h": 30,
-      "hit_rate_4h": 0.467,
-      "mean_ret_4h": -0.00074,
-      "median_ret_4h": -0.00079,
-      "n_24h": 20,
-      "hit_rate_24h": 0.25,
-      "mean_ret_24h": -0.10043,
+      "hit_rate_4h": 0.5,
+      "mean_ret_4h": -8e-05,
+      "median_ret_4h": 0.00214,
+      "n_24h": 21,
+      "hit_rate_24h": 0.286,
+      "mean_ret_24h": -0.09492,
       "median_ret_24h": -0.13588
     },
     "revival": {
