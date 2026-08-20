@@ -1,8 +1,23 @@
 {
-  "ts": "2026-08-20T10:50:04+00:00",
-  "scanned": 120,
+  "ts": "2026-08-20T10:55:24+00:00",
+  "scanned": 119,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "CHIPUSDT",
+      "signal": "ignition",
+      "score": 0.7899,
+      "raw_score": 0.5925,
+      "weight": 1.333,
+      "price": 0.02842,
+      "why": "trades 4.6x and volume 7.8x the prior 4h, 67% taker-buy, $67,631 burst \u2014 while price has only moved +2.0%",
+      "chg_24h": 0.0651,
+      "vol_surge": 7.75,
+      "chg_1h": 0.0201,
+      "market_surge": 5.41,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 96,
+    "count": 98,
     "baseline": 12.0,
     "wave": true
   },
