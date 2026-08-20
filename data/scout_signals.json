@@ -1,20 +1,34 @@
 {
-  "ts": "2026-08-20T23:40:18+00:00",
+  "ts": "2026-08-20T23:45:26+00:00",
   "scanned": 119,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "PROMUSDT",
-      "signal": "breakout",
-      "score": 0.9976,
-      "raw_score": 0.8805,
-      "weight": 1.133,
-      "price": 2.233,
-      "why": "trades 11.3x, volume 12.7x, 84% taker-buy, +5.2% in an hour, at 96% of its 24h range",
-      "chg_24h": 0.1343,
-      "vol_surge": 12.67,
-      "chg_1h": 0.0523,
-      "market_surge": 5.4,
+      "symbol": "ZAMAUSDT",
+      "signal": "ignition",
+      "score": 0.9175,
+      "raw_score": 0.8882,
+      "weight": 1.033,
+      "price": 0.04645,
+      "why": "trades 9.4x and volume 17.4x the prior 4h, 68% taker-buy, $74,709 burst \u2014 while price has only moved +0.3%",
+      "chg_24h": -0.0028,
+      "vol_surge": 17.41,
+      "chg_1h": 0.0028,
+      "market_surge": 4.44,
+      "actionable": true
+    },
+    {
+      "symbol": "ETHFIUSDT",
+      "signal": "ignition",
+      "score": 0.9128,
+      "raw_score": 0.8836,
+      "weight": 1.033,
+      "price": 0.5411,
+      "why": "trades 9.3x and volume 15.3x the prior 4h, 67% taker-buy, $104,765 burst \u2014 while price has only moved -0.3%",
+      "chg_24h": 0.0277,
+      "vol_surge": 15.25,
+      "chg_1h": -0.0028,
+      "market_surge": 3.71,
       "actionable": true
     }
   ],
@@ -26,7 +40,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 39,
+    "count": 37,
     "baseline": 13.0,
     "wave": true
   },
