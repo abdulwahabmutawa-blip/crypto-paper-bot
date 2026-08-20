@@ -1,8 +1,38 @@
 {
-  "ts": "2026-08-20T07:03:26+00:00",
+  "ts": "2026-08-20T07:09:23+00:00",
   "scanned": 118,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ETHFIUSDT",
+      "signal": "breakout",
+      "score": 0.6674,
+      "raw_score": 0.7415,
+      "weight": 0.9,
+      "price": 0.5326,
+      "why": "trades 6.5x, volume 7.3x, 70% taker-buy, +4.1% in an hour, at 96% of its 24h range",
+      "chg_24h": 0.1004,
+      "vol_surge": 7.32,
+      "chg_1h": 0.041,
+      "market_surge": 3.1,
+      "actionable": true
+    },
+    {
+      "symbol": "ETHUSDT",
+      "signal": "heat",
+      "score": 0.6,
+      "raw_score": 0.6,
+      "weight": 1.0,
+      "price": 2261.05,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.010% \u00b7 L/S 2.26",
+      "chg_24h": 0.18,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
+      "actionable": false,
+      "status": "benched \u2014 hit 44%, mean -0.81% over last 23 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +41,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 56,
+    "count": 59,
     "baseline": 12.0,
     "wave": true
   },
