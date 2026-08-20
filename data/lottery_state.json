@@ -1,15 +1,15 @@
 {
   "created": "2026-08-15",
-  "held_symbol": null,
-  "entry_price": null,
-  "units": 0.0,
-  "entry_scan_ts": null,
-  "entry_source": null,
+  "held_symbol": "CHIPUSDT",
+  "entry_price": 0.02971,
+  "units": 1210.0,
+  "entry_scan_ts": "2026-08-20T04:48:06+00:00",
+  "entry_source": "scout:breakout",
   "stopped": {
     "ASTERUSDT": "2026-08-20T04:43:01+00:00"
   },
   "entries": {
-    "2026-08-20": 2
+    "2026-08-20": 3
   },
   "realized": [
     {
@@ -273,12 +273,25 @@
       "entry": 0.645
     }
   ],
-  "last_value_usd": 35.95,
-  "last_updated_utc": "2026-08-20T05:22:33+00:00",
-  "open_position": null,
-  "spent_usd": null,
+  "last_value_usd": 35.93,
+  "last_updated_utc": "2026-08-20T05:28:03+00:00",
+  "open_position": {
+    "symbol": "CHIPUSDT",
+    "entry_time": "2026-08-20T05:28:03+00:00",
+    "entry_price": 0.02971,
+    "current_price": 0.02969,
+    "units": 1210.0,
+    "spent_usd": 35.9491,
+    "value_usd": 35.9249,
+    "pnl_usd": -0.0242,
+    "pnl_pct": -0.07,
+    "source": "scout:breakout"
+  },
+  "spent_usd": 35.9491,
   "no_pair": {
     "scan_ts": "2026-08-20T04:48:06+00:00",
     "syms": []
-  }
+  },
+  "hwm": 0.02971,
+  "entry_time": "2026-08-20T05:28:03+00:00"
 }
