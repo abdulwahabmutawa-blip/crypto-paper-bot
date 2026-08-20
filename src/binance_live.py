@@ -164,7 +164,7 @@ def guard(action: str, symbol: str, bals: dict, held_symbol: str | None,
 # price — so lateness must be enforced mechanically at the moment of
 # purchase, for EVERY source. The scout's paper record agrees: REDUSDT +27%
 # on the day at entry, -18.8% after.
-MAX_RUNUP_24H_AT_ENTRY = 0.25  # [EVIDENCE] measured from the 24h LOW, not
+MAX_RUNUP_24H_AT_ENTRY = 0.15  # [EVIDENCE] measured from the 24h LOW, not
                                # close-to-close: CHIP's second entry (15:30)
                                # dodged a close-to-close cap because the
                                # price FALLING after the pump shrank the day
@@ -173,6 +173,20 @@ MAX_RUNUP_24H_AT_ENTRY = 0.25  # [EVIDENCE] measured from the 24h LOW, not
                                # COW +37.6%, CHIP +29.2% then +27% — all
                                # losers, all refused. LINK +8.0% — the one
                                # winner — passes.
+                               # TIGHTENED 0.25 -> 0.15 (owner-directed
+                               # post-mortem 08-20, all 18 real trades vs
+                               # their actual price paths): every entry
+                               # >15% off its 24h low lost money except
+                               # EDEN — the seven of them total -$9.13 —
+                               # while the nine entries <=10% off the low
+                               # total +$1.16. ACE +24.6% and GPS +23.5%
+                               # slid UNDER the old 25% cap and delivered
+                               # -$3.05 and a +9% post-exit rebound we
+                               # sold into. The "sold too early" trades
+                               # the owner flagged were these same seats:
+                               # bought spent moves, shaken out on the
+                               # pullback, coin bounced after. Late entry
+                               # was the disease; early exit the symptom.
 MIN_CHG_1H_AT_ENTRY = 0.0      # [EVIDENCE] COW was FALLING at entry
                                # (-2.3%/1h). An explosion's current hour is
                                # green; buying a red hour is riding down.
