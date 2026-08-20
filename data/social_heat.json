@@ -1,16 +1,16 @@
 {
-  "ts": "2026-08-20T03:40:59+00:00",
+  "ts": "2026-08-20T03:46:50+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "SUI",
-      "LINK",
       "AERO",
-      "PUMP",
       "ETH",
       "PEPE",
+      "LINK",
+      "PUMP",
       "LIT",
-      "SOL"
+      "AAVE"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,7 +22,7 @@
       "CRCLB",
       "WLD",
       "PEPE",
-      "SOL"
+      "ZEC"
     ],
     "watcher": [
       "BTC",
@@ -64,16 +64,6 @@
       "long_short": 1.05
     },
     {
-      "symbol": "SOL",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.98
-    },
-    {
       "symbol": "TRUMP",
       "surfaces": 2,
       "sources": [
@@ -82,6 +72,14 @@
       ],
       "funding": 5e-05,
       "long_short": 1.7
+    },
+    {
+      "symbol": "AAVE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "AERO",
@@ -112,7 +110,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 5.2e-05
     },
     {
       "symbol": "LIT",
@@ -128,7 +126,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -3.1e-05
+      "funding": -2.8e-05
     },
     {
       "symbol": "RE",
@@ -148,6 +146,14 @@
     },
     {
       "symbol": "WLD",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
         "movers"
