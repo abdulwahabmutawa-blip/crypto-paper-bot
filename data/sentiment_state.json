@@ -1,10 +1,10 @@
 {
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "holding": "MRNA",
-  "units": 11.371011174523536,
+  "holding": "MSTR",
+  "units": 14.792609528517046,
   "cash": 0.0,
-  "entry_price": 116.70999908447266,
+  "entry_price": 109.87000274658203,
   "bench_units": 1.332054612938296,
   "stopped": {
     "SHIB-USD": "2026-07-27T00:01:08+00:00",
@@ -337,6 +337,26 @@
       "value": 1327.11,
       "fee": 1.66,
       "reason": "Grok: MRNA euphoric \u2014 Phase 3 cancer vaccine success, +50% surge (scan 2026-08-19T11:46)"
+    },
+    {
+      "date": "2026-08-20",
+      "action": "SELL",
+      "ticker": "MRNA",
+      "price": 143.30999756,
+      "units": 11.371,
+      "value": 1629.58,
+      "fee": 2.04,
+      "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
+    },
+    {
+      "date": "2026-08-20",
+      "action": "BUY",
+      "ticker": "MSTR",
+      "price": 109.87000275,
+      "units": 14.7926,
+      "value": 1625.26,
+      "fee": 2.28,
+      "reason": "Grok: MSTR euphoric \u2014 BTC breakout lifts Strategy heavily (scan 2026-08-20T12:57)"
     }
   ],
   "history": [
@@ -508,15 +528,15 @@
       "value": 1982.88,
       "bench": 1024.43,
       "holding": "MRNA"
+    },
+    {
+      "date": "2026-08-20",
+      "value": 1625.26,
+      "bench": 1021.67,
+      "holding": "MSTR"
     }
   ],
   "intraday": [
-    {
-      "ts": "2026-07-29T07:31:28+00:00",
-      "value": 896.16,
-      "bench": 986.87,
-      "holding": "CASH"
-    },
     {
       "ts": "2026-07-29T07:44:37+00:00",
       "value": 896.16,
@@ -9510,9 +9530,15 @@
       "value": 1982.88,
       "bench": 1024.43,
       "holding": "MRNA"
+    },
+    {
+      "ts": "2026-08-20T13:38:33+00:00",
+      "value": 1625.26,
+      "bench": 1021.67,
+      "holding": "MSTR"
     }
   ],
-  "last_updated_utc": "2026-08-20T13:25:04+00:00",
+  "last_updated_utc": "2026-08-20T13:38:33+00:00",
   "restatement": {
     "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)",
     "voided_trades": [
@@ -9591,5 +9617,5 @@
     ],
     "voided_reason": "signal faded before any real fill was possible (market closed the whole window) \u2014 trades could never have existed"
   },
-  "costs_paid": 18.6924
+  "costs_paid": 23.008
 }
