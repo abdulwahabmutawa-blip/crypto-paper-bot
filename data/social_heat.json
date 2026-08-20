@@ -1,14 +1,17 @@
 {
-  "ts": "2026-08-20T22:44:09+00:00",
+  "ts": "2026-08-20T22:49:59+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
-      "XRP",
       "BTC",
-      "SOL",
-      "TAO",
+      "XRP",
       "ETH",
-      "ENA"
+      "SOL",
+      "ENA",
+      "TAO",
+      "ONDO",
+      "UNI",
+      "ONG"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -65,6 +68,16 @@
       "long_short": 2.71
     },
     {
+      "symbol": "ONG",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -0.02,
+      "long_short": 0.87
+    },
+    {
       "symbol": "PEPE",
       "surfaces": 2,
       "sources": [
@@ -78,7 +91,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000332
+      "funding": -0.00032
     },
     {
       "symbol": "BOME",
@@ -102,15 +115,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.3e-05
+      "funding": 8.2e-05
     },
     {
-      "symbol": "ONG",
+      "symbol": "ONDO",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
-      "funding": -0.02
+      "funding": -8.1e-05
     },
     {
       "symbol": "SOL",
@@ -126,7 +139,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.5e-05
+      "funding": 2.6e-05
+    },
+    {
+      "symbol": "UNI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "XPL",
