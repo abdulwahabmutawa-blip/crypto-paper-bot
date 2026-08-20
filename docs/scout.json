@@ -1,23 +1,8 @@
 {
-  "ts": "2026-08-20T12:28:14+00:00",
+  "ts": "2026-08-20T12:33:34+00:00",
   "scanned": 125,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "DOTUSDT",
-      "signal": "breakout",
-      "score": 0.737,
-      "raw_score": 0.7134,
-      "weight": 1.033,
-      "price": 0.827,
-      "why": "trades 9.9x, volume 6.3x, 74% taker-buy, +2.2% in an hour, at 98% of its 24h range",
-      "chg_24h": 0.0603,
-      "vol_surge": 6.26,
-      "chg_1h": 0.0222,
-      "market_surge": 3.73,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -26,24 +11,24 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 83,
+    "count": 81,
     "baseline": 13.0,
     "wave": true
   },
   "scorecard": {
     "ignition": {
       "n_1h": 30,
-      "hit_rate_1h": 0.5,
-      "mean_ret_1h": 0.00545,
-      "median_ret_1h": 0.00297,
+      "hit_rate_1h": 0.467,
+      "mean_ret_1h": 0.00472,
+      "median_ret_1h": 0.0015,
       "n_4h": 30,
       "hit_rate_4h": 0.733,
-      "mean_ret_4h": 0.01485,
-      "median_ret_4h": 0.01235,
+      "mean_ret_4h": 0.01415,
+      "median_ret_4h": 0.00953,
       "n_24h": 30,
-      "hit_rate_24h": 0.9,
-      "mean_ret_24h": 0.05045,
-      "median_ret_24h": 0.0673
+      "hit_rate_24h": 0.833,
+      "mean_ret_24h": 0.04735,
+      "median_ret_24h": 0.07358
     },
     "breakout": {
       "n_1h": 30,
@@ -52,7 +37,7 @@
       "median_ret_1h": 0.00263,
       "n_4h": 30,
       "hit_rate_4h": 0.533,
-      "mean_ret_4h": 0.01611,
+      "mean_ret_4h": 0.0173,
       "median_ret_4h": 0.00603,
       "n_24h": 26,
       "hit_rate_24h": 0.346,
