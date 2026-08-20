@@ -1,9 +1,9 @@
 {
-  "ts": "2026-08-20T17:23:12+00:00",
+  "ts": "2026-08-20T17:28:23+00:00",
   "sources": {
     "coingecko": [
-      "PUMP",
       "BTC",
+      "PUMP",
       "XRP",
       "LIT",
       "ETH",
@@ -17,11 +17,11 @@
       "ACE",
       "BOME",
       "XRP",
-      "ENA",
       "PEPE",
+      "ENA",
       "TRUMP",
-      "DOGE",
-      "XLM"
+      "XLM",
+      "PUMP"
     ],
     "watcher": [
       "XRP",
@@ -33,6 +33,17 @@
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "PUMP",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.38
+    },
     {
       "symbol": "XRP",
       "surfaces": 3,
@@ -51,7 +62,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.001575,
+      "funding": -0.001601,
       "long_short": 0.98
     },
     {
@@ -73,30 +84,12 @@
       ]
     },
     {
-      "symbol": "PUMP",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "watcher"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.38
-    },
-    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5.5e-05
-    },
-    {
-      "symbol": "DOGE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
+      "funding": 5.3e-05
     },
     {
       "symbol": "ENA",
@@ -128,7 +121,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1e-05
+      "funding": -1.2e-05
     },
     {
       "symbol": "LIT",
