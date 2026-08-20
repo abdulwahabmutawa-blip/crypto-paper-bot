@@ -1,37 +1,8 @@
 {
-  "ts": "2026-08-20T05:26:34+00:00",
-  "scanned": 115,
+  "ts": "2026-08-20T05:32:34+00:00",
+  "scanned": 116,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ASTERUSDT",
-      "signal": "ignition",
-      "score": 1.1295,
-      "raw_score": 0.8473,
-      "weight": 1.333,
-      "price": 0.653,
-      "why": "trades 16.2x and volume 20.3x the prior 4h, 61% taker-buy, $640,709 burst \u2014 while price has only moved +2.2%",
-      "chg_24h": 0.0833,
-      "vol_surge": 20.31,
-      "chg_1h": 0.0219,
-      "market_surge": 13.98,
-      "actionable": true
-    },
-    {
-      "symbol": "CHIPUSDT",
-      "signal": "breakout",
-      "score": 0.7363,
-      "raw_score": 0.8181,
-      "weight": 0.9,
-      "price": 0.02979,
-      "why": "trades 10.2x, volume 8.5x, 84% taker-buy, +3.2% in an hour, at 91% of its 24h range",
-      "chg_24h": 0.1617,
-      "vol_surge": 8.48,
-      "chg_1h": 0.0319,
-      "market_surge": 7.07,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -40,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 56,
+    "count": 55,
     "baseline": 12.0,
     "wave": true
   },
@@ -88,10 +59,10 @@
       "median_ret_24h": -0.0187
     },
     "heat": {
-      "n_1h": 24,
-      "hit_rate_1h": 0.333,
-      "mean_ret_1h": -0.01295,
-      "median_ret_1h": -0.0049,
+      "n_1h": 25,
+      "hit_rate_1h": 0.32,
+      "mean_ret_1h": -0.01275,
+      "median_ret_1h": -0.00732,
       "n_4h": 23,
       "hit_rate_4h": 0.435,
       "mean_ret_4h": -0.00813,
