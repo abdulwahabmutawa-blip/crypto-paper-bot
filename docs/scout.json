@@ -1,8 +1,23 @@
 {
-  "ts": "2026-08-20T13:58:34+00:00",
-  "scanned": 126,
+  "ts": "2026-08-20T14:03:54+00:00",
+  "scanned": 124,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "PUMPUSDT",
+      "signal": "breakout",
+      "score": 0.8661,
+      "raw_score": 0.7874,
+      "weight": 1.1,
+      "price": 0.003561,
+      "why": "trades 7.3x, volume 8.3x, 60% taker-buy, +4.6% in an hour, at 95% of its 24h range",
+      "chg_24h": 0.1796,
+      "vol_surge": 8.29,
+      "chg_1h": 0.0455,
+      "market_surge": 1.93,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 57%, mean +0.47% over last 30 at 4h: not beating the round trip",
     "breakout": "actionable",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 92,
+    "count": 93,
     "baseline": 13.0,
     "wave": true
   },
@@ -27,8 +42,8 @@
       "median_ret_4h": 0.00745,
       "n_24h": 30,
       "hit_rate_24h": 0.8,
-      "mean_ret_24h": 0.04906,
-      "median_ret_24h": 0.0673
+      "mean_ret_24h": 0.04666,
+      "median_ret_24h": 0.0621
     },
     "breakout": {
       "n_1h": 30,
@@ -59,10 +74,10 @@
       "median_ret_24h": -0.0187
     },
     "heat": {
-      "n_1h": 29,
-      "hit_rate_1h": 0.31,
-      "mean_ret_1h": -0.01094,
-      "median_ret_1h": -0.0049,
+      "n_1h": 30,
+      "hit_rate_1h": 0.367,
+      "mean_ret_1h": -0.0072,
+      "median_ret_1h": -0.00133,
       "n_4h": 27,
       "hit_rate_4h": 0.481,
       "mean_ret_4h": -0.00635,
