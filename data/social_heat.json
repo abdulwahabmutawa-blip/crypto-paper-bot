@@ -1,17 +1,17 @@
 {
-  "ts": "2026-08-20T08:00:29+00:00",
+  "ts": "2026-08-20T08:06:26+00:00",
   "sources": {
     "coingecko": [
+      "ETH",
       "LIT",
       "BTC",
-      "ETH",
       "NEAR",
       "BOME",
       "PEPE",
       "PUMP",
-      "SUI",
-      "UNI",
-      "SOL"
+      "SOL",
+      "LINK",
+      "UNI"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -23,7 +23,7 @@
       "CRCLB",
       "WLD",
       "SOL",
-      "ZEC"
+      "XRP"
     ],
     "watcher": [
       "ETH",
@@ -44,7 +44,7 @@
         "watcher"
       ],
       "funding": 0.0001,
-      "long_short": 2.26
+      "long_short": 2.28
     },
     {
       "symbol": "PEPE",
@@ -73,7 +73,7 @@
         "watcher"
       ],
       "funding": 5e-05,
-      "long_short": 0.43
+      "long_short": 0.45
     },
     {
       "symbol": "SOL",
@@ -83,7 +83,7 @@
         "movers"
       ],
       "funding": 0.0001,
-      "long_short": 2.05
+      "long_short": 2.02
     },
     {
       "symbol": "TRUMP",
@@ -110,6 +110,14 @@
       ]
     },
     {
+      "symbol": "LINK",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -1e-06
+    },
+    {
       "symbol": "LIT",
       "surfaces": 1,
       "sources": [
@@ -131,15 +139,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -7.2e-05
-    },
-    {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": -8e-05
     },
     {
       "symbol": "UNI",
@@ -147,7 +147,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.6e-05
+      "funding": 7.7e-05
     },
     {
       "symbol": "WLD",
@@ -158,7 +158,7 @@
       "funding": 0.0001
     },
     {
-      "symbol": "ZEC",
+      "symbol": "XRP",
       "surfaces": 1,
       "sources": [
         "movers"
