@@ -1,65 +1,20 @@
 {
-  "ts": "2026-08-20T15:06:06+00:00",
-  "scanned": 126,
+  "ts": "2026-08-20T15:11:36+00:00",
+  "scanned": 125,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "CRVUSDT",
+      "symbol": "ONGUSDT",
       "signal": "ignition",
-      "score": 0.6417,
-      "raw_score": 0.6636,
+      "score": 0.6499,
+      "raw_score": 0.6721,
       "weight": 0.967,
-      "price": 0.2695,
-      "why": "trades 5.6x and volume 7.6x the prior 4h, 65% taker-buy, $95,619 burst \u2014 while price has only moved +0.6%",
-      "chg_24h": 0.0749,
-      "vol_surge": 7.6,
-      "chg_1h": 0.0056,
-      "market_surge": 1.95,
-      "actionable": false,
-      "status": "benched \u2014 hit 47%, mean +0.32% over last 30 at 4h: not beating the round trip"
-    },
-    {
-      "symbol": "DEXEUSDT",
-      "signal": "ignition",
-      "score": 0.6162,
-      "raw_score": 0.6372,
-      "weight": 0.967,
-      "price": 1.937,
-      "why": "trades 5.5x and volume 5.6x the prior 4h, 81% taker-buy, $56,196 burst \u2014 while price has only moved +1.0%",
-      "chg_24h": 0.0509,
-      "vol_surge": 5.56,
-      "chg_1h": 0.0104,
-      "market_surge": 1.71,
-      "actionable": false,
-      "status": "benched \u2014 hit 47%, mean +0.32% over last 30 at 4h: not beating the round trip"
-    },
-    {
-      "symbol": "PUMPUSDT",
-      "signal": "heat",
-      "score": 0.6,
-      "raw_score": 0.6,
-      "weight": 1.0,
-      "price": 0.003742,
-      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.003% \u00b7 L/S 1.35",
-      "chg_24h": 0.237,
-      "vol_surge": null,
-      "chg_1h": null,
-      "market_surge": 3,
-      "actionable": false,
-      "status": "benched \u2014 hit 45%, mean -0.60% over last 29 at 4h: not beating the round trip"
-    },
-    {
-      "symbol": "METUSDT",
-      "signal": "ignition",
-      "score": 0.5168,
-      "raw_score": 0.5344,
-      "weight": 0.967,
-      "price": 0.2121,
-      "why": "trades 4.3x and volume 5.8x the prior 4h, 60% taker-buy, $60,146 burst \u2014 while price has only moved +1.3%",
-      "chg_24h": 0.1902,
-      "vol_surge": 5.77,
-      "chg_1h": 0.0134,
-      "market_surge": 2.06,
+      "price": 0.08093,
+      "why": "trades 7.5x and volume 5.5x the prior 4h, 65% taker-buy, $63,452 burst \u2014 while price has only moved +1.1%",
+      "chg_24h": 0.3164,
+      "vol_surge": 5.47,
+      "chg_1h": 0.0112,
+      "market_surge": 2.45,
       "actionable": false,
       "status": "benched \u2014 hit 47%, mean +0.32% over last 30 at 4h: not beating the round trip"
     }
@@ -72,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 68,
+    "count": 60,
     "baseline": 13.0,
     "wave": true
   },
@@ -88,8 +43,8 @@
       "median_ret_4h": 0.0003,
       "n_24h": 30,
       "hit_rate_24h": 0.8,
-      "mean_ret_24h": 0.04565,
-      "median_ret_24h": 0.0597
+      "mean_ret_24h": 0.05092,
+      "median_ret_24h": 0.0621
     },
     "breakout": {
       "n_1h": 30,
@@ -101,9 +56,9 @@
       "mean_ret_4h": 0.02795,
       "median_ret_4h": 0.0176,
       "n_24h": 30,
-      "hit_rate_24h": 0.467,
-      "mean_ret_24h": -0.02148,
-      "median_ret_24h": -0.00808
+      "hit_rate_24h": 0.533,
+      "mean_ret_24h": -0.00765,
+      "median_ret_24h": 0.01877
     },
     "reversion": {
       "n_1h": 22,
