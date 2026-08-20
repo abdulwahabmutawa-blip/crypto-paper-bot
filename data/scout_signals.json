@@ -1,37 +1,8 @@
 {
-  "ts": "2026-08-20T09:03:44+00:00",
-  "scanned": 121,
+  "ts": "2026-08-20T09:09:34+00:00",
+  "scanned": 122,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "TIAUSDT",
-      "signal": "ignition",
-      "score": 1.0584,
-      "raw_score": 0.794,
-      "weight": 1.333,
-      "price": 0.3323,
-      "why": "trades 8.9x and volume 21.2x the prior 4h, 61% taker-buy, $54,872 burst \u2014 while price has only moved +2.5%",
-      "chg_24h": 0.0973,
-      "vol_surge": 21.23,
-      "chg_1h": 0.025,
-      "market_surge": 1.8,
-      "actionable": true
-    },
-    {
-      "symbol": "TIAUSDT",
-      "signal": "breakout",
-      "score": 0.6743,
-      "raw_score": 0.7492,
-      "weight": 0.9,
-      "price": 0.3323,
-      "why": "trades 8.9x, volume 21.2x, 61% taker-buy, +2.5% in an hour, at 85% of its 24h range",
-      "chg_24h": 0.0973,
-      "vol_surge": 21.23,
-      "chg_1h": 0.025,
-      "market_surge": 1.8,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -40,16 +11,16 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 82,
+    "count": 87,
     "baseline": 12.0,
     "wave": true
   },
   "scorecard": {
     "ignition": {
       "n_1h": 30,
-      "hit_rate_1h": 0.633,
-      "mean_ret_1h": 0.00639,
-      "median_ret_1h": 0.00659,
+      "hit_rate_1h": 0.6,
+      "mean_ret_1h": 0.00578,
+      "median_ret_1h": 0.00521,
       "n_4h": 30,
       "hit_rate_4h": 0.833,
       "mean_ret_4h": 0.01428,
