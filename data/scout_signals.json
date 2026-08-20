@@ -1,8 +1,23 @@
 {
-  "ts": "2026-08-20T06:24:15+00:00",
-  "scanned": 116,
+  "ts": "2026-08-20T06:30:24+00:00",
+  "scanned": 117,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "BIOUSDT",
+      "signal": "breakout",
+      "score": 0.7324,
+      "raw_score": 0.8137,
+      "weight": 0.9,
+      "price": 0.02992,
+      "why": "trades 14.8x, volume 16.6x, 62% taker-buy, +4.5% in an hour, at 92% of its 24h range",
+      "chg_24h": 0.1991,
+      "vol_surge": 16.57,
+      "chg_1h": 0.0447,
+      "market_surge": 6.89,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 57,
+    "count": 59,
     "baseline": 12.0,
     "wave": true
   },
@@ -19,7 +34,7 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.5,
-      "mean_ret_1h": 0.00332,
+      "mean_ret_1h": 0.00317,
       "median_ret_1h": 0.00284,
       "n_4h": 30,
       "hit_rate_4h": 0.833,
@@ -33,7 +48,7 @@
     "breakout": {
       "n_1h": 30,
       "hit_rate_1h": 0.467,
-      "mean_ret_1h": 0.00467,
+      "mean_ret_1h": 0.00446,
       "median_ret_1h": 0.0014,
       "n_4h": 30,
       "hit_rate_4h": 0.4,
