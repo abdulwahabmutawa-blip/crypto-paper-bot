@@ -1,32 +1,17 @@
 {
-  "ts": "2026-08-20T20:01:33+00:00",
-  "scanned": 122,
+  "ts": "2026-08-20T20:07:22+00:00",
+  "scanned": 124,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "AEROUSDT",
-      "signal": "ignition",
-      "score": 0.9323,
-      "raw_score": 0.9025,
-      "weight": 1.033,
-      "price": 0.4754,
-      "why": "trades 9.6x and volume 10.0x the prior 4h, 70% taker-buy, $51,140 burst \u2014 while price has only moved +0.3%",
-      "chg_24h": 0.1232,
-      "vol_surge": 10.02,
-      "chg_1h": 0.0034,
-      "market_surge": 2.97,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
     "reversion": "benched \u2014 hit 46%, mean +0.33% over last 22 at 4h: not beating the round trip",
-    "heat": "benched \u2014 hit 50%, mean +0.21% over last 30 at 4h: not beating the round trip",
+    "heat": "benched \u2014 hit 47%, mean -0.07% over last 30 at 4h: not beating the round trip",
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 42,
+    "count": 38,
     "baseline": 13.0,
     "wave": true
   },
@@ -38,11 +23,11 @@
       "median_ret_1h": -0.00148,
       "n_4h": 30,
       "hit_rate_4h": 0.533,
-      "mean_ret_4h": 0.01409,
+      "mean_ret_4h": 0.01426,
       "median_ret_4h": 0.006,
       "n_24h": 30,
       "hit_rate_24h": 0.933,
-      "mean_ret_24h": 0.06935,
+      "mean_ret_24h": 0.06863,
       "median_ret_24h": 0.06977
     },
     "breakout": {
@@ -75,13 +60,13 @@
     },
     "heat": {
       "n_1h": 30,
-      "hit_rate_1h": 0.4,
-      "mean_ret_1h": -0.00302,
-      "median_ret_1h": -0.00119,
+      "hit_rate_1h": 0.433,
+      "mean_ret_1h": -0.00183,
+      "median_ret_1h": 0.00058,
       "n_4h": 30,
-      "hit_rate_4h": 0.5,
-      "mean_ret_4h": 0.00213,
-      "median_ret_4h": 0.00214,
+      "hit_rate_4h": 0.467,
+      "mean_ret_4h": -0.00074,
+      "median_ret_4h": -0.00079,
       "n_24h": 19,
       "hit_rate_24h": 0.211,
       "mean_ret_24h": -0.10671,
