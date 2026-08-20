@@ -1,23 +1,8 @@
 {
-  "ts": "2026-08-20T18:19:24+00:00",
-  "scanned": 122,
+  "ts": "2026-08-20T18:24:49+00:00",
+  "scanned": 123,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ALGOUSDT",
-      "signal": "ignition",
-      "score": 0.7743,
-      "raw_score": 0.8299,
-      "weight": 0.933,
-      "price": 0.086,
-      "why": "trades 9.0x and volume 18.7x the prior 4h, 67% taker-buy, $201,369 burst \u2014 while price has only moved -1.9%",
-      "chg_24h": 0.0619,
-      "vol_surge": 18.72,
-      "chg_1h": -0.0194,
-      "market_surge": 12.25,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -26,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 48,
+    "count": 52,
     "baseline": 13.0,
     "wave": true
   },
