@@ -240,6 +240,18 @@ assert ok and base == 30.0, (ok, base)
 ok, _ = sc.wave_call(45, [30, 28, 33, 30, 29, 31, 30, 32, 28, 30, 31, 29])
 assert not ok, "1.5x the baseline is a breeze, not a wave"
 
+# --- revival volume must be a RATE, not a partial-day total (bug 08-20) ------
+# comparing a partial day against full days demanded a 9x pace at 08:00 UTC;
+# revival logged ZERO candidates in 3 days while other signals logged 389
+assert sc.prorated_day_volume(1_000_000, 0.5) == 2_000_000,     "half a day at 1M projects a 2M full-day rate"
+assert sc.prorated_day_volume(500_000, 1.0/24) is None,     "under 2h elapsed there is no honest rate"
+assert sc.prorated_day_volume(0.0, 0.5) == 0.0
+
+# --- the gate demands MEANINGFULLY beating fees (3x round trip) --------------
+ok, why = sc.signal_actionable({"signals": {"ignition": {
+    "n_4h": 30, "hit_rate_4h": 0.60, "mean_ret_4h": 0.004}}}, "ignition")
+assert not ok and "round trip" in why,     "a mean that only matches fees is trading for nothing"
+
 # --- revival is judged on its OWN clock (24h), not the sprint clock ----------
 assert "revival" in sc.SIGNAL_TYPES
 card24 = {"signals": {"revival": {

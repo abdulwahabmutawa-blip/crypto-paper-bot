@@ -566,7 +566,10 @@ def signal_actionable(card: dict, signal: str) -> tuple[bool, str]:
                        f"samples under ruleset {RULESET}")
     hit = s.get(f"hit_rate_{h}h", 0.0)
     mean = s.get(f"mean_ret_{h}h", 0.0)
-    if hit < MIN_ACT_HIT or mean <= ROUND_TRIP:
+    # 3x fees, not 1x: a mean that only matches the round trip is trading
+    # for nothing while still risking the stop (net-of-cost doctrine — the
+    # strongest surviving finding of the research audit)
+    if hit < MIN_ACT_HIT or mean < 3 * ROUND_TRIP:
         return False, (f"benched — hit {hit:.0%}, mean {mean:+.2%} over "
                        f"last {n} at {h}h: not beating the round trip")
     return True, ""
@@ -610,6 +613,22 @@ def breadth_state(raw_tickers: list[dict], now: datetime) -> dict:
         {"history": hist[-1200:], "count": count,
          "baseline": base, "wave": wave}))
     return {"count": count, "baseline": base, "wave": wave}
+
+
+def prorated_day_volume(partial_qv: float, elapsed_frac: float,
+                        min_frac: float = 2.0 / 24.0) -> float | None:
+    """Project the current partial UTC day's volume to a full-day rate.
+
+    BUG FIX 2026-08-20: revival compared today's PARTIAL volume against
+    full prior days and demanded 3x — so at 08:00 UTC a coin needed a 9x
+    pace to register, and in 3 days revival logged ZERO candidates while
+    the other signals logged 389. The one strategy the 2-year study
+    supports was structurally muted for most of every day. None before
+    min_frac elapsed: a 30-minute-old day projects pure noise.
+    """
+    if elapsed_frac < min_frac:
+        return None
+    return partial_qv / elapsed_frac
 
 
 def revival_verdict(f: dict) -> tuple[float, str] | None:
@@ -703,7 +722,12 @@ def revival_candidates(raw_tickers: list[dict], card: dict, breadth: dict,
                 "age_ok": True, "chg_24h": chg,
                 "week_chg": closes[-2] / closes[-9] - 1.0,
                 "med_pre_qv": pre_qv[len(pre_qv) // 2],
-                "today_qv": qvs[-1],
+                # projected full-day rate, not the raw partial (bug fix
+                # 08-20 — see prorated_day_volume)
+                "today_qv": prorated_day_volume(
+                    qvs[-1],
+                    (now.hour * 3600 + now.minute * 60 + now.second)
+                    / 86400.0),
                 "runup_30d": last / min(lows[-31:]) - 1.0,
                 "wave": breadth.get("wave"),
                 "wave_count": breadth.get("count"),
@@ -712,6 +736,8 @@ def revival_candidates(raw_tickers: list[dict], card: dict, breadth: dict,
             }
         except Exception:
             continue
+        if f["today_qv"] is None:
+            continue          # under 2h into the UTC day: no honest rate yet
         hit = revival_verdict(f)
         if not hit:
             continue
