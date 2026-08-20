@@ -1,16 +1,17 @@
 {
-  "ts": "2026-08-20T12:11:49+00:00",
+  "ts": "2026-08-20T12:17:29+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "LIT",
       "ETH",
-      "PUMP",
       "BOME",
-      "SOL",
+      "PUMP",
       "XRP",
       "UNI",
-      "SHIB"
+      "TAO",
+      "LINK",
+      "NEAR"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,8 +22,8 @@
       "ENA",
       "XRP",
       "TRUMP",
-      "CRCLB",
-      "XLM"
+      "PUMP",
+      "CRCLB"
     ],
     "watcher": [
       "PEPE",
@@ -74,14 +75,23 @@
       ]
     },
     {
+      "symbol": "PUMP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 3.9e-05,
+      "long_short": 1.42
+    },
+    {
       "symbol": "TRUMP",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": 5e-05,
-      "long_short": 1.93
+      "funding": 5e-05
     },
     {
       "symbol": "XRP",
@@ -108,6 +118,14 @@
       ]
     },
     {
+      "symbol": "LINK",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 6.5e-05
+    },
+    {
       "symbol": "LIT",
       "surfaces": 1,
       "sources": [
@@ -116,12 +134,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PUMP",
+      "symbol": "NEAR",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 4e-05
+      "funding": 0.0001
     },
     {
       "symbol": "RE",
@@ -132,33 +150,18 @@
       "funding": 5e-05
     },
     {
-      "symbol": "SHIB",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ]
-    },
-    {
-      "symbol": "SOL",
+      "symbol": "TAO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0001
+      "funding": 5e-05
     },
     {
       "symbol": "UNI",
       "surfaces": 1,
       "sources": [
         "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "XLM",
-      "surfaces": 1,
-      "sources": [
-        "movers"
       ],
       "funding": 0.0001
     }
