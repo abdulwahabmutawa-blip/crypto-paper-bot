@@ -1,10 +1,10 @@
 {
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "holding": "MSTR",
-  "units": 14.792609528517046,
+  "holding": "XRP-USD",
+  "units": 1266.3011250867269,
   "cash": 0.0,
-  "entry_price": 109.87000274658203,
+  "entry_price": 1.3171000480651855,
   "bench_units": 1.332054612938296,
   "stopped": {
     "SHIB-USD": "2026-07-27T00:01:08+00:00",
@@ -357,6 +357,26 @@
       "value": 1625.26,
       "fee": 2.28,
       "reason": "Grok: MSTR euphoric \u2014 BTC breakout lifts Strategy heavily (scan 2026-08-20T12:57)"
+    },
+    {
+      "date": "2026-08-20",
+      "action": "SELL",
+      "ticker": "MSTR",
+      "price": 113.23500061,
+      "units": 14.7926,
+      "value": 1675.04,
+      "fee": 2.35,
+      "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
+    },
+    {
+      "date": "2026-08-20",
+      "action": "BUY",
+      "ticker": "XRP-USD",
+      "price": 1.31710005,
+      "units": 1266.3011,
+      "value": 1667.85,
+      "fee": 4.85,
+      "reason": "Grok: XRP euphoric \u2014 Big mover on banker-hours flow and rally (scan 2026-08-20T17:04)"
     }
   ],
   "history": [
@@ -531,18 +551,12 @@
     },
     {
       "date": "2026-08-20",
-      "value": 1661.95,
-      "bench": 1021.16,
-      "holding": "MSTR"
+      "value": 1667.85,
+      "bench": 1020.42,
+      "holding": "XRP-USD"
     }
   ],
   "intraday": [
-    {
-      "ts": "2026-07-29T11:24:29+00:00",
-      "value": 896.16,
-      "bench": 986.87,
-      "holding": "CASH"
-    },
     {
       "ts": "2026-07-29T11:37:38+00:00",
       "value": 896.16,
@@ -9536,9 +9550,15 @@
       "value": 1661.95,
       "bench": 1021.16,
       "holding": "MSTR"
+    },
+    {
+      "ts": "2026-08-20T17:05:05+00:00",
+      "value": 1667.85,
+      "bench": 1020.42,
+      "holding": "XRP-USD"
     }
   ],
-  "last_updated_utc": "2026-08-20T16:50:35+00:00",
+  "last_updated_utc": "2026-08-20T17:05:05+00:00",
   "restatement": {
     "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)",
     "voided_trades": [
@@ -9617,5 +9637,5 @@
     ],
     "voided_reason": "signal faded before any real fill was possible (market closed the whole window) \u2014 trades could never have existed"
   },
-  "costs_paid": 23.008
+  "costs_paid": 30.2039
 }
