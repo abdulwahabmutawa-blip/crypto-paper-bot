@@ -1,21 +1,50 @@
 {
-  "ts": "2026-08-20T10:06:02+00:00",
-  "scanned": 117,
+  "ts": "2026-08-20T10:11:24+00:00",
+  "scanned": 120,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "ARBUSDT",
       "signal": "ignition",
-      "score": 0.9074,
-      "raw_score": 0.6807,
+      "score": 1.277,
+      "raw_score": 0.958,
       "weight": 1.333,
-      "price": 0.665,
-      "why": "trades 6.9x and volume 6.5x the prior 4h, 61% taker-buy, $375,337 burst \u2014 while price has only moved -0.4%",
-      "chg_24h": 0.105,
-      "vol_surge": 6.5,
-      "chg_1h": -0.0045,
-      "market_surge": 6.39,
+      "price": 0.0888,
+      "why": "trades 10.5x and volume 30.1x the prior 4h, 91% taker-buy, $884,249 burst \u2014 while price has only moved -0.8%",
+      "chg_24h": 0.1505,
+      "vol_surge": 30.11,
+      "chg_1h": -0.0078,
+      "market_surge": 17.03,
       "actionable": true
+    },
+    {
+      "symbol": "CFGUSDT",
+      "signal": "ignition",
+      "score": 1.0986,
+      "raw_score": 0.8241,
+      "weight": 1.333,
+      "price": 0.1334,
+      "why": "trades 8.1x and volume 11.6x the prior 4h, 73% taker-buy, $96,026 burst \u2014 while price has only moved +1.3%",
+      "chg_24h": -0.017,
+      "vol_surge": 11.61,
+      "chg_1h": 0.0129,
+      "market_surge": 6.57,
+      "actionable": true
+    },
+    {
+      "symbol": "ETHUSDT",
+      "signal": "heat",
+      "score": 0.6,
+      "raw_score": 0.6,
+      "weight": 1.0,
+      "price": 2285.78,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.010% \u00b7 L/S 2.42",
+      "chg_24h": 0.1916,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
+      "actionable": false,
+      "status": "benched \u2014 hit 48%, mean -0.69% over last 25 at 4h: not beating the round trip"
     }
   ],
   "gate": {
@@ -26,7 +55,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 94,
+    "count": 101,
     "baseline": 12.0,
     "wave": true
   },
