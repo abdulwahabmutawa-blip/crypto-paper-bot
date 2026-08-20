@@ -1,21 +1,22 @@
 {
-  "ts": "2026-08-20T01:02:14+00:00",
+  "ts": "2026-08-20T01:07:19+00:00",
   "scanned": 114,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "SKHYBUSDT",
-      "signal": "ignition",
-      "score": 0.8669,
-      "raw_score": 0.7031,
-      "weight": 1.233,
-      "price": 162.37,
-      "why": "trades 6.5x and volume 6.8x the prior 4h, 96% taker-buy, $71,913 burst \u2014 while price has only moved +2.6%",
-      "chg_24h": 0.0587,
-      "vol_surge": 6.8,
-      "chg_1h": 0.0261,
-      "market_surge": 1.41,
-      "actionable": true
+      "symbol": "ETHUSDT",
+      "signal": "heat",
+      "score": 0.6,
+      "raw_score": 0.6,
+      "weight": 1.0,
+      "price": 2260.55,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.010% \u00b7 L/S 2.5",
+      "chg_24h": 0.179,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
+      "actionable": false,
+      "status": "benched \u2014 hit 53%, mean -0.62% over last 19 at 4h: not beating the round trip"
     }
   ],
   "gate": {
@@ -26,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 55,
+    "count": 47,
     "baseline": 12.0,
     "wave": true
   },
@@ -48,11 +49,11 @@
     "breakout": {
       "n_1h": 30,
       "hit_rate_1h": 0.467,
-      "mean_ret_1h": 0.00438,
+      "mean_ret_1h": 0.00428,
       "median_ret_1h": -0.00105,
       "n_4h": 30,
       "hit_rate_4h": 0.533,
-      "mean_ret_4h": 0.01476,
+      "mean_ret_4h": 0.01335,
       "median_ret_4h": 0.00608,
       "n_24h": 23,
       "hit_rate_24h": 0.261,
@@ -74,10 +75,10 @@
       "median_ret_24h": -0.01912
     },
     "heat": {
-      "n_1h": 21,
-      "hit_rate_1h": 0.286,
-      "mean_ret_1h": -0.01582,
-      "median_ret_1h": -0.0087,
+      "n_1h": 22,
+      "hit_rate_1h": 0.318,
+      "mean_ret_1h": -0.01421,
+      "median_ret_1h": -0.00732,
       "n_4h": 19,
       "hit_rate_4h": 0.526,
       "mean_ret_4h": -0.00624,
