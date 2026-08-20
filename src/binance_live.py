@@ -219,17 +219,28 @@ def exit_params(source: str | None) -> dict:
                      trailing stop is the primary exit.
     """
     src = source or ""
+    # momentum_exit: does this seat die when the coin is no longer a top-25
+    # 24h mover? ONLY for seats whose entry thesis WAS 24h leadership (the
+    # legacy gainer path and adopted/recovered seats of unknown thesis).
+    # BUG FIX 2026-08-20: scout:breakout was on this list, but the entry
+    # guard demands a coin that has NOT already run far — so breakout seats
+    # almost never rank top-25 and were being bought and ejected 6 minutes
+    # later (ASTER -1.09%, CHIP -0.67%, both same morning): a structural
+    # buy-high-sell-lower machine. A breakout seat's thesis is a fresh
+    # intraday event; it is judged by its own burst clocks, stops and the
+    # ratchet, not by daily leaderboards.
+    momentum_exit = src in ("gainer", "adopted")
     if src == "scout:revival":
         # 28d: the 2y study (n=1,908) put the MEDIAN grind at 26 days
         # trough->peak — the first 14d cap would still have amputated
         # half the winners it was built to hold
         return {"kind": "grind", "stop_pct": -0.10, "stall_h": None,
-                "max_hold_h": 672.0}
+                "max_hold_h": 672.0, "momentum_exit": momentum_exit}
     if src.startswith("scout:"):
         return {"kind": "burst", "stop_pct": -0.06, "stall_h": 2.0,
-                "max_hold_h": 8.0}
+                "max_hold_h": 8.0, "momentum_exit": momentum_exit}
     return {"kind": "hype", "stop_pct": -0.10, "stall_h": 6.0,
-            "max_hold_h": 24.0}
+            "max_hold_h": 24.0, "momentum_exit": momentum_exit}
 
 
 # ---- watcher earn-in (OWNER DECISION 2026-08-19: "fix it. I don't want

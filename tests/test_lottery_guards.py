@@ -149,6 +149,18 @@ assert h["kind"] == "hype" and h["max_hold_h"] == 24.0 \
 assert bl.exit_params(None)["kind"] == "hype", \
     "an unknown seat gets the strictest familiar clock, never the longest"
 
+# --- momentum exit is per-thesis (bug fix 08-20) -----------------------------
+# The entry guard demands a coin that has NOT already run far; judging a
+# fresh breakout seat by 24h leaderboards therefore ejected it minutes
+# after entry, every time (ASTER -1.09% and CHIP -0.67% inside 6 minutes,
+# same morning). Only seats whose THESIS is 24h leadership carry that exit.
+assert bl.exit_params("scout:breakout").get("momentum_exit") is False,     "a breakout seat must never be judged by the daily leaderboard"
+assert bl.exit_params("scout:ignition").get("momentum_exit") is False
+assert bl.exit_params("scout:revival").get("momentum_exit") is False
+assert bl.exit_params("watcher").get("momentum_exit") is False,     "watcher rides are judged by scans, not rank (pre-existing rule)"
+assert bl.exit_params("gainer").get("momentum_exit") is True
+assert bl.exit_params("adopted").get("momentum_exit") is True
+
 # --- profit ratchet: a ride that paid never goes red (exit audit 08-19) -----
 # below +4% MFE: unarmed — a scratch may still become a stop-loss (LINK
 # peaked +1.8%; ratcheting there would churn every wiggle)

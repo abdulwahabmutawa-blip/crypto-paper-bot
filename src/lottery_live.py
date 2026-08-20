@@ -353,7 +353,10 @@ def main():
         # sell it one cycle after buying, every time; its stall clock covers
         # the fizzle case. Watcher hype rides are judged by scans, not rank.
         src = str(st.get("entry_source") or "")
-        if held and (src in ("gainer", "adopted") or src == "scout:breakout") \
+        # per-seat: only theses built on 24h leadership die with it (bug
+        # fix 08-20: breakout seats were on this list and got ejected 6
+        # minutes after entry, every time - see binance_live.exit_params)
+        if held and ep.get("momentum_exit") \
                 and not in_top_gainers(held, n=25):
             if sell("MOMENTUM GONE — no longer a top-25 24h mover"):
                 held = None
