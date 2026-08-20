@@ -1,8 +1,23 @@
 {
-  "ts": "2026-08-20T09:09:34+00:00",
-  "scanned": 122,
+  "ts": "2026-08-20T09:15:24+00:00",
+  "scanned": 120,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "\u5e01\u5b89\u4eba\u751fUSDT",
+      "signal": "breakout",
+      "score": 0.6448,
+      "raw_score": 0.7165,
+      "weight": 0.9,
+      "price": 0.4693,
+      "why": "trades 6.1x, volume 7.2x, 67% taker-buy, +4.2% in an hour, at 100% of its 24h range",
+      "chg_24h": 0.0002,
+      "vol_surge": 7.17,
+      "chg_1h": 0.0415,
+      "market_surge": 3.39,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 87,
+    "count": 93,
     "baseline": 12.0,
     "wave": true
   },
@@ -19,7 +34,7 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.6,
-      "mean_ret_1h": 0.00578,
+      "mean_ret_1h": 0.00586,
       "median_ret_1h": 0.00521,
       "n_4h": 30,
       "hit_rate_4h": 0.833,
