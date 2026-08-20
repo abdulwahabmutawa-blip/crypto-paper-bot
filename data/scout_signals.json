@@ -1,24 +1,35 @@
 {
-  "ts": "2026-08-20T12:50:24+00:00",
-  "scanned": 125,
+  "ts": "2026-08-20T12:56:24+00:00",
+  "scanned": 124,
   "ruleset": 3,
   "candidates": [
     {
       "symbol": "SNXXBUSDT",
-      "signal": "reversion",
-      "score": 0.4843,
-      "raw_score": 0.4843,
-      "weight": 1.0,
-      "price": 14.17,
-      "why": "down -16% on the day (bottom decile of the market), now +2.2% over 15m with 3 green candles",
-      "chg_24h": -0.1589,
-      "vol_surge": 1.9,
-      "chg_1h": -0.0125,
+      "signal": "ignition",
+      "score": 0.9738,
+      "raw_score": 0.8345,
+      "weight": 1.167,
+      "price": 14.15,
+      "why": "trades 7.8x and volume 13.2x the prior 4h, 84% taker-buy, $299,072 burst \u2014 while price has only moved -1.5%",
+      "chg_24h": -0.159,
+      "vol_surge": 13.17,
+      "chg_1h": -0.0146,
+      "market_surge": 3.36,
+      "actionable": true
+    },
+    {
+      "symbol": "SOXLBUSDT",
+      "signal": "ignition",
+      "score": 0.968,
+      "raw_score": 0.8295,
+      "weight": 1.167,
+      "price": 119.02,
+      "why": "trades 6.5x and volume 13.8x the prior 4h, 94% taker-buy, $272,412 burst \u2014 while price has only moved +0.7%",
+      "chg_24h": -0.118,
+      "vol_surge": 13.78,
+      "chg_1h": 0.0069,
       "market_surge": 0.0,
-      "oi_drop": null,
-      "funding": null,
-      "actionable": false,
-      "status": "benched \u2014 hit 43%, mean +0.04% over last 21 at 4h: not beating the round trip"
+      "actionable": true
     }
   ],
   "gate": {
@@ -29,7 +40,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 69,
+    "count": 81,
     "baseline": 13.0,
     "wave": true
   },
@@ -37,26 +48,26 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.467,
-      "mean_ret_1h": 0.00724,
+      "mean_ret_1h": 0.01023,
       "median_ret_1h": 0.0015,
       "n_4h": 30,
       "hit_rate_4h": 0.667,
       "mean_ret_4h": 0.01103,
       "median_ret_4h": 0.00781,
       "n_24h": 30,
-      "hit_rate_24h": 0.8,
-      "mean_ret_24h": 0.04406,
-      "median_ret_24h": 0.07358
+      "hit_rate_24h": 0.833,
+      "mean_ret_24h": 0.05766,
+      "median_ret_24h": 0.07407
     },
     "breakout": {
       "n_1h": 30,
       "hit_rate_1h": 0.533,
-      "mean_ret_1h": 0.01026,
+      "mean_ret_1h": 0.01227,
       "median_ret_1h": 0.00263,
       "n_4h": 30,
-      "hit_rate_4h": 0.533,
-      "mean_ret_4h": 0.01923,
-      "median_ret_4h": 0.00445,
+      "hit_rate_4h": 0.567,
+      "mean_ret_4h": 0.0225,
+      "median_ret_4h": 0.006,
       "n_24h": 26,
       "hit_rate_24h": 0.346,
       "mean_ret_24h": -0.03443,
