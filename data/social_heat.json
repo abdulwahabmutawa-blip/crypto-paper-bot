@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-20T03:19:43+00:00",
+  "ts": "2026-08-20T03:24:53+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -22,10 +22,10 @@
       "HEMI",
       "TRUMP",
       "ETH",
+      "CRCLB",
       "WLD",
       "PEPE",
-      "SOL",
-      "ZEC"
+      "SOL"
     ],
     "watcher": [
       "BTC",
@@ -95,6 +95,13 @@
       "funding": 5e-05
     },
     {
+      "symbol": "CRCLB",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
+    },
+    {
       "symbol": "HEMI",
       "surfaces": 1,
       "sources": [
@@ -124,7 +131,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.6e-05
+      "funding": 3.9e-05
     },
     {
       "symbol": "PUMP",
@@ -132,7 +139,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.7e-05
+      "funding": -2.2e-05
     },
     {
       "symbol": "RE",
@@ -171,14 +178,6 @@
       "surfaces": 1,
       "sources": [
         "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "movers"
       ],
       "funding": 0.0001
     }
