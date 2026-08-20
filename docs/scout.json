@@ -1,21 +1,24 @@
 {
-  "ts": "2026-08-20T12:44:55+00:00",
-  "scanned": 124,
+  "ts": "2026-08-20T12:50:24+00:00",
+  "scanned": 125,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "KAITOUSDT",
-      "signal": "breakout",
-      "score": 0.7418,
-      "raw_score": 0.7181,
-      "weight": 1.033,
-      "price": 0.3626,
-      "why": "trades 6.0x, volume 9.0x, 66% taker-buy, +3.5% in an hour, at 100% of its 24h range",
-      "chg_24h": 0.0355,
-      "vol_surge": 9.04,
-      "chg_1h": 0.0348,
-      "market_surge": 4.42,
-      "actionable": true
+      "symbol": "SNXXBUSDT",
+      "signal": "reversion",
+      "score": 0.4843,
+      "raw_score": 0.4843,
+      "weight": 1.0,
+      "price": 14.17,
+      "why": "down -16% on the day (bottom decile of the market), now +2.2% over 15m with 3 green candles",
+      "chg_24h": -0.1589,
+      "vol_surge": 1.9,
+      "chg_1h": -0.0125,
+      "market_surge": 0.0,
+      "oi_drop": null,
+      "funding": null,
+      "actionable": false,
+      "status": "benched \u2014 hit 43%, mean +0.04% over last 21 at 4h: not beating the round trip"
     }
   ],
   "gate": {
@@ -26,7 +29,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 70,
+    "count": 69,
     "baseline": 13.0,
     "wave": true
   },
@@ -34,7 +37,7 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.467,
-      "mean_ret_1h": 0.00707,
+      "mean_ret_1h": 0.00724,
       "median_ret_1h": 0.0015,
       "n_4h": 30,
       "hit_rate_4h": 0.667,
@@ -42,7 +45,7 @@
       "median_ret_4h": 0.00781,
       "n_24h": 30,
       "hit_rate_24h": 0.8,
-      "mean_ret_24h": 0.04518,
+      "mean_ret_24h": 0.04406,
       "median_ret_24h": 0.07358
     },
     "breakout": {
@@ -52,8 +55,8 @@
       "median_ret_1h": 0.00263,
       "n_4h": 30,
       "hit_rate_4h": 0.533,
-      "mean_ret_4h": 0.0193,
-      "median_ret_4h": 0.006,
+      "mean_ret_4h": 0.01923,
+      "median_ret_4h": 0.00445,
       "n_24h": 26,
       "hit_rate_24h": 0.346,
       "mean_ret_24h": -0.03443,
