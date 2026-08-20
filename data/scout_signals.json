@@ -1,8 +1,23 @@
 {
-  "ts": "2026-08-20T10:16:33+00:00",
-  "scanned": 120,
+  "ts": "2026-08-20T10:21:50+00:00",
+  "scanned": 119,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "MEGAUSDT",
+      "signal": "breakout",
+      "score": 0.7162,
+      "raw_score": 0.7676,
+      "weight": 0.933,
+      "price": 0.03617,
+      "why": "trades 9.5x, volume 27.7x, 78% taker-buy, +2.0% in an hour, at 97% of its 24h range",
+      "chg_24h": 0.1436,
+      "vol_surge": 27.67,
+      "chg_1h": 0.02,
+      "market_surge": 11.09,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,16 +26,16 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 104,
+    "count": 107,
     "baseline": 12.0,
     "wave": true
   },
   "scorecard": {
     "ignition": {
       "n_1h": 30,
-      "hit_rate_1h": 0.567,
-      "mean_ret_1h": 0.00499,
-      "median_ret_1h": 0.00521,
+      "hit_rate_1h": 0.533,
+      "mean_ret_1h": 0.00363,
+      "median_ret_1h": 0.0034,
       "n_4h": 30,
       "hit_rate_4h": 0.833,
       "mean_ret_4h": 0.01469,
