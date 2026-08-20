@@ -1,23 +1,23 @@
 {
-  "ts": "2026-08-20T23:12:29+00:00",
+  "ts": "2026-08-20T23:17:59+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
-      "BTC",
       "XRP",
+      "BTC",
       "ETH",
-      "SOL",
       "ENA",
+      "SOL",
       "LINK",
       "TAO",
-      "ONDO"
+      "ONG"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "ONG",
-      "ACE",
       "BOME",
+      "ACE",
       "PUMP",
       "ENA",
       "XRP",
@@ -25,10 +25,11 @@
       "XPL"
     ],
     "watcher": [
-      "XRP",
+      "ONG",
       "PUMP",
       "ENA",
-      "PEPE"
+      "XRP",
+      "BOME"
     ],
     "cryptopanic": []
   },
@@ -43,6 +44,17 @@
       ],
       "funding": 5e-05,
       "long_short": 2.01
+    },
+    {
+      "symbol": "ONG",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": -0.02,
+      "long_short": 0.92
     },
     {
       "symbol": "PUMP",
@@ -67,12 +79,14 @@
       "long_short": 2.68
     },
     {
-      "symbol": "PEPE",
+      "symbol": "BOME",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
-      ]
+      ],
+      "funding": 5e-05,
+      "long_short": 0.9
     },
     {
       "symbol": "ACE",
@@ -80,15 +94,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000259
-    },
-    {
-      "symbol": "BOME",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
+      "funding": -0.000258
     },
     {
       "symbol": "BTC",
@@ -96,7 +102,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.7e-05
+      "funding": 4.1e-05
     },
     {
       "symbol": "ETH",
@@ -104,7 +110,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.8e-05
+      "funding": 9.2e-05
     },
     {
       "symbol": "LINK",
@@ -112,23 +118,14 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.3e-05
+      "funding": 3.1e-05
     },
     {
-      "symbol": "ONDO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -5.8e-05
-    },
-    {
-      "symbol": "ONG",
+      "symbol": "PEPE",
       "surfaces": 1,
       "sources": [
         "movers"
-      ],
-      "funding": -0.02
+      ]
     },
     {
       "symbol": "SOL",
@@ -144,7 +141,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.1e-05
+      "funding": 1.8e-05
     },
     {
       "symbol": "XPL",

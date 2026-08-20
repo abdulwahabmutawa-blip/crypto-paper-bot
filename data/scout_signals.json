@@ -1,21 +1,22 @@
 {
-  "ts": "2026-08-20T23:12:35+00:00",
-  "scanned": 121,
+  "ts": "2026-08-20T23:18:06+00:00",
+  "scanned": 119,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "GRAMUSDT",
-      "signal": "ignition",
-      "score": 0.7616,
-      "raw_score": 0.7373,
+      "symbol": "ONGUSDT",
+      "signal": "heat",
+      "score": 0.6198,
+      "raw_score": 0.6,
       "weight": 1.033,
-      "price": 1.399,
-      "why": "trades 4.7x and volume 20.4x the prior 4h, 86% taker-buy, $171,526 burst \u2014 while price has only moved +0.6%",
-      "chg_24h": 0.0279,
-      "vol_surge": 20.39,
-      "chg_1h": 0.0065,
-      "market_surge": 0.88,
-      "actionable": true
+      "price": 0.1175,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding -2.000% \u00b7 L/S 0.92",
+      "chg_24h": 0.9473,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
+      "actionable": false,
+      "status": "benched \u2014 hit 53%, mean +0.37% over last 30 at 4h: not beating the round trip"
     }
   ],
   "gate": {
@@ -26,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 37,
+    "count": 40,
     "baseline": 13.0,
     "wave": true
   },
