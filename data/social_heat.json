@@ -1,17 +1,17 @@
 {
-  "ts": "2026-08-21T02:12:19+00:00",
+  "ts": "2026-08-21T02:17:29+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "ETH",
       "ENA",
       "PUMP",
-      "SOL",
       "XRP",
-      "BOME",
+      "SOL",
       "TAO",
-      "SHIB",
-      "GALA"
+      "LINK",
+      "GALA",
+      "NEXO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -36,17 +36,6 @@
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "BOME",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": 5e-05,
-      "long_short": 0.93
-    },
     {
       "symbol": "ENA",
       "surfaces": 3,
@@ -81,13 +70,23 @@
       "long_short": 2.85
     },
     {
+      "symbol": "BOME",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": 5e-05,
+      "long_short": 0.93
+    },
+    {
       "symbol": "BTC",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "watcher"
       ],
-      "funding": 8.7e-05,
+      "funding": 8.9e-05,
       "long_short": 1.02
     },
     {
@@ -97,7 +96,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.012625
+      "funding": -0.01251
     },
     {
       "symbol": "ACE",
@@ -105,7 +104,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000347
+      "funding": -0.000374
     },
     {
       "symbol": "ADA",
@@ -132,17 +131,25 @@
       "funding": 0.0001
     },
     {
+      "symbol": "LINK",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "NEXO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ]
+    },
+    {
       "symbol": "PEPE",
       "surfaces": 1,
       "sources": [
         "movers"
-      ]
-    },
-    {
-      "symbol": "SHIB",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
       ]
     },
     {
