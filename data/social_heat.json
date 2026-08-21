@@ -1,31 +1,31 @@
 {
-  "ts": "2026-08-21T16:35:19+00:00",
+  "ts": "2026-08-21T16:40:39+00:00",
   "sources": {
     "coingecko": [
       "ENA",
       "BTC",
       "PUMP",
-      "ZEC",
       "SUI",
-      "XRP",
+      "ZEC",
       "SOL",
-      "TAO",
+      "ETH",
+      "XRP",
       "LIT",
-      "PEPE",
-      "TRUMP",
-      "ETH"
+      "AERO",
+      "FET",
+      "PEPE"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "TUT",
       "ENA",
-      "NEIRO",
+      "TUT",
       "BCH",
+      "NEIRO",
+      "HEMI",
       "PEPE",
-      "XPL",
-      "FET",
-      "CRV"
+      "CRV",
+      "FET"
     ],
     "watcher": [
       "PUMP",
@@ -54,8 +54,18 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.000221,
+      "funding": 0.000219,
       "long_short": 1.62
+    },
+    {
+      "symbol": "FET",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.6
     },
     {
       "symbol": "PEPE",
@@ -82,8 +92,15 @@
         "coingecko",
         "watcher"
       ],
-      "funding": 0.0001,
-      "long_short": 2.48
+      "funding": 0.0001
+    },
+    {
+      "symbol": "AERO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "BTC",
@@ -110,12 +127,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "FET",
+      "symbol": "HEMI",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 0.0001
+      "funding": 5e-05
     },
     {
       "symbol": "LIT",
@@ -150,36 +167,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "TRUMP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "TUT",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 0.000101
-    },
-    {
-      "symbol": "XPL",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
+      "funding": 0.000112
     },
     {
       "symbol": "ZEC",
