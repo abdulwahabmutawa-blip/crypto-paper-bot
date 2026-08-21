@@ -1,37 +1,8 @@
 {
-  "ts": "2026-08-21T17:53:14+00:00",
+  "ts": "2026-08-21T17:58:34+00:00",
   "scanned": 151,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "NEOUSDT",
-      "signal": "ignition",
-      "score": 0.916,
-      "raw_score": 0.8868,
-      "weight": 1.033,
-      "price": 2.079,
-      "why": "trades 24.3x and volume 80.9x the prior 4h, 73% taker-buy, $254,068 burst \u2014 while price has only moved -1.8%",
-      "chg_24h": 0.0943,
-      "vol_surge": 80.88,
-      "chg_1h": -0.0184,
-      "market_surge": 2.33,
-      "actionable": true
-    },
-    {
-      "symbol": "GASUSDT",
-      "signal": "ignition",
-      "score": 0.9015,
-      "raw_score": 0.8727,
-      "weight": 1.033,
-      "price": 1.155,
-      "why": "trades 41.9x and volume 103.1x the prior 4h, 66% taker-buy, $197,501 burst \u2014 while price has only moved -1.7%",
-      "chg_24h": 0.0989,
-      "vol_surge": 103.07,
-      "chg_1h": -0.017,
-      "market_surge": 0.85,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -40,7 +11,7 @@
     "revival": "probation \u2014 2/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 87,
+    "count": 85,
     "baseline": 15.0,
     "wave": true
   },
