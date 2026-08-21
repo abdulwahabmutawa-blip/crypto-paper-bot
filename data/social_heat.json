@@ -1,18 +1,17 @@
 {
-  "ts": "2026-08-21T13:55:13+00:00",
+  "ts": "2026-08-21T14:00:59+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "ENA",
       "PUMP",
-      "SOL",
       "ZEC",
       "ETH",
+      "SOL",
+      "ONDO",
+      "LINK",
       "XRP",
-      "TAO",
-      "PEPE",
-      "GRAM",
-      "XPL"
+      "TAO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -45,7 +44,7 @@
         "watcher"
       ],
       "funding": 5e-05,
-      "long_short": 1.29
+      "long_short": 1.24
     },
     {
       "symbol": "BCH",
@@ -54,8 +53,8 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.000209,
-      "long_short": 1.56
+      "funding": 0.00021,
+      "long_short": 1.64
     },
     {
       "symbol": "BTC",
@@ -85,16 +84,7 @@
         "watcher"
       ],
       "funding": 0.0001,
-      "long_short": 2.06
-    },
-    {
-      "symbol": "XPL",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05
+      "long_short": 2.16
     },
     {
       "symbol": "CRV",
@@ -121,20 +111,20 @@
       "funding": 0.0001
     },
     {
-      "symbol": "GRAM",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "HEMI",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 0.000275
+      "funding": 0.000274
+    },
+    {
+      "symbol": "LINK",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "NEIRO",
@@ -145,11 +135,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PEPE",
+      "symbol": "ONDO",
       "surfaces": 1,
       "sources": [
         "coingecko"
-      ]
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "TAO",
@@ -165,7 +156,15 @@
       "sources": [
         "movers"
       ],
-      "funding": 5.2e-05
+      "funding": 5.1e-05
+    },
+    {
+      "symbol": "XPL",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "XRP",
