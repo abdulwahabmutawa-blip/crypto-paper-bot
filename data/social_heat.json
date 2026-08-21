@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-21T13:15:59+00:00",
+  "ts": "2026-08-21T13:22:09+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -7,12 +7,12 @@
       "PUMP",
       "SOL",
       "XRP",
-      "SUI",
-      "PEPE",
       "TAO",
       "ETH",
+      "PEPE",
+      "SUI",
       "ZEC",
-      "AAVE"
+      "GRAM"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,10 +21,10 @@
       "ENA",
       "HEMI",
       "TUT",
-      "XPL",
       "NEIRO",
+      "XPL",
       "BCH",
-      "PUMP"
+      "CRV"
     ],
     "watcher": [
       "ENA",
@@ -48,24 +48,13 @@
       "long_short": 1.29
     },
     {
-      "symbol": "PUMP",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.63
-    },
-    {
       "symbol": "BCH",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": 0.000202,
+      "funding": 0.000201,
       "long_short": 1.56
     },
     {
@@ -79,6 +68,16 @@
       "long_short": 1.02
     },
     {
+      "symbol": "PUMP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "watcher"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.63
+    },
+    {
       "symbol": "XRP",
       "surfaces": 2,
       "sources": [
@@ -89,10 +88,10 @@
       "long_short": 2.61
     },
     {
-      "symbol": "AAVE",
+      "symbol": "CRV",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
       "funding": 0.0001
     },
@@ -105,12 +104,20 @@
       "funding": 0.0001
     },
     {
+      "symbol": "GRAM",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "HEMI",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 0.000323
+      "funding": 0.000312
     },
     {
       "symbol": "NEIRO",
@@ -126,7 +133,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001004
+      "funding": -0.000983
     },
     {
       "symbol": "PEPE",
