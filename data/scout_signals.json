@@ -1,23 +1,8 @@
 {
-  "ts": "2026-08-21T04:31:04+00:00",
-  "scanned": 131,
+  "ts": "2026-08-21T04:36:33+00:00",
+  "scanned": 132,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "INJUSDT",
-      "signal": "ignition",
-      "score": 0.8585,
-      "raw_score": 0.8046,
-      "weight": 1.067,
-      "price": 4.758,
-      "why": "trades 7.7x and volume 13.2x the prior 4h, 61% taker-buy, $155,163 burst \u2014 while price has only moved -0.2%",
-      "chg_24h": 0.0248,
-      "vol_surge": 13.21,
-      "chg_1h": -0.0017,
-      "market_surge": 4.22,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -26,8 +11,8 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 51,
-    "baseline": 13.0,
+    "count": 54,
+    "baseline": 14.0,
     "wave": true
   },
   "scorecard": {
@@ -37,9 +22,9 @@
       "mean_ret_1h": 0.00265,
       "median_ret_1h": 0.00314,
       "n_4h": 30,
-      "hit_rate_4h": 0.567,
-      "mean_ret_4h": 0.00953,
-      "median_ret_4h": 0.00921,
+      "hit_rate_4h": 0.6,
+      "mean_ret_4h": 0.0114,
+      "median_ret_4h": 0.00927,
       "n_24h": 30,
       "hit_rate_24h": 0.933,
       "mean_ret_24h": 0.06056,
@@ -56,8 +41,8 @@
       "median_ret_4h": 0.01209,
       "n_24h": 30,
       "hit_rate_24h": 0.933,
-      "mean_ret_24h": 0.05518,
-      "median_ret_24h": 0.04379
+      "mean_ret_24h": 0.05399,
+      "median_ret_24h": 0.04202
     },
     "reversion": {
       "n_1h": 22,
