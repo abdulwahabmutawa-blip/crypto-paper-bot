@@ -1,23 +1,8 @@
 {
-  "ts": "2026-08-21T08:20:37+00:00",
-  "scanned": 137,
+  "ts": "2026-08-21T08:26:25+00:00",
+  "scanned": 138,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "XRPUSDT",
-      "signal": "breakout",
-      "score": 0.5715,
-      "raw_score": 0.5533,
-      "weight": 1.033,
-      "price": 1.3463,
-      "why": "trades 4.7x, volume 5.9x, 62% taker-buy, +2.2% in an hour, at 95% of its 24h range",
-      "chg_24h": 0.1946,
-      "vol_surge": 5.93,
-      "chg_1h": 0.0215,
-      "market_surge": 1.72,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -26,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 71,
+    "count": 79,
     "baseline": 14.0,
     "wave": true
   },
@@ -41,9 +26,9 @@
       "mean_ret_4h": 0.01338,
       "median_ret_4h": 0.00921,
       "n_24h": 30,
-      "hit_rate_24h": 0.867,
-      "mean_ret_24h": 0.06981,
-      "median_ret_24h": 0.04135
+      "hit_rate_24h": 0.9,
+      "mean_ret_24h": 0.08302,
+      "median_ret_24h": 0.04843
     },
     "breakout": {
       "n_1h": 30,
@@ -55,9 +40,9 @@
       "mean_ret_4h": 0.0169,
       "median_ret_4h": 0.00859,
       "n_24h": 30,
-      "hit_rate_24h": 0.933,
-      "mean_ret_24h": 0.06023,
-      "median_ret_24h": 0.04379
+      "hit_rate_24h": 0.967,
+      "mean_ret_24h": 0.07528,
+      "median_ret_24h": 0.04939
     },
     "reversion": {
       "n_1h": 22,
@@ -76,7 +61,7 @@
     "heat": {
       "n_1h": 30,
       "hit_rate_1h": 0.633,
-      "mean_ret_1h": 0.01355,
+      "mean_ret_1h": 0.01358,
       "median_ret_1h": 0.00618,
       "n_4h": 30,
       "hit_rate_4h": 0.667,
