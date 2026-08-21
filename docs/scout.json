@@ -1,8 +1,23 @@
 {
-  "ts": "2026-08-21T04:59:03+00:00",
-  "scanned": 133,
+  "ts": "2026-08-21T05:05:06+00:00",
+  "scanned": 132,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "NBISBUSDT",
+      "signal": "ignition",
+      "score": 1.0922,
+      "raw_score": 0.9929,
+      "weight": 1.1,
+      "price": 223.0,
+      "why": "trades 32.5x and volume 138.3x the prior 4h, 98% taker-buy, $169,222 burst \u2014 while price has only moved -0.0%",
+      "chg_24h": -0.0199,
+      "vol_surge": 138.27,
+      "chg_1h": -0.0005,
+      "market_surge": 18.94,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 48,
+    "count": 49,
     "baseline": 14.0,
     "wave": true
   },
@@ -23,8 +38,8 @@
       "median_ret_1h": 0.00314,
       "n_4h": 30,
       "hit_rate_4h": 0.6,
-      "mean_ret_4h": 0.0092,
-      "median_ret_4h": 0.00927,
+      "mean_ret_4h": 0.00873,
+      "median_ret_4h": 0.00921,
       "n_24h": 30,
       "hit_rate_24h": 0.933,
       "mean_ret_24h": 0.06056,
@@ -37,7 +52,7 @@
       "median_ret_1h": -0.00055,
       "n_4h": 30,
       "hit_rate_4h": 0.633,
-      "mean_ret_4h": 0.02267,
+      "mean_ret_4h": 0.02244,
       "median_ret_4h": 0.01186,
       "n_24h": 30,
       "hit_rate_24h": 0.933,
@@ -65,8 +80,8 @@
       "median_ret_1h": 0.00455,
       "n_4h": 30,
       "hit_rate_4h": 0.633,
-      "mean_ret_4h": 0.02394,
-      "median_ret_4h": 0.01027,
+      "mean_ret_4h": 0.02544,
+      "median_ret_4h": 0.01037,
       "n_24h": 25,
       "hit_rate_24h": 0.32,
       "mean_ret_24h": -0.07975,
