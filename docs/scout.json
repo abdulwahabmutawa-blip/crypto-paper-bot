@@ -1,23 +1,8 @@
 {
-  "ts": "2026-08-21T23:23:24+00:00",
-  "scanned": 151,
+  "ts": "2026-08-21T23:29:05+00:00",
+  "scanned": 153,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ARUSDT",
-      "signal": "breakout",
-      "score": 0.8206,
-      "raw_score": 0.8796,
-      "weight": 0.933,
-      "price": 2.3,
-      "why": "trades 16.5x, volume 21.9x, 60% taker-buy, +6.7% in an hour, at 95% of its 24h range",
-      "chg_24h": 0.1348,
-      "vol_surge": 21.91,
-      "chg_1h": 0.0668,
-      "market_surge": 7.58,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 53%, mean +0.35% over last 30 at 4h: not beating the round trip",
     "breakout": "actionable",
@@ -26,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 153,
+    "count": 138,
     "baseline": 16.0,
     "wave": true
   },
@@ -75,9 +60,9 @@
     },
     "heat": {
       "n_1h": 30,
-      "hit_rate_1h": 0.767,
-      "mean_ret_1h": 0.01739,
-      "median_ret_1h": 0.00966,
+      "hit_rate_1h": 0.733,
+      "mean_ret_1h": 0.01663,
+      "median_ret_1h": 0.00833,
       "n_4h": 30,
       "hit_rate_4h": 0.867,
       "mean_ret_4h": 0.03135,
