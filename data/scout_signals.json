@@ -1,20 +1,34 @@
 {
-  "ts": "2026-08-21T14:24:13+00:00",
+  "ts": "2026-08-21T14:30:14+00:00",
   "scanned": 154,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "SPCXBUSDT",
+      "symbol": "SNXXBUSDT",
       "signal": "ignition",
-      "score": 0.8748,
-      "raw_score": 0.729,
+      "score": 0.9476,
+      "raw_score": 0.7897,
       "weight": 1.2,
-      "price": 132.86,
-      "why": "trades 4.5x and volume 27.4x the prior 4h, 91% taker-buy, $1,265,415 burst \u2014 while price has only moved -1.2%",
-      "chg_24h": -0.0061,
-      "vol_surge": 27.37,
-      "chg_1h": -0.0115,
-      "market_surge": 8.13,
+      "price": 14.83,
+      "why": "trades 8.7x and volume 7.8x the prior 4h, 62% taker-buy, $168,657 burst \u2014 while price has only moved -0.4%",
+      "chg_24h": -0.0178,
+      "vol_surge": 7.82,
+      "chg_1h": -0.004,
+      "market_surge": 0.0,
+      "actionable": true
+    },
+    {
+      "symbol": "SNDKBUSDT",
+      "signal": "ignition",
+      "score": 0.7794,
+      "raw_score": 0.6495,
+      "weight": 1.2,
+      "price": 1588.32,
+      "why": "trades 4.1x and volume 9.1x the prior 4h, 64% taker-buy, $180,008 burst \u2014 while price has only moved -0.2%",
+      "chg_24h": -0.0082,
+      "vol_surge": 9.09,
+      "chg_1h": -0.0015,
+      "market_surge": 0.0,
       "actionable": true
     }
   ],
@@ -26,7 +40,7 @@
     "revival": "probation \u2014 2/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 131,
+    "count": 143,
     "baseline": 14.0,
     "wave": true
   },
@@ -38,8 +52,8 @@
       "median_ret_1h": 0.00404,
       "n_4h": 30,
       "hit_rate_4h": 0.7,
-      "mean_ret_4h": 0.0215,
-      "median_ret_4h": 0.01243,
+      "mean_ret_4h": 0.0212,
+      "median_ret_4h": 0.01003,
       "n_24h": 30,
       "hit_rate_24h": 0.9,
       "mean_ret_24h": 0.06905,
@@ -80,7 +94,7 @@
       "median_ret_1h": 0.00833,
       "n_4h": 30,
       "hit_rate_4h": 0.8,
-      "mean_ret_4h": 0.03011,
+      "mean_ret_4h": 0.03046,
       "median_ret_4h": 0.02297,
       "n_24h": 30,
       "hit_rate_24h": 0.5,
