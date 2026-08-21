@@ -1,37 +1,8 @@
 {
-  "ts": "2026-08-21T08:49:03+00:00",
-  "scanned": 137,
+  "ts": "2026-08-21T08:54:35+00:00",
+  "scanned": 138,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "WBETHUSDT",
-      "signal": "breakout",
-      "score": 0.8275,
-      "raw_score": 0.7755,
-      "weight": 1.067,
-      "price": 2677.93,
-      "why": "trades 14.9x, volume 19.3x, 76% taker-buy, +2.3% in an hour, at 97% of its 24h range",
-      "chg_24h": 0.0666,
-      "vol_surge": 19.33,
-      "chg_1h": 0.0234,
-      "market_surge": 5.44,
-      "actionable": true
-    },
-    {
-      "symbol": "WBTCUSDT",
-      "signal": "breakout",
-      "score": 0.7274,
-      "raw_score": 0.6817,
-      "weight": 1.067,
-      "price": 77929.13,
-      "why": "trades 5.0x, volume 36.5x, 89% taker-buy, +2.1% in an hour, at 97% of its 24h range",
-      "chg_24h": 0.0885,
-      "vol_surge": 36.54,
-      "chg_1h": 0.0211,
-      "market_surge": 10.85,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -40,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 87,
+    "count": 97,
     "baseline": 14.0,
     "wave": true
   },
@@ -62,7 +33,7 @@
     "breakout": {
       "n_1h": 30,
       "hit_rate_1h": 0.533,
-      "mean_ret_1h": 0.00635,
+      "mean_ret_1h": 0.00611,
       "median_ret_1h": 0.00888,
       "n_4h": 30,
       "hit_rate_4h": 0.567,
@@ -70,8 +41,8 @@
       "median_ret_4h": 0.01048,
       "n_24h": 30,
       "hit_rate_24h": 0.967,
-      "mean_ret_24h": 0.09046,
-      "median_ret_24h": 0.05997
+      "mean_ret_24h": 0.09992,
+      "median_ret_24h": 0.0869
     },
     "reversion": {
       "n_1h": 22,
