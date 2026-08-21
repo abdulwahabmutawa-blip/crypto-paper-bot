@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-21T10:51:59+00:00",
+  "ts": "2026-08-21T10:57:59+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -9,10 +9,10 @@
       "XRP",
       "SUI",
       "POL",
-      "ZEC",
+      "ADA",
+      "NEXO",
       "PEPE",
-      "LIT",
-      "ADA"
+      "ZEC"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -24,7 +24,7 @@
       "PUMP",
       "BCH",
       "XRP",
-      "PEPE"
+      "ZEC"
     ],
     "watcher": [
       "ENA",
@@ -91,12 +91,13 @@
       "long_short": 2.45
     },
     {
-      "symbol": "PEPE",
+      "symbol": "ZEC",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
-      ]
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "ADA",
@@ -112,15 +113,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000152
-    },
-    {
-      "symbol": "LIT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": 0.000149
     },
     {
       "symbol": "NEIRO",
@@ -131,12 +124,26 @@
       "funding": 5e-05
     },
     {
+      "symbol": "NEXO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ]
+    },
+    {
       "symbol": "ONG",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -0.00125
+      "funding": -0.001271
+    },
+    {
+      "symbol": "PEPE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ]
     },
     {
       "symbol": "POL",
@@ -169,14 +176,6 @@
         "movers"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
