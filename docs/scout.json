@@ -1,23 +1,8 @@
 {
-  "ts": "2026-08-21T08:37:35+00:00",
-  "scanned": 135,
+  "ts": "2026-08-21T08:43:06+00:00",
+  "scanned": 137,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "MUBUSDT",
-      "signal": "ignition",
-      "score": 0.8065,
-      "raw_score": 0.6541,
-      "weight": 1.233,
-      "price": 976.23,
-      "why": "trades 5.3x and volume 5.5x the prior 4h, 90% taker-buy, $50,192 burst \u2014 while price has only moved -0.8%",
-      "chg_24h": 0.0326,
-      "vol_surge": 5.55,
-      "chg_1h": -0.0081,
-      "market_surge": 4.84,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -26,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 81,
+    "count": 84,
     "baseline": 14.0,
     "wave": true
   },
@@ -42,22 +27,22 @@
       "median_ret_4h": 0.00921,
       "n_24h": 30,
       "hit_rate_24h": 0.933,
-      "mean_ret_24h": 0.08352,
+      "mean_ret_24h": 0.08354,
       "median_ret_24h": 0.04843
     },
     "breakout": {
       "n_1h": 30,
-      "hit_rate_1h": 0.5,
-      "mean_ret_1h": 0.00431,
-      "median_ret_1h": 0.00324,
+      "hit_rate_1h": 0.533,
+      "mean_ret_1h": 0.00601,
+      "median_ret_1h": 0.00823,
       "n_4h": 30,
       "hit_rate_4h": 0.533,
       "mean_ret_4h": 0.0169,
       "median_ret_4h": 0.00859,
       "n_24h": 30,
       "hit_rate_24h": 0.967,
-      "mean_ret_24h": 0.08065,
-      "median_ret_24h": 0.05343
+      "mean_ret_24h": 0.08453,
+      "median_ret_24h": 0.05404
     },
     "reversion": {
       "n_1h": 22,
@@ -82,9 +67,9 @@
       "hit_rate_4h": 0.667,
       "mean_ret_4h": 0.01901,
       "median_ret_4h": 0.01186,
-      "n_24h": 26,
-      "hit_rate_24h": 0.346,
-      "mean_ret_24h": -0.07466,
+      "n_24h": 27,
+      "hit_rate_24h": 0.37,
+      "mean_ret_24h": -0.07042,
       "median_ret_24h": -0.10234
     },
     "revival": {
