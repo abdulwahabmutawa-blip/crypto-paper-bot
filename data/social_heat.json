@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-21T20:24:19+00:00",
+  "ts": "2026-08-21T20:29:59+00:00",
   "sources": {
     "coingecko": [
       "ENA",
@@ -7,9 +7,10 @@
       "BTC",
       "ETH",
       "PUMP",
+      "SUI",
       "PENDLE",
-      "AERO",
-      "SUI"
+      "TAO",
+      "PEPE"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,8 +21,8 @@
       "PEPE",
       "TUT",
       "NEIRO",
-      "CRV",
-      "HEMI"
+      "HEMI",
+      "XPL"
     ],
     "watcher": [
       "ENA",
@@ -44,46 +45,37 @@
       "long_short": 1.04
     },
     {
+      "symbol": "PEPE",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ]
+    },
+    {
       "symbol": "BCH",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": 0.000163,
+      "funding": 0.000172,
       "long_short": 1.5
-    },
-    {
-      "symbol": "CRV",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.37
-    },
-    {
-      "symbol": "PEPE",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ]
-    },
-    {
-      "symbol": "AERO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "CRV",
+      "surfaces": 1,
+      "sources": [
+        "watcher"
       ],
       "funding": 0.0001
     },
@@ -144,7 +136,23 @@
       "funding": 0.0001
     },
     {
+      "symbol": "TAO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "TUT",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "XPL",
       "surfaces": 1,
       "sources": [
         "movers"
