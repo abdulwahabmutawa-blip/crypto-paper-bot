@@ -1,8 +1,37 @@
 {
-  "ts": "2026-08-21T21:53:14+00:00",
-  "scanned": 148,
+  "ts": "2026-08-21T21:58:36+00:00",
+  "scanned": 150,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ZECUSDT",
+      "signal": "heat",
+      "score": 0.7998,
+      "raw_score": 0.6,
+      "weight": 1.333,
+      "price": 725.39,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.010% \u00b7 L/S 0.69",
+      "chg_24h": 0.2719,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
+      "actionable": true
+    },
+    {
+      "symbol": "ETHUSDT",
+      "signal": "breakout",
+      "score": 0.6259,
+      "raw_score": 0.6472,
+      "weight": 0.967,
+      "price": 2515.24,
+      "why": "trades 4.2x, volume 8.9x, 73% taker-buy, +3.0% in an hour, at 97% of its 24h range",
+      "chg_24h": 0.0848,
+      "vol_surge": 8.9,
+      "chg_1h": 0.0304,
+      "market_surge": 2.88,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,8 +40,8 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 144,
-    "baseline": 15.0,
+    "count": 145,
+    "baseline": 16.0,
     "wave": true
   },
   "scorecard": {
@@ -32,9 +61,9 @@
     },
     "breakout": {
       "n_1h": 30,
-      "hit_rate_1h": 0.567,
-      "mean_ret_1h": 0.00683,
-      "median_ret_1h": 0.00823,
+      "hit_rate_1h": 0.6,
+      "mean_ret_1h": 0.00878,
+      "median_ret_1h": 0.00935,
       "n_4h": 30,
       "hit_rate_4h": 0.467,
       "mean_ret_4h": 0.01124,

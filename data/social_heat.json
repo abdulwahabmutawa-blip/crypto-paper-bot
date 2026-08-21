@@ -1,37 +1,38 @@
 {
-  "ts": "2026-08-21T21:53:09+00:00",
+  "ts": "2026-08-21T21:58:29+00:00",
   "sources": {
     "coingecko": [
-      "LIT",
-      "BTC",
       "ENA",
+      "BTC",
+      "LIT",
       "XRP",
       "ZEC",
       "ETH",
-      "ETHFI",
       "SOL",
+      "ETHFI",
       "LINK",
       "TAO",
-      "GALA",
-      "ONDO"
+      "NEAR",
+      "PEPE"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "BCH",
-      "ENA",
       "ZEC",
+      "ENA",
       "TUT",
-      "PEPE",
       "AAVE",
+      "PEPE",
       "CRV",
       "PENGU"
     ],
     "watcher": [
       "ENA",
+      "ZEC",
       "BCH",
       "PEPE",
-      "CRV"
+      "AAVE"
     ],
     "cryptopanic": []
   },
@@ -48,56 +49,58 @@
       "long_short": 1.12
     },
     {
-      "symbol": "BCH",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": 0.000222,
-      "long_short": 1.53
-    },
-    {
-      "symbol": "CRV",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.47
-    },
-    {
       "symbol": "PEPE",
-      "surfaces": 2,
+      "surfaces": 3,
       "sources": [
+        "coingecko",
         "movers",
         "watcher"
       ]
     },
     {
       "symbol": "ZEC",
-      "surfaces": 2,
+      "surfaces": 3,
       "sources": [
         "coingecko",
-        "movers"
+        "movers",
+        "watcher"
       ],
       "funding": 0.0001,
       "long_short": 0.69
     },
     {
       "symbol": "AAVE",
-      "surfaces": 1,
+      "surfaces": 2,
       "sources": [
-        "movers"
+        "movers",
+        "watcher"
       ],
-      "funding": 0.0001
+      "funding": 0.0001,
+      "long_short": 1.52
+    },
+    {
+      "symbol": "BCH",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": 0.00022,
+      "long_short": 1.53
     },
     {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "CRV",
+      "surfaces": 1,
+      "sources": [
+        "movers"
       ],
       "funding": 0.0001
     },
@@ -118,14 +121,6 @@
       "funding": 5e-05
     },
     {
-      "symbol": "GALA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "LINK",
       "surfaces": 1,
       "sources": [
@@ -142,12 +137,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "ONDO",
+      "symbol": "NEAR",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 0.0001
     },
     {
       "symbol": "PENGU",
