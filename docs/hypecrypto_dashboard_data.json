@@ -1,27 +1,27 @@
 {
-  "generated_utc": "2026-08-20T23:54:32+00:00",
+  "generated_utc": "2026-08-21T00:08:01+00:00",
   "created": "2026-08-15",
   "starting_cash": 1000.0,
-  "live_ts": "2026-08-20T23:54:32+00:00",
+  "live_ts": "2026-08-21T00:08:01+00:00",
   "current": {
-    "date": "2026-08-20",
-    "value": 996.1,
-    "bench": 1160.49,
-    "holding": "CASH"
+    "date": "2026-08-21",
+    "value": 994.7,
+    "bench": 1163.61,
+    "holding": "ONG-USD"
   },
   "board": [
     {
       "sym": "ONG",
-      "price": 0.1215,
+      "price": 0.1196,
       "line": "euphoric \u00b7 Binance top +107% mover",
-      "tag": "candidate",
+      "tag": "HELD",
       "on": true,
-      "pick": false,
+      "pick": true,
       "fill": 40
     },
     {
       "sym": "PUMP",
-      "price": 0.0039,
+      "price": 0.0038,
       "line": "euphoric \u00b7 Top mover +27% trending",
       "tag": "candidate",
       "on": true,
@@ -30,7 +30,7 @@
     },
     {
       "sym": "ENA",
-      "price": 0.1179,
+      "price": 0.1176,
       "line": "euphoric \u00b7 Top mover +23% heat",
       "tag": "candidate",
       "on": true,
@@ -39,7 +39,7 @@
     },
     {
       "sym": "XRP",
-      "price": 1.2687,
+      "price": 1.2645,
       "line": "euphoric \u00b7 +15% onchain pattern hype",
       "tag": "candidate",
       "on": true,
@@ -2094,6 +2094,12 @@
       "value": 996.1,
       "bench": 1160.49,
       "holding": "CASH"
+    },
+    {
+      "ts": "2026-08-21T00:08:01+00:00",
+      "value": 994.7,
+      "bench": 1163.61,
+      "holding": "ONG-USD"
     }
   ],
   "trades": [
@@ -2176,6 +2182,16 @@
       "value": 997.49,
       "fee": 1.4,
       "reason": "Hype faded \u2014 coin dropped off a newer euphoric scan"
+    },
+    {
+      "date": "2026-08-21",
+      "action": "BUY",
+      "ticker": "ONG-USD",
+      "price": 0.11955,
+      "units": 8320.39307,
+      "value": 994.7,
+      "fee": 1.39,
+      "reason": "Grok: ONG euphoric \u2014 Binance top +107% mover (scan 2026-08-20T23:13)"
     }
   ],
   "history": [
@@ -2208,11 +2224,17 @@
       "value": 996.1,
       "bench": 1160.49,
       "holding": "CASH"
+    },
+    {
+      "date": "2026-08-21",
+      "value": 994.7,
+      "bench": 1163.61,
+      "holding": "ONG-USD"
     }
   ],
-  "costs_paid": 11.7027,
+  "costs_paid": 13.0972,
   "frozen": null,
-  "thoughts": "I'm in cash. I buy only the freshest euphoric crypto (scan under 9h old), one entry a day, never on weekends \u2014 lukewarm or aging hype is how small accounts bleed out in fees.",
+  "thoughts": "I'm riding ONG from the 2026-08-20T23:13 scan. My exit is mechanical: a newer scan without it, -10% from entry, or a blind/severe Watcher \u2014 whichever comes first.",
   "strategy": {
     "name": "Hype Crypto \u2014 sentiment pattern, crypto venue, on trial",
     "rule": "Top euphoric crypto from a fresh Watcher scan; 1 entry/day max; -10% hard stop; exit on newer scan without the coin, stale scans, or SEVERE; Binance-tier fees",

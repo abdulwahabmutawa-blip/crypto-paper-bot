@@ -1,14 +1,15 @@
 {
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "holding": "XRP-USD",
-  "units": 1266.3011250867269,
-  "cash": 0.0,
-  "entry_price": 1.3171000480651855,
+  "holding": "CASH",
+  "units": 0.0,
+  "cash": 1394.4511157695586,
+  "entry_price": null,
   "bench_units": 1.332054612938296,
   "stopped": {
     "SHIB-USD": "2026-07-27T00:01:08+00:00",
-    "NLST": "2026-08-17T18:05:32+00:00"
+    "NLST": "2026-08-17T18:05:32+00:00",
+    "XRP-USD": "2026-08-20T23:13:11+00:00"
   },
   "trades": [
     {
@@ -377,6 +378,16 @@
       "value": 1667.85,
       "fee": 4.85,
       "reason": "Grok: XRP euphoric \u2014 Big mover on banker-hours flow and rally (scan 2026-08-20T17:04)"
+    },
+    {
+      "date": "2026-08-21",
+      "action": "SELL",
+      "ticker": "XRP-USD",
+      "price": 1.10440302,
+      "units": 1266.3011,
+      "value": 1398.51,
+      "fee": 4.06,
+      "reason": "STOP-LOSS hit (-16.1% from entry) \u2014 hype that bleeds gets cut"
     }
   ],
   "history": [
@@ -551,18 +562,12 @@
     },
     {
       "date": "2026-08-20",
-      "value": 1605.42,
+      "value": 1394.45,
       "bench": 1015.82,
-      "holding": "XRP-USD"
+      "holding": "CASH"
     }
   ],
   "intraday": [
-    {
-      "ts": "2026-07-29T18:12:58+00:00",
-      "value": 896.16,
-      "bench": 982.76,
-      "holding": "CASH"
-    },
     {
       "ts": "2026-07-29T18:26:11+00:00",
       "value": 896.16,
@@ -9556,9 +9561,15 @@
       "value": 1605.42,
       "bench": 1015.82,
       "holding": "XRP-USD"
+    },
+    {
+      "ts": "2026-08-21T00:07:58+00:00",
+      "value": 1394.45,
+      "bench": 1015.82,
+      "holding": "CASH"
     }
   ],
-  "last_updated_utc": "2026-08-20T23:54:27+00:00",
+  "last_updated_utc": "2026-08-21T00:07:58+00:00",
   "restatement": {
     "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)",
     "voided_trades": [
@@ -9637,5 +9648,5 @@
     ],
     "voided_reason": "signal faded before any real fill was possible (market closed the whole window) \u2014 trades could never have existed"
   },
-  "costs_paid": 30.2039
+  "costs_paid": 34.2596
 }

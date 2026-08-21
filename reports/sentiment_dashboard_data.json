@@ -1,13 +1,13 @@
 {
-  "generated_utc": "2026-08-20T23:54:27+00:00",
+  "generated_utc": "2026-08-21T00:07:58+00:00",
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "live_ts": "2026-08-20T23:54:27+00:00",
+  "live_ts": "2026-08-21T00:07:58+00:00",
   "current": {
     "date": "2026-08-20",
-    "value": 1605.42,
+    "value": 1394.45,
     "bench": 1015.82,
-    "holding": "XRP-USD"
+    "holding": "CASH"
   },
   "board": [
     {
@@ -39,11 +39,11 @@
     },
     {
       "sym": "XRP",
-      "price": 1.27,
+      "price": 1.1,
       "line": "euphoric \u00b7 15% jump banker hours",
-      "tag": "HELD",
+      "tag": "stopped",
       "on": true,
-      "pick": true,
+      "pick": false,
       "fill": 40
     }
   ],
@@ -55,12 +55,6 @@
     "board_note": "Buys the crowd's loudest euphoria, rides it while it lasts, cuts it at -10%, and refuses to trade in a severe-risk tape. Weakest-evidence strategy in the fleet \u2014 hence the strictest guards."
   },
   "intraday": [
-    {
-      "ts": "2026-07-29T18:12:58+00:00",
-      "value": 896.16,
-      "bench": 982.76,
-      "holding": "CASH"
-    },
     {
       "ts": "2026-07-29T18:26:11+00:00",
       "value": 896.16,
@@ -9054,18 +9048,15 @@
       "value": 1605.42,
       "bench": 1015.82,
       "holding": "XRP-USD"
+    },
+    {
+      "ts": "2026-08-21T00:07:58+00:00",
+      "value": 1394.45,
+      "bench": 1015.82,
+      "holding": "CASH"
     }
   ],
   "trades": [
-    {
-      "date": "2026-08-03",
-      "action": "SELL",
-      "ticker": "PLTR",
-      "price": 125.85,
-      "units": 7.7962,
-      "value": 981.15,
-      "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
-    },
     {
       "date": "2026-08-03",
       "action": "BUY",
@@ -9252,6 +9243,16 @@
       "value": 1667.85,
       "fee": 4.85,
       "reason": "Grok: XRP euphoric \u2014 Big mover on banker-hours flow and rally (scan 2026-08-20T17:04)"
+    },
+    {
+      "date": "2026-08-21",
+      "action": "SELL",
+      "ticker": "XRP-USD",
+      "price": 1.10440302,
+      "units": 1266.3011,
+      "value": 1398.51,
+      "fee": 4.06,
+      "reason": "STOP-LOSS hit (-16.1% from entry) \u2014 hype that bleeds gets cut"
     }
   ],
   "history": [
@@ -9426,14 +9427,14 @@
     },
     {
       "date": "2026-08-20",
-      "value": 1605.42,
+      "value": 1394.45,
       "bench": 1015.82,
-      "holding": "XRP-USD"
+      "holding": "CASH"
     }
   ],
-  "costs_paid": 30.2039,
+  "costs_paid": 34.2596,
   "frozen": null,
-  "thoughts": "I'm riding XRP because the Watcher's latest scan of X and the news says the crowd is most excited about it right now. I know hype is the weakest evidence there is \u2014 so my rules are the strictest in the fleet: the moment the excitement fades from the scans I sell, and if I'm down 10% from my buy price I sell no matter what.",
+  "thoughts": "I'm in cash. The crowd isn't truly excited about anything on the latest scan \u2014 and I only ever buy genuine euphoria. Chasing lukewarm hype is how sentiment traders lose; I wait for a loud one.",
   "strategy": {
     "name": "Hype Trader \u2014 rides the Watcher's reads, on trial",
     "rule": "Hold the top euphoric symbol from the Watcher's 8-hour Grok scans while it stays euphoric; -10% hard stop; Watcher severe verdict -> cash",
