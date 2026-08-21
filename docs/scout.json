@@ -1,8 +1,23 @@
 {
-  "ts": "2026-08-21T01:44:16+00:00",
-  "scanned": 125,
+  "ts": "2026-08-21T01:50:04+00:00",
+  "scanned": 124,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "MSTRBUSDT",
+      "signal": "breakout",
+      "score": 0.9609,
+      "raw_score": 0.8234,
+      "weight": 1.167,
+      "price": 118.59,
+      "why": "trades 8.8x, volume 17.2x, 88% taker-buy, +3.1% in an hour, at 99% of its 24h range",
+      "chg_24h": 0.0907,
+      "vol_surge": 17.19,
+      "chg_1h": 0.0309,
+      "market_surge": 2.36,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 42,
+    "count": 46,
     "baseline": 13.0,
     "wave": true
   },
