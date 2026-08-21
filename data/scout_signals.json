@@ -1,8 +1,23 @@
 {
-  "ts": "2026-08-21T04:14:26+00:00",
+  "ts": "2026-08-21T04:19:46+00:00",
   "scanned": 130,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "XRPUSDT",
+      "signal": "heat",
+      "score": 0.66,
+      "raw_score": 0.6,
+      "weight": 1.1,
+      "price": 1.3127,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.010% \u00b7 L/S 2.74",
+      "chg_24h": 0.1977,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 49,
+    "count": 51,
     "baseline": 13.0,
     "wave": true
   },
