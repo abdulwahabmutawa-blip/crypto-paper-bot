@@ -354,6 +354,74 @@ def watcher_earned(round_trips: list[float]) -> tuple[bool, str]:
     return True, (f"earned — twin last {n}: {wins} wins, mean {mean:+.2%}")
 
 
+# ---- FUEL-GONE exit (owner-directed 2026-08-21, replaces the stall clock) ---
+# The exit-timing audit (reports/exit_timing.md) found the book's signature
+# error is EARLY exits, and every one of them was the STALL CLOCK: stalls
+# surrendered only +1.6% of their in-hold peak on average, then the coins ran
+# +5.5% within 24h of the sell. Meanwhile the 08-15..08-21 rally made BTC
+# +22% while this book made -7% — with the scout's own flagged coins at a
+# median +18%: signal detection was fine, the clock was selling correctly
+# identified moves 2-4h into a 24-48h resolution. A clock knows nothing about
+# a thesis. This check does: an ignition/breakout entry IS a volume event, so
+# the position dies when the VOLUME dies (and it never paid, and the market
+# pulse is not in a wave regime where coins re-ignite). The stop-loss,
+# ratchet, trailing stop and max-hold cap all remain untouched above it.
+FUEL_MIN_SURGE = 1.5     # thesis alive while the last closed hour still runs
+                         # >=1.5x the pre-entry hourly-volume baseline
+FUEL_MIN_CLOSED_H = 2    # need >=2 fully closed post-entry hours to judge —
+                         # a measurement floor, not a stall clock: one hourly
+                         # candle is noise, and judging on the partial
+                         # forming hour would eject every fresh entry
+FUEL_MIN_GAIN = 0.03     # a seat >=+3% is paying; the ratchet/trailing
+                         # leash manage winners, fuel-gone only judges duds
+
+
+def fuel_surge(symbol: str, entry_ms: int) -> float | None:
+    """Last closed post-entry hourly quote volume vs the pre-entry baseline.
+
+    Baseline = median hourly quote volume of the closed hours BEFORE entry
+    (needs >=6 to mean anything). None = cannot judge yet, which refuses to
+    exit — unknown must never fire a sell."""
+    k = _call("GET", "/v3/klines",
+              {"symbol": symbol, "interval": "1h", "limit": 30})
+    try:
+        now_ms = time.time() * 1000
+        closed = [r for r in k if float(r[6]) < now_ms]
+        before = [float(r[7]) for r in closed if float(r[6]) <= entry_ms]
+        after = [r for r in closed if float(r[0]) >= entry_ms]
+        if len(before) < 6 or len(after) < FUEL_MIN_CLOSED_H:
+            return None
+        base = sorted(before)[len(before) // 2]
+        if base <= 0:
+            return None
+        return float(after[-1][7]) / base
+    except Exception:
+        return None
+
+
+def fuel_verdict(surge: float | None, pnl_frac: float | None,
+                 wave_active: bool) -> str | None:
+    """Pure verdict: exit reason iff the thesis is measurably dead.
+
+    Three concrete conditions, ALL required — no elapsed-time input:
+      1. the volume surge is gone (fuel below FUEL_MIN_SURGE x baseline)
+      2. the seat never paid (under FUEL_MIN_GAIN)
+      3. the market pulse is not in a breadth wave (waves re-ignite coins;
+         the stop/ratchet/trailing leash carry the downside meanwhile)
+    """
+    if surge is None or pnl_frac is None:
+        return None
+    if wave_active:
+        return None
+    if pnl_frac >= FUEL_MIN_GAIN:
+        return None
+    if surge >= FUEL_MIN_SURGE:
+        return None
+    return (f"FUEL GONE — hourly volume {surge:.1f}x its pre-entry baseline "
+            f"(floor {FUEL_MIN_SURGE}x) and only {pnl_frac:+.1%}: the surge "
+            f"this entry bought is over and it never paid")
+
+
 def trail_pct(gain: float | None) -> float:
     """Progressive trailing stop: the more a ride has paid, the tighter it
     is held. The 2y study's retention gradient is monotonic — +50-100%

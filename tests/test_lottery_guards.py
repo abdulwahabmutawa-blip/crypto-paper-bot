@@ -226,6 +226,24 @@ stale_glory = [0.5] * 10 + [-0.05] * 10
 ok, _ = bl.watcher_earned(stale_glory)
 assert not ok, "ten old wins must not arm a signal that lost its last ten"
 
+# --- fuel-gone verdict (08-21, replaced the stall clock): three concrete
+# conditions, ALL required, no elapsed-time input --------------------------
+# dead fuel + never paid + no wave -> exit
+assert bl.fuel_verdict(0.8, 0.01, False) is not None
+assert "FUEL GONE" in bl.fuel_verdict(0.8, 0.01, False)
+# any single condition alive -> hold
+assert bl.fuel_verdict(2.0, 0.01, False) is None, "surge alive must hold"
+assert bl.fuel_verdict(0.8, 0.04, False) is None, "a paying seat must hold"
+assert bl.fuel_verdict(0.8, 0.01, True) is None, "a wave regime must hold"
+# unknown must never fire a sell
+assert bl.fuel_verdict(None, 0.01, False) is None
+assert bl.fuel_verdict(0.8, None, False) is None
+# boundary: exactly at the floors -> hold (floors are alive, not dead)
+assert bl.fuel_verdict(bl.FUEL_MIN_SURGE, 0.01, False) is None
+assert bl.fuel_verdict(0.8, bl.FUEL_MIN_GAIN, False) is None
+# a losing-but-fueled seat holds: the stop-loss owns that exit, not fuel
+assert bl.fuel_verdict(3.0, -0.04, False) is None
+
 # --- tripwires: these asserts fail any casual edit that widens the blast
 # radius. Changing them is a deliberate reviewed act, which is the point.
 assert not hasattr(bl, "BOOK_CAP_USD"), \

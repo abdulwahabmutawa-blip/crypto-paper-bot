@@ -36,7 +36,9 @@ fast exits and the Watcher owns the slow qualitative ones:
   1. -10% hard stop from entry
   2. progressive trailing stop from the high-water mark (-15% while small,
      tightening to -8% past +100% — binance_live.trail_pct)  <- anti-crash
-  3. stalled: 6h in and under +3% — the pump never came
+  3. FUEL GONE (08-21, replaced the stall clock): volume surge dead vs
+     pre-entry baseline AND under +3% AND no breadth wave — thesis-based,
+     not clock-based (binance_live.fuel_verdict)
   4. max hold 24h — hype has a half-life, never marry a coin
   5. momentum gone: no longer a top-25 24h mover
   6. Watcher SEVERE, or scans stale > 24h (a blind risk officer grounds it)
@@ -72,7 +74,24 @@ SENTINEL = config.DATA / "sentinel_state.json"
 # hold a winner). The trailing stop is PROGRESSIVE — binance_live.
 # trail_pct(): -15% while small, -10% past +50%, -8% past +100% — because
 # the study's retention gradient says big gains die most completely.
-STALL_MIN_GAIN = 0.03   # stalled unless at least this far ahead
+STALL_MIN_GAIN = 0.03   # legacy name; the fuel-gone check now carries this
+                        # threshold as binance_live.FUEL_MIN_GAIN
+
+
+def wave_fresh() -> bool:
+    """Is a breadth wave active on FRESH data right now? Used by the
+    fuel-gone exit as its market-pulse input: a wave regime holds seats
+    (coins re-ignite), so a stale or missing breadth file must read as
+    'no wave' — failing toward the exit being ALLOWED, i.e. the old
+    conservative behavior, never toward an indefinite hold."""
+    try:
+        bd = json.loads((config.DATA / "breadth.json").read_text())
+        hist = bd.get("history") or []
+        fresh = hist and (datetime.now(timezone.utc) - datetime.fromisoformat(
+            hist[-1]["ts"])).total_seconds() < 2700
+        return bool(fresh and bd.get("wave"))
+    except Exception:
+        return False
 # Re-entry cooldown after ANY protective exit (audit 08-15: the old
 # blacklist was keyed on the Watcher's scan_ts — meaningless for scout
 # entries, and only the hard stop set it, so a trailing-stopped coin could
@@ -336,14 +355,30 @@ def main():
                     f"{hwm:.8g} peak, leash {tp:.0%}) — riding it down is "
                     f"not the strategy"):
                 held = None
-        # stall: hours in, still not meaningfully ahead. Hype that has not
-        # paid by now is decay, and every hour held is a hour of exposure.
-        if held and p and entry and stall_h is not None \
-                and held_h is not None and held_h >= stall_h \
-                and p / entry - 1 < STALL_MIN_GAIN:
-            if sell(f"STALLED ({held_h:.1f}h in, only "
-                    f"{(p / entry - 1):+.1%}) — the pump never came"):
-                held = None
+        # FUEL GONE (owner-directed 08-21, replaces the stall CLOCK): the
+        # exit audit proved stalls were the book's signature early-exit
+        # machine (+1.6% avg giveback, +5.5% avg post-exit run — selling
+        # correctly identified moves 2-4h into 24-48h resolutions, while
+        # BTC made +22% and this book -7%). A clock knows nothing about a
+        # thesis; this judges the thesis itself: exit only when the volume
+        # surge that justified the entry is measurably dead AND the seat
+        # never paid AND the market pulse is not in a wave regime (waves
+        # re-ignite coins — the stop/ratchet/trailing leash still protect).
+        # stall_h now only marks WHICH seats are thesis-checked (burst/hype
+        # seats; grind seats keep None and are exempt, unchanged).
+        if held and p and entry and stall_h is not None:
+            entry_ms = None
+            try:
+                entry_ms = int(datetime.fromisoformat(
+                    st["entry_time"]).timestamp() * 1000)
+            except Exception:
+                pass
+            if entry_ms:
+                why = binance_live.fuel_verdict(
+                    binance_live.fuel_surge(held, entry_ms),
+                    p / entry - 1, wave_fresh())
+                if why and sell(why):
+                    held = None
         # hard time cap: never marry a coin
         if held and held_h is not None and held_h >= max_hold:
             if sell(f"MAX HOLD ({held_h:.0f}h) — hype has a half-life"):
