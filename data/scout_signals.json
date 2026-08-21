@@ -1,21 +1,36 @@
 {
-  "ts": "2026-08-21T00:31:14+00:00",
-  "scanned": 120,
+  "ts": "2026-08-21T00:37:04+00:00",
+  "scanned": 121,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "TRUMPUSDT",
+      "symbol": "ORDIUSDT",
       "signal": "ignition",
-      "score": 0.8352,
-      "raw_score": 0.7827,
+      "score": 0.7703,
+      "raw_score": 0.722,
       "weight": 1.067,
-      "price": 1.646,
-      "why": "trades 7.1x and volume 27.8x the prior 4h, 61% taker-buy, $756,713 burst \u2014 while price has only moved -0.2%",
-      "chg_24h": -0.1165,
-      "vol_surge": 27.85,
-      "chg_1h": -0.0018,
-      "market_surge": 0.0,
+      "price": 4.158,
+      "why": "trades 4.1x and volume 11.6x the prior 4h, 85% taker-buy, $65,707 burst \u2014 while price has only moved -0.2%",
+      "chg_24h": 0.1368,
+      "vol_surge": 11.61,
+      "chg_1h": -0.0017,
+      "market_surge": 0.07,
       "actionable": true
+    },
+    {
+      "symbol": "BOMEUSDT",
+      "signal": "heat",
+      "score": 0.6198,
+      "raw_score": 0.6,
+      "weight": 1.033,
+      "price": 0.0011613,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.005% \u00b7 L/S 0.94",
+      "chg_24h": 0.3301,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
+      "actionable": false,
+      "status": "benched \u2014 hit 53%, mean +0.37% over last 30 at 4h: not beating the round trip"
     }
   ],
   "gate": {
@@ -26,7 +41,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 40,
+    "count": 38,
     "baseline": 13.0,
     "wave": true
   },
@@ -34,7 +49,7 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.4,
-      "mean_ret_1h": -0.00251,
+      "mean_ret_1h": -0.00455,
       "median_ret_1h": -0.00148,
       "n_4h": 30,
       "hit_rate_4h": 0.567,
