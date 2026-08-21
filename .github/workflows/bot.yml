@@ -114,7 +114,7 @@ jobs:
             for s in crypto_tracker congress_tracker \
                      bot_meanrev bot_commodity bot_allweather bot_scholar \
                      grok_sentinel sentinel_trader hunter_tracker analyst_agent \
-                     hype_crypto_tracker; do
+                     hype_crypto_tracker exit_auditor; do
               # 7-minute ceiling per bot: urlopen(timeout=) is a per-read
               # deadline, not a total one, and several bots make agentic or
               # unpinned-library calls that can stall far longer than that
@@ -125,7 +125,7 @@ jobs:
             done
             # one bot failing is a transient; ALL bots failing is systemic —
             # abort loudly instead of warning eleven times and committing anyway
-            if [ "$fails" -ge 11 ]; then
+            if [ "$fails" -ge 12 ]; then
               echo "::error::every bot failed this cycle — systemic fault, aborting loop"
               exit 1
             fi
