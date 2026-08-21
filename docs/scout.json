@@ -1,37 +1,8 @@
 {
-  "ts": "2026-08-21T17:02:34+00:00",
-  "scanned": 152,
+  "ts": "2026-08-21T17:08:14+00:00",
+  "scanned": 151,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "SPKUSDT",
-      "signal": "ignition",
-      "score": 0.9656,
-      "raw_score": 0.8523,
-      "weight": 1.133,
-      "price": 0.017917,
-      "why": "trades 9.3x and volume 10.5x the prior 4h, 71% taker-buy, $139,984 burst \u2014 while price has only moved +1.9%",
-      "chg_24h": 0.2237,
-      "vol_surge": 10.46,
-      "chg_1h": 0.0187,
-      "market_surge": 5.84,
-      "actionable": true
-    },
-    {
-      "symbol": "REDUSDT",
-      "signal": "ignition",
-      "score": 0.7127,
-      "raw_score": 0.6291,
-      "weight": 1.133,
-      "price": 0.1277,
-      "why": "trades 5.7x and volume 5.4x the prior 4h, 67% taker-buy, $75,110 burst \u2014 while price has only moved -0.1%",
-      "chg_24h": 0.2166,
-      "vol_surge": 5.35,
-      "chg_1h": -0.0008,
-      "market_surge": 3.4,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -40,7 +11,7 @@
     "revival": "probation \u2014 2/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 106,
+    "count": 108,
     "baseline": 15.0,
     "wave": true
   },
@@ -52,11 +23,11 @@
       "median_ret_1h": 0.0036,
       "n_4h": 30,
       "hit_rate_4h": 0.633,
-      "mean_ret_4h": 0.01936,
-      "median_ret_4h": 0.00989,
+      "mean_ret_4h": 0.01876,
+      "median_ret_4h": 0.00451,
       "n_24h": 30,
       "hit_rate_24h": 0.933,
-      "mean_ret_24h": 0.0791,
+      "mean_ret_24h": 0.07978,
       "median_ret_24h": 0.06835
     },
     "breakout": {
@@ -66,8 +37,8 @@
       "median_ret_1h": 0.00888,
       "n_4h": 30,
       "hit_rate_4h": 0.533,
-      "mean_ret_4h": 0.01546,
-      "median_ret_4h": 0.00899,
+      "mean_ret_4h": 0.01425,
+      "median_ret_4h": 0.00513,
       "n_24h": 30,
       "hit_rate_24h": 0.967,
       "mean_ret_24h": 0.12161,
