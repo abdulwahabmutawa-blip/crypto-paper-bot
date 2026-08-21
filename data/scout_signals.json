@@ -1,20 +1,34 @@
 {
-  "ts": "2026-08-21T06:00:16+00:00",
-  "scanned": 137,
+  "ts": "2026-08-21T06:06:24+00:00",
+  "scanned": 135,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "PNUTUSDT",
+      "symbol": "GRAMUSDT",
       "signal": "breakout",
-      "score": 0.7949,
-      "raw_score": 0.7695,
+      "score": 0.8017,
+      "raw_score": 0.7761,
       "weight": 1.033,
-      "price": 0.0537,
-      "why": "trades 10.9x, volume 18.6x, 74% taker-buy, +2.3% in an hour, at 97% of its 24h range",
-      "chg_24h": 0.1311,
-      "vol_surge": 18.62,
-      "chg_1h": 0.0229,
-      "market_surge": 4.54,
+      "price": 1.482,
+      "why": "trades 7.1x, volume 10.0x, 60% taker-buy, +4.4% in an hour, at 102% of its 24h range",
+      "chg_24h": 0.094,
+      "vol_surge": 10.04,
+      "chg_1h": 0.0444,
+      "market_surge": 8.89,
+      "actionable": true
+    },
+    {
+      "symbol": "ZECUSDT",
+      "signal": "ignition",
+      "score": 0.7922,
+      "raw_score": 0.6601,
+      "weight": 1.2,
+      "price": 603.78,
+      "why": "trades 4.2x and volume 9.0x the prior 4h, 82% taker-buy, $3,406,863 burst \u2014 while price has only moved +1.5%",
+      "chg_24h": 0.0955,
+      "vol_surge": 8.97,
+      "chg_1h": 0.0151,
+      "market_surge": 4.96,
       "actionable": true
     }
   ],
@@ -26,15 +40,15 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 65,
+    "count": 70,
     "baseline": 14.0,
     "wave": true
   },
   "scorecard": {
     "ignition": {
       "n_1h": 30,
-      "hit_rate_1h": 0.7,
-      "mean_ret_1h": 0.00289,
+      "hit_rate_1h": 0.667,
+      "mean_ret_1h": 0.00277,
       "median_ret_1h": 0.00314,
       "n_4h": 30,
       "hit_rate_4h": 0.7,
@@ -56,7 +70,7 @@
       "median_ret_4h": 0.00859,
       "n_24h": 30,
       "hit_rate_24h": 0.933,
-      "mean_ret_24h": 0.05316,
+      "mean_ret_24h": 0.05675,
       "median_ret_24h": 0.04202
     },
     "reversion": {
