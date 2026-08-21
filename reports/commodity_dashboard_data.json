@@ -1,50 +1,50 @@
 {
-  "generated_utc": "2026-08-21T13:16:38+00:00",
+  "generated_utc": "2026-08-21T13:30:04+00:00",
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "live_ts": "2026-08-20T19:55:00+00:00",
+  "live_ts": "2026-08-21T13:30:00+00:00",
   "current": {
-    "date": "2026-08-20",
-    "value": 1057.25,
-    "bench": 1015.82,
-    "holding": "DBC"
+    "date": "2026-08-21",
+    "value": 1060.48,
+    "bench": 1020.02,
+    "holding": "USO"
   },
   "board": [
     {
-      "sym": "DBC",
-      "price": 31.11,
-      "line": "Broad basket \u00b7 mom90 +7.4% \u00b7 MA gap +16.7%",
+      "sym": "USO",
+      "price": 134.98,
+      "line": "Oil \u00b7 mom90 +9.0% \u00b7 MA gap +29.4%",
       "tag": "HELD",
       "on": true,
       "pick": true,
-      "fill": 7.424038652790088
+      "fill": 8.986675325428939
     },
     {
-      "sym": "USO",
-      "price": 134.53,
-      "line": "Oil \u00b7 mom90 +4.7% \u00b7 MA gap +29.3%",
+      "sym": "DBC",
+      "price": 31.28,
+      "line": "Broad basket \u00b7 mom90 +8.5% \u00b7 MA gap +17.2%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 4.7170526200767116
+      "fill": 8.460473374299449
     },
     {
       "sym": "GLD",
-      "price": 415.26,
-      "line": "Gold \u00b7 mom90 -4.6% \u00b7 MA gap +0.5%",
+      "price": 420.42,
+      "line": "Gold \u00b7 mom90 -5.5% \u00b7 MA gap +1.7%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": -4.6168633457910335
+      "fill": -5.542695435335732
     },
     {
       "sym": "SLV",
-      "price": 61.67,
-      "line": "Silver \u00b7 mom90 -9.7% \u00b7 MA gap -4.3%",
+      "price": 62.89,
+      "line": "Silver \u00b7 mom90 -12.7% \u00b7 MA gap -2.6%",
       "tag": "below MA",
       "on": false,
       "pick": false,
-      "fill": -9.680727487587149
+      "fill": -12.701279024979485
     }
   ],
   "board_title": "4 commodity ETFs ranked by 90-day momentum",
@@ -55,12 +55,6 @@
     "board_note": "Commodities often trend when stocks and crypto chop \u2014 this bot rides whichever of gold/silver/oil/basket is trending, or stands aside."
   },
   "intraday": [
-    {
-      "ts": "2026-07-30T09:48:48+00:00",
-      "value": 1084.26,
-      "bench": 971.74,
-      "holding": "USO"
-    },
     {
       "ts": "2026-07-30T15:55:36+00:00",
       "value": 1071.9,
@@ -9054,6 +9048,12 @@
       "value": 1057.25,
       "bench": 1015.82,
       "holding": "DBC"
+    },
+    {
+      "ts": "2026-08-21T13:30:04+00:00",
+      "value": 1060.48,
+      "bench": 1020.02,
+      "holding": "USO"
     }
   ],
   "trades": [
@@ -9084,6 +9084,26 @@
       "units": 33.9843,
       "value": 967.46,
       "fee": 1.21,
+      "reason": "Strongest commodity above its 200-day MA"
+    },
+    {
+      "date": "2026-08-21",
+      "action": "SELL",
+      "ticker": "DBC",
+      "price": 31.28000069,
+      "units": 33.9843,
+      "value": 1063.03,
+      "fee": 1.33,
+      "reason": "Signal flip"
+    },
+    {
+      "date": "2026-08-21",
+      "action": "BUY",
+      "ticker": "USO",
+      "price": 134.97999573,
+      "units": 7.8566,
+      "value": 1060.48,
+      "fee": 1.22,
       "reason": "Strongest commodity above its 200-day MA"
     }
   ],
@@ -9243,6 +9263,12 @@
       "value": 1057.25,
       "bench": 1015.82,
       "holding": "DBC"
+    },
+    {
+      "date": "2026-08-21",
+      "value": 1060.48,
+      "bench": 1020.02,
+      "holding": "USO"
     }
   ],
   "strategy": {
@@ -9251,7 +9277,7 @@
     "backtest_cagr": "+8.7%/yr since 2010 \u00b7 +33.8%/yr 2024+ (beat SPY)",
     "backtest_maxdd": "-63% (2010s commodity winter) \u00b7 -47% recent"
   },
-  "costs_paid": 2.3261,
+  "costs_paid": 4.8759,
   "frozen": null,
-  "thoughts": "I'm holding DBC. Strongest commodity above its 200-day MA. I bought at $28.47; it's now $31.11 (+9.3% since I got in). My safety net: if the price falls to $28.01 (10% below its recent high), I sell automatically \u2014 no exceptions. Closest challenger on my list is USO, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
+  "thoughts": "I'm holding USO. Strongest commodity above its 200-day MA. I bought at $134.98; it's now $134.98 (-0.0% since I got in). My safety net: if the price falls to $121.48 (10% below its recent high), I sell automatically \u2014 no exceptions. Closest challenger on my list is DBC, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
 }
