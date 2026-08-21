@@ -1,48 +1,20 @@
 {
-  "ts": "2026-08-21T09:12:05+00:00",
+  "ts": "2026-08-21T09:18:04+00:00",
   "scanned": 142,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "NVDABUSDT",
-      "signal": "ignition",
-      "score": 1.1258,
-      "raw_score": 0.9131,
-      "weight": 1.233,
-      "price": 215.28,
-      "why": "trades 42.7x and volume 224.2x the prior 4h, 77% taker-buy, $359,847 burst \u2014 while price has only moved -1.2%",
-      "chg_24h": -0.016,
-      "vol_surge": 224.2,
-      "chg_1h": -0.012,
-      "market_surge": 0.0,
-      "actionable": true
-    },
-    {
-      "symbol": "AXSUSDT",
-      "signal": "ignition",
-      "score": 1.059,
-      "raw_score": 0.8589,
-      "weight": 1.233,
-      "price": 1.005,
-      "why": "trades 9.5x and volume 14.3x the prior 4h, 61% taker-buy, $59,007 burst \u2014 while price has only moved +0.9%",
-      "chg_24h": 0.0852,
-      "vol_surge": 14.33,
-      "chg_1h": 0.009,
-      "market_surge": 5.66,
-      "actionable": true
-    },
-    {
-      "symbol": "PEOPLEUSDT",
-      "signal": "ignition",
-      "score": 0.7951,
-      "raw_score": 0.6449,
-      "weight": 1.233,
-      "price": 0.01178,
-      "why": "trades 6.0x and volume 7.2x the prior 4h, 61% taker-buy, $258,359 burst \u2014 while price has only moved +1.1%",
-      "chg_24h": 0.4355,
-      "vol_surge": 7.18,
-      "chg_1h": 0.0112,
-      "market_surge": 6.75,
+      "symbol": "PUMPUSDT",
+      "signal": "heat",
+      "score": 0.7002,
+      "raw_score": 0.6,
+      "weight": 1.167,
+      "price": 0.003847,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.005% \u00b7 L/S 1.57",
+      "chg_24h": 0.1647,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
       "actionable": true
     }
   ],
@@ -54,7 +26,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 66,
+    "count": 58,
     "baseline": 14.0,
     "wave": true
   },
@@ -62,7 +34,7 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.633,
-      "mean_ret_1h": 0.00536,
+      "mean_ret_1h": 0.00765,
       "median_ret_1h": 0.00356,
       "n_4h": 30,
       "hit_rate_4h": 0.733,
@@ -76,16 +48,16 @@
     "breakout": {
       "n_1h": 30,
       "hit_rate_1h": 0.533,
-      "mean_ret_1h": 0.0076,
+      "mean_ret_1h": 0.00786,
       "median_ret_1h": 0.00888,
       "n_4h": 30,
       "hit_rate_4h": 0.567,
-      "mean_ret_4h": 0.01965,
-      "median_ret_4h": 0.01048,
+      "mean_ret_4h": 0.0202,
+      "median_ret_4h": 0.01186,
       "n_24h": 30,
       "hit_rate_24h": 0.967,
-      "mean_ret_24h": 0.09993,
-      "median_ret_24h": 0.0869
+      "mean_ret_24h": 0.10377,
+      "median_ret_24h": 0.09565
     },
     "reversion": {
       "n_1h": 22,
