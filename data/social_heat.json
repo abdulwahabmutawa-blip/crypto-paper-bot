@@ -1,28 +1,27 @@
 {
-  "ts": "2026-08-21T20:35:59+00:00",
+  "ts": "2026-08-21T20:41:59+00:00",
   "sources": {
     "coingecko": [
-      "ENA",
       "LIT",
+      "ENA",
       "BTC",
       "ETH",
       "PUMP",
       "SUI",
-      "PENDLE",
-      "TAO",
-      "PEPE"
+      "AERO",
+      "ETHFI"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "BCH",
       "ENA",
-      "PEPE",
       "ZEC",
+      "PEPE",
       "TUT",
       "NEIRO",
-      "HEMI",
-      "XPL"
+      "XPL",
+      "HEMI"
     ],
     "watcher": [
       "ENA",
@@ -45,23 +44,30 @@
       "long_short": 1.04
     },
     {
-      "symbol": "PEPE",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ]
-    },
-    {
       "symbol": "BCH",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": 0.000175,
+      "funding": 0.000186,
       "long_short": 1.5
+    },
+    {
+      "symbol": "PEPE",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ]
+    },
+    {
+      "symbol": "AERO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 2.9e-05
     },
     {
       "symbol": "BTC",
@@ -88,6 +94,14 @@
       "funding": 0.0001
     },
     {
+      "symbol": "ETHFI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "HEMI",
       "surfaces": 1,
       "sources": [
@@ -112,14 +126,6 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PENDLE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "PUMP",
       "surfaces": 1,
       "sources": [
@@ -134,14 +140,6 @@
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "TUT",
