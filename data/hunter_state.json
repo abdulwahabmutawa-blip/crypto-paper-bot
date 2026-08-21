@@ -1,10 +1,10 @@
 {
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "holding": "NVDA",
-  "units": 4.357967014111757,
+  "holding": "BTC-USD",
+  "units": 0.012165151733638802,
   "cash": 0.0,
-  "high_water": 221.7794952392578,
+  "high_water": 77137.0,
   "bench_units": 1.332054612938296,
   "trades": [
     {
@@ -239,6 +239,26 @@
       "value": 954.98,
       "fee": 1.05,
       "reason": "Top reward/risk score (8.49) \u2014 Nvidia, all-in"
+    },
+    {
+      "date": "2026-08-21",
+      "action": "SELL",
+      "ticker": "NVDA",
+      "price": 216.19000244,
+      "units": 4.358,
+      "value": 942.15,
+      "fee": 1.04,
+      "reason": "Outgunned \u2014 Bitcoin now scores >1.25x better on reward/risk"
+    },
+    {
+      "date": "2026-08-21",
+      "action": "BUY",
+      "ticker": "BTC-USD",
+      "price": 77137.0,
+      "units": 0.0122,
+      "value": 938.38,
+      "fee": 2.73,
+      "reason": "Top reward/risk score (9.82) \u2014 Bitcoin, all-in"
     }
   ],
   "history": [
@@ -394,18 +414,12 @@
     },
     {
       "date": "2026-08-21",
-      "value": 945.11,
-      "bench": 1019.06,
-      "holding": "NVDA"
+      "value": 938.38,
+      "bench": 1018.18,
+      "holding": "BTC-USD"
     }
   ],
   "intraday": [
-    {
-      "ts": "2026-07-30T16:49:15+00:00",
-      "value": 908.72,
-      "bench": 983.66,
-      "holding": "USO"
-    },
     {
       "ts": "2026-07-30T17:02:29+00:00",
       "value": 912.02,
@@ -9399,9 +9413,15 @@
       "value": 945.11,
       "bench": 1019.06,
       "holding": "NVDA"
+    },
+    {
+      "ts": "2026-08-21T13:58:10+00:00",
+      "value": 938.38,
+      "bench": 1018.18,
+      "holding": "BTC-USD"
     }
   ],
-  "last_updated_utc": "2026-08-21T13:44:39+00:00",
+  "last_updated_utc": "2026-08-21T13:58:10+00:00",
   "restatement": [
     {
       "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)"
@@ -9437,9 +9457,9 @@
       ]
     }
   ],
-  "costs_paid": 8.8668,
+  "costs_paid": 12.6324,
   "stopped": {
-    "ticker": "SLV",
-    "date": "2026-08-18"
+    "ticker": "NVDA",
+    "date": "2026-08-21"
   }
 }
