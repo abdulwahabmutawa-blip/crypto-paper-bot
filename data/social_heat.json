@@ -1,17 +1,18 @@
 {
-  "ts": "2026-08-21T14:00:59+00:00",
+  "ts": "2026-08-21T14:06:29+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "ENA",
       "PUMP",
-      "ZEC",
-      "ETH",
-      "SOL",
       "ONDO",
+      "SOL",
+      "ZEC",
       "LINK",
+      "ETH",
       "XRP",
-      "TAO"
+      "LIT",
+      "AVAX"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,8 +21,8 @@
       "HEMI",
       "TUT",
       "XPL",
-      "BCH",
       "NEIRO",
+      "BCH",
       "FET",
       "CRV"
     ],
@@ -53,7 +54,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.00021,
+      "funding": 0.000208,
       "long_short": 1.64
     },
     {
@@ -64,7 +65,7 @@
         "watcher"
       ],
       "funding": 0.0001,
-      "long_short": 1.02
+      "long_short": 1.04
     },
     {
       "symbol": "PUMP",
@@ -74,7 +75,7 @@
         "watcher"
       ],
       "funding": 5e-05,
-      "long_short": 1.63
+      "long_short": 1.61
     },
     {
       "symbol": "SOL",
@@ -85,6 +86,14 @@
       ],
       "funding": 0.0001,
       "long_short": 2.16
+    },
+    {
+      "symbol": "AVAX",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "CRV",
@@ -116,7 +125,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000274
+      "funding": 0.000261
     },
     {
       "symbol": "LINK",
@@ -125,6 +134,14 @@
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "LIT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "NEIRO",
@@ -143,20 +160,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "TUT",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 5.1e-05
+      "funding": 5.9e-05
     },
     {
       "symbol": "XPL",
