@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-21T23:06:15+00:00",
+  "ts": "2026-08-21T23:11:29+00:00",
   "scanned": 152,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "\u5e01\u5b89\u4eba\u751fUSDT",
+      "signal": "ignition",
+      "score": 0.9202,
+      "raw_score": 0.8908,
+      "weight": 1.033,
+      "price": 0.535,
+      "why": "trades 11.2x and volume 13.8x the prior 4h, 74% taker-buy, $98,565 burst \u2014 while price has only moved +1.7%",
+      "chg_24h": 0.1292,
+      "vol_surge": 13.76,
+      "chg_1h": 0.0175,
+      "market_surge": 2.16,
+      "actionable": false,
+      "status": "benched \u2014 hit 53%, mean +0.35% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 53%, mean +0.35% over last 30 at 4h: not beating the round trip",
     "breakout": "actionable",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 149,
+    "count": 145,
     "baseline": 16.0,
     "wave": true
   },
@@ -19,7 +35,7 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.433,
-      "mean_ret_1h": -0.00179,
+      "mean_ret_1h": -0.00187,
       "median_ret_1h": 0.00153,
       "n_4h": 30,
       "hit_rate_4h": 0.533,
@@ -32,16 +48,16 @@
     },
     "breakout": {
       "n_1h": 30,
-      "hit_rate_1h": 0.6,
-      "mean_ret_1h": 0.01045,
-      "median_ret_1h": 0.01178,
+      "hit_rate_1h": 0.567,
+      "mean_ret_1h": 0.00799,
+      "median_ret_1h": 0.00644,
       "n_4h": 30,
       "hit_rate_4h": 0.433,
       "mean_ret_4h": 0.00928,
       "median_ret_4h": 0.00046,
       "n_24h": 30,
       "hit_rate_24h": 0.933,
-      "mean_ret_24h": 0.12172,
+      "mean_ret_24h": 0.12211,
       "median_ret_24h": 0.12519
     },
     "reversion": {
