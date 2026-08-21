@@ -1,8 +1,23 @@
 {
-  "ts": "2026-08-21T22:43:46+00:00",
-  "scanned": 152,
+  "ts": "2026-08-21T22:49:27+00:00",
+  "scanned": 153,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "LTCUSDT",
+      "signal": "breakout",
+      "score": 0.5681,
+      "raw_score": 0.6089,
+      "weight": 0.933,
+      "price": 53.95,
+      "why": "trades 4.4x, volume 7.3x, 69% taker-buy, +2.4% in an hour, at 98% of its 24h range",
+      "chg_24h": 0.1246,
+      "vol_surge": 7.33,
+      "chg_1h": 0.0243,
+      "market_surge": 4.8,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 156,
+    "count": 152,
     "baseline": 16.0,
     "wave": true
   },
