@@ -1,21 +1,22 @@
 {
-  "ts": "2026-08-21T01:10:06+00:00",
-  "scanned": 122,
+  "ts": "2026-08-21T01:15:24+00:00",
+  "scanned": 119,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "BICOUSDT",
-      "signal": "breakout",
-      "score": 0.969,
-      "raw_score": 0.8303,
-      "weight": 1.167,
-      "price": 0.01989,
-      "why": "trades 12.5x, volume 8.8x, 64% taker-buy, +4.8% in an hour, at 92% of its 24h range",
-      "chg_24h": 0.185,
-      "vol_surge": 8.82,
-      "chg_1h": 0.0485,
-      "market_surge": 4.89,
-      "actionable": true
+      "symbol": "XRPUSDT",
+      "signal": "heat",
+      "score": 0.6198,
+      "raw_score": 0.6,
+      "weight": 1.033,
+      "price": 1.2739,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.010% \u00b7 L/S 2.72",
+      "chg_24h": 0.1456,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
+      "actionable": false,
+      "status": "benched \u2014 hit 53%, mean +0.39% over last 30 at 4h: not beating the round trip"
     }
   ],
   "gate": {
@@ -34,12 +35,12 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.433,
-      "mean_ret_1h": -0.00553,
+      "mean_ret_1h": -0.00529,
       "median_ret_1h": 0.00112,
       "n_4h": 30,
-      "hit_rate_4h": 0.567,
-      "mean_ret_4h": 0.00742,
-      "median_ret_4h": 0.00694,
+      "hit_rate_4h": 0.6,
+      "mean_ret_4h": 0.00875,
+      "median_ret_4h": 0.00927,
       "n_24h": 30,
       "hit_rate_24h": 0.933,
       "mean_ret_24h": 0.05774,
