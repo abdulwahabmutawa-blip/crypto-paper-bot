@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-21T19:50:29+00:00",
+  "ts": "2026-08-21T19:56:19+00:00",
   "sources": {
     "coingecko": [
       "ENA",
@@ -18,8 +18,8 @@
     "movers": [
       "BCH",
       "ENA",
-      "TUT",
       "CRV",
+      "TUT",
       "PEPE",
       "ZEC",
       "XPL",
@@ -29,7 +29,7 @@
       "ENA",
       "BCH",
       "PEPE",
-      "BTC"
+      "CRV"
     ],
     "cryptopanic": []
   },
@@ -61,18 +61,18 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.000126,
+      "funding": 0.000122,
       "long_short": 1.57
     },
     {
-      "symbol": "BTC",
+      "symbol": "CRV",
       "surfaces": 2,
       "sources": [
-        "coingecko",
+        "movers",
         "watcher"
       ],
       "funding": 0.0001,
-      "long_short": 1.04
+      "long_short": 1.32
     },
     {
       "symbol": "ZEC",
@@ -85,10 +85,10 @@
       "long_short": 0.66
     },
     {
-      "symbol": "CRV",
+      "symbol": "BTC",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
       "funding": 0.0001
     },
@@ -154,7 +154,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 5.5e-05
+      "funding": 5e-05
     },
     {
       "symbol": "XPL",
