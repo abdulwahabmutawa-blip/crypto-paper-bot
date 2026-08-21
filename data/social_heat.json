@@ -1,17 +1,17 @@
 {
-  "ts": "2026-08-21T02:01:15+00:00",
+  "ts": "2026-08-21T02:06:29+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "ETH",
       "ENA",
       "PUMP",
-      "XRP",
       "SOL",
+      "XRP",
+      "BOME",
       "TAO",
-      "GALA",
-      "PEPE",
-      "SHIB"
+      "SHIB",
+      "GALA"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,8 +19,8 @@
       "ONG",
       "BOME",
       "ENA",
-      "ACE",
       "PUMP",
+      "ACE",
       "XRP",
       "ADA",
       "PEPE"
@@ -37,6 +37,17 @@
   },
   "heat": [
     {
+      "symbol": "BOME",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 5e-05,
+      "long_short": 0.93
+    },
+    {
       "symbol": "ENA",
       "surfaces": 3,
       "sources": [
@@ -45,7 +56,7 @@
         "watcher"
       ],
       "funding": 5e-05,
-      "long_short": 2.0
+      "long_short": 2.01
     },
     {
       "symbol": "PUMP",
@@ -67,17 +78,7 @@
         "watcher"
       ],
       "funding": 0.0001,
-      "long_short": 2.72
-    },
-    {
-      "symbol": "BOME",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": 5e-05,
-      "long_short": 0.93
+      "long_short": 2.85
     },
     {
       "symbol": "BTC",
@@ -86,7 +87,7 @@
         "coingecko",
         "watcher"
       ],
-      "funding": 8.4e-05,
+      "funding": 8.6e-05,
       "long_short": 1.02
     },
     {
@@ -96,15 +97,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.013351
-    },
-    {
-      "symbol": "PEPE",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ]
+      "funding": -0.012904
     },
     {
       "symbol": "ACE",
@@ -112,7 +105,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000304
+      "funding": -0.000323
     },
     {
       "symbol": "ADA",
@@ -137,6 +130,13 @@
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "PEPE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
     },
     {
       "symbol": "SHIB",
