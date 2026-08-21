@@ -1,8 +1,37 @@
 {
-  "ts": "2026-08-21T02:34:54+00:00",
-  "scanned": 126,
+  "ts": "2026-08-21T02:40:36+00:00",
+  "scanned": 131,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "WBTCUSDT",
+      "signal": "ignition",
+      "score": 1.0481,
+      "raw_score": 0.9823,
+      "weight": 1.067,
+      "price": 74742.6,
+      "why": "trades 19.4x and volume 15.6x the prior 4h, 93% taker-buy, $84,438 burst \u2014 while price has only moved -0.0%",
+      "chg_24h": 0.0779,
+      "vol_surge": 15.62,
+      "chg_1h": -0.0002,
+      "market_surge": 3.25,
+      "actionable": true
+    },
+    {
+      "symbol": "ZROUSDT",
+      "signal": "ignition",
+      "score": 0.9413,
+      "raw_score": 0.8822,
+      "weight": 1.067,
+      "price": 0.873,
+      "why": "trades 16.3x and volume 92.9x the prior 4h, 62% taker-buy, $450,589 burst \u2014 while price has only moved +0.9%",
+      "chg_24h": 0.0,
+      "vol_surge": 92.86,
+      "chg_1h": 0.0092,
+      "market_surge": 25.33,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +40,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 51,
+    "count": 50,
     "baseline": 13.0,
     "wave": true
   },
