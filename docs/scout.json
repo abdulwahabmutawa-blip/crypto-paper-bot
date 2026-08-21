@@ -1,8 +1,23 @@
 {
-  "ts": "2026-08-21T12:48:55+00:00",
-  "scanned": 146,
+  "ts": "2026-08-21T12:54:24+00:00",
+  "scanned": 149,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "METUSDT",
+      "signal": "ignition",
+      "score": 0.9013,
+      "raw_score": 0.7113,
+      "weight": 1.267,
+      "price": 0.2191,
+      "why": "trades 7.3x and volume 8.7x the prior 4h, 65% taker-buy, $69,003 burst \u2014 while price has only moved +2.5%",
+      "chg_24h": 0.0488,
+      "vol_surge": 8.74,
+      "chg_1h": 0.0248,
+      "market_surge": 2.98,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 164,
+    "count": 149,
     "baseline": 14.0,
     "wave": true
   },
@@ -37,7 +52,7 @@
       "median_ret_1h": 0.0116,
       "n_4h": 30,
       "hit_rate_4h": 0.567,
-      "mean_ret_4h": 0.01434,
+      "mean_ret_4h": 0.01615,
       "median_ret_4h": 0.01077,
       "n_24h": 30,
       "hit_rate_24h": 0.967,
@@ -53,10 +68,10 @@
       "hit_rate_4h": 0.455,
       "mean_ret_4h": 0.00325,
       "median_ret_4h": 0.00145,
-      "n_24h": 21,
-      "hit_rate_24h": 0.333,
-      "mean_ret_24h": 0.00114,
-      "median_ret_24h": -0.0187
+      "n_24h": 22,
+      "hit_rate_24h": 0.364,
+      "mean_ret_24h": 0.00507,
+      "median_ret_24h": -0.01291
     },
     "heat": {
       "n_1h": 30,
