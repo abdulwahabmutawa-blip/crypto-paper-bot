@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-21T15:37:13+00:00",
+  "ts": "2026-08-21T15:42:59+00:00",
   "sources": {
     "coingecko": [
       "ENA",
@@ -19,12 +19,12 @@
     "movers": [
       "ENA",
       "NEIRO",
-      "BCH",
       "TUT",
+      "BCH",
       "XPL",
       "CRV",
-      "FET",
-      "PENGU"
+      "PENGU",
+      "PEPE"
     ],
     "watcher": [
       "ENA",
@@ -54,7 +54,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.000279,
+      "funding": 0.000274,
       "long_short": 1.61
     },
     {
@@ -68,6 +68,14 @@
       "long_short": 1.04
     },
     {
+      "symbol": "PEPE",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ]
+    },
+    {
       "symbol": "PUMP",
       "surfaces": 2,
       "sources": [
@@ -79,14 +87,6 @@
     },
     {
       "symbol": "CRV",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "FET",
       "surfaces": 1,
       "sources": [
         "movers"
@@ -134,13 +134,6 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PEPE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ]
-    },
-    {
       "symbol": "SOL",
       "surfaces": 1,
       "sources": [
@@ -154,7 +147,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 0.000128
+      "funding": 0.000132
     },
     {
       "symbol": "TAO",
