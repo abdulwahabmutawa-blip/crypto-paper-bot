@@ -1,10 +1,10 @@
 {
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "holding": "MSTR",
-  "units": 12.724301720538653,
+  "holding": "MRNA",
+  "units": 10.46548118592417,
   "cash": 0.0,
-  "entry_price": 119.83999633789062,
+  "entry_price": 144.9499969482422,
   "bench_units": 1.332054612938296,
   "stopped": {
     "SHIB-USD": "2026-07-27T00:01:08+00:00",
@@ -458,6 +458,26 @@
       "value": 1524.88,
       "fee": 2.14,
       "reason": "Grok: MSTR euphoric \u2014 BTC holdings profit surge retail frenzy (scan 2026-08-21T17:48)"
+    },
+    {
+      "date": "2026-08-21",
+      "action": "SELL",
+      "ticker": "MSTR",
+      "price": 119.53500366,
+      "units": 12.7243,
+      "value": 1521.0,
+      "fee": 2.13,
+      "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
+    },
+    {
+      "date": "2026-08-21",
+      "action": "BUY",
+      "ticker": "MRNA",
+      "price": 144.94999695,
+      "units": 10.4655,
+      "value": 1516.97,
+      "fee": 1.9,
+      "reason": "Grok: MRNA euphoric \u2014 Stocktwits trending big midday mover (scan 2026-08-21T19:52)"
     }
   ],
   "history": [
@@ -638,18 +658,12 @@
     },
     {
       "date": "2026-08-21",
-      "value": 1513.75,
-      "bench": 1020.81,
-      "holding": "MSTR"
+      "value": 1516.97,
+      "bench": 1020.46,
+      "holding": "MRNA"
     }
   ],
   "intraday": [
-    {
-      "ts": "2026-07-31T04:03:22+00:00",
-      "value": 899.37,
-      "bench": 987.97,
-      "holding": "MSFT"
-    },
     {
       "ts": "2026-07-31T04:16:33+00:00",
       "value": 899.37,
@@ -9643,9 +9657,15 @@
       "value": 1513.75,
       "bench": 1020.81,
       "holding": "MSTR"
+    },
+    {
+      "ts": "2026-08-21T19:52:47+00:00",
+      "value": 1516.97,
+      "bench": 1020.46,
+      "holding": "MRNA"
     }
   ],
-  "last_updated_utc": "2026-08-21T19:38:45+00:00",
+  "last_updated_utc": "2026-08-21T19:52:47+00:00",
   "restatement": {
     "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)",
     "voided_trades": [
@@ -9724,5 +9744,5 @@
     ],
     "voided_reason": "signal faded before any real fill was possible (market closed the whole window) \u2014 trades could never have existed"
   },
-  "costs_paid": 53.0906
+  "costs_paid": 57.1186
 }
