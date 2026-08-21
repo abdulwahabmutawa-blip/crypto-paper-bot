@@ -1,16 +1,16 @@
 {
-  "ts": "2026-08-21T02:51:59+00:00",
+  "ts": "2026-08-21T02:57:29+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "PUMP",
       "ETH",
-      "XRP",
-      "ENA",
       "SOL",
+      "ENA",
+      "CRV",
       "SUI",
-      "BOME",
-      "ONG"
+      "ONG",
+      "LIT"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,10 +19,10 @@
       "BOME",
       "ENA",
       "ACE",
-      "PUMP",
       "XRP",
-      "PEPE",
-      "XPL"
+      "PUMP",
+      "XPL",
+      "PEPE"
     ],
     "watcher": [
       "XRP",
@@ -35,17 +35,6 @@
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "BOME",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": 5e-05,
-      "long_short": 0.93
-    },
     {
       "symbol": "ENA",
       "surfaces": 3,
@@ -65,7 +54,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.01587,
+      "funding": -0.016041,
       "long_short": 0.84
     },
     {
@@ -80,15 +69,14 @@
       "long_short": 1.41
     },
     {
-      "symbol": "XRP",
-      "surfaces": 3,
+      "symbol": "BOME",
+      "surfaces": 2,
       "sources": [
-        "coingecko",
         "movers",
         "watcher"
       ],
-      "funding": 0.0001,
-      "long_short": 2.85
+      "funding": 5e-05,
+      "long_short": 0.93
     },
     {
       "symbol": "BTC",
@@ -97,7 +85,17 @@
         "coingecko",
         "watcher"
       ],
-      "funding": 9.7e-05
+      "funding": 9.7e-05,
+      "long_short": 1.02
+    },
+    {
+      "symbol": "XRP",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "ACE",
@@ -105,7 +103,15 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000573
+      "funding": -0.000583
+    },
+    {
+      "symbol": "CRV",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -0.000109
     },
     {
       "symbol": "ETH",
@@ -114,6 +120,14 @@
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "LIT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "PEPE",
