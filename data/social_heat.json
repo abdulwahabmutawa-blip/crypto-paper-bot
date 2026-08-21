@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-21T12:43:29+00:00",
+  "ts": "2026-08-21T12:48:48+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -9,21 +9,20 @@
       "SUI",
       "ETH",
       "XRP",
-      "TAO",
       "PEPE",
-      "AAVE"
+      "LINK"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "HEMI",
       "ONG",
+      "HEMI",
       "ENA",
       "XPL",
       "NEIRO",
       "BCH",
-      "CRV",
-      "FET"
+      "PUMP",
+      "CRV"
     ],
     "watcher": [
       "ENA",
@@ -47,13 +46,24 @@
       "long_short": 1.36
     },
     {
+      "symbol": "PUMP",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.65
+    },
+    {
       "symbol": "BCH",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": 0.000186,
+      "funding": 0.000184,
       "long_short": 1.55
     },
     {
@@ -67,16 +77,6 @@
       "long_short": 0.97
     },
     {
-      "symbol": "PUMP",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "watcher"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.65
-    },
-    {
       "symbol": "XRP",
       "surfaces": 2,
       "sources": [
@@ -85,14 +85,6 @@
       ],
       "funding": 0.0001,
       "long_short": 2.58
-    },
-    {
-      "symbol": "AAVE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "CRV",
@@ -111,20 +103,20 @@
       "funding": 0.0001
     },
     {
-      "symbol": "FET",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "HEMI",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 0.00042
+      "funding": 0.00039
+    },
+    {
+      "symbol": "LINK",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "NEIRO",
@@ -140,7 +132,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001134
+      "funding": -0.001141
     },
     {
       "symbol": "PEPE",
@@ -164,14 +156,6 @@
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "XPL",

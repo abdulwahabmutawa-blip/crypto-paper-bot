@@ -1,23 +1,8 @@
 {
-  "ts": "2026-08-21T12:43:34+00:00",
-  "scanned": 148,
+  "ts": "2026-08-21T12:48:55+00:00",
+  "scanned": 146,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "USUALUSDT",
-      "signal": "ignition",
-      "score": 0.9322,
-      "raw_score": 0.7357,
-      "weight": 1.267,
-      "price": 0.01203,
-      "why": "trades 12.8x and volume 6.9x the prior 4h, 63% taker-buy, $138,927 burst \u2014 while price has only moved +3.8%",
-      "chg_24h": 0.265,
-      "vol_surge": 6.91,
-      "chg_1h": 0.038,
-      "market_surge": 8.85,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -26,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 156,
+    "count": 164,
     "baseline": 14.0,
     "wave": true
   },
@@ -55,8 +40,8 @@
       "mean_ret_4h": 0.01434,
       "median_ret_4h": 0.01077,
       "n_24h": 30,
-      "hit_rate_24h": 1.0,
-      "mean_ret_24h": 0.11442,
+      "hit_rate_24h": 0.967,
+      "mean_ret_24h": 0.11301,
       "median_ret_24h": 0.10682
     },
     "reversion": {
