@@ -1,20 +1,48 @@
 {
-  "ts": "2026-08-21T09:06:04+00:00",
-  "scanned": 141,
+  "ts": "2026-08-21T09:12:05+00:00",
+  "scanned": 142,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "LTCUSDT",
+      "symbol": "NVDABUSDT",
       "signal": "ignition",
-      "score": 1.0745,
-      "raw_score": 0.8715,
+      "score": 1.1258,
+      "raw_score": 0.9131,
       "weight": 1.233,
-      "price": 49.91,
-      "why": "trades 11.5x and volume 10.9x the prior 4h, 61% taker-buy, $1,224,152 burst \u2014 while price has only moved -1.3%",
-      "chg_24h": 0.0566,
-      "vol_surge": 10.86,
-      "chg_1h": -0.0127,
-      "market_surge": 11.05,
+      "price": 215.28,
+      "why": "trades 42.7x and volume 224.2x the prior 4h, 77% taker-buy, $359,847 burst \u2014 while price has only moved -1.2%",
+      "chg_24h": -0.016,
+      "vol_surge": 224.2,
+      "chg_1h": -0.012,
+      "market_surge": 0.0,
+      "actionable": true
+    },
+    {
+      "symbol": "AXSUSDT",
+      "signal": "ignition",
+      "score": 1.059,
+      "raw_score": 0.8589,
+      "weight": 1.233,
+      "price": 1.005,
+      "why": "trades 9.5x and volume 14.3x the prior 4h, 61% taker-buy, $59,007 burst \u2014 while price has only moved +0.9%",
+      "chg_24h": 0.0852,
+      "vol_surge": 14.33,
+      "chg_1h": 0.009,
+      "market_surge": 5.66,
+      "actionable": true
+    },
+    {
+      "symbol": "PEOPLEUSDT",
+      "signal": "ignition",
+      "score": 0.7951,
+      "raw_score": 0.6449,
+      "weight": 1.233,
+      "price": 0.01178,
+      "why": "trades 6.0x and volume 7.2x the prior 4h, 61% taker-buy, $258,359 burst \u2014 while price has only moved +1.1%",
+      "chg_24h": 0.4355,
+      "vol_surge": 7.18,
+      "chg_1h": 0.0112,
+      "market_surge": 6.75,
       "actionable": true
     }
   ],
@@ -26,7 +54,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 64,
+    "count": 66,
     "baseline": 14.0,
     "wave": true
   },
