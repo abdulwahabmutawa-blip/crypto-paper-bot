@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-21T08:26:19+00:00",
+  "ts": "2026-08-21T08:31:55+00:00",
   "sources": {
     "coingecko": [
       "ENA",
@@ -18,12 +18,12 @@
     "movers": [
       "NEIRO",
       "ENA",
+      "ACE",
       "BOME",
       "ONG",
-      "ACE",
       "BCH",
-      "XRP",
-      "PUMP"
+      "PUMP",
+      "XPL"
     ],
     "watcher": [
       "ENA",
@@ -54,7 +54,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 4.7e-05,
+      "funding": 5e-05,
       "long_short": 1.54
     },
     {
@@ -64,7 +64,7 @@
         "coingecko",
         "watcher"
       ],
-      "funding": 8.6e-05,
+      "funding": 8.8e-05,
       "long_short": 1.04
     },
     {
@@ -74,18 +74,8 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.008245,
+      "funding": -0.007719,
       "long_short": 0.99
-    },
-    {
-      "symbol": "XRP",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": 0.0001,
-      "long_short": 2.66
     },
     {
       "symbol": "ACE",
@@ -93,7 +83,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.0013
+      "funding": -0.001306
     },
     {
       "symbol": "BCH",
@@ -165,6 +155,22 @@
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "XPL",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "XRP",
+      "surfaces": 1,
+      "sources": [
+        "watcher"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "ZEC",
