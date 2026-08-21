@@ -1,17 +1,16 @@
 {
-  "ts": "2026-08-21T02:45:59+00:00",
+  "ts": "2026-08-21T02:51:59+00:00",
   "sources": {
     "coingecko": [
       "BTC",
-      "ETH",
       "PUMP",
+      "ETH",
       "XRP",
       "ENA",
-      "SUI",
       "SOL",
-      "TAO",
-      "CRV",
-      "BOME"
+      "SUI",
+      "BOME",
+      "ONG"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,8 +21,8 @@
       "ACE",
       "PUMP",
       "XRP",
-      "XPL",
-      "ADA"
+      "PEPE",
+      "XPL"
     ],
     "watcher": [
       "XRP",
@@ -59,6 +58,17 @@
       "long_short": 2.01
     },
     {
+      "symbol": "ONG",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": -0.01587,
+      "long_short": 0.84
+    },
+    {
       "symbol": "PUMP",
       "surfaces": 3,
       "sources": [
@@ -87,17 +97,7 @@
         "coingecko",
         "watcher"
       ],
-      "funding": 9.8e-05,
-      "long_short": 1.02
-    },
-    {
-      "symbol": "ONG",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": -0.015453
+      "funding": 9.7e-05
     },
     {
       "symbol": "ACE",
@@ -105,23 +105,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000556
-    },
-    {
-      "symbol": "ADA",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "CRV",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -6.9e-05
+      "funding": -0.000573
     },
     {
       "symbol": "ETH",
@@ -130,6 +114,13 @@
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "PEPE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
     },
     {
       "symbol": "SOL",
@@ -146,14 +137,6 @@
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "XPL",

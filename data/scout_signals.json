@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-21T02:46:06+00:00",
-  "scanned": 130,
+  "ts": "2026-08-21T02:52:05+00:00",
+  "scanned": 129,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ONGUSDT",
+      "signal": "heat",
+      "score": 0.6402,
+      "raw_score": 0.6,
+      "weight": 1.067,
+      "price": 0.17424,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding -1.587% \u00b7 L/S 0.84",
+      "chg_24h": 1.8162,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
+      "actionable": false,
+      "status": "benched \u2014 hit 57%, mean +0.56% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -32,9 +48,9 @@
     },
     "breakout": {
       "n_1h": 30,
-      "hit_rate_1h": 0.433,
-      "mean_ret_1h": 0.0058,
-      "median_ret_1h": -0.00045,
+      "hit_rate_1h": 0.4,
+      "mean_ret_1h": 0.00528,
+      "median_ret_1h": -0.00055,
       "n_4h": 30,
       "hit_rate_4h": 0.667,
       "mean_ret_4h": 0.02312,
