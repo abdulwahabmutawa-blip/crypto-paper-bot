@@ -1,15 +1,15 @@
 {
   "created": "2026-08-15",
-  "held_symbol": null,
-  "entry_price": null,
-  "units": 0.0,
-  "entry_scan_ts": null,
-  "entry_source": null,
+  "held_symbol": "ZECUSDT",
+  "entry_price": 590.122,
+  "units": 0.06,
+  "entry_scan_ts": "2026-08-21T03:32:57+00:00",
+  "entry_source": "scout:breakout",
   "stopped": {
     "MEGAUSDT": "2026-08-21T04:16:06+00:00"
   },
   "entries": {
-    "2026-08-21": 1
+    "2026-08-21": 2
   },
   "realized": [
     {
@@ -324,13 +324,26 @@
       "entry": 0.03850576042341759
     }
   ],
-  "last_value_usd": 35.43,
-  "last_updated_utc": "2026-08-21T04:43:58+00:00",
-  "open_position": null,
-  "spent_usd": null,
+  "last_value_usd": 35.39,
+  "last_updated_utc": "2026-08-21T04:49:39+00:00",
+  "open_position": {
+    "symbol": "ZECUSDT",
+    "entry_time": "2026-08-21T04:49:39+00:00",
+    "entry_price": 590.122,
+    "current_price": 590.14,
+    "units": 0.06,
+    "spent_usd": 35.4073,
+    "value_usd": 35.4084,
+    "pnl_usd": 0.0011,
+    "pnl_pct": 0.0,
+    "source": "scout:breakout"
+  },
+  "spent_usd": 35.4073,
   "no_pair": {
     "scan_ts": "2026-08-21T03:32:57+00:00",
     "syms": []
   },
-  "wave_bonus_date": "2026-08-21"
+  "wave_bonus_date": "2026-08-21",
+  "hwm": 590.122,
+  "entry_time": "2026-08-21T04:49:39+00:00"
 }
