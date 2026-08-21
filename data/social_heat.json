@@ -1,15 +1,16 @@
 {
-  "ts": "2026-08-21T20:41:59+00:00",
+  "ts": "2026-08-21T20:47:38+00:00",
   "sources": {
     "coingecko": [
       "LIT",
       "ENA",
-      "BTC",
       "ETH",
+      "BTC",
       "PUMP",
       "SUI",
-      "AERO",
-      "ETHFI"
+      "XRP",
+      "TAO",
+      "ZEC"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -17,11 +18,11 @@
       "BCH",
       "ENA",
       "ZEC",
-      "PEPE",
       "TUT",
+      "PEPE",
       "NEIRO",
       "XPL",
-      "HEMI"
+      "FET"
     ],
     "watcher": [
       "ENA",
@@ -50,7 +51,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.000186,
+      "funding": 0.000193,
       "long_short": 1.5
     },
     {
@@ -62,12 +63,14 @@
       ]
     },
     {
-      "symbol": "AERO",
-      "surfaces": 1,
+      "symbol": "ZEC",
+      "surfaces": 2,
       "sources": [
-        "coingecko"
+        "coingecko",
+        "movers"
       ],
-      "funding": 2.9e-05
+      "funding": 0.0001,
+      "long_short": 0.67
     },
     {
       "symbol": "BTC",
@@ -94,20 +97,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "ETHFI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "HEMI",
+      "symbol": "FET",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 5e-05
+      "funding": 0.0001
     },
     {
       "symbol": "LIT",
@@ -142,6 +137,14 @@
       "funding": 0.0001
     },
     {
+      "symbol": "TAO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "TUT",
       "surfaces": 1,
       "sources": [
@@ -158,10 +161,10 @@
       "funding": 5e-05
     },
     {
-      "symbol": "ZEC",
+      "symbol": "XRP",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
       "funding": 0.0001
     }
