@@ -1,30 +1,30 @@
 {
-  "ts": "2026-08-21T21:03:59+00:00",
+  "ts": "2026-08-21T21:09:27+00:00",
   "sources": {
     "coingecko": [
       "LIT",
       "BTC",
       "ENA",
       "ETH",
-      "PUMP",
-      "SUI",
-      "ZEC",
       "XRP",
-      "PENDLE",
-      "ETHFI",
-      "CRV"
+      "ZEC",
+      "SUI",
+      "PUMP",
+      "GALA",
+      "ONDO",
+      "LINK"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "BCH",
-      "ENA",
       "TUT",
+      "ENA",
       "ZEC",
-      "AAVE",
       "NEIRO",
+      "AAVE",
       "PEPE",
-      "HEMI"
+      "CRV"
     ],
     "watcher": [
       "ENA",
@@ -53,14 +53,14 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.000214,
+      "funding": 0.000221,
       "long_short": 1.53
     },
     {
       "symbol": "CRV",
       "surfaces": 2,
       "sources": [
-        "coingecko",
+        "movers",
         "watcher"
       ],
       "funding": 0.0001,
@@ -109,20 +109,20 @@
       "funding": 0.0001
     },
     {
-      "symbol": "ETHFI",
+      "symbol": "GALA",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 0.0001
     },
     {
-      "symbol": "HEMI",
+      "symbol": "LINK",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 0.0001
     },
     {
       "symbol": "LIT",
@@ -141,12 +141,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PENDLE",
+      "symbol": "ONDO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0001
+      "funding": 5e-05
     },
     {
       "symbol": "PUMP",
