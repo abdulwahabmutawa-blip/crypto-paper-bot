@@ -1,8 +1,65 @@
 {
-  "ts": "2026-08-21T08:54:35+00:00",
-  "scanned": 138,
+  "ts": "2026-08-21T09:00:24+00:00",
+  "scanned": 139,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "WBETHUSDT",
+      "signal": "ignition",
+      "score": 1.0718,
+      "raw_score": 0.8693,
+      "weight": 1.233,
+      "price": 2675.41,
+      "why": "trades 11.2x and volume 8.4x the prior 4h, 84% taker-buy, $54,222 burst \u2014 while price has only moved +2.0%",
+      "chg_24h": 0.0683,
+      "vol_surge": 8.42,
+      "chg_1h": 0.0204,
+      "market_surge": 4.27,
+      "actionable": true
+    },
+    {
+      "symbol": "WBTCUSDT",
+      "signal": "ignition",
+      "score": 1.0533,
+      "raw_score": 0.8542,
+      "weight": 1.233,
+      "price": 78395.1,
+      "why": "trades 11.4x and volume 10.4x the prior 4h, 64% taker-buy, $117,535 burst \u2014 while price has only moved +2.2%",
+      "chg_24h": 0.1038,
+      "vol_surge": 10.39,
+      "chg_1h": 0.0224,
+      "market_surge": 4.19,
+      "actionable": true
+    },
+    {
+      "symbol": "ETCUSDT",
+      "signal": "ignition",
+      "score": 0.8074,
+      "raw_score": 0.6548,
+      "weight": 1.233,
+      "price": 7.42,
+      "why": "trades 6.4x and volume 7.6x the prior 4h, 63% taker-buy, $93,302 burst \u2014 while price has only moved +1.9%",
+      "chg_24h": 0.1113,
+      "vol_surge": 7.64,
+      "chg_1h": 0.0192,
+      "market_surge": 7.02,
+      "actionable": true
+    },
+    {
+      "symbol": "MORPHOUSDT",
+      "signal": "ignition",
+      "score": 0.7863,
+      "raw_score": 0.6377,
+      "weight": 1.233,
+      "price": 2.33,
+      "why": "trades 4.2x and volume 8.4x the prior 4h, 79% taker-buy, $77,306 burst \u2014 while price has only moved +1.7%",
+      "chg_24h": 0.0496,
+      "vol_surge": 8.45,
+      "chg_1h": 0.0166,
+      "market_surge": 3.86,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +68,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 97,
+    "count": 103,
     "baseline": 14.0,
     "wave": true
   },
@@ -33,7 +90,7 @@
     "breakout": {
       "n_1h": 30,
       "hit_rate_1h": 0.533,
-      "mean_ret_1h": 0.00611,
+      "mean_ret_1h": 0.00688,
       "median_ret_1h": 0.00888,
       "n_4h": 30,
       "hit_rate_4h": 0.567,
@@ -41,8 +98,8 @@
       "median_ret_4h": 0.01048,
       "n_24h": 30,
       "hit_rate_24h": 0.967,
-      "mean_ret_24h": 0.09992,
-      "median_ret_24h": 0.0869
+      "mean_ret_24h": 0.10248,
+      "median_ret_24h": 0.09565
     },
     "reversion": {
       "n_1h": 22,
