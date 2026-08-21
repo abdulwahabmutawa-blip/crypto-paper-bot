@@ -1,20 +1,20 @@
 {
-  "ts": "2026-08-21T06:57:24+00:00",
-  "scanned": 139,
+  "ts": "2026-08-21T07:02:45+00:00",
+  "scanned": 138,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "BOMEUSDT",
-      "signal": "heat",
-      "score": 0.6798,
-      "raw_score": 0.6,
-      "weight": 1.133,
-      "price": 0.0012452,
-      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.005% \u00b7 L/S 0.99",
-      "chg_24h": 0.241,
-      "vol_surge": null,
-      "chg_1h": null,
-      "market_surge": 3,
+      "symbol": "\u5e01\u5b89\u4eba\u751fUSDT",
+      "signal": "breakout",
+      "score": 0.7343,
+      "raw_score": 0.7108,
+      "weight": 1.033,
+      "price": 0.5105,
+      "why": "trades 7.5x, volume 5.6x, 71% taker-buy, +3.5% in an hour, at 100% of its 24h range",
+      "chg_24h": 0.1449,
+      "vol_surge": 5.63,
+      "chg_1h": 0.0355,
+      "market_surge": 3.25,
       "actionable": true
     }
   ],
@@ -26,7 +26,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 63,
+    "count": 67,
     "baseline": 14.0,
     "wave": true
   },
@@ -48,8 +48,8 @@
     "breakout": {
       "n_1h": 30,
       "hit_rate_1h": 0.467,
-      "mean_ret_1h": 0.00785,
-      "median_ret_1h": 0.0003,
+      "mean_ret_1h": 0.00753,
+      "median_ret_1h": -0.00045,
       "n_4h": 30,
       "hit_rate_4h": 0.533,
       "mean_ret_4h": 0.0169,
