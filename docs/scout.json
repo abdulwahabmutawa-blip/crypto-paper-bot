@@ -1,23 +1,8 @@
 {
-  "ts": "2026-08-21T14:12:10+00:00",
-  "scanned": 156,
+  "ts": "2026-08-21T14:18:09+00:00",
+  "scanned": 155,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "JSTUSDT",
-      "signal": "ignition",
-      "score": 0.9475,
-      "raw_score": 0.7896,
-      "weight": 1.2,
-      "price": 0.1057,
-      "why": "trades 6.4x and volume 8.2x the prior 4h, 97% taker-buy, $53,140 burst \u2014 while price has only moved -0.6%",
-      "chg_24h": 0.0021,
-      "vol_surge": 8.21,
-      "chg_1h": -0.0058,
-      "market_surge": 2.88,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -26,7 +11,7 @@
     "revival": "probation \u2014 2/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 130,
+    "count": 137,
     "baseline": 14.0,
     "wave": true
   },
@@ -42,8 +27,8 @@
       "median_ret_4h": 0.01243,
       "n_24h": 30,
       "hit_rate_24h": 0.9,
-      "mean_ret_24h": 0.06881,
-      "median_ret_24h": 0.06124
+      "mean_ret_24h": 0.06905,
+      "median_ret_24h": 0.06835
     },
     "breakout": {
       "n_1h": 30,
@@ -75,13 +60,13 @@
     },
     "heat": {
       "n_1h": 30,
-      "hit_rate_1h": 0.7,
-      "mean_ret_1h": 0.01626,
-      "median_ret_1h": 0.00788,
+      "hit_rate_1h": 0.733,
+      "mean_ret_1h": 0.01689,
+      "median_ret_1h": 0.00833,
       "n_4h": 30,
       "hit_rate_4h": 0.8,
-      "mean_ret_4h": 0.02875,
-      "median_ret_4h": 0.01992,
+      "mean_ret_4h": 0.03011,
+      "median_ret_4h": 0.02297,
       "n_24h": 30,
       "hit_rate_24h": 0.5,
       "mean_ret_24h": -0.02911,

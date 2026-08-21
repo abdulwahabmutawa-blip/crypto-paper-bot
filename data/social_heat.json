@@ -1,18 +1,18 @@
 {
-  "ts": "2026-08-21T14:12:06+00:00",
+  "ts": "2026-08-21T14:17:59+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "ENA",
       "PUMP",
+      "ZEC",
+      "LIT",
+      "XRP",
       "ONDO",
       "SOL",
-      "ZEC",
-      "LINK",
       "ETH",
-      "XRP",
-      "LIT",
-      "AVAX"
+      "LINK",
+      "XPL"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -54,7 +54,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.000215,
+      "funding": 0.000214,
       "long_short": 1.64
     },
     {
@@ -88,12 +88,13 @@
       "long_short": 2.16
     },
     {
-      "symbol": "AVAX",
-      "surfaces": 1,
+      "symbol": "XPL",
+      "surfaces": 2,
       "sources": [
-        "coingecko"
+        "coingecko",
+        "movers"
       ],
-      "funding": 0.0001
+      "funding": 5e-05
     },
     {
       "symbol": "CRV",
@@ -125,7 +126,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000265
+      "funding": 0.00026
     },
     {
       "symbol": "LINK",
@@ -165,15 +166,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 6.2e-05
-    },
-    {
-      "symbol": "XPL",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
+      "funding": 7e-05
     },
     {
       "symbol": "XRP",
