@@ -1,30 +1,30 @@
 {
-  "ts": "2026-08-21T13:22:09+00:00",
+  "ts": "2026-08-21T13:27:59+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "ENA",
       "PUMP",
       "SOL",
-      "XRP",
       "TAO",
       "ETH",
       "PEPE",
-      "SUI",
+      "XRP",
       "ZEC",
-      "GRAM"
+      "SUI",
+      "POL"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "ONG",
       "ENA",
       "HEMI",
       "TUT",
-      "NEIRO",
       "XPL",
+      "NEIRO",
+      "ONG",
       "BCH",
-      "CRV"
+      "PUMP"
     ],
     "watcher": [
       "ENA",
@@ -48,13 +48,24 @@
       "long_short": 1.29
     },
     {
+      "symbol": "PUMP",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.63
+    },
+    {
       "symbol": "BCH",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": 0.000201,
+      "funding": 0.000203,
       "long_short": 1.56
     },
     {
@@ -68,16 +79,6 @@
       "long_short": 1.02
     },
     {
-      "symbol": "PUMP",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "watcher"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.63
-    },
-    {
       "symbol": "XRP",
       "surfaces": 2,
       "sources": [
@@ -88,14 +89,6 @@
       "long_short": 2.61
     },
     {
-      "symbol": "CRV",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "ETH",
       "surfaces": 1,
       "sources": [
@@ -104,20 +97,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "GRAM",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "HEMI",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 0.000312
+      "funding": 0.000294
     },
     {
       "symbol": "NEIRO",
@@ -133,7 +118,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000983
+      "funding": -0.000938
     },
     {
       "symbol": "PEPE",
@@ -141,6 +126,14 @@
       "sources": [
         "coingecko"
       ]
+    },
+    {
+      "symbol": "POL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "SOL",
