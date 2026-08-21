@@ -1,20 +1,34 @@
 {
-  "ts": "2026-08-21T07:58:04+00:00",
+  "ts": "2026-08-21T08:03:58+00:00",
   "scanned": 138,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "AAVEUSDT",
+      "symbol": "JTOUSDT",
+      "signal": "ignition",
+      "score": 0.9912,
+      "raw_score": 0.8039,
+      "weight": 1.233,
+      "price": 0.5977,
+      "why": "trades 8.3x and volume 12.4x the prior 4h, 77% taker-buy, $82,493 burst \u2014 while price has only moved +2.8%",
+      "chg_24h": 0.068,
+      "vol_surge": 12.42,
+      "chg_1h": 0.0284,
+      "market_surge": 7.52,
+      "actionable": true
+    },
+    {
+      "symbol": "GALAUSDT",
       "signal": "breakout",
-      "score": 0.6698,
-      "raw_score": 0.6484,
+      "score": 0.8398,
+      "raw_score": 0.813,
       "weight": 1.033,
-      "price": 105.32,
-      "why": "trades 5.1x, volume 5.6x, 63% taker-buy, +4.9% in an hour, at 105% of its 24h range",
-      "chg_24h": 0.0823,
-      "vol_surge": 5.65,
-      "chg_1h": 0.0494,
-      "market_surge": 4.67,
+      "price": 0.001768,
+      "why": "trades 7.7x, volume 6.2x, 70% taker-buy, +6.1% in an hour, at 95% of its 24h range",
+      "chg_24h": 0.2488,
+      "vol_surge": 6.16,
+      "chg_1h": 0.0612,
+      "market_surge": 5.5,
       "actionable": true
     }
   ],
@@ -26,7 +40,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 94,
+    "count": 92,
     "baseline": 14.0,
     "wave": true
   },
@@ -47,9 +61,9 @@
     },
     "breakout": {
       "n_1h": 30,
-      "hit_rate_1h": 0.433,
-      "mean_ret_1h": 0.00433,
-      "median_ret_1h": -0.00055,
+      "hit_rate_1h": 0.467,
+      "mean_ret_1h": 0.00495,
+      "median_ret_1h": -0.00045,
       "n_4h": 30,
       "hit_rate_4h": 0.533,
       "mean_ret_4h": 0.0169,
