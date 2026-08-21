@@ -1,8 +1,37 @@
 {
-  "ts": "2026-08-21T08:43:06+00:00",
+  "ts": "2026-08-21T08:49:03+00:00",
   "scanned": 137,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "WBETHUSDT",
+      "signal": "breakout",
+      "score": 0.8275,
+      "raw_score": 0.7755,
+      "weight": 1.067,
+      "price": 2677.93,
+      "why": "trades 14.9x, volume 19.3x, 76% taker-buy, +2.3% in an hour, at 97% of its 24h range",
+      "chg_24h": 0.0666,
+      "vol_surge": 19.33,
+      "chg_1h": 0.0234,
+      "market_surge": 5.44,
+      "actionable": true
+    },
+    {
+      "symbol": "WBTCUSDT",
+      "signal": "breakout",
+      "score": 0.7274,
+      "raw_score": 0.6817,
+      "weight": 1.067,
+      "price": 77929.13,
+      "why": "trades 5.0x, volume 36.5x, 89% taker-buy, +2.1% in an hour, at 97% of its 24h range",
+      "chg_24h": 0.0885,
+      "vol_surge": 36.54,
+      "chg_1h": 0.0211,
+      "market_surge": 10.85,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +40,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 84,
+    "count": 87,
     "baseline": 14.0,
     "wave": true
   },
@@ -19,7 +48,7 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.667,
-      "mean_ret_1h": 0.00533,
+      "mean_ret_1h": 0.00609,
       "median_ret_1h": 0.00387,
       "n_4h": 30,
       "hit_rate_4h": 0.733,
@@ -33,16 +62,16 @@
     "breakout": {
       "n_1h": 30,
       "hit_rate_1h": 0.533,
-      "mean_ret_1h": 0.00601,
-      "median_ret_1h": 0.00823,
+      "mean_ret_1h": 0.00635,
+      "median_ret_1h": 0.00888,
       "n_4h": 30,
-      "hit_rate_4h": 0.533,
-      "mean_ret_4h": 0.0169,
-      "median_ret_4h": 0.00859,
+      "hit_rate_4h": 0.567,
+      "mean_ret_4h": 0.01965,
+      "median_ret_4h": 0.01048,
       "n_24h": 30,
       "hit_rate_24h": 0.967,
-      "mean_ret_24h": 0.08453,
-      "median_ret_24h": 0.05404
+      "mean_ret_24h": 0.09046,
+      "median_ret_24h": 0.05997
     },
     "reversion": {
       "n_1h": 22,
