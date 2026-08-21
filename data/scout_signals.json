@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-21T21:32:06+00:00",
-  "scanned": 148,
+  "ts": "2026-08-21T21:37:20+00:00",
+  "scanned": 149,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "APTUSDT",
+      "signal": "ignition",
+      "score": 0.5669,
+      "raw_score": 0.5669,
+      "weight": 1.0,
+      "price": 0.639,
+      "why": "trades 4.9x and volume 5.7x the prior 4h, 70% taker-buy, $122,524 burst \u2014 while price has only moved +1.9%",
+      "chg_24h": 0.1154,
+      "vol_surge": 5.67,
+      "chg_1h": 0.0191,
+      "market_surge": 3.45,
+      "actionable": false,
+      "status": "benched \u2014 hit 50%, mean +0.49% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 50%, mean +0.49% over last 30 at 4h: not beating the round trip",
     "breakout": "actionable",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 135,
+    "count": 129,
     "baseline": 15.0,
     "wave": true
   },
@@ -32,9 +48,9 @@
     },
     "breakout": {
       "n_1h": 30,
-      "hit_rate_1h": 0.533,
-      "mean_ret_1h": 0.00559,
-      "median_ret_1h": 0.00644,
+      "hit_rate_1h": 0.567,
+      "mean_ret_1h": 0.00683,
+      "median_ret_1h": 0.00823,
       "n_4h": 30,
       "hit_rate_4h": 0.467,
       "mean_ret_4h": 0.01124,
