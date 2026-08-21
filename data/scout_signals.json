@@ -1,8 +1,23 @@
 {
-  "ts": "2026-08-21T11:36:34+00:00",
-  "scanned": 144,
+  "ts": "2026-08-21T11:42:20+00:00",
+  "scanned": 145,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SANTOSUSDT",
+      "signal": "ignition",
+      "score": 0.9445,
+      "raw_score": 0.766,
+      "weight": 1.233,
+      "price": 0.521,
+      "why": "trades 7.7x and volume 14.4x the prior 4h, 62% taker-buy, $76,777 burst \u2014 while price has only moved +2.0%",
+      "chg_24h": 0.0358,
+      "vol_surge": 14.43,
+      "chg_1h": 0.0196,
+      "market_surge": 3.44,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 81,
+    "count": 92,
     "baseline": 14.0,
     "wave": true
   },
@@ -37,7 +52,7 @@
       "median_ret_1h": 0.00935,
       "n_4h": 30,
       "hit_rate_4h": 0.533,
-      "mean_ret_4h": 0.01583,
+      "mean_ret_4h": 0.01624,
       "median_ret_4h": 0.00899,
       "n_24h": 30,
       "hit_rate_24h": 1.0,
