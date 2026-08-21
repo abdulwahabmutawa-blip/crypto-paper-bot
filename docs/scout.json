@@ -1,34 +1,34 @@
 {
-  "ts": "2026-08-21T21:58:36+00:00",
-  "scanned": 150,
+  "ts": "2026-08-21T22:04:18+00:00",
+  "scanned": 148,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "ZECUSDT",
-      "signal": "heat",
-      "score": 0.7998,
-      "raw_score": 0.6,
-      "weight": 1.333,
-      "price": 725.39,
-      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.010% \u00b7 L/S 0.69",
-      "chg_24h": 0.2719,
-      "vol_surge": null,
-      "chg_1h": null,
-      "market_surge": 3,
+      "symbol": "SNDKBUSDT",
+      "signal": "ignition",
+      "score": 0.9811,
+      "raw_score": 0.9498,
+      "weight": 1.033,
+      "price": 1596.0,
+      "why": "trades 19.2x and volume 15.9x the prior 4h, 80% taker-buy, $197,993 burst \u2014 while price has only moved -0.0%",
+      "chg_24h": 0.0066,
+      "vol_surge": 15.95,
+      "chg_1h": -0.0002,
+      "market_surge": 1.53,
       "actionable": true
     },
     {
-      "symbol": "ETHUSDT",
+      "symbol": "BMNRBUSDT",
       "signal": "breakout",
-      "score": 0.6259,
-      "raw_score": 0.6472,
+      "score": 0.7861,
+      "raw_score": 0.8129,
       "weight": 0.967,
-      "price": 2515.24,
-      "why": "trades 4.2x, volume 8.9x, 73% taker-buy, +3.0% in an hour, at 97% of its 24h range",
-      "chg_24h": 0.0848,
-      "vol_surge": 8.9,
-      "chg_1h": 0.0304,
-      "market_surge": 2.88,
+      "price": 23.53,
+      "why": "trades 13.5x, volume 71.3x, 95% taker-buy, +2.3% in an hour, at 97% of its 24h range",
+      "chg_24h": 0.1,
+      "vol_surge": 71.32,
+      "chg_1h": 0.023,
+      "market_surge": 16.41,
       "actionable": true
     }
   ],
@@ -40,16 +40,16 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 145,
+    "count": 153,
     "baseline": 16.0,
     "wave": true
   },
   "scorecard": {
     "ignition": {
       "n_1h": 30,
-      "hit_rate_1h": 0.467,
-      "mean_ret_1h": -0.00406,
-      "median_ret_1h": 0.00169,
+      "hit_rate_1h": 0.433,
+      "mean_ret_1h": -0.00438,
+      "median_ret_1h": 0.00153,
       "n_4h": 30,
       "hit_rate_4h": 0.533,
       "mean_ret_4h": 0.00669,
@@ -97,9 +97,9 @@
       "mean_ret_4h": 0.03036,
       "median_ret_4h": 0.02451,
       "n_24h": 30,
-      "hit_rate_24h": 0.6,
-      "mean_ret_24h": -0.01466,
-      "median_ret_24h": 0.03981
+      "hit_rate_24h": 0.633,
+      "mean_ret_24h": -0.00224,
+      "median_ret_24h": 0.03983
     },
     "revival": {
       "n_1h": 4,
