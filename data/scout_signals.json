@@ -1,23 +1,8 @@
 {
-  "ts": "2026-08-21T22:33:03+00:00",
-  "scanned": 149,
+  "ts": "2026-08-21T22:38:37+00:00",
+  "scanned": 151,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "PAXGUSDT",
-      "signal": "ignition",
-      "score": 0.8309,
-      "raw_score": 0.8044,
-      "weight": 1.033,
-      "price": 4594.03,
-      "why": "trades 8.1x and volume 7.0x the prior 4h, 83% taker-buy, $215,677 burst \u2014 while price has only moved -0.1%",
-      "chg_24h": 0.0189,
-      "vol_surge": 6.97,
-      "chg_1h": -0.0006,
-      "market_surge": 0.0,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -26,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 151,
+    "count": 156,
     "baseline": 16.0,
     "wave": true
   },
@@ -34,7 +19,7 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.433,
-      "mean_ret_1h": -0.00438,
+      "mean_ret_1h": -0.00375,
       "median_ret_1h": 0.00153,
       "n_4h": 30,
       "hit_rate_4h": 0.533,
