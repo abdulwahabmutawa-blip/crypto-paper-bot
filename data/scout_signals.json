@@ -1,51 +1,8 @@
 {
-  "ts": "2026-08-21T06:23:35+00:00",
-  "scanned": 134,
+  "ts": "2026-08-21T06:29:24+00:00",
+  "scanned": 135,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "TURBOUSDT",
-      "signal": "ignition",
-      "score": 0.8775,
-      "raw_score": 0.7312,
-      "weight": 1.2,
-      "price": 0.000963,
-      "why": "trades 7.1x and volume 13.6x the prior 4h, 66% taker-buy, $56,104 burst \u2014 while price has only moved +2.7%",
-      "chg_24h": 0.1531,
-      "vol_surge": 13.57,
-      "chg_1h": 0.0267,
-      "market_surge": 4.64,
-      "actionable": true
-    },
-    {
-      "symbol": "CFGUSDT",
-      "signal": "ignition",
-      "score": 0.8631,
-      "raw_score": 0.7192,
-      "weight": 1.2,
-      "price": 0.1431,
-      "why": "trades 6.2x and volume 9.8x the prior 4h, 69% taker-buy, $73,150 burst \u2014 while price has only moved +1.9%",
-      "chg_24h": 0.0857,
-      "vol_surge": 9.82,
-      "chg_1h": 0.0185,
-      "market_surge": 1.79,
-      "actionable": true
-    },
-    {
-      "symbol": "TURBOUSDT",
-      "signal": "breakout",
-      "score": 0.7547,
-      "raw_score": 0.7306,
-      "weight": 1.033,
-      "price": 0.000963,
-      "why": "trades 7.1x, volume 13.6x, 66% taker-buy, +2.7% in an hour, at 87% of its 24h range",
-      "chg_24h": 0.1531,
-      "vol_surge": 13.57,
-      "chg_1h": 0.0267,
-      "market_surge": 4.64,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -54,15 +11,15 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 61,
+    "count": 62,
     "baseline": 14.0,
     "wave": true
   },
   "scorecard": {
     "ignition": {
       "n_1h": 30,
-      "hit_rate_1h": 0.7,
-      "mean_ret_1h": 0.00283,
+      "hit_rate_1h": 0.667,
+      "mean_ret_1h": 0.0024,
       "median_ret_1h": 0.00356,
       "n_4h": 30,
       "hit_rate_4h": 0.7,
