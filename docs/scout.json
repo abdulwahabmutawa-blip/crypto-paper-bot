@@ -1,8 +1,23 @@
 {
-  "ts": "2026-08-21T09:23:23+00:00",
-  "scanned": 139,
+  "ts": "2026-08-21T09:28:34+00:00",
+  "scanned": 141,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "GPSUSDT",
+      "signal": "breakout",
+      "score": 0.9509,
+      "raw_score": 0.8912,
+      "weight": 1.067,
+      "price": 0.01299,
+      "why": "trades 18.0x, volume 32.5x, 64% taker-buy, +6.8% in an hour, at 89% of its 24h range",
+      "chg_24h": 0.0855,
+      "vol_surge": 32.51,
+      "chg_1h": 0.0683,
+      "market_surge": 4.52,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 57,
+    "count": 60,
     "baseline": 14.0,
     "wave": true
   },
@@ -23,8 +38,8 @@
       "median_ret_1h": 0.00356,
       "n_4h": 30,
       "hit_rate_4h": 0.733,
-      "mean_ret_4h": 0.01532,
-      "median_ret_4h": 0.01243,
+      "mean_ret_4h": 0.01469,
+      "median_ret_4h": 0.01215,
       "n_24h": 30,
       "hit_rate_24h": 0.933,
       "mean_ret_24h": 0.08497,

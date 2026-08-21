@@ -1,17 +1,18 @@
 {
-  "ts": "2026-08-21T09:23:15+00:00",
+  "ts": "2026-08-21T09:28:29+00:00",
   "sources": {
     "coingecko": [
-      "ENA",
       "BTC",
+      "ENA",
       "PUMP",
-      "SOL",
       "ETH",
+      "SOL",
       "ONDO",
-      "ZEC",
       "PEPE",
+      "ZEC",
       "FET",
-      "LIT"
+      "LIT",
+      "XRP"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,8 +22,8 @@
       "NEIRO",
       "ACE",
       "XRP",
-      "XPL",
       "BCH",
+      "XPL",
       "PUMP"
     ],
     "watcher": [
@@ -58,6 +59,17 @@
       "long_short": 1.57
     },
     {
+      "symbol": "XRP",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.87
+    },
+    {
       "symbol": "BTC",
       "surfaces": 2,
       "sources": [
@@ -74,18 +86,8 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.001861,
+      "funding": -0.001586,
       "long_short": 1.29
-    },
-    {
-      "symbol": "XRP",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": 0.0001,
-      "long_short": 2.87
     },
     {
       "symbol": "ACE",
@@ -93,7 +95,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001501
+      "funding": -0.001488
     },
     {
       "symbol": "BCH",
@@ -101,7 +103,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000119
+      "funding": 0.000133
     },
     {
       "symbol": "ETH",
