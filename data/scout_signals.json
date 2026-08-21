@@ -1,8 +1,52 @@
 {
-  "ts": "2026-08-21T00:58:50+00:00",
-  "scanned": 121,
+  "ts": "2026-08-21T01:04:12+00:00",
+  "scanned": 122,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "CRCLBUSDT",
+      "signal": "ignition",
+      "score": 0.9513,
+      "raw_score": 0.8915,
+      "weight": 1.067,
+      "price": 84.74,
+      "why": "trades 15.5x and volume 67.9x the prior 4h, 63% taker-buy, $432,362 burst \u2014 while price has only moved +0.6%",
+      "chg_24h": 0.0511,
+      "vol_surge": 67.9,
+      "chg_1h": 0.0061,
+      "market_surge": 1.4,
+      "actionable": true
+    },
+    {
+      "symbol": "CHIPUSDT",
+      "signal": "breakout",
+      "score": 0.6691,
+      "raw_score": 0.5733,
+      "weight": 1.167,
+      "price": 0.03192,
+      "why": "trades 4.2x, volume 7.0x, 63% taker-buy, +2.2% in an hour, at 92% of its 24h range",
+      "chg_24h": 0.1421,
+      "vol_surge": 7.0,
+      "chg_1h": 0.0221,
+      "market_surge": 1.23,
+      "actionable": true
+    },
+    {
+      "symbol": "ENAUSDT",
+      "signal": "heat",
+      "score": 0.6198,
+      "raw_score": 0.6,
+      "weight": 1.033,
+      "price": 0.1198,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.005% \u00b7 L/S 2.0",
+      "chg_24h": 0.2758,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
+      "actionable": false,
+      "status": "benched \u2014 hit 53%, mean +0.37% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +55,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 38,
+    "count": 39,
     "baseline": 13.0,
     "wave": true
   },
@@ -27,8 +71,8 @@
       "median_ret_4h": 0.00694,
       "n_24h": 30,
       "hit_rate_24h": 0.933,
-      "mean_ret_24h": 0.06269,
-      "median_ret_24h": 0.05004
+      "mean_ret_24h": 0.05774,
+      "median_ret_24h": 0.04342
     },
     "breakout": {
       "n_1h": 30,
