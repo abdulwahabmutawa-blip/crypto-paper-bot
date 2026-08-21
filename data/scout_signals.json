@@ -1,8 +1,23 @@
 {
-  "ts": "2026-08-21T20:53:01+00:00",
-  "scanned": 152,
+  "ts": "2026-08-21T20:58:36+00:00",
+  "scanned": 151,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "AAVEUSDT",
+      "signal": "breakout",
+      "score": 0.8435,
+      "raw_score": 0.8723,
+      "weight": 0.967,
+      "price": 116.74,
+      "why": "trades 8.9x, volume 23.7x, 66% taker-buy, +6.1% in an hour, at 100% of its 24h range",
+      "chg_24h": 0.196,
+      "vol_surge": 23.74,
+      "chg_1h": 0.0609,
+      "market_surge": 10.86,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,16 +26,16 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 112,
+    "count": 117,
     "baseline": 15.0,
     "wave": true
   },
   "scorecard": {
     "ignition": {
       "n_1h": 30,
-      "hit_rate_1h": 0.5,
-      "mean_ret_1h": -0.00368,
-      "median_ret_1h": 0.00299,
+      "hit_rate_1h": 0.467,
+      "mean_ret_1h": -0.00406,
+      "median_ret_1h": 0.00169,
       "n_4h": 30,
       "hit_rate_4h": 0.567,
       "mean_ret_4h": 0.01395,
