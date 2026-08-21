@@ -1,8 +1,37 @@
 {
-  "ts": "2026-08-21T08:09:24+00:00",
-  "scanned": 134,
+  "ts": "2026-08-21T08:15:04+00:00",
+  "scanned": 136,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ROBOUSDT",
+      "signal": "ignition",
+      "score": 1.0959,
+      "raw_score": 0.8888,
+      "weight": 1.233,
+      "price": 0.0138,
+      "why": "trades 19.2x and volume 81.3x the prior 4h, 85% taker-buy, $356,780 burst \u2014 while price has only moved +2.9%",
+      "chg_24h": 0.0472,
+      "vol_surge": 81.29,
+      "chg_1h": 0.0291,
+      "market_surge": 15.09,
+      "actionable": true
+    },
+    {
+      "symbol": "NILUSDT",
+      "signal": "breakout",
+      "score": 0.7006,
+      "raw_score": 0.6782,
+      "weight": 1.033,
+      "price": 0.04606,
+      "why": "trades 5.1x, volume 8.9x, 71% taker-buy, +3.0% in an hour, at 95% of its 24h range",
+      "chg_24h": 0.0743,
+      "vol_surge": 8.91,
+      "chg_1h": 0.0302,
+      "market_surge": 5.76,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,23 +40,23 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 74,
+    "count": 66,
     "baseline": 14.0,
     "wave": true
   },
   "scorecard": {
     "ignition": {
       "n_1h": 30,
-      "hit_rate_1h": 0.633,
-      "mean_ret_1h": 0.0034,
-      "median_ret_1h": 0.00356,
+      "hit_rate_1h": 0.667,
+      "mean_ret_1h": 0.00392,
+      "median_ret_1h": 0.00387,
       "n_4h": 30,
       "hit_rate_4h": 0.733,
       "mean_ret_4h": 0.01338,
       "median_ret_4h": 0.00921,
       "n_24h": 30,
       "hit_rate_24h": 0.867,
-      "mean_ret_24h": 0.06414,
+      "mean_ret_24h": 0.06572,
       "median_ret_24h": 0.04125
     },
     "breakout": {
