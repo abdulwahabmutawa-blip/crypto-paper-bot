@@ -1,8 +1,23 @@
 {
-  "ts": "2026-08-21T00:25:35+00:00",
-  "scanned": 121,
+  "ts": "2026-08-21T00:31:14+00:00",
+  "scanned": 120,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "TRUMPUSDT",
+      "signal": "ignition",
+      "score": 0.8352,
+      "raw_score": 0.7827,
+      "weight": 1.067,
+      "price": 1.646,
+      "why": "trades 7.1x and volume 27.8x the prior 4h, 61% taker-buy, $756,713 burst \u2014 while price has only moved -0.2%",
+      "chg_24h": -0.1165,
+      "vol_surge": 27.85,
+      "chg_1h": -0.0018,
+      "market_surge": 0.0,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 37,
+    "count": 40,
     "baseline": 13.0,
     "wave": true
   },
@@ -36,13 +51,13 @@
       "mean_ret_1h": 0.0074,
       "median_ret_1h": 0.00237,
       "n_4h": 30,
-      "hit_rate_4h": 0.633,
-      "mean_ret_4h": 0.02254,
-      "median_ret_4h": 0.01048,
+      "hit_rate_4h": 0.667,
+      "mean_ret_4h": 0.02312,
+      "median_ret_4h": 0.01209,
       "n_24h": 30,
       "hit_rate_24h": 0.933,
-      "mean_ret_24h": 0.05502,
-      "median_ret_24h": 0.04939
+      "mean_ret_24h": 0.05316,
+      "median_ret_24h": 0.04554
     },
     "reversion": {
       "n_1h": 22,
