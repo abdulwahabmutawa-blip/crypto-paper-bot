@@ -1,51 +1,8 @@
 {
-  "ts": "2026-08-21T13:05:24+00:00",
-  "scanned": 150,
+  "ts": "2026-08-21T13:10:35+00:00",
+  "scanned": 151,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "MORPHOUSDT",
-      "signal": "breakout",
-      "score": 0.8516,
-      "raw_score": 0.7981,
-      "weight": 1.067,
-      "price": 2.447,
-      "why": "trades 6.8x, volume 23.3x, 86% taker-buy, +3.8% in an hour, at 98% of its 24h range",
-      "chg_24h": 0.1311,
-      "vol_surge": 23.3,
-      "chg_1h": 0.0382,
-      "market_surge": 17.34,
-      "actionable": true
-    },
-    {
-      "symbol": "HBARUSDT",
-      "signal": "ignition",
-      "score": 0.6079,
-      "raw_score": 0.5209,
-      "weight": 1.167,
-      "price": 0.07766,
-      "why": "trades 4.6x and volume 5.8x the prior 4h, 60% taker-buy, $503,698 burst \u2014 while price has only moved +2.4%",
-      "chg_24h": 0.0664,
-      "vol_surge": 5.8,
-      "chg_1h": 0.0241,
-      "market_surge": 7.4,
-      "actionable": true
-    },
-    {
-      "symbol": "HBARUSDT",
-      "signal": "breakout",
-      "score": 0.588,
-      "raw_score": 0.5511,
-      "weight": 1.067,
-      "price": 0.07766,
-      "why": "trades 4.6x, volume 5.8x, 60% taker-buy, +2.4% in an hour, at 87% of its 24h range",
-      "chg_24h": 0.0664,
-      "vol_surge": 5.8,
-      "chg_1h": 0.0241,
-      "market_surge": 7.4,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -54,20 +11,20 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 134,
+    "count": 137,
     "baseline": 14.0,
     "wave": true
   },
   "scorecard": {
     "ignition": {
       "n_1h": 30,
-      "hit_rate_1h": 0.633,
-      "mean_ret_1h": 0.00663,
-      "median_ret_1h": 0.00356,
+      "hit_rate_1h": 0.6,
+      "mean_ret_1h": 0.00525,
+      "median_ret_1h": 0.00299,
       "n_4h": 30,
       "hit_rate_4h": 0.667,
-      "mean_ret_4h": 0.02158,
-      "median_ret_4h": 0.01003,
+      "mean_ret_4h": 0.02196,
+      "median_ret_4h": 0.01243,
       "n_24h": 30,
       "hit_rate_24h": 0.9,
       "mean_ret_24h": 0.08545,
