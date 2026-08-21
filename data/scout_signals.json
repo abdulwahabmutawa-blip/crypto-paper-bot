@@ -1,48 +1,20 @@
 {
-  "ts": "2026-08-21T07:19:36+00:00",
-  "scanned": 139,
+  "ts": "2026-08-21T07:25:08+00:00",
+  "scanned": 137,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "SNDKBUSDT",
-      "signal": "ignition",
-      "score": 1.0576,
-      "raw_score": 0.8577,
-      "weight": 1.233,
-      "price": 1620.74,
-      "why": "trades 9.4x and volume 14.6x the prior 4h, 66% taker-buy, $195,572 burst \u2014 while price has only moved +1.3%",
-      "chg_24h": 0.0002,
-      "vol_surge": 14.58,
-      "chg_1h": 0.0132,
-      "market_surge": 0.97,
-      "actionable": true
-    },
-    {
-      "symbol": "SNXXBUSDT",
-      "signal": "breakout",
-      "score": 0.8247,
-      "raw_score": 0.7984,
-      "weight": 1.033,
-      "price": 15.47,
-      "why": "trades 18.8x, volume 34.2x, 78% taker-buy, +2.9% in an hour, at 90% of its 24h range",
-      "chg_24h": 0.0019,
-      "vol_surge": 34.24,
-      "chg_1h": 0.0293,
-      "market_surge": 2.05,
-      "actionable": true
-    },
-    {
-      "symbol": "LINKUSDT",
-      "signal": "breakout",
-      "score": 0.7976,
-      "raw_score": 0.7722,
-      "weight": 1.033,
-      "price": 11.303,
-      "why": "trades 11.4x, volume 16.6x, 64% taker-buy, +3.0% in an hour, at 97% of its 24h range",
-      "chg_24h": 0.0729,
-      "vol_surge": 16.63,
-      "chg_1h": 0.0301,
-      "market_surge": 10.73,
+      "symbol": "XRPUSDT",
+      "signal": "heat",
+      "score": 0.7002,
+      "raw_score": 0.6,
+      "weight": 1.167,
+      "price": 1.3203,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.010% \u00b7 L/S 2.66",
+      "chg_24h": 0.1895,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
       "actionable": true
     }
   ],
@@ -54,7 +26,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 78,
+    "count": 77,
     "baseline": 14.0,
     "wave": true
   },
@@ -62,7 +34,7 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.633,
-      "mean_ret_1h": 0.00326,
+      "mean_ret_1h": 0.0034,
       "median_ret_1h": 0.00356,
       "n_4h": 30,
       "hit_rate_4h": 0.733,
@@ -76,7 +48,7 @@
     "breakout": {
       "n_1h": 30,
       "hit_rate_1h": 0.433,
-      "mean_ret_1h": 0.00531,
+      "mean_ret_1h": 0.00433,
       "median_ret_1h": -0.00055,
       "n_4h": 30,
       "hit_rate_4h": 0.533,
