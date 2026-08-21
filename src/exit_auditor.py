@@ -36,6 +36,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 STATE = ROOT / "data" / "lottery_state.json"
+STATE2 = ROOT / "data" / "playbook_state.json"   # book #2 (08-21): same
+                                                 # grading, dry-runs skipped
 AUDIT = ROOT / "data" / "exit_audit.jsonl"
 REPORT_JSON = ROOT / "reports" / "exit_timing.json"
 REPORT_MD = ROOT / "reports" / "exit_timing.md"
@@ -125,9 +127,20 @@ def run() -> None:
                 rows.append(r)
                 done.add(f"{r['symbol']}|{r['exit_time']}")
 
+    # both books feed one audit stream; each row already carries `source`,
+    # and dry-run rows (playbook unarmed) are simulations, never audited
+    realized = list(st.get("realized", []))
+    if STATE2.exists():
+        try:
+            st2 = json.loads(STATE2.read_text(encoding="utf-8"))
+            realized += [t for t in st2.get("realized", [])
+                         if not t.get("dry_run")]
+        except Exception:
+            pass
+
     now_ms = time.time() * 1000
     new = 0
-    for t in st.get("realized", []):
+    for t in realized:
         if _key(t) in done or not t.get("exit_time"):
             continue
         x = _ms(t["exit_time"])

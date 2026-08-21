@@ -1,0 +1,13 @@
+[Unit]
+Description=Run the playbook book every 5 minutes
+
+[Timer]
+OnBootSec=3min
+OnUnitActiveSec=5min
+# offset from lottery.timer's spread so the two books do not hit Binance
+# on the same second
+RandomizedDelaySec=45
+Persistent=false
+
+[Install]
+WantedBy=timers.target

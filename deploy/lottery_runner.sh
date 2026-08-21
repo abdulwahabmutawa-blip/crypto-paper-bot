@@ -10,6 +10,12 @@
 # wedge every later cycle — the 08-12 poisoning class, VPS edition.
 set -uo pipefail
 
+# REPO LOCK (review 08-21): lottery, playbook and git-pull all share
+# one worktree — serialize whole cycles so two writers can never race
+# a rebase. 120s wait >> a normal cycle; timing out skips the cycle.
+exec 9>/opt/tradebot/repo.lock
+flock -w 120 9 || { echo "[runner] repo lock timeout — skipping cycle"; exit 0; }
+
 REPO="${LOTTERY_REPO:-/opt/tradebot/cloud-bot}"
 cd "$REPO" || { echo "repo not found: $REPO"; exit 1; }
 

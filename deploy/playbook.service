@@ -1,0 +1,27 @@
+[Unit]
+Description=Playbook book — one cycle (second Binance account, spot only)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=tradebot
+WorkingDirectory=/opt/tradebot/cloud-bot
+# Keys live ONLY here, 600, owned by root — never in git, never in the unit.
+# DIFFERENT FILE from /etc/lottery.env: the two books never share secrets.
+EnvironmentFile=/etc/playbook.env
+Environment=GIT_TERMINAL_PROMPT=0
+Environment=HOME=/opt/tradebot
+Environment="GIT_SSH_COMMAND=ssh -i /opt/tradebot/.ssh/id_ed25519 -o UserKnownHostsFile=/opt/tradebot/.ssh/known_hosts -o StrictHostKeyChecking=accept-new -o ConnectTimeout=10 -o ServerAliveInterval=15 -o ServerAliveCountMax=3"
+ExecStart=/opt/tradebot/cloud-bot/deploy/playbook_runner.sh
+TimeoutStartSec=900
+Restart=no
+
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+ReadWritePaths=/opt/tradebot
+
+[Install]
+WantedBy=multi-user.target
