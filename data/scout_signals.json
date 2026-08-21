@@ -1,20 +1,20 @@
 {
-  "ts": "2026-08-21T05:26:33+00:00",
-  "scanned": 135,
+  "ts": "2026-08-21T05:32:17+00:00",
+  "scanned": 136,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "SKYUSDT",
+      "symbol": "\u5e01\u5b89\u4eba\u751fUSDT",
       "signal": "ignition",
-      "score": 1.0286,
-      "raw_score": 0.8572,
+      "score": 1.0226,
+      "raw_score": 0.8522,
       "weight": 1.2,
-      "price": 0.06522,
-      "why": "trades 9.5x and volume 26.8x the prior 4h, 76% taker-buy, $124,936 burst \u2014 while price has only moved +2.5%",
-      "chg_24h": 0.0816,
-      "vol_surge": 26.79,
-      "chg_1h": 0.0251,
-      "market_surge": 32.66,
+      "price": 0.486,
+      "why": "trades 11.5x and volume 9.4x the prior 4h, 70% taker-buy, $75,660 burst \u2014 while price has only moved +2.3%",
+      "chg_24h": 0.0907,
+      "vol_surge": 9.44,
+      "chg_1h": 0.0234,
+      "market_surge": 2.21,
       "actionable": true
     }
   ],
@@ -26,15 +26,15 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 50,
+    "count": 53,
     "baseline": 14.0,
     "wave": true
   },
   "scorecard": {
     "ignition": {
       "n_1h": 30,
-      "hit_rate_1h": 0.667,
-      "mean_ret_1h": 0.00265,
+      "hit_rate_1h": 0.7,
+      "mean_ret_1h": 0.00289,
       "median_ret_1h": 0.00314,
       "n_4h": 30,
       "hit_rate_4h": 0.7,
@@ -42,8 +42,8 @@
       "median_ret_4h": 0.00921,
       "n_24h": 30,
       "hit_rate_24h": 0.933,
-      "mean_ret_24h": 0.06056,
-      "median_ret_24h": 0.05004
+      "mean_ret_24h": 0.05847,
+      "median_ret_24h": 0.04342
     },
     "breakout": {
       "n_1h": 30,
@@ -56,7 +56,7 @@
       "median_ret_4h": 0.01048,
       "n_24h": 30,
       "hit_rate_24h": 0.933,
-      "mean_ret_24h": 0.05399,
+      "mean_ret_24h": 0.05316,
       "median_ret_24h": 0.04202
     },
     "reversion": {
