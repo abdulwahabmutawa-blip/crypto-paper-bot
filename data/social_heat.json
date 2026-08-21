@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-21T09:28:29+00:00",
+  "ts": "2026-08-21T09:33:38+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -17,14 +17,14 @@
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "ONG",
       "ENA",
+      "ONG",
       "NEIRO",
-      "ACE",
       "XRP",
       "BCH",
       "XPL",
-      "PUMP"
+      "ACE",
+      "ZEC"
     ],
     "watcher": [
       "ENA",
@@ -46,17 +46,6 @@
       ],
       "funding": 5e-05,
       "long_short": 1.69
-    },
-    {
-      "symbol": "PUMP",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.57
     },
     {
       "symbol": "XRP",
@@ -86,8 +75,27 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.001586,
+      "funding": -0.001452,
       "long_short": 1.29
+    },
+    {
+      "symbol": "PUMP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "watcher"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.57
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "ACE",
@@ -95,7 +103,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001488
+      "funding": -0.001475
     },
     {
       "symbol": "BCH",
@@ -103,7 +111,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000133
+      "funding": 0.000145
     },
     {
       "symbol": "ETH",
@@ -167,14 +175,6 @@
         "movers"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
