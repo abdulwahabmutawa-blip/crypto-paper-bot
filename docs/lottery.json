@@ -1,13 +1,13 @@
 {
   "created": "2026-08-15",
-  "held_symbol": "\u5e01\u5b89\u4eba\u751fUSDT",
-  "entry_price": 0.5093,
-  "units": 69.4,
-  "entry_scan_ts": "2026-08-21T05:35:01+00:00",
-  "entry_source": "scout:breakout",
+  "held_symbol": null,
+  "entry_price": null,
+  "units": 0.0,
+  "entry_scan_ts": null,
+  "entry_source": null,
   "stopped": {
-    "MEGAUSDT": "2026-08-21T04:16:06+00:00",
-    "ZECUSDT": "2026-08-21T06:52:56+00:00"
+    "ZECUSDT": "2026-08-21T06:52:56+00:00",
+    "\u5e01\u5b89\u4eba\u751fUSDT": "2026-08-21T09:07:43+00:00"
   },
   "entries": {
     "2026-08-21": 3
@@ -340,28 +340,32 @@
       "date": "2026-08-21",
       "exit": 599.74,
       "entry": 590.122
+    },
+    {
+      "symbol": "\u5e01\u5b89\u4eba\u751fUSDT",
+      "source": "scout:breakout",
+      "entry_time": "2026-08-21T07:04:18+00:00",
+      "exit_time": "2026-08-21T09:07:43+00:00",
+      "entry_price": 0.5093,
+      "exit_price": 0.5352,
+      "units": 69.4,
+      "spent_usd": 35.3454,
+      "got_usd": 37.0894,
+      "pnl_pct": 5.09,
+      "pnl_usd": 1.744,
+      "reason": "RATCHET (+5.2% vs peak +10.6%) \u2014 a ride that paid never goes red again",
+      "date": "2026-08-21",
+      "exit": 0.5352,
+      "entry": 0.5093
     }
   ],
-  "last_value_usd": 37.83,
-  "last_updated_utc": "2026-08-21T09:02:01+00:00",
-  "open_position": {
-    "symbol": "\u5e01\u5b89\u4eba\u751fUSDT",
-    "entry_time": "2026-08-21T07:04:18+00:00",
-    "entry_price": 0.5093,
-    "current_price": 0.5452,
-    "units": 69.4,
-    "spent_usd": 35.3454,
-    "value_usd": 37.8369,
-    "pnl_usd": 2.4915,
-    "pnl_pct": 7.05,
-    "source": "scout:breakout"
-  },
-  "spent_usd": 35.3454,
+  "last_value_usd": 37.08,
+  "last_updated_utc": "2026-08-21T09:07:43+00:00",
+  "open_position": null,
+  "spent_usd": null,
   "no_pair": {
-    "scan_ts": "2026-08-21T05:35:01+00:00",
+    "scan_ts": "2026-08-21T07:37:59+00:00",
     "syms": []
   },
-  "wave_bonus_date": "2026-08-21",
-  "hwm": 0.5634,
-  "entry_time": "2026-08-21T07:04:18+00:00"
+  "wave_bonus_date": "2026-08-21"
 }
