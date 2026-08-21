@@ -1,23 +1,8 @@
 {
-  "ts": "2026-08-21T00:20:04+00:00",
-  "scanned": 118,
+  "ts": "2026-08-21T00:25:35+00:00",
+  "scanned": 121,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "DOGEUSDT",
-      "signal": "ignition",
-      "score": 0.9572,
-      "raw_score": 0.8971,
-      "weight": 1.067,
-      "price": 0.08117,
-      "why": "trades 12.5x and volume 28.9x the prior 4h, 71% taker-buy, $5,251,806 burst \u2014 while price has only moved +1.2%",
-      "chg_24h": 0.0775,
-      "vol_surge": 28.86,
-      "chg_1h": 0.0125,
-      "market_surge": 10.32,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -26,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 40,
+    "count": 37,
     "baseline": 13.0,
     "wave": true
   },
@@ -42,8 +27,8 @@
       "median_ret_4h": 0.00694,
       "n_24h": 30,
       "hit_rate_24h": 0.933,
-      "mean_ret_24h": 0.05822,
-      "median_ret_24h": 0.05004
+      "mean_ret_24h": 0.05633,
+      "median_ret_24h": 0.04958
     },
     "breakout": {
       "n_1h": 30,
