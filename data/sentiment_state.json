@@ -1,10 +1,10 @@
 {
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "holding": "CASH",
-  "units": 0.0,
-  "cash": 1394.4511157695586,
-  "entry_price": null,
+  "holding": "BTC-USD",
+  "units": 0.02007339017372404,
+  "cash": 0.0,
+  "entry_price": 69266.1875,
   "bench_units": 1.332054612938296,
   "stopped": {
     "SHIB-USD": "2026-07-27T00:01:08+00:00",
@@ -388,6 +388,16 @@
       "value": 1398.51,
       "fee": 4.06,
       "reason": "STOP-LOSS hit (-16.1% from entry) \u2014 hype that bleeds gets cut"
+    },
+    {
+      "date": "2026-08-21",
+      "action": "BUY",
+      "ticker": "BTC-USD",
+      "price": 69266.1875,
+      "units": 0.0201,
+      "value": 1390.41,
+      "fee": 4.04,
+      "reason": "Grok: BTC euphoric \u2014 breaks $75k on squeeze and ETFs (scan 2026-08-21T05:35)"
     }
   ],
   "history": [
@@ -568,12 +578,6 @@
     }
   ],
   "intraday": [
-    {
-      "ts": "2026-07-30T04:05:33+00:00",
-      "value": 896.16,
-      "bench": 971.68,
-      "holding": "CASH"
-    },
     {
       "ts": "2026-07-30T04:18:47+00:00",
       "value": 896.16,
@@ -9567,9 +9571,15 @@
       "value": 1394.45,
       "bench": 1015.82,
       "holding": "CASH"
+    },
+    {
+      "ts": "2026-08-21T05:35:58+00:00",
+      "value": 1390.41,
+      "bench": 1015.82,
+      "holding": "BTC-USD"
     }
   ],
-  "last_updated_utc": "2026-08-21T05:21:33+00:00",
+  "last_updated_utc": "2026-08-21T05:35:58+00:00",
   "restatement": {
     "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)",
     "voided_trades": [
@@ -9648,5 +9658,5 @@
     ],
     "voided_reason": "signal faded before any real fill was possible (market closed the whole window) \u2014 trades could never have existed"
   },
-  "costs_paid": 34.2596
+  "costs_paid": 38.3035
 }
