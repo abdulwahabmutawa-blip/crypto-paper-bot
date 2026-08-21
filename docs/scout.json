@@ -1,8 +1,23 @@
 {
-  "ts": "2026-08-21T11:53:34+00:00",
-  "scanned": 144,
+  "ts": "2026-08-21T11:59:15+00:00",
+  "scanned": 143,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "TSTUSDT",
+      "signal": "ignition",
+      "score": 0.8118,
+      "raw_score": 0.6765,
+      "weight": 1.2,
+      "price": 0.0156,
+      "why": "trades 6.8x and volume 5.5x the prior 4h, 68% taker-buy, $55,387 burst \u2014 while price has only moved -0.2%",
+      "chg_24h": 0.0426,
+      "vol_surge": 5.53,
+      "chg_1h": -0.0019,
+      "market_surge": 5.32,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 99,
+    "count": 103,
     "baseline": 14.0,
     "wave": true
   },
@@ -27,7 +42,7 @@
       "median_ret_4h": 0.00596,
       "n_24h": 30,
       "hit_rate_24h": 0.9,
-      "mean_ret_24h": 0.09,
+      "mean_ret_24h": 0.09832,
       "median_ret_24h": 0.07252
     },
     "breakout": {
@@ -37,12 +52,12 @@
       "median_ret_1h": 0.00935,
       "n_4h": 30,
       "hit_rate_4h": 0.533,
-      "mean_ret_4h": 0.01565,
+      "mean_ret_4h": 0.0161,
       "median_ret_4h": 0.00899,
       "n_24h": 30,
       "hit_rate_24h": 1.0,
-      "mean_ret_24h": 0.10968,
-      "median_ret_24h": 0.10196
+      "mean_ret_24h": 0.11277,
+      "median_ret_24h": 0.10682
     },
     "reversion": {
       "n_1h": 22,
