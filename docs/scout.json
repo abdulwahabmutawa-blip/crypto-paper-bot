@@ -1,20 +1,20 @@
 {
-  "ts": "2026-08-21T16:29:40+00:00",
-  "scanned": 155,
+  "ts": "2026-08-21T16:35:26+00:00",
+  "scanned": 153,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "ENSUSDT",
-      "signal": "breakout",
-      "score": 0.8334,
-      "raw_score": 0.8068,
-      "weight": 1.033,
-      "price": 5.34,
-      "why": "trades 8.9x, volume 12.2x, 68% taker-buy, +3.9% in an hour, at 96% of its 24h range",
-      "chg_24h": 0.1977,
-      "vol_surge": 12.19,
-      "chg_1h": 0.0389,
-      "market_surge": 8.05,
+      "symbol": "WBTCUSDT",
+      "signal": "ignition",
+      "score": 0.8928,
+      "raw_score": 0.744,
+      "weight": 1.2,
+      "price": 77254.85,
+      "why": "trades 4.7x and volume 11.6x the prior 4h, 87% taker-buy, $63,246 burst \u2014 while price has only moved -0.5%",
+      "chg_24h": 0.0678,
+      "vol_surge": 11.64,
+      "chg_1h": -0.0049,
+      "market_surge": 2.5,
       "actionable": true
     }
   ],
@@ -26,7 +26,7 @@
     "revival": "probation \u2014 2/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 132,
+    "count": 130,
     "baseline": 15.0,
     "wave": true
   },
@@ -42,13 +42,13 @@
       "median_ret_4h": 0.01417,
       "n_24h": 30,
       "hit_rate_24h": 0.933,
-      "mean_ret_24h": 0.07667,
+      "mean_ret_24h": 0.0791,
       "median_ret_24h": 0.06835
     },
     "breakout": {
       "n_1h": 30,
       "hit_rate_1h": 0.6,
-      "mean_ret_1h": 0.00911,
+      "mean_ret_1h": 0.00934,
       "median_ret_1h": 0.00888,
       "n_4h": 30,
       "hit_rate_4h": 0.533,
