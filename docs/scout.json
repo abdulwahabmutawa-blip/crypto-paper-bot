@@ -1,17 +1,32 @@
 {
-  "ts": "2026-08-21T23:50:35+00:00",
+  "ts": "2026-08-21T23:56:04+00:00",
   "scanned": 152,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ZAMAUSDT",
+      "signal": "breakout",
+      "score": 0.6461,
+      "raw_score": 0.7179,
+      "weight": 0.9,
+      "price": 0.0518,
+      "why": "trades 6.5x, volume 5.5x, 63% taker-buy, +5.6% in an hour, at 100% of its 24h range",
+      "chg_24h": 0.1147,
+      "vol_surge": 5.51,
+      "chg_1h": 0.0561,
+      "market_surge": 3.64,
+      "actionable": true
+    }
+  ],
   "gate": {
-    "ignition": "benched \u2014 hit 53%, mean +0.36% over last 30 at 4h: not beating the round trip",
+    "ignition": "benched \u2014 hit 50%, mean +0.19% over last 30 at 4h: not beating the round trip",
     "breakout": "actionable",
     "reversion": "benched \u2014 hit 46%, mean +0.33% over last 22 at 4h: not beating the round trip",
     "heat": "actionable",
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 120,
+    "count": 125,
     "baseline": 16.0,
     "wave": true
   },
@@ -22,9 +37,9 @@
       "mean_ret_1h": -0.00292,
       "median_ret_1h": 0.00153,
       "n_4h": 30,
-      "hit_rate_4h": 0.533,
-      "mean_ret_4h": 0.00362,
-      "median_ret_4h": 0.00283,
+      "hit_rate_4h": 0.5,
+      "mean_ret_4h": 0.00194,
+      "median_ret_4h": 0.0027,
       "n_24h": 30,
       "hit_rate_24h": 0.9,
       "mean_ret_24h": 0.06879,
