@@ -1,17 +1,32 @@
 {
-  "ts": "2026-08-21T19:17:26+00:00",
+  "ts": "2026-08-21T19:22:36+00:00",
   "scanned": 151,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ENAUSDT",
+      "signal": "heat",
+      "score": 0.7998,
+      "raw_score": 0.6,
+      "weight": 1.333,
+      "price": 0.137,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.006% \u00b7 L/S 1.04",
+      "chg_24h": 0.25,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
     "reversion": "benched \u2014 hit 46%, mean +0.33% over last 22 at 4h: not beating the round trip",
     "heat": "actionable",
-    "revival": "probation \u2014 3/12 resolved 24h samples under ruleset 3"
+    "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 87,
+    "count": 85,
     "baseline": 15.0,
     "wave": true
   },
@@ -27,8 +42,8 @@
       "median_ret_4h": 0.00473,
       "n_24h": 30,
       "hit_rate_24h": 0.967,
-      "mean_ret_24h": 0.08353,
-      "median_ret_24h": 0.07122
+      "mean_ret_24h": 0.0789,
+      "median_ret_24h": 0.06835
     },
     "breakout": {
       "n_1h": 30,
@@ -81,9 +96,9 @@
       "hit_rate_4h": 0.75,
       "mean_ret_4h": 0.00856,
       "median_ret_4h": 0.02608,
-      "n_24h": 3,
+      "n_24h": 4,
       "hit_rate_24h": 1.0,
-      "mean_ret_24h": 0.24109,
+      "mean_ret_24h": 0.2034,
       "median_ret_24h": 0.29739
     }
   },
