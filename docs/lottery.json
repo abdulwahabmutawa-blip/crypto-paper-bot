@@ -1,12 +1,13 @@
 {
   "created": "2026-08-15",
-  "held_symbol": "ZECUSDT",
-  "entry_price": 590.122,
-  "units": 0.06,
-  "entry_scan_ts": "2026-08-21T03:32:57+00:00",
-  "entry_source": "scout:breakout",
+  "held_symbol": null,
+  "entry_price": null,
+  "units": 0.0,
+  "entry_scan_ts": null,
+  "entry_source": null,
   "stopped": {
-    "MEGAUSDT": "2026-08-21T04:16:06+00:00"
+    "MEGAUSDT": "2026-08-21T04:16:06+00:00",
+    "ZECUSDT": "2026-08-21T06:52:56+00:00"
   },
   "entries": {
     "2026-08-21": 2
@@ -322,28 +323,32 @@
       "date": "2026-08-21",
       "exit": 0.03834,
       "entry": 0.03850576042341759
+    },
+    {
+      "symbol": "ZECUSDT",
+      "source": "scout:breakout",
+      "entry_time": "2026-08-21T04:49:39+00:00",
+      "exit_time": "2026-08-21T06:52:56+00:00",
+      "entry_price": 590.122,
+      "exit_price": 599.74,
+      "units": 0.06,
+      "spent_usd": 35.4073,
+      "got_usd": 35.3847,
+      "pnl_pct": 1.63,
+      "pnl_usd": -0.0226,
+      "reason": "STALLED (2.1h in, only +1.6%) \u2014 the pump never came",
+      "date": "2026-08-21",
+      "exit": 599.74,
+      "entry": 590.122
     }
   ],
-  "last_value_usd": 35.96,
-  "last_updated_utc": "2026-08-21T06:47:07+00:00",
-  "open_position": {
-    "symbol": "ZECUSDT",
-    "entry_time": "2026-08-21T04:49:39+00:00",
-    "entry_price": 590.122,
-    "current_price": 599.51,
-    "units": 0.06,
-    "spent_usd": 35.4073,
-    "value_usd": 35.9706,
-    "pnl_usd": 0.5633,
-    "pnl_pct": 1.59,
-    "source": "scout:breakout"
-  },
-  "spent_usd": 35.4073,
+  "last_value_usd": 35.37,
+  "last_updated_utc": "2026-08-21T06:52:56+00:00",
+  "open_position": null,
+  "spent_usd": null,
   "no_pair": {
-    "scan_ts": "2026-08-21T03:32:57+00:00",
+    "scan_ts": "2026-08-21T05:35:01+00:00",
     "syms": []
   },
-  "wave_bonus_date": "2026-08-21",
-  "hwm": 610.44,
-  "entry_time": "2026-08-21T04:49:39+00:00"
+  "wave_bonus_date": "2026-08-21"
 }
