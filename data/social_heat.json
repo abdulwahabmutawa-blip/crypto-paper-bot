@@ -1,18 +1,18 @@
 {
-  "ts": "2026-08-21T18:26:29+00:00",
+  "ts": "2026-08-21T18:31:49+00:00",
   "sources": {
     "coingecko": [
       "ENA",
       "BTC",
       "PUMP",
       "LIT",
+      "PEPE",
       "SOL",
       "ZEC",
-      "PEPE",
       "XRP",
+      "ETH",
       "ASTER",
-      "MORPHO",
-      "LINK"
+      "TAO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,9 +22,9 @@
       "TUT",
       "PEPE",
       "NEIRO",
-      "CRV",
       "XPL",
-      "PENGU"
+      "CRV",
+      "ZEC"
     ],
     "watcher": [
       "ENA",
@@ -43,7 +43,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.000107,
+      "funding": 0.000115,
       "long_short": 1.09
     },
     {
@@ -62,7 +62,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.000119,
+      "funding": 0.000127,
       "long_short": 1.57
     },
     {
@@ -74,6 +74,16 @@
       ],
       "funding": 0.0001,
       "long_short": 1.03
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 0.68
     },
     {
       "symbol": "ASTER",
@@ -92,7 +102,7 @@
       "funding": 0.0001
     },
     {
-      "symbol": "LINK",
+      "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -108,23 +118,7 @@
       "funding": 5e-05
     },
     {
-      "symbol": "MORPHO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "NEIRO",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
         "movers"
@@ -148,12 +142,20 @@
       "funding": 0.0001
     },
     {
+      "symbol": "TAO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "TUT",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 0.000138
+      "funding": 0.000143
     },
     {
       "symbol": "XPL",
@@ -165,14 +167,6 @@
     },
     {
       "symbol": "XRP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
         "coingecko"
