@@ -1,10 +1,10 @@
 {
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "holding": "MSTR",
-  "units": 12.865915836256436,
+  "holding": "CIFR",
+  "units": 97.44609938753358,
   "cash": 0.0,
-  "entry_price": 119.37999725341797,
+  "entry_price": 15.890000343322754,
   "bench_units": 1.332054612938296,
   "stopped": {
     "SHIB-USD": "2026-07-27T00:01:08+00:00",
@@ -418,6 +418,26 @@
       "value": 1535.93,
       "fee": 2.15,
       "reason": "Grok: MSTR euphoric \u2014 BTC proxy ripping with crypto surge (scan 2026-08-21T11:41)"
+    },
+    {
+      "date": "2026-08-21",
+      "action": "SELL",
+      "ticker": "MSTR",
+      "price": 120.66999817,
+      "units": 12.8659,
+      "value": 1552.53,
+      "fee": 2.17,
+      "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
+    },
+    {
+      "date": "2026-08-21",
+      "action": "BUY",
+      "ticker": "CIFR",
+      "price": 15.89000034,
+      "units": 97.4461,
+      "value": 1548.42,
+      "fee": 1.94,
+      "reason": "Grok: CIFR euphoric \u2014 Stocktwits top with BTC miners rally (scan 2026-08-21T15:46)"
     }
   ],
   "history": [
@@ -598,18 +618,12 @@
     },
     {
       "date": "2026-08-21",
-      "value": 1562.69,
-      "bench": 1020.55,
-      "holding": "MSTR"
+      "value": 1548.42,
+      "bench": 1022.07,
+      "holding": "CIFR"
     }
   ],
   "intraday": [
-    {
-      "ts": "2026-07-30T18:34:57+00:00",
-      "value": 912.28,
-      "bench": 986.12,
-      "holding": "MSFT"
-    },
     {
       "ts": "2026-07-30T18:48:10+00:00",
       "value": 910.02,
@@ -9603,9 +9617,15 @@
       "value": 1562.69,
       "bench": 1020.55,
       "holding": "MSTR"
+    },
+    {
+      "ts": "2026-08-21T15:47:13+00:00",
+      "value": 1548.42,
+      "bench": 1022.07,
+      "holding": "CIFR"
     }
   ],
-  "last_updated_utc": "2026-08-21T15:32:58+00:00",
+  "last_updated_utc": "2026-08-21T15:47:13+00:00",
   "restatement": {
     "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)",
     "voided_trades": [
@@ -9684,5 +9704,5 @@
     ],
     "voided_reason": "signal faded before any real fill was possible (market closed the whole window) \u2014 trades could never have existed"
   },
-  "costs_paid": 44.9302
+  "costs_paid": 49.0416
 }
