@@ -1,28 +1,30 @@
 {
-  "ts": "2026-08-21T23:45:09+00:00",
+  "ts": "2026-08-21T23:50:29+00:00",
   "sources": {
     "coingecko": [
       "BTC",
-      "ETH",
-      "LIT",
-      "PEPE",
       "XRP",
+      "ETH",
+      "PEPE",
       "SUI",
+      "LIT",
       "SOL",
       "ZEC",
+      "DOGE",
+      "PUMP",
+      "CRV",
       "AAVE",
-      "AERO",
-      "LINK"
+      "FET"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "BCH",
       "PEPE",
+      "BCH",
       "ZEC",
+      "TUT",
       "PENGU",
       "AAVE",
-      "TUT",
       "ENA",
       "CRV"
     ],
@@ -74,8 +76,18 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.000195,
+      "funding": 0.000191,
       "long_short": 1.54
+    },
+    {
+      "symbol": "CRV",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.58
     },
     {
       "symbol": "ENA",
@@ -84,16 +96,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.000129,
-      "long_short": 1.16
-    },
-    {
-      "symbol": "AERO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": 0.00014
     },
     {
       "symbol": "BTC",
@@ -104,10 +107,10 @@
       "funding": 0.0001
     },
     {
-      "symbol": "CRV",
+      "symbol": "DOGE",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
       "funding": 0.0001
     },
@@ -120,7 +123,7 @@
       "funding": 0.0001
     },
     {
-      "symbol": "LINK",
+      "symbol": "FET",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -140,6 +143,14 @@
       "surfaces": 1,
       "sources": [
         "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
       ],
       "funding": 5e-05
     },
@@ -165,7 +176,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000106
+      "funding": 0.000109
     },
     {
       "symbol": "XRP",
