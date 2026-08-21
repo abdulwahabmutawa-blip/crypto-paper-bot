@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-21T12:59:49+00:00",
+  "ts": "2026-08-21T13:05:19+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -18,12 +18,12 @@
     "stocktwits": [],
     "movers": [
       "ONG",
-      "HEMI",
       "ENA",
+      "HEMI",
       "XPL",
-      "BCH",
       "NEIRO",
-      "CRV",
+      "BCH",
+      "PUMP",
       "FET"
     ],
     "watcher": [
@@ -45,7 +45,18 @@
         "watcher"
       ],
       "funding": 5e-05,
-      "long_short": 1.36
+      "long_short": 1.29
+    },
+    {
+      "symbol": "PUMP",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.63
     },
     {
       "symbol": "BCH",
@@ -54,8 +65,8 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.000189,
-      "long_short": 1.55
+      "funding": 0.000203,
+      "long_short": 1.56
     },
     {
       "symbol": "BTC",
@@ -65,17 +76,7 @@
         "watcher"
       ],
       "funding": 0.0001,
-      "long_short": 0.97
-    },
-    {
-      "symbol": "PUMP",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "watcher"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.65
+      "long_short": 1.02
     },
     {
       "symbol": "XRP",
@@ -85,21 +86,13 @@
         "watcher"
       ],
       "funding": 0.0001,
-      "long_short": 2.58
+      "long_short": 2.61
     },
     {
       "symbol": "AAVE",
       "surfaces": 1,
       "sources": [
         "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "CRV",
-      "surfaces": 1,
-      "sources": [
-        "movers"
       ],
       "funding": 0.0001
     },
@@ -125,7 +118,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000363
+      "funding": 0.000345
     },
     {
       "symbol": "NEIRO",
@@ -141,7 +134,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001083
+      "funding": -0.001037
     },
     {
       "symbol": "PEPE",
