@@ -1,20 +1,20 @@
 {
-  "ts": "2026-08-21T07:08:25+00:00",
+  "ts": "2026-08-21T07:14:04+00:00",
   "scanned": 139,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "ENAUSDT",
-      "signal": "heat",
-      "score": 0.6798,
-      "raw_score": 0.6,
-      "weight": 1.133,
-      "price": 0.1321,
-      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.005% \u00b7 L/S 1.77",
-      "chg_24h": 0.4159,
-      "vol_surge": null,
-      "chg_1h": null,
-      "market_surge": 3,
+      "symbol": "TSTUSDT",
+      "signal": "ignition",
+      "score": 1.0527,
+      "raw_score": 0.8538,
+      "weight": 1.233,
+      "price": 0.01551,
+      "why": "trades 18.9x and volume 15.2x the prior 4h, 61% taker-buy, $57,692 burst \u2014 while price has only moved +1.9%",
+      "chg_24h": 0.0319,
+      "vol_surge": 15.22,
+      "chg_1h": 0.0191,
+      "market_surge": 2.77,
       "actionable": true
     }
   ],
@@ -26,15 +26,15 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 64,
+    "count": 70,
     "baseline": 14.0,
     "wave": true
   },
   "scorecard": {
     "ignition": {
       "n_1h": 30,
-      "hit_rate_1h": 0.667,
-      "mean_ret_1h": 0.00341,
+      "hit_rate_1h": 0.633,
+      "mean_ret_1h": 0.00326,
       "median_ret_1h": 0.00356,
       "n_4h": 30,
       "hit_rate_4h": 0.733,
@@ -56,8 +56,8 @@
       "median_ret_4h": 0.00859,
       "n_24h": 30,
       "hit_rate_24h": 0.933,
-      "mean_ret_24h": 0.05677,
-      "median_ret_24h": 0.04202
+      "mean_ret_24h": 0.05643,
+      "median_ret_24h": 0.04125
     },
     "reversion": {
       "n_1h": 22,
@@ -76,16 +76,16 @@
     "heat": {
       "n_1h": 30,
       "hit_rate_1h": 0.6,
-      "mean_ret_1h": 0.00835,
+      "mean_ret_1h": 0.00764,
       "median_ret_1h": 0.00455,
       "n_4h": 30,
-      "hit_rate_4h": 0.633,
-      "mean_ret_4h": 0.01745,
-      "median_ret_4h": 0.01037,
-      "n_24h": 25,
-      "hit_rate_24h": 0.32,
-      "mean_ret_24h": -0.07975,
-      "median_ret_24h": -0.10433
+      "hit_rate_4h": 0.667,
+      "mean_ret_4h": 0.0182,
+      "median_ret_4h": 0.01186,
+      "n_24h": 26,
+      "hit_rate_24h": 0.346,
+      "mean_ret_24h": -0.07466,
+      "median_ret_24h": -0.10234
     },
     "revival": {
       "n_1h": 4,
