@@ -1,8 +1,37 @@
 {
-  "ts": "2026-08-21T19:40:05+00:00",
+  "ts": "2026-08-21T19:45:26+00:00",
   "scanned": 151,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "CFGUSDT",
+      "signal": "ignition",
+      "score": 0.8739,
+      "raw_score": 0.819,
+      "weight": 1.067,
+      "price": 0.1458,
+      "why": "trades 36.1x and volume 40.7x the prior 4h, 67% taker-buy, $137,115 burst \u2014 while price has only moved +3.9%",
+      "chg_24h": 0.08,
+      "vol_surge": 40.7,
+      "chg_1h": 0.0392,
+      "market_surge": 12.72,
+      "actionable": true
+    },
+    {
+      "symbol": "CFGUSDT",
+      "signal": "breakout",
+      "score": 0.8601,
+      "raw_score": 0.8061,
+      "weight": 1.067,
+      "price": 0.1458,
+      "why": "trades 36.1x, volume 40.7x, 67% taker-buy, +3.9% in an hour, at 86% of its 24h range",
+      "chg_24h": 0.08,
+      "vol_surge": 40.7,
+      "chg_1h": 0.0392,
+      "market_surge": 12.72,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +40,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 86,
+    "count": 88,
     "baseline": 15.0,
     "wave": true
   },
@@ -23,7 +52,7 @@
       "median_ret_1h": 0.00299,
       "n_4h": 30,
       "hit_rate_4h": 0.567,
-      "mean_ret_4h": 0.0159,
+      "mean_ret_4h": 0.01614,
       "median_ret_4h": 0.00473,
       "n_24h": 30,
       "hit_rate_24h": 0.967,
@@ -37,7 +66,7 @@
       "median_ret_1h": 0.00823,
       "n_4h": 30,
       "hit_rate_4h": 0.567,
-      "mean_ret_4h": 0.01601,
+      "mean_ret_4h": 0.01588,
       "median_ret_4h": 0.00694,
       "n_24h": 30,
       "hit_rate_24h": 0.933,
