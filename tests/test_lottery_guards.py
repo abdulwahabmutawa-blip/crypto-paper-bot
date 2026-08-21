@@ -157,10 +157,18 @@ assert bl.exit_params(None)["kind"] == "hype", \
 
 # --- owner-accepted finish lines + wave rule (08-20 review) ------------------
 # floor: below $25 no new entries; unknown value must NOT halt by itself
-why = bl.book_floor_reason(24.99)
+# percentage floor (owner decision 08-21): 62.5% of the book's peak value,
+# scale-free — deposits move the peak, so the protection never drifts
+why = bl.book_floor_reason(24.99, 40.0)          # 62.4% of peak -> breach
 assert why and "FLOOR" in why and "post-mortem" in why
-assert bl.book_floor_reason(25.01) is None
-assert bl.book_floor_reason(None) is None,     "a failed value read is a data problem, not a stop signal"
+assert bl.book_floor_reason(25.01, 40.0) is None  # 62.6% of peak -> fine
+assert bl.book_floor_reason(49.9, 80.0) is not None, \
+    "the same -37.5%% drawdown must trip at ANY capital scale"
+assert bl.book_floor_reason(50.1, 80.0) is None
+assert bl.book_floor_reason(None, 40.0) is None, \
+    "a failed value read is a data problem, not a stop signal"
+assert bl.book_floor_reason(30.0, None) is None, \
+    "no recorded peak yet must not halt the book"
 # wave bonus: base 3, +1 on a breadth wave-day
 assert bl.entry_budget(False) == 3
 assert bl.entry_budget(True) == 4

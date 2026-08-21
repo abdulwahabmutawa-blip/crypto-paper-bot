@@ -4,11 +4,17 @@ Set at the 2026-08-20 scorecard review and accepted verbatim by the owner,
 so that no red candle at 2am ever gets to renegotiate them.
 
 ## Stop line (enforced in code)
-If the book's managed value closes **below $25**, the book takes **no new
-entries** (binance_live.book_floor_reason; exits still run so no seat is
-ever trapped) and the experiment owes a **full post-mortem** before any
-restart or top-up: what the record says about every signal, what was
-structural vs market, and whether the thesis deserves more capital.
+**Percentage form since 2026-08-21 (owner decision: "amount of money
+should not matter — we are focusing on creating a successful strategy").**
+If the book's managed value falls **below 62.5% of its own peak value**
+(a −37.5% drawdown — exactly what the original $25-of-$40 line encoded),
+the book takes **no new entries** (binance_live.book_floor_reason; exits
+still run so no seat is ever trapped) and the experiment owes a **full
+post-mortem** before any restart or top-up: what the record says about
+every signal, what was structural vs market, and whether the thesis
+deserves more capital. Deposits raise the peak automatically, so the
+protection is identical at any capital scale and no rule in this system
+references a dollar amount.
 
 ## Success marker
 The thesis is "catch an explosion early and hold it": the marker is the

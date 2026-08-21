@@ -434,12 +434,17 @@ def main():
         pass
     budget = binance_live.entry_budget(st.get("wave_bonus_date") == today)
 
-    # BOOK FLOOR (owner-accepted 08-20): below $25 the experiment stops
-    # taking entries and owes its owner a post-mortem, not a slower bleed.
-    # Exits above still ran — a breach never traps an open seat.
+    # BOOK FLOOR (percentage form, owner decision 08-21): entries stop when
+    # the book is 37.5%+ below its own peak value — the same protection the
+    # old $25-of-$40 line encoded, now scale-free so deposits neither
+    # loosen nor tighten it. Exits still run — a breach never traps a seat.
     _val_now = binance_live.managed_value(bals, st.get("held_symbol"),
                                           st.get("units"))
-    floor_why = binance_live.book_floor_reason(_val_now)
+    if _val_now is not None:
+        st["book_hwm_usd"] = round(
+            max(float(st.get("book_hwm_usd") or 0.0), _val_now), 4)
+    floor_why = binance_live.book_floor_reason(_val_now,
+                                               st.get("book_hwm_usd"))
     if floor_why and not st.get("floor_flagged"):
         st["floor_flagged"] = True
         binance_live.log({"event": "floor_breached", "value": round(_val_now, 2),

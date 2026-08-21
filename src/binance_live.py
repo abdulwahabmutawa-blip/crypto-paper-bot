@@ -229,19 +229,33 @@ MIN_RANGE_24H_AT_ENTRY = 0.05  # [EVIDENCE — 08-17 LTC] a round trip costs
 #     day of a mass-trough in the 2y study), so the scarcest resource must
 #     not be exhaustible by the quietest hours. Pre-registered at the
 #     review, not invented mid-wave.
-BOOK_FLOOR_USD = 25.0
+# PERCENTAGE FLOOR (owner decision 2026-08-21, replaces BOOK_FLOOR_USD=25):
+# "amount of money should not matter — we are focusing on creating a
+# successful strategy." The $25 line was $25-of-$40 = a 37.5% max drawdown
+# in disguise, and it silently loosened every time the owner deposited
+# (at $80 of capital the same $25 meant tolerating -69%). The floor is now
+# expressed as what it always meant: a maximum drawdown from the book's
+# high-water value. Deposits raise the high-water mark naturally, so the
+# guardrail rescales itself and NO rule in this system references a dollar
+# amount any more. 0.625 = the original 25/40 ratio, unchanged protection.
+BOOK_FLOOR_FRAC = 0.625      # no entries below 62.5% of the book's peak
 BASE_ENTRIES_PER_DAY = 3
 WAVE_BONUS_ENTRIES = 1
 
 
-def book_floor_reason(value_usd: float | None) -> str | None:
-    """Refusal reason when the owner's pre-committed floor is breached."""
-    if value_usd is None:
+def book_floor_reason(value_usd: float | None,
+                      hwm_usd: float | None) -> str | None:
+    """Refusal reason when the owner's pre-committed drawdown floor is
+    breached: value below BOOK_FLOOR_FRAC of the book's high-water value."""
+    if value_usd is None or not hwm_usd:
         return None          # unknown value must not halt the book by itself
-    if value_usd < BOOK_FLOOR_USD:
-        return (f"BOOK FLOOR — value ${value_usd:.2f} is below the "
-                f"owner's pre-committed ${BOOK_FLOOR_USD:.0f} stop line: "
-                f"no new entries; post-mortem due")
+    line = hwm_usd * BOOK_FLOOR_FRAC
+    if value_usd < line:
+        return (f"BOOK FLOOR — value ${value_usd:.2f} is below "
+                f"{BOOK_FLOOR_FRAC:.1%} of the book's ${hwm_usd:.2f} peak "
+                f"(line ${line:.2f}, drawdown "
+                f"{value_usd / hwm_usd - 1:.1%}): no new entries; "
+                f"post-mortem due")
     return None
 
 
