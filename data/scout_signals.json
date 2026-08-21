@@ -1,20 +1,48 @@
 {
-  "ts": "2026-08-21T07:14:04+00:00",
+  "ts": "2026-08-21T07:19:36+00:00",
   "scanned": 139,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "TSTUSDT",
+      "symbol": "SNDKBUSDT",
       "signal": "ignition",
-      "score": 1.0527,
-      "raw_score": 0.8538,
+      "score": 1.0576,
+      "raw_score": 0.8577,
       "weight": 1.233,
-      "price": 0.01551,
-      "why": "trades 18.9x and volume 15.2x the prior 4h, 61% taker-buy, $57,692 burst \u2014 while price has only moved +1.9%",
-      "chg_24h": 0.0319,
-      "vol_surge": 15.22,
-      "chg_1h": 0.0191,
-      "market_surge": 2.77,
+      "price": 1620.74,
+      "why": "trades 9.4x and volume 14.6x the prior 4h, 66% taker-buy, $195,572 burst \u2014 while price has only moved +1.3%",
+      "chg_24h": 0.0002,
+      "vol_surge": 14.58,
+      "chg_1h": 0.0132,
+      "market_surge": 0.97,
+      "actionable": true
+    },
+    {
+      "symbol": "SNXXBUSDT",
+      "signal": "breakout",
+      "score": 0.8247,
+      "raw_score": 0.7984,
+      "weight": 1.033,
+      "price": 15.47,
+      "why": "trades 18.8x, volume 34.2x, 78% taker-buy, +2.9% in an hour, at 90% of its 24h range",
+      "chg_24h": 0.0019,
+      "vol_surge": 34.24,
+      "chg_1h": 0.0293,
+      "market_surge": 2.05,
+      "actionable": true
+    },
+    {
+      "symbol": "LINKUSDT",
+      "signal": "breakout",
+      "score": 0.7976,
+      "raw_score": 0.7722,
+      "weight": 1.033,
+      "price": 11.303,
+      "why": "trades 11.4x, volume 16.6x, 64% taker-buy, +3.0% in an hour, at 97% of its 24h range",
+      "chg_24h": 0.0729,
+      "vol_surge": 16.63,
+      "chg_1h": 0.0301,
+      "market_surge": 10.73,
       "actionable": true
     }
   ],
@@ -26,7 +54,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 70,
+    "count": 78,
     "baseline": 14.0,
     "wave": true
   },
@@ -42,7 +70,7 @@
       "median_ret_4h": 0.00921,
       "n_24h": 30,
       "hit_rate_24h": 0.9,
-      "mean_ret_24h": 0.05424,
+      "mean_ret_24h": 0.05285,
       "median_ret_24h": 0.04135
     },
     "breakout": {
