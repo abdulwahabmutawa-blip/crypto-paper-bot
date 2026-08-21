@@ -90,27 +90,99 @@ def build_slate(limit: int | None = None, pause: float = 0.05) -> dict:
         windows_total += w
         ref = rows[-1]
         qv30 = sorted(float(r[7]) for r in rows[-30:])
+        med30 = qv30[len(qv30) // 2]
         # trailing 30d return from CLOSED candles only (rows already
-        # excludes the forming day) — feeds momo_v1; eligible_history
+        # excludes the forming day) — feeds momo_v1/v2; eligible_history
         # guarantees >=90 rows so [-31] always exists
         c_now, c_then = float(rows[-1][4]), float(rows[-31][4])
+        # ---- forensics covariates (08-21, record-only) ------------------
+        # Each is computable from the closed candles already fetched — no
+        # extra API weight, strictly no lookahead. They predict NOTHING yet;
+        # they accumulate history so a gen-2 model has features with a past.
+        qvs = [float(r[7]) for r in rows]
+        highs = [float(r[2]) for r in rows]
+        closes = [float(r[4]) for r in rows]
+        ref_close = float(ref[4])
+        resid_vol = round(qvs[-1] / med30, 3) if med30 > 0 else None
+        precursor = sum(1 for q in qvs[-5:] if med30 > 0
+                        and q >= 3 * med30)
+        spike_days = None
+        for back in range(1, min(len(rows), 400)):
+            i = len(rows) - back
+            prev_c = closes[i - 1] if i >= 1 else None
+            if prev_c and prev_c > 0 and highs[i] / prev_c - 1 >= 0.50:
+                spike_days = back
+                break
+        hi14 = max(highs[-14:])
+        hi7 = max(highs[-7:])
+        med7c = sorted(closes[-7:])[3]
         slate.append({
             "symbol": sym,
             "ref_open_time_ms": int(ref[0]),
             "ref_close_time_ms": int(ref[6]),
-            "ref_close": f"{float(ref[4]):.10g}",
+            "ref_close": f"{ref_close:.10g}",
             "listed_days": len(rows),
-            "median_qv_30d": round(qv30[len(qv30) // 2], 2),
+            "median_qv_30d": round(med30, 2),
             "own_hits": h, "own_windows": w,
             "ret_30d": round(c_now / c_then - 1.0, 6) if c_then > 0 else 0.0,
+            "resid_vol_ratio": resid_vol,
+            "vol_precursor_days": precursor,
+            "days_since_spike": spike_days,
+            "retrace_depth": round(ref_close / hi14, 4) if hi14 > 0 else None,
+            "target_inside_range": int(config.THRESHOLD_MULT * ref_close
+                                       <= hi7),
+            "oversold_trough": round(ref_close / med7c, 4) if med7c > 0
+            else None,
+            "closes_120d": closes[-121:],   # consumed for btc_beta, dropped
         })
         time.sleep(pause)
+
+    # btc_beta_120d (record-only): rolling OLS beta of each coin's daily
+    # log-ish returns vs BTC over the shared trailing window. Enables
+    # beta-adjusted scoring later (6/9 interim hits were wave-beta; without
+    # a recorded beta that adjustment can never be retrofitted honestly).
+    try:
+        btc = fetch.klines("BTCUSDT", "1d", limit=130)
+        now_ms = time.time() * 1000
+        btc_c = [float(r[4]) for r in btc if r[6] < now_ms]
+        btc_r = [btc_c[i] / btc_c[i - 1] - 1 for i in range(1, len(btc_c))]
+        for s in slate:
+            cs = s.pop("closes_120d", None) or []
+            rs = [cs[i] / cs[i - 1] - 1 for i in range(1, len(cs))]
+            n = min(len(rs), len(btc_r), 120)
+            if n >= 60:
+                a, b = rs[-n:], btc_r[-n:]
+                ma, mb = sum(a) / n, sum(b) / n
+                cov = sum((x - ma) * (y - mb) for x, y in zip(a, b)) / n
+                var = sum((y - mb) ** 2 for y in b) / n
+                s["btc_beta_120d"] = round(cov / var, 3) if var > 0 else None
+            else:
+                s["btc_beta_120d"] = None
+    except Exception:
+        for s in slate:
+            s.pop("closes_120d", None)
+            s.setdefault("btc_beta_120d", None)
+
+    # breadth at T0 (record-only): the fleet's mover-count file, committed
+    # by the Actions loop. 6/9 interim hits clustered on wave days — regime
+    # is where the recoverable edge lives, so the regime must be on the row.
+    breadth = {"breadth_count": None, "breadth_baseline": None,
+               "breadth_wave": None}
+    try:
+        bd = json.loads((config.ROOT.parent / "data" / "breadth.json")
+                        .read_text(encoding="utf-8"))
+        breadth = {"breadth_count": bd.get("count"),
+                   "breadth_baseline": bd.get("baseline"),
+                   "breadth_wave": bool(bd.get("wave"))}
+    except Exception:
+        pass
 
     base_rate = (hits_total / windows_total) if windows_total else 0.0
     print(f"[oracle] slate {len(slate)} symbols | climatology "
           f"{hits_total}/{windows_total} = {base_rate:.4f}")
     return {"slate": slate, "rejected": rejected, "base_rate": base_rate,
-            "base_rate_hits": hits_total, "base_rate_windows": windows_total}
+            "base_rate_hits": hits_total, "base_rate_windows": windows_total,
+            "breadth": breadth}
 
 
 def run(limit: int | None = None) -> Path:
@@ -157,6 +229,7 @@ def run(limit: int | None = None) -> Path:
         "slate": slate,
         "rejected": built["rejected"],
         "comparators": comp_meta,
+        "breadth_at_t0": built["breadth"],
     }
     # newline="\n" everywhere — see the note in ledger.append()
     snap_path.write_text(json.dumps(snap, sort_keys=True, indent=1),
@@ -168,9 +241,19 @@ def run(limit: int | None = None) -> Path:
     pred_path = day_dir / f"{run_id}.jsonl"
 
     p = round(built["base_rate"], 6)
+    # WINDOW-TIMING FIX (forensics 08-21, required-[A]): windows used to
+    # start at ref_close+1ms (00:00Z), hours before the run existed — so a
+    # coin that crossed 1.5x BEFORE the predictions were written scored as
+    # a hit (ACE crossed 11:05Z; the 08-17 run was created 11:37Z). A
+    # prediction must never be credited for a move that predates it. The
+    # window now starts at RUN CREATION; the end stays anchored to the
+    # reference candle, so late runs get slightly shorter windows rather
+    # than shifted ones. Rows carry window_basis so September's scoring can
+    # stratify pre-fix rows (whose idiosyncratic cluster is contaminated).
+    run_ms = int(now.timestamp() * 1000)
     with pred_path.open("w", encoding="utf-8", newline="\n") as fh:
         for s in slate:
-            w_start = s["ref_close_time_ms"] + 1
+            w_start = run_ms
             w_end = s["ref_close_time_ms"] + config.HORIZON_DAYS * DAY_MS
             rec = {
                 "schema_version": config.SCHEMA_VERSION,
@@ -191,6 +274,7 @@ def run(limit: int | None = None) -> Path:
                     "window_start_utc": _iso(w_start),
                     "window_end_utc": _iso(w_end),
                     "window_start_ms": w_start, "window_end_ms": w_end,
+                    "window_basis": "run_creation_v2",
                 },
                 "horizon_days": config.HORIZON_DAYS,
                 "probability": p,
@@ -207,6 +291,15 @@ def run(limit: int | None = None) -> Path:
                     "median_qv_30d": s["median_qv_30d"],
                     "own_hits": s["own_hits"], "own_windows": s["own_windows"],
                     "ret_30d": s["ret_30d"],
+                    # forensics battery (08-21, record-only — see build_slate)
+                    "resid_vol_ratio": s.get("resid_vol_ratio"),
+                    "vol_precursor_days": s.get("vol_precursor_days"),
+                    "days_since_spike": s.get("days_since_spike"),
+                    "retrace_depth": s.get("retrace_depth"),
+                    "target_inside_range": s.get("target_inside_range"),
+                    "oversold_trough": s.get("oversold_trough"),
+                    "btc_beta_120d": s.get("btc_beta_120d"),
+                    **built["breadth"],
                 },
                 # phase-1 comparators (see oracle/comparators.py): scored
                 # against the SAME resolution via the same paired statistic

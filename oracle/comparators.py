@@ -28,10 +28,16 @@ is not a probability, it is a dare.
 """
 from __future__ import annotations
 
-COMPARATOR_SPEC = "comparators_v1"
+COMPARATOR_SPEC = "comparators_v2"   # v2 (08-21): + momo_v2, liq_band_v1
 P_FLOOR, P_CEIL = 0.005, 0.75
 OWNRATE_K = 25          # shrinkage pseudo-windows toward the pooled rate
 AGE_EDGES = (180, 365)  # days: young / adolescent / mature
+# mid-band liquidity (forensics 08-21): the 9 interim hits clustered in the
+# $0.75M-$4M median-30d-quote-volume band; top- and bottom-tier were at or
+# below chance. Shipped as an INDICATOR lens (not the multiplicative
+# own-rate x liquidity combo, which underperformed own-rate alone 2/9 vs
+# 3/9 on the same interim data). September grades it like every other lens.
+LIQ_BAND = (750_000.0, 4_000_000.0)
 
 
 def _clamp(p: float) -> float:
@@ -77,9 +83,27 @@ def probabilities(slate: list[dict], base_rate: float
         return ("young" if d < AGE_EDGES[0]
                 else "adolescent" if d < AGE_EDGES[1] else "mature")
 
+    def band_bucket(s):
+        return "mid" if LIQ_BAND[0] <= s["median_qv_30d"] <= LIQ_BAND[1] \
+            else "outside"
+
     liq = _pooled(slate, liq_bucket)
     momo = _pooled(slate, momo_bucket)
     age = _pooled(slate, age_bucket)
+    band = _pooled(slate, band_bucket)
+
+    # momo_v2 (08-21): the momentum-FOLLOWING falsification twin of momo_v1.
+    # momo_v1 pools historical rates per tercile and comes out reversion-
+    # tilted (down-coins exploded more historically); the forensics' clean
+    # pre-window momentum ran the other way (interim AUC 0.94, rally-week
+    # caveat). v2 encodes the opposite belief — p rises monotonically with
+    # momentum rank — so September can crown one and kill the other.
+    ranked = sorted(s["ret_30d"] for s in slate)
+    n_r = max(1, len(ranked) - 1)
+
+    def mom_rank(s):
+        import bisect
+        return bisect.bisect_left(ranked, s["ret_30d"]) / n_r
 
     out: dict[str, dict[str, float]] = {}
     for s in slate:
@@ -90,6 +114,8 @@ def probabilities(slate: list[dict], base_rate: float
             "ownrate_v1": _clamp(own),
             "momo_v1": _clamp(momo[momo_bucket(s)] or base_rate),
             "age_v1": _clamp(age[age_bucket(s)] or base_rate),
+            "momo_v2": _clamp(base_rate * (0.5 + mom_rank(s))),
+            "liq_band_v1": _clamp(band[band_bucket(s)] or base_rate),
         }
 
     meta = {
@@ -105,5 +131,9 @@ def probabilities(slate: list[dict], base_rate: float
         "age_edges_days": list(AGE_EDGES),
         "age_rates": {k: round(v, 6) for k, v in age.items()
                       if v is not None},
+        "liq_band_usd": list(LIQ_BAND),
+        "liq_band_rates": {k: round(v, 6) for k, v in band.items()
+                           if v is not None},
+        "momo_v2": "p = base_rate * (0.5 + rank_pct(ret_30d)), clamped",
     }
     return out, meta

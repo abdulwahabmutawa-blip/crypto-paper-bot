@@ -88,6 +88,20 @@ def resolve_one(q: dict) -> dict:
     out["outcome"] = 1 if max_high >= target else 0
     out["status"] = "resolved"
     out["annul_reason"] = None
+    # hit-quality fields (forensics 08-21): a 2-hour wick that fully
+    # round-trips (TUT) and a sustained regime change resolve identically
+    # as outcome=1 — these mechanical extras let September separate them
+    # without changing what counts as a hit. Same fetched rows, no
+    # reasoning, no new inputs: the resolver purity contract holds.
+    if out["outcome"] == 1:
+        touch_i = next(i for i, r in enumerate(rows)
+                       if float(r[2]) >= target)
+        out["touch_day_index"] = touch_i
+        out["sustained_close"] = int(any(float(r[4]) >= target
+                                         for r in rows))
+        after = rows[touch_i:touch_i + 3]
+        lo = min(float(r[3]) for r in after)
+        out["retrace_48h_vs_target"] = round(lo / target - 1, 4)
     return out
 
 
