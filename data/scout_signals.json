@@ -1,34 +1,20 @@
 {
-  "ts": "2026-08-21T08:15:04+00:00",
-  "scanned": 136,
+  "ts": "2026-08-21T08:20:37+00:00",
+  "scanned": 137,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "ROBOUSDT",
-      "signal": "ignition",
-      "score": 1.0959,
-      "raw_score": 0.8888,
-      "weight": 1.233,
-      "price": 0.0138,
-      "why": "trades 19.2x and volume 81.3x the prior 4h, 85% taker-buy, $356,780 burst \u2014 while price has only moved +2.9%",
-      "chg_24h": 0.0472,
-      "vol_surge": 81.29,
-      "chg_1h": 0.0291,
-      "market_surge": 15.09,
-      "actionable": true
-    },
-    {
-      "symbol": "NILUSDT",
+      "symbol": "XRPUSDT",
       "signal": "breakout",
-      "score": 0.7006,
-      "raw_score": 0.6782,
+      "score": 0.5715,
+      "raw_score": 0.5533,
       "weight": 1.033,
-      "price": 0.04606,
-      "why": "trades 5.1x, volume 8.9x, 71% taker-buy, +3.0% in an hour, at 95% of its 24h range",
-      "chg_24h": 0.0743,
-      "vol_surge": 8.91,
-      "chg_1h": 0.0302,
-      "market_surge": 5.76,
+      "price": 1.3463,
+      "why": "trades 4.7x, volume 5.9x, 62% taker-buy, +2.2% in an hour, at 95% of its 24h range",
+      "chg_24h": 0.1946,
+      "vol_surge": 5.93,
+      "chg_1h": 0.0215,
+      "market_surge": 1.72,
       "actionable": true
     }
   ],
@@ -40,7 +26,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 66,
+    "count": 71,
     "baseline": 14.0,
     "wave": true
   },
@@ -48,7 +34,7 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.667,
-      "mean_ret_1h": 0.00392,
+      "mean_ret_1h": 0.00335,
       "median_ret_1h": 0.00387,
       "n_4h": 30,
       "hit_rate_4h": 0.733,
@@ -56,13 +42,13 @@
       "median_ret_4h": 0.00921,
       "n_24h": 30,
       "hit_rate_24h": 0.867,
-      "mean_ret_24h": 0.06572,
-      "median_ret_24h": 0.04125
+      "mean_ret_24h": 0.06981,
+      "median_ret_24h": 0.04135
     },
     "breakout": {
       "n_1h": 30,
       "hit_rate_1h": 0.467,
-      "mean_ret_1h": 0.00495,
+      "mean_ret_1h": 0.00234,
       "median_ret_1h": -0.00045,
       "n_4h": 30,
       "hit_rate_4h": 0.533,
@@ -70,8 +56,8 @@
       "median_ret_4h": 0.00859,
       "n_24h": 30,
       "hit_rate_24h": 0.933,
-      "mean_ret_24h": 0.05643,
-      "median_ret_24h": 0.04125
+      "mean_ret_24h": 0.06023,
+      "median_ret_24h": 0.04379
     },
     "reversion": {
       "n_1h": 22,
@@ -94,7 +80,7 @@
       "median_ret_1h": 0.00618,
       "n_4h": 30,
       "hit_rate_4h": 0.667,
-      "mean_ret_4h": 0.01974,
+      "mean_ret_4h": 0.01901,
       "median_ret_4h": 0.01186,
       "n_24h": 26,
       "hit_rate_24h": 0.346,
