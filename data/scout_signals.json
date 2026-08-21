@@ -1,17 +1,32 @@
 {
-  "ts": "2026-08-21T13:38:44+00:00",
-  "scanned": 152,
+  "ts": "2026-08-21T13:44:25+00:00",
+  "scanned": 153,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "MSTRBUSDT",
+      "signal": "ignition",
+      "score": 0.8311,
+      "raw_score": 0.6925,
+      "weight": 1.2,
+      "price": 120.61,
+      "why": "trades 5.1x and volume 15.0x the prior 4h, 63% taker-buy, $255,032 burst \u2014 while price has only moved -0.7%",
+      "chg_24h": 0.0688,
+      "vol_surge": 15.01,
+      "chg_1h": -0.0075,
+      "market_surge": 3.66,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
     "reversion": "benched \u2014 hit 46%, mean +0.33% over last 22 at 4h: not beating the round trip",
     "heat": "actionable",
-    "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
+    "revival": "probation \u2014 1/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 139,
+    "count": 143,
     "baseline": 14.0,
     "wave": true
   },
@@ -19,16 +34,16 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.6,
-      "mean_ret_1h": 0.00525,
-      "median_ret_1h": 0.00299,
+      "mean_ret_1h": 0.00539,
+      "median_ret_1h": 0.00356,
       "n_4h": 30,
       "hit_rate_4h": 0.7,
       "mean_ret_4h": 0.0215,
       "median_ret_4h": 0.01243,
       "n_24h": 30,
       "hit_rate_24h": 0.9,
-      "mean_ret_24h": 0.06852,
-      "median_ret_24h": 0.07122
+      "mean_ret_24h": 0.06881,
+      "median_ret_24h": 0.06124
     },
     "breakout": {
       "n_1h": 30,
@@ -80,7 +95,11 @@
       "n_4h": 4,
       "hit_rate_4h": 0.75,
       "mean_ret_4h": 0.00856,
-      "median_ret_4h": 0.02608
+      "median_ret_4h": 0.02608,
+      "n_24h": 1,
+      "hit_rate_24h": 1.0,
+      "mean_ret_24h": 0.29739,
+      "median_ret_24h": 0.29739
     }
   },
   "note": "READ-ONLY scout. Ranked opinion only \u2014 the book decides."
