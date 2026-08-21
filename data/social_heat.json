@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-21T10:40:59+00:00",
+  "ts": "2026-08-21T10:46:29+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -7,12 +7,12 @@
       "PUMP",
       "ETH",
       "XRP",
-      "ZEC",
       "SUI",
+      "POL",
+      "ZEC",
       "PEPE",
       "LIT",
-      "SOL",
-      "ONDO"
+      "ADA"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,10 +21,10 @@
       "ENA",
       "NEIRO",
       "XPL",
-      "BCH",
-      "PEPE",
       "PUMP",
-      "XRP"
+      "BCH",
+      "XRP",
+      "PEPE"
     ],
     "watcher": [
       "ENA",
@@ -99,11 +99,10 @@
       ]
     },
     {
-      "symbol": "SOL",
-      "surfaces": 2,
+      "symbol": "ADA",
+      "surfaces": 1,
       "sources": [
-        "coingecko",
-        "watcher"
+        "coingecko"
       ],
       "funding": 0.0001
     },
@@ -113,7 +112,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000155
+      "funding": 0.000154
     },
     {
       "symbol": "LIT",
@@ -132,7 +131,15 @@
       "funding": 5e-05
     },
     {
-      "symbol": "ONDO",
+      "symbol": "ONG",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -0.001261
+    },
+    {
+      "symbol": "POL",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -140,12 +147,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "ONG",
+      "symbol": "SOL",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "watcher"
       ],
-      "funding": -0.001281
+      "funding": 0.0001
     },
     {
       "symbol": "SUI",
