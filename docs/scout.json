@@ -1,20 +1,34 @@
 {
-  "ts": "2026-08-21T16:12:26+00:00",
-  "scanned": 152,
+  "ts": "2026-08-21T16:18:29+00:00",
+  "scanned": 153,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "BICOUSDT",
-      "signal": "breakout",
-      "score": 0.7883,
-      "raw_score": 0.7632,
-      "weight": 1.033,
-      "price": 0.02102,
-      "why": "trades 5.6x, volume 11.2x, 61% taker-buy, +5.8% in an hour, at 92% of its 24h range",
-      "chg_24h": 0.1108,
-      "vol_surge": 11.23,
-      "chg_1h": 0.0579,
-      "market_surge": 10.38,
+      "symbol": "HEIUSDT",
+      "signal": "ignition",
+      "score": 0.9712,
+      "raw_score": 0.8093,
+      "weight": 1.2,
+      "price": 0.1381,
+      "why": "trades 23.1x and volume 9.3x the prior 4h, 60% taker-buy, $73,514 burst \u2014 while price has only moved +3.0%",
+      "chg_24h": -0.0418,
+      "vol_surge": 9.33,
+      "chg_1h": 0.0298,
+      "market_surge": 0.0,
+      "actionable": true
+    },
+    {
+      "symbol": "ENAUSDT",
+      "signal": "heat",
+      "score": 0.78,
+      "raw_score": 0.6,
+      "weight": 1.3,
+      "price": 0.1505,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.005% \u00b7 L/S 1.18",
+      "chg_24h": 0.4857,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
       "actionable": true
     }
   ],
@@ -26,15 +40,15 @@
     "revival": "probation \u2014 2/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 120,
+    "count": 123,
     "baseline": 15.0,
     "wave": true
   },
   "scorecard": {
     "ignition": {
       "n_1h": 30,
-      "hit_rate_1h": 0.6,
-      "mean_ret_1h": 0.00511,
+      "hit_rate_1h": 0.567,
+      "mean_ret_1h": 0.00503,
       "median_ret_1h": 0.00404,
       "n_4h": 30,
       "hit_rate_4h": 0.7,
