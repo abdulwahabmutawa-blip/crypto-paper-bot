@@ -149,6 +149,29 @@ def run() -> None:
             break
         time.sleep(0.3)
 
+    # market capture (owner-directed 08-21): the 08-15..08-21 rally made
+    # BTC +22% while this book made -7% — and nobody was measuring the gap.
+    # Book return vs BTC/ETH over the last 24h and since inception, every
+    # cycle, so "did we capture the market?" is a published number.
+    capture = None
+    try:
+        book = float(st.get("last_value_usd") or 0)
+        t0 = _ms("2026-08-15T00:00:00+00:00")     # book inception, $40
+        now = int(time.time() * 1000)
+        capture = {"book_since_inception_pct":
+                   round((book / 40.0 - 1) * 100, 2)}
+        for sym in ("BTCUSDT", "ETHUSDT"):
+            ks = _klines(sym, t0, now, "1d")
+            if ks:
+                o, c = float(ks[0][1]), float(ks[-1][4])
+                capture[f"{sym[:3].lower()}_since_inception_pct"] = round(
+                    (c / o - 1) * 100, 2)
+                if len(ks) >= 2:
+                    capture[f"{sym[:3].lower()}_last24h_pct"] = round(
+                        (c / float(ks[-2][4]) - 1) * 100, 2)
+    except Exception:
+        capture = None
+
     if not rows:
         return
 
@@ -175,6 +198,7 @@ def run() -> None:
                          "well_timed": v["well"]}
                      for k, v in sorted(fams.items())},
         "thresholds_pct": THRESH * 100,
+        "market_capture": capture,
     }
     REPORT_JSON.parent.mkdir(parents=True, exist_ok=True)
     REPORT_JSON.write_text(json.dumps(summary, indent=1, sort_keys=True),
@@ -192,6 +216,20 @@ def run() -> None:
     for k, v in summary["families"].items():
         L.append(f"| {k} | {v['n']} | {v['avg_giveback_pct']:+.1f}% | "
                  f"{v['avg_post24h_max_pct']:+.1f}% | {v['well_timed']} |")
+    if capture:
+        L += ["", "## Market capture", "",
+              f"- book since inception (08-15, $40): "
+              f"**{capture['book_since_inception_pct']:+.1f}%**"]
+        for k in ("btc", "eth"):
+            si = capture.get(f"{k}_since_inception_pct")
+            d1 = capture.get(f"{k}_last24h_pct")
+            if si is not None:
+                gap = capture['book_since_inception_pct'] - si
+                L.append(f"- {k.upper()} since inception: {si:+.1f}% "
+                         f"(book gap **{gap:+.1f}pp**)"
+                         + (f" · last 24h {d1:+.1f}%" if d1 is not None
+                            else ""))
+        L.append("")
     L += ["", "_giveback = in-hold peak the exit surrendered; post-24h run "
           "= what the coin did after we sold. High post-run with low "
           "giveback = selling too early; high giveback = selling too "
