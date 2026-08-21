@@ -1,18 +1,19 @@
 {
-  "ts": "2026-08-21T23:11:22+00:00",
+  "ts": "2026-08-21T23:17:14+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "LIT",
       "ETH",
-      "XRP",
-      "SOL",
       "PEPE",
-      "ENA",
+      "SOL",
+      "XRP",
+      "ZEC",
       "SUI",
-      "LINK",
       "AERO",
-      "ZEC"
+      "LINK",
+      "AAVE",
+      "UNI"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -24,7 +25,7 @@
       "TUT",
       "AAVE",
       "ENA",
-      "FET"
+      "CRV"
     ],
     "watcher": [
       "ENA",
@@ -37,15 +38,15 @@
   },
   "heat": [
     {
-      "symbol": "ENA",
+      "symbol": "AAVE",
       "surfaces": 3,
       "sources": [
         "coingecko",
         "movers",
         "watcher"
       ],
-      "funding": 0.000131,
-      "long_short": 1.16
+      "funding": 0.0001,
+      "long_short": 1.57
     },
     {
       "symbol": "PEPE",
@@ -68,24 +69,24 @@
       "long_short": 0.68
     },
     {
-      "symbol": "AAVE",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.57
-    },
-    {
       "symbol": "BCH",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": 0.000212,
+      "funding": 0.000213,
       "long_short": 1.54
+    },
+    {
+      "symbol": "ENA",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": 0.000132,
+      "long_short": 1.16
     },
     {
       "symbol": "AERO",
@@ -104,18 +105,18 @@
       "funding": 0.0001
     },
     {
-      "symbol": "ETH",
+      "symbol": "CRV",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
       "funding": 0.0001
     },
     {
-      "symbol": "FET",
+      "symbol": "ETH",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
       "funding": 0.0001
     },
@@ -165,7 +166,15 @@
       "sources": [
         "movers"
       ],
-      "funding": 7.5e-05
+      "funding": 8e-05
+    },
+    {
+      "symbol": "UNI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "XRP",
