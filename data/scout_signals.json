@@ -1,32 +1,33 @@
 {
-  "ts": "2026-08-21T20:58:36+00:00",
-  "scanned": 151,
+  "ts": "2026-08-21T21:04:06+00:00",
+  "scanned": 152,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "AAVEUSDT",
-      "signal": "breakout",
-      "score": 0.8435,
-      "raw_score": 0.8723,
-      "weight": 0.967,
-      "price": 116.74,
-      "why": "trades 8.9x, volume 23.7x, 66% taker-buy, +6.1% in an hour, at 100% of its 24h range",
-      "chg_24h": 0.196,
-      "vol_surge": 23.74,
-      "chg_1h": 0.0609,
-      "market_surge": 10.86,
-      "actionable": true
+      "symbol": "JSTUSDT",
+      "signal": "ignition",
+      "score": 0.8942,
+      "raw_score": 0.8942,
+      "weight": 1.0,
+      "price": 0.10651,
+      "why": "trades 9.0x and volume 37.7x the prior 4h, 79% taker-buy, $76,170 burst \u2014 while price has only moved +0.6%",
+      "chg_24h": -0.007,
+      "vol_surge": 37.71,
+      "chg_1h": 0.0058,
+      "market_surge": 3.2,
+      "actionable": false,
+      "status": "benched \u2014 hit 50%, mean +0.49% over last 30 at 4h: not beating the round trip"
     }
   ],
   "gate": {
-    "ignition": "actionable",
+    "ignition": "benched \u2014 hit 50%, mean +0.49% over last 30 at 4h: not beating the round trip",
     "breakout": "actionable",
     "reversion": "benched \u2014 hit 46%, mean +0.33% over last 22 at 4h: not beating the round trip",
     "heat": "actionable",
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 117,
+    "count": 118,
     "baseline": 15.0,
     "wave": true
   },
@@ -37,9 +38,9 @@
       "mean_ret_1h": -0.00406,
       "median_ret_1h": 0.00169,
       "n_4h": 30,
-      "hit_rate_4h": 0.567,
-      "mean_ret_4h": 0.01395,
-      "median_ret_4h": 0.00329,
+      "hit_rate_4h": 0.5,
+      "mean_ret_4h": 0.00488,
+      "median_ret_4h": 0.0027,
       "n_24h": 30,
       "hit_rate_24h": 0.933,
       "mean_ret_24h": 0.07324,
