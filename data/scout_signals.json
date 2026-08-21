@@ -1,23 +1,8 @@
 {
-  "ts": "2026-08-21T22:16:06+00:00",
-  "scanned": 152,
+  "ts": "2026-08-21T22:21:35+00:00",
+  "scanned": 151,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "LDOUSDT",
-      "signal": "ignition",
-      "score": 0.7795,
-      "raw_score": 0.7546,
-      "weight": 1.033,
-      "price": 0.3704,
-      "why": "trades 6.4x and volume 12.9x the prior 4h, 65% taker-buy, $152,723 burst \u2014 while price has only moved +0.7%",
-      "chg_24h": 0.1071,
-      "vol_surge": 12.94,
-      "chg_1h": 0.0065,
-      "market_surge": 6.77,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -26,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 161,
+    "count": 155,
     "baseline": 16.0,
     "wave": true
   },
@@ -48,8 +33,8 @@
     "breakout": {
       "n_1h": 30,
       "hit_rate_1h": 0.6,
-      "mean_ret_1h": 0.00878,
-      "median_ret_1h": 0.00935,
+      "mean_ret_1h": 0.01008,
+      "median_ret_1h": 0.01367,
       "n_4h": 30,
       "hit_rate_4h": 0.467,
       "mean_ret_4h": 0.01124,
