@@ -1,17 +1,17 @@
 {
-  "ts": "2026-08-21T00:14:09+00:00",
+  "ts": "2026-08-21T00:19:59+00:00",
   "sources": {
     "coingecko": [
       "BTC",
-      "PUMP",
       "XRP",
+      "PUMP",
       "ENA",
-      "LINK",
-      "ONG",
-      "AERO",
-      "PEPE",
       "FET",
-      "BNB"
+      "AAVE",
+      "LINK",
+      "AERO",
+      "PENDLE",
+      "SHIB"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -47,17 +47,6 @@
       "long_short": 2.02
     },
     {
-      "symbol": "ONG",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": -0.02,
-      "long_short": 1.1
-    },
-    {
       "symbol": "PUMP",
       "surfaces": 3,
       "sources": [
@@ -90,12 +79,22 @@
       "long_short": 0.94
     },
     {
-      "symbol": "PEPE",
+      "symbol": "ONG",
       "surfaces": 2,
       "sources": [
-        "coingecko",
-        "movers"
-      ]
+        "movers",
+        "watcher"
+      ],
+      "funding": -0.02,
+      "long_short": 1.1
+    },
+    {
+      "symbol": "AAVE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "ACE",
@@ -103,7 +102,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.00027
+      "funding": -0.000276
     },
     {
       "symbol": "AERO",
@@ -114,20 +113,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "BNB",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.000146
-    },
-    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5.1e-05
+      "funding": 5.2e-05
     },
     {
       "symbol": "FET",
@@ -143,7 +134,29 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.4e-05
+      "funding": 4.8e-05
+    },
+    {
+      "symbol": "PENDLE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "PEPE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
+    },
+    {
+      "symbol": "SHIB",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ]
     },
     {
       "symbol": "XPL",
