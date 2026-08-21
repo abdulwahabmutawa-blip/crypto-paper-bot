@@ -1,28 +1,28 @@
 {
-  "ts": "2026-08-21T20:01:39+00:00",
+  "ts": "2026-08-21T20:07:19+00:00",
   "sources": {
     "coingecko": [
       "ENA",
       "LIT",
       "BTC",
-      "PUMP",
       "ETH",
-      "ZEC",
+      "PUMP",
       "TAO",
-      "AERO",
-      "XRP"
+      "PENDLE",
+      "XRP",
+      "ZEC"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "BCH",
       "ENA",
+      "BCH",
       "PEPE",
-      "CRV",
-      "TUT",
       "ZEC",
-      "PENGU",
-      "XPL"
+      "TUT",
+      "CRV",
+      "XPL",
+      "NEIRO"
     ],
     "watcher": [
       "ENA",
@@ -51,8 +51,8 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.00012,
-      "long_short": 1.57
+      "funding": 0.000122,
+      "long_short": 1.5
     },
     {
       "symbol": "CRV",
@@ -62,7 +62,7 @@
         "watcher"
       ],
       "funding": 0.0001,
-      "long_short": 1.32
+      "long_short": 1.37
     },
     {
       "symbol": "PEPE",
@@ -81,14 +81,6 @@
       ],
       "funding": 0.0001,
       "long_short": 0.67
-    },
-    {
-      "symbol": "AERO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "BTC",
@@ -115,12 +107,20 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PENGU",
+      "symbol": "NEIRO",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "PENDLE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "PUMP",
