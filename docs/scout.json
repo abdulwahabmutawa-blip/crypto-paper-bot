@@ -1,8 +1,23 @@
 {
-  "ts": "2026-08-21T11:04:04+00:00",
+  "ts": "2026-08-21T11:09:25+00:00",
   "scanned": 145,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "TUTUSDT",
+      "signal": "breakout",
+      "score": 0.711,
+      "raw_score": 0.6463,
+      "weight": 1.1,
+      "price": 0.03649,
+      "why": "trades 5.1x, volume 5.3x, 60% taker-buy, +5.5% in an hour, at 82% of its 24h range",
+      "chg_24h": 0.1473,
+      "vol_surge": 5.3,
+      "chg_1h": 0.0546,
+      "market_surge": 4.63,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -64,9 +79,9 @@
       "mean_ret_1h": 0.01436,
       "median_ret_1h": 0.0062,
       "n_4h": 30,
-      "hit_rate_4h": 0.7,
-      "mean_ret_4h": 0.02076,
-      "median_ret_4h": 0.01301,
+      "hit_rate_4h": 0.733,
+      "mean_ret_4h": 0.02315,
+      "median_ret_4h": 0.01584,
       "n_24h": 29,
       "hit_rate_24h": 0.414,
       "mean_ret_24h": -0.05,
