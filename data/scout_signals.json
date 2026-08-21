@@ -1,48 +1,34 @@
 {
-  "ts": "2026-08-21T07:36:25+00:00",
+  "ts": "2026-08-21T07:41:35+00:00",
   "scanned": 138,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "ORDIUSDT",
-      "signal": "ignition",
-      "score": 0.828,
-      "raw_score": 0.6715,
-      "weight": 1.233,
-      "price": 4.348,
-      "why": "trades 5.9x and volume 11.6x the prior 4h, 61% taker-buy, $140,298 burst \u2014 while price has only moved +2.7%",
-      "chg_24h": 0.1711,
-      "vol_surge": 11.56,
-      "chg_1h": 0.0269,
-      "market_surge": 1.81,
-      "actionable": true
-    },
-    {
-      "symbol": "LDOUSDT",
-      "signal": "ignition",
-      "score": 0.7901,
-      "raw_score": 0.6408,
-      "weight": 1.233,
-      "price": 0.3473,
-      "why": "trades 5.9x and volume 6.9x the prior 4h, 63% taker-buy, $67,681 burst \u2014 while price has only moved +1.1%",
-      "chg_24h": 0.0452,
-      "vol_surge": 6.91,
-      "chg_1h": 0.0111,
-      "market_surge": 3.45,
-      "actionable": true
-    },
-    {
-      "symbol": "ORDIUSDT",
+      "symbol": "SHIBUSDT",
       "signal": "breakout",
-      "score": 0.7001,
-      "raw_score": 0.6778,
+      "score": 0.6702,
+      "raw_score": 0.6488,
       "weight": 1.033,
-      "price": 4.348,
-      "why": "trades 5.9x, volume 11.6x, 61% taker-buy, +2.7% in an hour, at 86% of its 24h range",
-      "chg_24h": 0.1711,
-      "vol_surge": 11.56,
-      "chg_1h": 0.0269,
-      "market_surge": 1.81,
+      "price": 5.21e-06,
+      "why": "trades 5.6x, volume 5.8x, 78% taker-buy, +3.2% in an hour, at 100% of its 24h range",
+      "chg_24h": 0.0811,
+      "vol_surge": 5.83,
+      "chg_1h": 0.0317,
+      "market_surge": 2.71,
+      "actionable": true
+    },
+    {
+      "symbol": "FETUSDT",
+      "signal": "breakout",
+      "score": 0.6452,
+      "raw_score": 0.6246,
+      "weight": 1.033,
+      "price": 0.1512,
+      "why": "trades 6.3x, volume 5.6x, 68% taker-buy, +2.5% in an hour, at 98% of its 24h range",
+      "chg_24h": 0.1633,
+      "vol_surge": 5.56,
+      "chg_1h": 0.0251,
+      "market_surge": 3.27,
       "actionable": true
     }
   ],
@@ -54,7 +40,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 82,
+    "count": 83,
     "baseline": 14.0,
     "wave": true
   },
@@ -70,8 +56,8 @@
       "median_ret_4h": 0.00921,
       "n_24h": 30,
       "hit_rate_24h": 0.9,
-      "mean_ret_24h": 0.05134,
-      "median_ret_24h": 0.04125
+      "mean_ret_24h": 0.0484,
+      "median_ret_24h": 0.03608
     },
     "breakout": {
       "n_1h": 30,
@@ -96,9 +82,9 @@
       "hit_rate_4h": 0.455,
       "mean_ret_4h": 0.00325,
       "median_ret_4h": 0.00145,
-      "n_24h": 20,
-      "hit_rate_24h": 0.3,
-      "mean_ret_24h": -0.00472,
+      "n_24h": 21,
+      "hit_rate_24h": 0.333,
+      "mean_ret_24h": 0.00114,
       "median_ret_24h": -0.0187
     },
     "heat": {
