@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-22T07:40:06+00:00",
-  "scanned": 185,
+  "ts": "2026-08-22T07:45:14+00:00",
+  "scanned": 184,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "PNUTUSDT",
-      "signal": "ignition",
-      "score": 0.5423,
-      "raw_score": 0.6779,
-      "weight": 0.8,
-      "price": 0.0538,
-      "why": "trades 6.1x and volume 7.5x the prior 4h, 63% taker-buy, $172,332 burst \u2014 while price has only moved +0.4%",
-      "chg_24h": 0.015,
-      "vol_surge": 7.46,
-      "chg_1h": 0.0037,
-      "market_surge": 4.64,
-      "actionable": false,
-      "status": "benched \u2014 hit 30%, mean -1.48% over last 30 at 4h: not beating the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 30%, mean -1.48% over last 30 at 4h: not beating the round trip",
     "breakout": "actionable",
@@ -27,9 +11,9 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 81,
+    "count": 73,
     "baseline": 37.0,
-    "wave": true
+    "wave": false
   },
   "scorecard": {
     "ignition": {
@@ -57,8 +41,8 @@
       "median_ret_4h": 0.00269,
       "n_24h": 30,
       "hit_rate_24h": 0.833,
-      "mean_ret_24h": 0.08982,
-      "median_ret_24h": 0.06224
+      "mean_ret_24h": 0.08734,
+      "median_ret_24h": 0.07736
     },
     "reversion": {
       "n_1h": 24,
