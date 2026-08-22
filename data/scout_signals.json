@@ -1,33 +1,33 @@
 {
-  "ts": "2026-08-22T19:12:04+00:00",
-  "scanned": 154,
+  "ts": "2026-08-22T19:18:06+00:00",
+  "scanned": 155,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "PENDLEUSDT",
+      "symbol": "MORPHOUSDT",
       "signal": "ignition",
-      "score": 0.5744,
-      "raw_score": 0.8205,
-      "weight": 0.7,
-      "price": 1.716,
-      "why": "trades 8.7x and volume 14.7x the prior 4h, 68% taker-buy, $77,469 burst \u2014 while price has only moved +1.9%",
-      "chg_24h": 0.0684,
-      "vol_surge": 14.65,
-      "chg_1h": 0.019,
-      "market_surge": 2.97,
+      "score": 0.665,
+      "raw_score": 0.9072,
+      "weight": 0.733,
+      "price": 2.254,
+      "why": "trades 11.6x and volume 16.1x the prior 4h, 69% taker-buy, $51,415 burst \u2014 while price has only moved +0.6%",
+      "chg_24h": -0.0404,
+      "vol_surge": 16.15,
+      "chg_1h": 0.0058,
+      "market_surge": 0.85,
       "actionable": false,
-      "status": "benched \u2014 hit 20%, mean -2.32% over last 30 at 4h: not beating the round trip"
+      "status": "benched \u2014 hit 23%, mean -2.29% over last 30 at 4h: not beating the round trip"
     }
   ],
   "gate": {
-    "ignition": "benched \u2014 hit 20%, mean -2.32% over last 30 at 4h: not beating the round trip",
+    "ignition": "benched \u2014 hit 23%, mean -2.29% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 47%, mean -1.29% over last 30 at 4h: not beating the round trip",
     "reversion": "benched \u2014 hit 44%, mean +0.51% over last 25 at 4h: not beating the round trip",
     "heat": "actionable",
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 28,
+    "count": 30,
     "baseline": 39.0,
     "wave": false
   },
@@ -38,8 +38,8 @@
       "mean_ret_1h": -0.00795,
       "median_ret_1h": -0.00086,
       "n_4h": 30,
-      "hit_rate_4h": 0.2,
-      "mean_ret_4h": -0.02321,
+      "hit_rate_4h": 0.233,
+      "mean_ret_4h": -0.02289,
       "median_ret_4h": -0.0092,
       "n_24h": 30,
       "hit_rate_24h": 0.367,
