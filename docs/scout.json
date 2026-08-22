@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-22T01:17:27+00:00",
-  "scanned": 153,
+  "ts": "2026-08-22T01:22:36+00:00",
+  "scanned": 154,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ENSUSDT",
+      "signal": "ignition",
+      "score": 0.7312,
+      "raw_score": 0.7837,
+      "weight": 0.933,
+      "price": 6.19,
+      "why": "trades 17.8x and volume 6.1x the prior 4h, 66% taker-buy, $318,180 burst \u2014 while price has only moved +1.3%",
+      "chg_24h": 0.3703,
+      "vol_surge": 6.09,
+      "chg_1h": 0.0131,
+      "market_surge": 3.84,
+      "actionable": false,
+      "status": "benched \u2014 hit 43%, mean +0.11% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 43%, mean +0.11% over last 30 at 4h: not beating the round trip",
     "breakout": "actionable",
@@ -11,24 +27,24 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 162,
+    "count": 169,
     "baseline": 16.0,
     "wave": true
   },
   "scorecard": {
     "ignition": {
       "n_1h": 30,
-      "hit_rate_1h": 0.367,
-      "mean_ret_1h": -0.0036,
-      "median_ret_1h": 0.00087,
+      "hit_rate_1h": 0.4,
+      "mean_ret_1h": -0.0028,
+      "median_ret_1h": 0.00141,
       "n_4h": 30,
       "hit_rate_4h": 0.433,
       "mean_ret_4h": 0.00108,
       "median_ret_4h": 0.00108,
       "n_24h": 30,
       "hit_rate_24h": 0.9,
-      "mean_ret_24h": 0.08015,
-      "median_ret_24h": 0.08606
+      "mean_ret_24h": 0.08927,
+      "median_ret_24h": 0.09232
     },
     "breakout": {
       "n_1h": 30,
@@ -37,7 +53,7 @@
       "median_ret_1h": -0.00186,
       "n_4h": 30,
       "hit_rate_4h": 0.467,
-      "mean_ret_4h": 0.0115,
+      "mean_ret_4h": 0.00954,
       "median_ret_4h": 0.00046,
       "n_24h": 30,
       "hit_rate_24h": 0.9,
