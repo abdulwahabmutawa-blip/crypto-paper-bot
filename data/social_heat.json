@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-22T02:12:29+00:00",
+  "ts": "2026-08-22T02:18:19+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
@@ -8,22 +8,23 @@
       "XRP",
       "SUI",
       "PEPE",
-      "SOL",
       "ENA",
+      "SOL",
       "ETH",
-      "PUMP"
+      "PUMP",
+      "DOGE"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "ZEC",
+      "GALA",
       "PEPE",
       "BCH",
       "AAVE",
       "PENGU",
-      "ENA",
       "TRUMP",
-      "FET"
+      "TUT"
     ],
     "watcher": [
       "ZEC",
@@ -36,17 +37,6 @@
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "ENA",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": 0.000131,
-      "long_short": 1.23
-    },
     {
       "symbol": "PEPE",
       "surfaces": 3,
@@ -84,8 +74,18 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.000206,
+      "funding": 0.000209,
       "long_short": 1.54
+    },
+    {
+      "symbol": "ENA",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "watcher"
+      ],
+      "funding": 0.000125,
+      "long_short": 1.23
     },
     {
       "symbol": "PENGU",
@@ -105,6 +105,14 @@
       "funding": 0.0001
     },
     {
+      "symbol": "DOGE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "ETH",
       "surfaces": 1,
       "sources": [
@@ -113,7 +121,7 @@
       "funding": 0.0001
     },
     {
-      "symbol": "FET",
+      "symbol": "GALA",
       "surfaces": 1,
       "sources": [
         "movers"
@@ -159,6 +167,14 @@
         "movers"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "TUT",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.000111
     },
     {
       "symbol": "XRP",
