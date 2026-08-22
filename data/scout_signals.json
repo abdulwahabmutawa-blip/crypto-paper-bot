@@ -1,42 +1,11 @@
 {
-  "ts": "2026-08-22T22:30:14+00:00",
+  "ts": "2026-08-22T22:35:33+00:00",
   "scanned": 151,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ENAUSDT",
-      "signal": "breakout",
-      "score": 0.7184,
-      "raw_score": 0.7429,
-      "weight": 0.967,
-      "price": 0.1613,
-      "why": "trades 6.8x, volume 10.0x, 69% taker-buy, +3.2% in an hour, at 85% of its 24h range",
-      "chg_24h": 0.1386,
-      "vol_surge": 10.01,
-      "chg_1h": 0.032,
-      "market_surge": 2.35,
-      "actionable": false,
-      "status": "benched \u2014 hit 47%, mean -1.29% over last 30 at 4h: not beating the round trip"
-    },
-    {
-      "symbol": "ENAUSDT",
-      "signal": "ignition",
-      "score": 0.5002,
-      "raw_score": 0.7146,
-      "weight": 0.7,
-      "price": 0.1613,
-      "why": "trades 6.8x and volume 10.0x the prior 4h, 69% taker-buy, $1,401,953 burst \u2014 while price has only moved +3.2%",
-      "chg_24h": 0.1386,
-      "vol_surge": 10.01,
-      "chg_1h": 0.032,
-      "market_surge": 2.35,
-      "actionable": false,
-      "status": "benched \u2014 hit 20%, mean -1.96% over last 30 at 4h: not beating the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 20%, mean -1.96% over last 30 at 4h: not beating the round trip",
-    "breakout": "benched \u2014 hit 47%, mean -1.29% over last 30 at 4h: not beating the round trip",
+    "breakout": "benched \u2014 hit 50%, mean -1.00% over last 30 at 4h: not beating the round trip",
     "reversion": "benched \u2014 hit 44%, mean +0.51% over last 25 at 4h: not beating the round trip",
     "heat": "actionable",
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
@@ -57,8 +26,8 @@
       "mean_ret_4h": -0.01957,
       "median_ret_4h": -0.00896,
       "n_24h": 30,
-      "hit_rate_24h": 0.233,
-      "mean_ret_24h": -0.01609,
+      "hit_rate_24h": 0.2,
+      "mean_ret_24h": -0.01655,
       "median_ret_24h": -0.00831
     },
     "breakout": {
@@ -67,9 +36,9 @@
       "mean_ret_1h": -0.01175,
       "median_ret_1h": -0.00086,
       "n_4h": 30,
-      "hit_rate_4h": 0.467,
-      "mean_ret_4h": -0.01288,
-      "median_ret_4h": -0.00247,
+      "hit_rate_4h": 0.5,
+      "mean_ret_4h": -0.01001,
+      "median_ret_4h": 0.00266,
       "n_24h": 30,
       "hit_rate_24h": 0.4,
       "mean_ret_24h": 0.01679,
@@ -92,7 +61,7 @@
     "heat": {
       "n_1h": 30,
       "hit_rate_1h": 0.6,
-      "mean_ret_1h": 0.01718,
+      "mean_ret_1h": 0.01696,
       "median_ret_1h": 0.00832,
       "n_4h": 30,
       "hit_rate_4h": 0.733,
