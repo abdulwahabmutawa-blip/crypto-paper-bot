@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-22T05:51:09+00:00",
+  "ts": "2026-08-22T05:56:29+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -22,9 +22,9 @@
       "POL",
       "DASH",
       "PEPE",
-      "GALA",
       "AAVE",
-      "BCH"
+      "GALA",
+      "TUT"
     ],
     "watcher": [
       "ZEC",
@@ -53,7 +53,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 5e-05,
+      "funding": 4.4e-05,
       "long_short": 2.06
     },
     {
@@ -64,18 +64,8 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.000266,
+      "funding": 0.000254,
       "long_short": 0.72
-    },
-    {
-      "symbol": "BCH",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": 0.000211,
-      "long_short": 1.67
     },
     {
       "symbol": "BTC",
@@ -96,12 +86,20 @@
       "funding": 0.0001
     },
     {
+      "symbol": "BCH",
+      "surfaces": 1,
+      "sources": [
+        "watcher"
+      ],
+      "funding": 0.000204
+    },
+    {
       "symbol": "DASH",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 0.000309
+      "funding": 0.000294
     },
     {
       "symbol": "ETH",
@@ -133,7 +131,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000124
+      "funding": 0.000108
     },
     {
       "symbol": "PUMP",
@@ -157,13 +155,21 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 0.000131
+      "funding": 0.00011
     },
     {
       "symbol": "TAO",
       "surfaces": 1,
       "sources": [
         "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "TUT",
+      "surfaces": 1,
+      "sources": [
+        "movers"
       ],
       "funding": 5e-05
     },
