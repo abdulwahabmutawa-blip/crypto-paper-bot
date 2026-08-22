@@ -1,17 +1,17 @@
 {
-  "ts": "2026-08-22T08:12:58+00:00",
+  "ts": "2026-08-22T08:18:29+00:00",
   "sources": {
     "coingecko": [
       "TRUMP",
-      "BTC",
       "ZEC",
+      "BTC",
       "SUI",
       "PUMP",
-      "LIT",
       "XRP",
-      "SAND",
-      "PEPE",
+      "LIT",
       "ETH",
+      "SAND",
+      "SOL",
       "ENA"
     ],
     "reddit": [],
@@ -19,11 +19,11 @@
     "movers": [
       "TRUMP",
       "ZAMA",
-      "ZEC",
       "POL",
+      "ZEC",
+      "PUMP",
       "PEPE",
       "DASH",
-      "PUMP",
       "TUT"
     ],
     "watcher": [
@@ -35,15 +35,6 @@
   },
   "heat": [
     {
-      "symbol": "PEPE",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ]
-    },
-    {
       "symbol": "TRUMP",
       "surfaces": 3,
       "sources": [
@@ -51,7 +42,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -8.3e-05,
+      "funding": -7.1e-05,
       "long_short": 1.69
     },
     {
@@ -64,6 +55,14 @@
       ],
       "funding": 0.0001,
       "long_short": 0.59
+    },
+    {
+      "symbol": "PEPE",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ]
     },
     {
       "symbol": "PUMP",
@@ -129,7 +128,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000852
+      "funding": -0.000817
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "SUI",
