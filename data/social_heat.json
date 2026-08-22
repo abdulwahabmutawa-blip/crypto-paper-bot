@@ -1,17 +1,16 @@
 {
-  "ts": "2026-08-22T21:21:48+00:00",
+  "ts": "2026-08-22T21:27:19+00:00",
   "sources": {
     "coingecko": [
-      "ZEC",
       "PUMP",
+      "ZEC",
       "XRP",
       "BTC",
       "TRUMP",
       "LIT",
-      "UNI",
+      "ETH",
       "LINK",
-      "PEPE",
-      "ETH"
+      "ENA"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,8 +20,8 @@
       "PUMP",
       "POL",
       "ZEC",
-      "DASH",
       "ZAMA",
+      "DASH",
       "ENA"
     ],
     "watcher": [
@@ -80,14 +79,23 @@
       "long_short": 1.01
     },
     {
+      "symbol": "ENA",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.31
+    },
+    {
       "symbol": "TUT",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": 0.000325,
-      "long_short": 0.83
+      "funding": 0.000309
     },
     {
       "symbol": "XRP",
@@ -105,14 +113,6 @@
         "movers"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "ETH",
@@ -139,27 +139,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PEPE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ]
-    },
-    {
       "symbol": "POL",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.000158
     },
     {
       "symbol": "ZAMA",
