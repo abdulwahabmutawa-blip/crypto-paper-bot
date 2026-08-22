@@ -1,6 +1,6 @@
 # Exit timing — the bot grading its own exits
 
-updated 2026-08-22T21:29:20+00:00 · 21 exits audited · early/late line ±3% · MEASUREMENT ONLY
+updated 2026-08-22T21:42:49+00:00 · 21 exits audited · early/late line ±3% · MEASUREMENT ONLY
 
 | verdict | n |
 |---|---|
@@ -19,9 +19,9 @@ updated 2026-08-22T21:29:20+00:00 · 21 exits audited · early/late line ±3% ·
 ## Market capture
 
 - book since inception (08-15, $40 stake): **-19.7%** — trading P&L only (-$7.88 over 23 closed trades), deposits excluded
-- account balance: $53.22 (of which **+$21.10 is deposited capital, not profit** — inferred as balance minus stake minus P&L; deposits are not tracked anywhere yet)
-- BTC since inception: +22.4% (book gap **-42.2pp**) · last 24h -1.5%
-- ETH since inception: +28.7% (book gap **-48.4pp**) · last 24h -3.8%
+- account balance: $53.26 (of which **+$21.14 is deposited capital, not profit** — inferred as balance minus stake minus P&L; deposits are not tracked anywhere yet)
+- BTC since inception: +22.0% (book gap **-41.7pp**) · last 24h -1.8%
+- ETH since inception: +28.2% (book gap **-47.9pp**) · last 24h -4.1%
 
 ## Alpha by regime (book minus BTC, daily, paired)
 
@@ -29,7 +29,7 @@ updated 2026-08-22T21:29:20+00:00 · 21 exits audited · early/late line ±3% ·
 
 | regime (BTC day) | days | avg book | avg gap vs BTC |
 |---|---|---|---|
-| flat | 4 | -3.22% | **-2.88pp** |
+| flat | 4 | -3.22% | **-2.79pp** |
 | green | 4 | -1.76% | **-7.34pp** |
 
 | date | regime | book | BTC | gap |
@@ -41,7 +41,7 @@ updated 2026-08-22T21:29:20+00:00 · 21 exits audited · early/late line ±3% ·
 | 2026-08-19 | green | -8.44% | +7.12% | -15.56pp |
 | 2026-08-20 | green | -1.25% | +5.32% | -6.58pp |
 | 2026-08-21 | green | +5.00% | +7.27% | -2.27pp |
-| 2026-08-22 | flat | -0.01% | -1.47% | +1.45pp |
+| 2026-08-22 | flat | -0.01% | -1.80% | +1.79pp |
 
 
 _giveback = in-hold peak the exit surrendered; post-24h run = what the coin did after we sold. High post-run with low giveback = selling too early; high giveback = selling too late._
