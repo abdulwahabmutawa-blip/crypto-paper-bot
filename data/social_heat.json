@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-22T03:26:09+00:00",
+  "ts": "2026-08-22T03:31:29+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
@@ -7,12 +7,13 @@
       "PEPE",
       "BTC",
       "SUI",
-      "PUMP",
       "XRP",
-      "ETH",
+      "PUMP",
+      "ONDO",
       "TRUMP",
-      "LINK",
-      "UNI"
+      "NEAR",
+      "ETH",
+      "ADA"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -23,8 +24,8 @@
       "GALA",
       "PEPE",
       "BCH",
-      "ENA",
-      "AAVE"
+      "AAVE",
+      "PENGU"
     ],
     "watcher": [
       "ZEC",
@@ -54,7 +55,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.000171,
+      "funding": 0.000181,
       "long_short": 0.7
     },
     {
@@ -74,18 +75,18 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.000241,
+      "funding": 0.000238,
       "long_short": 1.6
     },
     {
-      "symbol": "ENA",
+      "symbol": "PENGU",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": 0.000167,
-      "long_short": 1.32
+      "funding": 5e-05,
+      "long_short": 2.1
     },
     {
       "symbol": "TRUMP",
@@ -95,6 +96,14 @@
         "movers"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "ADA",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "BTC",
@@ -110,7 +119,15 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000496
+      "funding": 0.000516
+    },
+    {
+      "symbol": "ENA",
+      "surfaces": 1,
+      "sources": [
+        "watcher"
+      ],
+      "funding": 0.00017
     },
     {
       "symbol": "ETH",
@@ -129,14 +146,6 @@
       "funding": 0.0001
     },
     {
-      "symbol": "LINK",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "LIT",
       "surfaces": 1,
       "sources": [
@@ -145,10 +154,18 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PENGU",
+      "symbol": "NEAR",
       "surfaces": 1,
       "sources": [
-        "watcher"
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ONDO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
       ],
       "funding": 5e-05
     },
@@ -162,14 +179,6 @@
     },
     {
       "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "UNI",
       "surfaces": 1,
       "sources": [
         "coingecko"
