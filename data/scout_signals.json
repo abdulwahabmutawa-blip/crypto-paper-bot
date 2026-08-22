@@ -1,49 +1,37 @@
 {
-  "ts": "2026-08-22T22:24:16+00:00",
+  "ts": "2026-08-22T22:30:14+00:00",
   "scanned": 151,
   "ruleset": 3,
   "candidates": [
     {
       "symbol": "ENAUSDT",
-      "signal": "heat",
-      "score": 0.7398,
-      "raw_score": 0.6,
-      "weight": 1.233,
-      "price": 0.1576,
-      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.005% \u00b7 L/S 1.31",
-      "chg_24h": 0.1154,
-      "vol_surge": null,
-      "chg_1h": null,
-      "market_surge": 3,
-      "actionable": true
+      "signal": "breakout",
+      "score": 0.7184,
+      "raw_score": 0.7429,
+      "weight": 0.967,
+      "price": 0.1613,
+      "why": "trades 6.8x, volume 10.0x, 69% taker-buy, +3.2% in an hour, at 85% of its 24h range",
+      "chg_24h": 0.1386,
+      "vol_surge": 10.01,
+      "chg_1h": 0.032,
+      "market_surge": 2.35,
+      "actionable": false,
+      "status": "benched \u2014 hit 47%, mean -1.29% over last 30 at 4h: not beating the round trip"
     },
     {
-      "symbol": "TRUMPUSDT",
-      "signal": "heat",
-      "score": 0.7398,
-      "raw_score": 0.6,
-      "weight": 1.233,
-      "price": 2.307,
-      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.005% \u00b7 L/S 1.53",
-      "chg_24h": 0.2524,
-      "vol_surge": null,
-      "chg_1h": null,
-      "market_surge": 3,
-      "actionable": true
-    },
-    {
-      "symbol": "ZECUSDT",
-      "signal": "heat",
-      "score": 0.7398,
-      "raw_score": 0.6,
-      "weight": 1.233,
-      "price": 808.14,
-      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.010% \u00b7 L/S 0.5",
-      "chg_24h": 0.1168,
-      "vol_surge": null,
-      "chg_1h": null,
-      "market_surge": 3,
-      "actionable": true
+      "symbol": "ENAUSDT",
+      "signal": "ignition",
+      "score": 0.5002,
+      "raw_score": 0.7146,
+      "weight": 0.7,
+      "price": 0.1613,
+      "why": "trades 6.8x and volume 10.0x the prior 4h, 69% taker-buy, $1,401,953 burst \u2014 while price has only moved +3.2%",
+      "chg_24h": 0.1386,
+      "vol_surge": 10.01,
+      "chg_1h": 0.032,
+      "market_surge": 2.35,
+      "actionable": false,
+      "status": "benched \u2014 hit 20%, mean -1.96% over last 30 at 4h: not beating the round trip"
     }
   ],
   "gate": {
@@ -54,7 +42,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 17,
+    "count": 18,
     "baseline": 39.0,
     "wave": false
   },
@@ -108,11 +96,11 @@
       "median_ret_1h": 0.00832,
       "n_4h": 30,
       "hit_rate_4h": 0.733,
-      "mean_ret_4h": 0.0179,
+      "mean_ret_4h": 0.01828,
       "median_ret_4h": 0.02774,
       "n_24h": 30,
       "hit_rate_24h": 0.9,
-      "mean_ret_24h": 0.08774,
+      "mean_ret_24h": 0.08708,
       "median_ret_24h": 0.11217
     },
     "revival": {

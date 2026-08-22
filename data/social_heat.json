@@ -1,18 +1,19 @@
 {
-  "ts": "2026-08-22T22:24:09+00:00",
+  "ts": "2026-08-22T22:30:09+00:00",
   "sources": {
     "coingecko": [
       "XRP",
-      "ZEC",
       "TRUMP",
+      "ZEC",
       "PUMP",
       "BTC",
-      "SOL",
-      "ETH",
+      "LIT",
       "XLM",
-      "ENA",
-      "DOGE",
-      "SHIB"
+      "SOL",
+      "TAO",
+      "SHIB",
+      "AAVE",
+      "ETH"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,9 +21,9 @@
       "TUT",
       "TRUMP",
       "PUMP",
-      "ZEC",
-      "POL",
       "ENA",
+      "POL",
+      "ZEC",
       "ZAMA",
       "DASH"
     ],
@@ -37,17 +38,6 @@
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "ENA",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.31
-    },
     {
       "symbol": "PUMP",
       "surfaces": 3,
@@ -92,13 +82,31 @@
       "long_short": 1.0
     },
     {
+      "symbol": "ENA",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": 5.9e-05,
+      "long_short": 1.31
+    },
+    {
       "symbol": "TUT",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": 0.00019
+      "funding": 0.000185
+    },
+    {
+      "symbol": "AAVE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "DASH",
@@ -109,7 +117,7 @@
       "funding": 0.0001
     },
     {
-      "symbol": "DOGE",
+      "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -117,12 +125,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "ETH",
+      "symbol": "LIT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0001
+      "funding": 5e-05
     },
     {
       "symbol": "POL",
@@ -146,6 +154,14 @@
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "TAO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "XLM",
