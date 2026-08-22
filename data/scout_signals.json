@@ -1,46 +1,48 @@
 {
-  "ts": "2026-08-22T01:00:06+00:00",
-  "scanned": 154,
+  "ts": "2026-08-22T01:06:05+00:00",
+  "scanned": 152,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "ZECUSDT",
-      "signal": "heat",
-      "score": 0.8202,
-      "raw_score": 0.6,
-      "weight": 1.367,
-      "price": 734.39,
-      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.010% \u00b7 L/S 0.66",
-      "chg_24h": 0.2872,
-      "vol_surge": null,
-      "chg_1h": null,
-      "market_surge": 3,
-      "actionable": true
+      "symbol": "GASUSDT",
+      "signal": "ignition",
+      "score": 0.8527,
+      "raw_score": 0.9139,
+      "weight": 0.933,
+      "price": 1.332,
+      "why": "trades 54.4x and volume 57.4x the prior 4h, 66% taker-buy, $104,455 burst \u2014 while price has only moved -0.1%",
+      "chg_24h": 0.1359,
+      "vol_surge": 57.43,
+      "chg_1h": -0.0008,
+      "market_surge": 6.06,
+      "actionable": false,
+      "status": "benched \u2014 hit 43%, mean +0.11% over last 30 at 4h: not beating the round trip"
     },
     {
-      "symbol": "DOTUSDT",
-      "signal": "breakout",
-      "score": 0.5474,
-      "raw_score": 0.5661,
-      "weight": 0.967,
-      "price": 0.963,
-      "why": "trades 4.4x, volume 5.8x, 70% taker-buy, +2.6% in an hour, at 98% of its 24h range",
-      "chg_24h": 0.1432,
-      "vol_surge": 5.85,
-      "chg_1h": 0.0256,
-      "market_surge": 4.45,
-      "actionable": true
+      "symbol": "SANDUSDT",
+      "signal": "ignition",
+      "score": 0.6357,
+      "raw_score": 0.6814,
+      "weight": 0.933,
+      "price": 0.04873,
+      "why": "trades 5.3x and volume 14.2x the prior 4h, 63% taker-buy, $95,141 burst \u2014 while price has only moved -1.5%",
+      "chg_24h": 0.1076,
+      "vol_surge": 14.21,
+      "chg_1h": -0.0148,
+      "market_surge": 7.57,
+      "actionable": false,
+      "status": "benched \u2014 hit 43%, mean +0.11% over last 30 at 4h: not beating the round trip"
     }
   ],
   "gate": {
-    "ignition": "benched \u2014 hit 47%, mean +0.15% over last 30 at 4h: not beating the round trip",
+    "ignition": "benched \u2014 hit 43%, mean +0.11% over last 30 at 4h: not beating the round trip",
     "breakout": "actionable",
     "reversion": "benched \u2014 hit 46%, mean +0.33% over last 22 at 4h: not beating the round trip",
     "heat": "actionable",
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 171,
+    "count": 169,
     "baseline": 16.0,
     "wave": true
   },
@@ -51,12 +53,12 @@
       "mean_ret_1h": -0.00203,
       "median_ret_1h": 0.00141,
       "n_4h": 30,
-      "hit_rate_4h": 0.467,
-      "mean_ret_4h": 0.00148,
-      "median_ret_4h": 0.00147,
+      "hit_rate_4h": 0.433,
+      "mean_ret_4h": 0.00108,
+      "median_ret_4h": 0.00108,
       "n_24h": 30,
       "hit_rate_24h": 0.9,
-      "mean_ret_24h": 0.07859,
+      "mean_ret_24h": 0.08015,
       "median_ret_24h": 0.08606
     },
     "breakout": {
@@ -70,8 +72,8 @@
       "median_ret_4h": 0.00046,
       "n_24h": 30,
       "hit_rate_24h": 0.9,
-      "mean_ret_24h": 0.11089,
-      "median_ret_24h": 0.12519
+      "mean_ret_24h": 0.10535,
+      "median_ret_24h": 0.11244
     },
     "reversion": {
       "n_1h": 22,
@@ -97,9 +99,9 @@
       "mean_ret_4h": 0.03135,
       "median_ret_4h": 0.02487,
       "n_24h": 30,
-      "hit_rate_24h": 0.667,
-      "mean_ret_24h": 0.00611,
-      "median_ret_24h": 0.03983
+      "hit_rate_24h": 0.7,
+      "mean_ret_24h": 0.02333,
+      "median_ret_24h": 0.04182
     },
     "revival": {
       "n_1h": 4,
