@@ -1,69 +1,8 @@
 {
-  "ts": "2026-08-22T07:05:17+00:00",
+  "ts": "2026-08-22T07:11:05+00:00",
   "scanned": 185,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "TRUMPUSDT",
-      "signal": "heat",
-      "score": 0.8598,
-      "raw_score": 0.6,
-      "weight": 1.433,
-      "price": 3.003,
-      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding -0.009% \u00b7 L/S 1.8",
-      "chg_24h": 0.7531,
-      "vol_surge": null,
-      "chg_1h": null,
-      "market_surge": 3,
-      "actionable": true
-    },
-    {
-      "symbol": "ZECUSDT",
-      "signal": "heat",
-      "score": 0.8598,
-      "raw_score": 0.6,
-      "weight": 1.433,
-      "price": 808.85,
-      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.021% \u00b7 L/S 0.59",
-      "chg_24h": 0.3414,
-      "vol_surge": null,
-      "chg_1h": null,
-      "market_surge": 3,
-      "actionable": true
-    },
-    {
-      "symbol": "ONGUSDT",
-      "signal": "reversion",
-      "score": 0.5492,
-      "raw_score": 0.5492,
-      "weight": 1.0,
-      "price": 0.081,
-      "why": "down -35% on the day (bottom decile of the market), now +0.9% over 15m with 4 green candles",
-      "chg_24h": -0.3472,
-      "vol_surge": 0.72,
-      "chg_1h": -0.0048,
-      "market_surge": 0.0,
-      "oi_drop": 0.139,
-      "funding": -0.00112,
-      "actionable": false,
-      "status": "benched \u2014 hit 46%, mean +0.33% over last 22 at 4h: not beating the round trip"
-    },
-    {
-      "symbol": "ARUSDT",
-      "signal": "ignition",
-      "score": 0.4163,
-      "raw_score": 0.5204,
-      "weight": 0.8,
-      "price": 2.267,
-      "why": "trades 4.5x and volume 6.2x the prior 4h, 70% taker-buy, $78,737 burst \u2014 while price has only moved +3.5%",
-      "chg_24h": 0.0826,
-      "vol_surge": 6.25,
-      "chg_1h": 0.0352,
-      "market_surge": 3.99,
-      "actionable": false,
-      "status": "benched \u2014 hit 30%, mean -1.42% over last 30 at 4h: not beating the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 30%, mean -1.42% over last 30 at 4h: not beating the round trip",
     "breakout": "actionable",
@@ -72,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 100,
+    "count": 89,
     "baseline": 35.0,
     "wave": true
   },
@@ -130,8 +69,8 @@
       "median_ret_4h": 0.03132,
       "n_24h": 30,
       "hit_rate_24h": 0.833,
-      "mean_ret_24h": 0.06827,
-      "median_ret_24h": 0.07145
+      "mean_ret_24h": 0.07329,
+      "median_ret_24h": 0.07661
     },
     "revival": {
       "n_1h": 4,
