@@ -1,8 +1,39 @@
 {
-  "ts": "2026-08-22T19:35:15+00:00",
+  "ts": "2026-08-22T19:40:34+00:00",
   "scanned": 156,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "WBTCUSDT",
+      "signal": "ignition",
+      "score": 0.7303,
+      "raw_score": 0.9964,
+      "weight": 0.733,
+      "price": 77324.66,
+      "why": "trades 13.8x and volume 12.3x the prior 4h, 100% taker-buy, $51,102 burst \u2014 while price has only moved +0.1%",
+      "chg_24h": 0.0021,
+      "vol_surge": 12.32,
+      "chg_1h": 0.0015,
+      "market_surge": 2.91,
+      "actionable": false,
+      "status": "benched \u2014 hit 23%, mean -2.29% over last 30 at 4h: not beating the round trip"
+    },
+    {
+      "symbol": "JSTUSDT",
+      "signal": "ignition",
+      "score": 0.7006,
+      "raw_score": 0.9558,
+      "weight": 0.733,
+      "price": 0.10543,
+      "why": "trades 12.5x and volume 30.2x the prior 4h, 88% taker-buy, $56,734 burst \u2014 while price has only moved +0.6%",
+      "chg_24h": -0.0043,
+      "vol_surge": 30.22,
+      "chg_1h": 0.0058,
+      "market_surge": 3.92,
+      "actionable": false,
+      "status": "benched \u2014 hit 23%, mean -2.29% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 23%, mean -2.29% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 47%, mean -1.29% over last 30 at 4h: not beating the round trip",
@@ -19,8 +50,8 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.267,
-      "mean_ret_1h": -0.00795,
-      "median_ret_1h": -0.00086,
+      "mean_ret_1h": -0.0065,
+      "median_ret_1h": -0.00059,
       "n_4h": 30,
       "hit_rate_4h": 0.233,
       "mean_ret_4h": -0.02289,
