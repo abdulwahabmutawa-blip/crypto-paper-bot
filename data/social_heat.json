@@ -1,19 +1,19 @@
 {
-  "ts": "2026-08-22T17:31:19+00:00",
+  "ts": "2026-08-22T17:37:00+00:00",
   "sources": {
     "coingecko": [
-      "BTC",
       "PUMP",
+      "BTC",
       "TRUMP",
       "SOL",
       "ZEC",
       "SUI",
-      "XRP",
       "ETH",
-      "ENA",
       "DOT",
       "DOGE",
-      "SHIB"
+      "POL",
+      "BNB",
+      "XRP"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -24,8 +24,8 @@
       "PUMP",
       "DASH",
       "TUT",
-      "ZAMA",
-      "AAVE"
+      "AAVE",
+      "ZAMA"
     ],
     "watcher": [
       "ZEC",
@@ -37,6 +37,17 @@
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "POL",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.19
+    },
     {
       "symbol": "PUMP",
       "surfaces": 3,
@@ -81,22 +92,20 @@
       "long_short": 1.0
     },
     {
-      "symbol": "POL",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.19
-    },
-    {
       "symbol": "AAVE",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "BNB",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.000177
     },
     {
       "symbol": "DASH",
@@ -123,27 +132,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "SHIB",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ]
     },
     {
       "symbol": "SOL",
@@ -167,7 +161,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.00013
+      "funding": 0.000149
     },
     {
       "symbol": "XRP",
