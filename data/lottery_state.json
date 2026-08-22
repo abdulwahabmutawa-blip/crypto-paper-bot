@@ -1,11 +1,13 @@
 {
   "created": "2026-08-15",
-  "held_symbol": "XRPUSDT",
-  "entry_price": 1.5075,
-  "units": 35.800000000000004,
-  "entry_scan_ts": "2026-08-22T20:21:08+00:00",
-  "entry_source": "watcher",
-  "stopped": {},
+  "held_symbol": null,
+  "entry_price": null,
+  "units": 0.0,
+  "entry_scan_ts": null,
+  "entry_source": null,
+  "stopped": {
+    "XRPUSDT": "2026-08-22T22:25:48+00:00"
+  },
   "entries": {
     "2026-08-22": 2
   },
@@ -388,29 +390,33 @@
       "date": "2026-08-22",
       "exit": 0.09133945854483926,
       "entry": 0.09208906937394247
+    },
+    {
+      "symbol": "XRPUSDT",
+      "source": "watcher",
+      "entry_time": "2026-08-22T20:27:35+00:00",
+      "exit_time": "2026-08-22T22:25:48+00:00",
+      "entry_price": 1.5075,
+      "exit_price": 1.4699,
+      "units": 35.8,
+      "spent_usd": 53.9685,
+      "got_usd": 52.4754,
+      "pnl_pct": -2.49,
+      "pnl_usd": -1.4931,
+      "reason": "Hype faded \u2014 coin off a newer euphoric scan",
+      "date": "2026-08-22",
+      "exit": 1.4699,
+      "entry": 1.5075
     }
   ],
-  "last_value_usd": 52.57,
-  "last_updated_utc": "2026-08-22T22:20:00+00:00",
-  "open_position": {
-    "symbol": "XRPUSDT",
-    "entry_time": "2026-08-22T20:27:35+00:00",
-    "entry_price": 1.5075,
-    "current_price": 1.4655,
-    "units": 35.8,
-    "spent_usd": 53.9685,
-    "value_usd": 52.4649,
-    "pnl_usd": -1.5036,
-    "pnl_pct": -2.79,
-    "source": "watcher"
-  },
-  "spent_usd": 53.9685,
+  "last_value_usd": 52.58,
+  "last_updated_utc": "2026-08-22T22:25:48+00:00",
+  "open_position": null,
+  "spent_usd": null,
   "no_pair": {
-    "scan_ts": "2026-08-22T20:21:08+00:00",
+    "scan_ts": "2026-08-22T22:23:07+00:00",
     "syms": []
   },
   "wave_bonus_date": "2026-08-22",
-  "book_hwm_usd": 58.4265,
-  "hwm": 1.5102,
-  "entry_time": "2026-08-22T20:27:35+00:00"
+  "book_hwm_usd": 58.4265
 }
