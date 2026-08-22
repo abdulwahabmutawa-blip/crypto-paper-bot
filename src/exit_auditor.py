@@ -39,6 +39,12 @@ STATE = ROOT / "data" / "lottery_state.json"
 STATE2 = ROOT / "data" / "playbook_state.json"   # book #2 (08-21): same
                                                  # grading, dry-runs skipped
 AUDIT = ROOT / "data" / "exit_audit.jsonl"
+
+# Capital the book was funded with at inception (2026-08-15). The owner has
+# topped the account up since; those deposits are NOT performance, so every
+# return below is computed from trading P&L against this base, never from
+# the live balance. See _capture().
+INCEPTION_USD = 40.0
 REPORT_JSON = ROOT / "reports" / "exit_timing.json"
 REPORT_MD = ROOT / "reports" / "exit_timing.md"
 
@@ -114,6 +120,36 @@ def _key(t: dict) -> str:
     return f"{t.get('symbol')}|{t.get('exit_time')}"
 
 
+def _usd(v: float) -> str:
+    """Signed dollars with the sign outside the symbol: -$7.88, not $-7.88."""
+    return f"{'-' if v < 0 else '+'}${abs(v):.2f}"
+
+
+def _capture(st: dict) -> dict:
+    """Book return since inception, computed from TRADING P&L — never from
+    the account balance, which moves when the owner deposits.
+
+    Returns the return itself plus the raw inputs, so a reader can always
+    check the arithmetic, and publishes the balance separately from the
+    performance figure. `implied_deposits_usd` is inferred (balance minus
+    stake minus P&L) because nothing in this repo records deposits yet; it
+    is the residual that the old balance/stake formula was silently
+    reporting as profit.
+    """
+    pnl = sum(float(t["pnl_usd"]) for t in st.get("realized", [])
+              if t.get("pnl_usd") is not None)
+    out = {"book_since_inception_pct": round((pnl / INCEPTION_USD) * 100, 2),
+           "realized_pnl_usd": round(pnl, 2),
+           "inception_usd": INCEPTION_USD,
+           "trades": len(st.get("realized", []))}
+    bal = st.get("last_value_usd")
+    if bal is not None:
+        bal = float(bal)
+        out["balance_usd"] = round(bal, 2)
+        out["implied_deposits_usd"] = round(bal - (INCEPTION_USD + pnl), 2)
+    return out
+
+
 def run() -> None:
     if not STATE.exists():
         return
@@ -166,13 +202,24 @@ def run() -> None:
     # BTC +22% while this book made -7% — and nobody was measuring the gap.
     # Book return vs BTC/ETH over the last 24h and since inception, every
     # cycle, so "did we capture the market?" is a published number.
+    #
+    # DEPOSIT BUG, fixed 2026-08-22: this was `last_value_usd / 40.0`, i.e.
+    # the live account balance over the inception stake. The owner had
+    # topped the account up by ~$22, so their own deposited cash was being
+    # reported as profit — the headline read +35.2% while the 23 realized
+    # trades summed to -$7.88 (a -19.7% return). The number written to
+    # expose the BTC gap was hiding it, and contradicted the alpha table
+    # directly below it. Return is now trading P&L over inception capital,
+    # which needs no deposit records and agrees with `alpha` by
+    # construction (there book_val starts at INCEPTION_USD and accumulates
+    # the same daily P&L, so both land on INCEPTION_USD + total P&L).
+    # Realized only: an open position's unrealized move is excluded, same
+    # as the alpha series, so the two can never disagree.
     capture = None
     try:
-        book = float(st.get("last_value_usd") or 0)
-        t0 = _ms("2026-08-15T00:00:00+00:00")     # book inception, $40
+        t0 = _ms("2026-08-15T00:00:00+00:00")     # book inception
         now = int(time.time() * 1000)
-        capture = {"book_since_inception_pct":
-                   round((book / 40.0 - 1) * 100, 2)}
+        capture = _capture(st)
         for sym in ("BTCUSDT", "ETHUSDT"):
             ks = _klines(sym, t0, now, "1d")
             if ks:
@@ -202,7 +249,7 @@ def run() -> None:
                 daily[d] = daily.get(d, 0.0) + float(t["pnl_usd"])
         t0 = _ms("2026-08-15T00:00:00+00:00")
         btc = _klines("BTCUSDT", t0, int(time.time() * 1000), "1d")
-        book_val, per_day = 40.0, []
+        book_val, per_day = INCEPTION_USD, []
         for k in btc:
             day = datetime.fromtimestamp(
                 float(k[0]) / 1000, tz=timezone.utc).strftime("%Y-%m-%d")
@@ -280,8 +327,18 @@ def run() -> None:
                  f"{v['avg_post24h_max_pct']:+.1f}% | {v['well_timed']} |")
     if capture:
         L += ["", "## Market capture", "",
-              f"- book since inception (08-15, $40): "
-              f"**{capture['book_since_inception_pct']:+.1f}%**"]
+              f"- book since inception (08-15, "
+              f"${capture['inception_usd']:.0f} stake): "
+              f"**{capture['book_since_inception_pct']:+.1f}%** "
+              f"— trading P&L only "
+              f"({_usd(capture['realized_pnl_usd'])} over "
+              f"{capture['trades']} closed trades), deposits excluded"]
+        if capture.get("balance_usd") is not None:
+            L.append(f"- account balance: ${capture['balance_usd']:.2f} "
+                     f"(of which **{_usd(capture['implied_deposits_usd'])} "
+                     f"is deposited capital, not profit** — inferred as "
+                     f"balance minus stake minus P&L; deposits are not "
+                     f"tracked anywhere yet)")
         for k in ("btc", "eth"):
             si = capture.get(f"{k}_since_inception_pct")
             d1 = capture.get(f"{k}_last24h_pct")

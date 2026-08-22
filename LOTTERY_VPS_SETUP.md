@@ -189,3 +189,56 @@ revokes the machine's power over the account no matter what the code does.
 | Real API key/secret | `/etc/lottery.env` on the VPS, mode 600 | git, chat, screenshots |
 | Watcher scans / paper fleet | GitHub Actions → repo | touches real keys |
 | Ledger + book state | VPS → repo (auditable) | contains secrets |
+
+## Exchange-side protective stops (opt-in, added 2026-08-22)
+
+`LOTTERY_EXCHANGE_STOPS=1` in `/etc/lottery.env` makes the book rest its
+protective floor **at Binance** as a `STOP_LOSS_LIMIT` order, instead of
+only checking the floor once per cycle and then selling at market.
+
+**Why.** On 08-22 AXSUSDT peaked +11.8%, so the ratchet set a floor at
+**+5.9%** — and the fill came back at **+1.29%**. The price fell through the
+floor in the ~5 minutes between two cycles and the bot sold at whatever it
+saw next. That is 4.6 points, on one trade, lost purely to polling
+granularity on an asset class that moves 5% in minutes.
+
+**It is additive, never a replacement.** Every poll-based exit (hard stop,
+ratchet, trailing, fuel-gone, momentum, max-hold, hype-faded) keeps running
+exactly as before. If the exchange rejects the order, or the API is down, or
+the flag is off, the book is exactly as protected as it was — the resting
+order can only ever catch something *sooner*. With the flag unset the code
+path is inert and makes no extra API calls at all.
+
+**Turning it on**
+
+```sh
+sudo sed -i 's/^LOTTERY_EXCHANGE_STOPS=.*/LOTTERY_EXCHANGE_STOPS=1/' /etc/lottery.env \
+  || echo 'LOTTERY_EXCHANGE_STOPS=1' | sudo tee -a /etc/lottery.env
+sudo systemctl restart lottery.timer
+deploy/check.sh          # confirms the flag is read
+```
+
+**What to watch in the ledger** (`data/lottery_ledger.jsonl`):
+
+| event | meaning |
+|---|---|
+| `stop_placed` | a floor is now resting at the exchange |
+| `stop_cancelled` | retired normally, before a bot-initiated sell or a floor move |
+| `stop_not_placed` | rejected — **the book fell back to poll-only for that seat** |
+| `stop_orphan_found` | an order the state file had forgotten, now cleaned up |
+| `stop_cancel_failed` | could not cancel; the book deliberately does not stack a second order |
+
+A run of `stop_not_placed` with the same `code`/`msg` means the exchange is
+refusing the order shape (usually a tick/step increment or a minimum
+notional) — turn the flag back off and read the message before retrying.
+
+**Turning it off** is always safe: unset the flag and restart. Any order
+still resting is cancelled by the next cycle's orphan sweep.
+
+**Note on valuation.** A resting sell order *locks* the position's units, so
+they leave the `free` balance. The book therefore values a held seat with
+free + locked for that one asset (`binance_live.balances_valuation`) — a
+free-only read would price the seat at $0 and trip the drawdown floor on a
+book that never lost anything. USDT and the owner's other assets are
+deliberately still read free-only: this is a shared account, and their own
+resting orders are none of the book's business.

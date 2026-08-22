@@ -232,9 +232,108 @@ def main():
 
     held = st["held_symbol"]
 
-    def sell(reason: str) -> bool:
+    def _retire_stop() -> None:
+        """Cancel and forget the resting protective stop, if any.
+
+        Falls back to ASKING the exchange when the state file has no id.
+        The state file and the exchange can disagree -- a crash between
+        placing an order and writing state leaves an order nobody remembers
+        -- and an orphan stop is not harmless: it holds the units a market
+        sell needs, and it can still fire days later against a seat the book
+        closed long ago. The exchange, not the state file, is the authority
+        on what is actually resting.
+        """
+        so = st.get("stop_order") or {}
+        oid = so.get("order_id")
+        if not oid and binance_live.exchange_stops_armed():
+            found = binance_live.resting_stop(held)
+            oid = str(found.get("orderId", "")) if found else None
+            if oid:
+                binance_live.log({"event": "stop_orphan_found",
+                                  "symbol": held, "order_id": oid})
+        if oid:
+            binance_live.cancel_stop(held, oid)
+        st.pop("stop_order", None)
+
+    def _stop_filled() -> dict | None:
+        """Did the resting stop trigger between cycles? Returns a fill dict
+        shaped like market()'s, or None.
+
+        Checked BEFORE any exit rule runs: if the exchange already sold the
+        seat, every downstream rule is reasoning about a position that is
+        not there, and the market-sell path would find nothing sellable and
+        wedge the seat open forever.
+        """
+        so = st.get("stop_order") or {}
+        oid = so.get("order_id")
+        if not oid or not binance_live.exchange_stops_armed():
+            return None
+        o = binance_live.order_status(held, oid)
+        if not o:
+            return None
+        status = str(o.get("status", ""))
+        if status in ("NEW", "PARTIALLY_FILLED"):
+            return None            # still resting / still working
+        if status != "FILLED":
+            # CANCELED / EXPIRED / REJECTED: the protection is gone but the
+            # seat is not. Forget it and let this cycle re-place one.
+            st.pop("stop_order", None)
+            return None
+        qty = float(o.get("executedQty", 0) or 0)
+        quote = float(o.get("cummulativeQuoteQty", 0) or 0)
+        if qty <= 0 or quote <= 0:
+            st.pop("stop_order", None)
+            return None
+        st.pop("stop_order", None)
+        return {"price": quote / qty, "qty": qty,
+                "order_id": str(oid), "commission": 0.0,
+                "commission_asset": ""}
+
+    def _sync_stop(entry_px, hwm_px, stop_pct) -> None:
+        """Keep a resting stop at the floor the poll rules would defend.
+
+        Purely additive: every poll-based exit still runs this cycle and
+        next. If anything here fails the book is exactly as protected as it
+        was before this feature existed.
+        """
+        if not binance_live.exchange_stops_armed():
+            return
+        floor = binance_live.protective_floor(entry_px, hwm_px, stop_pct)
+        units = float(st.get("units") or 0.0)
+        if not floor or units <= 0:
+            return
+        so = st.get("stop_order") or {}
+        cur = float(so.get("stop") or 0.0)
+        # The floor ratchets UP as a winner rises; re-placing on every tick
+        # of that climb is pure API churn, so move only on a real change.
+        if cur and abs(floor - cur) / cur <= binance_live.STOP_REPLACE_EPS:
+            return
+        if so.get("order_id"):
+            if not binance_live.cancel_stop(held, so["order_id"]):
+                return          # could not clear the old one: do not stack
+            st.pop("stop_order", None)
+        else:
+            # Nothing recorded -- but the exchange may still be holding an
+            # order this book has forgotten. Clear it before placing, or the
+            # seat ends up under two stops locking the same units.
+            _retire_stop()
+        placed = binance_live.place_protective_stop(held, units, floor)
+        if placed:
+            st["stop_order"] = placed
+
+    def sell(reason: str, prefilled: dict | None = None) -> bool:
+        """prefilled = a sale the EXCHANGE already executed (a resting
+        protective stop that triggered between cycles). The position is
+        already gone; everything after the order placement — the realized
+        record, the ledger exit, the cooldown stamp, clearing the seat — is
+        identical, so it runs through this one path rather than a parallel
+        bookkeeping copy that could drift out of step with it."""
         base = held[:-4]
         qty_free = bals.get(base, 0.0)
+        if prefilled:
+            # Cancel nothing, sell nothing, guard nothing: the units are
+            # already sold. Skip straight to recording it.
+            return _book_exit(reason, prefilled)
         # Sell ONLY what this bot bought. Selling the whole free balance
         # would liquidate coins the owner already held in the same account
         # (they hold 23 assets) — the bot's units are the ceiling, the
@@ -261,9 +360,19 @@ def main():
                               "symbol": held, "reason": why})
             print(f"[{KEY}] SELL refused: {why}")
             return False
+        # Retire the resting stop BEFORE selling. Left behind it would either
+        # hold the very units this market order needs, or fire later against
+        # a seat the book has already closed.
+        _retire_stop()
         fill = binance_live.market("SELL", held, qty=qty)
         if not fill:
             return False
+        return _book_exit(reason, fill)
+
+    def _book_exit(reason: str, fill: dict) -> bool:
+        """Record a completed sale: realized row, ledger exit, cooldown,
+        seat cleared. Shared by the market-sell path and the exchange-stop
+        path so the two can never disagree about what an exit looks like."""
         entry_px = st.get("entry_price")
         exit_px = fill["price"]
         u = float(st.get("units") or 0.0)
@@ -330,7 +439,22 @@ def main():
             except Exception:
                 held_h = None
 
-        if p and entry and p / entry - 1 <= stop_pct:
+        # DID THE EXCHANGE ALREADY SELL THIS SEAT? Asked before every exit
+        # rule, because each one below reasons about a position that may no
+        # longer exist -- and the market-sell path would find nothing
+        # sellable and leave the seat wedged open. This is the gap the
+        # resting stop exists to cover: AXSUSDT's floor was +5.9% and the
+        # poll filled it at +1.29%.
+        _pf = _stop_filled()
+        if _pf:
+            gain = (_pf["price"] / entry - 1) if entry else 0.0
+            if sell(f"PROTECTIVE STOP ({gain:+.1%} vs peak "
+                    f"{((hwm / entry - 1) if entry and hwm else 0):+.1%}) — "
+                    f"the floor held at the exchange, between cycles",
+                    prefilled=_pf):
+                held = None
+
+        if held and p and entry and p / entry - 1 <= stop_pct:
             if sell(f"STOP-LOSS ({(p / entry - 1):.1%} from entry) — "
                     f"hype that bleeds gets cut"):
                 held = None
@@ -413,6 +537,12 @@ def main():
                 if sell("Hype faded — coin off a newer euphoric scan"):
                     held = None
 
+        # The seat survived every poll rule, so leave a floor resting AT the
+        # exchange to cover the ~5 minutes until the next cycle. Last, so it
+        # is only ever placed on a position that is genuinely still open.
+        if held:
+            _sync_stop(entry, hwm, stop_pct)
+
     # ---- entry ----
     bals = binance_live.balances() or bals
     entries_today = st.get("entries", {}).get(today, 0)
@@ -438,8 +568,15 @@ def main():
     # the book is 37.5%+ below its own peak value — the same protection the
     # old $25-of-$40 line encoded, now scale-free so deposits neither
     # loosen nor tighten it. Exits still run — a breach never traps a seat.
-    _val_now = binance_live.managed_value(bals, st.get("held_symbol"),
-                                          st.get("units"))
+    # free+locked: a resting protective stop locks the seat's units, and
+    # valuing only the free balance would read as a total loss of the
+    # position and breach this very floor on a book that never lost a cent.
+    # Falls back to the free-only read if the totals call fails, which is
+    # the pre-feature behaviour rather than a halt.
+    _val_now = binance_live.managed_value(
+        (binance_live.balances_valuation(st.get("held_symbol"))
+         if binance_live.exchange_stops_armed() else None) or bals,
+        st.get("held_symbol"), st.get("units"))
     if _val_now is not None:
         st["book_hwm_usd"] = round(
             max(float(st.get("book_hwm_usd") or 0.0), _val_now), 4)
@@ -471,6 +608,17 @@ def main():
         st["stopped"] = {s: ts for s, ts in st.get("stopped", {}).items()
                          if _in_cooldown(ts)}
         blacklisted = set(st["stopped"])
+        # Retired symbols fold into the SAME set the cooldown uses, so both
+        # entry lanes (watcher and scout) are covered by the checks that
+        # already exist rather than a second guard each path could forget.
+        # Announced once per cycle, never per candidate: the no_pair bug
+        # (08-16) showed what a per-candidate line does to the ledger.
+        retired = binance_live.retired_symbols(st.get("realized"),
+                                               st.get("book_hwm_usd"))
+        if retired:
+            blacklisted |= set(retired)
+            print(f"[{KEY}] retired, will not re-enter: "
+                  + ", ".join(sorted(retired)))
 
         pick, source = None, None
         # OWNER DECISION 2026-08-19: watcher entries only when the paper
@@ -574,8 +722,15 @@ def main():
                                      if d >= today}
                     st["entries"][today] = entries_today + 1
 
-    val = binance_live.managed_value(binance_live.balances() or bals,
-                                     st["held_symbol"], st.get("units"))
+    # balances_valuation(), not balances(): a resting protective stop LOCKS the
+    # position's units, so a free-only read prices the seat at $0 -- a
+    # phantom -100% that would trip the drawdown floor and freeze entries on
+    # a book that never lost anything.
+    val = binance_live.managed_value(
+        (binance_live.balances_valuation(st.get("held_symbol"))
+         if binance_live.exchange_stops_armed()
+         else binance_live.balances()) or bals,
+        st["held_symbol"], st.get("units"))
     st["last_value_usd"] = round(val, 2)
     st["last_updated_utc"] = now.isoformat(timespec="seconds")
 
