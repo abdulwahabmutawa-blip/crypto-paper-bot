@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-22T16:08:24+00:00",
-  "scanned": 167,
+  "ts": "2026-08-22T16:14:06+00:00",
+  "scanned": 166,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "HMSTRUSDT",
-      "signal": "ignition",
-      "score": 0.6349,
-      "raw_score": 0.8661,
-      "weight": 0.733,
-      "price": 0.0001897,
-      "why": "trades 27.6x and volume 25.3x the prior 4h, 63% taker-buy, $81,219 burst \u2014 while price has only moved +1.6%",
-      "chg_24h": -0.013,
-      "vol_surge": 25.29,
-      "chg_1h": 0.0161,
-      "market_surge": 3.69,
-      "actionable": false,
-      "status": "benched \u2014 hit 23%, mean -1.77% over last 30 at 4h: not beating the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 23%, mean -1.77% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 47%, mean -1.29% over last 30 at 4h: not beating the round trip",
@@ -56,9 +40,9 @@
       "mean_ret_4h": -0.01288,
       "median_ret_4h": -0.00247,
       "n_24h": 30,
-      "hit_rate_24h": 0.6,
-      "mean_ret_24h": 0.0565,
-      "median_ret_24h": 0.04397
+      "hit_rate_24h": 0.567,
+      "mean_ret_24h": 0.04149,
+      "median_ret_24h": 0.02235
     },
     "reversion": {
       "n_1h": 25,
