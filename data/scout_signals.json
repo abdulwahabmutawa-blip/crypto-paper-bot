@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-22T06:07:47+00:00",
+  "ts": "2026-08-22T06:13:05+00:00",
   "scanned": 186,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "FORMUSDT",
+      "signal": "ignition",
+      "score": 0.7549,
+      "raw_score": 0.8707,
+      "weight": 0.867,
+      "price": 0.258,
+      "why": "trades 18.0x and volume 33.6x the prior 4h, 63% taker-buy, $168,552 burst \u2014 while price has only moved -1.5%",
+      "chg_24h": 0.0097,
+      "vol_surge": 33.65,
+      "chg_1h": -0.0145,
+      "market_surge": 6.17,
+      "actionable": false,
+      "status": "benched \u2014 hit 37%, mean -0.78% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 37%, mean -0.78% over last 30 at 4h: not beating the round trip",
     "breakout": "actionable",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 68,
+    "count": 72,
     "baseline": 32.0,
     "wave": true
   },
@@ -26,8 +42,8 @@
       "mean_ret_4h": -0.00779,
       "median_ret_4h": 0.00042,
       "n_24h": 30,
-      "hit_rate_24h": 0.933,
-      "mean_ret_24h": 0.12386,
+      "hit_rate_24h": 0.9,
+      "mean_ret_24h": 0.1202,
       "median_ret_24h": 0.10404
     },
     "breakout": {
@@ -68,9 +84,9 @@
       "mean_ret_4h": 0.0413,
       "median_ret_4h": 0.03132,
       "n_24h": 30,
-      "hit_rate_24h": 0.833,
-      "mean_ret_24h": 0.06273,
-      "median_ret_24h": 0.06205
+      "hit_rate_24h": 0.867,
+      "mean_ret_24h": 0.07212,
+      "median_ret_24h": 0.07145
     },
     "revival": {
       "n_1h": 4,
