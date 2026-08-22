@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-22T23:18:39+00:00",
+  "ts": "2026-08-22T23:24:24+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
@@ -25,8 +25,8 @@
       "ENA",
       "POL",
       "ZEC",
-      "ZAMA",
-      "DASH"
+      "PYTH",
+      "ZAMA"
     ],
     "watcher": [
       "ZEC",
@@ -69,7 +69,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 1.2e-05,
+      "funding": 4e-06,
       "long_short": 1.59
     },
     {
@@ -94,25 +94,24 @@
       "long_short": 1.01
     },
     {
-      "symbol": "DASH",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "TUT",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": 0.000178
+      "funding": 0.000187
     },
     {
       "symbol": "AAVE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "DASH",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -144,6 +143,14 @@
     },
     {
       "symbol": "POL",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "PYTH",
       "surfaces": 1,
       "sources": [
         "movers"
