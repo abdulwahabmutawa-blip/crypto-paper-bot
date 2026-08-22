@@ -1,20 +1,19 @@
 {
-  "ts": "2026-08-22T23:35:59+00:00",
+  "ts": "2026-08-22T23:41:09+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
-      "PUMP",
       "XRP",
       "TRUMP",
+      "PUMP",
       "DOGE",
       "ZRO",
       "BTC",
-      "DASH",
-      "ENA",
-      "XMR",
       "TAO",
+      "SOL",
       "LIT",
-      "LINK"
+      "PEPE",
+      "DASH"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,11 +21,11 @@
       "TUT",
       "TRUMP",
       "PUMP",
-      "ENA",
       "POL",
+      "ENA",
       "ZEC",
-      "PYTH",
-      "DASH"
+      "DASH",
+      "PYTH"
     ],
     "watcher": [
       "ZEC",
@@ -39,17 +38,6 @@
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "ENA",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.29
-    },
     {
       "symbol": "PUMP",
       "surfaces": 3,
@@ -69,7 +57,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -1.1e-05,
+      "funding": -1.5e-05,
       "long_short": 1.59
     },
     {
@@ -100,7 +88,17 @@
         "coingecko",
         "movers"
       ],
-      "funding": 0.0001
+      "funding": 0.0001,
+      "long_short": 1.44
+    },
+    {
+      "symbol": "ENA",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "TUT",
@@ -109,18 +107,10 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.00019
+      "funding": 0.000192
     },
     {
       "symbol": "DOGE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "LINK",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -134,6 +124,13 @@
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "PEPE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ]
     },
     {
       "symbol": "POL",
@@ -152,20 +149,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "TAO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "XMR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "XRP",
