@@ -1,15 +1,15 @@
 {
   "created": "2026-08-15",
-  "held_symbol": null,
-  "entry_price": null,
-  "units": 0.0,
-  "entry_scan_ts": null,
-  "entry_source": null,
+  "held_symbol": "ESPUSDT",
+  "entry_price": 0.09208906937394247,
+  "units": 591.0,
+  "entry_scan_ts": "2026-08-22T04:01:27+00:00",
+  "entry_source": "scout:breakout",
   "stopped": {
     "AXSUSDT": "2026-08-22T05:13:09+00:00"
   },
   "entries": {
-    "2026-08-21": 4
+    "2026-08-22": 1
   },
   "realized": [
     {
@@ -375,14 +375,27 @@
       "entry": 1.005
     }
   ],
-  "last_value_usd": 54.52,
-  "last_updated_utc": "2026-08-22T05:30:47+00:00",
-  "open_position": null,
-  "spent_usd": null,
+  "last_value_usd": 54.48,
+  "last_updated_utc": "2026-08-22T05:35:58+00:00",
+  "open_position": {
+    "symbol": "ESPUSDT",
+    "entry_time": "2026-08-22T05:35:58+00:00",
+    "entry_price": 0.09208906937394247,
+    "current_price": 0.09203,
+    "units": 591.0,
+    "spent_usd": 54.4246,
+    "value_usd": 54.3897,
+    "pnl_usd": -0.0349,
+    "pnl_pct": -0.06,
+    "source": "scout:breakout"
+  },
+  "spent_usd": 54.4246,
   "no_pair": {
     "scan_ts": "2026-08-22T04:01:27+00:00",
     "syms": []
   },
   "wave_bonus_date": "2026-08-22",
-  "book_hwm_usd": 58.4265
+  "book_hwm_usd": 58.4265,
+  "hwm": 0.09208906937394247,
+  "entry_time": "2026-08-22T05:35:58+00:00"
 }
