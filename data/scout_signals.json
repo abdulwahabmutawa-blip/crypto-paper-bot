@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-22T18:50:17+00:00",
-  "scanned": 159,
+  "ts": "2026-08-22T18:55:57+00:00",
+  "scanned": 155,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "MUBARAKUSDT",
+      "signal": "ignition",
+      "score": 0.3836,
+      "raw_score": 0.548,
+      "weight": 0.7,
+      "price": 0.02524,
+      "why": "trades 5.5x and volume 6.8x the prior 4h, 62% taker-buy, $73,730 burst \u2014 while price has only moved +3.8%",
+      "chg_24h": 0.1908,
+      "vol_surge": 6.79,
+      "chg_1h": 0.0383,
+      "market_surge": 0.84,
+      "actionable": false,
+      "status": "benched \u2014 hit 20%, mean -2.21% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 20%, mean -2.21% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 47%, mean -1.29% over last 30 at 4h: not beating the round trip",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 29,
+    "count": 27,
     "baseline": 39.0,
     "wave": false
   },
@@ -19,7 +35,7 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.267,
-      "mean_ret_1h": -0.00742,
+      "mean_ret_1h": -0.00795,
       "median_ret_1h": -0.00086,
       "n_4h": 30,
       "hit_rate_4h": 0.2,
