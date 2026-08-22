@@ -1,39 +1,8 @@
 {
-  "ts": "2026-08-22T01:06:05+00:00",
-  "scanned": 152,
+  "ts": "2026-08-22T01:11:34+00:00",
+  "scanned": 153,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "GASUSDT",
-      "signal": "ignition",
-      "score": 0.8527,
-      "raw_score": 0.9139,
-      "weight": 0.933,
-      "price": 1.332,
-      "why": "trades 54.4x and volume 57.4x the prior 4h, 66% taker-buy, $104,455 burst \u2014 while price has only moved -0.1%",
-      "chg_24h": 0.1359,
-      "vol_surge": 57.43,
-      "chg_1h": -0.0008,
-      "market_surge": 6.06,
-      "actionable": false,
-      "status": "benched \u2014 hit 43%, mean +0.11% over last 30 at 4h: not beating the round trip"
-    },
-    {
-      "symbol": "SANDUSDT",
-      "signal": "ignition",
-      "score": 0.6357,
-      "raw_score": 0.6814,
-      "weight": 0.933,
-      "price": 0.04873,
-      "why": "trades 5.3x and volume 14.2x the prior 4h, 63% taker-buy, $95,141 burst \u2014 while price has only moved -1.5%",
-      "chg_24h": 0.1076,
-      "vol_surge": 14.21,
-      "chg_1h": -0.0148,
-      "market_surge": 7.57,
-      "actionable": false,
-      "status": "benched \u2014 hit 43%, mean +0.11% over last 30 at 4h: not beating the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 43%, mean +0.11% over last 30 at 4h: not beating the round trip",
     "breakout": "actionable",
@@ -42,16 +11,16 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 169,
+    "count": 179,
     "baseline": 16.0,
     "wave": true
   },
   "scorecard": {
     "ignition": {
       "n_1h": 30,
-      "hit_rate_1h": 0.4,
-      "mean_ret_1h": -0.00203,
-      "median_ret_1h": 0.00141,
+      "hit_rate_1h": 0.367,
+      "mean_ret_1h": -0.0036,
+      "median_ret_1h": 0.00087,
       "n_4h": 30,
       "hit_rate_4h": 0.433,
       "mean_ret_4h": 0.00108,
@@ -64,7 +33,7 @@
     "breakout": {
       "n_1h": 30,
       "hit_rate_1h": 0.467,
-      "mean_ret_1h": 0.00332,
+      "mean_ret_1h": 0.0036,
       "median_ret_1h": 0.0017,
       "n_4h": 30,
       "hit_rate_4h": 0.467,
@@ -72,7 +41,7 @@
       "median_ret_4h": 0.00046,
       "n_24h": 30,
       "hit_rate_24h": 0.9,
-      "mean_ret_24h": 0.10535,
+      "mean_ret_24h": 0.1023,
       "median_ret_24h": 0.11244
     },
     "reversion": {

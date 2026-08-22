@@ -1,18 +1,17 @@
 {
-  "ts": "2026-08-22T01:05:59+00:00",
+  "ts": "2026-08-22T01:11:29+00:00",
   "sources": {
     "coingecko": [
       "SUI",
-      "ZEC",
+      "PUMP",
       "XRP",
       "BTC",
+      "ZEC",
       "PEPE",
-      "PUMP",
       "ETH",
-      "LIT",
       "SOL",
-      "ONDO",
-      "AAVE"
+      "LIT",
+      "DASH"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,9 +21,9 @@
       "PEPE",
       "PENGU",
       "AAVE",
-      "HEMI",
+      "CRV",
       "ENA",
-      "TUT"
+      "HEMI"
     ],
     "watcher": [
       "ZEC",
@@ -37,17 +36,6 @@
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "AAVE",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.64
-    },
     {
       "symbol": "PEPE",
       "surfaces": 3,
@@ -69,13 +57,23 @@
       "long_short": 0.65
     },
     {
+      "symbol": "AAVE",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.64
+    },
+    {
       "symbol": "BCH",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": 0.000209,
+      "funding": 0.000206,
       "long_short": 1.52
     },
     {
@@ -106,6 +104,22 @@
       "funding": 0.0001
     },
     {
+      "symbol": "CRV",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "DASH",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.000213
+    },
+    {
       "symbol": "ETH",
       "surfaces": 1,
       "sources": [
@@ -123,14 +137,6 @@
     },
     {
       "symbol": "LIT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "ONDO",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -160,14 +166,6 @@
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "TUT",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.000109
     },
     {
       "symbol": "XRP",
