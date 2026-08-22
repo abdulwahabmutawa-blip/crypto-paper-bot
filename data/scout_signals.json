@@ -1,18 +1,48 @@
 {
-  "ts": "2026-08-22T03:09:34+00:00",
+  "ts": "2026-08-22T03:15:34+00:00",
   "scanned": 151,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SOXLBUSDT",
+      "signal": "ignition",
+      "score": 0.8019,
+      "raw_score": 0.8594,
+      "weight": 0.933,
+      "price": 119.56,
+      "why": "trades 6.9x and volume 52.4x the prior 4h, 98% taker-buy, $64,415 burst \u2014 while price has only moved -0.4%",
+      "chg_24h": -0.0387,
+      "vol_surge": 52.41,
+      "chg_1h": -0.0036,
+      "market_surge": 2.01,
+      "actionable": false,
+      "status": "benched \u2014 hit 43%, mean +0.37% over last 30 at 4h: not beating the round trip"
+    },
+    {
+      "symbol": "CFGUSDT",
+      "signal": "breakout",
+      "score": 0.5812,
+      "raw_score": 0.5812,
+      "weight": 1.0,
+      "price": 0.1561,
+      "why": "trades 5.5x, volume 5.3x, 61% taker-buy, +2.8% in an hour, at 98% of its 24h range",
+      "chg_24h": 0.1596,
+      "vol_surge": 5.26,
+      "chg_1h": 0.0283,
+      "market_surge": 7.02,
+      "actionable": true
+    }
+  ],
   "gate": {
-    "ignition": "benched \u2014 hit 40%, mean +0.21% over last 30 at 4h: not beating the round trip",
+    "ignition": "benched \u2014 hit 43%, mean +0.37% over last 30 at 4h: not beating the round trip",
     "breakout": "actionable",
     "reversion": "benched \u2014 hit 46%, mean +0.33% over last 22 at 4h: not beating the round trip",
     "heat": "actionable",
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 235,
-    "baseline": 19.0,
+    "count": 228,
+    "baseline": 20.0,
     "wave": true
   },
   "scorecard": {
@@ -22,9 +52,9 @@
       "mean_ret_1h": -0.00575,
       "median_ret_1h": 0.00062,
       "n_4h": 30,
-      "hit_rate_4h": 0.4,
-      "mean_ret_4h": 0.00206,
-      "median_ret_4h": 0.00098,
+      "hit_rate_4h": 0.433,
+      "mean_ret_4h": 0.00367,
+      "median_ret_4h": 0.00108,
       "n_24h": 30,
       "hit_rate_24h": 0.9,
       "mean_ret_24h": 0.08735,
