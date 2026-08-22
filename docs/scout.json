@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-22T23:52:05+00:00",
-  "scanned": 151,
+  "ts": "2026-08-22T23:57:23+00:00",
+  "scanned": 149,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "POLUSDT",
+      "signal": "ignition",
+      "score": 0.5565,
+      "raw_score": 0.7592,
+      "weight": 0.733,
+      "price": 0.10776,
+      "why": "trades 7.6x and volume 10.3x the prior 4h, 66% taker-buy, $180,294 burst \u2014 while price has only moved +2.4%",
+      "chg_24h": 0.1343,
+      "vol_surge": 10.33,
+      "chg_1h": 0.024,
+      "market_surge": 2.04,
+      "actionable": false,
+      "status": "benched \u2014 hit 23%, mean -1.27% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 23%, mean -1.27% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 50%, mean -1.00% over last 30 at 4h: not beating the round trip",
@@ -40,9 +56,9 @@
       "mean_ret_4h": -0.01001,
       "median_ret_4h": 0.00266,
       "n_24h": 30,
-      "hit_rate_24h": 0.333,
-      "mean_ret_24h": 0.0038,
-      "median_ret_24h": -0.01702
+      "hit_rate_24h": 0.367,
+      "mean_ret_24h": 0.00559,
+      "median_ret_24h": -0.00999
     },
     "reversion": {
       "n_1h": 25,
