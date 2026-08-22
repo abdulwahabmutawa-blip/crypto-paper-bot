@@ -1,33 +1,17 @@
 {
-  "ts": "2026-08-22T09:31:36+00:00",
-  "scanned": 178,
+  "ts": "2026-08-22T09:37:21+00:00",
+  "scanned": 179,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "BBUSDT",
-      "signal": "ignition",
-      "score": 0.5601,
-      "raw_score": 0.7303,
-      "weight": 0.767,
-      "price": 0.01034,
-      "why": "trades 4.7x and volume 9.6x the prior 4h, 88% taker-buy, $83,867 burst \u2014 while price has only moved +0.7%",
-      "chg_24h": -0.244,
-      "vol_surge": 9.62,
-      "chg_1h": 0.0068,
-      "market_surge": 0.0,
-      "actionable": false,
-      "status": "benched \u2014 hit 27%, mean -1.99% over last 30 at 4h: not beating the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 27%, mean -1.99% over last 30 at 4h: not beating the round trip",
-    "breakout": "benched \u2014 hit 50%, mean -1.01% over last 30 at 4h: not beating the round trip",
+    "breakout": "benched \u2014 hit 50%, mean -1.17% over last 30 at 4h: not beating the round trip",
     "reversion": "benched \u2014 hit 46%, mean +0.33% over last 22 at 4h: not beating the round trip",
     "heat": "actionable",
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 51,
+    "count": 43,
     "baseline": 39.0,
     "wave": false
   },
@@ -53,7 +37,7 @@
       "median_ret_1h": 0.00293,
       "n_4h": 30,
       "hit_rate_4h": 0.5,
-      "mean_ret_4h": -0.01013,
+      "mean_ret_4h": -0.01174,
       "median_ret_4h": 0.00266,
       "n_24h": 30,
       "hit_rate_24h": 0.733,
