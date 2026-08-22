@@ -1,48 +1,18 @@
 {
-  "ts": "2026-08-22T07:28:24+00:00",
-  "scanned": 186,
+  "ts": "2026-08-22T07:34:15+00:00",
+  "scanned": 187,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "PORTALUSDT",
-      "signal": "breakout",
-      "score": 0.8183,
-      "raw_score": 0.7921,
-      "weight": 1.033,
-      "price": 0.01158,
-      "why": "trades 13.6x, volume 13.2x, 64% taker-buy, +3.7% in an hour, at 87% of its 24h range",
-      "chg_24h": 0.0348,
-      "vol_surge": 13.2,
-      "chg_1h": 0.0367,
-      "market_surge": 11.68,
-      "actionable": true
-    },
-    {
-      "symbol": "PORTALUSDT",
-      "signal": "ignition",
-      "score": 0.654,
-      "raw_score": 0.8175,
-      "weight": 0.8,
-      "price": 0.01158,
-      "why": "trades 13.6x and volume 13.2x the prior 4h, 64% taker-buy, $132,825 burst \u2014 while price has only moved +3.7%",
-      "chg_24h": 0.0348,
-      "vol_surge": 13.2,
-      "chg_1h": 0.0367,
-      "market_surge": 11.68,
-      "actionable": false,
-      "status": "benched \u2014 hit 30%, mean -1.42% over last 30 at 4h: not beating the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
-    "ignition": "benched \u2014 hit 30%, mean -1.42% over last 30 at 4h: not beating the round trip",
+    "ignition": "benched \u2014 hit 30%, mean -1.48% over last 30 at 4h: not beating the round trip",
     "breakout": "actionable",
     "reversion": "benched \u2014 hit 46%, mean +0.33% over last 22 at 4h: not beating the round trip",
     "heat": "actionable",
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 88,
-    "baseline": 36.0,
+    "count": 87,
+    "baseline": 37.0,
     "wave": true
   },
   "scorecard": {
@@ -53,7 +23,7 @@
       "median_ret_1h": 0.0004,
       "n_4h": 30,
       "hit_rate_4h": 0.3,
-      "mean_ret_4h": -0.01417,
+      "mean_ret_4h": -0.01476,
       "median_ret_4h": -0.00019,
       "n_24h": 30,
       "hit_rate_24h": 0.833,
@@ -75,10 +45,10 @@
       "median_ret_24h": 0.06224
     },
     "reversion": {
-      "n_1h": 23,
-      "hit_rate_1h": 0.435,
-      "mean_ret_1h": -0.0029,
-      "median_ret_1h": -0.00542,
+      "n_1h": 24,
+      "hit_rate_1h": 0.458,
+      "mean_ret_1h": -0.00205,
+      "median_ret_1h": 0.00065,
       "n_4h": 22,
       "hit_rate_4h": 0.455,
       "mean_ret_4h": 0.00325,
