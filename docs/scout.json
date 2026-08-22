@@ -1,21 +1,37 @@
 {
-  "ts": "2026-08-22T12:58:34+00:00",
-  "scanned": 170,
+  "ts": "2026-08-22T13:04:05+00:00",
+  "scanned": 171,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "ENAUSDT",
-      "signal": "heat",
-      "score": 0.7998,
-      "raw_score": 0.6,
-      "weight": 1.333,
-      "price": 0.1589,
-      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.005% \u00b7 L/S 1.25",
-      "chg_24h": 0.1448,
-      "vol_surge": null,
-      "chg_1h": null,
-      "market_surge": 3,
-      "actionable": true
+      "symbol": "CRCLBUSDT",
+      "signal": "ignition",
+      "score": 0.703,
+      "raw_score": 0.9165,
+      "weight": 0.767,
+      "price": 87.25,
+      "why": "trades 15.1x and volume 69.5x the prior 4h, 71% taker-buy, $389,985 burst \u2014 while price has only moved -0.5%",
+      "chg_24h": -0.0056,
+      "vol_surge": 69.47,
+      "chg_1h": -0.0048,
+      "market_surge": 5.32,
+      "actionable": false,
+      "status": "benched \u2014 hit 27%, mean -1.61% over last 30 at 4h: not beating the round trip"
+    },
+    {
+      "symbol": "CFGUSDT",
+      "signal": "ignition",
+      "score": 0.4752,
+      "raw_score": 0.6196,
+      "weight": 0.767,
+      "price": 0.1413,
+      "why": "trades 5.4x and volume 5.6x the prior 4h, 74% taker-buy, $68,799 burst \u2014 while price has only moved +0.9%",
+      "chg_24h": -0.0167,
+      "vol_surge": 5.63,
+      "chg_1h": 0.0086,
+      "market_surge": 2.73,
+      "actionable": false,
+      "status": "benched \u2014 hit 27%, mean -1.61% over last 30 at 4h: not beating the round trip"
     }
   ],
   "gate": {
@@ -26,7 +42,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 27,
+    "count": 26,
     "baseline": 39.0,
     "wave": false
   },
