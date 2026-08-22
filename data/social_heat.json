@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-22T01:50:29+00:00",
+  "ts": "2026-08-22T01:55:39+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
@@ -22,8 +22,8 @@
       "AAVE",
       "PENGU",
       "RE",
-      "ENA",
-      "CRV"
+      "CRV",
+      "TUT"
     ],
     "watcher": [
       "ZEC",
@@ -36,17 +36,6 @@
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "ENA",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": 0.000135,
-      "long_short": 1.14
-    },
     {
       "symbol": "PEPE",
       "surfaces": 3,
@@ -86,6 +75,16 @@
       ],
       "funding": 0.000193,
       "long_short": 1.52
+    },
+    {
+      "symbol": "ENA",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "watcher"
+      ],
+      "funding": 0.000137,
+      "long_short": 1.14
     },
     {
       "symbol": "PENGU",
@@ -158,6 +157,14 @@
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "TUT",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.000106
     },
     {
       "symbol": "XRP",
