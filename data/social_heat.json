@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-22T21:27:19+00:00",
+  "ts": "2026-08-22T21:32:29+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
@@ -21,8 +21,8 @@
       "POL",
       "ZEC",
       "ZAMA",
-      "DASH",
-      "ENA"
+      "ENA",
+      "PYTH"
     ],
     "watcher": [
       "ZEC",
@@ -95,7 +95,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.000309
+      "funding": 0.000313
     },
     {
       "symbol": "XRP",
@@ -103,14 +103,6 @@
       "sources": [
         "coingecko",
         "watcher"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "DASH",
-      "surfaces": 1,
-      "sources": [
-        "movers"
       ],
       "funding": 0.0001
     },
@@ -140,6 +132,14 @@
     },
     {
       "symbol": "POL",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "PYTH",
       "surfaces": 1,
       "sources": [
         "movers"
