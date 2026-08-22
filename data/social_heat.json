@@ -1,17 +1,18 @@
 {
-  "ts": "2026-08-22T15:45:29+00:00",
+  "ts": "2026-08-22T15:51:19+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
+      "ZEC",
       "BTC",
       "TRUMP",
-      "ZEC",
       "SOL",
       "XRP",
-      "PEPE",
+      "POL",
       "LINK",
       "ENA",
-      "POL"
+      "LIT",
+      "ONDO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,8 +23,8 @@
       "PUMP",
       "DASH",
       "AAVE",
-      "TUT",
-      "ZAMA"
+      "ZAMA",
+      "PEPE"
     ],
     "watcher": [
       "ZEC",
@@ -122,10 +123,26 @@
       "funding": 0.0001
     },
     {
-      "symbol": "PEPE",
+      "symbol": "LIT",
       "surfaces": 1,
       "sources": [
         "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "ONDO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 2.6e-05
+    },
+    {
+      "symbol": "PEPE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
       ]
     },
     {
@@ -135,14 +152,6 @@
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "TUT",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "XRP",
