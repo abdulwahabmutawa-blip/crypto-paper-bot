@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-22T14:33:26+00:00",
+  "ts": "2026-08-22T14:39:14+00:00",
   "scanned": 166,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "BNBUSDT",
-      "signal": "ignition",
-      "score": 0.4631,
-      "raw_score": 0.6038,
-      "weight": 0.767,
-      "price": 695.4,
-      "why": "trades 4.1x and volume 7.5x the prior 4h, 64% taker-buy, $3,286,684 burst \u2014 while price has only moved +0.3%",
-      "chg_24h": 0.024,
-      "vol_surge": 7.5,
-      "chg_1h": 0.003,
-      "market_surge": 0.94,
-      "actionable": false,
-      "status": "benched \u2014 hit 27%, mean -1.62% over last 30 at 4h: not beating the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 27%, mean -1.62% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 47%, mean -1.29% over last 30 at 4h: not beating the round trip",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 22,
+    "count": 19,
     "baseline": 39.0,
     "wave": false
   },
@@ -56,8 +40,8 @@
       "mean_ret_4h": -0.01288,
       "median_ret_4h": -0.00247,
       "n_24h": 30,
-      "hit_rate_24h": 0.7,
-      "mean_ret_24h": 0.06753,
+      "hit_rate_24h": 0.667,
+      "mean_ret_24h": 0.06101,
       "median_ret_24h": 0.05296
     },
     "reversion": {
