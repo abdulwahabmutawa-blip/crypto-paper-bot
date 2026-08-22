@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-22T17:25:49+00:00",
+  "ts": "2026-08-22T17:31:19+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -9,10 +9,11 @@
       "ZEC",
       "SUI",
       "XRP",
-      "LIT",
       "ETH",
-      "POL",
-      "ENA"
+      "ENA",
+      "DOT",
+      "DOGE",
+      "SHIB"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -23,8 +24,8 @@
       "PUMP",
       "DASH",
       "TUT",
-      "AAVE",
-      "ZAMA"
+      "ZAMA",
+      "AAVE"
     ],
     "watcher": [
       "ZEC",
@@ -36,17 +37,6 @@
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "POL",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.19
-    },
     {
       "symbol": "PUMP",
       "surfaces": 3,
@@ -91,6 +81,16 @@
       "long_short": 1.0
     },
     {
+      "symbol": "POL",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.19
+    },
+    {
       "symbol": "AAVE",
       "surfaces": 1,
       "sources": [
@@ -103,6 +103,22 @@
       "surfaces": 1,
       "sources": [
         "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "DOGE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "DOT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
       ],
       "funding": 0.0001
     },
@@ -123,12 +139,11 @@
       "funding": 0.0001
     },
     {
-      "symbol": "LIT",
+      "symbol": "SHIB",
       "surfaces": 1,
       "sources": [
         "coingecko"
-      ],
-      "funding": 5e-05
+      ]
     },
     {
       "symbol": "SOL",
@@ -152,7 +167,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000122
+      "funding": 0.00013
     },
     {
       "symbol": "XRP",
