@@ -1,39 +1,39 @@
 {
-  "ts": "2026-08-21T23:55:59+00:00",
+  "ts": "2026-08-22T00:02:09+00:00",
   "sources": {
     "coingecko": [
       "BTC",
-      "XRP",
-      "ETH",
       "PEPE",
+      "XRP",
       "SUI",
+      "ETH",
+      "ZEC",
       "LIT",
       "SOL",
-      "ZEC",
-      "DOGE",
       "PUMP",
-      "CRV",
+      "DOGE",
       "AAVE",
-      "FET"
+      "CRV"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "ZEC",
       "PEPE",
+      "ZEC",
       "BCH",
       "PENGU",
-      "TUT",
       "AAVE",
+      "TUT",
       "ENA",
       "CRV"
     ],
     "watcher": [
-      "ENA",
       "ZEC",
       "BCH",
       "PEPE",
-      "AAVE"
+      "ENA",
+      "AAVE",
+      "PENGU"
     ],
     "cryptopanic": []
   },
@@ -67,7 +67,7 @@
         "watcher"
       ],
       "funding": 0.0001,
-      "long_short": 0.68
+      "long_short": 0.66
     },
     {
       "symbol": "BCH",
@@ -76,8 +76,8 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.000188,
-      "long_short": 1.54
+      "funding": 0.000184,
+      "long_short": 1.52
     },
     {
       "symbol": "CRV",
@@ -87,7 +87,7 @@
         "movers"
       ],
       "funding": 0.0001,
-      "long_short": 1.58
+      "long_short": 1.61
     },
     {
       "symbol": "ENA",
@@ -96,7 +96,16 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.000137
+      "funding": 0.000136
+    },
+    {
+      "symbol": "PENGU",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "BTC",
@@ -123,26 +132,10 @@
       "funding": 0.0001
     },
     {
-      "symbol": "FET",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "LIT",
       "surfaces": 1,
       "sources": [
         "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "PENGU",
-      "surfaces": 1,
-      "sources": [
-        "movers"
       ],
       "funding": 5e-05
     },
@@ -176,7 +169,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.00011
+      "funding": 0.000108
     },
     {
       "symbol": "XRP",
