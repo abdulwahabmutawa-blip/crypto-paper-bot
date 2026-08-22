@@ -1,18 +1,18 @@
 {
-  "ts": "2026-08-22T12:14:09+00:00",
+  "ts": "2026-08-22T12:19:29+00:00",
   "sources": {
     "coingecko": [
-      "ZEC",
       "TRUMP",
+      "ZEC",
       "BTC",
       "PUMP",
       "XRP",
-      "SUI",
-      "ASTER",
       "SOL",
-      "LIT",
+      "SUI",
       "PEPE",
-      "ACE"
+      "ACE",
+      "IO",
+      "ETH"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,9 +22,9 @@
       "POL",
       "DASH",
       "TUT",
-      "PEPE",
       "AAVE",
-      "ENA"
+      "PEPE",
+      "PUMP"
     ],
     "watcher": [
       "TRUMP",
@@ -37,6 +37,17 @@
   },
   "heat": [
     {
+      "symbol": "PUMP",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.39
+    },
+    {
       "symbol": "TRUMP",
       "surfaces": 3,
       "sources": [
@@ -44,7 +55,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -5.6e-05,
+      "funding": -5.9e-05,
       "long_short": 1.57
     },
     {
@@ -69,31 +80,12 @@
       "long_short": 1.0
     },
     {
-      "symbol": "ENA",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.25
-    },
-    {
       "symbol": "PEPE",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ]
-    },
-    {
-      "symbol": "PUMP",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "watcher"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "AAVE",
@@ -109,15 +101,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.001507
-    },
-    {
-      "symbol": "ASTER",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": -0.00147
     },
     {
       "symbol": "DASH",
@@ -128,7 +112,23 @@
       "funding": 0.0001
     },
     {
-      "symbol": "LIT",
+      "symbol": "ENA",
+      "surfaces": 1,
+      "sources": [
+        "watcher"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "ETH",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "IO",
       "surfaces": 1,
       "sources": [
         "coingecko"
