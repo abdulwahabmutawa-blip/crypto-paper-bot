@@ -29,6 +29,27 @@
 - 110 paper-bot cycles + 257 lottery cycles in 24h, no gaps >15 min — cadence looks healthy.
 
 ## Needs a look
+- **Diagnosed today — the book's problem is holding, not picking.** 19 of 21 audited
+  trades went green at some point; only 9 ended green. Average peak available while
+  holding **+2.82%**, average realized **−1.03%** — it surrenders ~3.84 points per trade.
+  The loss is not a bleed: 3 trades account for −$8.26 of the −$7.88, and the other 20
+  net **+$0.38**. Fees/slippage are only **$1.63 (0.19% of turnover)** — not the problem.
+  Two fixes landed (below); two structural issues were left alone deliberately.
+- **Two fixes shipped 08-22.** (1) *Repeat-loser memory* — `st["stopped"]` was a 3h
+  cooldown, not a memory, so CHIPUSDT was bought 5× for −$5.72. A symbol that has cost
+  5% of the book, or lost twice, is now retired. Honest expected value: replayed on the
+  real tape it recovers **+$2.25**, not −$5.72 — the guard cannot prevent the first
+  losses, and on CHIP those were the big ones. (2) *Exchange-side protective stops*
+  (`LOTTERY_EXCHANGE_STOPS=1`, **off by default**) — AXSUSDT's ratchet floor was +5.9%
+  and the 5-minute poll filled it at **+1.29%**; a resting STOP_LOSS_LIMIT closes that
+  gap. Purely additive: every poll exit still runs, so a rejected order degrades to
+  today's behaviour, never to unprotected. See `LOTTERY_VPS_SETUP.md` to enable.
+- **Two things deliberately NOT changed** (they are strategy bets, not defects, and
+  n=23 is far too small to fit them): the ratchet arms at +4% and locks +0.5%, which
+  makes `LOTTERY_CRITERIA.md`'s own success marker — a trade ratcheted past **+30%** —
+  effectively unreachable, since a coin must cross the entire +4–8% band without one
+  dip. The code and the criteria disagree; that is an owner decision. And position
+  sizes ran $10–$54 with no vol scaling, with both big losses near max size.
 - **FIXED TODAY — the lottery's headline return was counting deposits as profit.**
   `exit_auditor.py` computed "book since inception" as live balance ÷ the $40 inception
   stake. The owner had topped the account up ~$22, so that cash was being published as

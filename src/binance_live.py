@@ -119,6 +119,37 @@ def balances() -> dict[str, float]:
     return out
 
 
+def balances_valuation(held_symbol: str | None) -> dict[str, float]:
+    """Free balances, PLUS the locked units of the held seat's base asset.
+    VALUATION ONLY -- never feed this to a sell path, which may only ever
+    spend free balance.
+
+    Exists because balances() is free-only: the moment a protective stop
+    rests on the exchange it locks the position's units, they vanish from
+    free, and managed_value() prices the seat at $0 -- a phantom -100% that
+    trips book_floor_reason and freezes entries on a book that never lost
+    anything.
+
+    Only the held base asset picks up its locked side, never USDT and never
+    the owner's other 22 assets: this account is shared, and their own
+    resting orders lock quote and base balances that are none of the book's
+    business. The bot's own protective stop locks exactly one thing -- the
+    seat it is protecting -- so that is exactly what this restores.
+    """
+    acct = _call("GET", "/v3/account", signed=True)
+    if not acct:
+        return {}
+    base = held_symbol[:-4] if held_symbol else None
+    out: dict[str, float] = {}
+    for b in (acct or {}).get("balances", []):
+        asset = b.get("asset")
+        free = float(b.get("free", 0) or 0)
+        val = free + (float(b.get("locked", 0) or 0) if asset == base else 0.0)
+        if val > 0:
+            out[asset] = val
+    return out
+
+
 def price(symbol: str) -> float | None:
     d = _call("GET", "/v3/ticker/price", {"symbol": symbol})
     try:
@@ -153,6 +184,65 @@ def guard(action: str, symbol: str, bals: dict, held_symbol: str | None,
                 f"${MIN_ORDER_USDT:.0f} exchange minimum; book effectively "
                 f"burned, nothing to do")
     return None
+
+
+# ---- repeat-loser memory (trade autopsy 2026-08-22) -------------------------
+# st["stopped"] is a 3-HOUR COOLDOWN, not a memory: nothing in the book ever
+# remembered that a coin had already taken money. CHIPUSDT was bought five
+# separate times over five days -- four losses, net -$5.72, 73% of the book's
+# entire drawdown -- because each re-entry looked fresh to the scanner.
+#
+# What this rule can and cannot do: it engages only AFTER a symbol has proved
+# itself, so it never prevents the first loss, and on CHIP the first two were
+# the big ones. Replayed on the real 23-trade tape it recovers +$2.25, not
+# the -$5.72 headline. Worth having as a guard; not a fix for the drawdown.
+#
+# Threshold is a FRACTION of the book's high-water value, never a dollar
+# amount -- same discipline as BOOK_FLOOR_FRAC (owner decision 2026-08-21:
+# "amount of money should not matter"), so it rescales when the owner
+# deposits. 0.05 sits mid-plateau: 3%, 5% and 8% all recover the same +$2.25
+# on the tape and only 10% degrades it, so the number is not knife-edge fitted.
+REPEAT_LOSS_FRAC = 0.05   # a symbol that has cost 5% of the book is retired
+REPEAT_LOSS_MAX = 2       # ...as is one that has lost this many round trips
+
+
+def retired_symbols(realized: list[dict] | None,
+                    hwm_usd: float | None) -> dict[str, str]:
+    """Symbols this book has stopped paying to re-learn, with the reason.
+
+    Retirement is for the life of the experiment, not a cooldown: the point
+    is that the coin has already answered the question. Cleared only by the
+    owner editing state, which is deliberate -- an automatic expiry would
+    reopen the exact door CHIP walked through five times.
+    """
+    out: dict[str, str] = {}
+    if not realized:
+        return out
+    losses: dict[str, int] = {}
+    cum: dict[str, float] = {}
+    for t in realized:
+        sym = t.get("symbol")
+        pnl = t.get("pnl_usd")
+        if not sym or pnl is None:
+            continue
+        pnl = float(pnl)
+        cum[sym] = cum.get(sym, 0.0) + pnl
+        if pnl < 0:
+            losses[sym] = losses.get(sym, 0) + 1
+    # A missing/zero high-water mark disables only the fraction test; the
+    # count test still stands, so an unreadable book value cannot silently
+    # switch the whole guard off.
+    line = -REPEAT_LOSS_FRAC * hwm_usd if hwm_usd else None
+    for sym in set(losses) | set(cum):
+        n, c = losses.get(sym, 0), cum.get(sym, 0.0)
+        if line is not None and c <= line:
+            out[sym] = (f"RETIRED — has cost this book ${-c:.2f}, past "
+                        f"{REPEAT_LOSS_FRAC:.0%} of its ${hwm_usd:.2f} peak; "
+                        f"it has already answered the question")
+        elif n >= REPEAT_LOSS_MAX:
+            out[sym] = (f"RETIRED — {n} losing round trips "
+                        f"(net ${c:+.2f}); it has already answered the question")
+    return out
 
 
 # ---- late-entry guard (trade autopsy 2026-08-16, all 4 real trades) ---------
@@ -541,6 +631,163 @@ def late_entry_check(symbol: str) -> str | None:
     except Exception:
         pass
     return late_entry(runup_24h, chg_1h, dd_2h, range_24h)
+
+
+# ---- exchange-side protective stop (trade autopsy 2026-08-22) ---------------
+# The book defends its floors by POLLING every ~5 min and then selling at
+# market. On 08-22 that cost real money: AXSUSDT peaked +11.8%, so
+# ratchet_stop set a floor at +5.9% -- and the fill came back at +1.29%. The
+# price fell through the floor between two cycles and the bot sold at
+# whatever it saw next. 4.6 points, gone to polling granularity, on an asset
+# class that moves 5% in minutes.
+#
+# A resting STOP_LOSS_LIMIT sits AT the exchange and triggers in the gap
+# between our cycles. Three rules keep this safe:
+#   1. ADDITIVE, NEVER REPLACING. Every poll-based exit (hard stop, ratchet,
+#      trailing, fuel, momentum, hype) keeps running untouched. If placement
+#      fails for any reason the book degrades to exactly today's behaviour,
+#      never to unprotected -- the one failure mode worth engineering against.
+#   2. Off by default (LOTTERY_EXCHANGE_STOPS != 1). This is the order path
+#      on a real-money account; it earns its way on with the owner watching.
+#   3. A resting order locks the units, so valuation must use
+#      balances_valuation() or the seat prices at $0. See that function.
+STOP_LIMIT_SLIP = 0.015   # limit this far under the trigger, so a fast
+                          # crash still fills instead of leaving a stranded
+                          # stop-limit above a collapsing bid
+STOP_REPLACE_EPS = 0.005  # only re-place when the floor moves >0.5%: the
+                          # floor creeps up every cycle a winner rises, and
+                          # cancel/replace on each tick is pure API churn
+
+
+def exchange_stops_armed() -> bool:
+    """Both the live-trading arm AND its own opt-in. Neither implies the other."""
+    return armed() and os.getenv("LOTTERY_EXCHANGE_STOPS", "") == "1"
+
+
+def symbol_filters(symbol: str) -> dict:
+    """{'tick': float, 'step': float} -- price and quantity increments.
+
+    Binance rejects any order off-increment (-1013), and a rejected stop is
+    a stop that silently is not there, so this is not optional politeness.
+    """
+    info = _call("GET", "/v3/exchangeInfo", {"symbol": symbol})
+    out = {"tick": 0.0, "step": 0.0}
+    for f in ((info or {}).get("symbols") or [{}])[0].get("filters", []):
+        if f.get("filterType") == "PRICE_FILTER":
+            out["tick"] = float(f.get("tickSize", 0) or 0)
+        elif f.get("filterType") == "LOT_SIZE":
+            out["step"] = float(f.get("stepSize", 0) or 0)
+    return out
+
+
+def _down_to(value: float, increment: float) -> float:
+    """Round DOWN onto an increment. Down, always: rounding a sell stop up
+    could place it above the market and be rejected outright."""
+    if not increment or increment <= 0:
+        return value
+    return int(value / increment) * increment
+
+
+def protective_floor(entry: float | None, hwm: float | None,
+                     stop_pct: float) -> float | None:
+    """The single highest price floor the poll-based rules would defend --
+    hard stop, profit ratchet and trailing stop resolved into one number a
+    resting order can carry. Mirrors the poll logic; it never invents a
+    floor the polling path would not also enforce.
+
+    stop_pct is per-seat (exit_params(): -0.06 burst, -0.10 grind/hype), so
+    it is passed in rather than assumed -- a resting order built on the wrong
+    species' stop would sit 4 points from where the poll path defends.
+    """
+    if not entry or entry <= 0:
+        return None
+    floors = [entry * (1.0 + stop_pct)]
+    if hwm and hwm > 0:
+        floors.append(hwm * (1.0 + trail_pct(hwm / entry - 1.0)))
+        r = ratchet_stop(entry, hwm)
+        if r:
+            floors.append(r)
+    return max(floors)
+
+
+def resting_stop(symbol: str) -> dict | None:
+    """The bot's live protective order on this symbol, if one is resting."""
+    if not armed():
+        return None
+    orders = _call("GET", "/v3/openOrders", {"symbol": symbol}, signed=True)
+    for o in orders or []:
+        if o.get("side") == "SELL" and "STOP" in str(o.get("type", "")):
+            return o
+    return None
+
+
+def order_status(symbol: str, order_id: str) -> dict | None:
+    if not armed() or not order_id:
+        return None
+    return _call("GET", "/v3/order",
+                 {"symbol": symbol, "orderId": order_id}, signed=True)
+
+
+def cancel_stop(symbol: str, order_id: str) -> bool:
+    """Cancel a resting stop. Must run before ANY bot-initiated sell: leaving
+    it behind would hold units the market order needs, or fire later against
+    a seat the book has already closed."""
+    if not armed() or not order_id:
+        return False
+    r = _call("DELETE", "/v3/order",
+              {"symbol": symbol, "orderId": order_id}, signed=True)
+    ok = bool(r)
+    log({"event": "stop_cancelled" if ok else "stop_cancel_failed",
+         "symbol": symbol, "order_id": str(order_id),
+         "code": LAST_ERROR.get("code"), "msg": LAST_ERROR.get("msg", "")})
+    return ok
+
+
+def place_protective_stop(symbol: str, qty: float,
+                          stop_price: float) -> dict | None:
+    """Rest a STOP_LOSS_LIMIT sell at stop_price. Returns the order or None.
+
+    Returning None is a normal, survivable outcome -- the caller keeps its
+    poll-based exits either way -- so every failure here is logged and
+    swallowed rather than raised.
+    """
+    if not exchange_stops_armed():
+        return None
+    f = symbol_filters(symbol)
+    stop = _down_to(stop_price, f["tick"])
+    limit = _down_to(stop * (1.0 - STOP_LIMIT_SLIP), f["tick"])
+    q = _down_to(qty, f["step"])
+    if stop <= 0 or limit <= 0 or q <= 0:
+        log({"event": "stop_not_placed", "symbol": symbol,
+             "reason": f"non-positive after increment rounding "
+                       f"(stop={stop}, limit={limit}, qty={q})"})
+        return None
+    # A stop at or above the market triggers instantly -- that is a market
+    # sell wearing a stop's clothes, and not what any caller asked for.
+    p = price(symbol)
+    if p and stop >= p:
+        log({"event": "stop_not_placed", "symbol": symbol,
+             "reason": f"floor {stop} is at or above market {p}; the "
+                       f"poll-based exit owns this case"})
+        return None
+    LAST_ERROR.clear()
+    resp = _call("POST", "/v3/order",
+                 {"symbol": symbol, "side": "SELL", "type": "STOP_LOSS_LIMIT",
+                  "timeInForce": "GTC",
+                  "quantity": f"{q:.8f}".rstrip("0").rstrip("."),
+                  "stopPrice": f"{stop:.10f}".rstrip("0").rstrip("."),
+                  "price": f"{limit:.10f}".rstrip("0").rstrip(".")},
+                 signed=True)
+    if not resp:
+        log({"event": "stop_not_placed", "symbol": symbol,
+             "reason": "exchange rejected or did not answer",
+             "code": LAST_ERROR.get("code"), "msg": LAST_ERROR.get("msg", "")})
+        return None
+    out = {"order_id": str(resp.get("orderId", "")), "stop": stop,
+           "limit": limit, "qty": q}
+    log({"event": "stop_placed", "symbol": symbol, **out})
+    print(f"[lottery-live] protective stop resting on {symbol} @ {stop}")
+    return out
 
 
 def market(action: str, symbol: str, quote_qty: float | None = None,
