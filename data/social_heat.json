@@ -1,19 +1,18 @@
 {
-  "ts": "2026-08-22T00:53:59+00:00",
+  "ts": "2026-08-22T00:59:59+00:00",
   "sources": {
     "coingecko": [
       "SUI",
-      "PEPE",
       "ZEC",
-      "BTC",
       "XRP",
+      "BTC",
+      "PEPE",
       "PUMP",
-      "LIT",
       "ETH",
-      "AAVE",
-      "ENA",
+      "LIT",
       "SOL",
-      "LINK"
+      "ONDO",
+      "AAVE"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,11 +20,11 @@
       "BCH",
       "ZEC",
       "PEPE",
-      "AAVE",
       "PENGU",
-      "HEMI",
+      "AAVE",
       "TUT",
-      "ENA"
+      "HEMI",
+      "FET"
     ],
     "watcher": [
       "ZEC",
@@ -48,17 +47,6 @@
       ],
       "funding": 0.0001,
       "long_short": 1.59
-    },
-    {
-      "symbol": "ENA",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": 0.000108,
-      "long_short": 1.16
     },
     {
       "symbol": "PEPE",
@@ -87,7 +75,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.000193,
+      "funding": 0.000203,
       "long_short": 1.52
     },
     {
@@ -97,7 +85,8 @@
         "movers",
         "watcher"
       ],
-      "funding": 5e-05
+      "funding": 5e-05,
+      "long_short": 1.98
     },
     {
       "symbol": "BTC",
@@ -108,10 +97,26 @@
       "funding": 0.0001
     },
     {
+      "symbol": "ENA",
+      "surfaces": 1,
+      "sources": [
+        "watcher"
+      ],
+      "funding": 0.000115
+    },
+    {
       "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "FET",
+      "surfaces": 1,
+      "sources": [
+        "movers"
       ],
       "funding": 0.0001
     },
@@ -124,15 +129,15 @@
       "funding": 5e-05
     },
     {
-      "symbol": "LINK",
+      "symbol": "LIT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0001
+      "funding": 5e-05
     },
     {
-      "symbol": "LIT",
+      "symbol": "ONDO",
       "surfaces": 1,
       "sources": [
         "coingecko"
