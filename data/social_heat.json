@@ -1,29 +1,31 @@
 {
-  "ts": "2026-08-22T09:14:49+00:00",
+  "ts": "2026-08-22T09:20:19+00:00",
   "sources": {
     "coingecko": [
-      "ZEC",
       "TRUMP",
+      "ZEC",
       "BTC",
       "PUMP",
       "SUI",
       "SOL",
-      "SAND",
       "XRP",
+      "SAND",
       "ETH",
-      "AAVE"
+      "PEPE",
+      "POL",
+      "XLM"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "TRUMP",
-      "ZEC",
       "POL",
+      "ZEC",
       "TUT",
       "DASH",
       "PEPE",
-      "PUMP",
-      "AAVE"
+      "AAVE",
+      "PENGU"
     ],
     "watcher": [
       "ZEC",
@@ -34,6 +36,15 @@
   },
   "heat": [
     {
+      "symbol": "PEPE",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ]
+    },
+    {
       "symbol": "TRUMP",
       "surfaces": 3,
       "sources": [
@@ -41,7 +52,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 2.5e-05,
+      "funding": 3.3e-05,
       "long_short": 1.57
     },
     {
@@ -56,32 +67,22 @@
       "long_short": 0.58
     },
     {
-      "symbol": "AAVE",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.47
-    },
-    {
-      "symbol": "PEPE",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ]
-    },
-    {
-      "symbol": "PUMP",
+      "symbol": "POL",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
       "funding": 5e-05,
-      "long_short": 1.58
+      "long_short": 1.21
+    },
+    {
+      "symbol": "AAVE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "BTC",
@@ -108,10 +109,18 @@
       "funding": 0.0001
     },
     {
-      "symbol": "POL",
+      "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
         "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
       ],
       "funding": 5e-05
     },
@@ -121,7 +130,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.00052
+      "funding": -0.000488
     },
     {
       "symbol": "SOL",
@@ -146,6 +155,14 @@
         "movers"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "XLM",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "XRP",
