@@ -1,22 +1,21 @@
 {
-  "ts": "2026-08-22T00:42:17+00:00",
-  "scanned": 153,
+  "ts": "2026-08-22T00:48:17+00:00",
+  "scanned": 154,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "PROMUSDT",
-      "signal": "ignition",
-      "score": 0.707,
-      "raw_score": 0.7311,
-      "weight": 0.967,
-      "price": 2.748,
-      "why": "trades 6.7x and volume 11.7x the prior 4h, 74% taker-buy, $83,345 burst \u2014 while price has only moved +2.8%",
-      "chg_24h": 0.2329,
-      "vol_surge": 11.73,
-      "chg_1h": 0.0281,
-      "market_surge": 3.92,
-      "actionable": false,
-      "status": "benched \u2014 hit 47%, mean +0.15% over last 30 at 4h: not beating the round trip"
+      "symbol": "PENDLEUSDT",
+      "signal": "breakout",
+      "score": 0.6714,
+      "raw_score": 0.7196,
+      "weight": 0.933,
+      "price": 1.696,
+      "why": "trades 6.1x, volume 8.6x, 81% taker-buy, +2.5% in an hour, at 98% of its 24h range",
+      "chg_24h": 0.1158,
+      "vol_surge": 8.64,
+      "chg_1h": 0.0248,
+      "market_surge": 3.02,
+      "actionable": true
     }
   ],
   "gate": {
@@ -27,7 +26,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 152,
+    "count": 144,
     "baseline": 16.0,
     "wave": true
   },
@@ -56,8 +55,8 @@
       "mean_ret_4h": 0.00799,
       "median_ret_4h": 0.0,
       "n_24h": 30,
-      "hit_rate_24h": 0.933,
-      "mean_ret_24h": 0.11479,
+      "hit_rate_24h": 0.9,
+      "mean_ret_24h": 0.11089,
       "median_ret_24h": 0.12519
     },
     "reversion": {
