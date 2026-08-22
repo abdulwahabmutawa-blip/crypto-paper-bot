@@ -1,29 +1,28 @@
 {
-  "ts": "2026-08-22T22:46:13+00:00",
+  "ts": "2026-08-22T22:51:37+00:00",
   "sources": {
     "coingecko": [
-      "TRUMP",
       "ZEC",
+      "TRUMP",
       "XRP",
-      "PUMP",
       "BTC",
+      "PUMP",
+      "ZRO",
       "PEPE",
       "XMR",
-      "SHIB",
       "AAVE",
-      "TAO",
-      "LIT",
-      "XLM",
-      "ENA"
+      "SHIB",
+      "ONDO",
+      "XLM"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "TUT",
-      "TRUMP",
       "PUMP",
-      "POL",
+      "TRUMP",
       "ENA",
+      "POL",
       "ZEC",
       "ZAMA",
       "DASH"
@@ -39,17 +38,6 @@
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "ENA",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": 5.4e-05,
-      "long_short": 1.31
-    },
     {
       "symbol": "PUMP",
       "surfaces": 3,
@@ -69,7 +57,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 4.3e-05,
+      "funding": 4e-05,
       "long_short": 1.53
     },
     {
@@ -94,13 +82,23 @@
       "long_short": 1.0
     },
     {
+      "symbol": "ENA",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": 6.1e-05,
+      "long_short": 1.31
+    },
+    {
       "symbol": "TUT",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": 0.000157
+      "funding": 0.00016
     },
     {
       "symbol": "AAVE",
@@ -119,12 +117,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "LIT",
+      "symbol": "ONDO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 4.8e-05
     },
     {
       "symbol": "PEPE",
@@ -147,14 +145,6 @@
       "sources": [
         "coingecko"
       ]
-    },
-    {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "XLM",
@@ -185,6 +175,14 @@
       "surfaces": 1,
       "sources": [
         "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "ZRO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
       ],
       "funding": 5e-05
     }
