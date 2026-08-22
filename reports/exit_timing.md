@@ -1,6 +1,6 @@
 # Exit timing — the bot grading its own exits
 
-updated 2026-08-22T18:46:57+00:00 · 21 exits audited · early/late line ±3% · MEASUREMENT ONLY
+updated 2026-08-22T19:00:25+00:00 · 21 exits audited · early/late line ±3% · MEASUREMENT ONLY
 
 | verdict | n |
 |---|---|
@@ -29,7 +29,7 @@ updated 2026-08-22T18:46:57+00:00 · 21 exits audited · early/late line ±3% ·
 
 | regime (BTC day) | days | avg book | avg gap vs BTC |
 |---|---|---|---|
-| flat | 4 | -3.22% | **-2.89pp** |
+| flat | 4 | -3.22% | **-2.90pp** |
 | green | 4 | -1.76% | **-7.34pp** |
 
 | date | regime | book | BTC | gap |
@@ -41,7 +41,7 @@ updated 2026-08-22T18:46:57+00:00 · 21 exits audited · early/late line ±3% ·
 | 2026-08-19 | green | -8.44% | +7.12% | -15.56pp |
 | 2026-08-20 | green | -1.25% | +5.32% | -6.58pp |
 | 2026-08-21 | green | +5.00% | +7.27% | -2.27pp |
-| 2026-08-22 | flat | -0.01% | -1.43% | +1.41pp |
+| 2026-08-22 | flat | -0.01% | -1.39% | +1.37pp |
 
 
 _giveback = in-hold peak the exit surrendered; post-24h run = what the coin did after we sold. High post-run with low giveback = selling too early; high giveback = selling too late._
