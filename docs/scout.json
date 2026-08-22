@@ -1,8 +1,39 @@
 {
-  "ts": "2026-08-22T20:48:50+00:00",
-  "scanned": 153,
+  "ts": "2026-08-22T20:54:26+00:00",
+  "scanned": 154,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "BMTUSDT",
+      "signal": "ignition",
+      "score": 0.5971,
+      "raw_score": 0.853,
+      "weight": 0.7,
+      "price": 0.01649,
+      "why": "trades 21.5x and volume 27.3x the prior 4h, 65% taker-buy, $54,125 burst \u2014 while price has only moved +2.4%",
+      "chg_24h": -0.0792,
+      "vol_surge": 27.3,
+      "chg_1h": 0.0236,
+      "market_surge": 2.68,
+      "actionable": false,
+      "status": "benched \u2014 hit 20%, mean -2.25% over last 30 at 4h: not beating the round trip"
+    },
+    {
+      "symbol": "GIGGLEUSDT",
+      "signal": "ignition",
+      "score": 0.4941,
+      "raw_score": 0.7058,
+      "weight": 0.7,
+      "price": 36.59,
+      "why": "trades 7.7x and volume 6.9x the prior 4h, 61% taker-buy, $58,881 burst \u2014 while price has only moved +1.2%",
+      "chg_24h": -0.0196,
+      "vol_surge": 6.88,
+      "chg_1h": 0.0116,
+      "market_surge": 1.46,
+      "actionable": false,
+      "status": "benched \u2014 hit 20%, mean -2.25% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 20%, mean -2.25% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 47%, mean -1.29% over last 30 at 4h: not beating the round trip",
@@ -11,7 +42,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 27,
+    "count": 26,
     "baseline": 39.0,
     "wave": false
   },
