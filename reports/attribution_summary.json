@@ -1,91 +1,83 @@
 {
- "updated_utc": "2026-08-19T08:04:00+00:00",
- "note": "Wednesday 2026-08-19, 08:04Z, before the US open. 19 lines appended: 12 bot dailies plus 7 trade_event lines. NO R1 BREACH, NO SIM-INTEGRITY ALERT, NO FROZEN BOT, NO CRON GAP - the cleanest infrastructure day in the ledger. 110 loop cycles in 24 hours, median gap 13.4 minutes, MAXIMUM gap 14.4 minutes, every bot's state age within 0.2 minutes of every other. I am not reporting a cron gap and I am showing the arithmetic that says so: the raw GitHub run-start series again looks alarming (largest interval 109.3 minutes, and 52 of 60 runs read 'cancelled') and again is an artifact of the long-running-loop design where each scheduled run cancels the previous one still cycling. The thing that matters is the commit cadence on data/*_state.json and there is no hole in it. FILL AUDIT NON-VACUOUS AND PASSING: nine new fills audited. The five equity legs (sentiment AMLX buy 13:37:41Z, sell 14:32:14Z, buy 18:36:33Z; hunter SLV sell and NVDA buy both 15:12:39Z) land at 09:37-14:36 ET on a Tuesday, inside US regular hours, at prices inside their 08-18 ranges. The four crypto fills (hypecrypto GPS sell, TUT buy, TUT sell, ACE buy) and the three lottery fills all sit inside Binance mainnet 1-minute ranges within +/-5 minutes of their timestamps. THE DAY'S DRIVER STORY: a 19-year-high 30-year yield (5.34% intraday) drove a semiconductor rout - the Philadelphia Semiconductor Index -4.98%, Nasdaq -1.33% - and the fleet was long that side in two books (congress -12.02 across TSM/META/AVGO/NVDA, hunter -29.89 after rotating into silver one day before the same yield print crushed it). Precious metals swapped roles with bonds inside allweather. Against all of that, one book made the fleet's whole day on a real dated catalyst: AMLX +63.8% on Phase 3 LUCIDITY hitting its primary endpoint. THE FINDING WORTH THE OWNER'S TIME is what that book did with it: its 'hype faded' exit rule sold the whole position 55 minutes in and rebought 2.61 higher four hours later, surrendering 3.16 units and 111.07 dollars of a 210-dollar move, because the rule keys on a name leaving a scan rather than on the thesis breaking, and unlike hunter it has no cooldown on a name it just exited. A CORRECTION I OWE THE ANALYST: I filed a fault against it yesterday for 'asserting Watcher readings it never fetched'. I read the source today. src/analyst_agent.py line 335 injects the full verdict into its prompt as 'Watcher latest: {...}' and the _watcher() docstring says 'context AND read_watcher tool', so citing it without a tool call is correct behaviour; the guardrail at line 238 that flags it is a false positive and has now fired two days running. The agent's quoted content also matched the current scan verbatim. That fault is WITHDRAWN. The separate defect - labelling an intraday print as a close, third session running - stands. DRIVER TALLY: 'hype_sentiment' gave back yesterday's improvement and fell to 14 profit / 26 loss (35.0%), retaking the worst-driver spot from 'technical' at 13 / 24 (35.1%) by one tenth of a point. That margin is noise and I am reporting it as noise: the two are indistinguishable and both are bad. 'unknown' grew again on meanrev's third unattributed session - that is the tally doing its job, not a gap in the work.",
- "total_lines_logged": 341,
- "lines_counted_in_tally": 332,
- "superseded_lines_excluded": 9,
- "superseded_note": "The 2026-08-17 daily lines for meanrev, allweather, commodity, congress, hunter, sentiment, scholar, analyst and hypecrypto stay excluded from the tally because the 2026-08-18 lines cover that same session with the bots' real marks. They remain in trade_attributions.jsonl.",
+ "updated_utc": "2026-08-22T13:45:00+00:00",
+ "lines_counted": 376,
+ "lines_total": 376,
+ "method": "Recomputed from source each run rather than incremented. Daily lines are deduped by (date,bot) keeping the last filing, which drops superseded re-filings so a session is never counted twice.",
  "by_primary_driver": {
-  "hype_sentiment": {
-   "profit": 14,
-   "loss": 26,
-   "flat": 6,
-   "profit_rate_pct": 35.0
-  },
-  "macro": {
-   "profit": 14,
-   "loss": 17,
-   "flat": 1,
-   "profit_rate_pct": 45.2
-  },
-  "market_beta": {
-   "profit": 27,
-   "loss": 20,
-   "flat": 7,
-   "profit_rate_pct": 57.4
-  },
-  "news_idiosyncratic": {
-   "profit": 12,
-   "loss": 6,
-   "flat": 1,
-   "profit_rate_pct": 66.7
-  },
   "none_cash": {
    "profit": 0,
    "loss": 1,
-   "flat": 30,
-   "profit_rate_pct": 0.0
+   "flat": 34,
+   "win_pct": 0.0
   },
-  "sector": {
-   "profit": 10,
-   "loss": 8,
-   "flat": 0,
-   "profit_rate_pct": 55.6
+  "market_beta": {
+   "profit": 32,
+   "loss": 23,
+   "flat": 7,
+   "win_pct": 58.2
   },
-  "technical": {
-   "profit": 13,
-   "loss": 24,
-   "flat": 3,
-   "profit_rate_pct": 35.1
+  "macro": {
+   "profit": 18,
+   "loss": 17,
+   "flat": 2,
+   "win_pct": 51.4
   },
   "unknown": {
-   "profit": 10,
-   "loss": 11,
+   "profit": 14,
+   "loss": 13,
    "flat": 71,
-   "profit_rate_pct": 47.6
+   "win_pct": 51.9
+  },
+  "hype_sentiment": {
+   "profit": 18,
+   "loss": 29,
+   "flat": 7,
+   "win_pct": 38.3
+  },
+  "technical": {
+   "profit": 14,
+   "loss": 30,
+   "flat": 4,
+   "win_pct": 31.8
+  },
+  "sector": {
+   "profit": 13,
+   "loss": 9,
+   "flat": 0,
+   "win_pct": 59.1
+  },
+  "news_idiosyncratic": {
+   "profit": 13,
+   "loss": 6,
+   "flat": 1,
+   "win_pct": 68.4
   }
  },
  "by_beta_or_alpha": {
-  "alpha": {
-   "profit": 56,
-   "loss": 61,
-   "flat": 7,
-   "profit_rate_pct": 47.9
+  "n/a": {
+   "profit": 13,
+   "loss": 15,
+   "flat": 110,
+   "win_pct": 46.4
   },
   "beta": {
-   "profit": 22,
-   "loss": 17,
+   "profit": 27,
+   "loss": 20,
    "flat": 7,
-   "profit_rate_pct": 56.4
+   "win_pct": 57.4
   },
   "mixed": {
-   "profit": 11,
-   "loss": 21,
-   "flat": 0,
-   "profit_rate_pct": 34.4
+   "profit": 18,
+   "loss": 22,
+   "flat": 1,
+   "win_pct": 45.0
   },
-  "n/a": {
-   "profit": 11,
-   "loss": 14,
-   "flat": 105,
-   "profit_rate_pct": 44.0
+  "alpha": {
+   "profit": 64,
+   "loss": 71,
+   "flat": 8,
+   "win_pct": 47.4
   }
  },
- "worst_driver": "hype_sentiment",
- "worst_driver_note": "hype_sentiment 14 profit / 26 loss = 35.0%; technical 13 / 24 = 35.1%. The gap is 0.1pp, which is noise - treat them as tied for worst. hype_sentiment gave back yesterday's improvement because four of today's six hype lines are losses (hypecrypto's ACE entry and TUT round trip, lottery's PUMP round trip and GPS close).",
- "confidence_mix": {
-  "high": 270,
-  "medium": 43,
-  "low": 19
- }
+ "note": "'technical' and 'hype_sentiment' remain the two worst drivers in this ledger and both took another loss this run - commodity's triple round trip confirmed on final closes at -7.92 on a session when BOTH its candidate assets rose, and sentiment's four-fill chain at -31.45. 'sector' resolved two lines cleanly today (meanrev to XLV within 0.08pp, congress to a tech-led tape) and is now the second-best driver by win rate. 'unknown' grew by one, again deliberately: I refused for a second run to attribute the sentiment book's day, because a 152-dollar pricing artifact from the 08-19-close bitcoin fill sits inside a +52.84 session."
 }
