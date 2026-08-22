@@ -1,22 +1,35 @@
 {
-  "ts": "2026-08-22T19:18:06+00:00",
-  "scanned": 155,
+  "ts": "2026-08-22T19:23:35+00:00",
+  "scanned": 154,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "MORPHOUSDT",
-      "signal": "ignition",
-      "score": 0.665,
-      "raw_score": 0.9072,
-      "weight": 0.733,
-      "price": 2.254,
-      "why": "trades 11.6x and volume 16.1x the prior 4h, 69% taker-buy, $51,415 burst \u2014 while price has only moved +0.6%",
-      "chg_24h": -0.0404,
-      "vol_surge": 16.15,
-      "chg_1h": 0.0058,
-      "market_surge": 0.85,
-      "actionable": false,
-      "status": "benched \u2014 hit 23%, mean -2.29% over last 30 at 4h: not beating the round trip"
+      "symbol": "TRUMPUSDT",
+      "signal": "heat",
+      "score": 0.78,
+      "raw_score": 0.6,
+      "weight": 1.3,
+      "price": 2.459,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.005% \u00b7 L/S 1.56",
+      "chg_24h": 0.3846,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
+      "actionable": true
+    },
+    {
+      "symbol": "ZECUSDT",
+      "signal": "heat",
+      "score": 0.78,
+      "raw_score": 0.6,
+      "weight": 1.3,
+      "price": 833.26,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.010% \u00b7 L/S 0.52",
+      "chg_24h": 0.2293,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
+      "actionable": true
     }
   ],
   "gate": {
@@ -27,7 +40,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 30,
+    "count": 28,
     "baseline": 39.0,
     "wave": false
   },
@@ -81,12 +94,12 @@
       "median_ret_1h": 0.00832,
       "n_4h": 30,
       "hit_rate_4h": 0.8,
-      "mean_ret_4h": 0.02177,
+      "mean_ret_4h": 0.0217,
       "median_ret_4h": 0.02774,
       "n_24h": 30,
       "hit_rate_24h": 0.9,
-      "mean_ret_24h": 0.09576,
-      "median_ret_24h": 0.12093
+      "mean_ret_24h": 0.08599,
+      "median_ret_24h": 0.11217
     },
     "revival": {
       "n_1h": 4,
