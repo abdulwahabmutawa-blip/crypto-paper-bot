@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-22T20:20:19+00:00",
+  "ts": "2026-08-22T20:25:58+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
@@ -19,8 +19,8 @@
       "TUT",
       "TRUMP",
       "PUMP",
-      "DASH",
       "POL",
+      "DASH",
       "ZEC",
       "AAVE",
       "ZAMA"
@@ -29,7 +29,9 @@
       "ZEC",
       "TRUMP",
       "PUMP",
-      "BTC"
+      "BTC",
+      "XRP",
+      "TUT"
     ],
     "cryptopanic": []
   },
@@ -78,12 +80,31 @@
       "long_short": 1.01
     },
     {
+      "symbol": "TUT",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": 0.000185,
+      "long_short": 0.97
+    },
+    {
+      "symbol": "XRP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "watcher"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "AAVE",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 0.000138
+      "funding": 0.000132
     },
     {
       "symbol": "AERO",
@@ -135,22 +156,6 @@
     },
     {
       "symbol": "SOL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "TUT",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.000169
-    },
-    {
-      "symbol": "XRP",
       "surfaces": 1,
       "sources": [
         "coingecko"
