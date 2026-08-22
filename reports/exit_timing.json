@@ -2,19 +2,14 @@
  "alpha_by_regime": {
   "by_regime": {
    "flat": {
-    "avg_book_pct": -4.29,
-    "avg_gap_pp": -4.32,
-    "n": 3
+    "avg_book_pct": -2.88,
+    "avg_gap_pp": -2.47,
+    "n": 4
    },
    "green": {
     "avg_book_pct": -1.76,
     "avg_gap_pp": -7.34,
     "n": 4
-   },
-   "red": {
-    "avg_book_pct": 1.37,
-    "avg_gap_pp": 3.62,
-    "n": 1
    }
   },
   "note": "gap = book minus BTC, daily, paired. Skill is a non-negative gap on flat/red days; green-day returns are tide, not skill. Realized-pnl based (open-position marks excluded).",
@@ -70,10 +65,10 @@
    },
    {
     "book_pct": 1.37,
-    "btc_pct": -2.25,
+    "btc_pct": -1.73,
     "date": "2026-08-22",
-    "gap_pp": 3.62,
-    "regime": "red"
+    "gap_pp": 3.1,
+    "regime": "flat"
    }
   ]
  },
@@ -109,13 +104,13 @@
    "well_timed": 0
   }
  },
- "generated_utc": "2026-08-22T10:23:26+00:00",
+ "generated_utc": "2026-08-22T10:36:55+00:00",
  "market_capture": {
-  "book_since_inception_pct": 34.08,
-  "btc_last24h_pct": -2.26,
-  "btc_since_inception_pct": 21.45,
-  "eth_last24h_pct": -4.91,
-  "eth_since_inception_pct": 27.13
+  "book_since_inception_pct": 29.67,
+  "btc_last24h_pct": -1.73,
+  "btc_since_inception_pct": 22.11,
+  "eth_last24h_pct": -4.24,
+  "eth_since_inception_pct": 28.03
  },
  "n_audited": 21,
  "thresholds_pct": 3.0,
