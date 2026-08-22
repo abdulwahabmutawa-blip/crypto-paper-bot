@@ -1,18 +1,17 @@
 {
-  "ts": "2026-08-22T13:03:59+00:00",
+  "ts": "2026-08-22T13:09:29+00:00",
   "sources": {
     "coingecko": [
       "TRUMP",
       "ZEC",
       "BTC",
-      "LIT",
       "PUMP",
+      "LIT",
       "XRP",
       "SOL",
+      "DOGE",
       "LINK",
-      "ETH",
-      "ENA",
-      "DOGE"
+      "UNI"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -24,7 +23,7 @@
       "AAVE",
       "ENA",
       "DASH",
-      "TUT"
+      "PEPE"
     ],
     "watcher": [
       "TRUMP",
@@ -36,17 +35,6 @@
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "ENA",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": 5.2e-05,
-      "long_short": 1.28
-    },
     {
       "symbol": "PUMP",
       "surfaces": 3,
@@ -66,7 +54,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -7.7e-05,
+      "funding": -7.4e-05,
       "long_short": 1.49
     },
     {
@@ -89,6 +77,16 @@
       ],
       "funding": 0.0001,
       "long_short": 1.01
+    },
+    {
+      "symbol": "ENA",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": 5.4e-05,
+      "long_short": 1.28
     },
     {
       "symbol": "AAVE",
@@ -115,14 +113,6 @@
       "funding": 0.0001
     },
     {
-      "symbol": "ETH",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "LINK",
       "surfaces": 1,
       "sources": [
@@ -137,6 +127,13 @@
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "PEPE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
     },
     {
       "symbol": "POL",
@@ -155,12 +152,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "TUT",
+      "symbol": "UNI",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 0.0001
     },
     {
       "symbol": "XRP",
