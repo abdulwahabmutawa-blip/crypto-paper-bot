@@ -212,11 +212,32 @@ path is inert and makes no extra API calls at all.
 **Turning it on**
 
 ```sh
-sudo sed -i 's/^LOTTERY_EXCHANGE_STOPS=.*/LOTTERY_EXCHANGE_STOPS=1/' /etc/lottery.env \
-  || echo 'LOTTERY_EXCHANGE_STOPS=1' | sudo tee -a /etc/lottery.env
-sudo systemctl restart lottery.timer
-deploy/check.sh          # confirms the flag is read
+# idempotent: rewrites the line if present, appends it if not.
+# NOT `sed ... || echo >>` -- sed exits 0 when it matches nothing, so that
+# form silently never adds the line and the feature stays off looking on.
+if sudo grep -q '^LOTTERY_EXCHANGE_STOPS=' /etc/lottery.env; then
+  sudo sed -i 's/^LOTTERY_EXCHANGE_STOPS=.*/LOTTERY_EXCHANGE_STOPS=1/' /etc/lottery.env
+else
+  echo 'LOTTERY_EXCHANGE_STOPS=1' | sudo tee -a /etc/lottery.env >/dev/null
+fi
+
+sudo grep '^LOTTERY_EXCHANGE_STOPS=' /etc/lottery.env   # MUST print =1
 ```
+
+No restart is needed. `lottery.service` is a `oneshot` with
+`EnvironmentFile=/etc/lottery.env`, so the file is re-read when the timer
+starts the next cycle — within ~5 minutes.
+
+Then watch one cycle actually place an order:
+
+```sh
+sudo journalctl -u lottery.service -n 40 --no-pager   # look for "protective stop resting on"
+tail -5 /opt/tradebot/cloud-bot/data/lottery_ledger.jsonl
+```
+
+A `stop_placed` line is the confirmation. Note the book must be **holding a
+position** for anything to be placed — while it sits in cash there is
+nothing to protect and the absence of `stop_placed` means nothing is wrong.
 
 **What to watch in the ledger** (`data/lottery_ledger.jsonl`):
 
