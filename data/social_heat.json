@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-22T15:28:59+00:00",
+  "ts": "2026-08-22T15:34:29+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
@@ -17,14 +17,14 @@
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "ZEC",
       "TRUMP",
       "POL",
+      "ZEC",
       "TUT",
-      "PUMP",
       "DASH",
-      "ACE",
-      "ZAMA"
+      "PUMP",
+      "ZAMA",
+      "AAVE"
     ],
     "watcher": [
       "ZEC",
@@ -81,30 +81,23 @@
       "long_short": 0.52
     },
     {
+      "symbol": "AAVE",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.53
+    },
+    {
       "symbol": "BTC",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "watcher"
       ],
-      "funding": 0.0001,
-      "long_short": 0.99
-    },
-    {
-      "symbol": "AAVE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "ACE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -0.00169
     },
     {
       "symbol": "DASH",
