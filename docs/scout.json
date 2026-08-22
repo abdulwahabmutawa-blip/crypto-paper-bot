@@ -1,8 +1,23 @@
 {
-  "ts": "2026-08-22T04:26:36+00:00",
-  "scanned": 159,
+  "ts": "2026-08-22T04:32:24+00:00",
+  "scanned": 163,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "WLFIUSDT",
+      "signal": "breakout",
+      "score": 0.7147,
+      "raw_score": 0.6919,
+      "weight": 1.033,
+      "price": 0.0671,
+      "why": "trades 6.3x, volume 5.2x, 61% taker-buy, +5.5% in an hour, at 84% of its 24h range",
+      "chg_24h": 0.0966,
+      "vol_surge": 5.2,
+      "chg_1h": 0.055,
+      "market_surge": 3.59,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 43%, mean +0.35% over last 30 at 4h: not beating the round trip",
     "breakout": "actionable",
@@ -11,24 +26,24 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 262,
-    "baseline": 25.0,
+    "count": 265,
+    "baseline": 26.0,
     "wave": true
   },
   "scorecard": {
     "ignition": {
       "n_1h": 30,
-      "hit_rate_1h": 0.367,
-      "mean_ret_1h": -0.00346,
-      "median_ret_1h": 0.0004,
+      "hit_rate_1h": 0.4,
+      "mean_ret_1h": -0.00184,
+      "median_ret_1h": 0.00062,
       "n_4h": 30,
       "hit_rate_4h": 0.433,
       "mean_ret_4h": 0.00349,
       "median_ret_4h": 0.00108,
       "n_24h": 30,
       "hit_rate_24h": 0.9,
-      "mean_ret_24h": 0.09211,
-      "median_ret_24h": 0.08712
+      "mean_ret_24h": 0.09468,
+      "median_ret_24h": 0.09773
     },
     "breakout": {
       "n_1h": 30,
