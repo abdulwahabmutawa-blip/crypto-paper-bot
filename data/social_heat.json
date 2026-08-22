@@ -1,20 +1,20 @@
 {
-  "ts": "2026-08-22T23:24:24+00:00",
+  "ts": "2026-08-22T23:30:09+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
-      "TRUMP",
-      "XRP",
       "PUMP",
-      "ZRO",
+      "XRP",
+      "TRUMP",
       "DOGE",
+      "ZRO",
       "BTC",
-      "PEPE",
-      "AAVE",
+      "DASH",
+      "ENA",
+      "XMR",
       "TAO",
       "LIT",
-      "ENA",
-      "DASH"
+      "LINK"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -26,7 +26,7 @@
       "POL",
       "ZEC",
       "PYTH",
-      "ZAMA"
+      "DASH"
     ],
     "watcher": [
       "ZEC",
@@ -69,7 +69,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 4e-06,
+      "funding": -3e-06,
       "long_short": 1.59
     },
     {
@@ -94,32 +94,33 @@
       "long_short": 1.01
     },
     {
+      "symbol": "DASH",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "TUT",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": 0.000187
-    },
-    {
-      "symbol": "AAVE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "DASH",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": 0.000188
     },
     {
       "symbol": "DOGE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "LINK",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -133,13 +134,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "PEPE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ]
     },
     {
       "symbol": "POL",
@@ -166,7 +160,7 @@
       "funding": 5e-05
     },
     {
-      "symbol": "XRP",
+      "symbol": "XMR",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -174,12 +168,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "ZAMA",
+      "symbol": "XRP",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 0.0001
     },
     {
       "symbol": "ZRO",
