@@ -1,21 +1,22 @@
 {
-  "ts": "2026-08-22T00:36:26+00:00",
+  "ts": "2026-08-22T00:42:17+00:00",
   "scanned": 153,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "BMTUSDT",
-      "signal": "breakout",
-      "score": 0.6005,
-      "raw_score": 0.6436,
-      "weight": 0.933,
-      "price": 0.01861,
-      "why": "trades 4.4x, volume 14.0x, 72% taker-buy, +2.7% in an hour, at 95% of its 24h range",
-      "chg_24h": 0.1215,
-      "vol_surge": 14.03,
-      "chg_1h": 0.027,
-      "market_surge": 7.04,
-      "actionable": true
+      "symbol": "PROMUSDT",
+      "signal": "ignition",
+      "score": 0.707,
+      "raw_score": 0.7311,
+      "weight": 0.967,
+      "price": 2.748,
+      "why": "trades 6.7x and volume 11.7x the prior 4h, 74% taker-buy, $83,345 burst \u2014 while price has only moved +2.8%",
+      "chg_24h": 0.2329,
+      "vol_surge": 11.73,
+      "chg_1h": 0.0281,
+      "market_surge": 3.92,
+      "actionable": false,
+      "status": "benched \u2014 hit 47%, mean +0.15% over last 30 at 4h: not beating the round trip"
     }
   ],
   "gate": {
@@ -26,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 150,
+    "count": 152,
     "baseline": 16.0,
     "wave": true
   },
@@ -42,8 +43,8 @@
       "median_ret_4h": 0.00147,
       "n_24h": 30,
       "hit_rate_24h": 0.9,
-      "mean_ret_24h": 0.07536,
-      "median_ret_24h": 0.06835
+      "mean_ret_24h": 0.07799,
+      "median_ret_24h": 0.08606
     },
     "breakout": {
       "n_1h": 30,
@@ -84,8 +85,8 @@
       "median_ret_4h": 0.02487,
       "n_24h": 30,
       "hit_rate_24h": 0.667,
-      "mean_ret_24h": 0.00729,
-      "median_ret_24h": 0.04182
+      "mean_ret_24h": 0.00611,
+      "median_ret_24h": 0.03983
     },
     "revival": {
       "n_1h": 4,
