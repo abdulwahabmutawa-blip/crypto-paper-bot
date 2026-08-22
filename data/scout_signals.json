@@ -1,21 +1,22 @@
 {
-  "ts": "2026-08-22T00:13:35+00:00",
-  "scanned": 152,
+  "ts": "2026-08-22T00:19:05+00:00",
+  "scanned": 151,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "NEOUSDT",
-      "signal": "breakout",
-      "score": 0.7241,
-      "raw_score": 0.8046,
-      "weight": 0.9,
-      "price": 2.254,
-      "why": "trades 110.4x, volume 136.3x, 60% taker-buy, +4.3% in an hour, at 86% of its 24h range",
-      "chg_24h": 0.1497,
-      "vol_surge": 136.34,
-      "chg_1h": 0.043,
-      "market_surge": 21.65,
-      "actionable": true
+      "symbol": "HOMEUSDT",
+      "signal": "ignition",
+      "score": 0.5491,
+      "raw_score": 0.5679,
+      "weight": 0.967,
+      "price": 0.00659,
+      "why": "trades 5.1x and volume 5.3x the prior 4h, 61% taker-buy, $67,037 burst \u2014 while price has only moved +0.9%",
+      "chg_24h": 0.0545,
+      "vol_surge": 5.33,
+      "chg_1h": 0.0092,
+      "market_surge": 12.36,
+      "actionable": false,
+      "status": "benched \u2014 hit 47%, mean +0.15% over last 30 at 4h: not beating the round trip"
     }
   ],
   "gate": {
@@ -26,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 120,
+    "count": 128,
     "baseline": 16.0,
     "wave": true
   },
@@ -41,8 +42,8 @@
       "mean_ret_4h": 0.00148,
       "median_ret_4h": 0.00147,
       "n_24h": 30,
-      "hit_rate_24h": 0.9,
-      "mean_ret_24h": 0.07142,
+      "hit_rate_24h": 0.867,
+      "mean_ret_24h": 0.07084,
       "median_ret_24h": 0.06398
     },
     "breakout": {
@@ -75,9 +76,9 @@
     },
     "heat": {
       "n_1h": 30,
-      "hit_rate_1h": 0.733,
-      "mean_ret_1h": 0.01663,
-      "median_ret_1h": 0.00833,
+      "hit_rate_1h": 0.767,
+      "mean_ret_1h": 0.01739,
+      "median_ret_1h": 0.00966,
       "n_4h": 30,
       "hit_rate_4h": 0.867,
       "mean_ret_4h": 0.03135,
