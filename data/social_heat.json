@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-22T14:27:29+00:00",
+  "ts": "2026-08-22T14:33:19+00:00",
   "sources": {
     "coingecko": [
       "TRUMP",
@@ -18,13 +18,13 @@
     "stocktwits": [],
     "movers": [
       "TRUMP",
-      "POL",
       "ZEC",
+      "POL",
       "DASH",
       "PUMP",
       "AAVE",
       "PEPE",
-      "UNI"
+      "DOGE"
     ],
     "watcher": [
       "ZEC",
@@ -107,6 +107,14 @@
       "funding": 0.0001
     },
     {
+      "symbol": "DOGE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "ENA",
       "surfaces": 1,
       "sources": [
@@ -128,7 +136,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.9e-05
+      "funding": 2.7e-05
     },
     {
       "symbol": "PEPE",
@@ -152,14 +160,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "XRP",
