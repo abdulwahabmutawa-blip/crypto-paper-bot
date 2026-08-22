@@ -1,17 +1,17 @@
 {
-  "ts": "2026-08-22T18:44:19+00:00",
+  "ts": "2026-08-22T18:50:09+00:00",
   "sources": {
     "coingecko": [
-      "BTC",
       "TRUMP",
-      "PUMP",
       "ZEC",
+      "PUMP",
+      "BTC",
       "XRP",
       "SOL",
-      "SUI",
       "AVAX",
-      "PEPE",
-      "DASH"
+      "SUI",
+      "LIT",
+      "PEPE"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -78,16 +78,6 @@
       "long_short": 1.01
     },
     {
-      "symbol": "DASH",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.43
-    },
-    {
       "symbol": "AAVE",
       "surfaces": 1,
       "sources": [
@@ -102,6 +92,22 @@
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "DASH",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "LIT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "PEPE",
@@ -140,7 +146,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000257
+      "funding": 0.000264
     },
     {
       "symbol": "XRP",
