@@ -1,23 +1,8 @@
 {
-  "ts": "2026-08-22T03:04:06+00:00",
+  "ts": "2026-08-22T03:09:34+00:00",
   "scanned": 151,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "TSTUSDT",
-      "signal": "breakout",
-      "score": 0.879,
-      "raw_score": 0.879,
-      "weight": 1.0,
-      "price": 0.01736,
-      "why": "trades 15.3x, volume 18.5x, 65% taker-buy, +6.4% in an hour, at 100% of its 24h range",
-      "chg_24h": 0.1364,
-      "vol_surge": 18.46,
-      "chg_1h": 0.0637,
-      "market_surge": 7.42,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 40%, mean +0.21% over last 30 at 4h: not beating the round trip",
     "breakout": "actionable",
@@ -26,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 237,
+    "count": 235,
     "baseline": 19.0,
     "wave": true
   },
@@ -83,9 +68,9 @@
       "mean_ret_4h": 0.03433,
       "median_ret_4h": 0.02697,
       "n_24h": 30,
-      "hit_rate_24h": 0.733,
-      "mean_ret_24h": 0.02658,
-      "median_ret_24h": 0.04789
+      "hit_rate_24h": 0.767,
+      "mean_ret_24h": 0.0352,
+      "median_ret_24h": 0.05163
     },
     "revival": {
       "n_1h": 4,
