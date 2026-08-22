@@ -1,35 +1,19 @@
 {
-  "ts": "2026-08-22T05:06:04+00:00",
-  "scanned": 164,
+  "ts": "2026-08-22T05:11:36+00:00",
+  "scanned": 105,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "BICOUSDT",
-      "signal": "ignition",
-      "score": 0.5172,
-      "raw_score": 0.5544,
-      "weight": 0.933,
-      "price": 0.02117,
-      "why": "trades 4.9x and volume 7.3x the prior 4h, 70% taker-buy, $66,543 burst \u2014 while price has only moved +4.0%",
-      "chg_24h": 0.1365,
-      "vol_surge": 7.34,
-      "chg_1h": 0.0398,
-      "market_surge": 3.89,
-      "actionable": false,
-      "status": "benched \u2014 hit 43%, mean +0.30% over last 30 at 4h: not beating the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
-    "ignition": "benched \u2014 hit 43%, mean +0.30% over last 30 at 4h: not beating the round trip",
+    "ignition": "benched \u2014 hit 40%, mean -0.48% over last 30 at 4h: not beating the round trip",
     "breakout": "actionable",
     "reversion": "benched \u2014 hit 46%, mean +0.33% over last 22 at 4h: not beating the round trip",
     "heat": "actionable",
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 289,
+    "count": 30,
     "baseline": 28.0,
-    "wave": true
+    "wave": false
   },
   "scorecard": {
     "ignition": {
@@ -38,9 +22,9 @@
       "mean_ret_1h": -0.00184,
       "median_ret_1h": 0.00062,
       "n_4h": 30,
-      "hit_rate_4h": 0.433,
-      "mean_ret_4h": 0.00297,
-      "median_ret_4h": 0.00108,
+      "hit_rate_4h": 0.4,
+      "mean_ret_4h": -0.00478,
+      "median_ret_4h": 0.00098,
       "n_24h": 30,
       "hit_rate_24h": 0.867,
       "mean_ret_24h": 0.09132,
