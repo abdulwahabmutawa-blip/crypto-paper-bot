@@ -1,18 +1,18 @@
 {
-  "generated_utc": "2026-08-21T23:56:47+00:00",
+  "generated_utc": "2026-08-22T00:10:15+00:00",
   "created": "2026-08-15",
   "starting_cash": 1000.0,
-  "live_ts": "2026-08-21T23:56:47+00:00",
+  "live_ts": "2026-08-22T00:10:15+00:00",
   "current": {
-    "date": "2026-08-21",
-    "value": 990.19,
-    "bench": 1243.24,
-    "holding": "CASH"
+    "date": "2026-08-22",
+    "value": 988.81,
+    "bench": 1236.83,
+    "holding": "PENGU-USD"
   },
   "board": [
     {
       "sym": "ZEC",
-      "price": 732.5,
+      "price": 738.04,
       "line": "euphoric \u00b7 ETF/mining catalysts, big green",
       "tag": "candidate",
       "on": true,
@@ -21,7 +21,7 @@
     },
     {
       "sym": "BCH",
-      "price": 287.2,
+      "price": 288.0,
       "line": "euphoric \u00b7 Payments narrative top mover",
       "tag": "candidate",
       "on": true,
@@ -39,7 +39,7 @@
     },
     {
       "sym": "ENA",
-      "price": 0.1421,
+      "price": 0.1426,
       "line": "euphoric \u00b7 FalconX deal fuels 48% rip",
       "tag": "candidate",
       "on": true,
@@ -48,7 +48,7 @@
     },
     {
       "sym": "AAVE",
-      "price": 122.34,
+      "price": 123.01,
       "line": "euphoric \u00b7 DeFi TVL and ETH beta pump",
       "tag": "candidate",
       "on": true,
@@ -59,9 +59,9 @@
       "sym": "PENGU",
       "price": 0.0089,
       "line": "euphoric \u00b7 NFT meme coin crowd cheer",
-      "tag": "candidate",
+      "tag": "HELD",
       "on": true,
-      "pick": false,
+      "pick": true,
       "fill": 40
     }
   ],
@@ -2652,6 +2652,12 @@
       "value": 990.19,
       "bench": 1243.24,
       "holding": "CASH"
+    },
+    {
+      "ts": "2026-08-22T00:10:15+00:00",
+      "value": 988.81,
+      "bench": 1236.83,
+      "holding": "PENGU-USD"
     }
   ],
   "trades": [
@@ -2754,6 +2760,16 @@
       "value": 991.58,
       "fee": 1.39,
       "reason": "Hype faded \u2014 coin dropped off a newer euphoric scan"
+    },
+    {
+      "date": "2026-08-22",
+      "action": "BUY",
+      "ticker": "PENGU-USD",
+      "price": 0.008899,
+      "units": 111114.377881,
+      "value": 988.81,
+      "fee": 1.39,
+      "reason": "Grok: PENGU euphoric \u2014 NFT meme coin crowd cheer (scan 2026-08-21T23:56)"
     }
   ],
   "history": [
@@ -2792,11 +2808,17 @@
       "value": 990.19,
       "bench": 1243.24,
       "holding": "CASH"
+    },
+    {
+      "date": "2026-08-22",
+      "value": 988.81,
+      "bench": 1236.83,
+      "holding": "PENGU-USD"
     }
   ],
-  "costs_paid": 14.4854,
+  "costs_paid": 15.8717,
   "frozen": null,
-  "thoughts": "I'm in cash. I buy only the freshest euphoric crypto (scan under 9h old), one entry a day, never on weekends \u2014 lukewarm or aging hype is how small accounts bleed out in fees.",
+  "thoughts": "I'm riding PENGU from the 2026-08-21T23:56 scan. My exit is mechanical: a newer scan without it, -10% from entry, or a blind/severe Watcher \u2014 whichever comes first.",
   "strategy": {
     "name": "Hype Crypto \u2014 sentiment pattern, crypto venue, on trial",
     "rule": "Top euphoric crypto from a fresh Watcher scan; 1 entry/day max; -10% hard stop; exit on newer scan without the coin, stale scans, or SEVERE; Binance-tier fees",
