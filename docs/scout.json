@@ -1,33 +1,48 @@
 {
-  "ts": "2026-08-22T04:38:36+00:00",
-  "scanned": 162,
+  "ts": "2026-08-22T04:44:07+00:00",
+  "scanned": 161,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "SOLUSDT",
+      "symbol": "BNSOLUSDT",
       "signal": "breakout",
-      "score": 0.6621,
-      "raw_score": 0.6409,
+      "score": 0.7271,
+      "raw_score": 0.7039,
       "weight": 1.033,
-      "price": 101.04,
-      "why": "trades 4.7x, volume 6.1x, 72% taker-buy, +4.2% in an hour, at 104% of its 24h range",
-      "chg_24h": 0.1278,
-      "vol_surge": 6.13,
-      "chg_1h": 0.0419,
-      "market_surge": 6.16,
+      "price": 112.7,
+      "why": "trades 4.8x, volume 12.8x, 89% taker-buy, +3.1% in an hour, at 81% of its 24h range",
+      "chg_24h": 0.1473,
+      "vol_surge": 12.82,
+      "chg_1h": 0.0311,
+      "market_surge": 3.06,
       "actionable": true
+    },
+    {
+      "symbol": "BNSOLUSDT",
+      "signal": "ignition",
+      "score": 0.6394,
+      "raw_score": 0.6853,
+      "weight": 0.933,
+      "price": 112.7,
+      "why": "trades 4.8x and volume 12.8x the prior 4h, 89% taker-buy, $57,490 burst \u2014 while price has only moved +3.1%",
+      "chg_24h": 0.1473,
+      "vol_surge": 12.82,
+      "chg_1h": 0.0311,
+      "market_surge": 3.06,
+      "actionable": false,
+      "status": "benched \u2014 hit 43%, mean +0.30% over last 30 at 4h: not beating the round trip"
     }
   ],
   "gate": {
-    "ignition": "benched \u2014 hit 43%, mean +0.35% over last 30 at 4h: not beating the round trip",
+    "ignition": "benched \u2014 hit 43%, mean +0.30% over last 30 at 4h: not beating the round trip",
     "breakout": "actionable",
     "reversion": "benched \u2014 hit 46%, mean +0.33% over last 22 at 4h: not beating the round trip",
     "heat": "actionable",
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 276,
-    "baseline": 26.0,
+    "count": 291,
+    "baseline": 27.0,
     "wave": true
   },
   "scorecard": {
@@ -38,7 +53,7 @@
       "median_ret_1h": 0.00062,
       "n_4h": 30,
       "hit_rate_4h": 0.433,
-      "mean_ret_4h": 0.00349,
+      "mean_ret_4h": 0.00297,
       "median_ret_4h": 0.00108,
       "n_24h": 30,
       "hit_rate_24h": 0.9,
