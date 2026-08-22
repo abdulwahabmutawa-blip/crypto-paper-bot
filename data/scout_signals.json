@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-22T06:47:26+00:00",
-  "scanned": 184,
+  "ts": "2026-08-22T06:53:26+00:00",
+  "scanned": 182,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "BMNRBUSDT",
+      "signal": "ignition",
+      "score": 0.7494,
+      "raw_score": 0.9367,
+      "weight": 0.8,
+      "price": 22.74,
+      "why": "trades 29.2x and volume 90.8x the prior 4h, 77% taker-buy, $258,396 burst \u2014 while price has only moved -0.2%",
+      "chg_24h": 0.0276,
+      "vol_surge": 90.76,
+      "chg_1h": -0.0022,
+      "market_surge": 14.39,
+      "actionable": false,
+      "status": "benched \u2014 hit 30%, mean -1.42% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 30%, mean -1.42% over last 30 at 4h: not beating the round trip",
     "breakout": "actionable",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 91,
+    "count": 94,
     "baseline": 34.0,
     "wave": true
   },
