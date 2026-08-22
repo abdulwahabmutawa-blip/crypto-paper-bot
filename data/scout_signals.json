@@ -1,37 +1,24 @@
 {
-  "ts": "2026-08-22T06:24:14+00:00",
+  "ts": "2026-08-22T06:30:06+00:00",
   "scanned": 184,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "SKYUSDT",
-      "signal": "ignition",
-      "score": 0.6208,
-      "raw_score": 0.7453,
-      "weight": 0.833,
-      "price": 0.06671,
-      "why": "trades 6.4x and volume 14.8x the prior 4h, 76% taker-buy, $170,217 burst \u2014 while price has only moved +2.0%",
-      "chg_24h": 0.0274,
-      "vol_surge": 14.83,
-      "chg_1h": 0.02,
-      "market_surge": 12.46,
+      "symbol": "ACEUSDT",
+      "signal": "reversion",
+      "score": 0.3306,
+      "raw_score": 0.3306,
+      "weight": 1.0,
+      "price": 0.2193,
+      "why": "down -15% on the day (bottom decile of the market), now +1.1% over 15m with 3 green candles",
+      "chg_24h": -0.1452,
+      "vol_surge": 0.34,
+      "chg_1h": -0.017,
+      "market_surge": 0.0,
+      "oi_drop": 0.119,
+      "funding": -0.00148,
       "actionable": false,
-      "status": "benched \u2014 hit 33%, mean -0.97% over last 30 at 4h: not beating the round trip"
-    },
-    {
-      "symbol": "TSLABUSDT",
-      "signal": "ignition",
-      "score": 0.5873,
-      "raw_score": 0.7051,
-      "weight": 0.833,
-      "price": 361.44,
-      "why": "trades 5.0x and volume 47.2x the prior 4h, 64% taker-buy, $105,368 burst \u2014 while price has only moved +0.2%",
-      "chg_24h": 0.0395,
-      "vol_surge": 47.24,
-      "chg_1h": 0.002,
-      "market_surge": 10.04,
-      "actionable": false,
-      "status": "benched \u2014 hit 33%, mean -0.97% over last 30 at 4h: not beating the round trip"
+      "status": "benched \u2014 hit 46%, mean +0.33% over last 22 at 4h: not beating the round trip"
     }
   ],
   "gate": {
@@ -42,7 +29,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 85,
+    "count": 80,
     "baseline": 33.0,
     "wave": true
   },
