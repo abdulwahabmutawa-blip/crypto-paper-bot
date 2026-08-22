@@ -1,8 +1,26 @@
 {
-  "ts": "2026-08-22T05:56:36+00:00",
-  "scanned": 181,
+  "ts": "2026-08-22T06:02:03+00:00",
+  "scanned": 182,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "NEIROUSDT",
+      "signal": "reversion",
+      "score": 0.4908,
+      "raw_score": 0.4908,
+      "weight": 1.0,
+      "price": 9.43e-05,
+      "why": "down -14% on the day (bottom decile of the market), now +2.6% over 15m with 4 green candles",
+      "chg_24h": -0.1376,
+      "vol_surge": 1.23,
+      "chg_1h": -0.1244,
+      "market_surge": 0.0,
+      "oi_drop": 0.168,
+      "funding": -1e-05,
+      "actionable": false,
+      "status": "benched \u2014 hit 46%, mean +0.33% over last 22 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 37%, mean -0.78% over last 30 at 4h: not beating the round trip",
     "breakout": "actionable",
@@ -11,8 +29,8 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 77,
-    "baseline": 31.0,
+    "count": 82,
+    "baseline": 32.0,
     "wave": true
   },
   "scorecard": {
@@ -41,7 +59,7 @@
       "median_ret_4h": 0.00382,
       "n_24h": 30,
       "hit_rate_24h": 0.9,
-      "mean_ret_24h": 0.10417,
+      "mean_ret_24h": 0.1025,
       "median_ret_24h": 0.09732
     },
     "reversion": {
