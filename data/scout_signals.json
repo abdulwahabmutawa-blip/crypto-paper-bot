@@ -1,8 +1,39 @@
 {
-  "ts": "2026-08-22T23:30:14+00:00",
-  "scanned": 151,
+  "ts": "2026-08-22T23:36:06+00:00",
+  "scanned": 150,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ONGUSDT",
+      "signal": "ignition",
+      "score": 0.5136,
+      "raw_score": 0.7007,
+      "weight": 0.733,
+      "price": 0.07292,
+      "why": "trades 9.3x and volume 6.0x the prior 4h, 69% taker-buy, $69,414 burst \u2014 while price has only moved +3.7%",
+      "chg_24h": -0.1686,
+      "vol_surge": 6.02,
+      "chg_1h": 0.0374,
+      "market_surge": 1.08,
+      "actionable": false,
+      "status": "benched \u2014 hit 23%, mean -1.37% over last 30 at 4h: not beating the round trip"
+    },
+    {
+      "symbol": "TIAUSDT",
+      "signal": "ignition",
+      "score": 0.5107,
+      "raw_score": 0.6968,
+      "weight": 0.733,
+      "price": 0.3729,
+      "why": "trades 5.1x and volume 18.1x the prior 4h, 62% taker-buy, $85,312 burst \u2014 while price has only moved -0.6%",
+      "chg_24h": -0.054,
+      "vol_surge": 18.14,
+      "chg_1h": -0.0059,
+      "market_surge": 2.8,
+      "actionable": false,
+      "status": "benched \u2014 hit 23%, mean -1.37% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 23%, mean -1.37% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 50%, mean -1.00% over last 30 at 4h: not beating the round trip",
@@ -26,8 +57,8 @@
       "mean_ret_4h": -0.01368,
       "median_ret_4h": -0.00538,
       "n_24h": 30,
-      "hit_rate_24h": 0.2,
-      "mean_ret_24h": -0.01838,
+      "hit_rate_24h": 0.167,
+      "mean_ret_24h": -0.0188,
       "median_ret_24h": -0.01251
     },
     "breakout": {
