@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-23T09:05:27+00:00",
+  "ts": "2026-08-23T09:11:07+00:00",
   "scanned": 113,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "XPLUSDT",
-      "signal": "ignition",
-      "score": 0.4464,
-      "raw_score": 0.6693,
-      "weight": 0.667,
-      "price": 0.09515,
-      "why": "trades 6.2x and volume 9.2x the prior 4h, 63% taker-buy, $238,528 burst \u2014 while price has only moved +2.5%",
-      "chg_24h": 0.0238,
-      "vol_surge": 9.19,
-      "chg_1h": 0.0254,
-      "market_surge": 1.86,
-      "actionable": false,
-      "status": "benched \u2014 hit 17%, mean -1.27% over last 30 at 4h: not beating the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 17%, mean -1.27% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 43%, mean -1.40% over last 30 at 4h: not beating the round trip",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 14,
+    "count": 13,
     "baseline": 39.0,
     "wave": false
   },
@@ -35,7 +19,7 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.267,
-      "mean_ret_1h": -0.00478,
+      "mean_ret_1h": -0.00489,
       "median_ret_1h": -0.0031,
       "n_4h": 30,
       "hit_rate_4h": 0.167,
