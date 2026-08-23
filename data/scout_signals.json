@@ -1,8 +1,38 @@
 {
-  "ts": "2026-08-23T20:47:24+00:00",
-  "scanned": 111,
+  "ts": "2026-08-23T20:53:23+00:00",
+  "scanned": 109,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SEIUSDT",
+      "signal": "ignition",
+      "score": 0.7859,
+      "raw_score": 0.7144,
+      "weight": 1.1,
+      "price": 0.04791,
+      "why": "trades 4.3x and volume 15.3x the prior 4h, 77% taker-buy, $100,062 burst \u2014 while price has only moved -0.0%",
+      "chg_24h": 0.0086,
+      "vol_surge": 15.31,
+      "chg_1h": -0.0004,
+      "market_surge": 17.57,
+      "actionable": false,
+      "status": "benched \u2014 hit 60%, mean +0.80% over last 30 at 4h: not beating 4x the round trip"
+    },
+    {
+      "symbol": "VIRTUALUSDT",
+      "signal": "breakout",
+      "score": 0.622,
+      "raw_score": 0.6022,
+      "weight": 1.033,
+      "price": 0.7341,
+      "why": "trades 4.7x, volume 6.9x, 70% taker-buy, +2.2% in an hour, at 95% of its 24h range",
+      "chg_24h": 0.0529,
+      "vol_surge": 6.88,
+      "chg_1h": 0.0223,
+      "market_surge": 1.13,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 60%, mean +0.80% over last 30 at 4h: not beating 4x the round trip",
     "breakout": "actionable",
@@ -11,7 +41,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 14,
+    "count": 16,
     "baseline": 39.0,
     "wave": false
   },
@@ -104,13 +134,13 @@
       "avg_loss_1h": -0.01093,
       "payoff_1h": 1.713,
       "n_4h": 30,
-      "hit_rate_4h": 0.6,
-      "mean_ret_4h": 0.01141,
-      "median_ret_4h": 0.00911,
+      "hit_rate_4h": 0.567,
+      "mean_ret_4h": 0.00932,
+      "median_ret_4h": 0.00815,
       "both_halves_4h": false,
-      "avg_win_4h": 0.03974,
-      "avg_loss_4h": -0.03107,
-      "payoff_4h": 1.279,
+      "avg_win_4h": 0.03947,
+      "avg_loss_4h": -0.0301,
+      "payoff_4h": 1.311,
       "n_24h": 30,
       "hit_rate_24h": 0.767,
       "mean_ret_24h": 0.05095,
