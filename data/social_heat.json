@@ -1,20 +1,20 @@
 {
-  "ts": "2026-08-23T00:02:59+00:00",
+  "ts": "2026-08-23T00:08:19+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
-      "TRUMP",
       "PUMP",
+      "TRUMP",
       "XRP",
-      "BTC",
       "ZRO",
+      "SOL",
+      "BTC",
+      "PEPE",
+      "ENA",
+      "AERO",
       "DOGE",
       "TAO",
-      "SOL",
-      "PEPE",
-      "AERO",
-      "ETH",
-      "LIT"
+      "ETH"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,8 +22,8 @@
       "TUT",
       "TRUMP",
       "PUMP",
-      "POL",
       "ENA",
+      "POL",
       "ZEC",
       "PYTH",
       "DASH"
@@ -39,6 +39,17 @@
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "ENA",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.29
+    },
     {
       "symbol": "PUMP",
       "surfaces": 3,
@@ -58,7 +69,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -3.9e-05,
+      "funding": -4.5e-05,
       "long_short": 1.59
     },
     {
@@ -83,23 +94,13 @@
       "long_short": 1.01
     },
     {
-      "symbol": "ENA",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.29
-    },
-    {
       "symbol": "TUT",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": 0.000171
+      "funding": 0.000154
     },
     {
       "symbol": "AERO",
@@ -132,14 +133,6 @@
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "LIT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "PEPE",
