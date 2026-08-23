@@ -1,23 +1,23 @@
 {
-  "generated_utc": "2026-08-23T10:10:10+00:00",
+  "generated_utc": "2026-08-23T10:11:08+00:00",
   "created": "2026-07-30",
   "starting_cash": 1000.0,
   "live_ts": "2026-08-23T10:10:00+00:00",
   "current": {
     "date": "2026-08-21",
-    "value": 1014.39,
-    "bench": 1032.25,
+    "value": 1014.44,
+    "bench": 1032.3,
     "holding": "SPY"
   },
   "board": [
     {
       "sym": "SPY",
-      "price": 765.65,
+      "price": 765.69,
       "line": "S&P 500 \u00b7 score +0.75 \u00b7 mom90 +9.7% \u00b7 MA gap +8.5%",
       "tag": "HELD",
       "on": true,
       "pick": true,
-      "fill": 18.847148004514793
+      "fill": 18.858499584150007
     },
     {
       "sym": "IWM",
@@ -26,7 +26,7 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 16.609649953414475
+      "fill": 16.609649953414472
     },
     {
       "sym": "QQQ",
@@ -44,7 +44,7 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 9.847329686484416
+      "fill": 9.84732968648442
     },
     {
       "sym": "DBC",
@@ -66,12 +66,12 @@
     },
     {
       "sym": "ETH-USD",
-      "price": 2414.64,
-      "line": "Ethereum \u00b7 score +0.23 \u00b7 mom90 +14.4% \u00b7 MA gap +20.3%",
+      "price": 2413.8,
+      "line": "Ethereum \u00b7 score +0.23 \u00b7 mom90 +14.3% \u00b7 MA gap +20.3%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 5.760441460421908
+      "fill": 5.744360133357043
     },
     {
       "sym": "USO",
@@ -84,12 +84,12 @@
     },
     {
       "sym": "BTC-USD",
-      "price": 76682.68,
+      "price": 76635.92,
       "line": "Bitcoin \u00b7 score -0.02 \u00b7 mom90 -0.8% \u00b7 MA gap +11.1%",
       "tag": "not eligible",
       "on": false,
       "pick": false,
-      "fill": -0.4716927852522955
+      "fill": -0.5085783976881109
     },
     {
       "sym": "GLD",
@@ -116,7 +116,7 @@
       "tag": "not eligible",
       "on": false,
       "pick": false,
-      "fill": -10.743924392778089
+      "fill": -10.743919027776174
     }
   ],
   "board_title": "12 instruments ranked by momentum-per-unit-risk",
@@ -127,6 +127,12 @@
     "board_note": "Every rule in this bot was earned by an earlier experiment: vol-adjusted momentum, trend gate as crash protection, vol-sized positions, trailing stop, and a switch threshold that fights churn. The synthesis on trial."
   },
   "intraday": [
+    {
+      "ts": "2026-08-02T05:45:59+00:00",
+      "value": 992.72,
+      "bench": 1006.85,
+      "holding": "IWM"
+    },
     {
       "ts": "2026-08-02T05:59:15+00:00",
       "value": 992.72,
@@ -9116,15 +9122,9 @@
       "holding": "SPY"
     },
     {
-      "ts": "2026-08-23T09:56:44+00:00",
-      "value": 1014.39,
-      "bench": 1032.25,
-      "holding": "SPY"
-    },
-    {
-      "ts": "2026-08-23T10:10:10+00:00",
-      "value": 1014.39,
-      "bench": 1032.25,
+      "ts": "2026-08-23T10:11:08+00:00",
+      "value": 1014.44,
+      "bench": 1032.3,
       "holding": "SPY"
     }
   ],
@@ -9258,8 +9258,8 @@
     },
     {
       "date": "2026-08-21",
-      "value": 1014.39,
-      "bench": 1032.25,
+      "value": 1014.44,
+      "bench": 1032.3,
       "holding": "SPY"
     }
   ],
@@ -9272,5 +9272,5 @@
   },
   "costs_paid": 2.1356,
   "frozen": null,
-  "thoughts": "I'm holding SPY. Best momentum-per-unit-risk in a confirmed uptrend. I bought at $766.38; it's now $765.65 (-0.1% since I got in). My safety net: if the price falls to $691.17 (10% below its recent high), I sell automatically \u2014 no exceptions. Closest challenger on my list is IWM, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
+  "thoughts": "I'm holding SPY. Best momentum-per-unit-risk in a confirmed uptrend. I bought at $766.38; it's now $765.69 (-0.1% since I got in). My safety net: if the price falls to $691.17 (10% below its recent high), I sell automatically \u2014 no exceptions. Closest challenger on my list is IWM, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
 }
