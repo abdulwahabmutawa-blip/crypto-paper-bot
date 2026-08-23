@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-23T08:31:56+00:00",
-  "scanned": 114,
+  "ts": "2026-08-23T08:37:36+00:00",
+  "scanned": 113,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "HBARUSDT",
+      "signal": "ignition",
+      "score": 0.471,
+      "raw_score": 0.7062,
+      "weight": 0.667,
+      "price": 0.07802,
+      "why": "trades 4.9x and volume 11.1x the prior 4h, 83% taker-buy, $299,532 burst \u2014 while price has only moved +1.8%",
+      "chg_24h": 0.0022,
+      "vol_surge": 11.08,
+      "chg_1h": 0.018,
+      "market_surge": 3.8,
+      "actionable": false,
+      "status": "benched \u2014 hit 17%, mean -1.29% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 17%, mean -1.29% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 43%, mean -1.40% over last 30 at 4h: not beating the round trip",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 13,
     "baseline": 39.0,
     "wave": false
   },
@@ -32,9 +48,9 @@
     },
     "breakout": {
       "n_1h": 30,
-      "hit_rate_1h": 0.467,
-      "mean_ret_1h": -0.01273,
-      "median_ret_1h": -0.00073,
+      "hit_rate_1h": 0.5,
+      "mean_ret_1h": -0.01154,
+      "median_ret_1h": 0.00448,
       "n_4h": 30,
       "hit_rate_4h": 0.433,
       "mean_ret_4h": -0.01402,

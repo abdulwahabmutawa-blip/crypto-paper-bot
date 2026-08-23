@@ -1,16 +1,15 @@
 {
-  "ts": "2026-08-23T08:31:49+00:00",
+  "ts": "2026-08-23T08:37:29+00:00",
   "sources": {
     "coingecko": [
-      "PUMP",
       "ZEC",
+      "PUMP",
       "TRUMP",
       "BTC",
-      "ETH",
-      "LIT",
       "SUI",
-      "AAVE",
-      "SOL"
+      "ETH",
+      "ENA",
+      "AAVE"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -18,22 +17,33 @@
       "TUT",
       "PUMP",
       "ENA",
-      "ZEC",
-      "PYTH",
-      "LTC",
       "ACE",
-      "AAVE"
+      "ZEC",
+      "AAVE",
+      "PYTH",
+      "LTC"
     ],
     "watcher": [
       "ZEC",
-      "TUT",
       "PUMP",
+      "TUT",
       "ENA",
       "BTC"
     ],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "ENA",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 0.000117,
+      "long_short": 1.23
+    },
     {
       "symbol": "PUMP",
       "surfaces": 3,
@@ -77,23 +87,13 @@
       "long_short": 0.99
     },
     {
-      "symbol": "ENA",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": 0.000113,
-      "long_short": 1.23
-    },
-    {
       "symbol": "TUT",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": 7.4e-05
+      "funding": 7.2e-05
     },
     {
       "symbol": "ACE",
@@ -101,7 +101,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.003306
+      "funding": -0.003517
     },
     {
       "symbol": "ETH",
@@ -110,14 +110,6 @@
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "LIT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "LTC",
@@ -136,20 +128,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "SOL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "SUI",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 0.00013
+      "funding": 0.000132
     },
     {
       "symbol": "TRUMP",
