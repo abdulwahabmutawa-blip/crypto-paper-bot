@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-23T04:20:59+00:00",
+  "ts": "2026-08-23T04:26:59+00:00",
   "sources": {
     "coingecko": [
       "TRUMP",
@@ -17,7 +17,9 @@
     "stocktwits": [],
     "movers": [
       "TUT",
-      "PUMP"
+      "PUMP",
+      "U",
+      "RLUSD"
     ],
     "watcher": [
       "ZEC",
@@ -118,12 +120,26 @@
       ]
     },
     {
+      "symbol": "RLUSD",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
+    },
+    {
       "symbol": "SUI",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "U",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
     },
     {
       "symbol": "ZRO",
