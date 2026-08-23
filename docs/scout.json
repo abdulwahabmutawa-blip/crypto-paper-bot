@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-23T06:01:26+00:00",
-  "scanned": 125,
+  "ts": "2026-08-23T06:07:15+00:00",
+  "scanned": 127,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ORDIUSDT",
+      "signal": "ignition",
+      "score": 0.5695,
+      "raw_score": 0.8135,
+      "weight": 0.7,
+      "price": 3.902,
+      "why": "trades 5.8x and volume 18.0x the prior 4h, 94% taker-buy, $341,834 burst \u2014 while price has only moved -0.2%",
+      "chg_24h": -0.0982,
+      "vol_surge": 18.05,
+      "chg_1h": -0.0015,
+      "market_surge": 13.65,
+      "actionable": false,
+      "status": "benched \u2014 hit 20%, mean -1.21% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 20%, mean -1.21% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 43%, mean -1.40% over last 30 at 4h: not beating the round trip",
@@ -53,10 +69,10 @@
       "hit_rate_4h": 0.44,
       "mean_ret_4h": 0.00507,
       "median_ret_4h": -0.00133,
-      "n_24h": 22,
-      "hit_rate_24h": 0.364,
-      "mean_ret_24h": 0.00507,
-      "median_ret_24h": -0.01291
+      "n_24h": 23,
+      "hit_rate_24h": 0.348,
+      "mean_ret_24h": 0.00203,
+      "median_ret_24h": -0.0187
     },
     "heat": {
       "n_1h": 30,

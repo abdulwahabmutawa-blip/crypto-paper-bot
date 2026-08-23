@@ -1,18 +1,16 @@
 {
-  "ts": "2026-08-23T06:01:19+00:00",
+  "ts": "2026-08-23T06:07:09+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
       "BTC",
-      "SUI",
       "ENA",
+      "SUI",
       "XRP",
       "LINK",
-      "ZEC",
       "TRUMP",
-      "LIT",
-      "HBAR",
-      "DOGE"
+      "PEPE",
+      "HBAR"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,7 +18,9 @@
       "TUT",
       "PUMP",
       "ACE",
-      "AAVE"
+      "AAVE",
+      "ENA",
+      "RE"
     ],
     "watcher": [
       "ZEC",
@@ -41,7 +41,7 @@
         "watcher"
       ],
       "funding": 5e-05,
-      "long_short": 1.01
+      "long_short": 1.02
     },
     {
       "symbol": "BTC",
@@ -51,7 +51,17 @@
         "watcher"
       ],
       "funding": 0.0001,
-      "long_short": 1.0
+      "long_short": 0.96
+    },
+    {
+      "symbol": "ENA",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.22
     },
     {
       "symbol": "TRUMP",
@@ -61,7 +71,7 @@
         "watcher"
       ],
       "funding": 5e-05,
-      "long_short": 1.53
+      "long_short": 1.58
     },
     {
       "symbol": "TUT",
@@ -71,17 +81,7 @@
         "watcher"
       ],
       "funding": 5e-05,
-      "long_short": 0.85
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "watcher"
-      ],
-      "funding": 0.0001,
-      "long_short": 0.5
+      "long_short": 0.86
     },
     {
       "symbol": "AAVE",
@@ -97,23 +97,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001587
-    },
-    {
-      "symbol": "DOGE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": -0.001611
     },
     {
       "symbol": "HBAR",
@@ -132,12 +116,19 @@
       "funding": 0.0001
     },
     {
-      "symbol": "LIT",
+      "symbol": "PEPE",
       "surfaces": 1,
       "sources": [
         "coingecko"
+      ]
+    },
+    {
+      "symbol": "RE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
       ],
-      "funding": 5e-05
+      "funding": -8e-06
     },
     {
       "symbol": "SUI",
@@ -152,6 +143,14 @@
       "surfaces": 1,
       "sources": [
         "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 1,
+      "sources": [
+        "watcher"
       ],
       "funding": 0.0001
     }
