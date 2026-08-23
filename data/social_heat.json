@@ -1,25 +1,25 @@
 {
-  "ts": "2026-08-23T15:32:00+00:00",
+  "ts": "2026-08-23T15:37:36+00:00",
   "sources": {
     "coingecko": [
-      "ZEC",
       "PUMP",
+      "ZEC",
       "LIT",
-      "BTC",
       "XRP",
-      "SOL",
+      "BTC",
       "ENA",
-      "TRUMP",
-      "AAVE",
-      "ETHFI"
+      "XMR",
+      "SOL",
+      "ETHFI",
+      "ETH"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "TUT",
-      "AAVE",
       "XPL",
       "ENA",
+      "AAVE",
       "TRUMP",
       "PUMP",
       "UNI",
@@ -46,27 +46,6 @@
       "long_short": 1.09
     },
     {
-      "symbol": "TRUMP",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": 3.9e-05,
-      "long_short": 1.81
-    },
-    {
-      "symbol": "AAVE",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.61
-    },
-    {
       "symbol": "ENA",
       "surfaces": 2,
       "sources": [
@@ -75,6 +54,16 @@
       ],
       "funding": 5e-05,
       "long_short": 1.23
+    },
+    {
+      "symbol": "TRUMP",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": 3.8e-05,
+      "long_short": 1.81
     },
     {
       "symbol": "TUT",
@@ -93,6 +82,15 @@
         "coingecko",
         "watcher"
       ],
+      "funding": 0.0001,
+      "long_short": 0.53
+    },
+    {
+      "symbol": "AAVE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
       "funding": 0.0001
     },
     {
@@ -108,6 +106,14 @@
       "surfaces": 1,
       "sources": [
         "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ETH",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
       ],
       "funding": 0.0001
     },
@@ -141,7 +147,15 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000125
+      "funding": 0.000123
+    },
+    {
+      "symbol": "XMR",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.000282
     },
     {
       "symbol": "XPL",
