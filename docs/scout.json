@@ -1,22 +1,22 @@
 {
-  "ts": "2026-08-23T13:51:03+00:00",
-  "scanned": 104,
+  "ts": "2026-08-23T13:57:02+00:00",
+  "scanned": 103,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "WLDUSDT",
-      "signal": "breakout",
-      "score": 0.6438,
-      "raw_score": 0.7425,
-      "weight": 0.867,
-      "price": 0.4052,
-      "why": "trades 6.9x, volume 9.4x, 68% taker-buy, +3.2% in an hour, at 96% of its 24h range",
-      "chg_24h": 0.0211,
-      "vol_surge": 9.38,
-      "chg_1h": 0.0318,
-      "market_surge": 7.14,
+      "symbol": "ENSUSDT",
+      "signal": "ignition",
+      "score": 0.6048,
+      "raw_score": 0.756,
+      "weight": 0.8,
+      "price": 5.91,
+      "why": "trades 6.9x and volume 11.8x the prior 4h, 67% taker-buy, $94,787 burst \u2014 while price has only moved +1.5%",
+      "chg_24h": 0.0405,
+      "vol_surge": 11.79,
+      "chg_1h": 0.0155,
+      "market_surge": 2.26,
       "actionable": false,
-      "status": "benched \u2014 hit 37%, mean -1.83% over last 30 at 4h: not beating 4x the round trip"
+      "status": "benched \u2014 hit 30%, mean -0.78% over last 30 at 4h: not beating 4x the round trip"
     }
   ],
   "gate": {
@@ -27,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 16,
+    "count": 14,
     "baseline": 39.0,
     "wave": false
   },
