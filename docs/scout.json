@@ -1,54 +1,8 @@
 {
-  "ts": "2026-08-23T08:48:36+00:00",
+  "ts": "2026-08-23T08:54:06+00:00",
   "scanned": 113,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ENAUSDT",
-      "signal": "breakout",
-      "score": 0.7554,
-      "raw_score": 0.8097,
-      "weight": 0.933,
-      "price": 0.1654,
-      "why": "trades 5.0x, volume 10.5x, 61% taker-buy, +8.0% in an hour, at 96% of its 24h range",
-      "chg_24h": 0.0904,
-      "vol_surge": 10.46,
-      "chg_1h": 0.0796,
-      "market_surge": 3.76,
-      "actionable": false,
-      "status": "benched \u2014 hit 43%, mean -1.40% over last 30 at 4h: not beating the round trip"
-    },
-    {
-      "symbol": "OGUSDT",
-      "signal": "ignition",
-      "score": 0.5807,
-      "raw_score": 0.8706,
-      "weight": 0.667,
-      "price": 2.906,
-      "why": "trades 29.9x and volume 11.7x the prior 4h, 65% taker-buy, $154,190 burst \u2014 while price has only moved -1.7%",
-      "chg_24h": 0.0689,
-      "vol_surge": 11.71,
-      "chg_1h": -0.0172,
-      "market_surge": 10.43,
-      "actionable": false,
-      "status": "benched \u2014 hit 17%, mean -1.27% over last 30 at 4h: not beating the round trip"
-    },
-    {
-      "symbol": "TRBUSDT",
-      "signal": "ignition",
-      "score": 0.4755,
-      "raw_score": 0.7129,
-      "weight": 0.667,
-      "price": 19.05,
-      "why": "trades 7.0x and volume 8.3x the prior 4h, 64% taker-buy, $61,388 burst \u2014 while price has only moved +1.3%",
-      "chg_24h": 0.0314,
-      "vol_surge": 8.27,
-      "chg_1h": 0.0133,
-      "market_surge": 1.51,
-      "actionable": false,
-      "status": "benched \u2014 hit 17%, mean -1.27% over last 30 at 4h: not beating the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 17%, mean -1.27% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 43%, mean -1.40% over last 30 at 4h: not beating the round trip",
