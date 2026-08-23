@@ -1,18 +1,18 @@
 {
-  "generated_utc": "2026-08-22T23:59:08+00:00",
+  "generated_utc": "2026-08-23T00:12:35+00:00",
   "created": "2026-08-15",
   "starting_cash": 1000.0,
-  "live_ts": "2026-08-22T23:59:08+00:00",
+  "live_ts": "2026-08-23T00:12:35+00:00",
   "current": {
-    "date": "2026-08-22",
-    "value": 997.44,
-    "bench": 1224.24,
-    "holding": "CASH"
+    "date": "2026-08-23",
+    "value": 996.05,
+    "bench": 1223.94,
+    "holding": "ENA-USD"
   },
   "board": [
     {
       "sym": "ZEC",
-      "price": 804.63,
+      "price": 791.8,
       "line": "euphoric \u00b7 Grayscale ETF push to $800+",
       "tag": "candidate",
       "on": true,
@@ -30,7 +30,7 @@
     },
     {
       "sym": "TRUMP",
-      "price": 2.386,
+      "price": 2.382,
       "line": "euphoric \u00b7 Meme rally with volume spike",
       "tag": "candidate",
       "on": true,
@@ -39,7 +39,7 @@
     },
     {
       "sym": "TUT",
-      "price": 0.0609,
+      "price": 0.0611,
       "line": "euphoric \u00b7 +40% Binance top gainer",
       "tag": "candidate",
       "on": true,
@@ -48,16 +48,16 @@
     },
     {
       "sym": "ENA",
-      "price": 0.1582,
+      "price": 0.1591,
       "line": "euphoric \u00b7 FalconX deal fueled jump",
-      "tag": "candidate",
+      "tag": "HELD",
       "on": true,
-      "pick": false,
+      "pick": true,
       "fill": 40
     },
     {
       "sym": "BTC",
-      "price": 77086.01,
+      "price": 77066.66,
       "line": "euphoric \u00b7 Treasury squeeze to ~$80k",
       "tag": "candidate",
       "on": true,
@@ -3270,6 +3270,12 @@
       "value": 997.44,
       "bench": 1224.24,
       "holding": "CASH"
+    },
+    {
+      "ts": "2026-08-23T00:12:35+00:00",
+      "value": 996.05,
+      "bench": 1223.94,
+      "holding": "ENA-USD"
     }
   ],
   "trades": [
@@ -3392,6 +3398,16 @@
       "value": 998.84,
       "fee": 1.4,
       "reason": "Hype faded \u2014 coin dropped off a newer euphoric scan"
+    },
+    {
+      "date": "2026-08-23",
+      "action": "BUY",
+      "ticker": "ENA-USD",
+      "price": 0.1591,
+      "units": 6260.514746,
+      "value": 996.05,
+      "fee": 1.4,
+      "reason": "Grok: ENA euphoric \u2014 FalconX deal fueled jump (scan 2026-08-22T22:23)"
     }
   ],
   "history": [
@@ -3436,11 +3452,17 @@
       "value": 997.44,
       "bench": 1224.24,
       "holding": "CASH"
+    },
+    {
+      "date": "2026-08-23",
+      "value": 996.05,
+      "bench": 1223.94,
+      "holding": "ENA-USD"
     }
   ],
-  "costs_paid": 17.2701,
+  "costs_paid": 18.6665,
   "frozen": null,
-  "thoughts": "I'm in cash. I buy only the freshest euphoric crypto (scan under 9h old), one entry a day, never on weekends \u2014 lukewarm or aging hype is how small accounts bleed out in fees.",
+  "thoughts": "I'm riding ENA from the 2026-08-22T22:23 scan. My exit is mechanical: a newer scan without it, -10% from entry, or a blind/severe Watcher \u2014 whichever comes first.",
   "strategy": {
     "name": "Hype Crypto \u2014 sentiment pattern, crypto venue, on trial",
     "rule": "Top euphoric crypto from a fresh Watcher scan; 1 entry/day max; -10% hard stop; exit on newer scan without the coin, stale scans, or SEVERE; Binance-tier fees",
