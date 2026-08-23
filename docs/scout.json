@@ -1,26 +1,26 @@
 {
-  "ts": "2026-08-23T06:07:15+00:00",
-  "scanned": 127,
+  "ts": "2026-08-23T06:13:06+00:00",
+  "scanned": 126,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "ORDIUSDT",
-      "signal": "ignition",
-      "score": 0.5695,
-      "raw_score": 0.8135,
-      "weight": 0.7,
-      "price": 3.902,
-      "why": "trades 5.8x and volume 18.0x the prior 4h, 94% taker-buy, $341,834 burst \u2014 while price has only moved -0.2%",
-      "chg_24h": -0.0982,
-      "vol_surge": 18.05,
-      "chg_1h": -0.0015,
-      "market_surge": 13.65,
+      "symbol": "COTIUSDT",
+      "signal": "breakout",
+      "score": 0.8601,
+      "raw_score": 0.9218,
+      "weight": 0.933,
+      "price": 0.01297,
+      "why": "trades 9.3x, volume 11.0x, 68% taker-buy, +7.5% in an hour, at 81% of its 24h range",
+      "chg_24h": 0.2,
+      "vol_surge": 10.96,
+      "chg_1h": 0.0755,
+      "market_surge": 5.49,
       "actionable": false,
-      "status": "benched \u2014 hit 20%, mean -1.21% over last 30 at 4h: not beating the round trip"
+      "status": "benched \u2014 hit 43%, mean -1.40% over last 30 at 4h: not beating the round trip"
     }
   ],
   "gate": {
-    "ignition": "benched \u2014 hit 20%, mean -1.21% over last 30 at 4h: not beating the round trip",
+    "ignition": "benched \u2014 hit 20%, mean -1.17% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 43%, mean -1.40% over last 30 at 4h: not beating the round trip",
     "reversion": "benched \u2014 hit 44%, mean +0.51% over last 25 at 4h: not beating the round trip",
     "heat": "benched \u2014 hit 53%, mean +0.32% over last 30 at 4h: not beating the round trip",
@@ -39,12 +39,12 @@
       "median_ret_1h": -0.00678,
       "n_4h": 30,
       "hit_rate_4h": 0.2,
-      "mean_ret_4h": -0.0121,
+      "mean_ret_4h": -0.01167,
       "median_ret_4h": -0.01301,
       "n_24h": 30,
       "hit_rate_24h": 0.1,
-      "mean_ret_24h": -0.04696,
-      "median_ret_24h": -0.04065
+      "mean_ret_24h": -0.0433,
+      "median_ret_24h": -0.02946
     },
     "breakout": {
       "n_1h": 30,
