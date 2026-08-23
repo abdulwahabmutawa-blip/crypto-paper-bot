@@ -1,17 +1,33 @@
 {
-  "ts": "2026-08-23T05:11:36+00:00",
-  "scanned": 134,
+  "ts": "2026-08-23T05:16:45+00:00",
+  "scanned": 132,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ZECUSDT",
+      "signal": "heat",
+      "score": 0.6198,
+      "raw_score": 0.6,
+      "weight": 1.033,
+      "price": 778.6,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.010% \u00b7 L/S 0.5",
+      "chg_24h": 0.008,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
+      "actionable": false,
+      "status": "benched \u2014 hit 53%, mean +0.19% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
-    "ignition": "benched \u2014 hit 17%, mean -1.46% over last 30 at 4h: not beating the round trip",
+    "ignition": "benched \u2014 hit 20%, mean -1.14% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 43%, mean -1.40% over last 30 at 4h: not beating the round trip",
     "reversion": "benched \u2014 hit 44%, mean +0.51% over last 25 at 4h: not beating the round trip",
     "heat": "benched \u2014 hit 53%, mean +0.19% over last 30 at 4h: not beating the round trip",
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 22,
+    "count": 12,
     "baseline": 39.0,
     "wave": false
   },
@@ -22,9 +38,9 @@
       "mean_ret_1h": -0.008,
       "median_ret_1h": -0.00613,
       "n_4h": 30,
-      "hit_rate_4h": 0.167,
-      "mean_ret_4h": -0.01459,
-      "median_ret_4h": -0.01301,
+      "hit_rate_4h": 0.2,
+      "mean_ret_4h": -0.01137,
+      "median_ret_4h": -0.01092,
       "n_24h": 30,
       "hit_rate_24h": 0.1,
       "mean_ret_24h": -0.04696,
@@ -45,10 +61,10 @@
       "median_ret_24h": -0.05959
     },
     "reversion": {
-      "n_1h": 26,
-      "hit_rate_1h": 0.423,
-      "mean_ret_1h": -0.00274,
-      "median_ret_1h": -0.00542,
+      "n_1h": 27,
+      "hit_rate_1h": 0.407,
+      "mean_ret_1h": -0.00359,
+      "median_ret_1h": -0.00751,
       "n_4h": 25,
       "hit_rate_4h": 0.44,
       "mean_ret_4h": 0.00507,
