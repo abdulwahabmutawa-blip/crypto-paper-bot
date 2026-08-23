@@ -1,16 +1,17 @@
 {
-  "ts": "2026-08-23T02:32:27+00:00",
+  "ts": "2026-08-23T02:38:11+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
       "TRUMP",
-      "BTC",
-      "ETH",
       "SOL",
-      "ZEC",
+      "ETH",
+      "BTC",
+      "PEPE",
+      "XMR",
       "RENDER",
-      "LIT",
-      "PEPE"
+      "XRP",
+      "ICP"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,7 +21,8 @@
       "TRUMP",
       "POL",
       "ENA",
-      "AAVE"
+      "AAVE",
+      "RLUSD"
     ],
     "watcher": [
       "ZEC",
@@ -51,7 +53,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -7e-06,
+      "funding": 4e-06,
       "long_short": 1.55
     },
     {
@@ -71,18 +73,8 @@
         "movers",
         "watcher"
       ],
-      "funding": 8.2e-05,
+      "funding": 9.7e-05,
       "long_short": 0.9
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "watcher"
-      ],
-      "funding": 0.0001,
-      "long_short": 0.52
     },
     {
       "symbol": "AAVE",
@@ -109,12 +101,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "LIT",
+      "symbol": "ICP",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 0.0001
     },
     {
       "symbol": "PEPE",
@@ -140,10 +132,41 @@
       "funding": 5e-05
     },
     {
+      "symbol": "RLUSD",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
+    },
+    {
       "symbol": "SOL",
       "surfaces": 1,
       "sources": [
         "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "XMR",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "XRP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 1,
+      "sources": [
+        "watcher"
       ],
       "funding": 0.0001
     }
