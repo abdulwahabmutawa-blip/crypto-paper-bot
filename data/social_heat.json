@@ -1,16 +1,16 @@
 {
-  "ts": "2026-08-23T08:26:29+00:00",
+  "ts": "2026-08-23T08:31:49+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
       "ZEC",
       "TRUMP",
       "BTC",
-      "BIO",
+      "ETH",
+      "LIT",
       "SUI",
       "AAVE",
-      "SOL",
-      "LIT"
+      "SOL"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -18,10 +18,11 @@
       "TUT",
       "PUMP",
       "ENA",
-      "PYTH",
       "ZEC",
+      "PYTH",
+      "LTC",
       "ACE",
-      "LTC"
+      "AAVE"
     ],
     "watcher": [
       "ZEC",
@@ -56,6 +57,16 @@
       "long_short": 0.5
     },
     {
+      "symbol": "AAVE",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.56
+    },
+    {
       "symbol": "BTC",
       "surfaces": 2,
       "sources": [
@@ -72,7 +83,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.00011,
+      "funding": 0.000113,
       "long_short": 1.23
     },
     {
@@ -82,16 +93,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 7.3e-05,
-      "long_short": 0.87
-    },
-    {
-      "symbol": "AAVE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": 7.4e-05
     },
     {
       "symbol": "ACE",
@@ -99,15 +101,15 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.003193
+      "funding": -0.003306
     },
     {
-      "symbol": "BIO",
+      "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 0.0001
     },
     {
       "symbol": "LIT",
@@ -147,7 +149,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 0.000127
+      "funding": 0.00013
     },
     {
       "symbol": "TRUMP",
