@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-23T10:15:29+00:00",
+  "ts": "2026-08-23T10:20:53+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
@@ -7,22 +7,21 @@
       "LIT",
       "SOL",
       "ZEC",
-      "LINK",
       "AAVE",
-      "XRP",
-      "TRUMP",
-      "PEPE"
+      "PEPE",
+      "LINK",
+      "BTC"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "TUT",
-      "PUMP",
       "ENA",
+      "PUMP",
       "AAVE",
       "ZEC",
-      "DOGE",
       "RE",
+      "DOGE",
       "UNI"
     ],
     "watcher": [
@@ -43,7 +42,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.000135,
+      "funding": 0.000136,
       "long_short": 1.31
     },
     {
@@ -79,22 +78,23 @@
       "long_short": 1.53
     },
     {
+      "symbol": "BTC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "watcher"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.01
+    },
+    {
       "symbol": "TUT",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": 5e-05,
-      "long_short": 0.95
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "watcher"
-      ],
-      "funding": 0.0001
+      "funding": 5e-05
     },
     {
       "symbol": "DOGE",
@@ -144,26 +144,10 @@
       "funding": 0.0001
     },
     {
-      "symbol": "TRUMP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "UNI",
       "surfaces": 1,
       "sources": [
         "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "XRP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
       ],
       "funding": 0.0001
     }

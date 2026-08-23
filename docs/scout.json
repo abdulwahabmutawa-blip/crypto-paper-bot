@@ -1,17 +1,33 @@
 {
-  "ts": "2026-08-23T10:15:36+00:00",
+  "ts": "2026-08-23T10:21:00+00:00",
   "scanned": 108,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "FETUSDT",
+      "signal": "ignition",
+      "score": 0.5281,
+      "raw_score": 0.7205,
+      "weight": 0.733,
+      "price": 0.163,
+      "why": "trades 6.5x and volume 13.1x the prior 4h, 72% taker-buy, $299,252 burst \u2014 while price has only moved +2.7%",
+      "chg_24h": 0.0284,
+      "vol_surge": 13.1,
+      "chg_1h": 0.0271,
+      "market_surge": 1.5,
+      "actionable": false,
+      "status": "benched \u2014 hit 23%, mean -1.13% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
-    "ignition": "benched \u2014 hit 23%, mean -1.03% over last 30 at 4h: not beating the round trip",
+    "ignition": "benched \u2014 hit 23%, mean -1.13% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 40%, mean -1.66% over last 30 at 4h: not beating the round trip",
     "reversion": "actionable",
     "heat": "benched \u2014 hit 53%, mean +0.34% over last 30 at 4h: not beating the round trip",
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 13,
+    "count": 14,
     "baseline": 39.0,
     "wave": false
   },
@@ -23,7 +39,7 @@
       "median_ret_1h": -0.00295,
       "n_4h": 30,
       "hit_rate_4h": 0.233,
-      "mean_ret_4h": -0.01026,
+      "mean_ret_4h": -0.01132,
       "median_ret_4h": -0.01222,
       "n_24h": 30,
       "hit_rate_24h": 0.067,
