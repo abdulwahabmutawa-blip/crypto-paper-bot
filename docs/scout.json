@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-23T03:23:05+00:00",
+  "ts": "2026-08-23T03:29:05+00:00",
   "scanned": 148,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "FLOKIUSDT",
+      "signal": "ignition",
+      "score": 0.4436,
+      "raw_score": 0.5784,
+      "weight": 0.767,
+      "price": 2.6e-05,
+      "why": "trades 5.6x and volume 5.7x the prior 4h, 64% taker-buy, $50,316 burst \u2014 while price has only moved -1.9%",
+      "chg_24h": -0.1508,
+      "vol_surge": 5.68,
+      "chg_1h": -0.0189,
+      "market_surge": 0.4,
+      "actionable": false,
+      "status": "benched \u2014 hit 27%, mean -0.58% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 27%, mean -0.58% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 47%, mean -1.21% over last 30 at 4h: not beating the round trip",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 9,
+    "count": 8,
     "baseline": 39.0,
     "wave": false
   },
@@ -40,8 +56,8 @@
       "mean_ret_4h": -0.01214,
       "median_ret_4h": -0.01522,
       "n_24h": 30,
-      "hit_rate_24h": 0.167,
-      "mean_ret_24h": -0.02877,
+      "hit_rate_24h": 0.2,
+      "mean_ret_24h": -0.0276,
       "median_ret_24h": -0.03102
     },
     "reversion": {
