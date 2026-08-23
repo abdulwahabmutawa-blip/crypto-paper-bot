@@ -1,8 +1,54 @@
 {
-  "ts": "2026-08-23T00:58:26+00:00",
-  "scanned": 148,
+  "ts": "2026-08-23T01:04:16+00:00",
+  "scanned": 150,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "BCHUSDT",
+      "signal": "ignition",
+      "score": 0.6775,
+      "raw_score": 0.8833,
+      "weight": 0.767,
+      "price": 279.7,
+      "why": "trades 9.3x and volume 11.2x the prior 4h, 81% taker-buy, $256,541 burst \u2014 while price has only moved +1.7%",
+      "chg_24h": -0.0551,
+      "vol_surge": 11.24,
+      "chg_1h": 0.0175,
+      "market_surge": 0.79,
+      "actionable": false,
+      "status": "benched \u2014 hit 27%, mean -0.60% over last 30 at 4h: not beating the round trip"
+    },
+    {
+      "symbol": "ENSUSDT",
+      "signal": "ignition",
+      "score": 0.6443,
+      "raw_score": 0.84,
+      "weight": 0.767,
+      "price": 5.82,
+      "why": "trades 53.7x and volume 25.1x the prior 4h, 61% taker-buy, $102,634 burst \u2014 while price has only moved +2.5%",
+      "chg_24h": -0.0761,
+      "vol_surge": 25.1,
+      "chg_1h": 0.0246,
+      "market_surge": 0.0,
+      "actionable": false,
+      "status": "benched \u2014 hit 27%, mean -0.60% over last 30 at 4h: not beating the round trip"
+    },
+    {
+      "symbol": "FFUSDT",
+      "signal": "ignition",
+      "score": 0.6352,
+      "raw_score": 0.8281,
+      "weight": 0.767,
+      "price": 0.0823,
+      "why": "trades 26.7x and volume 20.2x the prior 4h, 65% taker-buy, $250,608 burst \u2014 while price has only moved +3.4%",
+      "chg_24h": 0.1066,
+      "vol_surge": 20.18,
+      "chg_1h": 0.0335,
+      "market_surge": 15.98,
+      "actionable": false,
+      "status": "benched \u2014 hit 27%, mean -0.60% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 27%, mean -0.60% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 47%, mean -1.09% over last 30 at 4h: not beating the round trip",
@@ -11,7 +57,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 16,
+    "count": 17,
     "baseline": 39.0,
     "wave": false
   },
@@ -41,7 +87,7 @@
       "median_ret_4h": -0.00372,
       "n_24h": 30,
       "hit_rate_24h": 0.233,
-      "mean_ret_24h": -0.0218,
+      "mean_ret_24h": -0.02115,
       "median_ret_24h": -0.02447
     },
     "reversion": {
@@ -69,8 +115,8 @@
       "median_ret_4h": 0.01402,
       "n_24h": 30,
       "hit_rate_24h": 0.9,
-      "mean_ret_24h": 0.08708,
-      "median_ret_24h": 0.11217
+      "mean_ret_24h": 0.08599,
+      "median_ret_24h": 0.10864
     },
     "revival": {
       "n_1h": 4,
