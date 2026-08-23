@@ -1,17 +1,17 @@
 {
-  "ts": "2026-08-23T08:03:44+00:00",
+  "ts": "2026-08-23T08:09:00+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
       "ZEC",
       "TRUMP",
       "BTC",
-      "SOL",
-      "ETH",
+      "BIO",
       "ENA",
-      "TAO",
+      "ETH",
       "GRAM",
-      "BIO"
+      "SOL",
+      "LIT"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,8 +19,9 @@
       "TUT",
       "PUMP",
       "ACE",
-      "PYTH",
       "ENA",
+      "PYTH",
+      "ZEC",
       "U"
     ],
     "watcher": [
@@ -41,7 +42,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.000102,
+      "funding": 0.000106,
       "long_short": 1.23
     },
     {
@@ -54,6 +55,17 @@
       ],
       "funding": 5e-05,
       "long_short": 1.06
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 0.0001,
+      "long_short": 0.5
     },
     {
       "symbol": "BTC",
@@ -72,18 +84,8 @@
         "movers",
         "watcher"
       ],
-      "funding": 6.6e-05,
+      "funding": 7e-05,
       "long_short": 0.87
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "watcher"
-      ],
-      "funding": 0.0001,
-      "long_short": 0.5
     },
     {
       "symbol": "ACE",
@@ -91,7 +93,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.002485
+      "funding": -0.00264
     },
     {
       "symbol": "BIO",
@@ -118,6 +120,14 @@
       "funding": 5e-05
     },
     {
+      "symbol": "LIT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "PYTH",
       "surfaces": 1,
       "sources": [
@@ -132,14 +142,6 @@
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "TRUMP",
