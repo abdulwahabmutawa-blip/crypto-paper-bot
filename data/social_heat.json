@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-23T22:34:17+00:00",
+  "ts": "2026-08-23T22:40:18+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
@@ -7,12 +7,10 @@
       "TAO",
       "BTC",
       "AERO",
+      "ONDO",
       "LIT",
       "LINK",
-      "TRUMP",
-      "AAVE",
-      "ONDO",
-      "PEPE"
+      "MORPHO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -46,16 +44,6 @@
       "long_short": 0.5
     },
     {
-      "symbol": "AAVE",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.55
-    },
-    {
       "symbol": "PENGU",
       "surfaces": 2,
       "sources": [
@@ -86,13 +74,12 @@
       "long_short": 1.56
     },
     {
-      "symbol": "TRUMP",
-      "surfaces": 2,
+      "symbol": "AAVE",
+      "surfaces": 1,
       "sources": [
-        "coingecko",
         "movers"
       ],
-      "funding": 5e-05
+      "funding": 0.0001
     },
     {
       "symbol": "AERO",
@@ -127,6 +114,14 @@
       "funding": 5e-05
     },
     {
+      "symbol": "MORPHO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "ONDO",
       "surfaces": 1,
       "sources": [
@@ -135,11 +130,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PEPE",
+      "symbol": "TRUMP",
       "surfaces": 1,
       "sources": [
-        "coingecko"
-      ]
+        "movers"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "TUT",
@@ -147,7 +143,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000281
+      "funding": 0.000286
     },
     {
       "symbol": "XPL",
