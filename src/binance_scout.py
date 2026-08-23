@@ -238,6 +238,8 @@ RESIGNAL_COOLDOWN_H = 3.0   # [EVIDENCE — log autopsy 08-16] BICO was flagged
 # before the real-money book may act on its candidates:
 MIN_ACT_SAMPLES = 12        # [JUDGEMENT] fewer is a coin-flip streak
 MIN_ACT_HIT = 0.40
+FEE_K = 4.0                 # REVAMP 08-23: mean must beat 4x the round trip
+MIN_PAYOFF = 1.0            # avg win / avg loss unless hit >= 65%
 # Each signal is judged on ITS OWN clock: benching a days-scale grind
 # signal on 4h outcomes would test a marathoner over a sprint distance.
 ACT_HORIZON_H = {"revival": 24}     # everything else defaults to 4
@@ -566,12 +568,26 @@ def signal_actionable(card: dict, signal: str) -> tuple[bool, str]:
                        f"samples under ruleset {RULESET}")
     hit = s.get(f"hit_rate_{h}h", 0.0)
     mean = s.get(f"mean_ret_{h}h", 0.0)
-    # 3x fees, not 1x: a mean that only matches the round trip is trading
-    # for nothing while still risking the stop (net-of-cost doctrine — the
-    # strongest surviving finding of the research audit)
-    if hit < MIN_ACT_HIT or mean < 3 * ROUND_TRIP:
+    # FEE_K x fees, not 1x: a mean that only matches the round trip is
+    # trading for nothing while still risking the stop. REVAMP 08-23:
+    # 3x -> 4x (Binance bots review: turnover governed by fees is the #1
+    # shared mechanic of verified winners; 3+1 all-in round trips/day is
+    # 15-24%/month of book in fees if every slot fires).
+    if hit < MIN_ACT_HIT or mean < FEE_K * ROUND_TRIP:
         return False, (f"benched — hit {hit:.0%}, mean {mean:+.2%} over "
-                       f"last {n} at {h}h: not beating the round trip")
+                       f"last {n} at {h}h: not beating {FEE_K:g}x the "
+                       f"round trip")
+    # REVAMP 08-23: both halves of the rolling record must pay (a regime
+    # that flattered the first half is not a signal), and the payoff shape
+    # must be right — verified durable traders run 20-46% win rates with
+    # 2-5x payoff; the 98%-win / 5-10x-loss profile is the one that dies.
+    if s.get(f"both_halves_{h}h") is False:
+        return False, (f"benched — only one half of the last {n} paid at "
+                       f"{h}h: regime luck, not a signal")
+    payoff = s.get(f"payoff_{h}h")
+    if payoff is not None and payoff < MIN_PAYOFF and hit < 0.65:
+        return False, (f"benched — payoff {payoff:.2f} (avg win / avg loss) "
+                       f"with hit {hit:.0%}: losers outweigh winners")
     return True, ""
 
 
@@ -917,6 +933,27 @@ def resolve_outcomes(now: datetime) -> tuple[dict, list[dict]]:
                 entry[f"mean_ret_{h}h"] = round(sum(rets) / len(rets), 5)
                 entry[f"median_ret_{h}h"] = round(
                     sorted(rets)[len(rets) // 2], 5)
+                # REVAMP 08-23 (Bailey/Quantopian: IS Sharpe predicts OOS
+                # Sharpe at R^2 < 0.025; both-halves profitability and
+                # payoff shape predict better than any mean): record
+                # whether BOTH halves of the rolling record pay, and the
+                # avg-win/avg-loss payoff ratio. The gate reads both.
+                half = len(rets) // 2
+                if half >= 3:
+                    a, b = rets[:half], rets[half:]
+                    entry[f"both_halves_{h}h"] = bool(
+                        sum(a) / len(a) > 0 and sum(b) / len(b) > 0)
+                wins = [x for x in rets if x > 0]
+                losses = [x for x in rets if x < 0]
+                if wins:
+                    entry[f"avg_win_{h}h"] = round(sum(wins) / len(wins), 5)
+                if losses:
+                    entry[f"avg_loss_{h}h"] = round(
+                        sum(losses) / len(losses), 5)
+                if wins and losses:
+                    entry[f"payoff_{h}h"] = round(
+                        (sum(wins) / len(wins))
+                        / abs(sum(losses) / len(losses)), 3)
         if entry:
             card["signals"][sig] = entry
     _atomic_write(SCORECARD, json.dumps(card, indent=2))

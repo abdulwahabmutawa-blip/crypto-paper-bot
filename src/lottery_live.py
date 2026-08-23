@@ -42,7 +42,15 @@ fast exits and the Watcher owns the slow qualitative ones:
   3b. CLIMAX (08-23): red 1h close on the move's max volume closing in the
      lower half of its range — the top being distributed in real time
      (binance_live.climax_verdict; 8/10 forensic autopsies + AXS live)
-  4. max hold 24h — hype has a half-life, never marry a coin
+  3c. TERMINAL DIP (08-23): 3 post-entry hourly closes >=12% under the
+     high-water — 82% of such dips were the top (binance_live.
+     terminal_dip_verdict)
+  4. max hold as a SAFETY NET behind the tape exits: ignition 48h, other
+     scout seats 24h, hype 24h, revival 28d (REVAMP 08-23; exit_params)
+  Entry-side REVAMP 08-23 (REVAMP_2026-08-23.md): circuit breaker (2 losing
+  exits or -10% of peak in a UTC day), API-burst freeze, depth gate,
+  unlock-cliff veto, regime gate (revival stands down on wave days), and a
+  hardened learning gate (4x fees, both halves, payoff shape).
   5. momentum gone: no longer a top-25 24h mover
   6. Watcher SEVERE, or scans stale > 24h (a blind risk officer grounds it)
   7. hype faded on a NEWER scan (Watcher-sourced entries)
@@ -383,7 +391,10 @@ def main():
         exit_px = fill["price"]
         u = float(st.get("units") or 0.0)
         pnl = ((exit_px / entry_px - 1) * 100) if entry_px else None
-        spent = round(entry_px * u, 4) if entry_px else None
+        # spent priced on the SOLD qty, not the recorded units: lot-step
+        # truncation left dust that turned +1.6% winners into -$0.02 rows
+        # (review 08-23) and would have tripped the circuit breaker
+        spent = round(entry_px * fill["qty"], 4) if entry_px else None
         got = round(exit_px * fill["qty"], 4)
         pnl_usd = round(got - spent, 4) if spent is not None else None
         rec = {"symbol": held,
@@ -512,6 +523,15 @@ def main():
                     st["move_qv_n"] = _pn + 1
                     st["move_last_ms"] = int(float(_fresh[-1][0]))
                     if _why and sell(_why):
+                        held = None
+                # TERMINAL DIP (REVAMP 08-23): 3 post-entry hourly closes
+                # >=12% under the high-water = 82% the top, not a shakeout
+                if held and p and entry and ep.get("kind") != "grind":
+                    _post = [float(r[4]) for r in _kl
+                             if float(r[6]) < _now_ms
+                             and float(r[0]) >= _ems]
+                    _td = binance_live.terminal_dip_verdict(_post)
+                    if _td and sell(_td):
                         held = None
         # PROFIT RATCHET (exit audit 08-19): a ride that has paid never goes
         # red again; a ride that paid well keeps half its peak. This is the
@@ -644,8 +664,34 @@ def main():
     if not floor_why:
         st.pop("floor_flagged", None)
 
+    # REVAMP 08-23 — exposure caps enforced OUTSIDE the strategy (the one
+    # mechanic every verified durable winner shares): a daily circuit
+    # breaker and an exchange-health freeze sit above every entry lane.
+    _today_real = [t for t in st.get("realized", [])
+                   if t.get("date") == today]
+    breaker_why = binance_live.circuit_breaker_reason(
+        _today_real, st.get("book_hwm_usd"))
+    burst_why = None
+    try:
+        _tail = []
+        if binance_live.LEDGER.exists():
+            for _line in binance_live.LEDGER.read_text(
+                    encoding="utf-8").splitlines()[-300:]:
+                if _line.strip():
+                    _tail.append(json.loads(_line))
+        burst_why = binance_live.api_burst_reason(_tail, now)
+    except Exception:
+        burst_why = None
+    halt_why = breaker_why or burst_why
+    if halt_why and held is None and st.get("halt_flagged") != halt_why[:24]:
+        st["halt_flagged"] = halt_why[:24]
+        binance_live.log({"event": "entries_halted", "reason": halt_why})
+        print(f"[{KEY}] {halt_why}")
+    if not halt_why:
+        st.pop("halt_flagged", None)
+
     can_enter = (held is None and not (severe or stale)
-                 and floor_why is None
+                 and floor_why is None and halt_why is None
                  and (WEEKEND_ENTRIES or now.weekday() < 5)
                  and entries_today < budget)
     if floor_why and held is None:
@@ -674,6 +720,33 @@ def main():
             blacklisted |= set(retired)
             print(f"[{KEY}] retired, will not re-enter: "
                   + ", ".join(sorted(retired)))
+
+
+    def _pre_buy_veto(sym: str) -> str | None:
+        """REVAMP 08-23 vetoes that must FALL THROUGH to the next candidate
+        (review: running them after the pick ended the cycle's entry
+        instead of trying the next coin): the exit side must absorb the
+        seat (depth gate) and we never open into an unlock cliff."""
+        _bid, _ask = binance_live.depth_5pct(sym)
+        why = binance_live.depth_gate(bals.get("USDT", 0.0), _bid, _ask)
+        if why:
+            return why
+        try:
+            _u = json.loads((config.DATA / "unlocks.json")
+                            .read_text(encoding="utf-8"))
+            _ev = (_u.get("events") or {}).get(sym) or {}
+            _days = _ev.get("days_to_unlock")
+            # the file is a snapshot: age it (review 08-23 minor)
+            try:
+                _age_d = (now - datetime.fromisoformat(
+                    _u.get("generated_utc"))).total_seconds() / 86400.0
+                if _days is not None:
+                    _days = _days - _age_d
+            except Exception:
+                pass
+            return binance_live.unlock_veto(_days, _ev.get("adv_ratio"))
+        except Exception:
+            return None
 
         pick, source = None, None
         # OWNER DECISION 2026-08-19: watcher entries only when the paper
@@ -718,6 +791,12 @@ def main():
                                       "symbol": sym, "reason": late})
                     print(f"[{KEY}] {sym} (watcher) refused: {late}")
                     continue
+                veto = _pre_buy_veto(sym)
+                if veto:
+                    binance_live.log({"event": "refused", "action": "BUY",
+                                      "symbol": sym, "reason": veto})
+                    print(f"[{KEY}] {sym} (watcher) refused: {veto}")
+                    continue
                 pick, source = sym, "watcher"
                 break
         # The Scout: fast, quantitative, every cycle across all ~670 pairs.
@@ -741,11 +820,26 @@ def main():
                     continue
                 if not binance_live.price(c["symbol"]):
                     continue
+                # REVAMP 08-23: regime gating by family — revival stands
+                # down on wave days (no capitulation to rebound from)
+                reg = binance_live.regime_allows(c["signal"], wave_fresh())
+                if reg:
+                    binance_live.log({"event": "refused", "action": "BUY",
+                                      "symbol": c["symbol"], "reason": reg})
+                    print(f"[{KEY}] {c['symbol']} ({c['signal']}) refused: "
+                          f"{reg}")
+                    continue
                 late = binance_live.late_entry_check(c["symbol"])
                 if late:
                     binance_live.log({"event": "refused", "action": "BUY",
                                       "symbol": c["symbol"], "reason": late})
                     print(f"[{KEY}] {c['symbol']} (scout) refused: {late}")
+                    continue
+                veto = _pre_buy_veto(c["symbol"])
+                if veto:
+                    binance_live.log({"event": "refused", "action": "BUY",
+                                      "symbol": c["symbol"], "reason": veto})
+                    print(f"[{KEY}] {c['symbol']} (scout) refused: {veto}")
                     continue
                 pick = c["symbol"]
                 source = f"scout:{c['signal']}"

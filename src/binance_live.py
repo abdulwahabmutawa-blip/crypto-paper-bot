@@ -396,11 +396,18 @@ def exit_params(source: str | None) -> dict:
         # bot — the fleet's top earner — holds while its thesis holds;
         # this is that lesson, calibrated by our own numbers. Breakout
         # does NOT get this: its 24h record is NEGATIVE (-3.79%).
+        # REVAMP 08-23: 24h -> 48h. The 245-explosion tournament: a 24h cap
+        # captured +7.16% median and beat half the move only 10.6% of the
+        # time (the one uncensored number); median start-to-peak 54h. The
+        # cap is a safety net behind climax / terminal-dip / fuel-gone /
+        # trailing — the tape is meant to fire first.
         return {"kind": "burst", "stop_pct": -0.06, "stall_h": 4.0,
-                "max_hold_h": 24.0, "momentum_exit": momentum_exit}
+                "max_hold_h": 48.0, "momentum_exit": momentum_exit}
     if src.startswith("scout:"):
+        # 8h -> 24h for the same reason; breakout's own 24h record is weak,
+        # so it does not get ignition's 48h
         return {"kind": "burst", "stop_pct": -0.06, "stall_h": 2.0,
-                "max_hold_h": 8.0, "momentum_exit": momentum_exit}
+                "max_hold_h": 24.0, "momentum_exit": momentum_exit}
     return {"kind": "hype", "stop_pct": -0.10, "stall_h": 6.0,
             "max_hold_h": 24.0, "momentum_exit": momentum_exit}
 
@@ -418,7 +425,10 @@ def exit_params(source: str | None) -> dict:
 # grounding, hype-faded exits) — only its power to OPEN real positions is
 # gated.
 WATCHER_EARN_WINDOW = 10       # judge the twin's last N round trips
-WATCHER_EARN_MIN_N = 6         # fewer resolved trips = unproven = benched
+WATCHER_EARN_MIN_N = 10        # REVAMP 08-23: 6 -> 10. At n=6 one old
+                               # +11% paper trade carried the mean over
+                               # the bar, the lane bought XRP twice and
+                               # lost twice (0-for-9 real, lifetime)
 WATCHER_EARN_MIN_WINS = 0.40   # same bar the scout gate uses
 
 
@@ -451,7 +461,10 @@ def watcher_earned(round_trips: list[float]) -> tuple[bool, str]:
                        f"spend real money (owner decision 08-19)")
     wins = sum(1 for r in window if r > 0)
     mean = sum(window) / n
-    if wins / n < WATCHER_EARN_MIN_WINS or mean <= 0:
+    median = sorted(window)[n // 2]
+    # median > 0 too (REVAMP 08-23): a single outlier win must not carry
+    # the lane — the typical trip has to pay, not the best one
+    if wins / n < WATCHER_EARN_MIN_WINS or mean <= 0 or median <= 0:
         return False, (f"benched — twin last {n}: {wins} wins, "
                        f"mean {mean:+.2%}; the paper record does not "
                        f"justify real money")
@@ -486,8 +499,12 @@ def fuel_surge(symbol: str, entry_ms: int) -> float | None:
     Baseline = median hourly quote volume of the closed hours BEFORE entry
     (needs >=6 to mean anything). None = cannot judge yet, which refuses to
     exit — unknown must never fire a sell."""
+    # size the fetch from the hold (review 08-23: a fixed 30 went blind at
+    # hour ~24 — exactly when the new 48h ignition cap needs it most)
+    held_h = max(0.0, (time.time() * 1000 - entry_ms) / 3.6e6)
+    limit = int(min(500, 30 + held_h + 2))
     k = _call("GET", "/v3/klines",
-              {"symbol": symbol, "interval": "1h", "limit": 30})
+              {"symbol": symbol, "interval": "1h", "limit": limit})
     try:
         now_ms = time.time() * 1000
         closed = [r for r in k if float(r[6]) < now_ms]
@@ -562,6 +579,181 @@ def climax_verdict(candle: list, prior_max_qv: float,
             "half of its range: distribution, not demand")
 
 
+# ---- REVAMP 08-23: the risk architecture the verified winners share --------
+# Owner directive: "eliminate all the reasons it failed, for good." The
+# Binance bots/agents review (27 agents, 1,827 sources) found the durable
+# winners share no signal — they share a risk architecture: turnover
+# governed by fees, exposure caps enforced OUTSIDE the strategy, liquidity
+# gates, asymmetric exits, regime gating, pre-positioned mechanical exits.
+# Each rule below is one of those, as a pure function with its own test.
+
+TERMINAL_DIP = 0.12      # 3h close drawdown from high-water: 82% terminal in
+                         # the 245-explosion study; resumed pullbacks were
+                         # median -6.5%, never -20%
+
+
+def terminal_dip_verdict(closes_post: list[float]) -> str | None:
+    """Exit when the last 3 POST-ENTRY hourly closes ALL sit >=12% below
+    the high-water of the EARLIER post-entry closes. Closed candles on both
+    sides of the ratio (review 08-23 critical: judging closes against the
+    live, wick-sampled high-water with min() sold INTO breakouts — a flat
+    3h base followed by a +14% ignition tick read as a 12% dip). Needs >=4
+    post-entry closes so the high-water predates the judged window; a peak
+    inside the window therefore never fires (max(window) == peak)."""
+    if not closes_post or len(closes_post) < 4:
+        return None
+    hw = max(closes_post[:-3])
+    if hw <= 0:
+        return None
+    dd = max(closes_post[-3:]) / hw - 1.0
+    if dd <= -TERMINAL_DIP:
+        return (f"TERMINAL DIP — last 3 closes all {dd:.1%} under the move's "
+                f"high-water close: 82% of dips this deep were the top")
+    return None
+
+
+# Daily circuit breaker: the verified durable profile has MDD <= 25% over a
+# YEAR; all-in x -6% x (3+1) entries is -24% in a DAY. After 2 losing exits
+# or -10% of the book's peak in one UTC day, entries stop until tomorrow.
+BREAKER_MAX_LOSSES = 2
+BREAKER_DAY_LOSS_FRAC = 0.10
+BREAKER_MATERIAL_PCT = -1.0    # a "loss" is <= -1% on the trade (review
+                               # 08-23: lot-step dust turned +1.6% winners
+                               # into -$0.02 rows; 7 of 9 live days would
+                               # have tripped on scratches)
+
+
+def _trade_pct(t: dict, book_hwm_usd: float | None) -> float:
+    if t.get("pnl_pct") is not None:
+        return float(t["pnl_pct"])
+    base = max(float(book_hwm_usd or 1.0), 1.0)
+    return float(t.get("pnl_usd") or 0.0) * 100.0 / base
+
+
+def circuit_breaker_reason(realized_today: list[dict],
+                           book_hwm_usd: float | None) -> str | None:
+    """Pure: refusal reason once today's MATERIAL losses crossed either
+    line. Materiality = pnl_pct <= -1% (fee/dust scratches do not count);
+    the day-P&L line uses every row, since sums are what they are."""
+    losses = [t for t in realized_today
+              if _trade_pct(t, book_hwm_usd) <= BREAKER_MATERIAL_PCT]
+    day_pnl = sum(float(t.get("pnl_usd") or 0.0) for t in realized_today)
+    if len(losses) >= BREAKER_MAX_LOSSES:
+        return (f"CIRCUIT BREAKER — {len(losses)} losing exits today "
+                f"(${day_pnl:+.2f}): no more entries until the next UTC day")
+    if book_hwm_usd and book_hwm_usd > 0 \
+            and day_pnl <= -BREAKER_DAY_LOSS_FRAC * book_hwm_usd:
+        return (f"CIRCUIT BREAKER — day P&L ${day_pnl:+.2f} is "
+                f"{day_pnl / book_hwm_usd:.1%} of the book's peak "
+                f"(line {-BREAKER_DAY_LOSS_FRAC:.0%}): no more entries "
+                f"until the next UTC day")
+    return None
+
+
+# Depth gate: Oct-10-2025 printed $0 on ATOM/IOTX against stale bids; volume
+# ignition naturally selects thin names, and the late-entry guards protect
+# timing, not fill quality. The exit side is what matters for a long-only
+# book, so the BID side within 5% of mid must absorb our whole position
+# many times over.
+DEPTH_MIN_BID_USD = 25_000.0   # 5%-bid depth floor, absolute
+DEPTH_MAX_SHARE = 0.05         # our order <= 5% of the 5%-bid depth
+
+
+def depth_gate(order_usd: float, bid_depth_5pct_usd: float | None,
+               ask_depth_5pct_usd: float | None) -> str | None:
+    """Pure: refusal reason if the book cannot absorb the seat's exit."""
+    if bid_depth_5pct_usd is None or ask_depth_5pct_usd is None:
+        return "DEPTH UNKNOWN — order book unreadable; not buying blind"
+    if bid_depth_5pct_usd < DEPTH_MIN_BID_USD:
+        return (f"THIN BOOK — only ${bid_depth_5pct_usd:,.0f} of bids within "
+                f"5% (floor ${DEPTH_MIN_BID_USD:,.0f}): the exit would print "
+                f"through the book")
+    if order_usd > DEPTH_MAX_SHARE * bid_depth_5pct_usd:
+        return (f"TOO BIG FOR THE BOOK — ${order_usd:,.0f} is "
+                f"{order_usd / bid_depth_5pct_usd:.1%} of the 5% bid depth "
+                f"(cap {DEPTH_MAX_SHARE:.0%})")
+    return None
+
+
+def depth_5pct(symbol: str) -> tuple[float | None, float | None]:
+    """(bid_usd, ask_usd) resting within 5% of mid. One public call."""
+    d = _call("GET", "/v3/depth", {"symbol": symbol, "limit": 100})
+    try:
+        bids = [(float(p), float(q)) for p, q in d["bids"]]
+        asks = [(float(p), float(q)) for p, q in d["asks"]]
+        mid = (bids[0][0] + asks[0][0]) / 2.0
+        bid_usd = sum(p * q for p, q in bids if p >= mid * 0.95)
+        ask_usd = sum(p * q for p, q in asks if p <= mid * 1.05)
+        return bid_usd, ask_usd
+    except Exception:
+        return None, None
+
+
+# Unlock-proximity veto (signal leaderboard: ~90% of large cliffs negative
+# within 30d; avoidance is free for a long-only book). Defensive guard,
+# not a signal: we simply do not open a seat into a cliff.
+UNLOCK_VETO_DAYS = 7.0
+UNLOCK_VETO_ADV = 1.0
+
+
+def unlock_veto(days_to_unlock: float | None, adv_ratio: float | None
+                ) -> str | None:
+    """Pure: refuse entries into a >=1x-ADV unlock within 7 days."""
+    if days_to_unlock is None or adv_ratio is None:
+        return None
+    if days_to_unlock <= UNLOCK_VETO_DAYS and adv_ratio >= UNLOCK_VETO_ADV:
+        return (f"UNLOCK CLIFF — {adv_ratio:.1f}x daily volume unlocking in "
+                f"{days_to_unlock:.1f}d: ~90% of such cliffs trade down")
+    return None
+
+
+# Regime gating by signal family (every verified class is regime-bound):
+# revival is a capitulation-rebound thesis — on a breadth WAVE day it has
+# no capitulation to rebound from, so it stands down; ignition/breakout are
+# governed by their own scorecard gate (they arm/bench on record).
+def regime_allows(signal: str, wave_active: bool) -> str | None:
+    if signal == "revival" and wave_active:
+        return ("REGIME — revival is a capitulation-rebound thesis; a breadth "
+                "wave day is not its regime")
+    return None
+
+
+# API-burst freeze (Oct 10 2025 post-mortem: 503s and rejected orders for
+# ~106 minutes; traders who kept retrying into the book lost everything).
+# If the ledger shows a burst of api_error events, no new entries this
+# cycle — the exchange is telling us something.
+API_BURST_N = 3
+API_BURST_MIN = 10
+
+
+def api_burst_reason(ledger_rows: list[dict], now: datetime) -> str | None:
+    """Pure over the ledger tail: refuse entries after >=3 api_errors in
+    the last 10 minutes."""
+    recent = 0
+    for r in ledger_rows:
+        if r.get("event") != "api_error":
+            continue
+        # venue health only: 5xx and rate limits. A 400 -1121 from probing
+        # a Watcher coin with no Binance pair is OUR query, not the venue
+        # (review 08-23: 62 of the ledger's 69 api_errors were exactly that)
+        code = r.get("code")
+        body = str(r.get("body") or "")
+        server_side = (isinstance(code, int) and code >= 500) or (
+            "-1003" in body or "-1015" in body or "-1016" in body)
+        if not server_side:
+            continue
+        try:
+            age = (now - datetime.fromisoformat(r["ts"])).total_seconds()
+        except Exception:
+            continue
+        if 0 <= age <= API_BURST_MIN * 60:
+            recent += 1
+    if recent >= API_BURST_N:
+        return (f"API BURST — {recent} exchange errors in the last "
+                f"{API_BURST_MIN} min: not entering into a failing venue")
+    return None
+
+
 def trail_pct(gain: float | None) -> float:
     """Progressive trailing stop: the more a ride has paid, the tighter it
     is held. The 2y study's retention gradient is monotonic — +50-100%
@@ -584,10 +776,18 @@ def trail_pct(gain: float | None) -> float:
 # three trades that were UP +4-6% mid-ride ended -7.9% to -11.2%.
 # The ratchet closes that hole: once a ride has paid, it is never again
 # allowed to go red; once it has paid well, half the peak is locked.
-RATCHET_ARM = 0.04       # MFE >= +4%: lock breakeven-plus-fees
-RATCHET_LOCK = 0.005     # ...at entry +0.5% (covers the round trip)
-RATCHET_ARM2 = 0.08      # MFE >= +8%: lock half the peak gain
-RATCHET_KEEP2 = 0.5
+# REVAMP 08-23 (owner-directed, 245-explosion tournament + AXS live): the
+# early-arm/tight-lock tier (+4% -> lock entry+0.5%) was shaken out on the
+# first ordinary pullback in 240/245 real paths, realizing a median 15% of
+# the move. Mid-move pullbacks that RESUMED were median -6.5% deep. One
+# tier now: arm at +10% MFE, keep 50% of the peak gain; the progressive
+# trailing leash and the -6% stop own everything below the arm.
+RATCHET_ARM = 0.10       # MFE >= +10%: ratchet armed
+RATCHET_KEEP = 0.5       # floor keeps half the peak gain
+# legacy names kept importable (tests/tools); no longer used by the rule
+RATCHET_LOCK = 0.0
+RATCHET_ARM2 = RATCHET_ARM
+RATCHET_KEEP2 = RATCHET_KEEP
 
 
 def ratchet_stop(entry: float | None, hwm: float | None) -> float | None:
@@ -602,10 +802,8 @@ def ratchet_stop(entry: float | None, hwm: float | None) -> float | None:
     if not entry or not hwm or entry <= 0:
         return None
     mfe = hwm / entry - 1.0
-    if mfe >= RATCHET_ARM2:
-        return entry * (1.0 + mfe * RATCHET_KEEP2)
     if mfe >= RATCHET_ARM:
-        return entry * (1.0 + RATCHET_LOCK)
+        return entry * (1.0 + mfe * RATCHET_KEEP)
     return None
 
 

@@ -144,11 +144,13 @@ b = bl.exit_params("scout:ignition")
 # ignition earned the day-scale clock: its own scorecard shows +4.67% mean
 # at 24h (90% hit, n=30) vs +1.47% at 4h - an 8h clock exited at hour 5
 # of a 24-hour edge (the sentiment bot lesson, calibrated by our numbers)
-assert b["kind"] == "burst" and b["max_hold_h"] == 24.0 \
+# REVAMP 08-23: 24h -> 48h (tournament: 24h cap captured +7.16% median,
+# >half-move only 10.6%; the tape exits fire first, the cap is a net)
+assert b["kind"] == "burst" and b["max_hold_h"] == 48.0 \
     and b["stall_h"] == 4.0 and b["stop_pct"] == -0.06
-# breakout does NOT get it: its 24h record is NEGATIVE (-3.79%)
+# breakout gets 24h (from 8h), not ignition's 48h: its 24h record is weak
 bb = bl.exit_params("scout:breakout")
-assert bb["max_hold_h"] == 8.0 and bb["stall_h"] == 2.0
+assert bb["max_hold_h"] == 24.0 and bb["stall_h"] == 2.0
 h = bl.exit_params("watcher")
 assert h["kind"] == "hype" and h["max_hold_h"] == 24.0 \
     and h["stall_h"] == 6.0
@@ -185,21 +187,24 @@ assert bl.exit_params("watcher").get("momentum_exit") is False,     "watcher rid
 assert bl.exit_params("gainer").get("momentum_exit") is True
 assert bl.exit_params("adopted").get("momentum_exit") is True
 
-# --- profit ratchet: a ride that paid never goes red (exit audit 08-19) -----
-# below +4% MFE: unarmed — a scratch may still become a stop-loss (LINK
-# peaked +1.8%; ratcheting there would churn every wiggle)
+# --- profit ratchet (REVAMP 08-23: ONE tier, arm +10%, keep 50%) -----------
+# The 08-19 two-tier ratchet (+4% -> entry+0.5%; +8% -> half peak) was the
+# book's first honest fix and it saved COW/ACE-class round-trips on paper.
+# But the 245-explosion tournament replayed it on real paths: the early
+# arm / tight lock was shaken out on the FIRST ordinary pullback in 240 of
+# 245 moves, realizing a median 15% of the move; resumed pullbacks were
+# median -6.5% deep. So the breakeven tier is retired and the -6% stop plus
+# the progressive trailing leash own everything under +10% MFE.
 assert bl.ratchet_stop(1.0, 1.018) is None
 assert bl.ratchet_stop(None, 1.1) is None and bl.ratchet_stop(1.0, None) is None
-# COW peaked +4.3% then fell to -11.2%. Armed: floor = entry +0.5%.
-f = bl.ratchet_stop(0.1391, 0.1391 * 1.043)
-assert f is not None and abs(f / 0.1391 - 1.005) < 1e-6,     "COW must exit at +0.5%, not -11.2%"
-# ACE peaked +6.1% then fell to -7.9%. Same lock.
-f = bl.ratchet_stop(0.2241, 0.2241 * 1.061)
-assert f is not None and abs(f / 0.2241 - 1.005) < 1e-6
-# DEXE peaked +7.6%: still stage-1 (under +8%)
-f = bl.ratchet_stop(1.852, 1.852 * 1.076)
-assert abs(f / 1.852 - 1.005) < 1e-6
-# past +8% MFE, half the peak is locked: peak +10% -> floor +5%
+# COW peaked +4.3%: UNARMED now (the stop, not the ratchet, owns that case)
+assert bl.ratchet_stop(0.1391, 0.1391 * 1.043) is None
+# DEXE peaked +7.6%: still unarmed
+assert bl.ratchet_stop(1.852, 1.852 * 1.076) is None
+# AXS-class: peak +12.2% -> floor keeps half = +6.1%
+f = bl.ratchet_stop(1.005, 1.005 * 1.122)
+assert f is not None and abs(f / 1.005 - 1.061) < 1e-6, f
+# peak +10% exactly arms: floor +5%
 f = bl.ratchet_stop(1.0, 1.10)
 assert abs(f - 1.05) < 1e-9, f
 # the floor NEVER loosens as hwm rises (monotone in hwm)
@@ -222,13 +227,21 @@ assert not ok and "unproven" in why,     "3 resolved trips is not a record — t
 # a SELL with no matching BUY must not crash or count
 assert bl.twin_round_trips([{"action": "SELL", "ticker": "X", "price": 1}]) == []
 # a qualifying record arms it — mechanically, no human in the loop
-good = [0.11, -0.02, 0.05, -0.01, 0.08, 0.03]          # 4/6 wins, mean > 0
-ok, why = bl.watcher_earned(good)
+# REVAMP 08-23: n >= 10 and the MEDIAN trip must pay too (n=6 with one
+# outlier win armed the lane for two real XRP losses; 0-for-9 lifetime)
+good = [0.11, -0.02, 0.05, -0.01, 0.08, 0.03, 0.02, -0.01, 0.03, 0.01]
+ok, why = bl.watcher_earned(good)                      # 7/10 wins, median > 0
 assert ok and "earned" in why, why
+ok, why = bl.watcher_earned(good[:6])
+assert not ok and "unproven" in why, "six trips is no longer a record"
 # enough trips but a losing record stays benched
-bad = [0.11, -0.05, -0.06, -0.04, -0.09, -0.02]        # 1/6 wins
+bad = [0.11, -0.05, -0.06, -0.04, -0.09, -0.02, -0.01, -0.03, -0.02, 0.0]
 ok, why = bl.watcher_earned(bad)
 assert not ok and "does not justify" in why, why
+# mean carried by a single outlier while the median is negative: benched
+outlier = [0.30, -0.02, -0.01, -0.03, -0.01, -0.02, 0.01, -0.01, -0.02, 0.0]
+ok, _ = bl.watcher_earned(outlier)
+assert not ok, "one big win must not carry the lane over the bar"
 # only the rolling window counts: ancient wins cannot carry a rotten present
 stale_glory = [0.5] * 10 + [-0.05] * 10
 ok, _ = bl.watcher_earned(stale_glory)
@@ -266,6 +279,82 @@ assert bl.climax_verdict(_bar(100, 110, 90, 104, 500), 400, 100) is None, \
 assert bl.climax_verdict(_bar(100, 110, 90, 94, 500), 0, 90) is not None, \
     "5x move-average fallback must qualify when the max is unseeded"
 assert bl.climax_verdict([], 400, 100) is None, "garbage candle judges nothing"
+
+# --- REVAMP 08-23: ratchet one-tier (+10% arm, keep 50% of peak) ---------
+assert bl.ratchet_stop(100.0, 104.0) is None,     "the +4% breakeven tier is gone (shaken out 240/245 in the study)"
+assert bl.ratchet_stop(100.0, 109.9) is None
+_f = bl.ratchet_stop(100.0, 120.0)
+assert _f is not None and abs(_f - 110.0) < 1e-9, "keeps half of a +20% peak"
+assert bl.ratchet_stop(None, 120.0) is None
+
+# --- terminal dip (review-corrected 08-23): the last 3 post-entry CLOSES all
+# >=12% under the high-water of the EARLIER post-entry closes ------------------
+# a flat base then a breakout tick must NOT fire (the bug the review caught)
+assert bl.terminal_dip_verdict([100.0, 100.0, 100.0, 114.0]) is None,     "a peak inside the judged window is a breakout, not a dip"
+assert bl.terminal_dip_verdict([100.0, 112.0, 114.0, 115.0]) is None
+# a real terminal dip: peak close 115, then three closes all <= 101
+assert bl.terminal_dip_verdict([100.0, 115.0, 101.0, 100.0, 99.0]) is not None
+# one deep close among two recovered closes: NOT all three under -> hold
+assert bl.terminal_dip_verdict([100.0, 115.0, 99.0, 112.0, 113.0]) is None
+assert bl.terminal_dip_verdict([100.0, 115.0, 101.0]) is None,     "fewer than 4 post-entry closes must judge nothing"
+assert bl.terminal_dip_verdict([]) is None
+
+# --- circuit breaker: 2 losing exits OR -10% of peak in a UTC day --------
+assert bl.circuit_breaker_reason([], 50.0) is None
+assert bl.circuit_breaker_reason([{"pnl_usd": -0.5, "pnl_pct": -1.2}],
+                                 50.0) is None
+assert bl.circuit_breaker_reason([{"pnl_usd": -0.5, "pnl_pct": -1.2},
+                                  {"pnl_usd": -0.2, "pnl_pct": -1.5}],
+                                 50.0) is not None, "2 material losses trip"
+# dust/fee scratches are NOT losses (review 08-23: +1.6% winners priced as
+# -$0.02 rows would have tripped the breaker 7 of 9 live days)
+assert bl.circuit_breaker_reason([{"pnl_usd": -0.02, "pnl_pct": 1.63},
+                                  {"pnl_usd": -0.19, "pnl_pct": -0.43}],
+                                 50.0) is None, "scratches must not trip"
+assert bl.circuit_breaker_reason([{"pnl_usd": -5.5, "pnl_pct": -10.5}],
+                                 50.0) is not None,     "-11% of peak trips it on one loss"
+assert bl.circuit_breaker_reason([{"pnl_usd": 3.0, "pnl_pct": 6.0},
+                                  {"pnl_usd": -1.0, "pnl_pct": -2.0},
+                                  {"pnl_usd": 2.0, "pnl_pct": 4.0}],
+                                 50.0) is None
+assert bl.circuit_breaker_reason([{"pnl_usd": -5.5, "pnl_pct": -10.5}],
+                                 None) is None,     "no recorded peak -> only the loss-count line applies"
+
+# --- depth gate: the exit side must absorb the seat --------------------------
+assert bl.depth_gate(50.0, None, None) is not None, "unknown book: refuse"
+assert bl.depth_gate(50.0, 10_000.0, 500_000.0) is not None, "thin bids"
+assert bl.depth_gate(50.0, 100_000.0, 100_000.0) is None
+assert bl.depth_gate(10_000.0, 100_000.0, 100_000.0) is not None,     "an order that is 10% of the 5% bid depth is too big for the book"
+
+# --- unlock veto: >=1x ADV cliff within 7 days refuses -----------------------
+assert bl.unlock_veto(3.0, 1.5) is not None
+assert bl.unlock_veto(3.0, 0.4) is None, "small unlock: no veto"
+assert bl.unlock_veto(20.0, 5.0) is None, "far unlock: no veto"
+assert bl.unlock_veto(None, 5.0) is None and bl.unlock_veto(3.0, None) is None
+
+# --- regime gate: revival stands down on wave days ---------------------------
+assert bl.regime_allows("revival", True) is not None
+assert bl.regime_allows("revival", False) is None
+assert bl.regime_allows("ignition", True) is None
+
+# --- api burst: >=3 api_errors in 10 min freezes entries ---------------------
+from datetime import datetime as _dt, timezone as _tz, timedelta as _td
+_now = _dt.now(_tz.utc)
+def _err(mins_ago, code=503):
+    return {"event": "api_error", "code": code, "body": "",
+            "ts": (_now - _td(minutes=mins_ago)).isoformat(timespec="seconds")}
+assert bl.api_burst_reason([_err(1), _err(2)], _now) is None
+assert bl.api_burst_reason([_err(1), _err(2), _err(3)], _now) is not None
+assert bl.api_burst_reason([_err(1), _err(2), _err(30)], _now) is None,     "an old error does not count toward the burst"
+# client-side 400s (our bad symbol probes) are not venue failures
+assert bl.api_burst_reason([_err(1, 400), _err(2, 400), _err(3, 400)],
+                           _now) is None, "400 -1121 probes are our query"
+# rate limits ARE venue pressure
+_rl = {"event": "api_error", "code": 429, "body": '{"code":-1003}',
+       "ts": _now.isoformat(timespec="seconds")}
+assert bl.api_burst_reason([_rl, _rl, _rl], _now) is not None
+assert bl.api_burst_reason([{"event": "fill", "ts": _now.isoformat()}] * 5,
+                           _now) is None
 
 # --- tripwires: these asserts fail any casual edit that widens the blast
 # radius. Changing them is a deliberate reviewed act, which is the point.

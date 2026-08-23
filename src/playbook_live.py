@@ -536,7 +536,10 @@ def _exit_position(st: dict, now: datetime,
         avg_qv = (st["move_qv_sum"] / st["move_qv_n"]) if st["move_qv_n"] \
             else 0.0
     if not why:
-        why = terminal_dip_verdict([float(r[4]) for r in move[-3:]], hwm)
+        # shared, closed-candles-only verdict (review 08-23: the live-hwm
+        # + min() form sold into breakouts)
+        from binance_live import terminal_dip_verdict as _td_shared
+        why = _td_shared([float(r[4]) for r in move])
     if not why:
         floor = ratchet_floor(entry, hwm)
         if floor and p <= floor:
