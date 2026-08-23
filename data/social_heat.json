@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-23T19:34:00+00:00",
+  "ts": "2026-08-23T19:39:19+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
@@ -9,21 +9,21 @@
       "BTC",
       "SOL",
       "XRP",
-      "TRUMP",
-      "ZEN",
-      "ONDO"
+      "ONDO",
+      "ENA",
+      "TRUMP"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "PENGU",
+      "XPL",
       "AAVE",
       "TRUMP",
-      "XPL",
       "ENA",
-      "TUT",
+      "PUMP",
       "UNI",
-      "PUMP"
+      "TUT"
     ],
     "watcher": [
       "ZEC",
@@ -36,8 +36,9 @@
   "heat": [
     {
       "symbol": "ENA",
-      "surfaces": 2,
+      "surfaces": 3,
       "sources": [
+        "coingecko",
         "movers",
         "watcher"
       ],
@@ -164,14 +165,6 @@
         "movers"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "ZEN",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
