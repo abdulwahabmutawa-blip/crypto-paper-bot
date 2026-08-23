@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-23T03:01:10+00:00",
-  "scanned": 150,
+  "ts": "2026-08-23T03:06:35+00:00",
+  "scanned": 148,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "BERAUSDT",
-      "signal": "ignition",
-      "score": 0.5599,
-      "raw_score": 0.73,
-      "weight": 0.767,
-      "price": 0.18,
-      "why": "trades 6.0x and volume 17.2x the prior 4h, 72% taker-buy, $73,187 burst \u2014 while price has only moved -1.5%",
-      "chg_24h": -0.1115,
-      "vol_surge": 17.16,
-      "chg_1h": -0.0153,
-      "market_surge": 3.84,
-      "actionable": false,
-      "status": "benched \u2014 hit 27%, mean -0.58% over last 30 at 4h: not beating the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 27%, mean -0.58% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 47%, mean -1.21% over last 30 at 4h: not beating the round trip",
@@ -57,8 +41,8 @@
       "median_ret_4h": -0.01522,
       "n_24h": 30,
       "hit_rate_24h": 0.167,
-      "mean_ret_24h": -0.03076,
-      "median_ret_24h": -0.03102
+      "mean_ret_24h": -0.02794,
+      "median_ret_24h": -0.02459
     },
     "reversion": {
       "n_1h": 25,
