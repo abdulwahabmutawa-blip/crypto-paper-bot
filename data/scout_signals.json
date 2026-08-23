@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-23T05:28:04+00:00",
-  "scanned": 128,
+  "ts": "2026-08-23T05:33:24+00:00",
+  "scanned": 126,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "FETUSDT",
+      "signal": "ignition",
+      "score": 0.4247,
+      "raw_score": 0.6068,
+      "weight": 0.7,
+      "price": 0.156,
+      "why": "trades 5.5x and volume 5.1x the prior 4h, 64% taker-buy, $161,973 burst \u2014 while price has only moved -0.1%",
+      "chg_24h": -0.0618,
+      "vol_surge": 5.11,
+      "chg_1h": -0.0006,
+      "market_surge": 0.0,
+      "actionable": false,
+      "status": "benched \u2014 hit 20%, mean -1.14% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 20%, mean -1.14% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 43%, mean -1.40% over last 30 at 4h: not beating the round trip",
