@@ -1,16 +1,17 @@
 {
-  "ts": "2026-08-23T04:32:49+00:00",
+  "ts": "2026-08-23T04:38:19+00:00",
   "sources": {
     "coingecko": [
       "TRUMP",
-      "SUI",
       "PUMP",
       "BTC",
+      "SUI",
       "LIT",
+      "ONDO",
       "ETH",
+      "XRP",
       "PEPE",
-      "FET",
-      "ZEC"
+      "ZRO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,7 +22,9 @@
     "watcher": [
       "ZEC",
       "TUT",
-      "PUMP"
+      "PUMP",
+      "TRUMP",
+      "BTC"
     ],
     "cryptopanic": []
   },
@@ -38,6 +41,26 @@
       "long_short": 1.03
     },
     {
+      "symbol": "BTC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "watcher"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.0
+    },
+    {
+      "symbol": "TRUMP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "watcher"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.5
+    },
+    {
       "symbol": "TUT",
       "surfaces": 2,
       "sources": [
@@ -48,33 +71,7 @@
       "long_short": 0.87
     },
     {
-      "symbol": "ZEC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "watcher"
-      ],
-      "funding": 0.0001,
-      "long_short": 0.51
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "ETH",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "FET",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -88,6 +85,14 @@
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "ONDO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -0.000131
     },
     {
       "symbol": "PEPE",
@@ -105,7 +110,23 @@
       "funding": 0.0001
     },
     {
-      "symbol": "TRUMP",
+      "symbol": "XRP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 1,
+      "sources": [
+        "watcher"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ZRO",
       "surfaces": 1,
       "sources": [
         "coingecko"
