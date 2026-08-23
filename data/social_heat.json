@@ -1,29 +1,29 @@
 {
-  "ts": "2026-08-23T22:06:20+00:00",
+  "ts": "2026-08-23T22:11:28+00:00",
   "sources": {
     "coingecko": [
       "TAO",
       "PUMP",
       "ZEC",
-      "ONDO",
       "LIT",
+      "AERO",
       "ETH",
-      "BTC",
-      "LINK",
       "AAVE",
-      "AERO"
+      "LINK",
+      "BTC",
+      "ONDO"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "TRUMP",
       "TUT",
+      "TRUMP",
       "PENGU",
       "AAVE",
       "XPL",
       "TAO",
       "PUMP",
-      "UNI"
+      "ZEC"
     ],
     "watcher": [
       "ZEC",
@@ -33,6 +33,17 @@
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "ZEC",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 0.0001,
+      "long_short": 0.5
+    },
     {
       "symbol": "AAVE",
       "surfaces": 2,
@@ -72,16 +83,6 @@
       ],
       "funding": 5e-05,
       "long_short": 1.56
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "watcher"
-      ],
-      "funding": 0.0001,
-      "long_short": 0.5
     },
     {
       "symbol": "AERO",
@@ -145,15 +146,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000264
-    },
-    {
-      "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
+      "funding": 0.000281
     },
     {
       "symbol": "XPL",
