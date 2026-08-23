@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-23T01:15:06+00:00",
-  "scanned": 148,
+  "ts": "2026-08-23T01:20:36+00:00",
+  "scanned": 149,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "HOMEUSDT",
-      "signal": "ignition",
-      "score": 0.7032,
-      "raw_score": 0.9168,
-      "weight": 0.767,
-      "price": 0.00604,
-      "why": "trades 10.2x and volume 18.3x the prior 4h, 67% taker-buy, $65,550 burst \u2014 while price has only moved +0.0%",
-      "chg_24h": -0.0775,
-      "vol_surge": 18.32,
-      "chg_1h": 0.0,
-      "market_surge": 2.82,
-      "actionable": false,
-      "status": "benched \u2014 hit 27%, mean -0.60% over last 30 at 4h: not beating the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 27%, mean -0.60% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 47%, mean -1.09% over last 30 at 4h: not beating the round trip",
@@ -34,8 +18,8 @@
   "scorecard": {
     "ignition": {
       "n_1h": 30,
-      "hit_rate_1h": 0.2,
-      "mean_ret_1h": -0.00616,
+      "hit_rate_1h": 0.233,
+      "mean_ret_1h": -0.00613,
       "median_ret_1h": -0.00198,
       "n_4h": 30,
       "hit_rate_4h": 0.267,
