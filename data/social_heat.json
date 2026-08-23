@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-23T01:59:59+00:00",
+  "ts": "2026-08-23T02:05:19+00:00",
   "sources": {
     "coingecko": [
       "TRUMP",
@@ -20,8 +20,8 @@
       "POL",
       "ENA",
       "SOL",
-      "DASH",
-      "DOGE"
+      "ZAMA",
+      "BNB"
     ],
     "watcher": [
       "ZEC",
@@ -43,7 +43,7 @@
         "watcher"
       ],
       "funding": 5e-05,
-      "long_short": 1.2
+      "long_short": 1.17
     },
     {
       "symbol": "TRUMP",
@@ -53,8 +53,8 @@
         "movers",
         "watcher"
       ],
-      "funding": -4.6e-05,
-      "long_short": 1.6
+      "funding": -4.3e-05,
+      "long_short": 1.55
     },
     {
       "symbol": "ENA",
@@ -74,7 +74,7 @@
         "movers"
       ],
       "funding": 5e-05,
-      "long_short": 1.23
+      "long_short": 1.22
     },
     {
       "symbol": "TUT",
@@ -83,7 +83,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.000104,
+      "funding": 9.7e-05,
       "long_short": 0.9
     },
     {
@@ -96,26 +96,18 @@
       "funding": 0.0001
     },
     {
+      "symbol": "BNB",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.000217
+    },
+    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "DASH",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "DOGE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
       ],
       "funding": 0.0001
     },
@@ -158,6 +150,14 @@
         "watcher"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "ZAMA",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
