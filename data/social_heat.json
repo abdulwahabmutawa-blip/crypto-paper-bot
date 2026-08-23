@@ -1,26 +1,27 @@
 {
-  "ts": "2026-08-23T21:05:05+00:00",
+  "ts": "2026-08-23T21:11:00+00:00",
   "sources": {
     "coingecko": [
-      "ZEC",
       "PUMP",
+      "ZEC",
       "LIT",
       "TAO",
       "AAVE",
-      "XRP",
+      "SPK",
       "UNI",
-      "ZAMA"
+      "INJ",
+      "XRP"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "PENGU",
-      "XPL",
       "AAVE",
+      "XPL",
       "TRUMP",
       "TAO",
-      "UNI",
       "ENA",
+      "UNI",
       "WLD"
     ],
     "watcher": [
@@ -99,6 +100,14 @@
       "funding": 5e-05
     },
     {
+      "symbol": "INJ",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "LIT",
       "surfaces": 1,
       "sources": [
@@ -108,6 +117,14 @@
     },
     {
       "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "SPK",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -135,14 +152,6 @@
       "surfaces": 1,
       "sources": [
         "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "ZAMA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
       ],
       "funding": 5e-05
     }

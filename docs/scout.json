@@ -1,20 +1,20 @@
 {
-  "ts": "2026-08-23T21:05:14+00:00",
+  "ts": "2026-08-23T21:11:06+00:00",
   "scanned": 109,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "ETHUSDT",
+      "symbol": "JTOUSDT",
       "signal": "ignition",
-      "score": 0.6709,
-      "raw_score": 0.6099,
+      "score": 0.7504,
+      "raw_score": 0.6822,
       "weight": 1.1,
-      "price": 2462.45,
-      "why": "trades 4.4x and volume 7.5x the prior 4h, 68% taker-buy, $10,442,187 burst \u2014 while price has only moved +0.9%",
-      "chg_24h": 0.0172,
-      "vol_surge": 7.49,
-      "chg_1h": 0.009,
-      "market_surge": 1.85,
+      "price": 0.6056,
+      "why": "trades 4.4x and volume 11.8x the prior 4h, 71% taker-buy, $56,728 burst \u2014 while price has only moved +0.8%",
+      "chg_24h": 0.0236,
+      "vol_surge": 11.77,
+      "chg_1h": 0.008,
+      "market_surge": 4.48,
       "actionable": false,
       "status": "benched \u2014 hit 60%, mean +0.80% over last 30 at 4h: not beating 4x the round trip"
     }
@@ -27,20 +27,20 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 20,
+    "count": 22,
     "baseline": 39.0,
     "wave": false
   },
   "scorecard": {
     "ignition": {
       "n_1h": 30,
-      "hit_rate_1h": 0.3,
-      "mean_ret_1h": 0.00105,
-      "median_ret_1h": 0.00045,
+      "hit_rate_1h": 0.333,
+      "mean_ret_1h": 0.00163,
+      "median_ret_1h": 0.00057,
       "both_halves_1h": false,
-      "avg_win_1h": 0.00822,
-      "avg_loss_1h": -0.00769,
-      "payoff_1h": 1.07,
+      "avg_win_1h": 0.00811,
+      "avg_loss_1h": -0.00741,
+      "payoff_1h": 1.094,
       "n_4h": 30,
       "hit_rate_4h": 0.6,
       "mean_ret_4h": 0.00797,
