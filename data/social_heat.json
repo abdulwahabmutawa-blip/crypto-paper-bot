@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-23T11:48:29+00:00",
+  "ts": "2026-08-23T11:54:19+00:00",
   "sources": {
     "coingecko": [
       "ENA",
@@ -20,10 +20,10 @@
       "TUT",
       "PUMP",
       "ENA",
-      "AAVE",
       "UNI",
+      "AAVE",
+      "DASH",
       "ZEC",
-      "NEAR",
       "DOGE"
     ],
     "watcher": [
@@ -45,7 +45,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 6.9e-05,
+      "funding": 6.4e-05,
       "long_short": 1.25
     },
     {
@@ -126,6 +126,14 @@
       "funding": 5e-05
     },
     {
+      "symbol": "DASH",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "DOGE",
       "surfaces": 1,
       "sources": [
@@ -140,14 +148,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "NEAR",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "XPL",
