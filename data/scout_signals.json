@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-23T15:10:41+00:00",
+  "ts": "2026-08-23T15:15:54+00:00",
   "scanned": 111,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SKHYBUSDT",
+      "signal": "ignition",
+      "score": 0.7498,
+      "raw_score": 0.8331,
+      "weight": 0.9,
+      "price": 166.86,
+      "why": "trades 11.0x and volume 7.4x the prior 4h, 66% taker-buy, $63,746 burst \u2014 while price has only moved +0.6%",
+      "chg_24h": 0.0243,
+      "vol_surge": 7.38,
+      "chg_1h": 0.0061,
+      "market_surge": 2.16,
+      "actionable": false,
+      "status": "benched \u2014 hit 40%, mean -0.27% over last 30 at 4h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 40%, mean -0.27% over last 30 at 4h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 33%, mean -1.57% over last 30 at 4h: not beating 4x the round trip",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 20,
+    "count": 19,
     "baseline": 39.0,
     "wave": false
   },

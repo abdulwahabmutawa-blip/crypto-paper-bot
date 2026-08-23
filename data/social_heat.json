@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-23T15:10:36+00:00",
+  "ts": "2026-08-23T15:15:47+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
@@ -17,13 +17,13 @@
     "stocktwits": [],
     "movers": [
       "TUT",
-      "TRUMP",
       "ENA",
-      "AAVE",
+      "TRUMP",
       "PUMP",
+      "AAVE",
       "XPL",
       "DASH",
-      "ZEC"
+      "UNI"
     ],
     "watcher": [
       "ZEC",
@@ -53,19 +53,8 @@
         "movers",
         "watcher"
       ],
-      "funding": 4.5e-05,
+      "funding": 4.2e-05,
       "long_short": 1.81
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": 0.0001,
-      "long_short": 0.53
     },
     {
       "symbol": "ENA",
@@ -86,6 +75,16 @@
       ],
       "funding": 5e-05,
       "long_short": 0.98
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "watcher"
+      ],
+      "funding": 0.0001,
+      "long_short": 0.53
     },
     {
       "symbol": "AAVE",
@@ -141,6 +140,14 @@
       "sources": [
         "coingecko"
       ]
+    },
+    {
+      "symbol": "UNI",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.000141
     },
     {
       "symbol": "XPL",
