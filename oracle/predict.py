@@ -163,6 +163,24 @@ def build_slate(limit: int | None = None, pause: float = 0.05) -> dict:
             s.pop("closes_120d", None)
             s.setdefault("btc_beta_120d", None)
 
+    # unlock proximity at T0 (record-only, 08-23): the signal-leaderboard
+    # research graded unlock-cliff avoidance the cheapest documented
+    # expectancy gain (~90% of large cliffs negative within 30d). Recorded
+    # per symbol so September+ scoring can judge it in OUR universe before
+    # any book is allowed to veto on it. Source: src/unlock_watch.py.
+    unlocks = {}
+    try:
+        u = json.loads((config.ROOT.parent / "data" / "unlocks.json")
+                       .read_text(encoding="utf-8"))
+        unlocks = u.get("events") or {}
+    except Exception:
+        pass
+    for s in slate:
+        ev = unlocks.get(s["symbol"])
+        s["unlock_days"] = ev.get("days_to_unlock") if ev else None
+        s["unlock_adv_ratio"] = ev.get("adv_ratio") if ev else None
+        s["unlock_pct_supply"] = ev.get("pct_supply") if ev else None
+
     # breadth at T0 (record-only): the fleet's mover-count file, committed
     # by the Actions loop. 6/9 interim hits clustered on wave days — regime
     # is where the recoverable edge lives, so the regime must be on the row.
@@ -299,6 +317,9 @@ def run(limit: int | None = None) -> Path:
                     "target_inside_range": s.get("target_inside_range"),
                     "oversold_trough": s.get("oversold_trough"),
                     "btc_beta_120d": s.get("btc_beta_120d"),
+                    "unlock_days": s.get("unlock_days"),
+                    "unlock_adv_ratio": s.get("unlock_adv_ratio"),
+                    "unlock_pct_supply": s.get("unlock_pct_supply"),
                     **built["breadth"],
                 },
                 # phase-1 comparators (see oracle/comparators.py): scored
