@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-23T17:34:19+00:00",
+  "ts": "2026-08-23T17:40:19+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -9,9 +9,10 @@
       "ENA",
       "SOL",
       "ETH",
-      "UNI",
-      "AAVE",
-      "MORPHO"
+      "TRUMP",
+      "SUI",
+      "LINK",
+      "UNI"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,10 +21,10 @@
       "XPL",
       "AAVE",
       "ENA",
-      "PENGU",
       "PUMP",
       "UNI",
-      "WLD"
+      "PENGU",
+      "TRUMP"
     ],
     "watcher": [
       "ZEC",
@@ -58,14 +59,14 @@
       "long_short": 1.05
     },
     {
-      "symbol": "AAVE",
+      "symbol": "TRUMP",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 0.0001,
-      "long_short": 1.57
+      "funding": 5e-05,
+      "long_short": 1.82
     },
     {
       "symbol": "TUT",
@@ -97,6 +98,14 @@
       "funding": 0.0001
     },
     {
+      "symbol": "AAVE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
@@ -113,15 +122,15 @@
       "funding": 0.0001
     },
     {
-      "symbol": "LIT",
+      "symbol": "LINK",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 0.0001
     },
     {
-      "symbol": "MORPHO",
+      "symbol": "LIT",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -145,10 +154,10 @@
       "funding": 0.0001
     },
     {
-      "symbol": "WLD",
+      "symbol": "SUI",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
       "funding": 0.0001
     },
