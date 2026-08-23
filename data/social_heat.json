@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-23T06:29:29+00:00",
+  "ts": "2026-08-23T06:35:19+00:00",
   "sources": {
     "coingecko": [
       "ENA",
@@ -19,22 +19,32 @@
       "TUT",
       "PUMP",
       "ACE",
-      "AAVE",
       "ENA",
+      "AAVE",
       "ZEC",
-      "RE",
-      "U"
+      "UNI"
     ],
     "watcher": [
       "ZEC",
       "TUT",
       "PUMP",
-      "TRUMP",
+      "ENA",
       "BTC"
     ],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "ENA",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.22
+    },
     {
       "symbol": "PUMP",
       "surfaces": 3,
@@ -68,33 +78,14 @@
       "long_short": 0.96
     },
     {
-      "symbol": "ENA",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.22
-    },
-    {
-      "symbol": "TRUMP",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "watcher"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.58
-    },
-    {
       "symbol": "TUT",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": 5e-05
+      "funding": 5e-05,
+      "long_short": 0.86
     },
     {
       "symbol": "AAVE",
@@ -110,7 +101,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001696
+      "funding": -0.001714
     },
     {
       "symbol": "PEPE",
@@ -118,14 +109,6 @@
       "sources": [
         "coingecko"
       ]
-    },
-    {
-      "symbol": "RE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -9e-06
     },
     {
       "symbol": "SHIB",
@@ -151,11 +134,20 @@
       "funding": 0.0001
     },
     {
-      "symbol": "U",
+      "symbol": "TRUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "UNI",
       "surfaces": 1,
       "sources": [
         "movers"
-      ]
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "XRP",
