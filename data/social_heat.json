@@ -1,29 +1,28 @@
 {
-  "ts": "2026-08-23T16:16:09+00:00",
+  "ts": "2026-08-23T16:21:29+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
-      "LIT",
       "ZEC",
-      "XMR",
-      "SOL",
+      "LIT",
       "ENA",
+      "SOL",
+      "XMR",
       "XRP",
-      "TAO",
-      "ETH",
-      "VIRTUAL"
+      "BTC",
+      "ETH"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "TUT",
-      "AAVE",
       "XPL",
+      "AAVE",
       "ENA",
       "PUMP",
       "UNI",
       "DASH",
-      "TRUMP"
+      "ZEC"
     ],
     "watcher": [
       "ZEC",
@@ -46,6 +45,17 @@
       "long_short": 1.06
     },
     {
+      "symbol": "ZEC",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 0.0001,
+      "long_short": 0.53
+    },
+    {
       "symbol": "ENA",
       "surfaces": 2,
       "sources": [
@@ -54,16 +64,6 @@
       ],
       "funding": 5e-05,
       "long_short": 1.25
-    },
-    {
-      "symbol": "TRUMP",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": 3.8e-05,
-      "long_short": 1.79
     },
     {
       "symbol": "TUT",
@@ -76,20 +76,18 @@
       "long_short": 0.95
     },
     {
-      "symbol": "ZEC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "watcher"
-      ],
-      "funding": 0.0001,
-      "long_short": 0.53
-    },
-    {
       "symbol": "AAVE",
       "surfaces": 1,
       "sources": [
         "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
       ],
       "funding": 0.0001
     },
@@ -126,12 +124,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "TAO",
+      "symbol": "TRUMP",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "watcher"
       ],
-      "funding": 5e-05
+      "funding": 4.1e-05
     },
     {
       "symbol": "UNI",
@@ -139,15 +137,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000104
-    },
-    {
-      "symbol": "VIRTUAL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": 0.000103
     },
     {
       "symbol": "XMR",
@@ -155,7 +145,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 0.000328
+      "funding": 0.000332
     },
     {
       "symbol": "XPL",
