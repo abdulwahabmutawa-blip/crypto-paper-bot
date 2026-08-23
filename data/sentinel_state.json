@@ -1,73 +1,6 @@
 {
   "scans": [
     {
-      "risk_level": "caution",
-      "risk_alerts": [
-        {
-          "headline": "SEC delays tokenization/Reg Crypto rules; related stocks slip",
-          "markets": [
-            "both"
-          ],
-          "severity": "caution"
-        },
-        {
-          "headline": "Crypto Fear & Greed at 29 (Fear); BTC slips near $63k, ETF outflows",
-          "markets": [
-            "crypto"
-          ],
-          "severity": "caution"
-        },
-        {
-          "headline": "OpenAI talent exodus raises red flags ahead of potential IPO",
-          "markets": [
-            "stocks"
-          ],
-          "severity": "caution"
-        },
-        {
-          "headline": "AI infrastructure boom increasingly leveraged and harder to track",
-          "markets": [
-            "stocks"
-          ],
-          "severity": "caution"
-        }
-      ],
-      "hype": [
-        {
-          "symbol": "XRP",
-          "mood": "mixed",
-          "note": "Trending hard; $1 support debate, dip-buy chatter"
-        },
-        {
-          "symbol": "IOVA",
-          "mood": "euphoric",
-          "note": "StockTwits surge on catalysts, institutional buzz"
-        },
-        {
-          "symbol": "MSTR",
-          "mood": "mixed",
-          "note": "BTC proxy; MSCI exclusion talk vs buys"
-        },
-        {
-          "symbol": "AVGO",
-          "mood": "mixed",
-          "note": "AI chip volatility, financing debates"
-        },
-        {
-          "symbol": "BRK.B",
-          "mood": "euphoric",
-          "note": "Alphabet stake boost to top holding"
-        }
-      ],
-      "overall_mood": "Stocks show mild caution with low VIX and AI/Berkshire focus amid weekly gains, while crypto remains fearful near key levels but with fading panic and regulatory mixed signals.",
-      "ts": "2026-08-14T23:54:57+00:00",
-      "gauges": {
-        "vix": 14.2,
-        "crypto_fear_greed": 29,
-        "crypto_fng_label": "Fear"
-      }
-    },
-    {
       "risk_level": "none",
       "risk_alerts": [],
       "hype": [
@@ -8512,11 +8445,141 @@
         "crypto_fear_greed": 66,
         "crypto_fng_label": "Greed"
       }
+    },
+    {
+      "risk_level": "caution",
+      "risk_alerts": [
+        {
+          "headline": "Bond yield volatility and Treasury buyback intervention amid elevated long-end rates",
+          "markets": [
+            "both"
+          ],
+          "severity": "caution"
+        },
+        {
+          "headline": "Crypto leverage flush with $1.7B+ liquidations in flash move after short squeeze",
+          "markets": [
+            "crypto"
+          ],
+          "severity": "caution"
+        }
+      ],
+      "hype": [
+        {
+          "symbol": "PENGU",
+          "mood": "euphoric",
+          "note": "Top mover retail meme buzz Stocktwits"
+        },
+        {
+          "symbol": "XRP",
+          "mood": "euphoric",
+          "note": "Biggest weekly gain Treasury hopes"
+        },
+        {
+          "symbol": "ZEC",
+          "mood": "euphoric",
+          "note": "ETF filing multi-year high frenzy"
+        },
+        {
+          "symbol": "TAO",
+          "mood": "mixed",
+          "note": "Trending AI mover heat"
+        },
+        {
+          "symbol": "HYPE",
+          "mood": "euphoric",
+          "note": "DEX volume buyback chatter"
+        },
+        {
+          "symbol": "AAVE",
+          "mood": "mixed",
+          "note": "DeFi heat funding positive"
+        },
+        {
+          "symbol": "BTC",
+          "mood": "mixed",
+          "note": "Weekly surge short squeeze debate"
+        },
+        {
+          "symbol": "HOOD",
+          "mood": "euphoric",
+          "note": "Crypto stocks Clarity Act pop"
+        }
+      ],
+      "crypto_hype": [
+        {
+          "symbol": "ZEC",
+          "mood": "euphoric",
+          "stage": "peaked",
+          "organic": true,
+          "promo_risk": "low",
+          "catalyst": "Grayscale Zcash ETF amendment filing",
+          "why": "ETF push + mining fleet news drove multi-year high volume",
+          "note": "Futures billions next-bitcoin buzz"
+        },
+        {
+          "symbol": "XRP",
+          "mood": "euphoric",
+          "stage": "peaked",
+          "organic": true,
+          "promo_risk": "low",
+          "catalyst": "Treasury buybacks curve control hopes",
+          "why": "Biggest weekly in 21 mo short liqs ETF flows",
+          "note": "White House Ripple meet Clarity"
+        },
+        {
+          "symbol": "PENGU",
+          "mood": "euphoric",
+          "stage": "peaked",
+          "organic": true,
+          "promo_risk": "low",
+          "catalyst": "Brand retail toys Target Walmart expand",
+          "why": "Top Binance mover holders ATH social mentions",
+          "note": "Meme IP physical products FOMO"
+        },
+        {
+          "symbol": "TAO",
+          "mood": "mixed",
+          "stage": "peaked",
+          "organic": true,
+          "promo_risk": "low",
+          "catalyst": "none",
+          "why": "Coingecko trending Binance mover heat",
+          "note": "AI narrative crowd chase"
+        },
+        {
+          "symbol": "HYPE",
+          "mood": "euphoric",
+          "stage": "peaked",
+          "organic": true,
+          "promo_risk": "low",
+          "catalyst": "none",
+          "why": "Trending DEX fees volume attention",
+          "note": "Perp venue buyback hype"
+        },
+        {
+          "symbol": "AAVE",
+          "mood": "mixed",
+          "stage": "peaked",
+          "organic": true,
+          "promo_risk": "low",
+          "catalyst": "none",
+          "why": "Cross heat movers funding positive",
+          "note": "DeFi rotation mild"
+        }
+      ],
+      "overall_mood": "Cautious risk-on rebound as Treasury liquidity moves and Trump crypto support fuel stocks/crypto gains and greed, tempered by bond jitters and leverage flushes.",
+      "ts": "2026-08-23T20:53:34+00:00",
+      "gauges": {
+        "vix": 15.1,
+        "crypto_fear_greed": 66,
+        "crypto_fng_label": "Greed"
+      }
     }
   ],
   "month_count": {
     "2026-07": 35,
-    "2026-08": 105
+    "2026-08": 106
   },
-  "last_scan_utc": "2026-08-23T18:50:11+00:00"
+  "last_scan_utc": "2026-08-23T20:53:34+00:00"
 }
