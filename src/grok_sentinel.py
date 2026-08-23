@@ -267,7 +267,7 @@ this shape:
  "risk_level": "none" | "caution" | "severe",
  "risk_alerts": [{"headline": "...", "markets": ["crypto"|"stocks"|"both"], "severity": "caution"|"severe"}],
  "hype": [{"symbol": "TICKER", "mood": "euphoric"|"fearful"|"mixed", "note": "under 12 words"}],
- "crypto_hype": [{"symbol": "COIN", "mood": "euphoric"|"fearful"|"mixed", "note": "under 12 words"}],
+ "crypto_hype": [{"symbol": "COIN", "mood": "euphoric"|"fearful"|"mixed", "stage": "early"|"peaked", "organic": true|false, "promo_risk": "low"|"high", "catalyst": "...", "why": "...", "note": "under 12 words"}],
  "overall_mood": "one sentence on overall market mood"
 }
 
@@ -277,21 +277,43 @@ halts — not ordinary volatility. List at most 8 hype entries, most unusual
 chatter first.
 
 "crypto_hype" is a DEDICATED crypto section (a crypto book trades only from
-it): up to 6 coins, each tagged with a "stage" field:
-  "stage": "early"  — chatter is GROWING but still niche: rising mention
-     counts, smaller accounts, a dated upcoming catalyst (unlock, listing,
-     mainnet, product launch, court date), and the price has NOT already
-     exploded (roughly less than +15% on the day). This is the find that
-     matters most — hype you can see FORMING, not hype being celebrated.
-  "stage": "peaked" — the move already happened and the crowd is cheering
-     it (up big on the day, victory-lap posts). Still list these — they
-     are needed to know when hype fades — but they are exits, not entries.
+it): up to 6 coins. YOUR PRIMARY JOB HERE IS TO FIND HYPE THAT IS FORMING,
+NOT HYPE BEING CELEBRATED. Work in this order:
+
+STEP 1 — hunt for EARLY-stage coins first, using this method:
+  * mention counts on X are RISING hour over hour but still niche — many
+    DISTINCT small and mid-size accounts starting to talk about the same
+    coin, not one or two large accounts shouting;
+  * the talk is about a CATALYST, not the price: a dated upcoming event
+    (exchange listing/notice, mainnet, unlock, product launch, governance
+    vote, court date), dev/ecosystem news, a real partnership document;
+  * the price has NOT already exploded (roughly under +15% on the day,
+    and NOT a Binance 24h top mover — top movers are "peaked" by
+    definition, never "early").
+STEP 2 — only then list "peaked" coins (the move already happened and the
+  crowd is cheering: up big on the day, victory-lap posts). They are
+  needed to know when hype fades — exits, not entries.
+
+INFLUENCER / PROMOTION FILTER (apply to every coin, both stages):
+  exclude or mark as promotional any coin whose chatter is dominated by
+  paid promotion, giveaway/airdrop shilling, "100x"/"next SOL" calls,
+  call-group style posts, a single large account or a few coordinated
+  accounts, or engagement-farming replies. Organic = many independent
+  accounts discussing substance. Influencer enthusiasm is NOT hype
+  formation; it is usually the exit liquidity.
+
+Each crypto_hype item must carry these fields:
+  "stage": "early" | "peaked",
+  "organic": true | false          (false = promotion-dominated chatter),
+  "promo_risk": "low" | "high",
+  "catalyst": "under 12 words, dated if possible, or 'none'",
+  "why": "under 15 words: the evidence you saw (accounts rising, catalyst, etc.)"
 List EARLY coins first. Coins only (bare symbol like PEPE, SOL — no
 pairs), prefer ones spot-tradeable on major exchanges such as Binance.
-"euphoric" is reserved for genuine crowd mania, not any green candle. A
-coin that is already a BINANCE 24H TOP MOVER is by definition "peaked",
-never "early". Empty lists are perfectly good answers — never invent hype
-to fill the quota, and never promote a peaked coin to early to fill it."""
+"euphoric" is reserved for genuine crowd mania, not any green candle.
+Empty lists are perfectly good answers — never invent hype to fill the
+quota, never promote a peaked coin to early to fill it, and never list a
+coin only because influencers are loud about it."""
 
 
 def call_grok() -> str:

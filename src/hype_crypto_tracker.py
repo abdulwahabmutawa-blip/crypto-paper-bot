@@ -100,6 +100,11 @@ def crypto_candidates(scan: dict | None,
             continue
         if s in prev_syms:
             continue          # novelty: seen last scan = already late
+        # INFLUENCER FILTER (owner 08-23): promotion-dominated chatter is
+        # exit liquidity, not hype formation — never a candidate, whatever
+        # the stage says. Missing fields (older scans) pass unchanged.
+        if h.get("organic") is False or h.get("promo_risk") == "high":
+            continue
         (early if h.get("stage") == "early" else other).append(f"{s}-USD")
     out = early + other
     if out or isinstance(ch, list):
