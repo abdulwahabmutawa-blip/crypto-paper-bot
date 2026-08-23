@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-23T10:58:29+00:00",
+  "ts": "2026-08-23T11:03:43+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
@@ -19,10 +19,10 @@
       "ENA",
       "PUMP",
       "AAVE",
-      "RE",
       "UNI",
       "NEAR",
-      "DOGE"
+      "RE",
+      "ZEC"
     ],
     "watcher": [
       "ZEC",
@@ -43,8 +43,8 @@
         "movers",
         "watcher"
       ],
-      "funding": 9e-05,
-      "long_short": 1.31
+      "funding": 9.3e-05,
+      "long_short": 1.25
     },
     {
       "symbol": "PUMP",
@@ -55,7 +55,18 @@
         "watcher"
       ],
       "funding": 5e-05,
-      "long_short": 1.08
+      "long_short": 1.09
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 0.0001,
+      "long_short": 0.53
     },
     {
       "symbol": "BTC",
@@ -65,7 +76,7 @@
         "watcher"
       ],
       "funding": 0.0001,
-      "long_short": 1.01
+      "long_short": 1.02
     },
     {
       "symbol": "SOL",
@@ -75,7 +86,7 @@
         "watcher"
       ],
       "funding": 0.0001,
-      "long_short": 2.29
+      "long_short": 2.32
     },
     {
       "symbol": "TUT",
@@ -84,28 +95,10 @@
         "movers",
         "watcher"
       ],
-      "funding": 5e-05,
-      "long_short": 0.95
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "watcher"
-      ],
-      "funding": 0.0001
+      "funding": 5e-05
     },
     {
       "symbol": "AAVE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "DOGE",
       "surfaces": 1,
       "sources": [
         "movers"
