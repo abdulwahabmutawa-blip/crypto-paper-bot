@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-23T08:09:08+00:00",
+  "ts": "2026-08-23T08:14:59+00:00",
   "scanned": 116,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ZECUSDT",
-      "signal": "ignition",
-      "score": 0.3351,
-      "raw_score": 0.5294,
-      "weight": 0.633,
-      "price": 819.85,
-      "why": "trades 4.2x and volume 5.9x the prior 4h, 83% taker-buy, $2,939,394 burst \u2014 while price has only moved +3.7%",
-      "chg_24h": 0.0043,
-      "vol_surge": 5.85,
-      "chg_1h": 0.0369,
-      "market_surge": 6.69,
-      "actionable": false,
-      "status": "benched \u2014 hit 13%, mean -1.37% over last 30 at 4h: not beating the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 13%, mean -1.37% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 43%, mean -1.40% over last 30 at 4h: not beating the round trip",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 13,
+    "count": 12,
     "baseline": 39.0,
     "wave": false
   },
