@@ -1,18 +1,18 @@
 {
-  "ts": "2026-08-23T12:33:59+00:00",
+  "ts": "2026-08-23T12:39:19+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
       "LIT",
       "ENA",
+      "BTC",
       "SOL",
       "ZEC",
-      "BTC",
-      "XRP",
       "TRUMP",
-      "TAO",
-      "ASTER",
-      "ETH"
+      "NEAR",
+      "XRP",
+      "ETH",
+      "TAO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,8 +22,8 @@
       "ENA",
       "XPL",
       "AAVE",
-      "DOGE",
-      "NEAR",
+      "TRUMP",
+      "ZEC",
       "DASH"
     ],
     "watcher": [
@@ -45,7 +45,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 5.6e-05,
+      "funding": 5.8e-05,
       "long_short": 1.24
     },
     {
@@ -58,6 +58,17 @@
       ],
       "funding": 5e-05,
       "long_short": 1.09
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 0.0001,
+      "long_short": 0.54
     },
     {
       "symbol": "BTC",
@@ -80,23 +91,22 @@
       "long_short": 2.36
     },
     {
+      "symbol": "TRUMP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "TUT",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": 5e-05,
-      "long_short": 0.9
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "watcher"
-      ],
-      "funding": 0.0001
+      "funding": 5e-05
     },
     {
       "symbol": "AAVE",
@@ -107,23 +117,7 @@
       "funding": 0.0001
     },
     {
-      "symbol": "ASTER",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "DASH",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "DOGE",
       "surfaces": 1,
       "sources": [
         "movers"
@@ -150,20 +144,12 @@
       "symbol": "NEAR",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
       "funding": 0.0001
     },
     {
       "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "TRUMP",
       "surfaces": 1,
       "sources": [
         "coingecko"
