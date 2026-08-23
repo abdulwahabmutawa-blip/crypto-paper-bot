@@ -1,29 +1,29 @@
 {
-  "generated_utc": "2026-08-23T00:26:48+00:00",
+  "generated_utc": "2026-08-23T00:40:15+00:00",
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "live_ts": "2026-08-23T00:26:48+00:00",
+  "live_ts": "2026-08-23T00:40:15+00:00",
   "current": {
     "date": "2026-08-23",
-    "value": 939.25,
+    "value": 934.79,
     "bench": 1019.98,
-    "holding": "BTC-USD",
+    "holding": "SOL-USD",
     "bench_asof": "2026-08-21"
   },
   "board": [
     {
-      "sym": "SLV",
-      "price": 62.72,
-      "line": "Silver \u00b7 score +9.70 \u00b7 mom20 +19.8%",
-      "tag": "hunting",
+      "sym": "SOL",
+      "price": 96.61,
+      "line": "Solana \u00b7 score +10.65 \u00b7 mom20 +31.5%",
+      "tag": "HELD",
       "on": true,
-      "pick": false,
+      "pick": true,
       "fill": 50
     },
     {
-      "sym": "SOL",
-      "price": 94.25,
-      "line": "Solana \u00b7 score +9.64 \u00b7 mom20 +28.3%",
+      "sym": "SLV",
+      "price": 62.72,
+      "line": "Silver \u00b7 score +9.70 \u00b7 mom20 +19.8%",
       "tag": "hunting",
       "on": true,
       "pick": false,
@@ -40,11 +40,11 @@
     },
     {
       "sym": "BTC",
-      "price": 77208.13,
-      "line": "Bitcoin \u00b7 score +8.36 \u00b7 mom20 +21.6%",
-      "tag": "HELD",
+      "price": 77289.0,
+      "line": "Bitcoin \u00b7 score +8.42 \u00b7 mom20 +21.7%",
+      "tag": "hunting",
       "on": true,
-      "pick": true,
+      "pick": false,
       "fill": 50
     },
     {
@@ -76,8 +76,8 @@
     },
     {
       "sym": "ETH",
-      "price": 2427.28,
-      "line": "Ethereum \u00b7 score +6.53 \u00b7 mom20 +28.9%",
+      "price": 2430.72,
+      "line": "Ethereum \u00b7 score +6.59 \u00b7 mom20 +29.1%",
       "tag": "hunting",
       "on": true,
       "pick": false,
@@ -110,12 +110,6 @@
     "board_note": "Always hunting across leveraged ETFs, high-beta stocks, crypto and commodities \u2014 all-in on the best score, 8% trailing stop, cash only when everything falls. Aggression with a seatbelt."
   },
   "intraday": [
-    {
-      "ts": "2026-08-01T19:44:44+00:00",
-      "value": 919.47,
-      "bench": 995.08,
-      "holding": "USO"
-    },
     {
       "ts": "2026-08-01T19:57:56+00:00",
       "value": 919.47,
@@ -9109,27 +9103,15 @@
       "value": 939.25,
       "bench": 1019.98,
       "holding": "BTC-USD"
+    },
+    {
+      "ts": "2026-08-23T00:40:15+00:00",
+      "value": 934.79,
+      "bench": 1019.98,
+      "holding": "SOL-USD"
     }
   ],
   "trades": [
-    {
-      "date": "2026-07-28",
-      "action": "SELL",
-      "ticker": "USO",
-      "price": 119.65,
-      "units": 7.697,
-      "value": 920.95,
-      "reason": "Outgunned \u2014 Ethereum now scores >1.25x better on reward/risk"
-    },
-    {
-      "date": "2026-07-28",
-      "action": "BUY",
-      "ticker": "ETH-USD",
-      "price": 1913.48,
-      "units": 0.4813,
-      "value": 920.95,
-      "reason": "Top reward/risk score (4.10) \u2014 Ethereum, all-in"
-    },
     {
       "date": "2026-07-29",
       "action": "SELL",
@@ -9301,6 +9283,26 @@
       "value": 938.38,
       "fee": 2.73,
       "reason": "Top reward/risk score (9.82) \u2014 Bitcoin, all-in"
+    },
+    {
+      "date": "2026-08-23",
+      "action": "SELL",
+      "ticker": "BTC-USD",
+      "price": 77289.0,
+      "units": 0.0122,
+      "value": 940.23,
+      "fee": 2.73,
+      "reason": "Outgunned \u2014 Solana now scores >1.25x better on reward/risk"
+    },
+    {
+      "date": "2026-08-23",
+      "action": "BUY",
+      "ticker": "SOL-USD",
+      "price": 96.61000061,
+      "units": 9.6759,
+      "value": 934.79,
+      "fee": 2.72,
+      "reason": "Top reward/risk score (10.65) \u2014 Solana, all-in"
     }
   ],
   "history": [
@@ -9469,15 +9471,15 @@
     },
     {
       "date": "2026-08-23",
-      "value": 939.25,
+      "value": 934.79,
       "bench": 1019.98,
-      "holding": "BTC-USD",
+      "holding": "SOL-USD",
       "bench_asof": "2026-08-21"
     }
   ],
-  "costs_paid": 12.6324,
+  "costs_paid": 18.0779,
   "frozen": null,
-  "thoughts": "I'm all-in on BTC \u2014 right now it has the best combination of 'going up' and 'not too wild' of the 14 things I watch. My safety net: if it drops 8% from its recent high of $78,767.27 (that's $72,465.89), I sell instantly, no questions asked. I only switch to something else if it looks clearly better than what I hold \u2014 not just slightly better.",
+  "thoughts": "I'm all-in on SOL \u2014 right now it has the best combination of 'going up' and 'not too wild' of the 14 things I watch. My safety net: if it drops 8% from its recent high of $96.61 (that's $88.88), I sell instantly, no questions asked. I only switch to something else if it looks clearly better than what I hold \u2014 not just slightly better.",
   "strategy": {
     "name": "The Hunter \u2014 cross-asset opportunist",
     "rule": "Score 14 instruments by 20-day momentum/volatility; all-in on the best (1.25x hysteresis); 8% trailing stop; cash only if every score is negative or Watcher SEVERE",
