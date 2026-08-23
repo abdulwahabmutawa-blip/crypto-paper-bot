@@ -1,17 +1,33 @@
 {
-  "ts": "2026-08-23T03:35:15+00:00",
-  "scanned": 147,
+  "ts": "2026-08-23T03:41:03+00:00",
+  "scanned": 146,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "PUMPUSDT",
+      "signal": "heat",
+      "score": 0.6402,
+      "raw_score": 0.6,
+      "weight": 1.067,
+      "price": 0.00475,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.005% \u00b7 L/S 1.12",
+      "chg_24h": 0.1163,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
+      "actionable": false,
+      "status": "benched \u2014 hit 57%, mean +0.53% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
-    "ignition": "benched \u2014 hit 27%, mean -0.58% over last 30 at 4h: not beating the round trip",
+    "ignition": "benched \u2014 hit 23%, mean -0.84% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 47%, mean -1.21% over last 30 at 4h: not beating the round trip",
     "reversion": "benched \u2014 hit 44%, mean +0.51% over last 25 at 4h: not beating the round trip",
     "heat": "benched \u2014 hit 57%, mean +0.53% over last 30 at 4h: not beating the round trip",
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 10,
+    "count": 8,
     "baseline": 39.0,
     "wave": false
   },
@@ -22,9 +38,9 @@
       "mean_ret_1h": -0.00537,
       "median_ret_1h": -0.0049,
       "n_4h": 30,
-      "hit_rate_4h": 0.267,
-      "mean_ret_4h": -0.00584,
-      "median_ret_4h": -0.00438,
+      "hit_rate_4h": 0.233,
+      "mean_ret_4h": -0.00843,
+      "median_ret_4h": -0.00538,
       "n_24h": 30,
       "hit_rate_24h": 0.1,
       "mean_ret_24h": -0.03783,
