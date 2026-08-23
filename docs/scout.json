@@ -1,11 +1,27 @@
 {
-  "ts": "2026-08-23T02:27:25+00:00",
-  "scanned": 151,
+  "ts": "2026-08-23T02:32:34+00:00",
+  "scanned": 149,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "GALAUSDT",
+      "signal": "reversion",
+      "score": 0.3754,
+      "raw_score": 0.3754,
+      "weight": 1.0,
+      "price": 0.00191,
+      "why": "down -16% on the day (bottom decile of the market), now +0.6% over 15m with 2 green candles",
+      "chg_24h": -0.1598,
+      "vol_surge": 1.34,
+      "chg_1h": -0.0093,
+      "market_surge": 0.0,
+      "actionable": false,
+      "status": "benched \u2014 hit 44%, mean +0.51% over last 25 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
-    "ignition": "benched \u2014 hit 27%, mean -0.60% over last 30 at 4h: not beating the round trip",
-    "breakout": "benched \u2014 hit 47%, mean -1.09% over last 30 at 4h: not beating the round trip",
+    "ignition": "benched \u2014 hit 27%, mean -0.56% over last 30 at 4h: not beating the round trip",
+    "breakout": "benched \u2014 hit 47%, mean -1.21% over last 30 at 4h: not beating the round trip",
     "reversion": "benched \u2014 hit 44%, mean +0.51% over last 25 at 4h: not beating the round trip",
     "heat": "benched \u2014 hit 57%, mean +0.53% over last 30 at 4h: not beating the round trip",
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
@@ -23,7 +39,7 @@
       "median_ret_1h": -0.00198,
       "n_4h": 30,
       "hit_rate_4h": 0.267,
-      "mean_ret_4h": -0.00601,
+      "mean_ret_4h": -0.00564,
       "median_ret_4h": -0.00438,
       "n_24h": 30,
       "hit_rate_24h": 0.133,
@@ -37,8 +53,8 @@
       "median_ret_1h": -0.00073,
       "n_4h": 30,
       "hit_rate_4h": 0.467,
-      "mean_ret_4h": -0.0109,
-      "median_ret_4h": -0.00372,
+      "mean_ret_4h": -0.01214,
+      "median_ret_4h": -0.01522,
       "n_24h": 30,
       "hit_rate_24h": 0.2,
       "mean_ret_24h": -0.02672,
