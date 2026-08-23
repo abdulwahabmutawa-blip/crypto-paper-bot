@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-23T12:22:37+00:00",
+  "ts": "2026-08-23T12:28:19+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
@@ -10,9 +10,9 @@
       "BTC",
       "XRP",
       "TRUMP",
-      "NEAR",
-      "AAVE",
-      "ASTER"
+      "TAO",
+      "ASTER",
+      "ETH"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -23,7 +23,7 @@
       "XPL",
       "AAVE",
       "UNI",
-      "DASH",
+      "NEAR",
       "DOGE"
     ],
     "watcher": [
@@ -45,7 +45,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 5.8e-05,
+      "funding": 6.1e-05,
       "long_short": 1.24
     },
     {
@@ -58,16 +58,6 @@
       ],
       "funding": 5e-05,
       "long_short": 1.09
-    },
-    {
-      "symbol": "AAVE",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.56
     },
     {
       "symbol": "BTC",
@@ -96,7 +86,8 @@
         "movers",
         "watcher"
       ],
-      "funding": 5e-05
+      "funding": 5e-05,
+      "long_short": 0.9
     },
     {
       "symbol": "ZEC",
@@ -104,6 +95,14 @@
       "sources": [
         "coingecko",
         "watcher"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "AAVE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
       ],
       "funding": 0.0001
     },
@@ -116,7 +115,7 @@
       "funding": 5e-05
     },
     {
-      "symbol": "DASH",
+      "symbol": "DOGE",
       "surfaces": 1,
       "sources": [
         "movers"
@@ -124,10 +123,10 @@
       "funding": 0.0001
     },
     {
-      "symbol": "DOGE",
+      "symbol": "ETH",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
       "funding": 0.0001
     },
@@ -143,9 +142,17 @@
       "symbol": "NEAR",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "TAO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "TRUMP",
