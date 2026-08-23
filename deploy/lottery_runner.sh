@@ -46,6 +46,8 @@ fi
 #    backup; the shared last_scan_utc throttle dedupes the two hosts, and
 #    a rare same-window race costs one overwritten scan, nothing worse.
 python3 src/grok_sentinel.py || echo "[runner] watcher scan failed — riding the last committed scan"
+# social radar (08-23): learn which X chatter precedes rises; observation only
+python3 src/social_radar.py || echo "[runner] social radar failed — labels ride next cycle"
 # then the heat map (cross-source social agreement), then the Scout which
 # consumes both — all write files the book reads this same cycle
 python3 src/social_heat.py || echo "[runner] heat map failed — scout runs without the heat surface"
@@ -70,6 +72,7 @@ for f in data/lottery_state.json data/lottery_ledger.jsonl \
          data/social_heat.json data/breadth.json \
          data/sentinel_state.json data/sentinel_verdict.json \
          data/announcements.json \
+         data/social_radar_log.jsonl data/social_radar_card.json data/social_radar_state.json reports/social_radar.md \
          docs/sentinel.html \
          docs/lottery.json docs/scout.json docs/lottery_ledger.jsonl; do
   git add "$f" 2>/dev/null || true
