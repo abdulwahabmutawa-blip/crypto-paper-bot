@@ -1,29 +1,30 @@
 {
- "updated_utc": "2026-08-22T13:45:00+00:00",
- "run_note": "Saturday 2026-08-22, 13:45Z. NO R1 BREACH and NO SIM-INTEGRITY ALERT. The four sentiment fills that were new since my last run all verified CLEAN - the 08-19-daily-close contamination I flagged on 08-21 did NOT recur, which is the single most important line in this run. Two things do carry forward. (1) PROVENANCE FLAG, new: hypecrypto's PENGU buy was written at 00:10:19Z as 0.008899 x 111114.377881 and rewritten at 00:11:28Z as 0.008966 x 110284.056297 with value held at 988.81 - the trade log is not append-only and the state file has no 'restatement' key to document it. It moved the entry 0.75% AGAINST the bot, so nobody was flattered, and both prices sit inside the day range; that is why it is a flag and not an ALERT. (2) CRON GAP on the GitHub Actions path: bot.yml ran 37 times in 24h with 87 of the last 100 runs CANCELLED and a largest gap of 105 minutes, 2026-08-22 00:00Z -> 01:45Z, over the 90-minute rule. It had ZERO operational effect - the local loop committed cycles at 00:10, 00:24, 00:38, 00:51, 01:05, 01:18, 01:32 and 01:46 through that window - so the workflow is a redundant path, not the fleet's heartbeat. Loop health itself is excellent: 110 cycles in 24h, maximum gap 14.0 minutes, all eleven live books 11.6-11.8 minutes stale and lottery 5.0. GOVERNANCE: the 08-20 and 08-21 supervisor logs were written locally but never committed; today's commit carries all three days, which is why the ledger jumps from 236 to 248 judgments in one push.",
- "total_judgments": 248,
- "judgments_closed": 247,
- "judgments_open": 1,
+ "updated_utc": "2026-08-23T08:20:00+00:00",
+ "run_note": "Sunday 2026-08-23, 08:20Z. NO R1 BREACH and NO SIM-INTEGRITY ALERT on either defined test. Three things lead. (1) ROOT CAUSE FOUND for the restatement fault I opened yesterday: TWO FLEET LOOP INSTANCES ARE RUNNING. Five sub-2-minute double cycles in 24h (08-22 05:50/05:51, 11:30/11:31, 17:10/17:11, 22:50/22:51, and 08-23 04:30/04:32) against a normal 13.4-minute cadence. When a trade lands inside one of those windows BOTH instances execute it at their own quote and the later write silently replaces the first. It happened again today: hypecrypto's ENA sell was written at 04:30:54Z as 0.1502 / value 940.33 and rewritten at 04:32:55Z as 0.1507 / value 943.46, moving 3.13 IN FAVOUR of the bot, where the 08-22 PENGU restatement had moved 0.75% against it. Both prices are real quotes inside the 04:30 5m bar, so nothing was fabricated and neither ALERT test fires; but only one can be the true fill, the trade log is not append-only, and hypecrypto_state.json still has no 'restatement' key. Severity raised to HIGH: it is now reproducible, mechanism-identified, and has flattered a book. (2) THE DAY'S BEST EVIDENCE IS A CONTROLLED EXPERIMENT THE FLEET RAN ON ITSELF. Between 23:48Z and 00:15Z the lottery bot refused ENAUSDT SIX times through its LATE guard (15.3-16.7% off its 24h low against a +15% cap), then twice more on ROLLED OVER. At 00:12:39Z, between the fifth and sixth refusal, hypecrypto bought the same coin off the same Grok signal and lost 55.30. Same signal, same minutes, one entry filter, opposite outcomes. That is the cleanest measurement this project has produced. (3) hunter is through the 10% drawdown line at 895.89, and it got there by rotation rather than by market: BTC fell 1.6% and SOL 2.0% today while the book fell 4.45%, because the 'Outgunned' ranker bought SOL at 96.61 nine minutes before its 97.17 high. Still 145.89 above the R1 hard stop. Loop health is otherwise excellent: 124 fleet cycles in 24h, largest gap 14.5 minutes, all ten paper books 10.7-10.8 minutes stale and lottery 5.5 - no frozen bot. The GitHub Actions paper-trade-cycle path still cancels most of its own runs (21 of 25 in 24h) with a 117.7-minute gap 08-22 23:58Z -> 08-23 01:55Z, over the 90-minute rule and WIDER than yesterday's 105 - but the local loop committed cycles at 00:12, 00:26, 00:40, 00:53, 01:07, 01:20, 01:34 and 01:47 through that window, so operational effect is again zero.",
+ "total_judgments": 252,
+ "judgments_closed": 250,
+ "judgments_open": 2,
  "open_ids": [
-  "2026-08-22-hypecrypto-1"
+  "2026-08-23-hypecrypto-1",
+  "2026-08-23-hunter-1"
  ],
- "cumulative_alpha_usd": 152.0,
- "cumulative_alpha_usd_actionable": 1.6,
- "win_rate_closed_pct": 6.9,
- "win_rate_note": "Most closed judgments are no_change (alpha 0), so the headline rate carries no information - read the DIRECTIONAL record: 42 scored, 17W/17L/8N. The actionable column re-scores skip calls on the strictest defensible counterfactual (e.g. the 08-21 sentiment call books +36.38 headline but +10.07 actionable, because 'skip new entries' never told the bot to stop EXITING).",
+ "cumulative_alpha_usd": 207.3,
+ "cumulative_alpha_usd_actionable": 56.9,
+ "win_rate_closed_pct": 7.2,
+ "win_rate_note": "Most closed judgments are no_change (alpha 0), so the headline rate carries no information - read the DIRECTIONAL record: 43 scored, 18W/17L/8N. Today's close is the largest single win in the ledger and the actionable column moves for once, from 1.60 to 56.90: the hypecrypto skip call is fully actionable because the book was 100% CASH when I filed it, so 'skip new entries' had no exit side to discount and the counterfactual is simply the unchanged 997.44.",
  "directional": {
-  "scored": 42,
-  "wins": 17,
+  "scored": 43,
+  "wins": 18,
   "losses": 17,
   "neutral": 8
  },
  "by_bot": {
   "crypto": {
-   "judgments": 29,
-   "closed": 29,
+   "judgments": 30,
+   "closed": 30,
    "open": 0,
    "alpha_usd": 106.83,
-   "note": "Churn family stays RETIRED at 7W/0L/3N. Best day in the fleet again: +36.32 (+3.10%) on XRP against a bench that fell 1.45% with bitcoin - genuine alpha on the CLARITY Act push and a short squeeze. It also let a 1.6801 intraday print round-trip back to 1.4920 with no ratchet, roughly 149 of unrealised gain, which the 54-dollar lottery bot's RATCHET rule would have banked. Filed no_change rather than a price view."
+   "note": "Best relative day in the fleet by doing nothing: -0.19% against a bench -1.33%, a 1.14pp edge from sitting still in XRP while the bench basket fell harder. Yesterday's 1.6838 intraday print is now fully round-tripped to 1.4726 and the book still has no rule that could bank it. Churn family stays RETIRED at 7W/0L/3N; filed no_change rather than a price view."
   },
   "stock": {
    "judgments": 10,
@@ -37,42 +38,42 @@
    "closed": 28,
    "open": 0,
    "alpha_usd": -13.64,
-   "note": "THE THREE-SESSION UNATTRIBUTED RUN IS CLOSED AND CONFIRMED ON FINAL CLOSES: UNH +1.37% against XLV +1.29%, a 0.08pp tracking match. Driver is healthcare, not the name. Fleet's largest book at 1196.26, still -5.00% below its 08-04 entry at 410.66."
+   "note": "Frozen at the 08-21 close, 1196.26, fleet's largest book. US market shut both weekend days; no day result exists and nothing was filed."
   },
   "allweather": {
    "judgments": 27,
    "closed": 27,
    "open": 0,
    "alpha_usd": 0.0,
-   "note": "All no_change; a fixed-weight book between rebalances gives nothing scoreable. Gold was the entire session: GLD sleeve +3.26 of a +3.50 day, TLT -1.41 on the yield rebound its own Watcher named that morning."
+   "note": "All no_change; a fixed-weight book between rebalances gives nothing scoreable. Frozen at 1026.58 (08-21 close)."
   },
   "commodity": {
    "judgments": 29,
    "closed": 29,
    "open": 0,
    "alpha_usd": 47.79,
-   "note": "Yesterday's skip call closed NEUTRAL - it made no entry after I filed - but the finding hardened on final closes: DBC +0.48% and USO +0.07%, both UP, and the book still lost 7.92, of which 7.61 is fee. costs_paid 9.9309, and 77% of every fee in this bot's life was paid in one 109-minute stretch on Friday."
+   "note": "Frozen at 1049.33 (08-21 close). The open ranker fault carries forward untested: it cannot separate a 0.48% move from a 0.07% one, and the next Monday open is where that gets re-examined."
   },
   "congress": {
    "judgments": 27,
    "closed": 27,
    "open": 0,
    "alpha_usd": -1.39,
-   "note": "Friday's tech-led tape reversed the semis drag: +0.76% against SPY +0.41%, with NVDA -0.98% the only red leg. Every position is locked to a 90-day close_date with no stop, so the bot can act on none of it. Filing nothing, for the eighth run."
+   "note": "Frozen at 990.44. Every position is locked to a 90-day close_date with no stop, so the bot can act on nothing. Filing nothing, for the ninth run."
   },
   "hunter": {
-   "judgments": 27,
+   "judgments": 28,
    "closed": 27,
-   "open": 0,
+   "open": 1,
    "alpha_usd": 61.49,
-   "note": "Fleet's LOWEST book at 938.20, -6.18% from start, 188.20 above the R1 hard stop. Nineteen hours after going all-in on bitcoin at 77137 the position is 0.02% from entry. Its bench is frozen at bench_asof 2026-08-21 because it holds crypto against an equity benchmark on a weekend - read the day pct, not the gap. Churn thesis stays retired at -4.16."
+   "note": "FLEET'S LOWEST BOOK AND NOW THROUGH THE 10% DRAWDOWN LINE at 895.89, 145.89 above the R1 hard stop. -41.76 (-4.45%) on a day BTC fell 1.6% and SOL fell 2.0%, so roughly 2.5pp of the loss is the rotation itself: it bought SOL at 96.61 at 00:40:22Z, nine minutes before the 97.17 high, and paid 5.45 round trip. Filed a NEW skip_new_entries against the ranker's lateness, distinct from the retired churn thesis."
   },
   "sentiment": {
    "judgments": 17,
    "closed": 17,
    "open": 0,
    "alpha_usd": -27.08,
-   "note": "MY 08-21 SKIP CALL SCORED +36.38 HEADLINE, +10.07 ACTIONABLE - AND THE PREMISE WAS HALF WRONG. I said every further entry would be priced off the same broken path; all four subsequent fills verified CLEAN, inside range and inside regular hours. They lost 31.45 for ordinary reasons - 8.08 of fee on four fills in 123 minutes. The 08-19-close contamination did NOT recur, but the ~152 artifact from the bitcoin leg still sits inside the book's cumulative +518.86, so I still refuse to attribute its day. costs_paid 57.1186 = 3.76% of the book."
+   "note": "Frozen at 1518.86 (08-21 close), 100% in MRNA. The 'hype faded' exit fault stays open and untested over the weekend. The ~152 pricing artifact from the 08-19-close bitcoin leg still sits inside its cumulative +518.86."
   },
   "hype": {
    "judgments": 11,
@@ -86,85 +87,99 @@
    "closed": 17,
    "open": 0,
    "alpha_usd": 0.0,
-   "note": "Pure SPY beta, +0.40% against a bench +0.40%, two trades in its entire life, 2.14 of lifetime fees. Nothing scoreable and that is the point of it."
+   "note": "Frozen at 1014.39, pure SPY beta, three trades in its entire life, 2.1356 of lifetime fees. Nothing scoreable and that is the point of it."
   },
   "analyst": {
    "judgments": 16,
    "closed": 16,
    "open": 0,
    "alpha_usd": 0.0,
-   "note": "Reasoning VALIDATED on the 08-21 decision (no trigger fired, SPY closed 765.72, 1.42% above its 755.00 line); falsifier correctly did NOT fire. THE PRICE-CITATION DEFECT IS SIX SESSIONS OLD: it wrote 'SPY closed 765.64 today (8/21)' in a decision committed 09:30:44 ET, 44 seconds after the bell. The 0.08 error against the eventual close is the smallest yet and is coincidence, not a fix. api_cost_usd 0.9496 / 15 decisions, 0.0710 for this one, no runaway."
+   "note": "No new decision since 08-21, so nothing new was eligible for reasoning validation. api_cost_usd 0.9496 UNCHANGED across the weekend - zero spend, no runaway. The price-citation defect is now SEVEN sessions old and stays open."
   },
   "hypecrypto": {
-   "judgments": 6,
-   "closed": 5,
+   "judgments": 7,
+   "closed": 6,
    "open": 1,
-   "alpha_usd": -66.34,
-   "note": "MY STAY-IN-CASH CALL ON THIS BOOK IS NOW 0W/1L: it bought PENGU at 00:10Z exactly as I predicted and made 7.25 anyway. The 8-1 record I quoted was earned on the sentiment book and I am no longer quoting it across the two. NEW PROVENANCE FLAG: the PENGU buy was written at 0.008899 and REWRITTEN 69 seconds later at 0.008966, value held at 988.81, with no 'restatement' key in state to document it. Refiled the skip as a cost argument: 17.2701 of fees on a book at 997.44 while its bench is +22.5%."
+   "alpha_usd": -11.04,
+   "note": "MY SKIP CALL SCORED ITS FIRST WIN AND IT IS THE LARGEST IN THE LEDGER: +55.30, fully actionable. Record on this book is now 1W/1L, and the -66.34 hole from the first call is more than half filled. The bot bought ENA at 0.1591 at 00:12:39Z on a three-day-old FalconX story and sold at 0.1507; ENA has since recovered to 0.1543, ABOVE the exit, so the fade rule sold the low as well. Eight round trips in eight days, 19.9873 of lifetime fees on a 942.14 book against a bench at 1207.41. Refiled."
   },
   "lottery": {
-   "judgments": 4,
-   "closed": 4,
+   "judgments": 5,
+   "closed": 5,
    "open": 0,
    "alpha_usd": -0.3,
-   "note": "REAL MONEY, ~54 dollar base, NOT in any paper total. Dead flat today and instructive: RATCHET banked AXS at +1.29% off an +11.8% peak while FUEL GONE cut ESP at -0.81%, netting -0.0043. Its LATE guard then refused ZEC and PUMP twice for being 24.5-32.8% off their 24h lows against a +15% cap. Book 54.07 against a 58.4265 HWM; lifetime realized -7.8842 over 23 legs."
+   "note": "REAL MONEY, roughly 52 dollar base, NOT in any paper total. Book 54.07 -> 52.38 on two losing watcher-sourced XRP legs (-1.4931 and -0.2036); lifetime realized -9.5809 over 25 legs against a 58.4265 HWM. But its LATE guard refused ENA eight times in 39 minutes and saved a paper bot 55.30 it did not take. The split is now the read on this book: scout-sourced legs win, watcher-sourced legs lose."
   }
  },
- "driver_tally_note": "Full rolling tally in reports/attribution_summary.json, recomputed from source this run (376 of 376 lines counted after deduping superseded daily re-filings).",
+ "driver_tally_note": "Full rolling tally in reports/attribution_summary.json, recomputed from source this run (392 of 392 lines counted after deduping superseded daily re-filings). 'technical' 29.8% and 'hype_sentiment' 36.7% remain the two worst drivers and took today's only two losses.",
  "fleet_snapshot_at_run": {
-  "basis": "TEN paper books, baseline 10,000. stock/TQQQ stays retired (final 892.30, 07-31) and excluded. sentinel does not trade. Bot #13 lottery is REAL MONEY on a ~54 dollar base and is not part of any paper total. Marks are the bots' own recorded values: crypto, hunter and hypecrypto carry genuine 08-22 partial-day marks to 13:20Z; the seven equity books carry the COMPLETED 08-21 close, since US markets are shut today.",
-  "crypto": 1209.12,
+  "basis": "TEN paper books, baseline 10,000. stock/TQQQ stays retired (final 892.30, 07-31) and excluded. sentinel does not trade. Bot #13 lottery is REAL MONEY on a ~52 dollar base and is not part of any paper total. Marks are the bots' own recorded values: crypto, hunter and hypecrypto carry live 08-23 marks to 07:54Z; the seven equity books carry the COMPLETED 08-21 close, unchanged for a second day because the US market is shut.",
+  "crypto": 1181.29,
   "meanrev": 1196.26,
   "allweather": 1026.58,
   "commodity": 1049.33,
   "congress": 990.44,
-  "hunter": 938.2,
+  "hunter": 895.89,
   "sentiment": 1518.86,
-  "scholar": 1014.44,
-  "analyst": 1020.02,
-  "hypecrypto": 997.44,
-  "total": 10960.69,
-  "vs_baseline_usd": 960.69,
-  "vs_baseline_pct": 9.61,
-  "caveat": "The sentiment book's +518.86 is NOT a clean trading result: its 08-21 bitcoin leg was bought at 69266.1875, the 08-19 daily close to the cent and 7.6% below the real market, and sold at 76846. Roughly 152 of the fleet total is that artifact. Excluding it the fleet is about +808 (+8.1%).",
-  "lottery_real_money_usd": 54.07
+  "scholar": 1014.39,
+  "analyst": 1019.97,
+  "hypecrypto": 942.14,
+  "total": 10835.15,
+  "vs_baseline_usd": 835.15,
+  "vs_baseline_pct": 8.35,
+  "day_change_usd": -99.33,
+  "day_change_note": "Yesterday's 10960.69 is not directly comparable: it carried crypto at a 1209.12 PARTIAL 13:20Z mark that the bot itself later revised to a 1183.56 close. On like-for-like closes the fleet went 10934.48 -> 10835.15, -99.33, and every cent of it came from the three 24/7 crypto books.",
+  "caveat": "The sentiment book's +518.86 is NOT a clean trading result: its 08-21 bitcoin leg was bought at 69266.1875, the 08-19 daily close to the cent and 7.6% below the real market, and sold at 76846. Roughly 152 of the fleet total is that artifact. Excluding it the fleet is about +683 (+6.8%).",
+  "lottery_real_money_usd": 52.38
  },
  "open_faults": [
   {
+   "fault": "two fleet loop instances run concurrently; a trade landing in a double-cycle window is executed twice and the later write silently replaces the first",
+   "severity": "high",
+   "status": "OPEN, ROOT CAUSE IDENTIFIED, second occurrence",
+   "detail": "Five sub-2-minute double cycles in 24h against a 13.4-minute normal cadence: 08-22 05:50:04/05:51:04, 11:30:56/11:31:54, 17:10:26/17:11:31, 22:50:49/22:51:56, and 08-23 04:30:54/04:32:55. hypecrypto's ENA sell was written at 04:30:54Z as 0.1502 / value 940.33 / cash 939.0129 and rewritten at 04:32:55Z as 0.1507 / value 943.46 / cash 942.1387, moving 3.13 in the bot's favour; the 08-22 PENGU buy was rewritten 69 seconds after its write, 0.75% against it. Both prices in each pair are legitimate quotes, so this is a duplicated-execution and last-write-wins bug, not price fabrication. Every double cycle also re-marks all ten books at a second quote. hypecrypto_state.json has no 'restatement' key, unlike hunter, sentiment, scholar, analyst and congress."
+  },
+  {
+   "fault": "hypecrypto and sentiment enter on scan membership with no lateness filter, and exit on scan non-membership with no thesis test",
+   "severity": "high",
+   "status": "OPEN, now measured directly against a working control",
+   "detail": "hypecrypto bought ENA-USD at 00:12:39Z on a FalconX story that had already moved the coin ~65% between 08-18 and 08-21, and lost 55.30. In the same 39 minutes the lottery bot refused ENAUSDT eight times on the same signal - six LATE (15.3-16.7% off its 24h low against a +15% cap) and two ROLLED OVER (-4.8% and -4.1% below its 2h high). ENA then recovered to 0.1543, above hypecrypto's 0.1507 exit, so the fade rule sold the low too. Lifetime: hypecrypto 19.9873 of fees over 8 round trips in 8 days (2.12% of a 942.14 book); sentiment 57.1186 (3.76%)."
+  },
+  {
+   "fault": "hunter's reward/risk ranker has no lateness filter and rotates the whole book at market",
+   "severity": "medium",
+   "status": "NEW this run",
+   "detail": "SOL scored 10.65 against BTC's 9.82 and the bot went all-in at 96.61 at 00:40:22Z, nine minutes before the 97.17 intraday high, into a coin already up ~32% on the week. Book -4.45% on a day BTC fell 1.6% and SOL 2.0%; 5.45 of round-trip fee against 18.0779 lifetime. Same structural gap as the hype books: a strong-momentum screen with nothing that asks how much of the move is already gone."
+  },
+  {
    "fault": "sentiment's 'hype faded' exit keys on scan membership with no cooldown and no thesis test",
    "severity": "high",
-   "status": "OPEN, quantified again this run",
-   "detail": "Four fills in 123 minutes on 08-21 afternoon - CIFR out, MSTR in, MSTR out, MRNA in - lost 31.45 with 8.08 of it fee, every exit fired because a symbol dropped off a scan and not because any price or news event occurred. Lifetime costs_paid 57.1186 = 3.76% of the book."
+   "status": "OPEN, untested over the weekend",
+   "detail": "Four fills in 123 minutes on 08-21 afternoon lost 31.45 with 8.08 of it fee, every exit firing because a symbol dropped off a scan. Book frozen at 1518.86 since; next test is Monday's open."
   },
   {
    "fault": "sentiment priced three 08-21 fills off the 2026-08-19 daily close",
    "severity": "high",
-   "status": "NOT REPRODUCED this run - watch, do not close",
-   "detail": "XRP 1.10440302, BTC 69266.1875 and CIFR 15.89000034 all matched the 08-19 close exactly. The four fills new since then are clean, so the fault did not recur; the ~152 the BTC leg banked is still inside the book's cumulative value and still contaminates every P/L comparison that includes it."
+   "status": "NOT REPRODUCED - watch, do not close",
+   "detail": "XRP 1.10440302, BTC 69266.1875 and CIFR 15.89000034 all matched the 08-19 close exactly. No fills since 08-21 to test it. The ~152 the BTC leg banked is still inside the book's cumulative value and still contaminates every P/L comparison that includes it."
   },
   {
    "fault": "commodity's 200-day-MA ranker cannot separate two nearly identical moves",
    "severity": "medium",
-   "status": "OPEN, hardened on final closes",
-   "detail": "Three complete DBC<->USO round trips in 109 minutes on 08-21 while DBC rose 0.48% and USO rose 0.07%. Book -7.92 on a day both its only candidates gained; 7.61 of that is fee."
+   "status": "OPEN, untested over the weekend",
+   "detail": "Three complete DBC<->USO round trips in 109 minutes on 08-21 while DBC rose 0.48% and USO rose 0.07%. Book -7.92 on a day both its only candidates gained; 7.61 of that is fee. Next test is Monday's open."
   },
   {
    "fault": "analyst labels a live intraday quote as 'today's close'",
    "severity": "medium",
-   "status": "OPEN, sixth session",
-   "detail": "The 08-21 decision was committed 09:30:44 ET and states 'SPY closed 765.64 today (8/21)'. The 08-21 open was 766.05 and the 08-20 close 762.60. Error series: 4.43 (08-20), 1.07 (08-19), 0.08 (08-21) - the last one small by luck, not by fix."
+   "status": "OPEN, seventh session, no new decision to test",
+   "detail": "The 08-21 decision was committed 09:30:44 ET and states 'SPY closed 765.64 today (8/21)'. Error series: 4.43 (08-20), 1.07 (08-19), 0.08 (08-21). No decision has been written since, so the defect neither recurred nor was fixed."
   },
   {
-   "fault": "hypecrypto rewrites a recorded fill after the fact with no restatement record",
-   "severity": "medium",
-   "status": "NEW this run",
-   "detail": "PENGU buy written 00:10:19Z at 0.008899 x 111114.377881, rewritten 00:11:28Z at 0.008966 x 110284.056297, value pinned at 988.81. Direction was against the bot. hypecrypto_state.json has no 'restatement' key, unlike hunter, sentiment, scholar, analyst and congress."
-  },
-  {
-   "fault": "GitHub Actions bot.yml cancels most of its own runs",
+   "fault": "GitHub Actions paper-trade-cycle cancels most of its own runs",
    "severity": "low",
-   "status": "OPEN, no operational effect",
-   "detail": "87 of the last 100 bot.yml runs concluded 'cancelled'; largest 24h gap 105 minutes (08-22 00:00Z -> 01:45Z), over the 90-minute rule. The local loop covered every minute of that window, so this is redundancy noise rather than downtime - but it makes the Actions tab useless as a health signal."
+   "status": "OPEN, no operational effect, gap widened",
+   "detail": "21 of 25 runs in 24h concluded 'cancelled'; largest gap 117.7 minutes (08-22 23:58:18Z -> 08-23 01:55:59Z), over the 90-minute rule and up from 105 minutes yesterday. The local loop covered every minute of that window with cycles at 00:12, 00:26, 00:40, 00:53, 01:07, 01:20, 01:34 and 01:47, so this is redundancy noise rather than downtime - but it makes the Actions tab useless as a health signal. deploy-pages is separately healthy: 173 runs, all success, max gap 6.2 minutes."
   }
  ]
 }
