@@ -50,6 +50,8 @@ python3 src/grok_sentinel.py || echo "[runner] watcher scan failed — riding th
 # consumes both — all write files the book reads this same cycle
 python3 src/social_heat.py || echo "[runner] heat map failed — scout runs without the heat surface"
 python3 src/binance_scout.py || echo "[runner] scout failed — book falls back to Watcher-only"
+# exchange announcements (08-23): delisting instant-exit + entry veto
+python3 src/announcement_watch.py || echo "[runner] announcements fetch failed — riding the last file"
 # publish the sentinel dashboard the same way the Actions loop does
 cp -f reports/sentinel_dashboard.html docs/sentinel.html 2>/dev/null || true
 
@@ -67,6 +69,7 @@ for f in data/lottery_state.json data/lottery_ledger.jsonl \
          data/scout_signals.json data/scout_scorecard.json data/scout_log.jsonl \
          data/social_heat.json data/breadth.json \
          data/sentinel_state.json data/sentinel_verdict.json \
+         data/announcements.json \
          docs/sentinel.html \
          docs/lottery.json docs/scout.json docs/lottery_ledger.jsonl; do
   git add "$f" 2>/dev/null || true

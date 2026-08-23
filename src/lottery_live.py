@@ -433,6 +433,13 @@ def main():
             st.pop(_k, None)
         return True
 
+    # exchange announcements (08-23): delisting = instant exit + entry veto
+    try:
+        announcements = json.loads(
+            (config.DATA / "announcements.json").read_text(encoding="utf-8"))
+    except Exception:
+        announcements = None
+
     # ---- exits ----
     # These run EVERY cycle (~10 min) off live Binance prices, deliberately
     # not off the Watcher: Grok scans arrive at most every 8h, so anything
@@ -474,6 +481,12 @@ def main():
                     prefilled=_pf):
                 held = None
 
+        # DELISTING NOTICE (08-23): ahead of every other rule — the coin is
+        # being removed; the documented path from here is -16..-33%
+        _dl = binance_live.delisting_exit(held, announcements)
+        if held and _dl:
+            if sell(_dl):
+                held = None
         if held and p and entry and p / entry - 1 <= stop_pct:
             if sell(f"STOP-LOSS ({(p / entry - 1):.1%} from entry) — "
                     f"hype that bleeds gets cut"):
@@ -727,6 +740,9 @@ def main():
         (review: running them after the pick ended the cycle's entry
         instead of trying the next coin): the exit side must absorb the
         seat (depth gate) and we never open into an unlock cliff."""
+        why = binance_live.announcement_veto(sym, announcements, now)
+        if why:
+            return why
         _bid, _ask = binance_live.depth_5pct(sym)
         why = binance_live.depth_gate(bals.get("USDT", 0.0), _bid, _ask)
         if why:

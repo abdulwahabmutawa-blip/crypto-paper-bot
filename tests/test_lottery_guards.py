@@ -356,6 +356,31 @@ assert bl.api_burst_reason([_rl, _rl, _rl], _now) is not None
 assert bl.api_burst_reason([{"event": "fill", "ts": _now.isoformat()}] * 5,
                            _now) is None
 
+# --- exchange announcements (08-23): delisting exit + entry vetoes ---------
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
+import announcement_watch as aw  # noqa: E402
+assert aw.parse_delist("Binance Will Delist ICX, SCRT, STORJ on 2026-09-03") \
+    == (["ICX", "SCRT", "STORJ"], "2026-09-03")
+assert aw.parse_delist("Notice of Removal of Spot Trading Pairs - 2026-08-21") \
+    == ([], None), "pair-removal notices name no coin in the title"
+assert aw.parse_listing("Binance Will List Foo Protocol (FOO) ...") == ["FOO"]
+assert aw.parse_listing("Binance Futures Will Launch UNITREEUSDT ...") == []
+_ann = {"delist": {"SCRTUSDT": {"title": "Binance Will Delist ICX, SCRT, "
+                                "STORJ on 2026-09-03",
+                                "effective": "2026-09-03",
+                                "released_utc": "2026-08-20T12:00:06+00:00"}},
+        "listing": {"NEWUSDT": {"title": "Binance Will List New (NEW)",
+                                "released_utc": _now.isoformat(
+                                    timespec="seconds")}}}
+assert bl.delisting_exit("SCRTUSDT", _ann) is not None
+assert bl.delisting_exit("AXSUSDT", _ann) is None
+assert bl.delisting_exit("SCRTUSDT", None) is None, "no file = no notice"
+assert bl.announcement_veto("SCRTUSDT", _ann, _now) is not None
+assert bl.announcement_veto("NEWUSDT", _ann, _now) is not None, \
+    "a 0h-old listing is a listing open"
+assert bl.announcement_veto("AXSUSDT", _ann, _now) is None
+assert bl.announcement_veto("NEWUSDT", None, _now) is None
+
 # --- tripwires: these asserts fail any casual edit that widens the blast
 # radius. Changing them is a deliberate reviewed act, which is the point.
 assert not hasattr(bl, "BOOK_CAP_USD"), \

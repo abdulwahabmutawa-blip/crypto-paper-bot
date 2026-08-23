@@ -754,6 +754,45 @@ def api_burst_reason(ledger_rows: list[dict], now: datetime) -> str | None:
     return None
 
 
+# Exchange announcements (08-23, src/announcement_watch.py): the delisting
+# notice is a documented instant drawdown (-16..-33% within hours); a
+# listing open is documented negative EV (2024 Binance listings -22.7% at
+# 3 months). Pure verdicts over the watcher's file; a missing file is "no
+# notices known" and never blocks anything.
+LISTING_OPEN_VETO_H = 72.0
+
+
+def delisting_exit(symbol: str | None, ann: dict | None) -> str | None:
+    """Held symbol under a delisting notice -> exit reason."""
+    if not symbol or not ann:
+        return None
+    ev = (ann.get("delist") or {}).get(symbol)
+    if not ev:
+        return None
+    return (f"DELISTING NOTICE — {ev.get('title', '')[:70]} (effective "
+            f"{ev.get('effective')}): documented -16..-33% within hours")
+
+
+def announcement_veto(symbol: str, ann: dict | None,
+                      now: datetime) -> str | None:
+    """Entry refusal: under a delisting notice, or listed < 72h ago."""
+    if not ann:
+        return None
+    if symbol in (ann.get("delist") or {}):
+        return "DELISTING NOTICE — never open a seat in a coin being removed"
+    ev = (ann.get("listing") or {}).get(symbol)
+    if ev and ev.get("released_utc"):
+        try:
+            age_h = (now - datetime.fromisoformat(ev["released_utc"])
+                     ).total_seconds() / 3600.0
+            if age_h < LISTING_OPEN_VETO_H:
+                return (f"LISTING OPEN — listed {age_h:.0f}h ago: buying the "
+                        f"open is documented negative EV")
+        except Exception:
+            pass
+    return None
+
+
 def trail_pct(gain: float | None) -> float:
     """Progressive trailing stop: the more a ride has paid, the tighter it
     is held. The 2y study's retention gradient is monotonic — +50-100%
