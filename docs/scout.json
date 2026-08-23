@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-23T12:11:13+00:00",
-  "scanned": 106,
+  "ts": "2026-08-23T12:16:57+00:00",
+  "scanned": 103,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "PENDLEUSDT",
-      "signal": "ignition",
-      "score": 0.3972,
-      "raw_score": 0.5178,
-      "weight": 0.767,
-      "price": 1.748,
-      "why": "trades 4.6x and volume 5.3x the prior 4h, 62% taker-buy, $76,317 burst \u2014 while price has only moved +2.0%",
-      "chg_24h": 0.053,
-      "vol_surge": 5.27,
-      "chg_1h": 0.0204,
-      "market_surge": 6.16,
-      "actionable": false,
-      "status": "benched \u2014 hit 27%, mean -1.02% over last 30 at 4h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 27%, mean -1.02% over last 30 at 4h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 37%, mean -1.89% over last 30 at 4h: not beating 4x the round trip",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 14,
+    "count": 13,
     "baseline": 39.0,
     "wave": false
   },
