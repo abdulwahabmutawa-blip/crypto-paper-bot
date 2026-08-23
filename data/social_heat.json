@@ -1,15 +1,16 @@
 {
-  "ts": "2026-08-23T13:01:29+00:00",
+  "ts": "2026-08-23T13:07:19+00:00",
   "sources": {
     "coingecko": [
-      "PUMP",
       "BTC",
       "LIT",
+      "PUMP",
       "ENA",
-      "ZEC",
-      "TAO",
       "TRUMP",
-      "NEAR",
+      "TAO",
+      "XRP",
+      "ZEC",
+      "GRAM",
       "STX",
       "ASTER"
     ],
@@ -22,8 +23,8 @@
       "AAVE",
       "XPL",
       "TRUMP",
-      "UNI",
-      "DASH"
+      "DASH",
+      "RE"
     ],
     "watcher": [
       "ZEC",
@@ -43,7 +44,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 5.5e-05,
+      "funding": 5.1e-05,
       "long_short": 1.23
     },
     {
@@ -75,7 +76,7 @@
         "movers"
       ],
       "funding": 5e-05,
-      "long_short": 1.74
+      "long_short": 1.76
     },
     {
       "symbol": "TUT",
@@ -121,6 +122,14 @@
       "funding": 0.0001
     },
     {
+      "symbol": "GRAM",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "LIT",
       "surfaces": 1,
       "sources": [
@@ -129,12 +138,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "NEAR",
+      "symbol": "RE",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
-      "funding": 0.0001
+      "funding": 5e-05
     },
     {
       "symbol": "STX",
@@ -142,7 +151,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000235
+      "funding": -0.000255
     },
     {
       "symbol": "TAO",
@@ -153,20 +162,20 @@
       "funding": 5e-05
     },
     {
-      "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "XPL",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "XRP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
