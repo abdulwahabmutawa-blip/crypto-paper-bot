@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-23T02:49:23+00:00",
-  "scanned": 146,
+  "ts": "2026-08-23T02:55:09+00:00",
+  "scanned": 148,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "APTUSDT",
+      "signal": "ignition",
+      "score": 0.4163,
+      "raw_score": 0.5428,
+      "weight": 0.767,
+      "price": 0.615,
+      "why": "trades 4.2x and volume 5.2x the prior 4h, 77% taker-buy, $73,242 burst \u2014 while price has only moved -1.9%",
+      "chg_24h": -0.0848,
+      "vol_surge": 5.16,
+      "chg_1h": -0.0191,
+      "market_surge": 1.13,
+      "actionable": false,
+      "status": "benched \u2014 hit 27%, mean -0.58% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 27%, mean -0.58% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 47%, mean -1.21% over last 30 at 4h: not beating the round trip",
