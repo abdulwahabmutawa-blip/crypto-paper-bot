@@ -1,12 +1,28 @@
 {
-  "ts": "2026-08-23T08:14:59+00:00",
-  "scanned": 116,
+  "ts": "2026-08-23T08:20:36+00:00",
+  "scanned": 117,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ZECUSDT",
+      "signal": "heat",
+      "score": 0.6198,
+      "raw_score": 0.6,
+      "weight": 1.033,
+      "price": 809.5,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.010% \u00b7 L/S 0.5",
+      "chg_24h": 0.0025,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
+      "actionable": false,
+      "status": "benched \u2014 hit 53%, mean +0.31% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 13%, mean -1.37% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 43%, mean -1.40% over last 30 at 4h: not beating the round trip",
-    "reversion": "benched \u2014 hit 46%, mean +0.57% over last 26 at 4h: not beating the round trip",
+    "reversion": "actionable",
     "heat": "benched \u2014 hit 53%, mean +0.31% over last 30 at 4h: not beating the round trip",
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
@@ -49,9 +65,9 @@
       "hit_rate_1h": 0.393,
       "mean_ret_1h": -0.0034,
       "median_ret_1h": -0.00542,
-      "n_4h": 26,
-      "hit_rate_4h": 0.462,
-      "mean_ret_4h": 0.00572,
+      "n_4h": 27,
+      "hit_rate_4h": 0.481,
+      "mean_ret_4h": 0.00794,
       "median_ret_4h": 0.00145,
       "n_24h": 25,
       "hit_rate_24h": 0.36,
