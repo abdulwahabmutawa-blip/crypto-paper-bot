@@ -1,17 +1,18 @@
 {
-  "ts": "2026-08-23T12:05:36+00:00",
+  "ts": "2026-08-23T12:11:06+00:00",
   "sources": {
     "coingecko": [
-      "ENA",
       "PUMP",
       "LIT",
+      "ENA",
       "SOL",
+      "ZEC",
       "XPL",
-      "BTC",
       "XRP",
-      "ETH",
-      "UNI",
-      "AAVE"
+      "BTC",
+      "NEAR",
+      "AAVE",
+      "UNI"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -44,7 +45,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 5.6e-05,
+      "funding": 5.2e-05,
       "long_short": 1.24
     },
     {
@@ -79,14 +80,23 @@
       "long_short": 1.05
     },
     {
+      "symbol": "NEAR",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.46
+    },
+    {
       "symbol": "SOL",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "watcher"
       ],
-      "funding": 0.0001,
-      "long_short": 2.36
+      "funding": 0.0001
     },
     {
       "symbol": "TUT",
@@ -116,18 +126,19 @@
       "funding": 5e-05
     },
     {
-      "symbol": "DOGE",
-      "surfaces": 1,
+      "symbol": "ZEC",
+      "surfaces": 2,
       "sources": [
-        "movers"
+        "coingecko",
+        "watcher"
       ],
       "funding": 0.0001
     },
     {
-      "symbol": "ETH",
+      "symbol": "DOGE",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
       "funding": 0.0001
     },
@@ -140,26 +151,10 @@
       "funding": 5e-05
     },
     {
-      "symbol": "NEAR",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "XRP",
       "surfaces": 1,
       "sources": [
         "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "watcher"
       ],
       "funding": 0.0001
     }
