@@ -1,17 +1,17 @@
 {
-  "ts": "2026-08-23T06:24:09+00:00",
+  "ts": "2026-08-23T06:29:29+00:00",
   "sources": {
     "coingecko": [
-      "PUMP",
       "ENA",
+      "PUMP",
       "BTC",
-      "SUI",
-      "PEPE",
-      "ZEC",
-      "XRP",
       "TRUMP",
-      "HBAR",
-      "DOGE"
+      "ZEC",
+      "SUI",
+      "XRP",
+      "PEPE",
+      "SOL",
+      "SHIB"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,6 +21,8 @@
       "ACE",
       "AAVE",
       "ENA",
+      "ZEC",
+      "RE",
       "U"
     ],
     "watcher": [
@@ -43,6 +45,17 @@
       ],
       "funding": 5e-05,
       "long_short": 1.02
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 0.0001,
+      "long_short": 0.5
     },
     {
       "symbol": "BTC",
@@ -81,17 +94,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 5e-05,
-      "long_short": 0.86
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "watcher"
-      ],
-      "funding": 0.0001
+      "funding": 5e-05
     },
     {
       "symbol": "AAVE",
@@ -107,23 +110,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001685
-    },
-    {
-      "symbol": "DOGE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "HBAR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": -0.001696
     },
     {
       "symbol": "PEPE",
@@ -131,6 +118,29 @@
       "sources": [
         "coingecko"
       ]
+    },
+    {
+      "symbol": "RE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -9e-06
+    },
+    {
+      "symbol": "SHIB",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ]
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "SUI",
