@@ -1,17 +1,17 @@
 {
-  "ts": "2026-08-23T15:05:05+00:00",
+  "ts": "2026-08-23T15:10:36+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
-      "BTC",
       "ZEC",
+      "BTC",
       "LIT",
+      "XRP",
       "TRUMP",
       "ENA",
-      "XRP",
-      "AAVE",
-      "ETHFI",
-      "SOL"
+      "MORPHO",
+      "PEPE",
+      "ETHFI"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,8 +19,8 @@
       "TUT",
       "TRUMP",
       "ENA",
-      "PUMP",
       "AAVE",
+      "PUMP",
       "XPL",
       "DASH",
       "ZEC"
@@ -53,7 +53,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 5e-05,
+      "funding": 4.5e-05,
       "long_short": 1.81
     },
     {
@@ -66,16 +66,6 @@
       ],
       "funding": 0.0001,
       "long_short": 0.53
-    },
-    {
-      "symbol": "AAVE",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.61
     },
     {
       "symbol": "ENA",
@@ -94,7 +84,16 @@
         "movers",
         "watcher"
       ],
-      "funding": 5e-05
+      "funding": 5e-05,
+      "long_short": 0.98
+    },
+    {
+      "symbol": "AAVE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "BTC",
@@ -129,12 +128,19 @@
       "funding": 5e-05
     },
     {
-      "symbol": "SOL",
+      "symbol": "MORPHO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0001
+      "funding": 5e-05
+    },
+    {
+      "symbol": "PEPE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ]
     },
     {
       "symbol": "XPL",
