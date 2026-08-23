@@ -1,17 +1,17 @@
 {
-  "ts": "2026-08-23T18:15:19+00:00",
+  "ts": "2026-08-23T18:21:19+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
-      "LIT",
       "BTC",
-      "LINK",
       "ZEC",
-      "AAVE",
+      "LIT",
+      "LINK",
       "SOL",
+      "AAVE",
       "SUI",
       "XRP",
-      "ENA"
+      "ETH"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,10 +20,10 @@
       "XPL",
       "AAVE",
       "PENGU",
-      "PUMP",
       "ENA",
+      "PUMP",
       "UNI",
-      "TRUMP"
+      "ZEC"
     ],
     "watcher": [
       "ZEC",
@@ -36,17 +36,6 @@
   },
   "heat": [
     {
-      "symbol": "ENA",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.26
-    },
-    {
       "symbol": "PUMP",
       "surfaces": 3,
       "sources": [
@@ -58,14 +47,35 @@
       "long_short": 1.04
     },
     {
+      "symbol": "ZEC",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 0.0001,
+      "long_short": 0.52
+    },
+    {
       "symbol": "AAVE",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 0.000123,
+      "funding": 0.000116,
       "long_short": 1.53
+    },
+    {
+      "symbol": "ENA",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.26
     },
     {
       "symbol": "TUT",
@@ -84,20 +94,18 @@
         "coingecko",
         "watcher"
       ],
-      "funding": 0.0001,
-      "long_short": 2.54
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "watcher"
-      ],
       "funding": 0.0001
     },
     {
       "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -143,14 +151,6 @@
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "TRUMP",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "UNI",

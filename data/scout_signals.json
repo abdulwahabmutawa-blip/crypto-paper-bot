@@ -1,8 +1,23 @@
 {
-  "ts": "2026-08-23T18:15:26+00:00",
-  "scanned": 108,
+  "ts": "2026-08-23T18:21:26+00:00",
+  "scanned": 109,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ZECUSDT",
+      "signal": "heat",
+      "score": 0.66,
+      "raw_score": 0.6,
+      "weight": 1.1,
+      "price": 880.95,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.010% \u00b7 L/S 0.52",
+      "chg_24h": 0.0569,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 57%, mean +0.71% over last 30 at 4h: not beating 4x the round trip",
     "breakout": "actionable",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 18,
+    "count": 17,
     "baseline": 39.0,
     "wave": false
   },
@@ -52,13 +67,13 @@
       "avg_loss_1h": -0.01806,
       "payoff_1h": 1.514,
       "n_4h": 30,
-      "hit_rate_4h": 0.533,
-      "mean_ret_4h": 0.01708,
-      "median_ret_4h": 0.0064,
+      "hit_rate_4h": 0.5,
+      "mean_ret_4h": 0.01399,
+      "median_ret_4h": 0.00254,
       "both_halves_4h": true,
-      "avg_win_4h": 0.0465,
-      "avg_loss_4h": -0.02704,
-      "payoff_4h": 1.72,
+      "avg_win_4h": 0.04436,
+      "avg_loss_4h": -0.02572,
+      "payoff_4h": 1.725,
       "n_24h": 30,
       "hit_rate_24h": 0.1,
       "mean_ret_24h": -0.06154,
