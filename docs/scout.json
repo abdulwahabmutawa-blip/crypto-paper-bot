@@ -1,33 +1,17 @@
 {
-  "ts": "2026-08-23T07:25:42+00:00",
-  "scanned": 117,
+  "ts": "2026-08-23T07:31:35+00:00",
+  "scanned": 116,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "BROCCOLI714USDT",
-      "signal": "ignition",
-      "score": 0.5851,
-      "raw_score": 0.8773,
-      "weight": 0.667,
-      "price": 0.01811,
-      "why": "trades 17.0x and volume 15.5x the prior 4h, 63% taker-buy, $50,760 burst \u2014 while price has only moved +1.2%",
-      "chg_24h": -0.0533,
-      "vol_surge": 15.51,
-      "chg_1h": 0.0123,
-      "market_surge": 4.62,
-      "actionable": false,
-      "status": "benched \u2014 hit 17%, mean -1.23% over last 30 at 4h: not beating the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
-    "ignition": "benched \u2014 hit 17%, mean -1.23% over last 30 at 4h: not beating the round trip",
+    "ignition": "benched \u2014 hit 13%, mean -1.37% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 43%, mean -1.40% over last 30 at 4h: not beating the round trip",
     "reversion": "benched \u2014 hit 46%, mean +0.57% over last 26 at 4h: not beating the round trip",
     "heat": "benched \u2014 hit 53%, mean +0.32% over last 30 at 4h: not beating the round trip",
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 14,
+    "count": 13,
     "baseline": 39.0,
     "wave": false
   },
@@ -38,12 +22,12 @@
       "mean_ret_1h": -0.0049,
       "median_ret_1h": -0.0049,
       "n_4h": 30,
-      "hit_rate_4h": 0.167,
-      "mean_ret_4h": -0.01234,
+      "hit_rate_4h": 0.133,
+      "mean_ret_4h": -0.01371,
       "median_ret_4h": -0.01301,
       "n_24h": 30,
-      "hit_rate_24h": 0.033,
-      "mean_ret_24h": -0.04585,
+      "hit_rate_24h": 0.067,
+      "mean_ret_24h": -0.04237,
       "median_ret_24h": -0.02946
     },
     "breakout": {
@@ -57,7 +41,7 @@
       "median_ret_4h": -0.02267,
       "n_24h": 30,
       "hit_rate_24h": 0.1,
-      "mean_ret_24h": -0.05964,
+      "mean_ret_24h": -0.05992,
       "median_ret_24h": -0.06389
     },
     "reversion": {
