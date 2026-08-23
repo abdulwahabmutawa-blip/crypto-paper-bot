@@ -1,8 +1,38 @@
 {
-  "ts": "2026-08-23T00:31:19+00:00",
+  "ts": "2026-08-23T00:36:36+00:00",
   "scanned": 149,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "PORTALUSDT",
+      "signal": "breakout",
+      "score": 0.7517,
+      "raw_score": 0.7517,
+      "weight": 1.0,
+      "price": 0.01376,
+      "why": "trades 6.8x, volume 9.8x, 64% taker-buy, +3.8% in an hour, at 82% of its 24h range",
+      "chg_24h": 0.197,
+      "vol_surge": 9.76,
+      "chg_1h": 0.0385,
+      "market_surge": 1.81,
+      "actionable": false,
+      "status": "benched \u2014 hit 50%, mean -1.00% over last 30 at 4h: not beating the round trip"
+    },
+    {
+      "symbol": "PUMPUSDT",
+      "signal": "heat",
+      "score": 0.7002,
+      "raw_score": 0.6,
+      "weight": 1.167,
+      "price": 0.004978,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.005% \u00b7 L/S 1.27",
+      "chg_24h": 0.2056,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 23%, mean -1.27% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 50%, mean -1.00% over last 30 at 4h: not beating the round trip",
@@ -11,7 +41,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 15,
+    "count": 16,
     "baseline": 39.0,
     "wave": false
   },
@@ -19,7 +49,7 @@
     "ignition": {
       "n_1h": 30,
       "hit_rate_1h": 0.2,
-      "mean_ret_1h": -0.00498,
+      "mean_ret_1h": -0.00588,
       "median_ret_1h": -0.00179,
       "n_4h": 30,
       "hit_rate_4h": 0.233,
@@ -40,9 +70,9 @@
       "mean_ret_4h": -0.01001,
       "median_ret_4h": 0.00266,
       "n_24h": 30,
-      "hit_rate_24h": 0.267,
-      "mean_ret_24h": -0.01261,
-      "median_ret_24h": -0.02356
+      "hit_rate_24h": 0.233,
+      "mean_ret_24h": -0.02217,
+      "median_ret_24h": -0.02447
     },
     "reversion": {
       "n_1h": 25,
