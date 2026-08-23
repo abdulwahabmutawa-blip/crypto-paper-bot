@@ -62,7 +62,9 @@ from datetime import datetime, timezone
 
 import config
 from binance_live import late_entry, fuel_verdict, book_floor_reason, \
-    FUEL_MIN_CLOSED_H
+    FUEL_MIN_CLOSED_H, climax_verdict, CLIMAX_FALLBACK_MULT  # noqa: F401
+# climax_verdict lives in binance_live since 08-23 (owner promoted the
+# climax exit to book #1 too; one pure-function home, two books share it)
 
 KEY = "playbook"
 STATE = config.DATA / "playbook_state.json"
@@ -78,7 +80,7 @@ MIN_QV_24H = 1_000_000.0     # hygiene: thinner books printed unfillable wicks
 TRIG_CLOSE_GAIN = 0.04
 TRIG_VOL_SURGE = 3.0
 TRIG_BREAK_H = 48
-CLIMAX_FALLBACK_MULT = 5.0
+# CLIMAX_FALLBACK_MULT imported from binance_live (08-23)
 TERMINAL_DIP = 0.12
 RATCHET_ARM = 0.10
 RATCHET_LOCK = 0.50
@@ -170,31 +172,6 @@ def _signed(method: str, path: str, params: dict | None = None
 
 
 # ---- pure verdict functions (tested in tests/test_playbook_guards.py) ------
-def climax_verdict(candle: list, prior_max_qv: float,
-                   prior_avg_qv: float) -> str | None:
-    """Rule 1: red close on volume >= the move's PRIOR running max (or
-    >=5x prior move average), closing in the lower half of the bar's range.
-    Caller must pass statistics that EXCLUDE this candle (review 08-21:
-    folding the candle into the max before judging it made 'exceeds the
-    running max' unsatisfiable — the rule could never fire)."""
-    try:
-        o, h, low, c, qv = (float(candle[1]), float(candle[2]),
-                            float(candle[3]), float(candle[4]),
-                            float(candle[7]))
-    except Exception:
-        return None
-    if c >= o:
-        return None
-    big = (prior_max_qv > 0 and qv >= prior_max_qv) or \
-          (prior_avg_qv > 0 and qv >= CLIMAX_FALLBACK_MULT * prior_avg_qv)
-    if not big:
-        return None
-    if h == low or (c - low) / (h - low) > 0.5:
-        return None
-    return (f"CLIMAX — red 1h close on move-max volume, closed in the lower "
-            f"half of its range: distribution, not demand")
-
-
 def terminal_dip_verdict(closes_3h: list[float], hwm: float) -> str | None:
     """Rule 2: 3h close drawdown >= 12% from high-water. Caller must pass
     POST-ENTRY closes only (review 08-21: pre-entry candles here judged the

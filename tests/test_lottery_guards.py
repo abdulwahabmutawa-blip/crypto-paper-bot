@@ -252,6 +252,21 @@ assert bl.fuel_verdict(0.8, bl.FUEL_MIN_GAIN, False) is None
 # a losing-but-fueled seat holds: the stop-loss owns that exit, not fuel
 assert bl.fuel_verdict(3.0, -0.04, False) is None
 
+# --- climax verdict (08-23, promoted from the playbook): red close on
+# move-max volume in the lower half of the range = distribution ----------
+def _bar(o, h, low, c, qv):
+    return [0, o, h, low, c, 0, 0, qv]
+assert bl.climax_verdict(_bar(100, 110, 90, 94, 500), 400, 100) is not None
+assert bl.climax_verdict(_bar(100, 110, 90, 106, 500), 400, 100) is None, \
+    "green candle is never a climax"
+assert bl.climax_verdict(_bar(100, 110, 90, 94, 120), 400, 100) is None, \
+    "small volume is not a climax"
+assert bl.climax_verdict(_bar(100, 110, 90, 104, 500), 400, 100) is None, \
+    "red but closed in the upper half — the bid held"
+assert bl.climax_verdict(_bar(100, 110, 90, 94, 500), 0, 90) is not None, \
+    "5x move-average fallback must qualify when the max is unseeded"
+assert bl.climax_verdict([], 400, 100) is None, "garbage candle judges nothing"
+
 # --- tripwires: these asserts fail any casual edit that widens the blast
 # radius. Changing them is a deliberate reviewed act, which is the point.
 assert not hasattr(bl, "BOOK_CAP_USD"), \

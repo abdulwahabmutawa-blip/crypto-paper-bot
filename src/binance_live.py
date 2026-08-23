@@ -526,6 +526,42 @@ def fuel_verdict(surge: float | None, pnl_frac: float | None,
             f"this entry bought is over and it never paid")
 
 
+# ---- CLIMAX exit (owner-directed 08-23, playbook rule #3 promoted early) ---
+# The 245-explosion study: in 8 of 10 forensic autopsies the top was
+# callable at candle close — the move's maximum-volume hour printing a red
+# close in the lower half of its range (distribution, not demand). Exiting
+# on that close surrendered ~10-20% from top tick and dodged -25..-52%
+# retraces. Live proof the same week: AXS peaked +12.2% on exactly such a
+# bar at 04:55 and was worth +1.29% twenty minutes later. Shares the
+# verdict with the playbook book (this is the one pure-function home).
+CLIMAX_FALLBACK_MULT = 5.0   # when the running max is noisy: 5x move avg
+
+
+def climax_verdict(candle: list, prior_max_qv: float,
+                   prior_avg_qv: float) -> str | None:
+    """Red 1h close on volume >= the move's PRIOR running max (or >=5x the
+    prior move average), closing in the lower half of the bar's range.
+    Caller must pass statistics that EXCLUDE this candle (review 08-21:
+    folding it in first made 'exceeds the running max' unsatisfiable).
+    Candle = one CLOSED 1h kline row."""
+    try:
+        o, h, low, c, qv = (float(candle[1]), float(candle[2]),
+                            float(candle[3]), float(candle[4]),
+                            float(candle[7]))
+    except Exception:
+        return None
+    if c >= o:
+        return None                       # not red
+    big = (prior_max_qv > 0 and qv >= prior_max_qv) or \
+          (prior_avg_qv > 0 and qv >= CLIMAX_FALLBACK_MULT * prior_avg_qv)
+    if not big:
+        return None
+    if h == low or (c - low) / (h - low) > 0.5:
+        return None                       # closed in upper half — bid held
+    return ("CLIMAX — red 1h close on move-max volume, closed in the lower "
+            "half of its range: distribution, not demand")
+
+
 def trail_pct(gain: float | None) -> float:
     """Progressive trailing stop: the more a ride has paid, the tighter it
     is held. The 2y study's retention gradient is monotonic — +50-100%

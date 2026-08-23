@@ -39,6 +39,9 @@ fast exits and the Watcher owns the slow qualitative ones:
   3. FUEL GONE (08-21, replaced the stall clock): volume surge dead vs
      pre-entry baseline AND under +3% AND no breadth wave — thesis-based,
      not clock-based (binance_live.fuel_verdict)
+  3b. CLIMAX (08-23): red 1h close on the move's max volume closing in the
+     lower half of its range — the top being distributed in real time
+     (binance_live.climax_verdict; 8/10 forensic autopsies + AXS live)
   4. max hold 24h — hype has a half-life, never marry a coin
   5. momentum gone: no longer a top-25 24h mover
   6. Watcher SEVERE, or scans stale > 24h (a blind risk officer grounds it)
@@ -218,6 +221,9 @@ def main():
         st["spent_usd"] = None
         st.pop("hwm", None)
         st.pop("entry_time", None)
+        for _k in ("move_max_qv", "move_qv_sum", "move_qv_n",
+                   "move_last_ms"):
+            st.pop(_k, None)
     if not st["held_symbol"] and ledger_open:
         st["held_symbol"] = ledger_open["symbol"]
         st["entry_price"] = ledger_open.get("price")
@@ -411,6 +417,9 @@ def main():
         st["spent_usd"] = None
         st.pop("hwm", None)
         st.pop("entry_time", None)
+        for _k in ("move_max_qv", "move_qv_sum", "move_qv_n",
+                   "move_last_ms"):
+            st.pop(_k, None)
         return True
 
     # ---- exits ----
@@ -458,6 +467,52 @@ def main():
             if sell(f"STOP-LOSS ({(p / entry - 1):.1%} from entry) — "
                     f"hype that bleeds gets cut"):
                 held = None
+        # CLIMAX EXIT (owner-directed 08-23, playbook rule promoted early):
+        # a red 1h close on the move's maximum volume, closing in the lower
+        # half of its range, IS the top being distributed — 8/10 forensic
+        # autopsies, and AXS's own +12.2%→+1.29% waterfall started on
+        # exactly such a bar. Judged on POST-ENTRY closed candles only,
+        # each folded into the move statistics exactly once, and the judged
+        # candle is always compared against statistics that EXCLUDE it.
+        if held and entry and st.get("entry_time"):
+            try:
+                _ems = int(datetime.fromisoformat(
+                    st["entry_time"]).timestamp() * 1000)
+            except Exception:
+                _ems = None
+            _kl = binance_live._call(
+                "GET", "/v3/klines",
+                {"symbol": held, "interval": "1h", "limit": 56}) \
+                if _ems else None
+            if _kl:
+                import time as _time
+                _now_ms = _time.time() * 1000
+                _fresh = [r for r in _kl
+                          if float(r[6]) < _now_ms
+                          and float(r[0]) >= _ems
+                          and float(r[0]) > float(st.get("move_last_ms")
+                                                  or 0)]
+                if _fresh:
+                    _pmax = float(st.get("move_max_qv") or 0.0)
+                    _psum = float(st.get("move_qv_sum") or 0.0)
+                    _pn = int(st.get("move_qv_n") or 0)
+                    for r in _fresh[:-1]:
+                        _qv = float(r[7])
+                        _pmax = max(_pmax, _qv)
+                        _psum += _qv
+                        _pn += 1
+                    _why = None
+                    if _pn >= 1:
+                        _why = binance_live.climax_verdict(
+                            _fresh[-1], _pmax,
+                            (_psum / _pn) if _pn else 0.0)
+                    _qv = float(_fresh[-1][7])
+                    st["move_max_qv"] = max(_pmax, _qv)
+                    st["move_qv_sum"] = _psum + _qv
+                    st["move_qv_n"] = _pn + 1
+                    st["move_last_ms"] = int(float(_fresh[-1][0]))
+                    if _why and sell(_why):
+                        held = None
         # PROFIT RATCHET (exit audit 08-19): a ride that has paid never goes
         # red again; a ride that paid well keeps half its peak. This is the
         # asymmetry fix — winners peaked +4..8% and were round-tripping into
@@ -715,6 +770,10 @@ def main():
                     st["spent_usd"] = round(fill["price"] * fill["qty"], 4)
                     # seeds the trailing stop and the hold clock
                     st["hwm"] = fill["price"]
+                    # climax-exit move statistics start empty at entry
+                    st["move_max_qv"] = st["move_qv_sum"] = 0.0
+                    st["move_qv_n"] = 0
+                    st["move_last_ms"] = 0
                     st["entry_time"] = now.isoformat(timespec="seconds")
                     st["entry_scan_ts"], st["entry_source"] = scan_ts, source
                     st.setdefault("entries", {})
