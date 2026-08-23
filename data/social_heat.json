@@ -1,18 +1,18 @@
 {
-  "ts": "2026-08-23T11:32:09+00:00",
+  "ts": "2026-08-23T11:37:27+00:00",
   "sources": {
     "coingecko": [
       "ENA",
       "PUMP",
       "LIT",
       "SOL",
-      "BTC",
       "XPL",
-      "ZEC",
+      "BTC",
       "XRP",
-      "CHIP",
-      "BNB",
-      "UNI"
+      "ZEC",
+      "TRUMP",
+      "TAO",
+      "AAVE"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -45,7 +45,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 8.7e-05,
+      "funding": 8.2e-05,
       "long_short": 1.25
     },
     {
@@ -71,6 +71,16 @@
       "long_short": 0.53
     },
     {
+      "symbol": "AAVE",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.54
+    },
+    {
       "symbol": "BTC",
       "surfaces": 2,
       "sources": [
@@ -87,8 +97,7 @@
         "coingecko",
         "watcher"
       ],
-      "funding": 0.0001,
-      "long_short": 2.32
+      "funding": 0.0001
     },
     {
       "symbol": "TUT",
@@ -96,39 +105,6 @@
       "sources": [
         "movers",
         "watcher"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "UNI",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "AAVE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "BNB",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 8e-05
-    },
-    {
-      "symbol": "CHIP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
       ],
       "funding": 5e-05
     },
@@ -150,6 +126,30 @@
     },
     {
       "symbol": "NEAR",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "TAO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "TRUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "UNI",
       "surfaces": 1,
       "sources": [
         "movers"
