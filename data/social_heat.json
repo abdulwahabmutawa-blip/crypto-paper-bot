@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-23T11:54:19+00:00",
+  "ts": "2026-08-23T12:00:19+00:00",
   "sources": {
     "coingecko": [
       "ENA",
@@ -7,24 +7,23 @@
       "LIT",
       "SOL",
       "XPL",
-      "XRP",
       "BTC",
-      "ASTER",
+      "XRP",
+      "ETH",
       "UNI",
-      "AAVE",
-      "ZEC"
+      "AAVE"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "TUT",
-      "PUMP",
       "ENA",
+      "PUMP",
+      "XPL",
       "UNI",
-      "AAVE",
       "DASH",
       "ZEC",
-      "DOGE"
+      "NEAR"
     ],
     "watcher": [
       "ZEC",
@@ -45,7 +44,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 6.4e-05,
+      "funding": 5.9e-05,
       "long_short": 1.25
     },
     {
@@ -58,27 +57,6 @@
       ],
       "funding": 5e-05,
       "long_short": 1.09
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": 0.0001,
-      "long_short": 0.53
-    },
-    {
-      "symbol": "AAVE",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.54
     },
     {
       "symbol": "BTC",
@@ -97,7 +75,8 @@
         "coingecko",
         "watcher"
       ],
-      "funding": 0.0001
+      "funding": 0.0001,
+      "long_short": 2.32
     },
     {
       "symbol": "TUT",
@@ -106,7 +85,8 @@
         "movers",
         "watcher"
       ],
-      "funding": 5e-05
+      "funding": 5e-05,
+      "long_short": 0.94
     },
     {
       "symbol": "UNI",
@@ -118,12 +98,30 @@
       "funding": 0.0001
     },
     {
-      "symbol": "ASTER",
+      "symbol": "XPL",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "AAVE",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 0.0001
     },
     {
       "symbol": "DASH",
@@ -134,10 +132,10 @@
       "funding": 0.0001
     },
     {
-      "symbol": "DOGE",
+      "symbol": "ETH",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
       "funding": 0.0001
     },
@@ -150,12 +148,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "XPL",
+      "symbol": "NEAR",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
-      "funding": 5e-05
+      "funding": 0.0001
     },
     {
       "symbol": "XRP",

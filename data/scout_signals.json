@@ -1,10 +1,26 @@
 {
-  "ts": "2026-08-23T11:54:23+00:00",
-  "scanned": 106,
+  "ts": "2026-08-23T12:00:27+00:00",
+  "scanned": 105,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "OPUSDT",
+      "signal": "ignition",
+      "score": 0.5592,
+      "raw_score": 0.7291,
+      "weight": 0.767,
+      "price": 0.1103,
+      "why": "trades 5.7x and volume 18.5x the prior 4h, 62% taker-buy, $133,462 burst \u2014 while price has only moved +0.2%",
+      "chg_24h": 0.011,
+      "vol_surge": 18.46,
+      "chg_1h": 0.0018,
+      "market_surge": 6.31,
+      "actionable": false,
+      "status": "benched \u2014 hit 27%, mean -1.05% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
-    "ignition": "benched \u2014 hit 23%, mean -1.16% over last 30 at 4h: not beating the round trip",
+    "ignition": "benched \u2014 hit 27%, mean -1.05% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 37%, mean -1.89% over last 30 at 4h: not beating the round trip",
     "reversion": "actionable",
     "heat": "benched \u2014 hit 53%, mean +0.45% over last 30 at 4h: not beating the round trip",
@@ -22,8 +38,8 @@
       "mean_ret_1h": -0.00166,
       "median_ret_1h": -0.00038,
       "n_4h": 30,
-      "hit_rate_4h": 0.233,
-      "mean_ret_4h": -0.0116,
+      "hit_rate_4h": 0.267,
+      "mean_ret_4h": -0.01046,
       "median_ret_4h": -0.01301,
       "n_24h": 30,
       "hit_rate_24h": 0.067,
