@@ -1,29 +1,29 @@
 {
-  "ts": "2026-08-23T18:44:19+00:00",
+  "ts": "2026-08-23T18:50:14+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
       "ZEC",
-      "LIT",
       "BTC",
-      "TAO",
-      "XRP",
+      "LIT",
       "SOL",
-      "LINK",
+      "XRP",
+      "TAO",
       "PENDLE",
-      "VIRTUAL"
+      "LINK",
+      "AAVE"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
+      "AAVE",
       "PENGU",
       "XPL",
-      "AAVE",
+      "TRUMP",
       "ENA",
       "UNI",
       "PUMP",
-      "TAO",
-      "TUT"
+      "TAO"
     ],
     "watcher": [
       "ZEC",
@@ -47,6 +47,16 @@
       "long_short": 1.04
     },
     {
+      "symbol": "AAVE",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.53
+    },
+    {
       "symbol": "ENA",
       "surfaces": 2,
       "sources": [
@@ -67,16 +77,6 @@
       "long_short": 1.53
     },
     {
-      "symbol": "TUT",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": 5e-05,
-      "long_short": 0.91
-    },
-    {
       "symbol": "XRP",
       "surfaces": 2,
       "sources": [
@@ -92,14 +92,6 @@
       "sources": [
         "coingecko",
         "watcher"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "AAVE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
       ],
       "funding": 0.0001
     },
@@ -152,20 +144,28 @@
       "funding": 0.0001
     },
     {
+      "symbol": "TRUMP",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "TUT",
+      "surfaces": 1,
+      "sources": [
+        "watcher"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "UNI",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "VIRTUAL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "XPL",
