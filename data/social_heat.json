@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-23T06:18:59+00:00",
+  "ts": "2026-08-23T06:24:09+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
@@ -21,7 +21,7 @@
       "ACE",
       "AAVE",
       "ENA",
-      "ZEC"
+      "U"
     ],
     "watcher": [
       "ZEC",
@@ -43,17 +43,6 @@
       ],
       "funding": 5e-05,
       "long_short": 1.02
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": 0.0001,
-      "long_short": 0.5
     },
     {
       "symbol": "BTC",
@@ -92,7 +81,17 @@
         "movers",
         "watcher"
       ],
-      "funding": 5e-05
+      "funding": 5e-05,
+      "long_short": 0.86
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "watcher"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "AAVE",
@@ -108,7 +107,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001658
+      "funding": -0.001685
     },
     {
       "symbol": "DOGE",
@@ -140,6 +139,13 @@
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "U",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
     },
     {
       "symbol": "XRP",

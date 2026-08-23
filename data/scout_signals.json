@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-23T06:19:05+00:00",
+  "ts": "2026-08-23T06:24:17+00:00",
   "scanned": 123,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "CRCLBUSDT",
-      "signal": "ignition",
-      "score": 0.4662,
-      "raw_score": 0.666,
-      "weight": 0.7,
-      "price": 86.93,
-      "why": "trades 5.0x and volume 8.6x the prior 4h, 63% taker-buy, $65,427 burst \u2014 while price has only moved +0.3%",
-      "chg_24h": -0.0126,
-      "vol_surge": 8.56,
-      "chg_1h": 0.0027,
-      "market_surge": 1.13,
-      "actionable": false,
-      "status": "benched \u2014 hit 20%, mean -1.17% over last 30 at 4h: not beating the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 20%, mean -1.17% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 43%, mean -1.40% over last 30 at 4h: not beating the round trip",
@@ -42,9 +26,9 @@
       "mean_ret_4h": -0.01167,
       "median_ret_4h": -0.01301,
       "n_24h": 30,
-      "hit_rate_24h": 0.1,
-      "mean_ret_24h": -0.0433,
-      "median_ret_24h": -0.02946
+      "hit_rate_24h": 0.033,
+      "mean_ret_24h": -0.04715,
+      "median_ret_24h": -0.03823
     },
     "breakout": {
       "n_1h": 30,
