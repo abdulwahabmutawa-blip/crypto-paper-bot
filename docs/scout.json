@@ -1,38 +1,8 @@
 {
-  "ts": "2026-08-23T20:53:23+00:00",
-  "scanned": 109,
+  "ts": "2026-08-23T20:59:26+00:00",
+  "scanned": 110,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "SEIUSDT",
-      "signal": "ignition",
-      "score": 0.7859,
-      "raw_score": 0.7144,
-      "weight": 1.1,
-      "price": 0.04791,
-      "why": "trades 4.3x and volume 15.3x the prior 4h, 77% taker-buy, $100,062 burst \u2014 while price has only moved -0.0%",
-      "chg_24h": 0.0086,
-      "vol_surge": 15.31,
-      "chg_1h": -0.0004,
-      "market_surge": 17.57,
-      "actionable": false,
-      "status": "benched \u2014 hit 60%, mean +0.80% over last 30 at 4h: not beating 4x the round trip"
-    },
-    {
-      "symbol": "VIRTUALUSDT",
-      "signal": "breakout",
-      "score": 0.622,
-      "raw_score": 0.6022,
-      "weight": 1.033,
-      "price": 0.7341,
-      "why": "trades 4.7x, volume 6.9x, 70% taker-buy, +2.2% in an hour, at 95% of its 24h range",
-      "chg_24h": 0.0529,
-      "vol_surge": 6.88,
-      "chg_1h": 0.0223,
-      "market_surge": 1.13,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 60%, mean +0.80% over last 30 at 4h: not beating 4x the round trip",
     "breakout": "actionable",
@@ -41,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 16,
+    "count": 17,
     "baseline": 39.0,
     "wave": false
   },
@@ -64,13 +34,13 @@
       "avg_loss_4h": -0.01412,
       "payoff_4h": 1.47,
       "n_24h": 30,
-      "hit_rate_24h": 0.367,
-      "mean_ret_24h": -0.00639,
-      "median_ret_24h": -0.00405,
+      "hit_rate_24h": 0.4,
+      "mean_ret_24h": -7e-05,
+      "median_ret_24h": -0.00042,
       "both_halves_24h": false,
-      "avg_win_24h": 0.05138,
-      "avg_loss_24h": -0.04755,
-      "payoff_24h": 1.08
+      "avg_win_24h": 0.0489,
+      "avg_loss_24h": -0.03985,
+      "payoff_24h": 1.227
     },
     "breakout": {
       "n_1h": 30,
