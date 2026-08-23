@@ -1,17 +1,17 @@
 {
-  "ts": "2026-08-23T02:43:29+00:00",
+  "ts": "2026-08-23T02:49:19+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
       "TRUMP",
       "SOL",
       "ETH",
-      "BTC",
+      "XRP",
       "PEPE",
       "XMR",
-      "RENDER",
-      "XRP",
-      "ICP"
+      "BTC",
+      "ONDO",
+      "BONK"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,7 +21,8 @@
       "TRUMP",
       "POL",
       "ENA",
-      "AAVE"
+      "AAVE",
+      "RLUSD"
     ],
     "watcher": [
       "ZEC",
@@ -52,7 +53,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 1.5e-05,
+      "funding": 2.6e-05,
       "long_short": 1.55
     },
     {
@@ -72,7 +73,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 9.3e-05,
+      "funding": 7.8e-05,
       "long_short": 0.9
     },
     {
@@ -82,6 +83,13 @@
         "movers"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "BONK",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ]
     },
     {
       "symbol": "BTC",
@@ -100,12 +108,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "ICP",
+      "symbol": "ONDO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0001
+      "funding": -7.8e-05
     },
     {
       "symbol": "PEPE",
@@ -123,12 +131,11 @@
       "funding": 5e-05
     },
     {
-      "symbol": "RENDER",
+      "symbol": "RLUSD",
       "surfaces": 1,
       "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+        "movers"
+      ]
     },
     {
       "symbol": "SOL",
