@@ -1,33 +1,17 @@
 {
-  "ts": "2026-08-23T10:37:12+00:00",
+  "ts": "2026-08-23T10:42:35+00:00",
   "scanned": 107,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "AAVEUSDT",
-      "signal": "breakout",
-      "score": 0.5367,
-      "raw_score": 0.5964,
-      "weight": 0.9,
-      "price": 127.64,
-      "why": "trades 4.0x, volume 6.5x, 72% taker-buy, +3.2% in an hour, at 93% of its 24h range",
-      "chg_24h": 0.056,
-      "vol_surge": 6.48,
-      "chg_1h": 0.0322,
-      "market_surge": 1.12,
-      "actionable": false,
-      "status": "benched \u2014 hit 40%, mean -1.66% over last 30 at 4h: not beating the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 23%, mean -1.13% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 40%, mean -1.66% over last 30 at 4h: not beating the round trip",
     "reversion": "actionable",
-    "heat": "actionable",
+    "heat": "benched \u2014 hit 53%, mean +0.45% over last 30 at 4h: not beating the round trip",
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 16,
+    "count": 14,
     "baseline": 39.0,
     "wave": false
   },
@@ -77,11 +61,11 @@
     "heat": {
       "n_1h": 30,
       "hit_rate_1h": 0.433,
-      "mean_ret_1h": 0.01108,
+      "mean_ret_1h": 0.00337,
       "median_ret_1h": -0.0002,
       "n_4h": 30,
       "hit_rate_4h": 0.533,
-      "mean_ret_4h": 0.00672,
+      "mean_ret_4h": 0.00453,
       "median_ret_4h": 0.00752,
       "n_24h": 30,
       "hit_rate_24h": 0.767,
