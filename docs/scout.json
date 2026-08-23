@@ -1,8 +1,26 @@
 {
-  "ts": "2026-08-23T04:55:36+00:00",
-  "scanned": 143,
+  "ts": "2026-08-23T05:00:57+00:00",
+  "scanned": 145,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "LUNCUSDT",
+      "signal": "reversion",
+      "score": 0.4843,
+      "raw_score": 0.4843,
+      "weight": 1.0,
+      "price": 5.257e-05,
+      "why": "down -18% on the day (bottom decile of the market), now +0.9% over 15m with 3 green candles",
+      "chg_24h": -0.1767,
+      "vol_surge": 3.28,
+      "chg_1h": 0.0023,
+      "market_surge": 0.6,
+      "oi_drop": null,
+      "funding": null,
+      "actionable": false,
+      "status": "benched \u2014 hit 44%, mean +0.51% over last 25 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 13%, mean -1.38% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 43%, mean -1.40% over last 30 at 4h: not beating the round trip",
