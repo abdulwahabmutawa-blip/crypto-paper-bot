@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-23T07:20:29+00:00",
-  "scanned": 116,
+  "ts": "2026-08-23T07:25:42+00:00",
+  "scanned": 117,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "BROCCOLI714USDT",
+      "signal": "ignition",
+      "score": 0.5851,
+      "raw_score": 0.8773,
+      "weight": 0.667,
+      "price": 0.01811,
+      "why": "trades 17.0x and volume 15.5x the prior 4h, 63% taker-buy, $50,760 burst \u2014 while price has only moved +1.2%",
+      "chg_24h": -0.0533,
+      "vol_surge": 15.51,
+      "chg_1h": 0.0123,
+      "market_surge": 4.62,
+      "actionable": false,
+      "status": "benched \u2014 hit 17%, mean -1.23% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 17%, mean -1.23% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 43%, mean -1.40% over last 30 at 4h: not beating the round trip",
