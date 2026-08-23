@@ -1,28 +1,13 @@
 {
-  "ts": "2026-08-23T18:21:26+00:00",
+  "ts": "2026-08-23T18:27:17+00:00",
   "scanned": 109,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ZECUSDT",
-      "signal": "heat",
-      "score": 0.66,
-      "raw_score": 0.6,
-      "weight": 1.1,
-      "price": 880.95,
-      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.010% \u00b7 L/S 0.52",
-      "chg_24h": 0.0569,
-      "vol_surge": null,
-      "chg_1h": null,
-      "market_surge": 3,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 57%, mean +0.71% over last 30 at 4h: not beating 4x the round trip",
     "breakout": "actionable",
     "reversion": "benched \u2014 only one half of the last 28 paid at 4h: regime luck, not a signal",
-    "heat": "actionable",
+    "heat": "benched \u2014 only one half of the last 30 paid at 4h: regime luck, not a signal",
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
@@ -33,13 +18,13 @@
   "scorecard": {
     "ignition": {
       "n_1h": 30,
-      "hit_rate_1h": 0.3,
-      "mean_ret_1h": 0.00072,
+      "hit_rate_1h": 0.267,
+      "mean_ret_1h": 0.00067,
       "median_ret_1h": 0.00042,
       "both_halves_1h": false,
-      "avg_win_1h": 0.0076,
+      "avg_win_1h": 0.00751,
       "avg_loss_1h": -0.00769,
-      "payoff_1h": 0.989,
+      "payoff_1h": 0.977,
       "n_4h": 30,
       "hit_rate_4h": 0.567,
       "mean_ret_4h": 0.00708,
@@ -120,12 +105,12 @@
       "payoff_1h": 1.969,
       "n_4h": 30,
       "hit_rate_4h": 0.6,
-      "mean_ret_4h": 0.00977,
-      "median_ret_4h": 0.00854,
-      "both_halves_4h": true,
-      "avg_win_4h": 0.03871,
+      "mean_ret_4h": 0.0104,
+      "median_ret_4h": 0.00911,
+      "both_halves_4h": false,
+      "avg_win_4h": 0.03976,
       "avg_loss_4h": -0.03363,
-      "payoff_4h": 1.151,
+      "payoff_4h": 1.182,
       "n_24h": 30,
       "hit_rate_24h": 0.733,
       "mean_ret_24h": 0.05366,
