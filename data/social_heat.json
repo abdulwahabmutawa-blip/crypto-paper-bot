@@ -1,17 +1,17 @@
 {
-  "ts": "2026-08-23T06:46:57+00:00",
+  "ts": "2026-08-23T06:52:59+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
-      "BTC",
       "ENA",
+      "BTC",
       "TRUMP",
-      "SOL",
       "ZEC",
-      "SHIB",
-      "COTI",
       "XRP",
-      "PEPE"
+      "SOL",
+      "SHIB",
+      "SUI",
+      "ARB"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,8 +19,7 @@
       "TUT",
       "PUMP",
       "ACE",
-      "AAVE",
-      "ENA"
+      "AAVE"
     ],
     "watcher": [
       "ZEC",
@@ -32,17 +31,6 @@
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "ENA",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.22
-    },
     {
       "symbol": "PUMP",
       "surfaces": 3,
@@ -63,6 +51,16 @@
       ],
       "funding": 0.0001,
       "long_short": 0.96
+    },
+    {
+      "symbol": "ENA",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "watcher"
+      ],
+      "funding": 5.2e-05,
+      "long_short": 1.22
     },
     {
       "symbol": "TUT",
@@ -98,22 +96,15 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001739
+      "funding": -0.001755
     },
     {
-      "symbol": "COTI",
+      "symbol": "ARB",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -0.004002
-    },
-    {
-      "symbol": "PEPE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ]
+      "funding": 0.0001
     },
     {
       "symbol": "SHIB",
@@ -124,6 +115,14 @@
     },
     {
       "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "SUI",
       "surfaces": 1,
       "sources": [
         "coingecko"
