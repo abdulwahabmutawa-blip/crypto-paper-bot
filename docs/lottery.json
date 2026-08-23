@@ -1,15 +1,13 @@
 {
   "created": "2026-08-15",
-  "held_symbol": null,
-  "entry_price": null,
-  "units": 0.0,
-  "entry_scan_ts": null,
-  "entry_source": null,
-  "stopped": {
-    "XRPUSDT": "2026-08-22T22:25:48+00:00"
-  },
+  "held_symbol": "XRPUSDT",
+  "entry_price": 1.4959,
+  "units": 35.1,
+  "entry_scan_ts": "2026-08-23T00:25:59+00:00",
+  "entry_source": "watcher",
+  "stopped": {},
   "entries": {
-    "2026-08-22": 2
+    "2026-08-23": 1
   },
   "realized": [
     {
@@ -410,13 +408,26 @@
     }
   ],
   "last_value_usd": 52.58,
-  "last_updated_utc": "2026-08-23T01:22:08+00:00",
-  "open_position": null,
-  "spent_usd": null,
+  "last_updated_utc": "2026-08-23T01:27:58+00:00",
+  "open_position": {
+    "symbol": "XRPUSDT",
+    "entry_time": "2026-08-23T01:27:58+00:00",
+    "entry_price": 1.4959,
+    "current_price": 1.4956,
+    "units": 35.1,
+    "spent_usd": 52.5061,
+    "value_usd": 52.4956,
+    "pnl_usd": -0.0105,
+    "pnl_pct": -0.02,
+    "source": "watcher"
+  },
+  "spent_usd": 52.5061,
   "no_pair": {
     "scan_ts": "2026-08-23T00:25:59+00:00",
     "syms": []
   },
   "wave_bonus_date": "2026-08-22",
-  "book_hwm_usd": 58.4265
+  "book_hwm_usd": 58.4265,
+  "hwm": 1.4959,
+  "entry_time": "2026-08-23T01:27:58+00:00"
 }
