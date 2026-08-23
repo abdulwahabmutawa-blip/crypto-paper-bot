@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-23T11:03:48+00:00",
-  "scanned": 106,
+  "ts": "2026-08-23T11:09:37+00:00",
+  "scanned": 107,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "EIGENUSDT",
+      "signal": "breakout",
+      "score": 0.6556,
+      "raw_score": 0.7284,
+      "weight": 0.9,
+      "price": 0.2259,
+      "why": "trades 4.9x, volume 10.1x, 63% taker-buy, +5.4% in an hour, at 95% of its 24h range",
+      "chg_24h": 0.086,
+      "vol_surge": 10.14,
+      "chg_1h": 0.0536,
+      "market_surge": 15.41,
+      "actionable": false,
+      "status": "benched \u2014 hit 40%, mean -1.66% over last 30 at 4h: not beating the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 23%, mean -1.13% over last 30 at 4h: not beating the round trip",
     "breakout": "benched \u2014 hit 40%, mean -1.66% over last 30 at 4h: not beating the round trip",
