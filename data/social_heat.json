@@ -1,14 +1,15 @@
 {
-  "ts": "2026-08-23T10:26:29+00:00",
+  "ts": "2026-08-23T10:31:58+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
       "ENA",
       "LIT",
-      "SOL",
       "ZEC",
+      "SOL",
       "AAVE",
       "PEPE",
+      "RENDER",
       "LINK",
       "BTC"
     ],
@@ -19,10 +20,10 @@
       "ENA",
       "PUMP",
       "AAVE",
-      "ZEC",
       "UNI",
+      "ZEC",
       "DOGE",
-      "RE"
+      "DASH"
     ],
     "watcher": [
       "ZEC",
@@ -42,7 +43,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.000129,
+      "funding": 0.00012,
       "long_short": 1.31
     },
     {
@@ -97,6 +98,14 @@
       "funding": 5e-05
     },
     {
+      "symbol": "DASH",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "DOGE",
       "surfaces": 1,
       "sources": [
@@ -128,10 +137,10 @@
       ]
     },
     {
-      "symbol": "RE",
+      "symbol": "RENDER",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
       "funding": 5e-05
     },
