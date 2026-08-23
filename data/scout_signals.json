@@ -1,8 +1,37 @@
 {
-  "ts": "2026-08-23T21:33:25+00:00",
-  "scanned": 108,
+  "ts": "2026-08-23T21:38:34+00:00",
+  "scanned": 106,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "NEIROUSDT",
+      "signal": "ignition",
+      "score": 0.7779,
+      "raw_score": 0.6866,
+      "weight": 1.133,
+      "price": 9.468e-05,
+      "why": "trades 5.5x and volume 21.8x the prior 4h, 70% taker-buy, $122,149 burst \u2014 while price has only moved +2.3%",
+      "chg_24h": 0.0337,
+      "vol_surge": 21.83,
+      "chg_1h": 0.0235,
+      "market_surge": 1.51,
+      "actionable": true
+    },
+    {
+      "symbol": "NEIROUSDT",
+      "signal": "breakout",
+      "score": 0.6918,
+      "raw_score": 0.6697,
+      "weight": 1.033,
+      "price": 9.468e-05,
+      "why": "trades 5.5x, volume 21.8x, 70% taker-buy, +2.3% in an hour, at 87% of its 24h range",
+      "chg_24h": 0.0337,
+      "vol_surge": 21.83,
+      "chg_1h": 0.0235,
+      "market_surge": 1.51,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +40,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 21,
+    "count": 22,
     "baseline": 39.0,
     "wave": false
   },
