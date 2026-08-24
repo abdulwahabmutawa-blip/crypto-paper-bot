@@ -1,21 +1,36 @@
 {
-  "ts": "2026-08-24T11:55:26+00:00",
+  "ts": "2026-08-24T12:01:05+00:00",
   "scanned": 108,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "AEROUSDT",
+      "symbol": "FETUSDT",
       "signal": "breakout",
-      "score": 0.6399,
-      "raw_score": 0.6399,
+      "score": 0.7584,
+      "raw_score": 0.7584,
       "weight": 1.0,
-      "price": 0.5198,
-      "why": "trades 4.5x, volume 6.4x, 84% taker-buy, +3.3% in an hour, at 96% of its 24h range",
-      "chg_24h": 0.1269,
-      "vol_surge": 6.38,
+      "price": 0.169,
+      "why": "trades 7.3x, volume 12.4x, 66% taker-buy, +3.3% in an hour, at 87% of its 24h range",
+      "chg_24h": 0.0254,
+      "vol_surge": 12.43,
       "chg_1h": 0.033,
-      "market_surge": 6.45,
+      "market_surge": 3.67,
       "actionable": true
+    },
+    {
+      "symbol": "FETUSDT",
+      "signal": "ignition",
+      "score": 0.5553,
+      "raw_score": 0.724,
+      "weight": 0.767,
+      "price": 0.169,
+      "why": "trades 7.3x and volume 12.4x the prior 4h, 66% taker-buy, $272,098 burst \u2014 while price has only moved +3.3%",
+      "chg_24h": 0.0254,
+      "vol_surge": 12.43,
+      "chg_1h": 0.033,
+      "market_surge": 3.67,
+      "actionable": false,
+      "status": "benched \u2014 hit 27%, mean +0.15% over last 30 at 4h: not beating 4x the round trip"
     }
   ],
   "gate": {
@@ -26,7 +41,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 14,
+    "count": 15,
     "baseline": 39.0,
     "wave": false
   },
@@ -49,13 +64,13 @@
       "avg_loss_4h": -0.01731,
       "payoff_4h": 2.615,
       "n_24h": 30,
-      "hit_rate_24h": 0.533,
-      "mean_ret_24h": 0.01192,
-      "median_ret_24h": 0.00843,
-      "both_halves_24h": false,
-      "avg_win_24h": 0.03303,
-      "avg_loss_24h": -0.01568,
-      "payoff_24h": 2.106
+      "hit_rate_24h": 0.5,
+      "mean_ret_24h": 0.01077,
+      "median_ret_24h": 0.00344,
+      "both_halves_24h": true,
+      "avg_win_24h": 0.03327,
+      "avg_loss_24h": -0.01495,
+      "payoff_24h": 2.225
     },
     "breakout": {
       "n_1h": 30,
