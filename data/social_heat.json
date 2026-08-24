@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-24T16:51:09+00:00",
+  "ts": "2026-08-24T16:56:29+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -15,14 +15,14 @@
     "reddit": [],
     "stocktwits": [],
     "movers": [
+      "TAO",
       "MSTRB",
       "PENGU",
-      "TAO",
       "BTC",
       "NEAR",
-      "ETH",
       "BNB",
-      "PEPE"
+      "ETH",
+      "SOL"
     ],
     "watcher": [
       "ETH",
@@ -64,6 +64,16 @@
       "long_short": 1.5
     },
     {
+      "symbol": "SOL",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.23
+    },
+    {
       "symbol": "AERO",
       "surfaces": 1,
       "sources": [
@@ -77,7 +87,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 2.2e-05
+      "funding": 2e-05
     },
     {
       "symbol": "ENA",
@@ -108,14 +118,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 9.2e-05
-    },
-    {
-      "symbol": "PEPE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
+      "funding": 8.8e-05
     },
     {
       "symbol": "PUMP",
@@ -124,14 +127,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "SOL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "TAO",
@@ -147,7 +142,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1e-06
+      "funding": 7e-06
     },
     {
       "symbol": "VIRTUAL",
