@@ -1,16 +1,16 @@
 {
-  "ts": "2026-08-24T17:01:59+00:00",
+  "ts": "2026-08-24T17:07:59+00:00",
   "sources": {
     "coingecko": [
       "BTC",
-      "PUMP",
       "AERO",
-      "LIT",
       "SOL",
-      "ENA",
+      "INJ",
+      "LIT",
+      "PUMP",
       "ZEC",
-      "SUI",
-      "INJ"
+      "TAO",
+      "ONDO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -18,11 +18,11 @@
       "TAO",
       "MSTRB",
       "BTC",
-      "PENGU",
       "ETH",
+      "BNB",
+      "PENGU",
       "PAXG",
-      "XAUT",
-      "BNB"
+      "XAUT"
     ],
     "watcher": [
       "ETH",
@@ -51,7 +51,7 @@
         "watcher"
       ],
       "funding": 0.0001,
-      "long_short": 2.34
+      "long_short": 2.36
     },
     {
       "symbol": "PENGU",
@@ -62,6 +62,16 @@
       ],
       "funding": 5e-05,
       "long_short": 1.53
+    },
+    {
+      "symbol": "TAO",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.73
     },
     {
       "symbol": "AERO",
@@ -77,15 +87,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 1.7e-05
-    },
-    {
-      "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": 1.6e-05
     },
     {
       "symbol": "INJ",
@@ -111,12 +113,20 @@
       ]
     },
     {
+      "symbol": "ONDO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "PAXG",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -4e-06
+      "funding": -5e-06
     },
     {
       "symbol": "PUMP",
@@ -135,28 +145,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "XAUT",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -3e-06
+      "funding": 0.0
     },
     {
       "symbol": "ZEC",
