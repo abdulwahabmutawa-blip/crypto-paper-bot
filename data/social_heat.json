@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-24T15:12:29+00:00",
+  "ts": "2026-08-24T15:17:49+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -18,9 +18,9 @@
       "TAO",
       "ETH",
       "BTC",
-      "RE",
       "NEAR",
-      "PEPE"
+      "RE",
+      "BNB"
     ],
     "watcher": [
       "ZEC",
@@ -79,6 +79,14 @@
       "funding": 5e-05
     },
     {
+      "symbol": "BNB",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 2e-05
+    },
+    {
       "symbol": "ENA",
       "surfaces": 1,
       "sources": [
@@ -108,13 +116,6 @@
         "movers"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "PEPE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
     },
     {
       "symbol": "RE",
