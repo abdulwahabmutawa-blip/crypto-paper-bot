@@ -1,15 +1,16 @@
 {
-  "ts": "2026-08-24T17:13:19+00:00",
+  "ts": "2026-08-24T17:19:19+00:00",
   "sources": {
     "coingecko": [
       "BTC",
+      "PUMP",
       "AERO",
-      "SOL",
       "INJ",
       "LIT",
-      "PUMP",
+      "SOL",
       "ZEC",
       "TAO",
+      "VIRTUAL",
       "ONDO"
     ],
     "reddit": [],
@@ -19,8 +20,8 @@
       "TAO",
       "BTC",
       "ETH",
-      "PAXG",
       "XAUT",
+      "PAXG",
       "BNB",
       "SOL"
     ],
@@ -87,7 +88,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 1.5e-05
+      "funding": 1.3e-05
     },
     {
       "symbol": "INJ",
@@ -126,7 +127,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -6e-06
+      "funding": -4e-06
     },
     {
       "symbol": "PENGU",
@@ -145,12 +146,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "VIRTUAL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "XAUT",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 4e-06
+      "funding": 7e-06
     },
     {
       "symbol": "ZEC",
