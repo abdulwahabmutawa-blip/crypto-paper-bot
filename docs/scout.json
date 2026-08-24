@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-24T03:22:04+00:00",
+  "ts": "2026-08-24T03:27:36+00:00",
   "scanned": 113,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "HOMEUSDT",
-      "signal": "ignition",
-      "score": 0.5713,
-      "raw_score": 0.5713,
-      "weight": 1.0,
-      "price": 0.00633,
-      "why": "trades 5.6x and volume 5.7x the prior 4h, 66% taker-buy, $63,861 burst \u2014 while price has only moved +2.4%",
-      "chg_24h": 0.0411,
-      "vol_surge": 5.68,
-      "chg_1h": 0.0243,
-      "market_surge": 3.7,
-      "actionable": false,
-      "status": "benched \u2014 hit 50%, mean +0.04% over last 30 at 4h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 50%, mean +0.04% over last 30 at 4h: not beating 4x the round trip",
     "breakout": "benched \u2014 only one half of the last 30 paid at 4h: regime luck, not a signal",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 14,
+    "count": 17,
     "baseline": 39.0,
     "wave": false
   },
