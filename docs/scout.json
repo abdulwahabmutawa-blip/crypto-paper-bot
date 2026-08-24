@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-24T06:04:26+00:00",
+  "ts": "2026-08-24T06:09:36+00:00",
   "scanned": 112,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "AAVEUSDT",
+      "signal": "heat",
+      "score": 0.5802,
+      "raw_score": 0.6,
+      "weight": 0.967,
+      "price": 143.95,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.010% \u00b7 L/S 1.5",
+      "chg_24h": 0.1848,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
+      "actionable": false,
+      "status": "benched \u2014 hit 47%, mean +0.56% over last 30 at 4h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 33%, mean -0.56% over last 30 at 4h: not beating 4x the round trip",
     "breakout": "benched \u2014 only one half of the last 30 paid at 4h: regime luck, not a signal",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 32,
+    "count": 34,
     "baseline": 39.0,
     "wave": false
   },
@@ -34,23 +50,23 @@
       "avg_loss_4h": -0.01654,
       "payoff_4h": 0.653,
       "n_24h": 30,
-      "hit_rate_24h": 0.7,
-      "mean_ret_24h": 0.01764,
-      "median_ret_24h": 0.01551,
+      "hit_rate_24h": 0.733,
+      "mean_ret_24h": 0.02195,
+      "median_ret_24h": 0.01913,
       "both_halves_24h": true,
-      "avg_win_24h": 0.03676,
-      "avg_loss_24h": -0.02697,
-      "payoff_24h": 1.363
+      "avg_win_24h": 0.03728,
+      "avg_loss_24h": -0.02019,
+      "payoff_24h": 1.847
     },
     "breakout": {
       "n_1h": 30,
-      "hit_rate_1h": 0.467,
-      "mean_ret_1h": 0.00862,
-      "median_ret_1h": 0.0015,
+      "hit_rate_1h": 0.433,
+      "mean_ret_1h": 0.00768,
+      "median_ret_1h": 0.00057,
       "both_halves_1h": true,
-      "avg_win_1h": 0.0307,
-      "avg_loss_1h": -0.01661,
-      "payoff_1h": 1.849,
+      "avg_win_1h": 0.03189,
+      "avg_loss_1h": -0.01653,
+      "payoff_1h": 1.929,
       "n_4h": 30,
       "hit_rate_4h": 0.467,
       "mean_ret_4h": 0.01099,
