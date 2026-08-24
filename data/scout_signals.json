@@ -1,41 +1,8 @@
 {
-  "ts": "2026-08-24T17:52:33+00:00",
+  "ts": "2026-08-24T17:58:19+00:00",
   "scanned": 115,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "VIRTUALUSDT",
-      "signal": "heat",
-      "score": 0.6546,
-      "raw_score": 0.6,
-      "weight": 1.091,
-      "price": 0.7806,
-      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.005% \u00b7 L/S 1.37",
-      "chg_24h": 0.0919,
-      "vol_surge": null,
-      "chg_1h": null,
-      "market_surge": 3,
-      "actionable": false,
-      "status": "probation \u2014 103 rows but only 6.7 independent 24h windows (span 161h): overlapping labels are not a sample"
-    },
-    {
-      "symbol": "SNXXBUSDT",
-      "signal": "reversion",
-      "score": 0.3823,
-      "raw_score": 0.3823,
-      "weight": 1.0,
-      "price": 12.81,
-      "why": "down -17% on the day (bottom decile of the market), now +0.6% over 15m with 2 green candles",
-      "chg_24h": -0.1676,
-      "vol_surge": 0.39,
-      "chg_1h": -0.0221,
-      "market_surge": 0.75,
-      "oi_drop": null,
-      "funding": null,
-      "actionable": false,
-      "status": "probation \u2014 28 rows but only 4.8 independent 24h windows (span 116h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 126h): overlapping labels are not a sample",
     "breakout": "probation \u2014 220 rows but only 6.7 independent 24h windows (span 162h): overlapping labels are not a sample",
