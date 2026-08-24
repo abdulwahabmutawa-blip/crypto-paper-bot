@@ -1,15 +1,16 @@
 {
-  "ts": "2026-08-24T01:23:28+00:00",
+  "ts": "2026-08-24T01:28:59+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
       "BTC",
       "ZEC",
-      "LIT",
-      "MORPHO",
       "ENA",
       "TAO",
+      "LIT",
+      "MORPHO",
       "XRP",
+      "PEPE",
       "SUI"
     ],
     "reddit": [],
@@ -22,7 +23,7 @@
       "TAO",
       "XPL",
       "RE",
-      "UNI"
+      "ZEC"
     ],
     "watcher": [
       "ZEC",
@@ -32,6 +33,17 @@
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "ZEC",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 0.0001,
+      "long_short": 0.52
+    },
     {
       "symbol": "PENGU",
       "surfaces": 2,
@@ -61,16 +73,6 @@
       ],
       "funding": 0.0001,
       "long_short": 2.5
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "watcher"
-      ],
-      "funding": 0.0001,
-      "long_short": 0.52
     },
     {
       "symbol": "AAVE",
@@ -121,6 +123,13 @@
       "funding": 0.0001
     },
     {
+      "symbol": "PEPE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ]
+    },
+    {
       "symbol": "PUMP",
       "surfaces": 1,
       "sources": [
@@ -151,14 +160,6 @@
         "movers"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "XPL",
