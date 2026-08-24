@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-24T06:30:49+00:00",
+  "ts": "2026-08-24T06:36:09+00:00",
   "sources": {
     "coingecko": [
       "LIT",
@@ -20,10 +20,10 @@
       "PENGU",
       "AAVE",
       "XPL",
-      "ENA",
       "UNI",
       "NEAR",
-      "TAO"
+      "TAO",
+      "WLD"
     ],
     "watcher": [
       "LIT",
@@ -48,10 +48,9 @@
     },
     {
       "symbol": "ENA",
-      "surfaces": 3,
+      "surfaces": 2,
       "sources": [
         "coingecko",
-        "movers",
         "watcher"
       ],
       "funding": 5e-05,
@@ -142,10 +141,18 @@
       "sources": [
         "movers"
       ],
-      "funding": 5.2e-05
+      "funding": 5e-05
     },
     {
       "symbol": "UNI",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "WLD",
       "surfaces": 1,
       "sources": [
         "movers"
