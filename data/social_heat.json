@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-24T18:03:29+00:00",
+  "ts": "2026-08-24T18:09:09+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -8,9 +8,9 @@
       "INJ",
       "ZEC",
       "LIT",
-      "SOL",
       "ETH",
-      "XRP"
+      "SOL",
+      "SUI"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,8 +21,8 @@
       "BTC",
       "ETH",
       "BNB",
-      "XAUT",
-      "SOL"
+      "SOL",
+      "XAUT"
     ],
     "watcher": [
       "VIRTUAL"
@@ -118,6 +118,14 @@
       "funding": 5e-05
     },
     {
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "TAO",
       "surfaces": 1,
       "sources": [
@@ -131,15 +139,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 3.2e-05
-    },
-    {
-      "symbol": "XRP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": 3.6e-05
     },
     {
       "symbol": "ZEC",
