@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-24T20:42:12+00:00",
-  "scanned": 113,
+  "ts": "2026-08-24T20:47:29+00:00",
+  "scanned": 116,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "WBETHUSDT",
-      "signal": "ignition",
-      "score": 0.9611,
-      "raw_score": 0.9787,
-      "weight": 0.982,
-      "price": 2732.54,
-      "why": "trades 13.7x and volume 112.3x the prior 4h, 93% taker-buy, $54,994 burst \u2014 while price has only moved +0.2%",
-      "chg_24h": 0.0108,
-      "vol_surge": 112.29,
-      "chg_1h": 0.002,
-      "market_surge": 5.94,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 128h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 128h): overlapping labels are not a sample",
     "breakout": "probation \u2014 222 rows but only 6.8 independent 24h windows (span 163h): overlapping labels are not a sample",
