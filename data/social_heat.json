@@ -1,14 +1,16 @@
 {
-  "ts": "2026-08-24T23:02:36+00:00",
+  "ts": "2026-08-24T23:08:26+00:00",
   "sources": {
     "coingecko": [
-      "AERO",
       "PUMP",
+      "AERO",
       "ETH",
       "SUI",
-      "LINK",
+      "BTC",
+      "SOL",
+      "LIT",
       "ONDO",
-      "SOL"
+      "ENA"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -18,9 +20,9 @@
       "MSTRB",
       "BTC",
       "XAUT",
-      "RE",
       "ETH",
-      "LINK"
+      "LINK",
+      "RE"
     ],
     "watcher": [
       "VIRTUAL"
@@ -29,24 +31,24 @@
   },
   "heat": [
     {
+      "symbol": "BTC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 6.1e-05,
+      "long_short": 0.94
+    },
+    {
       "symbol": "ETH",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 9.3e-05,
-      "long_short": 2.42
-    },
-    {
-      "symbol": "LINK",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.66
+      "funding": 9.4e-05,
+      "long_short": 2.41
     },
     {
       "symbol": "SOL",
@@ -77,12 +79,28 @@
       "funding": 5e-05
     },
     {
-      "symbol": "BTC",
+      "symbol": "ENA",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "LINK",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 6.2e-05
+      "funding": 0.0001
+    },
+    {
+      "symbol": "LIT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "MSTRB",
@@ -129,7 +147,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.5e-05
+      "funding": 4.6e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."

@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-24T23:02:43+00:00",
-  "scanned": 116,
+  "ts": "2026-08-24T23:08:32+00:00",
+  "scanned": 117,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SNDKBUSDT",
+      "signal": "ignition",
+      "score": 0.5756,
+      "raw_score": 0.5862,
+      "weight": 0.982,
+      "price": 1480.7,
+      "why": "trades 4.3x and volume 5.6x the prior 4h, 73% taker-buy, $72,147 burst \u2014 while price has only moved -0.3%",
+      "chg_24h": -0.0847,
+      "vol_surge": 5.63,
+      "chg_1h": -0.0029,
+      "market_surge": 0.04,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.4 independent 24h windows (span 129h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.4 independent 24h windows (span 129h): overlapping labels are not a sample",
     "breakout": "probation \u2014 225 rows but only 6.9 independent 24h windows (span 166h): overlapping labels are not a sample",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 11,
+    "count": 10,
     "baseline": 28.0,
     "wave": false
   },
@@ -27,16 +43,16 @@
       "avg_win_1h": 0.01179,
       "avg_loss_1h": -0.01454,
       "payoff_1h": 0.811,
-      "span_h_4h": 131.2,
-      "n_eff_4h": 32.81,
+      "span_h_4h": 130.8,
+      "n_eff_4h": 32.7,
       "n_4h": 400,
       "hit_rate_4h": 0.482,
-      "mean_ret_4h": 0.00337,
+      "mean_ret_4h": 0.0034,
       "median_ret_4h": 0.00098,
       "both_halves_4h": false,
-      "avg_win_4h": 0.02589,
-      "avg_loss_4h": -0.02177,
-      "payoff_4h": 1.189,
+      "avg_win_4h": 0.02577,
+      "avg_loss_4h": -0.02184,
+      "payoff_4h": 1.18,
       "span_h_24h": 129.4,
       "n_eff_24h": 5.39,
       "n_24h": 400,
