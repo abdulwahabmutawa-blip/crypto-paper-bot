@@ -158,15 +158,40 @@ assert sc.universe_ok({"symbol": "AAAUSDT", "quoteVolume": "9000000",
     "a liquid coin that actually moves must pass"
 
 # --- the gate: probation -> earned -> benched --------------------------------
+# FIX 08-24: every scout signal is judged on the horizon it is HELD (24h),
+# and on INDEPENDENT windows (n_eff), not raw rows.
+assert sc.ACT_HORIZON_H["ignition"] == 24, \
+    "ignition is held up to 48h; judging its 4h record tests the wrong race"
+assert sc.ACT_HORIZON_H["breakout"] == 24
 ok, why = sc.signal_actionable({"signals": {}}, "ignition")
 assert not ok and "probation" in why, "no record under current rules = probation"
-ok, _ = sc.signal_actionable({"signals": {"ignition": {
-    "n_4h": 30, "hit_rate_4h": 0.55, "mean_ret_4h": 0.012}}}, "ignition")
-assert ok, "a signal that beats fees over a real sample must arm"
+good = {"signals": {"ignition": {
+    "n_24h": 30, "n_eff_24h": 10.0, "span_h_24h": 240.0,
+    "hit_rate_24h": 0.55, "mean_ret_24h": 0.012,
+    "both_halves_24h": True, "payoff_24h": 1.4}}}
+ok, _ = sc.signal_actionable(good, "ignition")
+assert ok, "a signal that beats fees over an INDEPENDENT sample must arm"
 ok, why = sc.signal_actionable({"signals": {"ignition": {
-    "n_4h": 30, "hit_rate_4h": 0.24, "mean_ret_4h": -0.0007}}}, "ignition")
+    "n_24h": 30, "n_eff_24h": 10.0, "hit_rate_24h": 0.24,
+    "mean_ret_24h": -0.0007}}}, "ignition")
 assert not ok and "benched" in why, \
     "the live 08-16 record (24% hit, negative mean) must NOT be tradeable"
+
+# INDEPENDENCE: 30 rows fired inside nine hours, each scored over its next
+# 24h, are one observation repeated - not a sample. This is the exact live
+# case on 08-24 (400 ignition rows, span 128h, n_eff 5.3).
+crowded = {"signals": {"ignition": {
+    "n_24h": 400, "n_eff_24h": 5.3, "span_h_24h": 128.0,
+    "hit_rate_24h": 0.65, "mean_ret_24h": 0.034,
+    "both_halves_24h": True, "payoff_24h": 1.6}}}
+ok, why = sc.signal_actionable(crowded, "ignition")
+assert not ok and "independent" in why, \
+    "overlapping labels must not arm a signal, however many rows there are"
+# ...and the same record spread over real time DOES arm
+spread = {"signals": {"ignition": dict(crowded["signals"]["ignition"],
+                                       n_eff_24h=9.0, span_h_24h=216.0)}}
+assert sc.signal_actionable(spread, "ignition")[0], \
+    "the same edge, measured across days, is a sample"
 
 # --- re-signal cooldown: one event, one log row ------------------------------
 hist = [{"ts": "2026-08-15T12:00:00+00:00", "symbol": "BICOUSDT",
@@ -249,14 +274,16 @@ assert sc.prorated_day_volume(0.0, 0.5) == 0.0
 
 # --- the gate demands MEANINGFULLY beating fees (3x round trip) --------------
 ok, why = sc.signal_actionable({"signals": {"ignition": {
-    "n_4h": 30, "hit_rate_4h": 0.60, "mean_ret_4h": 0.004}}}, "ignition")
+    "n_24h": 30, "n_eff_24h": 10.0, "hit_rate_24h": 0.60,
+    "mean_ret_24h": 0.004}}}, "ignition")
 assert not ok and "round trip" in why,     "a mean that only matches fees is trading for nothing"
 
 # --- revival is judged on its OWN clock (24h), not the sprint clock ----------
 assert "revival" in sc.SIGNAL_TYPES
 card24 = {"signals": {"revival": {
     "n_4h": 30, "hit_rate_4h": 0.10, "mean_ret_4h": -0.02,      # bad sprint
-    "n_24h": 30, "hit_rate_24h": 0.55, "mean_ret_24h": 0.03}}}  # good marathon
+    "n_24h": 30, "n_eff_24h": 12.0, "span_h_24h": 288.0,
+    "hit_rate_24h": 0.55, "mean_ret_24h": 0.03}}}               # good marathon
 ok, _ = sc.signal_actionable(card24, "revival")
 assert ok, "a grind signal with a winning 24h record must arm despite 4h noise"
 ok, why = sc.signal_actionable({"signals": {"revival": {

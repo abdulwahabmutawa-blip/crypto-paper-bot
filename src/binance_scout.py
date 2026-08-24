@@ -226,10 +226,16 @@ RULESET = 3                 # bump when signal RULES change: rows from other
                             # prior. Bumped while every v2 record was hours
                             # old, deliberately: resetting an empty ledger
                             # is free, resetting a week-old one is not.
-ROLL_WINDOW = 30            # rolling resolved samples per signal/horizon:
-                            # the card tracks what a signal IS, not what it
-                            # once was, so a benched signal can earn its way
-                            # back and a lucky streak decays
+ROLL_WINDOW = 30            # legacy count cap (kept for other readers)
+ROLL_DAYS = 14.0            # FIX 08-24: the rolling window is now TIME-based.
+                            # A COUNT window was self-defeating for fast
+                            # signals: 30 ignition samples filled in NINE
+                            # HOURS, so the window could never span more than
+                            # a fraction of a day and every "sample" measured
+                            # almost the same 24h forward window. The card
+                            # still tracks what a signal IS, not what it once
+                            # was - it just measures it over real time.
+ROLL_CAP = 400              # memory ceiling inside the time window
 RESIGNAL_COOLDOWN_H = 3.0   # [EVIDENCE — log autopsy 08-16] BICO was flagged
                             # 5x in 70 min while falling, BCH 4x, U 5x. One
                             # event, five rows: pseudo-replication pollutes
@@ -237,12 +243,28 @@ RESIGNAL_COOLDOWN_H = 3.0   # [EVIDENCE — log autopsy 08-16] BICO was flagged
 # THE GATE — what a signal type must show (current ruleset, rolling window)
 # before the real-money book may act on its candidates:
 MIN_ACT_SAMPLES = 12        # [JUDGEMENT] fewer is a coin-flip streak
+MIN_ACT_NEFF = 8.0          # FIX 08-24: INDEPENDENT windows, not raw rows.
+                            # 30 signals fired inside 9 hours and each scored
+                            # by its next 24h are ~1 observation repeated 30
+                            # times, not 30 observations - the same
+                            # overlapping-label trap the Oracle's scoring
+                            # plan handles with clustering. n_eff = min(n,
+                            # span_hours / horizon_hours), so arming needs a
+                            # record spread across days, not a busy morning.
 MIN_ACT_HIT = 0.40
 FEE_K = 4.0                 # REVAMP 08-23: mean must beat 4x the round trip
 MIN_PAYOFF = 1.0            # avg win / avg loss unless hit >= 65%
 # Each signal is judged on ITS OWN clock: benching a days-scale grind
 # signal on 4h outcomes would test a marathoner over a sprint distance.
-ACT_HORIZON_H = {"revival": 24}     # everything else defaults to 4
+# FIX 08-24 (horizon mismatch): judge a signal on the horizon we actually
+# HOLD it. exit_params holds ignition 48h, every other scout seat 24h,
+# revival 28d - yet the gate judged everything but revival on its 4h record.
+# It cut BOTH ways: ignition was benched on 4h (-0.56%) while its 24h record
+# paid (+1.88%, 67% hit, payoff 1.60), and breakout PASSED on 4h (+1.10%)
+# while losing -5.10% over the 24h we hold it. 24h is the longest horizon
+# the scorecard resolves, so it is the closest honest proxy for every seat.
+ACT_HORIZON_H = {"revival": 24, "ignition": 24, "breakout": 24,
+                 "reversion": 24, "heat": 24}
 
 # ---- heat (cross-source social agreement, from social_heat.py) --------------
 HEAT_MIN_SURFACES = 3       # [JUDGEMENT] 1 surface is noise, 2 is a maybe,
@@ -553,6 +575,14 @@ def signal_weight(card: dict, signal: str) -> float:
     return max(WEIGHT_FLOOR, min(WEIGHT_CEIL, 0.5 + hit))
 
 
+def _ts(raw):
+    """Parse a log timestamp, or None. Used by the scorecard's time window."""
+    try:
+        return datetime.fromisoformat(str(raw))
+    except Exception:
+        return None
+
+
 def signal_actionable(card: dict, signal: str) -> tuple[bool, str]:
     """The gate the real-money book obeys. Earned, never assumed: a signal
     type with no record under the CURRENT rules is on probation — its
@@ -566,6 +596,14 @@ def signal_actionable(card: dict, signal: str) -> tuple[bool, str]:
     if n < MIN_ACT_SAMPLES:
         return False, (f"probation — {n}/{MIN_ACT_SAMPLES} resolved {h}h "
                        f"samples under ruleset {RULESET}")
+    # INDEPENDENCE (fix 08-24): rows fired minutes apart and scored over the
+    # same forward window are one observation wearing many hats.
+    n_eff = s.get(f"n_eff_{h}h")
+    if n_eff is not None and n_eff < MIN_ACT_NEFF:
+        return False, (f"probation — {n} rows but only {n_eff:.1f} "
+                       f"independent {h}h windows "
+                       f"(span {s.get(f'span_h_{h}h', 0):.0f}h): overlapping "
+                       f"labels are not a sample")
     hit = s.get(f"hit_rate_{h}h", 0.0)
     mean = s.get(f"mean_ret_{h}h", 0.0)
     # FEE_K x fees, not 1x: a mean that only matches the round trip is
@@ -923,10 +961,26 @@ def resolve_outcomes(now: datetime) -> tuple[dict, list[dict]]:
         entry = {}
         for h in HORIZONS_H:
             # `is not None`: sentinels are excluded, a legitimate 0.0 counts
-            rets = [r[f"ret_{h}h"] for r in live
-                    if r.get("signal") == sig
-                    and r.get(f"ret_{h}h") is not None][-ROLL_WINDOW:]
+            # TIME window (fix 08-24), and keep the timestamps: span and
+            # independence are now part of the record, not assumptions.
+            pairs = []
+            for r in live:
+                if r.get("signal") != sig or r.get(f"ret_{h}h") is None:
+                    continue
+                t = _ts(r.get("ts"))
+                if t is None or (now - t).total_seconds() > ROLL_DAYS * 86400:
+                    continue
+                pairs.append((t, r[f"ret_{h}h"]))
+            pairs.sort()
+            pairs = pairs[-ROLL_CAP:]
+            rets = [x for _t, x in pairs]
             if rets:
+                span_h = ((pairs[-1][0] - pairs[0][0]).total_seconds() / 3600.0
+                          if len(pairs) > 1 else 0.0)
+                entry[f"span_h_{h}h"] = round(span_h, 1)
+                # independent observations: labels measured over the same
+                # forward window are one observation, however many rows
+                entry[f"n_eff_{h}h"] = round(min(len(rets), span_h / h), 2)
                 entry[f"n_{h}h"] = len(rets)
                 entry[f"hit_rate_{h}h"] = round(
                     sum(1 for x in rets if x > ROUND_TRIP) / len(rets), 3)
@@ -938,11 +992,18 @@ def resolve_outcomes(now: datetime) -> tuple[dict, list[dict]]:
                 # payoff shape predict better than any mean): record
                 # whether BOTH halves of the rolling record pay, and the
                 # avg-win/avg-loss payoff ratio. The gate reads both.
-                half = len(rets) // 2
-                if half >= 3:
-                    a, b = rets[:half], rets[half:]
-                    entry[f"both_halves_{h}h"] = bool(
-                        sum(a) / len(a) > 0 and sum(b) / len(b) > 0)
+                # halves split at the TIME midpoint (fix 08-24): a count
+                # split put both "halves" inside the same nine hours, which
+                # tested nothing. A time split asks the real question - did
+                # this signal pay in the first half of the window AND the
+                # second?
+                if len(rets) >= 6 and span_h > 0:
+                    mid = pairs[0][0] + (pairs[-1][0] - pairs[0][0]) / 2
+                    a = [x for t, x in pairs if t <= mid]
+                    b = [x for t, x in pairs if t > mid]
+                    if len(a) >= 3 and len(b) >= 3:
+                        entry[f"both_halves_{h}h"] = bool(
+                            sum(a) / len(a) > 0 and sum(b) / len(b) > 0)
                 wins = [x for x in rets if x > 0]
                 losses = [x for x in rets if x < 0]
                 if wins:
