@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-24T05:47:19+00:00",
+  "ts": "2026-08-24T05:52:29+00:00",
   "sources": {
     "coingecko": [
       "LIT",
@@ -8,9 +8,9 @@
       "ETH",
       "SUI",
       "ZEC",
+      "ENA",
       "SOL",
-      "TAO",
-      "TRUMP"
+      "TAO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -18,9 +18,9 @@
       "PENGU",
       "AAVE",
       "TUT",
+      "ENA",
       "UNI",
       "NEAR",
-      "ENA",
       "XPL",
       "TAO"
     ],
@@ -35,6 +35,17 @@
   },
   "heat": [
     {
+      "symbol": "ENA",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.43
+    },
+    {
       "symbol": "AAVE",
       "surfaces": 2,
       "sources": [
@@ -43,16 +54,6 @@
       ],
       "funding": 0.0001,
       "long_short": 1.48
-    },
-    {
-      "symbol": "ENA",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.43
     },
     {
       "symbol": "LIT",
@@ -133,20 +134,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "TRUMP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "TUT",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 8.7e-05
+      "funding": 9.4e-05
     },
     {
       "symbol": "UNI",
