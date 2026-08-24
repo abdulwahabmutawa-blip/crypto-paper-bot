@@ -1,15 +1,15 @@
 {
-  "ts": "2026-08-24T21:33:34+00:00",
+  "ts": "2026-08-24T21:39:02+00:00",
   "sources": {
     "coingecko": [
-      "AERO",
       "PUMP",
+      "AERO",
       "LIT",
       "SOL",
-      "PEPE",
       "SUI",
-      "BONK",
-      "BTC"
+      "BTC",
+      "PEPE",
+      "TAO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -17,9 +17,10 @@
       "VIRTUAL",
       "MSTRB",
       "BTC",
+      "SOL",
       "PAXG",
       "XAUT",
-      "SOL",
+      "ETH",
       "RLUSD"
     ],
     "watcher": [
@@ -35,7 +36,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 7.1e-05,
+      "funding": 7e-05,
       "long_short": 0.94
     },
     {
@@ -67,11 +68,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "BONK",
+      "symbol": "ETH",
       "surfaces": 1,
       "sources": [
-        "coingecko"
-      ]
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "LIT",
@@ -94,7 +96,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 1.2e-05
+      "funding": 1.1e-05
     },
     {
       "symbol": "PEPE",
@@ -125,6 +127,14 @@
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "TAO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "XAUT",
