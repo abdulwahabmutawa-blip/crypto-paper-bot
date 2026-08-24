@@ -1,39 +1,8 @@
 {
-  "ts": "2026-08-24T00:11:35+00:00",
-  "scanned": 112,
+  "ts": "2026-08-24T00:17:26+00:00",
+  "scanned": 111,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "SKHYBUSDT",
-      "signal": "ignition",
-      "score": 1.0827,
-      "raw_score": 0.9556,
-      "weight": 1.133,
-      "price": 166.53,
-      "why": "trades 76.1x and volume 228.7x the prior 4h, 92% taker-buy, $730,319 burst \u2014 while price has only moved -0.9%",
-      "chg_24h": 0.0157,
-      "vol_surge": 228.73,
-      "chg_1h": -0.0093,
-      "market_surge": 45.93,
-      "actionable": false,
-      "status": "benched \u2014 hit 63%, mean +0.80% over last 30 at 4h: not beating 4x the round trip"
-    },
-    {
-      "symbol": "ONGUSDT",
-      "signal": "ignition",
-      "score": 1.0228,
-      "raw_score": 0.9027,
-      "weight": 1.133,
-      "price": 0.07171,
-      "why": "trades 26.2x and volume 12.0x the prior 4h, 62% taker-buy, $65,954 burst \u2014 while price has only moved -0.1%",
-      "chg_24h": 0.0263,
-      "vol_surge": 12.04,
-      "chg_1h": -0.0006,
-      "market_surge": 1.18,
-      "actionable": false,
-      "status": "benched \u2014 hit 63%, mean +0.80% over last 30 at 4h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 63%, mean +0.80% over last 30 at 4h: not beating 4x the round trip",
     "breakout": "actionable",
