@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-24T17:41:19+00:00",
+  "ts": "2026-08-24T17:47:26+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -20,10 +20,10 @@
       "MSTRB",
       "TAO",
       "BTC",
-      "PENGU",
       "ETH",
       "XAUT",
-      "PAXG"
+      "PAXG",
+      "BNB"
     ],
     "watcher": [
       "ETH",
@@ -55,16 +55,6 @@
       "long_short": 2.36
     },
     {
-      "symbol": "PENGU",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.53
-    },
-    {
       "symbol": "VIRTUAL",
       "surfaces": 2,
       "sources": [
@@ -81,6 +71,14 @@
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "BNB",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 4e-06
     },
     {
       "symbol": "INJ",
@@ -111,7 +109,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.7e-05
+      "funding": 4.4e-05
     },
     {
       "symbol": "ONDO",
@@ -127,7 +125,15 @@
       "sources": [
         "movers"
       ],
-      "funding": 1e-06
+      "funding": -2e-06
+    },
+    {
+      "symbol": "PENGU",
+      "surfaces": 1,
+      "sources": [
+        "watcher"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "PUMP",
@@ -159,7 +165,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 1.8e-05
+      "funding": 2.2e-05
     },
     {
       "symbol": "ZEC",
