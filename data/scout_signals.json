@@ -1,17 +1,33 @@
 {
-  "ts": "2026-08-24T07:38:26+00:00",
-  "scanned": 111,
+  "ts": "2026-08-24T07:43:53+00:00",
+  "scanned": 112,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "XLMUSDT",
+      "signal": "ignition",
+      "score": 0.6693,
+      "raw_score": 0.8034,
+      "weight": 0.833,
+      "price": 0.1949,
+      "why": "trades 6.9x and volume 21.5x the prior 4h, 74% taker-buy, $1,028,302 burst \u2014 while price has only moved +0.3%",
+      "chg_24h": 0.0242,
+      "vol_surge": 21.54,
+      "chg_1h": 0.0031,
+      "market_surge": 10.25,
+      "actionable": false,
+      "status": "benched \u2014 hit 33%, mean -0.56% over last 30 at 4h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 33%, mean -0.56% over last 30 at 4h: not beating 4x the round trip",
     "breakout": "benched \u2014 only one half of the last 30 paid at 4h: regime luck, not a signal",
     "reversion": "benched \u2014 only one half of the last 28 paid at 4h: regime luck, not a signal",
-    "heat": "benched \u2014 hit 43%, mean +0.31% over last 30 at 4h: not beating 4x the round trip",
+    "heat": "benched \u2014 hit 47%, mean +0.43% over last 30 at 4h: not beating 4x the round trip",
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 24,
+    "count": 22,
     "baseline": 39.0,
     "wave": false
   },
@@ -104,13 +120,13 @@
       "avg_loss_1h": -0.01267,
       "payoff_1h": 1.449,
       "n_4h": 30,
-      "hit_rate_4h": 0.433,
-      "mean_ret_4h": 0.00312,
-      "median_ret_4h": -0.0079,
+      "hit_rate_4h": 0.467,
+      "mean_ret_4h": 0.00428,
+      "median_ret_4h": -0.00672,
       "both_halves_4h": false,
-      "avg_win_4h": 0.04231,
-      "avg_loss_4h": -0.02684,
-      "payoff_4h": 1.576,
+      "avg_win_4h": 0.03945,
+      "avg_loss_4h": -0.02649,
+      "payoff_4h": 1.489,
       "n_24h": 30,
       "hit_rate_24h": 0.767,
       "mean_ret_24h": 0.03821,
