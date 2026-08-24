@@ -1,8 +1,54 @@
 {
-  "ts": "2026-08-24T11:33:07+00:00",
-  "scanned": 104,
+  "ts": "2026-08-24T11:38:55+00:00",
+  "scanned": 108,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ORDIUSDT",
+      "signal": "ignition",
+      "score": 0.5403,
+      "raw_score": 0.7371,
+      "weight": 0.733,
+      "price": 4.132,
+      "why": "trades 5.7x and volume 12.5x the prior 4h, 79% taker-buy, $55,834 burst \u2014 while price has only moved +1.6%",
+      "chg_24h": 0.0127,
+      "vol_surge": 12.51,
+      "chg_1h": 0.016,
+      "market_surge": 3.01,
+      "actionable": false,
+      "status": "benched \u2014 hit 23%, mean +0.03% over last 30 at 4h: not beating 4x the round trip"
+    },
+    {
+      "symbol": "ZECUSDT",
+      "signal": "ignition",
+      "score": 0.4441,
+      "raw_score": 0.6058,
+      "weight": 0.733,
+      "price": 846.72,
+      "why": "trades 4.4x and volume 7.4x the prior 4h, 64% taker-buy, $3,650,071 burst \u2014 while price has only moved +0.6%",
+      "chg_24h": 0.0278,
+      "vol_surge": 7.43,
+      "chg_1h": 0.006,
+      "market_surge": 3.49,
+      "actionable": false,
+      "status": "benched \u2014 hit 23%, mean +0.03% over last 30 at 4h: not beating 4x the round trip"
+    },
+    {
+      "symbol": "XLMUSDT",
+      "signal": "ignition",
+      "score": 0.4099,
+      "raw_score": 0.5592,
+      "weight": 0.733,
+      "price": 0.1984,
+      "why": "trades 4.6x and volume 6.2x the prior 4h, 64% taker-buy, $425,391 burst \u2014 while price has only moved +1.6%",
+      "chg_24h": 0.0061,
+      "vol_surge": 6.24,
+      "chg_1h": 0.0159,
+      "market_surge": 3.97,
+      "actionable": false,
+      "status": "benched \u2014 hit 23%, mean +0.03% over last 30 at 4h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 23%, mean +0.03% over last 30 at 4h: not beating 4x the round trip",
     "breakout": "actionable",
@@ -61,12 +107,12 @@
       "payoff_4h": 1.833,
       "n_24h": 30,
       "hit_rate_24h": 0.267,
-      "mean_ret_24h": -0.0421,
-      "median_ret_24h": -0.04886,
+      "mean_ret_24h": -0.03985,
+      "median_ret_24h": -0.04044,
       "both_halves_24h": false,
       "avg_win_24h": 0.05639,
-      "avg_loss_24h": -0.07792,
-      "payoff_24h": 0.724
+      "avg_loss_24h": -0.07484,
+      "payoff_24h": 0.753
     },
     "reversion": {
       "n_1h": 28,
