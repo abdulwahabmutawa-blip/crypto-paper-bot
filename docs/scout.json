@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-24T02:09:16+00:00",
-  "scanned": 114,
+  "ts": "2026-08-24T02:14:35+00:00",
+  "scanned": 115,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SNDKBUSDT",
+      "signal": "ignition",
+      "score": 0.9377,
+      "raw_score": 0.9377,
+      "weight": 1.0,
+      "price": 1566.64,
+      "why": "trades 15.8x and volume 25.3x the prior 4h, 92% taker-buy, $193,385 burst \u2014 while price has only moved -1.7%",
+      "chg_24h": -0.0165,
+      "vol_surge": 25.3,
+      "chg_1h": -0.0166,
+      "market_surge": 12.81,
+      "actionable": false,
+      "status": "benched \u2014 hit 50%, mean +0.16% over last 30 at 4h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 50%, mean +0.16% over last 30 at 4h: not beating 4x the round trip",
     "breakout": "benched \u2014 only one half of the last 30 paid at 4h: regime luck, not a signal",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 11,
+    "count": 12,
     "baseline": 39.0,
     "wave": false
   },
@@ -35,12 +51,12 @@
       "payoff_4h": 0.938,
       "n_24h": 30,
       "hit_rate_24h": 0.6,
-      "mean_ret_24h": 0.01824,
+      "mean_ret_24h": 0.01927,
       "median_ret_24h": 0.01551,
       "both_halves_24h": true,
       "avg_win_24h": 0.04715,
-      "avg_loss_24h": -0.03168,
-      "payoff_24h": 1.488
+      "avg_loss_24h": -0.02889,
+      "payoff_24h": 1.632
     },
     "breakout": {
       "n_1h": 30,
