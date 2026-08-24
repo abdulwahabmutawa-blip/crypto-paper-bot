@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-24T22:57:13+00:00",
+  "ts": "2026-08-24T23:02:43+00:00",
   "scanned": 116,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "XPLUSDT",
-      "signal": "ignition",
-      "score": 0.7811,
-      "raw_score": 0.7954,
-      "weight": 0.982,
-      "price": 0.09746,
-      "why": "trades 8.5x and volume 9.0x the prior 4h, 62% taker-buy, $152,438 burst \u2014 while price has only moved +1.0%",
-      "chg_24h": -0.0551,
-      "vol_surge": 8.95,
-      "chg_1h": 0.0099,
-      "market_surge": 0.56,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.4 independent 24h windows (span 129h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.4 independent 24h windows (span 129h): overlapping labels are not a sample",
     "breakout": "probation \u2014 225 rows but only 6.9 independent 24h windows (span 166h): overlapping labels are not a sample",
