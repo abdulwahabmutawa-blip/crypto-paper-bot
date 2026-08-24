@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-24T19:51:10+00:00",
-  "scanned": 115,
+  "ts": "2026-08-24T19:57:11+00:00",
+  "scanned": 116,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "NVDABUSDT",
+      "signal": "ignition",
+      "score": 0.9461,
+      "raw_score": 0.9586,
+      "weight": 0.987,
+      "price": 208.6,
+      "why": "trades 22.9x and volume 112.6x the prior 4h, 88% taker-buy, $173,278 burst \u2014 while price has only moved -0.4%",
+      "chg_24h": -0.0495,
+      "vol_surge": 112.61,
+      "chg_1h": -0.0044,
+      "market_surge": 15.95,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 128h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 128h): overlapping labels are not a sample",
     "breakout": "probation \u2014 222 rows but only 6.8 independent 24h windows (span 163h): overlapping labels are not a sample",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 11,
+    "count": 10,
     "baseline": 30.0,
     "wave": false
   },
