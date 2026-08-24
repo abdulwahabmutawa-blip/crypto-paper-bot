@@ -1,39 +1,8 @@
 {
-  "ts": "2026-08-24T04:28:16+00:00",
-  "scanned": 113,
+  "ts": "2026-08-24T04:34:04+00:00",
+  "scanned": 112,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "EIGENUSDT",
-      "signal": "ignition",
-      "score": 0.7902,
-      "raw_score": 0.8779,
-      "weight": 0.9,
-      "price": 0.229,
-      "why": "trades 15.5x and volume 28.1x the prior 4h, 73% taker-buy, $149,108 burst \u2014 while price has only moved +2.2%",
-      "chg_24h": 0.1193,
-      "vol_surge": 28.1,
-      "chg_1h": 0.0219,
-      "market_surge": 16.56,
-      "actionable": false,
-      "status": "benched \u2014 hit 40%, mean -0.13% over last 30 at 4h: not beating 4x the round trip"
-    },
-    {
-      "symbol": "PROMUSDT",
-      "signal": "ignition",
-      "score": 0.5297,
-      "raw_score": 0.5885,
-      "weight": 0.9,
-      "price": 3.134,
-      "why": "trades 4.2x and volume 8.3x the prior 4h, 63% taker-buy, $235,860 burst \u2014 while price has only moved +1.7%",
-      "chg_24h": 0.2028,
-      "vol_surge": 8.27,
-      "chg_1h": 0.0169,
-      "market_surge": 6.51,
-      "actionable": false,
-      "status": "benched \u2014 hit 40%, mean -0.13% over last 30 at 4h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 40%, mean -0.13% over last 30 at 4h: not beating 4x the round trip",
     "breakout": "benched \u2014 only one half of the last 30 paid at 4h: regime luck, not a signal",
@@ -42,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 25,
+    "count": 28,
     "baseline": 39.0,
     "wave": false
   },
