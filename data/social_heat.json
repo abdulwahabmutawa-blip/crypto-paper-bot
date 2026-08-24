@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-24T18:49:04+00:00",
+  "ts": "2026-08-24T18:54:19+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -18,9 +18,9 @@
       "BTC",
       "ETH",
       "SOL",
-      "TAO",
+      "XAUT",
       "BNB",
-      "XAUT"
+      "PAXG"
     ],
     "watcher": [
       "VIRTUAL"
@@ -96,6 +96,14 @@
       ]
     },
     {
+      "symbol": "PAXG",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -5e-06
+    },
+    {
       "symbol": "PUMP",
       "surfaces": 1,
       "sources": [
@@ -118,14 +126,6 @@
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "XAUT",
