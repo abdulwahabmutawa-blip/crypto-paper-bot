@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-24T10:25:01+00:00",
+  "ts": "2026-08-24T10:30:29+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
@@ -8,10 +8,10 @@
       "LIT",
       "XRP",
       "VIRTUAL",
-      "AAVE",
       "AERO",
-      "TRUMP",
-      "UNI"
+      "ETHFI",
+      "TAO",
+      "SUI"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,8 +22,8 @@
       "AAVE",
       "TAO",
       "RE",
-      "WLD",
-      "XPL"
+      "XPL",
+      "WLD"
     ],
     "watcher": [
       "ZEC",
@@ -36,9 +36,8 @@
   "heat": [
     {
       "symbol": "AAVE",
-      "surfaces": 3,
+      "surfaces": 2,
       "sources": [
-        "coingecko",
         "movers",
         "watcher"
       ],
@@ -54,6 +53,16 @@
       ],
       "funding": 5e-05,
       "long_short": 1.58
+    },
+    {
+      "symbol": "TAO",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.68
     },
     {
       "symbol": "TUT",
@@ -92,6 +101,14 @@
       "funding": 0.0001
     },
     {
+      "symbol": "ETHFI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "LIT",
       "surfaces": 1,
       "sources": [
@@ -124,23 +141,7 @@
       "funding": 5e-05
     },
     {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "TRUMP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -0.000103
-    },
-    {
-      "symbol": "UNI",
+      "symbol": "SUI",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -161,7 +162,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 9e-06
+      "funding": 8e-06
     },
     {
       "symbol": "XPL",
