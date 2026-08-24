@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-24T05:25:03+00:00",
+  "ts": "2026-08-24T05:30:26+00:00",
   "scanned": 113,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SKYUSDT",
+      "signal": "ignition",
+      "score": 0.7791,
+      "raw_score": 0.9353,
+      "weight": 0.833,
+      "price": 0.06855,
+      "why": "trades 13.1x and volume 41.1x the prior 4h, 75% taker-buy, $211,991 burst \u2014 while price has only moved -0.1%",
+      "chg_24h": 0.0701,
+      "vol_surge": 41.1,
+      "chg_1h": -0.0009,
+      "market_surge": 21.05,
+      "actionable": false,
+      "status": "benched \u2014 hit 33%, mean -0.56% over last 30 at 4h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 33%, mean -0.56% over last 30 at 4h: not beating 4x the round trip",
     "breakout": "benched \u2014 only one half of the last 30 paid at 4h: regime luck, not a signal",
@@ -11,20 +27,20 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 26,
+    "count": 24,
     "baseline": 39.0,
     "wave": false
   },
   "scorecard": {
     "ignition": {
       "n_1h": 30,
-      "hit_rate_1h": 0.2,
-      "mean_ret_1h": -0.00434,
-      "median_ret_1h": -0.00263,
+      "hit_rate_1h": 0.267,
+      "mean_ret_1h": -0.00015,
+      "median_ret_1h": -0.00217,
       "both_halves_1h": false,
-      "avg_win_1h": 0.00946,
-      "avg_loss_1h": -0.01077,
-      "payoff_1h": 0.878,
+      "avg_win_1h": 0.01856,
+      "avg_loss_1h": -0.01159,
+      "payoff_1h": 1.601,
       "n_4h": 30,
       "hit_rate_4h": 0.333,
       "mean_ret_4h": -0.0056,
