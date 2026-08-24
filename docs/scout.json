@@ -1,54 +1,8 @@
 {
-  "ts": "2026-08-24T20:08:21+00:00",
-  "scanned": 114,
+  "ts": "2026-08-24T20:14:09+00:00",
+  "scanned": 115,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "SOXLBUSDT",
-      "signal": "ignition",
-      "score": 0.8749,
-      "raw_score": 0.8882,
-      "weight": 0.985,
-      "price": 111.18,
-      "why": "trades 8.1x and volume 32.4x the prior 4h, 94% taker-buy, $72,359 burst \u2014 while price has only moved -0.8%",
-      "chg_24h": -0.0708,
-      "vol_surge": 32.39,
-      "chg_1h": -0.0084,
-      "market_surge": 3.4,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 128h): overlapping labels are not a sample"
-    },
-    {
-      "symbol": "ALLOUSDT",
-      "signal": "ignition",
-      "score": 0.871,
-      "raw_score": 0.8843,
-      "weight": 0.985,
-      "price": 0.2622,
-      "why": "trades 8.7x and volume 15.0x the prior 4h, 82% taker-buy, $64,054 burst \u2014 while price has only moved +0.8%",
-      "chg_24h": -0.049,
-      "vol_surge": 15.03,
-      "chg_1h": 0.0077,
-      "market_surge": 2.57,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 128h): overlapping labels are not a sample"
-    },
-    {
-      "symbol": "MEUSDT",
-      "signal": "breakout",
-      "score": 0.7686,
-      "raw_score": 0.7702,
-      "weight": 0.998,
-      "price": 0.07416,
-      "why": "trades 9.5x, volume 7.9x, 70% taker-buy, +2.6% in an hour, at 96% of its 24h range",
-      "chg_24h": 0.0824,
-      "vol_surge": 7.93,
-      "chg_1h": 0.0264,
-      "market_surge": 17.76,
-      "actionable": false,
-      "status": "probation \u2014 222 rows but only 6.8 independent 24h windows (span 163h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 128h): overlapping labels are not a sample",
     "breakout": "probation \u2014 222 rows but only 6.8 independent 24h windows (span 163h): overlapping labels are not a sample",
@@ -57,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 10,
+    "count": 11,
     "baseline": 30.0,
     "wave": false
   },
@@ -95,16 +49,16 @@
       "payoff_24h": 1.932
     },
     "breakout": {
-      "span_h_1h": 184.3,
-      "n_eff_1h": 184.28,
-      "n_1h": 238,
-      "hit_rate_1h": 0.525,
-      "mean_ret_1h": 0.0048,
-      "median_ret_1h": 0.00338,
+      "span_h_1h": 187.0,
+      "n_eff_1h": 186.99,
+      "n_1h": 239,
+      "hit_rate_1h": 0.523,
+      "mean_ret_1h": 0.00466,
+      "median_ret_1h": 0.00324,
       "both_halves_1h": true,
       "avg_win_1h": 0.02375,
-      "avg_loss_1h": -0.01898,
-      "payoff_1h": 1.251,
+      "avg_loss_1h": -0.01907,
+      "payoff_1h": 1.246,
       "span_h_4h": 180.7,
       "n_eff_4h": 45.17,
       "n_4h": 237,
