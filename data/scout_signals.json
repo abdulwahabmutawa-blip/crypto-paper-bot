@@ -1,11 +1,44 @@
 {
-  "ts": "2026-08-24T17:47:32+00:00",
-  "scanned": 116,
+  "ts": "2026-08-24T17:52:33+00:00",
+  "scanned": 115,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "VIRTUALUSDT",
+      "signal": "heat",
+      "score": 0.6546,
+      "raw_score": 0.6,
+      "weight": 1.091,
+      "price": 0.7806,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.005% \u00b7 L/S 1.37",
+      "chg_24h": 0.0919,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
+      "actionable": false,
+      "status": "probation \u2014 103 rows but only 6.7 independent 24h windows (span 161h): overlapping labels are not a sample"
+    },
+    {
+      "symbol": "SNXXBUSDT",
+      "signal": "reversion",
+      "score": 0.3823,
+      "raw_score": 0.3823,
+      "weight": 1.0,
+      "price": 12.81,
+      "why": "down -17% on the day (bottom decile of the market), now +0.6% over 15m with 2 green candles",
+      "chg_24h": -0.1676,
+      "vol_surge": 0.39,
+      "chg_1h": -0.0221,
+      "market_surge": 0.75,
+      "oi_drop": null,
+      "funding": null,
+      "actionable": false,
+      "status": "probation \u2014 28 rows but only 4.8 independent 24h windows (span 116h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 126h): overlapping labels are not a sample",
-    "breakout": "probation \u2014 219 rows but only 6.7 independent 24h windows (span 160h): overlapping labels are not a sample",
+    "breakout": "probation \u2014 220 rows but only 6.7 independent 24h windows (span 162h): overlapping labels are not a sample",
     "reversion": "probation \u2014 28 rows but only 4.8 independent 24h windows (span 116h): overlapping labels are not a sample",
     "heat": "probation \u2014 103 rows but only 6.7 independent 24h windows (span 161h): overlapping labels are not a sample",
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
@@ -69,16 +102,16 @@
       "avg_win_4h": 0.04045,
       "avg_loss_4h": -0.0321,
       "payoff_4h": 1.26,
-      "span_h_24h": 160.1,
-      "n_eff_24h": 6.67,
-      "n_24h": 219,
-      "hit_rate_24h": 0.616,
-      "mean_ret_24h": 0.03439,
+      "span_h_24h": 161.7,
+      "n_eff_24h": 6.74,
+      "n_24h": 220,
+      "hit_rate_24h": 0.614,
+      "mean_ret_24h": 0.03366,
       "median_ret_24h": 0.02667,
       "both_halves_24h": true,
       "avg_win_24h": 0.09353,
-      "avg_loss_24h": -0.0614,
-      "payoff_24h": 1.523
+      "avg_loss_24h": -0.06215,
+      "payoff_24h": 1.505
     },
     "reversion": {
       "span_h_1h": 149.9,
