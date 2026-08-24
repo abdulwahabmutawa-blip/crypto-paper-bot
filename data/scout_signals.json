@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-24T05:03:09+00:00",
+  "ts": "2026-08-24T05:08:31+00:00",
   "scanned": 115,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "EULUSDT",
+      "signal": "breakout",
+      "score": 0.7428,
+      "raw_score": 0.7681,
+      "weight": 0.967,
+      "price": 1.426,
+      "why": "trades 19.6x, volume 9.4x, 67% taker-buy, +2.7% in an hour, at 104% of its 24h range",
+      "chg_24h": 0.0899,
+      "vol_surge": 9.41,
+      "chg_1h": 0.0266,
+      "market_surge": 3.23,
+      "actionable": false,
+      "status": "benched \u2014 only one half of the last 30 paid at 4h: regime luck, not a signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 33%, mean -0.56% over last 30 at 4h: not beating 4x the round trip",
     "breakout": "benched \u2014 only one half of the last 30 paid at 4h: regime luck, not a signal",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 32,
+    "count": 30,
     "baseline": 39.0,
     "wave": false
   },
