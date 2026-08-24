@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-24T19:11:04+00:00",
+  "ts": "2026-08-24T19:16:49+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
@@ -21,8 +21,8 @@
       "ETH",
       "SOL",
       "XAUT",
-      "PAXG",
-      "BNB"
+      "LINK",
+      "PAXG"
     ],
     "watcher": [
       "VIRTUAL"
@@ -70,14 +70,6 @@
       "funding": 5e-05
     },
     {
-      "symbol": "BNB",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0
-    },
-    {
       "symbol": "ETH",
       "surfaces": 1,
       "sources": [
@@ -90,6 +82,14 @@
       "surfaces": 1,
       "sources": [
         "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "LINK",
+      "surfaces": 1,
+      "sources": [
+        "movers"
       ],
       "funding": 0.0001
     },
@@ -114,7 +114,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 6e-06
+      "funding": 4e-06
     },
     {
       "symbol": "PUMP",
