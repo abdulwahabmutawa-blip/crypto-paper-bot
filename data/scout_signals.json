@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-24T16:17:25+00:00",
+  "ts": "2026-08-24T16:23:24+00:00",
   "scanned": 114,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "LUNCUSDT",
+      "signal": "ignition",
+      "score": 0.9233,
+      "raw_score": 0.9141,
+      "weight": 1.01,
+      "price": 5.605e-05,
+      "why": "trades 12.4x and volume 14.5x the prior 4h, 74% taker-buy, $85,214 burst \u2014 while price has only moved +0.9%",
+      "chg_24h": 0.0103,
+      "vol_surge": 14.54,
+      "chg_1h": 0.0086,
+      "market_surge": 8.46,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 127h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 127h): overlapping labels are not a sample",
     "breakout": "probation \u2014 219 rows but only 6.7 independent 24h windows (span 160h): overlapping labels are not a sample",
@@ -17,15 +33,15 @@
   },
   "scorecard": {
     "ignition": {
-      "span_h_1h": 129.5,
-      "n_eff_1h": 129.48,
+      "span_h_1h": 129.9,
+      "n_eff_1h": 129.86,
       "n_1h": 400,
-      "hit_rate_1h": 0.427,
-      "mean_ret_1h": 0.0002,
-      "median_ret_1h": 0.00088,
+      "hit_rate_1h": 0.425,
+      "mean_ret_1h": 0.00013,
+      "median_ret_1h": 0.00087,
       "both_halves_1h": false,
-      "avg_win_1h": 0.01217,
-      "avg_loss_1h": -0.01448,
+      "avg_win_1h": 0.01222,
+      "avg_loss_1h": -0.01454,
       "payoff_1h": 0.841,
       "span_h_4h": 130.5,
       "n_eff_4h": 32.63,
