@@ -1,35 +1,20 @@
 {
-  "ts": "2026-08-24T04:12:16+00:00",
+  "ts": "2026-08-24T04:17:26+00:00",
   "scanned": 114,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "PROMUSDT",
-      "signal": "breakout",
-      "score": 0.8557,
-      "raw_score": 0.8557,
-      "weight": 1.0,
-      "price": 3.157,
-      "why": "trades 7.1x, volume 8.1x, 69% taker-buy, +6.4% in an hour, at 94% of its 24h range",
-      "chg_24h": 0.209,
-      "vol_surge": 8.13,
-      "chg_1h": 0.0644,
-      "market_surge": 8.57,
-      "actionable": false,
-      "status": "benched \u2014 only one half of the last 30 paid at 4h: regime luck, not a signal"
-    },
-    {
-      "symbol": "DASHUSDT",
+      "symbol": "LUNCUSDT",
       "signal": "ignition",
-      "score": 0.6358,
-      "raw_score": 0.7065,
+      "score": 0.6633,
+      "raw_score": 0.737,
       "weight": 0.9,
-      "price": 41.74,
-      "why": "trades 7.1x and volume 6.2x the prior 4h, 79% taker-buy, $159,996 burst \u2014 while price has only moved +1.2%",
-      "chg_24h": 0.0427,
-      "vol_surge": 6.22,
-      "chg_1h": 0.0116,
-      "market_surge": 1.51,
+      "price": 5.452e-05,
+      "why": "trades 4.6x and volume 14.5x the prior 4h, 84% taker-buy, $57,735 burst \u2014 while price has only moved +0.4%",
+      "chg_24h": 0.0289,
+      "vol_surge": 14.55,
+      "chg_1h": 0.0039,
+      "market_surge": 3.95,
       "actionable": false,
       "status": "benched \u2014 hit 40%, mean -0.12% over last 30 at 4h: not beating 4x the round trip"
     }
@@ -42,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 20,
+    "count": 19,
     "baseline": 39.0,
     "wave": false
   },
@@ -116,14 +101,14 @@
       "avg_win_4h": 0.05108,
       "avg_loss_4h": -0.04053,
       "payoff_4h": 1.26,
-      "n_24h": 26,
-      "hit_rate_24h": 0.385,
-      "mean_ret_24h": -2e-05,
+      "n_24h": 27,
+      "hit_rate_24h": 0.407,
+      "mean_ret_24h": 0.00067,
       "median_ret_24h": -0.01291,
-      "both_halves_24h": false,
-      "avg_win_24h": 0.08003,
+      "both_halves_24h": true,
+      "avg_win_24h": 0.07444,
       "avg_loss_24h": -0.05005,
-      "payoff_24h": 1.599
+      "payoff_24h": 1.487
     },
     "heat": {
       "n_1h": 30,
