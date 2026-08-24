@@ -1,8 +1,38 @@
 {
-  "ts": "2026-08-24T09:23:06+00:00",
-  "scanned": 110,
+  "ts": "2026-08-24T09:28:26+00:00",
+  "scanned": 109,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "LTCUSDT",
+      "signal": "breakout",
+      "score": 0.7118,
+      "raw_score": 0.7118,
+      "weight": 1.0,
+      "price": 53.27,
+      "why": "trades 6.8x, volume 13.6x, 61% taker-buy, +2.8% in an hour, at 98% of its 24h range",
+      "chg_24h": 0.027,
+      "vol_surge": 13.65,
+      "chg_1h": 0.028,
+      "market_surge": 6.17,
+      "actionable": true
+    },
+    {
+      "symbol": "VIRTUALUSDT",
+      "signal": "ignition",
+      "score": 0.4703,
+      "raw_score": 0.6416,
+      "weight": 0.733,
+      "price": 0.7228,
+      "why": "trades 5.1x and volume 11.3x the prior 4h, 64% taker-buy, $141,053 burst \u2014 while price has only moved +2.9%",
+      "chg_24h": 0.0686,
+      "vol_surge": 11.27,
+      "chg_1h": 0.0292,
+      "market_surge": 4.12,
+      "actionable": false,
+      "status": "benched \u2014 hit 23%, mean -0.30% over last 30 at 4h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 23%, mean -0.30% over last 30 at 4h: not beating 4x the round trip",
     "breakout": "actionable",
@@ -11,7 +41,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 18,
+    "count": 17,
     "baseline": 39.0,
     "wave": false
   },
