@@ -1,14 +1,15 @@
 {
-  "ts": "2026-08-24T20:25:01+00:00",
+  "ts": "2026-08-24T20:30:26+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "AERO",
-      "PUMP",
-      "ZEC",
       "INJ",
+      "PUMP",
       "LIT",
       "ENA",
+      "ZEC",
+      "APT",
       "ATOM"
     ],
     "reddit": [],
@@ -19,8 +20,8 @@
       "MSTRB",
       "ETH",
       "PAXG",
-      "SOL",
       "XAUT",
+      "SOL",
       "LINK"
     ],
     "watcher": [
@@ -36,7 +37,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 7.5e-05,
+      "funding": 7.2e-05,
       "long_short": 0.94
     },
     {
@@ -58,12 +59,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "APT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "ATOM",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -5e-05
+      "funding": -5.8e-05
     },
     {
       "symbol": "ENA",
@@ -118,7 +127,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 1.6e-05
+      "funding": 1.4e-05
     },
     {
       "symbol": "PUMP",
