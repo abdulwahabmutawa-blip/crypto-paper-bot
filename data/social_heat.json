@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-24T04:22:59+00:00",
+  "ts": "2026-08-24T04:28:09+00:00",
   "sources": {
     "coingecko": [
       "LIT",
@@ -7,11 +7,11 @@
       "BTC",
       "ETH",
       "AAVE",
-      "ZEC",
       "ENA",
       "SOL",
-      "SUI",
-      "ASTER"
+      "ZEC",
+      "VIRTUAL",
+      "TRUMP"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -76,22 +76,23 @@
       "long_short": 1.06
     },
     {
+      "symbol": "TRUMP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.75
+    },
+    {
       "symbol": "ZEC",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "watcher"
       ],
-      "funding": 0.0001,
-      "long_short": 0.52
-    },
-    {
-      "symbol": "ASTER",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": 0.0001
     },
     {
       "symbol": "BTC",
@@ -134,23 +135,7 @@
       "funding": 0.0001
     },
     {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "TRUMP",
       "surfaces": 1,
       "sources": [
         "movers"
@@ -164,6 +149,14 @@
         "movers"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "VIRTUAL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "XRP",
