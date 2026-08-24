@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-24T18:59:35+00:00",
-  "scanned": 116,
+  "ts": "2026-08-24T19:05:23+00:00",
+  "scanned": 115,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "EULUSDT",
+      "signal": "ignition",
+      "score": 0.7714,
+      "raw_score": 0.7792,
+      "weight": 0.99,
+      "price": 1.365,
+      "why": "trades 6.9x and volume 15.8x the prior 4h, 62% taker-buy, $63,206 burst \u2014 while price has only moved -0.1%",
+      "chg_24h": 0.0111,
+      "vol_surge": 15.82,
+      "chg_1h": -0.0015,
+      "market_surge": 4.43,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 126h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 126h): overlapping labels are not a sample",
     "breakout": "probation \u2014 222 rows but only 6.8 independent 24h windows (span 163h): overlapping labels are not a sample",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 10,
+    "count": 11,
     "baseline": 31.0,
     "wave": false
   },
