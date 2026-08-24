@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-24T22:28:23+00:00",
+  "ts": "2026-08-24T22:34:06+00:00",
   "sources": {
     "coingecko": [
       "AERO",
@@ -21,7 +21,7 @@
       "RE",
       "XAUT",
       "ETH",
-      "TRX"
+      "LINK"
     ],
     "watcher": [
       "VIRTUAL"
@@ -46,8 +46,18 @@
         "coingecko",
         "movers"
       ],
-      "funding": 8.7e-05,
+      "funding": 8.6e-05,
       "long_short": 2.42
+    },
+    {
+      "symbol": "LINK",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.67
     },
     {
       "symbol": "SOL",
@@ -76,14 +86,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "LINK",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "MSTRB",
@@ -117,20 +119,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "TRX",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "XAUT",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 3.7e-05
+      "funding": 3.6e-05
     },
     {
       "symbol": "ZEC",
