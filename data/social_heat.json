@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-24T11:09:59+00:00",
+  "ts": "2026-08-24T11:15:59+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
@@ -22,8 +22,8 @@
       "AAVE",
       "TAO",
       "XPL",
-      "WLD",
-      "ETH"
+      "LINK",
+      "WLD"
     ],
     "watcher": [
       "ZEC",
@@ -43,16 +43,6 @@
       ],
       "funding": 0.0001,
       "long_short": 1.56
-    },
-    {
-      "symbol": "ETH",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 2.35
     },
     {
       "symbol": "PENGU",
@@ -91,13 +81,30 @@
         "coingecko",
         "watcher"
       ],
-      "funding": 0.0001
+      "funding": 0.0001,
+      "long_short": 0.58
     },
     {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ETH",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "LINK",
+      "surfaces": 1,
+      "sources": [
+        "movers"
       ],
       "funding": 0.0001
     },
@@ -155,7 +162,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 1.3e-05
+      "funding": 1.6e-05
     },
     {
       "symbol": "XPL",
