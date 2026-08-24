@@ -1,16 +1,16 @@
 {
-  "ts": "2026-08-24T13:35:20+00:00",
+  "ts": "2026-08-24T13:40:53+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
       "PUMP",
       "LIT",
       "BTC",
-      "SOL",
-      "PEPE",
       "SUI",
+      "ETH",
+      "SOL",
       "XRP",
-      "ETH"
+      "TAO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,10 +19,10 @@
       "SPK",
       "TAO",
       "RE",
-      "ETH",
-      "BTC",
       "XAUT",
-      "ONDO"
+      "PAXG",
+      "ETH",
+      "BTC"
     ],
     "watcher": [
       "ZEC",
@@ -73,14 +73,23 @@
       "long_short": 1.1
     },
     {
+      "symbol": "TAO",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.7
+    },
+    {
       "symbol": "ZEC",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "watcher"
       ],
-      "funding": 0.0001,
-      "long_short": 0.54
+      "funding": 0.0001
     },
     {
       "symbol": "LIT",
@@ -91,19 +100,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "ONDO",
+      "symbol": "PAXG",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 1.3e-05
-    },
-    {
-      "symbol": "PEPE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ]
+      "funding": 1.4e-05
     },
     {
       "symbol": "RE",
@@ -138,20 +140,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "XAUT",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 4.4e-05
+      "funding": 4.2e-05
     },
     {
       "symbol": "XRP",
