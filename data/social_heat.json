@@ -1,27 +1,28 @@
 {
-  "ts": "2026-08-24T23:42:16+00:00",
+  "ts": "2026-08-24T23:48:00+00:00",
   "sources": {
     "coingecko": [
-      "AERO",
       "PUMP",
-      "ETH",
+      "AERO",
       "BTC",
+      "ETH",
       "SUI",
       "SOL",
-      "LIT",
-      "XRP"
+      "XRP",
+      "ZEC",
+      "LIT"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "VIRTUAL",
       "SOL",
-      "MSTRB",
       "BTC",
+      "MSTRB",
       "XAUT",
+      "TAO",
       "ETH",
-      "LINK",
-      "TAO"
+      "LINK"
     ],
     "watcher": [
       "VIRTUAL"
@@ -36,7 +37,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 6.1e-05,
+      "funding": 6e-05,
       "long_short": 0.94
     },
     {
@@ -46,7 +47,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 9.7e-05,
+      "funding": 9.5e-05,
       "long_short": 2.41
     },
     {
@@ -130,10 +131,18 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.6e-05
+      "funding": 4.5e-05
     },
     {
       "symbol": "XRP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
         "coingecko"
