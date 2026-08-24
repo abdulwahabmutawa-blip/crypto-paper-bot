@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-24T17:19:19+00:00",
+  "ts": "2026-08-24T17:24:29+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -16,14 +16,14 @@
     "reddit": [],
     "stocktwits": [],
     "movers": [
+      "VIRTUAL",
       "MSTRB",
       "TAO",
       "BTC",
-      "ETH",
       "XAUT",
       "PAXG",
-      "BNB",
-      "SOL"
+      "ETH",
+      "BNB"
     ],
     "watcher": [
       "ETH",
@@ -55,16 +55,6 @@
       "long_short": 2.36
     },
     {
-      "symbol": "SOL",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 2.24
-    },
-    {
       "symbol": "TAO",
       "surfaces": 2,
       "sources": [
@@ -73,6 +63,16 @@
       ],
       "funding": 5e-05,
       "long_short": 1.73
+    },
+    {
+      "symbol": "VIRTUAL",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.37
     },
     {
       "symbol": "AERO",
@@ -88,7 +88,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 1.3e-05
+      "funding": 1e-05
     },
     {
       "symbol": "INJ",
@@ -127,7 +127,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -4e-06
+      "funding": -6e-06
     },
     {
       "symbol": "PENGU",
@@ -146,12 +146,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "VIRTUAL",
+      "symbol": "SOL",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 0.0001
     },
     {
       "symbol": "XAUT",
