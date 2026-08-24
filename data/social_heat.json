@@ -1,14 +1,14 @@
 {
-  "ts": "2026-08-24T08:32:28+00:00",
+  "ts": "2026-08-24T08:38:09+00:00",
   "sources": {
     "coingecko": [
-      "LIT",
       "ZEC",
+      "LIT",
       "PUMP",
       "SOL",
       "BTC",
       "XRP",
-      "AAVE",
+      "TRUMP",
       "ETHFI",
       "ENA"
     ],
@@ -18,10 +18,10 @@
       "TUT",
       "PENGU",
       "AAVE",
-      "RE",
       "XPL",
-      "UNI",
+      "RE",
       "TAO",
+      "UNI",
       "NEAR"
     ],
     "watcher": [
@@ -34,9 +34,8 @@
   "heat": [
     {
       "symbol": "AAVE",
-      "surfaces": 3,
+      "surfaces": 2,
       "sources": [
-        "coingecko",
         "movers",
         "watcher"
       ],
@@ -132,6 +131,14 @@
       "surfaces": 1,
       "sources": [
         "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "TRUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
       ],
       "funding": 5e-05
     },
