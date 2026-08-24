@@ -1,22 +1,22 @@
 {
-  "ts": "2026-08-24T19:05:23+00:00",
+  "ts": "2026-08-24T19:11:11+00:00",
   "scanned": 115,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "EULUSDT",
-      "signal": "ignition",
-      "score": 0.7714,
-      "raw_score": 0.7792,
-      "weight": 0.99,
-      "price": 1.365,
-      "why": "trades 6.9x and volume 15.8x the prior 4h, 62% taker-buy, $63,206 burst \u2014 while price has only moved -0.1%",
-      "chg_24h": 0.0111,
-      "vol_surge": 15.82,
-      "chg_1h": -0.0015,
-      "market_surge": 4.43,
+      "symbol": "FFUSDT",
+      "signal": "breakout",
+      "score": 0.812,
+      "raw_score": 0.8136,
+      "weight": 0.998,
+      "price": 0.09443,
+      "why": "trades 10.0x, volume 12.9x, 60% taker-buy, +4.6% in an hour, at 98% of its 24h range",
+      "chg_24h": 0.055,
+      "vol_surge": 12.91,
+      "chg_1h": 0.0457,
+      "market_surge": 0.13,
       "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 126h): overlapping labels are not a sample"
+      "status": "probation \u2014 222 rows but only 6.8 independent 24h windows (span 163h): overlapping labels are not a sample"
     }
   ],
   "gate": {
@@ -28,7 +28,7 @@
   },
   "breadth": {
     "count": 11,
-    "baseline": 31.0,
+    "baseline": 30.0,
     "wave": false
   },
   "scorecard": {
