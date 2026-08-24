@@ -1,17 +1,17 @@
 {
-  "ts": "2026-08-24T07:54:29+00:00",
+  "ts": "2026-08-24T08:00:01+00:00",
   "sources": {
     "coingecko": [
       "LIT",
       "PUMP",
       "ZEC",
-      "INJ",
-      "XRP",
       "ENA",
-      "BTC",
-      "PROM",
       "SOL",
-      "AAVE"
+      "BTC",
+      "AAVE",
+      "ETHFI",
+      "PROM",
+      "INJ"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,9 +19,9 @@
       "TUT",
       "PENGU",
       "AAVE",
+      "NEAR",
       "RE",
       "XPL",
-      "NEAR",
       "UNI",
       "TAO"
     ],
@@ -74,6 +74,14 @@
     },
     {
       "symbol": "ENA",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "ETHFI",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -159,14 +167,6 @@
         "movers"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "XRP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "ZEC",
