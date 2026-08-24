@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-24T10:42:09+00:00",
+  "ts": "2026-08-24T10:47:29+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
@@ -23,7 +23,7 @@
       "TAO",
       "WLD",
       "XPL",
-      "RE"
+      "ZEC"
     ],
     "watcher": [
       "ZEC",
@@ -46,6 +46,17 @@
       "long_short": 1.53
     },
     {
+      "symbol": "ZEC",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 0.0001,
+      "long_short": 0.58
+    },
+    {
       "symbol": "PENGU",
       "surfaces": 2,
       "sources": [
@@ -64,16 +75,6 @@
       ],
       "funding": 5e-05,
       "long_short": 0.81
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "watcher"
-      ],
-      "funding": 0.0001,
-      "long_short": 0.58
     },
     {
       "symbol": "AERO",
@@ -116,14 +117,6 @@
       "funding": 5e-05
     },
     {
-      "symbol": "RE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "SPK",
       "surfaces": 1,
       "sources": [
@@ -161,7 +154,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 1e-05
+      "funding": 1.3e-05
     },
     {
       "symbol": "XPL",
