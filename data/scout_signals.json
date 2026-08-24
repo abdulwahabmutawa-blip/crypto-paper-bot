@@ -1,17 +1,33 @@
 {
-  "ts": "2026-08-24T08:16:18+00:00",
-  "scanned": 110,
+  "ts": "2026-08-24T08:22:06+00:00",
+  "scanned": 109,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "GRAMUSDT",
+      "signal": "ignition",
+      "score": 0.6692,
+      "raw_score": 0.8033,
+      "weight": 0.833,
+      "price": 1.462,
+      "why": "trades 7.1x and volume 16.3x the prior 4h, 75% taker-buy, $204,273 burst \u2014 while price has only moved -0.7%",
+      "chg_24h": -0.0068,
+      "vol_surge": 16.29,
+      "chg_1h": -0.0075,
+      "market_surge": 0.24,
+      "actionable": false,
+      "status": "benched \u2014 hit 33%, mean -0.60% over last 30 at 4h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
-    "ignition": "benched \u2014 hit 33%, mean -0.56% over last 30 at 4h: not beating 4x the round trip",
+    "ignition": "benched \u2014 hit 33%, mean -0.60% over last 30 at 4h: not beating 4x the round trip",
     "breakout": "actionable",
     "reversion": "benched \u2014 only one half of the last 28 paid at 4h: regime luck, not a signal",
     "heat": "benched \u2014 hit 47%, mean +0.43% over last 30 at 4h: not beating 4x the round trip",
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 17,
+    "count": 16,
     "baseline": 39.0,
     "wave": false
   },
@@ -27,12 +43,12 @@
       "payoff_1h": 1.423,
       "n_4h": 30,
       "hit_rate_4h": 0.333,
-      "mean_ret_4h": -0.00564,
-      "median_ret_4h": -0.00234,
+      "mean_ret_4h": -0.00599,
+      "median_ret_4h": -0.00278,
       "both_halves_4h": false,
       "avg_win_4h": 0.01081,
-      "avg_loss_4h": -0.01661,
-      "payoff_4h": 0.651,
+      "avg_loss_4h": -0.01719,
+      "payoff_4h": 0.629,
       "n_24h": 30,
       "hit_rate_24h": 0.633,
       "mean_ret_24h": 0.01496,
@@ -113,12 +129,12 @@
       "payoff_4h": 1.489,
       "n_24h": 30,
       "hit_rate_24h": 0.767,
-      "mean_ret_24h": 0.03821,
-      "median_ret_24h": 0.05359,
+      "mean_ret_24h": 0.03547,
+      "median_ret_24h": 0.05347,
       "both_halves_24h": true,
-      "avg_win_24h": 0.06992,
+      "avg_win_24h": 0.06635,
       "avg_loss_24h": -0.06598,
-      "payoff_24h": 1.06
+      "payoff_24h": 1.006
     },
     "revival": {
       "n_1h": 4,
