@@ -1,12 +1,13 @@
 {
-  "ts": "2026-08-24T12:56:29+00:00",
+  "ts": "2026-08-24T13:02:09+00:00",
   "sources": {
     "coingecko": [
       "LIT",
+      "PUMP",
       "BTC",
       "ZEC",
-      "PUMP",
       "SOL",
+      "PEPE",
       "ETH",
       "XRP"
     ],
@@ -40,7 +41,7 @@
         "watcher"
       ],
       "funding": 0.0001,
-      "long_short": 0.58
+      "long_short": 0.54
     },
     {
       "symbol": "ETH",
@@ -60,7 +61,7 @@
         "watcher"
       ],
       "funding": 5e-05,
-      "long_short": 1.61
+      "long_short": 1.62
     },
     {
       "symbol": "PUMP",
@@ -102,7 +103,14 @@
       "sources": [
         "movers"
       ],
-      "funding": 3.3e-05
+      "funding": 2.8e-05
+    },
+    {
+      "symbol": "PEPE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ]
     },
     {
       "symbol": "RE",
@@ -142,7 +150,7 @@
       "sources": [
         "watcher"
       ],
-      "funding": 3.2e-05
+      "funding": 2.2e-05
     },
     {
       "symbol": "XRP",
