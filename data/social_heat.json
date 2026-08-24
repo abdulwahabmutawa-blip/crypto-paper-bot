@@ -1,28 +1,28 @@
 {
-  "ts": "2026-08-24T16:56:29+00:00",
+  "ts": "2026-08-24T17:01:59+00:00",
   "sources": {
     "coingecko": [
       "BTC",
+      "PUMP",
       "AERO",
       "LIT",
-      "PUMP",
       "SOL",
-      "ZEC",
       "ENA",
-      "VIRTUAL",
-      "TRUMP"
+      "ZEC",
+      "SUI",
+      "INJ"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "TAO",
       "MSTRB",
-      "PENGU",
       "BTC",
-      "NEAR",
-      "BNB",
+      "PENGU",
       "ETH",
-      "SOL"
+      "PAXG",
+      "XAUT",
+      "BNB"
     ],
     "watcher": [
       "ETH",
@@ -41,7 +41,7 @@
         "watcher"
       ],
       "funding": 0.0001,
-      "long_short": 0.95
+      "long_short": 0.93
     },
     {
       "symbol": "ETH",
@@ -61,17 +61,7 @@
         "watcher"
       ],
       "funding": 5e-05,
-      "long_short": 1.5
-    },
-    {
-      "symbol": "SOL",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 2.23
+      "long_short": 1.53
     },
     {
       "symbol": "AERO",
@@ -87,7 +77,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 2e-05
+      "funding": 1.7e-05
     },
     {
       "symbol": "ENA",
@@ -96,6 +86,14 @@
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "INJ",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "LIT",
@@ -113,12 +111,12 @@
       ]
     },
     {
-      "symbol": "NEAR",
+      "symbol": "PAXG",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 8.8e-05
+      "funding": -4e-06
     },
     {
       "symbol": "PUMP",
@@ -129,6 +127,22 @@
       "funding": 5e-05
     },
     {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "TAO",
       "surfaces": 1,
       "sources": [
@@ -137,20 +151,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "TRUMP",
+      "symbol": "XAUT",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
-      "funding": 7e-06
-    },
-    {
-      "symbol": "VIRTUAL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": -3e-06
     },
     {
       "symbol": "ZEC",
