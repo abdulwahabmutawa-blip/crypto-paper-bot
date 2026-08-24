@@ -598,8 +598,13 @@ def signal_actionable(card: dict, signal: str) -> tuple[bool, str]:
                        f"samples under ruleset {RULESET}")
     # INDEPENDENCE (fix 08-24): rows fired minutes apart and scored over the
     # same forward window are one observation wearing many hats.
+    # missing n_eff means the card predates this rule — fail CLOSED, like
+    # every other unknown in this system
     n_eff = s.get(f"n_eff_{h}h")
-    if n_eff is not None and n_eff < MIN_ACT_NEFF:
+    if n_eff is None:
+        return False, (f"probation — no independence measure on the {h}h "
+                       f"record yet (card predates the n_eff rule)")
+    if n_eff < MIN_ACT_NEFF:
         return False, (f"probation — {n} rows but only {n_eff:.1f} "
                        f"independent {h}h windows "
                        f"(span {s.get(f'span_h_{h}h', 0):.0f}h): overlapping "
