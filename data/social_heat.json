@@ -1,15 +1,15 @@
 {
-  "ts": "2026-08-24T20:14:04+00:00",
+  "ts": "2026-08-24T20:19:27+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "AERO",
       "PUMP",
-      "INJ",
-      "ENA",
-      "XRP",
       "ZEC",
-      "LIT"
+      "INJ",
+      "LIT",
+      "ENA",
+      "ATOM"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,9 +19,9 @@
       "MSTRB",
       "ETH",
       "SOL",
-      "TAO",
       "PAXG",
-      "XAUT"
+      "XAUT",
+      "ONDO"
     ],
     "watcher": [
       "VIRTUAL"
@@ -56,6 +56,14 @@
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "ATOM",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -4.7e-05
     },
     {
       "symbol": "ENA",
@@ -97,12 +105,20 @@
       ]
     },
     {
+      "symbol": "ONDO",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "PAXG",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 1.5e-05
+      "funding": 1.6e-05
     },
     {
       "symbol": "PUMP",
@@ -121,28 +137,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "XAUT",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "XRP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "ZEC",
