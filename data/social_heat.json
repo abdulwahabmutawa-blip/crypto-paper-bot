@@ -1,29 +1,28 @@
 {
-  "ts": "2026-08-24T03:44:09+00:00",
+  "ts": "2026-08-24T03:49:29+00:00",
   "sources": {
     "coingecko": [
       "LIT",
       "PUMP",
       "ENA",
       "BTC",
+      "ETHFI",
+      "XRP",
       "SOL",
       "SUI",
-      "ETHFI",
-      "ZEC",
-      "MET",
-      "AAVE"
+      "MET"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "PENGU",
-      "TRUMP",
       "AAVE",
+      "TRUMP",
       "ENA",
       "NEAR",
       "TAO",
       "UNI",
-      "ZEC"
+      "PUMP"
     ],
     "watcher": [
       "ZEC",
@@ -46,27 +45,6 @@
       "long_short": 1.36
     },
     {
-      "symbol": "ZEC",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": 0.0001,
-      "long_short": 0.53
-    },
-    {
-      "symbol": "AAVE",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.47
-    },
-    {
       "symbol": "PENGU",
       "surfaces": 2,
       "sources": [
@@ -75,6 +53,34 @@
       ],
       "funding": 5e-05,
       "long_short": 1.59
+    },
+    {
+      "symbol": "PUMP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.07
+    },
+    {
+      "symbol": "XRP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "watcher"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.52
+    },
+    {
+      "symbol": "AAVE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "BTC",
@@ -117,14 +123,6 @@
       "funding": 0.0001
     },
     {
-      "symbol": "PUMP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "SOL",
       "surfaces": 1,
       "sources": [
@@ -165,7 +163,7 @@
       "funding": 0.0001
     },
     {
-      "symbol": "XRP",
+      "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
         "watcher"
