@@ -1,41 +1,41 @@
 {
-  "generated_utc": "2026-08-24T14:39:37+00:00",
+  "generated_utc": "2026-08-24T14:40:43+00:00",
   "created": "2026-07-30",
   "starting_cash": 1000.0,
-  "live_ts": "2026-08-24T14:35:00+00:00",
+  "live_ts": "2026-08-24T14:40:00+00:00",
   "current": {
     "date": "2026-08-24",
-    "value": 1011.71,
-    "bench": 1029.53,
+    "value": 1011.84,
+    "bench": 1029.66,
     "holding": "SPY"
   },
   "board": [
     {
       "sym": "SPY",
-      "price": 763.63,
-      "line": "S&P 500 \u00b7 score +0.73 \u00b7 mom90 +9.4% \u00b7 MA gap +8.2%",
+      "price": 763.73,
+      "line": "S&P 500 \u00b7 score +0.73 \u00b7 mom90 +9.4% \u00b7 MA gap +8.3%",
       "tag": "HELD",
       "on": true,
       "pick": true,
-      "fill": 18.262858364168334
+      "fill": 18.292253685488337
     },
     {
       "sym": "IWM",
-      "price": 298.83,
+      "price": 298.85,
       "line": "US small caps \u00b7 score +0.64 \u00b7 mom90 +11.2% \u00b7 MA gap +10.9%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 16.001067149813302
+      "fill": 16.012209052742698
     },
     {
       "sym": "QQQ",
-      "price": 705.83,
+      "price": 705.86,
       "line": "Nasdaq 100 \u00b7 score +0.46 \u00b7 mom90 +10.9% \u00b7 MA gap +8.2%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 11.584330526263772
+      "fill": 11.590540370110718
     },
     {
       "sym": "EFA",
@@ -48,12 +48,12 @@
     },
     {
       "sym": "ETH-USD",
-      "price": 2523.88,
-      "line": "Ethereum \u00b7 score +0.35 \u00b7 mom90 +21.9% \u00b7 MA gap +25.5%",
+      "price": 2525.76,
+      "line": "Ethereum \u00b7 score +0.35 \u00b7 mom90 +22.0% \u00b7 MA gap +25.6%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 8.76512375175529
+      "fill": 8.799941562313379
     },
     {
       "sym": "DBC",
@@ -66,57 +66,57 @@
     },
     {
       "sym": "EEM",
-      "price": 66.04,
+      "price": 66.03,
       "line": "Emerging mkts \u00b7 score +0.22 \u00b7 mom90 +6.7% \u00b7 MA gap +8.5%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 5.407592133365478
+      "fill": 5.394193362763223
     },
     {
       "sym": "USO",
-      "price": 132.21,
-      "line": "Oil \u00b7 score +0.14 \u00b7 mom90 +7.8% \u00b7 MA gap +26.4%",
+      "price": 132.15,
+      "line": "Oil \u00b7 score +0.14 \u00b7 mom90 +7.8% \u00b7 MA gap +26.3%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 3.5666063980848866
+      "fill": 3.545353055476027
     },
     {
       "sym": "BTC-USD",
-      "price": 79626.7,
+      "price": 79625.28,
       "line": "Bitcoin \u00b7 score +0.12 \u00b7 mom90 +5.0% \u00b7 MA gap +15.3%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 3.0511945854677243
+      "fill": 3.0500847668072333
     },
     {
       "sym": "GLD",
-      "price": 428.84,
-      "line": "Gold \u00b7 score -0.11 \u00b7 mom90 -2.6% \u00b7 MA gap +3.6%",
+      "price": 428.96,
+      "line": "Gold \u00b7 score -0.11 \u00b7 mom90 -2.6% \u00b7 MA gap +3.7%",
       "tag": "not eligible",
       "on": false,
       "pick": false,
-      "fill": -2.6547363732338227
+      "fill": -2.6268690835958544
     },
     {
       "sym": "SLV",
-      "price": 62.54,
-      "line": "Silver \u00b7 score -0.27 \u00b7 mom90 -12.9% \u00b7 MA gap -3.3%",
+      "price": 62.53,
+      "line": "Silver \u00b7 score -0.27 \u00b7 mom90 -13.0% \u00b7 MA gap -3.3%",
       "tag": "not eligible",
       "on": false,
       "pick": false,
-      "fill": -6.77465540759858
+      "fill": -6.785471425508938
     },
     {
       "sym": "TLT",
-      "price": 82.56,
-      "line": "Long bonds \u00b7 score -0.36 \u00b7 mom90 -3.4% \u00b7 MA gap -3.0%",
+      "price": 82.58,
+      "line": "Long bonds \u00b7 score -0.36 \u00b7 mom90 -3.4% \u00b7 MA gap -2.9%",
       "tag": "not eligible",
       "on": false,
       "pick": false,
-      "fill": -9.060495725306389
+      "fill": -9.001963994480835
     }
   ],
   "board_title": "12 instruments ranked by momentum-per-unit-risk",
@@ -127,6 +127,18 @@
     "board_note": "Every rule in this bot was earned by an earlier experiment: vol-adjusted momentum, trend gate as crash protection, vol-sized positions, trailing stop, and a switch threshold that fights churn. The synthesis on trial."
   },
   "intraday": [
+    {
+      "ts": "2026-08-04T12:52:52+00:00",
+      "value": 1010.04,
+      "bench": 1021.49,
+      "holding": "IWM"
+    },
+    {
+      "ts": "2026-08-04T13:06:07+00:00",
+      "value": 1010.04,
+      "bench": 1021.49,
+      "holding": "IWM"
+    },
     {
       "ts": "2026-08-04T13:19:21+00:00",
       "value": 1010.04,
@@ -9110,21 +9122,9 @@
       "holding": "SPY"
     },
     {
-      "ts": "2026-08-24T14:12:34+00:00",
-      "value": 1010.44,
-      "bench": 1028.23,
-      "holding": "SPY"
-    },
-    {
-      "ts": "2026-08-24T14:26:03+00:00",
-      "value": 1010.55,
-      "bench": 1028.35,
-      "holding": "SPY"
-    },
-    {
-      "ts": "2026-08-24T14:39:37+00:00",
-      "value": 1011.71,
-      "bench": 1029.53,
+      "ts": "2026-08-24T14:40:43+00:00",
+      "value": 1011.84,
+      "bench": 1029.66,
       "holding": "SPY"
     }
   ],
@@ -9264,8 +9264,8 @@
     },
     {
       "date": "2026-08-24",
-      "value": 1011.71,
-      "bench": 1029.53,
+      "value": 1011.84,
+      "bench": 1029.66,
       "holding": "SPY"
     }
   ],
@@ -9278,5 +9278,5 @@
   },
   "costs_paid": 2.1356,
   "frozen": null,
-  "thoughts": "I'm holding SPY. Best momentum-per-unit-risk in a confirmed uptrend. I bought at $766.38; it's now $763.63 (-0.4% since I got in). My safety net: if the price falls to $691.17 (10% below its recent high), I sell automatically \u2014 no exceptions. Closest challenger on my list is IWM, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
+  "thoughts": "I'm holding SPY. Best momentum-per-unit-risk in a confirmed uptrend. I bought at $766.38; it's now $763.73 (-0.3% since I got in). My safety net: if the price falls to $691.17 (10% below its recent high), I sell automatically \u2014 no exceptions. Closest challenger on my list is IWM, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
 }
