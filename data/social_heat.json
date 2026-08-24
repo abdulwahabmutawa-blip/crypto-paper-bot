@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-24T16:11:29+00:00",
+  "ts": "2026-08-24T16:17:19+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -14,14 +14,14 @@
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "PENGU",
-      "TAO",
       "MSTRB",
+      "TAO",
+      "PENGU",
       "BTC",
       "NEAR",
+      "RE",
       "ETH",
-      "BNB",
-      "WLD"
+      "BNB"
     ],
     "watcher": [
       "ETH",
@@ -111,6 +111,14 @@
       "funding": 5e-05
     },
     {
+      "symbol": "RE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "TAO",
       "surfaces": 1,
       "sources": [
@@ -125,14 +133,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "WLD",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 4.2e-05
     },
     {
       "symbol": "XRP",
