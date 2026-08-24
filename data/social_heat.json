@@ -1,15 +1,16 @@
 {
-  "ts": "2026-08-24T21:15:36+00:00",
+  "ts": "2026-08-24T21:21:26+00:00",
   "sources": {
     "coingecko": [
-      "BTC",
-      "AERO",
-      "LIT",
       "PUMP",
-      "INJ",
+      "LIT",
+      "AERO",
+      "BTC",
       "BONK",
       "SOL",
-      "XMR"
+      "ETH",
+      "ZEC",
+      "PEPE"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -17,11 +18,11 @@
       "VIRTUAL",
       "MSTRB",
       "BTC",
-      "SOL",
       "PAXG",
       "XAUT",
+      "SOL",
       "ETH",
-      "LINK"
+      "RLUSD"
     ],
     "watcher": [
       "VIRTUAL"
@@ -36,8 +37,18 @@
         "coingecko",
         "movers"
       ],
-      "funding": 7.1e-05,
+      "funding": 7e-05,
       "long_short": 0.94
+    },
+    {
+      "symbol": "ETH",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 9.6e-05,
+      "long_short": 2.41
     },
     {
       "symbol": "SOL",
@@ -75,30 +86,6 @@
       ]
     },
     {
-      "symbol": "ETH",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 9.8e-05
-    },
-    {
-      "symbol": "INJ",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "LINK",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "LIT",
       "surfaces": 1,
       "sources": [
@@ -119,7 +106,14 @@
       "sources": [
         "movers"
       ],
-      "funding": 8e-06
+      "funding": 1.1e-05
+    },
+    {
+      "symbol": "PEPE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ]
     },
     {
       "symbol": "PUMP",
@@ -130,15 +124,22 @@
       "funding": 5e-05
     },
     {
+      "symbol": "RLUSD",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
+    },
+    {
       "symbol": "XAUT",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 4.2e-05
+      "funding": 4e-05
     },
     {
-      "symbol": "XMR",
+      "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
         "coingecko"
