@@ -1,32 +1,26 @@
 {
- "updated_utc": "2026-08-23T08:20:00+00:00",
- "lines_counted": 392,
- "lines_total": 392,
+ "updated_utc": "2026-08-24T09:30:00+00:00",
+ "lines_counted": 406,
+ "lines_total": 406,
  "method": "Recomputed from source each run rather than incremented. Daily lines are deduped by (date,bot) keeping the last filing, which drops superseded re-filings so a session is never counted twice.",
  "by_primary_driver": {
-  "unknown": {
-   "profit": 14,
-   "loss": 13,
-   "flat": 79,
-   "win_pct": 51.9
-  },
   "market_beta": {
    "profit": 32,
-   "loss": 24,
+   "loss": 25,
    "flat": 7,
-   "win_pct": 57.1
+   "win_pct": 56.1
   },
   "hype_sentiment": {
    "profit": 18,
-   "loss": 31,
+   "loss": 33,
    "flat": 7,
-   "win_pct": 36.7
+   "win_pct": 35.3
   },
   "technical": {
    "profit": 14,
-   "loss": 33,
+   "loss": 34,
    "flat": 4,
-   "win_pct": 29.8
+   "win_pct": 29.2
   },
   "macro": {
    "profit": 18,
@@ -34,11 +28,11 @@
    "flat": 2,
    "win_pct": 51.4
   },
-  "none_cash": {
-   "profit": 0,
-   "loss": 1,
-   "flat": 35,
-   "win_pct": 0.0
+  "unknown": {
+   "profit": 14,
+   "loss": 13,
+   "flat": 87,
+   "win_pct": 51.9
   },
   "sector": {
    "profit": 13,
@@ -51,33 +45,39 @@
    "loss": 7,
    "flat": 1,
    "win_pct": 65.0
+  },
+  "none_cash": {
+   "profit": 0,
+   "loss": 1,
+   "flat": 37,
+   "win_pct": 0.0
   }
  },
  "by_beta_or_alpha": {
   "alpha": {
    "profit": 64,
-   "loss": 77,
+   "loss": 80,
    "flat": 8,
-   "win_pct": 45.4
-  },
-  "n/a": {
-   "profit": 13,
-   "loss": 15,
-   "flat": 119,
-   "win_pct": 46.4
+   "win_pct": 44.4
   },
   "beta": {
    "profit": 27,
-   "loss": 20,
+   "loss": 21,
    "flat": 7,
-   "win_pct": 57.4
+   "win_pct": 56.2
   },
   "mixed": {
    "profit": 18,
    "loss": 23,
    "flat": 1,
    "win_pct": 43.9
+  },
+  "n/a": {
+   "profit": 13,
+   "loss": 15,
+   "flat": 129,
+   "win_pct": 46.4
   }
  },
- "note": "'technical' and 'hype_sentiment' stay the two worst drivers in this ledger and both took another loss today, on the same day and nearly the same minute. hunter's technical rotation into SOL at 96.61, nine minutes before the 97.17 high, cost 41.76; hypecrypto's hype entry into ENA at 00:12:39Z cost 55.30. The new evidence is that both losses were avoidable by a filter that already exists in the fleet: the lottery bot's LATE guard refused the same ENA eight times across the same 39 minutes. 'news_idiosyncratic' took its first clear loss in a while and it is instructive - the FalconX story was real and correctly identified, it was simply three days old, which is a lateness failure wearing a news label. Seven equity books are filed 'unknown' today because the US market was shut and there is no day result to attribute, which is the honest use of that value rather than a guess."
+ "note": "'technical' and 'hype_sentiment' remain the two worst drivers in this ledger and each took another loss today. The hype_sentiment loss is the informative one: hypecrypto bought ENA a second day running, off the same kind of scan, and lost a second time - 55.30 on 08-23 and 7.79 on 08-24. Nine round trips, nine finishes below the start. 'unknown' keeps swelling on flat lines because seven equity books have now sat three consecutive runs with no completed session to attribute, which is the honest label rather than a story."
 }

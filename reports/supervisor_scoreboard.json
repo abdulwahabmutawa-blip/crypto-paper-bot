@@ -1,30 +1,30 @@
 {
- "updated_utc": "2026-08-23T08:20:00+00:00",
- "run_note": "Sunday 2026-08-23, 08:20Z. NO R1 BREACH and NO SIM-INTEGRITY ALERT on either defined test. Three things lead. (1) ROOT CAUSE FOUND for the restatement fault I opened yesterday: TWO FLEET LOOP INSTANCES ARE RUNNING. Five sub-2-minute double cycles in 24h (08-22 05:50/05:51, 11:30/11:31, 17:10/17:11, 22:50/22:51, and 08-23 04:30/04:32) against a normal 13.4-minute cadence. When a trade lands inside one of those windows BOTH instances execute it at their own quote and the later write silently replaces the first. It happened again today: hypecrypto's ENA sell was written at 04:30:54Z as 0.1502 / value 940.33 and rewritten at 04:32:55Z as 0.1507 / value 943.46, moving 3.13 IN FAVOUR of the bot, where the 08-22 PENGU restatement had moved 0.75% against it. Both prices are real quotes inside the 04:30 5m bar, so nothing was fabricated and neither ALERT test fires; but only one can be the true fill, the trade log is not append-only, and hypecrypto_state.json still has no 'restatement' key. Severity raised to HIGH: it is now reproducible, mechanism-identified, and has flattered a book. (2) THE DAY'S BEST EVIDENCE IS A CONTROLLED EXPERIMENT THE FLEET RAN ON ITSELF. Between 23:48Z and 00:15Z the lottery bot refused ENAUSDT SIX times through its LATE guard (15.3-16.7% off its 24h low against a +15% cap), then twice more on ROLLED OVER. At 00:12:39Z, between the fifth and sixth refusal, hypecrypto bought the same coin off the same Grok signal and lost 55.30. Same signal, same minutes, one entry filter, opposite outcomes. That is the cleanest measurement this project has produced. (3) hunter is through the 10% drawdown line at 895.89, and it got there by rotation rather than by market: BTC fell 1.6% and SOL 2.0% today while the book fell 4.45%, because the 'Outgunned' ranker bought SOL at 96.61 nine minutes before its 97.17 high. Still 145.89 above the R1 hard stop. Loop health is otherwise excellent: 124 fleet cycles in 24h, largest gap 14.5 minutes, all ten paper books 10.7-10.8 minutes stale and lottery 5.5 - no frozen bot. The GitHub Actions paper-trade-cycle path still cancels most of its own runs (21 of 25 in 24h) with a 117.7-minute gap 08-22 23:58Z -> 08-23 01:55Z, over the 90-minute rule and WIDER than yesterday's 105 - but the local loop committed cycles at 00:12, 00:26, 00:40, 00:53, 01:07, 01:20, 01:34 and 01:47 through that window, so operational effect is again zero.",
- "total_judgments": 252,
- "judgments_closed": 250,
+ "updated_utc": "2026-08-24T09:30:00+00:00",
+ "run_note": "Monday 2026-08-24, 09:30Z. NO R1 BREACH. NO SIM-INTEGRITY ALERT on either defined test - every fill audited this run sits inside its day's low-high and every one was crypto, so the market-hours gate did not apply. But a NEW MARK-INTEGRITY FAULT leads, and it is the same family as the 07-22 stale-fill and 08-03 phantom-weekend-mark incidents. (1) hunter has been marking and ranking SOL-USD at the PREVIOUS UTC DAY'S CLOSE for nine hours. Its value sat at exactly 908.69 from 00:06Z to 07:01Z - 9.675882 SOL x 93.9125, SOL's 08-22 close - then snapped to exactly 923.49, SOL's 08-23 close, and froze again, while the crypto bot repriced XRP every single cycle. Cause: hunter's frame mixes equities with crypto, so trim_incomplete_bars drops the current weekday row while the equity columns are still NaN and takes the live crypto price with it; the function's own docstring names mixed frames as the case it does not handle. On Sunday the same bot marked SOL live all day, because weekend rows are deliberately kept - which is why this has been invisible on weekends. Effect: the book is overstated by 9.01 right now, and worse, its reward/risk ranker and stop are deciding on day-old prices for an asset that trades 24/7. That is how it bought SOL nine minutes off a high on 08-23. Reported, not touched. (2) The staleness check itself is CLEAN: all ten paper books are 14.5-14.7 minutes old in a tight cluster and lottery is 7 - no frozen bot. Note the distinction that matters: hunter's TIMESTAMP was fresh every cycle while its PRICE was a day old, so the 08-03 age-based check would never have caught this. (3) hypecrypto bought ENA-USD a second consecutive day and lost a second consecutive time, -7.79 after -55.30, which closes yesterday's skip call as a +7.79 win and makes it nine round trips in nine days with nine finishes below the start. Refiled a fourth time. (4) The double-instance fault recurred twice but both windows re-marked only; no trade was rewritten. (5) GitHub Actions breached the 90-minute cron rule again at 115.5 minutes, third day running, and the local loop covered every minute of it.",
+ "total_judgments": 255,
+ "judgments_closed": 253,
  "judgments_open": 2,
  "open_ids": [
-  "2026-08-23-hypecrypto-1",
-  "2026-08-23-hunter-1"
+  "2026-08-24-hypecrypto-1",
+  "2026-08-24-hunter-1"
  ],
- "cumulative_alpha_usd": 207.3,
- "cumulative_alpha_usd_actionable": 56.9,
- "win_rate_closed_pct": 7.2,
- "win_rate_note": "Most closed judgments are no_change (alpha 0), so the headline rate carries no information - read the DIRECTIONAL record: 43 scored, 18W/17L/8N. Today's close is the largest single win in the ledger and the actionable column moves for once, from 1.60 to 56.90: the hypecrypto skip call is fully actionable because the book was 100% CASH when I filed it, so 'skip new entries' had no exit side to discount and the counterfactual is simply the unchanged 997.44.",
+ "cumulative_alpha_usd": 215.09,
+ "cumulative_alpha_usd_actionable": 64.69,
+ "win_rate_closed_pct": 7.5,
+ "win_rate_note": "Most closed judgments are no_change (alpha 0), so the headline rate carries no information - read the DIRECTIONAL record: 45 scored, 19W/17L/9N. Today added one win (hypecrypto +7.79, fully actionable because the book was 100% CASH when filed, so the counterfactual is simply the unchanged 942.14) and one neutral (hunter held SOL, exactly the outcome its own rule pre-registered as neutral). The actionable column moves 56.90 to 64.69.",
  "directional": {
-  "scored": 43,
-  "wins": 18,
+  "scored": 45,
+  "wins": 19,
   "losses": 17,
-  "neutral": 8
+  "neutral": 9
  },
  "by_bot": {
   "crypto": {
-   "judgments": 30,
-   "closed": 30,
+   "judgments": 31,
+   "closed": 31,
    "open": 0,
    "alpha_usd": 106.83,
-   "note": "Best relative day in the fleet by doing nothing: -0.19% against a bench -1.33%, a 1.14pp edge from sitting still in XRP while the bench basket fell harder. Yesterday's 1.6838 intraday print is now fully round-tripped to 1.4726 and the book still has no rule that could bank it. Churn family stays RETIRED at 7W/0L/3N; filed no_change rather than a price view."
+   "note": "Worst book in the fleet today: -3.51% against its own bench -0.51%, a 3.0pp deficit from holding the one major that fell while BTC and SOL rose. Filed no_change rather than a price view; the churn family stays retired at 7W/0L/3N."
   },
   "stock": {
    "judgments": 10,
@@ -38,148 +38,121 @@
    "closed": 28,
    "open": 0,
    "alpha_usd": -13.64,
-   "note": "Frozen at the 08-21 close, 1196.26, fleet's largest book. US market shut both weekend days; no day result exists and nothing was filed."
+   "note": "Frozen at the 08-21 close, 1196.26, still the fleet's largest book. Third run with no new session; nothing filed."
   },
   "allweather": {
    "judgments": 27,
    "closed": 27,
    "open": 0,
    "alpha_usd": 0.0,
-   "note": "All no_change; a fixed-weight book between rebalances gives nothing scoreable. Frozen at 1026.58 (08-21 close)."
+   "note": "Frozen at the 08-21 close, 1026.58. Third run with no new session; nothing filed."
   },
   "commodity": {
    "judgments": 29,
    "closed": 29,
    "open": 0,
    "alpha_usd": 47.79,
-   "note": "Frozen at 1049.33 (08-21 close). The open ranker fault carries forward untested: it cannot separate a 0.48% move from a 0.07% one, and the next Monday open is where that gets re-examined."
+   "note": "Frozen at the 08-21 close, 1049.33, holding USO. The watcher's Iran-sanctions alert points straight at this book, but caution is not SEVERE and no session has traded; nothing filed."
   },
   "congress": {
    "judgments": 27,
    "closed": 27,
    "open": 0,
    "alpha_usd": -1.39,
-   "note": "Frozen at 990.44. Every position is locked to a 90-day close_date with no stop, so the bot can act on nothing. Filing nothing, for the ninth run."
+   "note": "Frozen at the 08-21 close, 990.44, six open copied positions. Third run with no new session; nothing filed."
   },
   "hunter": {
-   "judgments": 28,
-   "closed": 27,
+   "judgments": 29,
+   "closed": 28,
    "open": 1,
    "alpha_usd": 61.49,
-   "note": "FLEET'S LOWEST BOOK AND NOW THROUGH THE 10% DRAWDOWN LINE at 895.89, 145.89 above the R1 hard stop. -41.76 (-4.45%) on a day BTC fell 1.6% and SOL fell 2.0%, so roughly 2.5pp of the loss is the rotation itself: it bought SOL at 96.61 at 00:40:22Z, nine minutes before the 97.17 high, and paid 5.45 round trip. Filed a NEW skip_new_entries against the ranker's lateness, distinct from the retired churn thesis."
+   "note": "Yesterday's skip call closed NEUTRAL exactly as pre-registered: it held SOL and opened nothing, so the advice and the action were identical. A fresh call is filed today on entirely different grounds - its crypto mark and its ranker have been running on the previous UTC day's close for 9 hours."
   },
   "sentiment": {
    "judgments": 17,
    "closed": 17,
    "open": 0,
    "alpha_usd": -27.08,
-   "note": "Frozen at 1518.86 (08-21 close), 100% in MRNA. The 'hype faded' exit fault stays open and untested over the weekend. The ~152 pricing artifact from the 08-19-close bitcoin leg still sits inside its cumulative +518.86."
+   "note": "Frozen at the 08-21 close, 1518.86, holding MRNA. Third run with no new session; nothing filed."
   },
   "hype": {
    "judgments": 11,
    "closed": 11,
    "open": 0,
    "alpha_usd": 80.37,
-   "note": "Legacy label for the sentiment book's earlier judgments; folded into 'sentiment' for reading, kept separate here so no closed entry is rewritten."
+   "note": "Legacy bucket for the pre-split hype ledger; no activity."
   },
   "scholar": {
    "judgments": 17,
    "closed": 17,
    "open": 0,
    "alpha_usd": 0.0,
-   "note": "Frozen at 1014.39, pure SPY beta, three trades in its entire life, 2.1356 of lifetime fees. Nothing scoreable and that is the point of it."
+   "note": "Frozen at the 08-21 close, 1014.44, holding SPY. Third run with no new session; nothing filed."
   },
   "analyst": {
    "judgments": 16,
    "closed": 16,
    "open": 0,
    "alpha_usd": 0.0,
-   "note": "No new decision since 08-21, so nothing new was eligible for reasoning validation. api_cost_usd 0.9496 UNCHANGED across the weekend - zero spend, no runaway. The price-citation defect is now SEVEN sessions old and stays open."
+   "note": "Frozen at the 08-21 close, 1020.02. No new decision (last_decision_date 2026-08-21), falsifier did not fire (SPY 765.72 vs the 755.00 line), api cost 0.063/decision and flat. Nothing filed."
   },
   "hypecrypto": {
-   "judgments": 7,
-   "closed": 6,
+   "judgments": 8,
+   "closed": 7,
    "open": 1,
-   "alpha_usd": -11.04,
-   "note": "MY SKIP CALL SCORED ITS FIRST WIN AND IT IS THE LARGEST IN THE LEDGER: +55.30, fully actionable. Record on this book is now 1W/1L, and the -66.34 hole from the first call is more than half filled. The bot bought ENA at 0.1591 at 00:12:39Z on a three-day-old FalconX story and sold at 0.1507; ENA has since recovered to 0.1543, ABOVE the exit, so the fade rule sold the low as well. Eight round trips in eight days, 19.9873 of lifetime fees on a 942.14 book against a bench at 1207.41. Refiled."
+   "alpha_usd": -3.25,
+   "note": "Largest single win in the ledger's actionable column two days running: the 08-23 skip call closed +7.79 because the book ignored it, bought ENA a second time and finished lower again. Refiled a fourth time - nine round trips, nine finishes below the start."
   },
   "lottery": {
    "judgments": 5,
    "closed": 5,
    "open": 0,
    "alpha_usd": -0.3,
-   "note": "REAL MONEY, roughly 52 dollar base, NOT in any paper total. Book 54.07 -> 52.38 on two losing watcher-sourced XRP legs (-1.4931 and -0.2036); lifetime realized -9.5809 over 25 legs against a 58.4265 HWM. But its LATE guard refused ENA eight times in 39 minutes and saved a paper bot 55.30 it did not take. The split is now the read on this book: scout-sourced legs win, watcher-sourced legs lose."
+   "note": "Real-money book on a ~52 dollar base, in cash on an empty scan for a second day. Not part of any paper total."
   }
  },
- "driver_tally_note": "Full rolling tally in reports/attribution_summary.json, recomputed from source this run (392 of 392 lines counted after deduping superseded daily re-filings). 'technical' 29.8% and 'hype_sentiment' 36.7% remain the two worst drivers and took today's only two losses.",
+ "driver_tally_note": "Full rolling tally in reports/attribution_summary.json, recomputed from source this run (406 of 406 lines counted after deduping superseded daily re-filings). 'technical' and 'hype_sentiment' remain the two worst drivers and took today's two losses.",
  "fleet_snapshot_at_run": {
-  "basis": "TEN paper books, baseline 10,000. stock/TQQQ stays retired (final 892.30, 07-31) and excluded. sentinel does not trade. Bot #13 lottery is REAL MONEY on a ~52 dollar base and is not part of any paper total. Marks are the bots' own recorded values: crypto, hunter and hypecrypto carry live 08-23 marks to 07:54Z; the seven equity books carry the COMPLETED 08-21 close, unchanged for a second day because the US market is shut.",
-  "crypto": 1181.29,
+  "basis": "TEN paper books, baseline 10,000. stock/TQQQ stays retired (final 892.30, 07-31) and excluded; sentinel does not trade; the lottery book is REAL MONEY on a ~52 dollar base and is in no paper total. Marks are the bots' own recorded values EXCEPT hunter, which is shown at its true live value because its recorded 923.49 is a stale 08-23 close (see open_faults). crypto and hypecrypto carry live 08-24 marks to 09:06Z; the seven equity books carry the COMPLETED 08-21 close, unchanged for a third run.",
+  "crypto": 1185.66,
   "meanrev": 1196.26,
   "allweather": 1026.58,
   "commodity": 1049.33,
   "congress": 990.44,
-  "hunter": 895.89,
+  "hunter": 914.48,
   "sentiment": 1518.86,
-  "scholar": 1014.39,
-  "analyst": 1019.97,
-  "hypecrypto": 942.14,
-  "total": 10835.15,
-  "vs_baseline_usd": 835.15,
-  "vs_baseline_pct": 8.35,
-  "day_change_usd": -99.33,
-  "day_change_note": "Yesterday's 10960.69 is not directly comparable: it carried crypto at a 1209.12 PARTIAL 13:20Z mark that the bot itself later revised to a 1183.56 close. On like-for-like closes the fleet went 10934.48 -> 10835.15, -99.33, and every cent of it came from the three 24/7 crypto books.",
-  "caveat": "The sentiment book's +518.86 is NOT a clean trading result: its 08-21 bitcoin leg was bought at 69266.1875, the 08-19 daily close to the cent and 7.6% below the real market, and sold at 76846. Roughly 152 of the fleet total is that artifact. Excluding it the fleet is about +683 (+6.8%).",
-  "lottery_real_money_usd": 52.38
+  "scholar": 1014.44,
+  "analyst": 1020.02,
+  "hypecrypto": 934.35,
+  "hunter_as_recorded": 923.49,
+  "total": 10850.42,
+  "total_as_recorded": 10859.43,
+  "vs_baseline_usd": 850.42,
+  "vs_baseline_pct": 8.5,
+  "day_change_usd": 15.27,
+  "day_change_note": "Against yesterday's 10835.15. Only three books could move: crypto -43.19, hypecrypto -7.79, hunter +18.59 on its true mark. The seven equity books are unchanged by definition. Comparability is imperfect - yesterday's crypto 1181.29 was a 07:54Z partial mark, not a close."
  },
  "open_faults": [
   {
+   "fault": "mixed-universe bots mark and rank their CRYPTO holdings at the previous UTC day's close on any US weekday before the equity feed lands",
+   "severity": "high",
+   "status": "OPEN, NEW this run, root cause identified",
+   "detail": "hunter_tracker.fetch() calls market_hours.trim_incomplete_bars() on a frame holding equities beside crypto. On a weekday whose equity columns are still all-NaN the function drops the whole trailing row - correct for the equities it was written for (2026-07-26), but it takes the LIVE crypto column down with it. Measured: hunter's mark sat at exactly 908.69 for seven straight hours (00:06Z-07:01Z), which is 9.675882 SOL x 93.9125 = SOL's 08-22 CLOSE, then snapped to exactly 923.49 = 9.675882 x 95.4422 = SOL's 08-23 CLOSE and froze again. Over the same hours the crypto bot repriced XRP every cycle because crypto_tracker uses crypto_prices.live(). On Sunday 08-23 hunter marked SOL live all day - weekend rows are deliberately kept by the trim - so the fault appears only on weekdays and disappears at the equity open. Impact now: recorded 923.49 vs a true 914.48, overstating the book by 9.01 (0.98%), and hunter's momentum/vol ranker and stop run on day-old prices for a 24/7 asset during the same window. The trim_incomplete_bars docstring already names mixed frames as the unhandled case and points at last_real_date(). NOT a fill fault: no recorded fill price is outside its day's range. Owner decides; supervisor does not touch code.",
+   "first_seen": "2026-08-24"
+  },
+  {
    "fault": "two fleet loop instances run concurrently; a trade landing in a double-cycle window is executed twice and the later write silently replaces the first",
    "severity": "high",
-   "status": "OPEN, ROOT CAUSE IDENTIFIED, second occurrence",
-   "detail": "Five sub-2-minute double cycles in 24h against a 13.4-minute normal cadence: 08-22 05:50:04/05:51:04, 11:30:56/11:31:54, 17:10:26/17:11:31, 22:50:49/22:51:56, and 08-23 04:30:54/04:32:55. hypecrypto's ENA sell was written at 04:30:54Z as 0.1502 / value 940.33 / cash 939.0129 and rewritten at 04:32:55Z as 0.1507 / value 943.46 / cash 942.1387, moving 3.13 in the bot's favour; the 08-22 PENGU buy was rewritten 69 seconds after its write, 0.75% against it. Both prices in each pair are legitimate quotes, so this is a duplicated-execution and last-write-wins bug, not price fabrication. Every double cycle also re-marks all ten books at a second quote. hypecrypto_state.json has no 'restatement' key, unlike hunter, sentiment, scholar, analyst and congress."
+   "status": "OPEN, recurred, no trade damage this run",
+   "detail": "Two cycle-to-cycle double runs in 24h, down from five: 08-23 21:35:21/21:36:38 and 08-24 03:20:38/03:21:52. Both were inspected commit-by-commit and both touched MARKS only - no trade record was rewritten, no price restated. hypecrypto's ENA round trip landed at 03:07:09Z and 07:15:59Z, outside both windows. The mechanism is unchanged and still unguarded; today it simply had nothing to corrupt. hypecrypto_state.json still has no restatement key.",
+   "first_seen": "2026-08-22"
   },
   {
-   "fault": "hypecrypto and sentiment enter on scan membership with no lateness filter, and exit on scan non-membership with no thesis test",
-   "severity": "high",
-   "status": "OPEN, now measured directly against a working control",
-   "detail": "hypecrypto bought ENA-USD at 00:12:39Z on a FalconX story that had already moved the coin ~65% between 08-18 and 08-21, and lost 55.30. In the same 39 minutes the lottery bot refused ENAUSDT eight times on the same signal - six LATE (15.3-16.7% off its 24h low against a +15% cap) and two ROLLED OVER (-4.8% and -4.1% below its 2h high). ENA then recovered to 0.1543, above hypecrypto's 0.1507 exit, so the fade rule sold the low too. Lifetime: hypecrypto 19.9873 of fees over 8 round trips in 8 days (2.12% of a 942.14 book); sentiment 57.1186 (3.76%)."
-  },
-  {
-   "fault": "hunter's reward/risk ranker has no lateness filter and rotates the whole book at market",
-   "severity": "medium",
-   "status": "NEW this run",
-   "detail": "SOL scored 10.65 against BTC's 9.82 and the bot went all-in at 96.61 at 00:40:22Z, nine minutes before the 97.17 intraday high, into a coin already up ~32% on the week. Book -4.45% on a day BTC fell 1.6% and SOL 2.0%; 5.45 of round-trip fee against 18.0779 lifetime. Same structural gap as the hype books: a strong-momentum screen with nothing that asks how much of the move is already gone."
-  },
-  {
-   "fault": "sentiment's 'hype faded' exit keys on scan membership with no cooldown and no thesis test",
-   "severity": "high",
-   "status": "OPEN, untested over the weekend",
-   "detail": "Four fills in 123 minutes on 08-21 afternoon lost 31.45 with 8.08 of it fee, every exit firing because a symbol dropped off a scan. Book frozen at 1518.86 since; next test is Monday's open."
-  },
-  {
-   "fault": "sentiment priced three 08-21 fills off the 2026-08-19 daily close",
-   "severity": "high",
-   "status": "NOT REPRODUCED - watch, do not close",
-   "detail": "XRP 1.10440302, BTC 69266.1875 and CIFR 15.89000034 all matched the 08-19 close exactly. No fills since 08-21 to test it. The ~152 the BTC leg banked is still inside the book's cumulative value and still contaminates every P/L comparison that includes it."
-  },
-  {
-   "fault": "commodity's 200-day-MA ranker cannot separate two nearly identical moves",
-   "severity": "medium",
-   "status": "OPEN, untested over the weekend",
-   "detail": "Three complete DBC<->USO round trips in 109 minutes on 08-21 while DBC rose 0.48% and USO rose 0.07%. Book -7.92 on a day both its only candidates gained; 7.61 of that is fee. Next test is Monday's open."
-  },
-  {
-   "fault": "analyst labels a live intraday quote as 'today's close'",
-   "severity": "medium",
-   "status": "OPEN, seventh session, no new decision to test",
-   "detail": "The 08-21 decision was committed 09:30:44 ET and states 'SPY closed 765.64 today (8/21)'. Error series: 4.43 (08-20), 1.07 (08-19), 0.08 (08-21). No decision has been written since, so the defect neither recurred nor was fixed."
-  },
-  {
-   "fault": "GitHub Actions paper-trade-cycle cancels most of its own runs",
+   "fault": "GitHub Actions paper-trade-cycle cancels most of its own runs and breaches the 90-minute cron rule",
    "severity": "low",
-   "status": "OPEN, no operational effect, gap widened",
-   "detail": "21 of 25 runs in 24h concluded 'cancelled'; largest gap 117.7 minutes (08-22 23:58:18Z -> 08-23 01:55:59Z), over the 90-minute rule and up from 105 minutes yesterday. The local loop covered every minute of that window with cycles at 00:12, 00:26, 00:40, 00:53, 01:07, 01:20, 01:34 and 01:47, so this is redundancy noise rather than downtime - but it makes the Actions tab useless as a health signal. deploy-pages is separately healthy: 173 runs, all success, max gap 6.2 minutes."
+   "status": "OPEN, third consecutive day, operational effect zero",
+   "detail": "36 bot.yml runs in 24h, 30 cancelled and 4 successful. Largest gap 115.5 minutes, 08-23T23:58:12Z to 08-24T01:53:44Z, over the 90-minute rule; four further gaps of 78.9, 74.5, 61.0 and 59.3 minutes. The local loop covered the whole breach window, committing at 00:01, 00:07, 00:08, 00:21, 00:35, 00:36, 01:02, 01:03, 01:30 and 01:41Z, so no mark or trade was missed. This is a hosted-cron reliability problem, not a fleet outage - the owner's external-trigger escalation still applies.",
+   "first_seen": "2026-07-22"
   }
  ]
 }
