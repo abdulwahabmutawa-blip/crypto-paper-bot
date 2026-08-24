@@ -1,16 +1,17 @@
 {
-  "ts": "2026-08-24T03:05:16+00:00",
+  "ts": "2026-08-24T03:10:29+00:00",
   "sources": {
     "coingecko": [
       "LIT",
+      "ENA",
       "BTC",
       "ZEC",
-      "ENA",
       "PUMP",
       "SOL",
-      "MORPHO",
       "XRP",
-      "SUI"
+      "MORPHO",
+      "SUI",
+      "UNI"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,17 +22,29 @@
       "NEAR",
       "ENA",
       "TAO",
-      "ZEC",
-      "UNI"
+      "UNI",
+      "ZEC"
     ],
     "watcher": [
       "ZEC",
+      "ENA",
       "PENGU",
       "XRP"
     ],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "ENA",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.36
+    },
     {
       "symbol": "ZEC",
       "surfaces": 3,
@@ -44,16 +57,6 @@
       "long_short": 0.53
     },
     {
-      "symbol": "ENA",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.36
-    },
-    {
       "symbol": "PENGU",
       "surfaces": 2,
       "sources": [
@@ -62,6 +65,16 @@
       ],
       "funding": 5e-05,
       "long_short": 1.59
+    },
+    {
+      "symbol": "UNI",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.41
     },
     {
       "symbol": "XRP",
@@ -152,14 +165,6 @@
         "movers"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
