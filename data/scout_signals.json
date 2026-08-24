@@ -1,33 +1,33 @@
 {
-  "ts": "2026-08-24T13:18:34+00:00",
-  "scanned": 113,
+  "ts": "2026-08-24T13:24:25+00:00",
+  "scanned": 112,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "MUBARAKUSDT",
+      "symbol": "SNDKBUSDT",
       "signal": "ignition",
-      "score": 0.8469,
-      "raw_score": 0.8469,
+      "score": 0.6971,
+      "raw_score": 0.6971,
       "weight": 1.0,
-      "price": 0.02434,
-      "why": "trades 18.4x and volume 17.8x the prior 4h, 67% taker-buy, $104,610 burst \u2014 while price has only moved +2.8%",
-      "chg_24h": 0.0262,
-      "vol_surge": 17.84,
-      "chg_1h": 0.0279,
-      "market_surge": 1.1,
+      "price": 1502.68,
+      "why": "trades 5.7x and volume 6.0x the prior 4h, 94% taker-buy, $292,957 burst \u2014 while price has only moved -0.7%",
+      "chg_24h": -0.0534,
+      "vol_surge": 6.0,
+      "chg_1h": -0.0067,
+      "market_surge": 5.93,
       "actionable": false,
       "status": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 126h): overlapping labels are not a sample"
     }
   ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 126h): overlapping labels are not a sample",
-    "breakout": "probation \u2014 207 rows but only 6.5 independent 24h windows (span 157h): overlapping labels are not a sample",
+    "breakout": "probation \u2014 209 rows but only 6.5 independent 24h windows (span 157h): overlapping labels are not a sample",
     "reversion": "probation \u2014 28 rows but only 4.8 independent 24h windows (span 116h): overlapping labels are not a sample",
     "heat": "probation \u2014 99 rows but only 6.5 independent 24h windows (span 157h): overlapping labels are not a sample",
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 15,
+    "count": 14,
     "baseline": 39.0,
     "wave": false
   },
@@ -85,16 +85,16 @@
       "avg_win_4h": 0.04083,
       "avg_loss_4h": -0.03228,
       "payoff_4h": 1.265,
-      "span_h_24h": 157.0,
-      "n_eff_24h": 6.54,
-      "n_24h": 207,
-      "hit_rate_24h": 0.628,
-      "mean_ret_24h": 0.03515,
+      "span_h_24h": 157.2,
+      "n_eff_24h": 6.55,
+      "n_24h": 209,
+      "hit_rate_24h": 0.627,
+      "mean_ret_24h": 0.03524,
       "median_ret_24h": 0.02986,
       "both_halves_24h": true,
-      "avg_win_24h": 0.09393,
-      "avg_loss_24h": -0.06493,
-      "payoff_24h": 1.447
+      "avg_win_24h": 0.0941,
+      "avg_loss_24h": -0.06444,
+      "payoff_24h": 1.46
     },
     "reversion": {
       "span_h_1h": 116.4,
