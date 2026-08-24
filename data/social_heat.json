@@ -1,16 +1,17 @@
 {
-  "ts": "2026-08-24T03:55:03+00:00",
+  "ts": "2026-08-24T04:00:59+00:00",
   "sources": {
     "coingecko": [
       "LIT",
       "PUMP",
-      "ENA",
       "BTC",
-      "ETHFI",
-      "XRP",
-      "SOL",
+      "ENA",
       "SUI",
-      "MET"
+      "ZEC",
+      "ETH",
+      "AAVE",
+      "MET",
+      "VIRTUAL"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,9 +21,9 @@
       "TRUMP",
       "ENA",
       "NEAR",
-      "PUMP",
-      "UNI",
-      "TAO"
+      "XPL",
+      "TAO",
+      "UNI"
     ],
     "watcher": [
       "ZEC",
@@ -45,6 +46,16 @@
       "long_short": 1.36
     },
     {
+      "symbol": "AAVE",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.47
+    },
+    {
       "symbol": "PENGU",
       "surfaces": 2,
       "sources": [
@@ -52,35 +63,17 @@
         "watcher"
       ],
       "funding": 5e-05,
-      "long_short": 1.59
+      "long_short": 1.48
     },
     {
-      "symbol": "PUMP",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.07
-    },
-    {
-      "symbol": "XRP",
+      "symbol": "ZEC",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "watcher"
       ],
       "funding": 0.0001,
-      "long_short": 2.52
-    },
-    {
-      "symbol": "AAVE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
+      "long_short": 0.52
     },
     {
       "symbol": "BTC",
@@ -91,12 +84,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "ETHFI",
+      "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 0.0001
     },
     {
       "symbol": "LIT",
@@ -123,12 +116,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "SOL",
+      "symbol": "PUMP",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0001
+      "funding": 5e-05
     },
     {
       "symbol": "SUI",
@@ -163,7 +156,23 @@
       "funding": 0.0001
     },
     {
-      "symbol": "ZEC",
+      "symbol": "VIRTUAL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "XPL",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "XRP",
       "surfaces": 1,
       "sources": [
         "watcher"
