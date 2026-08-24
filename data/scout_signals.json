@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-24T00:34:26+00:00",
-  "scanned": 112,
+  "ts": "2026-08-24T00:39:36+00:00",
+  "scanned": 111,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "WBTCUSDT",
+      "signal": "ignition",
+      "score": 1.0813,
+      "raw_score": 0.9543,
+      "weight": 1.133,
+      "price": 77365.76,
+      "why": "trades 40.3x and volume 16.3x the prior 4h, 82% taker-buy, $90,783 burst \u2014 while price has only moved -0.1%",
+      "chg_24h": 0.0017,
+      "vol_surge": 16.32,
+      "chg_1h": -0.0006,
+      "market_surge": 8.18,
+      "actionable": false,
+      "status": "benched \u2014 hit 63%, mean +0.80% over last 30 at 4h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 63%, mean +0.80% over last 30 at 4h: not beating 4x the round trip",
     "breakout": "actionable",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 13,
+    "count": 12,
     "baseline": 39.0,
     "wave": false
   },
@@ -60,13 +76,13 @@
       "avg_loss_4h": -0.02396,
       "payoff_4h": 1.897,
       "n_24h": 30,
-      "hit_rate_24h": 0.167,
-      "mean_ret_24h": -0.05719,
+      "hit_rate_24h": 0.2,
+      "mean_ret_24h": -0.05436,
       "median_ret_24h": -0.07019,
       "both_halves_24h": false,
-      "avg_win_24h": 0.05654,
-      "avg_loss_24h": -0.08327,
-      "payoff_24h": 0.679
+      "avg_win_24h": 0.05063,
+      "avg_loss_24h": -0.08411,
+      "payoff_24h": 0.602
     },
     "reversion": {
       "n_1h": 28,
@@ -113,12 +129,12 @@
       "payoff_4h": 1.53,
       "n_24h": 30,
       "hit_rate_24h": 0.767,
-      "mean_ret_24h": 0.04648,
-      "median_ret_24h": 0.05673,
+      "mean_ret_24h": 0.04344,
+      "median_ret_24h": 0.05482,
       "both_halves_24h": true,
-      "avg_win_24h": 0.08071,
+      "avg_win_24h": 0.07674,
       "avg_loss_24h": -0.06598,
-      "payoff_24h": 1.223
+      "payoff_24h": 1.163
     },
     "revival": {
       "n_1h": 4,
