@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-24T06:36:16+00:00",
-  "scanned": 112,
+  "ts": "2026-08-24T06:41:36+00:00",
+  "scanned": 111,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "AEROUSDT",
-      "signal": "ignition",
-      "score": 0.6416,
-      "raw_score": 0.7702,
-      "weight": 0.833,
-      "price": 0.4908,
-      "why": "trades 8.1x and volume 11.0x the prior 4h, 62% taker-buy, $68,791 burst \u2014 while price has only moved +2.5%",
-      "chg_24h": 0.0928,
-      "vol_surge": 11.0,
-      "chg_1h": 0.0246,
-      "market_surge": 6.53,
-      "actionable": false,
-      "status": "benched \u2014 hit 33%, mean -0.57% over last 30 at 4h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 33%, mean -0.57% over last 30 at 4h: not beating 4x the round trip",
     "breakout": "benched \u2014 only one half of the last 30 paid at 4h: regime luck, not a signal",
@@ -27,20 +11,20 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 24,
+    "count": 22,
     "baseline": 39.0,
     "wave": false
   },
   "scorecard": {
     "ignition": {
       "n_1h": 30,
-      "hit_rate_1h": 0.367,
-      "mean_ret_1h": -7e-05,
-      "median_ret_1h": -0.00263,
+      "hit_rate_1h": 0.333,
+      "mean_ret_1h": -0.00077,
+      "median_ret_1h": -0.00297,
       "both_halves_1h": false,
-      "avg_win_1h": 0.01923,
-      "avg_loss_1h": -0.01186,
-      "payoff_1h": 1.621,
+      "avg_win_1h": 0.01997,
+      "avg_loss_1h": -0.01173,
+      "payoff_1h": 1.703,
       "n_4h": 30,
       "hit_rate_4h": 0.333,
       "mean_ret_4h": -0.00566,
@@ -129,12 +113,12 @@
       "payoff_4h": 1.572,
       "n_24h": 30,
       "hit_rate_24h": 0.767,
-      "mean_ret_24h": 0.04068,
-      "median_ret_24h": 0.05482,
+      "mean_ret_24h": 0.03821,
+      "median_ret_24h": 0.05359,
       "both_halves_24h": true,
-      "avg_win_24h": 0.07314,
+      "avg_win_24h": 0.06992,
       "avg_loss_24h": -0.06598,
-      "payoff_24h": 1.109
+      "payoff_24h": 1.06
     },
     "revival": {
       "n_1h": 4,
