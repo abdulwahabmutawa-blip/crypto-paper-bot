@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-24T00:39:36+00:00",
-  "scanned": 111,
+  "ts": "2026-08-24T00:45:00+00:00",
+  "scanned": 112,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "WBTCUSDT",
-      "signal": "ignition",
-      "score": 1.0813,
-      "raw_score": 0.9543,
-      "weight": 1.133,
-      "price": 77365.76,
-      "why": "trades 40.3x and volume 16.3x the prior 4h, 82% taker-buy, $90,783 burst \u2014 while price has only moved -0.1%",
-      "chg_24h": 0.0017,
-      "vol_surge": 16.32,
-      "chg_1h": -0.0006,
-      "market_surge": 8.18,
-      "actionable": false,
-      "status": "benched \u2014 hit 63%, mean +0.80% over last 30 at 4h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 63%, mean +0.80% over last 30 at 4h: not beating 4x the round trip",
     "breakout": "actionable",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 11,
     "baseline": 39.0,
     "wave": false
   },
@@ -51,12 +35,12 @@
       "payoff_4h": 1.167,
       "n_24h": 30,
       "hit_rate_24h": 0.633,
-      "mean_ret_24h": 0.01593,
-      "median_ret_24h": 0.01392,
+      "mean_ret_24h": 0.01688,
+      "median_ret_24h": 0.01551,
       "both_halves_24h": true,
-      "avg_win_24h": 0.04244,
-      "avg_loss_24h": -0.04122,
-      "payoff_24h": 1.03
+      "avg_win_24h": 0.04324,
+      "avg_loss_24h": -0.03583,
+      "payoff_24h": 1.207
     },
     "breakout": {
       "n_1h": 30,
