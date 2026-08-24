@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-24T07:43:53+00:00",
+  "ts": "2026-08-24T07:49:25+00:00",
   "scanned": 112,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "XLMUSDT",
-      "signal": "ignition",
-      "score": 0.6693,
-      "raw_score": 0.8034,
-      "weight": 0.833,
-      "price": 0.1949,
-      "why": "trades 6.9x and volume 21.5x the prior 4h, 74% taker-buy, $1,028,302 burst \u2014 while price has only moved +0.3%",
-      "chg_24h": 0.0242,
-      "vol_surge": 21.54,
-      "chg_1h": 0.0031,
-      "market_surge": 10.25,
-      "actionable": false,
-      "status": "benched \u2014 hit 33%, mean -0.56% over last 30 at 4h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 33%, mean -0.56% over last 30 at 4h: not beating 4x the round trip",
     "breakout": "benched \u2014 only one half of the last 30 paid at 4h: regime luck, not a signal",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 22,
+    "count": 24,
     "baseline": 39.0,
     "wave": false
   },
