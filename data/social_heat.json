@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-24T14:56:19+00:00",
+  "ts": "2026-08-24T15:01:59+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -8,9 +8,7 @@
       "ETH",
       "PUMP",
       "ZEC",
-      "AERO",
-      "PEPE",
-      "ENA"
+      "AERO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -18,11 +16,11 @@
       "PENGU",
       "RE",
       "MSTRB",
-      "SPK",
       "ETH",
-      "TAO",
       "BTC",
-      "LINK"
+      "TAO",
+      "NEAR",
+      "SPK"
     ],
     "watcher": [
       "ZEC",
@@ -40,7 +38,7 @@
         "movers"
       ],
       "funding": 0.0001,
-      "long_short": 0.99
+      "long_short": 0.95
     },
     {
       "symbol": "ETH",
@@ -60,7 +58,7 @@
         "watcher"
       ],
       "funding": 5e-05,
-      "long_short": 1.52
+      "long_short": 1.5
     },
     {
       "symbol": "PUMP",
@@ -70,7 +68,7 @@
         "watcher"
       ],
       "funding": 5e-05,
-      "long_short": 1.07
+      "long_short": 1.08
     },
     {
       "symbol": "ZEC",
@@ -91,22 +89,6 @@
       "funding": 5e-05
     },
     {
-      "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "LINK",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "LIT",
       "surfaces": 1,
       "sources": [
@@ -122,11 +104,12 @@
       ]
     },
     {
-      "symbol": "PEPE",
+      "symbol": "NEAR",
       "surfaces": 1,
       "sources": [
-        "coingecko"
-      ]
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "RE",
