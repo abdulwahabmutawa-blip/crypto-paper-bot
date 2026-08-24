@@ -1,22 +1,22 @@
 {
-  "ts": "2026-08-24T16:23:24+00:00",
+  "ts": "2026-08-24T16:28:33+00:00",
   "scanned": 114,
   "ruleset": 3,
   "candidates": [
     {
       "symbol": "LUNCUSDT",
-      "signal": "ignition",
-      "score": 0.9233,
-      "raw_score": 0.9141,
-      "weight": 1.01,
-      "price": 5.605e-05,
-      "why": "trades 12.4x and volume 14.5x the prior 4h, 74% taker-buy, $85,214 burst \u2014 while price has only moved +0.9%",
-      "chg_24h": 0.0103,
-      "vol_surge": 14.54,
-      "chg_1h": 0.0086,
-      "market_surge": 8.46,
+      "signal": "breakout",
+      "score": 0.7618,
+      "raw_score": 0.7633,
+      "weight": 0.998,
+      "price": 5.692e-05,
+      "why": "trades 8.1x, volume 9.5x, 66% taker-buy, +2.6% in an hour, at 99% of its 24h range",
+      "chg_24h": 0.0256,
+      "vol_surge": 9.5,
+      "chg_1h": 0.026,
+      "market_surge": 18.24,
       "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 127h): overlapping labels are not a sample"
+      "status": "probation \u2014 219 rows but only 6.7 independent 24h windows (span 160h): overlapping labels are not a sample"
     }
   ],
   "gate": {

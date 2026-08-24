@@ -1,26 +1,28 @@
 {
-  "ts": "2026-08-24T16:23:19+00:00",
+  "ts": "2026-08-24T16:28:29+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "PUMP",
-      "ETH",
       "LIT",
       "AERO",
+      "ETH",
+      "SOL",
+      "SUI",
       "XRP",
-      "SOL"
+      "VIRTUAL"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "PENGU",
-      "MSTRB",
       "TAO",
+      "MSTRB",
       "NEAR",
       "BTC",
+      "PENGU",
+      "PEPE",
       "ETH",
-      "BNB",
-      "SOL"
+      "BNB"
     ],
     "watcher": [
       "ETH",
@@ -63,16 +65,6 @@
       "long_short": 1.5
     },
     {
-      "symbol": "SOL",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 2.23
-    },
-    {
       "symbol": "AERO",
       "surfaces": 1,
       "sources": [
@@ -112,6 +104,13 @@
       "funding": 0.0001
     },
     {
+      "symbol": "PEPE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
+    },
+    {
       "symbol": "PUMP",
       "surfaces": 1,
       "sources": [
@@ -120,10 +119,34 @@
       "funding": 5e-05
     },
     {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "TAO",
       "surfaces": 1,
       "sources": [
         "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "VIRTUAL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
       ],
       "funding": 5e-05
     },
