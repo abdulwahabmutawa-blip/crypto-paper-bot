@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-24T01:01:21+00:00",
+  "ts": "2026-08-24T01:06:49+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -20,16 +20,15 @@
       "AAVE",
       "TAO",
       "TRUMP",
-      "XPL",
       "NEAR",
+      "XPL",
       "ZEC",
       "UNI"
     ],
     "watcher": [
       "ZEC",
       "PENGU",
-      "XRP",
-      "PUMP"
+      "XRP"
     ],
     "cryptopanic": []
   },
@@ -43,7 +42,7 @@
         "watcher"
       ],
       "funding": 0.0001,
-      "long_short": 0.51
+      "long_short": 0.52
     },
     {
       "symbol": "AAVE",
@@ -63,17 +62,7 @@
         "watcher"
       ],
       "funding": 5e-05,
-      "long_short": 1.68
-    },
-    {
-      "symbol": "PUMP",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "watcher"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.08
+      "long_short": 1.64
     },
     {
       "symbol": "TAO",
@@ -132,6 +121,14 @@
         "movers"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "SOL",
