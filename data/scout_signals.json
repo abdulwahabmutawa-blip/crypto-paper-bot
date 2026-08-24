@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-24T21:10:00+00:00",
-  "scanned": 115,
+  "ts": "2026-08-24T21:15:41+00:00",
+  "scanned": 116,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "WLFIUSDT",
+      "signal": "ignition",
+      "score": 0.6162,
+      "raw_score": 0.6275,
+      "weight": 0.982,
+      "price": 0.0579,
+      "why": "trades 4.3x and volume 5.5x the prior 4h, 93% taker-buy, $56,907 burst \u2014 while price has only moved +0.5%",
+      "chg_24h": -0.0334,
+      "vol_surge": 5.52,
+      "chg_1h": 0.0052,
+      "market_surge": 0.85,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.4 independent 24h windows (span 129h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.4 independent 24h windows (span 129h): overlapping labels are not a sample",
     "breakout": "probation \u2014 223 rows but only 6.9 independent 24h windows (span 165h): overlapping labels are not a sample",
@@ -37,16 +53,16 @@
       "avg_win_4h": 0.02589,
       "avg_loss_4h": -0.02171,
       "payoff_4h": 1.193,
-      "span_h_24h": 129.0,
+      "span_h_24h": 128.8,
       "n_eff_24h": 5.37,
       "n_24h": 400,
-      "hit_rate_24h": 0.647,
-      "mean_ret_24h": 0.03516,
-      "median_ret_24h": 0.02034,
+      "hit_rate_24h": 0.645,
+      "mean_ret_24h": 0.03478,
+      "median_ret_24h": 0.02021,
       "both_halves_24h": true,
-      "avg_win_24h": 0.0726,
-      "avg_loss_24h": -0.03781,
-      "payoff_24h": 1.92
+      "avg_win_24h": 0.07256,
+      "avg_loss_24h": -0.03803,
+      "payoff_24h": 1.908
     },
     "breakout": {
       "span_h_1h": 187.9,
