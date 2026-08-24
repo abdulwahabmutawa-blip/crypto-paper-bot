@@ -1,23 +1,23 @@
 {
-  "generated_utc": "2026-08-24T20:03:19+00:00",
+  "generated_utc": "2026-08-24T20:16:52+00:00",
   "created": "2026-07-30",
   "starting_cash": 1000.0,
   "live_ts": "2026-08-24T19:55:00+00:00",
   "current": {
     "date": "2026-08-24",
-    "value": 1011.55,
-    "bench": 1029.36,
+    "value": 1011.51,
+    "bench": 1029.32,
     "holding": "SPY"
   },
   "board": [
     {
       "sym": "SPY",
-      "price": 763.51,
+      "price": 763.48,
       "line": "S&P 500 \u00b7 score +0.73 \u00b7 mom90 +9.4% \u00b7 MA gap +8.2%",
       "tag": "HELD",
       "on": true,
       "pick": true,
-      "fill": 18.22751373635006
+      "fill": 18.218657879516403
     },
     {
       "sym": "IWM",
@@ -26,7 +26,7 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 15.517141871519225
+      "fill": 15.517141871519218
     },
     {
       "sym": "QQQ",
@@ -35,7 +35,7 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 11.657946779214232
+      "fill": 11.657946779214228
     },
     {
       "sym": "EFA",
@@ -44,7 +44,7 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 9.520794615444117
+      "fill": 9.520794615444123
     },
     {
       "sym": "DBC",
@@ -53,7 +53,7 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 7.904788273141317
+      "fill": 7.884781118469471
     },
     {
       "sym": "ETH-USD",
@@ -93,21 +93,21 @@
     },
     {
       "sym": "GLD",
-      "price": 426.71,
+      "price": 426.73,
       "line": "Gold \u00b7 score -0.13 \u00b7 mom90 -3.1% \u00b7 MA gap +3.1%",
       "tag": "not eligible",
       "on": false,
       "pick": false,
-      "fill": -3.1491005602338835
+      "fill": -3.1444595866462524
     },
     {
       "sym": "SLV",
-      "price": 62.21,
+      "price": 62.2,
       "line": "Silver \u00b7 score -0.28 \u00b7 mom90 -13.4% \u00b7 MA gap -3.8%",
       "tag": "not eligible",
       "on": false,
       "pick": false,
-      "fill": -7.012966340538483
+      "fill": -7.020149500457827
     },
     {
       "sym": "TLT",
@@ -116,7 +116,7 @@
       "tag": "not eligible",
       "on": false,
       "pick": false,
-      "fill": -9.054552827559721
+      "fill": -9.054546768342421
     }
   ],
   "board_title": "12 instruments ranked by momentum-per-unit-risk",
@@ -127,12 +127,6 @@
     "board_note": "Every rule in this bot was earned by an earlier experiment: vol-adjusted momentum, trend gate as crash protection, vol-sized positions, trailing stop, and a switch threshold that fights churn. The synthesis on trial."
   },
   "intraday": [
-    {
-      "ts": "2026-08-04T19:30:42+00:00",
-      "value": 1029.99,
-      "bench": 1041.14,
-      "holding": "IWM"
-    },
     {
       "ts": "2026-08-04T19:43:57+00:00",
       "value": 1030.62,
@@ -9126,6 +9120,12 @@
       "value": 1011.55,
       "bench": 1029.36,
       "holding": "SPY"
+    },
+    {
+      "ts": "2026-08-24T20:16:52+00:00",
+      "value": 1011.51,
+      "bench": 1029.32,
+      "holding": "SPY"
     }
   ],
   "trades": [
@@ -9264,8 +9264,8 @@
     },
     {
       "date": "2026-08-24",
-      "value": 1011.55,
-      "bench": 1029.36,
+      "value": 1011.51,
+      "bench": 1029.32,
       "holding": "SPY"
     }
   ],
@@ -9278,5 +9278,5 @@
   },
   "costs_paid": 2.1356,
   "frozen": null,
-  "thoughts": "I'm holding SPY. Best momentum-per-unit-risk in a confirmed uptrend. I bought at $766.38; it's now $763.51 (-0.4% since I got in). My safety net: if the price falls to $691.17 (10% below its recent high), I sell automatically \u2014 no exceptions. Closest challenger on my list is IWM, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
+  "thoughts": "I'm holding SPY. Best momentum-per-unit-risk in a confirmed uptrend. I bought at $766.38; it's now $763.48 (-0.4% since I got in). My safety net: if the price falls to $691.17 (10% below its recent high), I sell automatically \u2014 no exceptions. Closest challenger on my list is IWM, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
 }
