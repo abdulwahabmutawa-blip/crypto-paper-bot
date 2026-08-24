@@ -1,14 +1,15 @@
 {
-  "ts": "2026-08-24T19:22:18+00:00",
+  "ts": "2026-08-24T19:28:19+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "ZEC",
       "INJ",
+      "LIT",
       "AERO",
       "PUMP",
-      "LIT",
       "SOL",
+      "TAO",
       "XRP",
       "VIRTUAL"
     ],
@@ -19,10 +20,10 @@
       "MSTRB",
       "BTC",
       "ETH",
-      "XAUT",
-      "PAXG",
       "SOL",
-      "RE"
+      "XAUT",
+      "LINK",
+      "PAXG"
     ],
     "watcher": [
       "VIRTUAL"
@@ -48,7 +49,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 9.9e-05,
+      "funding": 9.7e-05,
       "long_short": 0.94
     },
     {
@@ -86,6 +87,14 @@
       "funding": 0.0001
     },
     {
+      "symbol": "LINK",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "LIT",
       "surfaces": 1,
       "sources": [
@@ -106,7 +115,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 7e-06
+      "funding": 8e-06
     },
     {
       "symbol": "PUMP",
@@ -117,10 +126,10 @@
       "funding": 5e-05
     },
     {
-      "symbol": "RE",
+      "symbol": "TAO",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
       "funding": 5e-05
     },
