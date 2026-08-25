@@ -1,13 +1,14 @@
 {
-  "ts": "2026-08-25T05:37:20+00:00",
+  "ts": "2026-08-25T05:42:53+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "SOL",
       "PEPE",
+      "PUMP",
       "AERO",
+      "LIT",
       "AAVE",
-      "LINK",
       "ZEC"
     ],
     "reddit": [],
@@ -77,12 +78,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "LINK",
+      "symbol": "LIT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0001
+      "funding": 5e-05
     },
     {
       "symbol": "MSTRB",
@@ -113,7 +114,15 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000116
+      "funding": -0.000147
+    },
+    {
+      "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "VIRTUAL",
