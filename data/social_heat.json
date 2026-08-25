@@ -1,17 +1,16 @@
 {
-  "ts": "2026-08-25T03:55:03+00:00",
+  "ts": "2026-08-25T04:00:36+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "SOL",
-      "PUMP",
       "ZEC",
+      "PUMP",
       "PEPE",
-      "LIT",
       "SUI",
-      "INJ",
-      "AERO",
-      "ETH"
+      "ETH",
+      "LIT",
+      "AERO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -29,16 +28,6 @@
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "INJ",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.42
-    },
     {
       "symbol": "SOL",
       "surfaces": 2,
@@ -70,6 +59,14 @@
       "surfaces": 1,
       "sources": [
         "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "INJ",
+      "surfaces": 1,
+      "sources": [
+        "movers"
       ],
       "funding": 0.0001
     },
