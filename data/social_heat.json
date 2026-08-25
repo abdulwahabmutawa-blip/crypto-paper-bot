@@ -1,14 +1,13 @@
 {
-  "ts": "2026-08-25T16:57:06+00:00",
+  "ts": "2026-08-25T17:02:16+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "ZRO",
       "ZEC",
-      "PUMP",
       "SOL",
+      "PUMP",
       "AERO",
-      "CFG",
       "LIT"
     ],
     "reddit": [],
@@ -16,17 +15,27 @@
     "movers": [
       "ONG",
       "ZRO",
-      "CRCLB",
-      "SOL",
-      "RE",
       "PENGU",
+      "SOL",
+      "CRCLB",
+      "RE",
       "UNI",
-      "TUT"
+      "BTC"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "BTC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 0.95
+    },
     {
       "symbol": "SOL",
       "surfaces": 2,
@@ -35,7 +44,7 @@
         "movers"
       ],
       "funding": 0.0001,
-      "long_short": 2.02
+      "long_short": 2.01
     },
     {
       "symbol": "ZRO",
@@ -45,26 +54,10 @@
         "movers"
       ],
       "funding": 5e-05,
-      "long_short": 0.93
+      "long_short": 0.9
     },
     {
       "symbol": "AERO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "CFG",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -112,14 +105,6 @@
     },
     {
       "symbol": "RE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "TUT",
       "surfaces": 1,
       "sources": [
         "movers"
