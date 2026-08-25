@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-25T12:50:04+00:00",
+  "ts": "2026-08-25T12:55:53+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
@@ -19,24 +19,12 @@
       "PROM",
       "INJ",
       "SOL",
-      "SNDKB",
-      "RE",
-      "BTC"
+      "SNDKB"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "BTC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 0.9
-    },
     {
       "symbol": "SOL",
       "surfaces": 2,
@@ -46,6 +34,14 @@
       ],
       "funding": 0.0001,
       "long_short": 1.77
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "ENA",
@@ -61,7 +57,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.9e-05
+      "funding": 0.0001
     },
     {
       "symbol": "INJ",
@@ -101,7 +97,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 2e-05
+      "funding": 1.3e-05
     },
     {
       "symbol": "PROM",
@@ -109,21 +105,13 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000107
+      "funding": -0.000126
     },
     {
       "symbol": "PUMP",
       "surfaces": 1,
       "sources": [
         "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "RE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
       ],
       "funding": 5e-05
     },
