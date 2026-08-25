@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-25T12:15:54+00:00",
-  "scanned": 121,
+  "ts": "2026-08-25T12:21:37+00:00",
+  "scanned": 118,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "COWUSDT",
-      "signal": "ignition",
-      "score": 0.8417,
-      "raw_score": 0.874,
-      "weight": 0.963,
-      "price": 0.1272,
-      "why": "trades 19.9x and volume 16.4x the prior 4h, 63% taker-buy, $79,861 burst \u2014 while price has only moved -1.3%",
-      "chg_24h": 0.0717,
-      "vol_surge": 16.42,
-      "chg_1h": -0.0132,
-      "market_surge": 8.38,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.4 independent 24h windows (span 130h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.4 independent 24h windows (span 130h): overlapping labels are not a sample",
     "breakout": "probation \u2014 235 rows but only 7.5 independent 24h windows (span 180h): overlapping labels are not a sample",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 11,
+    "count": 12,
     "baseline": 19.0,
     "wave": false
   },
