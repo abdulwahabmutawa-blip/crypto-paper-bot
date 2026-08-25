@@ -1,15 +1,16 @@
 {
-  "ts": "2026-08-25T00:16:56+00:00",
+  "ts": "2026-08-25T00:22:36+00:00",
   "sources": {
     "coingecko": [
-      "AERO",
       "BTC",
-      "ETH",
-      "SUI",
-      "PUMP",
+      "AERO",
       "SOL",
+      "ETH",
+      "PUMP",
+      "SUI",
+      "SUPER",
       "ZEC",
-      "ENA"
+      "XRP"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -17,11 +18,11 @@
       "VIRTUAL",
       "SOL",
       "RE",
-      "BTC",
       "MSTRB",
-      "XAUT",
       "LINK",
-      "ONDO"
+      "BTC",
+      "ONDO",
+      "XAUT"
     ],
     "watcher": [
       "VIRTUAL"
@@ -36,7 +37,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 5.7e-05,
+      "funding": 5.4e-05,
       "long_short": 0.94
     },
     {
@@ -61,14 +62,6 @@
     },
     {
       "symbol": "AERO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "ENA",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -131,12 +124,28 @@
       "funding": 0.0001
     },
     {
+      "symbol": "SUPER",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -0.001095
+    },
+    {
       "symbol": "XAUT",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 4.5e-05
+      "funding": 4.3e-05
+    },
+    {
+      "symbol": "XRP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "ZEC",
