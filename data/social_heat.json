@@ -1,26 +1,26 @@
 {
-  "ts": "2026-08-25T16:17:52+00:00",
+  "ts": "2026-08-25T16:23:24+00:00",
   "sources": {
     "coingecko": [
-      "ZRO",
       "BTC",
+      "ZRO",
       "SOL",
       "PUMP",
-      "ZEC",
       "CFG",
-      "LIT"
+      "ZEC",
+      "ASTER"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "ONG",
       "ZRO",
-      "TUT",
       "RE",
-      "PENGU",
+      "TUT",
       "SOL",
       "CRCLB",
-      "SNDKB"
+      "PENGU",
+      "INJ"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -47,6 +47,14 @@
       "long_short": 0.93
     },
     {
+      "symbol": "ASTER",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 4.6e-05
+    },
+    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
@@ -70,12 +78,12 @@
       ]
     },
     {
-      "symbol": "LIT",
+      "symbol": "INJ",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
-      "funding": 5e-05
+      "funding": 0.0001
     },
     {
       "symbol": "ONG",
@@ -108,13 +116,6 @@
         "movers"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "SNDKB",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
     },
     {
       "symbol": "TUT",
