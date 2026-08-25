@@ -1,33 +1,17 @@
 {
-  "ts": "2026-08-25T10:13:27+00:00",
-  "scanned": 121,
+  "ts": "2026-08-25T10:19:08+00:00",
+  "scanned": 119,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "BICOUSDT",
-      "signal": "ignition",
-      "score": 0.5785,
-      "raw_score": 0.5903,
-      "weight": 0.98,
-      "price": 0.01923,
-      "why": "trades 4.5x and volume 5.7x the prior 4h, 72% taker-buy, $89,680 burst \u2014 while price has only moved -0.5%",
-      "chg_24h": 0.0148,
-      "vol_surge": 5.66,
-      "chg_1h": -0.0052,
-      "market_surge": 5.03,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.4 independent 24h windows (span 130h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
-    "ignition": "probation \u2014 400 rows but only 5.4 independent 24h windows (span 130h): overlapping labels are not a sample",
+    "ignition": "probation \u2014 400 rows but only 5.5 independent 24h windows (span 131h): overlapping labels are not a sample",
     "breakout": "probation \u2014 232 rows but only 7.4 independent 24h windows (span 178h): overlapping labels are not a sample",
     "reversion": "probation \u2014 28 rows but only 4.8 independent 24h windows (span 116h): overlapping labels are not a sample",
     "heat": "probation \u2014 114 rows but only 7.4 independent 24h windows (span 178h): overlapping labels are not a sample",
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 13,
     "baseline": 20.0,
     "wave": false
   },
@@ -53,16 +37,16 @@
       "avg_win_4h": 0.02375,
       "avg_loss_4h": -0.02088,
       "payoff_4h": 1.138,
-      "span_h_24h": 130.4,
-      "n_eff_24h": 5.43,
+      "span_h_24h": 130.7,
+      "n_eff_24h": 5.45,
       "n_24h": 400,
-      "hit_rate_24h": 0.652,
-      "mean_ret_24h": 0.03786,
+      "hit_rate_24h": 0.65,
+      "mean_ret_24h": 0.0378,
       "median_ret_24h": 0.02034,
       "both_halves_24h": true,
-      "avg_win_24h": 0.07434,
-      "avg_loss_24h": -0.03565,
-      "payoff_24h": 2.085
+      "avg_win_24h": 0.07457,
+      "avg_loss_24h": -0.03545,
+      "payoff_24h": 2.104
     },
     "breakout": {
       "span_h_1h": 198.0,
