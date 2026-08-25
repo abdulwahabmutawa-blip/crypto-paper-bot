@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-25T14:47:40+00:00",
-  "scanned": 122,
+  "ts": "2026-08-25T14:53:28+00:00",
+  "scanned": 121,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "CRCLBUSDT",
-      "signal": "breakout",
-      "score": 0.7397,
-      "raw_score": 0.7487,
-      "weight": 0.988,
-      "price": 91.08,
-      "why": "trades 5.0x, volume 9.5x, 62% taker-buy, +6.1% in an hour, at 84% of its 24h range",
-      "chg_24h": -0.0014,
-      "vol_surge": 9.5,
-      "chg_1h": 0.0605,
-      "market_surge": 5.69,
-      "actionable": false,
-      "status": "probation \u2014 237 rows but only 7.5 independent 24h windows (span 181h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.4 independent 24h windows (span 130h): overlapping labels are not a sample",
     "breakout": "probation \u2014 237 rows but only 7.5 independent 24h windows (span 181h): overlapping labels are not a sample",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 14,
+    "count": 12,
     "baseline": 19.0,
     "wave": false
   },
