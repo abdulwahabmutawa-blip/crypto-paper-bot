@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-25T04:29:00+00:00",
-  "scanned": 111,
+  "ts": "2026-08-25T04:34:34+00:00",
+  "scanned": 115,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ALGOUSDT",
+      "signal": "ignition",
+      "score": 0.9209,
+      "raw_score": 0.9302,
+      "weight": 0.99,
+      "price": 0.0943,
+      "why": "trades 26.2x and volume 17.8x the prior 4h, 80% taker-buy, $125,684 burst \u2014 while price has only moved -0.8%",
+      "chg_24h": 0.0162,
+      "vol_surge": 17.82,
+      "chg_1h": -0.0084,
+      "market_surge": 11.9,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.4 independent 24h windows (span 130h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.4 independent 24h windows (span 130h): overlapping labels are not a sample",
     "breakout": "probation \u2014 227 rows but only 7.2 independent 24h windows (span 172h): overlapping labels are not a sample",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 16,
+    "count": 17,
     "baseline": 23.0,
     "wave": false
   },
