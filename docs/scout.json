@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-25T05:14:33+00:00",
+  "ts": "2026-08-25T05:20:32+00:00",
   "scanned": 113,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "STXUSDT",
+      "signal": "breakout",
+      "score": 0.7808,
+      "raw_score": 0.784,
+      "weight": 0.996,
+      "price": 0.2642,
+      "why": "trades 7.3x, volume 6.1x, 68% taker-buy, +5.8% in an hour, at 90% of its 24h range",
+      "chg_24h": 0.1121,
+      "vol_surge": 6.12,
+      "chg_1h": 0.0581,
+      "market_surge": 0.0,
+      "actionable": false,
+      "status": "probation \u2014 228 rows but only 7.2 independent 24h windows (span 173h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.4 independent 24h windows (span 130h): overlapping labels are not a sample",
     "breakout": "probation \u2014 228 rows but only 7.2 independent 24h windows (span 173h): overlapping labels are not a sample",
@@ -12,7 +28,7 @@
   },
   "breadth": {
     "count": 18,
-    "baseline": 23.0,
+    "baseline": 22.0,
     "wave": false
   },
   "scorecard": {
