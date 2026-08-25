@@ -1,15 +1,16 @@
 {
-  "ts": "2026-08-25T06:52:26+00:00",
+  "ts": "2026-08-25T06:58:00+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "SOL",
       "ETH",
       "PUMP",
-      "SUI",
       "AERO",
+      "SUI",
       "ZEC",
-      "STX"
+      "STX",
+      "RENDER"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,8 +21,8 @@
       "SOL",
       "MSTRB",
       "WLD",
-      "BTC",
-      "ONDO"
+      "ONDO",
+      "BTC"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -61,7 +62,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.4e-05
+      "funding": 7.2e-05
     },
     {
       "symbol": "INJ",
@@ -92,10 +93,18 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000419
+      "funding": -0.000424
     },
     {
       "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "RENDER",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -108,7 +117,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000234
+      "funding": -0.000263
     },
     {
       "symbol": "SUI",
