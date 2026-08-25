@@ -1,41 +1,41 @@
 {
-  "generated_utc": "2026-08-25T17:56:15+00:00",
+  "generated_utc": "2026-08-25T18:09:54+00:00",
   "created": "2026-07-30",
   "starting_cash": 1000.0,
-  "live_ts": "2026-08-25T17:55:00+00:00",
+  "live_ts": "2026-08-25T18:05:00+00:00",
   "current": {
     "date": "2026-08-25",
-    "value": 1013.64,
-    "bench": 1031.49,
+    "value": 1013.4,
+    "bench": 1031.24,
     "holding": "SPY"
   },
   "board": [
     {
       "sym": "SPY",
-      "price": 765.09,
-      "line": "S&P 500 \u00b7 score +0.73 \u00b7 mom90 +9.3% \u00b7 MA gap +8.4%",
+      "price": 764.9,
+      "line": "S&P 500 \u00b7 score +0.72 \u00b7 mom90 +9.3% \u00b7 MA gap +8.4%",
       "tag": "HELD",
       "on": true,
       "pick": true,
-      "fill": 18.144435194066755
+      "fill": 18.093706733149155
     },
     {
       "sym": "IWM",
-      "price": 298.77,
+      "price": 298.7,
       "line": "US small caps \u00b7 score +0.62 \u00b7 mom90 +10.9% \u00b7 MA gap +10.8%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 15.611827771850193
+      "fill": 15.575202382803088
     },
     {
       "sym": "QQQ",
-      "price": 709.61,
-      "line": "Nasdaq 100 \u00b7 score +0.47 \u00b7 mom90 +10.9% \u00b7 MA gap +8.7%",
+      "price": 709.17,
+      "line": "Nasdaq 100 \u00b7 score +0.46 \u00b7 mom90 +10.8% \u00b7 MA gap +8.7%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 11.654601505322315
+      "fill": 11.581514672417867
     },
     {
       "sym": "EFA",
@@ -44,25 +44,25 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 10.885059625161409
+      "fill": 10.885059625161414
     },
     {
       "sym": "ETH-USD",
-      "price": 2471.02,
-      "line": "Ethereum \u00b7 score +0.36 \u00b7 mom90 +22.2% \u00b7 MA gap +22.8%",
+      "price": 2473.38,
+      "line": "Ethereum \u00b7 score +0.36 \u00b7 mom90 +22.3% \u00b7 MA gap +22.9%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 8.944096344031413
+      "fill": 8.991726933654547
     },
     {
       "sym": "EEM",
-      "price": 67.11,
-      "line": "Emerging mkts \u00b7 score +0.26 \u00b7 mom90 +8.0% \u00b7 MA gap +10.2%",
+      "price": 67.09,
+      "line": "Emerging mkts \u00b7 score +0.26 \u00b7 mom90 +8.0% \u00b7 MA gap +10.1%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 6.427889311915942
+      "fill": 6.409100284120606
     },
     {
       "sym": "DBC",
@@ -71,34 +71,34 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 5.476653347710973
+      "fill": 5.4569881580094775
     },
     {
       "sym": "BTC-USD",
-      "price": 79231.46,
-      "line": "Bitcoin \u00b7 score +0.16 \u00b7 mom90 +6.6% \u00b7 MA gap +14.6%",
+      "price": 79275.35,
+      "line": "Bitcoin \u00b7 score +0.16 \u00b7 mom90 +6.6% \u00b7 MA gap +14.7%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 4.0370307943922805
+      "fill": 4.073136841437229
     },
     {
       "sym": "USO",
-      "price": 127.7,
+      "price": 127.72,
       "line": "Oil \u00b7 score +0.03 \u00b7 mom90 +1.5% \u00b7 MA gap +21.7%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 0.6698128944815874
+      "fill": 0.6770498856882485
     },
     {
       "sym": "GLD",
-      "price": 426.05,
+      "price": 426.1,
       "line": "Gold \u00b7 score -0.13 \u00b7 mom90 -3.2% \u00b7 MA gap +2.9%",
       "tag": "not eligible",
       "on": false,
       "pick": false,
-      "fill": -3.215969533713693
+      "fill": -3.2045251161597745
     },
     {
       "sym": "TLT",
@@ -107,16 +107,16 @@
       "tag": "not eligible",
       "on": false,
       "pick": false,
-      "fill": -5.15615900486202
+      "fill": -5.172430415485851
     },
     {
       "sym": "SLV",
-      "price": 62.24,
+      "price": 62.23,
       "line": "Silver \u00b7 score -0.26 \u00b7 mom90 -12.6% \u00b7 MA gap -3.9%",
       "tag": "not eligible",
       "on": false,
       "pick": false,
-      "fill": -6.609915239197216
+      "fill": -6.618683775585267
     }
   ],
   "board_title": "12 instruments ranked by momentum-per-unit-risk",
@@ -127,12 +127,6 @@
     "board_note": "Every rule in this bot was earned by an earlier experiment: vol-adjusted momentum, trend gate as crash protection, vol-sized positions, trailing stop, and a switch threshold that fights churn. The synthesis on trial."
   },
   "intraday": [
-    {
-      "ts": "2026-08-05T23:55:12+00:00",
-      "value": 1022.11,
-      "bench": 1037.76,
-      "holding": "IWM"
-    },
     {
       "ts": "2026-08-06T08:05:44+00:00",
       "value": 1022.11,
@@ -9126,6 +9120,12 @@
       "value": 1013.64,
       "bench": 1031.49,
       "holding": "SPY"
+    },
+    {
+      "ts": "2026-08-25T18:09:54+00:00",
+      "value": 1013.4,
+      "bench": 1031.24,
+      "holding": "SPY"
     }
   ],
   "trades": [
@@ -9270,8 +9270,8 @@
     },
     {
       "date": "2026-08-25",
-      "value": 1013.64,
-      "bench": 1031.49,
+      "value": 1013.4,
+      "bench": 1031.24,
       "holding": "SPY"
     }
   ],
@@ -9284,5 +9284,5 @@
   },
   "costs_paid": 2.1356,
   "frozen": null,
-  "thoughts": "I'm holding SPY. Best momentum-per-unit-risk in a confirmed uptrend. I bought at $766.38; it's now $765.09 (-0.2% since I got in). My safety net: if the price falls to $691.17 (10% below its recent high), I sell automatically \u2014 no exceptions. Closest challenger on my list is IWM, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
+  "thoughts": "I'm holding SPY. Best momentum-per-unit-risk in a confirmed uptrend. I bought at $766.38; it's now $764.90 (-0.2% since I got in). My safety net: if the price falls to $691.17 (10% below its recent high), I sell automatically \u2014 no exceptions. Closest challenger on my list is IWM, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
 }
