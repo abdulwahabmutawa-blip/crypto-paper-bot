@@ -1,8 +1,8 @@
 {
- "updated": "2026-08-25T13:12:24+00:00",
+ "updated": "2026-08-25T13:18:16+00:00",
  "spec": "x_chatter_precursors_2026-08-23",
  "n_rows_total": 1,
- "n_scored_excess_24h": 0,
+ "n_scored_excess_24h": 1,
  "objective": "BTC-excess 24h",
  "hit_threshold": 0.03,
  "features": {
@@ -21,14 +21,24 @@
   "H2_breadth_beats_loudness": {
    "note": ">=8 distinct handles & no T3 vs narrow+loud",
    "horizon_h": 24,
-   "group_true": null,
+   "group_true": {
+    "n": 1,
+    "hit": 0.0,
+    "mean": -0.06548,
+    "median": -0.06548
+   },
    "group_false": null
   },
   "H3_official_chatter_worthless": {
    "note": "link-heavy (announcement relay) vs organic",
    "horizon_h": 24,
    "group_true": null,
-   "group_false": null
+   "group_false": {
+    "n": 1,
+    "hit": 0.0,
+    "mean": -0.06548,
+    "median": -0.06548
+   }
   },
   "H4_occurred_catalyst_fades": {
    "note": "occurred vs pending, 72h",
@@ -39,14 +49,24 @@
   "H5_volatility_gate": {
    "note": "BTC 24h realized vol high vs low",
    "horizon_h": 24,
-   "group_true": null,
+   "group_true": {
+    "n": 1,
+    "hit": 0.0,
+    "mean": -0.06548,
+    "median": -0.06548
+   },
    "group_false": null
   },
   "H6_exchange_surface_words_exhaust": {
    "note": "scanner/exchange-surface wording vs organic",
    "horizon_h": 24,
    "group_true": null,
-   "group_false": null
+   "group_false": {
+    "n": 1,
+    "hit": 0.0,
+    "mean": -0.06548,
+    "median": -0.06548
+   }
   },
   "H7_extreme_velocity_contrarian": {
    "note": "all-new handles vs familiar, 72h",
@@ -57,7 +77,12 @@
   "H8_novelty_pays": {
    "note": "first ever appearance vs repeat",
    "horizon_h": 24,
-   "group_true": null,
+   "group_true": {
+    "n": 1,
+    "hit": 0.0,
+    "mean": -0.06548,
+    "median": -0.06548
+   },
    "group_false": null
   }
  },
