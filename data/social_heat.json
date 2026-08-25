@@ -1,16 +1,17 @@
 {
-  "ts": "2026-08-25T01:34:37+00:00",
+  "ts": "2026-08-25T01:40:11+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
       "BTC",
-      "SOL",
       "LIT",
-      "AERO",
+      "SOL",
       "XRP",
       "ZEC",
-      "PEPE",
-      "ONDO"
+      "AERO",
+      "ONDO",
+      "ETH",
+      "PEPE"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,7 +23,7 @@
       "ONDO",
       "PENGU",
       "MSTRB",
-      "BTC"
+      "WLD"
     ],
     "watcher": [
       "VIRTUAL"
@@ -30,16 +31,6 @@
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "BTC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 6.7e-05,
-      "long_short": 0.95
-    },
     {
       "symbol": "ONDO",
       "surfaces": 2,
@@ -77,6 +68,22 @@
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 6.9e-05
+    },
+    {
+      "symbol": "ETH",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 9.4e-05
     },
     {
       "symbol": "LIT",
@@ -131,6 +138,14 @@
         "movers"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "WLD",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "XRP",
