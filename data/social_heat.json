@@ -1,14 +1,14 @@
 {
-  "ts": "2026-08-25T14:15:07+00:00",
+  "ts": "2026-08-25T14:20:34+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "SOL",
       "PUMP",
-      "LIT",
       "ZRO",
+      "LIT",
       "ZEC",
-      "ENA",
+      "AAVE",
       "ETH"
     ],
     "reddit": [],
@@ -17,11 +17,11 @@
       "ONG",
       "PROM",
       "SNDKB",
-      "INJ",
       "RE",
       "SOL",
+      "INJ",
       "PENGU",
-      "MSTRB"
+      "HBAR"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -38,6 +38,14 @@
       "long_short": 1.92
     },
     {
+      "symbol": "AAVE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
@@ -46,20 +54,20 @@
       "funding": 0.0001
     },
     {
-      "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 8.9e-05
+    },
+    {
+      "symbol": "HBAR",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -5e-05
     },
     {
       "symbol": "INJ",
@@ -78,19 +86,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "MSTRB",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
-    },
-    {
       "symbol": "ONG",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 2.6e-05
+      "funding": 2.5e-05
     },
     {
       "symbol": "PENGU",
@@ -106,7 +107,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000173
+      "funding": -0.000168
     },
     {
       "symbol": "PUMP",
