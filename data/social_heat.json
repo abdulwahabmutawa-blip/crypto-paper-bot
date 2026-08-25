@@ -1,13 +1,16 @@
 {
-  "ts": "2026-08-25T13:07:07+00:00",
+  "ts": "2026-08-25T13:12:24+00:00",
   "sources": {
     "coingecko": [
-      "SOL",
       "ZEC",
       "BTC",
+      "SOL",
       "PUMP",
       "ENA",
-      "LINK"
+      "AERO",
+      "LINK",
+      "ONDO",
+      "ATOM"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -15,25 +18,13 @@
       "ONG",
       "PROM",
       "INJ",
-      "SOL",
       "SNDKB",
-      "UNI",
-      "BTC"
+      "SOL"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "BTC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 0.91
-    },
     {
       "symbol": "SOL",
       "surfaces": 2,
@@ -43,6 +34,30 @@
       ],
       "funding": 0.0001,
       "long_short": 1.87
+    },
+    {
+      "symbol": "AERO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "ATOM",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -0.000223
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "ENA",
@@ -69,12 +84,20 @@
       "funding": 0.0001
     },
     {
+      "symbol": "ONDO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "ONG",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -6e-06
+      "funding": -0.0
     },
     {
       "symbol": "PROM",
@@ -82,7 +105,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000152
+      "funding": -0.000167
     },
     {
       "symbol": "PUMP",
@@ -98,14 +121,6 @@
       "sources": [
         "movers"
       ]
-    },
-    {
-      "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "ZEC",
