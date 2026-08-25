@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-25T04:06:37+00:00",
+  "ts": "2026-08-25T04:12:04+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -7,10 +7,11 @@
       "ZEC",
       "PUMP",
       "PEPE",
-      "SUI",
       "ETH",
+      "SUI",
       "LIT",
-      "AERO"
+      "AERO",
+      "VIRTUAL"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -37,6 +38,16 @@
       ],
       "funding": 0.0001,
       "long_short": 1.94
+    },
+    {
+      "symbol": "VIRTUAL",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.43
     },
     {
       "symbol": "AERO",
@@ -139,14 +150,6 @@
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "VIRTUAL",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "ZEC",
