@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-25T10:02:31+00:00",
+  "ts": "2026-08-25T10:07:41+00:00",
   "scanned": 121,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "APTUSDT",
-      "signal": "ignition",
-      "score": 0.6593,
-      "raw_score": 0.6728,
-      "weight": 0.98,
-      "price": 0.599,
-      "why": "trades 4.9x and volume 11.0x the prior 4h, 61% taker-buy, $175,812 burst \u2014 while price has only moved -1.0%",
-      "chg_24h": -0.0276,
-      "vol_surge": 10.96,
-      "chg_1h": -0.0099,
-      "market_surge": 1.42,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.4 independent 24h windows (span 130h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.4 independent 24h windows (span 130h): overlapping labels are not a sample",
     "breakout": "probation \u2014 232 rows but only 7.4 independent 24h windows (span 178h): overlapping labels are not a sample",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 13,
+    "count": 12,
     "baseline": 20.0,
     "wave": false
   },

@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-25T10:02:25+00:00",
+  "ts": "2026-08-25T10:07:36+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -19,26 +19,16 @@
       "PROM",
       "INJ",
       "SOL",
-      "VIRTUAL",
       "PENGU",
       "FET",
+      "VIRTUAL",
       "RE",
-      "BTC"
+      "SNDKB"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "BTC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 0.87
-    },
     {
       "symbol": "SOL",
       "surfaces": 2,
@@ -47,7 +37,7 @@
         "movers"
       ],
       "funding": 0.0001,
-      "long_short": 1.86
+      "long_short": 1.84
     },
     {
       "symbol": "AERO",
@@ -56,6 +46,14 @@
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "DOGE",
@@ -95,7 +93,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000376
+      "funding": -0.000415
     },
     {
       "symbol": "INJ",
@@ -127,7 +125,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.00031
+      "funding": -0.0003
     },
     {
       "symbol": "PUMP",
@@ -144,6 +142,13 @@
         "movers"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "SNDKB",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
     },
     {
       "symbol": "VIRTUAL",
