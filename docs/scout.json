@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-25T11:08:40+00:00",
+  "ts": "2026-08-25T11:14:32+00:00",
   "scanned": 118,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "GIGGLEUSDT",
+      "signal": "ignition",
+      "score": 0.7121,
+      "raw_score": 0.7289,
+      "weight": 0.977,
+      "price": 35.35,
+      "why": "trades 5.2x and volume 12.9x the prior 4h, 69% taker-buy, $68,316 burst \u2014 while price has only moved -0.0%",
+      "chg_24h": -0.0235,
+      "vol_surge": 12.93,
+      "chg_1h": -0.0003,
+      "market_surge": 2.0,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.5 independent 24h windows (span 131h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.5 independent 24h windows (span 131h): overlapping labels are not a sample",
     "breakout": "probation \u2014 233 rows but only 7.4 independent 24h windows (span 178h): overlapping labels are not a sample",
@@ -12,21 +28,21 @@
   },
   "breadth": {
     "count": 11,
-    "baseline": 20.0,
+    "baseline": 19.0,
     "wave": false
   },
   "scorecard": {
     "ignition": {
-      "span_h_1h": 130.2,
-      "n_eff_1h": 130.2,
+      "span_h_1h": 130.0,
+      "n_eff_1h": 130.02,
       "n_1h": 400,
       "hit_rate_1h": 0.393,
-      "mean_ret_1h": -0.00098,
+      "mean_ret_1h": -0.00097,
       "median_ret_1h": 0.00019,
       "both_halves_1h": false,
-      "avg_win_1h": 0.01097,
+      "avg_win_1h": 0.011,
       "avg_loss_1h": -0.01346,
-      "payoff_1h": 0.815,
+      "payoff_1h": 0.817,
       "span_h_4h": 132.4,
       "n_eff_4h": 33.09,
       "n_4h": 400,
