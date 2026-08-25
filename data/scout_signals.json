@@ -1,37 +1,22 @@
 {
-  "ts": "2026-08-25T05:26:30+00:00",
+  "ts": "2026-08-25T05:32:20+00:00",
   "scanned": 114,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "SKHYBUSDT",
-      "signal": "ignition",
-      "score": 0.9154,
-      "raw_score": 0.9247,
-      "weight": 0.99,
-      "price": 157.98,
-      "why": "trades 39.6x and volume 11.6x the prior 4h, 83% taker-buy, $154,517 burst \u2014 while price has only moved +1.3%",
-      "chg_24h": -0.0103,
-      "vol_surge": 11.63,
-      "chg_1h": 0.0133,
-      "market_surge": 4.09,
+      "symbol": "EULUSDT",
+      "signal": "breakout",
+      "score": 0.7683,
+      "raw_score": 0.7714,
+      "weight": 0.996,
+      "price": 1.449,
+      "why": "trades 6.5x, volume 14.1x, 73% taker-buy, +4.2% in an hour, at 98% of its 24h range",
+      "chg_24h": 0.0154,
+      "vol_surge": 14.12,
+      "chg_1h": 0.0424,
+      "market_surge": 3.17,
       "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.4 independent 24h windows (span 130h): overlapping labels are not a sample"
-    },
-    {
-      "symbol": "FLOKIUSDT",
-      "signal": "ignition",
-      "score": 0.618,
-      "raw_score": 0.6242,
-      "weight": 0.99,
-      "price": 2.813e-05,
-      "why": "trades 5.1x and volume 7.4x the prior 4h, 70% taker-buy, $77,546 burst \u2014 while price has only moved +1.6%",
-      "chg_24h": 0.0403,
-      "vol_surge": 7.43,
-      "chg_1h": 0.0163,
-      "market_surge": 5.35,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.4 independent 24h windows (span 130h): overlapping labels are not a sample"
+      "status": "probation \u2014 228 rows but only 7.2 independent 24h windows (span 173h): overlapping labels are not a sample"
     }
   ],
   "gate": {
@@ -42,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 18,
+    "count": 19,
     "baseline": 22.0,
     "wave": false
   },
@@ -68,16 +53,16 @@
       "avg_win_4h": 0.02392,
       "avg_loss_4h": -0.02088,
       "payoff_4h": 1.145,
-      "span_h_24h": 129.9,
-      "n_eff_24h": 5.41,
+      "span_h_24h": 130.4,
+      "n_eff_24h": 5.43,
       "n_24h": 400,
-      "hit_rate_24h": 0.647,
-      "mean_ret_24h": 0.03742,
+      "hit_rate_24h": 0.65,
+      "mean_ret_24h": 0.0376,
       "median_ret_24h": 0.02145,
       "both_halves_24h": true,
-      "avg_win_24h": 0.07613,
-      "avg_loss_24h": -0.03887,
-      "payoff_24h": 1.959
+      "avg_win_24h": 0.0759,
+      "avg_loss_24h": -0.03872,
+      "payoff_24h": 1.96
     },
     "breakout": {
       "span_h_1h": 194.4,
