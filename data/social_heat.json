@@ -1,16 +1,17 @@
 {
-  "ts": "2026-08-25T07:03:06+00:00",
+  "ts": "2026-08-25T07:08:36+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "SOL",
-      "ETH",
       "PUMP",
+      "ETH",
       "AERO",
-      "SUI",
       "ZEC",
+      "SUI",
       "STX",
-      "RENDER"
+      "RENDER",
+      "AAVE"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -37,6 +38,14 @@
       ],
       "funding": 0.0001,
       "long_short": 1.94
+    },
+    {
+      "symbol": "AAVE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "AERO",
@@ -99,7 +108,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000433
+      "funding": -0.000437
     },
     {
       "symbol": "PUMP",
@@ -123,7 +132,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000278
+      "funding": -0.000272
     },
     {
       "symbol": "SUI",
