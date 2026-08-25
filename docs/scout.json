@@ -1,33 +1,17 @@
 {
-  "ts": "2026-08-25T06:11:04+00:00",
-  "scanned": 113,
+  "ts": "2026-08-25T06:16:30+00:00",
+  "scanned": 115,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "POLUSDT",
-      "signal": "breakout",
-      "score": 0.689,
-      "raw_score": 0.6917,
-      "weight": 0.996,
-      "price": 0.12103,
-      "why": "trades 5.0x, volume 8.7x, 66% taker-buy, +3.9% in an hour, at 99% of its 24h range",
-      "chg_24h": 0.1119,
-      "vol_surge": 8.74,
-      "chg_1h": 0.0387,
-      "market_surge": 0.77,
-      "actionable": false,
-      "status": "probation \u2014 228 rows but only 7.2 independent 24h windows (span 173h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.4 independent 24h windows (span 130h): overlapping labels are not a sample",
     "breakout": "probation \u2014 228 rows but only 7.2 independent 24h windows (span 173h): overlapping labels are not a sample",
     "reversion": "probation \u2014 28 rows but only 4.8 independent 24h windows (span 116h): overlapping labels are not a sample",
-    "heat": "probation \u2014 112 rows but only 7.3 independent 24h windows (span 175h): overlapping labels are not a sample",
+    "heat": "probation \u2014 113 rows but only 7.3 independent 24h windows (span 175h): overlapping labels are not a sample",
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 21,
+    "count": 19,
     "baseline": 22.0,
     "wave": false
   },
@@ -149,16 +133,16 @@
       "avg_win_4h": 0.04143,
       "avg_loss_4h": -0.03865,
       "payoff_4h": 1.072,
-      "span_h_24h": 174.7,
+      "span_h_24h": 174.8,
       "n_eff_24h": 7.28,
-      "n_24h": 112,
-      "hit_rate_24h": 0.616,
-      "mean_ret_24h": 0.016,
-      "median_ret_24h": 0.03927,
+      "n_24h": 113,
+      "hit_rate_24h": 0.611,
+      "mean_ret_24h": 0.01521,
+      "median_ret_24h": 0.0378,
       "both_halves_24h": false,
       "avg_win_24h": 0.09802,
-      "avg_loss_24h": -0.11562,
-      "payoff_24h": 0.848
+      "avg_loss_24h": -0.11464,
+      "payoff_24h": 0.855
     },
     "revival": {
       "span_h_1h": 5.7,
