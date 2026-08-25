@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-25T13:30:05+00:00",
+  "ts": "2026-08-25T13:35:35+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -20,8 +20,10 @@
       "PROM",
       "INJ",
       "SNDKB",
+      "PENGU",
       "SOL",
-      "PENGU"
+      "HBAR",
+      "UNI"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -43,7 +45,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000221
+      "funding": -0.000216
     },
     {
       "symbol": "BTC",
@@ -67,7 +69,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.9e-05
+      "funding": 9.8e-05
+    },
+    {
+      "symbol": "HBAR",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -6e-05
     },
     {
       "symbol": "INJ",
@@ -123,7 +133,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000171
+      "funding": -0.000175
     },
     {
       "symbol": "PUMP",
@@ -139,6 +149,14 @@
       "sources": [
         "movers"
       ]
+    },
+    {
+      "symbol": "UNI",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "ZEC",
