@@ -1,15 +1,15 @@
 {
-  "ts": "2026-08-25T06:05:14+00:00",
+  "ts": "2026-08-25T06:10:59+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "SOL",
-      "AERO",
-      "PUMP",
-      "LIT",
       "ETH",
-      "ZEC",
-      "LINK"
+      "PUMP",
+      "AERO",
+      "LIT",
+      "XRP",
+      "SUI"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,8 +20,8 @@
       "PENGU",
       "SOL",
       "MSTRB",
-      "ONDO",
-      "PEPE"
+      "WLD",
+      "ONDO"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -59,21 +59,13 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.6e-05
+      "funding": 8.4e-05
     },
     {
       "symbol": "INJ",
       "surfaces": 1,
       "sources": [
         "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "LINK",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
       ],
       "funding": 0.0001
     },
@@ -109,19 +101,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PEPE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
-    },
-    {
       "symbol": "PROM",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -0.000323
+      "funding": -0.000342
     },
     {
       "symbol": "PUMP",
@@ -132,6 +117,14 @@
       "funding": 5e-05
     },
     {
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "VIRTUAL",
       "surfaces": 1,
       "sources": [
@@ -140,7 +133,15 @@
       "funding": 5e-05
     },
     {
-      "symbol": "ZEC",
+      "symbol": "WLD",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "XRP",
       "surfaces": 1,
       "sources": [
         "coingecko"
