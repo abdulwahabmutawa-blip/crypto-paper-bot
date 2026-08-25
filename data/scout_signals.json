@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-25T05:54:22+00:00",
-  "scanned": 115,
+  "ts": "2026-08-25T05:59:29+00:00",
+  "scanned": 114,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "RENDERUSDT",
-      "signal": "breakout",
-      "score": 0.6107,
-      "raw_score": 0.6132,
-      "weight": 0.996,
-      "price": 1.561,
-      "why": "trades 6.2x, volume 5.8x, 67% taker-buy, +2.1% in an hour, at 95% of its 24h range",
-      "chg_24h": 0.0569,
-      "vol_surge": 5.77,
-      "chg_1h": 0.0209,
-      "market_surge": 4.04,
-      "actionable": false,
-      "status": "probation \u2014 228 rows but only 7.2 independent 24h windows (span 173h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.4 independent 24h windows (span 130h): overlapping labels are not a sample",
     "breakout": "probation \u2014 228 rows but only 7.2 independent 24h windows (span 173h): overlapping labels are not a sample",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 17,
+    "count": 18,
     "baseline": 22.0,
     "wave": false
   },
