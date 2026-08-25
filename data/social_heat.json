@@ -1,27 +1,27 @@
 {
-  "ts": "2026-08-25T12:05:16+00:00",
+  "ts": "2026-08-25T12:10:36+00:00",
   "sources": {
     "coingecko": [
-      "BTC",
       "SOL",
       "PUMP",
+      "BTC",
       "ZEC",
-      "MORPHO",
       "ENA",
-      "PEPE",
-      "XMR"
+      "MORPHO",
+      "TRUMP",
+      "DOT"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "ONG",
       "INJ",
-      "RE",
       "PROM",
-      "SOL",
+      "RE",
       "SNDKB",
+      "SOL",
       "BTC",
-      "MSTRB"
+      "FET"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -48,12 +48,28 @@
       "long_short": 1.77
     },
     {
+      "symbol": "DOT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "ENA",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "FET",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "INJ",
@@ -72,26 +88,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "MSTRB",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
-    },
-    {
       "symbol": "ONG",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 3.9e-05
-    },
-    {
-      "symbol": "PEPE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ]
+      "funding": 2.7e-05
     },
     {
       "symbol": "PROM",
@@ -99,7 +101,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -5.5e-05
+      "funding": -4.2e-05
     },
     {
       "symbol": "PUMP",
@@ -125,12 +127,12 @@
       ]
     },
     {
-      "symbol": "XMR",
+      "symbol": "TRUMP",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 0.000206
+      "funding": -0.000125
     },
     {
       "symbol": "ZEC",
