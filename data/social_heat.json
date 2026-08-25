@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-25T07:08:36+00:00",
+  "ts": "2026-08-25T07:14:12+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -23,12 +23,22 @@
       "MSTRB",
       "WLD",
       "ONDO",
-      "PENGU"
+      "BTC"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "BTC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 0.86
+    },
     {
       "symbol": "SOL",
       "surfaces": 2,
@@ -56,20 +66,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 7.1e-05
+      "funding": 7e-05
     },
     {
       "symbol": "INJ",
@@ -95,20 +97,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PENGU",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "PROM",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -0.000437
+      "funding": -0.000451
     },
     {
       "symbol": "PUMP",
@@ -132,7 +126,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000272
+      "funding": -0.000267
     },
     {
       "symbol": "SUI",
