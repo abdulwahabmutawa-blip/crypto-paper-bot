@@ -1,13 +1,14 @@
 {
-  "ts": "2026-08-25T02:47:44+00:00",
+  "ts": "2026-08-25T02:53:16+00:00",
   "sources": {
     "coingecko": [
       "BTC",
-      "SOL",
       "PUMP",
+      "SOL",
       "LIT",
       "AERO",
-      "INJ"
+      "INJ",
+      "ETH"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -16,8 +17,8 @@
       "VIRTUAL",
       "SOL",
       "PENGU",
-      "ONDO",
       "WLD",
+      "ONDO",
       "MSTRB",
       "RE"
     ],
@@ -45,6 +46,14 @@
     },
     {
       "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "coingecko"
