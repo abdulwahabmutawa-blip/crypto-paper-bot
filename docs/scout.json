@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-25T02:02:32+00:00",
-  "scanned": 112,
+  "ts": "2026-08-25T02:08:28+00:00",
+  "scanned": 115,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "VIRTUALUSDT",
-      "signal": "heat",
-      "score": 0.648,
-      "raw_score": 0.6,
-      "weight": 1.08,
-      "price": 0.8054,
-      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.005% \u00b7 L/S 1.4",
-      "chg_24h": 0.153,
-      "vol_surge": null,
-      "chg_1h": null,
-      "market_surge": 3,
-      "actionable": false,
-      "status": "probation \u2014 109 rows but only 7.1 independent 24h windows (span 169h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.5 independent 24h windows (span 131h): overlapping labels are not a sample",
     "breakout": "probation \u2014 226 rows but only 7.0 independent 24h windows (span 168h): overlapping labels are not a sample",
@@ -27,22 +11,22 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 16,
+    "count": 17,
     "baseline": 25.0,
     "wave": false
   },
   "scorecard": {
     "ignition": {
-      "span_h_1h": 129.7,
-      "n_eff_1h": 129.65,
+      "span_h_1h": 129.9,
+      "n_eff_1h": 129.94,
       "n_1h": 400,
-      "hit_rate_1h": 0.412,
-      "mean_ret_1h": -0.00057,
-      "median_ret_1h": 0.00048,
+      "hit_rate_1h": 0.41,
+      "mean_ret_1h": -0.00059,
+      "median_ret_1h": 0.00045,
       "both_halves_1h": false,
-      "avg_win_1h": 0.0112,
-      "avg_loss_1h": -0.01389,
-      "payoff_1h": 0.807,
+      "avg_win_1h": 0.01122,
+      "avg_loss_1h": -0.01382,
+      "payoff_1h": 0.812,
       "span_h_4h": 129.1,
       "n_eff_4h": 32.26,
       "n_4h": 400,
@@ -65,16 +49,16 @@
       "payoff_24h": 1.937
     },
     "breakout": {
-      "span_h_1h": 188.9,
-      "n_eff_1h": 188.88,
-      "n_1h": 241,
-      "hit_rate_1h": 0.523,
-      "mean_ret_1h": 0.00461,
+      "span_h_1h": 192.9,
+      "n_eff_1h": 192.93,
+      "n_1h": 242,
+      "hit_rate_1h": 0.521,
+      "mean_ret_1h": 0.00459,
       "median_ret_1h": 0.00324,
       "both_halves_1h": true,
       "avg_win_1h": 0.02363,
-      "avg_loss_1h": -0.01898,
-      "payoff_1h": 1.245,
+      "avg_loss_1h": -0.01881,
+      "payoff_1h": 1.256,
       "span_h_4h": 188.9,
       "n_eff_4h": 47.22,
       "n_4h": 241,
