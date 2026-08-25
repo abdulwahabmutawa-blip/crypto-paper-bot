@@ -1,37 +1,22 @@
 {
-  "ts": "2026-08-25T02:36:33+00:00",
-  "scanned": 114,
+  "ts": "2026-08-25T02:42:00+00:00",
+  "scanned": 115,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "ZROUSDT",
+      "symbol": "INTCBUSDT",
       "signal": "ignition",
-      "score": 0.6998,
-      "raw_score": 0.7163,
+      "score": 0.8706,
+      "raw_score": 0.8911,
       "weight": 0.977,
-      "price": 1.136,
-      "why": "trades 6.3x and volume 9.3x the prior 4h, 65% taker-buy, $70,509 burst \u2014 while price has only moved +1.2%",
-      "chg_24h": -0.0241,
-      "vol_surge": 9.3,
-      "chg_1h": 0.0116,
-      "market_surge": 3.47,
+      "price": 88.0,
+      "why": "trades 25.1x and volume 44.1x the prior 4h, 61% taker-buy, $50,421 burst \u2014 while price has only moved +0.4%",
+      "chg_24h": -0.0181,
+      "vol_surge": 44.13,
+      "chg_1h": 0.0042,
+      "market_surge": 0.0,
       "actionable": false,
       "status": "probation \u2014 400 rows but only 5.5 independent 24h windows (span 132h): overlapping labels are not a sample"
-    },
-    {
-      "symbol": "XRPUSDT",
-      "signal": "breakout",
-      "score": 0.6119,
-      "raw_score": 0.6156,
-      "weight": 0.994,
-      "price": 1.5438,
-      "why": "trades 5.6x, volume 6.7x, 61% taker-buy, +2.3% in an hour, at 93% of its 24h range",
-      "chg_24h": 0.0367,
-      "vol_surge": 6.74,
-      "chg_1h": 0.0227,
-      "market_surge": 3.66,
-      "actionable": false,
-      "status": "probation \u2014 226 rows but only 7.0 independent 24h windows (span 168h): overlapping labels are not a sample"
     }
   ],
   "gate": {
@@ -42,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 16,
+    "count": 17,
     "baseline": 25.0,
     "wave": false
   },
