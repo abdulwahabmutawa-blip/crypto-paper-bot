@@ -1,16 +1,16 @@
 {
-  "ts": "2026-08-25T04:34:28+00:00",
+  "ts": "2026-08-25T04:40:17+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "SOL",
       "ZEC",
-      "PUMP",
       "PEPE",
+      "DOGE",
       "ETH",
+      "PUMP",
       "AERO",
-      "TRUMP",
-      "VIRTUAL",
+      "SUI",
       "AAVE"
     ],
     "reddit": [],
@@ -21,8 +21,8 @@
       "INJ",
       "PENGU",
       "SOL",
-      "ONDO",
       "MSTRB",
+      "ONDO",
       "RE"
     ],
     "watcher": [],
@@ -38,16 +38,6 @@
       ],
       "funding": 0.0001,
       "long_short": 1.94
-    },
-    {
-      "symbol": "VIRTUAL",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.43
     },
     {
       "symbol": "AAVE",
@@ -67,6 +57,14 @@
     },
     {
       "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "DOGE",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -144,12 +142,20 @@
       "funding": 5e-05
     },
     {
-      "symbol": "TRUMP",
+      "symbol": "SUI",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -6.7e-05
+      "funding": 0.0001
+    },
+    {
+      "symbol": "VIRTUAL",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "ZEC",
