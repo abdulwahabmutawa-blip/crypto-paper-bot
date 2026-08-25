@@ -1,39 +1,8 @@
 {
-  "ts": "2026-08-25T14:59:11+00:00",
+  "ts": "2026-08-25T15:05:10+00:00",
   "scanned": 120,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "JASMYUSDT",
-      "signal": "breakout",
-      "score": 0.7933,
-      "raw_score": 0.8029,
-      "weight": 0.988,
-      "price": 0.00512,
-      "why": "trades 10.1x, volume 6.1x, 70% taker-buy, +5.6% in an hour, at 91% of its 24h range",
-      "chg_24h": 0.1532,
-      "vol_surge": 6.07,
-      "chg_1h": 0.0557,
-      "market_surge": 4.86,
-      "actionable": false,
-      "status": "probation \u2014 237 rows but only 7.5 independent 24h windows (span 181h): overlapping labels are not a sample"
-    },
-    {
-      "symbol": "SKHYBUSDT",
-      "signal": "ignition",
-      "score": 0.6264,
-      "raw_score": 0.6573,
-      "weight": 0.953,
-      "price": 158.78,
-      "why": "trades 4.4x and volume 7.9x the prior 4h, 78% taker-buy, $126,305 burst \u2014 while price has only moved +0.3%",
-      "chg_24h": 0.0237,
-      "vol_surge": 7.87,
-      "chg_1h": 0.0034,
-      "market_surge": 2.35,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.4 independent 24h windows (span 130h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.4 independent 24h windows (span 130h): overlapping labels are not a sample",
     "breakout": "probation \u2014 237 rows but only 7.5 independent 24h windows (span 181h): overlapping labels are not a sample",
@@ -42,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 13,
+    "count": 12,
     "baseline": 18.0,
     "wave": false
   },
