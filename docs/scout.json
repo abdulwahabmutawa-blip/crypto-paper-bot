@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-25T02:42:00+00:00",
-  "scanned": 115,
+  "ts": "2026-08-25T02:47:47+00:00",
+  "scanned": 116,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "INTCBUSDT",
-      "signal": "ignition",
-      "score": 0.8706,
-      "raw_score": 0.8911,
-      "weight": 0.977,
-      "price": 88.0,
-      "why": "trades 25.1x and volume 44.1x the prior 4h, 61% taker-buy, $50,421 burst \u2014 while price has only moved +0.4%",
-      "chg_24h": -0.0181,
-      "vol_surge": 44.13,
-      "chg_1h": 0.0042,
-      "market_surge": 0.0,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.5 independent 24h windows (span 132h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.5 independent 24h windows (span 132h): overlapping labels are not a sample",
     "breakout": "probation \u2014 226 rows but only 7.0 independent 24h windows (span 168h): overlapping labels are not a sample",
@@ -27,8 +11,8 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 17,
-    "baseline": 25.0,
+    "count": 18,
+    "baseline": 24.0,
     "wave": false
   },
   "scorecard": {
@@ -53,8 +37,8 @@
       "avg_win_4h": 0.02523,
       "avg_loss_4h": -0.02172,
       "payoff_4h": 1.161,
-      "span_h_24h": 132.2,
-      "n_eff_24h": 5.51,
+      "span_h_24h": 132.5,
+      "n_eff_24h": 5.52,
       "n_24h": 400,
       "hit_rate_24h": 0.647,
       "mean_ret_24h": 0.03631,
