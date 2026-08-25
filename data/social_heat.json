@@ -1,15 +1,15 @@
 {
-  "ts": "2026-08-25T04:57:36+00:00",
+  "ts": "2026-08-25T05:03:05+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "SOL",
       "PEPE",
       "ZEC",
-      "DOGE",
       "PUMP",
-      "ETH",
       "XRP",
+      "DOGE",
+      "ETH",
       "AERO",
       "SUI"
     ],
@@ -23,22 +23,12 @@
       "SOL",
       "MSTRB",
       "ONDO",
-      "BTC"
+      "RE"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "BTC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 0.85
-    },
     {
       "symbol": "SOL",
       "surfaces": 2,
@@ -47,7 +37,7 @@
         "movers"
       ],
       "funding": 0.0001,
-      "long_short": 1.94
+      "long_short": 1.91
     },
     {
       "symbol": "AERO",
@@ -56,6 +46,14 @@
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "DOGE",
@@ -124,6 +122,14 @@
       "surfaces": 1,
       "sources": [
         "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "RE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
       ],
       "funding": 5e-05
     },
