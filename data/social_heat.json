@@ -1,16 +1,16 @@
 {
-  "ts": "2026-08-25T00:44:17+00:00",
+  "ts": "2026-08-25T00:49:36+00:00",
   "sources": {
     "coingecko": [
-      "AERO",
-      "SOL",
       "BTC",
+      "AERO",
       "PUMP",
+      "SOL",
       "ETH",
-      "SUI",
       "ENA",
-      "POL",
-      "PENDLE"
+      "SUI",
+      "LIT",
+      "TAO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,9 +20,9 @@
       "RE",
       "MSTRB",
       "ONDO",
+      "PENGU",
       "BTC",
-      "LINK",
-      "PENGU"
+      "LINK"
     ],
     "watcher": [
       "VIRTUAL"
@@ -37,7 +37,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 5.5e-05,
+      "funding": 5.6e-05,
       "long_short": 0.94
     },
     {
@@ -93,6 +93,14 @@
       "funding": 0.0001
     },
     {
+      "symbol": "LIT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "MSTRB",
       "surfaces": 1,
       "sources": [
@@ -108,26 +116,10 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PENDLE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
         "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "POL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
       ],
       "funding": 5e-05
     },
@@ -154,6 +146,14 @@
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "TAO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
