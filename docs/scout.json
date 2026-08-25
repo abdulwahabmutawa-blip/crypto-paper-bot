@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-25T01:57:02+00:00",
-  "scanned": 116,
+  "ts": "2026-08-25T02:02:32+00:00",
+  "scanned": 112,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "VIRTUALUSDT",
+      "signal": "heat",
+      "score": 0.648,
+      "raw_score": 0.6,
+      "weight": 1.08,
+      "price": 0.8054,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.005% \u00b7 L/S 1.4",
+      "chg_24h": 0.153,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
+      "actionable": false,
+      "status": "probation \u2014 109 rows but only 7.1 independent 24h windows (span 169h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.5 independent 24h windows (span 131h): overlapping labels are not a sample",
     "breakout": "probation \u2014 226 rows but only 7.0 independent 24h windows (span 168h): overlapping labels are not a sample",
