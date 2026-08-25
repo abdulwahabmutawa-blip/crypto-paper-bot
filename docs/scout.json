@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-25T16:51:41+00:00",
-  "scanned": 118,
+  "ts": "2026-08-25T16:57:11+00:00",
+  "scanned": 117,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "DEXEUSDT",
+      "signal": "breakout",
+      "score": 0.8079,
+      "raw_score": 0.8193,
+      "weight": 0.986,
+      "price": 1.947,
+      "why": "trades 12.1x, volume 14.5x, 84% taker-buy, +3.2% in an hour, at 96% of its 24h range",
+      "chg_24h": 0.0451,
+      "vol_surge": 14.48,
+      "chg_1h": 0.0323,
+      "market_surge": 5.65,
+      "actionable": false,
+      "status": "probation \u2014 238 rows but only 7.7 independent 24h windows (span 184h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.4 independent 24h windows (span 130h): overlapping labels are not a sample",
     "breakout": "probation \u2014 238 rows but only 7.7 independent 24h windows (span 184h): overlapping labels are not a sample",

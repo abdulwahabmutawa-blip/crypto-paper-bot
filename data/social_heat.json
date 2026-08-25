@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-25T16:51:35+00:00",
+  "ts": "2026-08-25T16:57:06+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -16,27 +16,17 @@
     "movers": [
       "ONG",
       "ZRO",
-      "SOL",
       "CRCLB",
+      "SOL",
       "RE",
       "PENGU",
       "UNI",
-      "BTC"
+      "TUT"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "BTC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 0.95
-    },
     {
       "symbol": "SOL",
       "surfaces": 2,
@@ -64,6 +54,14 @@
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "CFG",
@@ -114,6 +112,14 @@
     },
     {
       "symbol": "RE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "TUT",
       "surfaces": 1,
       "sources": [
         "movers"
