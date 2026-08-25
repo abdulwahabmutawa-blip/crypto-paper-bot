@@ -1,16 +1,16 @@
 {
-  "ts": "2026-08-25T08:27:17+00:00",
+  "ts": "2026-08-25T08:32:27+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "SOL",
-      "PEPE",
-      "LIT",
-      "PUMP",
-      "AERO",
-      "SUI",
-      "ZEC",
       "TAO",
+      "PEPE",
+      "ZEC",
+      "PUMP",
+      "ETH",
+      "LIT",
+      "SUI",
       "MORPHO"
     ],
     "reddit": [],
@@ -21,9 +21,9 @@
       "SOL",
       "FET",
       "MSTRB",
-      "PROM",
       "PENGU",
-      "ONDO"
+      "PROM",
+      "WLD"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -40,20 +40,20 @@
       "long_short": 1.94
     },
     {
-      "symbol": "AERO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "ETH",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 6.5e-05
     },
     {
       "symbol": "FET",
@@ -95,14 +95,6 @@
       ]
     },
     {
-      "symbol": "ONDO",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
@@ -123,7 +115,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000468
+      "funding": -0.00049
     },
     {
       "symbol": "PUMP",
@@ -156,6 +148,14 @@
         "movers"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "WLD",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "ZEC",
