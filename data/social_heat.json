@@ -1,26 +1,27 @@
 {
-  "ts": "2026-08-26T23:18:11+00:00",
+  "ts": "2026-08-26T23:23:41+00:00",
   "sources": {
     "coingecko": [
       "BTC",
+      "SOL",
+      "ONG",
+      "PUMP",
       "ETH",
       "PENGU",
-      "SOL",
-      "PUMP",
-      "ONG",
-      "LINK",
       "ETHFI",
-      "LIT",
-      "SUI"
+      "ZEC",
+      "SUI",
+      "BONK",
+      "UNI"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "ONG",
-      "PUMP",
       "TUT",
-      "SNDKB",
+      "PUMP",
       "ZEC",
+      "SNDKB",
       "SOL",
       "TRUMP",
       "ENA"
@@ -39,7 +40,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.016666,
+      "funding": -0.016993,
       "long_short": 0.79
     },
     {
@@ -63,12 +64,29 @@
       "long_short": 2.01
     },
     {
+      "symbol": "ZEC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 0.56
+    },
+    {
+      "symbol": "BONK",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ]
+    },
+    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5.5e-05
+      "funding": 5.4e-05
     },
     {
       "symbol": "ENA",
@@ -88,22 +106,6 @@
     },
     {
       "symbol": "ETHFI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "LINK",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "LIT",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -139,7 +141,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 3.8e-05
+      "funding": 4.1e-05
     },
     {
       "symbol": "TUT",
@@ -150,10 +152,10 @@
       "funding": 5e-05
     },
     {
-      "symbol": "ZEC",
+      "symbol": "UNI",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
       "funding": 0.0001
     }
