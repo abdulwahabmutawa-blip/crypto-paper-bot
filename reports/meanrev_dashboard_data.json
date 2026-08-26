@@ -1,104 +1,104 @@
 {
-  "generated_utc": "2026-08-26T13:26:45+00:00",
+  "generated_utc": "2026-08-26T13:40:18+00:00",
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "live_ts": "2026-08-25T19:55:00+00:00",
+  "live_ts": "2026-08-26T13:40:00+00:00",
   "current": {
-    "date": "2026-08-25",
-    "value": 1216.66,
-    "bench": 1020.08,
-    "holding": "UNH"
+    "date": "2026-08-26",
+    "value": 1239.28,
+    "bench": 1019.7,
+    "holding": "WMT"
   },
   "board": [
     {
       "sym": "WMT",
-      "price": 105.39,
-      "line": "z -1.59",
-      "tag": "oversold",
-      "on": true,
-      "pick": false,
-      "fill": 26.438830961194036
-    },
-    {
-      "sym": "UNH",
-      "price": 396.62,
-      "line": "z -0.66",
+      "price": 104.72,
+      "line": "z -1.55",
       "tag": "HELD",
-      "on": false,
+      "on": true,
       "pick": true,
-      "fill": 11.043861996461546
+      "fill": 25.79239932020931
     },
     {
       "sym": "HD",
-      "price": 337.85,
+      "price": 337.34,
+      "line": "z -0.66",
+      "tag": "normal",
+      "on": false,
+      "pick": false,
+      "fill": 10.956196751793982
+    },
+    {
+      "sym": "AMZN",
+      "price": 259.61,
+      "line": "z -0.63",
+      "tag": "normal",
+      "on": false,
+      "pick": false,
+      "fill": 10.480594515078291
+    },
+    {
+      "sym": "GOOGL",
+      "price": 343.87,
       "line": "z -0.60",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 9.94101235659912
-    },
-    {
-      "sym": "GOOGL",
-      "price": 346.94,
-      "line": "z -0.28",
-      "tag": "normal",
-      "on": false,
-      "pick": false,
-      "fill": 4.713730752986565
-    },
-    {
-      "sym": "AMZN",
-      "price": 260.97,
-      "line": "z -0.26",
-      "tag": "normal",
-      "on": false,
-      "pick": false,
-      "fill": 4.256025966671432
-    },
-    {
-      "sym": "AAPL",
-      "price": 309.83,
-      "line": "z -0.17",
-      "tag": "normal",
-      "on": false,
-      "pick": false,
-      "fill": 2.889265774781669
+      "fill": 10.078505867301903
     },
     {
       "sym": "NVDA",
-      "price": 212.98,
-      "line": "z -0.16",
+      "price": 212.03,
+      "line": "z -0.44",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 2.6577758017233624
+      "fill": 7.407967494237458
     },
     {
       "sym": "JPM",
-      "price": 356.69,
-      "line": "z -0.07",
+      "price": 357.07,
+      "line": "z -0.14",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 1.1725966544765805
+      "fill": 2.308420015887409
+    },
+    {
+      "sym": "AAPL",
+      "price": 310.31,
+      "line": "z +0.05",
+      "tag": "normal",
+      "on": false,
+      "pick": false,
+      "fill": -0.7658981381567942
     },
     {
       "sym": "PG",
-      "price": 145.42,
-      "line": "z +0.22",
+      "price": 145.2,
+      "line": "z +0.10",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": -3.718045291760131
+      "fill": -1.637490706019404
     },
     {
-      "sym": "MSFT",
-      "price": 491.55,
-      "line": "z +0.37",
+      "sym": "XOM",
+      "price": 159.61,
+      "line": "z +0.19",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": -6.184354536498842
+      "fill": -3.125318969593157
+    },
+    {
+      "sym": "UNH",
+      "price": 404.92,
+      "line": "z +0.24",
+      "tag": "normal",
+      "on": false,
+      "pick": false,
+      "fill": -3.9664298532601734
     }
   ],
   "board_title": "16 mega-caps, most oversold first (z < -1.5 = buy zone)",
@@ -109,12 +109,6 @@
     "board_note": "Buys panic, sells relief: enter the most stretched mega-cap below -1.5 z, exit when it recovers to average."
   },
   "intraday": [
-    {
-      "ts": "2026-08-07T22:41:50+00:00",
-      "value": 1248.69,
-      "bench": 1029.78,
-      "holding": "UNH"
-    },
     {
       "ts": "2026-08-07T22:55:14+00:00",
       "value": 1248.69,
@@ -9108,6 +9102,12 @@
       "value": 1216.66,
       "bench": 1020.08,
       "holding": "UNH"
+    },
+    {
+      "ts": "2026-08-26T13:40:18+00:00",
+      "value": 1239.28,
+      "bench": 1019.7,
+      "holding": "WMT"
     }
   ],
   "trades": [
@@ -9172,6 +9172,26 @@
       "price": 410.66,
       "units": 3.0676,
       "value": 1259.73,
+      "reason": "Most oversold mega-cap (z < -1.5) \u2014 buying the dip"
+    },
+    {
+      "date": "2026-08-26",
+      "action": "SELL",
+      "ticker": "UNH",
+      "price": 404.92498779,
+      "units": 3.0676,
+      "value": 1242.14,
+      "fee": 1.55,
+      "reason": "Signal flip"
+    },
+    {
+      "date": "2026-08-26",
+      "action": "BUY",
+      "ticker": "WMT",
+      "price": 104.72499847,
+      "units": 11.8337,
+      "value": 1239.28,
+      "fee": 1.3,
       "reason": "Most oversold mega-cap (z < -1.5) \u2014 buying the dip"
     }
   ],
@@ -9350,6 +9370,12 @@
       "value": 1216.66,
       "bench": 1020.08,
       "holding": "UNH"
+    },
+    {
+      "date": "2026-08-26",
+      "value": 1239.28,
+      "bench": 1019.7,
+      "holding": "WMT"
     }
   ],
   "strategy": {
@@ -9358,7 +9384,7 @@
     "backtest_cagr": "+13.9%/yr since 2010 \u00b7 +9.7%/yr 2024+",
     "backtest_maxdd": "-57% (2010 era) \u00b7 verdict MIXED \u2014 this live run decides"
   },
-  "costs_paid": 0.0,
+  "costs_paid": 2.8553,
   "frozen": null,
-  "thoughts": "I'm holding UNH. Most oversold mega-cap (z < -1.5) \u2014 buying the dip. I bought at $410.66; it's now $396.62 (-3.4% since I got in). My safety net: if the price falls to $361.58 (12% below its recent high), I sell automatically \u2014 no exceptions. Closest challenger on my list is WMT, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
+  "thoughts": "I'm holding WMT. Most oversold mega-cap (z < -1.5) \u2014 buying the dip. I bought at $104.72; it's now $104.72 (+0.0% since I got in). My safety net: if the price falls to $92.16 (12% below its recent high), I sell automatically \u2014 no exceptions."
 }
