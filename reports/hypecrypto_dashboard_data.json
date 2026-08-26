@@ -1,46 +1,28 @@
 {
-  "generated_utc": "2026-08-26T15:02:21+00:00",
+  "generated_utc": "2026-08-26T15:16:48+00:00",
   "created": "2026-08-15",
   "starting_cash": 1000.0,
-  "live_ts": "2026-08-26T15:02:21+00:00",
+  "live_ts": "2026-08-26T15:16:48+00:00",
   "current": {
     "date": "2026-08-26",
-    "value": 934.35,
-    "bench": 1235.62,
-    "holding": "CASH"
+    "value": 933.04,
+    "bench": 1234.94,
+    "holding": "BTC-USD"
   },
   "board": [
     {
-      "sym": "SOL",
+      "sym": "ONG",
       "price": 0,
-      "line": "mixed \u00b7 catalyst not price explosion",
-      "tag": "mixed",
-      "on": false,
-      "pick": false,
-      "fill": 0
-    },
-    {
-      "sym": "ZANO",
-      "price": 0,
-      "line": "mixed \u00b7 privacy interest forming",
-      "tag": "mixed",
-      "on": false,
-      "pick": false,
-      "fill": 0
-    },
-    {
-      "sym": "VIRTUAL",
-      "price": 0.7247,
-      "line": "euphoric \u00b7 AI agent crowd cheering",
-      "tag": "candidate",
+      "line": "euphoric \u00b7 Top mover victory lap",
+      "tag": "euphoric",
       "on": true,
       "pick": false,
       "fill": 40
     },
     {
-      "sym": "HYPE",
+      "sym": "BMT",
       "price": 0,
-      "line": "euphoric \u00b7 victory lap posts",
+      "line": "euphoric \u00b7 Already exploded",
       "tag": "euphoric",
       "on": true,
       "pick": false,
@@ -49,23 +31,32 @@
     {
       "sym": "CASHCAT",
       "price": 0,
-      "line": "euphoric \u00b7 promo heavy past pump",
+      "line": "euphoric \u00b7 Meme promo heavy",
       "tag": "euphoric",
       "on": true,
       "pick": false,
       "fill": 40
     },
     {
-      "sym": "TAO",
+      "sym": "HYPE",
       "price": 0,
-      "line": "mixed \u00b7 AI sector rotation",
+      "line": "mixed \u00b7 Hyperliquid related",
       "tag": "mixed",
       "on": false,
       "pick": false,
       "fill": 0
+    },
+    {
+      "sym": "BTC",
+      "price": 77759.42,
+      "line": "euphoric \u00b7 Debasement short-squeeze",
+      "tag": "HELD",
+      "on": true,
+      "pick": true,
+      "fill": 40
     }
   ],
-  "board_title": "Grok's crypto hype read (scan 2026-08-24T17:45) \u00b7 \u26a0\ufe0f STALE 45h \u2014 trading suspended",
+  "board_title": "Grok's crypto hype read (scan 2026-08-26T15:15)",
   "meta": {
     "title": "Hype Crypto \u2014 $1,000 Challenge",
     "badge": "PAPER + TESTNET SHADOW \u00b7 CRYPTO HYPE ON TRIAL",
@@ -5430,6 +5421,12 @@
       "value": 934.35,
       "bench": 1235.62,
       "holding": "CASH"
+    },
+    {
+      "ts": "2026-08-26T15:16:48+00:00",
+      "value": 933.04,
+      "bench": 1234.94,
+      "holding": "BTC-USD"
     }
   ],
   "trades": [
@@ -5592,6 +5589,16 @@
       "value": 935.66,
       "fee": 1.31,
       "reason": "Hype faded \u2014 coin dropped off a newer euphoric scan"
+    },
+    {
+      "date": "2026-08-26",
+      "action": "BUY",
+      "ticker": "BTC-USD",
+      "price": 77759.42,
+      "units": 0.011999,
+      "value": 933.04,
+      "fee": 1.31,
+      "reason": "Grok: BTC euphoric \u2014 Debasement short-squeeze (scan 2026-08-26T15:15)"
     }
   ],
   "history": [
@@ -5657,14 +5664,14 @@
     },
     {
       "date": "2026-08-26",
-      "value": 934.35,
-      "bench": 1235.62,
-      "holding": "CASH"
+      "value": 933.04,
+      "bench": 1234.94,
+      "holding": "BTC-USD"
     }
   ],
-  "costs_paid": 22.6162,
+  "costs_paid": 23.9243,
   "frozen": null,
-  "thoughts": "\u26a0\ufe0f Scans are 45h old \u2014 no fresh hype exists, so I hold nothing and buy nothing.\n\nI'm in cash. I buy only the freshest euphoric crypto (scan under 9h old), one entry a day, never on weekends \u2014 lukewarm or aging hype is how small accounts bleed out in fees.",
+  "thoughts": "I'm riding BTC from the 2026-08-26T15:15 scan. My exit is mechanical: a newer scan without it, -10% from entry, or a blind/severe Watcher \u2014 whichever comes first.",
   "strategy": {
     "name": "Hype Crypto \u2014 sentiment pattern, crypto venue, on trial",
     "rule": "Top euphoric crypto from a fresh Watcher scan; 1 entry/day max; -10% hard stop; exit on newer scan without the coin, stale scans, or SEVERE; Binance-tier fees",

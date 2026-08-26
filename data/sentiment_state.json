@@ -1,10 +1,10 @@
 {
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "holding": "CASH",
-  "units": 0.0,
-  "cash": 1495.9063837507274,
-  "entry_price": null,
+  "holding": "ONG",
+  "units": 353.20011679297437,
+  "cash": 0.0,
+  "entry_price": 4.230000019073486,
   "bench_units": 1.332054612938296,
   "stopped": {
     "SHIB-USD": "2026-07-27T00:01:08+00:00",
@@ -508,6 +508,16 @@
       "value": 1498.0,
       "fee": 2.1,
       "reason": "Grok scans stale (24h) \u2014 hype unverifiable, flying blind is not a strategy"
+    },
+    {
+      "date": "2026-08-26",
+      "action": "BUY",
+      "ticker": "ONG",
+      "price": 4.23000002,
+      "units": 353.2001,
+      "value": 1494.04,
+      "fee": 1.87,
+      "reason": "Grok: ONG euphoric \u2014 Binance top mover +58% (scan 2026-08-26T15:15)"
     }
   ],
   "history": [
@@ -706,18 +716,12 @@
     },
     {
       "date": "2026-08-26",
-      "value": 1495.91,
-      "bench": 1020.61,
-      "holding": "CASH"
+      "value": 1494.04,
+      "bench": 1020.03,
+      "holding": "ONG"
     }
   ],
   "intraday": [
-    {
-      "ts": "2026-08-08T00:15:43+00:00",
-      "value": 1216.04,
-      "bench": 1030.02,
-      "holding": "NET"
-    },
     {
       "ts": "2026-08-08T00:29:07+00:00",
       "value": 1216.04,
@@ -9711,9 +9715,15 @@
       "value": 1495.91,
       "bench": 1020.61,
       "holding": "CASH"
+    },
+    {
+      "ts": "2026-08-26T15:16:44+00:00",
+      "value": 1494.04,
+      "bench": 1020.03,
+      "holding": "ONG"
     }
   ],
-  "last_updated_utc": "2026-08-26T15:02:17+00:00",
+  "last_updated_utc": "2026-08-26T15:16:44+00:00",
   "restatement": {
     "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)",
     "voided_trades": [
@@ -9792,5 +9802,5 @@
     ],
     "voided_reason": "signal faded before any real fill was possible (market closed the whole window) \u2014 trades could never have existed"
   },
-  "costs_paid": 62.979
+  "costs_paid": 64.8489
 }
