@@ -735,34 +735,34 @@ def main():
                   + ", ".join(sorted(retired)))
 
 
-    def _pre_buy_veto(sym: str) -> str | None:
-        """REVAMP 08-23 vetoes that must FALL THROUGH to the next candidate
-        (review: running them after the pick ended the cycle's entry
-        instead of trying the next coin): the exit side must absorb the
-        seat (depth gate) and we never open into an unlock cliff."""
-        why = binance_live.announcement_veto(sym, announcements, now)
-        if why:
-            return why
-        _bid, _ask = binance_live.depth_5pct(sym)
-        why = binance_live.depth_gate(bals.get("USDT", 0.0), _bid, _ask)
-        if why:
-            return why
-        try:
-            _u = json.loads((config.DATA / "unlocks.json")
-                            .read_text(encoding="utf-8"))
-            _ev = (_u.get("events") or {}).get(sym) or {}
-            _days = _ev.get("days_to_unlock")
-            # the file is a snapshot: age it (review 08-23 minor)
+        def _pre_buy_veto(sym: str) -> str | None:
+            """REVAMP 08-23 vetoes that must FALL THROUGH to the next candidate
+            (review: running them after the pick ended the cycle's entry
+            instead of trying the next coin): the exit side must absorb the
+            seat (depth gate) and we never open into an unlock cliff."""
+            why = binance_live.announcement_veto(sym, announcements, now)
+            if why:
+                return why
+            _bid, _ask = binance_live.depth_5pct(sym)
+            why = binance_live.depth_gate(bals.get("USDT", 0.0), _bid, _ask)
+            if why:
+                return why
             try:
-                _age_d = (now - datetime.fromisoformat(
-                    _u.get("generated_utc"))).total_seconds() / 86400.0
-                if _days is not None:
-                    _days = _days - _age_d
+                _u = json.loads((config.DATA / "unlocks.json")
+                                .read_text(encoding="utf-8"))
+                _ev = (_u.get("events") or {}).get(sym) or {}
+                _days = _ev.get("days_to_unlock")
+                # the file is a snapshot: age it (review 08-23 minor)
+                try:
+                    _age_d = (now - datetime.fromisoformat(
+                        _u.get("generated_utc"))).total_seconds() / 86400.0
+                    if _days is not None:
+                        _days = _days - _age_d
+                except Exception:
+                    pass
+                return binance_live.unlock_veto(_days, _ev.get("adv_ratio"))
             except Exception:
-                pass
-            return binance_live.unlock_veto(_days, _ev.get("adv_ratio"))
-        except Exception:
-            return None
+                return None
 
         pick, source = None, None
         # OWNER DECISION 2026-08-19: watcher entries only when the paper

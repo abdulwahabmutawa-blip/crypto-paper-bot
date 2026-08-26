@@ -29,14 +29,16 @@ import config
 
 BASE = "https://api.x.ai/v1"
 MODEL = "grok-4.5"
-# 2h cadence (2026-08-15, owner decision): hype-riding books were reacting to
-# fade up to 8h late, which is an eternity in a pump. 12 scans/day * 31 = 372,
-# so the cap sits at 400. This is ~4x the previous credit burn and the Watcher
-# serves the whole fleet, not just the crypto books — if credits run out the
-# gate reads UNKNOWN fleet-wide and every risk-gated bot stops entering, so
-# the balance matters more now than it did at 8h.
-SCAN_INTERVAL_H = 2
-MONTHLY_CAP = 400
+# 4h cadence (2026-08-26, owner decision): the 2h cadence (08-15) burned the
+# prepaid credits in ~9 days — scans stopped 08-24 17:45 UTC, the gate read
+# stale fleet-wide, and the book was grounded. Owner re-upped and asked to
+# "scan a bit less so the credits last longer": 4h halves the burn
+# (6 scans/day * 31 = 186, cap 200) while staying far inside the 24h stale
+# window. Tradeoff accepted: fade detection can lag up to 4h (it was the
+# 8h version of this lag that prompted the 2h move — 4h splits the
+# difference). If credits still run short, 6h is the next stop.
+SCAN_INTERVAL_H = 4
+MONTHLY_CAP = 200
 STATE = config.DATA / "sentinel_state.json"
 VERDICT = config.DATA / "sentinel_verdict.json"
 
