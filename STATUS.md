@@ -1,31 +1,29 @@
-# Fleet status — 2026-08-25 (UTC)
+# Fleet status — 2026-08-26 (UTC)
 
 9 paper bots ($1,000 each, no real money) + Watcher (Grok risk gate) + Lottery (REAL money, VPS).
 
 | Bot | Holds | 24h change | Value (asof) |
 |---|---|---|---|
-| crypto (trend) | XRP-USD | No trade | $1,220.44 (08-25) |
-| congress | 10 positions | No trade | $983.60 (08-24) |
-| meanrev | UNH | No trade | $1,223.26 (08-25) |
-| commodity | USO | No trade | $1,029.77 (08-25) |
-| allweather | 5-asset basket | No trade | $1,028.68 (08-25) |
-| hype (sentiment) | MSTR | Sold MRNA (hype faded), bought MSTR 08-24 | $1,439.54 (08-25) |
-| hypecrypto | CASH | Bought + sold ENA-USD same day 08-24 (hype faded) | $934.35 (08-25) |
-| Hunter | SOL-USD | No trade (held since 08-23 BTC→SOL flip) | $923.49 (08-25) |
-| Scholar | SPY | No trade | $1,011.51 (08-25) |
-| Analyst | SPY | No trade | $1,017.01 (08-25) |
-| Watcher (sentinel) | — (risk gate) | Verdict unchanged: CAUTION (Iran sanctions, bond yields) | n/a |
-| **Lottery (REAL $)** | CASH | No closed trades in window; sitting flat | $52.38 (08-25) |
+| crypto (trend) | XRP-USD | No trade | $1,158.41 (08-26) |
+| congress | 10 positions | No trade | $988.48 (08-25) |
+| meanrev | UNH | No trade | $1,216.66 (08-25) |
+| commodity | DBC | Rotated USO→DBC 08-25 (signal flip) | $992.99 (08-25) |
+| allweather | 5-asset basket | No trade | $1,033.30 (08-25) |
+| hype (sentiment) | CASH | Sold MSTR 08-25 — "Grok scans stale, flying blind is not a strategy" | $1,495.91 (08-25) |
+| hypecrypto | CASH | No trade | $934.35 (08-26) |
+| Hunter | SOL-USD | No trade | $935.66 (08-25) |
+| Scholar | SPY | No trade | $1,014.63 (08-25) |
+| Analyst | SPY | No trade | $1,020.07 (08-25) |
+| Watcher (sentinel) | — (risk gate) | No new scan since 08-24 17:45 UTC | last verdict: CAUTION (now stale) |
+| **Lottery (REAL $)** | CASH | No commits since 08-25 17:54 UTC | n/a |
 
 ## Changed
-- hype/sentiment: sold MRNA ("hype faded — dropped off Grok's euphoric list"), bought MSTR 08-24 13:30 ("Grok: MSTR euphoric — raises $2B cash pool BTC proxy").
-- hypecrypto: bought ENA-USD 08-24 03:05 (Grok stablecoin-deal chase), sold it again same day (hype faded) — round-tripped back to CASH, net -$5.16 on the pair.
-- crypto, congress, meanrev, commodity, allweather, Hunter, Scholar, Analyst: no trades, holdings unchanged.
-- Owner pushed 2 code commits 08-24 (signal-horizon gate fix, missing-n_eff fails-closed) + 1 Fleet Supervisor attribution log — code/reporting changes, not part of this digest's edits.
-- 108 paper-bot cycles + 256 lottery cycles in the last 24h; max gap 20.4 min (cycle) / 6.5 min (lottery) — cadence healthy, no missed crons.
+- commodity: SELL USO → BUY DBC on 08-25 (signal flip, normal rotation, small fees).
+- hype/sentiment: SELL MSTR → CASH on 08-25, explicitly because Grok scans had gone stale — bot self-detected the Watcher outage and de-risked.
+- crypto, congress, meanrev, allweather, hypecrypto, Hunter, Scholar, Analyst: no trades, holdings unchanged.
+- 109 paper-bot cycles in the window, max gap 14.1 min — cron cadence healthy, no missed/failed cycles, no RED FLAG or corrupted-state commits.
 
 ## Needs a look
-- Analyst cash is −$0.92 (same fee/rounding artifact as prior digests, not worsening).
-- Watcher's last risk verdict is from 08-24 17:45 UTC (~11.5h old) — still inside the 24h freshness window so bots read it as CAUTION, not stale, but no fresher Grok scan has landed since; worth confirming the Sentinel is still scanning.
-- Lottery real book: $52.38 vs high-water $58.43, cumulative −$9.58 over 25 round trips — slow bleed continues, no new closes this window.
-- No exceptions or error fields found in any bot state file; no stalled or skipped cycles detected.
+- **Watcher/Grok sentinel has not produced a scan in ~35h** (last: 2026-08-24 17:45 UTC; normal cadence is ~2h). Verdicts >24h old are treated as UNKNOWN by risk-gated bots, not CAUTION. This already caused hype/sentiment to exit MSTR defensively — worth checking whether the Grok sentinel step is silently failing inside the loop or rate-limited.
+- **Lottery (real money) has pushed no commits since 2026-08-25 17:54 UTC (~11.5h silent).** It runs on a separate VPS outside this repo's GitHub Actions, so there's no log visibility from here — worth checking the VPS process is still alive.
+- Analyst cash is −$1.00 (same fee/rounding artifact as prior digests, not worsening).
