@@ -1,10 +1,10 @@
 {
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "holding": "ONG",
-  "units": 353.20011679297437,
+  "holding": "GRRR",
+  "units": 94.46759304414915,
   "cash": 0.0,
-  "entry_price": 4.230000019073486,
+  "entry_price": 15.925000190734863,
   "bench_units": 1.332054612938296,
   "stopped": {
     "SHIB-USD": "2026-07-27T00:01:08+00:00",
@@ -518,6 +518,26 @@
       "value": 1494.04,
       "fee": 1.87,
       "reason": "Grok: ONG euphoric \u2014 Binance top mover +58% (scan 2026-08-26T15:15)"
+    },
+    {
+      "date": "2026-08-26",
+      "action": "SELL",
+      "ticker": "ONG",
+      "price": 4.26999998,
+      "units": 353.2001,
+      "value": 1508.16,
+      "fee": 1.89,
+      "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
+    },
+    {
+      "date": "2026-08-26",
+      "action": "BUY",
+      "ticker": "GRRR",
+      "price": 15.92500019,
+      "units": 94.4676,
+      "value": 1504.4,
+      "fee": 1.88,
+      "reason": "Grok: GRRR euphoric \u2014 Stocktwits viral on guidance raise (scan 2026-08-26T19:28)"
     }
   ],
   "history": [
@@ -716,18 +736,12 @@
     },
     {
       "date": "2026-08-26",
-      "value": 1518.76,
-      "bench": 1021.65,
-      "holding": "ONG"
+      "value": 1504.4,
+      "bench": 1021.55,
+      "holding": "GRRR"
     }
   ],
   "intraday": [
-    {
-      "ts": "2026-08-08T03:36:39+00:00",
-      "value": 1216.04,
-      "bench": 1030.02,
-      "holding": "NET"
-    },
     {
       "ts": "2026-08-08T03:50:02+00:00",
       "value": 1216.04,
@@ -9721,9 +9735,15 @@
       "value": 1518.76,
       "bench": 1021.65,
       "holding": "ONG"
+    },
+    {
+      "ts": "2026-08-26T19:29:53+00:00",
+      "value": 1504.4,
+      "bench": 1021.55,
+      "holding": "GRRR"
     }
   ],
-  "last_updated_utc": "2026-08-26T19:15:12+00:00",
+  "last_updated_utc": "2026-08-26T19:29:53+00:00",
   "restatement": {
     "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)",
     "voided_trades": [
@@ -9802,5 +9822,5 @@
     ],
     "voided_reason": "signal faded before any real fill was possible (market closed the whole window) \u2014 trades could never have existed"
   },
-  "costs_paid": 64.8489
+  "costs_paid": 68.6169
 }
