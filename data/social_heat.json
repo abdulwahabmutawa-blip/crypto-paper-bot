@@ -1,15 +1,17 @@
 {
-  "ts": "2026-08-26T21:48:31+00:00",
+  "ts": "2026-08-26T21:54:01+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
-      "SOL",
-      "BTC",
       "PENGU",
+      "BTC",
+      "SOL",
       "LIT",
-      "ZEC",
+      "HBAR",
       "ETH",
-      "ADA"
+      "ZEC",
+      "TAO",
+      "WLFI"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,8 +22,8 @@
       "SNDKB",
       "TRUMP",
       "ETH",
-      "BNB",
-      "ZEC"
+      "ZEC",
+      "BNB"
     ],
     "watcher": [
       "ONG"
@@ -46,7 +48,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.014175,
+      "funding": -0.014325,
       "long_short": 0.8
     },
     {
@@ -56,7 +58,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.000133,
+      "funding": -0.000128,
       "long_short": 1.25
     },
     {
@@ -70,20 +72,12 @@
       "long_short": 0.55
     },
     {
-      "symbol": "ADA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 2.5e-05
-    },
-    {
       "symbol": "BNB",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 5.2e-05
+      "funding": 5.3e-05
     },
     {
       "symbol": "BTC",
@@ -91,7 +85,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.6e-05
+      "funding": 7.5e-05
+    },
+    {
+      "symbol": "HBAR",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "LIT",
@@ -125,6 +127,14 @@
       "funding": 7.1e-05
     },
     {
+      "symbol": "TAO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "TRUMP",
       "surfaces": 1,
       "sources": [
@@ -137,6 +147,14 @@
       "surfaces": 1,
       "sources": [
         "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "WLFI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
       ],
       "funding": 5e-05
     }
