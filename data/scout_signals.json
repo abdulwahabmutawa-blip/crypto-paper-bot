@@ -1,22 +1,22 @@
 {
-  "ts": "2026-08-26T21:26:17+00:00",
+  "ts": "2026-08-26T21:31:47+00:00",
   "scanned": 100,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "MUBUSDT",
-      "signal": "breakout",
-      "score": 0.6384,
-      "raw_score": 0.6494,
-      "weight": 0.983,
-      "price": 960.65,
-      "why": "trades 5.6x, volume 7.4x, 71% taker-buy, +2.0% in an hour, at 95% of its 24h range",
-      "chg_24h": 0.0262,
-      "vol_surge": 7.44,
-      "chg_1h": 0.0202,
-      "market_surge": 3.01,
+      "symbol": "NEARUSDT",
+      "signal": "ignition",
+      "score": 0.5199,
+      "raw_score": 0.5789,
+      "weight": 0.898,
+      "price": 1.869,
+      "why": "trades 4.7x and volume 7.3x the prior 4h, 67% taker-buy, $375,069 burst \u2014 while price has only moved +2.4%",
+      "chg_24h": 0.0027,
+      "vol_surge": 7.29,
+      "chg_1h": 0.0235,
+      "market_surge": 6.06,
       "actionable": false,
-      "status": "benched \u2014 only one half of the last 255 paid at 24h: regime luck, not a signal"
+      "status": "probation \u2014 400 rows but only 5.4 independent 24h windows (span 130h): overlapping labels are not a sample"
     }
   ],
   "gate": {
