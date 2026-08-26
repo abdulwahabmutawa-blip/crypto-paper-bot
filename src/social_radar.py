@@ -81,11 +81,12 @@ STATE = config.DATA / "social_radar_state.json"
 REPORT = config.DATA.parent / "reports" / "social_radar.md"
 DATA_HOSTS = ("https://data-api.binance.vision", "https://api.binance.com")
 
-# 4h cadence + halved cap (2026-08-26, owner decision): prepaid xAI credits
-# ran dry in ~9 days at the 2h burn across sentinel + radar; owner re-upped
-# and asked to scan less so they last. Same halving applied to the sentinel.
-SCAN_INTERVAL_H = 4.0
-MONTHLY_CAP = 150           # discovery calls; evidence calls counted too
+# 8h cadence (2026-08-26 evening, owner decision — second cut in one day):
+# still draining at 4h, so halved again alongside the sentinel. Radar spends
+# up to 1+MAX_EVIDENCE*EVIDENCE_WINDOWS = 16 live-search calls per scan, so
+# cadence is the dominant knob; MAX_EVIDENCE is the next one if needed.
+SCAN_INTERVAL_H = 8.0
+MONTHLY_CAP = 75            # discovery calls; evidence calls counted too
 MAX_DISCOVERY = 12          # symbols Grok may name per scan
 MAX_EVIDENCE = 5            # admitted symbols we spend evidence calls on
 EVIDENCE_WINDOWS = 3        # 3 x 4h = last 12h

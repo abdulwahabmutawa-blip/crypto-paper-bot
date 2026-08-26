@@ -34,11 +34,12 @@ MODEL = "grok-4.5"
 # stale fleet-wide, and the book was grounded. Owner re-upped and asked to
 # "scan a bit less so the credits last longer": 4h halves the burn
 # (6 scans/day * 31 = 186, cap 200) while staying far inside the 24h stale
-# window. Tradeoff accepted: fade detection can lag up to 4h (it was the
-# 8h version of this lag that prompted the 2h move — 4h splits the
-# difference). If credits still run short, 6h is the next stop.
-SCAN_INTERVAL_H = 4
-MONTHLY_CAP = 200
+# window. 08-26 evening, owner: still draining — back to the original 8h
+# design cadence (~3 scans/day, cap 100). Fade-lag tradeoff accepted
+# knowingly: watcher entries are benched and the real book's exits are
+# volume-based (fuel_verdict), not Grok-based, so the lag costs little.
+SCAN_INTERVAL_H = 8
+MONTHLY_CAP = 100
 STATE = config.DATA / "sentinel_state.json"
 VERDICT = config.DATA / "sentinel_verdict.json"
 
