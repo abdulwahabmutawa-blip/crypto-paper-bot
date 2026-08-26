@@ -1,12 +1,12 @@
 {
-  "generated_utc": "2026-08-26T17:37:57+00:00",
+  "generated_utc": "2026-08-26T17:39:07+00:00",
   "created": "2026-07-30",
   "starting_cash": 1000.0,
   "live_ts": "2026-08-26T17:35:00+00:00",
   "current": {
     "date": "2026-08-26",
-    "value": 1014.44,
-    "bench": 1032.3,
+    "value": 1014.43,
+    "bench": 1032.29,
     "holding": "SPY"
   },
   "board": [
@@ -17,25 +17,25 @@
       "tag": "HELD",
       "on": true,
       "pick": true,
-      "fill": 15.930892925702118
+      "fill": 15.929481339112995
     },
     {
       "sym": "IWM",
-      "price": 298.83,
+      "price": 298.79,
       "line": "US small caps \u00b7 score +0.50 \u00b7 mom90 +8.6% \u00b7 MA gap +10.7%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 12.533586786124923
+      "fill": 12.512067114523653
     },
     {
       "sym": "QQQ",
-      "price": 710.86,
-      "line": "Nasdaq 100 \u00b7 score +0.41 \u00b7 mom90 +9.7% \u00b7 MA gap +8.8%",
+      "price": 710.98,
+      "line": "Nasdaq 100 \u00b7 score +0.42 \u00b7 mom90 +9.7% \u00b7 MA gap +8.9%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 10.365318451263485
+      "fill": 10.38439411577657
     },
     {
       "sym": "DBC",
@@ -48,75 +48,75 @@
     },
     {
       "sym": "ETH-USD",
-      "price": 2463.09,
+      "price": 2463.64,
       "line": "Ethereum \u00b7 score +0.37 \u00b7 mom90 +22.7% \u00b7 MA gap +22.3%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 9.133698186508333
+      "fill": 9.144601946850313
     },
     {
       "sym": "EFA",
-      "price": 108.3,
+      "price": 108.31,
       "line": "Developed intl \u00b7 score +0.34 \u00b7 mom90 +5.5% \u00b7 MA gap +8.5%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 8.375274637175515
+      "fill": 8.388978203074684
     },
     {
       "sym": "EEM",
-      "price": 67.32,
+      "price": 67.33,
       "line": "Emerging mkts \u00b7 score +0.20 \u00b7 mom90 +6.3% \u00b7 MA gap +10.4%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 5.093102995205121
+      "fill": 5.112175037289933
     },
     {
       "sym": "USO",
-      "price": 128.43,
+      "price": 128.42,
       "line": "Oil \u00b7 score +0.20 \u00b7 mom90 +10.7% \u00b7 MA gap +22.1%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 4.955442050439529
+      "fill": 4.951507240338837
     },
     {
       "sym": "BTC-USD",
-      "price": 78530.15,
+      "price": 78527.08,
       "line": "Bitcoin \u00b7 score +0.17 \u00b7 mom90 +6.8% \u00b7 MA gap +13.5%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 4.176187494044361
+      "fill": 4.17361403571617
     },
     {
       "sym": "GLD",
-      "price": 421.61,
-      "line": "Gold \u00b7 score -0.22 \u00b7 mom90 -5.5% \u00b7 MA gap +1.7%",
+      "price": 421.66,
+      "line": "Gold \u00b7 score -0.22 \u00b7 mom90 -5.4% \u00b7 MA gap +1.8%",
       "tag": "not eligible",
       "on": false,
       "pick": false,
-      "fill": -5.496214932721702
+      "fill": -5.485366047923
     },
     {
       "sym": "TLT",
-      "price": 83.19,
+      "price": 83.18,
       "line": "Long bonds \u00b7 score -0.31 \u00b7 mom90 -3.0% \u00b7 MA gap -2.2%",
       "tag": "not eligible",
       "on": false,
       "pick": false,
-      "fill": -7.8092549040985695
+      "fill": -7.853807913766802
     },
     {
       "sym": "SLV",
-      "price": 61.53,
+      "price": 61.52,
       "line": "Silver \u00b7 score -0.35 \u00b7 mom90 -16.4% \u00b7 MA gap -5.1%",
       "tag": "not eligible",
       "on": false,
       "pick": false,
-      "fill": -8.661606649027497
+      "fill": -8.665017739948466
     }
   ],
   "board_title": "12 instruments ranked by momentum-per-unit-risk",
@@ -127,6 +127,24 @@
     "board_note": "Every rule in this bot was earned by an earlier experiment: vol-adjusted momentum, trend gate as crash protection, vol-sized positions, trailing stop, and a switch threshold that fights churn. The synthesis on trial."
   },
   "intraday": [
+    {
+      "ts": "2026-08-08T02:02:51+00:00",
+      "value": 1028.01,
+      "bench": 1042.32,
+      "holding": "IWM"
+    },
+    {
+      "ts": "2026-08-08T02:16:14+00:00",
+      "value": 1028.01,
+      "bench": 1042.32,
+      "holding": "IWM"
+    },
+    {
+      "ts": "2026-08-08T02:29:38+00:00",
+      "value": 1028.01,
+      "bench": 1042.32,
+      "holding": "IWM"
+    },
     {
       "ts": "2026-08-08T02:43:02+00:00",
       "value": 1028.01,
@@ -9104,27 +9122,9 @@
       "holding": "SPY"
     },
     {
-      "ts": "2026-08-26T16:57:40+00:00",
-      "value": 1013.06,
-      "bench": 1030.89,
-      "holding": "SPY"
-    },
-    {
-      "ts": "2026-08-26T17:11:05+00:00",
-      "value": 1013.63,
-      "bench": 1031.48,
-      "holding": "SPY"
-    },
-    {
-      "ts": "2026-08-26T17:24:32+00:00",
-      "value": 1014.35,
-      "bench": 1032.21,
-      "holding": "SPY"
-    },
-    {
-      "ts": "2026-08-26T17:37:57+00:00",
-      "value": 1014.44,
-      "bench": 1032.3,
+      "ts": "2026-08-26T17:39:07+00:00",
+      "value": 1014.43,
+      "bench": 1032.29,
       "holding": "SPY"
     }
   ],
@@ -9276,8 +9276,8 @@
     },
     {
       "date": "2026-08-26",
-      "value": 1014.44,
-      "bench": 1032.3,
+      "value": 1014.43,
+      "bench": 1032.29,
       "holding": "SPY"
     }
   ],
