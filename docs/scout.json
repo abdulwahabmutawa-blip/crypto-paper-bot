@@ -1,35 +1,20 @@
 {
-  "ts": "2026-08-26T21:15:27+00:00",
-  "scanned": 100,
+  "ts": "2026-08-26T21:20:47+00:00",
+  "scanned": 103,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "LTCUSDT",
+      "symbol": "APTUSDT",
       "signal": "ignition",
-      "score": 0.735,
-      "raw_score": 0.8185,
+      "score": 0.7229,
+      "raw_score": 0.805,
       "weight": 0.898,
-      "price": 49.89,
-      "why": "trades 6.1x and volume 27.6x the prior 4h, 92% taker-buy, $907,955 burst \u2014 while price has only moved +0.1%",
-      "chg_24h": -0.0024,
-      "vol_surge": 27.56,
-      "chg_1h": 0.0014,
-      "market_surge": 7.33,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.4 independent 24h windows (span 130h): overlapping labels are not a sample"
-    },
-    {
-      "symbol": "UNIUSDT",
-      "signal": "ignition",
-      "score": 0.527,
-      "raw_score": 0.5869,
-      "weight": 0.898,
-      "price": 4.327,
-      "why": "trades 4.9x and volume 7.3x the prior 4h, 63% taker-buy, $129,801 burst \u2014 while price has only moved +1.9%",
-      "chg_24h": 0.0244,
-      "vol_surge": 7.28,
-      "chg_1h": 0.0186,
-      "market_surge": 0.65,
+      "price": 0.564,
+      "why": "trades 14.6x and volume 7.2x the prior 4h, 63% taker-buy, $66,080 burst \u2014 while price has only moved +1.3%",
+      "chg_24h": 0.0036,
+      "vol_surge": 7.2,
+      "chg_1h": 0.0126,
+      "market_surge": 2.3,
       "actionable": false,
       "status": "probation \u2014 400 rows but only 5.4 independent 24h windows (span 130h): overlapping labels are not a sample"
     }
@@ -42,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 16,
+    "count": 17,
     "baseline": 14.0,
     "wave": false
   },
@@ -71,13 +56,13 @@
       "span_h_24h": 129.7,
       "n_eff_24h": 5.41,
       "n_24h": 400,
-      "hit_rate_24h": 0.472,
-      "mean_ret_24h": 0.01361,
-      "median_ret_24h": -0.00048,
+      "hit_rate_24h": 0.468,
+      "mean_ret_24h": 0.01289,
+      "median_ret_24h": -0.00108,
       "both_halves_24h": false,
-      "avg_win_24h": 0.06545,
-      "avg_loss_24h": -0.03587,
-      "payoff_24h": 1.825
+      "avg_win_24h": 0.06479,
+      "avg_loss_24h": -0.03567,
+      "payoff_24h": 1.817
     },
     "breakout": {
       "span_h_1h": 235.7,
