@@ -801,7 +801,7 @@ def main():
                     continue
                 # the guard that was missing from this path: COW and CHIP
                 # were both Watcher picks bought after their pump was over
-                late = binance_live.late_entry_check(sym)
+                late = binance_live.late_entry_check(sym, wave=wave_fresh())
                 if late:
                     binance_live.log({"event": "refused", "action": "BUY",
                                       "symbol": sym, "reason": late})
@@ -845,7 +845,7 @@ def main():
                     print(f"[{KEY}] {c['symbol']} ({c['signal']}) refused: "
                           f"{reg}")
                     continue
-                late = binance_live.late_entry_check(c["symbol"])
+                late = binance_live.late_entry_check(c["symbol"], wave=wave_fresh())
                 if late:
                     binance_live.log({"event": "refused", "action": "BUY",
                                       "symbol": c["symbol"], "reason": late})

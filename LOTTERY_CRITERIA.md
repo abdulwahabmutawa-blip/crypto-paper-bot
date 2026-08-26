@@ -33,3 +33,17 @@ explosions cluster within a day of a mass-trough (2-year study, n=1,908),
 and the 08-20 wave found the daily budget already spent on scratch trades
 hours before breadth fired. Pre-registered at the review — deliberately
 not invented mid-wave.
+
+## Wave-aware LATE cap (owner-directed, 2026-08-27)
+
+The late-entry run-up cap is now regime-conditioned: **15% off the 24h low
+normally, 25% while a breadth wave is active** (same freshness condition as
+the wave-day +1 entry). Basis: replay of all 48 guard refusals since 08-19
+under the live exit stack (arm +10%, stop -6%) — refused-LATE entries made
++1.72% mean, 22/39 wins, with every large winner a wave-day mover; the same
+replay's dead-tape half shows no edge, so the wider cap stays wave-gated.
+
+**Pre-registered review at the 2026-09-30 checkpoint:** judge all real
+entries admitted in the 15–25% band (they are identifiable from the ledger's
+entry run-up) on their own record. If their net P&L is negative, the wave
+cap reverts to a flat 15%. Criterion set before outcomes, per house rule.

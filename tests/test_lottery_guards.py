@@ -389,4 +389,20 @@ assert bl.BASE.startswith("https://api.binance.com"), "mainnet host changed"
 assert "testnet.binance.vision" in binance_broker.BASE, \
     "the shadow broker must stay on testnet"
 
+
+# --- wave-aware LATE cap (refusal replay 08-27, n=39: refused-LATE entries
+# under the live exit stack made +1.72% mean / 22 wins, and every big winner
+# was a wave-day mover — so the cap widens to 25% ONLY while a breadth wave
+# is active; discipline unchanged in dead tape) -------------------------------
+# +20% off the low: refused on a normal day, allowed during a wave
+why = bl.late_entry(0.20, 0.01, -0.01, 0.30)
+assert why and "LATE" in why, "+20% run-up must refuse on a normal day"
+assert bl.late_entry(0.20, 0.01, -0.01, 0.30, wave=True) is None,     "+20% run-up must pass during an active wave"
+# the wave cap is a cap, not a hole: +29% refuses even mid-wave (CHIP class)
+why = bl.late_entry(0.292, 0.057, -0.005, 0.30, wave=True)
+assert why and "LATE" in why, "the CHIP entry must be refused even on a wave"
+# the other guards do not loosen with the wave flag
+why = bl.late_entry(0.05, 0.01, -0.05, 0.30, wave=True)
+assert why and "ROLLED" in why, "rolled-over must still refuse during a wave"
+
 print("test_lottery_guards: ALL PASS")

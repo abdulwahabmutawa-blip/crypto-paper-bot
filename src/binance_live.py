@@ -284,6 +284,17 @@ MIN_CHG_1H_AT_ENTRY = 0.0      # [EVIDENCE] COW was FALLING at entry
                                # (ignition-style) entry has a flat hour by
                                # definition, and the run-up cap above does
                                # the heavy lifting.
+MAX_RUNUP_24H_WAVE = 0.25      # [EVIDENCE 08-27 refusal replay, n=39 since
+                               # 08-19] refused-LATE entries under the LIVE
+                               # exit stack (arm +10%, stop -6%): +1.72% mean,
+                               # 22/39 wins — and the winners were wave-day
+                               # movers (XRP +21%, BOME +12%, DOGE, INJ, WLD).
+                               # In the dead half of the window the whole
+                               # edge vanishes, so the wider cap applies ONLY
+                               # while a breadth wave is active (the same
+                               # condition that grants the +1 entry). Guard
+                               # thresholds are not signal rules: no RULESET
+                               # bump. Pre-registered review: 09-30 checkpoint.
 MAX_DRAWDOWN_2H = -0.04        # [EVIDENCE — 08-17 CHIP] chg_1h compares two
                                # ENDPOINTS of a rolling window, so a crash
                                # bar simply ages out of it. The guard
@@ -847,7 +858,8 @@ def ratchet_stop(entry: float | None, hwm: float | None) -> float | None:
 
 
 def late_entry(runup_24h: float | None, chg_1h: float | None,
-               dd_2h: float | None, range_24h: float | None) -> str | None:
+               dd_2h: float | None, range_24h: float | None,
+               wave: bool = False) -> str | None:
     """Pure verdict: refusal reason if this entry is chasing a spent move or
     reaching for one too small to pay for itself.
 
@@ -861,10 +873,11 @@ def late_entry(runup_24h: float | None, chg_1h: float | None,
         return (f"NO ROOM — 24h range is only {range_24h:.1%} (floor "
                 f"{MIN_RANGE_24H_AT_ENTRY:.0%}): a round trip costs ~0.2% "
                 f"and this cannot pay for itself inside the hold")
-    if runup_24h > MAX_RUNUP_24H_AT_ENTRY:
+    runup_cap = MAX_RUNUP_24H_WAVE if wave else MAX_RUNUP_24H_AT_ENTRY
+    if runup_24h > runup_cap:
         return (f"LATE — already {runup_24h:+.1%} off its 24h low (cap "
-                f"{MAX_RUNUP_24H_AT_ENTRY:+.0%}): the pump this hype "
-                f"describes has already happened")
+                f"{runup_cap:+.0%}{' wave' if wave else ''}): the pump this "
+                f"hype describes has already happened")
     if dd_2h <= MAX_DRAWDOWN_2H:
         return (f"ROLLED OVER — {dd_2h:+.1%} below its 2h high (floor "
                 f"{MAX_DRAWDOWN_2H:+.0%}): it just fell, and an hourly "
@@ -875,7 +888,7 @@ def late_entry(runup_24h: float | None, chg_1h: float | None,
     return None
 
 
-def late_entry_check(symbol: str) -> str | None:
+def late_entry_check(symbol: str, wave: bool = False) -> str | None:
     """Fetch the four numbers late_entry() judges. Two public GETs."""
     runup_24h = range_24h = None
     t = _call("GET", "/v3/ticker/24hr", {"symbol": symbol})
@@ -903,7 +916,7 @@ def late_entry_check(symbol: str) -> str | None:
             dd_2h = last / peak - 1.0
     except Exception:
         pass
-    return late_entry(runup_24h, chg_1h, dd_2h, range_24h)
+    return late_entry(runup_24h, chg_1h, dd_2h, range_24h, wave=wave)
 
 
 # ---- exchange-side protective stop (trade autopsy 2026-08-22) ---------------
