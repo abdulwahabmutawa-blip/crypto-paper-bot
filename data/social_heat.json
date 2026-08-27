@@ -1,14 +1,14 @@
 {
-  "ts": "2026-08-27T03:54:11+00:00",
+  "ts": "2026-08-27T03:59:41+00:00",
   "sources": {
     "coingecko": [
-      "ETH",
       "BTC",
-      "LIT",
+      "ETH",
       "BICO",
-      "SOL",
-      "PUMP",
-      "ONG"
+      "LIT",
+      "PENGU",
+      "AERO",
+      "PUMP"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -18,8 +18,8 @@
       "ONG",
       "TUT",
       "SOL",
-      "TRUMP",
       "SNDKB",
+      "TRUMP",
       "TAO"
     ],
     "watcher": [
@@ -28,17 +28,6 @@
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "ONG",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": -0.004392,
-      "long_short": 1.11
-    },
     {
       "symbol": "BICO",
       "surfaces": 2,
@@ -50,14 +39,22 @@
       "long_short": 0.88
     },
     {
-      "symbol": "SOL",
+      "symbol": "ONG",
       "surfaces": 2,
       "sources": [
-        "coingecko",
-        "movers"
+        "movers",
+        "watcher"
       ],
-      "funding": 0.0001,
-      "long_short": 1.78
+      "funding": -0.003271,
+      "long_short": 1.11
+    },
+    {
+      "symbol": "AERO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "BTC",
@@ -65,7 +62,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4e-05
+      "funding": 4.1e-05
     },
     {
       "symbol": "ETH",
@@ -89,7 +86,15 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.003443
+      "funding": -0.003386
+    },
+    {
+      "symbol": "PENGU",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "PUMP",
@@ -97,7 +102,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -9.2e-05
+      "funding": -9.3e-05
     },
     {
       "symbol": "SNDKB",
@@ -105,6 +110,14 @@
       "sources": [
         "movers"
       ]
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "TAO",
@@ -120,7 +133,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -8.1e-05
+      "funding": -8e-05
     },
     {
       "symbol": "TUT",
