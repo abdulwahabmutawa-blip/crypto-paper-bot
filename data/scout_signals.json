@@ -1,17 +1,17 @@
 {
-  "ts": "2026-08-27T02:52:36+00:00",
+  "ts": "2026-08-27T02:57:45+00:00",
   "scanned": 102,
   "ruleset": 3,
   "candidates": [],
   "gate": {
-    "ignition": "probation \u2014 400 rows but only 5.5 independent 24h windows (span 133h): overlapping labels are not a sample",
+    "ignition": "probation \u2014 400 rows but only 5.6 independent 24h windows (span 133h): overlapping labels are not a sample",
     "breakout": "benched \u2014 only one half of the last 255 paid at 24h: regime luck, not a signal",
     "reversion": "probation \u2014 31 rows but only 6.7 independent 24h windows (span 160h): overlapping labels are not a sample",
     "heat": "benched \u2014 only one half of the last 121 paid at 24h: regime luck, not a signal",
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 18,
+    "count": 19,
     "baseline": 14.0,
     "wave": false
   },
@@ -37,16 +37,16 @@
       "avg_win_4h": 0.0199,
       "avg_loss_4h": -0.02176,
       "payoff_4h": 0.915,
-      "span_h_24h": 133.2,
-      "n_eff_24h": 5.55,
+      "span_h_24h": 133.4,
+      "n_eff_24h": 5.56,
       "n_24h": 400,
-      "hit_rate_24h": 0.455,
-      "mean_ret_24h": 0.01426,
-      "median_ret_24h": -0.00184,
+      "hit_rate_24h": 0.453,
+      "mean_ret_24h": 0.01389,
+      "median_ret_24h": -0.00196,
       "both_halves_24h": true,
-      "avg_win_24h": 0.0703,
-      "avg_loss_24h": -0.03559,
-      "payoff_24h": 1.975
+      "avg_win_24h": 0.07036,
+      "avg_loss_24h": -0.03585,
+      "payoff_24h": 1.962
     },
     "breakout": {
       "span_h_1h": 239.8,
