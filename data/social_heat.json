@@ -1,16 +1,16 @@
 {
-  "ts": "2026-08-27T00:54:01+00:00",
+  "ts": "2026-08-27T00:59:49+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
       "ONG",
-      "PENGU",
       "SOL",
       "BTC",
       "ENA",
+      "VET",
       "ONDO",
-      "ZEC",
-      "XRP"
+      "PENGU",
+      "PEPE"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,9 +19,9 @@
       "PUMP",
       "TUT",
       "SOL",
-      "TRUMP",
-      "ZEC",
       "SNDKB",
+      "ZEC",
+      "TRUMP",
       "ENA"
     ],
     "watcher": [
@@ -38,7 +38,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.019795,
+      "funding": -0.018796,
       "long_short": 0.81
     },
     {
@@ -58,7 +58,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -2.6e-05,
+      "funding": -2.5e-05,
       "long_short": 1.3
     },
     {
@@ -70,16 +70,6 @@
       ],
       "funding": 0.0001,
       "long_short": 1.96
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 0.59
     },
     {
       "symbol": "BTC",
@@ -106,6 +96,13 @@
       "funding": 5e-05
     },
     {
+      "symbol": "PEPE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ]
+    },
+    {
       "symbol": "SNDKB",
       "surfaces": 1,
       "sources": [
@@ -118,7 +115,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -1.6e-05
+      "funding": -1.4e-05
     },
     {
       "symbol": "TUT",
@@ -129,12 +126,20 @@
       "funding": 5e-05
     },
     {
-      "symbol": "XRP",
+      "symbol": "VET",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 7e-05
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
