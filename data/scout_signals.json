@@ -1,8 +1,84 @@
 {
-  "ts": "2026-08-27T07:58:45+00:00",
-  "scanned": 102,
+  "ts": "2026-08-27T08:04:34+00:00",
+  "scanned": 101,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SKHYBUSDT",
+      "signal": "ignition",
+      "score": 0.7992,
+      "raw_score": 0.903,
+      "weight": 0.885,
+      "price": 165.0,
+      "why": "trades 20.9x and volume 28.8x the prior 4h, 66% taker-buy, $54,406 burst \u2014 while price has only moved +0.5%",
+      "chg_24h": 0.0411,
+      "vol_surge": 28.8,
+      "chg_1h": 0.0046,
+      "market_surge": 0.0,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.7 independent 24h windows (span 136h): overlapping labels are not a sample"
+    },
+    {
+      "symbol": "FFUSDT",
+      "signal": "breakout",
+      "score": 0.7415,
+      "raw_score": 0.7536,
+      "weight": 0.984,
+      "price": 0.1027,
+      "why": "trades 14.1x, volume 12.4x, 62% taker-buy, +2.6% in an hour, at 98% of its 24h range",
+      "chg_24h": 0.0059,
+      "vol_surge": 12.44,
+      "chg_1h": 0.0258,
+      "market_surge": 1.38,
+      "actionable": false,
+      "status": "benched \u2014 only one half of the last 258 paid at 24h: regime luck, not a signal"
+    },
+    {
+      "symbol": "POLUSDT",
+      "signal": "ignition",
+      "score": 0.6608,
+      "raw_score": 0.7466,
+      "weight": 0.885,
+      "price": 0.10787,
+      "why": "trades 6.2x and volume 15.5x the prior 4h, 79% taker-buy, $352,655 burst \u2014 while price has only moved +1.8%",
+      "chg_24h": -0.1202,
+      "vol_surge": 15.52,
+      "chg_1h": 0.0184,
+      "market_surge": 4.26,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.7 independent 24h windows (span 136h): overlapping labels are not a sample"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "signal": "ignition",
+      "score": 0.6026,
+      "raw_score": 0.6809,
+      "weight": 0.885,
+      "price": 2507.22,
+      "why": "trades 4.4x and volume 13.1x the prior 4h, 68% taker-buy, $13,055,492 burst \u2014 while price has only moved +0.6%",
+      "chg_24h": 0.0228,
+      "vol_surge": 13.12,
+      "chg_1h": 0.0064,
+      "market_surge": 4.4,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.7 independent 24h windows (span 136h): overlapping labels are not a sample"
+    },
+    {
+      "symbol": "XLMUSDT",
+      "signal": "ignition",
+      "score": 0.5383,
+      "raw_score": 0.6082,
+      "weight": 0.885,
+      "price": 0.1845,
+      "why": "trades 4.3x and volume 7.9x the prior 4h, 64% taker-buy, $177,067 burst \u2014 while price has only moved +0.9%",
+      "chg_24h": 0.0022,
+      "vol_surge": 7.86,
+      "chg_1h": 0.0087,
+      "market_surge": 2.28,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.7 independent 24h windows (span 136h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.7 independent 24h windows (span 136h): overlapping labels are not a sample",
     "breakout": "benched \u2014 only one half of the last 258 paid at 24h: regime luck, not a signal",
@@ -11,7 +87,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 21,
+    "count": 23,
     "baseline": 14.0,
     "wave": false
   },
