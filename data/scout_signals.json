@@ -1,39 +1,8 @@
 {
-  "ts": "2026-08-26T23:58:21+00:00",
-  "scanned": 102,
+  "ts": "2026-08-27T00:03:33+00:00",
+  "scanned": 101,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "WLDUSDT",
-      "signal": "breakout",
-      "score": 0.6999,
-      "raw_score": 0.7105,
-      "weight": 0.985,
-      "price": 0.4146,
-      "why": "trades 5.3x, volume 8.2x, 60% taker-buy, +4.6% in an hour, at 94% of its 24h range",
-      "chg_24h": 0.0805,
-      "vol_surge": 8.19,
-      "chg_1h": 0.0459,
-      "market_surge": 5.04,
-      "actionable": false,
-      "status": "benched \u2014 only one half of the last 255 paid at 24h: regime luck, not a signal"
-    },
-    {
-      "symbol": "GRAMUSDT",
-      "signal": "ignition",
-      "score": 0.5643,
-      "raw_score": 0.6284,
-      "weight": 0.898,
-      "price": 1.407,
-      "why": "trades 4.2x and volume 7.7x the prior 4h, 74% taker-buy, $98,302 burst \u2014 while price has only moved +0.7%",
-      "chg_24h": -0.0236,
-      "vol_surge": 7.67,
-      "chg_1h": 0.0072,
-      "market_surge": 0.17,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.5 independent 24h windows (span 131h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.5 independent 24h windows (span 131h): overlapping labels are not a sample",
     "breakout": "benched \u2014 only one half of the last 255 paid at 24h: regime luck, not a signal",
@@ -42,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 22,
+    "count": 23,
     "baseline": 14.0,
     "wave": false
   },
@@ -62,12 +31,12 @@
       "n_eff_4h": 33.46,
       "n_4h": 400,
       "hit_rate_4h": 0.398,
-      "mean_ret_4h": -0.00239,
+      "mean_ret_4h": -0.00242,
       "median_ret_4h": -0.00248,
       "both_halves_4h": false,
-      "avg_win_4h": 0.02141,
+      "avg_win_4h": 0.02134,
       "avg_loss_4h": -0.02178,
-      "payoff_4h": 0.983,
+      "payoff_4h": 0.98,
       "span_h_24h": 131.2,
       "n_eff_24h": 5.47,
       "n_24h": 400,
