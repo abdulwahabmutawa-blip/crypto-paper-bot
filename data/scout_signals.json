@@ -1,54 +1,8 @@
 {
-  "ts": "2026-08-27T14:45:46+00:00",
-  "scanned": 108,
+  "ts": "2026-08-27T14:50:56+00:00",
+  "scanned": 111,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "BNSOLUSDT",
-      "signal": "breakout",
-      "score": 0.7947,
-      "raw_score": 0.8159,
-      "weight": 0.974,
-      "price": 120.9,
-      "why": "trades 17.7x, volume 222.2x, 96% taker-buy, +2.4% in an hour, at 94% of its 24h range",
-      "chg_24h": 0.1194,
-      "vol_surge": 222.23,
-      "chg_1h": 0.0237,
-      "market_surge": 0.0,
-      "actionable": false,
-      "status": "benched \u2014 only one half of the last 263 paid at 24h: regime luck, not a signal"
-    },
-    {
-      "symbol": "DASHUSDT",
-      "signal": "breakout",
-      "score": 0.7399,
-      "raw_score": 0.7596,
-      "weight": 0.974,
-      "price": 39.84,
-      "why": "trades 9.8x, volume 16.3x, 70% taker-buy, +2.2% in an hour, at 94% of its 24h range",
-      "chg_24h": 0.0501,
-      "vol_surge": 16.33,
-      "chg_1h": 0.0223,
-      "market_surge": 7.24,
-      "actionable": false,
-      "status": "benched \u2014 only one half of the last 263 paid at 24h: regime luck, not a signal"
-    },
-    {
-      "symbol": "BCHUSDT",
-      "signal": "ignition",
-      "score": 0.5593,
-      "raw_score": 0.6298,
-      "weight": 0.888,
-      "price": 271.1,
-      "why": "trades 4.8x and volume 7.3x the prior 4h, 73% taker-buy, $83,129 burst \u2014 while price has only moved +1.1%",
-      "chg_24h": 0.0359,
-      "vol_surge": 7.27,
-      "chg_1h": 0.0108,
-      "market_surge": 2.13,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.5 independent 24h windows (span 132h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.5 independent 24h windows (span 132h): overlapping labels are not a sample",
     "breakout": "benched \u2014 only one half of the last 263 paid at 24h: regime luck, not a signal",
@@ -57,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 23,
+    "count": 24,
     "baseline": 14.0,
     "wave": false
   },
@@ -83,14 +37,14 @@
       "avg_win_4h": 0.01922,
       "avg_loss_4h": -0.02133,
       "payoff_4h": 0.901,
-      "span_h_24h": 131.8,
-      "n_eff_24h": 5.49,
+      "span_h_24h": 132.1,
+      "n_eff_24h": 5.51,
       "n_24h": 400,
       "hit_rate_24h": 0.427,
       "mean_ret_24h": 0.00746,
       "median_ret_24h": -0.00361,
       "both_halves_24h": true,
-      "avg_win_24h": 0.06112,
+      "avg_win_24h": 0.06111,
       "avg_loss_24h": -0.03572,
       "payoff_24h": 1.711
     },
