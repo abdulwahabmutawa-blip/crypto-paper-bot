@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-27T05:16:17+00:00",
-  "scanned": 103,
+  "ts": "2026-08-27T05:22:12+00:00",
+  "scanned": 102,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "BCHUSDT",
-      "signal": "ignition",
-      "score": 0.7228,
-      "raw_score": 0.8139,
-      "weight": 0.888,
-      "price": 265.3,
-      "why": "trades 7.3x and volume 11.1x the prior 4h, 74% taker-buy, $62,087 burst \u2014 while price has only moved -0.6%",
-      "chg_24h": 0.0019,
-      "vol_surge": 11.09,
-      "chg_1h": -0.0056,
-      "market_surge": 1.52,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.6 independent 24h windows (span 134h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.6 independent 24h windows (span 134h): overlapping labels are not a sample",
     "breakout": "benched \u2014 only one half of the last 257 paid at 24h: regime luck, not a signal",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 18,
+    "count": 17,
     "baseline": 14.0,
     "wave": false
   },
