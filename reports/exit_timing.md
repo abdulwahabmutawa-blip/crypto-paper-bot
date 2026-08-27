@@ -1,6 +1,6 @@
 # Exit timing — the bot grading its own exits
 
-updated 2026-08-27T16:57:24+00:00 · 25 exits audited · early/late line ±3% · MEASUREMENT ONLY
+updated 2026-08-27T17:10:53+00:00 · 25 exits audited · early/late line ±3% · MEASUREMENT ONLY
 
 | verdict | n |
 |---|---|
@@ -21,9 +21,9 @@ updated 2026-08-27T16:57:24+00:00 · 25 exits audited · early/late line ±3% ·
 ## Market capture
 
 - book since inception (08-15, $40 stake): **-23.9%** — trading P&L only (-$9.58 over 25 closed trades), deposits excluded
-- account balance: $52.38 (of which **+$21.96 is deposited capital, not profit** — inferred as balance minus stake minus P&L; deposits are not tracked anywhere yet)
-- BTC since inception: +27.5% (book gap **-51.5pp**) · last 24h +1.7%
-- ETH since inception: +34.1% (book gap **-58.0pp**) · last 24h +0.7%
+- account balance: $52.22 (of which **+$21.80 is deposited capital, not profit** — inferred as balance minus stake minus P&L; deposits are not tracked anywhere yet)
+- BTC since inception: +27.8% (book gap **-51.7pp**) · last 24h +1.9%
+- ETH since inception: +34.2% (book gap **-58.2pp**) · last 24h +0.8%
 
 ## Alpha by regime (book minus BTC, daily, paired)
 
@@ -31,7 +31,7 @@ updated 2026-08-27T16:57:24+00:00 · 25 exits audited · early/late line ±3% ·
 
 | regime (BTC day) | days | avg book | avg gap vs BTC |
 |---|---|---|---|
-| flat | 9 | -2.02% | **-2.33pp** |
+| flat | 9 | -2.02% | **-2.35pp** |
 | green | 4 | -1.76% | **-7.34pp** |
 
 | date | regime | book | BTC | gap |
@@ -45,7 +45,7 @@ updated 2026-08-27T16:57:24+00:00 · 25 exits audited · early/late line ±3% ·
 | 2026-08-24 | flat | +0.00% | +1.62% | -1.62pp |
 | 2026-08-25 | flat | +0.00% | -0.57% | +0.57pp |
 | 2026-08-26 | flat | +0.00% | +0.62% | -0.62pp |
-| 2026-08-27 | flat | +0.00% | +1.73% | -1.73pp |
+| 2026-08-27 | flat | +0.00% | +1.92% | -1.92pp |
 
 
 _giveback = in-hold peak the exit surrendered; post-24h run = what the coin did after we sold. High post-run with low giveback = selling too early; high giveback = selling too late._
