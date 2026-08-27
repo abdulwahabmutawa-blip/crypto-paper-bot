@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-27T03:33:51+00:00",
+  "ts": "2026-08-27T03:36:46+00:00",
   "scanned": 106,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "\u5e01\u5b89\u4eba\u751fUSDT",
-      "signal": "ignition",
-      "score": 0.6872,
-      "raw_score": 0.7695,
-      "weight": 0.893,
-      "price": 0.5201,
-      "why": "trades 6.6x and volume 25.6x the prior 4h, 77% taker-buy, $59,756 burst \u2014 while price has only moved +1.4%",
-      "chg_24h": -0.0259,
-      "vol_surge": 25.55,
-      "chg_1h": 0.0138,
-      "market_surge": 5.25,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.6 independent 24h windows (span 134h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.6 independent 24h windows (span 134h): overlapping labels are not a sample",
     "breakout": "benched \u2014 only one half of the last 255 paid at 24h: regime luck, not a signal",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 17,
+    "count": 16,
     "baseline": 14.0,
     "wave": false
   },
