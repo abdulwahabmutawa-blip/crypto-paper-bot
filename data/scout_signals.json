@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-27T11:29:15+00:00",
-  "scanned": 110,
+  "ts": "2026-08-27T11:34:45+00:00",
+  "scanned": 111,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "MORPHOUSDT",
+      "signal": "breakout",
+      "score": 0.7483,
+      "raw_score": 0.7605,
+      "weight": 0.984,
+      "price": 2.685,
+      "why": "trades 12.0x, volume 12.8x, 62% taker-buy, +2.8% in an hour, at 93% of its 24h range",
+      "chg_24h": 0.0485,
+      "vol_surge": 12.83,
+      "chg_1h": 0.0279,
+      "market_surge": 7.31,
+      "actionable": false,
+      "status": "benched \u2014 only one half of the last 259 paid at 24h: regime luck, not a signal"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.5 independent 24h windows (span 132h): overlapping labels are not a sample",
     "breakout": "benched \u2014 only one half of the last 259 paid at 24h: regime luck, not a signal",
