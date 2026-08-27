@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-27T07:48:16+00:00",
-  "scanned": 100,
+  "ts": "2026-08-27T07:53:19+00:00",
+  "scanned": 102,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SPKUSDT",
+      "signal": "breakout",
+      "score": 0.8087,
+      "raw_score": 0.8219,
+      "weight": 0.984,
+      "price": 0.019452,
+      "why": "trades 13.2x, volume 21.7x, 66% taker-buy, +4.5% in an hour, at 87% of its 24h range",
+      "chg_24h": 0.0696,
+      "vol_surge": 21.67,
+      "chg_1h": 0.045,
+      "market_surge": 0.0,
+      "actionable": false,
+      "status": "benched \u2014 only one half of the last 258 paid at 24h: regime luck, not a signal"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.7 independent 24h windows (span 136h): overlapping labels are not a sample",
     "breakout": "benched \u2014 only one half of the last 258 paid at 24h: regime luck, not a signal",
@@ -11,22 +27,22 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 20,
+    "count": 23,
     "baseline": 14.0,
     "wave": false
   },
   "scorecard": {
     "ignition": {
-      "span_h_1h": 133.7,
-      "n_eff_1h": 133.72,
+      "span_h_1h": 133.8,
+      "n_eff_1h": 133.8,
       "n_1h": 400,
       "hit_rate_1h": 0.333,
-      "mean_ret_1h": -0.0025,
-      "median_ret_1h": -0.00115,
+      "mean_ret_1h": -0.00245,
+      "median_ret_1h": -0.00111,
       "both_halves_1h": false,
-      "avg_win_1h": 0.01023,
-      "avg_loss_1h": -0.01241,
-      "payoff_1h": 0.824,
+      "avg_win_1h": 0.01018,
+      "avg_loss_1h": -0.0124,
+      "payoff_1h": 0.821,
       "span_h_4h": 133.2,
       "n_eff_4h": 33.29,
       "n_4h": 400,
