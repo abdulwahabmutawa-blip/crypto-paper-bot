@@ -1,17 +1,48 @@
 {
-  "ts": "2026-08-27T13:51:24+00:00",
+  "ts": "2026-08-27T13:56:56+00:00",
   "scanned": 107,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SPCXBUSDT",
+      "signal": "ignition",
+      "score": 0.7942,
+      "raw_score": 0.8944,
+      "weight": 0.888,
+      "price": 139.07,
+      "why": "trades 9.3x and volume 17.4x the prior 4h, 75% taker-buy, $291,273 burst \u2014 while price has only moved -0.6%",
+      "chg_24h": -0.0027,
+      "vol_surge": 17.38,
+      "chg_1h": -0.006,
+      "market_surge": 0.0,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.5 independent 24h windows (span 132h): overlapping labels are not a sample"
+    },
+    {
+      "symbol": "PENGUUSDT",
+      "signal": "breakout",
+      "score": 0.5847,
+      "raw_score": 0.6003,
+      "weight": 0.974,
+      "price": 0.009817,
+      "why": "trades 4.9x, volume 6.4x, 63% taker-buy, +3.0% in an hour, at 98% of its 24h range",
+      "chg_24h": 0.0749,
+      "vol_surge": 6.38,
+      "chg_1h": 0.0297,
+      "market_surge": 3.54,
+      "actionable": false,
+      "status": "benched \u2014 only one half of the last 263 paid at 24h: regime luck, not a signal"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.5 independent 24h windows (span 132h): overlapping labels are not a sample",
-    "breakout": "benched \u2014 only one half of the last 261 paid at 24h: regime luck, not a signal",
+    "breakout": "benched \u2014 only one half of the last 263 paid at 24h: regime luck, not a signal",
     "reversion": "probation \u2014 31 rows but only 6.7 independent 24h windows (span 160h): overlapping labels are not a sample",
     "heat": "benched \u2014 only one half of the last 121 paid at 24h: regime luck, not a signal",
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 18,
+    "count": 19,
     "baseline": 14.0,
     "wave": false
   },
@@ -69,16 +100,16 @@
       "avg_win_4h": 0.03905,
       "avg_loss_4h": -0.03091,
       "payoff_4h": 1.263,
-      "span_h_24h": 229.0,
-      "n_eff_24h": 9.54,
-      "n_24h": 261,
-      "hit_rate_24h": 0.594,
-      "mean_ret_24h": 0.03153,
+      "span_h_24h": 229.7,
+      "n_eff_24h": 9.57,
+      "n_24h": 263,
+      "hit_rate_24h": 0.597,
+      "mean_ret_24h": 0.03169,
       "median_ret_24h": 0.02407,
       "both_halves_24h": false,
-      "avg_win_24h": 0.09441,
+      "avg_win_24h": 0.09387,
       "avg_loss_24h": -0.06099,
-      "payoff_24h": 1.548
+      "payoff_24h": 1.539
     },
     "reversion": {
       "span_h_1h": 204.0,
