@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-27T05:55:27+00:00",
+  "ts": "2026-08-27T06:00:59+00:00",
   "scanned": 103,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "CRVUSDT",
+      "signal": "breakout",
+      "score": 0.758,
+      "raw_score": 0.7672,
+      "weight": 0.988,
+      "price": 0.3272,
+      "why": "trades 8.6x, volume 13.2x, 69% taker-buy, +2.5% in an hour, at 94% of its 24h range",
+      "chg_24h": 0.0248,
+      "vol_surge": 13.2,
+      "chg_1h": 0.0254,
+      "market_surge": 5.78,
+      "actionable": false,
+      "status": "benched \u2014 only one half of the last 257 paid at 24h: regime luck, not a signal"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.6 independent 24h windows (span 135h): overlapping labels are not a sample",
     "breakout": "benched \u2014 only one half of the last 257 paid at 24h: regime luck, not a signal",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 18,
+    "count": 17,
     "baseline": 14.0,
     "wave": false
   },
