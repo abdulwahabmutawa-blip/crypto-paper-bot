@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-27T18:34:27+00:00",
+  "ts": "2026-08-27T18:40:09+00:00",
   "scanned": 104,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "MUBUSDT",
-      "signal": "ignition",
-      "score": 0.7611,
-      "raw_score": 0.841,
-      "weight": 0.905,
-      "price": 912.73,
-      "why": "trades 6.6x and volume 16.2x the prior 4h, 93% taker-buy, $220,884 burst \u2014 while price has only moved -0.2%",
-      "chg_24h": -0.0302,
-      "vol_surge": 16.23,
-      "chg_1h": -0.0023,
-      "market_surge": 4.25,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.5 independent 24h windows (span 133h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.5 independent 24h windows (span 133h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 20,
+    "count": 19,
     "baseline": 14.0,
     "wave": false
   },
