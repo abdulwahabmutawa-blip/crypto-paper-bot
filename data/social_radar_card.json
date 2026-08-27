@@ -1,8 +1,8 @@
 {
- "updated": "2026-08-27T15:12:54+00:00",
+ "updated": "2026-08-27T15:18:33+00:00",
  "spec": "x_chatter_precursors_2026-08-23",
  "n_rows_total": 3,
- "n_scored_excess_24h": 1,
+ "n_scored_excess_24h": 2,
  "objective": "BTC-excess 24h",
  "hit_threshold": 0.03,
  "features": {
@@ -34,10 +34,10 @@
    "horizon_h": 24,
    "group_true": null,
    "group_false": {
-    "n": 1,
-    "hit": 0.0,
-    "mean": -0.06548,
-    "median": -0.06548
+    "n": 2,
+    "hit": 0.5,
+    "mean": -0.01697,
+    "median": 0.03154
    }
   },
   "H4_occurred_catalyst_fades": {
@@ -60,17 +60,23 @@
     "mean": -0.06548,
     "median": -0.06548
    },
-   "group_false": null
+   "group_false": {
+    "n": 1,
+    "hit": 1.0,
+    "mean": 0.03154,
+    "median": 0.03154
+   },
+   "edge_pp": -9.7
   },
   "H6_exchange_surface_words_exhaust": {
    "note": "scanner/exchange-surface wording vs organic",
    "horizon_h": 24,
    "group_true": null,
    "group_false": {
-    "n": 1,
-    "hit": 0.0,
-    "mean": -0.06548,
-    "median": -0.06548
+    "n": 2,
+    "hit": 0.5,
+    "mean": -0.01697,
+    "median": 0.03154
    }
   },
   "H7_extreme_velocity_contrarian": {
@@ -88,10 +94,10 @@
    "note": "first ever appearance vs repeat",
    "horizon_h": 24,
    "group_true": {
-    "n": 1,
-    "hit": 0.0,
-    "mean": -0.06548,
-    "median": -0.06548
+    "n": 2,
+    "hit": 0.5,
+    "mean": -0.01697,
+    "median": 0.03154
    },
    "group_false": null
   }

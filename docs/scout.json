@@ -1,22 +1,22 @@
 {
-  "ts": "2026-08-27T15:12:59+00:00",
-  "scanned": 106,
+  "ts": "2026-08-27T15:18:37+00:00",
+  "scanned": 103,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "ATOMUSDT",
-      "signal": "ignition",
-      "score": 0.812,
-      "raw_score": 0.9123,
-      "weight": 0.89,
-      "price": 1.521,
-      "why": "trades 10.9x and volume 18.7x the prior 4h, 77% taker-buy, $79,070 burst \u2014 while price has only moved +1.2%",
-      "chg_24h": 0.0033,
-      "vol_surge": 18.71,
-      "chg_1h": 0.012,
-      "market_surge": 0.0,
+      "symbol": "WIFUSDT",
+      "signal": "breakout",
+      "score": 0.6261,
+      "raw_score": 0.6441,
+      "weight": 0.972,
+      "price": 0.2169,
+      "why": "trades 4.3x, volume 11.1x, 77% taker-buy, +2.6% in an hour, at 97% of its 24h range",
+      "chg_24h": 0.0992,
+      "vol_surge": 11.09,
+      "chg_1h": 0.026,
+      "market_surge": 8.25,
       "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.5 independent 24h windows (span 132h): overlapping labels are not a sample"
+      "status": "benched \u2014 only one half of the last 263 paid at 24h: regime luck, not a signal"
     }
   ],
   "gate": {
@@ -27,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 26,
+    "count": 27,
     "baseline": 14.0,
     "wave": false
   },
