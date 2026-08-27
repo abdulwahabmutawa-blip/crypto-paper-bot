@@ -1,11 +1,13 @@
 {
   "created": "2026-08-15",
-  "held_symbol": "WLDUSDT",
-  "entry_price": 0.4199,
-  "units": 124.7,
-  "entry_scan_ts": "2026-08-26T19:28:41+00:00",
-  "entry_source": "scout:breakout",
-  "stopped": {},
+  "held_symbol": null,
+  "entry_price": null,
+  "units": 0.0,
+  "entry_scan_ts": null,
+  "entry_source": null,
+  "stopped": {
+    "WLDUSDT": "2026-08-27T19:32:13+00:00"
+  },
   "entries": {
     "2026-08-27": 1
   },
@@ -422,33 +424,33 @@
       "date": "2026-08-23",
       "exit": 1.4901,
       "entry": 1.4959
+    },
+    {
+      "symbol": "WLDUSDT",
+      "source": "scout:breakout",
+      "entry_time": "2026-08-27T16:51:16+00:00",
+      "exit_time": "2026-08-27T19:32:13+00:00",
+      "entry_price": 0.4199,
+      "exit_price": 0.4149,
+      "units": 124.7,
+      "spent_usd": 52.3615,
+      "got_usd": 51.738,
+      "pnl_pct": -1.19,
+      "pnl_usd": -0.6235,
+      "reason": "Grok scans stale (24h) \u2014 risk officer blind, book grounded",
+      "date": "2026-08-27",
+      "exit": 0.4149,
+      "entry": 0.4199
     }
   ],
-  "last_value_usd": 51.59,
-  "last_updated_utc": "2026-08-27T19:26:33+00:00",
-  "open_position": {
-    "symbol": "WLDUSDT",
-    "entry_time": "2026-08-27T16:51:16+00:00",
-    "entry_price": 0.4199,
-    "current_price": 0.4136,
-    "units": 124.7,
-    "spent_usd": 52.3615,
-    "value_usd": 51.5759,
-    "pnl_usd": -0.7856,
-    "pnl_pct": -1.5,
-    "source": "scout:breakout"
-  },
-  "spent_usd": 52.3615,
+  "last_value_usd": 51.75,
+  "last_updated_utc": "2026-08-27T19:32:13+00:00",
+  "open_position": null,
+  "spent_usd": null,
   "no_pair": {
     "scan_ts": "2026-08-26T19:28:41+00:00",
     "syms": []
   },
   "wave_bonus_date": "2026-08-27",
-  "book_hwm_usd": 58.4265,
-  "hwm": 0.4208,
-  "move_max_qv": 1172013.56555,
-  "move_qv_sum": 2193581.4575199997,
-  "move_qv_n": 2,
-  "move_last_ms": 1787853600000,
-  "entry_time": "2026-08-27T16:51:16+00:00"
+  "book_hwm_usd": 58.4265
 }
