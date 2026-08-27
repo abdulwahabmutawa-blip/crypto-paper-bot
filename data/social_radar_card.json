@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-27T13:13:16+00:00",
+ "updated": "2026-08-27T13:18:43+00:00",
  "spec": "x_chatter_precursors_2026-08-23",
  "n_rows_total": 3,
  "n_scored_excess_24h": 1,
@@ -44,7 +44,12 @@
    "note": "occurred vs pending, 72h",
    "horizon_h": 72,
    "group_true": null,
-   "group_false": null
+   "group_false": {
+    "n": 1,
+    "hit": 0.0,
+    "mean": -0.13563,
+    "median": -0.13563
+   }
   },
   "H5_volatility_gate": {
    "note": "BTC 24h realized vol high vs low",
@@ -71,7 +76,12 @@
   "H7_extreme_velocity_contrarian": {
    "note": "all-new handles vs familiar, 72h",
    "horizon_h": 72,
-   "group_true": null,
+   "group_true": {
+    "n": 1,
+    "hit": 0.0,
+    "mean": -0.13563,
+    "median": -0.13563
+   },
    "group_false": null
   },
   "H8_novelty_pays": {
