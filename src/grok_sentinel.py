@@ -39,7 +39,13 @@ MODEL = "grok-4.5"
 # knowingly: watcher entries are benched and the real book's exits are
 # volume-based (fuel_verdict), not Grok-based, so the lag costs little.
 SCAN_INTERVAL_H = 8
-MONTHLY_CAP = 100
+# CAP BUG (2026-08-27): halving the cap to 100 mid-month was retroactive —
+# August had already spent 118 scans at the old 2h cadence, so the sentinel
+# went silent, scans aged past 24h, and the stale rule force-sold WLD at
+# -1.19% and grounded the book. 130 = August's 118 + the ~13 scans the 8h
+# cadence adds through month-end. From September the cadence itself is the
+# real ceiling (~93/month); the cap is only a runaway backstop above it.
+MONTHLY_CAP = 130
 STATE = config.DATA / "sentinel_state.json"
 VERDICT = config.DATA / "sentinel_verdict.json"
 
