@@ -1,16 +1,15 @@
 {
-  "ts": "2026-08-27T09:17:21+00:00",
+  "ts": "2026-08-27T09:23:11+00:00",
   "sources": {
     "coingecko": [
-      "TAO",
       "PENGU",
+      "TAO",
+      "PUMP",
       "BTC",
       "RUNE",
-      "PUMP",
-      "ENA",
-      "BEAM",
-      "ONDO",
-      "PEPE"
+      "SOL",
+      "AERO",
+      "BEAM"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -18,9 +17,9 @@
       "BICO",
       "TUT",
       "ONT",
-      "ONG",
       "ENA",
       "TAO",
+      "ONG",
       "SOL",
       "SNDKB"
     ],
@@ -29,14 +28,14 @@
   },
   "heat": [
     {
-      "symbol": "ENA",
+      "symbol": "SOL",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 4.5e-05,
-      "long_short": 1.57
+      "funding": 0.0001,
+      "long_short": 1.65
     },
     {
       "symbol": "TAO",
@@ -47,6 +46,14 @@
       ],
       "funding": 5e-05,
       "long_short": 1.79
+    },
+    {
+      "symbol": "AERO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "BEAM",
@@ -61,7 +68,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.005494
+      "funding": -0.005309
     },
     {
       "symbol": "BTC",
@@ -72,12 +79,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "ONDO",
+      "symbol": "ENA",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
-      "funding": 5e-05
+      "funding": 4.4e-05
     },
     {
       "symbol": "ONG",
@@ -85,7 +92,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001047
+      "funding": -0.001007
     },
     {
       "symbol": "ONT",
@@ -93,7 +100,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.002526
+      "funding": -0.002511
     },
     {
       "symbol": "PENGU",
@@ -104,19 +111,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PEPE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ]
-    },
-    {
       "symbol": "PUMP",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -4.9e-05
+      "funding": -4.1e-05
     },
     {
       "symbol": "RUNE",
@@ -124,7 +124,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000848
+      "funding": -0.000833
     },
     {
       "symbol": "SNDKB",
@@ -132,14 +132,6 @@
       "sources": [
         "movers"
       ]
-    },
-    {
-      "symbol": "SOL",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "TUT",
