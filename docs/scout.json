@@ -1,37 +1,37 @@
 {
-  "ts": "2026-08-27T08:26:35+00:00",
-  "scanned": 103,
+  "ts": "2026-08-27T08:31:54+00:00",
+  "scanned": 102,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "INJUSDT",
+      "symbol": "RENDERUSDT",
       "signal": "breakout",
-      "score": 0.6124,
-      "raw_score": 0.6223,
+      "score": 0.781,
+      "raw_score": 0.7937,
       "weight": 0.984,
-      "price": 5.553,
-      "why": "trades 4.5x, volume 11.8x, 63% taker-buy, +2.5% in an hour, at 84% of its 24h range",
-      "chg_24h": -0.0045,
-      "vol_surge": 11.76,
-      "chg_1h": 0.0247,
-      "market_surge": 0.91,
+      "price": 1.571,
+      "why": "trades 7.3x, volume 16.2x, 75% taker-buy, +3.8% in an hour, at 96% of its 24h range",
+      "chg_24h": 0.0362,
+      "vol_surge": 16.17,
+      "chg_1h": 0.0383,
+      "market_surge": 3.44,
       "actionable": false,
       "status": "benched \u2014 only one half of the last 258 paid at 24h: regime luck, not a signal"
     },
     {
-      "symbol": "INJUSDT",
-      "signal": "ignition",
-      "score": 0.554,
-      "raw_score": 0.626,
-      "weight": 0.885,
-      "price": 5.553,
-      "why": "trades 4.5x and volume 11.8x the prior 4h, 63% taker-buy, $161,329 burst \u2014 while price has only moved +2.5%",
-      "chg_24h": -0.0045,
-      "vol_surge": 11.76,
-      "chg_1h": 0.0247,
-      "market_surge": 0.91,
+      "symbol": "APTUSDT",
+      "signal": "breakout",
+      "score": 0.5653,
+      "raw_score": 0.5745,
+      "weight": 0.984,
+      "price": 0.582,
+      "why": "trades 4.6x, volume 6.1x, 67% taker-buy, +2.5% in an hour, at 97% of its 24h range",
+      "chg_24h": 0.0265,
+      "vol_surge": 6.14,
+      "chg_1h": 0.0246,
+      "market_surge": 4.0,
       "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.6 independent 24h windows (span 134h): overlapping labels are not a sample"
+      "status": "benched \u2014 only one half of the last 258 paid at 24h: regime luck, not a signal"
     }
   ],
   "gate": {
@@ -42,7 +42,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 21,
+    "count": 22,
     "baseline": 14.0,
     "wave": false
   },
