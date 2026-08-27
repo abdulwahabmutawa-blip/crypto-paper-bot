@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-27T11:06:46+00:00",
-  "scanned": 111,
+  "ts": "2026-08-27T11:12:25+00:00",
+  "scanned": 109,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "INTCBUSDT",
-      "signal": "ignition",
-      "score": 0.7326,
-      "raw_score": 0.8231,
-      "weight": 0.89,
-      "price": 90.74,
-      "why": "trades 8.1x and volume 17.7x the prior 4h, 68% taker-buy, $125,733 burst \u2014 while price has only moved -0.9%",
-      "chg_24h": 0.0312,
-      "vol_surge": 17.67,
-      "chg_1h": -0.0088,
-      "market_surge": 0.66,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.5 independent 24h windows (span 131h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.5 independent 24h windows (span 131h): overlapping labels are not a sample",
     "breakout": "benched \u2014 only one half of the last 259 paid at 24h: regime luck, not a signal",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 24,
+    "count": 26,
     "baseline": 14.0,
     "wave": false
   },
