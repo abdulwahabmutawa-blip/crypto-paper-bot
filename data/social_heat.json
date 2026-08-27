@@ -1,14 +1,13 @@
 {
-  "ts": "2026-08-27T08:37:31+00:00",
+  "ts": "2026-08-27T08:42:55+00:00",
   "sources": {
     "coingecko": [
       "RUNE",
+      "PUMP",
       "BTC",
       "PENGU",
-      "PUMP",
-      "SOL",
-      "ONDO",
-      "POL"
+      "ENA",
+      "ONDO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -27,14 +26,14 @@
   },
   "heat": [
     {
-      "symbol": "SOL",
+      "symbol": "ENA",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 0.0001,
-      "long_short": 1.66
+      "funding": 5e-05,
+      "long_short": 1.56
     },
     {
       "symbol": "BICO",
@@ -42,7 +41,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.007101
+      "funding": -0.006908
     },
     {
       "symbol": "BTC",
@@ -51,14 +50,6 @@
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "ONDO",
@@ -74,7 +65,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000885
+      "funding": -0.000893
     },
     {
       "symbol": "ONT",
@@ -82,18 +73,10 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.002425
+      "funding": -0.002466
     },
     {
       "symbol": "PENGU",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "POL",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -106,7 +89,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000104
+      "funding": -9.8e-05
     },
     {
       "symbol": "RUNE",
@@ -114,7 +97,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000933
+      "funding": -0.000945
     },
     {
       "symbol": "SNDKB",
@@ -122,6 +105,14 @@
       "sources": [
         "movers"
       ]
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "TAO",

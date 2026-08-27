@@ -1,39 +1,8 @@
 {
-  "ts": "2026-08-27T08:37:34+00:00",
+  "ts": "2026-08-27T08:42:59+00:00",
   "scanned": 107,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "CRCLBUSDT",
-      "signal": "breakout",
-      "score": 0.7941,
-      "raw_score": 0.807,
-      "weight": 0.984,
-      "price": 91.78,
-      "why": "trades 10.5x, volume 38.6x, 97% taker-buy, +2.0% in an hour, at 81% of its 24h range",
-      "chg_24h": -0.0011,
-      "vol_surge": 38.61,
-      "chg_1h": 0.0202,
-      "market_surge": 5.32,
-      "actionable": false,
-      "status": "benched \u2014 only one half of the last 258 paid at 24h: regime luck, not a signal"
-    },
-    {
-      "symbol": "TRUMPUSDT",
-      "signal": "breakout",
-      "score": 0.7298,
-      "raw_score": 0.7417,
-      "weight": 0.984,
-      "price": 2.343,
-      "why": "trades 6.3x, volume 10.9x, 63% taker-buy, +4.1% in an hour, at 90% of its 24h range",
-      "chg_24h": 0.0462,
-      "vol_surge": 10.94,
-      "chg_1h": 0.0413,
-      "market_surge": 2.35,
-      "actionable": false,
-      "status": "benched \u2014 only one half of the last 258 paid at 24h: regime luck, not a signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.5 independent 24h windows (span 133h): overlapping labels are not a sample",
     "breakout": "benched \u2014 only one half of the last 258 paid at 24h: regime luck, not a signal",
@@ -42,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 21,
+    "count": 23,
     "baseline": 14.0,
     "wave": false
   },
