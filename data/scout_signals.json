@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-27T02:12:35+00:00",
-  "scanned": 104,
+  "ts": "2026-08-27T02:18:37+00:00",
+  "scanned": 103,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "UNIUSDT",
+      "signal": "breakout",
+      "score": 0.5363,
+      "raw_score": 0.5422,
+      "weight": 0.989,
+      "price": 4.439,
+      "why": "trades 4.2x, volume 5.3x, 71% taker-buy, +2.5% in an hour, at 96% of its 24h range",
+      "chg_24h": 0.0267,
+      "vol_surge": 5.3,
+      "chg_1h": 0.0247,
+      "market_surge": 1.58,
+      "actionable": false,
+      "status": "benched \u2014 only one half of the last 255 paid at 24h: regime luck, not a signal"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.5 independent 24h windows (span 133h): overlapping labels are not a sample",
     "breakout": "benched \u2014 only one half of the last 255 paid at 24h: regime luck, not a signal",
