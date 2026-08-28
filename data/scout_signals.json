@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-28T22:17:43+00:00",
-  "scanned": 113,
+  "ts": "2026-08-28T22:23:26+00:00",
+  "scanned": 114,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "LDOUSDT",
-      "signal": "ignition",
-      "score": 0.8075,
-      "raw_score": 0.9176,
-      "weight": 0.88,
-      "price": 0.3616,
-      "why": "trades 13.4x and volume 31.1x the prior 4h, 77% taker-buy, $90,925 burst \u2014 while price has only moved +1.0%",
-      "chg_24h": -0.024,
-      "vol_surge": 31.07,
-      "chg_1h": 0.0101,
-      "market_surge": 13.61,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.2 independent 24h windows (span 125h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.2 independent 24h windows (span 125h): overlapping labels are not a sample",
     "breakout": "actionable",
