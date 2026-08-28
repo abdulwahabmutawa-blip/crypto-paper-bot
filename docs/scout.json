@@ -1,8 +1,38 @@
 {
-  "ts": "2026-08-28T13:54:48+00:00",
-  "scanned": 100,
+  "ts": "2026-08-28T14:00:37+00:00",
+  "scanned": 101,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SNDKBUSDT",
+      "signal": "breakout",
+      "score": 0.6458,
+      "raw_score": 0.6706,
+      "weight": 0.963,
+      "price": 1495.91,
+      "why": "trades 5.7x, volume 7.7x, 71% taker-buy, +2.4% in an hour, at 94% of its 24h range",
+      "chg_24h": 0.0131,
+      "vol_surge": 7.68,
+      "chg_1h": 0.0238,
+      "market_surge": 0.0,
+      "actionable": true
+    },
+    {
+      "symbol": "ETHUSDT",
+      "signal": "ignition",
+      "score": 0.6347,
+      "raw_score": 0.6922,
+      "weight": 0.917,
+      "price": 2511.21,
+      "why": "trades 4.0x and volume 11.1x the prior 4h, 75% taker-buy, $13,275,200 burst \u2014 while price has only moved +0.3%",
+      "chg_24h": 0.0066,
+      "vol_surge": 11.08,
+      "chg_1h": 0.0031,
+      "market_surge": 6.44,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.4 independent 24h windows (span 130h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.4 independent 24h windows (span 130h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -11,7 +41,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 11,
+    "count": 10,
     "baseline": 14.0,
     "wave": false
   },
@@ -40,13 +70,13 @@
       "span_h_24h": 130.4,
       "n_eff_24h": 5.43,
       "n_24h": 400,
-      "hit_rate_24h": 0.463,
-      "mean_ret_24h": 0.00801,
-      "median_ret_24h": -0.00108,
+      "hit_rate_24h": 0.465,
+      "mean_ret_24h": 0.00808,
+      "median_ret_24h": -0.00073,
       "both_halves_24h": true,
-      "avg_win_24h": 0.05492,
-      "avg_loss_24h": -0.03564,
-      "payoff_24h": 1.541
+      "avg_win_24h": 0.05474,
+      "avg_loss_24h": -0.03577,
+      "payoff_24h": 1.53
     },
     "breakout": {
       "span_h_1h": 275.0,
@@ -69,16 +99,16 @@
       "avg_win_4h": 0.03866,
       "avg_loss_4h": -0.03051,
       "payoff_4h": 1.267,
-      "span_h_24h": 253.5,
-      "n_eff_24h": 10.56,
-      "n_24h": 307,
-      "hit_rate_24h": 0.586,
-      "mean_ret_24h": 0.03139,
+      "span_h_24h": 253.8,
+      "n_eff_24h": 10.57,
+      "n_24h": 308,
+      "hit_rate_24h": 0.584,
+      "mean_ret_24h": 0.03115,
       "median_ret_24h": 0.02167,
       "both_halves_24h": true,
       "avg_win_24h": 0.09472,
-      "avg_loss_24h": -0.05883,
-      "payoff_24h": 1.61
+      "avg_loss_24h": -0.05869,
+      "payoff_24h": 1.614
     },
     "reversion": {
       "span_h_1h": 243.5,
