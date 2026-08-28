@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-28T23:45:47+00:00",
-  "scanned": 115,
+  "ts": "2026-08-28T23:51:37+00:00",
+  "scanned": 114,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ICPUSDT",
-      "signal": "ignition",
-      "score": 0.8009,
-      "raw_score": 0.9101,
-      "weight": 0.88,
-      "price": 2.392,
-      "why": "trades 19.4x and volume 31.1x the prior 4h, 69% taker-buy, $86,062 burst \u2014 while price has only moved +0.5%",
-      "chg_24h": -0.0257,
-      "vol_surge": 31.12,
-      "chg_1h": 0.0046,
-      "market_surge": 6.02,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.2 independent 24h windows (span 125h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.2 independent 24h windows (span 125h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 7,
+    "count": 8,
     "baseline": 13.0,
     "wave": false
   },
