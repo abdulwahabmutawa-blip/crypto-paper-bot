@@ -1,59 +1,68 @@
 {
-  "generated_utc": "2026-08-28T13:35:21+00:00",
+  "generated_utc": "2026-08-28T13:49:06+00:00",
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "live_ts": "2026-08-28T13:35:00+00:00",
+  "live_ts": "2026-08-28T13:45:00+00:00",
   "current": {
     "date": "2026-08-28",
-    "value": 1216.27,
-    "bench": 1028.16,
+    "value": 1216.92,
+    "bench": 1029.32,
     "holding": "WMT"
   },
   "board": [
     {
+      "sym": "HD",
+      "price": 328.45,
+      "line": "z -1.63",
+      "tag": "oversold",
+      "on": true,
+      "pick": false,
+      "fill": 27.17750429533486
+    },
+    {
       "sym": "WMT",
-      "price": 102.78,
-      "line": "z -1.54",
+      "price": 102.83,
+      "line": "z -1.53",
       "tag": "HELD",
       "on": true,
       "pick": true,
-      "fill": 25.594954372948475
-    },
-    {
-      "sym": "HD",
-      "price": 330.13,
-      "line": "z -1.46",
-      "tag": "normal",
-      "on": false,
-      "pick": false,
-      "fill": 24.299191821138404
+      "fill": 25.434720844568083
     },
     {
       "sym": "PG",
-      "price": 143.36,
-      "line": "z -1.11",
+      "price": 143.59,
+      "line": "z -0.96",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 18.44003556528435
+      "fill": 16.0153383391226
     },
     {
       "sym": "AMZN",
-      "price": 258.67,
-      "line": "z -0.99",
+      "price": 259.68,
+      "line": "z -0.88",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 16.5547994293106
+      "fill": 14.607104689752978
+    },
+    {
+      "sym": "JPM",
+      "price": 354.58,
+      "line": "z -0.84",
+      "tag": "normal",
+      "on": false,
+      "pick": false,
+      "fill": 14.019077103665534
     },
     {
       "sym": "UNH",
-      "price": 393.04,
-      "line": "z -0.87",
+      "price": 394.18,
+      "line": "z -0.74",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 14.535944971736175
+      "fill": 12.37394856803704
     },
     {
       "sym": "GOOGL",
@@ -62,43 +71,34 @@
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 10.81264092316469
-    },
-    {
-      "sym": "JPM",
-      "price": 355.67,
-      "line": "z -0.59",
-      "tag": "normal",
-      "on": false,
-      "pick": false,
-      "fill": 9.821990018232519
+      "fill": 10.812329551135223
     },
     {
       "sym": "XOM",
-      "price": 156.42,
-      "line": "z -0.50",
+      "price": 156.25,
+      "line": "z -0.53",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 8.319454343601663
+      "fill": 8.883778474379778
     },
     {
       "sym": "PEP",
-      "price": 140.17,
-      "line": "z -0.09",
+      "price": 140.82,
+      "line": "z +0.23",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 1.43406960797145
+      "fill": -3.888222910923239
     },
     {
-      "sym": "CVX",
-      "price": 199.57,
-      "line": "z +0.39",
+      "sym": "JNJ",
+      "price": 265.57,
+      "line": "z +0.40",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": -6.459923668007798
+      "fill": -6.74774640244484
     }
   ],
   "board_title": "16 mega-caps, most oversold first (z < -1.5 = buy zone)",
@@ -109,12 +109,6 @@
     "board_note": "Buys panic, sells relief: enter the most stretched mega-cap below -1.5 z, exit when it recovers to average."
   },
   "intraday": [
-    {
-      "ts": "2026-08-10T11:42:55+00:00",
-      "value": 1248.69,
-      "bench": 1029.78,
-      "holding": "UNH"
-    },
     {
       "ts": "2026-08-10T11:56:20+00:00",
       "value": 1248.69,
@@ -9108,6 +9102,12 @@
       "value": 1216.27,
       "bench": 1028.16,
       "holding": "WMT"
+    },
+    {
+      "ts": "2026-08-28T13:49:06+00:00",
+      "value": 1216.92,
+      "bench": 1029.32,
+      "holding": "WMT"
     }
   ],
   "trades": [
@@ -9385,8 +9385,8 @@
     },
     {
       "date": "2026-08-28",
-      "value": 1216.27,
-      "bench": 1028.16,
+      "value": 1216.92,
+      "bench": 1029.32,
       "holding": "WMT"
     }
   ],
@@ -9398,5 +9398,5 @@
   },
   "costs_paid": 2.8553,
   "frozen": null,
-  "thoughts": "I'm holding WMT. Most oversold mega-cap (z < -1.5) \u2014 buying the dip. I bought at $104.72; it's now $102.78 (-1.9% since I got in). My safety net: if the price falls to $92.39 (12% below its recent high), I sell automatically \u2014 no exceptions."
+  "thoughts": "I'm holding WMT. Most oversold mega-cap (z < -1.5) \u2014 buying the dip. I bought at $104.72; it's now $102.83 (-1.8% since I got in). My safety net: if the price falls to $92.39 (12% below its recent high), I sell automatically \u2014 no exceptions. Closest challenger on my list is HD, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
 }
