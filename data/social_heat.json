@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-28T13:43:31+00:00",
+  "ts": "2026-08-28T13:48:59+00:00",
   "sources": {
     "coingecko": [
       "ENA",
@@ -23,8 +23,8 @@
       "BMT",
       "UNI",
       "TRX",
-      "ETH",
-      "SOL"
+      "ZEC",
+      "ETH"
     ],
     "watcher": [
       "ENA",
@@ -42,7 +42,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 2.8e-05,
+      "funding": 3.4e-05,
       "long_short": 1.6
     },
     {
@@ -67,22 +67,12 @@
       "long_short": 0.76
     },
     {
-      "symbol": "SOL",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": -5.9e-05,
-      "long_short": 1.55
-    },
-    {
       "symbol": "BMT",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -0.000143
+      "funding": -0.000161
     },
     {
       "symbol": "BTC",
@@ -90,7 +80,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.2e-05
+      "funding": 6e-05
     },
     {
       "symbol": "CHIP",
@@ -98,7 +88,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.2e-05
+      "funding": -2.8e-05
     },
     {
       "symbol": "ETH",
@@ -137,7 +127,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.9e-05
+      "funding": 3e-05
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -5.8e-05
     },
     {
       "symbol": "SUI",
@@ -145,7 +143,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.6e-05
+      "funding": 2.5e-05
     },
     {
       "symbol": "TAO",
@@ -169,7 +167,15 @@
       "sources": [
         "movers"
       ],
-      "funding": 3.5e-05
+      "funding": 3.2e-05
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 8.4e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
