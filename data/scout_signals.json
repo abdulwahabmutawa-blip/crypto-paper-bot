@@ -1,39 +1,8 @@
 {
-  "ts": "2026-08-28T15:58:10+00:00",
-  "scanned": 104,
+  "ts": "2026-08-28T16:03:37+00:00",
+  "scanned": 105,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "WBETHUSDT",
-      "signal": "ignition",
-      "score": 0.6824,
-      "raw_score": 0.7442,
-      "weight": 0.917,
-      "price": 2732.26,
-      "why": "trades 4.7x and volume 39.7x the prior 4h, 97% taker-buy, $65,330 burst \u2014 while price has only moved -1.5%",
-      "chg_24h": -0.0183,
-      "vol_surge": 39.67,
-      "chg_1h": -0.0154,
-      "market_surge": 4.94,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.2 independent 24h windows (span 126h): overlapping labels are not a sample"
-    },
-    {
-      "symbol": "ENAUSDT",
-      "signal": "heat",
-      "score": 0.6414,
-      "raw_score": 0.6,
-      "weight": 1.069,
-      "price": 0.1692,
-      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding -0.003% \u00b7 L/S 1.64",
-      "chg_24h": 0.0509,
-      "vol_surge": null,
-      "chg_1h": null,
-      "market_surge": 3,
-      "actionable": false,
-      "status": "benched \u2014 hit 56%, mean +0.66% over last 123 at 24h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.2 independent 24h windows (span 126h): overlapping labels are not a sample",
     "breakout": "actionable",
