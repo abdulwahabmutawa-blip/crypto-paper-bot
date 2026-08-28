@@ -1,12 +1,13 @@
 {
   "created": "2026-08-15",
-  "held_symbol": "ENAUSDT",
-  "entry_price": 0.1694,
-  "units": 285.18,
-  "entry_scan_ts": "2026-08-28T11:16:41+00:00",
-  "entry_source": "scout:heat",
+  "held_symbol": null,
+  "entry_price": null,
+  "units": 0.0,
+  "entry_scan_ts": null,
+  "entry_source": null,
   "stopped": {
-    "SOXLBUSDT": "2026-08-28T15:59:39+00:00"
+    "SOXLBUSDT": "2026-08-28T15:59:39+00:00",
+    "ENAUSDT": "2026-08-28T18:03:13+00:00"
   },
   "entries": {
     "2026-08-28": 2
@@ -459,23 +460,30 @@
       "date": "2026-08-28",
       "exit": 112.22,
       "entry": 120.23
+    },
+    {
+      "symbol": "ENAUSDT",
+      "source": "scout:heat",
+      "entry_score": 0.6414,
+      "entry_time": "2026-08-28T15:59:39+00:00",
+      "exit_time": "2026-08-28T18:03:13+00:00",
+      "entry_price": 0.1694,
+      "exit_price": 0.16049999999999998,
+      "units": 285.18,
+      "spent_usd": 48.3095,
+      "got_usd": 45.7714,
+      "pnl_pct": -5.25,
+      "pnl_usd": -2.5381,
+      "reason": "FUEL GONE \u2014 hourly volume 0.6x its pre-entry baseline (floor 1.5x) and only -5.3%: the surge this entry bought is over and it never paid",
+      "date": "2026-08-28",
+      "exit": 0.16049999999999998,
+      "entry": 0.1694
     }
   ],
-  "last_value_usd": 46.11,
-  "last_updated_utc": "2026-08-28T17:58:07+00:00",
-  "open_position": {
-    "symbol": "ENAUSDT",
-    "entry_time": "2026-08-28T15:59:39+00:00",
-    "entry_price": 0.1694,
-    "current_price": 0.1617,
-    "units": 285.18,
-    "spent_usd": 48.3095,
-    "value_usd": 46.1136,
-    "pnl_usd": -2.1959,
-    "pnl_pct": -4.55,
-    "source": "scout:heat"
-  },
-  "spent_usd": 48.3095,
+  "last_value_usd": 45.77,
+  "last_updated_utc": "2026-08-28T18:03:13+00:00",
+  "open_position": null,
+  "spent_usd": null,
   "no_pair": {
     "scan_ts": "2026-08-28T11:16:41+00:00",
     "syms": []
@@ -483,10 +491,5 @@
   "wave_bonus_date": "2026-08-27",
   "book_hwm_usd": 58.4265,
   "entry_score": 0.6414,
-  "hwm": 0.1694,
-  "move_max_qv": 8476781.33051,
-  "move_qv_sum": 8476781.33051,
-  "move_qv_n": 1,
-  "move_last_ms": 1787932800000,
-  "entry_time": "2026-08-28T15:59:39+00:00"
+  "halt_flagged": "CIRCUIT BREAKER \u2014 2 losi"
 }
