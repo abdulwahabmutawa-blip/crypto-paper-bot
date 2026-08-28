@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-28T19:36:41+00:00",
+  "ts": "2026-08-28T19:42:11+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -7,9 +7,11 @@
       "ENA",
       "PENGU",
       "ZEC",
-      "AERO",
       "ETH",
-      "TAO"
+      "TAO",
+      "AERO",
+      "TRUMP",
+      "MINA"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -18,6 +20,7 @@
       "HEMI",
       "TRUMP",
       "TRX",
+      "BMT",
       "SNDKB",
       "RLUSD"
     ],
@@ -36,7 +39,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.001603,
+      "funding": -0.001569,
       "long_short": 1.69
     },
     {
@@ -46,7 +49,7 @@
         "coingecko",
         "watcher"
       ],
-      "funding": 2.2e-05,
+      "funding": 2.5e-05,
       "long_short": 1.61
     },
     {
@@ -56,8 +59,18 @@
         "coingecko",
         "watcher"
       ],
-      "funding": 3e-05,
+      "funding": 3.4e-05,
       "long_short": 1.75
+    },
+    {
+      "symbol": "TRUMP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 3.2e-05,
+      "long_short": 2.87
     },
     {
       "symbol": "AERO",
@@ -65,7 +78,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1e-05
+      "funding": 2e-06
+    },
+    {
+      "symbol": "BMT",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -0.000175
     },
     {
       "symbol": "BTC",
@@ -81,7 +102,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.4e-05
+      "funding": -2.3e-05
     },
     {
       "symbol": "HEMI",
@@ -90,6 +111,14 @@
         "movers"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "MINA",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -0.000564
     },
     {
       "symbol": "PENGU",
@@ -120,14 +149,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "TRUMP",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 3.2e-05
     },
     {
       "symbol": "TRX",
