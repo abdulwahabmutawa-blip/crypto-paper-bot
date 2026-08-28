@@ -1,23 +1,23 @@
 {
-  "generated_utc": "2026-08-27T20:06:14+00:00",
+  "generated_utc": "2026-08-28T00:02:30+00:00",
   "created": "2026-07-30",
   "starting_cash": 1000.0,
   "live_ts": "2026-08-27T19:55:00+00:00",
   "current": {
     "date": "2026-08-27",
-    "value": 1021.54,
-    "bench": 1039.53,
+    "value": 1021.53,
+    "bench": 1039.52,
     "holding": "SPY"
   },
   "board": [
     {
       "sym": "SPY",
-      "price": 771.05,
+      "price": 771.04,
       "line": "S&P 500 \u00b7 score +0.71 \u00b7 mom90 +9.1% \u00b7 MA gap +9.1%",
       "tag": "HELD",
       "on": true,
       "pick": true,
-      "fill": 17.8169641910013
+      "fill": 17.814407029944864
     },
     {
       "sym": "QQQ",
@@ -26,7 +26,7 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 12.386693757815605
+      "fill": 12.386693757815603
     },
     {
       "sym": "IWM",
@@ -35,16 +35,16 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 12.16859112691134
+      "fill": 12.17118545589791
     },
     {
       "sym": "ETH-USD",
-      "price": 2498.25,
+      "price": 2499.16,
       "line": "Ethereum \u00b7 score +0.39 \u00b7 mom90 +24.2% \u00b7 MA gap +23.9%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 9.700884326421319
+      "fill": 9.719258065872394
     },
     {
       "sym": "DBC",
@@ -66,12 +66,12 @@
     },
     {
       "sym": "EEM",
-      "price": 67.61,
+      "price": 67.62,
       "line": "Emerging mkts \u00b7 score +0.24 \u00b7 mom90 +7.6% \u00b7 MA gap +10.8%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 6.103541738795625
+      "fill": 6.109881233873254
     },
     {
       "sym": "BTC-USD",
@@ -80,25 +80,25 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 5.490420198898884
+      "fill": 5.490420198898886
     },
     {
       "sym": "USO",
-      "price": 130.02,
+      "price": 130.03,
       "line": "Oil \u00b7 score +0.13 \u00b7 mom90 +7.2% \u00b7 MA gap +23.3%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 3.3572433891128717
+      "fill": 3.361048632818079
     },
     {
       "sym": "GLD",
-      "price": 422.62,
+      "price": 422.6,
       "line": "Gold \u00b7 score -0.18 \u00b7 mom90 -4.4% \u00b7 MA gap +1.9%",
       "tag": "not eligible",
       "on": false,
       "pick": false,
-      "fill": -4.441852764478478
+      "fill": -4.446446483449561
     },
     {
       "sym": "SLV",
@@ -116,7 +116,7 @@
       "tag": "not eligible",
       "on": false,
       "pick": false,
-      "fill": -7.953432784864016
+      "fill": -7.9534100713579265
     }
   ],
   "board_title": "12 instruments ranked by momentum-per-unit-risk",
@@ -127,12 +127,6 @@
     "board_note": "Every rule in this bot was earned by an earlier experiment: vol-adjusted momentum, trend gate as crash protection, vol-sized positions, trailing stop, and a switch threshold that fights churn. The synthesis on trial."
   },
   "intraday": [
-    {
-      "ts": "2026-08-09T21:38:30+00:00",
-      "value": 1028.01,
-      "bench": 1042.32,
-      "holding": "IWM"
-    },
     {
       "ts": "2026-08-09T21:51:54+00:00",
       "value": 1028.01,
@@ -9126,6 +9120,12 @@
       "value": 1021.54,
       "bench": 1039.53,
       "holding": "SPY"
+    },
+    {
+      "ts": "2026-08-28T00:02:30+00:00",
+      "value": 1021.53,
+      "bench": 1039.52,
+      "holding": "SPY"
     }
   ],
   "trades": [
@@ -9282,8 +9282,8 @@
     },
     {
       "date": "2026-08-27",
-      "value": 1021.54,
-      "bench": 1039.53,
+      "value": 1021.53,
+      "bench": 1039.52,
       "holding": "SPY"
     }
   ],
@@ -9296,5 +9296,5 @@
   },
   "costs_paid": 2.1356,
   "frozen": null,
-  "thoughts": "I'm holding SPY. Best momentum-per-unit-risk in a confirmed uptrend. I bought at $766.38; it's now $771.05 (+0.6% since I got in). My safety net: if the price falls to $695.07 (10% below its recent high), I sell automatically \u2014 no exceptions. Closest challenger on my list is QQQ, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
+  "thoughts": "I'm holding SPY. Best momentum-per-unit-risk in a confirmed uptrend. I bought at $766.38; it's now $771.04 (+0.6% since I got in). My safety net: if the price falls to $695.07 (10% below its recent high), I sell automatically \u2014 no exceptions. Closest challenger on my list is QQQ, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
 }

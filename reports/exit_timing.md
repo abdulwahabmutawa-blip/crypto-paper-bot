@@ -1,6 +1,6 @@
 # Exit timing — the bot grading its own exits
 
-updated 2026-08-27T20:06:22+00:00 · 25 exits audited · early/late line ±3% · MEASUREMENT ONLY
+updated 2026-08-28T00:03:21+00:00 · 25 exits audited · early/late line ±3% · MEASUREMENT ONLY
 
 | verdict | n |
 |---|---|
@@ -22,8 +22,8 @@ updated 2026-08-27T20:06:22+00:00 · 25 exits audited · early/late line ±3% ·
 
 - book since inception (08-15, $40 stake): **-25.5%** — trading P&L only (-$10.20 over 26 closed trades), deposits excluded
 - account balance: $51.75 (of which **+$21.95 is deposited capital, not profit** — inferred as balance minus stake minus P&L; deposits are not tracked anywhere yet)
-- BTC since inception: +27.0% (book gap **-52.5pp**) · last 24h +1.3%
-- ETH since inception: +32.9% (book gap **-58.4pp**) · last 24h -0.2%
+- BTC since inception: +27.2% (book gap **-52.7pp**) · last 24h -0.1%
+- ETH since inception: +33.3% (book gap **-58.8pp**) · last 24h -0.1%
 
 ## Alpha by regime (book minus BTC, daily, paired)
 
@@ -31,12 +31,11 @@ updated 2026-08-27T20:06:22+00:00 · 25 exits audited · early/late line ±3% ·
 
 | regime (BTC day) | days | avg book | avg gap vs BTC |
 |---|---|---|---|
-| flat | 9 | -2.25% | **-2.51pp** |
+| flat | 10 | -2.02% | **-2.27pp** |
 | green | 4 | -1.76% | **-7.34pp** |
 
 | date | regime | book | BTC | gap |
 |---|---|---|---|---|
-| 2026-08-18 | flat | +3.08% | +0.30% | +2.78pp |
 | 2026-08-19 | green | -8.44% | +7.12% | -15.56pp |
 | 2026-08-20 | green | -1.25% | +5.32% | -6.58pp |
 | 2026-08-21 | green | +5.00% | +7.27% | -2.27pp |
@@ -45,7 +44,8 @@ updated 2026-08-27T20:06:22+00:00 · 25 exits audited · early/late line ±3% ·
 | 2026-08-24 | flat | +0.00% | +1.62% | -1.62pp |
 | 2026-08-25 | flat | +0.00% | -0.57% | +0.57pp |
 | 2026-08-26 | flat | +0.00% | +0.62% | -0.62pp |
-| 2026-08-27 | flat | -2.05% | +1.30% | -3.35pp |
+| 2026-08-27 | flat | -2.05% | +1.55% | -3.60pp |
+| 2026-08-28 | flat | +0.00% | -0.08% | +0.08pp |
 
 
 _giveback = in-hold peak the exit surrendered; post-24h run = what the coin did after we sold. High post-run with low giveback = selling too early; high giveback = selling too late._
