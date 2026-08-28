@@ -1,26 +1,8 @@
 {
-  "ts": "2026-08-28T20:53:35+00:00",
+  "ts": "2026-08-28T20:58:47+00:00",
   "scanned": 111,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "MOVRUSDT",
-      "signal": "reversion",
-      "score": 0.6327,
-      "raw_score": 0.624,
-      "weight": 1.014,
-      "price": 0.785,
-      "why": "down -20% on the day (bottom decile of the market), now +4.0% over 15m with 3 green candles",
-      "chg_24h": -0.1984,
-      "vol_surge": 8.26,
-      "chg_1h": -0.1467,
-      "market_surge": 0.0,
-      "oi_drop": 0.102,
-      "funding": 1e-05,
-      "actionable": false,
-      "status": "benched \u2014 hit 50%, mean +0.59% over last 32 at 24h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.2 independent 24h windows (span 125h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -35,16 +17,16 @@
   },
   "scorecard": {
     "ignition": {
-      "span_h_1h": 123.4,
-      "n_eff_1h": 123.43,
+      "span_h_1h": 122.6,
+      "n_eff_1h": 122.58,
       "n_1h": 400,
       "hit_rate_1h": 0.378,
       "mean_ret_1h": -0.00108,
-      "median_ret_1h": -0.00119,
+      "median_ret_1h": -0.0012,
       "both_halves_1h": false,
-      "avg_win_1h": 0.01132,
-      "avg_loss_1h": -0.01117,
-      "payoff_1h": 1.014,
+      "avg_win_1h": 0.01138,
+      "avg_loss_1h": -0.01112,
+      "payoff_1h": 1.023,
       "span_h_4h": 120.4,
       "n_eff_4h": 30.11,
       "n_4h": 400,
