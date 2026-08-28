@@ -602,6 +602,8 @@ def render(card: dict, latest: list[dict], rejected: list[tuple]) -> None:
     if rejected:
         L += ["## Rejected this scan (the filter doing its job)", "",
               ", ".join(f"{s} ({w})" for s, w in rejected[:12]), ""]
+    if os.environ.get("LOTTERY_LIVE", "").strip() == "1":
+        return  # single-writer rule (see grok_sentinel): fleet owns the report
     REPORT.parent.mkdir(parents=True, exist_ok=True)
     REPORT.write_text("\n".join(L), encoding="utf-8", newline="\n")
 

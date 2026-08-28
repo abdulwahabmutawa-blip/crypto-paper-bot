@@ -400,6 +400,17 @@ def render(st: dict) -> None:
                 f"{st['last_scan_utc']}; scans are failing (key/credits/API); "
                 f"fleet risk gate is running on UNKNOWN.\n\n"
                 + payload["thoughts"])
+    # SINGLE-WRITER RULE (2026-08-28): the VPS and the Actions fleet both
+    # rendered this dashboard into the same tracked file — two writers, one
+    # path, and it wedged the VPS repo twice in three days (unmerged
+    # sentinel_dashboard.html blocked every pull/commit/push for 17h+ the
+    # second time). The fleet owns the published copy; the lottery box
+    # (identified by LOTTERY_LIVE, which Actions never sets) skips the
+    # render entirely. Same rule applied to the radar report.
+    if os.environ.get("LOTTERY_LIVE", "").strip() == "1":
+        print("[sentinel] dashboard render skipped on the lottery box "
+              "(single-writer rule; the fleet publishes it)")
+        return
     template = (config.ROOT / "src" / "sentinel_template.html").read_text(
         encoding="utf-8")
     (config.REPORTS / "sentinel_dashboard.html").write_text(
