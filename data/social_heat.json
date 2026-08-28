@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-28T17:23:11+00:00",
+  "ts": "2026-08-28T17:28:41+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -20,6 +20,7 @@
     "movers": [
       "HEMI",
       "BMT",
+      "TRUMP",
       "SNDKB",
       "TRX",
       "RLUSD"
@@ -39,7 +40,7 @@
         "coingecko",
         "watcher"
       ],
-      "funding": -3.5e-05,
+      "funding": -3e-05,
       "long_short": 1.57
     },
     {
@@ -53,12 +54,22 @@
       "long_short": 0.8
     },
     {
+      "symbol": "TRUMP",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": 5e-05,
+      "long_short": 2.76
+    },
+    {
       "symbol": "AERO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -6e-06
+      "funding": -1.7e-05
     },
     {
       "symbol": "AVAX",
@@ -66,7 +77,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.1e-05
+      "funding": -1.3e-05
     },
     {
       "symbol": "BMT",
@@ -74,7 +85,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000298
+      "funding": -0.000303
     },
     {
       "symbol": "BTC",
@@ -82,7 +93,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8e-05
+      "funding": 8.1e-05
     },
     {
       "symbol": "ETH",
@@ -90,7 +101,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.6e-05
+      "funding": 1.3e-05
     },
     {
       "symbol": "LIT",
@@ -122,7 +133,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.3e-05
+      "funding": 3.2e-05
     },
     {
       "symbol": "RLUSD",
@@ -144,7 +155,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -7e-05
+      "funding": -6.7e-05
     },
     {
       "symbol": "SUI",
@@ -152,15 +163,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -6.5e-05
-    },
-    {
-      "symbol": "TRUMP",
-      "surfaces": 1,
-      "sources": [
-        "watcher"
-      ],
-      "funding": 5e-05
+      "funding": -6.9e-05
     },
     {
       "symbol": "TRX",
@@ -168,7 +171,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 7.5e-05
+      "funding": 7.9e-05
     },
     {
       "symbol": "ZEC",
