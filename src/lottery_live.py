@@ -194,6 +194,24 @@ def main():
     if turbo:
         print(f"[{KEY}] TURBO MODE active — gate advisory, hunting best score")
 
+    def _turbo_rank(cands: list) -> list:
+        """Best score first — with one demotion learned from the 08-28
+        Oracle cohort study: symbols in the serial-exploder top quartile
+        (explosion_history n >= 6) ranked LAST among candidates, because
+        the highest-history quartile locked +50% at 16% vs 28% for
+        modest-history coins this regime — the prior ran backwards. A
+        demotion, not a block: if nothing else is on the board they can
+        still be taken. In-sample caveat applies; turbo's own 20-RT
+        pre-registered evaluation judges this along with everything else."""
+        try:
+            _eh = json.loads((config.DATA / "explosion_history.json")
+                             .read_text()).get("symbols", {})
+        except Exception:
+            _eh = {}
+        return sorted(cands, key=lambda c: (
+            (_eh.get(c["symbol"], {}).get("n", 0) >= 6),
+            -(c.get("score") or 0.0)))
+
     bals = binance_live.balances()
     if not bals:
         print(f"[{KEY}] could not read balances — cycle skipped")
@@ -647,8 +665,7 @@ def main():
         # cannot boomerang. The buy happens next cycle through the full
         # guard stack — a hop earns entry, it is not granted it.
         if held and turbo:
-            _tc = sorted(scout_candidates(),
-                         key=lambda c: -(c.get("score") or 0.0))
+            _tc = _turbo_rank(scout_candidates())
             _best = _tc[0] if _tc else None
             if _best and _best["symbol"] != held                     and _best["symbol"] not in st.get("stopped", {})                     and held_h is not None and held_h >= 0.5:
                 _hs = float(st.get("entry_score") or 0.0)
@@ -862,8 +879,7 @@ def main():
         if pick is None:
             _cands = scout_candidates()
             if turbo:
-                _cands = sorted(_cands,
-                                key=lambda c: -(c.get("score") or 0.0))
+                _cands = _turbo_rank(_cands)
             for c in _cands:
                 if c["symbol"] in blacklisted:
                     continue
