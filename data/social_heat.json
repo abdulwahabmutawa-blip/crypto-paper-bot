@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-28T17:01:08+00:00",
+  "ts": "2026-08-28T17:06:27+00:00",
   "sources": {
     "coingecko": [
       "SOL",
@@ -20,7 +20,7 @@
       "HEMI",
       "BMT",
       "TRX",
-      "SNDKB",
+      "ENA",
       "RLUSD"
     ],
     "watcher": [
@@ -33,13 +33,14 @@
   "heat": [
     {
       "symbol": "ENA",
-      "surfaces": 2,
+      "surfaces": 3,
       "sources": [
         "coingecko",
+        "movers",
         "watcher"
       ],
-      "funding": -5.2e-05,
-      "long_short": 1.59
+      "funding": -4.9e-05,
+      "long_short": 1.57
     },
     {
       "symbol": "HEMI",
@@ -49,7 +50,7 @@
         "watcher"
       ],
       "funding": 5e-05,
-      "long_short": 0.75
+      "long_short": 0.8
     },
     {
       "symbol": "AVAX",
@@ -65,7 +66,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000278
+      "funding": -0.000282
     },
     {
       "symbol": "BTC",
@@ -81,7 +82,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1e-05
+      "funding": 1.1e-05
     },
     {
       "symbol": "ETH",
@@ -89,7 +90,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.5e-05
+      "funding": 2.3e-05
     },
     {
       "symbol": "LIT",
@@ -120,17 +121,10 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.7e-05
+      "funding": 2.9e-05
     },
     {
       "symbol": "RLUSD",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
-    },
-    {
-      "symbol": "SNDKB",
       "surfaces": 1,
       "sources": [
         "movers"
@@ -142,7 +136,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -7.9e-05
+      "funding": -7.8e-05
     },
     {
       "symbol": "SUI",
@@ -150,7 +144,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -5.8e-05
+      "funding": -6e-05
     },
     {
       "symbol": "TRUMP",
