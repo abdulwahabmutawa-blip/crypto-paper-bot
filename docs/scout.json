@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-28T22:50:33+00:00",
+  "ts": "2026-08-28T22:56:25+00:00",
   "scanned": 114,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "XAUTUSDT",
+      "signal": "ignition",
+      "score": 0.7082,
+      "raw_score": 0.8047,
+      "weight": 0.88,
+      "price": 4461.78,
+      "why": "trades 7.0x and volume 18.3x the prior 4h, 71% taker-buy, $643,034 burst \u2014 while price has only moved +0.1%",
+      "chg_24h": -0.0296,
+      "vol_surge": 18.25,
+      "chg_1h": 0.0012,
+      "market_surge": 5.54,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.2 independent 24h windows (span 125h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.2 independent 24h windows (span 125h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 7,
+    "count": 8,
     "baseline": 14.0,
     "wave": false
   },
