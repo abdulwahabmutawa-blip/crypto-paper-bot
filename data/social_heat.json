@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-28T18:13:07+00:00",
+  "ts": "2026-08-28T18:18:41+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -20,9 +20,10 @@
     "movers": [
       "HEMI",
       "BMT",
-      "TRUMP",
       "TRX",
+      "TRUMP",
       "SNDKB",
+      "PUMP",
       "RLUSD"
     ],
     "watcher": [
@@ -40,7 +41,7 @@
         "coingecko",
         "watcher"
       ],
-      "funding": 8e-06,
+      "funding": 1.2e-05,
       "long_short": 1.58
     },
     {
@@ -52,6 +53,16 @@
       ],
       "funding": 5e-05,
       "long_short": 0.83
+    },
+    {
+      "symbol": "PUMP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 3.5e-05,
+      "long_short": 1.16
     },
     {
       "symbol": "TRUMP",
@@ -69,7 +80,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4e-06
+      "funding": 2e-06
     },
     {
       "symbol": "BMT",
@@ -77,7 +88,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000231
+      "funding": -0.000225
     },
     {
       "symbol": "BTC",
@@ -85,7 +96,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.1e-05
+      "funding": 9.3e-05
     },
     {
       "symbol": "ETH",
@@ -93,7 +104,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1e-06
+      "funding": -0.0
     },
     {
       "symbol": "ONDO",
@@ -101,7 +112,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.2e-05
+      "funding": 7e-06
     },
     {
       "symbol": "PENGU",
@@ -117,14 +128,6 @@
       "sources": [
         "coingecko"
       ]
-    },
-    {
-      "symbol": "PUMP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 3.6e-05
     },
     {
       "symbol": "RLUSD",
@@ -146,7 +149,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -3.8e-05
+      "funding": -3.3e-05
     },
     {
       "symbol": "TRX",
@@ -162,7 +165,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 0.000579
+      "funding": 0.000575
     },
     {
       "symbol": "XRP",
@@ -170,7 +173,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -8e-06
+      "funding": -4e-06
     },
     {
       "symbol": "ZEC",
