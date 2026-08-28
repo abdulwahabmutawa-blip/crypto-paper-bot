@@ -1,6 +1,6 @@
 # Exit timing — the bot grading its own exits
 
-updated 2026-08-28T15:51:05+00:00 · 25 exits audited · early/late line ±3% · MEASUREMENT ONLY
+updated 2026-08-28T16:04:37+00:00 · 25 exits audited · early/late line ±3% · MEASUREMENT ONLY
 
 | verdict | n |
 |---|---|
@@ -21,9 +21,9 @@ updated 2026-08-28T15:51:05+00:00 · 25 exits audited · early/late line ±3% ·
 ## Market capture
 
 - book since inception (08-15, $40 stake): **-25.5%** — trading P&L only (-$10.20 over 26 closed trades), deposits excluded
-- account balance: $50.48 (of which **+$20.68 is deposited capital, not profit** — inferred as balance minus stake minus P&L; deposits are not tracked anywhere yet)
-- BTC since inception: +24.9% (book gap **-50.4pp**) · last 24h -1.9%
-- ETH since inception: +32.1% (book gap **-57.6pp**) · last 24h -1.0%
+- account balance: $49.20 (of which **+$19.40 is deposited capital, not profit** — inferred as balance minus stake minus P&L; deposits are not tracked anywhere yet)
+- BTC since inception: +23.9% (book gap **-49.4pp**) · last 24h -2.7%
+- ETH since inception: +30.6% (book gap **-56.1pp**) · last 24h -2.1%
 
 ## Alpha by regime (book minus BTC, daily, paired)
 
@@ -31,7 +31,8 @@ updated 2026-08-28T15:51:05+00:00 · 25 exits audited · early/late line ±3% ·
 
 | regime (BTC day) | days | avg book | avg gap vs BTC |
 |---|---|---|---|
-| flat | 10 | -2.02% | **-2.09pp** |
+| red | 1 | +0.00% | **+2.69pp** |
+| flat | 9 | -2.25% | **-2.53pp** |
 | green | 4 | -1.76% | **-7.34pp** |
 
 | date | regime | book | BTC | gap |
@@ -45,7 +46,7 @@ updated 2026-08-28T15:51:05+00:00 · 25 exits audited · early/late line ±3% ·
 | 2026-08-25 | flat | +0.00% | -0.57% | +0.57pp |
 | 2026-08-26 | flat | +0.00% | +0.62% | -0.62pp |
 | 2026-08-27 | flat | -2.05% | +1.55% | -3.60pp |
-| 2026-08-28 | flat | +0.00% | -1.91% | +1.91pp |
+| 2026-08-28 | red | +0.00% | -2.69% | +2.69pp |
 
 
 _giveback = in-hold peak the exit surrendered; post-24h run = what the coin did after we sold. High post-run with low giveback = selling too early; high giveback = selling too late._
