@@ -1,8 +1,23 @@
 {
-  "ts": "2026-08-28T19:25:27+00:00",
-  "scanned": 111,
+  "ts": "2026-08-28T19:31:08+00:00",
+  "scanned": 109,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "TURBOUSDT",
+      "signal": "breakout",
+      "score": 0.8099,
+      "raw_score": 0.8445,
+      "weight": 0.959,
+      "price": 0.001121,
+      "why": "trades 8.4x, volume 10.4x, 60% taker-buy, +5.6% in an hour, at 81% of its 24h range",
+      "chg_24h": 0.126,
+      "vol_surge": 10.45,
+      "chg_1h": 0.0556,
+      "market_surge": 23.88,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.2 independent 24h windows (span 125h): overlapping labels are not a sample",
     "breakout": "actionable",
