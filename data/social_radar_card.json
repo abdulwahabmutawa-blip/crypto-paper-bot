@@ -1,31 +1,43 @@
 {
- "updated": "2026-08-28T03:25:37+00:00",
+ "updated": "2026-08-28T03:39:07+00:00",
  "spec": "x_chatter_precursors_2026-08-23",
  "n_rows_total": 3,
- "n_scored_excess_24h": 2,
+ "n_scored_excess_24h": 3,
  "objective": "BTC-excess 24h",
  "hit_threshold": 0.03,
  "features": {
   "catalyst": {},
   "tier_T3": {},
   "handle": {},
-  "all": {}
+  "all": {
+   "all": {
+    "n": 3,
+    "hit": 0.333,
+    "mean": -0.01824,
+    "median": -0.02079
+   }
+  }
  },
  "hypotheses": {
   "H1_quiet_entry_beats_hot": {
    "note": "prior24h in [-2%,+5%] vs >+10%",
    "horizon_h": 24,
-   "group_true": null,
+   "group_true": {
+    "n": 1,
+    "hit": 0.0,
+    "mean": -0.02079,
+    "median": -0.02079
+   },
    "group_false": null
   },
   "H2_breadth_beats_loudness": {
    "note": ">=8 distinct handles & no T3 vs narrow+loud",
    "horizon_h": 24,
    "group_true": {
-    "n": 1,
+    "n": 2,
     "hit": 0.0,
-    "mean": -0.06548,
-    "median": -0.06548
+    "mean": -0.04313,
+    "median": -0.02079
    },
    "group_false": null
   },
@@ -34,10 +46,10 @@
    "horizon_h": 24,
    "group_true": null,
    "group_false": {
-    "n": 2,
-    "hit": 0.5,
-    "mean": -0.01697,
-    "median": 0.03154
+    "n": 3,
+    "hit": 0.333,
+    "mean": -0.01824,
+    "median": -0.02079
    }
   },
   "H4_occurred_catalyst_fades": {
@@ -61,23 +73,29 @@
     "median": -0.06548
    },
    "group_false": {
-    "n": 1,
-    "hit": 1.0,
-    "mean": 0.03154,
+    "n": 2,
+    "hit": 0.5,
+    "mean": 0.00537,
     "median": 0.03154
    },
-   "edge_pp": -9.7
+   "edge_pp": -7.09
   },
   "H6_exchange_surface_words_exhaust": {
    "note": "scanner/exchange-surface wording vs organic",
    "horizon_h": 24,
-   "group_true": null,
+   "group_true": {
+    "n": 1,
+    "hit": 0.0,
+    "mean": -0.02079,
+    "median": -0.02079
+   },
    "group_false": {
     "n": 2,
     "hit": 0.5,
     "mean": -0.01697,
     "median": 0.03154
-   }
+   },
+   "edge_pp": -0.38
   },
   "H7_extreme_velocity_contrarian": {
    "note": "all-new handles vs familiar, 72h",
@@ -94,10 +112,10 @@
    "note": "first ever appearance vs repeat",
    "horizon_h": 24,
    "group_true": {
-    "n": 2,
-    "hit": 0.5,
-    "mean": -0.01697,
-    "median": 0.03154
+    "n": 3,
+    "hit": 0.333,
+    "mean": -0.01824,
+    "median": -0.02079
    },
    "group_false": null
   }
