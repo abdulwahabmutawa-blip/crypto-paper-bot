@@ -47,3 +47,21 @@ replay's dead-tape half shows no edge, so the wider cap stays wave-gated.
 entries admitted in the 15–25% band (they are identifiable from the ledger's
 entry run-up) on their own record. If their net P&L is negative, the wave
 cap reverts to a flat 15%. Criterion set before outcomes, per house rule.
+
+## TURBO MODE (owner-directed, 2026-08-28)
+
+Owner decision, made with the 08-27 evidence in hand and against its
+recommendation — recorded, not litigated: the book runs aggressive.
+`data/TURBO_MODE` (phone-deletable) flips it: gate advisory, best-score
+hunting, 8 entries/day, 1h cooldown, 25% LATE cap, hop-if-25%-better with
+three frictions (30min min hold, no hopping out of dips >-3%, cooldown
+stamps). Unchanged: $25 floor, -6%/-10% stops, ratchet, depth/announcement/
+unlock vetoes, severe+stale grounding, watcher bench.
+
+**Pre-registered evaluation, set before outcomes:** after **20 turbo round
+trips** or at the **09-30 checkpoint**, whichever first: turbo keeps running
+only if its own realized net (sum of pnl_usd on trades entered while turbo)
+is **positive after fees**. Negative → delete the flag file and the gate
+resumes. Every realized trade now records its entry_score so the picks are
+attributable. The per-trade learning loop: scout scorecard (labels),
+exit_auditor (post-exit paths), repeat-loser retirement, cooldown stamps.

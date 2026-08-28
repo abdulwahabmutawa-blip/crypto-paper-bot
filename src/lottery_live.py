@@ -182,6 +182,18 @@ def main():
         "units": 0.0, "entry_scan_ts": None, "entry_source": None,
         "stopped": {}, "entries": {}, "realized": []}
 
+    # TURBO MODE (owner-directed 2026-08-28): a data/TURBO_MODE file in the
+    # repo (same phone-operable pattern as KILL_SWITCH) flips the book from
+    # gate-disciplined to best-score hunting: the learning gate turns
+    # advisory (rows keep logging, records keep building), budget 8/day,
+    # cooldown 1h, LATE cap 25%, and a held seat rotates into a candidate
+    # scoring 25%+ above its own. Floor, stops, ratchet, vetoes, severe/
+    # stale grounding and the watcher bench all stay. Pre-registered
+    # evaluation in LOTTERY_CRITERIA.md; delete the file to revert.
+    turbo = (config.DATA / "TURBO_MODE").exists()
+    if turbo:
+        print(f"[{KEY}] TURBO MODE active — gate advisory, hunting best score")
+
     bals = binance_live.balances()
     if not bals:
         print(f"[{KEY}] could not read balances — cycle skipped")
@@ -403,6 +415,7 @@ def main():
                # answer (watcher 0/6 -$7.90, scout +$0.94) was too important
                # to keep excavating
                "source": st.get("entry_source"),
+               "entry_score": st.get("entry_score"),
                "entry_time": st.get("entry_time"),
                "exit_time": now.isoformat(timespec="seconds"),
                "entry_price": entry_px, "exit_price": exit_px,
@@ -625,6 +638,29 @@ def main():
                 if sell("Hype faded — coin off a newer euphoric scan"):
                     held = None
 
+        # TURBO HOP (owner-directed 08-28): rotate into a fresh candidate
+        # that scores 25%+ above this seat's own entry score. Three
+        # frictions, each bought with the 08-27 post-exit study: 30min
+        # minimum hold (whipsaw), never hop out of a dip deeper than -3%
+        # (rotation exits sold troughs: +2.4% mean recovery after them),
+        # and the exit stamps the normal cooldown so the abandoned coin
+        # cannot boomerang. The buy happens next cycle through the full
+        # guard stack — a hop earns entry, it is not granted it.
+        if held and turbo:
+            _tc = sorted(scout_candidates(),
+                         key=lambda c: -(c.get("score") or 0.0))
+            _best = _tc[0] if _tc else None
+            if _best and _best["symbol"] != held                     and _best["symbol"] not in st.get("stopped", {})                     and held_h is not None and held_h >= 0.5:
+                _hs = float(st.get("entry_score") or 0.0)
+                _bs = float(_best.get("score") or 0.0)
+                _px = binance_live.price(held)
+                _pnl = (_px / entry - 1.0) if (_px and entry) else None
+                if _bs >= max(_hs * 1.25, _hs + 0.05)                         and _pnl is not None and _pnl > -0.03:
+                    if sell(f"TURBO HOP — {_best['symbol']} "
+                            f"({_best.get('signal')}) scores {_bs:.2f} vs "
+                            f"this seat's {_hs:.2f}; rotating"):
+                        held = None
+
         # The seat survived every poll rule, so leave a floor resting AT the
         # exchange to cover the ~5 minutes until the next cycle. Last, so it
         # is only ever placed on a position that is genuinely still open.
@@ -650,7 +686,8 @@ def main():
             st["wave_bonus_date"] = today
     except Exception:
         pass
-    budget = binance_live.entry_budget(st.get("wave_bonus_date") == today)
+    budget = 8 if turbo else binance_live.entry_budget(
+        st.get("wave_bonus_date") == today)
 
     # BOOK FLOOR (percentage form, owner decision 08-21): entries stop when
     # the book is 37.5%+ below its own peak value — the same protection the
@@ -716,7 +753,8 @@ def main():
         def _in_cooldown(ts_str) -> bool:
             try:
                 return (now - datetime.fromisoformat(ts_str)
-                        ).total_seconds() / 3600.0 < COOLDOWN_H
+                        ).total_seconds() / 3600.0 < (1.0 if turbo
+                                                       else COOLDOWN_H)
             except Exception:
                 return False    # legacy scan_ts values: not parseable = expired
         st["stopped"] = {s: ts for s, ts in st.get("stopped", {}).items()
@@ -764,7 +802,7 @@ def main():
             except Exception:
                 return None
 
-        pick, source = None, None
+        pick, source, pick_score = None, None, 0.0
         # OWNER DECISION 2026-08-19: watcher entries only when the paper
         # twin's rolling record has earned them (see binance_live). The
         # bench announces itself once per cycle rather than spamming the
@@ -801,7 +839,7 @@ def main():
                     continue
                 # the guard that was missing from this path: COW and CHIP
                 # were both Watcher picks bought after their pump was over
-                late = binance_live.late_entry_check(sym, wave=wave_fresh())
+                late = binance_live.late_entry_check(sym, wave=wave_fresh() or turbo)
                 if late:
                     binance_live.log({"event": "refused", "action": "BUY",
                                       "symbol": sym, "reason": late})
@@ -814,6 +852,7 @@ def main():
                     print(f"[{KEY}] {sym} (watcher) refused: {veto}")
                     continue
                 pick, source = sym, "watcher"
+                pick_score = 0.0
                 break
         # The Scout: fast, quantitative, every cycle across all ~670 pairs.
         # It supersedes the old naive top-24h-gainer fallback, which happily
@@ -821,7 +860,11 @@ def main():
         # over (the live COWUSDT case: +49% on the day, -6.5% in the hour, on
         # BELOW-average volume). The Scout requires the move to be alive now.
         if pick is None:
-            for c in scout_candidates():
+            _cands = scout_candidates()
+            if turbo:
+                _cands = sorted(_cands,
+                                key=lambda c: -(c.get("score") or 0.0))
+            for c in _cands:
                 if c["symbol"] in blacklisted:
                     continue
                 # THE GATE (autopsy 08-16): a signal type trades only after
@@ -829,11 +872,14 @@ def main():
                 # ruleset. Benched candidates still teach — the scout
                 # resolves outcomes from its log, not from our fills.
                 if c.get("actionable", True) is False:
-                    print(f"[{KEY}] scout {c['symbol']} ({c['signal']}) is "
-                          f"on the bench — "
-                          f"{c.get('status', 'unproven signal')}; logged "
-                          f"for learning, not traded")
-                    continue
+                    if not turbo:
+                        print(f"[{KEY}] scout {c['symbol']} ({c['signal']}) "
+                              f"is on the bench — "
+                              f"{c.get('status', 'unproven signal')}; logged "
+                              f"for learning, not traded")
+                        continue
+                    print(f"[{KEY}] TURBO takes benched {c['symbol']} "
+                          f"({c['signal']}, score {c.get('score')})")
                 if not binance_live.price(c["symbol"]):
                     continue
                 # REVAMP 08-23: regime gating by family — revival stands
@@ -845,7 +891,7 @@ def main():
                     print(f"[{KEY}] {c['symbol']} ({c['signal']}) refused: "
                           f"{reg}")
                     continue
-                late = binance_live.late_entry_check(c["symbol"], wave=wave_fresh())
+                late = binance_live.late_entry_check(c["symbol"], wave=wave_fresh() or turbo)
                 if late:
                     binance_live.log({"event": "refused", "action": "BUY",
                                       "symbol": c["symbol"], "reason": late})
@@ -859,6 +905,7 @@ def main():
                     continue
                 pick = c["symbol"]
                 source = f"scout:{c['signal']}"
+                pick_score = float(c.get("score") or 0.0)
                 print(f"[{KEY}] scout says {c['symbol']} "
                       f"({c['signal']}, score {c.get('score')}): "
                       f"{c.get('why', '')}")
@@ -886,6 +933,7 @@ def main():
                     st["move_last_ms"] = 0
                     st["entry_time"] = now.isoformat(timespec="seconds")
                     st["entry_scan_ts"], st["entry_source"] = scan_ts, source
+                    st["entry_score"] = pick_score
                     st.setdefault("entries", {})
                     st["entries"] = {d: c for d, c in st["entries"].items()
                                      if d >= today}
