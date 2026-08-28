@@ -1,17 +1,19 @@
 {
-  "ts": "2026-08-28T21:55:31+00:00",
+  "ts": "2026-08-28T22:01:31+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "PUMP",
-      "SOL",
       "ENA",
-      "TRUMP",
       "ZEC",
-      "VET",
+      "SOL",
+      "TRUMP",
       "PENDLE",
-      "ETHFI",
-      "ETH"
+      "ETH",
+      "PENGU",
+      "PAXG",
+      "VET",
+      "DOGE"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,8 +22,7 @@
       "HEMI",
       "TRUMP",
       "TRX",
-      "SNDKB",
-      "U"
+      "SNDKB"
     ],
     "watcher": [
       "ENA",
@@ -38,7 +39,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.002063,
+      "funding": -0.002108,
       "long_short": 1.74
     },
     {
@@ -49,7 +50,7 @@
         "watcher"
       ],
       "funding": 5e-05,
-      "long_short": 1.61
+      "long_short": 1.6
     },
     {
       "symbol": "SOL",
@@ -58,8 +59,8 @@
         "coingecko",
         "watcher"
       ],
-      "funding": 7.3e-05,
-      "long_short": 1.78
+      "funding": 7.4e-05,
+      "long_short": 1.79
     },
     {
       "symbol": "TRUMP",
@@ -80,26 +81,34 @@
       "funding": 0.0001
     },
     {
+      "symbol": "DOGE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 7.3e-05
+    },
+    {
       "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -2.1e-05
-    },
-    {
-      "symbol": "ETHFI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 2.3e-05
+      "funding": -2.2e-05
     },
     {
       "symbol": "HEMI",
       "surfaces": 1,
       "sources": [
         "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "PAXG",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
       ],
       "funding": 5e-05
     },
@@ -112,12 +121,20 @@
       "funding": 0.0001
     },
     {
+      "symbol": "PENGU",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "PUMP",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 3e-05
+      "funding": 2.9e-05
     },
     {
       "symbol": "SNDKB",
@@ -133,13 +150,6 @@
         "movers"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "U",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
     },
     {
       "symbol": "VET",
