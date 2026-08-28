@@ -1,29 +1,26 @@
 {
-  "ts": "2026-08-28T18:18:41+00:00",
+  "ts": "2026-08-28T18:24:35+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "PENGU",
       "SOL",
       "PUMP",
-      "ETH",
-      "ZEC",
-      "AERO",
       "ENA",
+      "ETH",
       "XRP",
-      "PEPE",
+      "DEXE",
+      "ZEC",
       "XMR",
-      "ONDO"
+      "PEPE"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "HEMI",
-      "BMT",
       "TRX",
-      "TRUMP",
+      "BMT",
       "SNDKB",
-      "PUMP",
       "RLUSD"
     ],
     "watcher": [
@@ -41,7 +38,7 @@
         "coingecko",
         "watcher"
       ],
-      "funding": 1.2e-05,
+      "funding": 1.6e-05,
       "long_short": 1.58
     },
     {
@@ -55,40 +52,12 @@
       "long_short": 0.83
     },
     {
-      "symbol": "PUMP",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 3.5e-05,
-      "long_short": 1.16
-    },
-    {
-      "symbol": "TRUMP",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": 5e-05,
-      "long_short": 2.78
-    },
-    {
-      "symbol": "AERO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 2e-06
-    },
-    {
       "symbol": "BMT",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -0.000225
+      "funding": -0.000217
     },
     {
       "symbol": "BTC",
@@ -96,7 +65,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.3e-05
+      "funding": 9.5e-05
+    },
+    {
+      "symbol": "DEXE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -0.001086
     },
     {
       "symbol": "ETH",
@@ -104,15 +81,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.0
-    },
-    {
-      "symbol": "ONDO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 7e-06
+      "funding": -2e-06
     },
     {
       "symbol": "PENGU",
@@ -128,6 +97,14 @@
       "sources": [
         "coingecko"
       ]
+    },
+    {
+      "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 3.5e-05
     },
     {
       "symbol": "RLUSD",
@@ -149,7 +126,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -3.3e-05
+      "funding": -2.8e-05
+    },
+    {
+      "symbol": "TRUMP",
+      "surfaces": 1,
+      "sources": [
+        "watcher"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "TRX",
@@ -165,7 +150,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 0.000575
+      "funding": 0.000562
     },
     {
       "symbol": "XRP",
@@ -173,7 +158,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -4e-06
+      "funding": -0.0
     },
     {
       "symbol": "ZEC",
