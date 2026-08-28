@@ -1,15 +1,16 @@
 {
-  "ts": "2026-08-28T20:47:53+00:00",
+  "ts": "2026-08-28T20:53:31+00:00",
   "sources": {
     "coingecko": [
-      "BTC",
       "SOL",
       "ENA",
       "PENGU",
-      "LIT",
+      "BTC",
       "ETH",
-      "LINK",
-      "TRUMP"
+      "LIT",
+      "UNI",
+      "PUMP",
+      "TAO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -36,7 +37,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.001227,
+      "funding": -0.001319,
       "long_short": 1.7
     },
     {
@@ -56,18 +57,8 @@
         "coingecko",
         "watcher"
       ],
-      "funding": 6.6e-05,
+      "funding": 6.7e-05,
       "long_short": 1.77
-    },
-    {
-      "symbol": "TRUMP",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 4.9e-05,
-      "long_short": 2.87
     },
     {
       "symbol": "BTC",
@@ -83,7 +74,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.8e-05
+      "funding": -2.7e-05
     },
     {
       "symbol": "HEMI",
@@ -92,14 +83,6 @@
         "movers"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "LINK",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 3.7e-05
     },
     {
       "symbol": "LIT",
@@ -118,6 +101,14 @@
       "funding": 5e-05
     },
     {
+      "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 3e-05
+    },
+    {
       "symbol": "RLUSD",
       "surfaces": 1,
       "sources": [
@@ -132,10 +123,34 @@
       ]
     },
     {
+      "symbol": "TAO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "TRUMP",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "TRX",
       "surfaces": 1,
       "sources": [
         "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "UNI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
       ],
       "funding": 0.0001
     }
