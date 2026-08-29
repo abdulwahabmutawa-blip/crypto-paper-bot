@@ -1,16 +1,18 @@
 {
-  "ts": "2026-08-29T09:56:03+00:00",
+  "ts": "2026-08-29T10:01:31+00:00",
   "sources": {
     "coingecko": [
-      "PUMP",
-      "PENGU",
       "SOL",
-      "HNT",
-      "ENA",
+      "PUMP",
       "SUI",
+      "HNT",
+      "PENGU",
+      "ENA",
       "TAO",
-      "LIT",
       "NEAR",
+      "POL",
+      "ONDO",
+      "AVAX",
       "VIRTUAL"
     ],
     "reddit": [],
@@ -18,8 +20,9 @@
     "movers": [
       "DEXE",
       "SNDKB",
-      "ZEC",
       "TRUMP",
+      "ZEC",
+      "PUMP",
       "RLUSD"
     ],
     "watcher": [
@@ -38,7 +41,7 @@
         "watcher"
       ],
       "funding": 5e-05,
-      "long_short": 1.58
+      "long_short": 1.53
     },
     {
       "symbol": "ENA",
@@ -47,8 +50,26 @@
         "coingecko",
         "watcher"
       ],
-      "funding": 1.3e-05,
-      "long_short": 1.6
+      "funding": 1.8e-05,
+      "long_short": 1.61
+    },
+    {
+      "symbol": "PUMP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.14
+    },
+    {
+      "symbol": "AVAX",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 7e-06
     },
     {
       "symbol": "HEMI",
@@ -66,20 +87,20 @@
       ]
     },
     {
-      "symbol": "LIT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "NEAR",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 3.3e-05
+      "funding": 2.9e-05
+    },
+    {
+      "symbol": "ONDO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -6e-05
     },
     {
       "symbol": "PENGU",
@@ -90,12 +111,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PUMP",
+      "symbol": "POL",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": -5.4e-05
     },
     {
       "symbol": "RLUSD",
@@ -117,7 +138,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6e-06
+      "funding": 3e-06
     },
     {
       "symbol": "SUI",
@@ -125,7 +146,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.5e-05
+      "funding": 6.1e-05
     },
     {
       "symbol": "TAO",
@@ -141,7 +162,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 6e-06
+      "funding": 4e-06
     },
     {
       "symbol": "VIRTUAL",
@@ -149,7 +170,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.9e-05
+      "funding": 1.7e-05
     },
     {
       "symbol": "ZEC",

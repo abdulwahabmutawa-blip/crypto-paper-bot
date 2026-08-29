@@ -1,11 +1,13 @@
 {
   "created": "2026-08-15",
-  "held_symbol": "JTOUSDT",
-  "entry_price": 0.4855,
-  "units": 90.2,
-  "entry_scan_ts": "2026-08-29T03:22:31+00:00",
-  "entry_source": "scout:ignition",
-  "stopped": {},
+  "held_symbol": null,
+  "entry_price": null,
+  "units": 0.0,
+  "entry_scan_ts": null,
+  "entry_source": null,
+  "stopped": {
+    "JTOUSDT": "2026-08-29T10:02:59+00:00"
+  },
   "entries": {
     "2026-08-29": 3
   },
@@ -511,34 +513,35 @@
       "date": "2026-08-29",
       "exit": 0.00618,
       "entry": 0.00645
+    },
+    {
+      "symbol": "JTOUSDT",
+      "source": "scout:ignition",
+      "entry_score": 0.7007,
+      "entry_time": "2026-08-29T07:05:39+00:00",
+      "exit_time": "2026-08-29T10:02:59+00:00",
+      "entry_price": 0.4855,
+      "exit_price": 0.4852000000000001,
+      "units": 90.2,
+      "spent_usd": 43.7921,
+      "got_usd": 43.765,
+      "pnl_pct": -0.06,
+      "pnl_usd": -0.0271,
+      "reason": "FUEL GONE \u2014 hourly volume 0.9x its pre-entry baseline (floor 1.5x) and only -0.0%: the surge this entry bought is over and it never paid",
+      "date": "2026-08-29",
+      "exit": 0.4852000000000001,
+      "entry": 0.4855
     }
   ],
-  "last_value_usd": 43.82,
-  "last_updated_utc": "2026-08-29T09:57:27+00:00",
-  "open_position": {
-    "symbol": "JTOUSDT",
-    "entry_time": "2026-08-29T07:05:39+00:00",
-    "entry_price": 0.4855,
-    "current_price": 0.4853,
-    "units": 90.2,
-    "spent_usd": 43.7921,
-    "value_usd": 43.7741,
-    "pnl_usd": -0.018,
-    "pnl_pct": -0.04,
-    "source": "scout:ignition"
-  },
-  "spent_usd": 43.7921,
+  "last_value_usd": 43.81,
+  "last_updated_utc": "2026-08-29T10:02:59+00:00",
+  "open_position": null,
+  "spent_usd": null,
   "no_pair": {
     "scan_ts": "2026-08-29T03:22:31+00:00",
     "syms": []
   },
   "wave_bonus_date": "2026-08-27",
   "book_hwm_usd": 58.4265,
-  "entry_score": 0.7007,
-  "hwm": 0.4938,
-  "move_max_qv": 427191.19685,
-  "move_qv_sum": 427191.19685,
-  "move_qv_n": 1,
-  "move_last_ms": 1787990400000,
-  "entry_time": "2026-08-29T07:05:39+00:00"
+  "entry_score": 0.7007
 }
