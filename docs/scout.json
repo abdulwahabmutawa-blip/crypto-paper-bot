@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-29T05:48:14+00:00",
-  "scanned": 102,
+  "ts": "2026-08-29T05:53:39+00:00",
+  "scanned": 103,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "UNIUSDT",
-      "signal": "ignition",
-      "score": 0.5057,
-      "raw_score": 0.5714,
-      "weight": 0.885,
-      "price": 4.461,
-      "why": "trades 5.0x and volume 6.0x the prior 4h, 64% taker-buy, $117,106 burst \u2014 while price has only moved +1.5%",
-      "chg_24h": -0.041,
-      "vol_surge": 6.02,
-      "chg_1h": 0.0152,
-      "market_surge": 0.41,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.2 independent 24h windows (span 125h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.2 independent 24h windows (span 125h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -85,16 +69,16 @@
       "avg_win_4h": 0.03932,
       "avg_loss_4h": -0.03055,
       "payoff_4h": 1.287,
-      "span_h_24h": 265.4,
-      "n_eff_24h": 11.06,
-      "n_24h": 323,
-      "hit_rate_24h": 0.56,
-      "mean_ret_24h": 0.02825,
+      "span_h_24h": 269.7,
+      "n_eff_24h": 11.24,
+      "n_24h": 324,
+      "hit_rate_24h": 0.559,
+      "mean_ret_24h": 0.02808,
       "median_ret_24h": 0.01803,
       "both_halves_24h": true,
       "avg_win_24h": 0.09488,
-      "avg_loss_24h": -0.05708,
-      "payoff_24h": 1.662
+      "avg_loss_24h": -0.05687,
+      "payoff_24h": 1.668
     },
     "reversion": {
       "span_h_1h": 252.3,
