@@ -1,21 +1,22 @@
 {
-  "ts": "2026-08-29T10:24:18+00:00",
-  "scanned": 98,
+  "ts": "2026-08-29T10:30:17+00:00",
+  "scanned": 99,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "TSTUSDT",
-      "signal": "breakout",
-      "score": 0.6965,
-      "raw_score": 0.7294,
-      "weight": 0.955,
-      "price": 0.01806,
-      "why": "trades 5.6x, volume 8.8x, 71% taker-buy, +4.1% in an hour, at 80% of its 24h range",
-      "chg_24h": 0.0874,
-      "vol_surge": 8.84,
-      "chg_1h": 0.0409,
-      "market_surge": 0.0,
-      "actionable": true
+      "symbol": "GIGGLEUSDT",
+      "signal": "ignition",
+      "score": 0.7235,
+      "raw_score": 0.8221,
+      "weight": 0.88,
+      "price": 37.25,
+      "why": "trades 11.3x and volume 27.3x the prior 4h, 64% taker-buy, $137,991 burst \u2014 while price has only moved +3.6%",
+      "chg_24h": 0.0111,
+      "vol_surge": 27.28,
+      "chg_1h": 0.0356,
+      "market_surge": 14.23,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.2 independent 24h windows (span 126h): overlapping labels are not a sample"
     }
   ],
   "gate": {
