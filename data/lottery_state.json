@@ -1,13 +1,15 @@
 {
   "created": "2026-08-15",
-  "held_symbol": "DASHUSDT",
-  "entry_price": 38.84,
-  "units": 1.178,
+  "held_symbol": "HOMEUSDT",
+  "entry_price": 0.00645,
+  "units": 7091.0,
   "entry_scan_ts": "2026-08-28T19:19:40+00:00",
-  "entry_source": "scout:ignition",
-  "stopped": {},
+  "entry_source": "scout:breakout",
+  "stopped": {
+    "DASHUSDT": "2026-08-29T00:59:44+00:00"
+  },
   "entries": {
-    "2026-08-29": 1
+    "2026-08-29": 2
   },
   "realized": [
     {
@@ -475,34 +477,52 @@
       "date": "2026-08-28",
       "exit": 0.16049999999999998,
       "entry": 0.1694
+    },
+    {
+      "symbol": "DASHUSDT",
+      "source": "scout:ignition",
+      "entry_score": 0.6661,
+      "entry_time": "2026-08-29T00:09:48+00:00",
+      "exit_time": "2026-08-29T00:59:44+00:00",
+      "entry_price": 38.84,
+      "exit_price": 38.82,
+      "units": 1.178,
+      "spent_usd": 45.7535,
+      "got_usd": 45.73,
+      "pnl_pct": -0.05,
+      "pnl_usd": -0.0235,
+      "reason": "TURBO HOP \u2014 HOMEUSDT (breakout) scores 0.87 vs this seat's 0.67; rotating",
+      "date": "2026-08-29",
+      "exit": 38.82,
+      "entry": 38.84
     }
   ],
-  "last_value_usd": 45.84,
-  "last_updated_utc": "2026-08-29T00:54:09+00:00",
+  "last_value_usd": 45.75,
+  "last_updated_utc": "2026-08-29T00:59:44+00:00",
   "open_position": {
-    "symbol": "DASHUSDT",
-    "entry_time": "2026-08-29T00:09:48+00:00",
-    "entry_price": 38.84,
-    "current_price": 38.9,
-    "units": 1.178,
-    "spent_usd": 45.7535,
-    "value_usd": 45.8242,
-    "pnl_usd": 0.0707,
-    "pnl_pct": 0.15,
-    "source": "scout:ignition"
+    "symbol": "HOMEUSDT",
+    "entry_time": "2026-08-29T00:59:44+00:00",
+    "entry_price": 0.00645,
+    "current_price": 0.00645,
+    "units": 7091.0,
+    "spent_usd": 45.737,
+    "value_usd": 45.737,
+    "pnl_usd": 0.0,
+    "pnl_pct": 0.0,
+    "source": "scout:breakout"
   },
-  "spent_usd": 45.7535,
+  "spent_usd": 45.737,
   "no_pair": {
     "scan_ts": "2026-08-28T19:19:40+00:00",
     "syms": []
   },
   "wave_bonus_date": "2026-08-27",
   "book_hwm_usd": 58.4265,
-  "entry_score": 0.6661,
-  "hwm": 39.09,
+  "entry_score": 0.8704,
+  "hwm": 0.00645,
   "move_max_qv": 0.0,
   "move_qv_sum": 0.0,
   "move_qv_n": 0,
   "move_last_ms": 0,
-  "entry_time": "2026-08-29T00:09:48+00:00"
+  "entry_time": "2026-08-29T00:59:44+00:00"
 }
