@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-29T07:59:37+00:00",
-  "scanned": 98,
+  "ts": "2026-08-29T08:04:45+00:00",
+  "scanned": 97,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "DEXEUSDT",
+      "signal": "heat",
+      "score": 0.6372,
+      "raw_score": 0.6,
+      "weight": 1.062,
+      "price": 2.421,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding -0.001% \u00b7 L/S 1.59",
+      "chg_24h": 0.2735,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
+      "actionable": false,
+      "status": "benched \u2014 hit 56%, mean +0.66% over last 123 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 127h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -17,16 +33,16 @@
   },
   "scorecard": {
     "ignition": {
-      "span_h_1h": 126.1,
-      "n_eff_1h": 126.13,
+      "span_h_1h": 126.0,
+      "n_eff_1h": 126.05,
       "n_1h": 400,
-      "hit_rate_1h": 0.378,
-      "mean_ret_1h": -0.00104,
-      "median_ret_1h": -0.00119,
+      "hit_rate_1h": 0.38,
+      "mean_ret_1h": -0.00103,
+      "median_ret_1h": -0.00115,
       "both_halves_1h": false,
-      "avg_win_1h": 0.01114,
-      "avg_loss_1h": -0.01086,
-      "payoff_1h": 1.026,
+      "avg_win_1h": 0.0111,
+      "avg_loss_1h": -0.0109,
+      "payoff_1h": 1.018,
       "span_h_4h": 123.9,
       "n_eff_4h": 30.97,
       "n_4h": 400,
