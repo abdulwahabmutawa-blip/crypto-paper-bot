@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-29T10:40:57+00:00",
-  "scanned": 95,
+  "ts": "2026-08-29T10:46:35+00:00",
+  "scanned": 97,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "TAOUSDT",
-      "signal": "ignition",
-      "score": 0.6644,
-      "raw_score": 0.7525,
-      "weight": 0.883,
-      "price": 234.4,
-      "why": "trades 5.4x and volume 13.0x the prior 4h, 84% taker-buy, $253,893 burst \u2014 while price has only moved +0.9%",
-      "chg_24h": -0.041,
-      "vol_surge": 12.98,
-      "chg_1h": 0.0095,
-      "market_surge": 3.03,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.2 independent 24h windows (span 126h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.2 independent 24h windows (span 126h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 7,
+    "count": 6,
     "baseline": 13.0,
     "wave": false
   },
