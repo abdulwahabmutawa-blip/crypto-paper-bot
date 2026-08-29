@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-29T11:30:33+00:00",
+  "ts": "2026-08-29T11:36:31+00:00",
   "sources": {
     "coingecko": [
       "HNT",
@@ -16,9 +16,10 @@
     "stocktwits": [],
     "movers": [
       "DEXE",
-      "SNDKB",
       "HEMI",
+      "SNDKB",
       "ZEC",
+      "TRUMP",
       "RLUSD"
     ],
     "watcher": [
@@ -47,7 +48,7 @@
         "coingecko",
         "watcher"
       ],
-      "funding": 2.4e-05,
+      "funding": 1.8e-05,
       "long_short": 1.6
     },
     {
@@ -59,6 +60,16 @@
       ],
       "funding": 5e-05,
       "long_short": 1.2
+    },
+    {
+      "symbol": "TRUMP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 2.2e-05,
+      "long_short": 2.32
     },
     {
       "symbol": "BTC",
@@ -74,7 +85,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 5.2e-05
+      "funding": 5e-05
     },
     {
       "symbol": "HNT",
@@ -112,14 +123,6 @@
         "coingecko"
       ],
       "funding": -7e-06
-    },
-    {
-      "symbol": "TRUMP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 1.9e-05
     },
     {
       "symbol": "UNI",
