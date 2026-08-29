@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-29T18:34:00+00:00",
+  "ts": "2026-08-29T18:39:47+00:00",
   "scanned": 70,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "HUMAUSDT",
+      "signal": "ignition",
+      "score": 0.6178,
+      "raw_score": 0.688,
+      "weight": 0.898,
+      "price": 0.02055,
+      "why": "trades 5.6x and volume 17.8x the prior 4h, 69% taker-buy, $148,421 burst \u2014 while price has only moved +2.3%",
+      "chg_24h": -0.1892,
+      "vol_surge": 17.81,
+      "chg_1h": 0.0229,
+      "market_surge": 7.81,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.0 independent 24h windows (span 120h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.0 independent 24h windows (span 120h): overlapping labels are not a sample",
     "breakout": "actionable",
