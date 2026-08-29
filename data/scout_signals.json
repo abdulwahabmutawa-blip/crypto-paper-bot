@@ -1,21 +1,22 @@
 {
-  "ts": "2026-08-29T15:31:17+00:00",
-  "scanned": 94,
+  "ts": "2026-08-29T15:37:03+00:00",
+  "scanned": 92,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "ZKPUSDT",
-      "signal": "breakout",
-      "score": 0.7974,
-      "raw_score": 0.8359,
-      "weight": 0.954,
-      "price": 0.053,
-      "why": "trades 7.8x, volume 12.0x, 60% taker-buy, +5.6% in an hour, at 90% of its 24h range",
-      "chg_24h": 0.2441,
-      "vol_surge": 12.0,
-      "chg_1h": 0.0558,
-      "market_surge": 0.0,
-      "actionable": true
+      "symbol": "APTUSDT",
+      "signal": "ignition",
+      "score": 0.755,
+      "raw_score": 0.8454,
+      "weight": 0.893,
+      "price": 0.541,
+      "why": "trades 10.7x and volume 7.1x the prior 4h, 67% taker-buy, $56,134 burst \u2014 while price has only moved +0.0%",
+      "chg_24h": -0.0305,
+      "vol_surge": 7.1,
+      "chg_1h": 0.0,
+      "market_surge": 2.13,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.0 independent 24h windows (span 120h): overlapping labels are not a sample"
     }
   ],
   "gate": {
