@@ -1,31 +1,30 @@
-# Fleet status — 2026-08-28 (UTC)
+# Fleet status — 2026-08-29 (UTC)
 
 10 paper bots ($1,000 each, no real money) + Watcher (Grok risk gate) + Lottery (REAL money, VPS).
 
 | Bot | Holds | 24h change | Value (asof) |
 |---|---|---|---|
-| crypto (trend) | SOL-USD | No new trade (held since 08-27) | $1,199.98 (08-28 04:59) |
-| congress | 10 positions | No trade | $1,015.47 (08-27) |
-| meanrev | WMT | No new trade (held since 08-26) | $1,214.37 (08-28 04:59) |
-| commodity | DBC | SELL USO → BUY DBC (signal flip) 08-27 | $1,011.77 (08-28 04:59) |
-| allweather | 5-asset basket | No trade | $1,032.62 (08-28 04:59) |
-| hype (sentiment) | CASH | SELL GRRR → CASH (Grok scans stale 24h) 08-27 | $1,459.59 (08-28 04:59) |
-| hypecrypto | ENA-USD | BUY ENA-USD (fresh Grok euphoric scan) 08-28 | $887.17 (08-28 04:59) |
-| Hunter | SOL-USD | No trade | $988.56 (08-28 04:59) |
-| Scholar | SPY | No trade | $1,021.53 (08-28 04:59) |
-| Analyst | SPY | No trade | $1,026.85 (08-28 04:59) |
-| Watcher (sentinel) | — (risk gate) | Last scan 08-28 00:02 UTC, risk_level=caution | ~5h old |
-| **Lottery (REAL $)** | CASH | WLDUSDT stopped out 08-27 19:32 UTC, no commits since 19:38 UTC | ~$51.75 (08-27 19:38) |
+| crypto (trend) | SOL-USD | No new trade (held since 08-27) | $1,166.74 (08-29) |
+| congress | 10 positions | No trade | $997.79 (08-28, markets closed Sat) |
+| meanrev | WMT | No new trade (held since 08-26) | $1,220.17 (08-28) |
+| commodity | DBC | No new trade (held since 08-27) | $1,009.64 (08-28) |
+| allweather | 5-asset basket | No trade | $1,025.04 (08-28) |
+| hype (sentiment) | NVDA | BUY NVDA — Grok euphoric, 08-28 11:16 UTC | $1,398.64 (08-28), down ~4.2% on the day |
+| hypecrypto | ENA-USD | No new trade (held since 08-28) | $887.72 (08-29) |
+| Hunter | SOL-USD | No trade | $1,005.32 (08-29) |
+| Scholar | SPY | No trade | $1,019.33 (08-28) |
+| Analyst | SPY | No trade | $1,024.56 (08-28) |
+| Watcher (sentinel) | — (risk gate) | Last scan 08-29 03:22 UTC, risk_level=caution | fresh (~2h old) |
+| **Lottery (REAL $)** | HOMEUSDT | Resumed after yesterday's 9h stall — 2 stop/fade exits then turbo-hopped into HOME | ~$44.05 (08-29 04:59), down -3.7% on this position |
 
 ## Changed
-- commodity: SELL USO → BUY DBC, signal flip, 08-27.
-- hype/sentiment: SELL GRRR → CASH, Grok scans went stale (24h), 08-27.
-- hypecrypto: BUY ENA-USD on a fresh euphoric scan, 08-28 — position is down ~5.5% intraday since entry.
-- crypto, congress, meanrev, allweather, Hunter, Scholar, Analyst: no trades, holdings unchanged.
-- Owner pushed two code/config changes today (not by this digest): sentinel scan cap raised 100→130 (mid-month cap had gone stale and silenced Watcher scans, which triggered a forced WLDUSDT exit in the Lottery book); and "TURBO MODE" — an owner-directed, phone-toggleable aggressive-entry change to the Lottery book, pre-registered for a 20-trade evaluation.
-- Paper fleet had one ~4h gap in cycle commits (20:06 UTC 08-27 → 00:03 UTC 08-28), a GitHub Actions scheduling delay — self-recovered, cadence has been healthy (~13min) since.
+- hype/sentiment: CASH → NVDA, Grok euphoric buy 08-28 11:16 UTC (landed after yesterday's digest cutoff).
+- Lottery: back to committing normally after the ~9h stall flagged yesterday. SOXLBUSDT stopped -6.7%, ENAUSDT exited -5.3% ("fuel gone"), then DASHUSDT turbo-hopped into HOMEUSDT (-0.05% on the hop). Now holding HOMEUSDT, down -3.7% since entry.
+- All other paper bots: no new trades, holdings unchanged since yesterday.
+- No failed or cancelled-for-error GitHub Actions runs in the visible history; cycle/lottery commit cadence looks healthy (~13min / ~5min respectively).
 
 ## Needs a look
-- **Lottery (real money) has not committed anything since 08-27 19:38 UTC — over 9 hours of silence**, spanning both the sentinel cap fix (21:01 UTC) and the TURBO MODE push (01:26 UTC) the owner made specifically to change its behavior. It last force-sold WLDUSDT at 19:32 UTC and went to cash; book value $51.75 vs high-water $58.43 (86% of peak, well above the 62.5% floor, so this isn't the floor-halt). The Lottery book runs on the owner's VPS, not GitHub Actions, so this digest can't see why it's not cycling — worth checking the VPS process is actually up before assuming TURBO MODE is live.
-- Watcher's August scan count is 119 of the new 130 cap with 3 days left in the month — not urgent, but will need watching if cadence doesn't taper.
-- Analyst cash sits at −$1.16 (fee/rounding artifact, same pattern as prior digests, not worsening materially).
+- Lottery book value $44.05 vs $58.43 high-water = 75% of peak, down from 86% yesterday — still above the 62.5% floor but trending toward it; worth watching.
+- Watcher's August scan count is 122/130 with 2 days left in the month — same trend flagged yesterday, not urgent yet.
+- Analyst cash sits at −$1.23 (rounding artifact, same pattern as prior digests, not worsening materially).
+- `git log` only shows ~3h of local history (repo history gets squashed/rewritten periodically) — this digest relied on each bot's own state-file trade/history log instead, so trade attribution should be solid, but anything git-only (e.g. non-bot commits) older than ~3h wasn't visible to this run.
