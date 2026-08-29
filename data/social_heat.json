@@ -1,30 +1,30 @@
 {
-  "ts": "2026-08-29T11:19:21+00:00",
+  "ts": "2026-08-29T11:25:51+00:00",
   "sources": {
     "coingecko": [
       "HNT",
       "BTC",
+      "ENA",
       "PENGU",
       "SOL",
-      "ENA",
-      "LIT",
       "UNI",
-      "INJ",
-      "PUMP"
+      "PUMP",
+      "TRUMP",
+      "LIT"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "DEXE",
+      "HEMI",
       "SNDKB",
       "ZEC",
-      "HEMI",
       "RLUSD"
     ],
     "watcher": [
       "ENA",
       "DEXE",
-      "HEMI"
+      "PENGU"
     ],
     "cryptopanic": []
   },
@@ -46,18 +46,18 @@
         "coingecko",
         "watcher"
       ],
-      "funding": 3e-05,
+      "funding": 2.6e-05,
       "long_short": 1.6
     },
     {
-      "symbol": "HEMI",
+      "symbol": "PENGU",
       "surfaces": 2,
       "sources": [
-        "movers",
+        "coingecko",
         "watcher"
       ],
-      "funding": 5.6e-05,
-      "long_short": 0.86
+      "funding": 5e-05,
+      "long_short": 1.2
     },
     {
       "symbol": "BTC",
@@ -65,7 +65,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0001
+      "funding": 9.8e-05
+    },
+    {
+      "symbol": "HEMI",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5.4e-05
     },
     {
       "symbol": "HNT",
@@ -75,23 +83,7 @@
       ]
     },
     {
-      "symbol": "INJ",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 6.4e-05
-    },
-    {
       "symbol": "LIT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -129,12 +121,20 @@
       "funding": -7e-06
     },
     {
+      "symbol": "TRUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 1.7e-05
+    },
+    {
       "symbol": "UNI",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 8.6e-05
+      "funding": 8.4e-05
     },
     {
       "symbol": "ZEC",
