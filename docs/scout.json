@@ -1,8 +1,39 @@
 {
-  "ts": "2026-08-29T05:32:49+00:00",
+  "ts": "2026-08-29T05:37:35+00:00",
   "scanned": 103,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "PROMUSDT",
+      "signal": "ignition",
+      "score": 0.7653,
+      "raw_score": 0.8647,
+      "weight": 0.885,
+      "price": 5.073,
+      "why": "trades 12.2x and volume 13.2x the prior 4h, 64% taker-buy, $163,252 burst \u2014 while price has only moved -1.8%",
+      "chg_24h": 0.0512,
+      "vol_surge": 13.16,
+      "chg_1h": -0.0184,
+      "market_surge": 0.0,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.2 independent 24h windows (span 125h): overlapping labels are not a sample"
+    },
+    {
+      "symbol": "BICOUSDT",
+      "signal": "ignition",
+      "score": 0.5441,
+      "raw_score": 0.6148,
+      "weight": 0.885,
+      "price": 0.0228,
+      "why": "trades 4.3x and volume 10.8x the prior 4h, 65% taker-buy, $122,756 burst \u2014 while price has only moved +2.7%",
+      "chg_24h": -0.1767,
+      "vol_surge": 10.77,
+      "chg_1h": 0.0275,
+      "market_surge": 3.84,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.2 independent 24h windows (span 125h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.2 independent 24h windows (span 125h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -11,7 +42,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 11,
+    "count": 10,
     "baseline": 13.0,
     "wave": false
   },
