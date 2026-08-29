@@ -1,10 +1,10 @@
 {
-  "ts": "2026-08-29T13:55:38+00:00",
+  "ts": "2026-08-29T14:01:38+00:00",
   "scanned": 92,
   "ruleset": 3,
   "candidates": [],
   "gate": {
-    "ignition": "probation \u2014 400 rows but only 5.1 independent 24h windows (span 122h): overlapping labels are not a sample",
+    "ignition": "probation \u2014 400 rows but only 5.1 independent 24h windows (span 123h): overlapping labels are not a sample",
     "breakout": "actionable",
     "reversion": "benched \u2014 hit 49%, mean +0.57% over last 37 at 24h: not beating 4x the round trip",
     "heat": "benched \u2014 hit 55%, mean +0.59% over last 125 at 24h: not beating 4x the round trip",
@@ -12,7 +12,7 @@
   },
   "breadth": {
     "count": 8,
-    "baseline": 13.0,
+    "baseline": 12.0,
     "wave": false
   },
   "scorecard": {
@@ -37,16 +37,16 @@
       "avg_win_4h": 0.01915,
       "avg_loss_4h": -0.02028,
       "payoff_4h": 0.944,
-      "span_h_24h": 122.4,
-      "n_eff_24h": 5.1,
+      "span_h_24h": 122.6,
+      "n_eff_24h": 5.11,
       "n_24h": 400,
       "hit_rate_24h": 0.417,
-      "mean_ret_24h": 0.00297,
-      "median_ret_24h": -0.0053,
+      "mean_ret_24h": 0.0029,
+      "median_ret_24h": -0.00542,
       "both_halves_24h": false,
       "avg_win_24h": 0.05537,
-      "avg_loss_24h": -0.03812,
-      "payoff_24h": 1.452
+      "avg_loss_24h": -0.03825,
+      "payoff_24h": 1.448
     },
     "breakout": {
       "span_h_1h": 300.3,
@@ -69,16 +69,16 @@
       "avg_win_4h": 0.03932,
       "avg_loss_4h": -0.03072,
       "payoff_4h": 1.28,
-      "span_h_24h": 277.5,
-      "n_eff_24h": 11.56,
-      "n_24h": 328,
-      "hit_rate_24h": 0.555,
-      "mean_ret_24h": 0.02797,
-      "median_ret_24h": 0.01761,
+      "span_h_24h": 277.8,
+      "n_eff_24h": 11.58,
+      "n_24h": 329,
+      "hit_rate_24h": 0.553,
+      "mean_ret_24h": 0.02787,
+      "median_ret_24h": 0.01701,
       "both_halves_24h": true,
       "avg_win_24h": 0.09524,
-      "avg_loss_24h": -0.05627,
-      "payoff_24h": 1.693
+      "avg_loss_24h": -0.05592,
+      "payoff_24h": 1.703
     },
     "reversion": {
       "span_h_1h": 252.3,
