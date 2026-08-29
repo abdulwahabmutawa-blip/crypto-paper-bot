@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-29T02:54:55+00:00",
+  "ts": "2026-08-29T03:00:31+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
@@ -10,9 +10,9 @@
       "ENA",
       "BTC",
       "SOL",
-      "TAO",
-      "BNB",
-      "SHIB"
+      "PENDLE",
+      "SHIB",
+      "ASTER"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,7 +22,8 @@
       "TRUMP",
       "ZEC",
       "SNDKB",
-      "TRX"
+      "TRX",
+      "RLUSD"
     ],
     "watcher": [
       "ENA",
@@ -40,7 +41,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -9.9e-05,
+      "funding": -9.7e-05,
       "long_short": 1.67
     },
     {
@@ -60,7 +61,7 @@
         "coingecko",
         "watcher"
       ],
-      "funding": 3.5e-05,
+      "funding": 3.6e-05,
       "long_short": 1.83
     },
     {
@@ -84,12 +85,12 @@
       "long_short": 0.58
     },
     {
-      "symbol": "BNB",
+      "symbol": "ASTER",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0
+      "funding": 5e-05
     },
     {
       "symbol": "BTC",
@@ -97,7 +98,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.3e-05
+      "funding": 9.4e-05
     },
     {
       "symbol": "FOGO",
@@ -113,7 +114,15 @@
       "sources": [
         "movers"
       ],
-      "funding": 6.2e-05
+      "funding": 5.9e-05
+    },
+    {
+      "symbol": "PENDLE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "PUMP",
@@ -122,6 +131,13 @@
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "RLUSD",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
     },
     {
       "symbol": "SHIB",
@@ -136,14 +152,6 @@
       "sources": [
         "movers"
       ]
-    },
-    {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "TRX",
