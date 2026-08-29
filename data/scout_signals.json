@@ -1,17 +1,32 @@
 {
-  "ts": "2026-08-29T09:11:17+00:00",
-  "scanned": 99,
+  "ts": "2026-08-29T09:16:37+00:00",
+  "scanned": 98,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ONGUSDT",
+      "signal": "breakout",
+      "score": 0.667,
+      "raw_score": 0.6984,
+      "weight": 0.955,
+      "price": 0.13399,
+      "why": "trades 5.3x, volume 7.5x, 65% taker-buy, +4.4% in an hour, at 95% of its 24h range",
+      "chg_24h": 0.1851,
+      "vol_surge": 7.48,
+      "chg_1h": 0.044,
+      "market_surge": 10.24,
+      "actionable": true
+    }
+  ],
   "gate": {
-    "ignition": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 127h): overlapping labels are not a sample",
+    "ignition": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 126h): overlapping labels are not a sample",
     "breakout": "actionable",
     "reversion": "benched \u2014 hit 49%, mean +0.55% over last 35 at 24h: not beating 4x the round trip",
     "heat": "benched \u2014 hit 56%, mean +0.66% over last 123 at 24h: not beating 4x the round trip",
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 8,
+    "count": 9,
     "baseline": 13.0,
     "wave": false
   },
@@ -37,16 +52,16 @@
       "avg_win_4h": 0.01967,
       "avg_loss_4h": -0.01989,
       "payoff_4h": 0.989,
-      "span_h_24h": 127.0,
-      "n_eff_24h": 5.29,
+      "span_h_24h": 126.4,
+      "n_eff_24h": 5.26,
       "n_24h": 400,
-      "hit_rate_24h": 0.435,
-      "mean_ret_24h": 0.00465,
-      "median_ret_24h": -0.00405,
+      "hit_rate_24h": 0.438,
+      "mean_ret_24h": 0.00477,
+      "median_ret_24h": -0.00392,
       "both_halves_24h": false,
-      "avg_win_24h": 0.05392,
-      "avg_loss_24h": -0.03664,
-      "payoff_24h": 1.471
+      "avg_win_24h": 0.0537,
+      "avg_loss_24h": -0.03667,
+      "payoff_24h": 1.465
     },
     "breakout": {
       "span_h_1h": 291.4,
