@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-29T06:36:46+00:00",
+  "ts": "2026-08-29T06:42:15+00:00",
   "scanned": 101,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ZROUSDT",
-      "signal": "ignition",
-      "score": 0.7228,
-      "raw_score": 0.8167,
-      "weight": 0.885,
-      "price": 1.055,
-      "why": "trades 9.9x and volume 6.7x the prior 4h, 68% taker-buy, $58,781 burst \u2014 while price has only moved -0.8%",
-      "chg_24h": -0.1006,
-      "vol_surge": 6.7,
-      "chg_1h": -0.0075,
-      "market_surge": 1.55,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 126h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 126h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -33,16 +17,16 @@
   },
   "scorecard": {
     "ignition": {
-      "span_h_1h": 125.0,
-      "n_eff_1h": 124.97,
+      "span_h_1h": 125.4,
+      "n_eff_1h": 125.43,
       "n_1h": 400,
       "hit_rate_1h": 0.378,
-      "mean_ret_1h": -0.00105,
-      "median_ret_1h": -0.00119,
+      "mean_ret_1h": -0.00101,
+      "median_ret_1h": -0.0012,
       "both_halves_1h": false,
       "avg_win_1h": 0.01133,
-      "avg_loss_1h": -0.01097,
-      "payoff_1h": 1.032,
+      "avg_loss_1h": -0.01085,
+      "payoff_1h": 1.044,
       "span_h_4h": 123.9,
       "n_eff_4h": 30.97,
       "n_4h": 400,
