@@ -1,17 +1,19 @@
 {
-  "ts": "2026-08-29T04:06:41+00:00",
+  "ts": "2026-08-29T04:12:21+00:00",
   "sources": {
     "coingecko": [
       "SOL",
       "PENGU",
+      "PUMP",
       "FOGO",
       "ZEC",
-      "TRUMP",
       "ETH",
       "LIT",
-      "FET",
-      "PUMP",
-      "VET"
+      "XAUT",
+      "TRUMP",
+      "ENA",
+      "HNT",
+      "RENDER"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,6 +24,7 @@
       "SNDKB",
       "ZEC",
       "TRX",
+      "ENA",
       "RLUSD"
     ],
     "watcher": [
@@ -33,13 +36,24 @@
   },
   "heat": [
     {
+      "symbol": "ENA",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.58
+    },
+    {
       "symbol": "DEXE",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": -3.3e-05,
+      "funding": -3.1e-05,
       "long_short": 1.65
     },
     {
@@ -73,28 +87,12 @@
       "long_short": 0.58
     },
     {
-      "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "watcher"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 4.4e-05
-    },
-    {
-      "symbol": "FET",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -0.000231
+      "funding": 4.8e-05
     },
     {
       "symbol": "FOGO",
@@ -103,6 +101,13 @@
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "HNT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ]
     },
     {
       "symbol": "LIT",
@@ -122,6 +127,14 @@
     },
     {
       "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "RENDER",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -159,12 +172,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "VET",
+      "symbol": "XAUT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0001
+      "funding": 1e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."

@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-29T04:06:48+00:00",
+  "ts": "2026-08-29T04:12:28+00:00",
   "scanned": 104,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ENAUSDT",
+      "signal": "heat",
+      "score": 0.6402,
+      "raw_score": 0.6,
+      "weight": 1.067,
+      "price": 0.162,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.005% \u00b7 L/S 1.58",
+      "chg_24h": 0.0056,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
+      "actionable": false,
+      "status": "benched \u2014 hit 56%, mean +0.66% over last 123 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.2 independent 24h windows (span 125h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 9,
+    "count": 8,
     "baseline": 13.0,
     "wave": false
   },
@@ -27,16 +43,16 @@
       "avg_win_1h": 0.01135,
       "avg_loss_1h": -0.01098,
       "payoff_1h": 1.034,
-      "span_h_4h": 122.7,
-      "n_eff_4h": 30.67,
+      "span_h_4h": 122.9,
+      "n_eff_4h": 30.72,
       "n_4h": 400,
-      "hit_rate_4h": 0.38,
-      "mean_ret_4h": -0.00339,
-      "median_ret_4h": -0.00358,
+      "hit_rate_4h": 0.383,
+      "mean_ret_4h": -0.00332,
+      "median_ret_4h": -0.00352,
       "both_halves_4h": false,
-      "avg_win_4h": 0.0198,
-      "avg_loss_4h": -0.0201,
-      "payoff_4h": 0.985,
+      "avg_win_4h": 0.0197,
+      "avg_loss_4h": -0.02008,
+      "payoff_4h": 0.981,
       "span_h_24h": 124.7,
       "n_eff_24h": 5.2,
       "n_24h": 400,
