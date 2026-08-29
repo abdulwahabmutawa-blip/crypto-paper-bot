@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-29T13:44:27+00:00",
+  "ts": "2026-08-29T13:49:45+00:00",
   "scanned": 93,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "HBARUSDT",
+      "signal": "ignition",
+      "score": 0.6948,
+      "raw_score": 0.7851,
+      "weight": 0.885,
+      "price": 0.0751,
+      "why": "trades 5.2x and volume 19.4x the prior 4h, 95% taker-buy, $87,425 burst \u2014 while price has only moved +0.3%",
+      "chg_24h": -0.0286,
+      "vol_surge": 19.37,
+      "chg_1h": 0.0031,
+      "market_surge": 1.45,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.1 independent 24h windows (span 122h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.1 independent 24h windows (span 122h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 7,
+    "count": 9,
     "baseline": 13.0,
     "wave": false
   },
@@ -37,16 +53,16 @@
       "avg_win_4h": 0.01915,
       "avg_loss_4h": -0.02028,
       "payoff_4h": 0.944,
-      "span_h_24h": 122.3,
+      "span_h_24h": 122.4,
       "n_eff_24h": 5.1,
       "n_24h": 400,
       "hit_rate_24h": 0.417,
-      "mean_ret_24h": 0.00295,
-      "median_ret_24h": -0.00542,
+      "mean_ret_24h": 0.00297,
+      "median_ret_24h": -0.0053,
       "both_halves_24h": false,
-      "avg_win_24h": 0.05569,
-      "avg_loss_24h": -0.038,
-      "payoff_24h": 1.466
+      "avg_win_24h": 0.05537,
+      "avg_loss_24h": -0.03812,
+      "payoff_24h": 1.452
     },
     "breakout": {
       "span_h_1h": 300.3,
