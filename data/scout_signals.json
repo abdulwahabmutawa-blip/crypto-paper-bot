@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-29T16:06:18+00:00",
-  "scanned": 81,
+  "ts": "2026-08-29T16:11:41+00:00",
+  "scanned": 82,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "INJUSDT",
+      "signal": "ignition",
+      "score": 0.56,
+      "raw_score": 0.6271,
+      "weight": 0.893,
+      "price": 5.092,
+      "why": "trades 4.0x and volume 8.4x the prior 4h, 66% taker-buy, $86,688 burst \u2014 while price has only moved +0.4%",
+      "chg_24h": -0.023,
+      "vol_surge": 8.44,
+      "chg_1h": 0.0037,
+      "market_surge": 4.03,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.0 independent 24h windows (span 120h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.0 independent 24h windows (span 120h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 13,
     "baseline": 12.0,
     "wave": false
   },
