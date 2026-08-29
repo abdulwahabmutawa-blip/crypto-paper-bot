@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-29T18:28:38+00:00",
+  "ts": "2026-08-29T18:34:00+00:00",
   "scanned": 70,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "VIRTUALUSDT",
-      "signal": "ignition",
-      "score": 0.6632,
-      "raw_score": 0.7386,
-      "weight": 0.898,
-      "price": 0.6984,
-      "why": "trades 6.6x and volume 21.9x the prior 4h, 62% taker-buy, $108,977 burst \u2014 while price has only moved +1.2%",
-      "chg_24h": 0.022,
-      "vol_surge": 21.88,
-      "chg_1h": 0.0117,
-      "market_surge": 1.56,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.0 independent 24h windows (span 120h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.0 independent 24h windows (span 120h): overlapping labels are not a sample",
     "breakout": "actionable",
