@@ -1,20 +1,20 @@
 {
-  "ts": "2026-08-29T23:30:17+00:00",
-  "scanned": 66,
+  "ts": "2026-08-29T23:35:36+00:00",
+  "scanned": 64,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "WLDUSDT",
+      "symbol": "POLUSDT",
       "signal": "ignition",
-      "score": 0.5234,
-      "raw_score": 0.5927,
+      "score": 0.4247,
+      "raw_score": 0.481,
       "weight": 0.883,
-      "price": 0.3778,
-      "why": "trades 4.4x and volume 6.0x the prior 4h, 71% taker-buy, $75,261 burst \u2014 while price has only moved +0.4%",
-      "chg_24h": -0.0029,
-      "vol_surge": 6.04,
-      "chg_1h": 0.0043,
-      "market_surge": 1.01,
+      "price": 0.10545,
+      "why": "trades 4.5x and volume 5.4x the prior 4h, 64% taker-buy, $104,017 burst \u2014 while price has only moved +3.6%",
+      "chg_24h": -0.0238,
+      "vol_surge": 5.38,
+      "chg_1h": 0.0365,
+      "market_surge": 5.68,
       "actionable": false,
       "status": "probation \u2014 400 rows but only 5.1 independent 24h windows (span 122h): overlapping labels are not a sample"
     }
@@ -27,22 +27,22 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 11,
+    "count": 12,
     "baseline": 13.0,
     "wave": false
   },
   "scorecard": {
     "ignition": {
-      "span_h_1h": 129.4,
-      "n_eff_1h": 129.42,
+      "span_h_1h": 129.8,
+      "n_eff_1h": 129.81,
       "n_1h": 400,
-      "hit_rate_1h": 0.367,
-      "mean_ret_1h": -0.00128,
-      "median_ret_1h": -0.00125,
+      "hit_rate_1h": 0.37,
+      "mean_ret_1h": -0.00125,
+      "median_ret_1h": -0.00122,
       "both_halves_1h": false,
-      "avg_win_1h": 0.01085,
-      "avg_loss_1h": -0.01048,
-      "payoff_1h": 1.035,
+      "avg_win_1h": 0.01081,
+      "avg_loss_1h": -0.01049,
+      "payoff_1h": 1.03,
       "span_h_4h": 128.0,
       "n_eff_4h": 31.99,
       "n_4h": 400,
