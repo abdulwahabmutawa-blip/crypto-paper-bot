@@ -1,23 +1,8 @@
 {
-  "ts": "2026-08-29T03:33:34+00:00",
+  "ts": "2026-08-29T03:39:17+00:00",
   "scanned": 106,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "MUBARAKUSDT",
-      "signal": "breakout",
-      "score": 0.7242,
-      "raw_score": 0.756,
-      "weight": 0.958,
-      "price": 0.02269,
-      "why": "trades 8.5x, volume 19.6x, 66% taker-buy, +2.3% in an hour, at 92% of its 24h range",
-      "chg_24h": 0.0713,
-      "vol_surge": 19.63,
-      "chg_1h": 0.0235,
-      "market_surge": 6.95,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.2 independent 24h windows (span 125h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -26,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 9,
+    "count": 8,
     "baseline": 13.0,
     "wave": false
   },
