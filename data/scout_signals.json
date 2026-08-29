@@ -1,8 +1,54 @@
 {
-  "ts": "2026-08-29T20:59:28+00:00",
-  "scanned": 62,
+  "ts": "2026-08-29T21:05:35+00:00",
+  "scanned": 66,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "CRCLBUSDT",
+      "signal": "ignition",
+      "score": 0.8435,
+      "raw_score": 0.9531,
+      "weight": 0.885,
+      "price": 88.0,
+      "why": "trades 9.7x and volume 69.5x the prior 4h, 87% taker-buy, $281,117 burst \u2014 while price has only moved -0.1%",
+      "chg_24h": 0.0132,
+      "vol_surge": 69.48,
+      "chg_1h": -0.0012,
+      "market_surge": 18.21,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.0 independent 24h windows (span 121h): overlapping labels are not a sample"
+    },
+    {
+      "symbol": "HBARUSDT",
+      "signal": "ignition",
+      "score": 0.7122,
+      "raw_score": 0.8047,
+      "weight": 0.885,
+      "price": 0.07552,
+      "why": "trades 7.7x and volume 9.0x the prior 4h, 69% taker-buy, $58,425 burst \u2014 while price has only moved +0.0%",
+      "chg_24h": -0.0155,
+      "vol_surge": 9.03,
+      "chg_1h": 0.0001,
+      "market_surge": 3.81,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.0 independent 24h windows (span 121h): overlapping labels are not a sample"
+    },
+    {
+      "symbol": "TAOUSDT",
+      "signal": "ignition",
+      "score": 0.5153,
+      "raw_score": 0.5823,
+      "weight": 0.885,
+      "price": 235.5,
+      "why": "trades 4.3x and volume 6.4x the prior 4h, 66% taker-buy, $110,905 burst \u2014 while price has only moved -0.6%",
+      "chg_24h": 0.0047,
+      "vol_surge": 6.4,
+      "chg_1h": -0.0059,
+      "market_surge": 1.93,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.0 independent 24h windows (span 121h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.0 independent 24h windows (span 121h): overlapping labels are not a sample",
     "breakout": "actionable",
