@@ -1,23 +1,8 @@
 {
-  "ts": "2026-08-29T12:30:45+00:00",
-  "scanned": 95,
+  "ts": "2026-08-29T12:36:05+00:00",
+  "scanned": 96,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ROBOUSDT",
-      "signal": "breakout",
-      "score": 0.7218,
-      "raw_score": 0.7558,
-      "weight": 0.955,
-      "price": 0.01525,
-      "why": "trades 9.5x, volume 15.2x, 61% taker-buy, +2.7% in an hour, at 100% of its 24h range",
-      "chg_24h": 0.1186,
-      "vol_surge": 15.22,
-      "chg_1h": 0.0269,
-      "market_surge": 8.65,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.2 independent 24h windows (span 125h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -26,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 8,
+    "count": 9,
     "baseline": 13.0,
     "wave": false
   },
@@ -52,16 +37,16 @@
       "avg_win_4h": 0.01925,
       "avg_loss_4h": -0.01989,
       "payoff_4h": 0.968,
-      "span_h_24h": 124.9,
-      "n_eff_24h": 5.21,
+      "span_h_24h": 124.6,
+      "n_eff_24h": 5.19,
       "n_24h": 400,
       "hit_rate_24h": 0.422,
-      "mean_ret_24h": 0.0035,
+      "mean_ret_24h": 0.00354,
       "median_ret_24h": -0.0049,
       "both_halves_24h": false,
       "avg_win_24h": 0.05507,
-      "avg_loss_24h": -0.03735,
-      "payoff_24h": 1.474
+      "avg_loss_24h": -0.03727,
+      "payoff_24h": 1.478
     },
     "breakout": {
       "span_h_1h": 299.2,
