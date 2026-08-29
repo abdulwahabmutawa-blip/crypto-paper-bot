@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-29T15:08:41+00:00",
+  "ts": "2026-08-29T15:14:31+00:00",
   "sources": {
     "coingecko": [
       "HNT",
@@ -7,18 +7,20 @@
       "ZEC",
       "LIT",
       "BTC",
-      "TAO",
-      "ENA",
       "ETH",
       "ICP",
-      "SOL"
+      "ENA",
+      "SOL",
+      "PENGU",
+      "SUI"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "DEXE",
       "ONG",
+      "DEXE",
       "ZEC",
+      "BMT",
       "RLUSD"
     ],
     "watcher": [
@@ -36,7 +38,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -5.6e-05,
+      "funding": -4.6e-05,
       "long_short": 1.67
     },
     {
@@ -46,8 +48,18 @@
         "coingecko",
         "watcher"
       ],
-      "funding": 3.6e-05,
+      "funding": 3e-05,
       "long_short": 1.58
+    },
+    {
+      "symbol": "PENGU",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "watcher"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.19
     },
     {
       "symbol": "ZEC",
@@ -58,6 +70,14 @@
       ],
       "funding": 0.0001,
       "long_short": 0.59
+    },
+    {
+      "symbol": "BMT",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 1.3e-05
     },
     {
       "symbol": "BTC",
@@ -104,15 +124,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000987
-    },
-    {
-      "symbol": "PENGU",
-      "surfaces": 1,
-      "sources": [
-        "watcher"
-      ],
-      "funding": 5e-05
+      "funding": -0.000929
     },
     {
       "symbol": "PUMP",
@@ -135,10 +147,10 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.8e-05
+      "funding": -2e-05
     },
     {
-      "symbol": "TAO",
+      "symbol": "SUI",
       "surfaces": 1,
       "sources": [
         "coingecko"
