@@ -1,23 +1,8 @@
 {
-  "ts": "2026-08-29T00:58:14+00:00",
-  "scanned": 115,
+  "ts": "2026-08-29T01:04:14+00:00",
+  "scanned": 112,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "HOMEUSDT",
-      "signal": "breakout",
-      "score": 0.8704,
-      "raw_score": 0.9086,
-      "weight": 0.958,
-      "price": 0.00647,
-      "why": "trades 18.1x, volume 27.4x, 76% taker-buy, +6.6% in an hour, at 92% of its 24h range",
-      "chg_24h": 0.0486,
-      "vol_surge": 27.4,
-      "chg_1h": 0.0659,
-      "market_surge": 12.32,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.2 independent 24h windows (span 126h): overlapping labels are not a sample",
     "breakout": "actionable",
