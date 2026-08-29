@@ -1,25 +1,27 @@
 {
-  "ts": "2026-08-29T12:08:41+00:00",
+  "ts": "2026-08-29T12:14:31+00:00",
   "sources": {
     "coingecko": [
       "HNT",
-      "SOL",
       "BTC",
+      "SOL",
       "ENA",
-      "UNI",
-      "SKY",
-      "TRUMP",
+      "PENGU",
       "PUMP",
-      "FOGO"
+      "LIT",
+      "SKY",
+      "ETH",
+      "UNI"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "DEXE",
-      "SNDKB",
       "HEMI",
-      "BMT",
+      "SNDKB",
       "ZEC",
+      "TRUMP",
+      "BMT",
       "RLUSD"
     ],
     "watcher": [
@@ -47,8 +49,18 @@
         "coingecko",
         "watcher"
       ],
-      "funding": 1.7e-05,
+      "funding": 1.8e-05,
       "long_short": 1.58
+    },
+    {
+      "symbol": "PENGU",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "watcher"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.2
     },
     {
       "symbol": "BMT",
@@ -67,12 +79,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "FOGO",
+      "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 3e-05
     },
     {
       "symbol": "HEMI",
@@ -90,10 +102,10 @@
       ]
     },
     {
-      "symbol": "PENGU",
+      "symbol": "LIT",
       "surfaces": 1,
       "sources": [
-        "watcher"
+        "coingecko"
       ],
       "funding": 5e-05
     },
@@ -133,15 +145,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -8e-06
+      "funding": -9e-06
     },
     {
       "symbol": "TRUMP",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
-      "funding": 3.7e-05
+      "funding": 4.2e-05
     },
     {
       "symbol": "UNI",
@@ -149,7 +161,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.7e-05
+      "funding": 7.8e-05
     },
     {
       "symbol": "ZEC",
