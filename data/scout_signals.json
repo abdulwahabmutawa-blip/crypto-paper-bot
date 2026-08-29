@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-29T23:24:27+00:00",
+  "ts": "2026-08-29T23:30:17+00:00",
   "scanned": 66,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "WLDUSDT",
+      "signal": "ignition",
+      "score": 0.5234,
+      "raw_score": 0.5927,
+      "weight": 0.883,
+      "price": 0.3778,
+      "why": "trades 4.4x and volume 6.0x the prior 4h, 71% taker-buy, $75,261 burst \u2014 while price has only moved +0.4%",
+      "chg_24h": -0.0029,
+      "vol_surge": 6.04,
+      "chg_1h": 0.0043,
+      "market_surge": 1.01,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.1 independent 24h windows (span 122h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.1 independent 24h windows (span 122h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 11,
     "baseline": 13.0,
     "wave": false
   },
