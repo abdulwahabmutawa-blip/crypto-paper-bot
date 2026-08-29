@@ -1,23 +1,23 @@
 {
-  "ts": "2026-08-29T11:25:51+00:00",
+  "ts": "2026-08-29T11:30:33+00:00",
   "sources": {
     "coingecko": [
       "HNT",
       "BTC",
       "ENA",
-      "PENGU",
       "SOL",
       "UNI",
-      "PUMP",
       "TRUMP",
-      "LIT"
+      "PUMP",
+      "PENGU",
+      "DEXE"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "DEXE",
-      "HEMI",
       "SNDKB",
+      "HEMI",
       "ZEC",
       "RLUSD"
     ],
@@ -31,8 +31,9 @@
   "heat": [
     {
       "symbol": "DEXE",
-      "surfaces": 2,
+      "surfaces": 3,
       "sources": [
+        "coingecko",
         "movers",
         "watcher"
       ],
@@ -46,7 +47,7 @@
         "coingecko",
         "watcher"
       ],
-      "funding": 2.6e-05,
+      "funding": 2.4e-05,
       "long_short": 1.6
     },
     {
@@ -65,7 +66,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.8e-05
+      "funding": 9.7e-05
     },
     {
       "symbol": "HEMI",
@@ -73,7 +74,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 5.4e-05
+      "funding": 5.2e-05
     },
     {
       "symbol": "HNT",
@@ -81,14 +82,6 @@
       "sources": [
         "coingecko"
       ]
-    },
-    {
-      "symbol": "LIT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "PUMP",
@@ -126,7 +119,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.7e-05
+      "funding": 1.9e-05
     },
     {
       "symbol": "UNI",
