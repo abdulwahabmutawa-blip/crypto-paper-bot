@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-29T06:58:46+00:00",
-  "scanned": 100,
+  "ts": "2026-08-29T07:04:14+00:00",
+  "scanned": 99,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "JTOUSDT",
+      "signal": "ignition",
+      "score": 0.7007,
+      "raw_score": 0.7935,
+      "weight": 0.883,
+      "price": 0.4859,
+      "why": "trades 7.2x and volume 23.7x the prior 4h, 74% taker-buy, $52,117 burst \u2014 while price has only moved +1.1%",
+      "chg_24h": 0.0142,
+      "vol_surge": 23.67,
+      "chg_1h": 0.011,
+      "market_surge": 5.55,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 126h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 126h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -37,16 +53,16 @@
       "avg_win_4h": 0.01967,
       "avg_loss_4h": -0.01994,
       "payoff_4h": 0.986,
-      "span_h_24h": 126.2,
+      "span_h_24h": 126.3,
       "n_eff_24h": 5.26,
       "n_24h": 400,
-      "hit_rate_24h": 0.443,
-      "mean_ret_24h": 0.00573,
-      "median_ret_24h": -0.00381,
-      "both_halves_24h": false,
-      "avg_win_24h": 0.05371,
-      "avg_loss_24h": -0.03571,
-      "payoff_24h": 1.504
+      "hit_rate_24h": 0.44,
+      "mean_ret_24h": 0.00546,
+      "median_ret_24h": -0.00386,
+      "both_halves_24h": true,
+      "avg_win_24h": 0.05396,
+      "avg_loss_24h": -0.03602,
+      "payoff_24h": 1.498
     },
     "breakout": {
       "span_h_1h": 291.4,
