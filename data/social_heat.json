@@ -1,16 +1,17 @@
 {
-  "ts": "2026-08-29T09:44:45+00:00",
+  "ts": "2026-08-29T09:50:31+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
-      "SOL",
       "PENGU",
-      "ENA",
+      "SOL",
       "HNT",
-      "DEXE",
-      "NEAR",
+      "ENA",
+      "SUI",
       "TAO",
-      "UNI"
+      "LIT",
+      "NEAR",
+      "VIRTUAL"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,7 +20,8 @@
       "SNDKB",
       "ZEC",
       "TRUMP",
-      "RLUSD"
+      "RLUSD",
+      "U"
     ],
     "watcher": [
       "ENA",
@@ -31,9 +33,8 @@
   "heat": [
     {
       "symbol": "DEXE",
-      "surfaces": 3,
+      "surfaces": 2,
       "sources": [
-        "coingecko",
         "movers",
         "watcher"
       ],
@@ -47,7 +48,7 @@
         "coingecko",
         "watcher"
       ],
-      "funding": 0.0,
+      "funding": 6e-06,
       "long_short": 1.6
     },
     {
@@ -66,12 +67,20 @@
       ]
     },
     {
+      "symbol": "LIT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "NEAR",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 3.8e-05
+      "funding": 3.4e-05
     },
     {
       "symbol": "PENGU",
@@ -109,7 +118,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1e-05
+      "funding": 7e-06
+    },
+    {
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 6.9e-05
     },
     {
       "symbol": "TAO",
@@ -125,15 +142,22 @@
       "sources": [
         "movers"
       ],
-      "funding": 3e-06
+      "funding": 6e-06
     },
     {
-      "symbol": "UNI",
+      "symbol": "U",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
+    },
+    {
+      "symbol": "VIRTUAL",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 8.5e-05
+      "funding": 2e-05
     },
     {
       "symbol": "ZEC",
