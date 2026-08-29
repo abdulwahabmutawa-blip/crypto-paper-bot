@@ -1,18 +1,18 @@
 {
-  "ts": "2026-08-29T02:38:14+00:00",
+  "ts": "2026-08-29T02:43:41+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
       "FOGO",
+      "ZEC",
       "BTC",
       "SHIB",
       "SOL",
       "ETH",
-      "PENGU",
+      "DEXE",
+      "BNB",
       "TAO",
-      "ZEC",
       "TRUMP",
-      "OP",
       "MORPHO"
     ],
     "reddit": [],
@@ -35,12 +35,13 @@
   "heat": [
     {
       "symbol": "DEXE",
-      "surfaces": 2,
+      "surfaces": 3,
       "sources": [
+        "coingecko",
         "movers",
         "watcher"
       ],
-      "funding": -0.000151,
+      "funding": -0.000125,
       "long_short": 1.67
     },
     {
@@ -74,12 +75,20 @@
       "long_short": 0.58
     },
     {
+      "symbol": "BNB",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0
+    },
+    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 9e-05
+      "funding": 8.9e-05
     },
     {
       "symbol": "ENA",
@@ -95,7 +104,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.4e-05
+      "funding": 3.5e-05
     },
     {
       "symbol": "FOGO",
@@ -111,7 +120,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 7.9e-05
+      "funding": 6.9e-05
     },
     {
       "symbol": "MORPHO",
@@ -119,23 +128,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -5e-06
-    },
-    {
-      "symbol": "OP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -0.0001
-    },
-    {
-      "symbol": "PENGU",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": 2e-06
     },
     {
       "symbol": "PUMP",
