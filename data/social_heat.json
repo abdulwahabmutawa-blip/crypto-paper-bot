@@ -1,18 +1,19 @@
 {
-  "ts": "2026-08-29T16:45:21+00:00",
+  "ts": "2026-08-29T16:51:11+00:00",
   "sources": {
     "coingecko": [
+      "SOL",
       "PUMP",
       "ZEC",
-      "SOL",
       "HNT",
-      "ETH",
-      "SUI",
       "LIT",
+      "SUI",
       "XRP",
-      "LINK",
+      "ETH",
       "AERO",
-      "BTC"
+      "BTC",
+      "ENA",
+      "LINK"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,6 +23,7 @@
       "PUMP",
       "ETH",
       "BTC",
+      "XRP",
       "RLUSD"
     ],
     "watcher": [
@@ -43,13 +45,23 @@
       "long_short": 1.2
     },
     {
+      "symbol": "ENA",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "watcher"
+      ],
+      "funding": 2.6e-05,
+      "long_short": 1.59
+    },
+    {
       "symbol": "ETH",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 6.1e-05,
+      "funding": 6.2e-05,
       "long_short": 2.62
     },
     {
@@ -63,14 +75,23 @@
       "long_short": 1.2
     },
     {
+      "symbol": "XRP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 7e-06,
+      "long_short": 2.57
+    },
+    {
       "symbol": "ZEC",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 0.0001,
-      "long_short": 0.58
+      "funding": 0.0001
     },
     {
       "symbol": "AERO",
@@ -89,14 +110,6 @@
       "funding": 5e-05
     },
     {
-      "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "watcher"
-      ],
-      "funding": 2e-05
-    },
-    {
       "symbol": "HNT",
       "surfaces": 1,
       "sources": [
@@ -109,7 +122,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.7e-05
+      "funding": 3.8e-05
     },
     {
       "symbol": "LIT",
@@ -125,7 +138,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000564
+      "funding": -0.00053
     },
     {
       "symbol": "PENGU",
@@ -148,7 +161,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -5.5e-05
+      "funding": -5.7e-05
     },
     {
       "symbol": "SUI",
@@ -157,14 +170,6 @@
         "coingecko"
       ],
       "funding": -0.0
-    },
-    {
-      "symbol": "XRP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 9e-06
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
