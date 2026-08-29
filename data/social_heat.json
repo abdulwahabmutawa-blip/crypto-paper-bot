@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-29T07:04:08+00:00",
+  "ts": "2026-08-29T07:09:41+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
@@ -19,7 +19,9 @@
     "movers": [
       "DEXE",
       "SNDKB",
-      "ZEC"
+      "ZEC",
+      "TRUMP",
+      "U"
     ],
     "watcher": [
       "ENA",
@@ -36,7 +38,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -8.8e-05,
+      "funding": -8.6e-05,
       "long_short": 1.6
     },
     {
@@ -46,8 +48,18 @@
         "coingecko",
         "watcher"
       ],
-      "funding": 1.2e-05,
+      "funding": 9e-06,
       "long_short": 1.59
+    },
+    {
+      "symbol": "TRUMP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 2.39
     },
     {
       "symbol": "APT",
@@ -55,7 +67,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2e-06
+      "funding": 3e-06
     },
     {
       "symbol": "BTC",
@@ -137,12 +149,11 @@
       "funding": 5e-05
     },
     {
-      "symbol": "TRUMP",
+      "symbol": "U",
       "surfaces": 1,
       "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+        "movers"
+      ]
     },
     {
       "symbol": "ZEC",
