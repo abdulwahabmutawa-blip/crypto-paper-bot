@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-29T20:37:24+00:00",
+  "ts": "2026-08-29T20:42:35+00:00",
   "scanned": 66,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "KITEUSDT",
+      "signal": "ignition",
+      "score": 0.5959,
+      "raw_score": 0.6711,
+      "weight": 0.888,
+      "price": 0.1316,
+      "why": "trades 5.1x and volume 11.0x the prior 4h, 76% taker-buy, $72,367 burst \u2014 while price has only moved +2.9%",
+      "chg_24h": 0.037,
+      "vol_surge": 11.02,
+      "chg_1h": 0.0289,
+      "market_surge": 15.75,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.0 independent 24h windows (span 121h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.0 independent 24h windows (span 121h): overlapping labels are not a sample",
     "breakout": "actionable",
