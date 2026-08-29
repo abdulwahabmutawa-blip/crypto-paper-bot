@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-29T13:09:37+00:00",
+  "ts": "2026-08-29T13:15:35+00:00",
   "scanned": 95,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "PLUMEUSDT",
+      "signal": "ignition",
+      "score": 0.6795,
+      "raw_score": 0.7678,
+      "weight": 0.885,
+      "price": 0.01377,
+      "why": "trades 5.1x and volume 34.8x the prior 4h, 91% taker-buy, $61,540 burst \u2014 while price has only moved -0.5%",
+      "chg_24h": -0.0058,
+      "vol_surge": 34.82,
+      "chg_1h": -0.0051,
+      "market_surge": 3.68,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.2 independent 24h windows (span 124h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.2 independent 24h windows (span 124h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 7,
+    "count": 8,
     "baseline": 13.0,
     "wave": false
   },
