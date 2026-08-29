@@ -9244,14 +9244,101 @@
       }
     },
     {
-      "risk_level": "unparsed",
-      "risk_alerts": [],
-      "hype": [],
-      "crypto_hype": [],
-      "overall_mood": "{\n  \"risk_level\": \"caution\",\n  \"risk_alerts\": [\n    {\n      \"headline\": \"Fed Chair Warsh hawkish Jackson Hole speech raises Sept hike odds to ~60%, triggering BTC pullback from $81k and ~$300-500M liquidations\",\n      \"markets\": [\"both\"],\n      \"severity\": \"caution\"\n    },\n    {\n      \"headline\": \"B",
-      "ts": "2026-08-29T19:25:21+00:00",
+      "risk_level": "caution",
+      "risk_alerts": [
+        {
+          "headline": "Fed Chair Warsh hawkish Jackson Hole speech raises Sept rate-hike odds to ~60%, sticky inflation focus",
+          "markets": [
+            "both"
+          ],
+          "severity": "caution"
+        },
+        {
+          "headline": "BTC ETFs $202M outflows end inflow streak; ~$380-488M crypto liquidations on pullback",
+          "markets": [
+            "crypto"
+          ],
+          "severity": "caution"
+        }
+      ],
+      "hype": [
+        {
+          "symbol": "CASHCAT",
+          "mood": "euphoric",
+          "note": "Stocktwits/CoinGecko meme trend spike"
+        },
+        {
+          "symbol": "ZEC",
+          "mood": "euphoric",
+          "note": "Privacy ETF launch outperformance"
+        },
+        {
+          "symbol": "PUMP",
+          "mood": "mixed",
+          "note": "Buybacks and launchpad volume chatter"
+        },
+        {
+          "symbol": "DEXE",
+          "mood": "euphoric",
+          "note": "Volume spike protocol upgrades thin liquidity"
+        },
+        {
+          "symbol": "TRUMP",
+          "mood": "mixed",
+          "note": "Binance mover retail political meme"
+        },
+        {
+          "symbol": "SOL",
+          "mood": "mixed",
+          "note": "ETF inflows governance vote residual"
+        }
+      ],
+      "crypto_hype": [
+        {
+          "symbol": "ZEC",
+          "mood": "euphoric",
+          "stage": "peaked",
+          "organic": true,
+          "promo_risk": "low",
+          "catalyst": "Grayscale Zcash ETF live Aug 25-28",
+          "why": "ETF catalyst short squeeze social dominance surge independent discussion",
+          "note": "Privacy boom decoupling from BTC dip"
+        },
+        {
+          "symbol": "DEXE",
+          "mood": "euphoric",
+          "stage": "peaked",
+          "organic": false,
+          "promo_risk": "high",
+          "catalyst": "Protocol upgrades wallet support demo",
+          "why": "Thin liquidity whale volume 500%+ spike no broad accounts",
+          "note": "Speculative low-cap mover"
+        },
+        {
+          "symbol": "PUMP",
+          "mood": "mixed",
+          "stage": "peaked",
+          "organic": true,
+          "promo_risk": "low",
+          "catalyst": "Daily $1M+ buybacks revenue high",
+          "why": "Platform fees burns technical breakout independent",
+          "note": "Launchpad residual after prior run"
+        },
+        {
+          "symbol": "TRUMP",
+          "mood": "mixed",
+          "stage": "peaked",
+          "organic": false,
+          "promo_risk": "high",
+          "catalyst": "none",
+          "why": "Political meme Binance mover coordinated chatter",
+          "note": "Retail hype no fresh catalyst"
+        }
+      ],
+      "overall_mood": "Cautious risk-off pullback after hawkish Fed Warsh remarks amid lingering crypto greed and AI/tech rotation, with Venezuela oil deal as longer-term supply positive.",
+      "ts": "2026-08-29T19:34:42+00:00",
       "gauges": {
-        "vix": 14.5,
+        "vix": 14.4,
         "crypto_fear_greed": 68,
         "crypto_fng_label": "Greed"
       }
@@ -9261,5 +9348,5 @@
     "2026-07": 35,
     "2026-08": 124
   },
-  "last_scan_utc": "2026-08-29T19:25:21+00:00"
+  "last_scan_utc": "2026-08-29T19:34:42+00:00"
 }

@@ -1,6 +1,21 @@
 {
-  "ts": "2026-08-29T19:25:21+00:00",
-  "risk_level": "unparsed",
-  "risk_alerts": [],
+  "ts": "2026-08-29T19:34:42+00:00",
+  "risk_level": "caution",
+  "risk_alerts": [
+    {
+      "headline": "Fed Chair Warsh hawkish Jackson Hole speech raises Sept rate-hike odds to ~60%, sticky inflation focus",
+      "markets": [
+        "both"
+      ],
+      "severity": "caution"
+    },
+    {
+      "headline": "BTC ETFs $202M outflows end inflow streak; ~$380-488M crypto liquidations on pullback",
+      "markets": [
+        "crypto"
+      ],
+      "severity": "caution"
+    }
+  ],
   "note": "consumed by every risk-gated bot via sentinel_gate.severe(); verdicts older than 24h are treated as UNKNOWN, not calm"
 }

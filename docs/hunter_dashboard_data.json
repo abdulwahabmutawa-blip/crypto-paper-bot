@@ -1,38 +1,29 @@
 {
-  "generated_utc": "2026-08-29T19:21:15+00:00",
+  "generated_utc": "2026-08-29T19:35:33+00:00",
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "live_ts": "2026-08-29T19:21:15+00:00",
+  "live_ts": "2026-08-29T19:35:33+00:00",
   "current": {
     "date": "2026-08-29",
-    "value": 1022.45,
-    "bench": 1027.15,
+    "value": 1022.35,
+    "bench": 1024.82,
     "holding": "SOL-USD",
-    "bench_asof": "2026-08-27"
+    "bench_asof": "2026-08-28"
   },
   "board": [
     {
       "sym": "SOL",
-      "price": 105.67,
-      "line": "Solana \u00b7 score +11.22 \u00b7 mom20 +39.1%",
+      "price": 105.66,
+      "line": "Solana \u00b7 score +11.07 \u00b7 mom20 +38.6%",
       "tag": "HELD",
       "on": true,
       "pick": true,
       "fill": 50
     },
     {
-      "sym": "MSTR",
-      "price": 137.4,
-      "line": "MicroStrategy \u00b7 score +7.70 \u00b7 mom20 +37.4%",
-      "tag": "hunting",
-      "on": true,
-      "pick": false,
-      "fill": 50
-    },
-    {
       "sym": "BTC",
-      "price": 78299.83,
-      "line": "Bitcoin \u00b7 score +7.64 \u00b7 mom20 +20.6%",
+      "price": 78227.48,
+      "line": "Bitcoin \u00b7 score +7.63 \u00b7 mom20 +20.6%",
       "tag": "hunting",
       "on": true,
       "pick": false,
@@ -40,35 +31,17 @@
     },
     {
       "sym": "ETH",
-      "price": 2458.53,
-      "line": "Ethereum \u00b7 score +6.30 \u00b7 mom20 +28.3%",
+      "price": 2455.89,
+      "line": "Ethereum \u00b7 score +6.37 \u00b7 mom20 +28.7%",
       "tag": "hunting",
       "on": true,
       "pick": false,
       "fill": 50
     },
     {
-      "sym": "COIN",
-      "price": 190.72,
-      "line": "Coinbase \u00b7 score +6.11 \u00b7 mom20 +24.2%",
-      "tag": "hunting",
-      "on": true,
-      "pick": false,
-      "fill": 50
-    },
-    {
-      "sym": "SLV",
-      "price": 62.77,
-      "line": "Silver \u00b7 score +4.96 \u00b7 mom20 +9.2%",
-      "tag": "hunting",
-      "on": true,
-      "pick": false,
-      "fill": 50
-    },
-    {
-      "sym": "GLD",
-      "price": 422.6,
-      "line": "Gold \u00b7 score +4.92 \u00b7 mom20 +6.1%",
+      "sym": "MSTR",
+      "price": 127.31,
+      "line": "MicroStrategy \u00b7 score +5.20 \u00b7 mom20 +27.3%",
       "tag": "hunting",
       "on": true,
       "pick": false,
@@ -76,17 +49,8 @@
     },
     {
       "sym": "USO",
-      "price": 130.01,
-      "line": "Oil \u00b7 score +4.62 \u00b7 mom20 +10.2%",
-      "tag": "hunting",
-      "on": true,
-      "pick": false,
-      "fill": 50
-    },
-    {
-      "sym": "TSLA",
-      "price": 354.81,
-      "line": "Tesla \u00b7 score +3.74 \u00b7 mom20 +8.0%",
+      "price": 129.7,
+      "line": "Oil \u00b7 score +4.49 \u00b7 mom20 +9.9%",
       "tag": "hunting",
       "on": true,
       "pick": false,
@@ -94,12 +58,48 @@
     },
     {
       "sym": "PLTR",
-      "price": 185.93,
-      "line": "Palantir \u00b7 score +3.70 \u00b7 mom20 +8.1%",
+      "price": 186.29,
+      "line": "Palantir \u00b7 score +3.80 \u00b7 mom20 +8.3%",
       "tag": "hunting",
       "on": true,
       "pick": false,
       "fill": 50
+    },
+    {
+      "sym": "COIN",
+      "price": 178.64,
+      "line": "Coinbase \u00b7 score +3.80 \u00b7 mom20 +16.3%",
+      "tag": "hunting",
+      "on": true,
+      "pick": false,
+      "fill": 50
+    },
+    {
+      "sym": "TSLA",
+      "price": 348.75,
+      "line": "Tesla \u00b7 score +2.81 \u00b7 mom20 +6.1%",
+      "tag": "hunting",
+      "on": true,
+      "pick": false,
+      "fill": 42.122358708362086
+    },
+    {
+      "sym": "SLV",
+      "price": 60.02,
+      "line": "Silver \u00b7 score +2.05 \u00b7 mom20 +4.4%",
+      "tag": "hunting",
+      "on": true,
+      "pick": false,
+      "fill": 30.695163830533723
+    },
+    {
+      "sym": "GLD",
+      "price": 408.89,
+      "line": "Gold \u00b7 score +1.79 \u00b7 mom20 +2.6%",
+      "tag": "hunting",
+      "on": true,
+      "pick": false,
+      "fill": 26.78596658459166
     }
   ],
   "board_title": "The whole market, scored by reward-per-unit-of-risk",
@@ -110,12 +110,6 @@
     "board_note": "Always hunting across leveraged ETFs, high-beta stocks, crypto and commodities \u2014 all-in on the best score, 8% trailing stop, cash only when everything falls. Aggression with a seatbelt."
   },
   "intraday": [
-    {
-      "ts": "2026-08-12T10:50:36+00:00",
-      "value": 997.22,
-      "bench": 1026.43,
-      "holding": "PLTR"
-    },
     {
       "ts": "2026-08-12T11:04:01+00:00",
       "value": 997.22,
@@ -9109,6 +9103,12 @@
       "value": 1022.45,
       "bench": 1027.15,
       "holding": "SOL-USD"
+    },
+    {
+      "ts": "2026-08-29T19:35:33+00:00",
+      "value": 1022.35,
+      "bench": 1024.82,
+      "holding": "SOL-USD"
     }
   ],
   "trades": [
@@ -9508,10 +9508,10 @@
     },
     {
       "date": "2026-08-29",
-      "value": 1022.45,
-      "bench": 1027.15,
+      "value": 1022.35,
+      "bench": 1024.82,
       "holding": "SOL-USD",
-      "bench_asof": "2026-08-27"
+      "bench_asof": "2026-08-28"
     }
   ],
   "costs_paid": 18.0779,
