@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-29T21:10:41+00:00",
+  "ts": "2026-08-29T21:15:56+00:00",
   "sources": {
     "coingecko": [
       "HNT",
@@ -14,13 +14,13 @@
     "stocktwits": [],
     "movers": [
       "ONG",
-      "ZEC",
       "PUMP",
+      "ZEC",
       "TRUMP",
       "SOL",
       "XRP",
-      "SUI",
-      "ETH"
+      "ETH",
+      "BTC"
     ],
     "watcher": [
       "ZEC",
@@ -41,6 +41,16 @@
       "long_short": 0.58
     },
     {
+      "symbol": "BTC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 9e-05,
+      "long_short": 1.19
+    },
+    {
       "symbol": "PUMP",
       "surfaces": 2,
       "sources": [
@@ -57,16 +67,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.000152,
+      "funding": -0.000151,
       "long_short": 1.97
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 9e-05
     },
     {
       "symbol": "DEXE",
@@ -82,7 +84,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 6e-06
+      "funding": 8e-06
     },
     {
       "symbol": "HNT",
@@ -105,7 +107,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000826
+      "funding": -0.000857
     },
     {
       "symbol": "PENGU",
@@ -114,14 +116,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -3e-06
     },
     {
       "symbol": "TRUMP",
