@@ -1,19 +1,17 @@
 {
-  "ts": "2026-08-29T09:28:31+00:00",
+  "ts": "2026-08-29T09:34:01+00:00",
   "sources": {
     "coingecko": [
-      "ENA",
       "PUMP",
-      "ZEC",
-      "PENGU",
       "ETH",
-      "HNT",
-      "LIT",
-      "DEXE",
-      "SUI",
-      "FOGO",
       "UNI",
-      "BTC"
+      "ENA",
+      "PENGU",
+      "SUI",
+      "DEXE",
+      "SOL",
+      "EGLD",
+      "ZEC"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -49,7 +47,7 @@
         "coingecko",
         "watcher"
       ],
-      "funding": -2.3e-05,
+      "funding": -1.3e-05,
       "long_short": 1.6
     },
     {
@@ -63,7 +61,7 @@
       "long_short": 0.64
     },
     {
-      "symbol": "BTC",
+      "symbol": "EGLD",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -76,36 +74,13 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.5e-05
-    },
-    {
-      "symbol": "FOGO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": 2.6e-05
     },
     {
       "symbol": "HEMI",
       "surfaces": 1,
       "sources": [
         "watcher"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "HNT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ]
-    },
-    {
-      "symbol": "LIT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
       ],
       "funding": 5e-05
     },
@@ -140,12 +115,20 @@
       ]
     },
     {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 1.4e-05
+    },
+    {
       "symbol": "SUI",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 7.9e-05
+      "funding": 7.7e-05
     },
     {
       "symbol": "UNI",
@@ -153,7 +136,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.8e-05
+      "funding": 8e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
