@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-29T06:31:26+00:00",
-  "scanned": 100,
+  "ts": "2026-08-29T06:36:46+00:00",
+  "scanned": 101,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ZROUSDT",
+      "signal": "ignition",
+      "score": 0.7228,
+      "raw_score": 0.8167,
+      "weight": 0.885,
+      "price": 1.055,
+      "why": "trades 9.9x and volume 6.7x the prior 4h, 68% taker-buy, $58,781 burst \u2014 while price has only moved -0.8%",
+      "chg_24h": -0.1006,
+      "vol_surge": 6.7,
+      "chg_1h": -0.0075,
+      "market_surge": 1.55,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 126h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 126h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 8,
+    "count": 7,
     "baseline": 13.0,
     "wave": false
   },
