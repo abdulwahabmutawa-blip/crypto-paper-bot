@@ -1,18 +1,19 @@
 {
-  "ts": "2026-08-29T04:47:01+00:00",
+  "ts": "2026-08-29T04:52:23+00:00",
   "sources": {
     "coingecko": [
       "SOL",
+      "PUMP",
       "ZEC",
       "BTC",
-      "PUMP",
-      "ONDO",
       "TRUMP",
+      "ETH",
       "FOGO",
-      "PENGU",
+      "ENA",
+      "LIT",
       "AERO",
       "SUI",
-      "ETH"
+      "ONDO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,9 +22,9 @@
       "HEMI",
       "TRUMP",
       "SNDKB",
-      "ENA",
       "ZEC",
-      "TRX"
+      "TRX",
+      "ENA"
     ],
     "watcher": [
       "ENA",
@@ -34,24 +35,25 @@
   },
   "heat": [
     {
+      "symbol": "ENA",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.58
+    },
+    {
       "symbol": "DEXE",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": -5e-05,
+      "funding": -4.6e-05,
       "long_short": 1.65
-    },
-    {
-      "symbol": "ENA",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.58
     },
     {
       "symbol": "HEMI",
@@ -89,7 +91,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.6e-05
+      "funding": -2e-05
     },
     {
       "symbol": "BTC",
@@ -116,20 +118,20 @@
       "funding": 5e-05
     },
     {
-      "symbol": "ONDO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-06
-    },
-    {
-      "symbol": "PENGU",
+      "symbol": "LIT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "ONDO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 3e-06
     },
     {
       "symbol": "PUMP",
@@ -152,7 +154,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3e-05
+      "funding": 2.9e-05
     },
     {
       "symbol": "SUI",
@@ -160,7 +162,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -8e-06
+      "funding": -6e-06
     },
     {
       "symbol": "TRX",
