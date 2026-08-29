@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-29T15:03:15+00:00",
+  "ts": "2026-08-29T15:08:45+00:00",
   "scanned": 95,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "PUMPUSDT",
-      "signal": "ignition",
-      "score": 0.6952,
-      "raw_score": 0.7785,
-      "weight": 0.893,
-      "price": 0.004797,
-      "why": "trades 8.9x and volume 10.0x the prior 4h, 61% taker-buy, $381,186 burst \u2014 while price has only moved +3.3%",
-      "chg_24h": -0.0129,
-      "vol_surge": 10.0,
-      "chg_1h": 0.0329,
-      "market_surge": 0.95,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.0 independent 24h windows (span 119h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.0 independent 24h windows (span 119h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 9,
+    "count": 10,
     "baseline": 12.0,
     "wave": false
   },
