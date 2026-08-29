@@ -1,23 +1,8 @@
 {
-  "ts": "2026-08-29T14:17:42+00:00",
-  "scanned": 92,
+  "ts": "2026-08-29T14:23:17+00:00",
+  "scanned": 94,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "DASHUSDT",
-      "signal": "breakout",
-      "score": 0.5967,
-      "raw_score": 0.6254,
-      "weight": 0.954,
-      "price": 41.64,
-      "why": "trades 4.2x, volume 6.4x, 72% taker-buy, +4.0% in an hour, at 97% of its 24h range",
-      "chg_24h": 0.0903,
-      "vol_surge": 6.36,
-      "chg_1h": 0.0405,
-      "market_surge": 8.77,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.0 independent 24h windows (span 120h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -26,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 8,
+    "count": 9,
     "baseline": 12.0,
     "wave": false
   },
@@ -55,13 +40,13 @@
       "span_h_24h": 120.2,
       "n_eff_24h": 5.01,
       "n_24h": 400,
-      "hit_rate_24h": 0.412,
-      "mean_ret_24h": 0.00259,
-      "median_ret_24h": -0.00552,
+      "hit_rate_24h": 0.415,
+      "mean_ret_24h": 0.00292,
+      "median_ret_24h": -0.00543,
       "both_halves_24h": true,
-      "avg_win_24h": 0.05573,
+      "avg_win_24h": 0.05594,
       "avg_loss_24h": -0.03824,
-      "payoff_24h": 1.457
+      "payoff_24h": 1.463
     },
     "breakout": {
       "span_h_1h": 300.3,
@@ -84,16 +69,16 @@
       "avg_win_4h": 0.03932,
       "avg_loss_4h": -0.03072,
       "payoff_4h": 1.28,
-      "span_h_24h": 277.8,
-      "n_eff_24h": 11.58,
-      "n_24h": 329,
-      "hit_rate_24h": 0.553,
-      "mean_ret_24h": 0.02787,
+      "span_h_24h": 278.2,
+      "n_eff_24h": 11.59,
+      "n_24h": 330,
+      "hit_rate_24h": 0.552,
+      "mean_ret_24h": 0.02774,
       "median_ret_24h": 0.01701,
       "both_halves_24h": true,
       "avg_win_24h": 0.09524,
-      "avg_loss_24h": -0.05592,
-      "payoff_24h": 1.703
+      "avg_loss_24h": -0.05565,
+      "payoff_24h": 1.711
     },
     "reversion": {
       "span_h_1h": 252.3,

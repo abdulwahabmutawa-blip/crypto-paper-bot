@@ -1,16 +1,17 @@
 {
-  "ts": "2026-08-29T14:17:37+00:00",
+  "ts": "2026-08-29T14:23:11+00:00",
   "sources": {
     "coingecko": [
       "HNT",
       "PUMP",
       "SOL",
       "PENGU",
-      "BTC",
+      "POL",
       "TAO",
+      "BTC",
+      "ETH",
       "ENA",
-      "NIL",
-      "POL"
+      "UNI"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,6 +20,7 @@
       "ONG",
       "ZEC",
       "BMT",
+      "SOL",
       "RLUSD"
     ],
     "watcher": [
@@ -36,7 +38,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -2.5e-05,
+      "funding": -2.7e-05,
       "long_short": 1.61
     },
     {
@@ -46,7 +48,7 @@
         "coingecko",
         "watcher"
       ],
-      "funding": 4.3e-05,
+      "funding": 4.5e-05,
       "long_short": 1.57
     },
     {
@@ -60,12 +62,22 @@
       "long_short": 1.18
     },
     {
+      "symbol": "SOL",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -1e-05,
+      "long_short": 1.91
+    },
+    {
       "symbol": "BMT",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 9e-06
+      "funding": 1.1e-05
     },
     {
       "symbol": "BTC",
@@ -76,6 +88,14 @@
       "funding": 0.0001
     },
     {
+      "symbol": "ETH",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 6.2e-05
+    },
+    {
       "symbol": "HNT",
       "surfaces": 1,
       "sources": [
@@ -83,20 +103,12 @@
       ]
     },
     {
-      "symbol": "NIL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -0.000602
-    },
-    {
       "symbol": "ONG",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -0.001185
+      "funding": -0.001153
     },
     {
       "symbol": "POL",
@@ -122,20 +134,20 @@
       ]
     },
     {
-      "symbol": "SOL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -1e-05
-    },
-    {
       "symbol": "TAO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "UNI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 8.3e-05
     },
     {
       "symbol": "ZEC",
