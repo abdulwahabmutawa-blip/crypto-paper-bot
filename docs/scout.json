@@ -1,39 +1,8 @@
 {
-  "ts": "2026-08-29T07:09:47+00:00",
+  "ts": "2026-08-29T07:14:58+00:00",
   "scanned": 100,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "INJUSDT",
-      "signal": "ignition",
-      "score": 0.6789,
-      "raw_score": 0.7689,
-      "weight": 0.883,
-      "price": 5.074,
-      "why": "trades 4.8x and volume 16.5x the prior 4h, 91% taker-buy, $106,624 burst \u2014 while price has only moved +0.0%",
-      "chg_24h": -0.048,
-      "vol_surge": 16.47,
-      "chg_1h": 0.0002,
-      "market_surge": 4.77,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 126h): overlapping labels are not a sample"
-    },
-    {
-      "symbol": "TURBOUSDT",
-      "signal": "ignition",
-      "score": 0.5599,
-      "raw_score": 0.6341,
-      "weight": 0.883,
-      "price": 0.001025,
-      "why": "trades 5.6x and volume 6.5x the prior 4h, 66% taker-buy, $57,223 burst \u2014 while price has only moved -0.6%",
-      "chg_24h": 0.0427,
-      "vol_surge": 6.46,
-      "chg_1h": -0.0058,
-      "market_surge": 0.49,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 126h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 126h): overlapping labels are not a sample",
     "breakout": "actionable",
