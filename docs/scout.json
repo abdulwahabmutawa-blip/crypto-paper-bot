@@ -1,37 +1,8 @@
 {
-  "ts": "2026-08-29T16:51:19+00:00",
-  "scanned": 75,
+  "ts": "2026-08-29T16:56:29+00:00",
+  "scanned": 74,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "HEIUSDT",
-      "signal": "breakout",
-      "score": 0.8316,
-      "raw_score": 0.8726,
-      "weight": 0.953,
-      "price": 0.154,
-      "why": "trades 12.8x, volume 12.6x, 64% taker-buy, +6.2% in an hour, at 97% of its 24h range",
-      "chg_24h": 0.0953,
-      "vol_surge": 12.62,
-      "chg_1h": 0.0621,
-      "market_surge": 2.92,
-      "actionable": true
-    },
-    {
-      "symbol": "UNIUSDT",
-      "signal": "breakout",
-      "score": 0.6698,
-      "raw_score": 0.7028,
-      "weight": 0.953,
-      "price": 4.62,
-      "why": "trades 6.1x, volume 7.4x, 78% taker-buy, +2.8% in an hour, at 92% of its 24h range",
-      "chg_24h": 0.0375,
-      "vol_surge": 7.43,
-      "chg_1h": 0.0276,
-      "market_surge": 7.75,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.0 independent 24h windows (span 120h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -40,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 15,
+    "count": 13,
     "baseline": 13.0,
     "wave": false
   },
