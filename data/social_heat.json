@@ -1,28 +1,29 @@
 {
-  "ts": "2026-08-29T10:46:31+00:00",
+  "ts": "2026-08-29T10:51:40+00:00",
   "sources": {
     "coingecko": [
       "HNT",
       "BTC",
-      "SOL",
       "PENGU",
+      "SOL",
       "ENA",
-      "LIT",
       "PUMP",
-      "POL",
-      "AVAX",
+      "LIT",
       "ASTER",
-      "SUI"
+      "POL",
+      "INJ",
+      "COTI"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "DEXE",
-      "HEMI",
       "SNDKB",
-      "TRUMP",
+      "HEMI",
       "ZEC",
-      "RLUSD"
+      "TRUMP",
+      "RLUSD",
+      "U"
     ],
     "watcher": [
       "ENA",
@@ -59,7 +60,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 5.4e-05,
+      "funding": 5.3e-05,
       "long_short": 0.85
     },
     {
@@ -71,14 +72,6 @@
       "funding": 5e-05
     },
     {
-      "symbol": "AVAX",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -1e-06
-    },
-    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
@@ -87,11 +80,27 @@
       "funding": 0.0001
     },
     {
+      "symbol": "COTI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -0.00201
+    },
+    {
       "symbol": "HNT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ]
+    },
+    {
+      "symbol": "INJ",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 6.9e-05
     },
     {
       "symbol": "LIT",
@@ -115,7 +124,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -4.3e-05
+      "funding": -4.1e-05
     },
     {
       "symbol": "PUMP",
@@ -145,15 +154,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -7e-06
-    },
-    {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5.4e-05
+      "funding": -6e-06
     },
     {
       "symbol": "TRUMP",
@@ -161,7 +162,14 @@
       "sources": [
         "movers"
       ],
-      "funding": 7e-06
+      "funding": 5e-06
+    },
+    {
+      "symbol": "U",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
     },
     {
       "symbol": "ZEC",
