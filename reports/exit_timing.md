@@ -1,6 +1,6 @@
 # Exit timing — the bot grading its own exits
 
-updated 2026-08-29T15:57:48+00:00 · 26 exits audited · early/late line ±3% · MEASUREMENT ONLY
+updated 2026-08-29T15:58:49+00:00 · 26 exits audited · early/late line ±3% · MEASUREMENT ONLY
 
 | verdict | n |
 |---|---|
