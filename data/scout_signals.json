@@ -1,23 +1,8 @@
 {
-  "ts": "2026-08-30T04:16:47+00:00",
-  "scanned": 64,
+  "ts": "2026-08-30T04:22:27+00:00",
+  "scanned": 62,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "STRKUSDT",
-      "signal": "breakout",
-      "score": 0.7749,
-      "raw_score": 0.8156,
-      "weight": 0.95,
-      "price": 0.02623,
-      "why": "trades 78.0x, volume 59.2x, 63% taker-buy, +4.5% in an hour, at 101% of its 24h range",
-      "chg_24h": 0.0654,
-      "vol_surge": 59.19,
-      "chg_1h": 0.0446,
-      "market_surge": 10.05,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.2 independent 24h windows (span 124h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -26,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 11,
     "baseline": 12.0,
     "wave": false
   },
