@@ -1,22 +1,37 @@
 {
-  "ts": "2026-08-30T01:39:27+00:00",
-  "scanned": 61,
+  "ts": "2026-08-30T01:45:02+00:00",
+  "scanned": 65,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "PENGUUSDT",
+      "symbol": "ZKUSDT",
       "signal": "ignition",
-      "score": 0.6365,
-      "raw_score": 0.7192,
+      "score": 0.7512,
+      "raw_score": 0.8488,
       "weight": 0.885,
-      "price": 0.009097,
-      "why": "trades 4.4x and volume 19.0x the prior 4h, 79% taker-buy, $144,085 burst \u2014 while price has only moved -0.1%",
-      "chg_24h": -0.0162,
-      "vol_surge": 18.99,
-      "chg_1h": -0.001,
-      "market_surge": 3.91,
+      "price": 0.00839,
+      "why": "trades 171.9x and volume 70.0x the prior 4h, 64% taker-buy, $139,028 burst \u2014 while price has only moved +2.4%",
+      "chg_24h": 0.022,
+      "vol_surge": 69.96,
+      "chg_1h": 0.0244,
+      "market_surge": 0.0,
       "actionable": false,
       "status": "probation \u2014 400 rows but only 5.2 independent 24h windows (span 124h): overlapping labels are not a sample"
+    },
+    {
+      "symbol": "ZECUSDT",
+      "signal": "heat",
+      "score": 0.6366,
+      "raw_score": 0.6,
+      "weight": 1.061,
+      "price": 832.19,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.010% \u00b7 L/S 0.57",
+      "chg_24h": 0.034,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
+      "actionable": false,
+      "status": "benched \u2014 hit 55%, mean +0.54% over last 127 at 24h: not beating 4x the round trip"
     }
   ],
   "gate": {
@@ -27,7 +42,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 8,
+    "count": 9,
     "baseline": 12.0,
     "wave": false
   },
