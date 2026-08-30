@@ -1,22 +1,35 @@
 {
-  "ts": "2026-08-30T16:54:56+00:00",
+  "ts": "2026-08-30T17:00:49+00:00",
   "scanned": 75,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "ICPUSDT",
-      "signal": "ignition",
-      "score": 0.6964,
-      "raw_score": 0.7652,
-      "weight": 0.91,
-      "price": 2.466,
-      "why": "trades 6.6x and volume 8.2x the prior 4h, 84% taker-buy, $83,593 burst \u2014 while price has only moved +0.6%",
-      "chg_24h": -0.0136,
-      "vol_surge": 8.16,
-      "chg_1h": 0.0061,
-      "market_surge": 6.17,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 127h): overlapping labels are not a sample"
+      "symbol": "DASHUSDT",
+      "signal": "breakout",
+      "score": 0.7745,
+      "raw_score": 0.8101,
+      "weight": 0.956,
+      "price": 43.13,
+      "why": "trades 7.3x, volume 13.2x, 87% taker-buy, +3.6% in an hour, at 102% of its 24h range",
+      "chg_24h": 0.0168,
+      "vol_surge": 13.16,
+      "chg_1h": 0.0363,
+      "market_surge": 12.21,
+      "actionable": true
+    },
+    {
+      "symbol": "ENAUSDT",
+      "signal": "breakout",
+      "score": 0.6201,
+      "raw_score": 0.6486,
+      "weight": 0.956,
+      "price": 0.1642,
+      "why": "trades 4.7x, volume 7.8x, 67% taker-buy, +3.0% in an hour, at 103% of its 24h range",
+      "chg_24h": 0.0428,
+      "vol_surge": 7.78,
+      "chg_1h": 0.0301,
+      "market_surge": 4.37,
+      "actionable": true
     }
   ],
   "gate": {
@@ -27,7 +40,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 13,
+    "count": 12,
     "baseline": 12.0,
     "wave": false
   },
