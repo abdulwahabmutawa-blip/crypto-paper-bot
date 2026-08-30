@@ -1,23 +1,8 @@
 {
-  "ts": "2026-08-30T00:53:46+00:00",
-  "scanned": 65,
+  "ts": "2026-08-30T00:59:35+00:00",
+  "scanned": 64,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ZKPUSDT",
-      "signal": "breakout",
-      "score": 0.863,
-      "raw_score": 0.9065,
-      "weight": 0.952,
-      "price": 0.054,
-      "why": "trades 7.9x, volume 9.0x, 62% taker-buy, +7.6% in an hour, at 97% of its 24h range",
-      "chg_24h": 0.25,
-      "vol_surge": 8.97,
-      "chg_1h": 0.0757,
-      "market_surge": 0.0,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.1 independent 24h windows (span 123h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -26,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 9,
+    "count": 8,
     "baseline": 12.0,
     "wave": false
   },
@@ -84,16 +69,16 @@
       "avg_win_4h": 0.03939,
       "avg_loss_4h": -0.03191,
       "payoff_4h": 1.235,
-      "span_h_24h": 283.3,
-      "n_eff_24h": 11.81,
-      "n_24h": 332,
-      "hit_rate_24h": 0.548,
-      "mean_ret_24h": 0.02714,
-      "median_ret_24h": 0.01661,
+      "span_h_24h": 288.8,
+      "n_eff_24h": 12.03,
+      "n_24h": 333,
+      "hit_rate_24h": 0.547,
+      "mean_ret_24h": 0.02695,
+      "median_ret_24h": 0.01605,
       "both_halves_24h": true,
       "avg_win_24h": 0.09524,
-      "avg_loss_24h": -0.05586,
-      "payoff_24h": 1.705
+      "avg_loss_24h": -0.05573,
+      "payoff_24h": 1.709
     },
     "reversion": {
       "span_h_1h": 252.3,
