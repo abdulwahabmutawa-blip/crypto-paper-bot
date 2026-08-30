@@ -1,22 +1,21 @@
 {
-  "ts": "2026-08-30T16:43:45+00:00",
-  "scanned": 76,
+  "ts": "2026-08-30T16:49:36+00:00",
+  "scanned": 75,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "ARBUSDT",
-      "signal": "ignition",
-      "score": 0.6323,
-      "raw_score": 0.6949,
-      "weight": 0.91,
-      "price": 0.0893,
-      "why": "trades 4.4x and volume 9.2x the prior 4h, 82% taker-buy, $124,353 burst \u2014 while price has only moved +0.7%",
-      "chg_24h": 0.0182,
-      "vol_surge": 9.19,
-      "chg_1h": 0.0068,
-      "market_surge": 11.44,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 127h): overlapping labels are not a sample"
+      "symbol": "AUCTIONUSDT",
+      "signal": "breakout",
+      "score": 0.5949,
+      "raw_score": 0.6229,
+      "weight": 0.955,
+      "price": 3.849,
+      "why": "trades 5.0x, volume 6.7x, 60% taker-buy, +3.4% in an hour, at 93% of its 24h range",
+      "chg_24h": 0.2184,
+      "vol_surge": 6.66,
+      "chg_1h": 0.0341,
+      "market_surge": 3.26,
+      "actionable": true
     }
   ],
   "gate": {
@@ -53,16 +52,16 @@
       "avg_win_4h": 0.01846,
       "avg_loss_4h": -0.01877,
       "payoff_4h": 0.983,
-      "span_h_24h": 126.7,
-      "n_eff_24h": 5.28,
+      "span_h_24h": 127.2,
+      "n_eff_24h": 5.3,
       "n_24h": 400,
-      "hit_rate_24h": 0.435,
-      "mean_ret_24h": 0.00072,
+      "hit_rate_24h": 0.432,
+      "mean_ret_24h": 0.00047,
       "median_ret_24h": -0.00405,
       "both_halves_24h": false,
-      "avg_win_24h": 0.04765,
+      "avg_win_24h": 0.0471,
       "avg_loss_24h": -0.03859,
-      "payoff_24h": 1.235
+      "payoff_24h": 1.221
     },
     "breakout": {
       "span_h_1h": 327.4,
