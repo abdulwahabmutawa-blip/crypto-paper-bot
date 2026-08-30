@@ -1,10 +1,26 @@
 {
-  "ts": "2026-08-30T01:22:37+00:00",
+  "ts": "2026-08-30T01:28:04+00:00",
   "scanned": 63,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "BICOUSDT",
+      "signal": "ignition",
+      "score": 0.6622,
+      "raw_score": 0.7483,
+      "weight": 0.885,
+      "price": 0.02315,
+      "why": "trades 6.6x and volume 9.1x the prior 4h, 74% taker-buy, $59,091 burst \u2014 while price has only moved +1.2%",
+      "chg_24h": 0.0415,
+      "vol_surge": 9.12,
+      "chg_1h": 0.0118,
+      "market_surge": 0.0,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.2 independent 24h windows (span 124h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
-    "ignition": "probation \u2014 400 rows but only 5.1 independent 24h windows (span 123h): overlapping labels are not a sample",
+    "ignition": "probation \u2014 400 rows but only 5.2 independent 24h windows (span 124h): overlapping labels are not a sample",
     "breakout": "actionable",
     "reversion": "benched \u2014 hit 50%, mean +0.65% over last 38 at 24h: not beating 4x the round trip",
     "heat": "benched \u2014 hit 55%, mean +0.54% over last 127 at 24h: not beating 4x the round trip",
@@ -37,16 +53,16 @@
       "avg_win_4h": 0.01813,
       "avg_loss_4h": -0.01976,
       "payoff_4h": 0.918,
-      "span_h_24h": 122.9,
-      "n_eff_24h": 5.12,
+      "span_h_24h": 123.8,
+      "n_eff_24h": 5.16,
       "n_24h": 400,
       "hit_rate_24h": 0.417,
-      "mean_ret_24h": 0.00321,
+      "mean_ret_24h": 0.00316,
       "median_ret_24h": -0.0049,
-      "both_halves_24h": true,
+      "both_halves_24h": false,
       "avg_win_24h": 0.0552,
-      "avg_loss_24h": -0.03755,
-      "payoff_24h": 1.47
+      "avg_loss_24h": -0.03764,
+      "payoff_24h": 1.466
     },
     "breakout": {
       "span_h_1h": 309.7,
