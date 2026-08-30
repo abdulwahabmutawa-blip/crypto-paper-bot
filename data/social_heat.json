@@ -1,16 +1,16 @@
 {
-  "ts": "2026-08-30T09:54:58+00:00",
+  "ts": "2026-08-30T10:00:41+00:00",
   "sources": {
     "coingecko": [
       "HNT",
       "PUMP",
       "ENA",
       "BTC",
-      "PENGU",
-      "ONDO",
-      "SOL",
       "NEAR",
-      "ZKC"
+      "ZKC",
+      "SOL",
+      "PENGU",
+      "ONDO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,7 +22,7 @@
       "ENSO",
       "SOL",
       "ETH",
-      "BTC"
+      "BNB"
     ],
     "watcher": [
       "PROM",
@@ -41,17 +41,7 @@
         "watcher"
       ],
       "funding": 5e-05,
-      "long_short": 1.33
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.13
+      "long_short": 1.34
     },
     {
       "symbol": "PROM",
@@ -60,7 +50,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 2.4e-05,
+      "funding": 3.2e-05,
       "long_short": 0.66
     },
     {
@@ -70,7 +60,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -5e-06,
+      "funding": -3e-06,
       "long_short": 1.9
     },
     {
@@ -82,6 +72,22 @@
       ],
       "funding": 0.0001,
       "long_short": 1.71
+    },
+    {
+      "symbol": "BNB",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 6e-06
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "ENA",
@@ -105,7 +111,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 3.9e-05
+      "funding": 4e-05
     },
     {
       "symbol": "HNT",
@@ -120,7 +126,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -7.7e-05
+      "funding": -7.5e-05
     },
     {
       "symbol": "ONDO",
