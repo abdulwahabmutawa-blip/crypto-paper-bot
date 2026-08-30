@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-30T19:55:36+00:00",
+  "ts": "2026-08-30T20:02:18+00:00",
   "scanned": 76,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ASTERUSDT",
-      "signal": "ignition",
-      "score": 0.8167,
-      "raw_score": 0.8956,
-      "weight": 0.912,
-      "price": 0.705,
-      "why": "trades 9.7x and volume 9.3x the prior 4h, 73% taker-buy, $322,733 burst \u2014 while price has only moved +0.3%",
-      "chg_24h": 0.0086,
-      "vol_surge": 9.32,
-      "chg_1h": 0.0028,
-      "market_surge": 7.15,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.4 independent 24h windows (span 129h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.4 independent 24h windows (span 129h): overlapping labels are not a sample",
     "breakout": "actionable",
