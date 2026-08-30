@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-30T10:34:41+00:00",
+  "ts": "2026-08-30T10:40:31+00:00",
   "sources": {
     "coingecko": [
       "HNT",
@@ -23,7 +23,7 @@
       "ENA",
       "SOL",
       "ETH",
-      "ENSO"
+      "BTC"
     ],
     "watcher": [
       "PROM",
@@ -45,13 +45,23 @@
       "long_short": 1.34
     },
     {
+      "symbol": "BTC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.13
+    },
+    {
       "symbol": "ENA",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 3e-05,
+      "funding": 2.6e-05,
       "long_short": 1.66
     },
     {
@@ -61,7 +71,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 5.5e-05,
+      "funding": 6.2e-05,
       "long_short": 2.48
     },
     {
@@ -71,7 +81,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -4e-06,
+      "funding": -8e-06,
       "long_short": 0.66
     },
     {
@@ -81,8 +91,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 1.1e-05,
-      "long_short": 1.89
+      "funding": 1.4e-05
     },
     {
       "symbol": "UNI",
@@ -101,22 +110,6 @@
         "movers"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "ENSO",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "HNT",
