@@ -1,16 +1,16 @@
 {
-  "ts": "2026-08-30T15:19:23+00:00",
+  "ts": "2026-08-30T15:24:31+00:00",
   "sources": {
     "coingecko": [
       "HNT",
       "PENGU",
+      "PUMP",
       "BTC",
       "LIT",
-      "PUMP",
-      "ENA",
-      "ETH",
+      "ZEC",
       "SOL",
-      "AERO",
+      "ETH",
+      "ENA",
       "UNI"
     ],
     "reddit": [],
@@ -19,11 +19,11 @@
       "PROM",
       "UNI",
       "ZEC",
-      "SOL",
       "ETH",
-      "PUMP",
+      "SOL",
+      "BNB",
       "BTC",
-      "BNB"
+      "PUMP"
     ],
     "watcher": [
       "HNT",
@@ -61,7 +61,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 5.5e-05,
+      "funding": 5.4e-05,
       "long_short": 2.43
     },
     {
@@ -79,7 +79,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -4.1e-05,
+      "funding": -4e-05,
       "long_short": 0.57
     },
     {
@@ -98,15 +98,16 @@
         "coingecko",
         "movers"
       ],
-      "funding": 2.3e-05
+      "funding": 2.1e-05
     },
     {
-      "symbol": "AERO",
-      "surfaces": 1,
+      "symbol": "ZEC",
+      "surfaces": 2,
       "sources": [
-        "coingecko"
+        "coingecko",
+        "movers"
       ],
-      "funding": 4e-05
+      "funding": 7.3e-05
     },
     {
       "symbol": "BNB",
@@ -122,7 +123,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.8e-05
+      "funding": 4e-05
     },
     {
       "symbol": "LIT",
@@ -139,14 +140,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 7.4e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
