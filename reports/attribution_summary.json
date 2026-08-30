@@ -1,83 +1,83 @@
 {
- "updated_utc": "2026-08-24T09:30:00+00:00",
- "lines_counted": 406,
- "lines_total": 406,
- "method": "Recomputed from source each run rather than incremented. Daily lines are deduped by (date,bot) keeping the last filing, which drops superseded re-filings so a session is never counted twice.",
+ "updated_utc": "2026-08-30T19:30:00+00:00",
+ "lines_counted": 423,
+ "lines_total": 423,
+ "method": "Recomputed from source each run rather than incremented. Daily lines are deduped by (date,bot) keeping the last filing, which drops superseded re-filings so a session is never counted twice; trade_event lines are all kept.",
  "by_primary_driver": {
-  "market_beta": {
-   "profit": 32,
-   "loss": 25,
-   "flat": 7,
-   "win_pct": 56.1
-  },
-  "hype_sentiment": {
-   "profit": 18,
-   "loss": 33,
-   "flat": 7,
-   "win_pct": 35.3
-  },
-  "technical": {
-   "profit": 14,
-   "loss": 34,
-   "flat": 4,
-   "win_pct": 29.2
-  },
-  "macro": {
-   "profit": 18,
-   "loss": 17,
-   "flat": 2,
-   "win_pct": 51.4
-  },
   "unknown": {
    "profit": 14,
    "loss": 13,
    "flat": 87,
    "win_pct": 51.9
   },
-  "sector": {
-   "profit": 13,
-   "loss": 9,
-   "flat": 0,
-   "win_pct": 59.1
+  "market_beta": {
+   "profit": 34,
+   "loss": 27,
+   "flat": 7,
+   "win_pct": 55.7
   },
-  "news_idiosyncratic": {
-   "profit": 13,
-   "loss": 7,
-   "flat": 1,
-   "win_pct": 65.0
+  "hype_sentiment": {
+   "profit": 18,
+   "loss": 37,
+   "flat": 7,
+   "win_pct": 32.7
+  },
+  "technical": {
+   "profit": 17,
+   "loss": 36,
+   "flat": 4,
+   "win_pct": 32.1
   },
   "none_cash": {
    "profit": 0,
    "loss": 1,
-   "flat": 37,
+   "flat": 38,
    "win_pct": 0.0
+  },
+  "macro": {
+   "profit": 18,
+   "loss": 18,
+   "flat": 2,
+   "win_pct": 50.0
+  },
+  "sector": {
+   "profit": 13,
+   "loss": 10,
+   "flat": 0,
+   "win_pct": 56.5
+  },
+  "news_idiosyncratic": {
+   "profit": 13,
+   "loss": 8,
+   "flat": 1,
+   "win_pct": 61.9
   }
  },
  "by_beta_or_alpha": {
   "alpha": {
-   "profit": 64,
-   "loss": 80,
+   "profit": 67,
+   "loss": 87,
    "flat": 8,
-   "win_pct": 44.4
-  },
-  "beta": {
-   "profit": 27,
-   "loss": 21,
-   "flat": 7,
-   "win_pct": 56.2
-  },
-  "mixed": {
-   "profit": 18,
-   "loss": 23,
-   "flat": 1,
-   "win_pct": 43.9
+   "win_pct": 43.5
   },
   "n/a": {
    "profit": 13,
    "loss": 15,
-   "flat": 129,
+   "flat": 130,
    "win_pct": 46.4
+  },
+  "beta": {
+   "profit": 28,
+   "loss": 23,
+   "flat": 7,
+   "win_pct": 54.9
+  },
+  "mixed": {
+   "profit": 19,
+   "loss": 25,
+   "flat": 1,
+   "win_pct": 43.2
   }
  },
- "note": "'technical' and 'hype_sentiment' remain the two worst drivers in this ledger and each took another loss today. The hype_sentiment loss is the informative one: hypecrypto bought ENA a second day running, off the same kind of scan, and lost a second time - 55.30 on 08-23 and 7.79 on 08-24. Nine round trips, nine finishes below the start. 'unknown' keeps swelling on flat lines because seven equity books have now sat three consecutive runs with no completed session to attribute, which is the honest label rather than a story."
+ "note": "'hype_sentiment' is now decisively the worst driver in the ledger and it produced BOTH of this run's large losses: sentiment -60.95 on an NVDA buy placed 1.1% under the day's high, and hypecrypto -102.73 on a PROM buy placed into a six-day 117% run. The two bots share one defect, an entry rule with no price filter, so they pay whatever the euphoria scan names at the moment it names it. Against that, the real-money lottery book took a breakout entry the same day on a 24h-low distance test and is up 17.1%, which is the cleanest controlled comparison the fleet has produced. 'market_beta' lines dominate the honest-and-boring end: four books were 100% in one asset and simply returned it."
 }
