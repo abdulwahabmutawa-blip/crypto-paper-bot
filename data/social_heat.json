@@ -1,13 +1,14 @@
 {
-  "ts": "2026-08-30T12:57:51+00:00",
+  "ts": "2026-08-30T13:03:21+00:00",
   "sources": {
     "coingecko": [
       "HNT",
       "LIT",
       "PUMP",
-      "UNI",
       "PENGU",
-      "BTC"
+      "UNI",
+      "BTC",
+      "ENA"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -38,7 +39,7 @@
         "watcher"
       ],
       "funding": 0.0001,
-      "long_short": 1.67
+      "long_short": 1.62
     },
     {
       "symbol": "BTC",
@@ -48,7 +49,17 @@
         "movers"
       ],
       "funding": 0.0001,
-      "long_short": 1.12
+      "long_short": 1.11
+    },
+    {
+      "symbol": "ENA",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -2e-06,
+      "long_short": 1.65
     },
     {
       "symbol": "HNT",
@@ -65,8 +76,8 @@
         "movers",
         "watcher"
       ],
-      "funding": -2e-06,
-      "long_short": 0.63
+      "funding": -7e-06,
+      "long_short": 0.62
     },
     {
       "symbol": "PUMP",
@@ -75,16 +86,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 5e-05,
-      "long_short": 1.33
-    },
-    {
-      "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -8e-06
+      "funding": 5e-05
     },
     {
       "symbol": "LIT",
@@ -108,7 +110,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 5.1e-05
+      "funding": 4.9e-05
     },
     {
       "symbol": "SUI",
