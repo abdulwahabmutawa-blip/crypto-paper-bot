@@ -1,12 +1,12 @@
 {
   "created": "2026-08-15",
-  "held_symbol": "AUCTIONUSDT",
-  "entry_price": 3.557,
-  "units": 12.31,
-  "entry_scan_ts": "2026-08-30T03:45:23+00:00",
-  "entry_source": "scout:breakout",
+  "held_symbol": null,
+  "entry_price": null,
+  "units": 0.0,
+  "entry_scan_ts": null,
+  "entry_source": null,
   "stopped": {
-    "UNIUSDT": "2026-08-30T09:00:39+00:00"
+    "AUCTIONUSDT": "2026-08-30T20:40:58+00:00"
   },
   "entries": {
     "2026-08-30": 3
@@ -585,34 +585,35 @@
       "date": "2026-08-30",
       "exit": 4.837,
       "entry": 4.963
+    },
+    {
+      "symbol": "AUCTIONUSDT",
+      "source": "scout:breakout",
+      "entry_score": 0.7672,
+      "entry_time": "2026-08-30T09:00:39+00:00",
+      "exit_time": "2026-08-30T20:40:58+00:00",
+      "entry_price": 3.557,
+      "exit_price": 3.9219999999999997,
+      "units": 12.31,
+      "spent_usd": 43.7867,
+      "got_usd": 48.2798,
+      "pnl_pct": 10.26,
+      "pnl_usd": 4.4931,
+      "reason": "RATCHET (+10.3% vs peak +21.5%) \u2014 a ride that paid never goes red again",
+      "date": "2026-08-30",
+      "exit": 3.9219999999999997,
+      "entry": 3.557
     }
   ],
-  "last_value_usd": 48.86,
-  "last_updated_utc": "2026-08-30T20:35:29+00:00",
-  "open_position": {
-    "symbol": "AUCTIONUSDT",
-    "entry_time": "2026-08-30T09:00:39+00:00",
-    "entry_price": 3.557,
-    "current_price": 3.973,
-    "units": 12.31,
-    "spent_usd": 43.7867,
-    "value_usd": 48.9076,
-    "pnl_usd": 5.1209,
-    "pnl_pct": 11.7,
-    "source": "scout:breakout"
-  },
-  "spent_usd": 43.7867,
+  "last_value_usd": 48.28,
+  "last_updated_utc": "2026-08-30T20:40:58+00:00",
+  "open_position": null,
+  "spent_usd": null,
   "no_pair": {
-    "scan_ts": "2026-08-30T03:45:23+00:00",
+    "scan_ts": "2026-08-30T20:08:51+00:00",
     "syms": []
   },
   "wave_bonus_date": "2026-08-27",
   "book_hwm_usd": 58.4265,
-  "entry_score": 0.7672,
-  "hwm": 4.32,
-  "move_max_qv": 1258013.55581,
-  "move_qv_sum": 7155434.772729999,
-  "move_qv_n": 10,
-  "move_last_ms": 1788116400000,
-  "entry_time": "2026-08-30T09:00:39+00:00"
+  "entry_score": 0.7672
 }
