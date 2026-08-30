@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-30T11:51:55+00:00",
+  "ts": "2026-08-30T11:57:41+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -19,30 +19,19 @@
       "UNI",
       "ZEC",
       "PUMP",
-      "ENA",
       "SOL",
+      "ENA",
       "ETH",
-      "BTC"
+      "SUI"
     ],
     "watcher": [
+      "HNT",
       "PROM",
-      "UNI",
-      "PUMP"
+      "UNI"
     ],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "PUMP",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.34
-    },
     {
       "symbol": "UNI",
       "surfaces": 3,
@@ -55,14 +44,12 @@
       "long_short": 1.62
     },
     {
-      "symbol": "BTC",
+      "symbol": "HNT",
       "surfaces": 2,
       "sources": [
         "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.13
+        "watcher"
+      ]
     },
     {
       "symbol": "PROM",
@@ -71,8 +58,18 @@
         "movers",
         "watcher"
       ],
-      "funding": -8e-06,
+      "funding": -2e-06,
       "long_short": 0.64
+    },
+    {
+      "symbol": "PUMP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.34
     },
     {
       "symbol": "SOL",
@@ -81,7 +78,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 4.9e-05,
+      "funding": 5.1e-05,
       "long_short": 1.88
     },
     {
@@ -90,7 +87,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7e-06
+      "funding": 6e-06
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "ENA",
@@ -106,14 +111,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 7.9e-05
-    },
-    {
-      "symbol": "HNT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ]
+      "funding": 7.8e-05
     },
     {
       "symbol": "LIT",
@@ -137,6 +135,14 @@
       "sources": [
         "coingecko"
       ]
+    },
+    {
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 7.5e-05
     },
     {
       "symbol": "ZEC",
