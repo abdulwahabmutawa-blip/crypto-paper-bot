@@ -1,39 +1,8 @@
 {
-  "ts": "2026-08-30T13:19:44+00:00",
+  "ts": "2026-08-30T13:24:57+00:00",
   "scanned": 67,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ZROUSDT",
-      "signal": "ignition",
-      "score": 0.6498,
-      "raw_score": 0.7196,
-      "weight": 0.903,
-      "price": 1.094,
-      "why": "trades 4.4x and volume 15.1x the prior 4h, 83% taker-buy, $124,725 burst \u2014 while price has only moved -0.5%",
-      "chg_24h": 0.0321,
-      "vol_surge": 15.07,
-      "chg_1h": -0.0055,
-      "market_surge": 5.77,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 128h): overlapping labels are not a sample"
-    },
-    {
-      "symbol": "BCHUSDT",
-      "signal": "ignition",
-      "score": 0.5712,
-      "raw_score": 0.6326,
-      "weight": 0.903,
-      "price": 251.3,
-      "why": "trades 6.2x and volume 5.7x the prior 4h, 63% taker-buy, $60,944 burst \u2014 while price has only moved +0.7%",
-      "chg_24h": 0.0274,
-      "vol_surge": 5.69,
-      "chg_1h": 0.0072,
-      "market_surge": 3.23,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 128h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 128h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -42,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 13,
+    "count": 12,
     "baseline": 12.0,
     "wave": false
   },
