@@ -1,29 +1,28 @@
 {
-  "ts": "2026-08-30T04:10:55+00:00",
+  "ts": "2026-08-30T04:16:47+00:00",
   "scanned": 64,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "PROMUSDT",
-      "signal": "heat",
-      "score": 0.6336,
-      "raw_score": 0.6,
-      "weight": 1.056,
-      "price": 6.884,
-      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding -0.003% \u00b7 L/S 0.69",
-      "chg_24h": 0.3466,
-      "vol_surge": null,
-      "chg_1h": null,
-      "market_surge": 3,
-      "actionable": false,
-      "status": "benched \u2014 hit 55%, mean +0.44% over last 128 at 24h: not beating 4x the round trip"
+      "symbol": "STRKUSDT",
+      "signal": "breakout",
+      "score": 0.7749,
+      "raw_score": 0.8156,
+      "weight": 0.95,
+      "price": 0.02623,
+      "why": "trades 78.0x, volume 59.2x, 63% taker-buy, +4.5% in an hour, at 101% of its 24h range",
+      "chg_24h": 0.0654,
+      "vol_surge": 59.19,
+      "chg_1h": 0.0446,
+      "market_surge": 10.05,
+      "actionable": true
     }
   ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.2 independent 24h windows (span 124h): overlapping labels are not a sample",
     "breakout": "actionable",
     "reversion": "benched \u2014 hit 50%, mean +0.65% over last 38 at 24h: not beating 4x the round trip",
-    "heat": "benched \u2014 hit 55%, mean +0.44% over last 128 at 24h: not beating 4x the round trip",
+    "heat": "benched \u2014 hit 54%, mean +0.42% over last 129 at 24h: not beating 4x the round trip",
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
@@ -149,16 +148,16 @@
       "avg_win_4h": 0.0404,
       "avg_loss_4h": -0.05001,
       "payoff_4h": 0.808,
-      "span_h_24h": 291.3,
-      "n_eff_24h": 12.14,
-      "n_24h": 128,
-      "hit_rate_24h": 0.547,
-      "mean_ret_24h": 0.00439,
-      "median_ret_24h": 0.02683,
+      "span_h_24h": 292.8,
+      "n_eff_24h": 12.2,
+      "n_24h": 129,
+      "hit_rate_24h": 0.543,
+      "mean_ret_24h": 0.0042,
+      "median_ret_24h": 0.02571,
       "both_halves_24h": false,
       "avg_win_24h": 0.09565,
-      "avg_loss_24h": -0.1093,
-      "payoff_24h": 0.875
+      "avg_loss_24h": -0.10775,
+      "payoff_24h": 0.888
     },
     "revival": {
       "span_h_1h": 5.7,
