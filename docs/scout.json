@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-30T06:46:46+00:00",
+  "ts": "2026-08-30T06:52:47+00:00",
   "scanned": 64,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "UNIUSDT",
+      "signal": "heat",
+      "score": 0.6312,
+      "raw_score": 0.6,
+      "weight": 1.052,
+      "price": 4.958,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.010% \u00b7 L/S 1.66",
+      "chg_24h": 0.1248,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
+      "actionable": false,
+      "status": "benched \u2014 hit 54%, mean +0.42% over last 129 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 126h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 11,
+    "count": 10,
     "baseline": 12.0,
     "wave": false
   },
@@ -37,16 +53,16 @@
       "avg_win_4h": 0.01826,
       "avg_loss_4h": -0.01942,
       "payoff_4h": 0.94,
-      "span_h_24h": 126.2,
+      "span_h_24h": 126.1,
       "n_eff_24h": 5.26,
       "n_24h": 400,
       "hit_rate_24h": 0.422,
-      "mean_ret_24h": 0.00325,
-      "median_ret_24h": -0.00489,
+      "mean_ret_24h": 0.00328,
+      "median_ret_24h": -0.0046,
       "both_halves_24h": false,
-      "avg_win_24h": 0.05436,
-      "avg_loss_24h": -0.03724,
-      "payoff_24h": 1.46
+      "avg_win_24h": 0.05406,
+      "avg_loss_24h": -0.03736,
+      "payoff_24h": 1.447
     },
     "breakout": {
       "span_h_1h": 316.1,
