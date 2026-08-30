@@ -1,8 +1,53 @@
 {
-  "ts": "2026-08-30T19:26:49+00:00",
-  "scanned": 76,
+  "ts": "2026-08-30T19:32:36+00:00",
+  "scanned": 78,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ZKUSDT",
+      "signal": "ignition",
+      "score": 0.7541,
+      "raw_score": 0.8269,
+      "weight": 0.912,
+      "price": 0.00964,
+      "why": "trades 22.4x and volume 14.7x the prior 4h, 62% taker-buy, $244,629 burst \u2014 while price has only moved +3.1%",
+      "chg_24h": 0.1667,
+      "vol_surge": 14.74,
+      "chg_1h": 0.031,
+      "market_surge": 0.0,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 128h): overlapping labels are not a sample"
+    },
+    {
+      "symbol": "ZKUSDT",
+      "signal": "breakout",
+      "score": 0.7381,
+      "raw_score": 0.7705,
+      "weight": 0.958,
+      "price": 0.00964,
+      "why": "trades 22.4x, volume 14.7x, 62% taker-buy, +3.1% in an hour, at 89% of its 24h range",
+      "chg_24h": 0.1667,
+      "vol_surge": 14.74,
+      "chg_1h": 0.031,
+      "market_surge": 0.0,
+      "actionable": true
+    },
+    {
+      "symbol": "UNIUSDT",
+      "signal": "heat",
+      "score": 0.6294,
+      "raw_score": 0.6,
+      "weight": 1.049,
+      "price": 5.397,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.010% \u00b7 L/S 1.63",
+      "chg_24h": 0.1581,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
+      "actionable": false,
+      "status": "benched \u2014 hit 54%, mean +0.38% over last 131 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 128h): overlapping labels are not a sample",
     "breakout": "actionable",
