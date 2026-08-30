@@ -1,23 +1,8 @@
 {
-  "ts": "2026-08-30T11:13:21+00:00",
-  "scanned": 64,
+  "ts": "2026-08-30T11:19:16+00:00",
+  "scanned": 61,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "UNIUSDT",
-      "signal": "breakout",
-      "score": 0.6358,
-      "raw_score": 0.6692,
-      "weight": 0.95,
-      "price": 5.034,
-      "why": "trades 4.7x, volume 6.1x, 81% taker-buy, +4.4% in an hour, at 99% of its 24h range",
-      "chg_24h": 0.1456,
-      "vol_surge": 6.13,
-      "chg_1h": 0.0437,
-      "market_surge": 6.98,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 126h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -26,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 13,
+    "count": 14,
     "baseline": 12.0,
     "wave": false
   },
