@@ -1,8 +1,23 @@
 {
-  "ts": "2026-08-30T00:48:25+00:00",
-  "scanned": 63,
+  "ts": "2026-08-30T00:53:46+00:00",
+  "scanned": 65,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ZKPUSDT",
+      "signal": "breakout",
+      "score": 0.863,
+      "raw_score": 0.9065,
+      "weight": 0.952,
+      "price": 0.054,
+      "why": "trades 7.9x, volume 9.0x, 62% taker-buy, +7.6% in an hour, at 97% of its 24h range",
+      "chg_24h": 0.25,
+      "vol_surge": 8.97,
+      "chg_1h": 0.0757,
+      "market_surge": 0.0,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.1 independent 24h windows (span 123h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 10,
+    "count": 9,
     "baseline": 12.0,
     "wave": false
   },
