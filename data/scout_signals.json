@@ -1,38 +1,8 @@
 {
-  "ts": "2026-08-30T08:59:18+00:00",
-  "scanned": 63,
+  "ts": "2026-08-30T09:04:45+00:00",
+  "scanned": 64,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "AUCTIONUSDT",
-      "signal": "breakout",
-      "score": 0.7672,
-      "raw_score": 0.8075,
-      "weight": 0.95,
-      "price": 3.544,
-      "why": "trades 23.5x, volume 15.1x, 68% taker-buy, +3.9% in an hour, at 87% of its 24h range",
-      "chg_24h": 0.1265,
-      "vol_surge": 15.11,
-      "chg_1h": 0.039,
-      "market_surge": 0.0,
-      "actionable": true
-    },
-    {
-      "symbol": "AUCTIONUSDT",
-      "signal": "ignition",
-      "score": 0.7342,
-      "raw_score": 0.8221,
-      "weight": 0.893,
-      "price": 3.544,
-      "why": "trades 23.5x and volume 15.1x the prior 4h, 68% taker-buy, $242,766 burst \u2014 while price has only moved +3.9%",
-      "chg_24h": 0.1265,
-      "vol_surge": 15.11,
-      "chg_1h": 0.039,
-      "market_surge": 0.0,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.2 independent 24h windows (span 124h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.2 independent 24h windows (span 124h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -41,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 11,
     "baseline": 12.0,
     "wave": false
   },
