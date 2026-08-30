@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-30T03:32:18+00:00",
-  "scanned": 61,
+  "ts": "2026-08-30T03:38:28+00:00",
+  "scanned": 62,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "PUMPUSDT",
+      "signal": "heat",
+      "score": 0.6336,
+      "raw_score": 0.6,
+      "weight": 1.056,
+      "price": 0.004994,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.005% \u00b7 L/S 1.36",
+      "chg_24h": 0.081,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
+      "actionable": false,
+      "status": "benched \u2014 hit 55%, mean +0.44% over last 128 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.2 independent 24h windows (span 124h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 9,
+    "count": 11,
     "baseline": 12.0,
     "wave": false
   },
@@ -27,16 +43,16 @@
       "avg_win_1h": 0.01083,
       "avg_loss_1h": -0.00958,
       "payoff_1h": 1.131,
-      "span_h_4h": 130.6,
-      "n_eff_4h": 32.64,
+      "span_h_4h": 130.7,
+      "n_eff_4h": 32.66,
       "n_4h": 400,
       "hit_rate_4h": 0.385,
-      "mean_ret_4h": -0.00367,
+      "mean_ret_4h": -0.00365,
       "median_ret_4h": -0.00287,
       "both_halves_4h": false,
       "avg_win_4h": 0.01799,
-      "avg_loss_4h": -0.0196,
-      "payoff_4h": 0.918,
+      "avg_loss_4h": -0.01957,
+      "payoff_4h": 0.919,
       "span_h_24h": 123.9,
       "n_eff_24h": 5.16,
       "n_24h": 400,
@@ -69,16 +85,16 @@
       "avg_win_4h": 0.03939,
       "avg_loss_4h": -0.032,
       "payoff_4h": 1.231,
-      "span_h_24h": 288.8,
-      "n_eff_24h": 12.03,
-      "n_24h": 333,
-      "hit_rate_24h": 0.547,
-      "mean_ret_24h": 0.02695,
+      "span_h_24h": 291.4,
+      "n_eff_24h": 12.14,
+      "n_24h": 334,
+      "hit_rate_24h": 0.545,
+      "mean_ret_24h": 0.0268,
       "median_ret_24h": 0.01605,
       "both_halves_24h": true,
       "avg_win_24h": 0.09524,
-      "avg_loss_24h": -0.05573,
-      "payoff_24h": 1.709
+      "avg_loss_24h": -0.05551,
+      "payoff_24h": 1.716
     },
     "reversion": {
       "span_h_1h": 252.3,
