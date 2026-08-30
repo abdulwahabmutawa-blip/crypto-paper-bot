@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-30T03:43:23+00:00",
+  "ts": "2026-08-30T03:48:56+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
@@ -26,8 +26,8 @@
       "XRP"
     ],
     "watcher": [
-      "HNT",
       "PROM",
+      "UNI",
       "PUMP"
     ],
     "cryptopanic": []
@@ -45,12 +45,15 @@
       "long_short": 1.36
     },
     {
-      "symbol": "HNT",
-      "surfaces": 2,
+      "symbol": "UNI",
+      "surfaces": 3,
       "sources": [
         "coingecko",
+        "movers",
         "watcher"
-      ]
+      ],
+      "funding": 0.0001,
+      "long_short": 1.69
     },
     {
       "symbol": "PROM",
@@ -59,7 +62,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -2.2e-05,
+      "funding": -2.8e-05,
       "long_short": 0.7
     },
     {
@@ -69,18 +72,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": -8e-06,
+      "funding": -6e-06,
       "long_short": 1.92
-    },
-    {
-      "symbol": "UNI",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.69
     },
     {
       "symbol": "XRP",
@@ -89,7 +82,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 1.8e-05
+      "funding": 1.8e-05,
+      "long_short": 2.56
     },
     {
       "symbol": "ZEC",
@@ -106,7 +100,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.6e-05
+      "funding": 3.4e-05
     },
     {
       "symbol": "BMT",
@@ -114,7 +108,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -2e-05
+      "funding": -1.9e-05
     },
     {
       "symbol": "BTC",
@@ -130,7 +124,14 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.6e-05
+      "funding": 4.5e-05
+    },
+    {
+      "symbol": "HNT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ]
     },
     {
       "symbol": "ONG",
@@ -138,7 +139,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001395
+      "funding": -0.001357
     },
     {
       "symbol": "PENGU",
