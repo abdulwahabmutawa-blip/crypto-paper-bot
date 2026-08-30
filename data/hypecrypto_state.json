@@ -1,13 +1,15 @@
 {
   "created": "2026-08-15",
   "starting_cash": 1000.0,
-  "holding": "PROM-USD",
-  "units": 119.7028930534913,
-  "cash": 0.0,
-  "entry_price": 7.266,
-  "entry_scan_ts": "2026-08-30T03:45:23+00:00",
+  "holding": "CASH",
+  "units": 0.0,
+  "cash": 768.2534309636718,
+  "entry_price": null,
+  "entry_scan_ts": null,
   "bench_units": 0.01588152678794818,
-  "stopped": {},
+  "stopped": {
+    "PROM-USD": "2026-08-30T03:45:23+00:00"
+  },
   "entries": {
     "2026-08-30": 1
   },
@@ -241,6 +243,16 @@
       "value": 869.76,
       "fee": 1.22,
       "reason": "Grok: PROM euphoric \u2014 exchange listing victory lap (scan 2026-08-30T03:45)"
+    },
+    {
+      "date": "2026-08-30",
+      "action": "SELL",
+      "ticker": "PROM-USD",
+      "price": 6.427,
+      "units": 119.702893,
+      "value": 769.33,
+      "fee": 1.08,
+      "reason": "STOP-LOSS (-11.5% from entry) \u2014 hype that bleeds gets cut"
     }
   ],
   "history": [
@@ -330,9 +342,9 @@
     },
     {
       "date": "2026-08-30",
-      "value": 786.21,
-      "bench": 1239.19,
-      "holding": "PROM-USD"
+      "value": 768.25,
+      "bench": 1239.13,
+      "holding": "CASH"
     }
   ],
   "intraday": [
@@ -7451,8 +7463,14 @@
       "value": 786.21,
       "bench": 1239.19,
       "holding": "PROM-USD"
+    },
+    {
+      "ts": "2026-08-30T10:21:21+00:00",
+      "value": 768.25,
+      "bench": 1239.13,
+      "holding": "CASH"
     }
   ],
-  "last_updated_utc": "2026-08-30T10:07:50+00:00",
-  "costs_paid": 31.4017
+  "last_updated_utc": "2026-08-30T10:21:21+00:00",
+  "costs_paid": 32.4788
 }

@@ -1,13 +1,13 @@
 {
-  "generated_utc": "2026-08-30T10:07:50+00:00",
+  "generated_utc": "2026-08-30T10:21:21+00:00",
   "created": "2026-08-15",
   "starting_cash": 1000.0,
-  "live_ts": "2026-08-30T10:07:50+00:00",
+  "live_ts": "2026-08-30T10:21:21+00:00",
   "current": {
     "date": "2026-08-30",
-    "value": 786.21,
-    "bench": 1239.19,
-    "holding": "PROM-USD"
+    "value": 768.25,
+    "bench": 1239.13,
+    "holding": "CASH"
   },
   "board": [
     {
@@ -21,16 +21,16 @@
     },
     {
       "sym": "PROM",
-      "price": 6.568,
+      "price": 6.427,
       "line": "euphoric \u00b7 exchange listing victory lap",
-      "tag": "HELD",
+      "tag": "stopped",
       "on": true,
-      "pick": true,
+      "pick": false,
       "fill": 40
     },
     {
       "sym": "UNI",
-      "price": 4.818,
+      "price": 4.834,
       "line": "euphoric \u00b7 protocol utility cheer",
       "tag": "candidate",
       "on": true,
@@ -7188,19 +7188,15 @@
       "value": 786.21,
       "bench": 1239.19,
       "holding": "PROM-USD"
+    },
+    {
+      "ts": "2026-08-30T10:21:21+00:00",
+      "value": 768.25,
+      "bench": 1239.13,
+      "holding": "CASH"
     }
   ],
   "trades": [
-    {
-      "date": "2026-08-18",
-      "action": "SELL",
-      "ticker": "TUT-USD",
-      "price": 0.04306,
-      "units": 25250.403187,
-      "value": 1087.28,
-      "fee": 1.52,
-      "reason": "Hype faded \u2014 coin dropped off a newer euphoric scan"
-    },
     {
       "date": "2026-08-19",
       "action": "BUY",
@@ -7390,6 +7386,16 @@
       "value": 869.76,
       "fee": 1.22,
       "reason": "Grok: PROM euphoric \u2014 exchange listing victory lap (scan 2026-08-30T03:45)"
+    },
+    {
+      "date": "2026-08-30",
+      "action": "SELL",
+      "ticker": "PROM-USD",
+      "price": 6.427,
+      "units": 119.702893,
+      "value": 769.33,
+      "fee": 1.08,
+      "reason": "STOP-LOSS (-11.5% from entry) \u2014 hype that bleeds gets cut"
     }
   ],
   "history": [
@@ -7479,14 +7485,14 @@
     },
     {
       "date": "2026-08-30",
-      "value": 786.21,
-      "bench": 1239.19,
-      "holding": "PROM-USD"
+      "value": 768.25,
+      "bench": 1239.13,
+      "holding": "CASH"
     }
   ],
-  "costs_paid": 31.4017,
+  "costs_paid": 32.4788,
   "frozen": null,
-  "thoughts": "I'm riding PROM from the 2026-08-30T03:45 scan. My exit is mechanical: a newer scan without it, -10% from entry, or a blind/severe Watcher \u2014 whichever comes first.",
+  "thoughts": "I'm in cash. I buy only the freshest euphoric crypto (scan under 9h old), one entry a day, never on weekends \u2014 lukewarm or aging hype is how small accounts bleed out in fees.",
   "strategy": {
     "name": "Hype Crypto \u2014 sentiment pattern, crypto venue, on trial",
     "rule": "Top euphoric crypto from a fresh Watcher scan; 1 entry/day max; -10% hard stop; exit on newer scan without the coin, stale scans, or SEVERE; Binance-tier fees",
