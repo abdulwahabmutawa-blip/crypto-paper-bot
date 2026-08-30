@@ -1,8 +1,23 @@
 {
-  "ts": "2026-08-30T02:07:02+00:00",
-  "scanned": 64,
+  "ts": "2026-08-30T02:12:46+00:00",
+  "scanned": 65,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "MOVRUSDT",
+      "signal": "breakout",
+      "score": 0.7305,
+      "raw_score": 0.7689,
+      "weight": 0.95,
+      "price": 0.853,
+      "why": "trades 23.1x, volume 33.3x, 66% taker-buy, +2.8% in an hour, at 91% of its 24h range",
+      "chg_24h": 0.1008,
+      "vol_surge": 33.34,
+      "chg_1h": 0.0277,
+      "market_surge": 14.37,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.2 independent 24h windows (span 124h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 8,
+    "count": 9,
     "baseline": 12.0,
     "wave": false
   },
