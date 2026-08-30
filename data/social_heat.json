@@ -1,16 +1,15 @@
 {
-  "ts": "2026-08-30T11:35:17+00:00",
+  "ts": "2026-08-30T11:41:10+00:00",
   "sources": {
     "coingecko": [
       "HNT",
-      "PUMP",
       "BTC",
-      "PENGU",
       "LIT",
-      "SUI",
+      "PENGU",
+      "PUMP",
       "SOL",
-      "ENA",
-      "UNI"
+      "UNI",
+      "XMR"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,10 +18,10 @@
       "UNI",
       "ZEC",
       "PUMP",
-      "SOL",
       "ENA",
+      "SOL",
       "ETH",
-      "BTC"
+      "BNB"
     ],
     "watcher": [
       "PROM",
@@ -55,33 +54,13 @@
       "long_short": 1.62
     },
     {
-      "symbol": "BTC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.13
-    },
-    {
-      "symbol": "ENA",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": -9e-06,
-      "long_short": 1.66
-    },
-    {
       "symbol": "PROM",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": -1e-06,
+      "funding": -8e-06,
       "long_short": 0.64
     },
     {
@@ -91,7 +70,32 @@
         "coingecko",
         "movers"
       ],
-      "funding": 4.4e-05
+      "funding": 4.5e-05,
+      "long_short": 1.88
+    },
+    {
+      "symbol": "BNB",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ENA",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -7e-06
     },
     {
       "symbol": "ETH",
@@ -125,12 +129,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "SUI",
+      "symbol": "XMR",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 6.8e-05
+      "funding": 0.001213
     },
     {
       "symbol": "ZEC",
