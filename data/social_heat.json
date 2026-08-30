@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-30T10:11:57+00:00",
+  "ts": "2026-08-30T10:17:41+00:00",
   "sources": {
     "coingecko": [
       "HNT",
@@ -21,9 +21,9 @@
       "ZEC",
       "PUMP",
       "SOL",
-      "ENA",
       "ETH",
-      "BTC"
+      "BTC",
+      "BNB"
     ],
     "watcher": [
       "PROM",
@@ -66,23 +66,13 @@
       "long_short": 1.13
     },
     {
-      "symbol": "ENA",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 4.2e-05,
-      "long_short": 1.66
-    },
-    {
       "symbol": "PROM",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": 9e-06,
+      "funding": 6e-06,
       "long_short": 0.66
     },
     {
@@ -92,7 +82,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 2e-06
+      "funding": 4e-06,
+      "long_short": 1.89
     },
     {
       "symbol": "ZEC",
@@ -104,12 +95,28 @@
       "funding": 0.0001
     },
     {
+      "symbol": "BNB",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 4e-06
+    },
+    {
+      "symbol": "ENA",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 3.7e-05
+    },
+    {
       "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 4.2e-05
+      "funding": 4.3e-05
     },
     {
       "symbol": "HNT",
@@ -132,7 +139,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -7.3e-05
+      "funding": -7.1e-05
     },
     {
       "symbol": "ZKC",
