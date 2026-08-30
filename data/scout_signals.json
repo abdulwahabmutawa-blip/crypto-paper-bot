@@ -1,38 +1,8 @@
 {
-  "ts": "2026-08-30T21:23:45+00:00",
-  "scanned": 81,
+  "ts": "2026-08-30T21:29:29+00:00",
+  "scanned": 80,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "MIRAUSDT",
-      "signal": "ignition",
-      "score": 0.7601,
-      "raw_score": 0.8465,
-      "weight": 0.898,
-      "price": 0.04507,
-      "why": "trades 14.1x and volume 25.7x the prior 4h, 61% taker-buy, $100,206 burst \u2014 while price has only moved +2.2%",
-      "chg_24h": 0.0888,
-      "vol_surge": 25.68,
-      "chg_1h": 0.022,
-      "market_surge": 8.06,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.4 independent 24h windows (span 130h): overlapping labels are not a sample"
-    },
-    {
-      "symbol": "MIRAUSDT",
-      "signal": "breakout",
-      "score": 0.7051,
-      "raw_score": 0.7399,
-      "weight": 0.953,
-      "price": 0.04507,
-      "why": "trades 14.1x, volume 25.7x, 61% taker-buy, +2.2% in an hour, at 89% of its 24h range",
-      "chg_24h": 0.0888,
-      "vol_surge": 25.68,
-      "chg_1h": 0.022,
-      "market_surge": 8.06,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.4 independent 24h windows (span 130h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -41,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 11,
     "baseline": 12.0,
     "wave": false
   },
@@ -57,16 +27,16 @@
       "avg_win_1h": 0.01092,
       "avg_loss_1h": -0.00901,
       "payoff_1h": 1.212,
-      "span_h_4h": 137.1,
-      "n_eff_4h": 34.28,
+      "span_h_4h": 137.4,
+      "n_eff_4h": 34.35,
       "n_4h": 400,
       "hit_rate_4h": 0.398,
-      "mean_ret_4h": -0.00256,
+      "mean_ret_4h": -0.0026,
       "median_ret_4h": -0.0027,
       "both_halves_4h": false,
       "avg_win_4h": 0.01865,
-      "avg_loss_4h": -0.01856,
-      "payoff_4h": 1.005,
+      "avg_loss_4h": -0.01864,
+      "payoff_4h": 1.001,
       "span_h_24h": 129.6,
       "n_eff_24h": 5.4,
       "n_24h": 400,
