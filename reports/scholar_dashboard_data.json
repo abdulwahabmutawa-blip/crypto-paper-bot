@@ -1,8 +1,8 @@
 {
-  "generated_utc": "2026-08-30T16:04:41+00:00",
+  "generated_utc": "2026-08-30T16:18:16+00:00",
   "created": "2026-07-30",
   "starting_cash": 1000.0,
-  "live_ts": "2026-08-30T16:00:00+00:00",
+  "live_ts": "2026-08-30T16:15:00+00:00",
   "current": {
     "date": "2026-08-28",
     "value": 1019.33,
@@ -17,7 +17,7 @@
       "tag": "HELD",
       "on": true,
       "pick": true,
-      "fill": 16.79422058792142
+      "fill": 16.794220587921423
     },
     {
       "sym": "EFA",
@@ -26,7 +26,7 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 11.550055027304092
+      "fill": 11.550055027304094
     },
     {
       "sym": "IWM",
@@ -35,7 +35,16 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 10.49613636874414
+      "fill": 10.496136368744127
+    },
+    {
+      "sym": "ETH-USD",
+      "price": 2517.93,
+      "line": "Ethereum \u00b7 score +0.41 \u00b7 mom90 +25.6% \u00b7 MA gap +24.6%",
+      "tag": "eligible",
+      "on": true,
+      "pick": false,
+      "fill": 10.202593399079028
     },
     {
       "sym": "QQQ",
@@ -44,16 +53,7 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 10.175441782305294
-    },
-    {
-      "sym": "ETH-USD",
-      "price": 2485.79,
-      "line": "Ethereum \u00b7 score +0.38 \u00b7 mom90 +24.0% \u00b7 MA gap +23.0%",
-      "tag": "eligible",
-      "on": true,
-      "pick": false,
-      "fill": 9.592137787880295
+      "fill": 10.175441782305295
     },
     {
       "sym": "EEM",
@@ -62,7 +62,7 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 5.240972298404669
+      "fill": 5.24097229840467
     },
     {
       "sym": "DBC",
@@ -75,12 +75,12 @@
     },
     {
       "sym": "BTC-USD",
-      "price": 78956.61,
-      "line": "Bitcoin \u00b7 score +0.18 \u00b7 mom90 +7.3% \u00b7 MA gap +13.9%",
+      "price": 79090.64,
+      "line": "Bitcoin \u00b7 score +0.18 \u00b7 mom90 +7.5% \u00b7 MA gap +14.1%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 4.420569955567178
+      "fill": 4.528083633213888
     },
     {
       "sym": "USO",
@@ -116,7 +116,7 @@
       "tag": "not eligible",
       "on": false,
       "pick": false,
-      "fill": -7.857874742158049
+      "fill": -7.857881301933238
     }
   ],
   "board_title": "12 instruments ranked by momentum-per-unit-risk",
@@ -127,12 +127,6 @@
     "board_note": "Every rule in this bot was earned by an earlier experiment: vol-adjusted momentum, trend gate as crash protection, vol-sized positions, trailing stop, and a switch threshold that fights churn. The synthesis on trial."
   },
   "intraday": [
-    {
-      "ts": "2026-08-13T20:44:38+00:00",
-      "value": 1034.76,
-      "bench": 1048.6,
-      "holding": "IWM"
-    },
     {
       "ts": "2026-08-13T20:58:07+00:00",
       "value": 1034.76,
@@ -9123,6 +9117,12 @@
     },
     {
       "ts": "2026-08-30T16:04:41+00:00",
+      "value": 1019.33,
+      "bench": 1037.28,
+      "holding": "SPY"
+    },
+    {
+      "ts": "2026-08-30T16:18:16+00:00",
       "value": 1019.33,
       "bench": 1037.28,
       "holding": "SPY"
