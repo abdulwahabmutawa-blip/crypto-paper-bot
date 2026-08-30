@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-30T21:29:29+00:00",
-  "scanned": 80,
+  "ts": "2026-08-30T21:35:26+00:00",
+  "scanned": 78,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ZECUSDT",
+      "signal": "ignition",
+      "score": 0.6849,
+      "raw_score": 0.7627,
+      "weight": 0.898,
+      "price": 873.9,
+      "why": "trades 6.6x and volume 15.6x the prior 4h, 78% taker-buy, $4,728,550 burst \u2014 while price has only moved +1.8%",
+      "chg_24h": 0.0456,
+      "vol_surge": 15.58,
+      "chg_1h": 0.0179,
+      "market_surge": 10.72,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.4 independent 24h windows (span 130h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.4 independent 24h windows (span 130h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 11,
+    "count": 12,
     "baseline": 12.0,
     "wave": false
   },
@@ -37,15 +53,15 @@
       "avg_win_4h": 0.01865,
       "avg_loss_4h": -0.01864,
       "payoff_4h": 1.001,
-      "span_h_24h": 129.6,
+      "span_h_24h": 129.7,
       "n_eff_24h": 5.4,
       "n_24h": 400,
       "hit_rate_24h": 0.435,
-      "mean_ret_24h": 0.00052,
-      "median_ret_24h": -0.00392,
+      "mean_ret_24h": 0.00053,
+      "median_ret_24h": -0.00386,
       "both_halves_24h": false,
       "avg_win_24h": 0.04683,
-      "avg_loss_24h": -0.03867,
+      "avg_loss_24h": -0.03866,
       "payoff_24h": 1.211
     },
     "breakout": {
