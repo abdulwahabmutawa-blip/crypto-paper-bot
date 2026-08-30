@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-30T21:12:47+00:00",
-  "scanned": 80,
+  "ts": "2026-08-30T21:18:36+00:00",
+  "scanned": 81,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "BCHUSDT",
+      "signal": "ignition",
+      "score": 0.6505,
+      "raw_score": 0.7244,
+      "weight": 0.898,
+      "price": 250.9,
+      "why": "trades 6.5x and volume 7.6x the prior 4h, 73% taker-buy, $88,025 burst \u2014 while price has only moved -0.3%",
+      "chg_24h": 0.0178,
+      "vol_surge": 7.57,
+      "chg_1h": -0.0032,
+      "market_surge": 3.36,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.4 independent 24h windows (span 129h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.4 independent 24h windows (span 129h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -69,16 +85,16 @@
       "avg_win_4h": 0.03883,
       "avg_loss_4h": -0.03163,
       "payoff_4h": 1.228,
-      "span_h_24h": 304.7,
-      "n_eff_24h": 12.69,
-      "n_24h": 345,
-      "hit_rate_24h": 0.536,
-      "mean_ret_24h": 0.02514,
+      "span_h_24h": 309.1,
+      "n_eff_24h": 12.88,
+      "n_24h": 346,
+      "hit_rate_24h": 0.535,
+      "mean_ret_24h": 0.02472,
       "median_ret_24h": 0.01289,
       "both_halves_24h": true,
       "avg_win_24h": 0.09517,
-      "avg_loss_24h": -0.05618,
-      "payoff_24h": 1.694
+      "avg_loss_24h": -0.05658,
+      "payoff_24h": 1.682
     },
     "reversion": {
       "span_h_1h": 252.3,
