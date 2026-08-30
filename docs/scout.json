@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-29T23:58:47+00:00",
+  "ts": "2026-08-30T00:04:37+00:00",
   "scanned": 65,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ROBOUSDT",
+      "signal": "ignition",
+      "score": 0.6507,
+      "raw_score": 0.7369,
+      "weight": 0.883,
+      "price": 0.01297,
+      "why": "trades 4.7x and volume 9.4x the prior 4h, 88% taker-buy, $52,585 burst \u2014 while price has only moved -0.4%",
+      "chg_24h": -0.1092,
+      "vol_surge": 9.44,
+      "chg_1h": -0.0038,
+      "market_surge": 2.06,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.1 independent 24h windows (span 123h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.1 independent 24h windows (span 123h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 10,
+    "count": 9,
     "baseline": 12.0,
     "wave": false
   },
