@@ -1,16 +1,17 @@
 {
-  "ts": "2026-08-30T10:06:18+00:00",
+  "ts": "2026-08-30T10:11:57+00:00",
   "sources": {
     "coingecko": [
       "HNT",
       "PUMP",
       "ENA",
       "BTC",
+      "SOL",
       "NEAR",
       "ZKC",
-      "SOL",
-      "PENGU",
-      "ONDO"
+      "ZEC",
+      "UNI",
+      "LIT"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,9 +21,9 @@
       "ZEC",
       "PUMP",
       "SOL",
-      "ENSO",
+      "ENA",
       "ETH",
-      "ENA"
+      "BTC"
     ],
     "watcher": [
       "PROM",
@@ -44,13 +45,34 @@
       "long_short": 1.34
     },
     {
+      "symbol": "UNI",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.69
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.13
+    },
+    {
       "symbol": "ENA",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 4.5e-05,
+      "funding": 4.2e-05,
       "long_short": 1.66
     },
     {
@@ -60,7 +82,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 1.8e-05,
+      "funding": 9e-06,
       "long_short": 0.66
     },
     {
@@ -70,34 +92,16 @@
         "coingecko",
         "movers"
       ],
-      "funding": -1e-06,
-      "long_short": 1.89
+      "funding": 2e-06
     },
     {
-      "symbol": "UNI",
+      "symbol": "ZEC",
       "surfaces": 2,
       "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.69
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "ENSO",
-      "surfaces": 1,
-      "sources": [
+        "coingecko",
         "movers"
       ],
-      "funding": 5e-05
+      "funding": 0.0001
     },
     {
       "symbol": "ETH",
@@ -105,7 +109,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4e-05
+      "funding": 4.2e-05
     },
     {
       "symbol": "HNT",
@@ -115,36 +119,20 @@
       ]
     },
     {
+      "symbol": "LIT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "NEAR",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -8e-05
-    },
-    {
-      "symbol": "ONDO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "PENGU",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
+      "funding": -7.3e-05
     },
     {
       "symbol": "ZKC",
