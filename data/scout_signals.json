@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-30T14:35:15+00:00",
-  "scanned": 72,
+  "ts": "2026-08-30T14:40:35+00:00",
+  "scanned": 69,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "DASHUSDT",
+      "signal": "ignition",
+      "score": 0.6002,
+      "raw_score": 0.6647,
+      "weight": 0.903,
+      "price": 41.5,
+      "why": "trades 6.2x and volume 7.4x the prior 4h, 63% taker-buy, $100,041 burst \u2014 while price has only moved +1.0%",
+      "chg_24h": -0.0065,
+      "vol_surge": 7.44,
+      "chg_1h": 0.01,
+      "market_surge": 0.0,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 128h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 128h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 13,
+    "count": 12,
     "baseline": 12.0,
     "wave": false
   },
