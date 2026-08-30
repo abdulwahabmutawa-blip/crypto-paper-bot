@@ -1,17 +1,47 @@
 {
-  "ts": "2026-08-30T21:57:21+00:00",
+  "ts": "2026-08-30T22:03:15+00:00",
   "scanned": 79,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "NEARUSDT",
+      "signal": "breakout",
+      "score": 0.5917,
+      "raw_score": 0.6209,
+      "weight": 0.953,
+      "price": 1.914,
+      "why": "trades 4.6x, volume 8.0x, 63% taker-buy, +2.4% in an hour, at 82% of its 24h range",
+      "chg_24h": 0.0241,
+      "vol_surge": 8.02,
+      "chg_1h": 0.0235,
+      "market_surge": 3.32,
+      "actionable": true
+    },
+    {
+      "symbol": "NEARUSDT",
+      "signal": "ignition",
+      "score": 0.5207,
+      "raw_score": 0.5818,
+      "weight": 0.895,
+      "price": 1.914,
+      "why": "trades 4.6x and volume 8.0x the prior 4h, 63% taker-buy, $715,652 burst \u2014 while price has only moved +2.4%",
+      "chg_24h": 0.0241,
+      "vol_surge": 8.02,
+      "chg_1h": 0.0235,
+      "market_surge": 3.32,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.4 independent 24h windows (span 129h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
-    "ignition": "probation \u2014 400 rows but only 5.4 independent 24h windows (span 130h): overlapping labels are not a sample",
+    "ignition": "probation \u2014 400 rows but only 5.4 independent 24h windows (span 129h): overlapping labels are not a sample",
     "breakout": "actionable",
     "reversion": "benched \u2014 hit 50%, mean +0.65% over last 38 at 24h: not beating 4x the round trip",
     "heat": "benched \u2014 hit 55%, mean +0.40% over last 132 at 24h: not beating 4x the round trip",
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 13,
     "baseline": 12.0,
     "wave": false
   },
@@ -37,16 +67,16 @@
       "avg_win_4h": 0.01875,
       "avg_loss_4h": -0.01865,
       "payoff_4h": 1.005,
-      "span_h_24h": 129.8,
-      "n_eff_24h": 5.41,
+      "span_h_24h": 129.4,
+      "n_eff_24h": 5.39,
       "n_24h": 400,
-      "hit_rate_24h": 0.435,
-      "mean_ret_24h": 0.00044,
-      "median_ret_24h": -0.00386,
+      "hit_rate_24h": 0.432,
+      "mean_ret_24h": 0.00027,
+      "median_ret_24h": -0.00392,
       "both_halves_24h": false,
-      "avg_win_24h": 0.04683,
-      "avg_loss_24h": -0.03882,
-      "payoff_24h": 1.206
+      "avg_win_24h": 0.04705,
+      "avg_loss_24h": -0.03893,
+      "payoff_24h": 1.209
     },
     "breakout": {
       "span_h_1h": 331.4,
