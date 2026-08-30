@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-30T17:40:36+00:00",
+  "ts": "2026-08-30T17:46:03+00:00",
   "scanned": 77,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "EIGENUSDT",
-      "signal": "ignition",
-      "score": 0.8296,
-      "raw_score": 0.9097,
-      "weight": 0.912,
-      "price": 0.199,
-      "why": "trades 59.4x and volume 90.5x the prior 4h, 68% taker-buy, $423,061 burst \u2014 while price has only moved -0.4%",
-      "chg_24h": 0.0253,
-      "vol_surge": 90.52,
-      "chg_1h": -0.004,
-      "market_surge": 43.6,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 127h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 127h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -27,22 +11,22 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 13,
+    "count": 12,
     "baseline": 12.0,
     "wave": false
   },
   "scorecard": {
     "ignition": {
-      "span_h_1h": 137.3,
-      "n_eff_1h": 137.3,
+      "span_h_1h": 137.5,
+      "n_eff_1h": 137.49,
       "n_1h": 400,
       "hit_rate_1h": 0.385,
-      "mean_ret_1h": -0.00017,
+      "mean_ret_1h": -0.00014,
       "median_ret_1h": -0.00088,
       "both_halves_1h": false,
       "avg_win_1h": 0.01078,
-      "avg_loss_1h": -0.0092,
-      "payoff_1h": 1.172,
+      "avg_loss_1h": -0.00916,
+      "payoff_1h": 1.177,
       "span_h_4h": 137.2,
       "n_eff_4h": 34.3,
       "n_4h": 400,
