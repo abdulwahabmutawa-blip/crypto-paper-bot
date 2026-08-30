@@ -1,39 +1,8 @@
 {
-  "ts": "2026-08-30T06:41:36+00:00",
-  "scanned": 65,
+  "ts": "2026-08-30T06:46:46+00:00",
+  "scanned": 64,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ICPUSDT",
-      "signal": "ignition",
-      "score": 0.795,
-      "raw_score": 0.8953,
-      "weight": 0.888,
-      "price": 2.425,
-      "why": "trades 22.5x and volume 51.5x the prior 4h, 69% taker-buy, $200,169 burst \u2014 while price has only moved -1.1%",
-      "chg_24h": -0.0106,
-      "vol_surge": 51.49,
-      "chg_1h": -0.011,
-      "market_surge": 8.88,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 126h): overlapping labels are not a sample"
-    },
-    {
-      "symbol": "PUMPUSDT",
-      "signal": "heat",
-      "score": 0.6312,
-      "raw_score": 0.6,
-      "weight": 1.052,
-      "price": 0.004919,
-      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.005% \u00b7 L/S 1.39",
-      "chg_24h": 0.0701,
-      "vol_surge": null,
-      "chg_1h": null,
-      "market_surge": 3,
-      "actionable": false,
-      "status": "benched \u2014 hit 54%, mean +0.42% over last 129 at 24h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.3 independent 24h windows (span 126h): overlapping labels are not a sample",
     "breakout": "actionable",
