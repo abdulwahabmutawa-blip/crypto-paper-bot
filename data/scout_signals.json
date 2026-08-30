@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-30T01:33:35+00:00",
-  "scanned": 64,
+  "ts": "2026-08-30T01:39:27+00:00",
+  "scanned": 61,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "PENGUUSDT",
+      "signal": "ignition",
+      "score": 0.6365,
+      "raw_score": 0.7192,
+      "weight": 0.885,
+      "price": 0.009097,
+      "why": "trades 4.4x and volume 19.0x the prior 4h, 79% taker-buy, $144,085 burst \u2014 while price has only moved -0.1%",
+      "chg_24h": -0.0162,
+      "vol_surge": 18.99,
+      "chg_1h": -0.001,
+      "market_surge": 3.91,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.2 independent 24h windows (span 124h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.2 independent 24h windows (span 124h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 9,
+    "count": 8,
     "baseline": 12.0,
     "wave": false
   },
@@ -27,16 +43,16 @@
       "avg_win_1h": 0.01073,
       "avg_loss_1h": -0.01013,
       "payoff_1h": 1.059,
-      "span_h_4h": 129.7,
-      "n_eff_4h": 32.42,
+      "span_h_4h": 129.6,
+      "n_eff_4h": 32.4,
       "n_4h": 400,
       "hit_rate_4h": 0.385,
-      "mean_ret_4h": -0.00361,
+      "mean_ret_4h": -0.00359,
       "median_ret_4h": -0.00287,
       "both_halves_4h": false,
-      "avg_win_4h": 0.01823,
-      "avg_loss_4h": -0.01969,
-      "payoff_4h": 0.926,
+      "avg_win_4h": 0.01814,
+      "avg_loss_4h": -0.01974,
+      "payoff_4h": 0.919,
       "span_h_24h": 123.8,
       "n_eff_24h": 5.16,
       "n_24h": 400,
