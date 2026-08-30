@@ -1,22 +1,22 @@
 {
-  "ts": "2026-08-30T03:49:01+00:00",
-  "scanned": 60,
+  "ts": "2026-08-30T03:54:26+00:00",
+  "scanned": 61,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "UNIUSDT",
-      "signal": "heat",
-      "score": 0.6336,
-      "raw_score": 0.6,
-      "weight": 1.056,
-      "price": 4.894,
-      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.010% \u00b7 L/S 1.69",
-      "chg_24h": 0.113,
-      "vol_surge": null,
-      "chg_1h": null,
-      "market_surge": 3,
+      "symbol": "ENSOUSDT",
+      "signal": "ignition",
+      "score": 0.7743,
+      "raw_score": 0.875,
+      "weight": 0.885,
+      "price": 0.852,
+      "why": "trades 11.0x and volume 92.5x the prior 4h, 65% taker-buy, $4,733,291 burst \u2014 while price has only moved -1.5%",
+      "chg_24h": -0.0104,
+      "vol_surge": 92.51,
+      "chg_1h": -0.015,
+      "market_surge": 22.82,
       "actionable": false,
-      "status": "benched \u2014 hit 55%, mean +0.44% over last 128 at 24h: not beating 4x the round trip"
+      "status": "probation \u2014 400 rows but only 5.2 independent 24h windows (span 124h): overlapping labels are not a sample"
     }
   ],
   "gate": {
