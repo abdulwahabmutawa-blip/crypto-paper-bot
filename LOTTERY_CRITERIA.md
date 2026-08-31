@@ -65,3 +65,29 @@ is **positive after fees**. Negative → delete the flag file and the gate
 resumes. Every realized trade now records its entry_score so the picks are
 attributable. The per-trade learning loop: scout scorecard (labels),
 exit_auditor (post-exit paths), repeat-loser retirement, cooldown stamps.
+
+## Forensics response (owner decisions, 2026-08-31)
+
+Basis: the 35-trade forensic study (17 agents + 3-skeptic panel, artifact
+"Lottery Bot Forensics"). Owner chose: keep turbo's speed, revoke its
+benched-signal privilege; ship the exit deletions only (the 8% trail stays
+un-shipped as in-sample until forward-tested).
+
+1. **actionable=TRUE is a hard entry requirement in every mode.** Benched-
+   taken-by-turbo: 6 trades, -$4.95, both biggest losses. Turbo keeps
+   8/day, 1h cooldown, 25% LATE cap, hop.
+2. **Hype-faded no longer market-sells.** It tightens the leash to 6% off
+   peak and lets price confirm (-$10.41 forward P&L as a market sell; sold
+   PUMP -1.9% before +47%). grok-STALE grounding untouched — iron rule.
+3. **CLIMAX needs >=4 closed post-entry candles AND MFE >= +5%** (UNI: fired
+   on one candle of "move history", sold within 1% of the local low).
+4. **FUEL GONE ineligible before hour 4** (winners' median first +15% takes
+   88h; an hour-two volume lull is not a dead thesis).
+
+Turbo's pre-registered 20-RT evaluation continues unchanged — trades 1-11
+(net -$4.96) stand in its record; the bench revocation applies from RT 12.
+Open items from the study, deliberately NOT shipped today: 8% trail
+(forward-test as candidate), multi-day promotion (shadow-test only),
+watcher-lane bench (moot while watcher stays benched), VWAP fill cap,
+refusal-streak veto, book cap decision (owner must choose), and
+LOTTERY_EXCHANGE_STOPS=1 (owner flips on the VPS — SHIP FIRST rec).

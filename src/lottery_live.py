@@ -255,6 +255,7 @@ def main():
               f"already closed — clearing the stale seat")
         st["held_symbol"] = st["entry_price"] = st["entry_scan_ts"] = None
         st["entry_source"] = None
+        st.pop("fade_flagged", None)
         st["units"] = 0.0
         st["spent_usd"] = None
         st.pop("hwm", None)
@@ -556,8 +557,17 @@ def main():
                         _pmax = max(_pmax, _qv)
                         _psum += _qv
                         _pn += 1
+                    # OWNER DECISION 2026-08-31 (forensics rec 3): CLIMAX
+                    # may not fire on a 2-candle-old position. UNI was sold
+                    # -2.54% within 1% of the local bottom because the
+                    # move's "maximum volume" was built from exactly ONE
+                    # prior candle — a coin flip dressed as a distribution
+                    # signal. Now needs >=4 closed post-entry candles of
+                    # move history AND a ride that actually paid (MFE
+                    # >= +5%), since a blow-off top presupposes a top.
                     _why = None
-                    if _pn >= 1:
+                    _mfe = (hwm / entry - 1.0) if (hwm and entry) else 0.0
+                    if _pn >= 4 and _mfe >= 0.05:
                         _why = binance_live.climax_verdict(
                             _fresh[-1], _pmax,
                             (_psum / _pn) if _pn else 0.0)
@@ -616,7 +626,13 @@ def main():
                     st["entry_time"]).timestamp() * 1000)
             except Exception:
                 pass
-            if entry_ms:
+            # OWNER DECISION 2026-08-31 (forensics rec 3): fuel-gone may
+            # not judge a seat younger than 4h. Volume naturally lulls in
+            # the hours after an ignition bar, and the winners' median time
+            # to first +15% was 88 HOURS — reading an hour-two lull as a
+            # dead thesis is the stall clock wearing a new hat. The stop,
+            # ratchet and trailing leash cover the seat meanwhile.
+            if entry_ms and held_h is not None and held_h >= 4.0:
                 why = binance_live.fuel_verdict(
                     binance_live.fuel_surge(held, entry_ms),
                     p / entry - 1, wave_fresh())
@@ -653,8 +669,28 @@ def main():
             hype_now = {c.replace("-USD", "") + "USDT"
                         for c in crypto_candidates(scan)}
             if held not in hype_now:
-                if sell("Hype faded — coin off a newer euphoric scan"):
-                    held = None
+                # OWNER DECISION 2026-08-31 (forensics rec 3): a Grok list
+                # diff is sentiment, not price, and this rule was the
+                # book's single worst money-loser — 7 exits, -$10.41 of
+                # forward P&L, avg +10.7% given up in the next 24h. It
+                # sold PUMP at -1.9% before a +47% run and CHIP at the
+                # panic low twice. It no longer market-sells: it tightens
+                # the leash to 6% off the peak and lets PRICE decide. The
+                # trailing/ratchet/stop rules below own the exit.
+                _fade_floor = hwm * 0.94 if hwm else None
+                if _fade_floor and p and p <= _fade_floor:
+                    if sell("Hype faded + price confirmed (6% off peak) — "
+                            "sentiment gone AND the tape agrees"):
+                        held = None
+                elif not st.get("fade_flagged"):
+                    st["fade_flagged"] = True
+                    binance_live.log({"event": "fade_tighten",
+                                      "symbol": held,
+                                      "reason": "off the euphoric scan; "
+                                                "leash tightened to 6%, "
+                                                "no market sell"})
+                    print(f"[{KEY}] hype faded on {held} — leash tightened "
+                          f"to 6% off peak (no market sell)")
 
         # TURBO HOP (owner-directed 08-28): rotate into a fresh candidate
         # that scores 25%+ above this seat's own entry score. Three
@@ -887,15 +923,22 @@ def main():
                 # its own scorecard shows it beating fees under the current
                 # ruleset. Benched candidates still teach — the scout
                 # resolves outcomes from its log, not from our fills.
+                # OWNER DECISION 2026-08-31 (forensics rec 2): turbo lost
+                # its benched-signal privilege. actionable=TRUE is a HARD
+                # entry requirement in every mode. Evidence: benched-taken-
+                # by-turbo went 6 trades / -$4.95 including both biggest
+                # losses of the account (SOXLB -6.66%, ENA -5.25%), while
+                # actionable scout trades made +$2.99 over 14. The gate was
+                # right on every lane for 16 days; the only policy that
+                # fought it lost. Turbo keeps its speed (8 entries/day, 1h
+                # cooldown, 25% LATE cap, hop) — it just may not override
+                # the scorecard.
                 if c.get("actionable", True) is False:
-                    if not turbo:
-                        print(f"[{KEY}] scout {c['symbol']} ({c['signal']}) "
-                              f"is on the bench — "
-                              f"{c.get('status', 'unproven signal')}; logged "
-                              f"for learning, not traded")
-                        continue
-                    print(f"[{KEY}] TURBO takes benched {c['symbol']} "
-                          f"({c['signal']}, score {c.get('score')})")
+                    print(f"[{KEY}] scout {c['symbol']} ({c['signal']}) "
+                          f"is on the bench — "
+                          f"{c.get('status', 'unproven signal')}; logged "
+                          f"for learning, not traded")
+                    continue
                 if not binance_live.price(c["symbol"]):
                     continue
                 # REVAMP 08-23: regime gating by family — revival stands
