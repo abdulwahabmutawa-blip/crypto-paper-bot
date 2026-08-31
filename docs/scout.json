@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-31T05:14:17+00:00",
+  "ts": "2026-08-31T05:19:36+00:00",
   "scanned": 96,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SHIBUSDT",
+      "signal": "ignition",
+      "score": 0.4901,
+      "raw_score": 0.5699,
+      "weight": 0.86,
+      "price": 5.05e-06,
+      "why": "trades 4.4x and volume 5.3x the prior 4h, 74% taker-buy, $68,598 burst \u2014 while price has only moved +1.0%",
+      "chg_24h": -0.0156,
+      "vol_surge": 5.3,
+      "chg_1h": 0.01,
+      "market_surge": 3.19,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.6 independent 24h windows (span 134h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.6 independent 24h windows (span 134h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 13,
+    "count": 12,
     "baseline": 12.0,
     "wave": false
   },
