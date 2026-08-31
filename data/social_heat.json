@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-31T21:02:28+00:00",
+  "ts": "2026-08-31T21:08:11+00:00",
   "sources": {
     "coingecko": [
       "ARB",
@@ -17,10 +17,10 @@
       "HEMI",
       "DASH",
       "SNDKB",
+      "BTC",
       "ZEC",
       "NEAR",
-      "BTC",
-      "ETH"
+      "U"
     ],
     "watcher": [
       "HEMI",
@@ -36,8 +36,8 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.001853,
-      "long_short": 1.45
+      "funding": -0.001834,
+      "long_short": 1.51
     },
     {
       "symbol": "BTC",
@@ -46,7 +46,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 8.9e-05,
+      "funding": 9e-05,
       "long_short": 0.99
     },
     {
@@ -83,7 +83,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.4e-05
+      "funding": 6.5e-05
     },
     {
       "symbol": "DASH",
@@ -92,14 +92,6 @@
         "movers"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "ETH",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5.8e-05
     },
     {
       "symbol": "LIT",
@@ -131,10 +123,17 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.2e-05
+      "funding": 4e-05
     },
     {
       "symbol": "SNDKB",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
+    },
+    {
+      "symbol": "U",
       "surfaces": 1,
       "sources": [
         "movers"
