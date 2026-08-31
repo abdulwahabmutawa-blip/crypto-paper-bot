@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-31T12:01:41+00:00",
+  "ts": "2026-08-31T12:07:21+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
@@ -16,10 +16,8 @@
     "stocktwits": [],
     "movers": [
       "HEMI",
-      "BTC",
-      "UNI",
-      "U",
-      "RLUSD"
+      "RLUSD",
+      "U"
     ],
     "watcher": [
       "HNT",
@@ -29,32 +27,20 @@
   },
   "heat": [
     {
-      "symbol": "BTC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.07
-    },
-    {
-      "symbol": "UNI",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0,
-      "long_short": 1.69
-    },
-    {
       "symbol": "BNB",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 0.0
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "HEMI",
@@ -107,7 +93,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -4e-05
+      "funding": -3.8e-05
     },
     {
       "symbol": "U",
@@ -115,6 +101,14 @@
       "sources": [
         "movers"
       ]
+    },
+    {
+      "symbol": "UNI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -0.0
     },
     {
       "symbol": "XMR",
