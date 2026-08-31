@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-31T18:11:27+00:00",
+  "ts": "2026-08-31T18:16:48+00:00",
   "scanned": 104,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "0GUSDT",
-      "signal": "ignition",
-      "score": 0.4596,
-      "raw_score": 0.5175,
-      "weight": 0.888,
-      "price": 0.2285,
-      "why": "trades 5.0x and volume 5.2x the prior 4h, 62% taker-buy, $261,216 burst \u2014 while price has only moved +2.7%",
-      "chg_24h": 0.3752,
-      "vol_surge": 5.19,
-      "chg_1h": 0.0274,
-      "market_surge": 4.65,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.7 independent 24h windows (span 138h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.7 independent 24h windows (span 138h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -47,12 +31,12 @@
       "n_eff_4h": 36.48,
       "n_4h": 400,
       "hit_rate_4h": 0.388,
-      "mean_ret_4h": -0.00288,
+      "mean_ret_4h": -0.00289,
       "median_ret_4h": -0.00283,
       "both_halves_4h": false,
-      "avg_win_4h": 0.01898,
+      "avg_win_4h": 0.01893,
       "avg_loss_4h": -0.01878,
-      "payoff_4h": 1.011,
+      "payoff_4h": 1.008,
       "span_h_24h": 137.6,
       "n_eff_24h": 5.73,
       "n_24h": 400,
