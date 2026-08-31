@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-31T12:41:15+00:00",
+  "ts": "2026-08-31T12:47:05+00:00",
   "scanned": 99,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "OPUSDT",
+      "signal": "ignition",
+      "score": 0.679,
+      "raw_score": 0.7832,
+      "weight": 0.867,
+      "price": 0.0867,
+      "why": "trades 6.7x and volume 14.9x the prior 4h, 67% taker-buy, $57,680 burst \u2014 while price has only moved -0.1%",
+      "chg_24h": -0.0323,
+      "vol_surge": 14.87,
+      "chg_1h": -0.0012,
+      "market_surge": 3.98,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.7 independent 24h windows (span 137h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.7 independent 24h windows (span 137h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -11,22 +27,22 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 9,
+    "count": 8,
     "baseline": 12.0,
     "wave": false
   },
   "scorecard": {
     "ignition": {
-      "span_h_1h": 146.7,
-      "n_eff_1h": 146.74,
+      "span_h_1h": 147.7,
+      "n_eff_1h": 147.68,
       "n_1h": 400,
-      "hit_rate_1h": 0.372,
-      "mean_ret_1h": -0.00023,
-      "median_ret_1h": -0.00092,
+      "hit_rate_1h": 0.37,
+      "mean_ret_1h": -0.00028,
+      "median_ret_1h": -0.00098,
       "both_halves_1h": false,
-      "avg_win_1h": 0.01111,
-      "avg_loss_1h": -0.00931,
-      "payoff_1h": 1.193,
+      "avg_win_1h": 0.01115,
+      "avg_loss_1h": -0.00934,
+      "payoff_1h": 1.194,
       "span_h_4h": 144.4,
       "n_eff_4h": 36.11,
       "n_4h": 400,
