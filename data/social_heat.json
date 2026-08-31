@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-31T17:55:00+00:00",
+  "ts": "2026-08-31T18:00:31+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
@@ -16,7 +16,9 @@
     "movers": [
       "HEMI",
       "DASH",
-      "SNDKB"
+      "SNDKB",
+      "U",
+      "RLUSD"
     ],
     "watcher": [
       "HEMI"
@@ -40,7 +42,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8e-05
+      "funding": 7.9e-05
     },
     {
       "symbol": "DASH",
@@ -56,7 +58,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3e-06
+      "funding": -3e-06
     },
     {
       "symbol": "LIT",
@@ -83,6 +85,13 @@
       "funding": 5e-05
     },
     {
+      "symbol": "RLUSD",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
+    },
+    {
       "symbol": "SHIB",
       "surfaces": 1,
       "sources": [
@@ -102,7 +111,14 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9e-06
+      "funding": 1.1e-05
+    },
+    {
+      "symbol": "U",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
     },
     {
       "symbol": "UNI",
