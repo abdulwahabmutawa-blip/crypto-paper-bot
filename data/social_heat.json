@@ -1,22 +1,23 @@
 {
-  "ts": "2026-08-31T16:15:51+00:00",
+  "ts": "2026-08-31T16:21:38+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "HNT",
       "PUMP",
-      "SOL",
-      "UNI",
-      "ETH",
       "PENGU",
-      "AERO"
+      "ETH",
+      "LIT",
+      "UNI",
+      "AERO",
+      "SOL",
+      "ARB"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "HEMI",
       "ENSO",
-      "SNDKB",
       "RLUSD"
     ],
     "watcher": [
@@ -41,7 +42,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000136
+      "funding": -0.000135
+    },
+    {
+      "symbol": "ARB",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5.6e-05
     },
     {
       "symbol": "BTC",
@@ -75,12 +84,20 @@
       ]
     },
     {
+      "symbol": "LIT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 3.9e-05
+      "funding": 3.8e-05
     },
     {
       "symbol": "PUMP",
@@ -88,17 +105,10 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.9e-05
+      "funding": 5e-05
     },
     {
       "symbol": "RLUSD",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
-    },
-    {
-      "symbol": "SNDKB",
       "surfaces": 1,
       "sources": [
         "movers"
@@ -110,7 +120,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.4e-05
+      "funding": -1.3e-05
     },
     {
       "symbol": "UNI",
@@ -118,7 +128,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.5e-05
+      "funding": 2.2e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
