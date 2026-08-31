@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-31T15:24:45+00:00",
-  "scanned": 104,
+  "ts": "2026-08-31T15:30:37+00:00",
+  "scanned": 105,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ARBUSDT",
-      "signal": "ignition",
-      "score": 0.6243,
-      "raw_score": 0.7176,
-      "weight": 0.87,
-      "price": 0.0872,
-      "why": "trades 6.0x and volume 9.9x the prior 4h, 69% taker-buy, $106,719 burst \u2014 while price has only moved +1.8%",
-      "chg_24h": -0.0191,
-      "vol_surge": 9.95,
-      "chg_1h": 0.0175,
-      "market_surge": 4.28,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.7 independent 24h windows (span 137h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.7 independent 24h windows (span 137h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -27,22 +11,22 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 7,
+    "count": 8,
     "baseline": 12.0,
     "wave": false
   },
   "scorecard": {
     "ignition": {
-      "span_h_1h": 145.4,
-      "n_eff_1h": 145.37,
+      "span_h_1h": 145.2,
+      "n_eff_1h": 145.17,
       "n_1h": 400,
-      "hit_rate_1h": 0.375,
-      "mean_ret_1h": -0.00019,
-      "median_ret_1h": -0.00088,
+      "hit_rate_1h": 0.378,
+      "mean_ret_1h": -0.00014,
+      "median_ret_1h": -0.00087,
       "both_halves_1h": false,
-      "avg_win_1h": 0.01125,
-      "avg_loss_1h": -0.00938,
-      "payoff_1h": 1.199,
+      "avg_win_1h": 0.01121,
+      "avg_loss_1h": -0.00936,
+      "payoff_1h": 1.198,
       "span_h_4h": 146.7,
       "n_eff_4h": 36.69,
       "n_4h": 400,
