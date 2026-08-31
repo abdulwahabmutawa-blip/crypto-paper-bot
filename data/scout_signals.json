@@ -1,36 +1,36 @@
 {
-  "ts": "2026-08-31T17:00:36+00:00",
+  "ts": "2026-08-31T17:06:06+00:00",
   "scanned": 106,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "CAKEUSDT",
-      "signal": "ignition",
-      "score": 0.7765,
-      "raw_score": 0.8905,
-      "weight": 0.872,
-      "price": 1.857,
-      "why": "trades 9.5x and volume 19.0x the prior 4h, 66% taker-buy, $192,664 burst \u2014 while price has only moved +0.2%",
-      "chg_24h": -0.018,
-      "vol_surge": 18.99,
-      "chg_1h": 0.0016,
-      "market_surge": 2.03,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.7 independent 24h windows (span 137h): overlapping labels are not a sample"
+      "symbol": "ZENUSDT",
+      "signal": "breakout",
+      "score": 0.7343,
+      "raw_score": 0.7721,
+      "weight": 0.951,
+      "price": 5.79,
+      "why": "trades 9.0x, volume 11.9x, 61% taker-buy, +3.2% in an hour, at 97% of its 24h range",
+      "chg_24h": 0.0934,
+      "vol_surge": 11.86,
+      "chg_1h": 0.0321,
+      "market_surge": 5.84,
+      "actionable": true
     },
     {
-      "symbol": "DASHUSDT",
-      "signal": "breakout",
-      "score": 0.7285,
-      "raw_score": 0.766,
-      "weight": 0.951,
-      "price": 47.08,
-      "why": "trades 6.0x, volume 7.3x, 60% taker-buy, +6.2% in an hour, at 99% of its 24h range",
-      "chg_24h": 0.0945,
-      "vol_surge": 7.28,
-      "chg_1h": 0.062,
-      "market_surge": 0.0,
-      "actionable": true
+      "symbol": "ZROUSDT",
+      "signal": "ignition",
+      "score": 0.6472,
+      "raw_score": 0.7422,
+      "weight": 0.872,
+      "price": 1.061,
+      "why": "trades 15.4x and volume 5.8x the prior 4h, 65% taker-buy, $59,103 burst \u2014 while price has only moved +2.6%",
+      "chg_24h": -0.0284,
+      "vol_surge": 5.82,
+      "chg_1h": 0.0261,
+      "market_surge": 1.79,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.7 independent 24h windows (span 137h): overlapping labels are not a sample"
     }
   ],
   "gate": {
@@ -41,7 +41,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 7,
+    "count": 9,
     "baseline": 12.0,
     "wave": false
   },
@@ -99,16 +99,16 @@
       "avg_win_4h": 0.03925,
       "avg_loss_4h": -0.03176,
       "payoff_4h": 1.236,
-      "span_h_24h": 309.8,
-      "n_eff_24h": 12.91,
-      "n_24h": 345,
+      "span_h_24h": 310.0,
+      "n_eff_24h": 12.92,
+      "n_24h": 347,
       "hit_rate_24h": 0.542,
-      "mean_ret_24h": 0.02538,
+      "mean_ret_24h": 0.02526,
       "median_ret_24h": 0.01416,
       "both_halves_24h": true,
-      "avg_win_24h": 0.09338,
-      "avg_loss_24h": -0.05545,
-      "payoff_24h": 1.684
+      "avg_win_24h": 0.09341,
+      "avg_loss_24h": -0.05566,
+      "payoff_24h": 1.678
     },
     "reversion": {
       "span_h_1h": 318.2,
