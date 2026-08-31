@@ -1,38 +1,8 @@
 {
-  "ts": "2026-08-31T17:06:06+00:00",
-  "scanned": 106,
+  "ts": "2026-08-31T17:11:35+00:00",
+  "scanned": 107,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ZENUSDT",
-      "signal": "breakout",
-      "score": 0.7343,
-      "raw_score": 0.7721,
-      "weight": 0.951,
-      "price": 5.79,
-      "why": "trades 9.0x, volume 11.9x, 61% taker-buy, +3.2% in an hour, at 97% of its 24h range",
-      "chg_24h": 0.0934,
-      "vol_surge": 11.86,
-      "chg_1h": 0.0321,
-      "market_surge": 5.84,
-      "actionable": true
-    },
-    {
-      "symbol": "ZROUSDT",
-      "signal": "ignition",
-      "score": 0.6472,
-      "raw_score": 0.7422,
-      "weight": 0.872,
-      "price": 1.061,
-      "why": "trades 15.4x and volume 5.8x the prior 4h, 65% taker-buy, $59,103 burst \u2014 while price has only moved +2.6%",
-      "chg_24h": -0.0284,
-      "vol_surge": 5.82,
-      "chg_1h": 0.0261,
-      "market_surge": 1.79,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.7 independent 24h windows (span 137h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.7 independent 24h windows (span 137h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -99,16 +69,16 @@
       "avg_win_4h": 0.03925,
       "avg_loss_4h": -0.03176,
       "payoff_4h": 1.236,
-      "span_h_24h": 310.0,
+      "span_h_24h": 310.1,
       "n_eff_24h": 12.92,
-      "n_24h": 347,
-      "hit_rate_24h": 0.542,
-      "mean_ret_24h": 0.02526,
-      "median_ret_24h": 0.01416,
+      "n_24h": 349,
+      "hit_rate_24h": 0.539,
+      "mean_ret_24h": 0.02472,
+      "median_ret_24h": 0.01364,
       "both_halves_24h": true,
       "avg_win_24h": 0.09341,
-      "avg_loss_24h": -0.05566,
-      "payoff_24h": 1.678
+      "avg_loss_24h": -0.05585,
+      "payoff_24h": 1.673
     },
     "reversion": {
       "span_h_1h": 318.2,
