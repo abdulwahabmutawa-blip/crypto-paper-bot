@@ -1,10 +1,10 @@
 {
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "holding": "NVDA",
-  "units": 6.429056286884844,
-  "cash": 0.0,
-  "entry_price": 226.77999877929688,
+  "holding": "CASH",
+  "units": 0.0,
+  "cash": 1409.4650489193123,
+  "entry_price": null,
   "bench_units": 1.332054612938296,
   "stopped": {
     "SHIB-USD": "2026-07-27T00:01:08+00:00",
@@ -558,6 +558,16 @@
       "value": 1457.98,
       "fee": 1.61,
       "reason": "Grok: NVDA euphoric \u2014 Earnings beat lifts tech rally (scan 2026-08-28T11:16)"
+    },
+    {
+      "date": "2026-08-31",
+      "action": "SELL",
+      "ticker": "NVDA",
+      "price": 219.4750061,
+      "units": 6.4291,
+      "value": 1411.02,
+      "fee": 1.55,
+      "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
     }
   ],
   "history": [
@@ -771,15 +781,15 @@
       "value": 1398.64,
       "bench": 1024.82,
       "holding": "NVDA"
+    },
+    {
+      "date": "2026-08-31",
+      "value": 1409.47,
+      "bench": 1020.29,
+      "holding": "CASH"
     }
   ],
   "intraday": [
-    {
-      "ts": "2026-08-14T23:14:49+00:00",
-      "value": 1326.92,
-      "bench": 1034.13,
-      "holding": "CASH"
-    },
     {
       "ts": "2026-08-14T23:28:12+00:00",
       "value": 1326.92,
@@ -9773,9 +9783,15 @@
       "value": 1398.64,
       "bench": 1024.82,
       "holding": "NVDA"
+    },
+    {
+      "ts": "2026-08-31T15:02:41+00:00",
+      "value": 1409.47,
+      "bench": 1020.29,
+      "holding": "CASH"
     }
   ],
-  "last_updated_utc": "2026-08-31T13:22:00+00:00",
+  "last_updated_utc": "2026-08-31T15:02:41+00:00",
   "restatement": {
     "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)",
     "voided_trades": [
@@ -9854,5 +9870,5 @@
     ],
     "voided_reason": "signal faded before any real fill was possible (market closed the whole window) \u2014 trades could never have existed"
   },
-  "costs_paid": 72.0492
+  "costs_paid": 73.6013
 }

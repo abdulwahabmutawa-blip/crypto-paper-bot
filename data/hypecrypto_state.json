@@ -1,11 +1,11 @@
 {
   "created": "2026-08-15",
   "starting_cash": 1000.0,
-  "holding": "HEMI-USD",
-  "units": 50306.745977726074,
-  "cash": 0.0,
-  "entry_price": 0.01525,
-  "entry_scan_ts": "2026-08-31T12:27:06+00:00",
+  "holding": "CASH",
+  "units": 0.0,
+  "cash": 739.4785793710189,
+  "entry_price": null,
+  "entry_scan_ts": null,
   "bench_units": 0.01588152678794818,
   "stopped": {
     "PROM-USD": "2026-08-30T03:45:23+00:00"
@@ -263,6 +263,16 @@
       "value": 767.18,
       "fee": 1.08,
       "reason": "Grok: HEMI euphoric \u2014 BTC L2 yield pump faded early (scan 2026-08-31T12:27)"
+    },
+    {
+      "date": "2026-08-31",
+      "action": "SELL",
+      "ticker": "HEMI-USD",
+      "price": 0.01472,
+      "units": 50306.745978,
+      "value": 740.52,
+      "fee": 1.04,
+      "reason": "R1 KILL FLOOR \u2014 book value $740.52 <= $750; liquidated and frozen per kill_criteria.md (code-enforced)"
     }
   ],
   "history": [
@@ -358,9 +368,9 @@
     },
     {
       "date": "2026-08-31",
-      "value": 765.17,
-      "bench": 1239.81,
-      "holding": "HEMI-USD"
+      "value": 739.48,
+      "bench": 1246.41,
+      "holding": "CASH"
     }
   ],
   "intraday": [
@@ -8109,8 +8119,18 @@
       "value": 765.17,
       "bench": 1239.81,
       "holding": "HEMI-USD"
+    },
+    {
+      "ts": "2026-08-31T15:03:05+00:00",
+      "value": 739.48,
+      "bench": 1246.41,
+      "holding": "CASH"
     }
   ],
-  "last_updated_utc": "2026-08-31T13:22:02+00:00",
-  "costs_paid": 33.5544
+  "last_updated_utc": "2026-08-31T15:03:05+00:00",
+  "costs_paid": 34.5911,
+  "frozen": {
+    "date": "2026-08-31",
+    "rule": "R1 kill floor (kill_criteria.md)"
+  }
 }
