@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-31T05:53:47+00:00",
-  "scanned": 97,
+  "ts": "2026-08-31T05:59:35+00:00",
+  "scanned": 99,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "TAOUSDT",
-      "signal": "ignition",
-      "score": 0.7956,
-      "raw_score": 0.9251,
-      "weight": 0.86,
-      "price": 230.1,
-      "why": "trades 12.6x and volume 23.0x the prior 4h, 81% taker-buy, $561,199 burst \u2014 while price has only moved +1.1%",
-      "chg_24h": -0.0291,
-      "vol_surge": 22.97,
-      "chg_1h": 0.011,
-      "market_surge": 0.23,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.6 independent 24h windows (span 134h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.6 independent 24h windows (span 134h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -27,22 +11,22 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 11,
     "baseline": 12.0,
     "wave": false
   },
   "scorecard": {
     "ignition": {
-      "span_h_1h": 146.0,
-      "n_eff_1h": 145.96,
+      "span_h_1h": 146.1,
+      "n_eff_1h": 146.06,
       "n_1h": 400,
-      "hit_rate_1h": 0.37,
-      "mean_ret_1h": -0.00035,
+      "hit_rate_1h": 0.367,
+      "mean_ret_1h": -0.00036,
       "median_ret_1h": -0.00098,
       "both_halves_1h": false,
-      "avg_win_1h": 0.01105,
-      "avg_loss_1h": -0.00943,
-      "payoff_1h": 1.172,
+      "avg_win_1h": 0.0111,
+      "avg_loss_1h": -0.00939,
+      "payoff_1h": 1.182,
       "span_h_4h": 142.4,
       "n_eff_4h": 35.61,
       "n_4h": 400,
