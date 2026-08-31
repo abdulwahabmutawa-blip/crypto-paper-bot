@@ -1,28 +1,13 @@
 {
-  "ts": "2026-08-31T19:29:22+00:00",
+  "ts": "2026-08-31T19:35:12+00:00",
   "scanned": 105,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "CRVUSDT",
-      "signal": "breakout",
-      "score": 0.6641,
-      "raw_score": 0.699,
-      "weight": 0.95,
-      "price": 0.3241,
-      "why": "trades 5.3x, volume 9.1x, 65% taker-buy, +3.9% in an hour, at 96% of its 24h range",
-      "chg_24h": 0.0547,
-      "vol_surge": 9.07,
-      "chg_1h": 0.0388,
-      "market_surge": 15.32,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.8 independent 24h windows (span 139h): overlapping labels are not a sample",
     "breakout": "actionable",
     "reversion": "benched \u2014 hit 50%, mean +0.65% over last 38 at 24h: not beating 4x the round trip",
-    "heat": "benched \u2014 hit 55%, mean +0.41% over last 137 at 24h: not beating 4x the round trip",
+    "heat": "benched \u2014 hit 54%, mean +0.38% over last 138 at 24h: not beating 4x the round trip",
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
@@ -52,16 +37,16 @@
       "avg_win_4h": 0.01932,
       "avg_loss_4h": -0.0186,
       "payoff_4h": 1.038,
-      "span_h_24h": 138.9,
-      "n_eff_24h": 5.79,
+      "span_h_24h": 139.4,
+      "n_eff_24h": 5.81,
       "n_24h": 400,
       "hit_rate_24h": 0.407,
-      "mean_ret_24h": -0.00143,
+      "mean_ret_24h": -0.00146,
       "median_ret_24h": -0.00779,
       "both_halves_24h": false,
       "avg_win_24h": 0.04942,
-      "avg_loss_24h": -0.03953,
-      "payoff_24h": 1.25
+      "avg_loss_24h": -0.03958,
+      "payoff_24h": 1.249
     },
     "breakout": {
       "span_h_1h": 329.5,
@@ -84,16 +69,16 @@
       "avg_win_4h": 0.03911,
       "avg_loss_4h": -0.03133,
       "payoff_4h": 1.248,
-      "span_h_24h": 305.8,
-      "n_eff_24h": 12.74,
-      "n_24h": 349,
-      "hit_rate_24h": 0.542,
-      "mean_ret_24h": 0.02578,
+      "span_h_24h": 306.9,
+      "n_eff_24h": 12.79,
+      "n_24h": 350,
+      "hit_rate_24h": 0.54,
+      "mean_ret_24h": 0.0255,
       "median_ret_24h": 0.01416,
       "both_halves_24h": true,
       "avg_win_24h": 0.09482,
-      "avg_loss_24h": -0.05613,
-      "payoff_24h": 1.689
+      "avg_loss_24h": -0.05622,
+      "payoff_24h": 1.687
     },
     "reversion": {
       "span_h_1h": 318.2,
@@ -148,16 +133,16 @@
       "avg_win_4h": 0.03948,
       "avg_loss_4h": -0.04316,
       "payoff_4h": 0.915,
-      "span_h_24h": 308.8,
-      "n_eff_24h": 12.87,
-      "n_24h": 137,
-      "hit_rate_24h": 0.547,
-      "mean_ret_24h": 0.00409,
+      "span_h_24h": 311.8,
+      "n_eff_24h": 12.99,
+      "n_24h": 138,
+      "hit_rate_24h": 0.543,
+      "mean_ret_24h": 0.00383,
       "median_ret_24h": 0.02571,
       "both_halves_24h": false,
       "avg_win_24h": 0.08776,
-      "avg_loss_24h": -0.10014,
-      "payoff_24h": 0.876
+      "avg_loss_24h": -0.09904,
+      "payoff_24h": 0.886
     },
     "revival": {
       "span_h_1h": 267.9,
