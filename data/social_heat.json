@@ -1,14 +1,14 @@
 {
-  "ts": "2026-08-31T03:16:00+00:00",
+  "ts": "2026-08-31T03:21:07+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
       "HNT",
-      "PENGU",
+      "BTC",
       "SOL",
-      "UNI",
-      "SUI",
       "ETH",
+      "SUI",
+      "PENGU",
       "AVAX"
     ],
     "reddit": [],
@@ -27,17 +27,6 @@
   },
   "heat": [
     {
-      "symbol": "UNI",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": 8e-05,
-      "long_short": 1.61
-    },
-    {
       "symbol": "HNT",
       "surfaces": 2,
       "sources": [
@@ -46,13 +35,23 @@
       ]
     },
     {
+      "symbol": "UNI",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": 8e-05,
+      "long_short": 1.61
+    },
+    {
       "symbol": "ZKC",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": -0.000786,
+      "funding": -0.00079,
       "long_short": 1.14
     },
     {
@@ -61,7 +60,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000112
+      "funding": -0.000114
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 7e-05
     },
     {
       "symbol": "ENSO",
@@ -77,7 +84,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.7e-05
+      "funding": 1.9e-05
     },
     {
       "symbol": "PENGU",
@@ -85,7 +92,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3e-05
+      "funding": 2.9e-05
     },
     {
       "symbol": "PUMP",
@@ -109,7 +116,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9e-06
+      "funding": 1.2e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
