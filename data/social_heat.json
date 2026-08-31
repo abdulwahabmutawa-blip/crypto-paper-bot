@@ -1,14 +1,14 @@
 {
-  "ts": "2026-08-31T21:30:16+00:00",
+  "ts": "2026-08-31T21:35:48+00:00",
   "sources": {
     "coingecko": [
       "ARB",
       "PUMP",
       "LIT",
-      "BTC",
-      "CRV",
       "PENGU",
-      "PYTH"
+      "BTC",
+      "HNT",
+      "DASH"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,7 +20,7 @@
       "BTC",
       "NEAR",
       "U",
-      "ZEC"
+      "ETH"
     ],
     "watcher": [
       "HEMI",
@@ -36,7 +36,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.001719,
+      "funding": -0.001716,
       "long_short": 1.51
     },
     {
@@ -46,8 +46,18 @@
         "coingecko",
         "movers"
       ],
-      "funding": 9.5e-05,
+      "funding": 9.6e-05,
       "long_short": 0.99
+    },
+    {
+      "symbol": "DASH",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.5
     },
     {
       "symbol": "HEMI",
@@ -68,20 +78,19 @@
       "funding": 0.0001
     },
     {
-      "symbol": "CRV",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 6.8e-05
-    },
-    {
-      "symbol": "DASH",
+      "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 0.0001
+      "funding": 6.3e-05
+    },
+    {
+      "symbol": "HNT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ]
     },
     {
       "symbol": "LIT",
@@ -113,15 +122,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.4e-05
-    },
-    {
-      "symbol": "PYTH",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": 4.7e-05
     },
     {
       "symbol": "SNDKB",
@@ -136,14 +137,6 @@
       "sources": [
         "movers"
       ]
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 1e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
