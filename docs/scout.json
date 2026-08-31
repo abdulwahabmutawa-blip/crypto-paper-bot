@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-31T03:10:47+00:00",
-  "scanned": 91,
+  "ts": "2026-08-31T03:16:07+00:00",
+  "scanned": 95,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "BICOUSDT",
-      "signal": "ignition",
-      "score": 0.5263,
-      "raw_score": 0.6071,
-      "weight": 0.867,
-      "price": 0.02142,
-      "why": "trades 5.5x and volume 7.7x the prior 4h, 68% taker-buy, $88,356 burst \u2014 while price has only moved +3.1%",
-      "chg_24h": -0.1332,
-      "vol_surge": 7.7,
-      "chg_1h": 0.0308,
-      "market_surge": 0.84,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.5 independent 24h windows (span 132h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.5 independent 24h windows (span 132h): overlapping labels are not a sample",
     "breakout": "actionable",
