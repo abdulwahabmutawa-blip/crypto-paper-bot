@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-31T10:32:31+00:00",
+  "ts": "2026-08-31T10:37:41+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -15,7 +15,8 @@
       "HEMI",
       "UNI",
       "BTC",
-      "RLUSD"
+      "RLUSD",
+      "U"
     ],
     "watcher": [
       "HNT",
@@ -80,10 +81,17 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.5e-05
+      "funding": 3e-05
     },
     {
       "symbol": "RLUSD",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
+    },
+    {
+      "symbol": "U",
       "surfaces": 1,
       "sources": [
         "movers"
@@ -95,7 +103,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 6e-06
+      "funding": 5e-06
     },
     {
       "symbol": "ZKC",
@@ -103,7 +111,7 @@
       "sources": [
         "watcher"
       ],
-      "funding": -0.000554
+      "funding": -0.000527
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."

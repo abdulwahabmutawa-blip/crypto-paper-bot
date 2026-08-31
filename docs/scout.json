@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-31T10:32:35+00:00",
-  "scanned": 99,
+  "ts": "2026-08-31T10:37:46+00:00",
+  "scanned": 100,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "WLFIUSDT",
+      "signal": "ignition",
+      "score": 0.6112,
+      "raw_score": 0.7091,
+      "weight": 0.862,
+      "price": 0.0581,
+      "why": "trades 5.7x and volume 7.9x the prior 4h, 82% taker-buy, $66,255 burst \u2014 while price has only moved +0.9%",
+      "chg_24h": 0.0122,
+      "vol_surge": 7.92,
+      "chg_1h": 0.0087,
+      "market_surge": 0.89,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.7 independent 24h windows (span 138h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.7 independent 24h windows (span 138h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 8,
+    "count": 9,
     "baseline": 12.0,
     "wave": false
   },
