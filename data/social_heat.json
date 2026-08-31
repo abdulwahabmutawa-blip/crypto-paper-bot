@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-31T18:33:33+00:00",
+  "ts": "2026-08-31T18:39:24+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
@@ -19,7 +19,8 @@
       "HEMI",
       "DASH",
       "SNDKB",
-      "U"
+      "U",
+      "RLUSD"
     ],
     "watcher": [
       "HEMI"
@@ -43,7 +44,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.002516
+      "funding": -0.002501
     },
     {
       "symbol": "AERO",
@@ -51,7 +52,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -7.5e-05
+      "funding": -6.4e-05
     },
     {
       "symbol": "BTC",
@@ -59,7 +60,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.5e-05
+      "funding": 7.4e-05
     },
     {
       "symbol": "DASH",
@@ -67,7 +68,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 3.2e-05
+      "funding": 3.1e-05
     },
     {
       "symbol": "ENA",
@@ -75,7 +76,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.1e-05
+      "funding": -9e-06
     },
     {
       "symbol": "HNT",
@@ -109,6 +110,13 @@
       "funding": 5e-05
     },
     {
+      "symbol": "RLUSD",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
+    },
+    {
       "symbol": "SNDKB",
       "surfaces": 1,
       "sources": [
@@ -121,7 +129,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.9e-05
+      "funding": 2e-05
     },
     {
       "symbol": "U",
@@ -136,7 +144,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.1e-05
+      "funding": 2.5e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
