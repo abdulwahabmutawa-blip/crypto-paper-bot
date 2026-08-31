@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-31T07:17:35+00:00",
-  "scanned": 98,
+  "ts": "2026-08-31T07:23:25+00:00",
+  "scanned": 100,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "CAKEUSDT",
-      "signal": "ignition",
-      "score": 0.7608,
-      "raw_score": 0.8826,
-      "weight": 0.862,
-      "price": 1.85,
-      "why": "trades 14.6x and volume 20.1x the prior 4h, 62% taker-buy, $220,155 burst \u2014 while price has only moved +0.9%",
-      "chg_24h": 0.059,
-      "vol_surge": 20.1,
-      "chg_1h": 0.0093,
-      "market_surge": 6.32,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.7 independent 24h windows (span 136h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.7 independent 24h windows (span 136h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 11,
+    "count": 12,
     "baseline": 12.0,
     "wave": false
   },
