@@ -1,37 +1,24 @@
 {
-  "ts": "2026-08-31T13:37:46+00:00",
-  "scanned": 98,
+  "ts": "2026-08-31T13:43:35+00:00",
+  "scanned": 99,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "TSLABUSDT",
-      "signal": "ignition",
-      "score": 0.7708,
-      "raw_score": 0.889,
-      "weight": 0.867,
-      "price": 353.29,
-      "why": "trades 22.4x and volume 61.5x the prior 4h, 75% taker-buy, $223,005 burst \u2014 while price has only moved +2.0%",
-      "chg_24h": 0.0043,
-      "vol_surge": 61.48,
-      "chg_1h": 0.0199,
-      "market_surge": 10.48,
+      "symbol": "PROMUSDT",
+      "signal": "reversion",
+      "score": 0.5672,
+      "raw_score": 0.5672,
+      "weight": 1.0,
+      "price": 5.892,
+      "why": "down -17% on the day (bottom decile of the market), now +3.9% over 15m with 3 green candles",
+      "chg_24h": -0.1701,
+      "vol_surge": 0.68,
+      "chg_1h": -0.0601,
+      "market_surge": 0.0,
+      "oi_drop": 0.129,
+      "funding": -4e-05,
       "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.7 independent 24h windows (span 137h): overlapping labels are not a sample"
-    },
-    {
-      "symbol": "MSTRBUSDT",
-      "signal": "ignition",
-      "score": 0.6637,
-      "raw_score": 0.7655,
-      "weight": 0.867,
-      "price": 127.04,
-      "why": "trades 6.2x and volume 16.7x the prior 4h, 78% taker-buy, $224,716 burst \u2014 while price has only moved -1.1%",
-      "chg_24h": -0.0292,
-      "vol_surge": 16.73,
-      "chg_1h": -0.0107,
-      "market_surge": 2.56,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.7 independent 24h windows (span 137h): overlapping labels are not a sample"
+      "status": "benched \u2014 hit 50%, mean +0.65% over last 38 at 24h: not beating 4x the round trip"
     }
   ],
   "gate": {
@@ -42,7 +29,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 9,
+    "count": 10,
     "baseline": 12.0,
     "wave": false
   },
