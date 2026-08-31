@@ -1,16 +1,16 @@
 {
-  "ts": "2026-08-31T14:17:38+00:00",
+  "ts": "2026-08-31T14:23:21+00:00",
   "sources": {
     "coingecko": [
       "LIT",
-      "PUMP",
-      "PENGU",
       "BTC",
-      "UNI",
+      "PUMP",
       "XMR",
+      "UNI",
+      "PENGU",
+      "ARB",
       "HNT",
       "SOL",
-      "ARB",
       "ETH"
     ],
     "reddit": [],
@@ -19,7 +19,8 @@
       "HEMI",
       "ENSO",
       "SNDKB",
-      "U"
+      "U",
+      "RLUSD"
     ],
     "watcher": [
       "HEMI"
@@ -43,7 +44,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.8e-05
+      "funding": -1.6e-05
     },
     {
       "symbol": "BTC",
@@ -67,7 +68,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.2e-05
+      "funding": 7.4e-05
     },
     {
       "symbol": "HNT",
@@ -90,7 +91,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.6e-05
+      "funding": 1.7e-05
     },
     {
       "symbol": "PUMP",
@@ -99,6 +100,13 @@
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "RLUSD",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
     },
     {
       "symbol": "SNDKB",
@@ -113,7 +121,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.2e-05
+      "funding": -2.3e-05
     },
     {
       "symbol": "U",
@@ -128,7 +136,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.2e-05
+      "funding": 4.5e-05
     },
     {
       "symbol": "XMR",
@@ -136,7 +144,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 0.00055
+      "funding": 0.000576
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."

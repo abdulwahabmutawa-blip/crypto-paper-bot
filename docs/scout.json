@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-31T14:17:43+00:00",
-  "scanned": 101,
+  "ts": "2026-08-31T14:23:25+00:00",
+  "scanned": 100,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ZKCUSDT",
+      "signal": "ignition",
+      "score": 0.746,
+      "raw_score": 0.8575,
+      "weight": 0.87,
+      "price": 0.056,
+      "why": "trades 13.4x and volume 14.4x the prior 4h, 65% taker-buy, $300,701 burst \u2014 while price has only moved +2.2%",
+      "chg_24h": -0.1398,
+      "vol_surge": 14.44,
+      "chg_1h": 0.0219,
+      "market_surge": 0.0,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.7 independent 24h windows (span 138h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.7 independent 24h windows (span 138h): overlapping labels are not a sample",
     "breakout": "actionable",
