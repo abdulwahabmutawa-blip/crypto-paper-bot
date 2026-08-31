@@ -1,6 +1,6 @@
 # Exit timing — the bot grading its own exits
 
-updated 2026-08-31T13:08:38+00:00 · 34 exits audited · early/late line ±3% · MEASUREMENT ONLY
+updated 2026-08-31T13:22:06+00:00 · 34 exits audited · early/late line ±3% · MEASUREMENT ONLY
 
 | verdict | n |
 |---|---|
@@ -26,7 +26,7 @@ updated 2026-08-31T13:08:38+00:00 · 34 exits audited · early/late line ±3% ·
 - book since inception (08-15, $40 stake): **-37.9%** — trading P&L only (-$15.17 over 37 closed trades), deposits excluded
 - account balance: $46.79 (of which **+$21.96 is deposited capital, not profit** — inferred as balance minus stake minus P&L; deposits are not tracked anywhere yet)
 - BTC since inception: +23.8% (book gap **-61.8pp**) · last 24h +0.5%
-- ETH since inception: +30.4% (book gap **-68.3pp**) · last 24h +1.6%
+- ETH since inception: +30.4% (book gap **-68.3pp**) · last 24h +1.5%
 
 ## Alpha by regime (book minus BTC, daily, paired)
 
