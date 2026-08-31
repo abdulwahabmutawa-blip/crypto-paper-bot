@@ -1,8 +1,38 @@
 {
-  "ts": "2026-08-31T04:34:37+00:00",
+  "ts": "2026-08-31T04:39:45+00:00",
   "scanned": 95,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ZKUSDT",
+      "signal": "breakout",
+      "score": 0.8819,
+      "raw_score": 0.9283,
+      "weight": 0.95,
+      "price": 0.01014,
+      "why": "trades 12.0x, volume 14.1x, 73% taker-buy, +7.4% in an hour, at 98% of its 24h range",
+      "chg_24h": 0.1791,
+      "vol_surge": 14.12,
+      "chg_1h": 0.0742,
+      "market_surge": 7.74,
+      "actionable": true
+    },
+    {
+      "symbol": "STRKUSDT",
+      "signal": "ignition",
+      "score": 0.7392,
+      "raw_score": 0.8575,
+      "weight": 0.862,
+      "price": 0.02578,
+      "why": "trades 13.3x and volume 28.1x the prior 4h, 62% taker-buy, $53,778 burst \u2014 while price has only moved +1.9%",
+      "chg_24h": -0.0281,
+      "vol_surge": 28.11,
+      "chg_1h": 0.0194,
+      "market_surge": 2.02,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.6 independent 24h windows (span 134h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.6 independent 24h windows (span 134h): overlapping labels are not a sample",
     "breakout": "actionable",
