@@ -1,24 +1,8 @@
 {
-  "ts": "2026-08-31T21:08:17+00:00",
-  "scanned": 103,
+  "ts": "2026-08-31T21:13:37+00:00",
+  "scanned": 102,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "INJUSDT",
-      "signal": "ignition",
-      "score": 0.6132,
-      "raw_score": 0.6828,
-      "weight": 0.898,
-      "price": 4.965,
-      "why": "trades 6.1x and volume 6.3x the prior 4h, 73% taker-buy, $71,339 burst \u2014 while price has only moved +0.0%",
-      "chg_24h": -0.0439,
-      "vol_surge": 6.35,
-      "chg_1h": 0.0004,
-      "market_surge": 2.5,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.8 independent 24h windows (span 140h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.8 independent 24h windows (span 140h): overlapping labels are not a sample",
     "breakout": "actionable",
