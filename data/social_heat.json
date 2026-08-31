@@ -1,19 +1,20 @@
 {
-  "ts": "2026-08-31T17:16:51+00:00",
+  "ts": "2026-08-31T17:22:12+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
-      "ZEC",
-      "HNT",
       "PENGU",
+      "ZEC",
       "ARB",
       "SOL",
-      "UNI"
+      "UNI",
+      "HNT"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "HEMI",
+      "DASH",
       "SNDKB",
       "RLUSD"
     ],
@@ -39,7 +40,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.2e-05
+      "funding": 7.7e-05
+    },
+    {
+      "symbol": "DASH",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "HNT",
