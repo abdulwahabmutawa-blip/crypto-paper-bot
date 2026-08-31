@@ -1,20 +1,27 @@
 {
- "updated": "2026-08-31T05:59:31+00:00",
+ "updated": "2026-08-31T06:06:36+00:00",
  "spec": "x_chatter_precursors_2026-08-23",
  "n_rows_total": 5,
- "n_scored_excess_24h": 3,
+ "n_scored_excess_24h": 4,
  "objective": "BTC-excess 24h",
  "hit_threshold": 0.03,
  "features": {
   "catalyst": {},
-  "tier_T3": {},
+  "tier_T3": {
+   "False": {
+    "n": 3,
+    "hit": 0.0,
+    "mean": -0.0316,
+    "median": -0.02079
+   }
+  },
   "handle": {},
   "all": {
    "all": {
-    "n": 3,
-    "hit": 0.333,
-    "mean": -0.01824,
-    "median": -0.02079
+    "n": 4,
+    "hit": 0.25,
+    "mean": -0.01582,
+    "median": -0.00854
    }
   }
  },
@@ -23,10 +30,10 @@
    "note": "prior24h in [-2%,+5%] vs >+10%",
    "horizon_h": 24,
    "group_true": {
-    "n": 1,
+    "n": 2,
     "hit": 0.0,
-    "mean": -0.02079,
-    "median": -0.02079
+    "mean": -0.01467,
+    "median": -0.00854
    },
    "group_false": null
   },
@@ -73,12 +80,12 @@
     "median": -0.06548
    },
    "group_false": {
-    "n": 2,
-    "hit": 0.5,
-    "mean": 0.00537,
-    "median": 0.03154
+    "n": 3,
+    "hit": 0.333,
+    "mean": 0.00074,
+    "median": -0.00854
    },
-   "edge_pp": -7.09
+   "edge_pp": -6.62
   },
   "H6_exchange_surface_words_exhaust": {
    "note": "scanner/exchange-surface wording vs organic",
@@ -90,12 +97,12 @@
     "median": -0.02079
    },
    "group_false": {
-    "n": 2,
-    "hit": 0.5,
-    "mean": -0.01697,
-    "median": 0.03154
+    "n": 3,
+    "hit": 0.333,
+    "mean": -0.01416,
+    "median": -0.00854
    },
-   "edge_pp": -0.38
+   "edge_pp": -0.66
   },
   "H7_extreme_velocity_contrarian": {
    "note": "all-new handles vs familiar, 72h",
@@ -112,10 +119,10 @@
    "note": "first ever appearance vs repeat",
    "horizon_h": 24,
    "group_true": {
-    "n": 3,
-    "hit": 0.333,
-    "mean": -0.01824,
-    "median": -0.02079
+    "n": 4,
+    "hit": 0.25,
+    "mean": -0.01582,
+    "median": -0.00854
    },
    "group_false": null
   }
