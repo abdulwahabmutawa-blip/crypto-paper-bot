@@ -1,11 +1,11 @@
 # Exit timing — the bot grading its own exits
 
-updated 2026-08-31T05:26:12+00:00 · 32 exits audited · early/late line ±3% · MEASUREMENT ONLY
+updated 2026-08-31T05:39:42+00:00 · 33 exits audited · early/late line ±3% · MEASUREMENT ONLY
 
 | verdict | n |
 |---|---|
 | TOO_EARLY | 14 |
-| TOO_LATE | 2 |
+| TOO_LATE | 3 |
 | BOTH | 12 |
 | WELL_TIMED | 4 |
 
@@ -15,7 +15,7 @@ updated 2026-08-31T05:26:12+00:00 · 32 exits audited · early/late line ±3% ·
 | Grok scans stale | 1 | +1.6% | +3.1% | 0 |
 | Hype faded | 7 | +6.1% | +10.7% | 0 |
 | MOMENTUM GONE | 2 | +0.6% | +12.3% | 0 |
-| RATCHET | 2 | +8.9% | +6.6% | 0 |
+| RATCHET | 3 | +8.2% | +4.5% | 0 |
 | STALLED | 12 | +1.5% | +9.7% | 3 |
 | STOP-LOSS | 2 | +11.5% | +8.8% | 0 |
 | TURBO HOP | 1 | +0.8% | +9.8% | 0 |
@@ -24,8 +24,8 @@ updated 2026-08-31T05:26:12+00:00 · 32 exits audited · early/late line ±3% ·
 
 - book since inception (08-15, $40 stake): **-37.9%** — trading P&L only (-$15.17 over 37 closed trades), deposits excluded
 - account balance: $46.79 (of which **+$21.96 is deposited capital, not profit** — inferred as balance minus stake minus P&L; deposits are not tracked anywhere yet)
-- BTC since inception: +23.9% (book gap **-61.9pp**) · last 24h +0.6%
-- ETH since inception: +29.6% (book gap **-67.5pp**) · last 24h +0.9%
+- BTC since inception: +23.5% (book gap **-61.5pp**) · last 24h +0.3%
+- ETH since inception: +29.1% (book gap **-67.0pp**) · last 24h +0.6%
 
 ## Alpha by regime (book minus BTC, daily, paired)
 
@@ -34,7 +34,7 @@ updated 2026-08-31T05:26:12+00:00 · 32 exits audited · early/late line ±3% ·
 | regime (BTC day) | days | avg book | avg gap vs BTC |
 |---|---|---|---|
 | red | 1 | -20.08% | **-17.08pp** |
-| flat | 12 | -0.99% | **-1.24pp** |
+| flat | 12 | -0.99% | **-1.21pp** |
 | green | 4 | -1.76% | **-7.34pp** |
 
 | date | regime | book | BTC | gap |
@@ -48,7 +48,7 @@ updated 2026-08-31T05:26:12+00:00 · 32 exits audited · early/late line ±3% ·
 | 2026-08-28 | red | -20.08% | -3.00% | -17.08pp |
 | 2026-08-29 | flat | -12.84% | +0.49% | -13.33pp |
 | 2026-08-30 | flat | +26.83% | -0.70% | +27.53pp |
-| 2026-08-31 | flat | -5.67% | +0.57% | -6.24pp |
+| 2026-08-31 | flat | -5.67% | +0.26% | -5.93pp |
 
 
 _giveback = in-hold peak the exit surrendered; post-24h run = what the coin did after we sold. High post-run with low giveback = selling too early; high giveback = selling too late._
