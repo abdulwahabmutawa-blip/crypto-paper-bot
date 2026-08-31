@@ -649,15 +649,19 @@ def circuit_breaker_reason(realized_today: list[dict],
     losses = [t for t in realized_today
               if _trade_pct(t, book_hwm_usd) <= BREAKER_MATERIAL_PCT]
     day_pnl = sum(float(t.get("pnl_usd") or 0.0) for t in realized_today)
-    if len(losses) >= BREAKER_MAX_LOSSES:
-        return (f"CIRCUIT BREAKER — {len(losses)} losing exits today "
-                f"(${day_pnl:+.2f}): no more entries until the next UTC day")
+    # ORDER MATTERS (owner amendment 08-31): the day-loss line is ABSOLUTE
+    # and is checked FIRST — the loss-count branch below is overridable by
+    # the golden ticket (one elite entry per day, see lottery_live), and
+    # must never mask the ruin-math line by returning its string first.
     if book_hwm_usd and book_hwm_usd > 0 \
             and day_pnl <= -BREAKER_DAY_LOSS_FRAC * book_hwm_usd:
         return (f"CIRCUIT BREAKER — day P&L ${day_pnl:+.2f} is "
                 f"{day_pnl / book_hwm_usd:.1%} of the book's peak "
                 f"(line {-BREAKER_DAY_LOSS_FRAC:.0%}): no more entries "
                 f"until the next UTC day")
+    if len(losses) >= BREAKER_MAX_LOSSES:
+        return (f"CIRCUIT BREAKER — {len(losses)} losing exits today "
+                f"(${day_pnl:+.2f}): no more entries until the next UTC day")
     return None
 
 

@@ -91,3 +91,21 @@ Open items from the study, deliberately NOT shipped today: 8% trail
 watcher-lane bench (moot while watcher stays benched), VWAP fill cap,
 refusal-streak veto, book cap decision (owner must choose), and
 LOTTERY_EXCHANGE_STOPS=1 (owner flips on the VPS — SHIP FIRST rec).
+
+## Golden ticket through the breaker (owner amendment, 2026-08-31)
+
+Owner: "it's ok to stop for a while, but a high-percentage, low-risk
+opportunity should not be missed." Encoded with PROVEN keys only — score
+and Grok sentiment are explicitly not keys (forensics: corr(score,pnl)
++0.09; hype lane owned every disaster):
+
+- The loss-count breaker becomes overridable for **one entry per UTC day**,
+  taken only by an **actionable** candidate that is EITHER on an **active
+  breadth wave** OR a **revival** signal, passing every normal guard, and
+  never a symbol that already lost money today.
+- The **-10% day-loss line and the API-burst freeze stay absolute** (the
+  day-loss check now runs first so it can never be masked).
+- No turbo-hops while halted (a sell during a halt cannot be re-bought).
+- Every use is ledger-tagged `breaker_override`. **Pre-registered
+  evaluation: at 09-30 or after 6 override trades, whichever first — the
+  ticket survives only if its own net P&L is positive.**

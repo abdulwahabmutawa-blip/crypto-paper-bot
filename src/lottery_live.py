@@ -700,7 +700,7 @@ def main():
         # and the exit stamps the normal cooldown so the abandoned coin
         # cannot boomerang. The buy happens next cycle through the full
         # guard stack — a hop earns entry, it is not granted it.
-        if held and turbo:
+        if held and turbo and halt_why is None:
             _tc = _turbo_rank(scout_candidates())
             _best = _tc[0] if _tc else None
             if _best and _best["symbol"] != held                     and _best["symbol"] not in st.get("stopped", {})                     and held_h is not None and held_h >= 0.5:
@@ -786,6 +786,17 @@ def main():
     except Exception:
         burst_why = None
     halt_why = breaker_why or burst_why
+    # GOLDEN TICKET (owner amendment 2026-08-31): "it's ok to stop for a
+    # while, but a high-percentage opportunity should not be missed." The
+    # loss-COUNT breaker becomes overridable for exactly ONE entry per UTC
+    # day, and only for the setups whose win rate is PROVEN, not scored:
+    # an actionable candidate arriving on an active breadth wave (54-64%
+    # of explosions cluster there) or an actionable revival (the 2y
+    # study's profile). Score is NOT a key (corr with pnl +0.09). The
+    # -10% day-loss line and the API-burst freeze stay absolute.
+    golden = bool(breaker_why and "losing exits" in breaker_why
+                  and burst_why is None
+                  and st.get("breaker_override_date") != today)
     if halt_why and held is None and st.get("halt_flagged") != halt_why[:24]:
         st["halt_flagged"] = halt_why[:24]
         binance_live.log({"event": "entries_halted", "reason": halt_why})
@@ -794,7 +805,7 @@ def main():
         st.pop("halt_flagged", None)
 
     can_enter = (held is None and not (severe or stale)
-                 and floor_why is None and halt_why is None
+                 and floor_why is None and (halt_why is None or golden)
                  and (WEEKEND_ENTRIES or now.weekday() < 5)
                  and entries_today < budget)
     if floor_why and held is None:
@@ -878,7 +889,7 @@ def main():
         if np.get("scan_ts") != scan_ts:
             np = {"scan_ts": scan_ts, "syms": []}
         st["no_pair"] = np
-        if fresh and watcher_ok:
+        if fresh and watcher_ok and halt_why is None:
             for c in crypto_candidates(scan, prev_scan):
                 sym = c.replace("-USD", "") + "USDT"
                 if sym in blacklisted or sym in np["syms"]:
@@ -919,6 +930,14 @@ def main():
             for c in _cands:
                 if c["symbol"] in blacklisted:
                     continue
+                # golden-ticket mode: trading THROUGH a halt — only the
+                # proven-context setups qualify, and never a coin that
+                # already took today's money.
+                if halt_why:
+                    if not (wave_fresh() or c.get("signal") == "revival"):
+                        continue
+                    if str(st.get("stopped", {}).get(c["symbol"], ""))[:10]                             == today:
+                        continue
                 # THE GATE (autopsy 08-16): a signal type trades only after
                 # its own scorecard shows it beating fees under the current
                 # ruleset. Benched candidates still teach — the scout
@@ -997,6 +1016,15 @@ def main():
                     st["entries"] = {d: c for d, c in st["entries"].items()
                                      if d >= today}
                     st["entries"][today] = entries_today + 1
+                    if halt_why:
+                        st["breaker_override_date"] = today
+                        binance_live.log({
+                            "event": "breaker_override", "symbol": pick,
+                            "reason": f"golden ticket through the breaker: "
+                                      f"{source}, wave={wave_fresh()}, "
+                                      f"one per UTC day"})
+                        print(f"[{KEY}] GOLDEN TICKET spent on {pick} "
+                              f"({source}) — breaker back in force")
 
     # balances_valuation(), not balances(): a resting protective stop LOCKS the
     # position's units, so a free-only read prices the seat at $0 -- a

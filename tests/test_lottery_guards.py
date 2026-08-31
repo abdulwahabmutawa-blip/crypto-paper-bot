@@ -405,4 +405,15 @@ assert why and "LATE" in why, "the CHIP entry must be refused even on a wave"
 why = bl.late_entry(0.05, 0.01, -0.05, 0.30, wave=True)
 assert why and "ROLLED" in why, "rolled-over must still refuse during a wave"
 
+# --- circuit breaker: absolute line outranks the overridable one -----------
+# (owner amendment 08-31: the loss-count branch is golden-ticket overridable,
+# the -10%-of-peak day line is not — so the day line must win the string)
+losses2 = [{"pnl_pct": -2.0, "pnl_usd": -1.0}, {"pnl_pct": -1.5, "pnl_usd": -0.8}]
+why = bl.circuit_breaker_reason(losses2, 100.0)
+assert why and "losing exits" in why, "two material losses must trip the count branch"
+big_day = [{"pnl_pct": -2.0, "pnl_usd": -6.0}, {"pnl_pct": -3.0, "pnl_usd": -6.0}]
+why = bl.circuit_breaker_reason(big_day, 100.0)
+assert why and "day P&L" in why, "the absolute day-loss line must be reported first"
+assert bl.circuit_breaker_reason([{"pnl_pct": -0.4, "pnl_usd": -0.2}] * 3, 100.0) is None,     "fee scratches must never trip the breaker"
+
 print("test_lottery_guards: ALL PASS")
