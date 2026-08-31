@@ -1,5 +1,5 @@
 {
-  "ts": "2026-08-31T00:41:19+00:00",
+  "ts": "2026-08-31T00:46:41+00:00",
   "sources": {
     "coingecko": [
       "HNT",
@@ -16,7 +16,8 @@
     "stocktwits": [],
     "movers": [
       "ZKC",
-      "UNI"
+      "UNI",
+      "NEAR"
     ],
     "watcher": [
       "HNT",
@@ -35,6 +36,16 @@
       ]
     },
     {
+      "symbol": "NEAR",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -1.1e-05,
+      "long_short": 1.53
+    },
+    {
       "symbol": "UNI",
       "surfaces": 2,
       "sources": [
@@ -51,7 +62,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.001599,
+      "funding": -0.001506,
       "long_short": 0.93
     },
     {
@@ -60,7 +71,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.1e-05
+      "funding": 7.2e-05
     },
     {
       "symbol": "ETH",
@@ -69,14 +80,6 @@
         "coingecko"
       ],
       "funding": 8e-06
-    },
-    {
-      "symbol": "NEAR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -1.6e-05
     },
     {
       "symbol": "PENDLE",
@@ -100,7 +103,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.4e-05
+      "funding": -1.3e-05
     },
     {
       "symbol": "XMR",
@@ -108,7 +111,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 0.000961
+      "funding": 0.000978
     },
     {
       "symbol": "ZEC",
@@ -116,7 +119,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.5e-05
+      "funding": 2.3e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
