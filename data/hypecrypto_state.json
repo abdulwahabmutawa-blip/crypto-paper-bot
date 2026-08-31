@@ -1,17 +1,17 @@
 {
   "created": "2026-08-15",
   "starting_cash": 1000.0,
-  "holding": "CASH",
-  "units": 0.0,
-  "cash": 768.2534309636718,
-  "entry_price": null,
-  "entry_scan_ts": null,
+  "holding": "HEMI-USD",
+  "units": 50306.745977726074,
+  "cash": 0.0,
+  "entry_price": 0.01525,
+  "entry_scan_ts": "2026-08-31T12:27:06+00:00",
   "bench_units": 0.01588152678794818,
   "stopped": {
     "PROM-USD": "2026-08-30T03:45:23+00:00"
   },
   "entries": {
-    "2026-08-30": 1
+    "2026-08-31": 1
   },
   "trades": [
     {
@@ -253,6 +253,16 @@
       "value": 769.33,
       "fee": 1.08,
       "reason": "STOP-LOSS (-11.5% from entry) \u2014 hype that bleeds gets cut"
+    },
+    {
+      "date": "2026-08-31",
+      "action": "BUY",
+      "ticker": "HEMI-USD",
+      "price": 0.01525,
+      "units": 50306.745978,
+      "value": 767.18,
+      "fee": 1.08,
+      "reason": "Grok: HEMI euphoric \u2014 BTC L2 yield pump faded early (scan 2026-08-31T12:27)"
     }
   ],
   "history": [
@@ -348,9 +358,9 @@
     },
     {
       "date": "2026-08-31",
-      "value": 768.25,
-      "bench": 1245.56,
-      "holding": "CASH"
+      "value": 767.18,
+      "bench": 1240.82,
+      "holding": "HEMI-USD"
     }
   ],
   "intraday": [
@@ -8069,8 +8079,14 @@
       "value": 768.25,
       "bench": 1245.56,
       "holding": "CASH"
+    },
+    {
+      "ts": "2026-08-31T12:28:10+00:00",
+      "value": 767.18,
+      "bench": 1240.82,
+      "holding": "HEMI-USD"
     }
   ],
-  "last_updated_utc": "2026-08-31T12:13:42+00:00",
-  "costs_paid": 32.4788
+  "last_updated_utc": "2026-08-31T12:28:10+00:00",
+  "costs_paid": 33.5544
 }

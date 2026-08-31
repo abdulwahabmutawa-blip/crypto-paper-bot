@@ -1,44 +1,53 @@
 {
-  "generated_utc": "2026-08-31T12:13:42+00:00",
+  "generated_utc": "2026-08-31T12:28:10+00:00",
   "created": "2026-08-15",
   "starting_cash": 1000.0,
-  "live_ts": "2026-08-31T12:13:42+00:00",
+  "live_ts": "2026-08-31T12:28:10+00:00",
   "current": {
     "date": "2026-08-31",
-    "value": 768.25,
-    "bench": 1245.56,
-    "holding": "CASH"
+    "value": 767.18,
+    "bench": 1240.82,
+    "holding": "HEMI-USD"
   },
   "board": [
     {
-      "sym": "HNT",
-      "price": 4.67,
-      "line": "euphoric \u00b7 DePIN real-world adoption rally",
-      "tag": "candidate",
+      "sym": "HEMI",
+      "price": 0.0152,
+      "line": "euphoric \u00b7 BTC L2 yield pump faded early",
+      "tag": "HELD",
       "on": true,
-      "pick": false,
+      "pick": true,
       "fill": 40
     },
     {
-      "sym": "ZKC",
+      "sym": "PONS",
       "price": 0,
-      "line": "euphoric \u00b7 Binance top mover pump",
+      "line": "euphoric \u00b7 Launchpad meme rotation",
       "tag": "euphoric",
       "on": true,
       "pick": false,
       "fill": 40
     },
     {
-      "sym": "BTC",
-      "price": 78428.01,
-      "line": "mixed \u00b7 Recovery post-Warsh dip",
+      "sym": "HYPE",
+      "price": 0,
+      "line": "euphoric \u00b7 Hyperliquid victory laps",
+      "tag": "euphoric",
+      "on": true,
+      "pick": false,
+      "fill": 40
+    },
+    {
+      "sym": "PUMP",
+      "price": 0,
+      "line": "mixed \u00b7 Trading takeover noise",
       "tag": "mixed",
       "on": false,
       "pick": false,
       "fill": 0
     }
   ],
-  "board_title": "Grok's crypto hype read (scan 2026-08-31T04:18)",
+  "board_title": "Grok's crypto hype read (scan 2026-08-31T12:27)",
   "meta": {
     "title": "Hype Crypto \u2014 $1,000 Challenge",
     "badge": "PAPER + TESTNET SHADOW \u00b7 CRYPTO HYPE ON TRIAL",
@@ -7761,19 +7770,15 @@
       "value": 768.25,
       "bench": 1245.56,
       "holding": "CASH"
+    },
+    {
+      "ts": "2026-08-31T12:28:10+00:00",
+      "value": 767.18,
+      "bench": 1240.82,
+      "holding": "HEMI-USD"
     }
   ],
   "trades": [
-    {
-      "date": "2026-08-19",
-      "action": "BUY",
-      "ticker": "ACE-USD",
-      "price": 0.2269,
-      "units": 4778.493176,
-      "value": 1084.24,
-      "fee": 1.52,
-      "reason": "Grok: ACE euphoric \u2014 Top Binance mover huge volume (scan 2026-08-18T22:39)"
-    },
     {
       "date": "2026-08-19",
       "action": "SELL",
@@ -7963,6 +7968,16 @@
       "value": 769.33,
       "fee": 1.08,
       "reason": "STOP-LOSS (-11.5% from entry) \u2014 hype that bleeds gets cut"
+    },
+    {
+      "date": "2026-08-31",
+      "action": "BUY",
+      "ticker": "HEMI-USD",
+      "price": 0.01525,
+      "units": 50306.745978,
+      "value": 767.18,
+      "fee": 1.08,
+      "reason": "Grok: HEMI euphoric \u2014 BTC L2 yield pump faded early (scan 2026-08-31T12:27)"
     }
   ],
   "history": [
@@ -8058,14 +8073,14 @@
     },
     {
       "date": "2026-08-31",
-      "value": 768.25,
-      "bench": 1245.56,
-      "holding": "CASH"
+      "value": 767.18,
+      "bench": 1240.82,
+      "holding": "HEMI-USD"
     }
   ],
-  "costs_paid": 32.4788,
+  "costs_paid": 33.5544,
   "frozen": null,
-  "thoughts": "I'm in cash. I buy only the freshest euphoric crypto (scan under 9h old), one entry a day, never on weekends \u2014 lukewarm or aging hype is how small accounts bleed out in fees.",
+  "thoughts": "I'm riding HEMI from the 2026-08-31T12:27 scan. My exit is mechanical: a newer scan without it, -10% from entry, or a blind/severe Watcher \u2014 whichever comes first.",
   "strategy": {
     "name": "Hype Crypto \u2014 sentiment pattern, crypto venue, on trial",
     "rule": "Top euphoric crypto from a fresh Watcher scan; 1 entry/day max; -10% hard stop; exit on newer scan without the coin, stale scans, or SEVERE; Binance-tier fees",
