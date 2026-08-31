@@ -1,17 +1,17 @@
 {
-  "ts": "2026-08-31T03:48:35+00:00",
-  "scanned": 96,
+  "ts": "2026-08-31T03:54:45+00:00",
+  "scanned": 94,
   "ruleset": 3,
   "candidates": [],
   "gate": {
-    "ignition": "probation \u2014 400 rows but only 5.5 independent 24h windows (span 132h): overlapping labels are not a sample",
+    "ignition": "probation \u2014 400 rows but only 5.6 independent 24h windows (span 134h): overlapping labels are not a sample",
     "breakout": "actionable",
     "reversion": "benched \u2014 hit 50%, mean +0.65% over last 38 at 24h: not beating 4x the round trip",
-    "heat": "benched \u2014 hit 55%, mean +0.56% over last 133 at 24h: not beating 4x the round trip",
+    "heat": "benched \u2014 hit 55%, mean +0.58% over last 134 at 24h: not beating 4x the round trip",
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 14,
+    "count": 12,
     "baseline": 12.0,
     "wave": false
   },
@@ -37,16 +37,16 @@
       "avg_win_4h": 0.01876,
       "avg_loss_4h": -0.01949,
       "payoff_4h": 0.963,
-      "span_h_24h": 132.4,
-      "n_eff_24h": 5.52,
+      "span_h_24h": 134.5,
+      "n_eff_24h": 5.6,
       "n_24h": 400,
-      "hit_rate_24h": 0.427,
-      "mean_ret_24h": -0.00019,
-      "median_ret_24h": -0.0046,
+      "hit_rate_24h": 0.43,
+      "mean_ret_24h": 0.0003,
+      "median_ret_24h": -0.00424,
       "both_halves_24h": false,
-      "avg_win_24h": 0.04761,
-      "avg_loss_24h": -0.03944,
-      "payoff_24h": 1.207
+      "avg_win_24h": 0.04752,
+      "avg_loss_24h": -0.03887,
+      "payoff_24h": 1.223
     },
     "breakout": {
       "span_h_1h": 326.2,
@@ -133,16 +133,16 @@
       "avg_win_4h": 0.04004,
       "avg_loss_4h": -0.04491,
       "payoff_4h": 0.892,
-      "span_h_24h": 310.1,
-      "n_eff_24h": 12.92,
-      "n_24h": 133,
-      "hit_rate_24h": 0.549,
-      "mean_ret_24h": 0.00562,
-      "median_ret_24h": 0.02571,
+      "span_h_24h": 310.2,
+      "n_eff_24h": 12.93,
+      "n_24h": 134,
+      "hit_rate_24h": 0.552,
+      "mean_ret_24h": 0.00582,
+      "median_ret_24h": 0.02683,
       "both_halves_24h": false,
-      "avg_win_24h": 0.09275,
+      "avg_win_24h": 0.09193,
       "avg_loss_24h": -0.10365,
-      "payoff_24h": 0.895
+      "payoff_24h": 0.887
     },
     "revival": {
       "span_h_1h": 5.7,
