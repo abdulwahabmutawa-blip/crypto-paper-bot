@@ -1,31 +1,32 @@
 {
- "updated_utc": "2026-08-30T19:30:00+00:00",
- "run_note": "Sunday 2026-08-30, 19:30Z. First supervisor run since 08-24, so this covers a six-day backlog of 28 trades. NO R1 BREACH and NO SIM-INTEGRITY ALERT. The fill audit was the widest yet and it came back clean on both defined tests: all 14 equity fills landed inside US regular hours (09:32-15:39 ET), and all 28 fills sat inside their day's low-high. One fill needed a second source - hypecrypto's PROM exit at 6.427 showed marginally under Yahoo's 6.4366 low, and Binance confirms it inside 6.336-7.890, so it is cross-venue variance and not a fault. (1) The loud number is hypecrypto: -102.73 in a day, -11.79%, now 768.25 and only 18.25 above the R1 line that retires it. It bought PROM at 7.266 after a six-day 3.63-to-7.89 run and was stopped at 6.427, 1.4% off the day's low, after which PROM closed back at 6.827. That is the fifth round trip of exactly this shape since the last run. (2) sentiment lost 60.95 the same way in equities, buying NVDA at 226.78 within 1.1% of the 08-28 high and watching it close 217.55. Two bots, one defect: an entry rule with no price filter. (3) The 08-24 hypecrypto skip call closed at +166.10, the largest judgment alpha ever recorded here. (4) GitHub Actions is FIXED: the largest gap in 24h is 11.0 minutes against a 90-minute rule, on 263 runs, after three consecutive days of breaches ending 08-24. The schedule now fires roughly every 6 minutes. (5) Staleness check CLEAN: all ten paper books are 12 minutes old in a tight cluster, lottery 6. No frozen bot. (6) hunter's stale-mark fault is dormant today only because weekend rows are kept; it will re-arm at Monday's pre-open. Still OPEN and untouched.",
- "total_judgments": 260,
- "judgments_closed": 257,
+ "updated_utc": "2026-08-31T15:30:00+00:00",
+ "run_note": "Monday 2026-08-31, 15:30Z. NO R1 BREACH and NO SIM-INTEGRITY ALERT, but two things lead. (1) THE FLEET LOOP IS DOWN. The last cycle commit is 13:22:07Z and it is now ~15:30Z, a 128-minute hole against a 13m27s cadence, roughly 9 missed cycles. This is NOT the 2026-08-03 freeze-guard misfire and not a code regression: bot.yml runs a 345-minute loop by design because GitHub accepts only ~6% of its scheduled starts, so the fleet is simply waiting for a start to be accepted. The 06:57Z run ended cleanly at 13:22Z after 384 minutes. The consequence matters more than the cause: the loop died at 09:22 ET, eight minutes before the US open, so NO equity book has a 2026-08-31 mark and every equity state file still carries the completed 08-28 Friday close. All values in fleet_snapshot_at_run are the supervisor's own live marks, not the bots'. (2) hypecrypto is THROUGH the R1 line intraday at 741.92 against a $750 hard stop. R1 says 'closes below', and its last recorded close is 765.17, so this is not yet a breach and I am not calling it one. It is one bad session from being one. (3) The hunter stale-mark fault re-armed at Monday's pre-open exactly as the 08-30 brief predicted, and is measured for the first time: same 13:21Z cycle, crypto wrote a 08-31 row implying SOL 102.78, hunter wrote a 08-30 row implying 100.72. (4) One fill all run, hypecrypto's HEMI buy, and it audits clean: 12:28Z, crypto pair so the market-hours gate does not apply, 0.01525 against CoinGecko 0.015267 at 12:25Z. (5) The 08-30 hypecrypto skip call closed at +26.33; the sentiment and commodity calls closed neutral but neither was actually tested, because the loop was down across the open. (6) The Analyst's 08-28 reasoning validated TRUE and its falsifier did not fire, but 9 of its 20 decisions carry the UNRECEIPTED WATCHER CLAIM tag, which is a reasoning-quality fault the profit does not excuse.",
+ "total_judgments": 265,
+ "judgments_closed": 262,
  "judgments_open": 3,
  "open_ids": [
-  "2026-08-30-hypecrypto-1",
-  "2026-08-30-sentiment-1",
-  "2026-08-30-commodity-1"
+  "2026-08-31-hypecrypto-1",
+  "2026-08-31-hunter-1",
+  "2026-08-31-sentiment-1"
  ],
- "cumulative_alpha_usd": 381.19,
- "cumulative_alpha_usd_actionable": 230.79,
- "win_rate_closed_pct": 7.8,
- "win_rate_note": "Most closed judgments are no_change (alpha 0), so the headline rate carries no information - read the DIRECTIONAL record: 47 scored, 20W/17L/10N. This run added one win (hypecrypto +166.10, fully actionable since the book was 100% CASH at filing, so the counterfactual is the unchanged 934.35) and one neutral (hunter held SOL and traded nothing, the outcome its own rule pre-registered as neutral). Actionable alpha moves 64.69 to 230.79, and a single judgment supplied 72% of it.",
+ "cumulative_alpha_usd": 407.52,
+ "cumulative_alpha_usd_actionable": 257.12,
+ "win_rate_closed_pct": 8.0,
+ "win_rate_note": "Most closed judgments are no_change (alpha 0), so the headline rate carries no information - read the DIRECTIONAL record: 50 scored, 21W/17L/12N. This run added one win (hypecrypto +26.33, fully actionable since the book was 100% CASH at filing, so the counterfactual is the unchanged 768.25) and two neutrals. Both neutrals are weak evidence and are recorded as such: sentiment and commodity each closed neutral because they traded nothing, but the fleet loop was down across the 08-31 open, so they were prevented from acting rather than choosing not to. Actionable alpha moves 26.33 to 257.12.",
  "directional": {
-  "scored": 47,
-  "wins": 20,
+  "scored": 50,
+  "wins": 21,
   "losses": 17,
-  "neutral": 10
+  "neutral": 12,
+  "method": "A judgment is DIRECTIONAL if its action was not no_change (50 of 262 closed). Win/loss is the sign of its alpha; neutral is alpha exactly 0. Reconciles to the 08-30 run: 381.19 + 26.33 = 407.52 and 20W/17L/10N + 1W + 2N."
  },
  "by_bot": {
   "crypto": {
-   "judgments": 32,
-   "closed": 32,
+   "judgments": 33,
+   "closed": 33,
    "open": 0,
    "alpha_usd": 106.83,
-   "note": "Best paper book at 1197.85 and the 08-27 SOL rotation is up 54.13. Still 28.57 behind its own hot crypto bench, which is not a criticism. Filed no_change; the churn family stays retired at 7W/0L/3N."
+   "note": "Best paper book at 1156.75 live and the only bot besides hypecrypto to write a 2026-08-31 row, which made it the control that exposed hunter's stale mark. Filed no_change; the churn family stays retired at 7W/0L/3N."
   },
   "stock": {
    "judgments": 10,
@@ -47,11 +48,11 @@
    "alpha_usd": 0.0
   },
   "commodity": {
-   "judgments": 30,
-   "closed": 29,
-   "open": 1,
+   "judgments": 31,
+   "closed": 31,
+   "open": 0,
    "alpha_usd": 47.79,
-   "note": "Three signal-flip round trips in three sessions between two correlated commodity funds, 7.20 of fees in 72 hours while the book lost 20.13 and its bench gained 7.86. First whipsaw call filed."
+   "note": "The whipsaw call closed neutral, no fourth flip, and DBC then rose 1.32% on the Kharg oil-terminal threat. Filed no_change today rather than manufacture an objection to a holding that finally has a catalyst."
   },
   "congress": {
    "judgments": 27,
@@ -60,18 +61,18 @@
    "alpha_usd": -1.39
   },
   "hunter": {
-   "judgments": 30,
+   "judgments": 31,
    "closed": 30,
-   "open": 0,
+   "open": 1,
    "alpha_usd": 61.49,
-   "note": "The 08-24 call closed NEUTRAL exactly as pre-registered: it traded nothing all window and rode SOL from 94.51 to about 106.4. Filed no_change today because its stale-mark fault cannot fire on a weekend."
+   "note": "The stale-mark fault is no longer a prediction. In the same 13:21Z cycle it wrote a 2026-08-30 row implying SOL 100.72 while crypto wrote 2026-08-31 implying 102.78. First skip call filed against the fault while it is actually armed."
   },
   "sentiment": {
-   "judgments": 18,
-   "closed": 17,
+   "judgments": 19,
+   "closed": 18,
    "open": 1,
    "alpha_usd": -27.08,
-   "note": "Fleet's largest single-day loss, -60.95, from buying NVDA 1.1% under the 08-28 high and holding it into a 4.57% session decline. First skip_new_entries call filed on this book."
+   "note": "Yesterday's skip call closed NEUTRAL but was never tested: the loop died eight minutes before the 08-31 open, so the bot was prevented from rotating rather than choosing not to. Refiled on the same terms."
   },
   "hype": {
    "judgments": 11,
@@ -92,73 +93,73 @@
    "alpha_usd": 0.0
   },
   "hypecrypto": {
-   "judgments": 9,
-   "closed": 8,
+   "judgments": 10,
+   "closed": 9,
    "open": 1,
-   "alpha_usd": 162.85,
-   "note": "The 08-24 skip call closed at +166.10, the largest single-judgment alpha in the ledger and fully actionable because the book was 100% CASH when it was filed. Five more euphoria round trips took it 934.35 to 768.25. Refiled a fifth time; the book is 18.25 from the R1 hard stop."
+   "alpha_usd": 189.18,
+   "note": "Yesterday's fifth skip call closed at +26.33 because the bot again did not skip: it bought HEMI at 0.01525, 44.1% above the 24h low, after a +37.8% pump. Escalated today from skip to close_position, the first ever filed on this book, because the book is now through the R1 line intraday at 741.92."
   },
   "lottery": {
    "judgments": 5,
    "closed": 5,
    "open": 0,
    "alpha_usd": -0.3,
-   "note": "REAL MONEY, roughly 51 dollars. Entered AUCTIONUSDT on a scout breakout at 3.557 and is up 17.1%. Its 24h-low distance filter remains the only working entry filter in the fleet."
+   "note": "REAL MONEY, roughly 47 dollars. Banked AUCTIONUSDT at +10.26% on its ratchet exit (peak was +21.5%), then took two small rule-driven losses today and tripped its own circuit breaker. Its 24h-low distance filter remains the only working entry filter in the fleet."
   }
  },
- "driver_tally_note": "Full rolling tally in reports/attribution_summary.json, recomputed from source this run. 'hype_sentiment' is now the worst driver in the ledger and produced both large losses this run; the real-money lottery book took a filtered breakout entry the same day and is up 17.1%, which is the cleanest control the fleet has.",
+ "driver_tally_note": "Full rolling tally in reports/attribution_summary.json, recomputed from source this run. Only one fill happened all run so the tally barely moved; 'hype_sentiment' remains the worst driver in the ledger and supplied the only loss of size today.",
  "fleet_snapshot_at_run": {
-  "crypto": 1197.85,
-  "meanrev": 1220.17,
-  "allweather": 1025.04,
-  "commodity": 1009.64,
-  "congress": 997.79,
-  "hunter": 1032.42,
-  "sentiment": 1398.64,
-  "scholar": 1019.33,
-  "analyst": 1024.56,
-  "hypecrypto": 768.25,
-  "basis": "TEN paper books, baseline 10,000. stock/TQQQ stays retired (final 892.30, 07-31) and excluded; sentinel does not trade; the lottery book is REAL MONEY on a roughly 51 dollar base and is in no paper total. Marks are the bots' own recorded values and none is stale this run - it is Sunday, so weekend rows are kept and hunter marks SOL live. crypto, hunter and hypecrypto carry live 08-30 marks; the seven equity books carry the COMPLETED 08-28 Friday close, which is correct rather than stale.",
-  "total": 10693.69,
-  "vs_baseline_usd": 693.69,
-  "vs_baseline_pct": 6.94,
-  "change_since_last_run_usd": -156.73,
-  "change_since_last_run_note": "Against the 08-24 run's 10850.42, six days and 28 trades ago. hypecrypto -166.10 and sentiment -120.22 are the whole decline; meanrev +23.91, crypto +12.19 and hunter +117.94 offset part of it. Note the brief spec still says 'vs $8,000', which predates scholar, analyst and hypecrypto and the stock retirement; the live baseline is 10,000 across ten books."
+  "crypto": 1156.75,
+  "meanrev": 1235.56,
+  "allweather": 1020.57,
+  "commodity": 1022.92,
+  "congress": 994.37,
+  "hunter": 996.71,
+  "sentiment": 1411.5,
+  "scholar": 1014.31,
+  "analyst": 1019.51,
+  "hypecrypto": 741.92,
+  "basis": "TEN paper books, baseline 10,000. stock/TQQQ stays retired (final 892.30, 07-31) and excluded; sentinel does not trade; the lottery book is REAL MONEY on a roughly 47 dollar base and is in no paper total. IMPORTANT: unlike every prior run these are the SUPERVISOR'S live marks, not the bots' recorded values. The fleet loop stopped at 13:22Z, eight minutes before the 08-31 open, so the seven equity books still carry the 08-28 Friday close and hunter still carries a day-stale 08-30 crypto mark of 974.55. Priced at SPY 765.59, NVDA 219.55, WMT 104.41, DBC 31.195, TLT 82.245, GLD 406.49, BIL 91.67, SOL 103.01, BTC 78,348, HEMI 0.014748.",
+  "total": 10614.12,
+  "vs_baseline_usd": 614.12,
+  "vs_baseline_pct": 6.14,
+  "change_since_last_run_usd": -79.57,
+  "change_since_last_run_note": "Against the 08-30 run's 10,693.69. Not a like-for-like comparison: that run read the bots' own weekend marks, this one reads live prices the bots have not seen. hypecrypto -26.33 and hunter -35.71 (which is the stale mark unwinding, not a loss) are most of it; meanrev +15.39 and commodity +13.28 offset. Note the brief spec still says 'vs $8,000', which predates scholar, analyst and hypecrypto and the stock retirement; the live baseline is 10,000 across ten books."
  },
  "open_faults": [
   {
    "fault": "mixed-universe bots mark and rank their CRYPTO holdings at the previous UTC day's close on any US weekday before the equity feed lands",
    "severity": "high",
-   "status": "OPEN, dormant today, unchanged since 08-24",
-   "detail": "Root cause unchanged: hunter_tracker.fetch() calls market_hours.trim_incomplete_bars() on a frame holding equities beside crypto, and on a weekday whose equity columns are still all-NaN the trim drops the trailing row and takes the live crypto column with it. It cannot fire today because it is Sunday and weekend rows are deliberately kept: hunter's 1032.42 implies SOL near 106.70 against a live 106.3-106.4, so the mark is honest right now. Expect it to re-arm at Monday's pre-open. The 08-24 judgment filed against it closed NEUTRAL because the bot never traded in the window, which means the fault was never exercised, not that it was resolved. Owner decides; supervisor does not touch code.",
-   "first_seen": "2026-08-24"
+   "status": "OPEN and ARMED - fired today, measured for the first time",
+   "first_seen": "2026-08-24",
+   "detail": "Root cause unchanged: hunter_tracker.fetch() calls market_hours.trim_incomplete_bars() on a frame holding equities beside crypto, and on a weekday whose equity columns are still all-NaN the trim drops the trailing row and takes the live crypto column with it. On 08-30 this was dormant because weekend rows are kept. Today it fired. Proof is a same-cycle comparison rather than an argument: in the 13:21Z cycle crypto_state.json wrote {date 2026-08-31, implied SOL 102.78} while hunter_state.json wrote {date 2026-08-30, implied SOL 100.72}. Both bots hold SOL. Hunter understated itself by 2.2% and would have ranked any rotation on a day-old price. A skip_new_entries judgment is filed against it while it is armed. Owner decides; supervisor does not touch code."
   },
   {
    "fault": "entry rules with no price filter on the two euphoria-driven books (sentiment, hypecrypto)",
    "severity": "high",
-   "status": "OPEN, NEW this run, mechanism measured",
-   "detail": "Not a code bug but a design defect, and it is now measured on both books in the same week. hypecrypto bought PROM at 7.266 into a 3.63-to-7.89 six-day run and stopped at 6.427, 1.4% off the day's low; sentiment bought NVDA at 226.78, 1.1% under the day's 229.26 high, and closed 4.07% down the same session. Both rules take the symbol a scan names and pay the prevailing price, which is by construction after the move that made it euphoric. The controlled comparison is in-fleet: the real-money lottery book screens candidates on distance from the 24h low, entered AUCTION on 08-30 and is up 17.1%. Combined damage since the 08-24 run is 286.32 across the two books. Reported, not touched.",
-   "first_seen": "2026-08-30"
+   "status": "OPEN, unchanged, now measured on a sixth entry",
+   "first_seen": "2026-08-30",
+   "detail": "Not a code bug but a design defect. Today's instance is the cleanest yet: hypecrypto's Grok scan named HEMI at 12:27Z after a +37.8% 24h run and the bot bought at 12:28Z at 0.01525, which is 44.1% above the coin's 24h low of 0.010585 and 8.7% under its 0.016709 high. It was 3.3% underwater within three hours. The bot's own logged reason even says the pump 'faded early'. sentiment's leg is untested this run only because the loop was down across the open. The in-fleet control is unchanged: the real-money lottery book screens on distance from the 24h low and banked AUCTION at +10.26% on 08-30. Reported, not touched."
   },
   {
-   "fault": "analyst price-feed date alignment does not match the reference feed",
-   "severity": "low",
-   "status": "OPEN, NEW this run, informational",
-   "detail": "The agent's own decision text quotes SPY closing 769.72 on 8/27 and 771.90 on 8/28; Yahoo has 771.10 and 769.35 for those dates. The two values are close to each other but transposed across the two sessions, so this is not a clean one-day lag. It changes nothing today because both readings sit roughly 15 points above the agent's 755.00 abort line, and its reasoning validated true and its falsifier did not fire. Worth confirming before the feed matters near a threshold.",
-   "first_seen": "2026-08-30"
-  },
-  {
-   "fault": "commodity signal-flip rule whipsawing between correlated funds",
+   "fault": "analyst cites the Watcher without calling read_watcher",
    "severity": "medium",
-   "status": "OPEN, NEW this run",
-   "detail": "Three complete USO/DBC round trips on three consecutive sessions (08-25, 08-26, 08-27), six legs, 7.20 of fees on a roughly 1,010 book in 72 hours. Over the same window the book fell 1029.77 to 1009.64 while its benchmark rose 1016.94 to 1024.80. The '200-day MA' ranking is resolving a near tie between two highly correlated commodity vehicles and paying a spread on every flip. Judgment 2026-08-30-commodity-1 is filed against the next flip.",
-   "first_seen": "2026-08-30"
+   "status": "OPEN, escalated from the price-feed note",
+   "first_seen": "2026-08-30",
+   "detail": "9 of the agent's 20 decisions carry guardrail_tag 'UNRECEIPTED WATCHER CLAIM (read_watcher not called)', including three of the last four (08-25, 08-27, 08-28). On those days its reasoning states the Watcher's risk level as fact while tools_called contains only get_price_history. The stated levels happened to be right and the trades were holds, so nothing has been lost, but under this bot's own pre-registered spec, asserting evidence it did not fetch is a reasoning-quality failure regardless of outcome. Separately the earlier price-alignment note stands unresolved: the agent quoted SPY 769.72 on 8/27 and 771.90 on 8/28 where Yahoo has 771.10 and 769.35. api_cost_usd is healthy at 1.3338 over 20 decisions ($0.067 each)."
+  },
+  {
+   "fault": "fleet loop covers only ~82% of wall-clock by design",
+   "severity": "medium",
+   "status": "OPEN, structural, currently in a hole",
+   "first_seen": "2026-07-26",
+   "detail": "bot.yml deliberately runs a 345-minute loop because GitHub accepts only about 6% of its 72 requested starts per day. Coverage is therefore ~82% and the remaining holes are unavoidable for a single job. Today's hole is the expensive kind: the 06:57Z run ended at 13:22Z, eight minutes before the US open, so no equity book marked 08-31 and no bot could act on the open. The workflow's own comments name the fix (an external trigger); this is the owner's escalation call, recorded here because the cost is now visible rather than theoretical."
   }
  ],
  "kill_criteria_flags": {
-  "R1_breach_below_750": "NONE. Closest is hypecrypto at 768.25, which is 18.25 above the line.",
-  "below_800_informational": "hypecrypto 768.25. It is the only book under 900.",
-  "R4_dead_money": "NONE. hypecrypto sits in cash but only between round trips, nowhere near 30 consecutive days.",
-  "probation": "R2/R3 are scheduled-review rules, not daily ones, so nothing is decided here. Flagged for the next review: hypecrypto is 486.77 behind its own bench (768.25 vs 1255.02) on a book that is also down 23.2% absolute, which is the shape R2 was written for."
+  "R1_breach_below_750": "NO BREACH. R1 is written on CLOSES and hypecrypto's last recorded close is 765.17. But it is trading THROUGH the line right now: live 741.92, which is 8.08 below the $750 hard stop. One session at this level retires it.",
+  "below_800_informational": "hypecrypto 741.92 live / 765.17 last close. It is the only book under 900; the next weakest is congress at 994.37.",
+  "R4_dead_money": "NONE. hypecrypto sits in cash only between round trips, nowhere near 30 consecutive days.",
+  "probation": "R2/R3 are scheduled-review rules, not daily ones, so nothing is decided here. Flagged for the next review: hypecrypto is 497.89 behind its own bench (741.92 vs 1239.81) on a book also down 25.8% absolute, which is exactly the shape R2 was written for. It has only 16 trading days, so it is not yet eligible; R1 will almost certainly reach it first."
  }
 }
