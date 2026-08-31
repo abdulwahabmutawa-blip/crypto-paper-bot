@@ -1,21 +1,22 @@
 {
-  "ts": "2026-08-31T07:00:47+00:00",
-  "scanned": 99,
+  "ts": "2026-08-31T07:06:30+00:00",
+  "scanned": 96,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "ENSOUSDT",
-      "signal": "breakout",
-      "score": 0.7192,
-      "raw_score": 0.757,
-      "weight": 0.95,
-      "price": 0.912,
-      "why": "trades 7.4x, volume 9.2x, 61% taker-buy, +3.5% in an hour, at 95% of its 24h range",
-      "chg_24h": 0.0495,
-      "vol_surge": 9.21,
-      "chg_1h": 0.0352,
-      "market_surge": 1.84,
-      "actionable": true
+      "symbol": "COMPUSDT",
+      "signal": "revival",
+      "score": 0.3531,
+      "raw_score": 0.3531,
+      "weight": 1.0,
+      "price": 19.04,
+      "why": "revival day-one: fell -13% last week on $0.50M/day quiet, volume arriving 4.7x today, only +20% off its 30d low \u00b7 serial exploder: 3 runs in 2y",
+      "chg_24h": 0.041,
+      "vol_surge": 4.7,
+      "chg_1h": null,
+      "market_surge": null,
+      "actionable": false,
+      "status": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
     }
   ],
   "gate": {
