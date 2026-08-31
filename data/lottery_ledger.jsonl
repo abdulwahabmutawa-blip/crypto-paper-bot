@@ -441,3 +441,6 @@
 {"ts": "2026-08-31T00:03:59+00:00", "event": "refused", "action": "BUY", "symbol": "REUSDT", "reason": "LATE \u2014 -0.8% in the last hour: the move is rolling over, hype arrived after the top"}
 {"ts": "2026-08-31T00:21:15+00:00", "event": "refused", "action": "BUY", "symbol": "INJUSDT", "reason": "LATE \u2014 -1.0% in the last hour: the move is rolling over, hype arrived after the top"}
 {"ts": "2026-08-31T00:53:33+00:00", "event": "fill", "action": "BUY", "symbol": "ZROUSDT", "price": 1.032, "qty": 46.13, "order_id": "1511654878", "commission": 5.197e-05, "commission_asset": "BNB"}
+{"ts": "2026-08-31T03:00:52+00:00", "event": "fill", "action": "SELL", "symbol": "ZROUSDT", "price": 1.014, "qty": 46.13, "order_id": "1511766622", "commission": 5.136e-05, "commission_asset": "BNB"}
+{"ts": "2026-08-31T03:00:52+00:00", "event": "exit", "symbol": "ZROUSDT", "reason": "FUEL GONE \u2014 hourly volume 0.8x its pre-entry baseline (floor 1.5x) and only -1.7%: the surge this entry bought is over and it never paid", "source": "scout:ignition", "entry_price": 1.032, "exit_price": 1.014, "pnl_pct": -1.74, "pnl_usd": -0.8304}
+{"ts": "2026-08-31T03:00:52+00:00", "event": "entries_halted", "reason": "CIRCUIT BREAKER \u2014 2 losing exits today ($-1.49): no more entries until the next UTC day"}
