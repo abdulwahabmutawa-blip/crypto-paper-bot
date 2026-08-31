@@ -1,27 +1,26 @@
 {
-  "ts": "2026-08-31T23:08:41+00:00",
+  "ts": "2026-08-31T23:14:31+00:00",
   "sources": {
     "coingecko": [
       "ARB",
       "LIT",
       "PUMP",
-      "HNT",
-      "ZEC",
+      "BTC",
       "PENGU",
-      "VIRTUAL",
-      "SOL"
+      "HNT",
+      "ZEC"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "0G",
+      "ARB",
       "HEMI",
       "SNDKB",
       "DASH",
       "NEAR",
       "TRUMP",
-      "ADA",
-      "BTC"
+      "ADA"
     ],
     "watcher": [
       "HEMI",
@@ -37,8 +36,18 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.00209,
+      "funding": -0.002084,
       "long_short": 1.47
+    },
+    {
+      "symbol": "ARB",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.28
     },
     {
       "symbol": "HEMI",
@@ -59,20 +68,12 @@
       "funding": 1.3e-05
     },
     {
-      "symbol": "ARB",
+      "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 8.6e-05
+      "funding": 8.5e-05
     },
     {
       "symbol": "DASH",
@@ -119,7 +120,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4e-05
+      "funding": 3.7e-05
     },
     {
       "symbol": "SNDKB",
@@ -129,28 +130,12 @@
       ]
     },
     {
-      "symbol": "SOL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 4.8e-05
-    },
-    {
       "symbol": "TRUMP",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -5.5e-05
-    },
-    {
-      "symbol": "VIRTUAL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 2.1e-05
+      "funding": -5.7e-05
     },
     {
       "symbol": "ZEC",

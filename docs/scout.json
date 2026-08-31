@@ -1,8 +1,24 @@
 {
-  "ts": "2026-08-31T23:08:47+00:00",
-  "scanned": 100,
+  "ts": "2026-08-31T23:14:35+00:00",
+  "scanned": 99,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "LINKUSDT",
+      "signal": "ignition",
+      "score": 0.8061,
+      "raw_score": 0.8957,
+      "weight": 0.9,
+      "price": 11.307,
+      "why": "trades 11.6x and volume 11.3x the prior 4h, 62% taker-buy, $1,223,532 burst \u2014 while price has only moved -0.4%",
+      "chg_24h": -0.0096,
+      "vol_surge": 11.34,
+      "chg_1h": -0.0042,
+      "market_surge": 10.51,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.9 independent 24h windows (span 141h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.9 independent 24h windows (span 141h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 10,
     "baseline": 11.0,
     "wave": false
   },
