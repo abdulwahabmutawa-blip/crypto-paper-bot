@@ -1,67 +1,8 @@
 {
-  "ts": "2026-08-31T19:56:35+00:00",
+  "ts": "2026-08-31T20:02:19+00:00",
   "scanned": 105,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "SNDKBUSDT",
-      "signal": "breakout",
-      "score": 0.8349,
-      "raw_score": 0.8798,
-      "weight": 0.949,
-      "price": 1563.22,
-      "why": "trades 17.9x, volume 60.4x, 68% taker-buy, +6.2% in an hour, at 100% of its 24h range",
-      "chg_24h": 0.0433,
-      "vol_surge": 60.43,
-      "chg_1h": 0.062,
-      "market_surge": 15.27,
-      "actionable": true
-    },
-    {
-      "symbol": "KORUBUSDT",
-      "signal": "ignition",
-      "score": 0.7515,
-      "raw_score": 0.8397,
-      "weight": 0.895,
-      "price": 21.07,
-      "why": "trades 12.9x and volume 31.3x the prior 4h, 64% taker-buy, $57,015 burst \u2014 while price has only moved +2.8%",
-      "chg_24h": -0.0188,
-      "vol_surge": 31.28,
-      "chg_1h": 0.0278,
-      "market_surge": 2.94,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.8 independent 24h windows (span 140h): overlapping labels are not a sample"
-    },
-    {
-      "symbol": "KORUBUSDT",
-      "signal": "breakout",
-      "score": 0.7253,
-      "raw_score": 0.7643,
-      "weight": 0.949,
-      "price": 21.07,
-      "why": "trades 12.9x, volume 31.3x, 64% taker-buy, +2.8% in an hour, at 83% of its 24h range",
-      "chg_24h": -0.0188,
-      "vol_surge": 31.28,
-      "chg_1h": 0.0278,
-      "market_surge": 2.94,
-      "actionable": true
-    },
-    {
-      "symbol": "SOXLBUSDT",
-      "signal": "ignition",
-      "score": 0.682,
-      "raw_score": 0.762,
-      "weight": 0.895,
-      "price": 112.91,
-      "why": "trades 5.5x and volume 22.6x the prior 4h, 91% taker-buy, $63,122 burst \u2014 while price has only moved +1.4%",
-      "chg_24h": 0.0,
-      "vol_surge": 22.58,
-      "chg_1h": 0.0141,
-      "market_surge": 1.37,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.8 independent 24h windows (span 140h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.8 independent 24h windows (span 140h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -70,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 9,
+    "count": 8,
     "baseline": 11.0,
     "wave": false
   },
