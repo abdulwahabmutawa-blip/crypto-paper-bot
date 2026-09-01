@@ -1,8 +1,53 @@
 {
-  "ts": "2026-09-01T00:59:34+00:00",
+  "ts": "2026-09-01T01:04:46+00:00",
   "scanned": 92,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "BERAUSDT",
+      "signal": "ignition",
+      "score": 0.8148,
+      "raw_score": 0.9104,
+      "weight": 0.895,
+      "price": 0.1842,
+      "why": "trades 10.4x and volume 16.1x the prior 4h, 86% taker-buy, $63,382 burst \u2014 while price has only moved +2.2%",
+      "chg_24h": 0.1083,
+      "vol_surge": 16.07,
+      "chg_1h": 0.0216,
+      "market_surge": 7.47,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.9 independent 24h windows (span 142h): overlapping labels are not a sample"
+    },
+    {
+      "symbol": "BERAUSDT",
+      "signal": "breakout",
+      "score": 0.7497,
+      "raw_score": 0.7892,
+      "weight": 0.95,
+      "price": 0.1842,
+      "why": "trades 10.4x, volume 16.1x, 86% taker-buy, +2.2% in an hour, at 84% of its 24h range",
+      "chg_24h": 0.1083,
+      "vol_surge": 16.07,
+      "chg_1h": 0.0216,
+      "market_surge": 7.47,
+      "actionable": true
+    },
+    {
+      "symbol": "POLUSDT",
+      "signal": "ignition",
+      "score": 0.4811,
+      "raw_score": 0.5376,
+      "weight": 0.895,
+      "price": 0.09243,
+      "why": "trades 4.1x and volume 5.9x the prior 4h, 69% taker-buy, $98,314 burst \u2014 while price has only moved +1.8%",
+      "chg_24h": -0.0458,
+      "vol_surge": 5.88,
+      "chg_1h": 0.0184,
+      "market_surge": 1.48,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.9 independent 24h windows (span 142h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.9 independent 24h windows (span 142h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -11,7 +56,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 15,
+    "count": 18,
     "baseline": 11.0,
     "wave": false
   },
