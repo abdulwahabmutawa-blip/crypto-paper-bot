@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-01T03:33:58+00:00",
+  "ts": "2026-09-01T03:39:23+00:00",
   "scanned": 91,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ETHUSDT",
+      "signal": "ignition",
+      "score": 0.4708,
+      "raw_score": 0.526,
+      "weight": 0.895,
+      "price": 2479.93,
+      "why": "trades 4.0x and volume 5.3x the prior 4h, 61% taker-buy, $5,839,292 burst \u2014 while price has only moved +0.8%",
+      "chg_24h": 0.0236,
+      "vol_surge": 5.27,
+      "chg_1h": 0.0079,
+      "market_surge": 2.59,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 6.0 independent 24h windows (span 145h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 6.0 independent 24h windows (span 145h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 13,
+    "count": 14,
     "baseline": 11.0,
     "wave": false
   },
