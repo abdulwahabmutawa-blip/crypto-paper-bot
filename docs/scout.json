@@ -1,17 +1,33 @@
 {
-  "ts": "2026-09-01T05:19:47+00:00",
-  "scanned": 88,
+  "ts": "2026-09-01T05:25:03+00:00",
+  "scanned": 85,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "AUCTIONUSDT",
+      "signal": "ignition",
+      "score": 0.663,
+      "raw_score": 0.7408,
+      "weight": 0.895,
+      "price": 3.34,
+      "why": "trades 5.7x and volume 24.0x the prior 4h, 72% taker-buy, $76,097 burst \u2014 while price has only moved -0.7%",
+      "chg_24h": -0.0621,
+      "vol_surge": 24.04,
+      "chg_1h": -0.0065,
+      "market_surge": 1.86,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 6.0 independent 24h windows (span 145h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
-    "ignition": "probation \u2014 400 rows but only 6.1 independent 24h windows (span 146h): overlapping labels are not a sample",
+    "ignition": "probation \u2014 400 rows but only 6.0 independent 24h windows (span 145h): overlapping labels are not a sample",
     "breakout": "actionable",
     "reversion": "benched \u2014 hit 50%, mean +0.65% over last 38 at 24h: not beating 4x the round trip",
     "heat": "benched \u2014 hit 54%, mean +0.43% over last 136 at 24h: not beating 4x the round trip",
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 14,
+    "count": 12,
     "baseline": 11.0,
     "wave": false
   },
@@ -37,16 +53,16 @@
       "avg_win_4h": 0.01887,
       "avg_loss_4h": -0.01815,
       "payoff_4h": 1.04,
-      "span_h_24h": 145.9,
-      "n_eff_24h": 6.08,
+      "span_h_24h": 144.8,
+      "n_eff_24h": 6.03,
       "n_24h": 400,
       "hit_rate_24h": 0.438,
-      "mean_ret_24h": 0.00066,
+      "mean_ret_24h": 0.00069,
       "median_ret_24h": -0.00424,
       "both_halves_24h": false,
-      "avg_win_24h": 0.04754,
+      "avg_win_24h": 0.04761,
       "avg_loss_24h": -0.03942,
-      "payoff_24h": 1.206
+      "payoff_24h": 1.208
     },
     "breakout": {
       "span_h_1h": 332.8,
