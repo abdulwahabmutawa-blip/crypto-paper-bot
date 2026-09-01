@@ -1,10 +1,10 @@
 {
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "holding": "ARB-USD",
-  "units": 2234304.552365551,
+  "holding": "GPRO",
+  "units": 1597.733308686337,
   "cash": 0.0,
-  "entry_price": 0.0006290000164881349,
+  "entry_price": 0.8759999871253967,
   "bench_units": 1.332054612938296,
   "stopped": {
     "SHIB-USD": "2026-07-27T00:01:08+00:00",
@@ -578,6 +578,26 @@
       "value": 1405.38,
       "fee": 4.09,
       "reason": "Grok: ARB euphoric \u2014 Binance top gainer retail chase (scan 2026-09-01T04:42)"
+    },
+    {
+      "date": "2026-09-01",
+      "action": "SELL",
+      "ticker": "ARB-USD",
+      "price": 0.00062903,
+      "units": 2234304.5524,
+      "value": 1405.44,
+      "fee": 4.08,
+      "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
+    },
+    {
+      "date": "2026-09-01",
+      "action": "BUY",
+      "ticker": "GPRO",
+      "price": 0.87599999,
+      "units": 1597.7333,
+      "value": 1399.61,
+      "fee": 1.75,
+      "reason": "Grok: GPRO euphoric \u2014 Markiplier stake WSB FOMO surge (scan 2026-09-01T12:44)"
     }
   ],
   "history": [
@@ -794,18 +814,13 @@
     },
     {
       "date": "2026-08-31",
-      "value": 1405.38,
-      "bench": 1021.75,
-      "holding": "ARB-USD"
+      "value": 1399.61,
+      "bench": 1014.63,
+      "holding": "GPRO",
+      "bench_asof": "2026-09-01"
     }
   ],
   "intraday": [
-    {
-      "ts": "2026-08-15T17:17:26+00:00",
-      "value": 1326.92,
-      "bench": 1034.13,
-      "holding": "CASH"
-    },
     {
       "ts": "2026-08-15T17:30:51+00:00",
       "value": 1326.92,
@@ -9799,9 +9814,15 @@
       "value": 1405.38,
       "bench": 1021.75,
       "holding": "ARB-USD"
+    },
+    {
+      "ts": "2026-09-01T13:40:28+00:00",
+      "value": 1399.61,
+      "bench": 1014.63,
+      "holding": "GPRO"
     }
   ],
-  "last_updated_utc": "2026-09-01T13:26:52+00:00",
+  "last_updated_utc": "2026-09-01T13:40:28+00:00",
   "restatement": {
     "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)",
     "voided_trades": [
@@ -9880,5 +9901,5 @@
     ],
     "voided_reason": "signal faded before any real fill was possible (market closed the whole window) \u2014 trades could never have existed"
   },
-  "costs_paid": 77.6887
+  "costs_paid": 83.5162
 }

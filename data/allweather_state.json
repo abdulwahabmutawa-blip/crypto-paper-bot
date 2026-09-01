@@ -2,13 +2,13 @@
   "created": "2026-07-16",
   "starting_cash": 1000.0,
   "units": {
-    "SPY": 0.39475792447935604,
-    "TLT": 4.852110492102734,
-    "GLD": 0.40232471115868407,
-    "DBC": 2.589129489140047,
-    "BIL": 0.8179179498045626
+    "SPY": 0.4000053597317169,
+    "TLT": 4.953092854896599,
+    "GLD": 0.3815051357633237,
+    "DBC": 2.417167163547692,
+    "BIL": 0.833492253207089
   },
-  "last_rebalance_month": "2026-08",
+  "last_rebalance_month": "2026-09",
   "bench_units": 1.332054612938296,
   "trades": [
     {
@@ -135,6 +135,56 @@
       "price": 28.88,
       "units": 0.0608,
       "value": 1.76,
+      "reason": "Monthly rebalance to 7.5%"
+    },
+    {
+      "date": "2026-09-01",
+      "action": "REBAL+",
+      "ticker": "SPY",
+      "price": 761.76,
+      "units": 0.0053,
+      "value": 4.01,
+      "fee": 0.0,
+      "reason": "Monthly rebalance to 30.0%"
+    },
+    {
+      "date": "2026-09-01",
+      "action": "REBAL+",
+      "ticker": "TLT",
+      "price": 82.03,
+      "units": 0.1011,
+      "value": 8.3,
+      "fee": 0.01,
+      "reason": "Monthly rebalance to 40.0%"
+    },
+    {
+      "date": "2026-09-01",
+      "action": "REBAL-",
+      "ticker": "GLD",
+      "price": 399.35,
+      "units": 0.0208,
+      "value": 8.31,
+      "fee": 0.01,
+      "reason": "Monthly rebalance to 15.0%"
+    },
+    {
+      "date": "2026-09-01",
+      "action": "REBAL-",
+      "ticker": "DBC",
+      "price": 31.51,
+      "units": 0.1719,
+      "value": 5.42,
+      "fee": 0.01,
+      "reason": "Monthly rebalance to 7.5%"
+    },
+    {
+      "date": "2026-09-01",
+      "action": "REBAL+",
+      "ticker": "BIL",
+      "price": 91.39,
+      "units": 0.0156,
+      "value": 1.43,
+      "fee": 0.0,
       "reason": "Monthly rebalance to 7.5%"
     }
   ],
@@ -336,15 +386,15 @@
       "value": 1023.52,
       "bench": 1021.75,
       "holding": "5 assets"
+    },
+    {
+      "date": "2026-09-01",
+      "value": 1015.69,
+      "bench": 1014.71,
+      "holding": "5 assets"
     }
   ],
   "intraday": [
-    {
-      "ts": "2026-08-15T17:03:59+00:00",
-      "value": 1018.6,
-      "bench": 1034.13,
-      "holding": "5 assets"
-    },
     {
       "ts": "2026-08-15T17:17:24+00:00",
       "value": 1018.6,
@@ -9338,7 +9388,14 @@
       "value": 1023.52,
       "bench": 1021.75,
       "holding": "5 assets"
+    },
+    {
+      "ts": "2026-09-01T13:40:24+00:00",
+      "value": 1015.69,
+      "bench": 1014.71,
+      "holding": "5 assets"
     }
   ],
-  "last_updated_utc": "2026-09-01T13:26:48+00:00"
+  "last_updated_utc": "2026-09-01T13:40:24+00:00",
+  "costs_paid": 0.0299
 }
