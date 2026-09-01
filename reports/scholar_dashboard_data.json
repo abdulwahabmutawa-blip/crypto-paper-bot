@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-01T02:12:29+00:00",
+  "generated_utc": "2026-09-01T02:25:59+00:00",
   "created": "2026-07-30",
   "starting_cash": 1000.0,
   "live_ts": "2026-08-31T19:55:00+00:00",
@@ -17,16 +17,43 @@
       "tag": "HELD",
       "on": true,
       "pick": true,
-      "fill": 16.091743368899802
+      "fill": 16.09174336889978
+    },
+    {
+      "sym": "ETH-USD",
+      "price": 2481.6,
+      "line": "Ethereum \u00b7 score +0.55 \u00b7 mom90 +33.6% \u00b7 MA gap +22.5%",
+      "tag": "eligible",
+      "on": true,
+      "pick": false,
+      "fill": 13.781738582624312
+    },
+    {
+      "sym": "BTC-USD",
+      "price": 78878.86,
+      "line": "Bitcoin \u00b7 score +0.47 \u00b7 mom90 +18.3% \u00b7 MA gap +13.6%",
+      "tag": "eligible",
+      "on": true,
+      "pick": false,
+      "fill": 11.820244580464344
     },
     {
       "sym": "EFA",
       "price": 107.44,
-      "line": "Developed intl \u00b7 score +0.44 \u00b7 mom90 +7.0% \u00b7 MA gap +7.4%",
+      "line": "Developed intl \u00b7 score +0.47 \u00b7 mom90 +7.4% \u00b7 MA gap +7.5%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 11.102453216968797
+      "fill": 11.654651696999832
+    },
+    {
+      "sym": "IWM",
+      "price": 293.91,
+      "line": "US small caps \u00b7 score +0.42 \u00b7 mom90 +7.3% \u00b7 MA gap +8.6%",
+      "tag": "eligible",
+      "on": true,
+      "pick": false,
+      "fill": 10.511218664985499
     },
     {
       "sym": "QQQ",
@@ -35,52 +62,25 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 10.24290791379668
-    },
-    {
-      "sym": "ETH-USD",
-      "price": 2481.6,
-      "line": "Ethereum \u00b7 score +0.38 \u00b7 mom90 +23.8% \u00b7 MA gap +22.8%",
-      "tag": "eligible",
-      "on": true,
-      "pick": false,
-      "fill": 9.51104128792037
-    },
-    {
-      "sym": "IWM",
-      "price": 293.91,
-      "line": "US small caps \u00b7 score +0.38 \u00b7 mom90 +6.6% \u00b7 MA gap +8.5%",
-      "tag": "eligible",
-      "on": true,
-      "pick": false,
-      "fill": 9.5048204341635
+      "fill": 10.242907913796678
     },
     {
       "sym": "DBC",
       "price": 31.3,
-      "line": "Broad commodities \u00b7 score +0.28 \u00b7 mom90 +6.1% \u00b7 MA gap +16.1%",
+      "line": "Broad commodities \u00b7 score +0.32 \u00b7 mom90 +7.1% \u00b7 MA gap +16.3%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 6.886333663941993
+      "fill": 8.121003060468153
     },
     {
       "sym": "EEM",
       "price": 67.0,
-      "line": "Emerging mkts \u00b7 score +0.20 \u00b7 mom90 +6.3% \u00b7 MA gap +9.5%",
+      "line": "Emerging mkts \u00b7 score +0.26 \u00b7 mom90 +8.2% \u00b7 MA gap +9.6%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 5.079544981663576
-    },
-    {
-      "sym": "BTC-USD",
-      "price": 78878.86,
-      "line": "Bitcoin \u00b7 score +0.17 \u00b7 mom90 +7.2% \u00b7 MA gap +13.8%",
-      "tag": "eligible",
-      "on": true,
-      "pick": false,
-      "fill": 4.358004145006236
+      "fill": 6.612669441043203
     },
     {
       "sym": "USO",
@@ -116,7 +116,7 @@
       "tag": "not eligible",
       "on": false,
       "pick": false,
-      "fill": -8.901534362518767
+      "fill": -8.901529266658933
     }
   ],
   "board_title": "12 instruments ranked by momentum-per-unit-risk",
@@ -127,12 +127,6 @@
     "board_note": "Every rule in this bot was earned by an earlier experiment: vol-adjusted momentum, trend gate as crash protection, vol-sized positions, trailing stop, and a switch threshold that fights churn. The synthesis on trial."
   },
   "intraday": [
-    {
-      "ts": "2026-08-15T11:13:17+00:00",
-      "value": 1040.22,
-      "bench": 1046.61,
-      "holding": "IWM"
-    },
     {
       "ts": "2026-08-15T11:26:46+00:00",
       "value": 1040.22,
@@ -9126,6 +9120,12 @@
       "value": 1016.11,
       "bench": 1034.0,
       "holding": "SPY"
+    },
+    {
+      "ts": "2026-09-01T02:25:59+00:00",
+      "value": 1016.11,
+      "bench": 1034.0,
+      "holding": "SPY"
     }
   ],
   "trades": [
@@ -9308,5 +9308,5 @@
   },
   "costs_paid": 2.1356,
   "frozen": null,
-  "thoughts": "I'm holding SPY. Best momentum-per-unit-risk in a confirmed uptrend. I bought at $766.38; it's now $766.95 (+0.1% since I got in). My safety net: if the price falls to $697.29 (10% below its recent high), I sell automatically \u2014 no exceptions. Closest challenger on my list is EFA, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
+  "thoughts": "I'm holding SPY. Best momentum-per-unit-risk in a confirmed uptrend. I bought at $766.38; it's now $766.95 (+0.1% since I got in). My safety net: if the price falls to $697.29 (10% below its recent high), I sell automatically \u2014 no exceptions. Closest challenger on my list is ETH-USD, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
 }
