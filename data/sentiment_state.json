@@ -1,10 +1,10 @@
 {
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "holding": "CASH",
-  "units": 0.0,
-  "cash": 1409.4650489193123,
-  "entry_price": null,
+  "holding": "ARB-USD",
+  "units": 2234304.552365551,
+  "cash": 0.0,
+  "entry_price": 0.0006290000164881349,
   "bench_units": 1.332054612938296,
   "stopped": {
     "SHIB-USD": "2026-07-27T00:01:08+00:00",
@@ -568,6 +568,16 @@
       "value": 1411.02,
       "fee": 1.55,
       "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
+    },
+    {
+      "date": "2026-09-01",
+      "action": "BUY",
+      "ticker": "ARB-USD",
+      "price": 0.000629,
+      "units": 2234304.5524,
+      "value": 1405.38,
+      "fee": 4.09,
+      "reason": "Grok: ARB euphoric \u2014 Binance top gainer retail chase (scan 2026-09-01T04:42)"
     }
   ],
   "history": [
@@ -790,12 +800,6 @@
     }
   ],
   "intraday": [
-    {
-      "ts": "2026-08-15T11:13:18+00:00",
-      "value": 1326.92,
-      "bench": 1034.13,
-      "holding": "CASH"
-    },
     {
       "ts": "2026-08-15T11:26:46+00:00",
       "value": 1326.92,
@@ -9789,9 +9793,15 @@
       "value": 1409.47,
       "bench": 1021.75,
       "holding": "CASH"
+    },
+    {
+      "ts": "2026-09-01T04:43:19+00:00",
+      "value": 1405.38,
+      "bench": 1021.75,
+      "holding": "ARB-USD"
     }
   ],
-  "last_updated_utc": "2026-09-01T04:28:47+00:00",
+  "last_updated_utc": "2026-09-01T04:43:19+00:00",
   "restatement": {
     "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)",
     "voided_trades": [
@@ -9870,5 +9880,5 @@
     ],
     "voided_reason": "signal faded before any real fill was possible (market closed the whole window) \u2014 trades could never have existed"
   },
-  "costs_paid": 73.6013
+  "costs_paid": 77.6887
 }
