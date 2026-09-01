@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-01T01:10:11+00:00",
+  "ts": "2026-09-01T01:15:41+00:00",
   "sources": {
     "coingecko": [
       "ARB",
@@ -7,10 +7,9 @@
       "BTC",
       "HNT",
       "LIT",
-      "PUMP",
-      "XMR",
+      "ETH",
       "SOL",
-      "PLUME"
+      "PUMP"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,8 +18,8 @@
       "ARB",
       "DASH",
       "SNDKB",
-      "NEAR",
       "HEMI",
+      "NEAR",
       "PEPE",
       "ZEC"
     ],
@@ -38,7 +37,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.001578,
+      "funding": -0.001589,
       "long_short": 1.49
     },
     {
@@ -67,7 +66,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8e-05
+      "funding": 7.7e-05
     },
     {
       "symbol": "DASH",
@@ -76,6 +75,14 @@
         "movers"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "ETH",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 6.1e-05
     },
     {
       "symbol": "HNT",
@@ -116,20 +123,12 @@
       ]
     },
     {
-      "symbol": "PLUME",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "PUMP",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 1.1e-05
+      "funding": 7e-06
     },
     {
       "symbol": "SNDKB",
@@ -144,15 +143,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.5e-05
-    },
-    {
-      "symbol": "XMR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": 1.3e-05
     },
     {
       "symbol": "ZEC",
@@ -160,7 +151,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 6.7e-05
+      "funding": 6.9e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
