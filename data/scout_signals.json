@@ -1,21 +1,22 @@
 {
-  "ts": "2026-09-01T05:42:06+00:00",
-  "scanned": 87,
+  "ts": "2026-09-01T05:47:45+00:00",
+  "scanned": 90,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "UNIUSDT",
-      "signal": "breakout",
-      "score": 0.7348,
-      "raw_score": 0.7735,
-      "weight": 0.95,
-      "price": 5.571,
-      "why": "trades 6.8x, volume 11.2x, 71% taker-buy, +4.0% in an hour, at 98% of its 24h range",
-      "chg_24h": 0.0785,
-      "vol_surge": 11.23,
-      "chg_1h": 0.0403,
-      "market_surge": 12.04,
-      "actionable": true
+      "symbol": "ENAUSDT",
+      "signal": "ignition",
+      "score": 0.6103,
+      "raw_score": 0.6819,
+      "weight": 0.895,
+      "price": 0.1523,
+      "why": "trades 4.5x and volume 10.3x the prior 4h, 77% taker-buy, $367,419 burst \u2014 while price has only moved +1.5%",
+      "chg_24h": 0.0033,
+      "vol_surge": 10.28,
+      "chg_1h": 0.0153,
+      "market_surge": 0.98,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 6.0 independent 24h windows (span 145h): overlapping labels are not a sample"
     }
   ],
   "gate": {
@@ -26,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 13,
+    "count": 15,
     "baseline": 11.0,
     "wave": false
   },
@@ -52,16 +53,16 @@
       "avg_win_4h": 0.01895,
       "avg_loss_4h": -0.01815,
       "payoff_4h": 1.044,
-      "span_h_24h": 144.8,
-      "n_eff_24h": 6.03,
+      "span_h_24h": 144.6,
+      "n_eff_24h": 6.02,
       "n_24h": 400,
-      "hit_rate_24h": 0.438,
-      "mean_ret_24h": 0.00069,
-      "median_ret_24h": -0.00424,
+      "hit_rate_24h": 0.44,
+      "mean_ret_24h": 0.00083,
+      "median_ret_24h": -0.00405,
       "both_halves_24h": false,
-      "avg_win_24h": 0.04761,
-      "avg_loss_24h": -0.03942,
-      "payoff_24h": 1.208
+      "avg_win_24h": 0.04742,
+      "avg_loss_24h": -0.03941,
+      "payoff_24h": 1.203
     },
     "breakout": {
       "span_h_1h": 332.8,
