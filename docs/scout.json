@@ -1,24 +1,8 @@
 {
-  "ts": "2026-09-01T05:30:40+00:00",
-  "scanned": 86,
+  "ts": "2026-09-01T05:36:36+00:00",
+  "scanned": 89,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "SOMIUSDT",
-      "signal": "ignition",
-      "score": 0.751,
-      "raw_score": 0.8391,
-      "weight": 0.895,
-      "price": 0.126,
-      "why": "trades 14.0x and volume 44.3x the prior 4h, 68% taker-buy, $91,669 burst \u2014 while price has only moved +3.2%",
-      "chg_24h": 0.0571,
-      "vol_surge": 44.26,
-      "chg_1h": 0.0319,
-      "market_surge": 0.0,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 6.0 independent 24h windows (span 145h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 6.0 independent 24h windows (span 145h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 14,
+    "count": 13,
     "baseline": 11.0,
     "wave": false
   },
