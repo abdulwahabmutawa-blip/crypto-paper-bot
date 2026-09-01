@@ -1,13 +1,14 @@
 {
-  "ts": "2026-09-01T03:56:06+00:00",
+  "ts": "2026-09-01T04:02:01+00:00",
   "sources": {
     "coingecko": [
       "ARB",
+      "BTC",
       "PENGU",
       "PUMP",
-      "BTC",
-      "DOT",
       "LIT",
+      "UNI",
+      "DOT",
       "SOL"
     ],
     "reddit": [],
@@ -18,8 +19,8 @@
       "DASH",
       "NEAR",
       "UNI",
-      "SNDKB",
       "PUMP",
+      "SNDKB",
       "ZEC"
     ],
     "watcher": [
@@ -36,8 +37,8 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.001882,
-      "long_short": 1.42
+      "funding": -0.001919,
+      "long_short": 1.51
     },
     {
       "symbol": "ARB",
@@ -56,8 +57,18 @@
         "coingecko",
         "movers"
       ],
-      "funding": -7e-06,
-      "long_short": 0.95
+      "funding": -1e-05,
+      "long_short": 0.97
+    },
+    {
+      "symbol": "UNI",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.72
     },
     {
       "symbol": "BTC",
@@ -65,7 +76,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.1e-05
+      "funding": 9.2e-05
     },
     {
       "symbol": "DASH",
@@ -128,15 +139,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.8e-05
-    },
-    {
-      "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
+      "funding": -1.9e-05
     },
     {
       "symbol": "ZEC",
