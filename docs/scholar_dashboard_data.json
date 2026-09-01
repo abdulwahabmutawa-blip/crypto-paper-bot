@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-01T06:04:23+00:00",
+  "generated_utc": "2026-09-01T06:17:53+00:00",
   "created": "2026-07-30",
   "starting_cash": 1000.0,
   "live_ts": "2026-08-31T19:55:00+00:00",
@@ -21,39 +21,30 @@
     },
     {
       "sym": "ETH-USD",
-      "price": 2481.6,
-      "line": "Ethereum \u00b7 score +0.55 \u00b7 mom90 +33.6% \u00b7 MA gap +22.5%",
+      "price": 2482.13,
+      "line": "Ethereum \u00b7 score +0.55 \u00b7 mom90 +33.6% \u00b7 MA gap +22.6%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 13.781738582624312
+      "fill": 13.792682681684365
     },
     {
       "sym": "BTC-USD",
-      "price": 78878.86,
-      "line": "Bitcoin \u00b7 score +0.47 \u00b7 mom90 +18.3% \u00b7 MA gap +13.6%",
+      "price": 78871.51,
+      "line": "Bitcoin \u00b7 score +0.47 \u00b7 mom90 +18.2% \u00b7 MA gap +13.6%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 11.820244580464344
+      "fill": 11.813522303820232
     },
     {
       "sym": "EFA",
       "price": 107.44,
-      "line": "Developed intl \u00b7 score +0.47 \u00b7 mom90 +7.4% \u00b7 MA gap +7.5%",
+      "line": "Developed intl \u00b7 score +0.44 \u00b7 mom90 +7.0% \u00b7 MA gap +7.4%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 11.654651696999832
-    },
-    {
-      "sym": "IWM",
-      "price": 293.91,
-      "line": "US small caps \u00b7 score +0.42 \u00b7 mom90 +7.3% \u00b7 MA gap +8.6%",
-      "tag": "eligible",
-      "on": true,
-      "pick": false,
-      "fill": 10.511218664985483
+      "fill": 11.102453216968797
     },
     {
       "sym": "QQQ",
@@ -65,22 +56,31 @@
       "fill": 10.24290791379668
     },
     {
-      "sym": "DBC",
-      "price": 31.3,
-      "line": "Broad commodities \u00b7 score +0.32 \u00b7 mom90 +7.1% \u00b7 MA gap +16.3%",
+      "sym": "IWM",
+      "price": 293.91,
+      "line": "US small caps \u00b7 score +0.38 \u00b7 mom90 +6.6% \u00b7 MA gap +8.5%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 8.121003060468153
+      "fill": 9.504820434163506
+    },
+    {
+      "sym": "DBC",
+      "price": 31.3,
+      "line": "Broad commodities \u00b7 score +0.28 \u00b7 mom90 +6.1% \u00b7 MA gap +16.1%",
+      "tag": "eligible",
+      "on": true,
+      "pick": false,
+      "fill": 6.886333663941993
     },
     {
       "sym": "EEM",
       "price": 67.0,
-      "line": "Emerging mkts \u00b7 score +0.26 \u00b7 mom90 +8.2% \u00b7 MA gap +9.6%",
+      "line": "Emerging mkts \u00b7 score +0.20 \u00b7 mom90 +6.3% \u00b7 MA gap +9.5%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 6.612669441043202
+      "fill": 5.079544981663575
     },
     {
       "sym": "USO",
@@ -112,11 +112,11 @@
     {
       "sym": "TLT",
       "price": 82.53,
-      "line": "Long bonds \u00b7 score -0.33 \u00b7 mom90 -3.2% \u00b7 MA gap -2.9%",
+      "line": "Long bonds \u00b7 score -0.36 \u00b7 mom90 -3.4% \u00b7 MA gap -2.9%",
       "tag": "not eligible",
       "on": false,
       "pick": false,
-      "fill": -8.362780927037445
+      "fill": -8.901528662331113
     }
   ],
   "board_title": "12 instruments ranked by momentum-per-unit-risk",
@@ -127,12 +127,6 @@
     "board_note": "Every rule in this bot was earned by an earlier experiment: vol-adjusted momentum, trend gate as crash protection, vol-sized positions, trailing stop, and a switch threshold that fights churn. The synthesis on trial."
   },
   "intraday": [
-    {
-      "ts": "2026-08-15T12:47:30+00:00",
-      "value": 1040.22,
-      "bench": 1046.61,
-      "holding": "IWM"
-    },
     {
       "ts": "2026-08-15T13:00:57+00:00",
       "value": 1040.22,
@@ -9123,6 +9117,12 @@
     },
     {
       "ts": "2026-09-01T06:04:23+00:00",
+      "value": 1016.11,
+      "bench": 1034.0,
+      "holding": "SPY"
+    },
+    {
+      "ts": "2026-09-01T06:17:53+00:00",
       "value": 1016.11,
       "bench": 1034.0,
       "holding": "SPY"
