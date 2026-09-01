@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-01T08:05:30+00:00",
+  "generated_utc": "2026-09-01T08:10:14+00:00",
   "created": "2026-07-30",
   "starting_cash": 1000.0,
   "live_ts": "2026-08-31T19:55:00+00:00",
@@ -17,7 +17,7 @@
       "tag": "HELD",
       "on": true,
       "pick": true,
-      "fill": 16.091743368899806
+      "fill": 16.091743368899795
     },
     {
       "sym": "ETH-USD",
@@ -44,7 +44,16 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 11.1024532169688
+      "fill": 11.654651696999828
+    },
+    {
+      "sym": "IWM",
+      "price": 293.91,
+      "line": "US small caps \u00b7 score +0.42 \u00b7 mom90 +7.3% \u00b7 MA gap +8.6%",
+      "tag": "eligible",
+      "on": true,
+      "pick": false,
+      "fill": 10.51121866498549
     },
     {
       "sym": "QQQ",
@@ -53,7 +62,7 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 10.242907913796682
+      "fill": 10.242907913796678
     },
     {
       "sym": "IWM",
@@ -116,7 +125,7 @@
       "tag": "not eligible",
       "on": false,
       "pick": false,
-      "fill": -8.90153309599268
+      "fill": -8.362786572223825
     }
   ],
   "board_title": "12 instruments ranked by momentum-per-unit-risk",
@@ -127,6 +136,78 @@
     "board_note": "Every rule in this bot was earned by an earlier experiment: vol-adjusted momentum, trend gate as crash protection, vol-sized positions, trailing stop, and a switch threshold that fights churn. The synthesis on trial."
   },
   "intraday": [
+    {
+      "ts": "2026-08-15T12:07:10+00:00",
+      "value": 1040.22,
+      "bench": 1046.61,
+      "holding": "IWM"
+    },
+    {
+      "ts": "2026-08-15T12:20:36+00:00",
+      "value": 1040.22,
+      "bench": 1046.61,
+      "holding": "IWM"
+    },
+    {
+      "ts": "2026-08-15T12:34:03+00:00",
+      "value": 1040.22,
+      "bench": 1046.61,
+      "holding": "IWM"
+    },
+    {
+      "ts": "2026-08-15T12:47:30+00:00",
+      "value": 1040.22,
+      "bench": 1046.61,
+      "holding": "IWM"
+    },
+    {
+      "ts": "2026-08-15T13:00:57+00:00",
+      "value": 1040.22,
+      "bench": 1046.61,
+      "holding": "IWM"
+    },
+    {
+      "ts": "2026-08-15T13:14:24+00:00",
+      "value": 1040.22,
+      "bench": 1046.61,
+      "holding": "IWM"
+    },
+    {
+      "ts": "2026-08-15T13:27:50+00:00",
+      "value": 1040.22,
+      "bench": 1046.61,
+      "holding": "IWM"
+    },
+    {
+      "ts": "2026-08-15T13:41:45+00:00",
+      "value": 1040.22,
+      "bench": 1046.61,
+      "holding": "IWM"
+    },
+    {
+      "ts": "2026-08-15T13:55:14+00:00",
+      "value": 1040.22,
+      "bench": 1046.61,
+      "holding": "IWM"
+    },
+    {
+      "ts": "2026-08-15T14:08:38+00:00",
+      "value": 1040.22,
+      "bench": 1046.61,
+      "holding": "IWM"
+    },
+    {
+      "ts": "2026-08-15T14:22:03+00:00",
+      "value": 1040.22,
+      "bench": 1046.61,
+      "holding": "IWM"
+    },
+    {
+      "ts": "2026-08-15T14:35:29+00:00",
+      "value": 1040.22,
+      "bench": 1046.61,
+      "holding": "IWM"
+    },
     {
       "ts": "2026-08-15T14:48:56+00:00",
       "value": 1040.22,
@@ -9050,79 +9131,7 @@
       "holding": "SPY"
     },
     {
-      "ts": "2026-09-01T05:23:50+00:00",
-      "value": 1016.11,
-      "bench": 1034.0,
-      "holding": "SPY"
-    },
-    {
-      "ts": "2026-09-01T05:37:21+00:00",
-      "value": 1016.11,
-      "bench": 1034.0,
-      "holding": "SPY"
-    },
-    {
-      "ts": "2026-09-01T05:50:53+00:00",
-      "value": 1016.11,
-      "bench": 1034.0,
-      "holding": "SPY"
-    },
-    {
-      "ts": "2026-09-01T06:04:23+00:00",
-      "value": 1016.11,
-      "bench": 1034.0,
-      "holding": "SPY"
-    },
-    {
-      "ts": "2026-09-01T06:17:53+00:00",
-      "value": 1016.11,
-      "bench": 1034.0,
-      "holding": "SPY"
-    },
-    {
-      "ts": "2026-09-01T06:31:21+00:00",
-      "value": 1016.11,
-      "bench": 1034.0,
-      "holding": "SPY"
-    },
-    {
-      "ts": "2026-09-01T06:44:48+00:00",
-      "value": 1016.11,
-      "bench": 1034.0,
-      "holding": "SPY"
-    },
-    {
-      "ts": "2026-09-01T06:58:15+00:00",
-      "value": 1016.11,
-      "bench": 1034.0,
-      "holding": "SPY"
-    },
-    {
-      "ts": "2026-09-01T07:11:42+00:00",
-      "value": 1016.11,
-      "bench": 1034.0,
-      "holding": "SPY"
-    },
-    {
-      "ts": "2026-09-01T07:25:10+00:00",
-      "value": 1016.11,
-      "bench": 1034.0,
-      "holding": "SPY"
-    },
-    {
-      "ts": "2026-09-01T07:38:37+00:00",
-      "value": 1016.11,
-      "bench": 1034.0,
-      "holding": "SPY"
-    },
-    {
-      "ts": "2026-09-01T07:52:03+00:00",
-      "value": 1016.11,
-      "bench": 1034.0,
-      "holding": "SPY"
-    },
-    {
-      "ts": "2026-09-01T08:05:30+00:00",
+      "ts": "2026-09-01T08:10:14+00:00",
       "value": 1016.11,
       "bench": 1034.0,
       "holding": "SPY"
