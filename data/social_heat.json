@@ -1,15 +1,16 @@
 {
-  "ts": "2026-09-01T03:01:02+00:00",
+  "ts": "2026-09-01T03:06:41+00:00",
   "sources": {
     "coingecko": [
       "ARB",
       "LIT",
-      "PENGU",
       "BTC",
-      "HNT",
-      "CRV",
+      "PENGU",
       "VIRTUAL",
-      "NEAR"
+      "HNT",
+      "PUMP",
+      "SOL",
+      "CRV"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -37,8 +38,8 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.001862,
-      "long_short": 1.4
+      "funding": -0.001883,
+      "long_short": 1.42
     },
     {
       "symbol": "ARB",
@@ -48,17 +49,17 @@
         "movers"
       ],
       "funding": 0.0001,
-      "long_short": 1.27
+      "long_short": 1.21
     },
     {
-      "symbol": "NEAR",
+      "symbol": "PUMP",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 0.0001,
-      "long_short": 1.5
+      "funding": 4e-06,
+      "long_short": 0.95
     },
     {
       "symbol": "BTC",
@@ -108,6 +109,14 @@
       "funding": 5e-05
     },
     {
+      "symbol": "NEAR",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
@@ -123,19 +132,19 @@
       ]
     },
     {
-      "symbol": "PUMP",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 1e-05
-    },
-    {
       "symbol": "SNDKB",
       "surfaces": 1,
       "sources": [
         "movers"
       ]
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -1e-05
     },
     {
       "symbol": "VIRTUAL",
