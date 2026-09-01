@@ -1,15 +1,14 @@
 {
-  "ts": "2026-09-01T02:06:11+00:00",
+  "ts": "2026-09-01T02:11:35+00:00",
   "sources": {
     "coingecko": [
       "ARB",
       "PENGU",
       "HNT",
       "ZEC",
-      "BTC",
       "AERO",
-      "UNI",
-      "CRV"
+      "CRV",
+      "BTC"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,9 +18,9 @@
       "DASH",
       "SNDKB",
       "NEAR",
-      "PEPE",
+      "HEMI",
       "ENSO",
-      "ZEC"
+      "PEPE"
     ],
     "watcher": [
       "HEMI",
@@ -37,7 +36,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.001937,
+      "funding": -0.001921,
       "long_short": 1.4
     },
     {
@@ -51,14 +50,14 @@
       "long_short": 1.27
     },
     {
-      "symbol": "ZEC",
+      "symbol": "HEMI",
       "surfaces": 2,
       "sources": [
-        "coingecko",
-        "movers"
+        "movers",
+        "watcher"
       ],
-      "funding": 8.9e-05,
-      "long_short": 0.44
+      "funding": 5e-05,
+      "long_short": 0.77
     },
     {
       "symbol": "AERO",
@@ -66,7 +65,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000102
+      "funding": -9.8e-05
     },
     {
       "symbol": "BTC",
@@ -74,7 +73,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.3e-05
+      "funding": 7.4e-05
     },
     {
       "symbol": "CRV",
@@ -98,15 +97,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -8.6e-05
-    },
-    {
-      "symbol": "HEMI",
-      "surfaces": 1,
-      "sources": [
-        "watcher"
-      ],
-      "funding": 5e-05
+      "funding": -8.1e-05
     },
     {
       "symbol": "HNT",
@@ -146,12 +137,12 @@
       ]
     },
     {
-      "symbol": "UNI",
+      "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0001
+      "funding": 9e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
