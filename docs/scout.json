@@ -1,21 +1,22 @@
 {
-  "ts": "2026-09-01T04:57:47+00:00",
-  "scanned": 89,
+  "ts": "2026-09-01T05:03:37+00:00",
+  "scanned": 86,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "NOTUSDT",
-      "signal": "breakout",
-      "score": 0.6062,
-      "raw_score": 0.6375,
-      "weight": 0.951,
-      "price": 0.000513,
-      "why": "trades 4.2x, volume 6.0x, 77% taker-buy, +4.5% in an hour, at 99% of its 24h range",
-      "chg_24h": 0.14,
-      "vol_surge": 5.97,
-      "chg_1h": 0.0448,
-      "market_surge": 3.03,
-      "actionable": true
+      "symbol": "OPUSDT",
+      "signal": "revival",
+      "score": 0.5878,
+      "raw_score": 0.5878,
+      "weight": 1.0,
+      "price": 0.0963,
+      "why": "revival day-one: fell -13% last week on $2.97M/day quiet, volume arriving 9.8x today, only +19% off its 30d low \u00b7 serial exploder: 4 runs in 2y",
+      "chg_24h": 0.1107,
+      "vol_surge": 9.8,
+      "chg_1h": null,
+      "market_surge": null,
+      "actionable": false,
+      "status": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
     }
   ],
   "gate": {
