@@ -1,8 +1,38 @@
 {
-  "ts": "2026-09-01T03:51:04+00:00",
-  "scanned": 91,
+  "ts": "2026-09-01T03:56:10+00:00",
+  "scanned": 90,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "TWTUSDT",
+      "signal": "ignition",
+      "score": 0.7574,
+      "raw_score": 0.8463,
+      "weight": 0.895,
+      "price": 0.5297,
+      "why": "trades 24.9x and volume 27.9x the prior 4h, 61% taker-buy, $123,960 burst \u2014 while price has only moved +2.2%",
+      "chg_24h": 0.1449,
+      "vol_surge": 27.95,
+      "chg_1h": 0.0224,
+      "market_surge": 9.27,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 6.0 independent 24h windows (span 145h): overlapping labels are not a sample"
+    },
+    {
+      "symbol": "TWTUSDT",
+      "signal": "breakout",
+      "score": 0.7054,
+      "raw_score": 0.7418,
+      "weight": 0.951,
+      "price": 0.5297,
+      "why": "trades 24.9x, volume 27.9x, 61% taker-buy, +2.2% in an hour, at 90% of its 24h range",
+      "chg_24h": 0.1449,
+      "vol_surge": 27.95,
+      "chg_1h": 0.0224,
+      "market_surge": 9.27,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 6.0 independent 24h windows (span 145h): overlapping labels are not a sample",
     "breakout": "actionable",
