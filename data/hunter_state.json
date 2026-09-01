@@ -1,10 +1,10 @@
 {
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "holding": "SOL-USD",
-  "units": 9.675882059812942,
+  "holding": "BTC-USD",
+  "units": 0.012469744955847756,
   "cash": 0.0,
-  "high_water": 109.31999969482422,
+  "high_water": 77207.1875,
   "bench_units": 1.332054612938296,
   "trades": [
     {
@@ -279,6 +279,26 @@
       "value": 934.79,
       "fee": 2.72,
       "reason": "Top reward/risk score (10.65) \u2014 Solana, all-in"
+    },
+    {
+      "date": "2026-09-01",
+      "action": "SELL",
+      "ticker": "SOL-USD",
+      "price": 100.08000183,
+      "units": 9.6759,
+      "value": 968.36,
+      "fee": 2.81,
+      "reason": "TRAILING STOP \u2014 fell 8% from its high-water mark"
+    },
+    {
+      "date": "2026-09-01",
+      "action": "BUY",
+      "ticker": "BTC-USD",
+      "price": 77207.1875,
+      "units": 0.0125,
+      "value": 962.75,
+      "fee": 2.8,
+      "reason": "Top reward/risk score (7.95) \u2014 Bitcoin, all-in"
     }
   ],
   "history": [
@@ -504,18 +524,12 @@
     },
     {
       "date": "2026-09-01",
-      "value": 973.2,
-      "bench": 1014.69,
-      "holding": "SOL-USD"
+      "value": 962.75,
+      "bench": 1014.2,
+      "holding": "BTC-USD"
     }
   ],
   "intraday": [
-    {
-      "ts": "2026-08-15T18:25:19+00:00",
-      "value": 990.45,
-      "bench": 1034.13,
-      "holding": "PLTR"
-    },
     {
       "ts": "2026-08-15T18:38:46+00:00",
       "value": 990.45,
@@ -9509,9 +9523,15 @@
       "value": 973.2,
       "bench": 1014.69,
       "holding": "SOL-USD"
+    },
+    {
+      "ts": "2026-09-01T18:15:08+00:00",
+      "value": 962.75,
+      "bench": 1014.2,
+      "holding": "BTC-USD"
     }
   ],
-  "last_updated_utc": "2026-09-01T18:01:36+00:00",
+  "last_updated_utc": "2026-09-01T18:15:08+00:00",
   "restatement": [
     {
       "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)"
@@ -9547,9 +9567,9 @@
       ]
     }
   ],
-  "costs_paid": 18.0779,
+  "costs_paid": 23.6863,
   "stopped": {
-    "ticker": "BTC-USD",
-    "date": "2026-08-23"
+    "ticker": "SOL-USD",
+    "date": "2026-09-01"
   }
 }
