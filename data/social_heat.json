@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-01T02:11:35+00:00",
+  "ts": "2026-09-01T02:17:11+00:00",
   "sources": {
     "coingecko": [
       "ARB",
@@ -17,10 +17,10 @@
       "ARB",
       "DASH",
       "SNDKB",
-      "NEAR",
       "HEMI",
-      "ENSO",
-      "PEPE"
+      "NEAR",
+      "PEPE",
+      "ZEC"
     ],
     "watcher": [
       "HEMI",
@@ -36,7 +36,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.001921,
+      "funding": -0.001917,
       "long_short": 1.4
     },
     {
@@ -60,12 +60,22 @@
       "long_short": 0.77
     },
     {
+      "symbol": "ZEC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 9.1e-05,
+      "long_short": 0.44
+    },
+    {
       "symbol": "AERO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -9.8e-05
+      "funding": -0.0001
     },
     {
       "symbol": "BTC",
@@ -73,7 +83,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.4e-05
+      "funding": 7.5e-05
     },
     {
       "symbol": "CRV",
@@ -90,14 +100,6 @@
         "movers"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "ENSO",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -8.1e-05
     },
     {
       "symbol": "HNT",
@@ -135,14 +137,6 @@
       "sources": [
         "movers"
       ]
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 9e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
