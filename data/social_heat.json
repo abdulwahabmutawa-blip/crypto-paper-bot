@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-01T04:23:53+00:00",
+  "ts": "2026-09-01T04:30:29+00:00",
   "sources": {
     "coingecko": [
       "ARB",
@@ -15,8 +15,8 @@
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "ARB",
       "0G",
+      "ARB",
       "DASH",
       "NEAR",
       "UNI",
@@ -25,12 +25,23 @@
       "ZEC"
     ],
     "watcher": [
-      "HEMI",
-      "0G"
+      "0G",
+      "ARB"
     ],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "ARB",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.29
+    },
     {
       "symbol": "0G",
       "surfaces": 2,
@@ -38,18 +49,8 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.002211,
+      "funding": -0.002312,
       "long_short": 1.51
-    },
-    {
-      "symbol": "ARB",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.29
     },
     {
       "symbol": "NEAR",
@@ -77,7 +78,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.7e-05
+      "funding": 9.9e-05
     },
     {
       "symbol": "DASH",
@@ -93,15 +94,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.7e-05
-    },
-    {
-      "symbol": "HEMI",
-      "surfaces": 1,
-      "sources": [
-        "watcher"
-      ],
-      "funding": 5.9e-05
+      "funding": 9e-05
     },
     {
       "symbol": "LIT",
@@ -117,7 +110,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -4.1e-05
+      "funding": -4.8e-05
     },
     {
       "symbol": "PENGU",
@@ -140,7 +133,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -6e-06
+      "funding": -1.1e-05
     },
     {
       "symbol": "SNDKB",

@@ -1,8 +1,39 @@
 {
-  "ts": "2026-09-01T04:23:57+00:00",
+  "ts": "2026-09-01T04:30:35+00:00",
   "scanned": 90,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "MORPHOUSDT",
+      "signal": "ignition",
+      "score": 0.7355,
+      "raw_score": 0.8217,
+      "weight": 0.895,
+      "price": 2.531,
+      "why": "trades 8.1x and volume 11.0x the prior 4h, 64% taker-buy, $62,480 burst \u2014 while price has only moved +0.6%",
+      "chg_24h": 0.0247,
+      "vol_surge": 10.98,
+      "chg_1h": 0.0056,
+      "market_surge": 2.22,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 6.1 independent 24h windows (span 145h): overlapping labels are not a sample"
+    },
+    {
+      "symbol": "ARBUSDT",
+      "signal": "heat",
+      "score": 0.6282,
+      "raw_score": 0.6,
+      "weight": 1.047,
+      "price": 0.1115,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.010% \u00b7 L/S 1.29",
+      "chg_24h": 0.3149,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
+      "actionable": false,
+      "status": "benched \u2014 hit 54%, mean +0.43% over last 136 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 6.1 independent 24h windows (span 145h): overlapping labels are not a sample",
     "breakout": "actionable",
