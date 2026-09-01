@@ -1,17 +1,16 @@
 {
-  "ts": "2026-09-01T04:40:51+00:00",
+  "ts": "2026-09-01T04:46:31+00:00",
   "sources": {
     "coingecko": [
       "ARB",
       "BTC",
-      "PENGU",
-      "UNI",
       "ETH",
-      "NEAR",
-      "LIT",
-      "HNT",
+      "UNI",
+      "PENGU",
       "MORPHO",
-      "PUMP"
+      "NEAR",
+      "HNT",
+      "LIT"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,10 +19,10 @@
       "ARB",
       "DASH",
       "NEAR",
-      "PUMP",
       "UNI",
+      "PUMP",
       "SNDKB",
-      "ZEC"
+      "HEMI"
     ],
     "watcher": [
       "0G",
@@ -50,7 +49,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.002473,
+      "funding": -0.00259,
       "long_short": 1.51
     },
     {
@@ -62,16 +61,6 @@
       ],
       "funding": 0.0001,
       "long_short": 1.53
-    },
-    {
-      "symbol": "PUMP",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": -6e-06,
-      "long_short": 0.97
     },
     {
       "symbol": "UNI",
@@ -105,7 +94,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.1e-05
+      "funding": 9e-05
+    },
+    {
+      "symbol": "HEMI",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.000126
     },
     {
       "symbol": "HNT",
@@ -128,7 +125,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -5.7e-05
+      "funding": -5.3e-05
     },
     {
       "symbol": "PENGU",
@@ -139,19 +136,19 @@
       "funding": 5e-05
     },
     {
+      "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -5e-06
+    },
+    {
       "symbol": "SNDKB",
       "surfaces": 1,
       "sources": [
         "movers"
       ]
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
