@@ -1,12 +1,12 @@
 {
-  "generated_utc": "2026-09-01T13:56:32+00:00",
+  "generated_utc": "2026-09-01T14:10:33+00:00",
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "live_ts": "2026-09-01T13:56:32+00:00",
+  "live_ts": "2026-09-01T14:10:33+00:00",
   "current": {
     "date": "2026-09-01",
-    "value": 1405.44,
-    "bench": 1014.69,
+    "value": 2323.02,
+    "bench": 1016.2,
     "holding": "ARB-USD"
   },
   "board": [
@@ -39,7 +39,7 @@
     },
     {
       "sym": "CVX",
-      "price": 208.81,
+      "price": 208.45,
       "line": "euphoric \u00b7 Oil spike energy strength",
       "tag": "candidate",
       "on": true,
@@ -73,12 +73,6 @@
     "board_note": "Buys the crowd's loudest euphoria, rides it while it lasts, cuts it at -10%, and refuses to trade in a severe-risk tape. Weakest-evidence strategy in the fleet \u2014 hence the strictest guards."
   },
   "intraday": [
-    {
-      "ts": "2026-08-15T14:22:03+00:00",
-      "value": 1326.92,
-      "bench": 1034.13,
-      "holding": "CASH"
-    },
     {
       "ts": "2026-08-15T14:35:30+00:00",
       "value": 1326.92,
@@ -9072,29 +9066,15 @@
       "value": 1405.44,
       "bench": 1014.69,
       "holding": "ARB-USD"
+    },
+    {
+      "ts": "2026-09-01T14:10:33+00:00",
+      "value": 2323.02,
+      "bench": 1016.2,
+      "holding": "ARB-USD"
     }
   ],
   "trades": [
-    {
-      "date": "2026-08-21",
-      "action": "SELL",
-      "ticker": "BTC-USD",
-      "price": 76846.0,
-      "units": 0.0201,
-      "value": 1542.56,
-      "fee": 4.47,
-      "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
-    },
-    {
-      "date": "2026-08-21",
-      "action": "BUY",
-      "ticker": "MSTR",
-      "price": 119.37999725,
-      "units": 12.8659,
-      "value": 1535.93,
-      "fee": 2.15,
-      "reason": "Grok: MSTR euphoric \u2014 BTC proxy ripping with crypto surge (scan 2026-08-21T11:41)"
-    },
     {
       "date": "2026-08-21",
       "action": "SELL",
@@ -9274,6 +9254,26 @@
       "value": 1399.61,
       "fee": 1.75,
       "reason": "Grok: GPRO euphoric \u2014 Markiplier stake WSB FOMO surge (scan 2026-09-01T12:44)"
+    },
+    {
+      "date": "2026-09-01",
+      "action": "SELL",
+      "ticker": "GPRO",
+      "price": 1.46000004,
+      "units": 1597.7333,
+      "value": 2332.69,
+      "fee": 2.92,
+      "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
+    },
+    {
+      "date": "2026-09-01",
+      "action": "BUY",
+      "ticker": "ARB-USD",
+      "price": 0.00062903,
+      "units": 3693024.2114,
+      "value": 2323.02,
+      "fee": 6.76,
+      "reason": "Grok: ARB euphoric \u2014 Robinhood Chain revenue surge (scan 2026-09-01T13:55)"
     }
   ],
   "history": [
@@ -9496,14 +9496,14 @@
     },
     {
       "date": "2026-09-01",
-      "value": 1405.44,
-      "bench": 1014.69,
+      "value": 2323.02,
+      "bench": 1016.2,
       "holding": "ARB-USD"
     }
   ],
-  "costs_paid": 83.5162,
+  "costs_paid": 93.1884,
   "frozen": null,
-  "thoughts": "I'm riding GPRO because the Watcher's latest scan of X and the news says the crowd is most excited about it right now. I know hype is the weakest evidence there is \u2014 so my rules are the strictest in the fleet: the moment the excitement fades from the scans I sell, and if I'm down 10% from my buy price I sell no matter what.",
+  "thoughts": "I'm riding ARB because the Watcher's latest scan of X and the news says the crowd is most excited about it right now. I know hype is the weakest evidence there is \u2014 so my rules are the strictest in the fleet: the moment the excitement fades from the scans I sell, and if I'm down 10% from my buy price I sell no matter what.",
   "strategy": {
     "name": "Hype Trader \u2014 rides the Watcher's reads, on trial",
     "rule": "Hold the top euphoric symbol from the Watcher's 8-hour Grok scans while it stays euphoric; -10% hard stop; Watcher severe verdict -> cash",

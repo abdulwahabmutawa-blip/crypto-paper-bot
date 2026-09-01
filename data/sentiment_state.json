@@ -1,10 +1,10 @@
 {
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "holding": "GPRO",
-  "units": 1597.733308686337,
+  "holding": "ARB-USD",
+  "units": 3693024.211441071,
   "cash": 0.0,
-  "entry_price": 0.8759999871253967,
+  "entry_price": 0.0006290287710726261,
   "bench_units": 1.332054612938296,
   "stopped": {
     "SHIB-USD": "2026-07-27T00:01:08+00:00",
@@ -598,6 +598,26 @@
       "value": 1399.61,
       "fee": 1.75,
       "reason": "Grok: GPRO euphoric \u2014 Markiplier stake WSB FOMO surge (scan 2026-09-01T12:44)"
+    },
+    {
+      "date": "2026-09-01",
+      "action": "SELL",
+      "ticker": "GPRO",
+      "price": 1.46000004,
+      "units": 1597.7333,
+      "value": 2332.69,
+      "fee": 2.92,
+      "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
+    },
+    {
+      "date": "2026-09-01",
+      "action": "BUY",
+      "ticker": "ARB-USD",
+      "price": 0.00062903,
+      "units": 3693024.2114,
+      "value": 2323.02,
+      "fee": 6.76,
+      "reason": "Grok: ARB euphoric \u2014 Robinhood Chain revenue surge (scan 2026-09-01T13:55)"
     }
   ],
   "history": [
@@ -820,18 +840,12 @@
     },
     {
       "date": "2026-09-01",
-      "value": 1405.44,
-      "bench": 1014.69,
+      "value": 2323.02,
+      "bench": 1016.2,
       "holding": "ARB-USD"
     }
   ],
   "intraday": [
-    {
-      "ts": "2026-08-15T14:22:03+00:00",
-      "value": 1326.92,
-      "bench": 1034.13,
-      "holding": "CASH"
-    },
     {
       "ts": "2026-08-15T14:35:30+00:00",
       "value": 1326.92,
@@ -9825,9 +9839,15 @@
       "value": 1405.44,
       "bench": 1014.69,
       "holding": "ARB-USD"
+    },
+    {
+      "ts": "2026-09-01T14:10:33+00:00",
+      "value": 2323.02,
+      "bench": 1016.2,
+      "holding": "ARB-USD"
     }
   ],
-  "last_updated_utc": "2026-09-01T13:56:32+00:00",
+  "last_updated_utc": "2026-09-01T14:10:33+00:00",
   "restatement": {
     "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)",
     "voided_trades": [
@@ -9906,5 +9926,5 @@
     ],
     "voided_reason": "signal faded before any real fill was possible (market closed the whole window) \u2014 trades could never have existed"
   },
-  "costs_paid": 83.5162
+  "costs_paid": 93.1884
 }
