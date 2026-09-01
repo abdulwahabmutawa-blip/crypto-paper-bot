@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-01T00:04:17+00:00",
-  "scanned": 91,
+  "ts": "2026-09-01T00:09:36+00:00",
+  "scanned": 92,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SNXXBUSDT",
+      "signal": "ignition",
+      "score": 0.7874,
+      "raw_score": 0.8798,
+      "weight": 0.895,
+      "price": 13.94,
+      "why": "trades 10.5x and volume 7.3x the prior 4h, 81% taker-buy, $53,321 burst \u2014 while price has only moved -0.2%",
+      "chg_24h": 0.1333,
+      "vol_surge": 7.32,
+      "chg_1h": -0.0021,
+      "market_surge": 0.0,
+      "actionable": false,
+      "status": "probation \u2014 400 rows but only 5.9 independent 24h windows (span 142h): overlapping labels are not a sample"
+    }
+  ],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.9 independent 24h windows (span 142h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 15,
+    "count": 18,
     "baseline": 11.0,
     "wave": false
   },
