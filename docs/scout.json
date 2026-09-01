@@ -1,39 +1,8 @@
 {
-  "ts": "2026-09-01T00:20:28+00:00",
-  "scanned": 91,
+  "ts": "2026-09-01T00:26:27+00:00",
+  "scanned": 90,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ZROUSDT",
-      "signal": "ignition",
-      "score": 0.7431,
-      "raw_score": 0.8302,
-      "weight": 0.895,
-      "price": 1.042,
-      "why": "trades 8.1x and volume 24.9x the prior 4h, 75% taker-buy, $132,463 burst \u2014 while price has only moved +1.2%",
-      "chg_24h": 0.0,
-      "vol_surge": 24.86,
-      "chg_1h": 0.0117,
-      "market_surge": 5.18,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.9 independent 24h windows (span 142h): overlapping labels are not a sample"
-    },
-    {
-      "symbol": "ICPUSDT",
-      "signal": "ignition",
-      "score": 0.6807,
-      "raw_score": 0.7606,
-      "weight": 0.895,
-      "price": 2.425,
-      "why": "trades 5.7x and volume 12.9x the prior 4h, 83% taker-buy, $59,586 burst \u2014 while price has only moved +1.0%",
-      "chg_24h": 0.0202,
-      "vol_surge": 12.91,
-      "chg_1h": 0.01,
-      "market_surge": 1.78,
-      "actionable": false,
-      "status": "probation \u2014 400 rows but only 5.9 independent 24h windows (span 142h): overlapping labels are not a sample"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "probation \u2014 400 rows but only 5.9 independent 24h windows (span 142h): overlapping labels are not a sample",
     "breakout": "actionable",
@@ -42,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 15,
+    "count": 13,
     "baseline": 11.0,
     "wave": false
   },
