@@ -263,3 +263,82 @@ free-only read would price the seat at $0 and trip the drawdown floor on a
 book that never lost anything. USDT and the owner's other assets are
 deliberately still read free-only: this is a shared account, and their own
 resting orders are none of the book's business.
+
+---
+
+## REVIVAL RUNBOOK — when the box goes silent (written 2026-09-02 after the third wedge)
+
+The box has been silent since 2026-09-01 06:00 UTC. It holds BERAUSDT (254.654 units, entry 0.1837, ~-5% as of 12:00 UTC 09-02). Two separate faults are in play:
+
+1. **Code crash (fixed in git today):** since the 08-31 golden-ticket commit, every cycle that held a seat under TURBO_MODE died with `UnboundLocalError: halt_why` after the exit rules and before the state write. Fix is on `main`; the box picks it up on its first successful `git pull`.
+2. **The box itself stopped cycling/publishing at 06:00 UTC 09-01** (scout files stopped committing too). That is either the 08-25 class git wedge (unmerged index entries) or a host/timer problem. Only SSH can tell.
+
+## Step 1 — look (read-only)
+
+```bash
+ssh root@<VPS_IP>
+systemctl status lottery.timer lottery.service --no-pager | head -40
+journalctl -u lottery.service -n 150 --no-pager
+cd /opt/tradebot/cloud-bot
+sudo -u tradebot git status --short | head -20
+sudo -u tradebot git ls-files -u | head           # unmerged entries = the 08-25 wedge
+ls .git/MERGE_HEAD .git/REBASE_HEAD .git/rebase-merge .git/rebase-apply .git/index.lock 2>/dev/null
+sudo -u tradebot git log --oneline -3
+sudo -u tradebot git stash list
+cat .git/gc.log 2>/dev/null
+df -h / | tail -1; free -m | head -2
+```
+
+What to look for in the journal: `UnboundLocalError` (fault 1), `pull failed — running on cached state` / `PUSH FAILED` (fault 2, git), `STATE CORRUPT`, `repo lock timeout`, or simply no entries after 06:00 UTC 09-01 (timer/host).
+
+## Step 2 — heal git if wedged
+
+```bash
+cd /opt/tradebot/cloud-bot
+sudo -u tradebot git rebase --abort 2>/dev/null; sudo -u tradebot git merge --abort 2>/dev/null
+rm -f .git/index.lock
+# unmerged entries: keep OUR ledger/state/log files, take origin for everything else
+for f in $(sudo -u tradebot git ls-files -u | awk '{print $4}' | sort -u); do
+  case "$f" in
+    data/lottery_state.json|data/lottery_ledger.jsonl|data/scout_log.jsonl|data/social_radar_log.jsonl|data/exit_audit.jsonl)
+      sudo -u tradebot git checkout --ours -- "$f" ;;
+    *) sudo -u tradebot git checkout --theirs -- "$f" ;;
+  esac
+  sudo -u tradebot git add -- "$f"
+done
+sudo -u tradebot git stash drop 2>/dev/null
+sudo -u tradebot git -c user.name=lottery-bot -c user.email=bot@users.noreply.github.com commit -qm "vps: heal wedge $(date -u +%F)" 2>/dev/null
+sudo -u tradebot git prune; rm -f .git/gc.log
+GIT_SSH_COMMAND="ssh -i /opt/tradebot/.ssh/id_ed25519 -o UserKnownHostsFile=/opt/tradebot/.ssh/known_hosts" \
+  sudo -u tradebot --preserve-env=GIT_SSH_COMMAND git pull --rebase --autostash -X theirs
+```
+
+## Step 3 — pull today's fix, verify, run one cycle by hand
+
+```bash
+sudo -u tradebot git log --oneline -1          # must show today's lottery_live fix
+python3 -m pyflakes src/lottery_live.py || pip3 install -q pyflakes && python3 -m pyflakes src/lottery_live.py
+python3 src/state_preflight.py
+sudo systemctl start lottery.service && journalctl -u lottery.service -n 40 --no-pager
+```
+
+The manual cycle must print `[lottery] 2026-09-02 seat=BERAUSDT book $…` (or a SELL line if the -6% stop triggers) and push a `lottery:` commit you can see on GitHub within a minute.
+
+## Step 4 — arm the exchange-resting stop (the 08-31 "ship first" item)
+
+```bash
+sudo nano /etc/lottery.env     # add the line:  LOTTERY_EXCHANGE_STOPS=1
+sudo systemctl start lottery.service && journalctl -u lottery.service -n 20 --no-pager | grep -i stop
+```
+
+After this, a dead box can no longer leave a naked position: the -6% floor (and the ratchet floor, once armed) rests at Binance itself.
+
+## Step 5 — make sure the timer is enabled and cycling
+
+```bash
+systemctl is-enabled lottery.timer || sudo systemctl enable --now lottery.timer
+systemctl list-timers lottery.timer --no-pager
+```
+
+Then check GitHub: `lottery:` commits every ~5 min, and `docs/lottery.json` `last_updated_utc` moving.
+

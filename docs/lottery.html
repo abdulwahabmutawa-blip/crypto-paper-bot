@@ -35,6 +35,10 @@
         color:var(--dim);word-break:break-all}
   .foot{color:var(--dim);font-size:12px;text-align:center;margin-top:24px}
   a{color:var(--gold)}
+  .alarm{background:#3a1114;border:1px solid var(--loss);color:#ffb3ad;
+         border-radius:12px;padding:12px 14px;margin:0 0 16px;font-size:14px}
+  .alarm b{color:#fff}
+  .alarm pre{white-space:pre-wrap;font-size:11px;color:#ffb3ad;margin:8px 0 0}
 </style>
 </head>
 <body>
@@ -42,6 +46,8 @@
   <h1>🎰 Lottery Book <span style="color:var(--gold)">· real money</span></h1>
   <p class="sub">Real money on Binance spot — no cap, every entry goes all in.
      Odds favor burn — this page is the honest record either way.</p>
+
+  <div id="alarm" class="alarm" hidden></div>
 
   <div class="big">
     <div class="l">book value</div>
@@ -85,6 +91,26 @@ const dur=(a,b)=>{ if(!a) return ""; const m=Math.round(((b?new Date(b):new Date
 async function load(){
   try{
     const st=await fetch("lottery.json",{cache:"no-store"}).then(r=>r.json());
+    // BOT SILENT alarm (incident 2026-09-01: the book stopped updating for 30h
+    // with a real position open and nothing on this page said so). The VPS
+    // cycles every 5 min, so >30 min without a state write means exits are
+    // NOT being checked. Computed client-side from the state's own clock,
+    // so it needs no other process to be alive to raise it.
+    const staleMin=st.last_updated_utc?Math.round((Date.now()-new Date(st.last_updated_utc).getTime())/60000):null;
+    let alarm="";
+    if(staleMin!=null && staleMin>30){
+      alarm+="⚠️ <b>BOT SILENT for "+(staleMin<120?staleMin+" min":(staleMin/60).toFixed(1)+" h")+
+        "</b> — last state write "+esc(when(st.last_updated_utc))+". Exits are NOT being checked"+
+        (st.open_position&&st.open_position.symbol?" while <b>"+esc(st.open_position.symbol)+"</b> is open":"")+
+        ". SSH to the VPS (runbook in LOTTERY_VPS_SETUP.md).";
+    }
+    try{
+      const rf=await fetch("lottery_red_flag.json",{cache:"no-store"});
+      if(rf.ok){ const f=await rf.json();
+        alarm+=(alarm?"<br><br>":"")+"🛑 <b>Last cycle CRASHED</b> ("+esc(when(f.ts))+"): "+esc(f.what||"")+
+          "<pre>"+esc((f.tail||[]).slice(-8).join("\n"))+"</pre>"; }
+    }catch(e){}
+    $("alarm").innerHTML=alarm; $("alarm").hidden=!alarm;
     $("val").textContent=money(st.last_value_usd);
     const op=st.open_position;
     if(op && op.symbol){

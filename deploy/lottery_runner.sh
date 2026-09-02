@@ -26,6 +26,50 @@ git rebase --abort 2>/dev/null || true
 git merge --abort 2>/dev/null || true
 find .git -maxdepth 1 -name index.lock -mmin +10 -delete 2>/dev/null || true
 
+# 0b) UNMERGED INDEX ENTRIES (incident 2026-08-25, and the likely 09-01
+#     silence): a host event killed a cycle mid `pull --rebase --autostash`,
+#     the stash-pop left stage-2/stage-3 entries with no MERGE_HEAD, and
+#     --abort cannot see them — so every later cycle RAN but could not
+#     pull, commit or push until a human SSHed in. Heal mechanically and
+#     direction-agnostically (stage numbering flips between rebase and
+#     stash-pop, so never trust "ours"/"theirs"): append-only logs keep the
+#     side with MORE lines, the state file keeps the side with the NEWER
+#     last_updated_utc, everything else (caches, generated files) takes the
+#     committed HEAD and regenerates next cycle.
+if [ -n "$(git ls-files -u 2>/dev/null)" ]; then
+  echo "[runner] HEAL: unmerged index entries — resolving mechanically"
+  git ls-files -u | awk '{print $4}' | sort -u | while read -r f; do
+    python3 - "$f" <<'PY'
+import json, subprocess, sys
+f = sys.argv[1]
+def stage(n):
+    r = subprocess.run(["git", "show", f":{n}:{f}"], capture_output=True)
+    return r.stdout.decode("utf-8", "replace") if r.returncode == 0 else None
+a, b = stage(2), stage(3)
+pick = None
+if a is not None and b is not None:
+    if f.endswith(".jsonl"):
+        pick = a if a.count("\n") >= b.count("\n") else b
+    elif f == "data/lottery_state.json":
+        def ts(s):
+            try:
+                return json.loads(s).get("last_updated_utc") or ""
+            except Exception:
+                return ""
+        pick = a if ts(a) >= ts(b) else b
+if pick is None:
+    subprocess.run(["git", "checkout", "HEAD", "--", f], capture_output=True)
+else:
+    open(f, "w", encoding="utf-8", newline="").write(pick)
+subprocess.run(["git", "add", "--", f], capture_output=True)
+print(f"[runner]   healed {f} ({'content rule' if pick is not None else 'HEAD'})")
+PY
+  done
+  git stash drop -q 2>/dev/null || true
+  git commit -q -m "lottery: heal unmerged index $(date -u +'%Y-%m-%d %H:%M') UTC" 2>/dev/null \
+    || git reset -q 2>/dev/null || true
+fi
+
 # 1) pull fresh scans — bounded, never wedging, never fatal (exits must
 #    still run on cached state if the network is down)
 timeout -k 10 60 git pull --rebase --autostash -X theirs -q \
@@ -57,8 +101,33 @@ python3 src/announcement_watch.py || echo "[runner] announcements fetch failed �
 # publish the sentinel dashboard the same way the Actions loop does
 cp -f reports/sentinel_dashboard.html docs/sentinel.html 2>/dev/null || true
 
-python3 src/lottery_live.py
-rc=$?
+python3 src/lottery_live.py 2>&1 | tee /tmp/lottery_cycle.log
+rc=${PIPESTATUS[0]}
+
+# 3b) A CRASHED CYCLE MUST BE VISIBLE ON THE PHONE (incident 2026-09-01: the
+#     book died every cycle for 30 hours with a real position open and the
+#     only symptom was a dashboard that quietly stopped updating). A non-zero
+#     exit writes docs/lottery_red_flag.json with the traceback tail; the
+#     phone page shows it in red; a clean cycle removes it.
+python3 - "$rc" <<'PY'
+import json, pathlib, sys
+from datetime import datetime, timezone
+rc = int(sys.argv[1])
+flag = pathlib.Path("docs/lottery_red_flag.json")
+log = pathlib.Path("/tmp/lottery_cycle.log")
+if rc != 0:
+    tail = log.read_text(encoding="utf-8", errors="replace").splitlines()[-30:] \
+        if log.exists() else []
+    flag.write_text(json.dumps({
+        "ts": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "what": f"lottery_live.py exited {rc} — exits/entries did NOT complete this cycle",
+        "tail": tail,
+    }, indent=1), encoding="utf-8")
+    print(f"[runner] RED FLAG written — lottery_live.py exited {rc}")
+elif flag.exists():
+    flag.unlink()
+    print("[runner] red flag cleared — cycle completed")
+PY
 
 # 4) publish where GitHub Pages can serve it (data/ is not served):
 #    state verbatim, ledger trimmed for the phone page
@@ -77,6 +146,8 @@ for f in data/lottery_state.json data/lottery_ledger.jsonl \
          docs/lottery.json docs/scout.json docs/lottery_ledger.jsonl; do
   git add "$f" 2>/dev/null || true
 done
+# the red flag is added OR removed: stage its deletion too
+git add -A docs/lottery_red_flag.json 2>/dev/null || true
 if ! git diff --cached --quiet; then
   git commit -q -m "lottery: $(date -u +'%Y-%m-%d %H:%M') UTC"
   pushed=0

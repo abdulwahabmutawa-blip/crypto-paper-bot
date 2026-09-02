@@ -1,0 +1,75 @@
+name: tests
+
+# The gate the real-money book never had. Two production outages of the
+# lottery box were code that compiled but could not RUN a cycle:
+#   2026-08-23..26  an indent slip made the entry path unreachable
+#   2026-08-31..09-01  an unbound local (halt_why) crashed every held-seat
+#                      cycle under TURBO_MODE, 30h with a position open
+# pyflakes flags the second class as "undefined name" in one second, and
+# tests/test_lottery_cycle.py drives lottery_live.main() end to end against
+# a mocked exchange for both. This workflow runs them on every push that
+# touches source or tests. The fleet's own cycle commits (data/, docs/,
+# reports/) never trigger it.
+
+on:
+  push:
+    paths:
+      - 'src/**'
+      - 'tests/**'
+      - 'deploy/**'
+      - 'requirements.txt'
+      - '.github/workflows/tests.yml'
+  pull_request:
+    paths:
+      - 'src/**'
+      - 'tests/**'
+      - 'deploy/**'
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt pytest pyflakes
+
+      # Undefined names and syntax errors in the order path fail the build.
+      # Unused-variable noise is tolerated (grep keeps only the fatal classes).
+      - name: pyflakes (fatal classes only)
+        shell: bash
+        run: |
+          set -o pipefail
+          python -m pyflakes src/*.py oracle/*.py > /tmp/pyflakes.txt || true
+          if grep -E "undefined name|invalid syntax|unexpected indent|redefinition of unused|referenced before assignment" /tmp/pyflakes.txt; then
+            echo "::error::pyflakes found a fatal class of defect (see above)"
+            exit 1
+          fi
+          echo "pyflakes: no fatal findings ($(wc -l < /tmp/pyflakes.txt) advisory lines)"
+
+      - name: shell syntax (deploy scripts)
+        shell: bash
+        run: for f in deploy/*.sh; do bash -n "$f" || exit 1; done
+
+      # Two styles coexist in tests/: assert-at-import scripts (run as
+      # scripts) and pytest modules (collected). Both must pass.
+      - name: assert-style test scripts
+        shell: bash
+        run: |
+          set -e
+          for f in tests/test_*.py; do
+            if grep -q "^def test_\|^import pytest\|^from pytest" "$f"; then continue; fi
+            echo "== $f"; timeout 120 python "$f"
+          done
+
+      - name: pytest modules
+        run: python -m pytest tests -q --no-header -p no:cacheprovider
