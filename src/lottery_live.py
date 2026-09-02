@@ -472,6 +472,43 @@ def main():
     except Exception:
         announcements = None
 
+    def _halt_state() -> tuple:
+        """REVAMP 08-23 exposure caps, evaluated OUTSIDE the strategy: the
+        daily circuit breaker (2 losing exits or -10% of peak per UTC day)
+        and the API-burst freeze. Returns (breaker_why, burst_why, halt_why).
+
+        Called BEFORE the exit rules (the turbo hop may not fire while
+        halted) and AGAIN before the entry lane (a losing exit this cycle
+        can be today's second and must halt this same cycle's entry).
+
+        INCIDENT 2026-09-01: the golden-ticket commit (ad621af1e) made the
+        turbo-hop rule read `halt_why` here, while the variable was only
+        assigned further down in the entry section. Every cycle that held a
+        seat under TURBO_MODE died with UnboundLocalError after the exit
+        rules and before the state write — the dashboard froze at the
+        BERAUSDT buy (01:06 UTC) and no resting stop was ever synced. The
+        cycle test in tests/test_lottery_cycle.py now runs main() end to end
+        against a mocked exchange so this class of bug cannot ship again.
+        """
+        _today_real = [t for t in st.get("realized", [])
+                       if t.get("date") == today]
+        _b = binance_live.circuit_breaker_reason(
+            _today_real, st.get("book_hwm_usd"))
+        _u = None
+        try:
+            _tail = []
+            if binance_live.LEDGER.exists():
+                for _line in binance_live.LEDGER.read_text(
+                        encoding="utf-8").splitlines()[-300:]:
+                    if _line.strip():
+                        _tail.append(json.loads(_line))
+            _u = binance_live.api_burst_reason(_tail, now)
+        except Exception:
+            _u = None
+        return _b, _u, (_b or _u)
+
+    breaker_why, burst_why, halt_why = _halt_state()
+
     # ---- exits ----
     # These run EVERY cycle (~10 min) off live Binance prices, deliberately
     # not off the Watcher: Grok scans arrive at most every 8h, so anything
@@ -770,22 +807,9 @@ def main():
     # REVAMP 08-23 — exposure caps enforced OUTSIDE the strategy (the one
     # mechanic every verified durable winner shares): a daily circuit
     # breaker and an exchange-health freeze sit above every entry lane.
-    _today_real = [t for t in st.get("realized", [])
-                   if t.get("date") == today]
-    breaker_why = binance_live.circuit_breaker_reason(
-        _today_real, st.get("book_hwm_usd"))
-    burst_why = None
-    try:
-        _tail = []
-        if binance_live.LEDGER.exists():
-            for _line in binance_live.LEDGER.read_text(
-                    encoding="utf-8").splitlines()[-300:]:
-                if _line.strip():
-                    _tail.append(json.loads(_line))
-        burst_why = binance_live.api_burst_reason(_tail, now)
-    except Exception:
-        burst_why = None
-    halt_why = breaker_why or burst_why
+    # Re-evaluated here, AFTER the exit rules: an exit this cycle can be
+    # today's second loss and must halt this same cycle's entry.
+    breaker_why, burst_why, halt_why = _halt_state()
     # GOLDEN TICKET (owner amendment 2026-08-31): "it's ok to stop for a
     # while, but a high-percentage opportunity should not be missed." The
     # loss-COUNT breaker becomes overridable for exactly ONE entry per UTC
