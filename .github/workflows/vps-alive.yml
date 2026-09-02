@@ -1,0 +1,50 @@
+name: vps-alive
+
+# The alarm the real-money book never had. On 2026-09-01 the VPS went silent
+# for 30h+ with an all-in position open and the first human notice came from
+# the next morning's digest. This workflow FAILS (which GitHub e-mails to the
+# owner) whenever the VPS has not written data/lottery_state.json for more
+# than 30 minutes while holding a seat. In cash it only warns, so a box that
+# was stopped on purpose does not page anyone every half hour.
+#
+# GitHub accepts only a fraction of scheduled starts, so this is a best-
+# effort heartbeat, not a guarantee; the phone page's red BOT SILENT banner
+# is the always-on view.
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  heartbeat:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Real-money box heartbeat
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json, sys
+          from datetime import datetime, timezone
+          st = json.load(open("docs/lottery.json", encoding="utf-8"))
+          ts = st.get("last_updated_utc")
+          held = st.get("held_symbol")
+          age = None
+          if ts:
+              age = (datetime.now(timezone.utc) - datetime.fromisoformat(ts)).total_seconds() / 60
+          print(f"last state write: {ts} ({'?' if age is None else round(age)} min ago); seat: {held or 'CASH'}")
+          if age is None or age > 30:
+              msg = f"LOTTERY VPS SILENT for {'?' if age is None else round(age)} min"
+              if held:
+                  print(f"::error::{msg} while holding {held} — exits are NOT being checked. SSH the box (LOTTERY_VPS_SETUP.md, REVIVAL RUNBOOK).")
+                  sys.exit(1)
+              print(f"::warning::{msg} (in cash — no position at risk)")
+          else:
+              print("VPS alive")
+          PY
