@@ -1,27 +1,34 @@
 {
- "updated": "2026-09-02T08:04:36+00:00",
+ "updated": "2026-09-02T08:18:06+00:00",
  "spec": "x_chatter_precursors_2026-08-23",
  "n_rows_total": 6,
- "n_scored_excess_24h": 5,
+ "n_scored_excess_24h": 6,
  "objective": "BTC-excess 24h",
  "hit_threshold": 0.03,
  "features": {
-  "catalyst": {},
+  "catalyst": {
+   "unlock": {
+    "n": 3,
+    "hit": 0.0,
+    "mean": -0.02989,
+    "median": -0.03512
+   }
+  },
   "tier_T3": {
    "False": {
-    "n": 4,
+    "n": 5,
     "hit": 0.0,
-    "mean": -0.03248,
+    "mean": -0.0238,
     "median": -0.02079
    }
   },
   "handle": {},
   "all": {
    "all": {
-    "n": 5,
-    "hit": 0.2,
-    "mean": -0.01968,
-    "median": -0.02079
+    "n": 6,
+    "hit": 0.167,
+    "mean": -0.01457,
+    "median": -0.00854
    }
   }
  },
@@ -30,10 +37,10 @@
    "note": "prior24h in [-2%,+5%] vs >+10%",
    "horizon_h": 24,
    "group_true": {
-    "n": 3,
+    "n": 4,
     "hit": 0.0,
-    "mean": -0.02148,
-    "median": -0.02079
+    "mean": -0.01338,
+    "median": -0.00854
    },
    "group_false": null
   },
@@ -41,10 +48,10 @@
    "note": ">=8 distinct handles & no T3 vs narrow+loud",
    "horizon_h": 24,
    "group_true": {
-    "n": 3,
+    "n": 4,
     "hit": 0.0,
-    "mean": -0.04046,
-    "median": -0.03512
+    "mean": -0.02761,
+    "median": -0.02079
    },
    "group_false": null
   },
@@ -53,9 +60,9 @@
    "horizon_h": 24,
    "group_true": null,
    "group_false": {
-    "n": 4,
-    "hit": 0.25,
-    "mean": -0.02246,
+    "n": 5,
+    "hit": 0.2,
+    "mean": -0.01578,
     "median": -0.02079
    }
   },
@@ -86,12 +93,12 @@
     "median": -0.06548
    },
    "group_false": {
-    "n": 4,
-    "hit": 0.25,
-    "mean": -0.00823,
+    "n": 5,
+    "hit": 0.2,
+    "mean": -0.00439,
     "median": -0.00854
    },
-   "edge_pp": -5.73
+   "edge_pp": -6.11
   },
   "H6_exchange_surface_words_exhaust": {
    "note": "scanner/exchange-surface wording vs organic",
@@ -103,12 +110,12 @@
     "median": -0.02079
    },
    "group_false": {
-    "n": 4,
-    "hit": 0.25,
-    "mean": -0.0194,
+    "n": 5,
+    "hit": 0.2,
+    "mean": -0.01333,
     "median": -0.00854
    },
-   "edge_pp": -0.14
+   "edge_pp": -0.75
   },
   "H7_extreme_velocity_contrarian": {
    "note": "all-new handles vs familiar, 72h",
@@ -125,10 +132,10 @@
    "note": "first ever appearance vs repeat",
    "horizon_h": 24,
    "group_true": {
-    "n": 5,
-    "hit": 0.2,
-    "mean": -0.01968,
-    "median": -0.02079
+    "n": 6,
+    "hit": 0.167,
+    "mean": -0.01457,
+    "median": -0.00854
    },
    "group_false": null
   }
