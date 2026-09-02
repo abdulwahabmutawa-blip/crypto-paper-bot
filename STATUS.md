@@ -1,28 +1,30 @@
-# Fleet status — 2026-09-01 (UTC)
+# Fleet status — 2026-09-02 (UTC)
 
 10 paper bots ($1,000 each, no real money) + Watcher (Grok risk gate) + Lottery (REAL money, VPS).
 
 | Bot | Holds | 24h change | Value (asof) |
 |---|---|---|---|
-| crypto (trend) | SOL-USD | No new trade | $1,163.60 (09-01) |
-| congress | 10 positions | No trade | $994.08 (08-31) |
-| meanrev | WMT | No new trade | $1,240.17 (08-31) |
-| commodity | DBC | No new trade | $1,026.31 (08-31) |
-| allweather | 5-asset basket | No trade | $1,023.52 (08-31) |
-| hype (sentiment) | ARB-USD | SOLD NVDA (faded) → BOUGHT ARB-USD | ~$1,405.38 (09-01, at entry) |
-| hypecrypto | CASH | No trade — still frozen (R1 kill floor, since 08-31) | $739.48 (09-01) |
-| Hunter | SOL-USD | No trade | $996.42 (08-31) |
-| Scholar | SPY | No trade | $1,016.11 (08-31) |
-| Analyst | SPY | No trade | $1,021.25 (08-31) |
-| Watcher (sentinel) | — (risk gate) | 90 scans logged, latest 09-01 04:42 UTC, risk_level=caution | fresh |
-| **Lottery (REAL $)** | BERAUSDT | Opened 09-01 01:06 UTC (scout:breakout), still held, no exit | $46.78 (09-01 01:06) |
+| crypto (trend/regime) | CASH | SOLD SOL-USD → cash: "all 8 coins falling on the week" | $1,119.75 (09-02) |
+| congress | 10 positions | No trade | $983.39 (09-01) |
+| meanrev | WMT | No new trade | $1,253.66 (09-01) |
+| commodity | DBC | No new trade | $1,047.35 (09-01) |
+| allweather | 5-asset basket | Monthly rebalance (small trims/adds, all 5 legs) | $1,014.96 (09-01) |
+| hype (sentiment) | ARB-USD | No new trade | $2,323.02 (09-01) |
+| hypecrypto | CASH | No trade — still frozen (R1 kill floor, since 08-31) | $739.48 (09-02) |
+| Hunter | BTC-USD | Trailing stop hit on SOL-USD → bought BTC-USD | $965.54 (09-01) |
+| Scholar | SPY | No trade | $1,009.16 (09-01) |
+| Analyst | SPY | No trade (guardrail flag — see below) | $1,014.18 (09-01) |
+| Watcher (sentinel) | — (risk gate) | Scan at 09-01 22:06 UTC, risk_level=caution | fresh |
+| **Lottery (REAL $)** | BERAUSDT | No update in ~28h — stale (see below) | $46.78 (09-01 01:06, stale) |
 
 ## Changed
-- hype (sentiment): sold NVDA 08-31 ("hype faded — dropped off Grok's euphoric list", -$46.96 vs cost), then bought ARB-USD 09-01 04:42 UTC on a Grok euphoric/Binance-top-gainer signal. Now holding crypto instead of an equity.
-- Lottery: entered BERAUSDT at 01:06 UTC (scout:breakout signal, entry score 0.75). No exit yet after ~4h — normal for this bot, book value flat at $46.78.
-- All other paper bots (crypto, congress, meanrev, commodity, allweather, hypecrypto, Hunter, Scholar, Analyst): no new trades. Marks moved only with the market.
+- crypto (trend/regime): sold SOL-USD, moved to CASH — "all 8 coins falling on the week — cash until one rises" (09-02).
+- Hunter: trailing stop hit on SOL-USD (-8% from high-water mark), rotated all-in to BTC-USD (09-01).
+- allweather: routine monthly rebalance executed across all 5 legs (09-01), small trims/adds only.
+- All other paper bots (congress, meanrev, commodity, hype, hypecrypto, Scholar, Analyst): no new trades — marks moved with the market only.
 
 ## Needs a look
-- One cron gap: fleet cycle loop had a 101-min hole 08-31 13:22→15:03 UTC. Per the supervisor's 08-31 note this is expected — GitHub Actions accepts only ~6% of this workflow's scheduled starts by design (345-min loop), not a regression. No other gaps in cycle (13-min cadence) or lottery (5-min cadence) commits over the last 24h.
-- hypecrypto remains frozen since 08-31 (R1 kill floor, book liquidated at $740.52) — unchanged today, already known.
-- Supervisor (Fleet Supervisor bot) has not logged a new run since 08-31 18:28 UTC (~10.5h ago); its scoreboard/judgments are that old. Not necessarily broken — no evidence either way in this window.
+- **Lottery (real money, VPS)**: no commit from the lottery process in ~23–28h — last lottery-tagged commit 09-01 06:00 UTC, and lottery_state.json itself last wrote 09-01 01:06 UTC. Its BERAUSDT position ($46.78) has had no fresh mark or exit check since. Worth confirming the VPS process is still alive.
+- Analyst: its latest decision (09-01, hold — no trade) carries guardrail_tag "UNRECEIPTED WATCHER CLAIM (read_watcher not called)" — reasoning cited the Watcher's risk read without the tool call that would back it. No bad trade resulted, but this is a recurring flag (Supervisor noted it on 9/20 decisions as of 08-31).
+- hypecrypto remains frozen since 08-31 (R1 kill floor) — unchanged, already known.
+- Fleet Supervisor scoreboard hasn't logged a new run since 08-31 20:47 UTC (~32h stale) — no independent audit covering today's activity.
