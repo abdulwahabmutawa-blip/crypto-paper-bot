@@ -1,9 +1,9 @@
 {
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "holding": "SOL-USD",
-  "units": 11.229458517143849,
-  "cash": 0.0,
+  "holding": "CASH",
+  "units": 0.0,
+  "cash": 1119.7463150905755,
   "bench_units": 0.01552055830726173,
   "trades": [
     {
@@ -1306,6 +1306,25 @@
       "value": 1143.72,
       "fee": 2.92,
       "reason": "Strongest eligible coin (+16.2% 7d momentum)"
+    },
+    {
+      "date": "2026-09-02",
+      "action": "SELL",
+      "ticker": "SOL-USD",
+      "price": 99.97,
+      "units": 11.229459,
+      "value": 1122.61,
+      "fee": 2.86,
+      "reason": "Signal flip"
+    },
+    {
+      "date": "2026-09-02",
+      "action": "TO CASH",
+      "ticker": "\u2014",
+      "price": 0,
+      "units": 0,
+      "value": 1119.75,
+      "reason": "All 8 coins falling on the week \u2014 cash until one rises"
     }
   ],
   "history": [
@@ -1596,16 +1615,16 @@
       "value": 1123.06,
       "bench": 1201.85,
       "holding": "SOL-USD"
+    },
+    {
+      "date": "2026-09-02",
+      "value": 1119.75,
+      "bench": 1200.72,
+      "holding": "CASH"
     }
   ],
-  "last_updated_utc": "2026-09-01T23:54:58+00:00",
+  "last_updated_utc": "2026-09-02T00:08:26+00:00",
   "intraday": [
-    {
-      "ts": "2026-08-15T23:08:22+00:00",
-      "value": 1009.75,
-      "bench": 978.94,
-      "holding": "XRP-USD"
-    },
     {
       "ts": "2026-08-15T23:21:45+00:00",
       "value": 1007.54,
@@ -10599,9 +10618,13 @@
       "value": 1123.06,
       "bench": 1201.85,
       "holding": "SOL-USD"
+    },
+    {
+      "ts": "2026-09-02T00:08:26+00:00",
+      "value": 1119.75,
+      "bench": 1200.72,
+      "holding": "CASH"
     }
   ],
-  "costs_paid": 87.9205,
-  "entry_regime": "TREND",
-  "entry_price": 101.85
+  "costs_paid": 90.7832
 }
