@@ -318,6 +318,25 @@ def main():
             return None
         status = str(o.get("status", ""))
         if status in ("NEW", "PARTIALLY_FILLED"):
+            # STRANDED STOP-LIMIT (review 2026-09-02): once a STOP_LOSS_LIMIT
+            # triggers, Binance reports it as a WORKING limit order (status
+            # still NEW, isWorking true). If the market is now below that
+            # limit — the AXS-style sweep the stop existed for — the order sits
+            # above the bid forever, the units stay locked, and the seat has
+            # no protection at all. Cancel it so this cycle's poll rules can
+            # market-sell; the limit leg is a price, the fill is the point.
+            if o.get("isWorking") and "LIMIT" in str(o.get("type", "")):
+                lim = float(o.get("price") or 0)
+                px = binance_live.price(held)
+                if lim and px and px < lim:
+                    binance_live.log({"event": "stop_stranded", "symbol": held,
+                                      "order_id": str(oid), "limit": lim,
+                                      "market": px})
+                    print(f"[{KEY}] resting stop on {held} triggered but its "
+                          f"limit {lim} is above market {px} — cancelling so "
+                          f"the poll exit can sell")
+                    if binance_live.cancel_stop(held, oid):
+                        st.pop("stop_order", None)
             return None            # still resting / still working
         if status != "FILLED":
             # CANCELED / EXPIRED / REJECTED: the protection is gone but the
@@ -374,7 +393,6 @@ def main():
         identical, so it runs through this one path rather than a parallel
         bookkeeping copy that could drift out of step with it."""
         base = held[:-4]
-        qty_free = bals.get(base, 0.0)
         if prefilled:
             # Cancel nothing, sell nothing, guard nothing: the units are
             # already sold. Skip straight to recording it.
@@ -384,20 +402,9 @@ def main():
         # (they hold 23 assets) — the bot's units are the ceiling, the
         # exchange balance only caps it lower if something is missing.
         owned = float(st.get("units") or 0.0)
-        sellable = min(owned, qty_free) if owned > 0 else 0.0
         if owned <= 0:
             print(f"[{KEY}] no recorded units for {held} — refusing to sell "
                   f"a balance this bot did not buy")
-            return False
-        # mainnet lot steps (binance_broker's cache is testnet's — different)
-        info = binance_live._call("GET", "/v3/exchangeInfo", {"symbol": held})
-        step = 0.0
-        for f in ((info or {}).get("symbols") or [{}])[0].get("filters", []):
-            if f.get("filterType") == "LOT_SIZE":
-                step = float(f.get("stepSize", 0) or 0)
-        qty = int(sellable / step) * step if step > 0 else sellable
-        if qty <= 0:
-            print(f"[{KEY}] nothing sellable in {base} — skip")
             return False
         why = binance_live.guard("SELL", held, bals, held, owned)
         if why:
@@ -405,10 +412,48 @@ def main():
                               "symbol": held, "reason": why})
             print(f"[{KEY}] SELL refused: {why}")
             return False
-        # Retire the resting stop BEFORE selling. Left behind it would either
-        # hold the very units this market order needs, or fire later against
-        # a seat the book has already closed.
+        # REVIEW 2026-09-02 (critical): a resting protective stop LOCKS the
+        # seat's units. Sizing from the cycle-start free balance read 0 the
+        # moment a stop rested, so every poll exit (ratchet, climax, fuel,
+        # max-hold, even the -6% stop on a gap) silently no-op'd — and on an
+        # account that also holds the owner's own coins of the same asset,
+        # min(owned, free) would have sold THEIR coins and forgotten ours.
+        # Order now: retire the stop FIRST, then re-read what is free.
+        _so_id = (st.get("stop_order") or {}).get("order_id")
+        _had_stop = bool(_so_id) or binance_live.exchange_stops_armed()
         _retire_stop()
+        if _had_stop:
+            fresh = binance_live.balances()
+            qty_free = fresh.get(base, 0.0) if fresh else 0.0
+        else:
+            qty_free = bals.get(base, 0.0)
+        sellable = min(owned, qty_free)
+        if sellable <= 0 and _so_id:
+            # Nothing free even after the cancel: the stop may have FILLED in
+            # the gap (the cancel then fails against a closed order). Ask.
+            o = binance_live.order_status(held, _so_id)
+            if o and str(o.get("status", "")) == "FILLED":
+                q = float(o.get("executedQty", 0) or 0)
+                quote = float(o.get("cummulativeQuoteQty", 0) or 0)
+                if q > 0 and quote > 0:
+                    return _book_exit(
+                        f"PROTECTIVE STOP filled at the exchange before "
+                        f"this rule ({reason[:40]})",
+                        {"price": quote / q, "qty": q, "order_id": str(_so_id),
+                         "commission": 0.0, "commission_asset": ""})
+        # mainnet lot steps (binance_broker's cache is testnet's — different)
+        info = binance_live._call("GET", "/v3/exchangeInfo", {"symbol": held})
+        step = 0.0
+        for f in ((info or {}).get("symbols") or [{}])[0].get("filters", []):
+            if f.get("filterType") == "LOT_SIZE":
+                step = float(f.get("stepSize", 0) or 0)
+        qty = binance_live._down_to(sellable, step) if step > 0 else sellable
+        if qty <= 0:
+            binance_live.log({"event": "sell_blocked", "symbol": held,
+                              "reason": f"no free units to sell (owned "
+                                        f"{owned}, free {qty_free}) — {reason[:60]}"})
+            print(f"[{KEY}] nothing sellable in {base} — skip")
+            return False
         fill = binance_live.market("SELL", held, qty=qty)
         if not fill:
             return False
@@ -738,7 +783,18 @@ def main():
         # cannot boomerang. The buy happens next cycle through the full
         # guard stack — a hop earns entry, it is not granted it.
         if held and turbo and halt_why is None:
-            _tc = _turbo_rank(scout_candidates())
+            # REVIEW 2026-09-02: rank only candidates the ENTRY lane could
+            # actually take. The raw scout list is mostly benched signals
+            # (top candidate benched in 225/279 turbo-era cycles), and a
+            # hop that sells a live seat for a coin the next cycle refuses
+            # is a paid round trip into cash — and a bench bypass through
+            # the sell side, against the owner's 08-31 hard requirement.
+            _hop_block = set(st.get("stopped", {})) | set(
+                binance_live.retired_symbols(st.get("realized"),
+                                             st.get("book_hwm_usd")) or [])
+            _tc = _turbo_rank([c for c in scout_candidates()
+                               if c.get("actionable")
+                               and c.get("symbol") not in _hop_block])
             _best = _tc[0] if _tc else None
             if _best and _best["symbol"] != held                     and _best["symbol"] not in st.get("stopped", {})                     and held_h is not None and held_h >= 0.5:
                 _hs = float(st.get("entry_score") or 0.0)
@@ -976,7 +1032,7 @@ def main():
                 # fought it lost. Turbo keeps its speed (8 entries/day, 1h
                 # cooldown, 25% LATE cap, hop) — it just may not override
                 # the scorecard.
-                if c.get("actionable", True) is False:
+                if not c.get("actionable"):     # missing/null = NOT proven
                     print(f"[{KEY}] scout {c['symbol']} ({c['signal']}) "
                           f"is on the bench — "
                           f"{c.get('status', 'unproven signal')}; logged "
@@ -1086,7 +1142,13 @@ def main():
         }
     else:
         st["open_position"] = None
-    STATE.write_text(json.dumps(st, indent=2))
+    # ATOMIC write (review 2026-09-02): a kill mid-write (the host event
+    # class) left half a JSON file, and state_preflight then blocks EVERY
+    # later cycle, exits included. Write beside, then rename over.
+    _tmp = STATE.with_suffix(".json.tmp")
+    _tmp.write_text(json.dumps(st, indent=2), encoding="utf-8")
+    import os as _os
+    _os.replace(_tmp, STATE)
     print(f"[{KEY}] {today} seat={st['held_symbol'] or 'CASH'} "
           f"book ${val:.2f} (no cap) — "
           f"ticket odds printed in the docstring")

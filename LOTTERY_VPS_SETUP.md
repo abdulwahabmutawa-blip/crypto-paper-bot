@@ -326,6 +326,11 @@ The manual cycle must print `[lottery] 2026-09-02 seat=BERAUSDT book $…` (or a
 
 ## Step 4 — arm the exchange-resting stop (the 08-31 "ship first" item)
 
+Only after Step 3 shows the box on a commit from 2026-09-02 or later: the
+sell path was rewritten that day to cancel the resting stop BEFORE sizing
+the sale (on older code a resting stop silently disabled every poll exit
+and could sell the owner's own coins of the same asset).
+
 ```bash
 sudo nano /etc/lottery.env     # add the line:  LOTTERY_EXCHANGE_STOPS=1
 sudo systemctl start lottery.service && journalctl -u lottery.service -n 20 --no-pager | grep -i stop

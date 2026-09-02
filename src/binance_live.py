@@ -941,9 +941,10 @@ def late_entry_check(symbol: str, wave: bool = False) -> str | None:
 #      on a real-money account; it earns its way on with the owner watching.
 #   3. A resting order locks the units, so valuation must use
 #      balances_valuation() or the seat prices at $0. See that function.
-STOP_LIMIT_SLIP = 0.015   # limit this far under the trigger, so a fast
-                          # crash still fills instead of leaving a stranded
-                          # stop-limit above a collapsing bid
+STOP_LIMIT_SLIP = 0.05    # limit this far under the trigger (fallback form
+                          # only — STOP_LOSS market is preferred where the
+                          # pair allows it). 1.5% stranded in the AXS-class
+                          # sweep; the fill is the protection, not the price
 STOP_REPLACE_EPS = 0.005  # only re-place when the floor moves >0.5%: the
                           # floor creeps up every cycle a winner rises, and
                           # cancel/replace on each tick is pure API churn
@@ -961,12 +962,14 @@ def symbol_filters(symbol: str) -> dict:
     a stop that silently is not there, so this is not optional politeness.
     """
     info = _call("GET", "/v3/exchangeInfo", {"symbol": symbol})
-    out = {"tick": 0.0, "step": 0.0}
-    for f in ((info or {}).get("symbols") or [{}])[0].get("filters", []):
+    out = {"tick": 0.0, "step": 0.0, "order_types": []}
+    sym = ((info or {}).get("symbols") or [{}])[0]
+    for f in sym.get("filters", []):
         if f.get("filterType") == "PRICE_FILTER":
             out["tick"] = float(f.get("tickSize", 0) or 0)
         elif f.get("filterType") == "LOT_SIZE":
             out["step"] = float(f.get("stepSize", 0) or 0)
+    out["order_types"] = [str(t) for t in (sym.get("orderTypes") or [])]
     return out
 
 
@@ -1061,20 +1064,29 @@ def place_protective_stop(symbol: str, qty: float,
                        f"poll-based exit owns this case"})
         return None
     LAST_ERROR.clear()
-    resp = _call("POST", "/v3/order",
-                 {"symbol": symbol, "side": "SELL", "type": "STOP_LOSS_LIMIT",
-                  "timeInForce": "GTC",
-                  "quantity": f"{q:.8f}".rstrip("0").rstrip("."),
-                  "stopPrice": f"{stop:.10f}".rstrip("0").rstrip("."),
-                  "price": f"{limit:.10f}".rstrip("0").rstrip(".")},
-                 signed=True)
+    # REVIEW 2026-09-02: prefer a STOP_LOSS (market on trigger) where the
+    # pair allows it. A stop-LIMIT 1.5% under the trigger strands in exactly
+    # the sweep it exists for (AXS: 1.114 -> 0.948 inside one 15m bar, then
+    # 1.041 — the limit would have sat above the market with the units
+    # locked). The fill is the protection, not the price. Pairs without
+    # STOP_LOSS fall back to the limit form with a wide slip.
+    use_market = "STOP_LOSS" in (f.get("order_types") or [])
+    params = {"symbol": symbol, "side": "SELL",
+              "type": "STOP_LOSS" if use_market else "STOP_LOSS_LIMIT",
+              "quantity": f"{q:.8f}".rstrip("0").rstrip("."),
+              "stopPrice": f"{stop:.10f}".rstrip("0").rstrip(".")}
+    if not use_market:
+        params["timeInForce"] = "GTC"
+        params["price"] = f"{limit:.10f}".rstrip("0").rstrip(".")
+    resp = _call("POST", "/v3/order", params, signed=True)
     if not resp:
         log({"event": "stop_not_placed", "symbol": symbol,
              "reason": "exchange rejected or did not answer",
              "code": LAST_ERROR.get("code"), "msg": LAST_ERROR.get("msg", "")})
         return None
     out = {"order_id": str(resp.get("orderId", "")), "stop": stop,
-           "limit": limit, "qty": q}
+           "limit": None if use_market else limit, "qty": q,
+           "type": params["type"]}
     log({"event": "stop_placed", "symbol": symbol, **out})
     print(f"[lottery-live] protective stop resting on {symbol} @ {stop}")
     return out
