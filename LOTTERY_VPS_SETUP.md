@@ -150,7 +150,7 @@ sudo systemctl enable --now lottery.timer
 systemctl list-timers lottery.timer --no-pager
 ```
 
-Cycles now run every 10 minutes, forever, without you.
+Cycles run every 5 minutes, forever, without you.
 
 ---
 
@@ -190,11 +190,18 @@ revokes the machine's power over the account no matter what the code does.
 | Watcher scans / paper fleet | GitHub Actions → repo | touches real keys |
 | Ledger + book state | VPS → repo (auditable) | contains secrets |
 
-## Exchange-side protective stops (opt-in, added 2026-08-22)
+## Exchange-side protective stops (added 2026-08-22; ON BY DEFAULT since 2026-09-02)
 
-`LOTTERY_EXCHANGE_STOPS=1` in `/etc/lottery.env` makes the book rest its
-protective floor **at Binance** as a `STOP_LOSS_LIMIT` order, instead of
-only checking the floor once per cycle and then selling at market.
+The book rests its protective floor **at Binance** — a `STOP_LOSS` (market
+on trigger) order where the pair allows it, else `STOP_LOSS_LIMIT` with a
+5% limit gap — instead of only checking the floor once per cycle and then
+selling at market. **Since 2026-09-02 this is on whenever the book is live;
+`LOTTERY_EXCHANGE_STOPS=0` in `/etc/lottery.env` turns it off.** (The 09-01
+wedge left an all-in seat naked for 30h+; the 37-trade replay shows the
+resting hard stop is P&L-neutral and caps that tail at -6%.) The floor is
+placed in the same cycle as the buy. The bot tags its own orders with a
+`lotstop-` client id and never touches the owner's own resting orders on
+the same coin.
 
 **Why.** On 08-22 AXSUSDT peaked +11.8%, so the ratchet set a floor at
 **+5.9%** — and the fill came back at **+1.29%**. The price fell through the
@@ -324,19 +331,20 @@ sudo systemctl start lottery.service && journalctl -u lottery.service -n 40 --no
 
 The manual cycle must print `[lottery] 2026-09-02 seat=BERAUSDT book $…` (or a SELL line if the -6% stop triggers) and push a `lottery:` commit you can see on GitHub within a minute.
 
-## Step 4 — arm the exchange-resting stop (the 08-31 "ship first" item)
+## Step 4 — confirm the exchange-resting stop is live (the 08-31 "ship first" item)
 
-Only after Step 3 shows the box on a commit from 2026-09-02 or later: the
-sell path was rewritten that day to cancel the resting stop BEFORE sizing
-the sale (on older code a resting stop silently disabled every poll exit
-and could sell the owner's own coins of the same asset).
+Since 2026-09-02 the resting stop is ON by default once the box runs a
+commit from that day or later (the sell path was rewritten the same day to
+cancel the resting stop BEFORE sizing the sale; on older code a resting
+stop silently disabled every poll exit). Nothing to add to the env file —
+just make sure it is not switched off, and watch one cycle place it:
 
 ```bash
-sudo nano /etc/lottery.env     # add the line:  LOTTERY_EXCHANGE_STOPS=1
+sudo grep -n 'LOTTERY_EXCHANGE_STOPS' /etc/lottery.env || echo "not set = ON (good)"
 sudo systemctl start lottery.service && journalctl -u lottery.service -n 20 --no-pager | grep -i stop
 ```
 
-After this, a dead box can no longer leave a naked position: the -6% floor (and the ratchet floor, once armed) rests at Binance itself.
+After this, a dead box can no longer leave a naked position: the -6% floor (and the ratchet floor, once armed) rests at Binance itself. Note: on revival the first cycle will MAX-HOLD sell BERAUSDT at market (breakout seats cap at 24h and it has been held far longer) — that is the pre-registered rule, not a fault.
 
 ## Step 5 — make sure the timer is enabled and cycling
 

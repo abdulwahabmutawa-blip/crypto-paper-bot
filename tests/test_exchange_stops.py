@@ -20,7 +20,7 @@ for k in ("BINANCE_LIVE_API_KEY", "BINANCE_LIVE_API_SECRET",
           "LOTTERY_LIVE", "LOTTERY_EXCHANGE_STOPS"):
     os.environ.pop(k, None)
 
-# --- INERT UNLESS EXPLICITLY ARMED ---------------------------------------
+# --- INERT UNLESS LIVE; ON BY DEFAULT ONCE LIVE (opt-out since 2026-09-02) --
 assert not bl.exchange_stops_armed(), "nothing set must not arm"
 os.environ["LOTTERY_EXCHANGE_STOPS"] = "1"
 assert not bl.exchange_stops_armed(), "its own flag must not arm live trading"
@@ -29,9 +29,12 @@ os.environ["BINANCE_LIVE_API_SECRET"] = "s"
 os.environ["LOTTERY_LIVE"] = "1"
 assert bl.armed()
 assert bl.exchange_stops_armed(), "keys + live + own flag = armed"
+os.environ.pop("LOTTERY_EXCHANGE_STOPS", None)
+assert bl.exchange_stops_armed(), \
+    "a live book with nothing set rests its floor at the exchange (default ON)"
 os.environ["LOTTERY_EXCHANGE_STOPS"] = "0"
 assert bl.armed() and not bl.exchange_stops_armed(), \
-    "a live book with the feature off must stay on the poll path"
+    "an explicit 0 keeps the poll-only path"
 # and while disarmed, placement is inert without touching the network
 assert bl.place_protective_stop("AXSUSDT", 10.0, 1.0) is None
 

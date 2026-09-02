@@ -232,19 +232,79 @@ def main():
     #   * an unconfirmed order (POST timed out after the exchange accepted
     #     it) is surfaced as a marker the owner can see in the ledger.
     ledger_open = None          # last BUY fill with no closing SELL/exit
+    unconfirmed = None          # last BUY whose POST timed out, unresolved
+    last_stop_placed = None     # last stop this book rested, uncancelled
     if binance_live.LEDGER.exists():
         for line in binance_live.LEDGER.read_text(encoding="utf-8").splitlines():
             try:
                 e = json.loads(line)
             except Exception:
                 continue
-            if e.get("event") == "fill" and e.get("action") == "BUY":
+            ev = e.get("event")
+            if ev == "fill" and e.get("action") == "BUY":
                 ledger_open = e
+                last_stop_placed = None
+                if unconfirmed and unconfirmed.get("symbol") == e.get("symbol"):
+                    unconfirmed = None
+            elif ev == "order_unconfirmed" and e.get("action") == "BUY" \
+                    and e.get("client_order_id"):
+                unconfirmed = e
+            elif ev == "order_unconfirmed_resolved" and unconfirmed \
+                    and e.get("client_order_id") == unconfirmed.get("client_order_id"):
+                unconfirmed = None
+            elif ev == "stop_placed" and ledger_open \
+                    and e.get("symbol") == ledger_open.get("symbol"):
+                last_stop_placed = e
+            elif ev in ("stop_cancelled", "stop_orphan_found") and last_stop_placed \
+                    and str(e.get("order_id")) == str(last_stop_placed.get("order_id")):
+                last_stop_placed = None if ev == "stop_cancelled" else last_stop_placed
             elif ledger_open and e.get("symbol") == ledger_open.get("symbol") \
-                    and (e.get("event") == "exit"
-                         or (e.get("event") == "fill"
-                             and e.get("action") == "SELL")):
+                    and (ev == "exit"
+                         or (ev == "fill" and e.get("action") == "SELL")):
                 ledger_open = None
+                last_stop_placed = None
+    # UNCONFIRMED BUY (review 2026-09-02): a POST that timed out AFTER the
+    # exchange accepted it used to leave the whole book in a coin the state
+    # called CASH — no stop, no exit rule, and by the "never adopt what the
+    # bot did not buy" rule, never sold. Orders now carry a client id, so
+    # the exchange is simply asked.
+    if unconfirmed and not ledger_open and not st["held_symbol"]:
+        _sym, _cid = unconfirmed["symbol"], unconfirmed["client_order_id"]
+        _o = binance_live.order_by_client(_sym, _cid)
+        _status = str((_o or {}).get("status", ""))
+        if _status == "FILLED":
+            _q = float(_o.get("executedQty") or 0)
+            _quote = float(_o.get("cummulativeQuoteQty") or 0)
+            if _q > 0 and _quote > 0:
+                _ts = None
+                try:
+                    _ts = datetime.fromtimestamp(
+                        float(_o.get("time")) / 1000, tz=timezone.utc
+                    ).isoformat(timespec="seconds")
+                except Exception:
+                    _ts = now.isoformat(timespec="seconds")
+                _fill = {"price": _quote / _q, "qty": _q,
+                         "order_id": str(_o.get("orderId", "")),
+                         "client_order_id": _cid, "commission": 0.0,
+                         "commission_asset": ""}
+                binance_live.log({"event": "fill", "action": "BUY",
+                                  "symbol": _sym, **_fill,
+                                  "note": "recovered: the POST timed out "
+                                          "after the exchange filled it"})
+                ledger_open = {"symbol": _sym, "price": _fill["price"],
+                               "qty": _q, "ts": _ts}
+                print(f"[{KEY}] RECOVERED unconfirmed BUY {_sym} "
+                      f"{_q} @ {_fill['price']:.8g}")
+        elif _status in ("NEW", "PARTIALLY_FILLED"):
+            binance_live.cancel_by_client(_sym, _cid)
+            binance_live.log({"event": "order_unconfirmed_resolved",
+                              "symbol": _sym, "client_order_id": _cid,
+                              "status": _status, "note": "still open — cancelled"})
+        elif _o is not None or binance_live.LAST_ERROR.get("code") == -2013:
+            # -2013 = order does not exist: the POST never reached the book
+            binance_live.log({"event": "order_unconfirmed_resolved",
+                              "symbol": _sym, "client_order_id": _cid,
+                              "status": _status or "not_found"})
     if st["held_symbol"] and (not ledger_open
                               or ledger_open.get("symbol") != st["held_symbol"]):
         binance_live.log({"event": "reconciled_closed_seat",
@@ -273,6 +333,24 @@ def main():
         binance_live.log({"event": "recovered_from_ledger",
                           "symbol": st["held_symbol"], "units": st["units"]})
         print(f"[{KEY}] recovered unfinished seat {st['held_symbol']} "
+              f"from the ledger (state file had lost it)")
+    # LOST STOP RECORD (review 2026-09-02): a crash between placing the
+    # resting stop and writing state leaves an order the state does not
+    # know about. If it then FILLS, nothing in openOrders remembers it and
+    # the seat wedges open forever ("nothing sellable"). The ledger does
+    # remember: re-adopt the last uncancelled stop_placed for this seat.
+    if st["held_symbol"] and not (st.get("stop_order") or {}).get("order_id") \
+            and last_stop_placed and last_stop_placed.get("symbol") == st["held_symbol"] \
+            and last_stop_placed.get("order_id"):
+        st["stop_order"] = {"order_id": str(last_stop_placed["order_id"]),
+                            "stop": last_stop_placed.get("stop"),
+                            "limit": last_stop_placed.get("limit"),
+                            "qty": last_stop_placed.get("qty"),
+                            "recovered": True}
+        binance_live.log({"event": "stop_record_recovered",
+                          "symbol": st["held_symbol"],
+                          "order_id": st["stop_order"]["order_id"]})
+        print(f"[{KEY}] re-adopted resting stop {st['stop_order']['order_id']} "
               f"from the ledger (state file had lost it)")
 
     held = st["held_symbol"]
@@ -1092,6 +1170,11 @@ def main():
                     st["entry_time"] = now.isoformat(timespec="seconds")
                     st["entry_scan_ts"], st["entry_source"] = scan_ts, source
                     st["entry_score"] = pick_score
+                    # rest the floor NOW, not next cycle: the 5 minutes after
+                    # a fill are as exposed as any other 5 minutes
+                    held = pick
+                    _sync_stop(fill["price"], fill["price"],
+                               binance_live.exit_params(source)["stop_pct"])
                     st.setdefault("entries", {})
                     st["entries"] = {d: c for d, c in st["entries"].items()
                                      if d >= today}

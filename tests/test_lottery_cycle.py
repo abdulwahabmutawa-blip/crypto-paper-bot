@@ -46,7 +46,9 @@ def cycle(tmp_path, monkeypatch):
     monkeypatch.setenv("BINANCE_LIVE_API_KEY", "k")
     monkeypatch.setenv("BINANCE_LIVE_API_SECRET", "s")
     monkeypatch.setenv("LOTTERY_LIVE", "1")
-    monkeypatch.delenv("LOTTERY_EXCHANGE_STOPS", raising=False)
+    # poll-only baseline for the incident scenarios; the resting-stop tests
+    # arm it explicitly, and one test checks the default (unset = ON)
+    monkeypatch.setenv("LOTTERY_EXCHANGE_STOPS", "0")
     data = tmp_path / "data"
     data.mkdir()
     monkeypatch.setattr(config, "DATA", data)
@@ -108,13 +110,23 @@ def cycle(tmp_path, monkeypatch):
                 {"filterType": "PRICE_FILTER", "tickSize": "0.0001"}]}]}
         if path == "/v3/ticker/24hr":
             return h["ticker"]
+        def _find(p):
+            if p.get("orderId") is not None:
+                return h["open_orders"].get(str(p["orderId"]))
+            cid = p.get("origClientOrderId")
+            for o in h["open_orders"].values():
+                if o.get("clientOrderId") == cid:
+                    return o
+            bl.LAST_ERROR.clear()
+            bl.LAST_ERROR.update({"code": -2013, "msg": "Order does not exist."})
+            return None
         if path == "/v3/openOrders":
             return [o for o in h["open_orders"].values()
                     if o["status"] in ("NEW", "PARTIALLY_FILLED")]
         if path == "/v3/order" and method == "GET":
-            return h["open_orders"].get(str(params.get("orderId")))
+            return _find(params)
         if path == "/v3/order" and method == "DELETE":
-            o = h["open_orders"].get(str(params.get("orderId")))
+            o = _find(params)
             if not o or o["status"] != "NEW":
                 return None            # nothing to cancel (already filled)
             o["status"] = "CANCELED"
@@ -129,6 +141,7 @@ def cycle(tmp_path, monkeypatch):
             h["locked"][b] = h["locked"].get(b, 0.0) + q
             h["base"][b] = h["base"].get(b, 0.0) - q
             h["open_orders"][oid] = {"orderId": oid, "symbol": params["symbol"],
+                                     "clientOrderId": params.get("newClientOrderId", ""),
                                      "side": "SELL", "type": params["type"],
                                      "status": "NEW", "isWorking": False,
                                      "price": params.get("price", "0"),
@@ -183,6 +196,7 @@ def cycle(tmp_path, monkeypatch):
                                  "status": "NEW", "isWorking": working,
                                  "price": str(limit or 0),
                                  "stopPrice": str(stop_price), "origQty": str(q)}
+        h["open_orders"][oid]["clientOrderId"] = "lotstop-" + st["held_symbol"] + "-1"
         st["stop_order"] = {"order_id": oid, "stop": stop_price,
                             "limit": limit, "qty": q}
         ll.STATE.write_text(json.dumps(st))
@@ -407,3 +421,91 @@ def test_state_write_is_atomic_leaves_no_tmp(cycle):
     _completes(cycle)
     assert not (cycle["data"] / "lottery_state.json.tmp").exists()
     json.loads(cycle["ll"].STATE.read_text())     # parseable
+
+
+# --- default: exchange stops ON once live (opt-out since 2026-09-02) ------
+def test_default_env_rests_a_stop_and_buy_rests_it_the_same_cycle(cycle):
+    cycle["monkeypatch"].delenv("LOTTERY_EXCHANGE_STOPS", raising=False)
+    cycle["cash"]()
+    cycle["scout"]()
+    _completes(cycle)
+    st = cycle["state"]()
+    assert st["held_symbol"] == "ABCUSDT"
+    so = st.get("stop_order")
+    assert so and so["order_id"] in cycle["open_orders"], \
+        "a fresh buy must leave a floor resting at the exchange this cycle"
+    assert cycle["open_orders"][so["order_id"]]["clientOrderId"].startswith("lotstop-")
+    assert abs(so["stop"] / cycle["price"] - 0.94) < 0.001  # burst seat -6%
+
+
+def test_owner_own_stop_order_is_never_adopted_or_cancelled(cycle):
+    cycle["monkeypatch"].setenv("LOTTERY_EXCHANGE_STOPS", "1")
+    cycle["seat"]()
+    # the OWNER's own resting stop on the same coin, on their own 100 units
+    cycle["base"]["BERA"] = 100.0
+    cycle["open_orders"]["555"] = {"orderId": "555", "symbol": "BERAUSDT",
+                                   "clientOrderId": "web_abc", "side": "SELL",
+                                   "type": "STOP_LOSS_LIMIT", "status": "NEW",
+                                   "isWorking": False, "price": "0.15",
+                                   "stopPrice": "0.16", "origQty": "100"}
+    _completes(cycle)
+    assert cycle["open_orders"]["555"]["status"] == "NEW", "cancelled the owner's order"
+    so = cycle["state"]().get("stop_order")
+    assert so and so["order_id"] != "555"
+
+
+# --- crash between placing a stop and writing state: the ledger remembers --
+def test_lost_stop_record_that_filled_is_booked_from_the_ledger(cycle):
+    cycle["monkeypatch"].setenv("LOTTERY_EXCHANGE_STOPS", "1")
+    st = cycle["seat"]()
+    oid = cycle["rest_stop"](0.1727)
+    # state never learned about it (crash before the write)...
+    st = cycle["state"](); st.pop("stop_order"); cycle["ll"].STATE.write_text(json.dumps(st))
+    # ...but the ledger did, and the stop then FILLED overnight
+    cycle["bl"].log({"event": "stop_placed", "symbol": "BERAUSDT", "order_id": oid,
+                     "stop": 0.1727, "limit": None, "qty": 254.654, "type": "STOP_LOSS"})
+    o = cycle["open_orders"][oid]
+    o.update({"status": "FILLED", "executedQty": "254.654",
+              "cummulativeQuoteQty": str(round(254.654 * 0.1720, 4))})
+    cycle["locked"].pop("BERA", None)
+    cycle["usdt"] = round(254.654 * 0.1720, 4)
+    cycle["price"] = 0.1720
+    _completes(cycle)
+    s = cycle["state"]()
+    assert s["held_symbol"] is None, "seat wedged open after a filled stop"
+    assert s["realized"] and "PROTECTIVE STOP" in s["realized"][-1]["reason"]
+    assert not _sells(cycle), "must not try to market-sell units already sold"
+    assert "stop_record_recovered" in cycle["ledger_events"]()
+
+
+# --- a BUY whose POST timed out after the exchange filled it --------------
+def test_unconfirmed_buy_is_recovered_and_managed(cycle):
+    cycle["cash"]()
+    cid = "lot-ABCUSDT-42"
+    cycle["bl"].log({"event": "order_unconfirmed", "action": "BUY",
+                     "symbol": "ABCUSDT", "client_order_id": cid,
+                     "note": "POST returned nothing"})
+    # the exchange did fill it: the coin is in the account, USDT is gone
+    cycle["open_orders"]["9"] = {"orderId": "9", "symbol": "ABCUSDT",
+                                 "clientOrderId": cid, "side": "BUY",
+                                 "type": "MARKET", "status": "FILLED",
+                                 "executedQty": "46.0",
+                                 "cummulativeQuoteQty": "46.0",
+                                 "time": int(cycle["now"].timestamp() * 1000) - 300_000}
+    cycle["base"]["ABC"] = 46.0
+    cycle["usdt"] = 0.0
+    _completes(cycle)
+    s = cycle["state"]()
+    assert s["held_symbol"] == "ABCUSDT" and abs(s["units"] - 46.0) < 1e-9
+    assert s["entry_price"] == 1.0
+    ev = cycle["ledger_events"]()
+    assert "fill" in ev and "recovered_from_ledger" in ev
+
+
+def test_unconfirmed_buy_that_never_reached_the_book_is_resolved(cycle):
+    cycle["cash"]()
+    cycle["bl"].log({"event": "order_unconfirmed", "action": "BUY",
+                     "symbol": "ABCUSDT", "client_order_id": "lot-ABCUSDT-43"})
+    _completes(cycle)                     # exchange says -2013: not found
+    assert cycle["state"]()["held_symbol"] is None
+    assert "order_unconfirmed_resolved" in cycle["ledger_events"]()

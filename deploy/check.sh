@@ -30,7 +30,7 @@ echo "   LOTTERY_LIVE=${LOTTERY_LIVE:-unset}   (1 = the bot may place orders)"
 echo "   LOTTERY_EXCHANGE_STOPS=${LOTTERY_EXCHANGE_STOPS:-unset}   (1 = rest the"
 echo "     protective floor AT the exchange; unset/0 = poll-only, the old path)"
 if systemctl is-enabled lottery.timer >/dev/null 2>&1; then
-  echo "   timer: ENABLED — cycles run every 10 minutes"
+  echo "   timer: ENABLED — cycles run every 5 minutes"
 else
   echo "   timer: not enabled — the bot only runs when you start it by hand"
 fi

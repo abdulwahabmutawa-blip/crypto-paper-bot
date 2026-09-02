@@ -36,8 +36,17 @@ umask 077
 # DISARMED until the verification below passes (audit 08-15: writing
 # LOTTERY_LIVE=1 first meant a failed verify left the box armed with a
 # possibly-broken key)
+# PRESERVE every other line (review 2026-09-02): this file also carries
+# XAI_API_KEY, LOTTERY_EXCHANGE_STOPS, CRYPTOPANIC_TOKEN. Overwriting the
+# whole file on a key rotation silently disarmed the Watcher and the
+# resting stops.
+TMP_ENV=$(mktemp)
+if [ -f "$ENV_FILE" ]; then
+  grep -v '^BINANCE_LIVE_API_KEY=\|^BINANCE_LIVE_API_SECRET=\|^LOTTERY_LIVE=' "$ENV_FILE" > "$TMP_ENV" || true
+fi
 printf 'BINANCE_LIVE_API_KEY=%s\nBINANCE_LIVE_API_SECRET=%s\nLOTTERY_LIVE=0\n' \
-  "$KEY" "$SECRET" > "$ENV_FILE"
+  "$KEY" "$SECRET" >> "$TMP_ENV"
+mv "$TMP_ENV" "$ENV_FILE"
 chmod 600 "$ENV_FILE"
 chown root:root "$ENV_FILE"
 echo "Saved to $ENV_FILE (readable by root only). Not armed yet."
@@ -58,7 +67,7 @@ All good. Next, run ONE cycle and read what it says:
     systemctl start lottery.service
     systemctl status lottery.service --no-pager
 
-If that looks right, go live every 10 minutes:
+If that looks right, go live every 5 minutes:
 
     systemctl enable --now lottery.timer
 EOF

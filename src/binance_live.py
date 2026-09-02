@@ -951,8 +951,38 @@ STOP_REPLACE_EPS = 0.005  # only re-place when the floor moves >0.5%: the
 
 
 def exchange_stops_armed() -> bool:
-    """Both the live-trading arm AND its own opt-in. Neither implies the other."""
-    return armed() and os.getenv("LOTTERY_EXCHANGE_STOPS", "") == "1"
+    """Live-trading arm AND not explicitly disabled.
+
+    OPT-OUT since 2026-09-02 (was opt-in, never flipped): the 09-01 wedge
+    left an all-in seat with nothing between it and zero for 30h+, and the
+    37-trade replay shows a resting hard stop is P&L-neutral (+$0.81) while
+    it caps the outage tail at -6%. LOTTERY_EXCHANGE_STOPS=0 restores the
+    poll-only path. Its own flag never arms live trading.
+    """
+    return armed() and os.getenv("LOTTERY_EXCHANGE_STOPS", "1").strip() != "0"
+
+
+def client_id(prefix: str, symbol: str) -> str:
+    """A newClientOrderId this book can recognise as ITS OWN. The account is
+    shared with the owner's other holdings and resting orders: an order
+    lookup without this tag could adopt or cancel one of theirs. Binance
+    allows <=36 chars of [a-zA-Z0-9-_]."""
+    return f"{prefix}-{symbol}-{int(time.time() * 1000) % 10_000_000_000}"[:36]
+
+
+def order_by_client(symbol: str, cid: str) -> dict | None:
+    if not armed() or not cid:
+        return None
+    return _call("GET", "/v3/order",
+                 {"symbol": symbol, "origClientOrderId": cid}, signed=True)
+
+
+def cancel_by_client(symbol: str, cid: str) -> bool:
+    if not armed() or not cid:
+        return False
+    r = _call("DELETE", "/v3/order",
+              {"symbol": symbol, "origClientOrderId": cid}, signed=True)
+    return bool(r)
 
 
 def symbol_filters(symbol: str) -> dict:
@@ -1009,7 +1039,10 @@ def resting_stop(symbol: str) -> dict | None:
         return None
     orders = _call("GET", "/v3/openOrders", {"symbol": symbol}, signed=True)
     for o in orders or []:
-        if o.get("side") == "SELL" and "STOP" in str(o.get("type", "")):
+        # ONLY orders this book tagged: the owner's own stop on the same
+        # coin must never be adopted, cancelled, or counted as ours.
+        if o.get("side") == "SELL" and "STOP" in str(o.get("type", "")) \
+                and str(o.get("clientOrderId", "")).startswith("lotstop-"):
             return o
     return None
 
@@ -1073,6 +1106,7 @@ def place_protective_stop(symbol: str, qty: float,
     use_market = "STOP_LOSS" in (f.get("order_types") or [])
     params = {"symbol": symbol, "side": "SELL",
               "type": "STOP_LOSS" if use_market else "STOP_LOSS_LIMIT",
+              "newClientOrderId": client_id("lotstop", symbol),
               "quantity": f"{q:.8f}".rstrip("0").rstrip("."),
               "stopPrice": f"{stop:.10f}".rstrip("0").rstrip(".")}
     if not use_market:
@@ -1086,7 +1120,7 @@ def place_protective_stop(symbol: str, qty: float,
         return None
     out = {"order_id": str(resp.get("orderId", "")), "stop": stop,
            "limit": None if use_market else limit, "qty": q,
-           "type": params["type"]}
+           "type": params["type"], "client_order_id": params["newClientOrderId"]}
     log({"event": "stop_placed", "symbol": symbol, **out})
     print(f"[lottery-live] protective stop resting on {symbol} @ {stop}")
     return out
@@ -1104,7 +1138,9 @@ def market(action: str, symbol: str, quote_qty: float | None = None,
              "reason": "not armed (LOTTERY_LIVE != 1) — market() is inert"})
         print(f"[lottery-live] market() called while not armed — refused")
         return None
-    params = {"symbol": symbol, "side": action.upper(), "type": "MARKET"}
+    cid = client_id("lot", symbol)
+    params = {"symbol": symbol, "side": action.upper(), "type": "MARKET",
+              "newClientOrderId": cid}
     if action.upper() == "BUY":
         # FLOOR to the cent, never round: an all-in BUY passes the exact
         # free balance, and round() half-up asked Binance for more than the
@@ -1129,9 +1165,9 @@ def market(action: str, symbol: str, quote_qty: float | None = None,
         # it). Leave a loud marker so the next cycle's ledger reconciliation
         # looks for an untracked position instead of trusting the void.
         log({"event": "order_unconfirmed", "action": action.upper(),
-             "symbol": symbol,
+             "symbol": symbol, "client_order_id": cid,
              "note": "POST returned nothing — order MAY have filled; "
-                     "reconcile against balances next cycle"})
+                     "next cycle asks the exchange by client_order_id"})
         return None
     fills = resp.get("fills") or []
     tq = sum(float(f["qty"]) for f in fills)
@@ -1142,7 +1178,7 @@ def market(action: str, symbol: str, quote_qty: float | None = None,
     avg = sum(float(f["price"]) * float(f["qty"]) for f in fills) / tq
     commission = sum(float(f.get("commission", 0) or 0) for f in fills)
     out = {"price": avg, "qty": tq, "order_id": str(resp.get("orderId", "")),
-           "commission": commission,
+           "client_order_id": cid, "commission": commission,
            "commission_asset": (fills[0].get("commissionAsset", "")
                                 if fills else "")}
     log({"event": "fill", "action": action.upper(), "symbol": symbol, **out})
