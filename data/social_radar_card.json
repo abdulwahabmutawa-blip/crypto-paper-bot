@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-02T06:00:36+00:00",
+ "updated": "2026-09-02T06:14:56+00:00",
  "spec": "x_chatter_precursors_2026-08-23",
  "n_rows_total": 6,
  "n_scored_excess_24h": 5,
@@ -62,13 +62,19 @@
   "H4_occurred_catalyst_fades": {
    "note": "occurred vs pending, 72h",
    "horizon_h": 72,
-   "group_true": null,
+   "group_true": {
+    "n": 1,
+    "hit": 0.0,
+    "mean": -0.03435,
+    "median": -0.03435
+   },
    "group_false": {
     "n": 3,
     "hit": 0.0,
     "mean": -0.03861,
     "median": -0.00508
-   }
+   },
+   "edge_pp": 0.43
   },
   "H5_volatility_gate": {
    "note": "BTC 24h realized vol high vs low",
