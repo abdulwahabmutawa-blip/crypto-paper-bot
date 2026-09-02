@@ -1,10 +1,10 @@
 {
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "holding": "ARB-USD",
-  "units": 3693024.211441071,
+  "holding": "DELL",
+  "units": 5.18847736076287,
   "cash": 0.0,
-  "entry_price": 0.0006290287710726261,
+  "entry_price": 445.8699951171875,
   "bench_units": 1.332054612938296,
   "stopped": {
     "SHIB-USD": "2026-07-27T00:01:08+00:00",
@@ -618,6 +618,26 @@
       "value": 2323.02,
       "fee": 6.76,
       "reason": "Grok: ARB euphoric \u2014 Robinhood Chain revenue surge (scan 2026-09-01T13:55)"
+    },
+    {
+      "date": "2026-09-02",
+      "action": "SELL",
+      "ticker": "ARB-USD",
+      "price": 0.00062903,
+      "units": 3693024.2114,
+      "value": 2323.02,
+      "fee": 6.74,
+      "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
+    },
+    {
+      "date": "2026-09-02",
+      "action": "BUY",
+      "ticker": "DELL",
+      "price": 445.86999512,
+      "units": 5.1885,
+      "value": 2313.39,
+      "fee": 2.9,
+      "reason": "Grok: DELL euphoric \u2014 Earnings beat, premarket surge (scan 2026-09-02T15:06)"
     }
   ],
   "history": [
@@ -846,18 +866,12 @@
     },
     {
       "date": "2026-09-02",
-      "value": 2323.02,
-      "bench": 1019.8,
-      "holding": "ARB-USD"
+      "value": 2313.39,
+      "bench": 1019.59,
+      "holding": "DELL"
     }
   ],
   "intraday": [
-    {
-      "ts": "2026-08-16T17:44:14+00:00",
-      "value": 1326.92,
-      "bench": 1034.13,
-      "holding": "CASH"
-    },
     {
       "ts": "2026-08-16T17:57:37+00:00",
       "value": 1326.92,
@@ -9851,9 +9865,15 @@
       "value": 2323.02,
       "bench": 1019.8,
       "holding": "ARB-USD"
+    },
+    {
+      "ts": "2026-09-02T15:06:52+00:00",
+      "value": 2313.39,
+      "bench": 1019.59,
+      "holding": "DELL"
     }
   ],
-  "last_updated_utc": "2026-09-02T14:52:32+00:00",
+  "last_updated_utc": "2026-09-02T15:06:52+00:00",
   "restatement": {
     "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)",
     "voided_trades": [
@@ -9932,5 +9952,5 @@
     ],
     "voided_reason": "signal faded before any real fill was possible (market closed the whole window) \u2014 trades could never have existed"
   },
-  "costs_paid": 93.1884
+  "costs_paid": 102.8206
 }
