@@ -1,7 +1,7 @@
 {
- "updated": "2026-09-02T11:55:23+00:00",
+ "updated": "2026-09-02T21:56:49+00:00",
  "spec": "x_chatter_precursors_2026-08-23",
- "n_rows_total": 6,
+ "n_rows_total": 7,
  "n_scored_excess_24h": 6,
  "objective": "BTC-excess 24h",
  "hit_threshold": 0.03,
@@ -76,12 +76,12 @@
     "median": -0.03435
    },
    "group_false": {
-    "n": 3,
+    "n": 4,
     "hit": 0.0,
-    "mean": -0.03861,
-    "median": -0.00508
+    "mean": -0.02376,
+    "median": 0.02079
    },
-   "edge_pp": 0.43
+   "edge_pp": -1.06
   },
   "H5_volatility_gate": {
    "note": "BTC 24h realized vol high vs low",
@@ -121,10 +121,10 @@
    "note": "all-new handles vs familiar, 72h",
    "horizon_h": 72,
    "group_true": {
-    "n": 3,
+    "n": 4,
     "hit": 0.0,
-    "mean": -0.03861,
-    "median": -0.00508
+    "mean": -0.02376,
+    "median": 0.02079
    },
    "group_false": null
   },
