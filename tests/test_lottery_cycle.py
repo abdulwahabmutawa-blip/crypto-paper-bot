@@ -336,14 +336,41 @@ def test_turbo_hop_ignores_benched_candidate(cycle):
     assert cycle["state"]()["held_symbol"] == "BERAUSDT"
 
 
-def test_turbo_hop_takes_actionable_candidate(cycle):
+def test_turbo_hop_is_gone_even_for_actionable_candidate(cycle):
     (cycle["data"] / "TURBO_MODE").write_text("on")
     cycle["seat"](score=0.60, hours_held=2.0)
     cycle["scout"](symbol="ZKCUSDT", signal="breakout", actionable=True,
                    score=0.95)
     _completes(cycle)
+    assert not _sells(cycle), "TURBO HOP was removed 2026-09-03"
+
+
+def test_stale_scan_tightens_leash_instead_of_selling(cycle):
+    st = cycle["seat"]()
+    st["hwm"] = 0.1837 * 1.08
+    cycle["ll"].STATE.write_text(json.dumps(st))
+    (cycle["data"] / "sentinel_state.json").write_text(json.dumps({"scans": [
+        {"ts": "2026-08-01T00:00:00+00:00", "risk_level": "caution", "crypto_hype": []}]}))
+    cycle["price"] = 0.1837 * 1.04          # 3.7% off peak: inside the leash
+    _completes(cycle)
+    assert not _sells(cycle) and cycle["state"]().get("fade_flagged")
+    cycle["price"] = 0.1837 * 1.08 * 0.89   # 11% off peak: leash fires
+    cycle["ll"].main()
     assert len(_sells(cycle)) == 1
-    assert cycle["state"]()["realized"][-1]["reason"].startswith("TURBO HOP")
+    assert cycle["state"]()["realized"][-1]["reason"].startswith("LEASH")
+
+
+def test_fees_are_netted_into_pnl(cycle):
+    cycle["cash"]()
+    cycle["scout"]()
+    _completes(cycle)
+    st = cycle["state"]()
+    st["entry_fee_usd"] = 0.03
+    cycle["ll"].STATE.write_text(json.dumps(st))
+    cycle["price"] = cycle["price"] * 0.93
+    cycle["ll"].main()
+    r = cycle["state"]()["realized"][-1]
+    assert r["fees_usd"] >= 0.03 and r["pnl_usd"] <= (r["got_usd"] - r["spent_usd"]) - 0.03
 
 
 # --- exchange-resting stop: the units are LOCKED while it rests ------------

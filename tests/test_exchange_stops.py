@@ -46,21 +46,13 @@ assert bl.protective_floor(0, None, -0.10) is None
 assert abs(bl.protective_floor(e, None, -0.10) - e * 0.90) < 1e-9
 assert abs(bl.protective_floor(e, None, -0.06) - e * 0.94) < 1e-9
 
-# the AXSUSDT replay: at its real +11.8% peak the floor is +5.9%
-axs = bl.protective_floor(e, e * 1.118, -0.10)
-assert abs(axs / e - 1 - 0.059) < 1e-6, (axs / e - 1)
-# ...which is 4.6 points above where the poll actually filled it
-assert axs / e - 1 > 0.0129 + 0.045
-
-# the floor never sits below what the poll path would defend
+# 2026-09-03: ONLY the hard stop rests at the exchange (a resting ratchet
+# wicked ZEC out of a +31% ride at +6% in the replay); the poll path keeps
+# the ratchet and the 10% trail.
 for mfe in (0.0, 0.02, 0.04, 0.08, 0.12, 0.5, 1.2):
-    hwm = e * (1 + mfe)
-    f = bl.protective_floor(e, hwm, -0.10)
-    assert f >= e * 0.90 - 1e-9, "never below the hard stop"
-    r = bl.ratchet_stop(e, hwm)
-    if r:
-        assert f >= r - 1e-9, "never below the ratchet"
-    assert f >= hwm * (1 + bl.trail_pct(mfe)) - 1e-9, "never below the trail"
+    f = bl.protective_floor(e, e * (1 + mfe), -0.10)
+    assert abs(f - e * 0.90) < 1e-9, "resting floor must be the hard stop only"
+assert bl.trail_pct(0.05) == -0.15 and bl.trail_pct(0.10) == -0.10 and bl.trail_pct(1.5) == -0.10
 
 # the floor is monotonic in the peak: a ride that climbs never loosens
 prev = 0.0

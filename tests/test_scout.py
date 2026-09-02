@@ -216,8 +216,11 @@ try:
     new = {"ts": "2026-08-16T10:00:00+00:00", "symbol": "BUSDT",
            "signal": "ignition", "price": 1.0, "ruleset": sc.RULESET,
            "ret_1h": -0.05, "ret_4h": -0.05, "ret_24h": -0.05}
+    # three DISTINCT symbols: since 2026-09-03 the card thins to one row per
+    # symbol-day (re-flags of one episode are not three observations)
+    news = [dict(new, symbol=s) for s in ("BUSDT", "CUSDT", "DUSDT")]
     sc.LOG.write_text("\n".join([json.dumps(old)] * 20
-                                + [json.dumps(new)] * 3) + "\n")
+                                + [json.dumps(r) for r in news]) + "\n")
     card, rows = sc.resolve_outcomes(datetime(2026, 8, 18, 11, 0,
                                               tzinfo=timezone.utc))
     ign = card["signals"]["ignition"]

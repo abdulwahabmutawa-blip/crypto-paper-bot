@@ -137,9 +137,10 @@ assert g["max_hold_h"] == 672.0, \
 
 # progressive trail: the bigger the gain, the tighter the leash
 assert bl.trail_pct(0.0) == -0.15 and bl.trail_pct(None) == -0.15
-assert bl.trail_pct(0.6) == -0.10, "past +50% the leash tightens"
-assert bl.trail_pct(1.5) == -0.08, "past +100% tighter still (+500% events " \
-    "kept only -58% at 30d — big gains die most completely)"
+# 2026-09-03: flat 10% from peak once the ride has paid +10% (the old
+# -15% leash was dead code below +43%; a 10% trail scored best in replay)
+assert bl.trail_pct(0.10) == -0.10 and bl.trail_pct(0.6) == -0.10
+assert bl.trail_pct(1.5) == -0.10, "one leash once armed; the ratchet is the lower bound"
 b = bl.exit_params("scout:ignition")
 # ignition earned the day-scale clock: its own scorecard shows +4.67% mean
 # at 24h (90% hit, n=30) vs +1.47% at 4h - an 8h clock exited at hour 5
@@ -148,9 +149,10 @@ b = bl.exit_params("scout:ignition")
 # >half-move only 10.6%; the tape exits fire first, the cap is a net)
 assert b["kind"] == "burst" and b["max_hold_h"] == 48.0 \
     and b["stall_h"] == 4.0 and b["stop_pct"] == -0.06
-# breakout gets 24h (from 8h), not ignition's 48h: its 24h record is weak
+# 2026-09-03: every scout burst seat gets 48h (replay: the core's edge sits
+# in hours 24-48; first +15% arrives at a median 36.9h)
 bb = bl.exit_params("scout:breakout")
-assert bb["max_hold_h"] == 24.0 and bb["stall_h"] == 2.0
+assert bb["max_hold_h"] == 48.0 and bb["stall_h"] == 2.0
 h = bl.exit_params("watcher")
 assert h["kind"] == "hype" and h["max_hold_h"] == 24.0 \
     and h["stall_h"] == 6.0

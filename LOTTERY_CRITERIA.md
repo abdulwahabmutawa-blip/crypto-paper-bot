@@ -109,3 +109,33 @@ and Grok sentiment are explicitly not keys (forensics: corr(score,pnl)
 - Every use is ledger-tagged `breaker_override`. **Pre-registered
   evaluation: at 09-30 or after 6 override trades, whichever first — the
   ticket survives only if its own net P&L is positive.**
+
+## Owner sign-off 2026-09-03 — after the 2026-09-02 diagnostic ("fix it")
+
+Basis: 191-agent diagnostic, 81 adversarially verified findings, 37-trade
+exit replay. Shipped together, no RULESET bump (exit/guard/label changes):
+
+- **Exits are price rules only.** FUEL GONE, MOMENTUM GONE and TURBO HOP are
+  deleted as sell paths. Watcher SEVERE, stale scans and hype-faded now only
+  tighten the leash (10% off peak) and let price decide.
+- **Trail** is a flat 10% from peak once MFE >= +10%; below that the -6%
+  stop and the ratchet (arm +10%, keep 50%) own the seat. Only the hard stop
+  rests at the exchange.
+- **Max hold 48h** for every scout seat. **2 entries per UTC day** (+1 on a
+  wave day). Circuit breaker on a **rolling 24h** window.
+- **P&L is net of fees** (`fees_usd` on every realized row); every
+  pre-registered test is judged on the net number.
+- **Book peak on a cost basis** (held units at entry price) so the 62.5%
+  floor measures trading, not deposits or unrealized spikes.
+- **Gate labels**: rows carry BTC at flag time; the card reports the mean of
+  per-UTC-day BTC-excess returns and the day count; arming needs >= 8 days
+  and an excess mean above 4x the round trip. ROLL_CAP now thins per
+  symbol-day instead of truncating the window.
+- **Heat lane retired** from the real book (observation only).
+- **TURBO MODE deleted** (11 RTs, -$4.96 gross / -$5.72 net; P(pass) 2-8%,
+  expected cost of finishing the test ~ -$4). Futility bound recorded: no
+  pre-registered evaluation continues once its expected completion cost
+  exceeds its possible gain.
+
+Evaluation at the 2026-09-30 checkpoint unchanged: every signal on its own
+net record; keep / stop / resize is the owner's call.

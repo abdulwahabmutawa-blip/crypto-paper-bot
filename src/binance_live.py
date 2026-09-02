@@ -340,7 +340,7 @@ MIN_RANGE_24H_AT_ENTRY = 0.05  # [EVIDENCE — 08-17 LTC] a round trip costs
 # guardrail rescales itself and NO rule in this system references a dollar
 # amount any more. 0.625 = the original 25/40 ratio, unchanged protection.
 BOOK_FLOOR_FRAC = 0.625      # no entries below 62.5% of the book's peak
-BASE_ENTRIES_PER_DAY = 3
+BASE_ENTRIES_PER_DAY = 2   # 2026-09-03: cadence is the risk control
 WAVE_BONUS_ENTRIES = 1
 
 
@@ -417,8 +417,10 @@ def exit_params(source: str | None) -> dict:
     if src.startswith("scout:"):
         # 8h -> 24h for the same reason; breakout's own 24h record is weak,
         # so it does not get ignition's 48h
+        # 2026-09-03: 48h like ignition (replay: the core's edge sits in
+        # hours 24-48; first +15% arrives at a median 36.9h)
         return {"kind": "burst", "stop_pct": -0.06, "stall_h": 2.0,
-                "max_hold_h": 24.0, "momentum_exit": momentum_exit}
+                "max_hold_h": 48.0, "momentum_exit": momentum_exit}
     return {"kind": "hype", "stop_pct": -0.10, "stall_h": 6.0,
             "max_hold_h": 24.0, "momentum_exit": momentum_exit}
 
@@ -814,10 +816,11 @@ def trail_pct(gain: float | None) -> float:
     events kept -24% at 30d, +500%+ kept -58%: the bigger the pump, the
     more completely it dies, so protecting a big gain matters more than
     stretching for its tail. gain = high-water-mark / entry - 1."""
+    # 2026-09-03 (owner sign-off): flat 10% from peak once the ride has paid
+    # +10%; the old -15% leash was dead code below +43% (grid: identical
+    # results on/off in all 24 rows). Below the arm the -6% stop owns it.
     g = gain or 0.0
-    if g >= 1.0:
-        return -0.08
-    if g >= 0.5:
+    if g >= 0.10:
         return -0.10
     return -0.15
 
@@ -1024,13 +1027,30 @@ def protective_floor(entry: float | None, hwm: float | None,
     """
     if not entry or entry <= 0:
         return None
-    floors = [entry * (1.0 + stop_pct)]
-    if hwm and hwm > 0:
-        floors.append(hwm * (1.0 + trail_pct(hwm / entry - 1.0)))
-        r = ratchet_stop(entry, hwm)
-        if r:
-            floors.append(r)
-    return max(floors)
+    # 2026-09-03 (owner sign-off): ONLY the hard stop rests at the exchange.
+    # Resting the ratchet/trail let a single wick close ZEC's +31% ride at
+    # +6% (replay: -$8.91 on one trade); the poll rules keep those levels.
+    return entry * (1.0 + stop_pct)
+
+
+def fee_usd(fill: dict, symbol: str, px: float | None) -> float:
+    """Commission of one fill priced in USDT: USDT as-is, the coin at the
+    fill price, BNB at its ticker (fetched once per call)."""
+    try:
+        c = float(fill.get("commission") or 0.0)
+    except Exception:
+        return 0.0
+    if c <= 0:
+        return 0.0
+    asset = str(fill.get("commission_asset") or "")
+    if asset == "USDT":
+        return round(c, 6)
+    if asset and symbol and symbol.startswith(asset) and px:
+        return round(c * px, 6)
+    if asset == "BNB":
+        p = price("BNBUSDT")
+        return round(c * p, 6) if p else 0.0
+    return 0.0
 
 
 def resting_stop(symbol: str) -> dict | None:

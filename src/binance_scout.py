@@ -235,7 +235,7 @@ ROLL_DAYS = 14.0            # FIX 08-24: the rolling window is now TIME-based.
                             # almost the same 24h forward window. The card
                             # still tracks what a signal IS, not what it once
                             # was - it just measures it over real time.
-ROLL_CAP = 400              # memory ceiling inside the time window
+ROLL_CAP = 2000             # memory ceiling AFTER symbol-day thinning (2026-09-03)
 RESIGNAL_COOLDOWN_H = 3.0   # [EVIDENCE — log autopsy 08-16] BICO was flagged
                             # 5x in 70 min while falling, BCH 4x, U 5x. One
                             # event, five rows: pseudo-replication pollutes
@@ -243,6 +243,7 @@ RESIGNAL_COOLDOWN_H = 3.0   # [EVIDENCE — log autopsy 08-16] BICO was flagged
 # THE GATE — what a signal type must show (current ruleset, rolling window)
 # before the real-money book may act on its candidates:
 MIN_ACT_SAMPLES = 12        # [JUDGEMENT] fewer is a coin-flip streak
+MIN_ACT_DAYS = 8            # 2026-09-03: distinct UTC days in the record
 MIN_ACT_NEFF = 8.0          # FIX 08-24: INDEPENDENT windows, not raw rows.
                             # 30 signals fired inside 9 hours and each scored
                             # by its next 24h are ~1 observation repeated 30
@@ -609,6 +610,18 @@ def signal_actionable(card: dict, signal: str) -> tuple[bool, str]:
                        f"independent {h}h windows "
                        f"(span {s.get(f'span_h_{h}h', 0):.0f}h): overlapping "
                        f"labels are not a sample")
+    # DAY-CLUSTERED + BTC-EXCESS bar (2026-09-03): when the card carries
+    # them, the record must span >= MIN_ACT_DAYS UTC days and the mean of
+    # per-day BTC-excess returns must beat fees. Cards without these fields
+    # (older rows, tests) fall back to the row statistics below.
+    days = s.get(f"days_{h}h")
+    if days is not None and days < MIN_ACT_DAYS:
+        return False, (f"probation — record spans {days} UTC days "
+                       f"(need {MIN_ACT_DAYS}): regime luck, not a signal")
+    mean_x = s.get(f"mean_x_{h}h")
+    if mean_x is not None and mean_x < FEE_K * ROUND_TRIP:
+        return False, (f"benched — BTC-excess day mean {mean_x:+.2%} at "
+                       f"{h}h: market beta, not signal")
     hit = s.get(f"hit_rate_{h}h", 0.0)
     mean = s.get(f"mean_ret_{h}h", 0.0)
     # FEE_K x fees, not 1x: a mean that only matches the round trip is
@@ -881,10 +894,14 @@ def log_candidates(cands: list[dict], now: datetime) -> None:
     """Full features per row (autopsy 08-16: the first analysis had to dig
     features back out of git history — the log should carry its own
     evidence)."""
+    try:
+        _btc = binance_data.price("BTCUSDT") if cands else None
+    except Exception:
+        _btc = None
     with LOG.open("a", encoding="utf-8") as fh:
         for c in cands:
             fh.write(json.dumps({
-                "ts": now.isoformat(timespec="seconds"),
+                "ts": now.isoformat(timespec="seconds"), "btc": _btc,
                 "symbol": c["symbol"], "signal": c["signal"],
                 "score": round(c["score"], 4), "price": c["price"],
                 "ruleset": RULESET, "actionable": c.get("actionable"),
@@ -938,13 +955,16 @@ def resolve_outcomes(now: datetime) -> tuple[dict, list[dict]]:
             elif age_h >= h:
                 pending.setdefault(r["symbol"], []).append((r, h))
     if pending:
-        px = binance_data.prices(list(pending)[:100])
+        px = binance_data.prices(list(pending)[:100] + ["BTCUSDT"])
+        _btc_now = px.get("BTCUSDT")
         for sym, items in pending.items():
             p_now = px.get(sym)
             if p_now:
                 for r, h in items:
                     if r.get("price"):
                         r[f"ret_{h}h"] = round(p_now / r["price"] - 1.0, 5)
+                        if _btc_now and r.get("btc"):
+                            r[f"btc_{h}h"] = _btc_now
                         changed = True
             elif px:
                 # others priced fine -> this symbol itself is the problem
@@ -975,9 +995,21 @@ def resolve_outcomes(now: datetime) -> tuple[dict, list[dict]]:
                 t = _ts(r.get("ts"))
                 if t is None or (now - t).total_seconds() > ROLL_DAYS * 86400:
                     continue
-                pairs.append((t, r[f"ret_{h}h"]))
+                pairs.append((t, r[f"ret_{h}h"], r.get("symbol")))
             pairs.sort()
-            pairs = pairs[-ROLL_CAP:]
+            # FIX 2026-09-03: ROLL_CAP used to keep the LAST 400 rows, which
+            # truncated the 14-day window to ~144h and locked ignition out of
+            # the gate for ever. Thin per symbol-day instead (one row per
+            # episode), then cap.
+            _seen = set()
+            _thin = []
+            for t, x, sym in pairs:
+                k = (sym, t.date())
+                if k in _seen:
+                    continue
+                _seen.add(k)
+                _thin.append((t, x))
+            pairs = _thin[-ROLL_CAP:]
             rets = [x for _t, x in pairs]
             if rets:
                 span_h = ((pairs[-1][0] - pairs[0][0]).total_seconds() / 3600.0
@@ -1009,6 +1041,30 @@ def resolve_outcomes(now: datetime) -> tuple[dict, list[dict]]:
                     if len(a) >= 3 and len(b) >= 3:
                         entry[f"both_halves_{h}h"] = bool(
                             sum(a) / len(a) > 0 and sum(b) / len(b) > 0)
+                # DAY-CLUSTERED, BTC-EXCESS (owner sign-off 2026-09-03): raw
+                # row means armed breakout on a BTC surge (08-19..21 rows
+                # +6.5%, all others -0.3%). The gate now reads the mean of
+                # per-UTC-day means of the BTC-excess return, over >= 8 days.
+                _by_day = {}
+                for t, x in pairs:
+                    _by_day.setdefault(t.date(), []).append(x)
+                entry[f"days_{h}h"] = len(_by_day)
+                _xs = []
+                for r in live:
+                    if r.get("signal") != sig or r.get(f"ret_{h}h") is None:
+                        continue
+                    if r.get("btc") and r.get(f"btc_{h}h"):
+                        _t2 = _ts(r.get("ts"))
+                        if _t2 is not None and (now - _t2).total_seconds() <= ROLL_DAYS * 86400:
+                            _xs.append((_t2, r[f"ret_{h}h"]
+                                        - (r[f"btc_{h}h"] / r["btc"] - 1.0)))
+                if len(_xs) >= 6:
+                    _bd = {}
+                    for t, x in _xs:
+                        _bd.setdefault(t.date(), []).append(x)
+                    _xm = [sum(v) / len(v) for v in _bd.values()]
+                    entry[f"mean_x_{h}h"] = round(sum(_xm) / len(_xm), 5)
+                    entry[f"days_x_{h}h"] = len(_xm)
                 wins = [x for x in rets if x > 0]
                 losses = [x for x in rets if x < 0]
                 if wins:

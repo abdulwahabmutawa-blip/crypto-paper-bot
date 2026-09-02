@@ -550,7 +550,11 @@ def main():
         # (review 08-23) and would have tripped the circuit breaker
         spent = round(entry_px * fill["qty"], 4) if entry_px else None
         got = round(exit_px * fill["qty"], 4)
-        pnl_usd = round(got - spent, 4) if spent is not None else None
+        # FEES NETTED (owner sign-off 2026-09-03): $2.64 of commissions were
+        # invisible to pnl_usd, the breaker and every pre-registered test.
+        fees = float(st.get("entry_fee_usd") or 0.0) + binance_live.fee_usd(
+            fill, held, exit_px)
+        pnl_usd = round(got - spent - fees, 4) if spent is not None else None
         rec = {"symbol": held,
                # source recorded since 08-19: the per-source review had to
                # reconstruct it from git history of the state file, and the
@@ -563,7 +567,7 @@ def main():
                "entry_price": entry_px, "exit_price": exit_px,
                "units": round(u, 8), "spent_usd": spent, "got_usd": got,
                "pnl_pct": round(pnl, 2) if pnl is not None else None,
-               "pnl_usd": pnl_usd, "reason": reason,
+               "pnl_usd": pnl_usd, "fees_usd": round(fees, 4), "reason": reason,
                "date": today, "exit": exit_px, "entry": entry_px}
         st["realized"].append(rec)
         binance_live.log({"event": "exit", "symbol": held, "reason": reason,
@@ -583,6 +587,8 @@ def main():
         st["spent_usd"] = None
         st.pop("hwm", None)
         st.pop("entry_time", None)
+        st.pop("entry_fee_usd", None)
+        st.pop("fade_flagged", None)
         for _k in ("move_max_qv", "move_qv_sum", "move_qv_n",
                    "move_last_ms"):
             st.pop(_k, None)
@@ -613,10 +619,18 @@ def main():
         cycle test in tests/test_lottery_cycle.py now runs main() end to end
         against a mocked exchange so this class of bug cannot ship again.
         """
-        _today_real = [t for t in st.get("realized", [])
-                       if t.get("date") == today]
-        _b = binance_live.circuit_breaker_reason(
-            _today_real, st.get("book_hwm_usd"))
+        # ROLLING 24h (owner sign-off 2026-09-03): the UTC-date window gave
+        # 6h/11h/22h of cooling-off after the three halts.
+        _win = []
+        for t in st.get("realized", []):
+            try:
+                _dt = datetime.fromisoformat(str(t.get("exit_time")))
+                if (now - _dt).total_seconds() <= 86400:
+                    _win.append(t)
+            except Exception:
+                if t.get("date") == today:
+                    _win.append(t)
+        _b = binance_live.circuit_breaker_reason(_win, st.get("book_hwm_usd"))
         _u = None
         try:
             _tail = []
@@ -768,123 +782,46 @@ def main():
                     f"{hwm:.8g} peak, leash {tp:.0%}) — riding it down is "
                     f"not the strategy"):
                 held = None
-        # FUEL GONE (owner-directed 08-21, replaces the stall CLOCK): the
-        # exit audit proved stalls were the book's signature early-exit
-        # machine (+1.6% avg giveback, +5.5% avg post-exit run — selling
-        # correctly identified moves 2-4h into 24-48h resolutions, while
-        # BTC made +22% and this book -7%). A clock knows nothing about a
-        # thesis; this judges the thesis itself: exit only when the volume
-        # surge that justified the entry is measurably dead AND the seat
-        # never paid AND the market pulse is not in a wave regime (waves
-        # re-ignite coins — the stop/ratchet/trailing leash still protect).
-        # stall_h now only marks WHICH seats are thesis-checked (burst/hype
-        # seats; grind seats keep None and are exempt, unchanged).
-        if held and p and entry and stall_h is not None:
-            entry_ms = None
-            try:
-                entry_ms = int(datetime.fromisoformat(
-                    st["entry_time"]).timestamp() * 1000)
-            except Exception:
-                pass
-            # OWNER DECISION 2026-08-31 (forensics rec 3): fuel-gone may
-            # not judge a seat younger than 4h. Volume naturally lulls in
-            # the hours after an ignition bar, and the winners' median time
-            # to first +15% was 88 HOURS — reading an hour-two lull as a
-            # dead thesis is the stall clock wearing a new hat. The stop,
-            # ratchet and trailing leash cover the seat meanwhile.
-            if entry_ms and held_h is not None and held_h >= 4.0:
-                why = binance_live.fuel_verdict(
-                    binance_live.fuel_surge(held, entry_ms),
-                    p / entry - 1, wave_fresh())
-                if why and sell(why):
-                    held = None
+        # FUEL GONE removed 2026-09-03 (owner sign-off): 0/6, -$6.85 realized;
+        # replay: a 4h clock in a volume hat (+$18 saved / -$22 given up).
+        # Price rules (stop, ratchet, 10% trail, max hold) own the exit.
         # hard time cap: never marry a coin
         if held and held_h is not None and held_h >= max_hold:
             if sell(f"MAX HOLD ({held_h:.0f}h) — hype has a half-life"):
                 held = None
-        # Momentum decay — ONLY for entries whose thesis was "it is a top
-        # mover" (gainer/adopted/scout:breakout). An ignition entry has by
-        # definition NOT moved yet, so judging it by top-25 membership would
-        # sell it one cycle after buying, every time; its stall clock covers
-        # the fizzle case. Watcher hype rides are judged by scans, not rank.
-        src = str(st.get("entry_source") or "")
-        # per-seat: only theses built on 24h leadership die with it (bug
-        # fix 08-20: breakout seats were on this list and got ejected 6
-        # minutes after entry, every time - see binance_live.exit_params)
-        if held and ep.get("momentum_exit") \
-                and not in_top_gainers(held, n=25):
-            if sell("MOMENTUM GONE — no longer a top-25 24h mover"):
-                held = None
+        # NON-PRICE SIGNALS TIGHTEN THE LEASH, NEVER SELL (owner sign-off
+        # 2026-09-03; replay: clock/sentiment/rotation exits gave up ~$36 vs
+        # the mechanical core; Grok-stale sold WLD on an API-budget bug).
+        # Momentum-gone, Watcher SEVERE, stale scans and hype-faded all set
+        # fade_flagged; the 10%-off-peak leash below then lets PRICE decide.
+        _flag_why = None
+        if held and ep.get("momentum_exit") and not in_top_gainers(held, n=25):
+            _flag_why = "no longer a top-25 24h mover"
         if held and severe:
-            if sell("Watcher SEVERE — lottery closes in a crisis"):
-                held = None
+            _flag_why = "Watcher SEVERE"
         if held and stale:
-            if sell(f"Grok scans stale "
-                    f"({'?' if age_h is None else f'{age_h:.0f}'}h) — "
-                    f"risk officer blind, book grounded"):
-                held = None
-        if held and st.get("entry_source") == "watcher" and not stale \
-                and scan_ts and st.get("entry_scan_ts") \
-                and scan_ts > st["entry_scan_ts"]:
+            _flag_why = "Grok scans stale"
+        if (held and st.get("entry_source") == "watcher" and not stale
+                and scan_ts and st.get("entry_scan_ts")
+                and scan_ts > st["entry_scan_ts"]):
             hype_now = {c.replace("-USD", "") + "USDT"
                         for c in crypto_candidates(scan)}
             if held not in hype_now:
-                # OWNER DECISION 2026-08-31 (forensics rec 3): a Grok list
-                # diff is sentiment, not price, and this rule was the
-                # book's single worst money-loser — 7 exits, -$10.41 of
-                # forward P&L, avg +10.7% given up in the next 24h. It
-                # sold PUMP at -1.9% before a +47% run and CHIP at the
-                # panic low twice. It no longer market-sells: it tightens
-                # the leash to 6% off the peak and lets PRICE decide. The
-                # trailing/ratchet/stop rules below own the exit.
-                _fade_floor = hwm * 0.94 if hwm else None
-                if _fade_floor and p and p <= _fade_floor:
-                    if sell("Hype faded + price confirmed (6% off peak) — "
-                            "sentiment gone AND the tape agrees"):
-                        held = None
-                elif not st.get("fade_flagged"):
-                    st["fade_flagged"] = True
-                    binance_live.log({"event": "fade_tighten",
-                                      "symbol": held,
-                                      "reason": "off the euphoric scan; "
-                                                "leash tightened to 6%, "
-                                                "no market sell"})
-                    print(f"[{KEY}] hype faded on {held} — leash tightened "
-                          f"to 6% off peak (no market sell)")
+                _flag_why = "off the euphoric scan"
+        if held and _flag_why and not st.get("fade_flagged"):
+            st["fade_flagged"] = True
+            binance_live.log({"event": "fade_tighten", "symbol": held,
+                              "reason": f"{_flag_why}; leash tightened to "
+                                        f"10% off peak, no market sell"})
+            print(f"[{KEY}] {_flag_why} on {held} — leash 10% off peak")
+        if held and st.get("fade_flagged") and p and hwm and p <= hwm * 0.90:
+            if sell(f"LEASH ({(p / entry - 1):+.1%} vs peak "
+                    f"{(hwm / entry - 1):+.1%}) — thesis flagged and the "
+                    f"tape gave back 10%"):
+                held = None
 
-        # TURBO HOP (owner-directed 08-28): rotate into a fresh candidate
-        # that scores 25%+ above this seat's own entry score. Three
-        # frictions, each bought with the 08-27 post-exit study: 30min
-        # minimum hold (whipsaw), never hop out of a dip deeper than -3%
-        # (rotation exits sold troughs: +2.4% mean recovery after them),
-        # and the exit stamps the normal cooldown so the abandoned coin
-        # cannot boomerang. The buy happens next cycle through the full
-        # guard stack — a hop earns entry, it is not granted it.
-        if held and turbo and halt_why is None:
-            # REVIEW 2026-09-02: rank only candidates the ENTRY lane could
-            # actually take. The raw scout list is mostly benched signals
-            # (top candidate benched in 225/279 turbo-era cycles), and a
-            # hop that sells a live seat for a coin the next cycle refuses
-            # is a paid round trip into cash — and a bench bypass through
-            # the sell side, against the owner's 08-31 hard requirement.
-            _hop_block = set(st.get("stopped", {})) | set(
-                binance_live.retired_symbols(st.get("realized"),
-                                             st.get("book_hwm_usd")) or [])
-            _tc = _turbo_rank([c for c in scout_candidates()
-                               if c.get("actionable")
-                               and c.get("symbol") not in _hop_block])
-            _best = _tc[0] if _tc else None
-            if _best and _best["symbol"] != held                     and _best["symbol"] not in st.get("stopped", {})                     and held_h is not None and held_h >= 0.5:
-                _hs = float(st.get("entry_score") or 0.0)
-                _bs = float(_best.get("score") or 0.0)
-                _px = binance_live.price(held)
-                _pnl = (_px / entry - 1.0) if (_px and entry) else None
-                if _bs >= max(_hs * 1.25, _hs + 0.05)                         and _pnl is not None and _pnl > -0.03:
-                    if sell(f"TURBO HOP — {_best['symbol']} "
-                            f"({_best.get('signal')}) scores {_bs:.2f} vs "
-                            f"this seat's {_hs:.2f}; rotating"):
-                        held = None
-
+        # TURBO HOP removed 2026-09-03 (owner sign-off): hop keyed to a score
+        # with corr(score, pnl) -0.02; DASH->HOME chain -$1.94.
         # The seat survived every poll rule, so leave a floor resting AT the
         # exchange to cover the ~5 minutes until the next cycle. Last, so it
         # is only ever placed on a position that is genuinely still open.
@@ -927,8 +864,15 @@ def main():
          if binance_live.exchange_stops_armed() else None) or bals,
         st.get("held_symbol"), st.get("units"))
     if _val_now is not None:
+        # COST BASIS peak (owner sign-off 2026-09-03): the $58.43 peak was a
+        # deposit plus AXS marked at an unrealized +12.4%; the floor, day-loss
+        # and retire lines were calibrated to money never realized. Held
+        # units count at their entry price; deposits still raise the peak.
+        _cost_val = float(bals.get("USDT", 0.0)) + (
+            float(st.get("units") or 0.0) * float(st.get("entry_price") or 0.0)
+            if st.get("held_symbol") else 0.0)
         st["book_hwm_usd"] = round(
-            max(float(st.get("book_hwm_usd") or 0.0), _val_now), 4)
+            max(float(st.get("book_hwm_usd") or 0.0), _cost_val), 4)
     floor_why = binance_live.book_floor_reason(_val_now,
                                                st.get("book_hwm_usd"))
     if floor_why and not st.get("floor_flagged"):
@@ -1110,6 +1054,8 @@ def main():
                 # fought it lost. Turbo keeps its speed (8 entries/day, 1h
                 # cooldown, 25% LATE cap, hop) — it just may not override
                 # the scorecard.
+                if c.get("signal") == "heat":
+                    continue        # retired 2026-09-03: lagging, 0/2 real
                 if not c.get("actionable"):     # missing/null = NOT proven
                     print(f"[{KEY}] scout {c['symbol']} ({c['signal']}) "
                           f"is on the bench — "
@@ -1161,6 +1107,8 @@ def main():
                     # ever sell back (the account holds other coins)
                     st["units"] = fill["qty"]
                     st["spent_usd"] = round(fill["price"] * fill["qty"], 4)
+                    st["entry_fee_usd"] = binance_live.fee_usd(
+                        fill, pick, fill["price"])
                     # seeds the trailing stop and the hold clock
                     st["hwm"] = fill["price"]
                     # climax-exit move statistics start empty at entry
