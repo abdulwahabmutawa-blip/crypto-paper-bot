@@ -443,6 +443,18 @@ def test_fresh_seat_gets_a_market_stop_resting_at_minus_six_percent(cycle):
     assert cycle["locked"]["BERA"] > 0            # units locked at the exchange
 
 
+def test_seat_sold_by_hand_is_cleared_not_resold(cycle):
+    cycle["seat"]()
+    cycle["base"]["BERA"] = 0.0          # the owner sold it during the outage
+    cycle["usdt"] = 44.0
+    _completes(cycle)
+    s = cycle["state"]()
+    assert s["held_symbol"] is None and s["units"] == 0.0
+    assert not _sells(cycle)
+    assert "reconciled_external_close" in cycle["ledger_events"]()
+    assert "sell_blocked" not in cycle["ledger_events"]()
+
+
 def test_state_write_is_atomic_leaves_no_tmp(cycle):
     cycle["seat"]()
     _completes(cycle)

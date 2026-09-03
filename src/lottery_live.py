@@ -353,6 +353,34 @@ def main():
         print(f"[{KEY}] re-adopted resting stop {st['stop_order']['order_id']} "
               f"from the ledger (state file had lost it)")
 
+    # SEAT CLOSED OUTSIDE THE BOT (2026-09-03: the owner sold BERAUSDT by
+    # hand during the VPS outage). If the exchange holds none of the seat's
+    # base asset, free OR locked, the position is gone: clear the seat with
+    # a ledger event instead of trying to sell coins that are not there
+    # (which would log sell_blocked every cycle and freeze entries on a
+    # phantom -100% valuation). No realized row: the bot did not sell it.
+    if st["held_symbol"]:
+        _base = st["held_symbol"][:-4]
+        _have = (binance_live.balances_valuation(st["held_symbol"]) or {}
+                 ).get(_base)
+        if _have is not None and _have <= 1e-9 and not bals.get(_base, 0.0):
+            binance_live.log({"event": "reconciled_external_close",
+                              "symbol": st["held_symbol"],
+                              "units": st.get("units"),
+                              "note": "exchange holds none of this asset — "
+                                      "seat was closed outside the bot"})
+            print(f"[{KEY}] {st['held_symbol']} is no longer in the account "
+                  f"— seat closed outside the bot; clearing it")
+            st["stopped"][st["held_symbol"]] = now.isoformat(timespec="seconds")
+            st["held_symbol"] = st["entry_price"] = st["entry_scan_ts"] = None
+            st["entry_source"] = None
+            st["units"] = 0.0
+            st["spent_usd"] = None
+            for _k in ("hwm", "entry_time", "entry_fee_usd", "fade_flagged",
+                       "stop_order", "move_max_qv", "move_qv_sum",
+                       "move_qv_n", "move_last_ms"):
+                st.pop(_k, None)
+
     held = st["held_symbol"]
 
     def _retire_stop() -> None:
