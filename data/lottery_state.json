@@ -1,12 +1,12 @@
 {
   "created": "2026-08-15",
-  "held_symbol": "SPKUSDT",
-  "entry_price": 0.022436387931034484,
-  "units": 1972.0,
-  "entry_scan_ts": "2026-09-03T07:46:17+00:00",
-  "entry_source": "scout:breakout",
+  "held_symbol": null,
+  "entry_price": null,
+  "units": 0.0,
+  "entry_scan_ts": null,
+  "entry_source": null,
   "stopped": {
-    "BERAUSDT": "2026-09-03T10:57:17+00:00"
+    "SPKUSDT": "2026-09-03T16:14:04+00:00"
   },
   "entries": {
     "2026-09-03": 1
@@ -639,43 +639,36 @@
       "date": "2026-08-31",
       "exit": 1.014,
       "entry": 1.032
+    },
+    {
+      "symbol": "SPKUSDT",
+      "source": "scout:breakout",
+      "entry_score": 0.7966,
+      "entry_time": "2026-09-03T10:57:17+00:00",
+      "exit_time": "2026-09-03T16:14:04+00:00",
+      "entry_price": 0.022436387931034484,
+      "exit_price": 0.021085,
+      "units": 1972.0,
+      "spent_usd": 44.2446,
+      "got_usd": 41.5796,
+      "pnl_pct": -6.02,
+      "pnl_usd": -2.6981,
+      "fees_usd": 0.0331,
+      "reason": "PROTECTIVE STOP (-6.0% vs peak +3.8%) \u2014 the floor held at the exchange, between cycles",
+      "date": "2026-09-03",
+      "exit": 0.021085,
+      "entry": 0.022436387931034484
     }
   ],
-  "last_value_usd": 41.78,
-  "last_updated_utc": "2026-09-03T16:09:34+00:00",
-  "open_position": {
-    "symbol": "SPKUSDT",
-    "entry_time": "2026-09-03T10:57:17+00:00",
-    "entry_price": 0.022436387931034484,
-    "current_price": 0.021176,
-    "units": 1972.0,
-    "spent_usd": 44.2446,
-    "value_usd": 41.7591,
-    "pnl_usd": -2.4855,
-    "pnl_pct": -5.62,
-    "source": "scout:breakout"
-  },
-  "spent_usd": 44.2446,
+  "last_value_usd": 41.6,
+  "last_updated_utc": "2026-09-03T16:14:04+00:00",
+  "open_position": null,
+  "spent_usd": null,
   "no_pair": {
-    "scan_ts": "2026-09-03T07:46:17+00:00",
+    "scan_ts": "2026-09-03T11:11:48+00:00",
     "syms": []
   },
   "wave_bonus_date": "2026-09-03",
   "book_hwm_usd": 44.27,
-  "entry_score": 0.7966,
-  "entry_fee_usd": 0.033114,
-  "hwm": 0.023288,
-  "move_max_qv": 1618583.480916,
-  "move_qv_sum": 2962328.671477,
-  "move_qv_n": 5,
-  "move_last_ms": 1788447600000,
-  "entry_time": "2026-09-03T10:57:17+00:00",
-  "stop_order": {
-    "order_id": "878433424",
-    "stop": 0.021089999999999998,
-    "limit": null,
-    "qty": 1972.0,
-    "type": "STOP_LOSS",
-    "client_order_id": "lotstop-SPKUSDT-8433040776"
-  }
+  "entry_score": 0.7966
 }
