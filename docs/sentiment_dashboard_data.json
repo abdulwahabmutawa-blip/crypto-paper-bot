@@ -1,22 +1,22 @@
 {
-  "generated_utc": "2026-09-03T13:28:13+00:00",
+  "generated_utc": "2026-09-03T13:41:45+00:00",
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "live_ts": "2026-09-03T13:28:13+00:00",
+  "live_ts": "2026-09-03T13:41:45+00:00",
   "current": {
-    "date": "2026-09-02",
-    "value": 2553.77,
-    "bench": 1019.23,
-    "holding": "DELL"
+    "date": "2026-09-03",
+    "value": 2593.53,
+    "bench": 1025.27,
+    "holding": "SNOW"
   },
   "board": [
     {
       "sym": "SNOW",
-      "price": 305.84,
+      "price": 371.5,
       "line": "euphoric \u00b7 earnings beat raise AI coding surge",
-      "tag": "candidate",
+      "tag": "HELD",
       "on": true,
-      "pick": false,
+      "pick": true,
       "fill": 40
     },
     {
@@ -91,12 +91,6 @@
     "board_note": "Buys the crowd's loudest euphoria, rides it while it lasts, cuts it at -10%, and refuses to trade in a severe-risk tape. Weakest-evidence strategy in the fleet \u2014 hence the strictest guards."
   },
   "intraday": [
-    {
-      "ts": "2026-08-17T10:16:34+00:00",
-      "value": 1326.92,
-      "bench": 1034.13,
-      "holding": "CASH"
-    },
     {
       "ts": "2026-08-17T10:30:02+00:00",
       "value": 1326.92,
@@ -9090,29 +9084,15 @@
       "value": 2553.77,
       "bench": 1019.23,
       "holding": "DELL"
+    },
+    {
+      "ts": "2026-09-03T13:41:45+00:00",
+      "value": 2593.53,
+      "bench": 1025.27,
+      "holding": "SNOW"
     }
   ],
   "trades": [
-    {
-      "date": "2026-08-21",
-      "action": "SELL",
-      "ticker": "CIFR",
-      "price": 15.68999958,
-      "units": 97.4461,
-      "value": 1528.93,
-      "fee": 1.91,
-      "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
-    },
-    {
-      "date": "2026-08-21",
-      "action": "BUY",
-      "ticker": "MSTR",
-      "price": 119.83999634,
-      "units": 12.7243,
-      "value": 1524.88,
-      "fee": 2.14,
-      "reason": "Grok: MSTR euphoric \u2014 BTC holdings profit surge retail frenzy (scan 2026-08-21T17:48)"
-    },
     {
       "date": "2026-08-21",
       "action": "SELL",
@@ -9292,6 +9272,26 @@
       "value": 2313.39,
       "fee": 2.9,
       "reason": "Grok: DELL euphoric \u2014 Earnings beat, premarket surge (scan 2026-09-02T15:06)"
+    },
+    {
+      "date": "2026-09-03",
+      "action": "SELL",
+      "ticker": "DELL",
+      "price": 501.11499023,
+      "units": 5.1885,
+      "value": 2600.02,
+      "fee": 3.25,
+      "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
+    },
+    {
+      "date": "2026-09-03",
+      "action": "BUY",
+      "ticker": "SNOW",
+      "price": 371.49990845,
+      "units": 6.9812,
+      "value": 2593.53,
+      "fee": 3.25,
+      "reason": "Grok: SNOW euphoric \u2014 earnings beat raise AI coding surge (scan 2026-09-03T11:11)"
     }
   ],
   "history": [
@@ -9523,11 +9523,17 @@
       "value": 2553.77,
       "bench": 1019.23,
       "holding": "DELL"
+    },
+    {
+      "date": "2026-09-03",
+      "value": 2593.53,
+      "bench": 1025.27,
+      "holding": "SNOW"
     }
   ],
-  "costs_paid": 102.8206,
+  "costs_paid": 109.3166,
   "frozen": null,
-  "thoughts": "I'm riding DELL because the Watcher's latest scan of X and the news says the crowd is most excited about it right now. I know hype is the weakest evidence there is \u2014 so my rules are the strictest in the fleet: the moment the excitement fades from the scans I sell, and if I'm down 10% from my buy price I sell no matter what.",
+  "thoughts": "I'm riding SNOW because the Watcher's latest scan of X and the news says the crowd is most excited about it right now. I know hype is the weakest evidence there is \u2014 so my rules are the strictest in the fleet: the moment the excitement fades from the scans I sell, and if I'm down 10% from my buy price I sell no matter what.",
   "strategy": {
     "name": "Hype Trader \u2014 rides the Watcher's reads, on trial",
     "rule": "Hold the top euphoric symbol from the Watcher's 8-hour Grok scans while it stays euphoric; -10% hard stop; Watcher severe verdict -> cash",

@@ -1,10 +1,10 @@
 {
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "holding": "DELL",
-  "units": 5.18847736076287,
+  "holding": "SNOW",
+  "units": 6.981233981704594,
   "cash": 0.0,
-  "entry_price": 445.8699951171875,
+  "entry_price": 371.4999084472656,
   "bench_units": 1.332054612938296,
   "stopped": {
     "SHIB-USD": "2026-07-27T00:01:08+00:00",
@@ -638,6 +638,26 @@
       "value": 2313.39,
       "fee": 2.9,
       "reason": "Grok: DELL euphoric \u2014 Earnings beat, premarket surge (scan 2026-09-02T15:06)"
+    },
+    {
+      "date": "2026-09-03",
+      "action": "SELL",
+      "ticker": "DELL",
+      "price": 501.11499023,
+      "units": 5.1885,
+      "value": 2600.02,
+      "fee": 3.25,
+      "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
+    },
+    {
+      "date": "2026-09-03",
+      "action": "BUY",
+      "ticker": "SNOW",
+      "price": 371.49990845,
+      "units": 6.9812,
+      "value": 2593.53,
+      "fee": 3.25,
+      "reason": "Grok: SNOW euphoric \u2014 earnings beat raise AI coding surge (scan 2026-09-03T11:11)"
     }
   ],
   "history": [
@@ -869,15 +889,15 @@
       "value": 2553.77,
       "bench": 1019.23,
       "holding": "DELL"
+    },
+    {
+      "date": "2026-09-03",
+      "value": 2593.53,
+      "bench": 1025.27,
+      "holding": "SNOW"
     }
   ],
   "intraday": [
-    {
-      "ts": "2026-08-17T10:16:34+00:00",
-      "value": 1326.92,
-      "bench": 1034.13,
-      "holding": "CASH"
-    },
     {
       "ts": "2026-08-17T10:30:02+00:00",
       "value": 1326.92,
@@ -9871,9 +9891,15 @@
       "value": 2553.77,
       "bench": 1019.23,
       "holding": "DELL"
+    },
+    {
+      "ts": "2026-09-03T13:41:45+00:00",
+      "value": 2593.53,
+      "bench": 1025.27,
+      "holding": "SNOW"
     }
   ],
-  "last_updated_utc": "2026-09-03T13:28:13+00:00",
+  "last_updated_utc": "2026-09-03T13:41:45+00:00",
   "restatement": {
     "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)",
     "voided_trades": [
@@ -9952,5 +9978,5 @@
     ],
     "voided_reason": "signal faded before any real fill was possible (market closed the whole window) \u2014 trades could never have existed"
   },
-  "costs_paid": 102.8206
+  "costs_paid": 109.3166
 }
