@@ -1,24 +1,8 @@
 {
-  "ts": "2026-09-03T11:10:22+00:00",
+  "ts": "2026-09-03T11:16:29+00:00",
   "scanned": 97,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "MSTRBUSDT",
-      "signal": "ignition",
-      "score": 0.9196,
-      "raw_score": 0.9857,
-      "weight": 0.933,
-      "price": 124.43,
-      "why": "trades 12.0x and volume 13.2x the prior 4h, 97% taker-buy, $131,296 burst \u2014 while price has only moved +0.3%",
-      "chg_24h": 0.0187,
-      "vol_surge": 13.2,
-      "chg_1h": 0.003,
-      "market_surge": 2.13,
-      "actionable": false,
-      "status": "benched \u2014 hit 47%, mean +0.79% over last 572 at 24h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 47%, mean +0.79% over last 572 at 24h: not beating 4x the round trip",
     "breakout": "actionable",
