@@ -1,6 +1,6 @@
 # Exit timing — the bot grading its own exits
 
-updated 2026-09-03T17:06:27+00:00 · 37 exits audited · early/late line ±3% · MEASUREMENT ONLY
+updated 2026-09-03T17:19:58+00:00 · 37 exits audited · early/late line ±3% · MEASUREMENT ONLY
 
 | verdict | n |
 |---|---|
@@ -24,9 +24,9 @@ updated 2026-09-03T17:06:27+00:00 · 37 exits audited · early/late line ±3% ·
 ## Market capture
 
 - book since inception (08-15, $40 stake): **-44.7%** — trading P&L only (-$17.87 over 38 closed trades), deposits excluded
-- account balance: $41.60 (of which **+$19.47 is deposited capital, not profit** — inferred as balance minus stake minus P&L; deposits are not tracked anywhere yet)
-- BTC since inception: +28.4% (book gap **-73.1pp**) · last 24h +4.7%
-- ETH since inception: +32.5% (book gap **-77.2pp**) · last 24h +4.3%
+- account balance: $41.29 (of which **+$19.16 is deposited capital, not profit** — inferred as balance minus stake minus P&L; deposits are not tracked anywhere yet)
+- BTC since inception: +28.6% (book gap **-73.2pp**) · last 24h +4.8%
+- ETH since inception: +32.7% (book gap **-77.3pp**) · last 24h +4.4%
 
 ## Alpha by regime (book minus BTC, daily, paired)
 
@@ -36,7 +36,7 @@ updated 2026-09-03T17:06:27+00:00 · 37 exits audited · early/late line ±3% ·
 |---|---|---|---|
 | red | 1 | -20.08% | **-17.08pp** |
 | flat | 14 | -0.85% | **-0.99pp** |
-| green | 5 | -3.58% | **-8.98pp** |
+| green | 5 | -3.58% | **-9.00pp** |
 
 | date | regime | book | BTC | gap |
 |---|---|---|---|---|
@@ -49,7 +49,7 @@ updated 2026-09-03T17:06:27+00:00 · 37 exits audited · early/late line ±3% ·
 | 2026-08-31 | flat | -5.67% | +1.16% | -6.83pp |
 | 2026-09-01 | flat | +0.00% | -1.45% | +1.45pp |
 | 2026-09-02 | flat | +0.00% | -0.13% | +0.13pp |
-| 2026-09-03 | green | -10.87% | +4.67% | -15.54pp |
+| 2026-09-03 | green | -10.87% | +4.80% | -15.66pp |
 
 
 _giveback = in-hold peak the exit surrendered; post-24h run = what the coin did after we sold. High post-run with low giveback = selling too early; high giveback = selling too late._
