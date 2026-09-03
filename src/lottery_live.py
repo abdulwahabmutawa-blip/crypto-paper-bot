@@ -901,9 +901,15 @@ def main():
         # deposit plus AXS marked at an unrealized +12.4%; the floor, day-loss
         # and retire lines were calibrated to money never realized. Held
         # units count at their entry price; deposits still raise the peak.
+        # never count units the exchange does not hold (a seat sold by hand
+        # while state still said "held" wrote a phantom $91 peak on 09-03)
+        _held_units = 0.0
+        if st.get("held_symbol"):
+            _bv2 = binance_live.balances_valuation(st["held_symbol"]) or {}
+            _held_units = min(float(st.get("units") or 0.0),
+                              float(_bv2.get(st["held_symbol"][:-4], 0.0)))
         _cost_val = float(bals.get("USDT", 0.0)) + (
-            float(st.get("units") or 0.0) * float(st.get("entry_price") or 0.0)
-            if st.get("held_symbol") else 0.0)
+            _held_units * float(st.get("entry_price") or 0.0))
         st["book_hwm_usd"] = round(
             max(float(st.get("book_hwm_usd") or 0.0), _cost_val), 4)
     floor_why = binance_live.book_floor_reason(_val_now,
