@@ -1,54 +1,8 @@
 {
-  "ts": "2026-09-03T13:55:18+00:00",
-  "scanned": 99,
+  "ts": "2026-09-03T14:00:48+00:00",
+  "scanned": 100,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "MUBUSDT",
-      "signal": "ignition",
-      "score": 0.8603,
-      "raw_score": 0.9251,
-      "weight": 0.93,
-      "price": 942.08,
-      "why": "trades 23.5x and volume 26.3x the prior 4h, 86% taker-buy, $138,242 burst \u2014 while price has only moved -1.6%",
-      "chg_24h": 0.018,
-      "vol_surge": 26.34,
-      "chg_1h": -0.0164,
-      "market_surge": 5.71,
-      "actionable": false,
-      "status": "benched \u2014 hit 46%, mean +0.59% over last 558 at 24h: not beating 4x the round trip"
-    },
-    {
-      "symbol": "SNXXBUSDT",
-      "signal": "ignition",
-      "score": 0.8563,
-      "raw_score": 0.9207,
-      "weight": 0.93,
-      "price": 13.85,
-      "why": "trades 11.6x and volume 29.5x the prior 4h, 78% taker-buy, $134,053 burst \u2014 while price has only moved -0.9%",
-      "chg_24h": 0.0473,
-      "vol_surge": 29.5,
-      "chg_1h": -0.0093,
-      "market_surge": 0.0,
-      "actionable": false,
-      "status": "benched \u2014 hit 46%, mean +0.59% over last 558 at 24h: not beating 4x the round trip"
-    },
-    {
-      "symbol": "TIAUSDT",
-      "signal": "ignition",
-      "score": 0.6129,
-      "raw_score": 0.659,
-      "weight": 0.93,
-      "price": 0.36,
-      "why": "trades 4.0x and volume 15.3x the prior 4h, 70% taker-buy, $154,803 burst \u2014 while price has only moved -1.1%",
-      "chg_24h": 0.0303,
-      "vol_surge": 15.28,
-      "chg_1h": -0.011,
-      "market_surge": 15.0,
-      "actionable": false,
-      "status": "benched \u2014 hit 46%, mean +0.59% over last 558 at 24h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 46%, mean +0.59% over last 558 at 24h: not beating 4x the round trip",
     "breakout": "actionable",
@@ -57,7 +11,7 @@
     "revival": "probation \u2014 2/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 15,
+    "count": 17,
     "baseline": 11.0,
     "wave": false
   },
