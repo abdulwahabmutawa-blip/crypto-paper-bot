@@ -1,8 +1,23 @@
 {
-  "ts": "2026-09-03T16:45:33+00:00",
-  "scanned": 107,
+  "ts": "2026-09-03T16:51:22+00:00",
+  "scanned": 108,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ORDIUSDT",
+      "signal": "breakout",
+      "score": 0.7491,
+      "raw_score": 0.8134,
+      "weight": 0.921,
+      "price": 4.315,
+      "why": "trades 11.6x, volume 10.6x, 83% taker-buy, +3.1% in an hour, at 98% of its 24h range",
+      "chg_24h": 0.1182,
+      "vol_surge": 10.62,
+      "chg_1h": 0.0313,
+      "market_surge": 8.58,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 45%, mean +0.48% over last 550 at 24h: not beating 4x the round trip",
     "breakout": "actionable",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 2/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 28,
+    "count": 29,
     "baseline": 11.0,
     "wave": true
   },

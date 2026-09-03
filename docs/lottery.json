@@ -1,15 +1,15 @@
 {
   "created": "2026-08-15",
-  "held_symbol": null,
-  "entry_price": null,
-  "units": 0.0,
-  "entry_scan_ts": null,
-  "entry_source": null,
+  "held_symbol": "ORDIUSDT",
+  "entry_price": 4.327,
+  "units": 9.61,
+  "entry_scan_ts": "2026-09-03T11:11:48+00:00",
+  "entry_source": "scout:breakout",
   "stopped": {
     "SPKUSDT": "2026-09-03T16:14:04+00:00"
   },
   "entries": {
-    "2026-09-03": 1
+    "2026-09-03": 2
   },
   "realized": [
     {
@@ -661,14 +661,40 @@
     }
   ],
   "last_value_usd": 41.6,
-  "last_updated_utc": "2026-09-03T16:47:04+00:00",
-  "open_position": null,
-  "spent_usd": null,
+  "last_updated_utc": "2026-09-03T16:52:54+00:00",
+  "open_position": {
+    "symbol": "ORDIUSDT",
+    "entry_time": "2026-09-03T16:52:54+00:00",
+    "entry_price": 4.327,
+    "current_price": 4.327,
+    "units": 9.61,
+    "spent_usd": 41.5825,
+    "value_usd": 41.5825,
+    "pnl_usd": 0.0,
+    "pnl_pct": 0.0,
+    "source": "scout:breakout"
+  },
+  "spent_usd": 41.5825,
   "no_pair": {
     "scan_ts": "2026-09-03T11:11:48+00:00",
     "syms": []
   },
   "wave_bonus_date": "2026-09-03",
   "book_hwm_usd": 44.27,
-  "entry_score": 0.7966
+  "entry_score": 0.7491,
+  "entry_fee_usd": 0.031194,
+  "hwm": 4.327,
+  "move_max_qv": 0.0,
+  "move_qv_sum": 0.0,
+  "move_qv_n": 0,
+  "move_last_ms": 0,
+  "entry_time": "2026-09-03T16:52:54+00:00",
+  "stop_order": {
+    "order_id": "4014595086",
+    "stop": 4.067,
+    "limit": null,
+    "qty": 9.6,
+    "type": "STOP_LOSS",
+    "client_order_id": "lotstop-ORDIUSDT-8454377607"
+  }
 }
