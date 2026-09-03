@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-03T19:05:03+00:00",
+  "ts": "2026-09-03T19:10:34+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
@@ -15,13 +15,13 @@
     "stocktwits": [],
     "movers": [
       "ZEC",
-      "ENA",
       "XPL",
-      "ARB",
+      "ENA",
       "CRCLB",
+      "ARB",
+      "HEMI",
       "ADA",
-      "WLD",
-      "TRUMP"
+      "WLD"
     ],
     "watcher": [
       "ARB"
@@ -74,7 +74,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.7e-05
+      "funding": 2.9e-05
     },
     {
       "symbol": "BTC",
@@ -90,6 +90,14 @@
       "sources": [
         "movers"
       ]
+    },
+    {
+      "symbol": "HEMI",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "LIT",
@@ -113,15 +121,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2e-06
-    },
-    {
-      "symbol": "TRUMP",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
+      "funding": -5e-06
     },
     {
       "symbol": "WLD",
