@@ -259,7 +259,7 @@ def main():
                     and str(e.get("order_id")) == str(last_stop_placed.get("order_id")):
                 last_stop_placed = None if ev == "stop_cancelled" else last_stop_placed
             elif ledger_open and e.get("symbol") == ledger_open.get("symbol") \
-                    and (ev == "exit"
+                    and (ev in ("exit", "reconciled_external_close")
                          or (ev == "fill" and e.get("action") == "SELL")):
                 ledger_open = None
                 last_stop_placed = None
