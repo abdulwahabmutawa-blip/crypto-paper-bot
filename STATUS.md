@@ -1,30 +1,26 @@
-# Fleet status — 2026-09-02 (UTC)
+# Fleet status — 2026-09-03 (UTC)
 
-10 paper bots ($1,000 each, no real money) + Watcher (Grok risk gate) + Lottery (REAL money, VPS).
+10 paper bots ($1,000 each, no real money) + Watcher (Grok risk gate).
 
-| Bot | Holds | 24h change | Value (asof) |
+| Bot | Holds | 24h change | Value |
 |---|---|---|---|
-| crypto (trend/regime) | CASH | SOLD SOL-USD → cash: "all 8 coins falling on the week" | $1,119.75 (09-02) |
-| congress | 10 positions | No trade | $983.39 (09-01) |
-| meanrev | WMT | No new trade | $1,253.66 (09-01) |
-| commodity | DBC | No new trade | $1,047.35 (09-01) |
-| allweather | 5-asset basket | Monthly rebalance (small trims/adds, all 5 legs) | $1,014.96 (09-01) |
-| hype (sentiment) | ARB-USD | No new trade | $2,323.02 (09-01) |
-| hypecrypto | CASH | No trade — still frozen (R1 kill floor, since 08-31) | $739.48 (09-02) |
-| Hunter | BTC-USD | Trailing stop hit on SOL-USD → bought BTC-USD | $965.54 (09-01) |
-| Scholar | SPY | No trade | $1,009.16 (09-01) |
-| Analyst | SPY | No trade (guardrail flag — see below) | $1,014.18 (09-01) |
-| Watcher (sentinel) | — (risk gate) | Scan at 09-01 22:06 UTC, risk_level=caution | fresh |
-| **Lottery (REAL $)** | BERAUSDT | No update in ~28h — stale (see below) | $46.78 (09-01 01:06, stale) |
+| crypto (trend/regime) | CASH | No change (already cash) | $1,119.75 |
+| congress | 10 positions | No new trade — marks only | $983.81 |
+| meanrev | WMT | No new trade — marks only | $1,254.96 |
+| commodity | DBC | Whipsaw: DBC→USO→DBC (3 flips) | $1,032.39 |
+| allweather | 5-asset basket | No new trade — marks only | $1,019.01 |
+| sentiment | DELL | Rotated ARB-USD → DELL (Grok hype) — see below | $2,553.77 |
+| hypecrypto | CASH | No change — still frozen (kill floor, 08-31) | $739.48 |
+| Hunter | BTC-USD | No new trade — marks only | $961.96 |
+| Scholar | SPY | No new trade — marks only | $1,013.73 |
+| Analyst | SPY | No new trade — marks only | $1,018.71 |
+| Watcher | — (no capital) | Verdict refreshed, still "caution" | n/a |
 
 ## Changed
-- crypto (trend/regime): sold SOL-USD, moved to CASH — "all 8 coins falling on the week — cash until one rises" (09-02).
-- Hunter: trailing stop hit on SOL-USD (-8% from high-water mark), rotated all-in to BTC-USD (09-01).
-- allweather: routine monthly rebalance executed across all 5 legs (09-01), small trims/adds only.
-- All other paper bots (congress, meanrev, commodity, hype, hypecrypto, Scholar, Analyst): no new trades — marks moved with the market only.
+- commodity: 3 whipsaw flips (DBC→DBC→USO→USO→DBC), ~$5.08 fees, ended back on DBC.
+- sentiment: sold ARB-USD, bought DELL on a Grok euphoria signal — but see Needs a look.
+- No stop-outs. No other position changes. No failed or skipped cycles — commits ran every ~13–14 min all 24h with no gap over 20 min.
 
 ## Needs a look
-- **Lottery (real money, VPS)**: no commit from the lottery process in ~23–28h — last lottery-tagged commit 09-01 06:00 UTC, and lottery_state.json itself last wrote 09-01 01:06 UTC. Its BERAUSDT position ($46.78) has had no fresh mark or exit check since. Worth confirming the VPS process is still alive.
-- Analyst: its latest decision (09-01, hold — no trade) carries guardrail_tag "UNRECEIPTED WATCHER CLAIM (read_watcher not called)" — reasoning cited the Watcher's risk read without the tool call that would back it. No bad trade resulted, but this is a recurring flag (Supervisor noted it on 9/20 decisions as of 08-31).
-- hypecrypto remains frozen since 08-31 (R1 kill floor) — unchanged, already known.
-- Fleet Supervisor scoreboard hasn't logged a new run since 08-31 20:47 UTC (~32h stale) — no independent audit covering today's activity.
+- **sentiment bot's price feed looks broken.** The ARB-USD price on its 09-01 BUY and 09-02 SELL is identical (0.00062903) despite ARB trading 24/7 — that's a stale/frozen quote, not a real 0% move. Its book has gone from $1,000 start to $2,553.77 (+155%), far outside every other bot's $740–$1,255 range, and the jump traces to that ARB-USD leg plus an adjacent GPRO round-trip that shows +67% in one session. Treat this bot's current value as unverified until the price source is checked.
+- Nothing else broken: all other 9 bots' cycles ran cleanly, Watcher's risk verdict is fresh (23:19 UTC 09-02).
