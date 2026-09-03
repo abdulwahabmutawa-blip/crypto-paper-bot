@@ -1,84 +1,8 @@
 {
-  "ts": "2026-09-03T12:36:28+00:00",
+  "ts": "2026-09-03T12:42:27+00:00",
   "scanned": 96,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "SNDKBUSDT",
-      "signal": "ignition",
-      "score": 0.8858,
-      "raw_score": 0.9535,
-      "weight": 0.929,
-      "price": 1541.87,
-      "why": "trades 12.8x and volume 15.4x the prior 4h, 83% taker-buy, $213,560 burst \u2014 while price has only moved +0.1%",
-      "chg_24h": 0.0014,
-      "vol_surge": 15.43,
-      "chg_1h": 0.0013,
-      "market_surge": 0.0,
-      "actionable": false,
-      "status": "benched \u2014 hit 47%, mean +0.67% over last 566 at 24h: not beating 4x the round trip"
-    },
-    {
-      "symbol": "KORUBUSDT",
-      "signal": "ignition",
-      "score": 0.7941,
-      "raw_score": 0.8548,
-      "weight": 0.929,
-      "price": 19.76,
-      "why": "trades 24.1x and volume 49.4x the prior 4h, 62% taker-buy, $74,439 burst \u2014 while price has only moved +2.0%",
-      "chg_24h": 0.0259,
-      "vol_surge": 49.42,
-      "chg_1h": 0.0201,
-      "market_surge": 3.27,
-      "actionable": false,
-      "status": "benched \u2014 hit 47%, mean +0.67% over last 566 at 24h: not beating 4x the round trip"
-    },
-    {
-      "symbol": "ETHUSDT",
-      "signal": "ignition",
-      "score": 0.6123,
-      "raw_score": 0.6591,
-      "weight": 0.929,
-      "price": 2416.56,
-      "why": "trades 6.2x and volume 6.4x the prior 4h, 65% taker-buy, $10,226,765 burst \u2014 while price has only moved +0.5%",
-      "chg_24h": 0.013,
-      "vol_surge": 6.37,
-      "chg_1h": 0.0046,
-      "market_surge": 3.1,
-      "actionable": false,
-      "status": "benched \u2014 hit 47%, mean +0.67% over last 566 at 24h: not beating 4x the round trip"
-    },
-    {
-      "symbol": "PENGUUSDT",
-      "signal": "ignition",
-      "score": 0.5756,
-      "raw_score": 0.6196,
-      "weight": 0.929,
-      "price": 0.008391,
-      "why": "trades 4.2x and volume 7.2x the prior 4h, 71% taker-buy, $99,356 burst \u2014 while price has only moved +0.2%",
-      "chg_24h": 0.0196,
-      "vol_surge": 7.16,
-      "chg_1h": 0.0018,
-      "market_surge": 2.66,
-      "actionable": false,
-      "status": "benched \u2014 hit 47%, mean +0.67% over last 566 at 24h: not beating 4x the round trip"
-    },
-    {
-      "symbol": "TRUMPUSDT",
-      "signal": "ignition",
-      "score": 0.5436,
-      "raw_score": 0.5851,
-      "weight": 0.929,
-      "price": 2.357,
-      "why": "trades 5.2x and volume 6.6x the prior 4h, 63% taker-buy, $880,013 burst \u2014 while price has only moved -1.9%",
-      "chg_24h": 0.0707,
-      "vol_surge": 6.65,
-      "chg_1h": -0.0187,
-      "market_surge": 7.84,
-      "actionable": false,
-      "status": "benched \u2014 hit 47%, mean +0.67% over last 566 at 24h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 47%, mean +0.67% over last 566 at 24h: not beating 4x the round trip",
     "breakout": "actionable",
@@ -87,7 +11,7 @@
     "revival": "probation \u2014 2/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 14,
+    "count": 12,
     "baseline": 11.0,
     "wave": false
   },
