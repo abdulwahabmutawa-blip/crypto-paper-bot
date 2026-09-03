@@ -1,8 +1,39 @@
 {
-  "ts": "2026-09-03T13:21:27+00:00",
+  "ts": "2026-09-03T13:27:18+00:00",
   "scanned": 98,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "XAUTUSDT",
+      "signal": "ignition",
+      "score": 0.8006,
+      "raw_score": 0.8636,
+      "weight": 0.927,
+      "price": 4471.48,
+      "why": "trades 8.0x and volume 10.3x the prior 4h, 84% taker-buy, $603,826 burst \u2014 while price has only moved +0.7%",
+      "chg_24h": 0.0265,
+      "vol_surge": 10.31,
+      "chg_1h": 0.0069,
+      "market_surge": 4.03,
+      "actionable": false,
+      "status": "benched \u2014 hit 47%, mean +0.65% over last 564 at 24h: not beating 4x the round trip"
+    },
+    {
+      "symbol": "ICPUSDT",
+      "signal": "ignition",
+      "score": 0.6933,
+      "raw_score": 0.7479,
+      "weight": 0.927,
+      "price": 2.501,
+      "why": "trades 5.1x and volume 9.6x the prior 4h, 86% taker-buy, $74,277 burst \u2014 while price has only moved +0.4%",
+      "chg_24h": -0.0028,
+      "vol_surge": 9.56,
+      "chg_1h": 0.0036,
+      "market_surge": 0.91,
+      "actionable": false,
+      "status": "benched \u2014 hit 47%, mean +0.65% over last 564 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 47%, mean +0.65% over last 564 at 24h: not beating 4x the round trip",
     "breakout": "actionable",
@@ -11,21 +42,21 @@
     "revival": "probation \u2014 2/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 13,
     "baseline": 11.0,
     "wave": false
   },
   "scorecard": {
     "ignition": {
-      "span_h_1h": 334.6,
-      "n_eff_1h": 334.62,
-      "n_1h": 616,
-      "hit_rate_1h": 0.394,
-      "mean_ret_1h": -0.00107,
+      "span_h_1h": 334.9,
+      "n_eff_1h": 334.9,
+      "n_1h": 617,
+      "hit_rate_1h": 0.395,
+      "mean_ret_1h": -0.00105,
       "median_ret_1h": -0.00054,
       "both_halves_1h": false,
       "days_1h": 14,
-      "mean_x_1h": -0.00082,
+      "mean_x_1h": -0.00021,
       "days_x_1h": 1,
       "avg_win_1h": 0.01016,
       "avg_loss_1h": -0.01133,
