@@ -363,7 +363,8 @@ def main():
         _base = st["held_symbol"][:-4]
         _have = (binance_live.balances_valuation(st["held_symbol"]) or {}
                  ).get(_base)
-        if _have is not None and _have <= 1e-9 and not bals.get(_base, 0.0):
+        if (_have is not None and _have <= 1e-9 and not bals.get(_base, 0.0)
+                and not (st.get("stop_order") or {}).get("order_id")):
             binance_live.log({"event": "reconciled_external_close",
                               "symbol": st["held_symbol"],
                               "units": st.get("units"),
