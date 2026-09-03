@@ -1,17 +1,17 @@
 {
-  "ts": "2026-09-03T19:38:48+00:00",
+  "ts": "2026-09-03T19:44:04+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
-      "LIT",
       "PENGU",
+      "LIT",
       "ENA",
       "ARB",
-      "SOL",
       "PUMP",
-      "BTC",
-      "SUI",
-      "UNI"
+      "SOL",
+      "UNI",
+      "LINK",
+      "PEPE"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -23,7 +23,7 @@
       "HEMI",
       "ARB",
       "ADA",
-      "WLD"
+      "PEPE"
     ],
     "watcher": [
       "ARB"
@@ -53,6 +53,14 @@
       "long_short": 1.45
     },
     {
+      "symbol": "PEPE",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ]
+    },
+    {
       "symbol": "ZEC",
       "surfaces": 2,
       "sources": [
@@ -71,14 +79,6 @@
       "funding": 0.0001
     },
     {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "CRCLB",
       "surfaces": 1,
       "sources": [
@@ -92,6 +92,14 @@
         "movers"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "LINK",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "LIT",
@@ -115,18 +123,10 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.8e-05
+      "funding": -1.7e-05
     },
     {
       "symbol": "SOL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "SUI",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -138,14 +138,6 @@
       "surfaces": 1,
       "sources": [
         "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "WLD",
-      "surfaces": 1,
-      "sources": [
-        "movers"
       ],
       "funding": 0.0001
     },
