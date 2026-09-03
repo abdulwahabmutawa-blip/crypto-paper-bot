@@ -458,3 +458,4 @@
 {"ts": "2026-09-03T10:47:45+00:00", "event": "sell_blocked", "symbol": "BERAUSDT", "reason": "no free units to sell (owned 254.654, free 0.0) \u2014 MAX HOLD (58h) \u2014 hype has a half-life"}
 {"ts": "2026-09-03T10:47:46+00:00", "event": "api_error", "path": "/v3/order", "code": 400, "body": "{\"code\":-2010,\"msg\":\"Account has insufficient balance for requested action.\"}"}
 {"ts": "2026-09-03T10:47:46+00:00", "event": "stop_not_placed", "symbol": "BERAUSDT", "reason": "exchange rejected or did not answer", "code": -2010, "msg": "Account has insufficient balance for requested action."}
+{"ts": "2026-09-03T10:50:32+00:00", "event": "reconciled_external_close", "symbol": "BERAUSDT", "units": 254.654, "remaining": 0.0, "note": "exchange holds none of this asset \u2014 seat was closed outside the bot"}
