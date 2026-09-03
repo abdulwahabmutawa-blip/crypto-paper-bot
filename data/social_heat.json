@@ -1,29 +1,29 @@
 {
-  "ts": "2026-09-03T19:49:48+00:00",
+  "ts": "2026-09-03T19:55:37+00:00",
   "sources": {
     "coingecko": [
-      "ZEC",
       "PENGU",
+      "ZEC",
       "LIT",
       "ENA",
       "ARB",
       "PUMP",
       "SOL",
+      "SUI",
       "UNI",
-      "LINK",
-      "PEPE"
+      "LINK"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "ZEC",
       "XPL",
-      "ENA",
       "CRCLB",
-      "HEMI",
+      "ENA",
       "ADA",
-      "WLD",
-      "ARB"
+      "HEMI",
+      "PEPE",
+      "WLD"
     ],
     "watcher": [
       "ARB"
@@ -33,10 +33,9 @@
   "heat": [
     {
       "symbol": "ARB",
-      "surfaces": 3,
+      "surfaces": 2,
       "sources": [
         "coingecko",
-        "movers",
         "watcher"
       ],
       "funding": 0.0001,
@@ -59,7 +58,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 0.0001,
+      "funding": 9.7e-05,
       "long_short": 0.58
     },
     {
@@ -113,7 +112,7 @@
       "symbol": "PEPE",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ]
     },
     {
@@ -122,10 +121,18 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.1e-05
+      "funding": -2.5e-05
     },
     {
       "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "SUI",
       "surfaces": 1,
       "sources": [
         "coingecko"
