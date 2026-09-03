@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-03T19:55:37+00:00",
+  "ts": "2026-09-03T20:00:58+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
@@ -22,8 +22,8 @@
       "ENA",
       "ADA",
       "HEMI",
-      "PEPE",
-      "WLD"
+      "ARB",
+      "PEPE"
     ],
     "watcher": [
       "ARB"
@@ -33,13 +33,14 @@
   "heat": [
     {
       "symbol": "ARB",
-      "surfaces": 2,
+      "surfaces": 3,
       "sources": [
         "coingecko",
+        "movers",
         "watcher"
       ],
-      "funding": 0.0001,
-      "long_short": 1.24
+      "funding": 9.6e-05,
+      "long_short": 1.32
     },
     {
       "symbol": "ENA",
@@ -58,7 +59,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 9.7e-05,
+      "funding": 9.3e-05,
       "long_short": 0.58
     },
     {
@@ -121,7 +122,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.5e-05
+      "funding": -3.1e-05
     },
     {
       "symbol": "SOL",
@@ -144,14 +145,6 @@
       "surfaces": 1,
       "sources": [
         "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "WLD",
-      "surfaces": 1,
-      "sources": [
-        "movers"
       ],
       "funding": 0.0001
     },
