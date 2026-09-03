@@ -1,6 +1,6 @@
 # Exit timing — the bot grading its own exits
 
-updated 2026-09-03T16:10:55+00:00 · 37 exits audited · early/late line ±3% · MEASUREMENT ONLY
+updated 2026-09-03T16:24:26+00:00 · 37 exits audited · early/late line ±3% · MEASUREMENT ONLY
 
 | verdict | n |
 |---|---|
@@ -24,9 +24,9 @@ updated 2026-09-03T16:10:55+00:00 · 37 exits audited · early/late line ±3% ·
 ## Market capture
 
 - book since inception (08-15, $40 stake): **-37.9%** — trading P&L only (-$15.17 over 37 closed trades), deposits excluded
-- account balance: $42.16 (of which **+$17.33 is deposited capital, not profit** — inferred as balance minus stake minus P&L; deposits are not tracked anywhere yet)
-- BTC since inception: +28.5% (book gap **-66.4pp**) · last 24h +4.7%
-- ETH since inception: +33.0% (book gap **-70.9pp**) · last 24h +4.7%
+- account balance: $41.78 (of which **+$16.95 is deposited capital, not profit** — inferred as balance minus stake minus P&L; deposits are not tracked anywhere yet)
+- BTC since inception: +28.1% (book gap **-66.0pp**) · last 24h +4.4%
+- ETH since inception: +32.5% (book gap **-70.4pp**) · last 24h +4.2%
 
 ## Alpha by regime (book minus BTC, daily, paired)
 
@@ -36,7 +36,7 @@ updated 2026-09-03T16:10:55+00:00 · 37 exits audited · early/late line ±3% ·
 |---|---|---|---|
 | red | 1 | -20.08% | **-17.08pp** |
 | flat | 14 | -0.85% | **-0.99pp** |
-| green | 5 | -1.41% | **-6.82pp** |
+| green | 5 | -1.41% | **-6.75pp** |
 
 | date | regime | book | BTC | gap |
 |---|---|---|---|---|
@@ -49,7 +49,7 @@ updated 2026-09-03T16:10:55+00:00 · 37 exits audited · early/late line ±3% ·
 | 2026-08-31 | flat | -5.67% | +1.16% | -6.83pp |
 | 2026-09-01 | flat | +0.00% | -1.45% | +1.45pp |
 | 2026-09-02 | flat | +0.00% | -0.13% | +0.13pp |
-| 2026-09-03 | green | +0.00% | +4.75% | -4.75pp |
+| 2026-09-03 | green | +0.00% | +4.42% | -4.42pp |
 
 
 _giveback = in-hold peak the exit surrendered; post-24h run = what the coin did after we sold. High post-run with low giveback = selling too early; high giveback = selling too late._
