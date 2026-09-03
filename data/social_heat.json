@@ -1,16 +1,17 @@
 {
-  "ts": "2026-09-03T16:51:16+00:00",
+  "ts": "2026-09-03T16:56:41+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
-      "LIT",
       "ARB",
+      "LIT",
       "SOL",
       "UNI",
       "ENA",
       "BTC",
+      "PEPE",
       "ETH",
-      "PEPE"
+      "LINK"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -18,11 +19,11 @@
       "ZEC",
       "CRCLB",
       "ENA",
-      "PEPE",
       "TRUMP",
+      "PEPE",
       "ADA",
-      "DOGE",
-      "XRP"
+      "PUMP",
+      "DOGE"
     ],
     "watcher": [
       "ARB"
@@ -82,7 +83,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.9e-05
+      "funding": 0.0001
     },
     {
       "symbol": "CRCLB",
@@ -105,7 +106,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.8e-05
+      "funding": 9.9e-05
+    },
+    {
+      "symbol": "LINK",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "LIT",
@@ -113,7 +122,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1e-06
+      "funding": 5e-06
+    },
+    {
+      "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -8e-06
     },
     {
       "symbol": "SOL",
@@ -121,7 +138,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.7e-05
+      "funding": 7.8e-05
     },
     {
       "symbol": "TRUMP",
@@ -129,7 +146,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -3.8e-05
+      "funding": -4.2e-05
     },
     {
       "symbol": "UNI",
@@ -137,15 +154,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.5e-05
-    },
-    {
-      "symbol": "XRP",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 6.7e-05
+      "funding": 7.4e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
