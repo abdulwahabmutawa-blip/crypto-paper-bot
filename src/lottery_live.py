@@ -361,13 +361,17 @@ def main():
     # phantom -100% valuation). No realized row: the bot did not sell it.
     if st["held_symbol"]:
         _base = st["held_symbol"][:-4]
-        _have = (binance_live.balances_valuation(st["held_symbol"]) or {}
-                 ).get(_base)
-        if (_have is not None and _have <= 1e-9 and not bals.get(_base, 0.0)
+        _bv = binance_live.balances_valuation(st["held_symbol"])
+        # the exchange OMITS assets with a zero balance: a missing key on a
+        # non-empty account read means zero, not unknown. Anything under 1%
+        # of the recorded units is dust the bot cannot sell either.
+        _have = (_bv.get(_base, 0.0) if _bv else None)
+        if (_have is not None
+                and _have < max(1e-9, 0.01 * float(st.get("units") or 0.0))
                 and not (st.get("stop_order") or {}).get("order_id")):
             binance_live.log({"event": "reconciled_external_close",
                               "symbol": st["held_symbol"],
-                              "units": st.get("units"),
+                              "units": st.get("units"), "remaining": _have,
                               "note": "exchange holds none of this asset — "
                                       "seat was closed outside the bot"})
             print(f"[{KEY}] {st['held_symbol']} is no longer in the account "

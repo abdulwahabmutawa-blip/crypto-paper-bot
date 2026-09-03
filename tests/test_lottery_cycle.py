@@ -445,7 +445,7 @@ def test_fresh_seat_gets_a_market_stop_resting_at_minus_six_percent(cycle):
 
 def test_seat_sold_by_hand_is_cleared_not_resold(cycle):
     cycle["seat"]()
-    cycle["base"]["BERA"] = 0.0          # the owner sold it during the outage
+    cycle["base"].pop("BERA", None)      # the owner sold it: Binance omits the asset
     cycle["usdt"] = 44.0
     _completes(cycle)
     s = cycle["state"]()
