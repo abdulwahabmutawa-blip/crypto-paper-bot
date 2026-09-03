@@ -1,8 +1,23 @@
 {
-  "ts": "2026-09-03T10:48:49+00:00",
+  "ts": "2026-09-03T10:54:09+00:00",
   "scanned": 98,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SPKUSDT",
+      "signal": "breakout",
+      "score": 0.7966,
+      "raw_score": 0.8556,
+      "weight": 0.931,
+      "price": 0.022337,
+      "why": "trades 47.8x, volume 41.4x, 64% taker-buy, +5.7% in an hour, at 98% of its 24h range",
+      "chg_24h": 0.1339,
+      "vol_surge": 41.44,
+      "chg_1h": 0.0566,
+      "market_surge": 7.62,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 2/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 17,
+    "count": 18,
     "baseline": 11.0,
     "wave": false
   },
