@@ -1,37 +1,37 @@
 {
- "updated_utc": "2026-08-31T15:30:00+00:00",
- "lines_counted": 436,
- "lines_total": 436,
+ "updated_utc": "2026-09-03T10:45:00+00:00",
+ "lines_counted": 455,
+ "lines_total": 455,
  "method": "Recomputed from source each run rather than incremented. Daily lines are deduped by (date,bot) keeping the last filing, which drops superseded re-filings so a session is never counted twice; trade_event lines are all kept.",
  "by_primary_driver": {
   "unknown": {
-   "profit": 15,
+   "profit": 16,
    "loss": 13,
-   "flat": 87,
-   "win_pct": 53.6
+   "flat": 88,
+   "win_pct": 55.2
   },
   "market_beta": {
-   "profit": 36,
-   "loss": 30,
+   "profit": 40,
+   "loss": 31,
    "flat": 7,
-   "win_pct": 54.5
+   "win_pct": 56.3
   },
   "hype_sentiment": {
    "profit": 18,
-   "loss": 39,
+   "loss": 40,
    "flat": 7,
-   "win_pct": 31.6
+   "win_pct": 31.0
   },
   "technical": {
    "profit": 17,
-   "loss": 37,
-   "flat": 4,
-   "win_pct": 31.5
+   "loss": 41,
+   "flat": 5,
+   "win_pct": 29.3
   },
   "none_cash": {
    "profit": 0,
    "loss": 1,
-   "flat": 39,
+   "flat": 43,
    "win_pct": 0.0
   },
   "macro": {
@@ -43,41 +43,41 @@
   "sector": {
    "profit": 14,
    "loss": 10,
-   "flat": 0,
+   "flat": 1,
    "win_pct": 58.3
   },
   "news_idiosyncratic": {
-   "profit": 14,
+   "profit": 15,
    "loss": 8,
    "flat": 1,
-   "win_pct": 63.6
+   "win_pct": 65.2
   }
  },
  "by_beta_or_alpha": {
   "alpha": {
-   "profit": 71,
-   "loss": 89,
-   "flat": 8,
-   "win_pct": 44.4
+   "profit": 73,
+   "loss": 94,
+   "flat": 9,
+   "win_pct": 43.7
   },
   "n/a": {
    "profit": 13,
    "loss": 16,
-   "flat": 131,
+   "flat": 136,
    "win_pct": 44.8
   },
   "beta": {
-   "profit": 29,
-   "loss": 26,
+   "profit": 33,
+   "loss": 27,
    "flat": 7,
-   "win_pct": 52.7
+   "win_pct": 55.0
   },
   "mixed": {
    "profit": 19,
    "loss": 26,
-   "flat": 1,
+   "flat": 2,
    "win_pct": 42.2
   }
  },
- "note": "The tally barely moved because only one fill happened all run, but that fill is the point: 'hype_sentiment' stays the worst driver in the ledger and produced the ONLY loss of any size today, hypecrypto -26.33 on a HEMI buy placed 44% above the coin's 24h low after a +37.8% pump. Against it, the day's two best books were driven by things the bots did not choose: commodity +1.31% on a Kharg oil-terminal threat and crypto/hunter +2.3% on a SOL bounce. 'market_beta' and 'macro' lines again dominate the honest-and-boring end, four books being 100% in one asset and simply returning it. New this run: the first 'sector' call in a while, meanrev's WMT +1.28% against a -0.49% tape, filed at medium confidence because the defensive-bid read is inferred and no WMT headline was found."
+ "note": "2026-09-03: the hype_sentiment driver's losing record got worse in the only way that matters - the strategy that owns it hit the R1 kill floor and is retired. Read the sentiment bot's profit lines against the GPRO stale-fill finding before treating that driver as validated."
 }
