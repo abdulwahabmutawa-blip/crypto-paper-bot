@@ -1063,6 +1063,17 @@ def main():
             except Exception:
                 return None
 
+        # BTC VETO (2026-09-04): one public call per cycle, refuses the whole
+        # scout lane while BTC is the thing moving.
+        _btc_hot = binance_live.btc_hot_reason()
+        if _btc_hot:
+            print(f"[{KEY}] {_btc_hot}")
+            if st.get("btc_hot_flagged") != _btc_hot[:20]:
+                st["btc_hot_flagged"] = _btc_hot[:20]
+                binance_live.log({"event": "refused", "action": "BUY",
+                                  "symbol": "*", "reason": _btc_hot})
+        else:
+            st.pop("btc_hot_flagged", None)
         pick, source, pick_score = None, None, 0.0
         # OWNER DECISION 2026-08-19: watcher entries only when the paper
         # twin's rolling record has earned them (see binance_live). The
@@ -1120,7 +1131,7 @@ def main():
         # bought a coin that pumped six hours ago and was already rolling
         # over (the live COWUSDT case: +49% on the day, -6.5% in the hour, on
         # BELOW-average volume). The Scout requires the move to be alive now.
-        if pick is None:
+        if pick is None and not _btc_hot:
             _cands = scout_candidates()
             if turbo:
                 _cands = _turbo_rank(_cands)

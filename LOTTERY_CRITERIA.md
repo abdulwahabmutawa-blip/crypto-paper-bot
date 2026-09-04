@@ -167,3 +167,11 @@ positive expectancy over the window was the ignition definition (volume
 49-51%, +0.8% at -6% stop, +1.1% at -8%. Decisions: **ignition-only
 entries for the last-chance week; ignition stop -8%**; breakout entries
 off until its BTC-excess day record is positive.
+
+**BTC veto (2026-09-04, same study):** of the 123 ignition shapes, those
+flagged while BTC was up >= +1% over 4h hit 10% (-2.5%) and while BTC was
+up >= +2% over 24h hit 22% (-1.8%); the remaining 95 hit 49% (+1.10%),
+positive on 6 of 8 days. `binance_live.btc_hot_reason` refuses the scout
+lane under either condition. Other conditions tested (taker share < 0.8,
+avoiding 12-17 UTC, volume >= 8x) add a little on samples of 37-58 and are
+NOT shipped; they are noted here as candidates for the 09-30 review.

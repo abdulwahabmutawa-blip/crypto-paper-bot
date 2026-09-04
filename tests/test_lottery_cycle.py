@@ -491,6 +491,16 @@ def test_paying_tape_allows_entries(cycle):
     assert [o[0] for o in cycle["orders"]] == ["BUY"]
 
 
+def test_btc_hot_vetoes_entries(cycle):
+    cycle["cash"]()
+    cycle["scout"]()
+    cycle["monkeypatch"].setattr(cycle["bl"], "btc_hot_reason",
+                                 lambda: "BTC HOT — +1.5% in 4h")
+    _completes(cycle)
+    assert cycle["orders"] == []
+    assert cycle["state"]()["held_symbol"] is None
+
+
 def test_state_write_is_atomic_leaves_no_tmp(cycle):
     cycle["seat"]()
     _completes(cycle)

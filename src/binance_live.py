@@ -1036,6 +1036,32 @@ def protective_floor(entry: float | None, hwm: float | None,
     return entry * (1.0 + stop_pct)
 
 
+BTC_HOT_4H = 0.01    # alt ignitions fail while BTC itself is ripping:
+BTC_HOT_24H = 0.02   # two-week coin-hour study (2026-09-04, n=123 ignition
+                     # shapes): BTC 4h >= +1% -> 10% hit / -2.5%; BTC 24h
+                     # >= +2% -> 22% / -1.8%; the rest 49% / +1.1%.
+
+
+def btc_hot_reason() -> str | None:
+    """Refusal reason when BTC is up >= BTC_HOT_4H over 4h or >= BTC_HOT_24H
+    over 24h. Unknown data (no candles) = no veto: this is a filter on a
+    known-bad regime, not a safety rail."""
+    k = _call("GET", "/v3/klines",
+              {"symbol": "BTCUSDT", "interval": "1h", "limit": 26})
+    if not isinstance(k, list) or len(k) < 25:
+        return None
+    try:
+        closes = [float(c[4]) for c in k]
+        last, c4, c24 = closes[-1], closes[-5], closes[-25]
+        r4, r24 = last / c4 - 1.0, last / c24 - 1.0
+    except Exception:
+        return None
+    if r4 >= BTC_HOT_4H or r24 >= BTC_HOT_24H:
+        return (f"BTC HOT — BTC {r4:+.1%} in 4h / {r24:+.1%} in 24h: alt "
+                f"ignitions fail while the money is in BTC")
+    return None
+
+
 def fee_usd(fill: dict, symbol: str, px: float | None) -> float:
     """Commission of one fill priced in USDT: USDT as-is, the coin at the
     fill price, BNB at its ticker (fetched once per call)."""
