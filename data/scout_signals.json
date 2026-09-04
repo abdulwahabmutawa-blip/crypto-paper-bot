@@ -1,20 +1,35 @@
 {
-  "ts": "2026-09-04T08:06:43+00:00",
-  "scanned": 115,
+  "ts": "2026-09-04T08:12:25+00:00",
+  "scanned": 113,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "HEIUSDT",
+      "symbol": "WBETHUSDT",
       "signal": "ignition",
-      "score": 0.794,
-      "raw_score": 0.8519,
+      "score": 0.9024,
+      "raw_score": 0.9683,
       "weight": 0.932,
-      "price": 0.15,
-      "why": "trades 76.6x and volume 87.4x the prior 4h, 65% taker-buy, $211,227 burst \u2014 while price has only moved +2.5%",
-      "chg_24h": 0.0696,
-      "vol_surge": 87.39,
-      "chg_1h": 0.0246,
-      "market_surge": 0.0,
+      "price": 2775.94,
+      "why": "trades 9.6x and volume 53.0x the prior 4h, 94% taker-buy, $50,222 burst \u2014 while price has only moved -0.1%",
+      "chg_24h": 0.0412,
+      "vol_surge": 53.0,
+      "chg_1h": -0.0009,
+      "market_surge": 4.07,
+      "actionable": false,
+      "status": "benched \u2014 hit 42%, mean -0.18% over last 517 at 24h: not beating 4x the round trip"
+    },
+    {
+      "symbol": "CRVUSDT",
+      "signal": "ignition",
+      "score": 0.7785,
+      "raw_score": 0.8353,
+      "weight": 0.932,
+      "price": 0.3722,
+      "why": "trades 8.2x and volume 10.4x the prior 4h, 65% taker-buy, $89,192 burst \u2014 while price has only moved -0.2%",
+      "chg_24h": 0.0332,
+      "vol_surge": 10.4,
+      "chg_1h": -0.0016,
+      "market_surge": 0.88,
       "actionable": false,
       "status": "benched \u2014 hit 42%, mean -0.18% over last 517 at 24h: not beating 4x the round trip"
     }
@@ -27,7 +42,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 14,
+    "count": 15,
     "baseline": 11.0,
     "wave": false
   },
