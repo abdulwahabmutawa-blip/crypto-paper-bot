@@ -1,26 +1,28 @@
-# Fleet status — 2026-09-03 (UTC)
+# Fleet status — 2026-09-04 (UTC)
 
 10 paper bots ($1,000 each, no real money) + Watcher (Grok risk gate).
 
 | Bot | Holds | 24h change | Value |
 |---|---|---|---|
-| crypto (trend/regime) | CASH | No change (already cash) | $1,119.75 |
-| congress | 10 positions | No new trade — marks only | $983.81 |
-| meanrev | WMT | No new trade — marks only | $1,254.96 |
-| commodity | DBC | Whipsaw: DBC→USO→DBC (3 flips) | $1,032.39 |
-| allweather | 5-asset basket | No new trade — marks only | $1,019.01 |
-| sentiment | DELL | Rotated ARB-USD → DELL (Grok hype) — see below | $2,553.77 |
+| crypto (trend/regime) | ADA-USD | CASH → ADA-USD (signal flip, 09-03) | $1,158.84 |
+| congress | 10 positions | No new trade — marks only | $1,003.21 |
+| meanrev | HD | WMT → HD (signal flip, 09-03) | $1,286.23 |
+| commodity | DBC | No new trade — marks only (prior whipsaw already settled) | $1,033.03 |
+| allweather | 5-asset basket | No new trade — marks only | $1,025.74 |
+| sentiment | SNOW | DELL → SNOW (Grok hype rotation) — see below | $2,488.60 |
 | hypecrypto | CASH | No change — still frozen (kill floor, 08-31) | $739.48 |
-| Hunter | BTC-USD | No new trade — marks only | $961.96 |
-| Scholar | SPY | No new trade — marks only | $1,013.73 |
-| Analyst | SPY | No new trade — marks only | $1,018.71 |
-| Watcher | — (no capital) | Verdict refreshed, still "caution" | n/a |
+| Hunter | BTC-USD | No new trade — marks only | $1,013.66 |
+| Scholar | ETH-USD | SPY → ETH-USD (signal flip, 09-03) | $1,030.22 |
+| Analyst | SPY | No new trade — marks only | $1,029.25 |
+| Watcher | — (no capital) | No new scan since 09-03 11:11 UTC — see below | n/a |
 
 ## Changed
-- commodity: 3 whipsaw flips (DBC→DBC→USO→USO→DBC), ~$5.08 fees, ended back on DBC.
-- sentiment: sold ARB-USD, bought DELL on a Grok euphoria signal — but see Needs a look.
-- No stop-outs. No other position changes. No failed or skipped cycles — commits ran every ~13–14 min all 24h with no gap over 20 min.
+- crypto: went to CASH then bought ADA-USD in the same window (signal flip, 09-03).
+- meanrev: WMT → HD, oversold-dip rotation.
+- scholar: SPY → ETH-USD, vol-targeted 36% position, rest cash.
+- sentiment: DELL → SNOW on a Grok hype signal — book value still anomalous, see below.
+- No stop-outs. No failed or skipped cycles — 110 cycle commits over the last 24h, no gap over 20 min.
 
 ## Needs a look
-- **sentiment bot's price feed looks broken.** The ARB-USD price on its 09-01 BUY and 09-02 SELL is identical (0.00062903) despite ARB trading 24/7 — that's a stale/frozen quote, not a real 0% move. Its book has gone from $1,000 start to $2,553.77 (+155%), far outside every other bot's $740–$1,255 range, and the jump traces to that ARB-USD leg plus an adjacent GPRO round-trip that shows +67% in one session. Treat this bot's current value as unverified until the price source is checked.
-- Nothing else broken: all other 9 bots' cycles ran cleanly, Watcher's risk verdict is fresh (23:19 UTC 09-02).
+- **sentiment bot's value is still anomalous.** $2,488.60 vs every other bot's $739–$1,286 range. Yesterday's flagged cause (a frozen ARB-USD quote, 0.00062903 repeated across 3 trades on 09-01/09-02, plus a same-day GPRO round-trip showing +67%) is still sitting in its trade history and hasn't been corrected. Today's DELL/SNOW fills look like real distinct prices, but the inflated cash base carried forward from the earlier bug is unverified.
+- **Watcher hasn't scanned in ~18h.** Last verdict is 2026-09-03T11:11 UTC ("caution"); normal cadence is ~8h. September scan count is 7, far under the 100/month cap, so it isn't budget throttling — cause unclear. Not yet past the 24h "treat as UNKNOWN" line, but worth checking the scan scheduler.
