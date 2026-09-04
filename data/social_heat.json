@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-04T03:52:18+00:00",
+  "ts": "2026-09-04T03:57:13+00:00",
   "sources": {
     "coingecko": [
       "UNI",
@@ -8,8 +8,8 @@
       "LIT",
       "BTC",
       "ARB",
-      "PUMP",
-      "ONDO"
+      "CHIP",
+      "PUMP"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,8 +19,8 @@
       "CRCLB",
       "UNI",
       "ENA",
-      "XPL",
       "ADA",
+      "XPL",
       "ARB"
     ],
     "watcher": [],
@@ -36,6 +36,16 @@
       ],
       "funding": 0.0001,
       "long_short": 1.27
+    },
+    {
+      "symbol": "CHIP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -7.4e-05,
+      "long_short": 1.1
     },
     {
       "symbol": "UNI",
@@ -71,15 +81,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.9e-05
-    },
-    {
-      "symbol": "CHIP",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -8.2e-05
+      "funding": 9e-05
     },
     {
       "symbol": "CRCLB",
@@ -94,18 +96,10 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.3e-05
+      "funding": 4.5e-05
     },
     {
       "symbol": "LIT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "ONDO",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -118,7 +112,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4e-06
+      "funding": 5e-06
     },
     {
       "symbol": "PUMP",
@@ -126,7 +120,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.4e-05
+      "funding": -2.5e-05
     },
     {
       "symbol": "XPL",
