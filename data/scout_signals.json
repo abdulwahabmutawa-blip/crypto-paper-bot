@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-04T17:34:36+00:00",
-  "scanned": 118,
+  "ts": "2026-09-04T17:40:05+00:00",
+  "scanned": 117,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "FLOKIUSDT",
+      "signal": "ignition",
+      "score": 0.8274,
+      "raw_score": 0.8954,
+      "weight": 0.924,
+      "price": 2.475e-05,
+      "why": "trades 10.1x and volume 37.5x the prior 4h, 73% taker-buy, $268,163 burst \u2014 while price has only moved -1.5%",
+      "chg_24h": -0.0429,
+      "vol_surge": 37.52,
+      "chg_1h": -0.0147,
+      "market_surge": 7.42,
+      "actionable": false,
+      "status": "benched \u2014 hit 42%, mean -0.03% over last 530 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 42%, mean -0.03% over last 530 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 BTC-excess day mean -0.30% at 24h: market beta, not signal",
