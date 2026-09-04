@@ -1,8 +1,8 @@
 {
-  "generated_utc": "2026-09-04T02:24:28+00:00",
+  "generated_utc": "2026-09-04T02:38:05+00:00",
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "live_ts": "2026-09-04T02:24:28+00:00",
+  "live_ts": "2026-09-04T02:38:05+00:00",
   "current": {
     "date": "2026-09-03",
     "value": 1013.66,
@@ -13,7 +13,16 @@
     {
       "sym": "SOL",
       "price": 100.39,
-      "line": "Solana \u00b7 score +8.26 \u00b7 mom20 +31.8%",
+      "line": "Solana \u00b7 score +8.72 \u00b7 mom20 +33.3%",
+      "tag": "hunting",
+      "on": true,
+      "pick": false,
+      "fill": 50
+    },
+    {
+      "sym": "MSTR",
+      "price": 144.82,
+      "line": "MicroStrategy \u00b7 score +8.71 \u00b7 mom20 +55.7%",
       "tag": "hunting",
       "on": true,
       "pick": false,
@@ -22,16 +31,25 @@
     {
       "sym": "BTC",
       "price": 77300.48,
-      "line": "Bitcoin \u00b7 score +8.04 \u00b7 mom20 +21.9%",
+      "line": "Bitcoin \u00b7 score +8.40 \u00b7 mom20 +22.7%",
       "tag": "HELD",
       "on": true,
       "pick": true,
       "fill": 50
     },
     {
+      "sym": "COIN",
+      "price": 192.7,
+      "line": "Coinbase \u00b7 score +6.06 \u00b7 mom20 +29.8%",
+      "tag": "hunting",
+      "on": true,
+      "pick": false,
+      "fill": 50
+    },
+    {
       "sym": "USO",
-      "price": 141.15,
-      "line": "Oil \u00b7 score +6.33 \u00b7 mom20 +12.9%",
+      "price": 142.09,
+      "line": "Oil \u00b7 score +6.02 \u00b7 mom20 +12.2%",
       "tag": "hunting",
       "on": true,
       "pick": false,
@@ -40,65 +58,47 @@
     {
       "sym": "ETH",
       "price": 2391.5,
-      "line": "Ethereum \u00b7 score +5.88 \u00b7 mom20 +26.9%",
+      "line": "Ethereum \u00b7 score +5.93 \u00b7 mom20 +27.2%",
       "tag": "hunting",
       "on": true,
       "pick": false,
       "fill": 50
-    },
-    {
-      "sym": "MSTR",
-      "price": 123.19,
-      "line": "MicroStrategy \u00b7 score +4.92 \u00b7 mom20 +26.9%",
-      "tag": "hunting",
-      "on": true,
-      "pick": false,
-      "fill": 50
-    },
-    {
-      "sym": "COIN",
-      "price": 174.96,
-      "line": "Coinbase \u00b7 score +2.99 \u00b7 mom20 +13.7%",
-      "tag": "hunting",
-      "on": true,
-      "pick": false,
-      "fill": 44.84182172434462
     },
     {
       "sym": "TSLA",
-      "price": 357.01,
-      "line": "Tesla \u00b7 score +2.04 \u00b7 mom20 +5.0%",
+      "price": 376.37,
+      "line": "Tesla \u00b7 score +3.68 \u00b7 mom20 +10.0%",
       "tag": "hunting",
       "on": true,
       "pick": false,
-      "fill": 30.671411279707137
+      "fill": 50
+    },
+    {
+      "sym": "PLTR",
+      "price": 182.53,
+      "line": "Palantir \u00b7 score +1.68 \u00b7 mom20 +4.9%",
+      "tag": "hunting",
+      "on": true,
+      "pick": false,
+      "fill": 25.201218132895026
     },
     {
       "sym": "SLV",
-      "price": 59.07,
-      "line": "Silver \u00b7 score +0.72 \u00b7 mom20 +1.6%",
+      "price": 60.55,
+      "line": "Silver \u00b7 score +1.59 \u00b7 mom20 +3.5%",
       "tag": "hunting",
       "on": true,
       "pick": false,
-      "fill": 10.823300660684168
+      "fill": 23.77825769944154
     },
     {
       "sym": "GLD",
-      "price": 402.78,
-      "line": "Gold \u00b7 score +0.61 \u00b7 mom20 +1.0%",
+      "price": 410.22,
+      "line": "Gold \u00b7 score +1.34 \u00b7 mom20 +2.2%",
       "tag": "hunting",
       "on": true,
       "pick": false,
-      "fill": 9.11140199030687
-    },
-    {
-      "sym": "NVDA",
-      "price": 224.41,
-      "line": "Nvidia \u00b7 score -0.15 \u00b7 mom20 -0.4%",
-      "tag": "falling",
-      "on": false,
-      "pick": false,
-      "fill": -2.219840203831733
+      "fill": 20.128410431791245
     }
   ],
   "board_title": "The whole market, scored by reward-per-unit-of-risk",
@@ -109,12 +109,6 @@
     "board_note": "Always hunting across leveraged ETFs, high-beta stocks, crypto and commodities \u2014 all-in on the best score, 8% trailing stop, cash only when everything falls. Aggression with a seatbelt."
   },
   "intraday": [
-    {
-      "ts": "2026-08-18T02:44:58+00:00",
-      "value": 987.51,
-      "bench": 1029.24,
-      "holding": "SLV"
-    },
     {
       "ts": "2026-08-18T02:58:26+00:00",
       "value": 987.51,
@@ -9107,6 +9101,12 @@
       "ts": "2026-09-04T02:24:28+00:00",
       "value": 963.92,
       "bench": 1019.23,
+      "holding": "BTC-USD"
+    },
+    {
+      "ts": "2026-09-04T02:38:05+00:00",
+      "value": 963.92,
+      "bench": 1029.9,
       "holding": "BTC-USD"
     }
   ],
