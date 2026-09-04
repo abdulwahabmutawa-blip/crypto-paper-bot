@@ -1,6 +1,6 @@
 # Small-wins lab — paper study (owner request 2026-09-04)
 
-updated 2026-09-04T17:53:21+00:00 · runs 11 · open 175 · resolved 8 · cost 0.25%/RT
+updated 2026-09-04T18:08:19+00:00 · runs 12 · open 192 · resolved 10 · cost 0.25%/RT
 
 PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst day > -3 units.
 
@@ -8,7 +8,7 @@ PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | momentum|t2|s2|h8 | 1 | 1 | 1.0 | 100% | 56% | +1.75% | 100% | 0% | 0% | +1.8% | watch |
 | momentum|t1.5|s1.5|h8 | 1 | 1 | 1.0 | 100% | 58% | +1.25% | 100% | 0% | 0% | +1.2% | watch |
+| momentum|t1|s1|h6 | 5 | 1 | 5.0 | 60% | 62% | -0.05% | 60% | 40% | 0% | -0.3% | fail |
 | momentum|t1.5|s1|h8 | 3 | 1 | 3.0 | 33% | 50% | -0.42% | 33% | 67% | 0% | -1.2% | fail |
-| momentum|t1|s1|h6 | 3 | 1 | 3.0 | 33% | 62% | -0.58% | 33% | 67% | 0% | -1.8% | fail |
 
 _hit = share of trades with positive net return; break-even = (stop+cost)/(target+stop); worst day = sum of unit returns on the worst UTC day. Paper only, one unit per trade, no keys, no orders._
