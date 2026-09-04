@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-04T12:57:54+00:00",
-  "scanned": 120,
+  "ts": "2026-09-04T13:03:24+00:00",
+  "scanned": 118,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "LTCUSDT",
+      "signal": "ignition",
+      "score": 0.5312,
+      "raw_score": 0.5724,
+      "weight": 0.928,
+      "price": 50.45,
+      "why": "trades 5.5x and volume 5.4x the prior 4h, 65% taker-buy, $218,372 burst \u2014 while price has only moved -1.7%",
+      "chg_24h": -0.0098,
+      "vol_surge": 5.43,
+      "chg_1h": -0.0173,
+      "market_surge": 2.77,
+      "actionable": false,
+      "status": "benched \u2014 hit 43%, mean -0.05% over last 520 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 43%, mean -0.05% over last 520 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 35%, mean -0.19% over last 202 at 24h: not beating 4x the round trip",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 9,
+    "count": 10,
     "baseline": 12.0,
     "wave": false
   },
