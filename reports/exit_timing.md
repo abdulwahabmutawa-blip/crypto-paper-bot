@@ -1,11 +1,11 @@
 # Exit timing — the bot grading its own exits
 
-updated 2026-09-04T16:07:35+00:00 · 37 exits audited · early/late line ±3% · MEASUREMENT ONLY
+updated 2026-09-04T16:22:32+00:00 · 38 exits audited · early/late line ±3% · MEASUREMENT ONLY
 
 | verdict | n |
 |---|---|
 | TOO_EARLY | 16 |
-| TOO_LATE | 4 |
+| TOO_LATE | 5 |
 | BOTH | 13 |
 | WELL_TIMED | 4 |
 
@@ -16,6 +16,7 @@ updated 2026-09-04T16:07:35+00:00 · 37 exits audited · early/late line ±3% ·
 | Grok scans stale | 1 | +1.6% | +3.1% | 0 |
 | Hype faded | 7 | +6.1% | +10.7% | 0 |
 | MOMENTUM GONE | 2 | +0.6% | +12.3% | 0 |
+| PROTECTIVE STOP | 1 | +11.8% | +0.9% | 0 |
 | RATCHET | 4 | +9.2% | +3.7% | 0 |
 | STALLED | 12 | +1.5% | +9.7% | 3 |
 | STOP-LOSS | 2 | +11.5% | +8.8% | 0 |
@@ -26,7 +27,7 @@ updated 2026-09-04T16:07:35+00:00 · 37 exits audited · early/late line ±3% ·
 - book since inception (08-15, $40 stake): **-51.1%** — trading P&L only (-$20.42 over 39 closed trades), deposits excluded
 - account balance: $39.03 (of which **+$19.45 is deposited capital, not profit** — inferred as balance minus stake minus P&L; deposits are not tracked anywhere yet)
 - BTC since inception: +26.1% (book gap **-77.1pp**) · last 24h -2.2%
-- ETH since inception: +30.3% (book gap **-81.4pp**) · last 24h -2.2%
+- ETH since inception: +30.3% (book gap **-81.3pp**) · last 24h -2.2%
 
 ## Alpha by regime (book minus BTC, daily, paired)
 
