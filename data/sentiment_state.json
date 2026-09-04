@@ -1,10 +1,10 @@
 {
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "holding": "SNOW",
-  "units": 6.981233981704594,
-  "cash": 0.0,
-  "entry_price": 371.4999084472656,
+  "holding": "CASH",
+  "units": 0.0,
+  "cash": 2452.9978251718903,
+  "entry_price": null,
   "bench_units": 1.332054612938296,
   "stopped": {
     "SHIB-USD": "2026-07-27T00:01:08+00:00",
@@ -658,6 +658,16 @@
       "value": 2593.53,
       "fee": 3.25,
       "reason": "Grok: SNOW euphoric \u2014 earnings beat raise AI coding surge (scan 2026-09-03T11:11)"
+    },
+    {
+      "date": "2026-09-04",
+      "action": "SELL",
+      "ticker": "SNOW",
+      "price": 351.80999756,
+      "units": 6.9812,
+      "value": 2456.07,
+      "fee": 3.07,
+      "reason": "Grok scans stale (26h) \u2014 hype unverifiable, flying blind is not a strategy"
     }
   ],
   "history": [
@@ -895,15 +905,15 @@
       "value": 2488.6,
       "bench": 1029.9,
       "holding": "SNOW"
+    },
+    {
+      "date": "2026-09-04",
+      "value": 2453.0,
+      "bench": 1029.35,
+      "holding": "CASH"
     }
   ],
   "intraday": [
-    {
-      "ts": "2026-08-18T07:43:58+00:00",
-      "value": 1181.29,
-      "bench": 1034.13,
-      "holding": "CASH"
-    },
     {
       "ts": "2026-08-18T07:57:25+00:00",
       "value": 1181.29,
@@ -9897,9 +9907,15 @@
       "value": 2488.6,
       "bench": 1029.9,
       "holding": "SNOW"
+    },
+    {
+      "ts": "2026-09-04T13:33:36+00:00",
+      "value": 2453.0,
+      "bench": 1029.35,
+      "holding": "CASH"
     }
   ],
-  "last_updated_utc": "2026-09-04T13:20:04+00:00",
+  "last_updated_utc": "2026-09-04T13:33:36+00:00",
   "restatement": {
     "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)",
     "voided_trades": [
@@ -9978,5 +9994,5 @@
     ],
     "voided_reason": "signal faded before any real fill was possible (market closed the whole window) \u2014 trades could never have existed"
   },
-  "costs_paid": 109.3166
+  "costs_paid": 112.3867
 }
