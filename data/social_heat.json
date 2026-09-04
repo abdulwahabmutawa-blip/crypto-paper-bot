@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-04T14:56:48+00:00",
+  "ts": "2026-09-04T15:02:28+00:00",
   "sources": {
     "coingecko": [
       "MARSCOIN",
@@ -14,6 +14,7 @@
     "reddit": [],
     "stocktwits": [],
     "movers": [
+      "MARSCOIN",
       "DASH",
       "ZEC",
       "SNDKB",
@@ -26,14 +27,24 @@
   },
   "heat": [
     {
+      "symbol": "MARSCOIN",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 0.68
+    },
+    {
       "symbol": "UNI",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 6.6e-05,
-      "long_short": 1.39
+      "funding": 6.9e-05,
+      "long_short": 1.4
     },
     {
       "symbol": "ZEC",
@@ -42,8 +53,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 0.0,
-      "long_short": 0.54
+      "funding": -6e-06,
+      "long_short": 0.46
     },
     {
       "symbol": "ARB",
@@ -75,7 +86,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -2e-06
+      "funding": -3e-06
     },
     {
       "symbol": "ETH",
@@ -83,7 +94,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.6e-05
+      "funding": 1.4e-05
     },
     {
       "symbol": "LIT",
@@ -91,15 +102,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.00012
-    },
-    {
-      "symbol": "MARSCOIN",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": -0.000116
     },
     {
       "symbol": "PROM",
