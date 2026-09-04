@@ -1,42 +1,33 @@
 {
-  "ts": "2026-09-04T04:02:37+00:00",
+  "ts": "2026-09-04T04:07:47+00:00",
   "sources": {
     "coingecko": [
       "UNI",
-      "PENGU",
       "ZEC",
       "LIT",
+      "PENGU",
       "BTC",
       "ARB",
       "CHIP",
+      "CAKE",
       "PUMP"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "CHIP",
+      "DASH",
       "ZEC",
       "CRCLB",
       "UNI",
       "ENA",
       "ADA",
-      "XPL",
-      "ARB"
+      "XPL"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "ARB",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.26
-    },
     {
       "symbol": "CHIP",
       "surfaces": 2,
@@ -44,7 +35,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -7.3e-05,
+      "funding": -7.5e-05,
       "long_short": 1.08
     },
     {
@@ -65,7 +56,7 @@
         "movers"
       ],
       "funding": 0.0001,
-      "long_short": 0.57
+      "long_short": 0.61
     },
     {
       "symbol": "ADA",
@@ -76,12 +67,28 @@
       "funding": 0.0001
     },
     {
+      "symbol": "ARB",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 8.9e-05
+      "funding": 9e-05
+    },
+    {
+      "symbol": "CAKE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "CRCLB",
@@ -91,12 +98,20 @@
       ]
     },
     {
+      "symbol": "DASH",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "ENA",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 4.7e-05
+      "funding": 4.9e-05
     },
     {
       "symbol": "LIT",
@@ -112,7 +127,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3e-06
+      "funding": 1e-06
     },
     {
       "symbol": "PUMP",
@@ -120,7 +135,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.8e-05
+      "funding": -2.7e-05
     },
     {
       "symbol": "XPL",
