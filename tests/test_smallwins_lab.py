@@ -46,6 +46,7 @@ def test_features_shape():
     assert F and set(F) >= {"px", "r1h", "r4h", "r24", "v4h", "tbs4h", "rp24", "rng24", "btc1", "btc4", "btc24"}
     assert 0.0 <= F["rp24"] <= 1.0 and 0.0 <= F["tbs4h"] <= 1.0
     assert sw.features(k[:50], b) is None
+    assert sw.features(k[:99], b[:99]) is not None, "99 closed candles (a 100-limit fetch minus the open one) must work"
 
 
 def test_grid_is_sane():

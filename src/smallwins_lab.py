@@ -102,7 +102,8 @@ def universe():
 
 def features(k15, btc15):
     """k15: last >= 100 closed 15m candles. Returns feature dict or None."""
-    if len(k15) < 100 or len(btc15) < 100:
+    # 97 = 24h of closed candles + 1; the newest fetched candle is still open
+    if len(k15) < 97 or len(btc15) < 97:
         return None
     cl = [float(c[4]) for c in k15]
     hi = [float(c[2]) for c in k15]
@@ -195,8 +196,8 @@ def main():
     if not syms:
         print("[smallwins] no universe (ticker fetch failed) — skipping run")
         return 0
-    btc15 = binance_data.klines("BTCUSDT", "15m", 100) or []
-    if len(btc15) < 100:
+    btc15 = binance_data.klines("BTCUSDT", "15m", 120) or []
+    if len(btc15) < 97:
         print("[smallwins] no BTC candles — skipping run")
         return 0
     tiers = {s: i for i, s in enumerate(syms)}
@@ -207,7 +208,7 @@ def main():
     # resolve first (needs candles for held symbols), then look for entries
     need = set(p["symbol"] for p in st["open"]) | set(syms)
     for s in need:
-        k = binance_data.klines(s, "15m", 100)
+        k = binance_data.klines(s, "15m", 120)
         if k:
             cache[s] = k
     still_open = []
