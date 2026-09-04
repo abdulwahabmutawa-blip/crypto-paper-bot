@@ -1,14 +1,13 @@
 {
-  "ts": "2026-09-04T16:27:37+00:00",
+  "ts": "2026-09-04T16:33:01+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
-      "LIT",
       "MARSCOIN",
+      "LIT",
       "UNI",
       "ENA",
-      "PUMP",
-      "PENGU",
+      "ARB",
       "TAO"
     ],
     "reddit": [],
@@ -18,15 +17,25 @@
       "DASH",
       "SNDKB",
       "ZEC",
-      "UNI",
-      "ARB",
       "PROM",
-      "LINK"
+      "ARB",
+      "UNI",
+      "XPL"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "ARB",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.21
+    },
     {
       "symbol": "MARSCOIN",
       "surfaces": 2,
@@ -54,16 +63,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": -2e-05,
+      "funding": -1.5e-05,
       "long_short": 0.45
-    },
-    {
-      "symbol": "ARB",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "DASH",
@@ -79,15 +80,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.5e-05
-    },
-    {
-      "symbol": "LINK",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -8e-06
+      "funding": 4.9e-05
     },
     {
       "symbol": "LIT",
@@ -95,29 +88,13 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -4.9e-05
-    },
-    {
-      "symbol": "PENGU",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -6e-06
+      "funding": -5.3e-05
     },
     {
       "symbol": "PROM",
       "surfaces": 1,
       "sources": [
         "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "PUMP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
       ],
       "funding": 5e-05
     },
@@ -133,6 +110,14 @@
       "surfaces": 1,
       "sources": [
         "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "XPL",
+      "surfaces": 1,
+      "sources": [
+        "movers"
       ],
       "funding": 5e-05
     }
