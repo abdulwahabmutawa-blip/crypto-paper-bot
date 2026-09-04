@@ -1,8 +1,54 @@
 {
-  "ts": "2026-09-04T03:00:31+00:00",
-  "scanned": 114,
+  "ts": "2026-09-04T03:06:13+00:00",
+  "scanned": 115,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "DASHUSDT",
+      "signal": "breakout",
+      "score": 0.7398,
+      "raw_score": 0.7862,
+      "weight": 0.941,
+      "price": 50.3,
+      "why": "trades 5.6x, volume 9.8x, 69% taker-buy, +6.1% in an hour, at 100% of its 24h range",
+      "chg_24h": 0.1767,
+      "vol_surge": 9.79,
+      "chg_1h": 0.0605,
+      "market_surge": 8.8,
+      "actionable": false,
+      "status": "benched \u2014 hit 38%, mean +0.60% over last 220 at 24h: not beating 4x the round trip"
+    },
+    {
+      "symbol": "ORDIUSDT",
+      "signal": "ignition",
+      "score": 0.6802,
+      "raw_score": 0.7267,
+      "weight": 0.936,
+      "price": 4.173,
+      "why": "trades 6.0x and volume 25.6x the prior 4h, 63% taker-buy, $160,791 burst \u2014 while price has only moved +0.8%",
+      "chg_24h": 0.0586,
+      "vol_surge": 25.58,
+      "chg_1h": 0.0085,
+      "market_surge": 10.72,
+      "actionable": false,
+      "status": "benched \u2014 hit 43%, mean +0.17% over last 528 at 24h: not beating 4x the round trip"
+    },
+    {
+      "symbol": "TRUMPUSDT",
+      "signal": "ignition",
+      "score": 0.485,
+      "raw_score": 0.5181,
+      "weight": 0.936,
+      "price": 2.423,
+      "why": "trades 5.0x and volume 5.6x the prior 4h, 63% taker-buy, $585,655 burst \u2014 while price has only moved +3.2%",
+      "chg_24h": 0.0717,
+      "vol_surge": 5.65,
+      "chg_1h": 0.0324,
+      "market_surge": 2.31,
+      "actionable": false,
+      "status": "benched \u2014 hit 43%, mean +0.17% over last 528 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 43%, mean +0.17% over last 528 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 38%, mean +0.60% over last 220 at 24h: not beating 4x the round trip",
@@ -11,7 +57,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 18,
+    "count": 20,
     "baseline": 11.0,
     "wave": false
   },
