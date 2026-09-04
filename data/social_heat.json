@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-04T15:07:58+00:00",
+  "ts": "2026-09-04T15:13:38+00:00",
   "sources": {
     "coingecko": [
       "LIT",
@@ -7,9 +7,9 @@
       "MARSCOIN",
       "BTC",
       "ARB",
+      "ETH",
       "UNI",
-      "PUMP",
-      "ETH"
+      "PENGU"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,9 +19,9 @@
       "ZEC",
       "SNDKB",
       "PROM",
+      "ENA",
       "ARB",
-      "UNI",
-      "XPL"
+      "UNI"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -64,7 +64,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -7e-06,
+      "funding": -9e-06,
       "long_short": 0.46
     },
     {
@@ -73,7 +73,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.1e-05
+      "funding": 5e-05
     },
     {
       "symbol": "DASH",
@@ -84,12 +84,20 @@
       "funding": 0.0001
     },
     {
+      "symbol": "ENA",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -5e-06
+    },
+    {
       "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 1.4e-05
+      "funding": 1.2e-05
     },
     {
       "symbol": "LIT",
@@ -97,7 +105,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000109
+      "funding": -0.000103
+    },
+    {
+      "symbol": "PENGU",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -2e-06
     },
     {
       "symbol": "PROM",
@@ -108,27 +124,11 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PUMP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "SNDKB",
       "surfaces": 1,
       "sources": [
         "movers"
       ]
-    },
-    {
-      "symbol": "XPL",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
