@@ -1,14 +1,15 @@
 {
-  "ts": "2026-09-04T12:52:18+00:00",
+  "ts": "2026-09-04T12:57:49+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
       "LIT",
-      "UNI",
       "BTC",
+      "UNI",
       "PUMP",
       "SOL",
       "XPL",
+      "TAO",
       "ENA"
     ],
     "reddit": [],
@@ -20,8 +21,8 @@
       "CRCLB",
       "SPCXB",
       "ENA",
-      "XPL",
-      "ADA"
+      "ADA",
+      "LINK"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -34,18 +35,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 2.7e-05,
+      "funding": 3e-05,
       "long_short": 1.53
-    },
-    {
-      "symbol": "XPL",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.22
     },
     {
       "symbol": "ZEC",
@@ -89,6 +80,14 @@
       "funding": 0.0001
     },
     {
+      "symbol": "LINK",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 1e-05
+    },
+    {
       "symbol": "LIT",
       "surfaces": 1,
       "sources": [
@@ -118,7 +117,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.5e-05
+      "funding": -1.4e-05
     },
     {
       "symbol": "SPCXB",
@@ -128,12 +127,28 @@
       ]
     },
     {
+      "symbol": "TAO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 1e-06
+    },
+    {
       "symbol": "UNI",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 3.4e-05
+      "funding": 3.7e-05
+    },
+    {
+      "symbol": "XPL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 4.8e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
