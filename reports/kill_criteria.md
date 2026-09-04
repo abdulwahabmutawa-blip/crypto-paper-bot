@@ -110,6 +110,20 @@ maximum of many draws. Judge it by these rules, never by its rank.
   become eligible.
 - **~2026-11-20:** ~90 trading days. R5 promotions become eligible.
 
+### Owner override 2026-09-04
+
+Outside the scheduled-review rule, same as the 07-31 stock-bot kill, and
+recorded as such: the owner retired **congress** ($1,003 after 37 days,
+-0.9% at last full mark vs bench +2.6%; the pre-registered finding that
+copying Congress does not beat the index already stood), **hunter**
+($1,014 after 40 days, behind its +3.6% bench, max DD -7.3%), **analyst**
+(LLM agent, 1 trade in 26 days, holding SPY; the corpus's own review rates
+LLMs as verified-bad traders and its API cost is not covered by one index
+trade), and confirmed **hypecrypto**'s R1 retirement ($739). Their state
+files and dashboards remain as frozen archives; they leave the Actions
+roster. Kept: crypto, meanrev, commodity, allweather (control), scholar,
+sentiment (under audit for a suspected stale-fill inflation, see STATUS).
+
 ## Roster covered
 
 crypto (regime switcher), meanrev, commodity, allweather, congress, hunter,
