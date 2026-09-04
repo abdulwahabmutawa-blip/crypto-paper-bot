@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-04T02:43:07+00:00",
+  "ts": "2026-09-04T02:48:37+00:00",
   "sources": {
     "coingecko": [
       "LIT",
@@ -16,18 +16,28 @@
     "stocktwits": [],
     "movers": [
       "CHIP",
-      "ZEC",
       "CRCLB",
+      "ZEC",
       "UNI",
       "XPL",
       "ENA",
       "ADA",
-      "HEMI"
+      "LINK"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "LINK",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.38
+    },
     {
       "symbol": "UNI",
       "surfaces": 2,
@@ -70,7 +80,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.7e-05
+      "funding": 8.5e-05
     },
     {
       "symbol": "CHIP",
@@ -78,7 +88,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 3.6e-05
+      "funding": 2.6e-05
     },
     {
       "symbol": "CRCLB",
@@ -96,22 +106,6 @@
       "funding": 5e-05
     },
     {
-      "symbol": "HEMI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "LINK",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "LIT",
       "surfaces": 1,
       "sources": [
@@ -125,7 +119,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.3e-05
+      "funding": 2.8e-05
     },
     {
       "symbol": "PUMP",
@@ -133,7 +127,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0
+      "funding": -3e-06
     },
     {
       "symbol": "SOL",
@@ -141,7 +135,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.2e-05
+      "funding": 4.1e-05
     },
     {
       "symbol": "XPL",
