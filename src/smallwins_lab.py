@@ -43,7 +43,10 @@ MAX_RESOLVED_KEEP = 20000
 
 # (target, stop, max_hold_h) grid applied to every shape
 GRID = [(0.01, 0.01, 6), (0.015, 0.015, 8), (0.02, 0.02, 8),
-        (0.015, 0.01, 8), (0.03, 0.02, 12)]
+        (0.015, 0.01, 8), (0.03, 0.02, 12),
+        # owner 2026-09-04: "+3% and more" cells (two-week backtest: all
+        # within a few points of break-even; forward record decides)
+        (0.03, 0.03, 24), (0.03, 0.04, 48), (0.05, 0.03, 48), (0.04, 0.02, 24)]
 
 # entry SHAPES on 15m features (F) — see features()
 SHAPES = {
