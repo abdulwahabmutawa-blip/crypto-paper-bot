@@ -1,15 +1,15 @@
 {
-  "ts": "2026-09-04T08:28:57+00:00",
+  "ts": "2026-09-04T08:34:48+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
       "UNI",
       "LIT",
       "SOL",
-      "ENA",
       "BTC",
+      "ETH",
       "PENGU",
-      "LINK",
+      "ARB",
       "TAO"
     ],
     "reddit": [],
@@ -21,33 +21,13 @@
       "PROM",
       "UNI",
       "ENA",
-      "SPCXB",
-      "LINK"
+      "XPL",
+      "SPCXB"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "ENA",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": -3.5e-05,
-      "long_short": 1.44
-    },
-    {
-      "symbol": "LINK",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 9.7e-05,
-      "long_short": 1.43
-    },
     {
       "symbol": "UNI",
       "surfaces": 2,
@@ -55,7 +35,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 6.7e-05,
+      "funding": 6.6e-05,
       "long_short": 1.37
     },
     {
@@ -65,8 +45,16 @@
         "coingecko",
         "movers"
       ],
-      "funding": 2.8e-05,
+      "funding": 2.3e-05,
       "long_short": 0.61
+    },
+    {
+      "symbol": "ARB",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 9.3e-05
     },
     {
       "symbol": "BTC",
@@ -92,12 +80,28 @@
       "funding": 0.0001
     },
     {
+      "symbol": "ENA",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -3.1e-05
+    },
+    {
+      "symbol": "ETH",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 7.8e-05
+    },
+    {
       "symbol": "LIT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -5.7e-05
+      "funding": -7.3e-05
     },
     {
       "symbol": "PENGU",
@@ -105,7 +109,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.4e-05
+      "funding": 4.7e-05
     },
     {
       "symbol": "PROM",
@@ -121,7 +125,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -3.5e-05
+      "funding": -3.3e-05
     },
     {
       "symbol": "SPCXB",
@@ -135,6 +139,14 @@
       "surfaces": 1,
       "sources": [
         "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "XPL",
+      "surfaces": 1,
+      "sources": [
+        "movers"
       ],
       "funding": 5e-05
     }

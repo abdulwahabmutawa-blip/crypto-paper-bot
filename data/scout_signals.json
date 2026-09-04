@@ -1,37 +1,22 @@
 {
-  "ts": "2026-09-04T08:29:03+00:00",
-  "scanned": 112,
+  "ts": "2026-09-04T08:34:52+00:00",
+  "scanned": 113,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "XPLUSDT",
       "signal": "ignition",
-      "score": 0.7973,
-      "raw_score": 0.8573,
+      "score": 0.5256,
+      "raw_score": 0.5652,
       "weight": 0.93,
-      "price": 0.735,
-      "why": "trades 13.1x and volume 11.8x the prior 4h, 64% taker-buy, $179,206 burst \u2014 while price has only moved +2.1%",
-      "chg_24h": 0.0138,
-      "vol_surge": 11.76,
-      "chg_1h": 0.0208,
-      "market_surge": 2.37,
+      "price": 0.09534,
+      "why": "trades 4.9x and volume 6.8x the prior 4h, 63% taker-buy, $200,641 burst \u2014 while price has only moved +2.2%",
+      "chg_24h": 0.0788,
+      "vol_surge": 6.76,
+      "chg_1h": 0.0224,
+      "market_surge": 1.65,
       "actionable": false,
       "status": "benched \u2014 hit 42%, mean -0.19% over last 516 at 24h: not beating 4x the round trip"
-    },
-    {
-      "symbol": "ASTERUSDT",
-      "signal": "breakout",
-      "score": 0.6907,
-      "raw_score": 0.7426,
-      "weight": 0.93,
-      "price": 0.735,
-      "why": "trades 13.1x, volume 11.8x, 64% taker-buy, +2.1% in an hour, at 87% of its 24h range",
-      "chg_24h": 0.0138,
-      "vol_surge": 11.76,
-      "chg_1h": 0.0208,
-      "market_surge": 2.37,
-      "actionable": false,
-      "status": "benched \u2014 hit 35%, mean -0.19% over last 202 at 24h: not beating 4x the round trip"
     }
   ],
   "gate": {
@@ -42,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 16,
+    "count": 15,
     "baseline": 11.0,
     "wave": false
   },
