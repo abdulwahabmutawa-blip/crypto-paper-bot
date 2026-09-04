@@ -1,39 +1,8 @@
 {
-  "ts": "2026-09-04T19:16:53+00:00",
-  "scanned": 120,
+  "ts": "2026-09-04T19:22:14+00:00",
+  "scanned": 119,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "COTIUSDT",
-      "signal": "breakout",
-      "score": 0.7034,
-      "raw_score": 0.7548,
-      "weight": 0.932,
-      "price": 0.01444,
-      "why": "trades 18.1x, volume 8.1x, 60% taker-buy, +2.7% in an hour, at 96% of its 24h range",
-      "chg_24h": 0.0776,
-      "vol_surge": 8.12,
-      "chg_1h": 0.027,
-      "market_surge": 9.33,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.60% at 24h: market beta, not signal"
-    },
-    {
-      "symbol": "FILUSDT",
-      "signal": "ignition",
-      "score": 0.6086,
-      "raw_score": 0.6579,
-      "weight": 0.925,
-      "price": 0.75,
-      "why": "trades 4.2x and volume 7.5x the prior 4h, 89% taker-buy, $87,658 burst \u2014 while price has only moved +0.9%",
-      "chg_24h": -0.0649,
-      "vol_surge": 7.48,
-      "chg_1h": 0.0087,
-      "market_surge": 0.13,
-      "actionable": false,
-      "status": "benched \u2014 hit 42%, mean -0.02% over last 527 at 24h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 42%, mean -0.02% over last 527 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 BTC-excess day mean -0.60% at 24h: market beta, not signal",
@@ -42,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 16,
+    "count": 15,
     "baseline": 12.0,
     "wave": false
   },
@@ -69,7 +38,7 @@
       "median_ret_4h": -0.00099,
       "both_halves_4h": false,
       "days_4h": 14,
-      "mean_x_4h": 0.00332,
+      "mean_x_4h": 0.00377,
       "days_x_4h": 2,
       "avg_win_4h": 0.0188,
       "avg_loss_4h": -0.0188,
