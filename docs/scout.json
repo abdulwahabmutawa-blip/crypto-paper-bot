@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-04T13:19:36+00:00",
-  "scanned": 120,
+  "ts": "2026-09-04T13:25:40+00:00",
+  "scanned": 122,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "DEXEUSDT",
+      "signal": "ignition",
+      "score": 0.5454,
+      "raw_score": 0.5883,
+      "weight": 0.927,
+      "price": 2.001,
+      "why": "trades 5.9x and volume 6.6x the prior 4h, 61% taker-buy, $50,887 burst \u2014 while price has only moved +2.6%",
+      "chg_24h": 0.0188,
+      "vol_surge": 6.58,
+      "chg_1h": 0.0262,
+      "market_surge": 3.37,
+      "actionable": false,
+      "status": "benched \u2014 hit 43%, mean -0.05% over last 519 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 43%, mean -0.05% over last 519 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 35%, mean -0.11% over last 201 at 24h: not beating 4x the round trip",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 10,
+    "count": 9,
     "baseline": 12.0,
     "wave": false
   },
@@ -30,19 +46,19 @@
       "avg_win_1h": 0.01021,
       "avg_loss_1h": -0.0109,
       "payoff_1h": 0.937,
-      "span_h_4h": 331.3,
-      "n_eff_4h": 82.83,
-      "n_4h": 613,
+      "span_h_4h": 331.8,
+      "n_eff_4h": 82.95,
+      "n_4h": 614,
       "hit_rate_4h": 0.427,
-      "mean_ret_4h": -0.00087,
+      "mean_ret_4h": -0.00092,
       "median_ret_4h": -0.00115,
       "both_halves_4h": false,
       "days_4h": 14,
-      "mean_x_4h": -0.00044,
+      "mean_x_4h": -0.00056,
       "days_x_4h": 2,
       "avg_win_4h": 0.01889,
-      "avg_loss_4h": -0.01868,
-      "payoff_4h": 1.011,
+      "avg_loss_4h": -0.01871,
+      "payoff_4h": 1.01,
       "span_h_24h": 311.1,
       "n_eff_24h": 12.96,
       "n_24h": 519,
