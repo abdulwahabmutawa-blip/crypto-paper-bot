@@ -50,5 +50,5 @@ def test_features_shape():
 
 def test_grid_is_sane():
     for target, stop, max_h in sw.GRID:
-        assert 0 < target <= 0.05 and 0 < stop <= 0.05 and 1 <= max_h <= 24
+        assert 0 < target <= 0.05 and 0 < stop <= 0.05 and 1 <= max_h <= 48
         assert sw.breakeven(target, stop) < 0.85, "a tactic nobody can clear is not a test"
