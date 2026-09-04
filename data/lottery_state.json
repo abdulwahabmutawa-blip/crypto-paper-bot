@@ -1,12 +1,13 @@
 {
   "created": "2026-08-15",
-  "held_symbol": "ORDIUSDT",
-  "entry_price": 4.327,
-  "units": 9.61,
-  "entry_scan_ts": "2026-09-03T11:11:48+00:00",
-  "entry_source": "scout:breakout",
+  "held_symbol": null,
+  "entry_price": null,
+  "units": 0.0,
+  "entry_scan_ts": null,
+  "entry_source": null,
   "stopped": {
-    "SPKUSDT": "2026-09-03T16:14:04+00:00"
+    "SPKUSDT": "2026-09-03T16:14:04+00:00",
+    "ORDIUSDT": "2026-09-04T10:18:09+00:00"
   },
   "entries": {
     "2026-09-03": 2
@@ -658,23 +659,31 @@
       "date": "2026-09-03",
       "exit": 0.021085,
       "entry": 0.022436387931034484
+    },
+    {
+      "symbol": "ORDIUSDT",
+      "source": "scout:breakout",
+      "entry_score": 0.7491,
+      "entry_time": "2026-09-03T16:52:54+00:00",
+      "exit_time": "2026-09-04T10:18:09+00:00",
+      "entry_price": 4.327,
+      "exit_price": 4.064,
+      "units": 9.61,
+      "spent_usd": 41.5392,
+      "got_usd": 39.0144,
+      "pnl_pct": -6.08,
+      "pnl_usd": -2.556,
+      "fees_usd": 0.0312,
+      "reason": "PROTECTIVE STOP (-6.1% vs peak +1.6%) \u2014 the floor held at the exchange, between cycles",
+      "date": "2026-09-04",
+      "exit": 4.064,
+      "entry": 4.327
     }
   ],
-  "last_value_usd": 39.34,
-  "last_updated_utc": "2026-09-04T10:12:46+00:00",
-  "open_position": {
-    "symbol": "ORDIUSDT",
-    "entry_time": "2026-09-03T16:52:54+00:00",
-    "entry_price": 4.327,
-    "current_price": 4.092,
-    "units": 9.61,
-    "spent_usd": 41.5825,
-    "value_usd": 39.3241,
-    "pnl_usd": -2.2584,
-    "pnl_pct": -5.43,
-    "source": "scout:breakout"
-  },
-  "spent_usd": 41.5825,
+  "last_value_usd": 39.03,
+  "last_updated_utc": "2026-09-04T10:18:09+00:00",
+  "open_position": null,
+  "spent_usd": null,
   "no_pair": {
     "scan_ts": "2026-09-03T11:11:48+00:00",
     "syms": []
@@ -682,19 +691,5 @@
   "wave_bonus_date": "2026-09-04",
   "book_hwm_usd": 44.27,
   "entry_score": 0.7491,
-  "entry_fee_usd": 0.031194,
-  "hwm": 4.397,
-  "move_max_qv": 597270.20162,
-  "move_qv_sum": 2643014.94473,
-  "move_qv_n": 17,
-  "move_last_ms": 1788512400000,
-  "entry_time": "2026-09-03T16:52:54+00:00",
-  "stop_order": {
-    "order_id": "4014595086",
-    "stop": 4.067,
-    "limit": null,
-    "qty": 9.6,
-    "type": "STOP_LOSS",
-    "client_order_id": "lotstop-ORDIUSDT-8454377607"
-  }
+  "halt_flagged": "CIRCUIT BREAKER \u2014 day P&"
 }
