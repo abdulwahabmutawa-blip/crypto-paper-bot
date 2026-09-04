@@ -1,22 +1,22 @@
 {
-  "ts": "2026-09-04T13:48:38+00:00",
-  "scanned": 120,
+  "ts": "2026-09-04T13:54:12+00:00",
+  "scanned": 121,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "MUBUSDT",
-      "signal": "breakout",
-      "score": 0.723,
-      "raw_score": 0.7825,
-      "weight": 0.924,
-      "price": 989.85,
-      "why": "trades 14.3x, volume 99.4x, 75% taker-buy, +2.6% in an hour, at 86% of its 24h range",
-      "chg_24h": 0.0551,
-      "vol_surge": 99.39,
-      "chg_1h": 0.0264,
-      "market_surge": 17.01,
+      "symbol": "ARUSDT",
+      "signal": "ignition",
+      "score": 0.7452,
+      "raw_score": 0.803,
+      "weight": 0.928,
+      "price": 2.576,
+      "why": "trades 7.5x and volume 13.9x the prior 4h, 82% taker-buy, $87,162 burst \u2014 while price has only moved +2.0%",
+      "chg_24h": 0.0074,
+      "vol_surge": 13.89,
+      "chg_1h": 0.0202,
+      "market_surge": 5.13,
       "actionable": false,
-      "status": "benched \u2014 hit 36%, mean -0.11% over last 202 at 24h: not beating 4x the round trip"
+      "status": "benched \u2014 hit 43%, mean -0.05% over last 520 at 24h: not beating 4x the round trip"
     }
   ],
   "gate": {
@@ -27,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 14,
+    "count": 15,
     "baseline": 12.0,
     "wave": false
   },
