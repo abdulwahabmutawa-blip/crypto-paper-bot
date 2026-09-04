@@ -1,11 +1,12 @@
 {
-  "ts": "2026-09-04T11:29:37+00:00",
+  "ts": "2026-09-04T11:34:57+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
       "LIT",
-      "BTC",
       "UNI",
+      "BTC",
+      "DASH",
       "XMR"
     ],
     "reddit": [],
@@ -14,8 +15,8 @@
       "DASH",
       "ZEC",
       "XPL",
-      "CRCLB",
       "CHIP",
+      "CRCLB",
       "ENA",
       "PROM",
       "ADA"
@@ -24,6 +25,16 @@
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "DASH",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.56
+    },
     {
       "symbol": "ZEC",
       "surfaces": 2,
@@ -66,20 +77,12 @@
       ]
     },
     {
-      "symbol": "DASH",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "ENA",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -1.1e-05
+      "funding": -6e-06
     },
     {
       "symbol": "LIT",
@@ -87,7 +90,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -5e-05
+      "funding": -4.9e-05
     },
     {
       "symbol": "PROM",
@@ -103,7 +106,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.3e-05
+      "funding": 4.1e-05
     },
     {
       "symbol": "XMR",
@@ -111,7 +114,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 0.000648
+      "funding": 0.000677
     },
     {
       "symbol": "XPL",
