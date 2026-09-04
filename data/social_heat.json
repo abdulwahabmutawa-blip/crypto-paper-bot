@@ -1,14 +1,14 @@
 {
-  "ts": "2026-09-04T07:28:38+00:00",
+  "ts": "2026-09-04T07:33:46+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
       "PENGU",
       "UNI",
       "LIT",
-      "PUMP",
       "XRP",
-      "BTC"
+      "ENA",
+      "PUMP"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -17,9 +17,9 @@
       "ZEC",
       "CRCLB",
       "CHIP",
-      "PROM",
       "UNI",
       "ENA",
+      "PROM",
       "ADA"
     ],
     "watcher": [],
@@ -27,13 +27,23 @@
   },
   "heat": [
     {
+      "symbol": "ENA",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -4e-05,
+      "long_short": 1.46
+    },
+    {
       "symbol": "UNI",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 8.7e-05,
+      "funding": 8.6e-05,
       "long_short": 1.32
     },
     {
@@ -43,7 +53,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 8.5e-05,
+      "funding": 8.1e-05,
       "long_short": 0.61
     },
     {
@@ -55,20 +65,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5.9e-05
-    },
-    {
       "symbol": "CHIP",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 1.3e-05
+      "funding": 1.7e-05
     },
     {
       "symbol": "CRCLB",
@@ -86,20 +88,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -4.1e-05
-    },
-    {
       "symbol": "LIT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 1.7e-05
+      "funding": 1.5e-05
     },
     {
       "symbol": "PENGU",
@@ -107,7 +101,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.3e-05
+      "funding": 1.7e-05
     },
     {
       "symbol": "PROM",
@@ -123,7 +117,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -3.9e-05
+      "funding": -4.5e-05
     },
     {
       "symbol": "XRP",
