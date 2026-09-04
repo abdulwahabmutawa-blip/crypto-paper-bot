@@ -412,7 +412,10 @@ def exit_params(source: str | None) -> dict:
         # time (the one uncensored number); median start-to-peak 54h. The
         # cap is a safety net behind climax / terminal-dip / fuel-gone /
         # trailing — the tape is meant to fire first.
-        return {"kind": "burst", "stop_pct": -0.06, "stall_h": 4.0,
+        # 2026-09-04: -8% (was -6%). Two-week coin-hour study of the
+        # ignition shape: -6% stop +0.77%/49% hit, -8% +1.08%/51%; a
+        # 2-3 day move wobbles more than 6% on the way up.
+        return {"kind": "burst", "stop_pct": -0.08, "stall_h": 4.0,
                 "max_hold_h": 48.0, "momentum_exit": momentum_exit}
     if src.startswith("scout:"):
         # 8h -> 24h for the same reason; breakout's own 24h record is weak,

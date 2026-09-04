@@ -155,3 +155,15 @@ fees) on trades entered from 2026-09-04 12:00 UTC.
 
 Cadence expectation under the gate: several days with zero trades are
 normal and are the gate working, not a fault.
+
+**Two-week mover study (2026-09-04, 201 pairs, 31 coins that rose >=30%
+within 72h):** at the hour they turned the movers had ORDINARY volume and
+taker flow (no early burst signature); their only tell was a 7-day
+drawdown at the bottom of the 24h range, which 19% of all coin-hours share
+and which LOSES when bought (-1.2..-1.5%/trade at every stop width). Bursts
+at the range top (breakout) lose at every stop width. The only shape with
+positive expectancy over the window was the ignition definition (volume
+5x over 4h, price not yet moved, taker-buy >= 60%): 123 coin-days, hit
+49-51%, +0.8% at -6% stop, +1.1% at -8%. Decisions: **ignition-only
+entries for the last-chance week; ignition stop -8%**; breakout entries
+off until its BTC-excess day record is positive.

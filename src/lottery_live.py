@@ -1151,6 +1151,12 @@ def main():
                 # the scorecard.
                 if c.get("signal") == "heat":
                     continue        # retired 2026-09-03: lagging, 0/2 real
+                if c.get("signal") == "breakout":
+                    # LAST-CHANCE WEEK (owner, 2026-09-04): breakout entries
+                    # off. Week 08-28..09-04 breakout rows hit 24% / -1.45%;
+                    # two-week coin-hour study: bursts at the range top lose
+                    # at every stop width; only the ignition shape paid.
+                    continue
                 if not c.get("actionable"):     # missing/null = NOT proven
                     print(f"[{KEY}] scout {c['symbol']} ({c['signal']}) "
                           f"is on the bench — "

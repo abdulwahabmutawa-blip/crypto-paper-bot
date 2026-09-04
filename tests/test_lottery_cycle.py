@@ -221,7 +221,7 @@ def cycle(tmp_path, monkeypatch):
             "book_hwm_usd": 46.0}))
         bl.LEDGER.write_text("")
 
-    def scout(symbol="ABCUSDT", signal="breakout", actionable=True, score=0.8,
+    def scout(symbol="ABCUSDT", signal="ignition", actionable=True, score=0.8,
               extra=None):
         cands = [{"symbol": symbol, "signal": signal, "score": score,
                   "actionable": actionable, "why": "test"}]
@@ -292,7 +292,7 @@ def test_cash_plus_actionable_scout_candidate_buys(cycle):
     st = cycle["state"]()
     assert [o[0] for o in cycle["orders"]] == ["BUY"], cycle["orders"]
     assert st["held_symbol"] == "ABCUSDT"
-    assert st["entry_source"] == "scout:breakout"
+    assert st["entry_source"] == "scout:ignition"
     assert st["units"] > 0 and st["hwm"] == cycle["price"]
 
 
@@ -375,10 +375,10 @@ def test_fees_are_netted_into_pnl(cycle):
     st = cycle["state"]()
     st["entry_fee_usd"] = 0.03
     cycle["ll"].STATE.write_text(json.dumps(st))
-    cycle["price"] = cycle["price"] * 0.93
+    cycle["price"] = cycle["price"] * 0.90    # under the -8% ignition stop
     cycle["ll"].main()
     r = cycle["state"]()["realized"][-1]
-    assert r["fees_usd"] >= 0.03 and r["pnl_usd"] <= (r["got_usd"] - r["spent_usd"]) - 0.03
+    assert r["fees_usd"] >= 0.03 and r["pnl_usd"] <= (r["got_usd"] - r["spent_usd"]) - 0.03 + 1e-6
 
 
 # --- exchange-resting stop: the units are LOCKED while it rests ------------
@@ -510,7 +510,7 @@ def test_default_env_rests_a_stop_and_buy_rests_it_the_same_cycle(cycle):
     assert so and so["order_id"] in cycle["open_orders"], \
         "a fresh buy must leave a floor resting at the exchange this cycle"
     assert cycle["open_orders"][so["order_id"]]["clientOrderId"].startswith("lotstop-")
-    assert abs(so["stop"] / cycle["price"] - 0.94) < 0.001  # burst seat -6%
+    assert abs(so["stop"] / cycle["price"] - 0.92) < 0.001  # ignition seat -8%
 
 
 def test_owner_own_stop_order_is_never_adopted_or_cancelled(cycle):

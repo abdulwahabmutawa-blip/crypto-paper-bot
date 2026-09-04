@@ -148,7 +148,7 @@ b = bl.exit_params("scout:ignition")
 # REVAMP 08-23: 24h -> 48h (tournament: 24h cap captured +7.16% median,
 # >half-move only 10.6%; the tape exits fire first, the cap is a net)
 assert b["kind"] == "burst" and b["max_hold_h"] == 48.0 \
-    and b["stall_h"] == 4.0 and b["stop_pct"] == -0.06
+    and b["stall_h"] == 4.0 and b["stop_pct"] == -0.08   # -8% since 2026-09-04
 # 2026-09-03: every scout burst seat gets 48h (replay: the core's edge sits
 # in hours 24-48; first +15% arrives at a median 36.9h)
 bb = bl.exit_params("scout:breakout")
@@ -173,9 +173,9 @@ assert bl.book_floor_reason(None, 40.0) is None, \
     "a failed value read is a data problem, not a stop signal"
 assert bl.book_floor_reason(30.0, None) is None, \
     "no recorded peak yet must not halt the book"
-# wave bonus: base 3, +1 on a breadth wave-day
-assert bl.entry_budget(False) == 3
-assert bl.entry_budget(True) == 4
+# wave bonus: base 2 (since 2026-09-03), +1 on a breadth wave-day
+assert bl.entry_budget(False) == 2
+assert bl.entry_budget(True) == 3
 
 # --- momentum exit is per-thesis (bug fix 08-20) -----------------------------
 # The entry guard demands a coin that has NOT already run far; judging a
