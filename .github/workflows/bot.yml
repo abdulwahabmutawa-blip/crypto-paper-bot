@@ -115,7 +115,7 @@ jobs:
                      bot_meanrev bot_commodity bot_allweather bot_scholar \
                      grok_sentinel sentinel_trader hunter_tracker analyst_agent \
                      hype_crypto_tracker exit_auditor unlock_watch \
-                     announcement_watch social_radar; do
+                     announcement_watch social_radar smallwins_lab; do
               # 7-minute ceiling per bot: urlopen(timeout=) is a per-read
               # deadline, not a total one, and several bots make agentic or
               # unpinned-library calls that can stall far longer than that
@@ -153,6 +153,7 @@ jobs:
             cp reports/analyst_dashboard_data.json docs/analyst_dashboard_data.json 2>/dev/null || true
             cp reports/hypecrypto_dashboard.html docs/hypecrypto.html 2>/dev/null || true
             cp reports/hypecrypto_dashboard_data.json docs/hypecrypto_dashboard_data.json 2>/dev/null || true
+            cp reports/smallwins.md docs/smallwins.md 2>/dev/null || true
 
             git add data/ reports/ docs/ \
               || echo "::error::git add failed — this cycle will not publish"
