@@ -1,14 +1,15 @@
 {
-  "ts": "2026-09-04T03:40:40+00:00",
+  "ts": "2026-09-04T03:46:38+00:00",
   "sources": {
     "coingecko": [
       "UNI",
+      "PENGU",
       "ZEC",
       "LIT",
-      "PENGU",
+      "BTC",
       "ARB",
       "PUMP",
-      "AAVE"
+      "ONDO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -47,14 +48,6 @@
       "long_short": 0.57
     },
     {
-      "symbol": "AAVE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0
-    },
-    {
       "symbol": "ADA",
       "surfaces": 1,
       "sources": [
@@ -69,6 +62,14 @@
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 8.8e-05
     },
     {
       "symbol": "CHIP",
@@ -91,10 +92,18 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.3e-05
+      "funding": 4.1e-05
     },
     {
       "symbol": "LIT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "ONDO",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -107,7 +116,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8e-06
+      "funding": 4e-06
     },
     {
       "symbol": "PUMP",
