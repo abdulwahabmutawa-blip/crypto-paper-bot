@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-04T12:29:03+00:00",
-  "scanned": 117,
+  "ts": "2026-09-04T12:34:51+00:00",
+  "scanned": 115,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SOXLBUSDT",
+      "signal": "ignition",
+      "score": 0.8221,
+      "raw_score": 0.885,
+      "weight": 0.929,
+      "price": 110.38,
+      "why": "trades 96.9x and volume 267.9x the prior 4h, 73% taker-buy, $1,020,888 burst \u2014 while price has only moved -1.9%",
+      "chg_24h": 0.0621,
+      "vol_surge": 267.89,
+      "chg_1h": -0.0192,
+      "market_surge": 22.85,
+      "actionable": false,
+      "status": "benched \u2014 hit 43%, mean -0.06% over last 517 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 43%, mean -0.06% over last 517 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 35%, mean -0.19% over last 202 at 24h: not beating 4x the round trip",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 14,
+    "count": 9,
     "baseline": 12.0,
     "wave": false
   },
