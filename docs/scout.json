@@ -1,24 +1,8 @@
 {
-  "ts": "2026-09-04T09:42:36+00:00",
+  "ts": "2026-09-04T09:48:32+00:00",
   "scanned": 114,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "FLOKIUSDT",
-      "signal": "breakout",
-      "score": 0.8038,
-      "raw_score": 0.8606,
-      "weight": 0.934,
-      "price": 2.696e-05,
-      "why": "trades 26.2x, volume 20.6x, 63% taker-buy, +5.9% in an hour, at 95% of its 24h range",
-      "chg_24h": 0.0964,
-      "vol_surge": 20.6,
-      "chg_1h": 0.0589,
-      "market_surge": 9.09,
-      "actionable": false,
-      "status": "benched \u2014 hit 35%, mean -0.19% over last 200 at 24h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 42%, mean -0.19% over last 511 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 35%, mean -0.19% over last 200 at 24h: not beating 4x the round trip",
@@ -33,19 +17,19 @@
   },
   "scorecard": {
     "ignition": {
-      "span_h_1h": 334.2,
-      "n_eff_1h": 334.18,
-      "n_1h": 623,
-      "hit_rate_1h": 0.382,
+      "span_h_1h": 334.4,
+      "n_eff_1h": 334.37,
+      "n_1h": 624,
+      "hit_rate_1h": 0.381,
       "mean_ret_1h": -0.00101,
       "median_ret_1h": -0.00065,
       "both_halves_1h": false,
       "days_1h": 14,
-      "mean_x_1h": -0.00168,
+      "mean_x_1h": -0.00173,
       "days_x_1h": 2,
       "avg_win_1h": 0.01029,
-      "avg_loss_1h": -0.01085,
-      "payoff_1h": 0.948,
+      "avg_loss_1h": -0.01083,
+      "payoff_1h": 0.951,
       "span_h_4h": 331.2,
       "n_eff_4h": 82.8,
       "n_4h": 611,
