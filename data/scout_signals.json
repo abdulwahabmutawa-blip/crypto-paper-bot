@@ -1,8 +1,54 @@
 {
-  "ts": "2026-09-04T19:27:55+00:00",
+  "ts": "2026-09-04T19:33:35+00:00",
   "scanned": 120,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "NEARUSDT",
+      "signal": "breakout",
+      "score": 0.7405,
+      "raw_score": 0.7945,
+      "weight": 0.932,
+      "price": 2.104,
+      "why": "trades 5.7x, volume 10.5x, 81% taker-buy, +5.4% in an hour, at 90% of its 24h range",
+      "chg_24h": 0.0552,
+      "vol_surge": 10.49,
+      "chg_1h": 0.0536,
+      "market_surge": 5.58,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.60% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "GRAMUSDT",
+      "signal": "ignition",
+      "score": 0.74,
+      "raw_score": 0.8,
+      "weight": 0.925,
+      "price": 1.386,
+      "why": "trades 6.4x and volume 22.5x the prior 4h, 86% taker-buy, $301,868 burst \u2014 while price has only moved +0.8%",
+      "chg_24h": 0.0087,
+      "vol_surge": 22.51,
+      "chg_1h": 0.008,
+      "market_surge": 0.0,
+      "actionable": false,
+      "status": "benched \u2014 hit 42%, mean -0.04% over last 528 at 24h: not beating 4x the round trip"
+    },
+    {
+      "symbol": "ONDOUSDT",
+      "signal": "ignition",
+      "score": 0.6998,
+      "raw_score": 0.7566,
+      "weight": 0.925,
+      "price": 0.3592,
+      "why": "trades 6.5x and volume 10.8x the prior 4h, 73% taker-buy, $259,585 burst \u2014 while price has only moved +1.4%",
+      "chg_24h": -0.0242,
+      "vol_surge": 10.82,
+      "chg_1h": 0.0135,
+      "market_surge": 9.3,
+      "actionable": false,
+      "status": "benched \u2014 hit 42%, mean -0.04% over last 528 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 42%, mean -0.04% over last 528 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 BTC-excess day mean -0.60% at 24h: market beta, not signal",
@@ -11,7 +57,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 16,
+    "count": 17,
     "baseline": 12.0,
     "wave": false
   },
