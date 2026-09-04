@@ -1,14 +1,15 @@
 {
-  "ts": "2026-09-04T09:20:39+00:00",
+  "ts": "2026-09-04T09:25:57+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
-      "LIT",
       "UNI",
+      "LIT",
       "BTC",
+      "ASTER",
       "ETH",
       "ENA",
-      "ASTER"
+      "DASH"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -27,13 +28,23 @@
   },
   "heat": [
     {
+      "symbol": "DASH",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.57
+    },
+    {
       "symbol": "ENA",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": -2.2e-05,
+      "funding": -2.6e-05,
       "long_short": 1.47
     },
     {
@@ -43,7 +54,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 6.9e-05,
+      "funding": 7.1e-05,
       "long_short": 1.34
     },
     {
@@ -53,7 +64,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 5.9e-05,
+      "funding": 5.8e-05,
       "long_short": 0.6
     },
     {
@@ -78,7 +89,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.4e-05
+      "funding": 7.1e-05
     },
     {
       "symbol": "CRCLB",
@@ -88,20 +99,12 @@
       ]
     },
     {
-      "symbol": "DASH",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0001
+      "funding": 9.6e-05
     },
     {
       "symbol": "LINK",
@@ -117,7 +120,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000145
+      "funding": -0.000149
     },
     {
       "symbol": "PROM",
