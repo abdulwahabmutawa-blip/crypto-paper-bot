@@ -1,16 +1,14 @@
 # Small-wins lab — paper study (owner request 2026-09-04)
 
-updated 2026-09-04T20:52:29+00:00 · runs 23 · open 268 · resolved 146 · cost 0.25%/RT
+updated 2026-09-04T21:09:16+00:00 · runs 24 · open 289 · resolved 152 · cost 0.25%/RT
 
 PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst day > -3 units.
 
 | tactic | n | days | trades/day | hit | break-even | mean net | target% | stop% | time% | worst day | verdict |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| momentum|t5|s3|h48 | 1 | 1 | 1.0 | 100% | 41% | +4.75% | 100% | 0% | 0% | +4.8% | watch |
 | range_bottom|t5|s3|h48 | 1 | 1 | 1.0 | 100% | 41% | +4.75% | 100% | 0% | 0% | +4.8% | watch |
 | ignition|t5|s3|h48 | 1 | 1 | 1.0 | 100% | 41% | +4.75% | 100% | 0% | 0% | +4.8% | watch |
 | range_bottom|t4|s2|h24 | 1 | 1 | 1.0 | 100% | 38% | +3.75% | 100% | 0% | 0% | +3.8% | watch |
-| momentum|t3|s3|h24 | 2 | 1 | 2.0 | 100% | 54% | +2.75% | 100% | 0% | 0% | +5.5% | watch |
 | momentum|t3|s4|h48 | 2 | 1 | 2.0 | 100% | 61% | +2.75% | 100% | 0% | 0% | +5.5% | watch |
 | ignition|t3|s3|h24 | 2 | 1 | 2.0 | 100% | 54% | +2.75% | 100% | 0% | 0% | +5.5% | watch |
 | ignition|t3|s4|h48 | 2 | 1 | 2.0 | 100% | 61% | +2.75% | 100% | 0% | 0% | +5.5% | watch |
@@ -22,13 +20,15 @@ PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst
 | range_bottom|t1.5|s1.5|h8 | 4 | 1 | 4.0 | 100% | 58% | +1.25% | 100% | 0% | 0% | +5.0% | watch |
 | range_bottom|t1.5|s1|h8 | 4 | 1 | 4.0 | 100% | 50% | +1.25% | 100% | 0% | 0% | +5.0% | watch |
 | ignition|t3|s2|h12 | 3 | 1 | 3.0 | 67% | 45% | +1.08% | 67% | 33% | 0% | +3.2% | watch |
+| momentum|t3|s3|h24 | 3 | 1 | 3.0 | 67% | 54% | +0.75% | 67% | 33% | 0% | +2.2% | watch |
 | range_bottom|t1|s1|h6 | 5 | 1 | 5.0 | 100% | 62% | +0.75% | 100% | 0% | 0% | +3.8% | watch |
+| momentum|t5|s3|h48 | 2 | 1 | 2.0 | 50% | 41% | +0.75% | 50% | 50% | 0% | +1.5% | watch |
 | ignition|t1.5|s1.5|h8 | 4 | 1 | 4.0 | 75% | 58% | +0.50% | 75% | 25% | 0% | +2.0% | watch |
 | ignition|t2|s2|h8 | 3 | 1 | 3.0 | 67% | 56% | +0.42% | 67% | 33% | 0% | +1.3% | watch |
-| momentum|t1|s1|h6 | 30 | 1 | 30.0 | 73% | 62% | +0.22% | 73% | 27% | 0% | +6.5% | watch |
-| momentum|t1.5|s1|h8 | 19 | 1 | 19.0 | 58% | 50% | +0.20% | 58% | 42% | 0% | +3.8% | watch |
 | momentum|t1.5|s1.5|h8 | 16 | 1 | 16.0 | 62% | 58% | +0.12% | 62% | 38% | 0% | +2.0% | watch |
+| momentum|t1|s1|h6 | 32 | 1 | 32.0 | 69% | 62% | +0.12% | 69% | 31% | 0% | +4.0% | watch |
 | momentum|t2|s2|h8 | 12 | 1 | 12.0 | 58% | 56% | +0.08% | 58% | 42% | 0% | +1.0% | watch |
+| momentum|t1.5|s1|h8 | 21 | 1 | 21.0 | 52% | 50% | +0.06% | 52% | 48% | 0% | +1.3% | watch |
 | ignition|t1.5|s1|h8 | 6 | 1 | 6.0 | 50% | 50% | +0.00% | 50% | 50% | 0% | +0.0% | fail |
 | ignition|t1|s1|h6 | 6 | 1 | 6.0 | 50% | 62% | -0.25% | 50% | 50% | 0% | -1.5% | fail |
 | momentum|t4|s2|h24 | 7 | 1 | 7.0 | 29% | 38% | -0.54% | 29% | 71% | 0% | -3.8% | fail |
