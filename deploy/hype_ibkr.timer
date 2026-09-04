@@ -1,0 +1,13 @@
+[Unit]
+Description=Hype trader on IBKR — every 10 minutes, weekdays, US regular hours (UTC)
+
+[Timer]
+# 13:30-20:00 UTC covers 09:30-16:00 New York during EDT; the bot's own
+# market-hours gate handles the EST shift and holidays.
+OnCalendar=Mon..Fri *-*-* 13,14,15,16,17,18,19:00/10:00
+OnCalendar=Mon..Fri *-*-* 20:00:00
+RandomizedDelaySec=30
+Persistent=false
+
+[Install]
+WantedBy=timers.target
