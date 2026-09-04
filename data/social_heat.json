@@ -1,15 +1,15 @@
 {
-  "ts": "2026-09-04T17:39:59+00:00",
+  "ts": "2026-09-04T17:45:37+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
       "LIT",
       "MARSCOIN",
       "BTC",
-      "PENGU",
       "UNI",
       "ASTER",
-      "PUMP"
+      "PENGU",
+      "DASH"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,8 +19,8 @@
       "SNDKB",
       "ZEC",
       "ARB",
-      "UNI",
       "PROM",
+      "UNI",
       "ZKC"
     ],
     "watcher": [],
@@ -28,13 +28,23 @@
   },
   "heat": [
     {
+      "symbol": "DASH",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.49
+    },
+    {
       "symbol": "MARSCOIN",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 0.00015,
+      "funding": 0.000171,
       "long_short": 0.68
     },
     {
@@ -54,7 +64,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -6.5e-05,
+      "funding": -7.2e-05,
       "long_short": 0.44
     },
     {
@@ -82,20 +92,12 @@
       "funding": 3.6e-05
     },
     {
-      "symbol": "DASH",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "LIT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000116
+      "funding": -0.000122
     },
     {
       "symbol": "PENGU",
@@ -103,21 +105,13 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -8e-06
+      "funding": -9e-06
     },
     {
       "symbol": "PROM",
       "surfaces": 1,
       "sources": [
         "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "PUMP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
       ],
       "funding": 5e-05
     },
