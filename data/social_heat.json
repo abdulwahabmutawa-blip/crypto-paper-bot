@@ -1,13 +1,12 @@
 {
-  "ts": "2026-09-04T09:31:28+00:00",
+  "ts": "2026-09-04T09:36:36+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
       "UNI",
       "LIT",
-      "BTC",
       "ASTER",
-      "ETH",
+      "BTC",
       "ENA",
       "DASH"
     ],
@@ -19,9 +18,9 @@
       "PROM",
       "CRCLB",
       "ENA",
-      "UNI",
+      "CHIP",
       "LINK",
-      "ADA"
+      "XPL"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -44,18 +43,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": -2.6e-05,
+      "funding": -2.2e-05,
       "long_short": 1.47
-    },
-    {
-      "symbol": "UNI",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 7.4e-05,
-      "long_short": 1.34
     },
     {
       "symbol": "ZEC",
@@ -64,16 +53,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 6.3e-05,
+      "funding": 6.9e-05,
       "long_short": 0.6
-    },
-    {
-      "symbol": "ADA",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "ASTER",
@@ -89,7 +70,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.1e-05
+      "funding": 7.4e-05
+    },
+    {
+      "symbol": "CHIP",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "CRCLB",
@@ -97,14 +86,6 @@
       "sources": [
         "movers"
       ]
-    },
-    {
-      "symbol": "ETH",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 9.6e-05
     },
     {
       "symbol": "LINK",
@@ -124,6 +105,22 @@
     },
     {
       "symbol": "PROM",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "UNI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 7.4e-05
+    },
+    {
+      "symbol": "XPL",
       "surfaces": 1,
       "sources": [
         "movers"
