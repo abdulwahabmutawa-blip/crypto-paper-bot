@@ -147,6 +147,53 @@ def scout_candidates(max_age_min: float = 30.0) -> list[dict]:
 # the momentum-decay EXIT is a different question from entry selection.
 
 
+TAPE_WINDOW_H = 28.0      # flags from the last 28h whose 4h label is known
+TAPE_MIN_ROWS = 15
+TAPE_MIN_MEAN = 0.005     # +0.5%: ON cohort +3.32%/45% hit vs OFF +0.70%/33%
+
+
+def tape_dead_reason(now: datetime) -> str | None:
+    """REGIME GATE (owner's last-chance week, 2026-09-04). The record has no
+    per-coin feature that picks winners; what separates paying weeks from
+    losing ones is the DAY. Measure it live from the scout's own flags: the
+    mean 4h return of every candidate flagged in the last 28h (labels known
+    by now). Below +0.5% the tape is dead and the book takes no entry.
+    Backtest on 1,359 labelled ignition/breakout rows (08-16..09-03): ON
+    mean +3.32% / hit 45% / 19% reach +10%; OFF +0.70% / 33% / 8%. Would
+    have blocked 13 of the 14 real trades of 08-27..09-04 (net -$10.84).
+    Fails toward NO ENTRY when the log is missing or thin."""
+    p = config.DATA / "scout_log.jsonl"
+    if not p.exists():
+        return "TAPE UNKNOWN — no scout log"
+    lo = now - __import__("datetime").timedelta(hours=TAPE_WINDOW_H)
+    hi = now - __import__("datetime").timedelta(hours=4)
+    vals = []
+    try:
+        for line in p.read_text(encoding="utf-8").splitlines()[-4000:]:
+            try:
+                r = json.loads(line)
+            except Exception:
+                continue
+            if r.get("ret_4h") is None:
+                continue
+            try:
+                t = datetime.fromisoformat(r["ts"])
+            except Exception:
+                continue
+            if lo <= t <= hi:
+                vals.append(float(r["ret_4h"]))
+    except Exception:
+        return "TAPE UNKNOWN — scout log unreadable"
+    if len(vals) < TAPE_MIN_ROWS:
+        return (f"TAPE UNKNOWN — only {len(vals)} labelled flags in the last "
+                f"{TAPE_WINDOW_H:.0f}h (need {TAPE_MIN_ROWS})")
+    m = sum(vals) / len(vals)
+    if m < TAPE_MIN_MEAN:
+        return (f"TAPE DEAD — last {len(vals)} flags averaged {m:+.2%} at 4h "
+                f"(need {TAPE_MIN_MEAN:+.1%}): no entry until the tape pays")
+    return None
+
+
 def in_top_gainers(symbol: str, n: int = 10) -> bool:
     d = binance_live._call("GET", "/v3/ticker/24hr")
     if not isinstance(d, list):
@@ -945,8 +992,17 @@ def main():
     if not halt_why:
         st.pop("halt_flagged", None)
 
+    tape_why = tape_dead_reason(now) if held is None else None
+    if tape_why and st.get("tape_flagged") != tape_why[:12]:
+        st["tape_flagged"] = tape_why[:12]
+        binance_live.log({"event": "tape_gate", "reason": tape_why})
+    if not tape_why:
+        st.pop("tape_flagged", None)
+    if tape_why and held is None:
+        print(f"[{KEY}] {tape_why}")
     can_enter = (held is None and not (severe or stale)
                  and floor_why is None and (halt_why is None or golden)
+                 and tape_why is None
                  and (WEEKEND_ENTRIES or now.weekday() < 5)
                  and entries_today < budget)
     if floor_why and held is None:

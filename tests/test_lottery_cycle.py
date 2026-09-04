@@ -206,6 +206,14 @@ def cycle(tmp_path, monkeypatch):
         h["base"] = {}
         h["locked"] = {}
         h["usdt"] = 46.0
+        # a paying tape by default (the TAPE gate fails closed without one)
+        rows = []
+        for i in range(20):
+            t = now - timedelta(hours=6 + i * 0.5)
+            rows.append(json.dumps({"ts": t.isoformat(timespec="seconds"),
+                                    "symbol": f"T{i}USDT", "signal": "ignition",
+                                    "ruleset": 3, "ret_4h": 0.02}))
+        (data / "scout_log.jsonl").write_text("\n".join(rows) + "\n")
         ll.STATE.write_text(json.dumps({
             "created": "2026-09-01", "held_symbol": None, "entry_price": None,
             "units": 0.0, "entry_scan_ts": None, "entry_source": None,
@@ -453,6 +461,34 @@ def test_seat_sold_by_hand_is_cleared_not_resold(cycle):
     assert not _sells(cycle)
     assert "reconciled_external_close" in cycle["ledger_events"]()
     assert "sell_blocked" not in cycle["ledger_events"]()
+
+
+def _scout_log(cycle, ret4):
+    now = cycle["now"]
+    rows = []
+    for i in range(20):
+        t = now - timedelta(hours=6 + i * 0.5)
+        rows.append(json.dumps({"ts": t.isoformat(timespec="seconds"),
+                                "symbol": f"X{i}USDT", "signal": "ignition",
+                                "ruleset": 3, "ret_4h": ret4}))
+    (cycle["data"] / "scout_log.jsonl").write_text("\n".join(rows) + "\n")
+
+
+def test_dead_tape_blocks_entries(cycle):
+    cycle["cash"]()
+    cycle["scout"]()
+    _scout_log(cycle, -0.01)              # last day's flags averaged -1%
+    _completes(cycle)
+    assert cycle["orders"] == []
+    assert "tape_gate" in cycle["ledger_events"]()
+
+
+def test_paying_tape_allows_entries(cycle):
+    cycle["cash"]()
+    cycle["scout"]()
+    _scout_log(cycle, 0.02)               # flags averaged +2% at 4h
+    _completes(cycle)
+    assert [o[0] for o in cycle["orders"]] == ["BUY"]
 
 
 def test_state_write_is_atomic_leaves_no_tmp(cycle):

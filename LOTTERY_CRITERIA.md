@@ -139,3 +139,19 @@ exit replay. Shipped together, no RULESET bump (exit/guard/label changes):
 
 Evaluation at the 2026-09-30 checkpoint unchanged: every signal on its own
 net record; keep / stop / resize is the owner's call.
+
+## Last-chance week (owner, 2026-09-04): the TAPE gate
+
+Week of 08-27..09-04: 14 real trades, -$10.84; the same entries under the
+new exit stack still -$8.75 — 8 of 14 buys never got above +3%. The scout
+record (1,586 labelled rows) has no per-coin feature that picks winners;
+the DAY does. New entry gate `lottery_live.tape_dead_reason`: the mean 4h
+return of every flag in the last 28h must be >= +0.5% (min 15 rows), else
+no entry. In-sample: ON cohort +3.32% / 45% hit / 19% reach +10%, OFF
++0.70% / 33% / 8%; ON on 8 of 15 days; would have blocked 13 of this
+week's 14 trades. **Owner's rule: if the book is not net positive by
+2026-09-11 it is killed.** That verdict is read from `pnl_usd` (net of
+fees) on trades entered from 2026-09-04 12:00 UTC.
+
+Cadence expectation under the gate: several days with zero trades are
+normal and are the gate working, not a fault.
