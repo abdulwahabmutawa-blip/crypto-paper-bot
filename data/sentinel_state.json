@@ -9696,33 +9696,142 @@
       }
     },
     {
-      "risk_level": "unparsed",
-      "risk_alerts": [],
-      "hype": [],
-      "crypto_hype": [],
-      "overall_mood": "{\n  \"risk_level\": \"caution\",\n  \"risk_alerts\": [\n    {\n      \"headline\": \"Hot US jobs data lifts Fed hike odds, yields up, risk assets dip\",\n      \"markets\": [\"both\"],\n      \"severity\": \"caution\"\n    }\n  ],\n  \"hype\": [\n    {\n      \"symbol\": \"AMC\",\n      \"mood\": \"euphoric\",\n      \"note\": \"CEO vs Robin",
-      "ts": "2026-09-05T22:06:17+00:00",
+      "risk_level": "caution",
+      "risk_alerts": [
+        {
+          "headline": "US strikes Iranian oil tankers amid missile threats to Navy; oil volatility risk",
+          "markets": [
+            "both"
+          ],
+          "severity": "caution"
+        },
+        {
+          "headline": "Strong jobs data lifts Fed rate-hike odds; Trump pressures Warsh",
+          "markets": [
+            "both"
+          ],
+          "severity": "caution"
+        },
+        {
+          "headline": "Trump Venezuela oil deal expands US control; energy sector shifts",
+          "markets": [
+            "stocks"
+          ],
+          "severity": "caution"
+        }
+      ],
+      "hype": [
+        {
+          "symbol": "HOOD",
+          "mood": "euphoric",
+          "note": "crypto stocks surge with BTC"
+        },
+        {
+          "symbol": "MSTR",
+          "mood": "euphoric",
+          "note": "bitcoin proxy rallying hard"
+        },
+        {
+          "symbol": "COIN",
+          "mood": "euphoric",
+          "note": "exchange play on crypto rebound"
+        },
+        {
+          "symbol": "TJX",
+          "mood": "mixed",
+          "note": "retail strength in trending"
+        },
+        {
+          "symbol": "GE",
+          "mood": "mixed",
+          "note": "defense energy rivalry buzz"
+        }
+      ],
+      "crypto_hype": [
+        {
+          "symbol": "ARB",
+          "mood": "euphoric",
+          "stage": "peaked",
+          "organic": true,
+          "promo_risk": "low",
+          "catalyst": "Robinhood Chain fees revenue share",
+          "why": "Foundation H1 income + partnerships; top mover chatter",
+          "note": "L2 activity boom already priced"
+        },
+        {
+          "symbol": "UNI",
+          "mood": "euphoric",
+          "stage": "peaked",
+          "organic": true,
+          "promo_risk": "low",
+          "catalyst": "record burns from RH Chain volume",
+          "why": "DEX dominance + institutional buys; big daily gain",
+          "note": "fee switch narrative cheering"
+        },
+        {
+          "symbol": "DASH",
+          "mood": "euphoric",
+          "stage": "peaked",
+          "organic": true,
+          "promo_risk": "low",
+          "catalyst": "DashCon 2026 privacy upgrades",
+          "why": "privacy coin rotation; multi-surface heat",
+          "note": "victory lap on surge"
+        },
+        {
+          "symbol": "MARSCOIN",
+          "mood": "euphoric",
+          "stage": "peaked",
+          "organic": false,
+          "promo_risk": "high",
+          "catalyst": "Binance spot listing",
+          "why": "meme top mover; shill heavy posts",
+          "note": "listing pump already done"
+        },
+        {
+          "symbol": "ZEC",
+          "mood": "euphoric",
+          "stage": "peaked",
+          "organic": true,
+          "promo_risk": "low",
+          "catalyst": "privacy narrative rotation",
+          "why": "broad privacy gains; heat signals",
+          "note": "crowd cheering big move"
+        },
+        {
+          "symbol": "PONS",
+          "mood": "mixed",
+          "stage": "early",
+          "organic": false,
+          "promo_risk": "high",
+          "catalyst": "airdrop live notices",
+          "why": "trending searches + mass airdrop bots",
+          "note": "promo dominated niche talk"
+        }
+      ],
+      "overall_mood": "Crypto in greed with alt/privacy pumps and BTC near 80k while stocks mixed-cautious on Fed hike odds, jobs data, and Iran-Venezuela oil geopolitics amid low VIX.",
+      "ts": "2026-09-05T22:13:49+00:00",
       "gauges": {
         "vix": 14.5,
         "crypto_fear_greed": 73,
         "crypto_fng_label": "Greed"
       },
       "usage": {
-        "input_tokens": 267525,
+        "input_tokens": 201023,
         "input_tokens_details": {
-          "cached_tokens": 191360
+          "cached_tokens": 130816
         },
-        "output_tokens": 2698,
+        "output_tokens": 2323,
         "output_tokens_details": {
-          "reasoning_tokens": 1776
+          "reasoning_tokens": 1418
         },
-        "total_tokens": 270223,
+        "total_tokens": 203346,
         "num_sources_used": 0,
-        "num_server_side_tools_used": 17,
-        "cost_in_usd_ticks": 5368520000,
+        "num_server_side_tools_used": 20,
+        "cost_in_usd_ticks": 4871936000,
         "server_side_tool_usage_details": {
-          "web_search_calls": 9,
-          "x_search_calls": 8,
+          "web_search_calls": 8,
+          "x_search_calls": 12,
           "code_interpreter_calls": 0,
           "file_search_calls": 0,
           "mcp_calls": 0,
@@ -9730,8 +9839,8 @@
           "image_generation_calls": 0
         },
         "context_details": {
-          "input_tokens": 73907,
-          "output_tokens": 1188
+          "input_tokens": 71391,
+          "output_tokens": 1160
         }
       }
     }
@@ -9741,5 +9850,5 @@
     "2026-08": 130,
     "2026-09": 11
   },
-  "last_scan_utc": "2026-09-05T22:06:17+00:00"
+  "last_scan_utc": "2026-09-05T22:13:49+00:00"
 }
