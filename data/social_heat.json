@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-05T08:03:32+00:00",
+  "ts": "2026-09-05T08:08:43+00:00",
   "sources": {
     "coingecko": [
       "DASH",
@@ -22,7 +22,7 @@
       "SNDKB",
       "LTC",
       "SAHARA",
-      "BNB"
+      "ZEC"
     ],
     "watcher": [
       "ZEC",
@@ -40,7 +40,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 3.4e-05,
+      "funding": 4.5e-05,
       "long_short": 1.26
     },
     {
@@ -51,8 +51,19 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.000409,
+      "funding": 0.000398,
       "long_short": 0.67
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": -5e-06,
+      "long_short": 0.44
     },
     {
       "symbol": "NEAR",
@@ -65,30 +76,12 @@
       "long_short": 2.09
     },
     {
-      "symbol": "ZEC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "watcher"
-      ],
-      "funding": -1.2e-05,
-      "long_short": 0.44
-    },
-    {
-      "symbol": "BNB",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 2.2e-05
-    },
-    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -2e-06
+      "funding": -3e-06
     },
     {
       "symbol": "LIT",
@@ -143,7 +136,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.7e-05
+      "funding": 2.5e-05
     },
     {
       "symbol": "ZEN",
