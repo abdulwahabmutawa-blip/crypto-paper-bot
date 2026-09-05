@@ -1,20 +1,35 @@
 {
-  "ts": "2026-09-05T16:25:45+00:00",
+  "ts": "2026-09-05T16:30:53+00:00",
   "scanned": 99,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "UNIUSDT",
+      "symbol": "TSTUSDT",
+      "signal": "ignition",
+      "score": 0.6443,
+      "raw_score": 0.6833,
+      "weight": 0.943,
+      "price": 0.02028,
+      "why": "trades 5.1x and volume 13.7x the prior 4h, 82% taker-buy, $93,083 burst \u2014 while price has only moved +3.0%",
+      "chg_24h": 0.1871,
+      "vol_surge": 13.69,
+      "chg_1h": 0.0305,
+      "market_surge": 4.18,
+      "actionable": false,
+      "status": "benched \u2014 hit 44%, mean +0.27% over last 542 at 24h: not beating 4x the round trip"
+    },
+    {
+      "symbol": "TSTUSDT",
       "signal": "breakout",
-      "score": 0.7806,
-      "raw_score": 0.8503,
+      "score": 0.6434,
+      "raw_score": 0.7009,
       "weight": 0.918,
-      "price": 6.61,
-      "why": "trades 10.0x, volume 11.2x, 75% taker-buy, +4.8% in an hour, at 102% of its 24h range",
-      "chg_24h": 0.047,
-      "vol_surge": 11.24,
-      "chg_1h": 0.048,
-      "market_surge": 8.05,
+      "price": 0.02028,
+      "why": "trades 5.1x, volume 13.7x, 82% taker-buy, +3.0% in an hour, at 80% of its 24h range",
+      "chg_24h": 0.1871,
+      "vol_surge": 13.69,
+      "chg_1h": 0.0305,
+      "market_surge": 4.18,
       "actionable": false,
       "status": "benched \u2014 hit 38%, mean +0.49% over last 197 at 24h: not beating 4x the round trip"
     }
@@ -27,7 +42,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 22,
+    "count": 21,
     "baseline": 14.0,
     "wave": false
   },
