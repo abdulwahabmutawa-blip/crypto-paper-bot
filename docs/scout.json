@@ -1,11 +1,42 @@
 {
-  "ts": "2026-09-04T23:57:18+00:00",
+  "ts": "2026-09-05T00:02:45+00:00",
   "scanned": 119,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "EIGENUSDT",
+      "signal": "ignition",
+      "score": 0.8512,
+      "raw_score": 0.9192,
+      "weight": 0.926,
+      "price": 0.1942,
+      "why": "trades 10.2x and volume 69.3x the prior 4h, 68% taker-buy, $106,514 burst \u2014 while price has only moved -0.1%",
+      "chg_24h": -0.0558,
+      "vol_surge": 69.32,
+      "chg_1h": -0.0005,
+      "market_surge": 9.14,
+      "actionable": false,
+      "status": "benched \u2014 hit 43%, mean -0.00% over last 523 at 24h: not beating 4x the round trip"
+    },
+    {
+      "symbol": "DOTUSDT",
+      "signal": "ignition",
+      "score": 0.6071,
+      "raw_score": 0.6556,
+      "weight": 0.926,
+      "price": 0.889,
+      "why": "trades 6.1x and volume 7.8x the prior 4h, 70% taker-buy, $124,877 burst \u2014 while price has only moved +2.2%",
+      "chg_24h": 0.0045,
+      "vol_surge": 7.75,
+      "chg_1h": 0.0218,
+      "market_surge": 3.77,
+      "actionable": false,
+      "status": "benched \u2014 hit 43%, mean -0.00% over last 523 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 43%, mean -0.00% over last 523 at 24h: not beating 4x the round trip",
-    "breakout": "benched \u2014 BTC-excess day mean -0.96% at 24h: market beta, not signal",
+    "breakout": "benched \u2014 BTC-excess day mean +0.14% at 24h: market beta, not signal",
     "reversion": "probation \u2014 12 rows but only 6.6 independent 24h windows (span 159h): overlapping labels are not a sample",
     "heat": "benched \u2014 hit 33%, mean -3.26% over last 30 at 24h: not beating 4x the round trip",
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
@@ -92,7 +123,7 @@
       "median_ret_24h": -0.02259,
       "both_halves_24h": false,
       "days_24h": 11,
-      "mean_x_24h": -0.00959,
+      "mean_x_24h": 0.0014,
       "days_x_24h": 1,
       "avg_win_24h": 0.09266,
       "avg_loss_24h": -0.05191,
