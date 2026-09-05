@@ -175,3 +175,32 @@ positive on 6 of 8 days. `binance_live.btc_hot_reason` refuses the scout
 lane under either condition. Other conditions tested (taker share < 0.8,
 avoiding 12-17 UTC, volume >= 8x) add a little on samples of 37-58 and are
 NOT shipped; they are noted here as candidates for the 09-30 review.
+
+## 2026-09-05 — SURGE lane replaces the scout entry lanes (owner sign-off)
+
+Owner: "everything we did has not yielded anything beneficial ... find the best
+way to build a pre-move signal ... replace the one in place with it now ...
+a simple win will do."
+
+Study (trading-research/premove_findings.md, local): no free source arrives
+before the move at 5-minute latency. Listings pop and fade inside 30 minutes;
+funding/OI extremes only predict down moves. The one shape with a positive,
+mostly-stable mean is momentum with the crowd not yet in:
+v24 >= 1.6x, close in the top 20% of the 24h range, r24 +3..+15%, BTC 24h
+> -1%, perp funding <= +0.03%, OI 24h change <= +20%. First-touch sim over
+60 days, +5%/-3%/48h: 824 trades, +1.18%/trade, 55% hit, 5 of 8 weeks
+positive (unfiltered momentum +0.35%, 45%).
+
+Shipped: src/surge_signal.py (read-only ranker), `scout:surge` seat in
+binance_live.exit_params (stop -3%, target +5%, 48h, no stall clock), the
+lane in lottery_live ahead of the legacy scout lane, which is OFF by default
+(LOTTERY_LEGACY_SCOUT=1 restores it together with its tape gate;
+LOTTERY_SURGE=0 disables the new lane). late_entry_check is not applied to
+surge picks: the lane's own r24 cap is the anti-chase rule the sim used.
+All other guards stay: breaker, BTC veto (4h/24h), cooldown, retired,
+announcements, depth, unlocks, exchange guard, resting stops, 2 entries/day.
+
+Pre-registered judgement: net P&L after fees over the first 40 surge round
+trips; expected +1%/trade, 55% hit. Below break-even after 40 = the lane is
+retired and the book goes to cash. Quiet weeks are expected to run flat to
+slightly negative; that is not a failure signal by itself.

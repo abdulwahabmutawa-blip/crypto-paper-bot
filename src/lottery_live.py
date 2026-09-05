@@ -70,8 +70,11 @@ from __future__ import annotations
 import json
 from datetime import datetime, timezone
 
+import os
+
 import config
 import binance_live
+import surge_signal
 from sentinel_trader import scan_age_hours, scan_is_stale
 from hype_crypto_tracker import crypto_candidates, ENTRY_FRESH_H
 
@@ -116,6 +119,15 @@ WEEKEND_ENTRIES = True
 MAX_ENTRIES_PER_DAY = 3
 STABLES = {"USDC", "FDUSD", "TUSD", "DAI", "EUR", "USDP", "BUSD"}
 KEY = "lottery"
+# OWNER DECISION 2026-09-05: the SURGE lane (src/surge_signal.py) REPLACES
+# the scout's ignition/breakout/heat lanes. The legacy scout lane and its
+# tape gate stay in the code behind LOTTERY_LEGACY_SCOUT=1 for a rollback.
+def surge_lane() -> bool:
+    return os.environ.get("LOTTERY_SURGE", "1") != "0"
+
+
+def legacy_scout_lane() -> bool:
+    return os.environ.get("LOTTERY_LEGACY_SCOUT", "0") == "1"
 
 
 def scout_candidates(max_age_min: float = 30.0) -> list[dict]:
@@ -777,6 +789,14 @@ def main():
             if sell(f"STOP-LOSS ({(p / entry - 1):.1%} from entry) — "
                     f"hype that bleeds gets cut"):
                 held = None
+        # FIXED TARGET (surge seats only, 2026-09-05): the shape's edge is a
+        # frequent modest +5%, measured first-touch in the 60-day sim. Take
+        # it. The ratchet/trail above +10% never fire for such a seat.
+        _tgt = ep.get("target_pct")
+        if held and p and entry and _tgt and p / entry - 1 >= _tgt:
+            if sell(f"TARGET ({(p / entry - 1):+.1%} from entry) — "
+                    f"surge seat takes its +{_tgt:.0%}"):
+                held = None
         # CLIMAX EXIT (owner-directed 08-23, playbook rule promoted early):
         # a red 1h close on the move's maximum volume, closing in the lower
         # half of its range, IS the top being distributed — 8/10 forensic
@@ -992,7 +1012,10 @@ def main():
     if not halt_why:
         st.pop("halt_flagged", None)
 
-    tape_why = tape_dead_reason(now) if held is None else None
+    # the tape gate measures the LEGACY scout's flags; it does not judge the
+    # surge lane, which carries its own regime filter (BTC 24h, funding, OI)
+    tape_why = (tape_dead_reason(now)
+                if (held is None and legacy_scout_lane()) else None)
     if tape_why and st.get("tape_flagged") != tape_why[:12]:
         st["tape_flagged"] = tape_why[:12]
         binance_live.log({"event": "tape_gate", "reason": tape_why})
@@ -1131,7 +1154,36 @@ def main():
         # bought a coin that pumped six hours ago and was already rolling
         # over (the live COWUSDT case: +49% on the day, -6.5% in the hour, on
         # BELOW-average volume). The Scout requires the move to be alive now.
-        if pick is None and not _btc_hot:
+        # SURGE LANE (owner decision 2026-09-05): the only entry lane unless
+        # the legacy scout is switched back on. Every candidate already
+        # passed the shape, BTC, funding and OI filters; the book adds its
+        # own vetoes (cooldown, retired, announcements, depth, unlocks) and
+        # the exchange guard. late_entry_check is NOT applied: the lane's
+        # own r24 cap (+3..15%) is the anti-chase rule the sim was run with.
+        if pick is None and not _btc_hot and surge_lane() and halt_why is None:
+            try:
+                _surge = surge_signal.candidates(now)
+            except Exception as e:      # a scan failure is a no-entry, not a crash
+                print(f"[{KEY}] surge scan failed: {e}")
+                _surge = []
+            for c in _surge:
+                if c["symbol"] in blacklisted:
+                    continue
+                if not binance_live.price(c["symbol"]):
+                    continue
+                veto = _pre_buy_veto(c["symbol"])
+                if veto:
+                    binance_live.log({"event": "refused", "action": "BUY",
+                                      "symbol": c["symbol"], "reason": veto})
+                    print(f"[{KEY}] {c['symbol']} (surge) refused: {veto}")
+                    continue
+                pick = c["symbol"]
+                source = "scout:surge"
+                pick_score = float(c.get("score") or 0.0)
+                print(f"[{KEY}] surge says {c['symbol']} "
+                      f"(score {c.get('score')}): {c.get('why', '')}")
+                break
+        if pick is None and not _btc_hot and legacy_scout_lane():
             _cands = scout_candidates()
             if turbo:
                 _cands = _turbo_rank(_cands)

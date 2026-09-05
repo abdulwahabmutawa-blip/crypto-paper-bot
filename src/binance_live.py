@@ -399,6 +399,15 @@ def exit_params(source: str | None) -> dict:
         # half the winners it was built to hold
         return {"kind": "grind", "stop_pct": -0.10, "stall_h": None,
                 "max_hold_h": 672.0, "momentum_exit": momentum_exit}
+    if src == "scout:surge":
+        # SURGE (owner decision 2026-09-05, replaces ignition/breakout as the
+        # entry lane): 60-day first-touch sim, one trade per coin, 0.25%
+        # cost — +5%/-3%/48h: 824 trades, +1.18%/trade, 55% hit, 5/8 weeks
+        # positive. Fixed target: the shape's edge is a modest, frequent
+        # +5%, not a ride; no stall clock (the sim had none).
+        return {"kind": "burst", "stop_pct": -0.03, "stall_h": None,
+                "max_hold_h": 48.0, "momentum_exit": False,
+                "target_pct": 0.05}
     if src == "scout:ignition":
         # Ignition's OWN scorecard: +1.47% mean at 4h but +4.67% at 24h
         # (90% hit, n=30) — the edge lives at the day scale, and the old

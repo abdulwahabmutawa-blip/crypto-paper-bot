@@ -49,6 +49,10 @@ def cycle(tmp_path, monkeypatch):
     # poll-only baseline for the incident scenarios; the resting-stop tests
     # arm it explicitly, and one test checks the default (unset = ON)
     monkeypatch.setenv("LOTTERY_EXCHANGE_STOPS", "0")
+    # this harness drives the LEGACY scout lane (the incidents it replays
+    # happened there); test_surge_lane flips both switches for the 09-05 lane
+    monkeypatch.setenv("LOTTERY_LEGACY_SCOUT", "1")
+    monkeypatch.setenv("LOTTERY_SURGE", "0")
     data = tmp_path / "data"
     data.mkdir()
     monkeypatch.setattr(config, "DATA", data)
