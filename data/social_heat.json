@@ -1,18 +1,17 @@
 {
-  "ts": "2026-09-05T07:19:05+00:00",
+  "ts": "2026-09-05T07:24:44+00:00",
   "sources": {
     "coingecko": [
       "DASH",
       "ZEC",
-      "LIT",
-      "PENGU",
       "MARSCOIN",
+      "PENGU",
+      "LIT",
       "ARB",
-      "AVAX",
+      "XMR",
       "BTC",
-      "NEAR",
-      "BONK",
-      "XMR"
+      "PUMP",
+      "TAO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -42,7 +41,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 1.7e-05,
+      "funding": 1.6e-05,
       "long_short": 1.32
     },
     {
@@ -53,7 +52,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.000411,
+      "funding": 0.000408,
       "long_short": 0.66
     },
     {
@@ -64,18 +63,8 @@
         "movers",
         "watcher"
       ],
-      "funding": -3.5e-05,
+      "funding": -3.4e-05,
       "long_short": 0.43
-    },
-    {
-      "symbol": "NEAR",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 2.08
     },
     {
       "symbol": "ARB",
@@ -84,21 +73,6 @@
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "AVAX",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "BONK",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ]
     },
     {
       "symbol": "BTC",
@@ -125,7 +99,23 @@
       "funding": 0.0001
     },
     {
+      "symbol": "NEAR",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "PENGU",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "PUMP",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -148,12 +138,20 @@
       ]
     },
     {
+      "symbol": "TAO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "XMR",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 0.000893
+      "funding": 0.000875
     },
     {
       "symbol": "ZEN",
