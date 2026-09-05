@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-05T23:48:37+00:00",
+  "ts": "2026-09-05T23:54:07+00:00",
   "scanned": 97,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "BOMEUSDT",
+      "signal": "breakout",
+      "score": 0.854,
+      "raw_score": 0.9436,
+      "weight": 0.905,
+      "price": 0.000936,
+      "why": "trades 20.3x, volume 37.1x, 79% taker-buy, +7.5% in an hour, at 104% of its 24h range",
+      "chg_24h": 0.1205,
+      "vol_surge": 37.1,
+      "chg_1h": 0.0752,
+      "market_surge": 0.0,
+      "actionable": false,
+      "status": "benched \u2014 hit 39%, mean +0.55% over last 201 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 44%, mean +0.24% over last 533 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 39%, mean +0.55% over last 201 at 24h: not beating 4x the round trip",
