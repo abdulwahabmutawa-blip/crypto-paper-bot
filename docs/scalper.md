@@ -1,6 +1,6 @@
 # Scalper — hyper-aggressive small-wins PAPER bot
 
-updated 2026-09-05T22:48:12+00:00 · runs 35 · equity **$1,014.23** (+1.42%) · cash $0.00 · open 10/10 · round trips 12
+updated 2026-09-05T23:04:29+00:00 · runs 36 · equity **$1,015.94** (+1.59%) · cash $0.00 · open 10/10 · round trips 12
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -32,13 +32,13 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 |---|---|---|---|---|---|
 | 2026-09-05T12:33 | UUSDT | bottom | 0.9993 | 0.9994 | +0.01% |
 | 2026-09-05T12:33 | BFUSDUSDT | bottom | 1 | 1 | +0.00% |
-| 2026-09-05T15:25 | BMTUSDT | bottom | 0.01795 | 0.01792 | -0.17% |
-| 2026-09-05T15:25 | EGLDUSDT | bottom | 4.642 | 4.577 | -1.40% |
-| 2026-09-05T17:17 | ONGUSDT | bottom | 0.09469 | 0.0955 | +0.86% |
-| 2026-09-05T18:37 | ZAMAUSDT | bottom | 0.05037 | 0.05016 | -0.42% |
-| 2026-09-05T18:37 | MORPHOUSDT | bottom | 2.495 | 2.504 | +0.36% |
-| 2026-09-05T19:09 | LAUSDT | bottom | 0.0672 | 0.0683 | +1.64% |
-| 2026-09-05T20:51 | SOPHUSDT | bottom | 0.00399 | 0.00401 | +0.50% |
+| 2026-09-05T15:25 | BMTUSDT | bottom | 0.01795 | 0.01816 | +1.17% |
+| 2026-09-05T15:25 | EGLDUSDT | bottom | 4.642 | 4.581 | -1.31% |
+| 2026-09-05T17:17 | ONGUSDT | bottom | 0.09469 | 0.09567 | +1.03% |
+| 2026-09-05T18:37 | ZAMAUSDT | bottom | 0.05037 | 0.05014 | -0.46% |
+| 2026-09-05T18:37 | MORPHOUSDT | bottom | 2.495 | 2.503 | +0.32% |
+| 2026-09-05T19:09 | LAUSDT | bottom | 0.0672 | 0.0686 | +2.08% |
+| 2026-09-05T20:51 | SOPHUSDT | bottom | 0.00399 | 0.004 | +0.25% |
 | 2026-09-05T21:39 | BICOUSDT | bottom | 0.02288 | 0.02241 | -2.05% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
