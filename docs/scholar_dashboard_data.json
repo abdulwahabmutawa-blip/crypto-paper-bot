@@ -1,11 +1,11 @@
 {
-  "generated_utc": "2026-09-05T06:53:01+00:00",
+  "generated_utc": "2026-09-05T07:08:22+00:00",
   "created": "2026-07-30",
   "starting_cash": 1000.0,
-  "live_ts": "2026-09-05T06:50:00+00:00",
+  "live_ts": "2026-09-05T07:05:00+00:00",
   "current": {
     "date": "2026-09-05",
-    "value": 1020.7,
+    "value": 1020.79,
     "bench": 1038.44,
     "holding": "ETH-USD",
     "bench_asof": "2026-09-04"
@@ -13,21 +13,21 @@
   "board": [
     {
       "sym": "ETH-USD",
-      "price": 2453.56,
-      "line": "Ethereum \u00b7 score +0.99 \u00b7 mom90 +56.4% \u00b7 MA gap +20.6%",
+      "price": 2454.22,
+      "line": "Ethereum \u00b7 score +0.99 \u00b7 mom90 +56.4% \u00b7 MA gap +20.7%",
       "tag": "HELD",
       "on": true,
       "pick": true,
-      "fill": 24.679513891882245
+      "fill": 24.70012462676865
     },
     {
       "sym": "BTC-USD",
-      "price": 79676.24,
-      "line": "Bitcoin \u00b7 score +0.81 \u00b7 mom90 +30.9% \u00b7 MA gap +14.4%",
+      "price": 79705.78,
+      "line": "Bitcoin \u00b7 score +0.81 \u00b7 mom90 +30.9% \u00b7 MA gap +14.5%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 20.31576549661626
+      "fill": 20.352421843298472
     },
     {
       "sym": "SPY",
@@ -36,7 +36,7 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 16.777705348299364
+      "fill": 16.777705348299374
     },
     {
       "sym": "EFA",
@@ -54,7 +54,7 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 13.069774031288494
+      "fill": 13.069774031288498
     },
     {
       "sym": "QQQ",
@@ -63,7 +63,7 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 9.504599833500425
+      "fill": 9.504599833500423
     },
     {
       "sym": "EEM",
@@ -117,7 +117,7 @@
       "tag": "not eligible",
       "on": false,
       "pick": false,
-      "fill": -5.860798788564638
+      "fill": -5.860769858801353
     }
   ],
   "board_title": "12 instruments ranked by momentum-per-unit-risk",
@@ -128,12 +128,6 @@
     "board_note": "Every rule in this bot was earned by an earlier experiment: vol-adjusted momentum, trend gate as crash protection, vol-sized positions, trailing stop, and a switch threshold that fights churn. The synthesis on trial."
   },
   "intraday": [
-    {
-      "ts": "2026-08-18T21:31:52+00:00",
-      "value": 1023.78,
-      "bench": 1034.59,
-      "holding": "IWM"
-    },
     {
       "ts": "2026-08-18T21:45:17+00:00",
       "value": 1023.78,
@@ -9127,6 +9121,12 @@
       "value": 1020.7,
       "bench": 1038.44,
       "holding": "ETH-USD"
+    },
+    {
+      "ts": "2026-09-05T07:08:22+00:00",
+      "value": 1020.79,
+      "bench": 1038.44,
+      "holding": "ETH-USD"
     }
   ],
   "trades": [
@@ -9345,7 +9345,7 @@
     },
     {
       "date": "2026-09-05",
-      "value": 1020.7,
+      "value": 1020.79,
       "bench": 1038.44,
       "holding": "ETH-USD",
       "bench_asof": "2026-09-04"
@@ -9360,5 +9360,5 @@
   },
   "costs_paid": 4.2557,
   "frozen": null,
-  "thoughts": "I'm holding ETH-USD. Best momentum-per-unit-risk in a confirmed uptrend. I bought at $2,432.88; it's now $2,453.56 (+0.9% since I got in). I deliberately kept $656.80 aside in cash \u2014 I take smaller positions in assets that swing a lot. My safety net: if the price falls to $2,266.57 (10% below its recent high), I sell automatically \u2014 no exceptions. Closest challenger on my list is BTC-USD, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
+  "thoughts": "I'm holding ETH-USD. Best momentum-per-unit-risk in a confirmed uptrend. I bought at $2,432.88; it's now $2,454.22 (+0.9% since I got in). I deliberately kept $656.80 aside in cash \u2014 I take smaller positions in assets that swing a lot. My safety net: if the price falls to $2,266.57 (10% below its recent high), I sell automatically \u2014 no exceptions. Closest challenger on my list is BTC-USD, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
 }
