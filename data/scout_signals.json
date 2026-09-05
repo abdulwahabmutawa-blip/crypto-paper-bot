@@ -1,24 +1,8 @@
 {
-  "ts": "2026-09-05T12:20:37+00:00",
-  "scanned": 114,
+  "ts": "2026-09-05T12:26:26+00:00",
+  "scanned": 116,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "TWTUSDT",
-      "signal": "ignition",
-      "score": 0.7702,
-      "raw_score": 0.815,
-      "weight": 0.945,
-      "price": 0.6481,
-      "why": "trades 7.4x and volume 18.4x the prior 4h, 83% taker-buy, $61,757 burst \u2014 while price has only moved +1.6%",
-      "chg_24h": 0.0538,
-      "vol_surge": 18.4,
-      "chg_1h": 0.0157,
-      "market_surge": 5.55,
-      "actionable": false,
-      "status": "benched \u2014 hit 44%, mean +0.21% over last 539 at 24h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 44%, mean +0.21% over last 539 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 37%, mean +0.48% over last 193 at 24h: not beating 4x the round trip",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 20,
+    "count": 21,
     "baseline": 14.0,
     "wave": false
   },
@@ -47,18 +31,18 @@
       "avg_loss_1h": -0.01021,
       "payoff_1h": 0.999,
       "span_h_4h": 331.3,
-      "n_eff_4h": 82.82,
-      "n_4h": 632,
-      "hit_rate_4h": 0.445,
+      "n_eff_4h": 82.84,
+      "n_4h": 633,
+      "hit_rate_4h": 0.444,
       "mean_ret_4h": -5e-05,
-      "median_ret_4h": 0.0,
+      "median_ret_4h": -3e-05,
       "both_halves_4h": false,
       "days_4h": 14,
-      "mean_x_4h": 0.00246,
+      "mean_x_4h": 0.00242,
       "days_x_4h": 3,
       "avg_win_4h": 0.01791,
-      "avg_loss_4h": -0.01778,
-      "payoff_4h": 1.007,
+      "avg_loss_4h": -0.01773,
+      "payoff_4h": 1.01,
       "span_h_24h": 311.2,
       "n_eff_24h": 12.97,
       "n_24h": 539,
