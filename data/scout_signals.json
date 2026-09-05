@@ -1,24 +1,8 @@
 {
-  "ts": "2026-09-05T12:48:38+00:00",
+  "ts": "2026-09-05T12:54:25+00:00",
   "scanned": 102,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "BCHUSDT",
-      "signal": "ignition",
-      "score": 0.8527,
-      "raw_score": 0.9033,
-      "weight": 0.944,
-      "price": 251.2,
-      "why": "trades 14.0x and volume 11.0x the prior 4h, 66% taker-buy, $141,828 burst \u2014 while price has only moved -0.5%",
-      "chg_24h": 0.0024,
-      "vol_surge": 11.04,
-      "chg_1h": -0.0048,
-      "market_surge": 0.0,
-      "actionable": false,
-      "status": "benched \u2014 hit 44%, mean +0.23% over last 544 at 24h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 44%, mean +0.23% over last 544 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 37%, mean +0.48% over last 193 at 24h: not beating 4x the round trip",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 39,
+    "count": 36,
     "baseline": 14.0,
     "wave": true
   },
