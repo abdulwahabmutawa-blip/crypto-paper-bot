@@ -137,6 +137,17 @@ the small-wins protocol from the lab run hyper-aggressively, 10 seats,
 Pre-registered: judged on >= 100 round trips against a 54% break-even hit
 rate; under R1-R5 like every other paper bot.
 
+### Reinstatement 2026-09-05 (later the same day)
+
+Owner asked to bring **crypto** back "but better". `src/crypto_regime_lab.py`
+replayed the bot's decision stack over 520 days of Kraken closes: every
+alt-rotation variant (7/14/30-day momentum, with or without a BTC fallback
+or relative-strength gate) lost to BTC buy-and-hold; the tide gauge alone
+(hold BTC above its 200-day MA, cash below) made +14.5%/yr at -20.5% max DD
+with 9 switches. The bot is reinstated as **v4 BTC tide gauge** with the
+same state file and history; the alt brains are gone. Judged under R1-R5
+as before; the in-sample replay is context, not a promise.
+
 ## Roster covered
 
 crypto (regime switcher), meanrev, commodity, allweather, congress, hunter,

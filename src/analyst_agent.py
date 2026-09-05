@@ -32,7 +32,7 @@ MODEL = "claude-opus-5"
 IN_PRICE, OUT_PRICE = 5.0, 25.0          # USD per 1M tokens (claude-opus-5)
 UNIVERSE = ["SPY", "QQQ", "GLD", "USO", "TLT", "BTC-USD", "ETH-USD"]
 BENCH = "SPY"
-MAX_TOOL_CALLS = 6
+MAX_TOOL_CALLS = 8
 MAX_HEADLINE_CALLS = 3
 MONTHLY_DECISION_CAP = 25                 # ~22 trading days + slack
 R1_FLOOR = 750.0
@@ -67,7 +67,10 @@ Decision discipline:
 - Your API cost is charged against your own account. Wasted tool calls and
   churn come straight out of your P/L.
 
-Use your tools to check prices, headlines, and the Watcher before deciding.
+Use your tools to check prices, headlines, the Watcher and the fleet's own
+evidence (read_fleet_evidence) before deciding. The evidence files are what
+this project has actually measured; a claim that contradicts them needs data.
+Each decision is scored 5 trading days later against SPY and shown back to you.
 You MUST finish by calling submit_decision. Guardrails you cannot waive:
 long only, one position, one trade/day, Watcher SEVERE forces cash, equity
 below $750 retires you."""
@@ -94,6 +97,22 @@ TOOLS = [
                     "level, alerts, and market mood from its X/news scan.",
      "input_schema": {"type": "object", "properties": {},
                       "additionalProperties": False},
+     "strict": True},
+    {"name": "read_fleet_evidence",
+     "description": "The fleet's own measured evidence (2026-09-05 upgrade: "
+                    "you were flying without it). Topics: scan_scorecard = "
+                    "forward returns of every symbol the Watcher ever hyped, by "
+                    "mood/stage; watcher_hype = the latest scan's hype list with "
+                    "moods; kill_criteria = every bot retired and why; "
+                    "fee_reality = what costs do to each strategy; "
+                    "crypto_regime_lab = 2-year replay of the crypto rules vs "
+                    "BTC; status = fleet status notes; lessons = the project's "
+                    "standing lessons file.",
+     "input_schema": {"type": "object", "properties": {
+         "topic": {"type": "string", "enum": ["scan_scorecard", "watcher_hype",
+                                              "kill_criteria", "fee_reality",
+                                              "crypto_regime_lab", "status", "lessons"]}},
+         "required": ["topic"], "additionalProperties": False},
      "strict": True},
     {"name": "submit_decision",
      "description": "Submit your final decision for today. REQUIRED once per day.",
@@ -143,6 +162,89 @@ def _watcher():
                 "last_known": {"risk_level": v.get("risk_level"),
                                "ts": v.get("ts")}}
     return {k: v.get(k) for k in ("risk_level", "risk_alerts", "ts") if k in v}
+
+
+EVIDENCE_FILES = {
+    "scan_scorecard": config.REPORTS / "scan_scorecard.md",
+    "kill_criteria": config.REPORTS / "kill_criteria.md",
+    "fee_reality": config.REPORTS / "fee_reality.md",
+    "crypto_regime_lab": config.REPORTS / "crypto_regime_lab.md",
+    "status": config.ROOT / "STATUS.md",
+    "lessons": config.ROOT / "CLAUDE.md",
+}
+
+
+def _evidence(topic: str, limit: int = 7000) -> str:
+    """Curated project evidence for the agent, trimmed to a token budget."""
+    if topic == "watcher_hype":
+        import sentinel_gate
+        p = config.DATA / "sentinel_state.json"
+        if not p.exists():
+            return "(no Watcher scans on file)"
+        scans = json.loads(p.read_text(encoding="utf-8")).get("scans", [])
+        if not scans:
+            return "(no Watcher scans on file)"
+        sc = scans[-1]
+        age = sentinel_gate._age_hours(sc)
+        return json.dumps({"scan_ts": sc.get("ts"), "age_hours": None if age is None else round(age, 1),
+                           "risk_level": sc.get("risk_level"), "overall_mood": sc.get("overall_mood"),
+                           "hype": sc.get("hype", []), "crypto_hype": sc.get("crypto_hype", []),
+                           "gauges": sc.get("gauges", {})}, indent=1)
+    p = EVIDENCE_FILES.get(topic)
+    if not p or not p.exists():
+        return f"(no {topic} file yet)"
+    txt = p.read_text(encoding="utf-8", errors="replace")
+    return txt if len(txt) <= limit else txt[:limit] + "\n...(truncated)"
+
+
+def _score_outcomes(st, close):
+    """Close the learning loop (2026-09-05: 25 decisions, zero scored — the
+    'outcome' field the record shows the agent was never written). A decision
+    is scored once 5 trading days have passed: what the instrument it chose
+    (or kept) did vs SPY over those 5 days. Idempotent; never rescored."""
+    if BENCH not in close.columns:
+        return
+    spy = close[BENCH].dropna()
+    for d in st.get("decisions", []):
+        if d.get("outcome") or not d.get("date"):
+            continue
+        tkr = d.get("fill_ticker") or d.get("held_at_decision")
+        if not tkr:                               # pre-09-05 records: look it up
+            marks = [h for h in st.get("history", []) if h["date"] <= d["date"]]
+            tkr = marks[-1]["holding"] if marks else None
+        try:
+            t0 = pd.Timestamp(d["date"])
+        except Exception:
+            continue
+        after = spy.index[spy.index > t0]
+        if len(after) < 5:
+            continue                              # not old enough yet
+        t5 = after[4]
+        try:
+            s0, s5 = float(spy.asof(t0)), float(spy.loc[t5])
+            spy_pct = (s5 / s0 - 1) * 100
+            if tkr and tkr != "CASH" and tkr in close.columns:
+                ser = close[tkr].dropna()
+                own_pct = (float(ser.asof(t5)) / float(ser.asof(t0)) - 1) * 100
+            else:
+                own_pct = 0.0                    # cash
+        except Exception:
+            continue
+        d["outcome"] = {"scored_through": str(t5.date()), "own_5d_pct": round(own_pct, 2),
+                        "spy_5d_pct": round(spy_pct, 2), "excess_5d_pct": round(own_pct - spy_pct, 2),
+                        "verdict": ("matched SPY" if abs(own_pct - spy_pct) < 1e-9 else
+                                    "beat SPY" if own_pct > spy_pct else "lagged SPY")}
+
+
+def _scorecard_line(st) -> str:
+    sc = [d["outcome"] for d in st.get("decisions", []) if d.get("outcome")]
+    if not sc:
+        return "no decision old enough to score yet"
+    beat = sum(1 for o in sc if o["verdict"] == "beat SPY")
+    ex = sum(o["excess_5d_pct"] for o in sc) / len(sc)
+    same = sum(1 for o in sc if o["verdict"] == "matched SPY")
+    return (f"{len(sc)} decisions scored at +5 trading days: {beat} beat SPY, "
+            f"{same} were SPY itself, mean excess {ex:+.2f}%")
 
 
 def _recent_record(st, close):
@@ -200,6 +302,8 @@ def decide(client, context, close_raw):
                         else "\n".join(_headlines()))
             elif c.name == "read_watcher":
                 body = json.dumps(_watcher())
+            elif c.name == "read_fleet_evidence":
+                body = _evidence(str(c.input.get("topic", "")))
             else:
                 body = "unknown tool"
             results.append({"type": "tool_result", "tool_use_id": c.id,
@@ -321,6 +425,7 @@ def main():
               "(add it as a repo secret to activate)")
         should_decide = False
 
+    _score_outcomes(st, close_raw)               # learning loop, every cycle
     if should_decide:
         import anthropic
         client = anthropic.Anthropic(api_key=api_key)  # api_key pre-stripped
@@ -334,7 +439,12 @@ def main():
             f"30-day momentum snapshot: {json.dumps(mom)}\n"
             f"Watcher latest: {json.dumps(_watcher())}\n"
             f"Your recent decisions and what happened after them:\n"
-            f"{json.dumps(_recent_record(st, close), indent=1)}\n\n"
+            f"{json.dumps(_recent_record(st, close), indent=1)}\n"
+            f"Scored record so far: {_scorecard_line(st)}\n"
+            f"Fleet evidence is available via read_fleet_evidence (scan_scorecard, "
+            f"watcher_hype, kill_criteria, fee_reality, crypto_regime_lab, status, "
+            f"lessons) — it is the project's measured experience; use it before "
+            f"reasoning from priors.\n\n"
             f"Make today's decision. Investigate with tools first if useful.")
         decision, tools_called, usage = None, [], {"in": 0, "out": 0}
         try:
@@ -410,7 +520,7 @@ def main():
 
         st["last_decision_date"] = today
         st["decisions"].append({
-            "date": today, "model": MODEL,
+            "date": today, "model": MODEL, "held_at_decision": st["holding"],
             "decision": decision or {"action": "hold", "error": tag},
             "guardrail_action": action, "guardrail_tag": tag,
             "tools_called": tools_called,

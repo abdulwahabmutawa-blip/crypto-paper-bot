@@ -103,11 +103,16 @@
   </div>
 
   <h1>The Bot Fleet <em>· paper trading, live</em></h1>
-  <p class="sub">A fleet of $1,000 paper-trading experiments (three books still running, nine stopped) — rival theories
+  <p class="sub">A fleet of $1,000 paper-trading experiments (four books still running, eight stopped) — rival theories
   of market edge trading live on GitHub Actions, every decision on a public
   ledger. Simulation only; not investment advice.</p>
 
   <div class="grid">
+    <a class="card" href="index.html"><span class="emoji">🪙</span>
+      <div class="name">Crypto Regime Switcher</div>
+      <div class="desc">Momentum brain in uptrends, dip-buying brain in chop —
+        picked daily by BTC's 200-day tide gauge.</div>
+      <div class="val">edge theory: trend timing on the tide itself</div></a>
     <a class="card" href="meanrev.html"><span class="emoji">🎯</span>
       <div class="name">Mean-Reversion Mega-Caps</div>
       <div class="desc">Buys panic in quality names, sells the relief bounce.
@@ -132,13 +137,8 @@
   </div>
 
   <details class="retired">
-    <summary>⏹ Stopped bots (9)</summary>
+    <summary>⏹ Stopped bots (8)</summary>
     <div class="grid">
-      <a class="card" href="index.html"><span class="emoji">🪙</span>
-        <div class="name">Crypto Regime Switcher</div>
-        <div class="desc">Momentum brain in uptrends, dip-buying brain in chop —
-          picked daily by BTC's 200-day tide gauge.</div>
-        <div class="val">RETIRED 2026-09-05 · final $1,089.97 (+9.0%, behind BTC)</div></a>
       <a class="card" href="congress.html"><span class="emoji">🏛</span>
         <div class="name">Congress Copier</div>
         <div class="desc">Auto-follows every member of Congress with a proven
@@ -199,7 +199,7 @@
 // two days. Name = the docs/<name>_dashboard_data.json prefix. Paper books
 // only: the lottery book is real money on a different scale and is never
 // mixed into this figure.
-const ACTIVE = ["meanrev","sentiment","scalper"];
+const ACTIVE = ["crypto","meanrev","sentiment","scalper"];
 const fmt$ = v => (v<0?"-$":"$") + Math.abs(v).toLocaleString("en-US",
   {minimumFractionDigits:2, maximumFractionDigits:2});
 

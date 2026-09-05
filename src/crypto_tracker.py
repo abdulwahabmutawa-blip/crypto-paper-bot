@@ -1,4 +1,9 @@
-"""LIVE crypto $1,000 paper sim — YOLO 2.0 momentum rotation, 8 coins.
+"""LIVE crypto $1,000 paper sim — BTC tide gauge (v4, 2026-09-05).
+
+v4 rule: BTC above its 200-day MA -> hold BTC; below -> cash. -10% failure
+stop and the exit dead-band (mom > -2%) still apply, Watcher SEVERE and the
+R1 floor still force cash. Why the rotation died: see signal() and
+reports/crypto_regime_lab.md. Earlier design notes kept below for the record.
 
 Rule (user choice, lesson from the grid in test_absmom.py applied):
 Always 100% in the coin with the hottest 7-day momentum; if all 8 have
@@ -106,15 +111,21 @@ def signal(close: pd.DataFrame) -> tuple[str, dict, str]:
             "z": round(float(z20[c]), 2),
             "above_ma": bool(last[c] > ma[c]),
         }
-    # rank by the metric the active brain uses
+    # v4 (owner "make it better" 2026-09-05, src/crypto_regime_lab.py, 520
+    # days of Kraken closes, same fees): every alt-rotation variant lost to
+    # BTC buy-and-hold (7d momentum -40%/yr, 14d -8%, 30d -14%, with or
+    # without a BTC fallback or relative-strength gate), while the tide gauge
+    # alone — hold BTC above its 200-day MA, cash below — made +14.5%/yr with
+    # a -20% max drawdown and 9 switches. Live record agreed: the book's only
+    # big win was XRP in a BTC run; its losses were alts bought at the top of
+    # 7-day spikes (SOL +16%, LINK +23%) and a flat XRP held while BTC ran.
+    # So the pick IS the regime. The 8-coin board stays for the dashboard.
     if regime == "TREND":
         ranked = sorted(COINS, key=lambda c: board[c]["mom_pct"], reverse=True)
-        top = ranked[0]
-        pick = top if board[top]["mom_pct"] > 0 else "CASH"
+        pick = BENCH
     else:
         ranked = sorted(COINS, key=lambda c: board[c]["z"])
-        top = ranked[0]
-        pick = top if board[top]["z"] < Z_ENTRY else "CASH"
+        pick = "CASH"
     for i, c in enumerate(ranked):
         board[c]["rank"] = i + 1
     return pick, board, regime
@@ -299,29 +310,29 @@ def emit(st, board, pick, live_ts="", regime="") -> None:
         "frozen": st.get("frozen"),
         "thoughts": (
             ("Right now I'm in TREND mode: Bitcoin is above its 200-day average, "
-             "which historically means crypto is in an uptrend — so my rule is to "
-             "ride whichever coin has climbed the most this week. "
+             "which historically means crypto is in an uptrend — so I hold "
+             "Bitcoin itself. I used to rotate into the hottest altcoin; a "
+             "two-year replay showed that lost to simply holding BTC, so I stopped. "
              if "TREND" in (regime or "").upper() else
              "Right now I'm in CHOP mode: Bitcoin is below its 200-day average, "
-             "which means the market is directionless — chasing momentum here "
-             "loses money, so instead I look for a coin that fell unusually hard "
-             "and try to catch its bounce back. ")
+             "which means the market is directionless — history says the "
+             "cheapest thing to do here is hold cash and wait for the tide to turn. ")
             + (f"That's why I'm holding {st['holding'].replace('-USD', '')}. "
                "I keep my seat through small wobbles instead of paying fees "
-               "on every flicker."
+               "on every flicker, and I sell if I'm 10% below my entry."
                if st["holding"] != "CASH" else
                "Nothing qualifies at this moment, so I'm in cash — in crypto, "
                "sitting out is often the smartest trade.")),
         "strategy": {
-            "name": "Regime Switcher — two brains, one bot",
-            "rule": "BTC above its 200-day MA = TREND: ride the hottest "
-                    "rising 7-day-momentum coin. Below = CHOP: buy the most "
-                    "oversold coin (z20 < -1.25) and harvest the bounce; "
-                    "nothing qualifies -> cash. Exits use a dead-band (hold "
-                    "until mom < -2% / z back to -0.25) so boundary wobbles "
-                    "don't churn fees",
-            "backtest_cagr": "+50%/yr since 2017 · +9%/yr in the 2024+ chop",
-            "backtest_maxdd": "-93% (2017 era) · experimental — parameters are soft",
+            "name": "BTC Tide Gauge (v4) — one rule, no rotation",
+            "rule": "BTC above its 200-day MA -> hold BTC; below -> cash. "
+                    "-10% failure stop; exit dead-band (mom > -2%) against "
+                    "whipsaw; Watcher SEVERE and the $750 floor force cash. "
+                    "v1-v3 rotated 8 alts by momentum/oversold z — retired "
+                    "2026-09-05 after a 2-year replay showed every rotation "
+                    "variant losing to BTC (reports/crypto_regime_lab.md)",
+            "backtest_cagr": "+14.5%/yr 2025-2026 replay (BTC B&H -3.0%) · 9 switches",
+            "backtest_maxdd": "-20.5% in the replay (BTC B&H -53%) · in-sample, judge live",
         },
     }
     (config.REPORTS / "crypto_dashboard_data.json").write_text(

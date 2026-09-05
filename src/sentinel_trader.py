@@ -89,6 +89,16 @@ def main():
               f"(> {sentinel_gate.MAX_AGE_H:.0f}h): no entries, exit holding")
     hype = (scan or {}).get("hype", [])
     euphoric = [h for h in hype if h.get("mood") == "euphoric"]
+    # Fill audit 2026-09-05: "ONG" (a Binance mover) was bought as a stock and
+    # "ARB" priced by Yahoo at $0.0006 (a different coin). Grok's crypto_hype
+    # section says which symbols are coins; only those get the -USD suffix
+    # beyond the fixed CRYPTO majors.
+    coin_syms = {str(h.get("symbol", "")).upper().lstrip("$")
+                 for h in (scan or {}).get("crypto_hype", []) or []}
+
+    def ticker_of(sym: str) -> str:
+        s_ = sym.upper().lstrip("$")
+        return f"{s_}-USD" if s_ in coin_syms else to_ticker(s_)
 
     st = json.loads(STATE.read_text()) if STATE.exists() else None
     if st is None:
@@ -99,10 +109,32 @@ def main():
               "stopped": {}, "trades": [], "history": [], "intraday": []}
         print(f"[{KEY}] NEW sim {today}")
 
-    cand_map = {to_ticker(h["symbol"]): h for h in euphoric}
+    cand_map = {ticker_of(h["symbol"]): h for h in euphoric}
     px, rawc = quotes(list(cand_map)
                       + ([st["holding"]] if st["holding"] != "CASH" else []))
+    # coins: price from Binance (the venue the fee model assumes), not Yahoo's
+    # ambiguous "<SYM>-USD" lookup; a coin Binance does not list is untradeable
+    import binance_data
+    for t in list(px):
+        if t.endswith("-USD") and t != BENCH:
+            bp = binance_data.price(t[:-4] + "USDT")
+            if bp:
+                px[t] = float(bp)
+            elif t in cand_map:
+                px.pop(t, None)
     tradeable = [t for t in cand_map if t in px]
+    et_today = str(market_hours._et_now(now).date())
+
+    def fresh(t: str) -> bool:
+        """Fill audit 2026-09-05: Yahoo's daily frame often lacks TODAY's bar
+        for a ticker that just started moving; ffill then fills the order at
+        YESTERDAY's close. GPRO 09-01 filled at 0.876 (prev close) when the
+        day's low was 1.16; SOUN 08-06 at 6.43 vs a 7.00 low; MRNA 08-19 was
+        marked 116 -> 174 within one session. A stock order fills only when
+        its own bar for today's session has been delivered. Coins are 24/7."""
+        if t.endswith("-USD"):
+            return True
+        return market_hours.last_real_date(rawc, t) == et_today
 
     def sell(reason) -> bool:
         """Returns True only if the sale actually filled. A missing quote
@@ -113,6 +145,10 @@ def main():
         if p is None:
             print(f"[{KEY}] held {st['holding']} has no quote — sale deferred, "
                   f"position kept, nothing recorded")
+            return False
+        if not fresh(st["holding"]):
+            print(f"[{KEY}] held {st['holding']}: today's bar not delivered yet — "
+                  f"sale deferred (stale-fill guard)")
             return False
         gross = st["units"] * p
         f = risk_common.fee(st["holding"], gross)
@@ -125,8 +161,6 @@ def main():
         st["cash"], st["holding"], st["units"] = gross - f, "CASH", 0.0
         st["entry_price"] = None
         return True
-
-    import market_hours
 
     # 1) hard stop-loss (fills only when the holding's market is open —
     #    a closed market has no tradable price, so the stop waits for one)
@@ -183,7 +217,10 @@ def main():
         desired = avail[0] if avail else "CASH"
 
     sell_ok = st["holding"] == "CASH" or market_hours.can_fill(st["holding"])
-    buy_ok = desired == "CASH" or market_hours.can_fill(desired)
+    buy_ok = desired == "CASH" or (market_hours.can_fill(desired) and fresh(desired))
+    if desired not in ("CASH", st["holding"]) and market_hours.can_fill(desired)             and not fresh(desired):
+        print(f"[{KEY}] {desired}: today's bar not delivered yet — entry deferred "
+              f"(stale-fill guard)")
     if desired != st["holding"] and not (sell_ok and buy_ok):
         print(f"[{KEY}] rotation {st['holding']} -> {desired} deferred — "
               f"US market closed, will fill at the open")

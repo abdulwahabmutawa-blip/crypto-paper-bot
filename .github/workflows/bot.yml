@@ -119,7 +119,9 @@ jobs:
             # scholar retired (the four weakest by value, $1,020-1,090 after
             # 5+ weeks; crypto behind BTC). bot_scalper joins: the small-wins
             # protocol from the lab, hyper-aggressive (10 seats, +3/-3/24h).
-            for s in bot_meanrev bot_scalper \
+            # OWNER 2026-09-05 (later): crypto REINSTATED as v4 BTC tide gauge
+            # after the regime lab (reports/crypto_regime_lab.md); state kept.
+            for s in crypto_tracker bot_meanrev bot_scalper \
                      grok_sentinel sentinel_trader \
                      exit_auditor unlock_watch \
                      announcement_watch social_radar smallwins_lab; do
