@@ -1,28 +1,27 @@
-# Fleet status — 2026-09-04 (UTC)
-
-10 paper bots ($1,000 each, no real money) + Watcher (Grok risk gate).
+# Fleet status — 2026-09-05 (UTC)
 
 | Bot | Holds | 24h change | Value |
 |---|---|---|---|
-| crypto (trend/regime) | ADA-USD | CASH → ADA-USD (signal flip, 09-03) | $1,158.84 |
-| congress | 10 positions | No new trade — marks only | $1,003.21 |
-| meanrev | HD | WMT → HD (signal flip, 09-03) | $1,286.23 |
-| commodity | DBC | No new trade — marks only (prior whipsaw already settled) | $1,033.03 |
-| allweather | 5-asset basket | No new trade — marks only | $1,025.74 |
-| sentiment | SNOW | DELL → SNOW (Grok hype rotation) — see below | $2,488.60 |
-| hypecrypto | CASH | No change — still frozen (kill floor, 08-31) | $739.48 |
-| Hunter | BTC-USD | No new trade — marks only | $1,013.66 |
-| Scholar | ETH-USD | SPY → ETH-USD (signal flip, 09-03) | $1,030.22 |
-| Analyst | SPY | No new trade — marks only | $1,029.25 |
-| Watcher | — (no capital) | No new scan since 09-03 11:11 UTC — see below | n/a |
+| crypto | ADA-USD | No new trade — marks only | $1,089.97 |
+| meanrev | HD | No new trade — marks only | $1,298.52 |
+| commodity | DBC | No new trade — marks only | $1,031.42 |
+| allweather | 5-asset basket | No new trade — marks only | $1,023.80 |
+| scholar | ETH-USD | No new trade — marks only | $1,019.62 |
+| sentiment | CASH | SNOW → CASH (stale Grok feed, 09-04) | $2,453.00 |
+| hypecrypto | CASH | Frozen (R1 kill, 08-31) — no change | $739.48 |
+| congress *(retired)* | 10 positions | Retired 09-04 by owner decision — frozen | $990.64 |
+| hunter *(retired)* | BTC-USD | Retired 09-04 by owner decision — frozen | $994.61 |
+| analyst *(retired)* | SPY | Retired 09-04 by owner decision — frozen | $1,025.35 |
+| lottery — REAL MONEY | CASH | Stopped out of ORDIUSDT, circuit breaker tripped | $39.03 |
+| Watcher | — (no capital) | Last scan 09-04 21:10 UTC | n/a |
 
 ## Changed
-- crypto: went to CASH then bought ADA-USD in the same window (signal flip, 09-03).
-- meanrev: WMT → HD, oversold-dip rotation.
-- scholar: SPY → ETH-USD, vol-targeted 36% position, rest cash.
-- sentiment: DELL → SNOW on a Grok hype signal — book value still anomalous, see below.
-- No stop-outs. No failed or skipped cycles — 110 cycle commits over the last 24h, no gap over 20 min.
+- **sentiment**: sold SNOW → CASH on 09-04 ("Grok scans stale 26h — flying blind is not a strategy"). Its $2,453 value still carries the unresolved stale-quote inflation flagged in a prior digest — unverified.
+- **congress, hunter, analyst, hypecrypto retired** from the active roster by owner decision 2026-09-04 (recorded in `reports/kill_criteria.md`). Dashboards remain as frozen archives; they no longer run in the Actions workflow. Not yet reflected in CLAUDE.md's bot list.
+- **lottery (real money, no cap)**: ORDIUSDT stopped out at -6.1% (-$2.56) on 09-04 10:18 UTC. Day P&L hit -11.9%, tripping the circuit breaker (no new entries same UTC day); a separate "tape dead" signal gate has kept it flat since 09-04 14:41 UTC. No fills since. Book value $39.03 vs $44.27 high-water mark.
+- No skipped or failed cycles: paper-fleet cycles ran every ~13-16 min, lottery every ~5-8 min throughout the window — no gaps.
 
 ## Needs a look
-- **sentiment bot's value is still anomalous.** $2,488.60 vs every other bot's $739–$1,286 range. Yesterday's flagged cause (a frozen ARB-USD quote, 0.00062903 repeated across 3 trades on 09-01/09-02, plus a same-day GPRO round-trip showing +67%) is still sitting in its trade history and hasn't been corrected. Today's DELL/SNOW fills look like real distinct prices, but the inflated cash base carried forward from the earlier bug is unverified.
-- **Watcher hasn't scanned in ~18h.** Last verdict is 2026-09-03T11:11 UTC ("caution"); normal cadence is ~8h. September scan count is 7, far under the 100/month cap, so it isn't budget throttling — cause unclear. Not yet past the 24h "treat as UNKNOWN" line, but worth checking the scan scheduler.
+- **lottery book is real money, currently $39.03**, halted by its own circuit breaker/tape gate — not actively bleeding, but worth the owner's eyes given it has no cap.
+- **sentiment's $2,453 value is still unverified** — the stale-quote inflation from 09-01/09-02 flagged previously has not been corrected.
+- Watcher's last scan (09-04 21:10 UTC, ~8h old) is within normal cadence — not stale, noted only because it was flagged yesterday.
