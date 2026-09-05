@@ -1,6 +1,6 @@
 # Scalper — hyper-aggressive small-wins PAPER bot
 
-updated 2026-09-05T16:14:48+00:00 · runs 10 · equity **$1,007.71** (+0.77%) · cash $0.00 · open 10/10 · round trips 6
+updated 2026-09-05T16:30:53+00:00 · runs 11 · equity **$1,008.52** (+0.85%) · cash $0.00 · open 10/10 · round trips 6
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -26,13 +26,13 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 |---|---|---|---|---|---|
 | 2026-09-05T12:33 | UUSDT | bottom | 0.9993 | 0.9994 | +0.01% |
 | 2026-09-05T12:33 | BFUSDUSDT | bottom | 1 | 1 | +0.00% |
-| 2026-09-05T12:33 | STXUSDT | bottom | 0.2584 | 0.2607 | +0.89% |
-| 2026-09-05T12:33 | ENSOUSDT | surge | 0.892 | 0.907 | +1.68% |
-| 2026-09-05T12:33 | SPKUSDT | surge | 0.020793 | 0.021025 | +1.12% |
-| 2026-09-05T12:33 | BNBUSDT | surge | 756.24 | 770.85 | +1.93% |
-| 2026-09-05T14:02 | PLUMEUSDT | bottom | 0.01349 | 0.01356 | +0.52% |
-| 2026-09-05T14:20 | PUMPUSDT | bottom | 0.004075 | 0.004025 | -1.23% |
-| 2026-09-05T15:25 | BMTUSDT | bottom | 0.01795 | 0.01783 | -0.67% |
-| 2026-09-05T15:25 | EGLDUSDT | bottom | 4.642 | 4.598 | -0.95% |
+| 2026-09-05T12:33 | STXUSDT | bottom | 0.2584 | 0.2609 | +0.97% |
+| 2026-09-05T12:33 | ENSOUSDT | surge | 0.892 | 0.905 | +1.46% |
+| 2026-09-05T12:33 | SPKUSDT | surge | 0.020793 | 0.020886 | +0.45% |
+| 2026-09-05T12:33 | BNBUSDT | surge | 756.24 | 770.58 | +1.90% |
+| 2026-09-05T14:02 | PLUMEUSDT | bottom | 0.01349 | 0.01354 | +0.37% |
+| 2026-09-05T14:20 | PUMPUSDT | bottom | 0.004075 | 0.00406 | -0.37% |
+| 2026-09-05T15:25 | BMTUSDT | bottom | 0.01795 | 0.01795 | +0.00% |
+| 2026-09-05T15:25 | EGLDUSDT | bottom | 4.642 | 4.611 | -0.67% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
