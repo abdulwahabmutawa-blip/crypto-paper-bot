@@ -1,16 +1,16 @@
 {
-  "ts": "2026-09-05T11:45:52+00:00",
+  "ts": "2026-09-05T11:51:35+00:00",
   "sources": {
     "coingecko": [
       "MARSCOIN",
+      "PENGU",
       "DASH",
       "ZEC",
-      "PENGU",
       "TAO",
-      "ZEN",
       "ARB",
       "SOL",
-      "LIT"
+      "LIT",
+      "ETH"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,8 +19,8 @@
       "DASH",
       "ZEN",
       "NEAR",
-      "TUT",
       "SNDKB",
+      "TUT",
       "ZKP",
       "TAO"
     ],
@@ -51,7 +51,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.000401,
+      "funding": 0.000415,
       "long_short": 0.68
     },
     {
@@ -71,18 +71,8 @@
         "coingecko",
         "watcher"
       ],
-      "funding": 3e-05,
+      "funding": 3.4e-05,
       "long_short": 0.44
-    },
-    {
-      "symbol": "ZEN",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 4.5e-05,
-      "long_short": 1.72
     },
     {
       "symbol": "ARB",
@@ -93,12 +83,20 @@
       "funding": 0.0001
     },
     {
+      "symbol": "ETH",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 3.5e-05
+    },
+    {
       "symbol": "LIT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 1.5e-05
+      "funding": 1.4e-05
     },
     {
       "symbol": "NEAR",
@@ -129,7 +127,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3e-05
+      "funding": 3.1e-05
     },
     {
       "symbol": "TUT",
@@ -137,7 +135,15 @@
       "sources": [
         "movers"
       ],
-      "funding": -3.2e-05
+      "funding": -5e-05
+    },
+    {
+      "symbol": "ZEN",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 4.9e-05
     },
     {
       "symbol": "ZKP",
