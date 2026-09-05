@@ -1,26 +1,26 @@
 {
-  "ts": "2026-09-05T20:02:54+00:00",
+  "ts": "2026-09-05T20:08:41+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
       "UNI",
       "PENGU",
-      "PUMP",
       "ZEC",
+      "PUMP",
+      "ETH",
       "BTC",
-      "LIT",
-      "ENA",
       "MARSCOIN",
-      "ETH"
+      "LIT",
+      "SUSHI"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "TUT",
       "DASH",
-      "MARSCOIN",
-      "UNI",
       "ARB",
+      "UNI",
+      "MARSCOIN",
       "BNB",
       "DOGE",
       "LTC"
@@ -41,7 +41,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.000274,
+      "funding": 0.000251,
       "long_short": 0.64
     },
     {
@@ -71,7 +71,7 @@
         "coingecko",
         "watcher"
       ],
-      "funding": -2.7e-05,
+      "funding": -3e-05,
       "long_short": 0.43
     },
     {
@@ -88,7 +88,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 8.1e-05
+      "funding": 8e-05
     },
     {
       "symbol": "BTC",
@@ -96,7 +96,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.1e-05
+      "funding": 3.2e-05
     },
     {
       "symbol": "DOGE",
@@ -107,20 +107,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 4.9e-05
+      "funding": 5.1e-05
     },
     {
       "symbol": "FIRO",
@@ -162,12 +154,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "SUSHI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -0.001113
+    },
+    {
       "symbol": "TUT",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -0.000256
+      "funding": -0.000245
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
