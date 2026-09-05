@@ -916,12 +916,6 @@
   ],
   "intraday": [
     {
-      "ts": "2026-08-19T01:22:17+00:00",
-      "value": 1280.83,
-      "bench": 1022.29,
-      "holding": "AMLX"
-    },
-    {
       "ts": "2026-08-19T01:35:41+00:00",
       "value": 1280.83,
       "bench": 1022.29,
@@ -9914,97 +9908,92 @@
       "value": 1323.05,
       "bench": 1025.94,
       "holding": "CASH"
-    }
-  ],
-  "last_updated_utc": "2026-09-05T14:01:40+00:00",
-  "costs_paid": 112.3867,
-  "restatements": [
-    {
-      "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)",
-      "voided_trades": [
-        {
-          "date": "2026-07-18",
-          "action": "BUY",
-          "ticker": "XRP-USD",
-          "price": 1.09,
-          "units": 919.62,
-          "value": 1004.41,
-          "reason": "Grok: XRP euphoric \u2014 SWIFT banks coil, wealth transfer talk (scan 2026-07-18T23:37)"
-        },
-        {
-          "date": "2026-07-19",
-          "action": "SELL",
-          "ticker": "XRP-USD",
-          "price": 1.1,
-          "units": 919.62,
-          "value": 1007.81,
-          "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
-        },
-        {
-          "date": "2026-07-19",
-          "action": "BUY",
-          "ticker": "OXY",
-          "price": 54.86,
-          "units": 18.3706,
-          "value": 1007.81,
-          "reason": "Grok: OXY euphoric \u2014 Energy bounce on geo oil fears (scan 2026-07-19T18:09)"
-        },
-        {
-          "date": "2026-07-20",
-          "action": "SELL",
-          "ticker": "OXY",
-          "price": 54.86,
-          "units": 18.3706,
-          "value": 1007.81,
-          "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
-        },
-        {
-          "date": "2026-07-20",
-          "action": "BUY",
-          "ticker": "AEHR",
-          "price": 81.05,
-          "units": 12.4344,
-          "value": 1007.81,
-          "reason": "Grok: AEHR euphoric \u2014 AI test gear orders fuel retail surge (scan 2026-07-20T08:26)"
-        },
-        {
-          "date": "2026-07-20",
-          "action": "SELL",
-          "ticker": "AEHR",
-          "price": 77.36,
-          "units": 12.4344,
-          "value": 961.93,
-          "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
-        },
-        {
-          "date": "2026-07-20",
-          "action": "BUY",
-          "ticker": "ACHR",
-          "price": 5.31,
-          "units": 181.1541,
-          "value": 961.93,
-          "reason": "Grok: ACHR euphoric \u2014 20% rip on Anduril military VTOL (scan 2026-07-20T20:45)"
-        },
-        {
-          "date": "2026-07-21",
-          "action": "SELL",
-          "ticker": "ACHR",
-          "price": 5.31,
-          "units": 181.1541,
-          "value": 961.93,
-          "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
-        }
-      ],
-      "voided_reason": "signal faded before any real fill was possible (market closed the whole window) \u2014 trades could never have existed"
     },
     {
-      "ts": "2026-09-05T14:01:40+00:00",
-      "note": "restated 2026-09-05 after the fill audit (reports/sentiment_fill_audit.md): stock orders were booked at the previous close when Yahoo had not delivered today's bar (GPRO 09-01 at 0.876 vs a 1.16 day low; SOUN 08-06), Yahoo crypto prints diverged from Binance (XRP 08-21 stop, BTC 08-21 entry, SHIB 07-27), and ARB-USD on Yahoo was a different token (4 legs voided). Every leg replayed at market prices; equity restated from the recorded figure to the audited one. History before this point is left as recorded (the chart shows the correction).",
-      "recorded_equity": 2453.0,
-      "restated_equity": 1323.05,
-      "legs_restated": 5,
-      "legs_voided": 4,
-      "trades_annotated": 9
+      "ts": "2026-09-05T14:00:12+00:00",
+      "value": 2453.0,
+      "bench": 1025.94,
+      "holding": "CASH"
     }
-  ]
+  ],
+  "last_updated_utc": "2026-09-05T14:00:12+00:00",
+  "restatement": {
+    "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)",
+    "voided_trades": [
+      {
+        "date": "2026-07-18",
+        "action": "BUY",
+        "ticker": "XRP-USD",
+        "price": 1.09,
+        "units": 919.62,
+        "value": 1004.41,
+        "reason": "Grok: XRP euphoric \u2014 SWIFT banks coil, wealth transfer talk (scan 2026-07-18T23:37)"
+      },
+      {
+        "date": "2026-07-19",
+        "action": "SELL",
+        "ticker": "XRP-USD",
+        "price": 1.1,
+        "units": 919.62,
+        "value": 1007.81,
+        "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
+      },
+      {
+        "date": "2026-07-19",
+        "action": "BUY",
+        "ticker": "OXY",
+        "price": 54.86,
+        "units": 18.3706,
+        "value": 1007.81,
+        "reason": "Grok: OXY euphoric \u2014 Energy bounce on geo oil fears (scan 2026-07-19T18:09)"
+      },
+      {
+        "date": "2026-07-20",
+        "action": "SELL",
+        "ticker": "OXY",
+        "price": 54.86,
+        "units": 18.3706,
+        "value": 1007.81,
+        "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
+      },
+      {
+        "date": "2026-07-20",
+        "action": "BUY",
+        "ticker": "AEHR",
+        "price": 81.05,
+        "units": 12.4344,
+        "value": 1007.81,
+        "reason": "Grok: AEHR euphoric \u2014 AI test gear orders fuel retail surge (scan 2026-07-20T08:26)"
+      },
+      {
+        "date": "2026-07-20",
+        "action": "SELL",
+        "ticker": "AEHR",
+        "price": 77.36,
+        "units": 12.4344,
+        "value": 961.93,
+        "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
+      },
+      {
+        "date": "2026-07-20",
+        "action": "BUY",
+        "ticker": "ACHR",
+        "price": 5.31,
+        "units": 181.1541,
+        "value": 961.93,
+        "reason": "Grok: ACHR euphoric \u2014 20% rip on Anduril military VTOL (scan 2026-07-20T20:45)"
+      },
+      {
+        "date": "2026-07-21",
+        "action": "SELL",
+        "ticker": "ACHR",
+        "price": 5.31,
+        "units": 181.1541,
+        "value": 961.93,
+        "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
+      }
+    ],
+    "voided_reason": "signal faded before any real fill was possible (market closed the whole window) \u2014 trades could never have existed"
+  },
+  "costs_paid": 112.3867
 }
