@@ -1,11 +1,11 @@
 {
-  "generated_utc": "2026-09-05T04:48:23+00:00",
+  "generated_utc": "2026-09-05T05:03:42+00:00",
   "created": "2026-07-30",
   "starting_cash": 1000.0,
-  "live_ts": "2026-09-05T04:45:00+00:00",
+  "live_ts": "2026-09-05T05:00:00+00:00",
   "current": {
     "date": "2026-09-05",
-    "value": 1020.17,
+    "value": 1019.62,
     "bench": 1038.44,
     "holding": "ETH-USD",
     "bench_asof": "2026-09-04"
@@ -13,21 +13,21 @@
   "board": [
     {
       "sym": "ETH-USD",
-      "price": 2450.02,
-      "line": "Ethereum \u00b7 score +0.98 \u00b7 mom90 +56.2% \u00b7 MA gap +20.5%",
+      "price": 2446.33,
+      "line": "Ethereum \u00b7 score +0.98 \u00b7 mom90 +55.9% \u00b7 MA gap +20.3%",
       "tag": "HELD",
       "on": true,
       "pick": true,
-      "fill": 24.56865513735443
+      "fill": 24.45258171062732
     },
     {
       "sym": "BTC-USD",
-      "price": 79521.4,
-      "line": "Bitcoin \u00b7 score +0.80 \u00b7 mom90 +30.6% \u00b7 MA gap +14.2%",
+      "price": 79467.0,
+      "line": "Bitcoin \u00b7 score +0.80 \u00b7 mom90 +30.6% \u00b7 MA gap +14.1%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 20.122693721271094
+      "fill": 20.054507592591854
     },
     {
       "sym": "SPY",
@@ -36,7 +36,7 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 16.777705348299364
+      "fill": 16.777705348299385
     },
     {
       "sym": "EFA",
@@ -45,7 +45,7 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 16.06982247233
+      "fill": 16.069822472330006
     },
     {
       "sym": "IWM",
@@ -54,7 +54,7 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 13.069774031288503
+      "fill": 13.0697740312885
     },
     {
       "sym": "QQQ",
@@ -63,7 +63,7 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 9.504599833500421
+      "fill": 9.50459983350042
     },
     {
       "sym": "EEM",
@@ -72,7 +72,7 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 8.336652451434087
+      "fill": 8.336652451434084
     },
     {
       "sym": "DBC",
@@ -117,7 +117,7 @@
       "tag": "not eligible",
       "on": false,
       "pick": false,
-      "fill": -5.86076301886712
+      "fill": -5.860774232419261
     }
   ],
   "board_title": "12 instruments ranked by momentum-per-unit-risk",
@@ -128,12 +128,6 @@
     "board_note": "Every rule in this bot was earned by an earlier experiment: vol-adjusted momentum, trend gate as crash protection, vol-sized positions, trailing stop, and a switch threshold that fights churn. The synthesis on trial."
   },
   "intraday": [
-    {
-      "ts": "2026-08-18T19:43:33+00:00",
-      "value": 1024.87,
-      "bench": 1035.26,
-      "holding": "IWM"
-    },
     {
       "ts": "2026-08-18T19:57:00+00:00",
       "value": 1023.9,
@@ -9127,6 +9121,12 @@
       "value": 1020.17,
       "bench": 1038.44,
       "holding": "ETH-USD"
+    },
+    {
+      "ts": "2026-09-05T05:03:42+00:00",
+      "value": 1019.62,
+      "bench": 1038.44,
+      "holding": "ETH-USD"
     }
   ],
   "trades": [
@@ -9345,7 +9345,7 @@
     },
     {
       "date": "2026-09-05",
-      "value": 1020.17,
+      "value": 1019.62,
       "bench": 1038.44,
       "holding": "ETH-USD",
       "bench_asof": "2026-09-04"
@@ -9360,5 +9360,5 @@
   },
   "costs_paid": 4.2557,
   "frozen": null,
-  "thoughts": "I'm holding ETH-USD. Best momentum-per-unit-risk in a confirmed uptrend. I bought at $2,432.88; it's now $2,450.02 (+0.7% since I got in). I deliberately kept $656.80 aside in cash \u2014 I take smaller positions in assets that swing a lot. My safety net: if the price falls to $2,266.57 (10% below its recent high), I sell automatically \u2014 no exceptions. Closest challenger on my list is BTC-USD, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
+  "thoughts": "I'm holding ETH-USD. Best momentum-per-unit-risk in a confirmed uptrend. I bought at $2,432.88; it's now $2,446.33 (+0.6% since I got in). I deliberately kept $656.80 aside in cash \u2014 I take smaller positions in assets that swing a lot. My safety net: if the price falls to $2,266.57 (10% below its recent high), I sell automatically \u2014 no exceptions. Closest challenger on my list is BTC-USD, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
 }
