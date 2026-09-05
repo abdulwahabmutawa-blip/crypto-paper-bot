@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-05T02:18:38+00:00",
-  "scanned": 121,
+  "ts": "2026-09-05T02:23:57+00:00",
+  "scanned": 120,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SNXXBUSDT",
+      "signal": "breakout",
+      "score": 0.6863,
+      "raw_score": 0.7592,
+      "weight": 0.904,
+      "price": 17.56,
+      "why": "trades 148.8x, volume 661.0x, 68% taker-buy, +2.3% in an hour, at 94% of its 24h range",
+      "chg_24h": 0.2463,
+      "vol_surge": 661.03,
+      "chg_1h": 0.0233,
+      "market_surge": 1.39,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.14% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 44%, mean +0.13% over last 529 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 BTC-excess day mean +0.14% at 24h: market beta, not signal",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 20,
+    "count": 24,
     "baseline": 13.0,
     "wave": false
   },
