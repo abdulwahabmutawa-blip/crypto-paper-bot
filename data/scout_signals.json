@@ -1,22 +1,22 @@
 {
-  "ts": "2026-09-05T21:20:47+00:00",
+  "ts": "2026-09-05T21:26:36+00:00",
   "scanned": 96,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "ENSOUSDT",
-      "signal": "breakout",
-      "score": 0.6785,
-      "raw_score": 0.7497,
-      "weight": 0.905,
-      "price": 0.923,
-      "why": "trades 14.1x, volume 15.9x, 62% taker-buy, +2.4% in an hour, at 100% of its 24h range",
-      "chg_24h": 0.0936,
-      "vol_surge": 15.95,
-      "chg_1h": 0.0244,
-      "market_surge": 2.34,
+      "symbol": "MARSCOINUSDT",
+      "signal": "heat",
+      "score": 0.4998,
+      "raw_score": 0.6,
+      "weight": 0.833,
+      "price": 0.2328,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.011% \u00b7 L/S 0.64",
+      "chg_24h": 0.2163,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
       "actionable": false,
-      "status": "benched \u2014 hit 39%, mean +0.60% over last 199 at 24h: not beating 4x the round trip"
+      "status": "benched \u2014 hit 41%, mean -1.28% over last 32 at 24h: not beating 4x the round trip"
     }
   ],
   "gate": {
@@ -27,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 20,
+    "count": 21,
     "baseline": 15.0,
     "wave": false
   },
