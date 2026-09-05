@@ -1,39 +1,8 @@
 {
-  "ts": "2026-09-05T19:57:24+00:00",
+  "ts": "2026-09-05T20:03:00+00:00",
   "scanned": 95,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "OPUSDT",
-      "signal": "ignition",
-      "score": 0.6779,
-      "raw_score": 0.7204,
-      "weight": 0.941,
-      "price": 0.1031,
-      "why": "trades 8.2x and volume 7.2x the prior 4h, 61% taker-buy, $78,043 burst \u2014 while price has only moved +1.6%",
-      "chg_24h": 0.0466,
-      "vol_surge": 7.18,
-      "chg_1h": 0.0158,
-      "market_surge": 1.86,
-      "actionable": false,
-      "status": "benched \u2014 hit 45%, mean +0.28% over last 540 at 24h: not beating 4x the round trip"
-    },
-    {
-      "symbol": "AEROUSDT",
-      "signal": "breakout",
-      "score": 0.6721,
-      "raw_score": 0.7427,
-      "weight": 0.905,
-      "price": 0.5468,
-      "why": "trades 7.5x, volume 6.9x, 79% taker-buy, +2.9% in an hour, at 93% of its 24h range",
-      "chg_24h": 0.0907,
-      "vol_surge": 6.9,
-      "chg_1h": 0.0286,
-      "market_surge": 0.0,
-      "actionable": false,
-      "status": "benched \u2014 hit 39%, mean +0.54% over last 199 at 24h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 45%, mean +0.28% over last 540 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 39%, mean +0.54% over last 199 at 24h: not beating 4x the round trip",
@@ -69,7 +38,7 @@
       "median_ret_4h": -0.0002,
       "both_halves_4h": false,
       "days_4h": 14,
-      "mean_x_4h": 0.0028,
+      "mean_x_4h": 0.00288,
       "days_x_4h": 3,
       "avg_win_4h": 0.01782,
       "avg_loss_4h": -0.01737,
