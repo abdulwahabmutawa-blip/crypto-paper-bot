@@ -140,7 +140,7 @@ for f in data/lottery_state.json data/lottery_ledger.jsonl \
          data/scout_signals.json data/scout_scorecard.json data/scout_log.jsonl \
          data/social_heat.json data/breadth.json \
          data/sentinel_state.json data/sentinel_verdict.json \
-         data/announcements.json \
+         data/announcements.json data/surge_signals.json data/surge_log.jsonl \
          data/social_radar_log.jsonl data/social_radar_card.json data/social_radar_state.json reports/social_radar.md \
          docs/sentinel.html \
          docs/lottery.json docs/scout.json docs/lottery_ledger.jsonl; do
