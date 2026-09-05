@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-05T17:14:41+00:00",
+  "ts": "2026-09-05T17:20:21+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
@@ -19,12 +19,12 @@
     "movers": [
       "MARSCOIN",
       "DASH",
-      "TUT",
       "NEAR",
+      "TUT",
       "ZEN",
       "LTC",
       "BNB",
-      "TRUMP"
+      "UNI"
     ],
     "watcher": [
       "ZEC",
@@ -42,7 +42,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 6.2e-05,
+      "funding": 6e-05,
       "long_short": 1.28
     },
     {
@@ -53,8 +53,18 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.000507,
+      "funding": 0.000498,
       "long_short": 0.63
+    },
+    {
+      "symbol": "UNI",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.49
     },
     {
       "symbol": "ZEC",
@@ -63,7 +73,7 @@
         "coingecko",
         "watcher"
       ],
-      "funding": -1.2e-05,
+      "funding": -1.7e-05,
       "long_short": 0.42
     },
     {
@@ -88,7 +98,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000126
+      "funding": 0.000125
     },
     {
       "symbol": "CAKE",
@@ -127,7 +137,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 9e-06
+      "funding": 2e-06
     },
     {
       "symbol": "PENGU",
@@ -146,28 +156,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "TRUMP",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "TUT",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -0.000257
-    },
-    {
-      "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": -0.000263
     },
     {
       "symbol": "ZEN",
