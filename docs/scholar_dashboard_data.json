@@ -1,11 +1,11 @@
 {
-  "generated_utc": "2026-09-05T09:58:07+00:00",
+  "generated_utc": "2026-09-05T10:13:08+00:00",
   "created": "2026-07-30",
   "starting_cash": 1000.0,
-  "live_ts": "2026-09-05T09:55:00+00:00",
+  "live_ts": "2026-09-05T10:10:00+00:00",
   "current": {
     "date": "2026-09-05",
-    "value": 1021.45,
+    "value": 1021.33,
     "bench": 1038.44,
     "holding": "ETH-USD",
     "bench_asof": "2026-09-04"
@@ -13,21 +13,21 @@
   "board": [
     {
       "sym": "ETH-USD",
-      "price": 2458.65,
-      "line": "Ethereum \u00b7 score +0.83 \u00b7 mom90 +45.8% \u00b7 MA gap +20.8%",
+      "price": 2457.84,
+      "line": "Ethereum \u00b7 score +0.83 \u00b7 mom90 +45.7% \u00b7 MA gap +20.7%",
       "tag": "HELD",
       "on": true,
       "pick": true,
-      "fill": 20.68963031910157
+      "fill": 20.6675958471725
     },
     {
       "sym": "BTC-USD",
-      "price": 79627.62,
+      "price": 79625.62,
       "line": "Bitcoin \u00b7 score +0.69 \u00b7 mom90 +25.9% \u00b7 MA gap +14.3%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 17.355410517558987
+      "fill": 17.353249923855127
     },
     {
       "sym": "SPY",
@@ -45,7 +45,7 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 16.06982247233001
+      "fill": 16.069822472330006
     },
     {
       "sym": "IWM",
@@ -54,7 +54,7 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 13.069774031288512
+      "fill": 13.069774031288508
     },
     {
       "sym": "QQQ",
@@ -72,7 +72,7 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 8.336652451434084
+      "fill": 8.336652451434087
     },
     {
       "sym": "DBC",
@@ -117,7 +117,7 @@
       "tag": "not eligible",
       "on": false,
       "pick": false,
-      "fill": -5.86076984823986
+      "fill": -5.860774232419252
     }
   ],
   "board_title": "12 instruments ranked by momentum-per-unit-risk",
@@ -128,12 +128,6 @@
     "board_note": "Every rule in this bot was earned by an earlier experiment: vol-adjusted momentum, trend gate as crash protection, vol-sized positions, trailing stop, and a switch threshold that fights churn. The synthesis on trial."
   },
   "intraday": [
-    {
-      "ts": "2026-08-18T21:45:17+00:00",
-      "value": 1023.78,
-      "bench": 1034.59,
-      "holding": "IWM"
-    },
     {
       "ts": "2026-08-18T21:58:42+00:00",
       "value": 1023.78,
@@ -9127,6 +9121,12 @@
       "value": 1021.45,
       "bench": 1038.44,
       "holding": "ETH-USD"
+    },
+    {
+      "ts": "2026-09-05T10:13:08+00:00",
+      "value": 1021.33,
+      "bench": 1038.44,
+      "holding": "ETH-USD"
     }
   ],
   "trades": [
@@ -9345,7 +9345,7 @@
     },
     {
       "date": "2026-09-05",
-      "value": 1021.45,
+      "value": 1021.33,
       "bench": 1038.44,
       "holding": "ETH-USD",
       "bench_asof": "2026-09-04"
@@ -9360,5 +9360,5 @@
   },
   "costs_paid": 4.2557,
   "frozen": null,
-  "thoughts": "I'm holding ETH-USD. Best momentum-per-unit-risk in a confirmed uptrend. I bought at $2,432.88; it's now $2,458.65 (+1.1% since I got in). I deliberately kept $656.80 aside in cash \u2014 I take smaller positions in assets that swing a lot. My safety net: if the price falls to $2,266.57 (10% below its recent high), I sell automatically \u2014 no exceptions. Closest challenger on my list is BTC-USD, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
+  "thoughts": "I'm holding ETH-USD. Best momentum-per-unit-risk in a confirmed uptrend. I bought at $2,432.88; it's now $2,457.84 (+1.0% since I got in). I deliberately kept $656.80 aside in cash \u2014 I take smaller positions in assets that swing a lot. My safety net: if the price falls to $2,266.57 (10% below its recent high), I sell automatically \u2014 no exceptions. Closest challenger on my list is BTC-USD, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
 }
