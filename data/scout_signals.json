@@ -1,22 +1,22 @@
 {
-  "ts": "2026-09-05T09:43:28+00:00",
+  "ts": "2026-09-05T09:49:13+00:00",
   "scanned": 115,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "UNIUSDT",
-      "signal": "breakout",
-      "score": 0.594,
-      "raw_score": 0.6442,
-      "weight": 0.922,
-      "price": 6.391,
-      "why": "trades 4.7x, volume 10.7x, 66% taker-buy, +2.8% in an hour, at 94% of its 24h range",
-      "chg_24h": 0.0069,
-      "vol_surge": 10.66,
-      "chg_1h": 0.0283,
-      "market_surge": 3.54,
+      "symbol": "WBTCUSDT",
+      "signal": "ignition",
+      "score": 0.8651,
+      "raw_score": 0.9144,
+      "weight": 0.946,
+      "price": 79617.81,
+      "why": "trades 8.1x and volume 24.3x the prior 4h, 96% taker-buy, $55,817 burst \u2014 while price has only moved +0.1%",
+      "chg_24h": -0.0167,
+      "vol_surge": 24.29,
+      "chg_1h": 0.0006,
+      "market_surge": 4.76,
       "actionable": false,
-      "status": "benched \u2014 hit 37%, mean +0.43% over last 192 at 24h: not beating 4x the round trip"
+      "status": "benched \u2014 hit 44%, mean +0.21% over last 533 at 24h: not beating 4x the round trip"
     }
   ],
   "gate": {
@@ -27,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 24,
+    "count": 25,
     "baseline": 13.0,
     "wave": false
   },
