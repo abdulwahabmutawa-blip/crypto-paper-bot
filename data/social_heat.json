@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-05T04:38:11+00:00",
+  "ts": "2026-09-05T04:43:41+00:00",
   "sources": {
     "coingecko": [
       "DASH",
@@ -11,8 +11,7 @@
       "ARB",
       "TAO",
       "MARSCOIN",
-      "ZEN",
-      "ENA"
+      "SOL"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -54,7 +53,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.000429,
+      "funding": 0.000425,
       "long_short": 0.63
     },
     {
@@ -89,15 +88,6 @@
       "long_short": 1.95
     },
     {
-      "symbol": "ZEN",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "ARB",
       "surfaces": 1,
       "sources": [
@@ -111,15 +101,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8e-06
-    },
-    {
-      "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": 6e-06
     },
     {
       "symbol": "PENGU",
@@ -145,6 +127,14 @@
       ]
     },
     {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 2.5e-05
+    },
+    {
       "symbol": "TAO",
       "surfaces": 1,
       "sources": [
@@ -153,12 +143,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "ZEN",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "ZKC",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -0.000678
+      "funding": -0.000683
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
