@@ -74,6 +74,46 @@ def _load():
             "resolved": [], "runs": 0}
 
 
+def _key(p):
+    return (p.get("symbol"), p.get("tactic"), p.get("entry_ms"))
+
+
+def merge_states(a, b):
+    """Union of two lab states. Resolved rows win over open rows with the
+    same key; runs = max. Guards against a stale checkout overwriting a
+    newer file (2026-09-05: run 49 clobbered run 60, 88 resolved trades lost)."""
+    res = {}
+    for st in (a, b):
+        for r in st.get("resolved", []):
+            res.setdefault(_key(r), r)
+    opn = {}
+    for st in (a, b):
+        for p in st.get("open", []):
+            k = _key(p)
+            if k not in res:
+                opn.setdefault(k, p)
+    out = {"created": min(a.get("created") or "9", b.get("created") or "9"),
+           "open": list(opn.values()),
+           "resolved": sorted(res.values(), key=lambda r: r.get("exit_ts", "")),
+           "runs": max(a.get("runs", 0), b.get("runs", 0))}
+    if a.get("updated") or b.get("updated"):
+        out["updated"] = max(a.get("updated", ""), b.get("updated", ""))
+    return out
+
+
+def _remote_state():
+    """The copy on origin/main, if reachable — the working tree can lag it."""
+    import subprocess
+    try:
+        subprocess.run(["git", "fetch", "-q", "origin", "main"], timeout=40,
+                       check=True, capture_output=True)
+        out = subprocess.run(["git", "show", "origin/main:" + str(STATE.relative_to(STATE.parents[1]).as_posix())],
+                             timeout=20, check=True, capture_output=True)
+        return json.loads(out.stdout.decode("utf-8"))
+    except Exception:
+        return None
+
+
 def _save(st):
     tmp = STATE.with_suffix(".json.tmp")
     tmp.write_text(json.dumps(st, indent=1), encoding="utf-8")
@@ -191,6 +231,9 @@ def scoreboard(st):
 
 def main():
     st = _load()
+    remote = _remote_state()
+    if remote:
+        st = merge_states(st, remote)
     now = _now()
     syms = universe()
     if not syms:
