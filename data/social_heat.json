@@ -1,18 +1,18 @@
 {
-  "ts": "2026-09-05T16:52:58+00:00",
+  "ts": "2026-09-05T16:58:41+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
       "ASTER",
-      "PENGU",
       "PUMP",
+      "PENGU",
       "ZEC",
-      "MARSCOIN",
       "LIT",
-      "BTC",
-      "UNI",
+      "MARSCOIN",
       "DASH",
-      "CAKE"
+      "UNI",
+      "BTC",
+      "ARB"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -42,7 +42,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 7.1e-05,
+      "funding": 6.9e-05,
       "long_short": 1.27
     },
     {
@@ -53,7 +53,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.000555,
+      "funding": 0.000554,
       "long_short": 0.64
     },
     {
@@ -73,8 +73,16 @@
         "coingecko",
         "watcher"
       ],
-      "funding": -1.7e-05,
+      "funding": -1.2e-05,
       "long_short": 0.41
+    },
+    {
+      "symbol": "ARB",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "ASTER",
@@ -90,7 +98,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000134
+      "funding": 0.000133
     },
     {
       "symbol": "BTC",
@@ -99,14 +107,6 @@
         "coingecko"
       ],
       "funding": 2.1e-05
-    },
-    {
-      "symbol": "CAKE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "FIRO",
@@ -137,7 +137,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4e-05
+      "funding": 3.6e-05
     },
     {
       "symbol": "PENGU",
@@ -161,7 +161,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000231
+      "funding": -0.000234
     },
     {
       "symbol": "ZEN",
@@ -169,7 +169,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 8.6e-05
+      "funding": 9.3e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
