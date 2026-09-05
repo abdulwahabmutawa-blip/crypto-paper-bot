@@ -162,6 +162,7 @@ jobs:
             cp reports/hypecrypto_dashboard_data.json docs/hypecrypto_dashboard_data.json 2>/dev/null || true
             cp reports/smallwins.md docs/smallwins.md 2>/dev/null || true
             cp reports/scalper.md docs/scalper.md 2>/dev/null || true
+            cp reports/scalper_dashboard_data.json docs/scalper_dashboard_data.json 2>/dev/null || true
 
             git add data/ reports/ docs/ \
               || echo "::error::git add failed — this cycle will not publish"

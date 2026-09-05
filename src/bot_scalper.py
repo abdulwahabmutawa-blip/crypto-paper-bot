@@ -165,6 +165,22 @@ def report(st, marks):
                  "Entries at the close of the 15m candle that fired; exits on the first later candle touching "
                  "target or stop (stop first if both), else the 24h close._\n")
     REPORT.write_text("\n".join(lines), encoding="utf-8")
+    # fleet.html's net box and docs/scalper.html read this (same shape as the
+    # other books: starting_cash + current.value); intraday kept short.
+    js = REPORT.with_name("scalper_dashboard_data.json")
+    try:
+        prev = json.loads(js.read_text(encoding="utf-8")).get("intraday", [])
+    except Exception:
+        prev = []
+    point = {"ts": now.isoformat(timespec="seconds"), "value": round(eq, 2)}
+    js.write_text(json.dumps({
+        "generated_utc": point["ts"], "created": st.get("created"),
+        "starting_cash": START_USD,
+        "current": {"date": point["ts"][:10], "value": point["value"],
+                    "holding": f"{len(st['open'])}/{SEATS} seats"},
+        "intraday": (prev + [point])[-400:],
+        "round_trips": len(tr), "cash": st["cash"],
+    }, indent=1), encoding="utf-8")
 
 
 def main():

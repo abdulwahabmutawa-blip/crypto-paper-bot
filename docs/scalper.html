@@ -1,0 +1,75 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="refresh" content="300">
+<title>The Scalper — Live $1k Paper Sim</title>
+<style>
+  :root, :root[data-theme="dark"], :root[data-theme="light"]{
+    --bg:#0A0A0B; --panel:rgba(255,255,255,.03); --line:rgba(255,255,255,.14);
+    --text:#F5F6F8; --muted:#B3B9C2; --gain:#2BB8A5; --loss:#E25B50;
+    --mono:Consolas,"Cascadia Code","SF Mono",Menlo,monospace;
+  }
+  *{box-sizing:border-box}
+  body{background:radial-gradient(120% 90% at 50% 0%,#111114 0%,var(--bg) 55%) fixed;
+    color:var(--text);margin:0;font:15px/1.5 "Segoe UI",system-ui,sans-serif;padding:22px 20px}
+  .wrap{max-width:960px;margin:0 auto}
+  a{color:var(--gain)}
+  .eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  .v{font:700 40px/1.1 var(--mono);margin:6px 0 2px}
+  .up{color:var(--gain)} .down{color:var(--loss)}
+  .box{border:1px solid var(--line);border-radius:18px;padding:18px 22px;background:var(--panel);margin:14px 0}
+  table{border-collapse:collapse;width:100%;font:13px/1.4 var(--mono);margin:8px 0}
+  th,td{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;white-space:nowrap}
+  .scroll{overflow-x:auto}
+  h1{font-size:26px;margin:0 0 4px} h2{font-size:17px;margin:18px 0 6px}
+  p.sub{color:var(--muted);margin:0 0 10px}
+</style>
+<div class="wrap">
+  <p><a href="fleet.html">← fleet</a></p>
+  <h1>⚡ The Scalper <span style="color:var(--muted);font-weight:400">· paper, $1,000</span></h1>
+  <p class="sub">10 seats on 15m crypto candles, +3% target / −3% stop / 24h leash, never idle.
+    Pre-registered: judged on 100 round trips against a 54% break-even hit rate.</p>
+  <div class="box">
+    <span class="eyebrow">Portfolio value</span>
+    <div class="v" id="val">—</div>
+    <div id="sub" style="color:var(--muted)">loading…</div>
+  </div>
+  <div class="box" id="report">loading report…</div>
+  <p class="sub">Paper money · public ledger:
+    <a href="https://github.com/abdulwahabmutawa-blip/crypto-paper-bot">github.com/abdulwahabmutawa-blip/crypto-paper-bot</a></p>
+</div>
+<script>
+(async function(){
+  try{
+    const d = await (await fetch("scalper_dashboard_data.json",{cache:"no-store"})).json();
+    const live = d.intraday && d.intraday.length ? d.intraday[d.intraday.length-1].value : d.current.value;
+    const net = live - d.starting_cash, pct = net/d.starting_cash*100;
+    const v = document.getElementById("val");
+    v.textContent = "$" + live.toFixed(2) + "  " + (net>=0?"+":"−") + Math.abs(pct).toFixed(2) + "%";
+    v.className = "v " + (net>=0?"up":"down");
+    document.getElementById("sub").textContent = d.current.holding + " · " + d.round_trips +
+      " round trips · updated " + d.generated_utc.replace("T"," ").slice(0,16) + " UTC";
+  }catch(e){ document.getElementById("sub").textContent = "data not published yet (first Actions cycle pending)"; }
+  try{
+    const md = await (await fetch("scalper.md",{cache:"no-store"})).text();
+    // tiny markdown: headings, bold, pipe tables, bullets; nothing else needed
+    const esc = s => s.replace(/&/g,"&amp;").replace(/</g,"&lt;");
+    let html = "", table = [];
+    const flush = () => { if(!table.length) return;
+      const rows = table.filter(r => !/^\|[-| ]+\|$/.test(r)).map(r => r.slice(1,-1).split("|").map(c=>c.trim()));
+      html += '<div class="scroll"><table>' + rows.map((r,i) => "<tr>" + r.map(c => (i?"<td>":"<th>") + esc(c) + (i?"</td>":"</th>")).join("") + "</tr>").join("") + "</table></div>";
+      table = []; };
+    for(const raw of md.split("\n")){
+      const line = raw.trimEnd();
+      if(line.startsWith("|")){ table.push(line); continue; } flush();
+      if(!line.trim()) continue;
+      let t = esc(line).replace(/\*\*(.+?)\*\*/g,"<b>$1</b>").replace(/_(.+?)_$/,"<i>$1</i>");
+      if(line.startsWith("## ")) html += "<h2>" + t.slice(3) + "</h2>";
+      else if(line.startsWith("# ")) continue;
+      else if(line.startsWith("- ")) html += "<p>• " + t.slice(2) + "</p>";
+      else html += "<p>" + t + "</p>";
+    }
+    flush();
+    document.getElementById("report").innerHTML = html || "no report yet";
+  }catch(e){ document.getElementById("report").textContent = "report not published yet"; }
+})();
+</script>
