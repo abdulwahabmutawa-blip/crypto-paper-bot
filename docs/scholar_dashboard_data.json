@@ -1,8 +1,8 @@
 {
-  "generated_utc": "2026-09-05T10:28:08+00:00",
+  "generated_utc": "2026-09-05T10:43:11+00:00",
   "created": "2026-07-30",
   "starting_cash": 1000.0,
-  "live_ts": "2026-09-05T10:25:00+00:00",
+  "live_ts": "2026-09-05T10:40:00+00:00",
   "current": {
     "date": "2026-09-05",
     "value": 1020.9,
@@ -13,21 +13,21 @@
   "board": [
     {
       "sym": "ETH-USD",
-      "price": 2454.91,
+      "price": 2454.92,
       "line": "Ethereum \u00b7 score +0.82 \u00b7 mom90 +45.6% \u00b7 MA gap +20.6%",
       "tag": "HELD",
       "on": true,
       "pick": true,
-      "fill": 20.58762627351584
+      "fill": 20.58790009835899
     },
     {
       "sym": "BTC-USD",
-      "price": 79606.75,
-      "line": "Bitcoin \u00b7 score +0.69 \u00b7 mom90 +25.9% \u00b7 MA gap +14.2%",
+      "price": 79612.96,
+      "line": "Bitcoin \u00b7 score +0.69 \u00b7 mom90 +25.9% \u00b7 MA gap +14.3%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 17.332852643421703
+      "fill": 17.339570291438253
     },
     {
       "sym": "SPY",
@@ -54,7 +54,7 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 13.069774031288508
+      "fill": 13.0697740312885
     },
     {
       "sym": "QQQ",
@@ -117,7 +117,7 @@
       "tag": "not eligible",
       "on": false,
       "pick": false,
-      "fill": -5.8607698482398645
+      "fill": -5.860769177871702
     }
   ],
   "board_title": "12 instruments ranked by momentum-per-unit-risk",
@@ -128,12 +128,6 @@
     "board_note": "Every rule in this bot was earned by an earlier experiment: vol-adjusted momentum, trend gate as crash protection, vol-sized positions, trailing stop, and a switch threshold that fights churn. The synthesis on trial."
   },
   "intraday": [
-    {
-      "ts": "2026-08-18T22:26:27+00:00",
-      "value": 1023.78,
-      "bench": 1034.59,
-      "holding": "IWM"
-    },
     {
       "ts": "2026-08-18T22:39:52+00:00",
       "value": 1023.78,
@@ -9127,6 +9121,12 @@
       "value": 1020.9,
       "bench": 1038.44,
       "holding": "ETH-USD"
+    },
+    {
+      "ts": "2026-09-05T10:43:11+00:00",
+      "value": 1020.9,
+      "bench": 1038.44,
+      "holding": "ETH-USD"
     }
   ],
   "trades": [
@@ -9360,5 +9360,5 @@
   },
   "costs_paid": 4.2557,
   "frozen": null,
-  "thoughts": "I'm holding ETH-USD. Best momentum-per-unit-risk in a confirmed uptrend. I bought at $2,432.88; it's now $2,454.91 (+0.9% since I got in). I deliberately kept $656.80 aside in cash \u2014 I take smaller positions in assets that swing a lot. My safety net: if the price falls to $2,266.57 (10% below its recent high), I sell automatically \u2014 no exceptions. Closest challenger on my list is BTC-USD, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
+  "thoughts": "I'm holding ETH-USD. Best momentum-per-unit-risk in a confirmed uptrend. I bought at $2,432.88; it's now $2,454.92 (+0.9% since I got in). I deliberately kept $656.80 aside in cash \u2014 I take smaller positions in assets that swing a lot. My safety net: if the price falls to $2,266.57 (10% below its recent high), I sell automatically \u2014 no exceptions. Closest challenger on my list is BTC-USD, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
 }
