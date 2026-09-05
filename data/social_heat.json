@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-05T09:14:43+00:00",
+  "ts": "2026-09-05T09:20:31+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
@@ -21,8 +21,8 @@
       "NEAR",
       "SNDKB",
       "BNB",
-      "LTC",
-      "TAO"
+      "ENSO",
+      "LTC"
     ],
     "watcher": [
       "ZEC",
@@ -40,7 +40,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 9.6e-05,
+      "funding": 0.0001,
       "long_short": 1.33
     },
     {
@@ -51,7 +51,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.000295,
+      "funding": 0.000279,
       "long_short": 0.67
     },
     {
@@ -65,23 +65,13 @@
       "long_short": 2.05
     },
     {
-      "symbol": "TAO",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.37
-    },
-    {
       "symbol": "ZEC",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "watcher"
       ],
-      "funding": 1.5e-05,
+      "funding": 1.6e-05,
       "long_short": 0.44
     },
     {
@@ -106,7 +96,15 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.9e-05
+      "funding": 5.1e-05
+    },
+    {
+      "symbol": "ENSO",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "LIT",
@@ -114,7 +112,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 4.9e-05
     },
     {
       "symbol": "LTC",
@@ -140,12 +138,20 @@
       ]
     },
     {
+      "symbol": "TAO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "ZEN",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 0.0001
+      "funding": 9.8e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
