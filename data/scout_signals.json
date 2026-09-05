@@ -1,24 +1,8 @@
 {
-  "ts": "2026-09-05T19:45:56+00:00",
+  "ts": "2026-09-05T19:51:37+00:00",
   "scanned": 97,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ETCUSDT",
-      "signal": "ignition",
-      "score": 0.8001,
-      "raw_score": 0.8503,
-      "weight": 0.941,
-      "price": 7.79,
-      "why": "trades 7.7x and volume 11.4x the prior 4h, 83% taker-buy, $57,385 burst \u2014 while price has only moved +0.6%",
-      "chg_24h": 0.0555,
-      "vol_surge": 11.4,
-      "chg_1h": 0.0065,
-      "market_surge": 1.17,
-      "actionable": false,
-      "status": "benched \u2014 hit 44%, mean +0.27% over last 537 at 24h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 44%, mean +0.27% over last 537 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 39%, mean +0.54% over last 199 at 24h: not beating 4x the round trip",
@@ -27,25 +11,25 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 22,
+    "count": 23,
     "baseline": 14.0,
     "wave": false
   },
   "scorecard": {
     "ignition": {
-      "span_h_1h": 333.7,
-      "n_eff_1h": 333.75,
-      "n_1h": 644,
-      "hit_rate_1h": 0.39,
-      "mean_ret_1h": -0.00064,
-      "median_ret_1h": -0.00067,
+      "span_h_1h": 334.1,
+      "n_eff_1h": 334.11,
+      "n_1h": 645,
+      "hit_rate_1h": 0.389,
+      "mean_ret_1h": -0.00066,
+      "median_ret_1h": -0.00072,
       "both_halves_1h": false,
       "days_1h": 14,
-      "mean_x_1h": -0.0007,
+      "mean_x_1h": -0.00075,
       "days_x_1h": 3,
       "avg_win_1h": 0.01028,
       "avg_loss_1h": -0.01023,
-      "payoff_1h": 1.006,
+      "payoff_1h": 1.005,
       "span_h_4h": 330.9,
       "n_eff_4h": 82.72,
       "n_4h": 630,
