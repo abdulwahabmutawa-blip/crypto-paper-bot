@@ -37,7 +37,8 @@ REPORT = config.ROOT / "reports" / "smallwins.md"
 COST = 0.0025
 UNIVERSE_N = 150
 STABLES = {"USDC", "FDUSD", "TUSD", "DAI", "EUR", "USDP", "BUSD", "USD1",
-           "USDE", "XUSD", "EURI", "AEUR"}
+           "USDE", "XUSD", "EURI", "AEUR", "BFUSD", "USDS", "RLUSD",
+           "PAXG", "WBTC", "WBETH", "BNSOL", "SOLV"}
 BAD_SUFFIX = ("UP", "DOWN", "BULL", "BEAR")
 MAX_RESOLVED_KEEP = 20000
 
