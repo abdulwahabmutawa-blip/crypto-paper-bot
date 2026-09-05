@@ -1,6 +1,6 @@
 # Scalper — hyper-aggressive small-wins PAPER bot
 
-updated 2026-09-05T14:54:23+00:00 · runs 5 · equity **$1,006.22** (+0.62%) · cash $0.00 · open 10/10 · round trips 4
+updated 2026-09-05T15:10:28+00:00 · runs 6 · equity **$1,008.15** (+0.82%) · cash $0.00 · open 10/10 · round trips 4
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -22,15 +22,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-05T12:33 | UUSDT | bottom | 0.9993 | 0.9994 | +0.01% |
+| 2026-09-05T12:33 | UUSDT | bottom | 0.9993 | 0.9993 | +0.00% |
 | 2026-09-05T12:33 | BFUSDUSDT | bottom | 1 | 1 | +0.00% |
-| 2026-09-05T12:33 | STXUSDT | bottom | 0.2584 | 0.2587 | +0.12% |
-| 2026-09-05T12:33 | ENSOUSDT | surge | 0.892 | 0.898 | +0.67% |
-| 2026-09-05T12:33 | SPKUSDT | surge | 0.020793 | 0.020608 | -0.89% |
-| 2026-09-05T12:33 | BNBUSDT | surge | 756.24 | 769.22 | +1.72% |
+| 2026-09-05T12:33 | STXUSDT | bottom | 0.2584 | 0.2593 | +0.35% |
+| 2026-09-05T12:33 | ENSOUSDT | surge | 0.892 | 0.908 | +1.79% |
+| 2026-09-05T12:33 | SPKUSDT | surge | 0.020793 | 0.020712 | -0.39% |
+| 2026-09-05T12:33 | BNBUSDT | surge | 756.24 | 769.01 | +1.69% |
 | 2026-09-05T14:02 | PLUMEUSDT | bottom | 0.01349 | 0.0136 | +0.82% |
-| 2026-09-05T14:02 | FFUSDT | surge | 0.12358 | 0.12193 | -1.34% |
-| 2026-09-05T14:20 | PUMPUSDT | bottom | 0.004075 | 0.004065 | -0.25% |
-| 2026-09-05T14:20 | 币安人生USDT | surge | 0.5537 | 0.5558 | +0.38% |
+| 2026-09-05T14:02 | FFUSDT | surge | 0.12358 | 0.11962 | -3.20% |
+| 2026-09-05T14:20 | PUMPUSDT | bottom | 0.004075 | 0.004073 | -0.05% |
+| 2026-09-05T14:20 | 币安人生USDT | surge | 0.5537 | 0.566 | +2.22% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
