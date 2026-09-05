@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-05T01:56:12+00:00",
+  "generated_utc": "2026-09-05T02:11:39+00:00",
   "created": "2026-07-30",
   "starting_cash": 1000.0,
   "live_ts": "2026-09-04T19:55:00+00:00",
@@ -32,92 +32,92 @@
     {
       "sym": "SPY",
       "price": 770.24,
-      "line": "S&P 500 \u00b7 score +0.67 \u00b7 mom90 +8.5% \u00b7 MA gap +8.5%",
+      "line": "S&P 500 \u00b7 score +0.67 \u00b7 mom90 +8.5% \u00b7 MA gap +8.4%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 16.74496560443527
+      "fill": 16.777705348299374
     },
     {
       "sym": "EFA",
       "price": 108.36,
-      "line": "Developed intl \u00b7 score +0.57 \u00b7 mom90 +9.0% \u00b7 MA gap +8.0%",
+      "line": "Developed intl \u00b7 score +0.64 \u00b7 mom90 +10.2% \u00b7 MA gap +7.9%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 14.189755020144451
+      "fill": 16.06982247233001
     },
     {
       "sym": "IWM",
       "price": 295.95,
-      "line": "US small caps \u00b7 score +0.48 \u00b7 mom90 +8.3% \u00b7 MA gap +8.8%",
+      "line": "US small caps \u00b7 score +0.52 \u00b7 mom90 +9.0% \u00b7 MA gap +8.7%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 11.983645776419708
+      "fill": 13.0697740312885
     },
     {
       "sym": "QQQ",
       "price": 719.06,
-      "line": "Nasdaq 100 \u00b7 score +0.41 \u00b7 mom90 +9.5% \u00b7 MA gap +9.5%",
+      "line": "Nasdaq 100 \u00b7 score +0.38 \u00b7 mom90 +8.8% \u00b7 MA gap +9.4%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 10.215660434305775
+      "fill": 9.50459983350042
     },
     {
       "sym": "EEM",
       "price": 68.72,
-      "line": "Emerging mkts \u00b7 score +0.32 \u00b7 mom90 +9.7% \u00b7 MA gap +11.8%",
+      "line": "Emerging mkts \u00b7 score +0.33 \u00b7 mom90 +10.2% \u00b7 MA gap +11.7%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 7.901823771506108
+      "fill": 8.336652451434087
     },
     {
       "sym": "DBC",
       "price": 31.9,
-      "line": "Broad commodities \u00b7 score +0.23 \u00b7 mom90 +5.1% \u00b7 MA gap +17.5%",
+      "line": "Broad commodities \u00b7 score +0.12 \u00b7 mom90 +2.6% \u00b7 MA gap +17.3%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 5.820753269290245
-    },
-    {
-      "sym": "USO",
-      "price": 142.08,
-      "line": "Oil \u00b7 score +0.03 \u00b7 mom90 +1.8% \u00b7 MA gap +32.2%",
-      "tag": "eligible",
-      "on": true,
-      "pick": false,
-      "fill": 0.8437537719273606
+      "fill": 3.0374292620367096
     },
     {
       "sym": "GLD",
       "price": 406.74,
-      "line": "Gold \u00b7 score -0.14 \u00b7 mom90 -3.6% \u00b7 MA gap -2.1%",
+      "line": "Gold \u00b7 score -0.10 \u00b7 mom90 -2.6% \u00b7 MA gap -2.1%",
       "tag": "not eligible",
       "on": false,
       "pick": false,
-      "fill": -3.543094289527832
+      "fill": -2.5247182338665346
+    },
+    {
+      "sym": "USO",
+      "price": 142.08,
+      "line": "Oil \u00b7 score -0.11 \u00b7 mom90 -5.7% \u00b7 MA gap +31.8%",
+      "tag": "not eligible",
+      "on": false,
+      "pick": false,
+      "fill": -2.7855091839095603
     },
     {
       "sym": "SLV",
       "price": 59.82,
-      "line": "Silver \u00b7 score -0.20 \u00b7 mom90 -9.6% \u00b7 MA gap -8.4%",
+      "line": "Silver \u00b7 score -0.16 \u00b7 mom90 -7.7% \u00b7 MA gap -8.5%",
       "tag": "not eligible",
       "on": false,
       "pick": false,
-      "fill": -5.0976453715792
+      "fill": -4.105515244236868
     },
     {
       "sym": "TLT",
       "price": 82.22,
-      "line": "Long bonds \u00b7 score -0.31 \u00b7 mom90 -3.0% \u00b7 MA gap -2.8%",
+      "line": "Long bonds \u00b7 score -0.23 \u00b7 mom90 -2.2% \u00b7 MA gap -2.8%",
       "tag": "not eligible",
       "on": false,
       "pick": false,
-      "fill": -7.805828505162969
+      "fill": -5.860789633605147
     }
   ],
   "board_title": "12 instruments ranked by momentum-per-unit-risk",
@@ -128,12 +128,6 @@
     "board_note": "Every rule in this bot was earned by an earlier experiment: vol-adjusted momentum, trend gate as crash protection, vol-sized positions, trailing stop, and a switch threshold that fights churn. The synthesis on trial."
   },
   "intraday": [
-    {
-      "ts": "2026-08-18T18:49:53+00:00",
-      "value": 1024.87,
-      "bench": 1035.5,
-      "holding": "IWM"
-    },
     {
       "ts": "2026-08-18T19:03:17+00:00",
       "value": 1024.26,
@@ -9124,6 +9118,12 @@
     },
     {
       "ts": "2026-09-05T01:56:12+00:00",
+      "value": 1021.13,
+      "bench": 1038.44,
+      "holding": "ETH-USD"
+    },
+    {
+      "ts": "2026-09-05T02:11:39+00:00",
       "value": 1021.13,
       "bench": 1038.44,
       "holding": "ETH-USD"
