@@ -1,17 +1,17 @@
 {
-  "ts": "2026-09-05T07:02:21+00:00",
+  "ts": "2026-09-05T07:07:53+00:00",
   "sources": {
     "coingecko": [
-      "ZEC",
       "DASH",
-      "BTC",
+      "ZEC",
       "MARSCOIN",
       "PENGU",
-      "XMR",
-      "BONK",
       "ARB",
+      "BTC",
+      "XMR",
       "LIT",
-      "ONDO"
+      "BONK",
+      "AVAX"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,8 +21,8 @@
       "ZEN",
       "NEAR",
       "SNDKB",
-      "ZEC",
       "LTC",
+      "ZEC",
       "SAHARA"
     ],
     "watcher": [
@@ -41,7 +41,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 2.1e-05,
+      "funding": 5e-06,
       "long_short": 1.32
     },
     {
@@ -52,7 +52,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.000378,
+      "funding": 0.000396,
       "long_short": 0.66
     },
     {
@@ -64,10 +64,18 @@
         "watcher"
       ],
       "funding": -3.6e-05,
-      "long_short": 0.42
+      "long_short": 0.43
     },
     {
       "symbol": "ARB",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "AVAX",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -114,14 +122,6 @@
       "funding": 0.0001
     },
     {
-      "symbol": "ONDO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
@@ -150,7 +150,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 0.000954
+      "funding": 0.000942
     },
     {
       "symbol": "ZEN",
