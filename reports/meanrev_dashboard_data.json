@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-04T23:52:04+00:00",
+  "generated_utc": "2026-09-05T00:07:37+00:00",
   "created": "2026-07-16",
   "starting_cash": 1000.0,
   "live_ts": "2026-09-04T19:55:00+00:00",
@@ -13,20 +13,20 @@
     {
       "sym": "PEP",
       "price": 137.63,
-      "line": "z -1.53",
-      "tag": "oversold",
-      "on": true,
+      "line": "z -1.48",
+      "tag": "normal",
+      "on": false,
       "pick": false,
-      "fill": 25.420999115874988
+      "fill": 24.632690810670375
     },
     {
       "sym": "HD",
       "price": 321.05,
-      "line": "z -1.17",
+      "line": "z -1.29",
       "tag": "HELD",
       "on": false,
       "pick": true,
-      "fill": 19.436876390899272
+      "fill": 21.514317780435032
     },
     {
       "sym": "GOOGL",
@@ -35,70 +35,70 @@
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 17.894664361845503
+      "fill": 17.885040659458408
     },
     {
       "sym": "AMZN",
       "price": 258.51,
-      "line": "z -0.64",
+      "line": "z -0.71",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 10.749244698184874
-    },
-    {
-      "sym": "XOM",
-      "price": 159.43,
-      "line": "z -0.55",
-      "tag": "normal",
-      "on": false,
-      "pick": false,
-      "fill": 9.102481926472326
+      "fill": 11.856685042284534
     },
     {
       "sym": "KO",
       "price": 88.08,
-      "line": "z -0.47",
+      "line": "z -0.40",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 7.800275452224516
+      "fill": 6.722352404701557
     },
     {
       "sym": "WMT",
       "price": 107.14,
-      "line": "z -0.34",
+      "line": "z -0.37",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 5.734496817373348
+      "fill": 6.228517253496168
+    },
+    {
+      "sym": "XOM",
+      "price": 159.43,
+      "line": "z -0.33",
+      "tag": "normal",
+      "on": false,
+      "pick": false,
+      "fill": 5.439946766759731
     },
     {
       "sym": "UNH",
       "price": 397.2,
-      "line": "z +0.05",
+      "line": "z -0.00",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": -0.8046720463281236
+      "fill": 0.058426756360571666
     },
     {
       "sym": "JPM",
       "price": 358.61,
-      "line": "z +0.07",
+      "line": "z +0.13",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": -1.1389259550151165
+      "fill": -2.1566344211902013
     },
     {
       "sym": "MSFT",
       "price": 499.68,
-      "line": "z +0.42",
+      "line": "z +0.50",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": -6.978401371862493
+      "fill": -8.30839724800648
     }
   ],
   "board_title": "16 mega-caps, most oversold first (z < -1.5 = buy zone)",
@@ -109,12 +109,6 @@
     "board_note": "Buys panic, sells relief: enter the most stretched mega-cap below -1.5 z, exit when it recovers to average."
   },
   "intraday": [
-    {
-      "ts": "2026-08-18T17:01:35+00:00",
-      "value": 1214.21,
-      "bench": 1023.66,
-      "holding": "UNH"
-    },
     {
       "ts": "2026-08-18T17:15:01+00:00",
       "value": 1212.92,
@@ -9108,6 +9102,12 @@
       "value": 1298.52,
       "bench": 1025.95,
       "holding": "HD"
+    },
+    {
+      "ts": "2026-09-05T00:07:37+00:00",
+      "value": 1298.52,
+      "bench": 1025.95,
+      "holding": "HD"
     }
   ],
   "trades": [
@@ -9448,5 +9448,5 @@
   },
   "costs_paid": 5.8276,
   "frozen": null,
-  "thoughts": "I'm holding HD. Most oversold mega-cap (z < -1.5) \u2014 buying the dip. I bought at $318.95; it's now $321.05 (+0.7% since I got in). My safety net: if the price falls to $282.99 (12% below its recent high), I sell automatically \u2014 no exceptions. Closest challenger on my list is PEP, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
+  "thoughts": "I'm holding HD. Most oversold mega-cap (z < -1.5) \u2014 buying the dip. I bought at $318.95; it's now $321.05 (+0.7% since I got in). My safety net: if the price falls to $282.99 (12% below its recent high), I sell automatically \u2014 no exceptions."
 }

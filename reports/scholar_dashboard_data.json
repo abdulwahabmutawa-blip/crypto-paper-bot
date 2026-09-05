@@ -1,13 +1,14 @@
 {
-  "generated_utc": "2026-09-04T23:52:07+00:00",
+  "generated_utc": "2026-09-05T00:07:40+00:00",
   "created": "2026-07-30",
   "starting_cash": 1000.0,
   "live_ts": "2026-09-04T19:55:00+00:00",
   "current": {
-    "date": "2026-09-04",
+    "date": "2026-09-05",
     "value": 1021.13,
     "bench": 1038.44,
-    "holding": "ETH-USD"
+    "holding": "ETH-USD",
+    "bench_asof": "2026-09-04"
   },
   "board": [
     {
@@ -26,7 +27,7 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 20.484401119807323
+      "fill": 20.48440111980733
     },
     {
       "sym": "SPY",
@@ -35,7 +36,7 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 16.744965604435258
+      "fill": 16.744965604435265
     },
     {
       "sym": "EFA",
@@ -44,7 +45,7 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 14.18975502014446
+      "fill": 14.189755020144451
     },
     {
       "sym": "IWM",
@@ -53,7 +54,7 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 11.983645776419719
+      "fill": 11.983645776419708
     },
     {
       "sym": "QQQ",
@@ -62,7 +63,7 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 10.215660434305777
+      "fill": 10.215660434305772
     },
     {
       "sym": "EEM",
@@ -116,7 +117,7 @@
       "tag": "not eligible",
       "on": false,
       "pick": false,
-      "fill": -7.805878335107767
+      "fill": -7.805827280304624
     }
   ],
   "board_title": "12 instruments ranked by momentum-per-unit-risk",
@@ -127,12 +128,6 @@
     "board_note": "Every rule in this bot was earned by an earlier experiment: vol-adjusted momentum, trend gate as crash protection, vol-sized positions, trailing stop, and a switch threshold that fights churn. The synthesis on trial."
   },
   "intraday": [
-    {
-      "ts": "2026-08-18T17:01:40+00:00",
-      "value": 1026.14,
-      "bench": 1036.1,
-      "holding": "IWM"
-    },
     {
       "ts": "2026-08-18T17:15:05+00:00",
       "value": 1026.68,
@@ -9126,6 +9121,12 @@
       "value": 1021.13,
       "bench": 1038.44,
       "holding": "ETH-USD"
+    },
+    {
+      "ts": "2026-09-05T00:07:40+00:00",
+      "value": 1021.13,
+      "bench": 1038.44,
+      "holding": "ETH-USD"
     }
   ],
   "trades": [
@@ -9341,6 +9342,13 @@
       "value": 1021.13,
       "bench": 1038.44,
       "holding": "ETH-USD"
+    },
+    {
+      "date": "2026-09-05",
+      "value": 1021.13,
+      "bench": 1038.44,
+      "holding": "ETH-USD",
+      "bench_asof": "2026-09-04"
     }
   ],
   "strategy": {
