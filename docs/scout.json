@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-05T10:56:47+00:00",
-  "scanned": 116,
+  "ts": "2026-09-05T11:01:56+00:00",
+  "scanned": 115,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "PORTALUSDT",
+      "signal": "ignition",
+      "score": 0.6037,
+      "raw_score": 0.6395,
+      "weight": 0.944,
+      "price": 0.01676,
+      "why": "trades 4.0x and volume 9.1x the prior 4h, 78% taker-buy, $61,867 burst \u2014 while price has only moved -1.8%",
+      "chg_24h": 0.0595,
+      "vol_surge": 9.07,
+      "chg_1h": -0.0176,
+      "market_surge": 1.86,
+      "actionable": false,
+      "status": "benched \u2014 hit 44%, mean +0.21% over last 536 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 44%, mean +0.21% over last 536 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 37%, mean +0.45% over last 192 at 24h: not beating 4x the round trip",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 23,
+    "count": 24,
     "baseline": 14.0,
     "wave": false
   },
