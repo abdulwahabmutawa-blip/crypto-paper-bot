@@ -1,6 +1,6 @@
 # Small-wins lab — paper study (owner request 2026-09-04)
 
-updated 2026-09-05T03:03:19+00:00 · runs 39 · open 266 · resolved 406 · cost 0.25%/RT
+updated 2026-09-05T03:18:37+00:00 · runs 40 · open 272 · resolved 412 · cost 0.25%/RT
 
 PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst day > -3 units.
 
@@ -22,16 +22,16 @@ PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst
 | ignition|t1.5|s1|h8 | 10 | 2 | 5.0 | 50% | 50% | +0.10% | 50% | 40% | 10% | -0.2% | watch |
 | range_bottom|t1.5|s1.5|h8 | 18 | 2 | 9.0 | 56% | 58% | +0.10% | 44% | 22% | 33% | +0.2% | fail |
 | ignition|t1.5|s1.5|h8 | 9 | 2 | 4.5 | 56% | 58% | +0.08% | 56% | 33% | 11% | -0.2% | fail |
-| momentum|t1.5|s1|h8 | 41 | 2 | 20.5 | 54% | 50% | +0.04% | 49% | 46% | 5% | -6.2% | watch |
+| momentum|t1.5|s1|h8 | 42 | 2 | 21.0 | 52% | 50% | +0.01% | 48% | 48% | 5% | -6.2% | watch |
 | range_bottom|t1.5|s1|h8 | 19 | 2 | 9.5 | 47% | 50% | -0.00% | 37% | 32% | 32% | -0.0% | fail |
-| momentum|t1|s1|h6 | 55 | 2 | 27.5 | 62% | 62% | -0.01% | 60% | 36% | 4% | -4.0% | fail |
+| momentum|t1|s1|h6 | 56 | 2 | 28.0 | 61% | 62% | -0.03% | 59% | 38% | 4% | -4.0% | fail |
+| momentum|t4|s2|h24 | 19 | 2 | 9.5 | 37% | 38% | -0.04% | 37% | 63% | 0% | -17.2% | fail |
 | range_bottom|t1|s1|h6 | 25 | 2 | 12.5 | 52% | 62% | -0.05% | 44% | 28% | 28% | -0.8% | fail |
-| momentum|t3|s3|h24 | 15 | 2 | 7.5 | 53% | 54% | -0.05% | 53% | 47% | 0% | -11.3% | fail |
 | ignition|t1|s1|h6 | 11 | 1 | 11.0 | 55% | 62% | -0.07% | 55% | 36% | 9% | -0.8% | fail |
-| momentum|t1.5|s1.5|h8 | 38 | 2 | 19.0 | 55% | 58% | -0.16% | 50% | 45% | 5% | -11.2% | fail |
 | momentum|t2|s2|h8 | 36 | 2 | 18.0 | 53% | 56% | -0.18% | 44% | 42% | 14% | -15.7% | fail |
+| momentum|t1.5|s1.5|h8 | 39 | 2 | 19.5 | 54% | 58% | -0.20% | 49% | 46% | 5% | -11.2% | fail |
 | momentum|t3|s2|h12 | 20 | 2 | 10.0 | 40% | 45% | -0.25% | 40% | 60% | 0% | -16.5% | fail |
-| momentum|t4|s2|h24 | 18 | 2 | 9.0 | 33% | 38% | -0.25% | 33% | 67% | 0% | -17.2% | fail |
-| momentum|t5|s3|h48 | 10 | 2 | 5.0 | 30% | 41% | -0.85% | 30% | 70% | 0% | -14.8% | fail |
+| momentum|t3|s3|h24 | 16 | 2 | 8.0 | 50% | 54% | -0.25% | 50% | 50% | 0% | -11.3% | fail |
+| momentum|t5|s3|h48 | 11 | 2 | 5.5 | 27% | 41% | -1.07% | 27% | 73% | 0% | -14.8% | fail |
 
 _hit = share of trades with positive net return; break-even = (stop+cost)/(target+stop); worst day = sum of unit returns on the worst UTC day. Paper only, one unit per trade, no keys, no orders._
