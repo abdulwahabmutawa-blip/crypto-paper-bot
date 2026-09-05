@@ -1,11 +1,11 @@
 {
-  "generated_utc": "2026-09-05T08:27:53+00:00",
+  "generated_utc": "2026-09-05T08:43:08+00:00",
   "created": "2026-07-30",
   "starting_cash": 1000.0,
-  "live_ts": "2026-09-05T08:25:00+00:00",
+  "live_ts": "2026-09-05T08:40:00+00:00",
   "current": {
     "date": "2026-09-05",
-    "value": 1021.0,
+    "value": 1021.02,
     "bench": 1038.44,
     "holding": "ETH-USD",
     "bench_asof": "2026-09-04"
@@ -13,21 +13,21 @@
   "board": [
     {
       "sym": "ETH-USD",
-      "price": 2455.6,
+      "price": 2455.73,
       "line": "Ethereum \u00b7 score +0.82 \u00b7 mom90 +45.6% \u00b7 MA gap +20.6%",
       "tag": "HELD",
       "on": true,
       "pick": true,
-      "fill": 20.606496568451618
+      "fill": 20.610045350595215
     },
     {
       "sym": "BTC-USD",
-      "price": 79661.97,
-      "line": "Bitcoin \u00b7 score +0.70 \u00b7 mom90 +26.0% \u00b7 MA gap +14.3%",
+      "price": 79620.63,
+      "line": "Bitcoin \u00b7 score +0.69 \u00b7 mom90 +25.9% \u00b7 MA gap +14.3%",
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 17.392472277353914
+      "fill": 17.347863981277637
     },
     {
       "sym": "SPY",
@@ -36,7 +36,7 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 16.777705348299367
+      "fill": 16.777705348299385
     },
     {
       "sym": "EFA",
@@ -45,7 +45,7 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 16.069822472330006
+      "fill": 16.06982247233001
     },
     {
       "sym": "IWM",
@@ -54,7 +54,7 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 13.0697740312885
+      "fill": 13.069774031288508
     },
     {
       "sym": "QQQ",
@@ -63,7 +63,7 @@
       "tag": "eligible",
       "on": true,
       "pick": false,
-      "fill": 9.504599833500418
+      "fill": 9.50459983350042
     },
     {
       "sym": "EEM",
@@ -117,7 +117,7 @@
       "tag": "not eligible",
       "on": false,
       "pick": false,
-      "fill": -5.860771755432145
+      "fill": -5.86076224946039
     }
   ],
   "board_title": "12 instruments ranked by momentum-per-unit-risk",
@@ -128,12 +128,6 @@
     "board_note": "Every rule in this bot was earned by an earlier experiment: vol-adjusted momentum, trend gate as crash protection, vol-sized positions, trailing stop, and a switch threshold that fights churn. The synthesis on trial."
   },
   "intraday": [
-    {
-      "ts": "2026-08-18T20:23:54+00:00",
-      "value": 1023.78,
-      "bench": 1034.59,
-      "holding": "IWM"
-    },
     {
       "ts": "2026-08-18T20:37:19+00:00",
       "value": 1023.78,
@@ -9127,6 +9121,12 @@
       "value": 1021.0,
       "bench": 1038.44,
       "holding": "ETH-USD"
+    },
+    {
+      "ts": "2026-09-05T08:43:08+00:00",
+      "value": 1021.02,
+      "bench": 1038.44,
+      "holding": "ETH-USD"
     }
   ],
   "trades": [
@@ -9345,7 +9345,7 @@
     },
     {
       "date": "2026-09-05",
-      "value": 1021.0,
+      "value": 1021.02,
       "bench": 1038.44,
       "holding": "ETH-USD",
       "bench_asof": "2026-09-04"
@@ -9360,5 +9360,5 @@
   },
   "costs_paid": 4.2557,
   "frozen": null,
-  "thoughts": "I'm holding ETH-USD. Best momentum-per-unit-risk in a confirmed uptrend. I bought at $2,432.88; it's now $2,455.60 (+0.9% since I got in). I deliberately kept $656.80 aside in cash \u2014 I take smaller positions in assets that swing a lot. My safety net: if the price falls to $2,266.57 (10% below its recent high), I sell automatically \u2014 no exceptions. Closest challenger on my list is BTC-USD, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
+  "thoughts": "I'm holding ETH-USD. Best momentum-per-unit-risk in a confirmed uptrend. I bought at $2,432.88; it's now $2,455.73 (+0.9% since I got in). I deliberately kept $656.80 aside in cash \u2014 I take smaller positions in assets that swing a lot. My safety net: if the price falls to $2,266.57 (10% below its recent high), I sell automatically \u2014 no exceptions. Closest challenger on my list is BTC-USD, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
 }
