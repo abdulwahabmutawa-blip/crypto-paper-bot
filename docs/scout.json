@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-05T08:52:17+00:00",
-  "scanned": 119,
+  "ts": "2026-09-05T08:57:43+00:00",
+  "scanned": 118,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "AIXBTUSDT",
+      "signal": "breakout",
+      "score": 0.7734,
+      "raw_score": 0.8361,
+      "weight": 0.925,
+      "price": 0.0233,
+      "why": "trades 20.8x, volume 11.0x, 71% taker-buy, +4.6% in an hour, at 99% of its 24h range",
+      "chg_24h": 0.1546,
+      "vol_surge": 11.05,
+      "chg_1h": 0.0463,
+      "market_surge": 8.68,
+      "actionable": false,
+      "status": "benched \u2014 hit 37%, mean +0.43% over last 190 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 44%, mean +0.21% over last 533 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 37%, mean +0.43% over last 190 at 24h: not beating 4x the round trip",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 21,
+    "count": 20,
     "baseline": 13.0,
     "wave": false
   },
@@ -38,7 +54,7 @@
       "median_ret_4h": -0.0002,
       "both_halves_4h": false,
       "days_4h": 14,
-      "mean_x_4h": 0.00314,
+      "mean_x_4h": 0.00323,
       "days_x_4h": 3,
       "avg_win_4h": 0.01826,
       "avg_loss_4h": -0.01767,
