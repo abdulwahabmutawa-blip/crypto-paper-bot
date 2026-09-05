@@ -1,19 +1,35 @@
 {
-  "ts": "2026-09-05T09:37:49+00:00",
+  "ts": "2026-09-05T09:43:28+00:00",
   "scanned": 115,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "UNIUSDT",
+      "signal": "breakout",
+      "score": 0.594,
+      "raw_score": 0.6442,
+      "weight": 0.922,
+      "price": 6.391,
+      "why": "trades 4.7x, volume 10.7x, 66% taker-buy, +2.8% in an hour, at 94% of its 24h range",
+      "chg_24h": 0.0069,
+      "vol_surge": 10.66,
+      "chg_1h": 0.0283,
+      "market_surge": 3.54,
+      "actionable": false,
+      "status": "benched \u2014 hit 37%, mean +0.43% over last 192 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 44%, mean +0.21% over last 533 at 24h: not beating 4x the round trip",
-    "breakout": "benched \u2014 hit 37%, mean +0.44% over last 191 at 24h: not beating 4x the round trip",
+    "breakout": "benched \u2014 hit 37%, mean +0.43% over last 192 at 24h: not beating 4x the round trip",
     "reversion": "probation \u2014 9/12 resolved 24h samples under ruleset 3",
     "heat": "benched \u2014 hit 33%, mean -2.86% over last 30 at 24h: not beating 4x the round trip",
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 26,
+    "count": 24,
     "baseline": 13.0,
-    "wave": true
+    "wave": false
   },
   "scorecard": {
     "ignition": {
@@ -25,7 +41,7 @@
       "median_ret_1h": -0.00064,
       "both_halves_1h": false,
       "days_1h": 14,
-      "mean_x_1h": -9e-05,
+      "mean_x_1h": -0.0001,
       "days_x_1h": 3,
       "avg_win_1h": 0.01017,
       "avg_loss_1h": -0.01011,
@@ -58,19 +74,19 @@
       "payoff_24h": 1.311
     },
     "breakout": {
-      "span_h_1h": 332.3,
-      "n_eff_1h": 236,
-      "n_1h": 236,
-      "hit_rate_1h": 0.407,
-      "mean_ret_1h": -0.00025,
+      "span_h_1h": 334.2,
+      "n_eff_1h": 237,
+      "n_1h": 237,
+      "hit_rate_1h": 0.405,
+      "mean_ret_1h": -0.00024,
       "median_ret_1h": -0.00111,
       "both_halves_1h": false,
       "days_1h": 14,
-      "mean_x_1h": -0.00386,
+      "mean_x_1h": -0.00362,
       "days_x_1h": 3,
-      "avg_win_1h": 0.02141,
+      "avg_win_1h": 0.02122,
       "avg_loss_1h": -0.01864,
-      "payoff_1h": 1.148,
+      "payoff_1h": 1.138,
       "span_h_4h": 330.8,
       "n_eff_4h": 82.71,
       "n_4h": 230,
@@ -84,19 +100,19 @@
       "avg_win_4h": 0.03856,
       "avg_loss_4h": -0.03152,
       "payoff_4h": 1.223,
-      "span_h_24h": 311.1,
-      "n_eff_24h": 12.96,
-      "n_24h": 191,
-      "hit_rate_24h": 0.372,
-      "mean_ret_24h": 0.00442,
-      "median_ret_24h": -0.01862,
+      "span_h_24h": 311.3,
+      "n_eff_24h": 12.97,
+      "n_24h": 192,
+      "hit_rate_24h": 0.37,
+      "mean_ret_24h": 0.00431,
+      "median_ret_24h": -0.01752,
       "both_halves_24h": false,
       "days_24h": 12,
-      "mean_x_24h": 0.03379,
+      "mean_x_24h": 0.02839,
       "days_x_24h": 2,
       "avg_win_24h": 0.09318,
-      "avg_loss_24h": -0.0481,
-      "payoff_24h": 1.937
+      "avg_loss_24h": -0.04784,
+      "payoff_24h": 1.948
     },
     "reversion": {
       "span_h_1h": 316.2,
