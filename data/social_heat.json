@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-05T07:52:41+00:00",
+  "ts": "2026-09-05T07:58:01+00:00",
   "sources": {
     "coingecko": [
       "DASH",
@@ -9,7 +9,7 @@
       "PENGU",
       "NEAR",
       "TAO",
-      "PUMP",
+      "BTC",
       "SOL",
       "ARB"
     ],
@@ -23,7 +23,7 @@
       "SNDKB",
       "LTC",
       "SAHARA",
-      "ZEC"
+      "TRUMP"
     ],
     "watcher": [
       "ZEC",
@@ -41,7 +41,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 2.1e-05,
+      "funding": 2.7e-05,
       "long_short": 1.32
     },
     {
@@ -52,19 +52,8 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.000418,
+      "funding": 0.000415,
       "long_short": 0.66
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": -2.7e-05,
-      "long_short": 0.43
     },
     {
       "symbol": "NEAR",
@@ -77,12 +66,30 @@
       "long_short": 2.08
     },
     {
+      "symbol": "ZEC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "watcher"
+      ],
+      "funding": -2e-05,
+      "long_short": 0.43
+    },
+    {
       "symbol": "ARB",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -1e-06
     },
     {
       "symbol": "LIT",
@@ -102,14 +109,6 @@
     },
     {
       "symbol": "PENGU",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "PUMP",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -137,13 +136,21 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.8e-05
+      "funding": 2.6e-05
     },
     {
       "symbol": "TAO",
       "surfaces": 1,
       "sources": [
         "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "TRUMP",
+      "surfaces": 1,
+      "sources": [
+        "movers"
       ],
       "funding": 5e-05
     },
