@@ -1,16 +1,17 @@
 {
-  "ts": "2026-09-05T06:13:11+00:00",
+  "ts": "2026-09-05T06:18:41+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
       "DASH",
+      "PENGU",
       "BTC",
       "MARSCOIN",
-      "PENGU",
-      "SOL",
       "CHIP",
+      "SOL",
       "BNB",
-      "DCR"
+      "XMR",
+      "UNI"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,7 +23,7 @@
       "SNDKB",
       "ZEC",
       "SAHARA",
-      "ZKC"
+      "LTC"
     ],
     "watcher": [
       "ZEC",
@@ -51,7 +52,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.00037,
+      "funding": 0.000364,
       "long_short": 0.65
     },
     {
@@ -62,7 +63,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -3.3e-05,
+      "funding": -3.6e-05,
       "long_short": 0.42
     },
     {
@@ -90,11 +91,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "DCR",
+      "symbol": "LTC",
       "surfaces": 1,
       "sources": [
-        "coingecko"
-      ]
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "NEAR",
@@ -136,20 +138,28 @@
       "funding": 4.3e-05
     },
     {
+      "symbol": "UNI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 8.7e-05
+    },
+    {
+      "symbol": "XMR",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.001049
+    },
+    {
       "symbol": "ZEN",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "ZKC",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -0.000639
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
