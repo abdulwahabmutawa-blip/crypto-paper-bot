@@ -1,27 +1,11 @@
 {
-  "ts": "2026-09-05T08:24:56+00:00",
-  "scanned": 118,
+  "ts": "2026-09-05T08:30:15+00:00",
+  "scanned": 119,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "LDOUSDT",
-      "signal": "ignition",
-      "score": 0.8488,
-      "raw_score": 0.8983,
-      "weight": 0.945,
-      "price": 0.3834,
-      "why": "trades 16.1x and volume 12.8x the prior 4h, 66% taker-buy, $63,981 burst \u2014 while price has only moved -0.6%",
-      "chg_24h": -0.0059,
-      "vol_surge": 12.81,
-      "chg_1h": -0.0065,
-      "market_surge": 4.73,
-      "actionable": false,
-      "status": "benched \u2014 hit 44%, mean +0.21% over last 530 at 24h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 44%, mean +0.21% over last 530 at 24h: not beating 4x the round trip",
-    "breakout": "benched \u2014 hit 36%, mean +0.42% over last 188 at 24h: not beating 4x the round trip",
+    "breakout": "benched \u2014 hit 36%, mean +0.42% over last 189 at 24h: not beating 4x the round trip",
     "reversion": "probation \u2014 9/12 resolved 24h samples under ruleset 3",
     "heat": "benched \u2014 hit 33%, mean -2.86% over last 30 at 24h: not beating 4x the round trip",
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
@@ -67,7 +51,7 @@
       "median_ret_24h": -0.00405,
       "both_halves_24h": true,
       "days_24h": 12,
-      "mean_x_24h": 0.01923,
+      "mean_x_24h": 0.01925,
       "days_x_24h": 2,
       "avg_win_24h": 0.04717,
       "avg_loss_24h": -0.03615,
@@ -100,19 +84,19 @@
       "avg_win_4h": 0.03866,
       "avg_loss_4h": -0.03171,
       "payoff_4h": 1.219,
-      "span_h_24h": 309.2,
-      "n_eff_24h": 12.88,
-      "n_24h": 188,
-      "hit_rate_24h": 0.362,
-      "mean_ret_24h": 0.00422,
+      "span_h_24h": 310.0,
+      "n_eff_24h": 12.92,
+      "n_24h": 189,
+      "hit_rate_24h": 0.365,
+      "mean_ret_24h": 0.00424,
       "median_ret_24h": -0.01915,
       "both_halves_24h": false,
       "days_24h": 12,
-      "mean_x_24h": 0.05729,
+      "mean_x_24h": 0.04267,
       "days_x_24h": 2,
-      "avg_win_24h": 0.09655,
+      "avg_win_24h": 0.09527,
       "avg_loss_24h": -0.0481,
-      "payoff_24h": 2.007
+      "payoff_24h": 1.981
     },
     "reversion": {
       "span_h_1h": 316.2,
