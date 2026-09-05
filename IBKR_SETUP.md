@@ -47,8 +47,29 @@ docker run -d --name ibgateway --restart unless-stopped \
   ghcr.io/gnzsnz/ib-gateway:stable
 sleep 60; docker logs ibgateway --tail 30
 ```
-The first login may ask for a confirmation in the **IBKR Mobile** app.
-When the log shows the Gateway logged in, check the port answers:
+**Second factor (verified live 2026-09-05).** This account's SLS device is a
+6-digit code app (Microsoft Authenticator, shown in Client Portal as
+"Mobile Authenticator"), not IB Key. A code app never sends a push, so the
+Gateway log sits at "Second Factor Authentication initiated" until someone
+types the code into its dialog. Do it over noVNC:
+```bash
+docker run -d --name novnc --network host -e REMOTE_HOST=127.0.0.1 -e REMOTE_PORT=5900 theasp/novnc:latest
+```
+On the PC: `ssh -L 8080:127.0.0.1:8080 root@168.119.103.198`, open
+http://localhost:8080/vnc.html (VNC password from /etc/ibgateway.env), then
+`docker restart ibgateway`; when the dialog appears type the current code
+from the authenticator app and press Enter. Afterwards `docker rm -f novnc`.
+The Gateway re-asks after its weekly Sunday restart, so repeat this then.
+The socket "port open" test below is NOT proof of login (socat answers
+regardless); use the API handshake:
+```bash
+python3 -c "
+from ib_async import IB; ib=IB()
+try:
+    ib.connect('127.0.0.1',4001,clientId=9,timeout=15); print('API OK', ib.managedAccounts()); ib.disconnect()
+except Exception as e: print('API FAIL', repr(e))"
+```
+Check the port answers:
 ```bash
 python3 - <<'PY'
 import socket; s=socket.socket(); s.settimeout(3); print("paper port:", "open" if s.connect_ex(("127.0.0.1",4002))==0 else "closed")
@@ -58,8 +79,8 @@ PY
 ## C. Bot on the VPS — you (once), then it runs itself
 
 ```bash
-cd /opt/tradebot/cloud-bot && sudo -u tradebot git pull -q
-pip3 install -q ib_async
+cd /opt/tradebot/cloud-bot && sudo -u tradebot env HOME=/opt/tradebot GIT_SSH_COMMAND="ssh -i /opt/tradebot/.ssh/id_ed25519 -o UserKnownHostsFile=/opt/tradebot/.ssh/known_hosts" git pull -q
+pip3 install -q --break-system-packages ib_async
 install -m 600 /dev/null /etc/hype_ibkr.env
 nano /etc/hype_ibkr.env
 ```
@@ -107,3 +128,8 @@ more than 3% from the quote — read it before going live.
 Net P&L on `pnl_usd` (commissions included) over at least 20 round trips,
 against holding SPY. Two entries a week means that is roughly 10 weeks; a
 $300 book that is not net positive by then does not get more money.
+
+## Status log
+- 2026-09-05 13:07 UTC: LIVE on account U27932364, net $328.55, seat CASH,
+  units installed, timer enabled by owner. Went straight to live (no paper
+  phase) by owner decision.
