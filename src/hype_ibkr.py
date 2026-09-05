@@ -77,11 +77,16 @@ def entries_last_7d(st, now) -> int:
 def equity_candidates(scan: dict | None) -> list[str]:
     """Euphoric US-stock tickers from the scan, in Grok's order."""
     out = []
+    # Fill audit 2026-09-05: the paper twin bought "ONG" (a Binance mover) as
+    # a stock. Anything the Watcher lists in crypto_hype is a coin, whatever
+    # its ticker looks like — never send it to IBKR as an equity.
+    coins = {str(h.get("symbol", "")).upper().lstrip("$")
+             for h in (scan or {}).get("crypto_hype", []) or []} | CRYPTO
     for h in (scan or {}).get("hype", []) or []:
         if h.get("mood") != "euphoric":
             continue
         sym = str(h.get("symbol", "")).upper().lstrip("$")
-        if not sym or sym in CRYPTO or not sym.isalpha() or len(sym) > 5:
+        if not sym or sym in coins or not sym.isalpha() or len(sym) > 5:
             continue
         t = to_ticker(sym)
         if t.endswith("-USD"):
