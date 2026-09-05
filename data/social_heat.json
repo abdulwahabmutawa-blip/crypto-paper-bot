@@ -1,17 +1,17 @@
 {
-  "ts": "2026-09-05T07:41:23+00:00",
+  "ts": "2026-09-05T07:46:51+00:00",
   "sources": {
     "coingecko": [
       "DASH",
       "ZEC",
       "MARSCOIN",
-      "PENGU",
       "LIT",
-      "ARB",
-      "PUMP",
+      "PENGU",
+      "NEAR",
       "TAO",
-      "BTC",
-      "XMR"
+      "PUMP",
+      "SOL",
+      "ARB"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -41,7 +41,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 9e-06,
+      "funding": 1.3e-05,
       "long_short": 1.32
     },
     {
@@ -52,7 +52,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.000409,
+      "funding": 0.000415,
       "long_short": 0.66
     },
     {
@@ -63,8 +63,18 @@
         "movers",
         "watcher"
       ],
-      "funding": -3.1e-05,
+      "funding": -2.9e-05,
       "long_short": 0.43
+    },
+    {
+      "symbol": "NEAR",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.08
     },
     {
       "symbol": "ARB",
@@ -73,14 +83,6 @@
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 1e-06
     },
     {
       "symbol": "LIT",
@@ -92,14 +94,6 @@
     },
     {
       "symbol": "LTC",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "NEAR",
       "surfaces": 1,
       "sources": [
         "movers"
@@ -138,20 +132,20 @@
       ]
     },
     {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 2.9e-05
+    },
+    {
       "symbol": "TAO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "XMR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.000807
     },
     {
       "symbol": "ZEN",
