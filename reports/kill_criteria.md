@@ -124,6 +124,19 @@ files and dashboards remain as frozen archives; they leave the Actions
 roster. Kept: crypto, meanrev, commodity, allweather (control), scholar,
 sentiment (under audit for a suspected stale-fill inflation, see STATUS).
 
+### Owner override 2026-09-05
+
+Second override, recorded as such: the owner retired the four least
+successful remaining bots by value at the 09-05 digest: **scholar**
+($1,019.62), **allweather** ($1,023.80, the control), **commodity**
+($1,031.42) and **crypto** ($1,089.97, behind BTC over the same window).
+Frozen archives as before. Kept: meanrev ($1,298.52) and sentiment
+($2,453.00, still under fill audit). Added **scalper** (src/bot_scalper.py):
+the small-wins protocol from the lab run hyper-aggressively, 10 seats,
++3%/-3%/24h, surge + range-bottom shapes on 15m candles, never idle.
+Pre-registered: judged on >= 100 round trips against a 54% break-even hit
+rate; under R1-R5 like every other paper bot.
+
 ## Roster covered
 
 crypto (regime switcher), meanrev, commodity, allweather, congress, hunter,

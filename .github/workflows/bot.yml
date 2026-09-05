@@ -115,8 +115,11 @@ jobs:
             # hypecrypto retired (flat-to-negative vs benchmark after 20-40
             # trading days; hypecrypto through the R1 floor). Dashboards stay
             # in docs/ as frozen archives. Recorded in reports/kill_criteria.md.
-            for s in crypto_tracker \
-                     bot_meanrev bot_commodity bot_allweather bot_scholar \
+            # OWNER DECISION 2026-09-05: crypto, commodity, allweather and
+            # scholar retired (the four weakest by value, $1,020-1,090 after
+            # 5+ weeks; crypto behind BTC). bot_scalper joins: the small-wins
+            # protocol from the lab, hyper-aggressive (10 seats, +3/-3/24h).
+            for s in bot_meanrev bot_scalper \
                      grok_sentinel sentinel_trader \
                      exit_auditor unlock_watch \
                      announcement_watch social_radar smallwins_lab; do
@@ -158,6 +161,7 @@ jobs:
             cp reports/hypecrypto_dashboard.html docs/hypecrypto.html 2>/dev/null || true
             cp reports/hypecrypto_dashboard_data.json docs/hypecrypto_dashboard_data.json 2>/dev/null || true
             cp reports/smallwins.md docs/smallwins.md 2>/dev/null || true
+            cp reports/scalper.md docs/scalper.md 2>/dev/null || true
 
             git add data/ reports/ docs/ \
               || echo "::error::git add failed — this cycle will not publish"

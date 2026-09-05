@@ -9,6 +9,10 @@ Hunter, Scholar (synthesis bot, added at the 2026-07-31 v2 review), plus a Watch
 Grok. The leveraged stock bot was retired 2026-07-31 by owner decision (docs/stocks.html is a
 frozen archive). Each bot manages **$1,000 of PAPER capital. No real money.**
 Runs itself on GitHub Actions; dashboards are bilingual (English/Arabic).
+Active roster after the owner's 2026-09-04/05 retirements: meanrev, sentiment (Watcher +
+sentinel_trader), scalper (small-wins paper bot, `src/bot_scalper.py`), plus the utilities
+(exit_auditor, unlock/announcement watch, social radar, smallwins_lab). Everything else is a
+frozen archive; see `reports/kill_criteria.md`.
 
 ## Where things are
 - `src/` — the bots. One `bot_*.py` / `*_tracker.py` per strategy, plus:
