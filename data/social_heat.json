@@ -1,17 +1,17 @@
 {
-  "ts": "2026-09-05T15:52:52+00:00",
+  "ts": "2026-09-05T15:58:09+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
       "ASTER",
       "ZEC",
-      "LIT",
-      "MARSCOIN",
       "PENGU",
       "UNI",
-      "SOL",
+      "MARSCOIN",
       "NEAR",
-      "PUMP"
+      "PUMP",
+      "AI",
+      "SUI"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -41,7 +41,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.00058,
+      "funding": 0.000578,
       "long_short": 0.66
     },
     {
@@ -61,7 +61,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 8.7e-05,
+      "funding": 8.1e-05,
       "long_short": 1.26
     },
     {
@@ -81,8 +81,16 @@
         "coingecko",
         "watcher"
       ],
-      "funding": -2e-06,
+      "funding": -6e-06,
       "long_short": 0.42
+    },
+    {
+      "symbol": "AI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0
     },
     {
       "symbol": "BNB",
@@ -90,7 +98,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000139
+      "funding": 0.000137
     },
     {
       "symbol": "FIRO",
@@ -98,14 +106,6 @@
       "sources": [
         "coingecko"
       ]
-    },
-    {
-      "symbol": "LIT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "LTC",
@@ -132,12 +132,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "SOL",
+      "symbol": "SUI",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5.9e-05
+      "funding": 0.0001
     },
     {
       "symbol": "TUT",
@@ -145,7 +145,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000227
+      "funding": -0.000228
     },
     {
       "symbol": "UNI",
@@ -161,7 +161,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 7.7e-05
+      "funding": 7.9e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
