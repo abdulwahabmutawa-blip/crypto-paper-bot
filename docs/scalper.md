@@ -1,6 +1,6 @@
 # Scalper — hyper-aggressive small-wins PAPER bot
 
-updated 2026-09-05T14:22:19+00:00 · runs 3 · equity **$1,006.06** (+0.61%) · cash $0.00 · open 10/10 · round trips 4
+updated 2026-09-05T14:38:21+00:00 · runs 4 · equity **$1,007.44** (+0.74%) · cash $0.00 · open 10/10 · round trips 4
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -24,13 +24,13 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 |---|---|---|---|---|---|
 | 2026-09-05T12:33 | UUSDT | bottom | 0.9993 | 0.9994 | +0.01% |
 | 2026-09-05T12:33 | BFUSDUSDT | bottom | 1 | 1 | +0.00% |
-| 2026-09-05T12:33 | STXUSDT | bottom | 0.2584 | 0.2589 | +0.19% |
-| 2026-09-05T12:33 | ENSOUSDT | surge | 0.892 | 0.897 | +0.56% |
-| 2026-09-05T12:33 | SPKUSDT | surge | 0.020793 | 0.020703 | -0.43% |
-| 2026-09-05T12:33 | BNBUSDT | surge | 756.24 | 763 | +0.89% |
-| 2026-09-05T14:02 | PLUMEUSDT | bottom | 0.01349 | 0.0135 | +0.07% |
-| 2026-09-05T14:02 | FFUSDT | surge | 0.12358 | 0.12305 | -0.43% |
-| 2026-09-05T14:20 | PUMPUSDT | bottom | 0.004075 | 0.004075 | +0.00% |
-| 2026-09-05T14:20 | 币安人生USDT | surge | 0.5537 | 0.5548 | +0.20% |
+| 2026-09-05T12:33 | STXUSDT | bottom | 0.2584 | 0.2596 | +0.46% |
+| 2026-09-05T12:33 | ENSOUSDT | surge | 0.892 | 0.895 | +0.34% |
+| 2026-09-05T12:33 | SPKUSDT | surge | 0.020793 | 0.020662 | -0.63% |
+| 2026-09-05T12:33 | BNBUSDT | surge | 756.24 | 768.56 | +1.63% |
+| 2026-09-05T14:02 | PLUMEUSDT | bottom | 0.01349 | 0.01358 | +0.67% |
+| 2026-09-05T14:02 | FFUSDT | surge | 0.12358 | 0.1221 | -1.20% |
+| 2026-09-05T14:20 | PUMPUSDT | bottom | 0.004075 | 0.004078 | +0.07% |
+| 2026-09-05T14:20 | 币安人生USDT | surge | 0.5537 | 0.5598 | +1.10% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
