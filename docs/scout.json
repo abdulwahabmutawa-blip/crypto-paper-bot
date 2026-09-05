@@ -1,37 +1,39 @@
 {
-  "ts": "2026-09-05T06:41:00+00:00",
-  "scanned": 120,
+  "ts": "2026-09-05T06:46:09+00:00",
+  "scanned": 119,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "DOGEUSDT",
-      "signal": "ignition",
-      "score": 0.832,
-      "raw_score": 0.8804,
-      "weight": 0.945,
-      "price": 0.08541,
-      "why": "trades 9.9x and volume 12.1x the prior 4h, 63% taker-buy, $1,042,239 burst \u2014 while price has only moved +1.0%",
-      "chg_24h": -0.0171,
-      "vol_surge": 12.15,
-      "chg_1h": 0.0097,
-      "market_surge": 2.91,
+      "symbol": "COTIUSDT",
+      "signal": "breakout",
+      "score": 0.7463,
+      "raw_score": 0.8077,
+      "weight": 0.924,
+      "price": 0.01518,
+      "why": "trades 14.2x, volume 16.0x, 63% taker-buy, +4.2% in an hour, at 98% of its 24h range",
+      "chg_24h": 0.151,
+      "vol_surge": 16.01,
+      "chg_1h": 0.0419,
+      "market_surge": 7.7,
       "actionable": false,
-      "status": "benched \u2014 hit 44%, mean +0.21% over last 531 at 24h: not beating 4x the round trip"
+      "status": "benched \u2014 hit 37%, mean +0.53% over last 188 at 24h: not beating 4x the round trip"
     },
     {
-      "symbol": "PENGUUSDT",
-      "signal": "ignition",
-      "score": 0.6816,
-      "raw_score": 0.7213,
-      "weight": 0.945,
-      "price": 0.00849,
-      "why": "trades 5.1x and volume 13.9x the prior 4h, 85% taker-buy, $161,707 burst \u2014 while price has only moved +1.7%",
-      "chg_24h": -0.0041,
-      "vol_surge": 13.91,
-      "chg_1h": 0.017,
-      "market_surge": 3.23,
+      "symbol": "CATIUSDT",
+      "signal": "reversion",
+      "score": 0.6263,
+      "raw_score": 0.6263,
+      "weight": 1.0,
+      "price": 0.05015,
+      "why": "down -14% on the day (bottom decile of the market), now +2.1% over 15m with 3 green candles",
+      "chg_24h": -0.1355,
+      "vol_surge": 11.03,
+      "chg_1h": -0.1442,
+      "market_surge": 2.2,
+      "oi_drop": 0.11,
+      "funding": 5e-05,
       "actionable": false,
-      "status": "benched \u2014 hit 44%, mean +0.21% over last 531 at 24h: not beating 4x the round trip"
+      "status": "probation \u2014 10/12 resolved 24h samples under ruleset 3"
     }
   ],
   "gate": {
@@ -42,7 +44,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 25,
+    "count": 24,
     "baseline": 13.0,
     "wave": false
   },
