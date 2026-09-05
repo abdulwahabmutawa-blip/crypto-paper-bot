@@ -48,6 +48,7 @@ SCAN_INTERVAL_H = 8
 MONTHLY_CAP = 130
 STATE = config.DATA / "sentinel_state.json"
 VERDICT = config.DATA / "sentinel_verdict.json"
+LAST_USAGE: dict = {}
 
 def gather_gauges() -> dict:
     """Quantitative fear gauges (free, no keys). Logged with every scan so
@@ -341,6 +342,11 @@ def call_grok() -> str:
     )
     with urllib.request.urlopen(req, timeout=300) as r:
         data = json.load(r)
+    # cost visibility (2026-09-05): per-scan token/search usage was never
+    # recorded, so the real price of a scan was a guess. Kept on the module so
+    # main() can stamp it onto the scan without changing this return type.
+    global LAST_USAGE
+    LAST_USAGE = data.get("usage") or {}
     if isinstance(data.get("output_text"), str) and data["output_text"]:
         return data["output_text"]
     parts = []
@@ -475,6 +481,8 @@ def main():
     scan = parse_scan(raw)
     scan["ts"] = now.isoformat(timespec="seconds")
     scan["gauges"] = gather_gauges()   # hard numbers logged beside the vibes
+    if LAST_USAGE:
+        scan["usage"] = LAST_USAGE
     st["scans"] = (st["scans"] + [scan])[-90:]
     st["last_scan_utc"] = scan["ts"]
     st["month_count"][mkey] = st["month_count"].get(mkey, 0) + 1
