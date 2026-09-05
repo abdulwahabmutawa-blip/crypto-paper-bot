@@ -1,24 +1,8 @@
 {
-  "ts": "2026-09-05T07:46:57+00:00",
-  "scanned": 120,
+  "ts": "2026-09-05T07:52:47+00:00",
+  "scanned": 119,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "WLFIUSDT",
-      "signal": "ignition",
-      "score": 0.7463,
-      "raw_score": 0.7898,
-      "weight": 0.945,
-      "price": 0.0568,
-      "why": "trades 7.2x and volume 20.8x the prior 4h, 62% taker-buy, $148,467 burst \u2014 while price has only moved +0.2%",
-      "chg_24h": -0.0173,
-      "vol_surge": 20.76,
-      "chg_1h": 0.0018,
-      "market_surge": 4.27,
-      "actionable": false,
-      "status": "benched \u2014 hit 44%, mean +0.22% over last 527 at 24h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 44%, mean +0.22% over last 527 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 36%, mean +0.42% over last 188 at 24h: not beating 4x the round trip",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 24,
+    "count": 22,
     "baseline": 13.0,
     "wave": false
   },
@@ -41,7 +25,7 @@
       "median_ret_1h": -0.00065,
       "both_halves_1h": false,
       "days_1h": 14,
-      "mean_x_1h": 0.00027,
+      "mean_x_1h": 0.00023,
       "days_x_1h": 3,
       "avg_win_1h": 0.01026,
       "avg_loss_1h": -0.0102,
@@ -82,7 +66,7 @@
       "median_ret_1h": -0.00111,
       "both_halves_1h": false,
       "days_1h": 14,
-      "mean_x_1h": -0.00433,
+      "mean_x_1h": -0.00386,
       "days_x_1h": 3,
       "avg_win_1h": 0.02141,
       "avg_loss_1h": -0.01864,
