@@ -1,6 +1,6 @@
 # Scalper — hyper-aggressive small-wins PAPER bot
 
-updated 2026-09-05T21:08:44+00:00 · runs 29 · equity **$1,013.96** (+1.40%) · cash $0.00 · open 10/10 · round trips 11
+updated 2026-09-05T21:25:00+00:00 · runs 30 · equity **$1,018.33** (+1.83%) · cash $0.00 · open 10/10 · round trips 11
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -29,15 +29,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-05T12:33 | UUSDT | bottom | 0.9993 | 0.9994 | +0.01% |
+| 2026-09-05T12:33 | UUSDT | bottom | 0.9993 | 0.9995 | +0.02% |
 | 2026-09-05T12:33 | BFUSDUSDT | bottom | 1 | 1 | +0.00% |
-| 2026-09-05T12:33 | ENSOUSDT | surge | 0.892 | 0.904 | +1.35% |
+| 2026-09-05T12:33 | ENSOUSDT | surge | 0.892 | 0.923 | +3.48% |
 | 2026-09-05T15:25 | BMTUSDT | bottom | 0.01795 | 0.01785 | -0.56% |
-| 2026-09-05T15:25 | EGLDUSDT | bottom | 4.642 | 4.553 | -1.92% |
-| 2026-09-05T17:17 | ONGUSDT | bottom | 0.09469 | 0.09552 | +0.88% |
-| 2026-09-05T18:37 | ZAMAUSDT | bottom | 0.05037 | 0.05029 | -0.16% |
-| 2026-09-05T18:37 | MORPHOUSDT | bottom | 2.495 | 2.499 | +0.16% |
-| 2026-09-05T19:09 | LAUSDT | bottom | 0.0672 | 0.0682 | +1.49% |
-| 2026-09-05T20:51 | SOPHUSDT | bottom | 0.00399 | 0.00401 | +0.50% |
+| 2026-09-05T15:25 | EGLDUSDT | bottom | 4.642 | 4.631 | -0.24% |
+| 2026-09-05T17:17 | ONGUSDT | bottom | 0.09469 | 0.0958 | +1.17% |
+| 2026-09-05T18:37 | ZAMAUSDT | bottom | 0.05037 | 0.05042 | +0.10% |
+| 2026-09-05T18:37 | MORPHOUSDT | bottom | 2.495 | 2.508 | +0.52% |
+| 2026-09-05T19:09 | LAUSDT | bottom | 0.0672 | 0.0681 | +1.34% |
+| 2026-09-05T20:51 | SOPHUSDT | bottom | 0.00399 | 0.004 | +0.25% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
