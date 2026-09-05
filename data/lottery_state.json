@@ -1,13 +1,13 @@
 {
   "created": "2026-08-15",
-  "held_symbol": null,
-  "entry_price": null,
-  "units": 0.0,
-  "entry_scan_ts": null,
-  "entry_source": null,
+  "held_symbol": "ASTERUSDT",
+  "entry_price": 0.836,
+  "units": 46.68,
+  "entry_scan_ts": "2026-09-05T05:19:02+00:00",
+  "entry_source": "scout:surge",
   "stopped": {},
   "entries": {
-    "2026-09-03": 2
+    "2026-09-05": 1
   },
   "realized": [
     {
@@ -677,15 +677,41 @@
       "entry": 4.327
     }
   ],
-  "last_value_usd": 39.03,
-  "last_updated_utc": "2026-09-05T12:56:56+00:00",
-  "open_position": null,
-  "spent_usd": null,
+  "last_value_usd": 39.08,
+  "last_updated_utc": "2026-09-05T13:02:30+00:00",
+  "open_position": {
+    "symbol": "ASTERUSDT",
+    "entry_time": "2026-09-05T13:02:30+00:00",
+    "entry_price": 0.836,
+    "current_price": 0.837,
+    "units": 46.68,
+    "spent_usd": 39.0245,
+    "value_usd": 39.0712,
+    "pnl_usd": 0.0467,
+    "pnl_pct": 0.12,
+    "source": "scout:surge"
+  },
+  "spent_usd": 39.0245,
   "no_pair": {
     "scan_ts": "2026-09-05T05:19:02+00:00",
     "syms": []
   },
   "wave_bonus_date": "2026-09-05",
   "book_hwm_usd": 44.27,
-  "entry_score": 0.7491
+  "entry_score": 0.364,
+  "entry_fee_usd": 0.029252,
+  "hwm": 0.836,
+  "move_max_qv": 0.0,
+  "move_qv_sum": 0.0,
+  "move_qv_n": 0,
+  "move_last_ms": 0,
+  "entry_time": "2026-09-05T13:02:30+00:00",
+  "stop_order": {
+    "order_id": "483246581",
+    "stop": 0.81,
+    "limit": null,
+    "qty": 46.68,
+    "type": "STOP_LOSS",
+    "client_order_id": "lotstop-ASTERUSDT-8613474056"
+  }
 }
