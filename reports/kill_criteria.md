@@ -148,6 +148,19 @@ with 9 switches. The bot is reinstated as **v4 BTC tide gauge** with the
 same state file and history; the alt brains are gone. Judged under R1-R5
 as before; the in-sample replay is context, not a promise.
 
+### Hype Trader restatement 2026-09-05
+
+The suspected stale-fill inflation was real. `src/sentiment_fill_audit.py`
+priced all 68 legs at the market bar of the minute each was booked (fill
+times recovered from git): 5 legs restated (GPRO 09-01 and SOUN 08-06 booked
+at the previous close below the day's low; XRP 08-21 stop, BTC 08-21 entry
+and SHIB 07-27 on Yahoo crypto prints that diverged from Binance) and 4 ARB
+legs voided (Yahoo's ARB-USD was not Arbitrum). Recorded $2,453.00 ->
+restated **$1,323.05**. Root cause fixed in sentinel_trader (a stock order
+fills only when today's bar for that ticker has been delivered; coins come
+from the Watcher's crypto_hype list and are priced on Binance). The book
+stays on the roster under its restated value.
+
 ## Roster covered
 
 crypto (regime switcher), meanrev, commodity, allweather, congress, hunter,

@@ -3,7 +3,7 @@
   "starting_cash": 1000.0,
   "holding": "CASH",
   "units": 0.0,
-  "cash": 2452.9978251718903,
+  "cash": 1323.05,
   "entry_price": null,
   "bench_units": 1.332054612938296,
   "stopped": {
@@ -118,7 +118,7 @@
       "price": 0.0,
       "units": 186865909.2454,
       "value": 934.33,
-      "reason": "STOP-LOSS hit (-11.3% from entry) \u2014 hype that bleeds gets cut"
+      "reason": "STOP-LOSS hit (-11.3% from entry) \u2014 hype that bleeds gets cut [restated 2026-09-05: booked 0.0 while the market bar was 5.3e-06-5.4e-06; true 5e-06]"
     },
     {
       "date": "2026-07-27",
@@ -237,7 +237,7 @@
       "units": 175.9384,
       "value": 1131.28,
       "fee": 1.42,
-      "reason": "Grok: SOUN euphoric \u2014 AI voice stock retail trending (scan 2026-08-06T08:05)"
+      "reason": "Grok: SOUN euphoric \u2014 AI voice stock retail trending (scan 2026-08-06T08:05) [restated 2026-09-05: booked 6.42999983 while the market bar was 7.119999885559082-8.180000305175781; true 7.365]"
     },
     {
       "date": "2026-08-07",
@@ -387,7 +387,7 @@
       "units": 1266.3011,
       "value": 1398.51,
       "fee": 4.06,
-      "reason": "STOP-LOSS hit (-16.1% from entry) \u2014 hype that bleeds gets cut"
+      "reason": "STOP-LOSS hit (-16.1% from entry) \u2014 hype that bleeds gets cut [restated 2026-09-05: booked 1.10440302 while the market bar was 1.2588-1.2741; true 1.2655]"
     },
     {
       "date": "2026-08-21",
@@ -397,7 +397,7 @@
       "units": 0.0201,
       "value": 1390.41,
       "fee": 4.04,
-      "reason": "Grok: BTC euphoric \u2014 breaks $75k on squeeze and ETFs (scan 2026-08-21T05:35)"
+      "reason": "Grok: BTC euphoric \u2014 breaks $75k on squeeze and ETFs (scan 2026-08-21T05:35) [restated 2026-09-05: booked 69266.1875 while the market bar was 74918.79-75500.0; true 75472.73]"
     },
     {
       "date": "2026-08-21",
@@ -577,7 +577,7 @@
       "units": 2234304.5524,
       "value": 1405.38,
       "fee": 4.09,
-      "reason": "Grok: ARB euphoric \u2014 Binance top gainer retail chase (scan 2026-09-01T04:42)"
+      "reason": "Grok: ARB euphoric \u2014 Binance top gainer retail chase (scan 2026-09-01T04:42) [VOID 2026-09-05: wrong asset \u2014 Yahoo ARB-USD was not Arbitrum; no trade]"
     },
     {
       "date": "2026-09-01",
@@ -587,7 +587,7 @@
       "units": 2234304.5524,
       "value": 1405.44,
       "fee": 4.08,
-      "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
+      "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list [VOID 2026-09-05: wrong asset \u2014 Yahoo ARB-USD was not Arbitrum; no trade]"
     },
     {
       "date": "2026-09-01",
@@ -597,7 +597,7 @@
       "units": 1597.7333,
       "value": 1399.61,
       "fee": 1.75,
-      "reason": "Grok: GPRO euphoric \u2014 Markiplier stake WSB FOMO surge (scan 2026-09-01T12:44)"
+      "reason": "Grok: GPRO euphoric \u2014 Markiplier stake WSB FOMO surge (scan 2026-09-01T12:44) [restated 2026-09-05: booked 0.87599999 while the market bar was 1.2999999523162842-1.6399999856948853; true 1.56]"
     },
     {
       "date": "2026-09-01",
@@ -617,7 +617,7 @@
       "units": 3693024.2114,
       "value": 2323.02,
       "fee": 6.76,
-      "reason": "Grok: ARB euphoric \u2014 Robinhood Chain revenue surge (scan 2026-09-01T13:55)"
+      "reason": "Grok: ARB euphoric \u2014 Robinhood Chain revenue surge (scan 2026-09-01T13:55) [VOID 2026-09-05: wrong asset \u2014 Yahoo ARB-USD was not Arbitrum; no trade]"
     },
     {
       "date": "2026-09-02",
@@ -627,7 +627,7 @@
       "units": 3693024.2114,
       "value": 2323.02,
       "fee": 6.74,
-      "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
+      "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list [VOID 2026-09-05: wrong asset \u2014 Yahoo ARB-USD was not Arbitrum; no trade]"
     },
     {
       "date": "2026-09-02",
@@ -908,9 +908,10 @@
     },
     {
       "date": "2026-09-04",
-      "value": 2453.0,
+      "value": 1323.05,
       "bench": 1025.94,
-      "holding": "CASH"
+      "holding": "CASH",
+      "restated": true
     }
   ],
   "intraday": [
@@ -9910,89 +9911,100 @@
     },
     {
       "ts": "2026-09-05T13:45:08+00:00",
-      "value": 2453.0,
+      "value": 1323.05,
       "bench": 1025.94,
       "holding": "CASH"
     }
   ],
-  "last_updated_utc": "2026-09-05T13:45:08+00:00",
-  "restatement": {
-    "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)",
-    "voided_trades": [
-      {
-        "date": "2026-07-18",
-        "action": "BUY",
-        "ticker": "XRP-USD",
-        "price": 1.09,
-        "units": 919.62,
-        "value": 1004.41,
-        "reason": "Grok: XRP euphoric \u2014 SWIFT banks coil, wealth transfer talk (scan 2026-07-18T23:37)"
-      },
-      {
-        "date": "2026-07-19",
-        "action": "SELL",
-        "ticker": "XRP-USD",
-        "price": 1.1,
-        "units": 919.62,
-        "value": 1007.81,
-        "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
-      },
-      {
-        "date": "2026-07-19",
-        "action": "BUY",
-        "ticker": "OXY",
-        "price": 54.86,
-        "units": 18.3706,
-        "value": 1007.81,
-        "reason": "Grok: OXY euphoric \u2014 Energy bounce on geo oil fears (scan 2026-07-19T18:09)"
-      },
-      {
-        "date": "2026-07-20",
-        "action": "SELL",
-        "ticker": "OXY",
-        "price": 54.86,
-        "units": 18.3706,
-        "value": 1007.81,
-        "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
-      },
-      {
-        "date": "2026-07-20",
-        "action": "BUY",
-        "ticker": "AEHR",
-        "price": 81.05,
-        "units": 12.4344,
-        "value": 1007.81,
-        "reason": "Grok: AEHR euphoric \u2014 AI test gear orders fuel retail surge (scan 2026-07-20T08:26)"
-      },
-      {
-        "date": "2026-07-20",
-        "action": "SELL",
-        "ticker": "AEHR",
-        "price": 77.36,
-        "units": 12.4344,
-        "value": 961.93,
-        "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
-      },
-      {
-        "date": "2026-07-20",
-        "action": "BUY",
-        "ticker": "ACHR",
-        "price": 5.31,
-        "units": 181.1541,
-        "value": 961.93,
-        "reason": "Grok: ACHR euphoric \u2014 20% rip on Anduril military VTOL (scan 2026-07-20T20:45)"
-      },
-      {
-        "date": "2026-07-21",
-        "action": "SELL",
-        "ticker": "ACHR",
-        "price": 5.31,
-        "units": 181.1541,
-        "value": 961.93,
-        "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
-      }
-    ],
-    "voided_reason": "signal faded before any real fill was possible (market closed the whole window) \u2014 trades could never have existed"
-  },
-  "costs_paid": 112.3867
+  "last_updated_utc": "2026-09-05T14:01:40+00:00",
+  "costs_paid": 112.3867,
+  "restatements": [
+    {
+      "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)",
+      "voided_trades": [
+        {
+          "date": "2026-07-18",
+          "action": "BUY",
+          "ticker": "XRP-USD",
+          "price": 1.09,
+          "units": 919.62,
+          "value": 1004.41,
+          "reason": "Grok: XRP euphoric \u2014 SWIFT banks coil, wealth transfer talk (scan 2026-07-18T23:37)"
+        },
+        {
+          "date": "2026-07-19",
+          "action": "SELL",
+          "ticker": "XRP-USD",
+          "price": 1.1,
+          "units": 919.62,
+          "value": 1007.81,
+          "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
+        },
+        {
+          "date": "2026-07-19",
+          "action": "BUY",
+          "ticker": "OXY",
+          "price": 54.86,
+          "units": 18.3706,
+          "value": 1007.81,
+          "reason": "Grok: OXY euphoric \u2014 Energy bounce on geo oil fears (scan 2026-07-19T18:09)"
+        },
+        {
+          "date": "2026-07-20",
+          "action": "SELL",
+          "ticker": "OXY",
+          "price": 54.86,
+          "units": 18.3706,
+          "value": 1007.81,
+          "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
+        },
+        {
+          "date": "2026-07-20",
+          "action": "BUY",
+          "ticker": "AEHR",
+          "price": 81.05,
+          "units": 12.4344,
+          "value": 1007.81,
+          "reason": "Grok: AEHR euphoric \u2014 AI test gear orders fuel retail surge (scan 2026-07-20T08:26)"
+        },
+        {
+          "date": "2026-07-20",
+          "action": "SELL",
+          "ticker": "AEHR",
+          "price": 77.36,
+          "units": 12.4344,
+          "value": 961.93,
+          "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
+        },
+        {
+          "date": "2026-07-20",
+          "action": "BUY",
+          "ticker": "ACHR",
+          "price": 5.31,
+          "units": 181.1541,
+          "value": 961.93,
+          "reason": "Grok: ACHR euphoric \u2014 20% rip on Anduril military VTOL (scan 2026-07-20T20:45)"
+        },
+        {
+          "date": "2026-07-21",
+          "action": "SELL",
+          "ticker": "ACHR",
+          "price": 5.31,
+          "units": 181.1541,
+          "value": 961.93,
+          "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
+        }
+      ],
+      "voided_reason": "signal faded before any real fill was possible (market closed the whole window) \u2014 trades could never have existed"
+    },
+    {
+      "ts": "2026-09-05T14:01:40+00:00",
+      "note": "restated 2026-09-05 after the fill audit (reports/sentiment_fill_audit.md): stock orders were booked at the previous close when Yahoo had not delivered today's bar (GPRO 09-01 at 0.876 vs a 1.16 day low; SOUN 08-06), Yahoo crypto prints diverged from Binance (XRP 08-21 stop, BTC 08-21 entry, SHIB 07-27), and ARB-USD on Yahoo was a different token (4 legs voided). Every leg replayed at market prices; equity restated from the recorded figure to the audited one. History before this point is left as recorded (the chart shows the correction).",
+      "recorded_equity": 2453.0,
+      "restated_equity": 1323.05,
+      "legs_restated": 5,
+      "legs_voided": 4,
+      "trades_annotated": 9
+    }
+  ]
 }
