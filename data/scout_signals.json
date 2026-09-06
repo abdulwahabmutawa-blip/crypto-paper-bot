@@ -1,24 +1,8 @@
 {
-  "ts": "2026-09-06T09:11:26+00:00",
-  "scanned": 101,
+  "ts": "2026-09-06T09:16:45+00:00",
+  "scanned": 98,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "1000CATUSDT",
-      "signal": "ignition",
-      "score": 0.6949,
-      "raw_score": 0.7323,
-      "weight": 0.949,
-      "price": 0.002271,
-      "why": "trades 5.7x and volume 17.2x the prior 4h, 71% taker-buy, $99,481 burst \u2014 while price has only moved -1.0%",
-      "chg_24h": 0.0702,
-      "vol_surge": 17.17,
-      "chg_1h": -0.0096,
-      "market_surge": 2.61,
-      "actionable": false,
-      "status": "benched \u2014 hit 45%, mean +0.52% over last 547 at 24h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 45%, mean +0.52% over last 547 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 41%, mean +0.67% over last 215 at 24h: not beating 4x the round trip",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 18,
+    "count": 16,
     "baseline": 17.0,
     "wave": false
   },
@@ -183,7 +167,7 @@
       "median_ret_24h": -0.01975,
       "both_halves_24h": false,
       "days_24h": 12,
-      "mean_x_24h": 0.06538,
+      "mean_x_24h": 0.06038,
       "days_x_24h": 3,
       "avg_win_24h": 0.08037,
       "avg_loss_24h": -0.07554,

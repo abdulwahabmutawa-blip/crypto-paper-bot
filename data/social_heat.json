@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-06T09:11:21+00:00",
+  "ts": "2026-09-06T09:16:41+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
@@ -8,10 +8,9 @@
       "PENGU",
       "LIT",
       "UNI",
-      "MARSCOIN",
-      "SUI",
-      "BTC",
-      "ONDO"
+      "ZRO",
+      "XRP",
+      "BTC"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,11 +18,11 @@
       "ARB",
       "ZEC",
       "UNI",
-      "ENA",
       "PROM",
+      "ENA",
       "NEAR",
       "DOGE",
-      "LINK"
+      "MARSCOIN"
     ],
     "watcher": [
       "ARB",
@@ -72,7 +71,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.1e-05
+      "funding": 1.2e-05
     },
     {
       "symbol": "DOGE",
@@ -98,14 +97,6 @@
       ]
     },
     {
-      "symbol": "LINK",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "LIT",
       "surfaces": 1,
       "sources": [
@@ -117,9 +108,9 @@
       "symbol": "MARSCOIN",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
-      "funding": 0.00026
+      "funding": 0.000249
     },
     {
       "symbol": "NEAR",
@@ -128,14 +119,6 @@
         "movers"
       ],
       "funding": -3.8e-05
-    },
-    {
-      "symbol": "ONDO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "PENGU",
@@ -154,12 +137,20 @@
       "funding": 5e-05
     },
     {
-      "symbol": "SUI",
+      "symbol": "XRP",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0001
+      "funding": 8e-06
+    },
+    {
+      "symbol": "ZRO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
