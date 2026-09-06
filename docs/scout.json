@@ -1,8 +1,39 @@
 {
-  "ts": "2026-09-06T23:03:38+00:00",
+  "ts": "2026-09-06T23:09:35+00:00",
   "scanned": 96,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ONDOUSDT",
+      "signal": "breakout",
+      "score": 0.5631,
+      "raw_score": 0.6278,
+      "weight": 0.897,
+      "price": 0.387,
+      "why": "trades 4.0x, volume 11.5x, 82% taker-buy, +2.0% in an hour, at 95% of its 24h range",
+      "chg_24h": 0.0464,
+      "vol_surge": 11.5,
+      "chg_1h": 0.0203,
+      "market_surge": 5.22,
+      "actionable": false,
+      "status": "benched \u2014 hit 40%, mean +0.40% over last 202 at 24h: not beating 4x the round trip"
+    },
+    {
+      "symbol": "INJUSDT",
+      "signal": "breakout",
+      "score": 0.512,
+      "raw_score": 0.5708,
+      "weight": 0.897,
+      "price": 5.282,
+      "why": "trades 4.8x, volume 5.7x, 71% taker-buy, +2.3% in an hour, at 99% of its 24h range",
+      "chg_24h": 0.0749,
+      "vol_surge": 5.69,
+      "chg_1h": 0.0229,
+      "market_surge": 2.99,
+      "actionable": false,
+      "status": "benched \u2014 hit 40%, mean +0.40% over last 202 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 46%, mean +0.48% over last 543 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 40%, mean +0.40% over last 202 at 24h: not beating 4x the round trip",
@@ -11,7 +42,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 16,
+    "count": 17,
     "baseline": 18.0,
     "wave": false
   },
