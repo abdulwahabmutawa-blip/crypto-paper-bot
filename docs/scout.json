@@ -1,39 +1,8 @@
 {
-  "ts": "2026-09-06T03:42:28+00:00",
+  "ts": "2026-09-06T03:48:15+00:00",
   "scanned": 101,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "SOLUSDT",
-      "signal": "ignition",
-      "score": 0.8334,
-      "raw_score": 0.8718,
-      "weight": 0.956,
-      "price": 106.5,
-      "why": "trades 15.9x and volume 14.8x the prior 4h, 70% taker-buy, $8,218,073 burst \u2014 while price has only moved +2.1%",
-      "chg_24h": 0.046,
-      "vol_surge": 14.77,
-      "chg_1h": 0.0214,
-      "market_surge": 11.17,
-      "actionable": false,
-      "status": "benched \u2014 hit 45%, mean +0.42% over last 540 at 24h: not beating 4x the round trip"
-    },
-    {
-      "symbol": "SOLUSDT",
-      "signal": "breakout",
-      "score": 0.6844,
-      "raw_score": 0.757,
-      "weight": 0.904,
-      "price": 106.5,
-      "why": "trades 15.9x, volume 14.8x, 70% taker-buy, +2.1% in an hour, at 90% of its 24h range",
-      "chg_24h": 0.046,
-      "vol_surge": 14.77,
-      "chg_1h": 0.0214,
-      "market_surge": 11.17,
-      "actionable": false,
-      "status": "benched \u2014 hit 40%, mean +0.56% over last 208 at 24h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 45%, mean +0.42% over last 540 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 40%, mean +0.56% over last 208 at 24h: not beating 4x the round trip",
