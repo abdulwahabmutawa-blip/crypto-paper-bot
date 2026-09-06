@@ -1,6 +1,6 @@
 # Scalper — hyper-aggressive small-wins PAPER bot
 
-updated 2026-09-06T18:49:01+00:00 · runs 109 · equity **$1,022.20** (+2.22%) · cash $0.00 · open 10/10 · round trips 33
+updated 2026-09-06T18:53:17+00:00 · runs 110 · equity **$1,023.67** (+2.37%) · cash $0.00 · open 10/10 · round trips 33
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -33,15 +33,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-06T04:12 | MITOUSDT | bottom | 0.01721 | 0.01705 | -0.93% |
-| 2026-09-06T06:51 | XPLUSDT | bottom | 0.09213 | 0.09127 | -0.93% |
-| 2026-09-06T08:22 | TRUMPUSDT | bottom | 2.343 | 2.309 | -1.45% |
-| 2026-09-06T12:59 | BNBUSDT | bottom | 755.57 | 749.45 | -0.81% |
+| 2026-09-06T04:12 | MITOUSDT | bottom | 0.01721 | 0.01708 | -0.76% |
+| 2026-09-06T06:51 | XPLUSDT | bottom | 0.09213 | 0.09121 | -1.00% |
+| 2026-09-06T08:22 | TRUMPUSDT | bottom | 2.343 | 2.307 | -1.54% |
+| 2026-09-06T12:59 | BNBUSDT | bottom | 755.57 | 749.65 | -0.78% |
 | 2026-09-06T12:59 | DEXEUSDT | bottom | 1.975 | 1.979 | +0.20% |
 | 2026-09-06T13:19 | ZKCUSDT | bottom | 0.049 | 0.0486 | -0.82% |
-| 2026-09-06T13:52 | MUBARAKUSDT | bottom | 0.03126 | 0.03134 | +0.26% |
-| 2026-09-06T14:41 | CAKEUSDT | bottom | 2.166 | 2.187 | +0.97% |
-| 2026-09-06T15:13 | BICOUSDT | bottom | 0.02188 | 0.02227 | +1.78% |
+| 2026-09-06T13:52 | MUBARAKUSDT | bottom | 0.03126 | 0.03149 | +0.74% |
+| 2026-09-06T14:41 | CAKEUSDT | bottom | 2.166 | 2.19 | +1.11% |
+| 2026-09-06T15:13 | BICOUSDT | bottom | 0.02188 | 0.02245 | +2.61% |
 | 2026-09-06T15:30 | ZKPUSDT | bottom | 0.0471 | 0.0476 | +1.06% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
