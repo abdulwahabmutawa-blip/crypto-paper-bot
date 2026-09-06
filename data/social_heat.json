@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-06T00:44:21+00:00",
+  "ts": "2026-09-06T00:49:58+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
@@ -23,7 +23,7 @@
       "ENA",
       "ASTER",
       "BNB",
-      "DOGE"
+      "LTC"
     ],
     "watcher": [
       "ARB",
@@ -58,23 +58,13 @@
       "long_short": 1.5
     },
     {
-      "symbol": "DOGE",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 3.08
-    },
-    {
       "symbol": "MARSCOIN",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": 0.000318,
+      "funding": 0.000333,
       "long_short": 0.67
     },
     {
@@ -84,7 +74,7 @@
         "coingecko",
         "watcher"
       ],
-      "funding": 2.2e-05,
+      "funding": 2.6e-05,
       "long_short": 0.43
     },
     {
@@ -101,7 +91,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.5e-05
+      "funding": 4.4e-05
     },
     {
       "symbol": "DASH",
@@ -112,12 +102,20 @@
       "funding": 0.0001
     },
     {
+      "symbol": "DOGE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "ENA",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 3.7e-05
+      "funding": 4.3e-05
     },
     {
       "symbol": "FIRO",
@@ -135,12 +133,20 @@
       "funding": 0.0001
     },
     {
+      "symbol": "LTC",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "NEAR",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 2.6e-05
+      "funding": 2.7e-05
     },
     {
       "symbol": "PENGU",
@@ -164,7 +170,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -2.8e-05
+      "funding": -2.4e-05
     },
     {
       "symbol": "XRP",
