@@ -1,6 +1,6 @@
 # Scalper — hyper-aggressive small-wins PAPER bot
 
-updated 2026-09-06T20:01:50+00:00 · runs 114 · equity **$1,024.06** (+2.41%) · cash $0.00 · open 10/10 · round trips 34
+updated 2026-09-06T20:18:53+00:00 · runs 115 · equity **$1,024.39** (+2.44%) · cash $0.00 · open 10/10 · round trips 34
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -34,14 +34,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-06T04:12 | MITOUSDT | bottom | 0.01721 | 0.01704 | -0.99% |
-| 2026-09-06T06:51 | XPLUSDT | bottom | 0.09213 | 0.09059 | -1.67% |
+| 2026-09-06T06:51 | XPLUSDT | bottom | 0.09213 | 0.09017 | -2.13% |
 | 2026-09-06T08:22 | TRUMPUSDT | bottom | 2.343 | 2.318 | -1.07% |
-| 2026-09-06T12:59 | BNBUSDT | bottom | 755.57 | 749.58 | -0.79% |
-| 2026-09-06T12:59 | DEXEUSDT | bottom | 1.975 | 1.976 | +0.05% |
-| 2026-09-06T13:19 | ZKCUSDT | bottom | 0.049 | 0.0486 | -0.82% |
-| 2026-09-06T13:52 | MUBARAKUSDT | bottom | 0.03126 | 0.0315 | +0.77% |
-| 2026-09-06T14:41 | CAKEUSDT | bottom | 2.166 | 2.192 | +1.20% |
-| 2026-09-06T15:30 | ZKPUSDT | bottom | 0.0471 | 0.0476 | +1.06% |
-| 2026-09-06T19:08 | ACEUSDT | bottom | 0.1663 | 0.1675 | +0.72% |
+| 2026-09-06T12:59 | BNBUSDT | bottom | 755.57 | 749.38 | -0.82% |
+| 2026-09-06T12:59 | DEXEUSDT | bottom | 1.975 | 1.978 | +0.15% |
+| 2026-09-06T13:19 | ZKCUSDT | bottom | 0.049 | 0.0488 | -0.41% |
+| 2026-09-06T13:52 | MUBARAKUSDT | bottom | 0.03126 | 0.03147 | +0.67% |
+| 2026-09-06T14:41 | CAKEUSDT | bottom | 2.166 | 2.194 | +1.29% |
+| 2026-09-06T15:30 | ZKPUSDT | bottom | 0.0471 | 0.0479 | +1.70% |
+| 2026-09-06T19:08 | ACEUSDT | bottom | 0.1663 | 0.167 | +0.42% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
