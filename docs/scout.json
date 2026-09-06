@@ -1,8 +1,39 @@
 {
-  "ts": "2026-09-06T16:40:34+00:00",
-  "scanned": 101,
+  "ts": "2026-09-06T16:46:08+00:00",
+  "scanned": 100,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "INJUSDT",
+      "signal": "ignition",
+      "score": 0.6207,
+      "raw_score": 0.6575,
+      "weight": 0.944,
+      "price": 5.172,
+      "why": "trades 5.1x and volume 7.0x the prior 4h, 77% taker-buy, $101,308 burst \u2014 while price has only moved +0.7%",
+      "chg_24h": 0.0542,
+      "vol_surge": 7.05,
+      "chg_1h": 0.0068,
+      "market_surge": 3.92,
+      "actionable": false,
+      "status": "benched \u2014 hit 46%, mean +0.51% over last 546 at 24h: not beating 4x the round trip"
+    },
+    {
+      "symbol": "UNIUSDT",
+      "signal": "heat",
+      "score": 0.5208,
+      "raw_score": 0.6,
+      "weight": 0.868,
+      "price": 7.258,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.006% \u00b7 L/S 1.58",
+      "chg_24h": 0.0909,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
+      "actionable": false,
+      "status": "benched \u2014 hit 27%, mean -2.79% over last 30 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 46%, mean +0.51% over last 546 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 40%, mean +0.40% over last 203 at 24h: not beating 4x the round trip",
@@ -11,7 +42,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 23,
+    "count": 22,
     "baseline": 18.0,
     "wave": false
   },
