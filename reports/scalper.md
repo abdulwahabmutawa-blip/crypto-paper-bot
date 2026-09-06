@@ -1,6 +1,6 @@
 # Scalper — hyper-aggressive small-wins PAPER bot
 
-updated 2026-09-06T13:00:58+00:00 · runs 87 · equity **$1,027.78** (+2.78%) · cash $0.00 · open 10/10 · round trips 27
+updated 2026-09-06T13:04:48+00:00 · runs 88 · equity **$1,028.71** (+2.87%) · cash $0.00 · open 10/10 · round trips 27
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -33,15 +33,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-05T15:25 | BMTUSDT | bottom | 0.01795 | 0.01798 | +0.17% |
-| 2026-09-05T17:17 | ONGUSDT | bottom | 0.09469 | 0.09424 | -0.48% |
-| 2026-09-06T04:12 | MITOUSDT | bottom | 0.01721 | 0.01717 | -0.23% |
-| 2026-09-06T06:51 | XPLUSDT | bottom | 0.09213 | 0.0909 | -1.34% |
-| 2026-09-06T07:09 | ACEUSDT | bottom | 0.1731 | 0.1688 | -2.48% |
-| 2026-09-06T08:22 | TRUMPUSDT | bottom | 2.343 | 2.344 | +0.04% |
-| 2026-09-06T12:59 | 币安人生USDT | bottom | 0.5192 | 0.5203 | +0.21% |
-| 2026-09-06T12:59 | BNBUSDT | bottom | 755.57 | 755.51 | -0.01% |
-| 2026-09-06T12:59 | TWTUSDT | bottom | 0.6063 | 0.5996 | -1.11% |
-| 2026-09-06T12:59 | DEXEUSDT | bottom | 1.975 | 1.977 | +0.10% |
+| 2026-09-05T15:25 | BMTUSDT | bottom | 0.01795 | 0.018 | +0.28% |
+| 2026-09-05T17:17 | ONGUSDT | bottom | 0.09469 | 0.09441 | -0.30% |
+| 2026-09-06T04:12 | MITOUSDT | bottom | 0.01721 | 0.0172 | -0.06% |
+| 2026-09-06T06:51 | XPLUSDT | bottom | 0.09213 | 0.09115 | -1.06% |
+| 2026-09-06T07:09 | ACEUSDT | bottom | 0.1731 | 0.1686 | -2.60% |
+| 2026-09-06T08:22 | TRUMPUSDT | bottom | 2.343 | 2.342 | -0.04% |
+| 2026-09-06T12:59 | 币安人生USDT | bottom | 0.5192 | 0.5219 | +0.52% |
+| 2026-09-06T12:59 | BNBUSDT | bottom | 755.57 | 754.93 | -0.08% |
+| 2026-09-06T12:59 | TWTUSDT | bottom | 0.6063 | 0.5995 | -1.12% |
+| 2026-09-06T12:59 | DEXEUSDT | bottom | 1.975 | 1.98 | +0.25% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
