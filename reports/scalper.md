@@ -1,6 +1,6 @@
 # Scalper — hyper-aggressive small-wins PAPER bot
 
-updated 2026-09-06T17:27:43+00:00 · runs 104 · equity **$1,020.35** (+2.04%) · cash $0.00 · open 10/10 · round trips 33
+updated 2026-09-06T17:43:58+00:00 · runs 105 · equity **$1,022.15** (+2.21%) · cash $0.00 · open 10/10 · round trips 33
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -33,15 +33,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-06T04:12 | MITOUSDT | bottom | 0.01721 | 0.01703 | -1.05% |
-| 2026-09-06T06:51 | XPLUSDT | bottom | 0.09213 | 0.09102 | -1.20% |
-| 2026-09-06T08:22 | TRUMPUSDT | bottom | 2.343 | 2.312 | -1.32% |
-| 2026-09-06T12:59 | BNBUSDT | bottom | 755.57 | 747.53 | -1.06% |
-| 2026-09-06T12:59 | DEXEUSDT | bottom | 1.975 | 1.981 | +0.30% |
-| 2026-09-06T13:19 | ZKCUSDT | bottom | 0.049 | 0.0486 | -0.82% |
-| 2026-09-06T13:52 | MUBARAKUSDT | bottom | 0.03126 | 0.03119 | -0.22% |
+| 2026-09-06T04:12 | MITOUSDT | bottom | 0.01721 | 0.01707 | -0.81% |
+| 2026-09-06T06:51 | XPLUSDT | bottom | 0.09213 | 0.09106 | -1.16% |
+| 2026-09-06T08:22 | TRUMPUSDT | bottom | 2.343 | 2.308 | -1.49% |
+| 2026-09-06T12:59 | BNBUSDT | bottom | 755.57 | 747.84 | -1.02% |
+| 2026-09-06T12:59 | DEXEUSDT | bottom | 1.975 | 1.984 | +0.46% |
+| 2026-09-06T13:19 | ZKCUSDT | bottom | 0.049 | 0.0487 | -0.61% |
+| 2026-09-06T13:52 | MUBARAKUSDT | bottom | 0.03126 | 0.03144 | +0.58% |
 | 2026-09-06T14:41 | CAKEUSDT | bottom | 2.166 | 2.18 | +0.65% |
-| 2026-09-06T15:13 | BICOUSDT | bottom | 0.02188 | 0.02213 | +1.14% |
-| 2026-09-06T15:30 | ZKPUSDT | bottom | 0.0471 | 0.0476 | +1.06% |
+| 2026-09-06T15:13 | BICOUSDT | bottom | 0.02188 | 0.02219 | +1.42% |
+| 2026-09-06T15:30 | ZKPUSDT | bottom | 0.0471 | 0.0477 | +1.27% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
