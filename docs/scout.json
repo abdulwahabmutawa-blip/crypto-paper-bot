@@ -1,24 +1,8 @@
 {
-  "ts": "2026-09-06T00:27:46+00:00",
-  "scanned": 97,
+  "ts": "2026-09-06T00:33:37+00:00",
+  "scanned": 96,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "INJUSDT",
-      "signal": "ignition",
-      "score": 0.7892,
-      "raw_score": 0.8334,
-      "weight": 0.947,
-      "price": 5.019,
-      "why": "trades 8.7x and volume 14.2x the prior 4h, 74% taker-buy, $87,290 burst \u2014 while price has only moved +1.9%",
-      "chg_24h": 0.0452,
-      "vol_surge": 14.19,
-      "chg_1h": 0.0191,
-      "market_surge": 4.0,
-      "actionable": false,
-      "status": "benched \u2014 hit 45%, mean +0.33% over last 538 at 24h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 45%, mean +0.33% over last 538 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 39%, mean +0.55% over last 201 at 24h: not beating 4x the round trip",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 25,
+    "count": 23,
     "baseline": 15.0,
     "wave": false
   },
@@ -54,7 +38,7 @@
       "median_ret_4h": 0.00015,
       "both_halves_4h": false,
       "days_4h": 13,
-      "mean_x_4h": 0.0035,
+      "mean_x_4h": 0.00345,
       "days_x_4h": 3,
       "avg_win_4h": 0.01744,
       "avg_loss_4h": -0.01747,
