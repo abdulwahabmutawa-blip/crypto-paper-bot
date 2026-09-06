@@ -1,6 +1,6 @@
 # Scalper — hyper-aggressive small-wins PAPER bot
 
-updated 2026-09-06T07:16:25+00:00 · runs 66 · equity **$1,028.89** (+2.89%) · cash $0.00 · open 10/10 · round trips 20
+updated 2026-09-06T07:34:55+00:00 · runs 67 · equity **$1,029.56** (+2.96%) · cash $0.00 · open 10/10 · round trips 20
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -35,13 +35,13 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 |---|---|---|---|---|---|
 | 2026-09-05T12:33 | UUSDT | bottom | 0.9993 | 0.9994 | +0.01% |
 | 2026-09-05T12:33 | BFUSDUSDT | bottom | 1 | 1 | +0.00% |
-| 2026-09-05T15:25 | BMTUSDT | bottom | 0.01795 | 0.01812 | +0.95% |
-| 2026-09-05T15:25 | EGLDUSDT | bottom | 4.642 | 4.572 | -1.51% |
-| 2026-09-05T17:17 | ONGUSDT | bottom | 0.09469 | 0.09445 | -0.25% |
-| 2026-09-06T04:12 | MITOUSDT | bottom | 0.01721 | 0.01697 | -1.39% |
-| 2026-09-06T06:34 | BROCCOLI714USDT | bottom | 0.01986 | 0.01976 | -0.50% |
-| 2026-09-06T06:34 | MUBARAKUSDT | bottom | 0.03124 | 0.03164 | +1.28% |
-| 2026-09-06T06:51 | XPLUSDT | bottom | 0.09213 | 0.09163 | -0.54% |
-| 2026-09-06T07:09 | ACEUSDT | bottom | 0.1731 | 0.1723 | -0.46% |
+| 2026-09-05T15:25 | BMTUSDT | bottom | 0.01795 | 0.01817 | +1.23% |
+| 2026-09-05T15:25 | EGLDUSDT | bottom | 4.642 | 4.596 | -0.99% |
+| 2026-09-05T17:17 | ONGUSDT | bottom | 0.09469 | 0.0943 | -0.41% |
+| 2026-09-06T04:12 | MITOUSDT | bottom | 0.01721 | 0.01696 | -1.45% |
+| 2026-09-06T06:34 | BROCCOLI714USDT | bottom | 0.01986 | 0.01977 | -0.45% |
+| 2026-09-06T06:34 | MUBARAKUSDT | bottom | 0.03124 | 0.0315 | +0.83% |
+| 2026-09-06T06:51 | XPLUSDT | bottom | 0.09213 | 0.09214 | +0.01% |
+| 2026-09-06T07:09 | ACEUSDT | bottom | 0.1731 | 0.1722 | -0.52% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
