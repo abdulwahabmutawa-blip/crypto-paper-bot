@@ -1,24 +1,8 @@
 {
-  "ts": "2026-09-06T09:44:41+00:00",
-  "scanned": 99,
+  "ts": "2026-09-06T09:49:57+00:00",
+  "scanned": 100,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "EPICUSDT",
-      "signal": "breakout",
-      "score": 0.6003,
-      "raw_score": 0.6604,
-      "weight": 0.909,
-      "price": 0.4763,
-      "why": "trades 6.1x, volume 6.1x, 70% taker-buy, +3.2% in an hour, at 94% of its 24h range",
-      "chg_24h": 0.2437,
-      "vol_surge": 6.1,
-      "chg_1h": 0.0321,
-      "market_surge": 3.48,
-      "actionable": false,
-      "status": "benched \u2014 hit 42%, mean +0.71% over last 216 at 24h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 45%, mean +0.53% over last 548 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 42%, mean +0.71% over last 216 at 24h: not beating 4x the round trip",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 16,
+    "count": 17,
     "baseline": 17.0,
     "wave": false
   },
@@ -67,7 +51,7 @@
       "median_ret_24h": -0.00196,
       "both_halves_24h": true,
       "days_24h": 12,
-      "mean_x_24h": 0.02683,
+      "mean_x_24h": 0.02651,
       "days_x_24h": 3,
       "avg_win_24h": 0.05033,
       "avg_loss_24h": -0.03502,
