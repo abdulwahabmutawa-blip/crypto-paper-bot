@@ -1,48 +1,17 @@
 {
-  "ts": "2026-09-06T06:57:46+00:00",
-  "scanned": 99,
+  "ts": "2026-09-06T07:03:26+00:00",
+  "scanned": 100,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "NEARUSDT",
-      "signal": "ignition",
-      "score": 0.6225,
-      "raw_score": 0.6532,
-      "weight": 0.953,
-      "price": 2.264,
-      "why": "trades 6.1x and volume 8.5x the prior 4h, 62% taker-buy, $995,317 burst \u2014 while price has only moved +2.3%",
-      "chg_24h": -0.0074,
-      "vol_surge": 8.53,
-      "chg_1h": 0.0226,
-      "market_surge": 0.82,
-      "actionable": false,
-      "status": "benched \u2014 hit 45%, mean +0.42% over last 545 at 24h: not beating 4x the round trip"
-    },
-    {
-      "symbol": "NEARUSDT",
-      "signal": "breakout",
-      "score": 0.6098,
-      "raw_score": 0.6709,
-      "weight": 0.909,
-      "price": 2.264,
-      "why": "trades 6.1x, volume 8.5x, 62% taker-buy, +2.3% in an hour, at 81% of its 24h range",
-      "chg_24h": -0.0074,
-      "vol_surge": 8.53,
-      "chg_1h": 0.0226,
-      "market_surge": 0.82,
-      "actionable": false,
-      "status": "benched \u2014 hit 41%, mean +0.69% over last 214 at 24h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
-    "ignition": "benched \u2014 hit 45%, mean +0.42% over last 545 at 24h: not beating 4x the round trip",
+    "ignition": "benched \u2014 hit 45%, mean +0.51% over last 549 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 41%, mean +0.69% over last 214 at 24h: not beating 4x the round trip",
     "reversion": "probation \u2014 7/12 resolved 24h samples under ruleset 3",
     "heat": "benched \u2014 hit 29%, mean -2.48% over last 31 at 24h: not beating 4x the round trip",
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 18,
+    "count": 20,
     "baseline": 17.0,
     "wave": false
   },
@@ -74,19 +43,19 @@
       "avg_win_4h": 0.01776,
       "avg_loss_4h": -0.01684,
       "payoff_4h": 1.055,
-      "span_h_24h": 311.5,
+      "span_h_24h": 311.6,
       "n_eff_24h": 12.98,
-      "n_24h": 545,
-      "hit_rate_24h": 0.45,
-      "mean_ret_24h": 0.00417,
-      "median_ret_24h": -0.00338,
+      "n_24h": 549,
+      "hit_rate_24h": 0.454,
+      "mean_ret_24h": 0.00507,
+      "median_ret_24h": -0.00271,
       "both_halves_24h": true,
       "days_24h": 12,
-      "mean_x_24h": 0.02524,
+      "mean_x_24h": 0.02834,
       "days_x_24h": 3,
-      "avg_win_24h": 0.04872,
+      "avg_win_24h": 0.04996,
       "avg_loss_24h": -0.03496,
-      "payoff_24h": 1.394
+      "payoff_24h": 1.429
     },
     "breakout": {
       "span_h_1h": 333.7,
