@@ -1,22 +1,22 @@
 {
-  "ts": "2026-09-06T22:52:27+00:00",
-  "scanned": 93,
+  "ts": "2026-09-06T22:57:48+00:00",
+  "scanned": 96,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "INJUSDT",
-      "signal": "ignition",
-      "score": 0.8484,
-      "raw_score": 0.8949,
-      "weight": 0.948,
-      "price": 5.183,
-      "why": "trades 11.0x and volume 16.9x the prior 4h, 63% taker-buy, $199,983 burst \u2014 while price has only moved -0.5%",
-      "chg_24h": 0.0562,
-      "vol_surge": 16.89,
-      "chg_1h": -0.005,
-      "market_surge": 6.89,
+      "symbol": "ZECUSDT",
+      "signal": "heat",
+      "score": 0.5166,
+      "raw_score": 0.6,
+      "weight": 0.861,
+      "price": 1231.43,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.009% \u00b7 L/S 0.37",
+      "chg_24h": 0.2075,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
       "actionable": false,
-      "status": "benched \u2014 hit 46%, mean +0.48% over last 543 at 24h: not beating 4x the round trip"
+      "status": "benched \u2014 hit 31%, mean -2.04% over last 29 at 24h: not beating 4x the round trip"
     }
   ],
   "gate": {
@@ -27,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 17,
+    "count": 16,
     "baseline": 18.0,
     "wave": false
   },
@@ -54,7 +54,7 @@
       "median_ret_4h": 0.0,
       "both_halves_4h": false,
       "days_4h": 14,
-      "mean_x_4h": 0.0027,
+      "mean_x_4h": 0.00267,
       "days_x_4h": 4,
       "avg_win_4h": 0.01801,
       "avg_loss_4h": -0.01712,
