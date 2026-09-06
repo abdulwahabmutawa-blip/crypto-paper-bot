@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-06T08:20:06+00:00",
+  "ts": "2026-09-06T08:25:41+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
@@ -7,11 +7,10 @@
       "ARB",
       "PENGU",
       "RAY",
+      "SUI",
       "ETH",
-      "ONDO",
-      "LIT",
-      "NEAR",
-      "MARSCOIN"
+      "BTC",
+      "LIT"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,7 +21,7 @@
       "UNI",
       "ENA",
       "DOGE",
-      "PROM",
+      "TUT",
       "CAKE"
     ],
     "watcher": [
@@ -52,18 +51,8 @@
         "movers",
         "watcher"
       ],
-      "funding": 6.5e-05,
+      "funding": 6.4e-05,
       "long_short": 0.41
-    },
-    {
-      "symbol": "MARSCOIN",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.000311,
-      "long_short": 0.65
     },
     {
       "symbol": "UNI",
@@ -74,6 +63,14 @@
       ],
       "funding": 0.0001,
       "long_short": 1.63
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 1.2e-05
     },
     {
       "symbol": "CAKE",
@@ -105,7 +102,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.5e-05
+      "funding": 6.1e-05
     },
     {
       "symbol": "FIRO",
@@ -123,20 +120,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "NEAR",
+      "symbol": "MARSCOIN",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
-      "funding": 1.5e-05
-    },
-    {
-      "symbol": "ONDO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": 0.000314
     },
     {
       "symbol": "PENGU",
@@ -147,20 +136,28 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PROM",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "RAY",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 0.0
+    },
+    {
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "TUT",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -0.000217
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
