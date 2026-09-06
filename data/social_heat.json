@@ -1,17 +1,16 @@
 {
-  "ts": "2026-09-06T10:32:12+00:00",
+  "ts": "2026-09-06T10:38:11+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
-      "ARB",
       "ZEC",
+      "ARB",
       "PENGU",
       "SOL",
-      "BTC",
-      "DASH",
       "ENA",
-      "UNI",
-      "NEAR"
+      "BTC",
+      "NEAR",
+      "ONDO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,11 +18,11 @@
       "ARB",
       "ZEC",
       "UNI",
-      "ENA",
       "NEAR",
-      "PROM",
+      "ENA",
       "DOGE",
-      "LINK"
+      "LINK",
+      "PROM"
     ],
     "watcher": [
       "ARB",
@@ -45,17 +44,6 @@
       "long_short": 1.09
     },
     {
-      "symbol": "UNI",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.6
-    },
-    {
       "symbol": "ZEC",
       "surfaces": 3,
       "sources": [
@@ -63,7 +51,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 7.2e-05,
+      "funding": 7.4e-05,
       "long_short": 0.39
     },
     {
@@ -73,7 +61,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 4.9e-05,
+      "funding": 4.4e-05,
       "long_short": 1.61
     },
     {
@@ -83,8 +71,18 @@
         "coingecko",
         "movers"
       ],
-      "funding": 1.1e-05,
+      "funding": 1.4e-05,
       "long_short": 2.2
+    },
+    {
+      "symbol": "UNI",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.6
     },
     {
       "symbol": "BTC",
@@ -92,15 +90,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.5e-05
-    },
-    {
-      "symbol": "DASH",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": 3.7e-05
     },
     {
       "symbol": "DOGE",
@@ -124,6 +114,14 @@
         "movers"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "ONDO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "PENGU",
