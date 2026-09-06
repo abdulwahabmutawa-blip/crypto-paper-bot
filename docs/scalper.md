@@ -1,6 +1,6 @@
 # Scalper — hyper-aggressive small-wins PAPER bot
 
-updated 2026-09-06T08:23:42+00:00 · runs 70 · equity **$1,034.84** (+3.48%) · cash $0.00 · open 10/10 · round trips 22
+updated 2026-09-06T08:39:58+00:00 · runs 71 · equity **$1,035.70** (+3.57%) · cash $0.00 · open 10/10 · round trips 22
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -34,14 +34,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-05T12:33 | UUSDT | bottom | 0.9993 | 0.9994 | +0.01% |
-| 2026-09-05T12:33 | BFUSDUSDT | bottom | 1 | 1 | +0.00% |
-| 2026-09-05T15:25 | BMTUSDT | bottom | 0.01795 | 0.01799 | +0.22% |
-| 2026-09-05T15:25 | EGLDUSDT | bottom | 4.642 | 4.59 | -1.12% |
-| 2026-09-05T17:17 | ONGUSDT | bottom | 0.09469 | 0.09439 | -0.32% |
-| 2026-09-06T04:12 | MITOUSDT | bottom | 0.01721 | 0.01706 | -0.87% |
-| 2026-09-06T06:34 | BROCCOLI714USDT | bottom | 0.01986 | 0.01984 | -0.10% |
-| 2026-09-06T06:51 | XPLUSDT | bottom | 0.09213 | 0.09296 | +0.90% |
-| 2026-09-06T07:09 | ACEUSDT | bottom | 0.1731 | 0.171 | -1.21% |
-| 2026-09-06T08:22 | TRUMPUSDT | bottom | 2.343 | 2.342 | -0.04% |
+| 2026-09-05T12:33 | BFUSDUSDT | bottom | 1 | 1.0001 | +0.01% |
+| 2026-09-05T15:25 | BMTUSDT | bottom | 0.01795 | 0.018 | +0.28% |
+| 2026-09-05T15:25 | EGLDUSDT | bottom | 4.642 | 4.6 | -0.90% |
+| 2026-09-05T17:17 | ONGUSDT | bottom | 0.09469 | 0.09518 | +0.52% |
+| 2026-09-06T04:12 | MITOUSDT | bottom | 0.01721 | 0.01694 | -1.57% |
+| 2026-09-06T06:34 | BROCCOLI714USDT | bottom | 0.01986 | 0.01979 | -0.35% |
+| 2026-09-06T06:51 | XPLUSDT | bottom | 0.09213 | 0.09344 | +1.42% |
+| 2026-09-06T07:09 | ACEUSDT | bottom | 0.1731 | 0.1714 | -0.98% |
+| 2026-09-06T08:22 | TRUMPUSDT | bottom | 2.343 | 2.341 | -0.09% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
