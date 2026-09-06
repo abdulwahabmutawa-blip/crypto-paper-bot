@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-06T20:00:31+00:00",
+  "ts": "2026-09-06T20:05:41+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
@@ -7,19 +7,20 @@
       "TAO",
       "ARB",
       "PENGU",
+      "DASH",
       "RAY"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "RAY",
-      "ARB",
       "ZEC",
+      "ARB",
       "TAO",
       "NEAR",
       "ENA",
-      "DASH",
-      "PROM"
+      "PROM",
+      "DASH"
     ],
     "watcher": [
       "RAY",
@@ -38,8 +39,8 @@
         "movers",
         "watcher"
       ],
-      "funding": 7.6e-05,
-      "long_short": 1.03
+      "funding": 8e-05,
+      "long_short": 1.02
     },
     {
       "symbol": "RAY",
@@ -60,7 +61,17 @@
         "watcher"
       ],
       "funding": 0.0001,
-      "long_short": 0.37
+      "long_short": 0.36
+    },
+    {
+      "symbol": "DASH",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 2.8e-05,
+      "long_short": 1.37
     },
     {
       "symbol": "TAO",
@@ -70,15 +81,7 @@
         "movers"
       ],
       "funding": 5e-05,
-      "long_short": 1.54
-    },
-    {
-      "symbol": "DASH",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 3.1e-05
+      "long_short": 1.59
     },
     {
       "symbol": "ENA",
@@ -101,7 +104,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 8.5e-05
+      "funding": 8.7e-05
     },
     {
       "symbol": "PENGU",
@@ -125,7 +128,7 @@
       "sources": [
         "watcher"
       ],
-      "funding": 8.2e-05
+      "funding": 8.4e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
