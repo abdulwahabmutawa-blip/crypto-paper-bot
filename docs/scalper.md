@@ -1,19 +1,20 @@
 # Scalper — hyper-aggressive small-wins PAPER bot
 
-updated 2026-09-06T18:53:17+00:00 · runs 110 · equity **$1,023.67** (+2.37%) · cash $0.00 · open 10/10 · round trips 33
+updated 2026-09-06T19:10:36+00:00 · runs 111 · equity **$1,024.44** (+2.44%) · cash $0.00 · open 10/10 · round trips 34
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
-- hit 64% (break-even 54%) · mean +0.68%/trade · realized $+23.21 · worst day $+5.57 · trades/day 16.5
+- hit 65% (break-even 54%) · mean +0.74%/trade · realized $+25.86 · worst day $+8.22 · trades/day 17.0
 
 | shape | n | hit | mean | target% | stop% | time% |
 |---|---|---|---|---|---|---|
 | surge | 8 | 75% | +1.25% | 75% | 25% | 0% |
-| bottom | 25 | 60% | +0.50% | 56% | 32% | 12% |
+| bottom | 26 | 62% | +0.59% | 58% | 31% | 12% |
 
 ## Last 15 round trips
 | exit (UTC) | coin | shape | how | hours | net | P&L |
 |---|---|---|---|---|---|---|
+| 2026-09-06T19:08 | BICOUSDT | bottom | TARGET | 3.8 | +2.75% | $+2.64 |
 | 2026-09-06T15:30 | BMTUSDT | bottom | TIME | 24.0 | +0.53% | $+0.54 |
 | 2026-09-06T15:13 | ZAMAUSDT | surge | STOP | 0.2 | -3.25% | $-3.23 |
 | 2026-09-06T14:57 | ONGUSDT | bottom | STOP | 21.2 | -3.25% | $-3.34 |
@@ -28,20 +29,19 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | 2026-09-06T08:22 | NOMUSDT | bottom | TARGET | 0.0 | +2.75% | $+3.05 |
 | 2026-09-06T08:06 | MUBARAKUSDT | bottom | TARGET | 1.2 | +2.75% | $+2.97 |
 | 2026-09-06T07:09 | BICOUSDT | bottom | STOP | 9.2 | -3.25% | $-3.34 |
-| 2026-09-06T06:51 | ZAMAUSDT | bottom | TARGET | 12.0 | +2.75% | $+2.83 |
 
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-06T04:12 | MITOUSDT | bottom | 0.01721 | 0.01708 | -0.76% |
-| 2026-09-06T06:51 | XPLUSDT | bottom | 0.09213 | 0.09121 | -1.00% |
-| 2026-09-06T08:22 | TRUMPUSDT | bottom | 2.343 | 2.307 | -1.54% |
-| 2026-09-06T12:59 | BNBUSDT | bottom | 755.57 | 749.65 | -0.78% |
+| 2026-09-06T04:12 | MITOUSDT | bottom | 0.01721 | 0.0171 | -0.64% |
+| 2026-09-06T06:51 | XPLUSDT | bottom | 0.09213 | 0.09122 | -0.99% |
+| 2026-09-06T08:22 | TRUMPUSDT | bottom | 2.343 | 2.302 | -1.75% |
+| 2026-09-06T12:59 | BNBUSDT | bottom | 755.57 | 749.99 | -0.74% |
 | 2026-09-06T12:59 | DEXEUSDT | bottom | 1.975 | 1.979 | +0.20% |
 | 2026-09-06T13:19 | ZKCUSDT | bottom | 0.049 | 0.0486 | -0.82% |
-| 2026-09-06T13:52 | MUBARAKUSDT | bottom | 0.03126 | 0.03149 | +0.74% |
-| 2026-09-06T14:41 | CAKEUSDT | bottom | 2.166 | 2.19 | +1.11% |
-| 2026-09-06T15:13 | BICOUSDT | bottom | 0.02188 | 0.02245 | +2.61% |
+| 2026-09-06T13:52 | MUBARAKUSDT | bottom | 0.03126 | 0.03164 | +1.22% |
+| 2026-09-06T14:41 | CAKEUSDT | bottom | 2.166 | 2.189 | +1.06% |
 | 2026-09-06T15:30 | ZKPUSDT | bottom | 0.0471 | 0.0476 | +1.06% |
+| 2026-09-06T19:08 | ACEUSDT | bottom | 0.1663 | 0.1667 | +0.24% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
