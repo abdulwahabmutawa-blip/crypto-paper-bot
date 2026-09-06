@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-06T20:16:27+00:00",
-  "scanned": 95,
+  "ts": "2026-09-06T20:21:46+00:00",
+  "scanned": 96,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SAHARAUSDT",
+      "signal": "ignition",
+      "score": 0.627,
+      "raw_score": 0.6649,
+      "weight": 0.943,
+      "price": 0.00929,
+      "why": "trades 4.1x and volume 10.1x the prior 4h, 63% taker-buy, $78,458 burst \u2014 while price has only moved -0.2%",
+      "chg_24h": -0.0075,
+      "vol_surge": 10.09,
+      "chg_1h": -0.0021,
+      "market_surge": 0.33,
+      "actionable": false,
+      "status": "benched \u2014 hit 46%, mean +0.48% over last 549 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 46%, mean +0.48% over last 549 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 40%, mean +0.40% over last 203 at 24h: not beating 4x the round trip",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 14,
+    "count": 15,
     "baseline": 18.0,
     "wave": false
   },
@@ -66,7 +82,7 @@
       "median_ret_1h": -0.00139,
       "both_halves_1h": false,
       "days_1h": 14,
-      "mean_x_1h": -0.00038,
+      "mean_x_1h": -0.00034,
       "days_x_1h": 4,
       "avg_win_1h": 0.02071,
       "avg_loss_1h": -0.01816,
@@ -92,7 +108,7 @@
       "median_ret_24h": -0.01513,
       "both_halves_24h": true,
       "days_24h": 12,
-      "mean_x_24h": 0.01083,
+      "mean_x_24h": 0.01104,
       "days_x_24h": 3,
       "avg_win_24h": 0.0827,
       "avg_loss_24h": -0.04927,
