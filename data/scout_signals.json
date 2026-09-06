@@ -1,39 +1,8 @@
 {
-  "ts": "2026-09-06T10:00:09+00:00",
-  "scanned": 100,
+  "ts": "2026-09-06T10:05:38+00:00",
+  "scanned": 99,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ZROUSDT",
-      "signal": "ignition",
-      "score": 0.6813,
-      "raw_score": 0.7179,
-      "weight": 0.949,
-      "price": 1.076,
-      "why": "trades 4.2x and volume 13.7x the prior 4h, 85% taker-buy, $58,651 burst \u2014 while price has only moved +0.5%",
-      "chg_24h": 0.0218,
-      "vol_surge": 13.66,
-      "chg_1h": 0.0047,
-      "market_surge": 4.0,
-      "actionable": false,
-      "status": "benched \u2014 hit 45%, mean +0.53% over last 548 at 24h: not beating 4x the round trip"
-    },
-    {
-      "symbol": "ETHFIUSDT",
-      "signal": "ignition",
-      "score": 0.6032,
-      "raw_score": 0.6356,
-      "weight": 0.949,
-      "price": 0.5901,
-      "why": "trades 4.3x and volume 8.7x the prior 4h, 70% taker-buy, $61,947 burst \u2014 while price has only moved +1.2%",
-      "chg_24h": 0.0591,
-      "vol_surge": 8.75,
-      "chg_1h": 0.0124,
-      "market_surge": 5.15,
-      "actionable": false,
-      "status": "benched \u2014 hit 45%, mean +0.53% over last 548 at 24h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 45%, mean +0.53% over last 548 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 41%, mean +0.70% over last 215 at 24h: not beating 4x the round trip",
@@ -42,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 16,
+    "count": 17,
     "baseline": 17.0,
     "wave": false
   },
