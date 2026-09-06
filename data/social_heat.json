@@ -1,15 +1,13 @@
 {
-  "ts": "2026-09-06T09:22:25+00:00",
+  "ts": "2026-09-06T09:28:05+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
       "ARB",
       "ZEC",
-      "PENGU",
       "LIT",
+      "PENGU",
       "UNI",
-      "ZRO",
-      "XRP",
       "BTC"
     ],
     "reddit": [],
@@ -20,9 +18,9 @@
       "UNI",
       "ENA",
       "PROM",
-      "MARSCOIN",
       "NEAR",
-      "DOGE"
+      "DOGE",
+      "DASH"
     ],
     "watcher": [
       "ARB",
@@ -62,7 +60,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 7.7e-05,
+      "funding": 8e-05,
       "long_short": 0.42
     },
     {
@@ -71,7 +69,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.3e-05
+      "funding": 1.4e-05
+    },
+    {
+      "symbol": "DASH",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "DOGE",
@@ -105,20 +111,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "MARSCOIN",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.000241
-    },
-    {
       "symbol": "NEAR",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -3.8e-05
+      "funding": -3.7e-05
     },
     {
       "symbol": "PENGU",
@@ -133,22 +131,6 @@
       "surfaces": 1,
       "sources": [
         "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "XRP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 1.1e-05
-    },
-    {
-      "symbol": "ZRO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
       ],
       "funding": 5e-05
     }
