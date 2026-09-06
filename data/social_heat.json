@@ -1,16 +1,15 @@
 {
-  "ts": "2026-09-06T22:13:38+00:00",
+  "ts": "2026-09-06T22:19:31+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
       "ZEC",
       "TAO",
-      "NEAR",
       "RAY",
-      "ARB",
-      "PENGU",
       "DASH",
-      "LIT"
+      "NEAR",
+      "PUMP",
+      "ARB"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,8 +19,8 @@
       "NEAR",
       "TAO",
       "PROM",
-      "ARB",
       "LINK",
+      "ARB",
       "WLD"
     ],
     "watcher": [
@@ -41,7 +40,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 1.9e-05,
+      "funding": 1.7e-05,
       "long_short": 1.05
     },
     {
@@ -91,7 +90,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.2e-05
+      "funding": 3.9e-05
     },
     {
       "symbol": "FIRO",
@@ -109,26 +108,18 @@
       "funding": 0.0001
     },
     {
-      "symbol": "LIT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "PENGU",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "PROM",
       "surfaces": 1,
       "sources": [
         "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
       ],
       "funding": 5e-05
     },
@@ -138,7 +129,7 @@
       "sources": [
         "watcher"
       ],
-      "funding": 6.8e-05
+      "funding": 7.1e-05
     },
     {
       "symbol": "WLD",
@@ -146,7 +137,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 8.8e-05
+      "funding": 8.6e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
