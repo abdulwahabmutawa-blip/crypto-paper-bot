@@ -1,6 +1,6 @@
 # Scalper — hyper-aggressive small-wins PAPER bot
 
-updated 2026-09-06T10:17:52+00:00 · runs 77 · equity **$1,038.55** (+3.85%) · cash $0.00 · open 10/10 · round trips 23
+updated 2026-09-06T10:34:10+00:00 · runs 78 · equity **$1,036.75** (+3.67%) · cash $0.00 · open 10/10 · round trips 23
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -33,15 +33,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-05T12:33 | UUSDT | bottom | 0.9993 | 0.9994 | +0.01% |
-| 2026-09-05T12:33 | BFUSDUSDT | bottom | 1 | 1.0001 | +0.01% |
-| 2026-09-05T15:25 | BMTUSDT | bottom | 0.01795 | 0.01803 | +0.45% |
-| 2026-09-05T15:25 | EGLDUSDT | bottom | 4.642 | 4.548 | -2.02% |
-| 2026-09-05T17:17 | ONGUSDT | bottom | 0.09469 | 0.09588 | +1.26% |
-| 2026-09-06T04:12 | MITOUSDT | bottom | 0.01721 | 0.01705 | -0.93% |
-| 2026-09-06T06:51 | XPLUSDT | bottom | 0.09213 | 0.09216 | +0.03% |
-| 2026-09-06T07:09 | ACEUSDT | bottom | 0.1731 | 0.1708 | -1.33% |
-| 2026-09-06T08:22 | TRUMPUSDT | bottom | 2.343 | 2.359 | +0.68% |
-| 2026-09-06T10:16 | 1000CATUSDT | bottom | 0.00226 | 0.002259 | -0.04% |
+| 2026-09-05T12:33 | UUSDT | bottom | 0.9993 | 0.9993 | +0.00% |
+| 2026-09-05T12:33 | BFUSDUSDT | bottom | 1 | 1 | +0.00% |
+| 2026-09-05T15:25 | BMTUSDT | bottom | 0.01795 | 0.01802 | +0.39% |
+| 2026-09-05T15:25 | EGLDUSDT | bottom | 4.642 | 4.557 | -1.83% |
+| 2026-09-05T17:17 | ONGUSDT | bottom | 0.09469 | 0.09528 | +0.62% |
+| 2026-09-06T04:12 | MITOUSDT | bottom | 0.01721 | 0.01709 | -0.70% |
+| 2026-09-06T06:51 | XPLUSDT | bottom | 0.09213 | 0.09182 | -0.34% |
+| 2026-09-06T07:09 | ACEUSDT | bottom | 0.1731 | 0.1703 | -1.62% |
+| 2026-09-06T08:22 | TRUMPUSDT | bottom | 2.343 | 2.357 | +0.60% |
+| 2026-09-06T10:16 | 1000CATUSDT | bottom | 0.00226 | 0.002244 | -0.71% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
