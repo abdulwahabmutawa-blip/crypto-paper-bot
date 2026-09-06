@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-06T19:05:20+00:00",
+  "ts": "2026-09-06T19:11:03+00:00",
   "scanned": 96,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ROSEUSDT",
+      "signal": "breakout",
+      "score": 0.6274,
+      "raw_score": 0.7033,
+      "weight": 0.892,
+      "price": 0.00776,
+      "why": "trades 11.7x, volume 5.6x, 67% taker-buy, +3.1% in an hour, at 97% of its 24h range",
+      "chg_24h": 0.1528,
+      "vol_surge": 5.55,
+      "chg_1h": 0.0305,
+      "market_surge": 0.0,
+      "actionable": false,
+      "status": "benched \u2014 hit 40%, mean +0.40% over last 201 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 46%, mean +0.54% over last 550 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 40%, mean +0.40% over last 201 at 24h: not beating 4x the round trip",
@@ -92,7 +108,7 @@
       "median_ret_24h": -0.01561,
       "both_halves_24h": true,
       "days_24h": 12,
-      "mean_x_24h": 0.01095,
+      "mean_x_24h": 0.01075,
       "days_x_24h": 3,
       "avg_win_24h": 0.08464,
       "avg_loss_24h": -0.04927,
