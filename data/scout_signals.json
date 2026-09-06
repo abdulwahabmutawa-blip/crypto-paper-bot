@@ -1,8 +1,39 @@
 {
-  "ts": "2026-09-06T20:43:38+00:00",
+  "ts": "2026-09-06T20:49:36+00:00",
   "scanned": 93,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "FORMUSDT",
+      "signal": "ignition",
+      "score": 0.8352,
+      "raw_score": 0.8866,
+      "weight": 0.942,
+      "price": 0.2683,
+      "why": "trades 99.1x and volume 50.5x the prior 4h, 64% taker-buy, $164,279 burst \u2014 while price has only moved +0.9%",
+      "chg_24h": -0.0487,
+      "vol_surge": 50.5,
+      "chg_1h": 0.0094,
+      "market_surge": 11.51,
+      "actionable": false,
+      "status": "benched \u2014 hit 46%, mean +0.48% over last 549 at 24h: not beating 4x the round trip"
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "signal": "breakout",
+      "score": 0.6847,
+      "raw_score": 0.7676,
+      "weight": 0.892,
+      "price": 7.821,
+      "why": "trades 14.0x, volume 20.3x, 77% taker-buy, +2.1% in an hour, at 108% of its 24h range",
+      "chg_24h": 0.0257,
+      "vol_surge": 20.26,
+      "chg_1h": 0.0206,
+      "market_surge": 8.15,
+      "actionable": false,
+      "status": "benched \u2014 hit 40%, mean +0.40% over last 203 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 46%, mean +0.48% over last 549 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 40%, mean +0.40% over last 203 at 24h: not beating 4x the round trip",
@@ -11,7 +42,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 15,
+    "count": 16,
     "baseline": 18.0,
     "wave": false
   },
@@ -38,7 +69,7 @@
       "median_ret_4h": -0.00019,
       "both_halves_4h": false,
       "days_4h": 14,
-      "mean_x_4h": 0.00204,
+      "mean_x_4h": 0.00205,
       "days_x_4h": 4,
       "avg_win_4h": 0.01771,
       "avg_loss_4h": -0.01715,
@@ -154,7 +185,7 @@
       "median_ret_4h": -0.00738,
       "both_halves_4h": false,
       "days_4h": 13,
-      "mean_x_4h": 0.00463,
+      "mean_x_4h": 0.00447,
       "days_x_4h": 4,
       "avg_win_4h": 0.03552,
       "avg_loss_4h": -0.05859,
