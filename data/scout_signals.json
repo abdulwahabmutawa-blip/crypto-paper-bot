@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-06T16:57:25+00:00",
-  "scanned": 98,
+  "ts": "2026-09-06T17:02:48+00:00",
+  "scanned": 100,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "FIDAUSDT",
+      "signal": "ignition",
+      "score": 0.5859,
+      "raw_score": 0.6206,
+      "weight": 0.944,
+      "price": 0.02081,
+      "why": "trades 5.0x and volume 5.0x the prior 4h, 86% taker-buy, $67,018 burst \u2014 while price has only moved +0.8%",
+      "chg_24h": 0.0736,
+      "vol_surge": 5.0,
+      "chg_1h": 0.0082,
+      "market_surge": 0.0,
+      "actionable": false,
+      "status": "benched \u2014 hit 46%, mean +0.51% over last 546 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 46%, mean +0.51% over last 546 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 40%, mean +0.40% over last 203 at 24h: not beating 4x the round trip",
