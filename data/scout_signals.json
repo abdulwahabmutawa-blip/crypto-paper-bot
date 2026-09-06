@@ -1,8 +1,54 @@
 {
-  "ts": "2026-09-06T07:08:45+00:00",
-  "scanned": 99,
+  "ts": "2026-09-06T07:14:38+00:00",
+  "scanned": 100,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "GRAMUSDT",
+      "signal": "ignition",
+      "score": 0.8234,
+      "raw_score": 0.864,
+      "weight": 0.953,
+      "price": 1.412,
+      "why": "trades 9.5x and volume 14.6x the prior 4h, 61% taker-buy, $158,483 burst \u2014 while price has only moved -0.7%",
+      "chg_24h": -0.0042,
+      "vol_surge": 14.63,
+      "chg_1h": -0.007,
+      "market_surge": 2.39,
+      "actionable": false,
+      "status": "benched \u2014 hit 45%, mean +0.51% over last 549 at 24h: not beating 4x the round trip"
+    },
+    {
+      "symbol": "ZAMAUSDT",
+      "signal": "breakout",
+      "score": 0.6901,
+      "raw_score": 0.7592,
+      "weight": 0.909,
+      "price": 0.05298,
+      "why": "trades 8.5x, volume 11.8x, 61% taker-buy, +2.8% in an hour, at 101% of its 24h range",
+      "chg_24h": 0.0171,
+      "vol_surge": 11.76,
+      "chg_1h": 0.0281,
+      "market_surge": 9.68,
+      "actionable": false,
+      "status": "benched \u2014 hit 41%, mean +0.69% over last 214 at 24h: not beating 4x the round trip"
+    },
+    {
+      "symbol": "PENDLEUSDT",
+      "signal": "ignition",
+      "score": 0.6621,
+      "raw_score": 0.6948,
+      "weight": 0.953,
+      "price": 2.104,
+      "why": "trades 7.3x and volume 6.0x the prior 4h, 66% taker-buy, $104,924 burst \u2014 while price has only moved -0.4%",
+      "chg_24h": 0.0857,
+      "vol_surge": 5.97,
+      "chg_1h": -0.0043,
+      "market_surge": 4.54,
+      "actionable": false,
+      "status": "benched \u2014 hit 45%, mean +0.51% over last 549 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 45%, mean +0.51% over last 549 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 41%, mean +0.69% over last 214 at 24h: not beating 4x the round trip",
@@ -11,7 +57,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 20,
+    "count": 18,
     "baseline": 17.0,
     "wave": false
   },
