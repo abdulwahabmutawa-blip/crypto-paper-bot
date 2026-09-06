@@ -1,24 +1,8 @@
 {
-  "ts": "2026-09-06T04:49:48+00:00",
-  "scanned": 102,
+  "ts": "2026-09-06T04:55:16+00:00",
+  "scanned": 103,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "DASHUSDT",
-      "signal": "breakout",
-      "score": 0.7965,
-      "raw_score": 0.8782,
-      "weight": 0.907,
-      "price": 72.71,
-      "why": "trades 9.3x, volume 13.6x, 69% taker-buy, +6.1% in an hour, at 88% of its 24h range",
-      "chg_24h": 0.0479,
-      "vol_surge": 13.61,
-      "chg_1h": 0.0608,
-      "market_surge": 5.37,
-      "actionable": false,
-      "status": "benched \u2014 hit 40%, mean +0.59% over last 209 at 24h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 45%, mean +0.40% over last 539 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 40%, mean +0.59% over last 209 at 24h: not beating 4x the round trip",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 20,
+    "count": 17,
     "baseline": 16.0,
     "wave": false
   },
@@ -67,26 +51,26 @@
       "median_ret_24h": -0.00338,
       "both_halves_24h": true,
       "days_24h": 12,
-      "mean_x_24h": 0.02743,
+      "mean_x_24h": 0.0271,
       "days_x_24h": 3,
       "avg_win_24h": 0.04846,
       "avg_loss_24h": -0.03508,
       "payoff_24h": 1.381
     },
     "breakout": {
-      "span_h_1h": 333.5,
-      "n_eff_1h": 258,
-      "n_1h": 258,
-      "hit_rate_1h": 0.384,
+      "span_h_1h": 333.7,
+      "n_eff_1h": 259,
+      "n_1h": 259,
+      "hit_rate_1h": 0.382,
       "mean_ret_1h": -0.00077,
-      "median_ret_1h": -0.00178,
+      "median_ret_1h": -0.00185,
       "both_halves_1h": false,
       "days_1h": 14,
       "mean_x_1h": -0.00208,
       "days_x_1h": 4,
       "avg_win_1h": 0.02083,
-      "avg_loss_1h": -0.01825,
-      "payoff_1h": 1.142,
+      "avg_loss_1h": -0.01814,
+      "payoff_1h": 1.149,
       "span_h_4h": 329.7,
       "n_eff_4h": 82.42,
       "n_4h": 246,

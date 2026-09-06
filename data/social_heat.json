@@ -1,15 +1,16 @@
 {
-  "ts": "2026-09-06T04:49:41+00:00",
+  "ts": "2026-09-06T04:55:11+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
-      "PENGU",
       "ARB",
+      "PENGU",
       "UNI",
       "RAY",
       "ZEC",
       "PUMP",
-      "SUI"
+      "SUI",
+      "SOL"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,9 +20,9 @@
       "CAKE",
       "UNI",
       "ZEC",
+      "DASH",
       "ASTER",
-      "ENA",
-      "DOGE"
+      "TUT"
     ],
     "watcher": [
       "ARB",
@@ -41,7 +42,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 9.1e-05,
+      "funding": 8.9e-05,
       "long_short": 1.34
     },
     {
@@ -63,8 +64,18 @@
         "movers",
         "watcher"
       ],
-      "funding": 5.5e-05,
+      "funding": 5.8e-05,
       "long_short": 0.41
+    },
+    {
+      "symbol": "DASH",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.22
     },
     {
       "symbol": "MARSCOIN",
@@ -73,7 +84,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.000348,
+      "funding": 0.000324,
       "long_short": 0.72
     },
     {
@@ -86,30 +97,6 @@
     },
     {
       "symbol": "CAKE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "DASH",
-      "surfaces": 1,
-      "sources": [
-        "watcher"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "DOGE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 9.3e-05
-    },
-    {
-      "symbol": "ENA",
       "surfaces": 1,
       "sources": [
         "movers"
@@ -148,12 +135,28 @@
       "funding": 0.0
     },
     {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 7.7e-05
+    },
+    {
       "symbol": "SUI",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "TUT",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -0.000164
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
