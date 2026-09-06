@@ -1,17 +1,17 @@
 {
-  "ts": "2026-09-06T06:02:41+00:00",
+  "ts": "2026-09-06T06:08:33+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
-      "PENGU",
       "ZEC",
       "ARB",
+      "PENGU",
       "UNI",
-      "BTC",
       "DASH",
-      "AVAX",
-      "XMR",
-      "LINK"
+      "BTC",
+      "LINK",
+      "MARSCOIN",
+      "XMR"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,9 +21,9 @@
       "ZEC",
       "CAKE",
       "UNI",
-      "TUT",
+      "DOGE",
       "ASTER",
-      "DOGE"
+      "TUT"
     ],
     "watcher": [
       "ARB",
@@ -43,8 +43,19 @@
         "movers",
         "watcher"
       ],
-      "funding": 9e-05,
+      "funding": 8.9e-05,
       "long_short": 1.31
+    },
+    {
+      "symbol": "MARSCOIN",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 0.000127,
+      "long_short": 0.7
     },
     {
       "symbol": "UNI",
@@ -79,30 +90,12 @@
       "long_short": 1.71
     },
     {
-      "symbol": "MARSCOIN",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": 0.00014,
-      "long_short": 0.7
-    },
-    {
       "symbol": "ASTER",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "AVAX",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "BTC",
@@ -157,7 +150,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000259
+      "funding": -0.000286
     },
     {
       "symbol": "XMR",
@@ -165,7 +158,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 0.00088
+      "funding": 0.000892
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
