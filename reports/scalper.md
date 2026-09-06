@@ -1,6 +1,6 @@
 # Scalper — hyper-aggressive small-wins PAPER bot
 
-updated 2026-09-06T08:56:15+00:00 · runs 72 · equity **$1,036.34** (+3.63%) · cash $0.00 · open 10/10 · round trips 22
+updated 2026-09-06T09:12:30+00:00 · runs 73 · equity **$1,037.05** (+3.70%) · cash $0.00 · open 10/10 · round trips 22
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -33,15 +33,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-05T12:33 | UUSDT | bottom | 0.9993 | 0.9994 | +0.01% |
+| 2026-09-05T12:33 | UUSDT | bottom | 0.9993 | 0.9993 | +0.00% |
 | 2026-09-05T12:33 | BFUSDUSDT | bottom | 1 | 1 | +0.00% |
 | 2026-09-05T15:25 | BMTUSDT | bottom | 0.01795 | 0.01805 | +0.56% |
-| 2026-09-05T15:25 | EGLDUSDT | bottom | 4.642 | 4.591 | -1.10% |
-| 2026-09-05T17:17 | ONGUSDT | bottom | 0.09469 | 0.09514 | +0.48% |
-| 2026-09-06T04:12 | MITOUSDT | bottom | 0.01721 | 0.01693 | -1.63% |
-| 2026-09-06T06:34 | BROCCOLI714USDT | bottom | 0.01986 | 0.0198 | -0.30% |
-| 2026-09-06T06:51 | XPLUSDT | bottom | 0.09213 | 0.09324 | +1.20% |
-| 2026-09-06T07:09 | ACEUSDT | bottom | 0.1731 | 0.1721 | -0.58% |
-| 2026-09-06T08:22 | TRUMPUSDT | bottom | 2.343 | 2.35 | +0.30% |
+| 2026-09-05T15:25 | EGLDUSDT | bottom | 4.642 | 4.592 | -1.08% |
+| 2026-09-05T17:17 | ONGUSDT | bottom | 0.09469 | 0.09622 | +1.62% |
+| 2026-09-06T04:12 | MITOUSDT | bottom | 0.01721 | 0.01697 | -1.39% |
+| 2026-09-06T06:34 | BROCCOLI714USDT | bottom | 0.01986 | 0.01973 | -0.65% |
+| 2026-09-06T06:51 | XPLUSDT | bottom | 0.09213 | 0.09292 | +0.86% |
+| 2026-09-06T07:09 | ACEUSDT | bottom | 0.1731 | 0.1724 | -0.40% |
+| 2026-09-06T08:22 | TRUMPUSDT | bottom | 2.343 | 2.347 | +0.17% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
