@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-06T15:31:41+00:00",
+  "ts": "2026-09-06T15:37:41+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
@@ -7,10 +7,9 @@
       "ZEC",
       "RAY",
       "PENGU",
+      "SOL",
       "TAO",
-      "PUMP",
-      "UNI",
-      "SOL"
+      "PUMP"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,12 +21,13 @@
       "NEAR",
       "PROM",
       "ENA",
-      "SOL"
+      "TAO"
     ],
     "watcher": [
+      "RAY",
       "ARB",
       "ZEC",
-      "RAY"
+      "UNI"
     ],
     "cryptopanic": []
   },
@@ -61,27 +61,27 @@
         "movers",
         "watcher"
       ],
-      "funding": 2.6e-05,
+      "funding": 2.4e-05,
       "long_short": 0.36
     },
     {
-      "symbol": "SOL",
+      "symbol": "TAO",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 9.7e-05,
-      "long_short": 1.93
+      "funding": -6e-05,
+      "long_short": 1.48
     },
     {
       "symbol": "UNI",
       "surfaces": 2,
       "sources": [
-        "coingecko",
-        "movers"
+        "movers",
+        "watcher"
       ],
-      "funding": 4.9e-05,
+      "funding": 4.8e-05,
       "long_short": 1.56
     },
     {
@@ -105,7 +105,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 1.7e-05
+      "funding": 1.5e-05
     },
     {
       "symbol": "PENGU",
@@ -113,7 +113,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.9e-05
+      "funding": 3e-05
     },
     {
       "symbol": "PROM",
@@ -132,12 +132,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "TAO",
+      "symbol": "SOL",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -6e-05
+      "funding": 9.4e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
