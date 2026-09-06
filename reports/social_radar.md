@@ -1,6 +1,6 @@
 # Social radar — which X chatter precedes rises (learning)
 
-updated 2026-09-06T05:42:33+00:00 · rows 8 · scored@24h-excess 8 · objective **BTC-excess 24h**
+updated 2026-09-06T06:00:14+00:00 · rows 8 · scored@24h-excess 8 · objective **BTC-excess 24h**
 
 _Grok harvests posts; this module counts. Observation only — nothing trades until a pattern clears the gate (n>=12, 4x fees, both halves, payoff) **and** the owner approves. Power: ~3.5 candidates/day, so only large (>=5pp) effects are readable in two weeks._
 
