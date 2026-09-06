@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-06T03:59:35+00:00",
-  "scanned": 103,
+  "ts": "2026-09-06T04:05:37+00:00",
+  "scanned": 102,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "MORPHOUSDT",
+      "signal": "breakout",
+      "score": 0.5122,
+      "raw_score": 0.5647,
+      "weight": 0.907,
+      "price": 2.595,
+      "why": "trades 4.0x, volume 6.0x, 70% taker-buy, +2.8% in an hour, at 101% of its 24h range",
+      "chg_24h": 0.0233,
+      "vol_surge": 5.96,
+      "chg_1h": 0.0277,
+      "market_surge": 8.55,
+      "actionable": false,
+      "status": "benched \u2014 hit 40%, mean +0.56% over last 208 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 45%, mean +0.42% over last 540 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 40%, mean +0.56% over last 208 at 24h: not beating 4x the round trip",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 20,
+    "count": 21,
     "baseline": 16.0,
     "wave": false
   },
