@@ -1,6 +1,6 @@
 # Scalper — hyper-aggressive small-wins PAPER bot
 
-updated 2026-09-06T15:50:05+00:00 · runs 98 · equity **$1,018.23** (+1.82%) · cash $0.00 · open 10/10 · round trips 33
+updated 2026-09-06T16:06:22+00:00 · runs 99 · equity **$1,018.23** (+1.82%) · cash $0.00 · open 10/10 · round trips 33
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -33,15 +33,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-06T04:12 | MITOUSDT | bottom | 0.01721 | 0.01692 | -1.69% |
-| 2026-09-06T06:51 | XPLUSDT | bottom | 0.09213 | 0.09074 | -1.51% |
-| 2026-09-06T08:22 | TRUMPUSDT | bottom | 2.343 | 2.305 | -1.62% |
-| 2026-09-06T12:59 | BNBUSDT | bottom | 755.57 | 745.4 | -1.35% |
-| 2026-09-06T12:59 | DEXEUSDT | bottom | 1.975 | 1.978 | +0.15% |
-| 2026-09-06T13:19 | ZKCUSDT | bottom | 0.049 | 0.0488 | -0.41% |
-| 2026-09-06T13:52 | MUBARAKUSDT | bottom | 0.03126 | 0.03151 | +0.80% |
-| 2026-09-06T14:41 | CAKEUSDT | bottom | 2.166 | 2.169 | +0.14% |
-| 2026-09-06T15:13 | BICOUSDT | bottom | 0.02188 | 0.02203 | +0.69% |
-| 2026-09-06T15:30 | ZKPUSDT | bottom | 0.0471 | 0.0472 | +0.21% |
+| 2026-09-06T04:12 | MITOUSDT | bottom | 0.01721 | 0.01687 | -1.98% |
+| 2026-09-06T06:51 | XPLUSDT | bottom | 0.09213 | 0.09083 | -1.41% |
+| 2026-09-06T08:22 | TRUMPUSDT | bottom | 2.343 | 2.308 | -1.49% |
+| 2026-09-06T12:59 | BNBUSDT | bottom | 755.57 | 745.6 | -1.32% |
+| 2026-09-06T12:59 | DEXEUSDT | bottom | 1.975 | 1.974 | -0.05% |
+| 2026-09-06T13:19 | ZKCUSDT | bottom | 0.049 | 0.0486 | -0.82% |
+| 2026-09-06T13:52 | MUBARAKUSDT | bottom | 0.03126 | 0.03133 | +0.22% |
+| 2026-09-06T14:41 | CAKEUSDT | bottom | 2.166 | 2.171 | +0.23% |
+| 2026-09-06T15:13 | BICOUSDT | bottom | 0.02188 | 0.02219 | +1.42% |
+| 2026-09-06T15:30 | ZKPUSDT | bottom | 0.0471 | 0.0474 | +0.64% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
