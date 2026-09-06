@@ -1,24 +1,8 @@
 {
-  "ts": "2026-09-06T18:15:26+00:00",
-  "scanned": 97,
+  "ts": "2026-09-06T18:21:04+00:00",
+  "scanned": 99,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "CRVUSDT",
-      "signal": "ignition",
-      "score": 0.6988,
-      "raw_score": 0.7411,
-      "weight": 0.943,
-      "price": 0.375,
-      "why": "trades 5.3x and volume 12.3x the prior 4h, 79% taker-buy, $92,130 burst \u2014 while price has only moved +0.8%",
-      "chg_24h": 0.0223,
-      "vol_surge": 12.26,
-      "chg_1h": 0.0078,
-      "market_surge": 3.29,
-      "actionable": false,
-      "status": "benched \u2014 hit 46%, mean +0.55% over last 548 at 24h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 46%, mean +0.55% over last 548 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 40%, mean +0.43% over last 203 at 24h: not beating 4x the round trip",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 19,
+    "count": 18,
     "baseline": 18.0,
     "wave": false
   },
