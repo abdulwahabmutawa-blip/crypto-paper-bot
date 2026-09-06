@@ -1,12 +1,13 @@
 {
   "created": "2026-08-15",
-  "held_symbol": "PROMUSDT",
-  "entry_price": 5.5242906626506025,
-  "units": 6.64,
-  "entry_scan_ts": "2026-09-06T07:16:25+00:00",
-  "entry_source": "scout:surge",
+  "held_symbol": null,
+  "entry_price": null,
+  "units": 0.0,
+  "entry_scan_ts": null,
+  "entry_source": null,
   "stopped": {
-    "BNBUSDT": "2026-09-06T15:00:09+00:00"
+    "BNBUSDT": "2026-09-06T15:00:09+00:00",
+    "PROMUSDT": "2026-09-06T17:32:49+00:00"
   },
   "entries": {
     "2026-09-06": 1
@@ -715,43 +716,37 @@
       "date": "2026-09-06",
       "exit": 740.9300000000001,
       "entry": 763.91
+    },
+    {
+      "symbol": "PROMUSDT",
+      "source": "scout:surge",
+      "entry_score": 0.6236,
+      "entry_time": "2026-09-06T15:00:09+00:00",
+      "exit_time": "2026-09-06T17:32:49+00:00",
+      "entry_price": 5.5242906626506025,
+      "exit_price": 5.355371987951807,
+      "units": 6.64,
+      "spent_usd": 36.6813,
+      "got_usd": 35.5597,
+      "pnl_pct": -3.06,
+      "pnl_usd": -1.149,
+      "fees_usd": 0.0274,
+      "reason": "PROTECTIVE STOP (-3.1% vs peak +1.9%) \u2014 the floor held at the exchange, between cycles",
+      "date": "2026-09-06",
+      "exit": 5.355371987951807,
+      "entry": 5.5242906626506025
     }
   ],
-  "last_value_usd": 35.97,
-  "last_updated_utc": "2026-09-06T17:27:12+00:00",
-  "open_position": {
-    "symbol": "PROMUSDT",
-    "entry_time": "2026-09-06T15:00:09+00:00",
-    "entry_price": 5.5242906626506025,
-    "current_price": 5.415,
-    "units": 6.64,
-    "spent_usd": 36.6813,
-    "value_usd": 35.9556,
-    "pnl_usd": -0.7257,
-    "pnl_pct": -1.98,
-    "source": "scout:surge"
-  },
-  "spent_usd": 36.6813,
+  "last_value_usd": 35.57,
+  "last_updated_utc": "2026-09-06T17:32:49+00:00",
+  "open_position": null,
+  "spent_usd": null,
   "no_pair": {
-    "scan_ts": "2026-09-06T07:16:25+00:00",
+    "scan_ts": "2026-09-06T15:31:35+00:00",
     "syms": []
   },
   "wave_bonus_date": "2026-09-05",
   "book_hwm_usd": 44.27,
   "entry_score": 0.6236,
-  "entry_fee_usd": 0.027435,
-  "hwm": 5.628,
-  "move_max_qv": 285697.96891,
-  "move_qv_sum": 285697.96891,
-  "move_qv_n": 1,
-  "move_last_ms": 1788710400000,
-  "entry_time": "2026-09-06T15:00:09+00:00",
-  "stop_order": {
-    "order_id": "741092173",
-    "stop": 5.3580000000000005,
-    "limit": null,
-    "qty": 6.640000000000001,
-    "type": "STOP_LOSS",
-    "client_order_id": "lotstop-PROMUSDT-8706909125"
-  }
+  "halt_flagged": "CIRCUIT BREAKER \u2014 2 losi"
 }
