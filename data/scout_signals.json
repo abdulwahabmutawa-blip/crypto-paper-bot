@@ -1,24 +1,8 @@
 {
-  "ts": "2026-09-06T18:42:46+00:00",
+  "ts": "2026-09-06T18:48:41+00:00",
   "scanned": 97,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "DASHUSDT",
-      "signal": "ignition",
-      "score": 0.5057,
-      "raw_score": 0.5368,
-      "weight": 0.942,
-      "price": 71.22,
-      "why": "trades 4.1x and volume 6.6x the prior 4h, 79% taker-buy, $804,148 burst \u2014 while price has only moved +3.6%",
-      "chg_24h": 0.0566,
-      "vol_surge": 6.58,
-      "chg_1h": 0.0359,
-      "market_surge": 2.56,
-      "actionable": false,
-      "status": "benched \u2014 hit 46%, mean +0.55% over last 549 at 24h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 46%, mean +0.55% over last 549 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 40%, mean +0.43% over last 203 at 24h: not beating 4x the round trip",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 15,
+    "count": 14,
     "baseline": 18.0,
     "wave": false
   },
@@ -46,19 +30,19 @@
       "avg_win_1h": 0.01038,
       "avg_loss_1h": -0.00987,
       "payoff_1h": 1.051,
-      "span_h_4h": 331.2,
-      "n_eff_4h": 82.8,
-      "n_4h": 636,
-      "hit_rate_4h": 0.442,
-      "mean_ret_4h": 6e-05,
+      "span_h_4h": 331.3,
+      "n_eff_4h": 82.83,
+      "n_4h": 637,
+      "hit_rate_4h": 0.443,
+      "mean_ret_4h": 0.0001,
       "median_ret_4h": 0.0,
       "both_halves_4h": false,
       "days_4h": 14,
-      "mean_x_4h": 0.00192,
+      "mean_x_4h": 0.00204,
       "days_x_4h": 4,
-      "avg_win_4h": 0.01759,
+      "avg_win_4h": 0.01762,
       "avg_loss_4h": -0.01719,
-      "payoff_4h": 1.023,
+      "payoff_4h": 1.025,
       "span_h_24h": 311.0,
       "n_eff_24h": 12.96,
       "n_24h": 549,
