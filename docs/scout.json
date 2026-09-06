@@ -1,8 +1,54 @@
 {
-  "ts": "2026-09-06T16:23:46+00:00",
-  "scanned": 101,
+  "ts": "2026-09-06T16:29:26+00:00",
+  "scanned": 100,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "FORMUSDT",
+      "signal": "ignition",
+      "score": 0.8225,
+      "raw_score": 0.8712,
+      "weight": 0.944,
+      "price": 0.268,
+      "why": "trades 32.5x and volume 31.5x the prior 4h, 71% taker-buy, $167,803 burst \u2014 while price has only moved +2.2%",
+      "chg_24h": -0.057,
+      "vol_surge": 31.5,
+      "chg_1h": 0.0221,
+      "market_surge": 0.0,
+      "actionable": false,
+      "status": "benched \u2014 hit 46%, mean +0.51% over last 544 at 24h: not beating 4x the round trip"
+    },
+    {
+      "symbol": "WIFUSDT",
+      "signal": "ignition",
+      "score": 0.6541,
+      "raw_score": 0.6929,
+      "weight": 0.944,
+      "price": 0.2151,
+      "why": "trades 4.5x and volume 22.7x the prior 4h, 81% taker-buy, $130,655 burst \u2014 while price has only moved +1.5%",
+      "chg_24h": 0.0089,
+      "vol_surge": 22.72,
+      "chg_1h": 0.0151,
+      "market_surge": 13.84,
+      "actionable": false,
+      "status": "benched \u2014 hit 46%, mean +0.51% over last 544 at 24h: not beating 4x the round trip"
+    },
+    {
+      "symbol": "OPUSDT",
+      "signal": "ignition",
+      "score": 0.5247,
+      "raw_score": 0.5559,
+      "weight": 0.944,
+      "price": 0.1104,
+      "why": "trades 4.3x and volume 6.4x the prior 4h, 68% taker-buy, $103,779 burst \u2014 while price has only moved +1.9%",
+      "chg_24h": 0.1019,
+      "vol_surge": 6.44,
+      "chg_1h": 0.0194,
+      "market_surge": 1.53,
+      "actionable": false,
+      "status": "benched \u2014 hit 46%, mean +0.51% over last 544 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 46%, mean +0.51% over last 544 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 40%, mean +0.40% over last 203 at 24h: not beating 4x the round trip",
@@ -11,7 +57,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 21,
+    "count": 23,
     "baseline": 18.0,
     "wave": false
   },
@@ -92,7 +138,7 @@
       "median_ret_24h": -0.01513,
       "both_halves_24h": true,
       "days_24h": 12,
-      "mean_x_24h": 0.01019,
+      "mean_x_24h": 0.01126,
       "days_x_24h": 3,
       "avg_win_24h": 0.08342,
       "avg_loss_24h": -0.04984,
