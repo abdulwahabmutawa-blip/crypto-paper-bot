@@ -1,6 +1,6 @@
 # Scalper — hyper-aggressive small-wins PAPER bot
 
-updated 2026-09-07T08:26:09+00:00 · runs 160 · equity **$1,000.92** (+0.09%) · cash $0.00 · open 10/10 · round trips 51
+updated 2026-09-07T08:42:24+00:00 · runs 161 · equity **$1,001.37** (+0.14%) · cash $0.00 · open 10/10 · round trips 51
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -33,15 +33,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-06T12:59 | BNBUSDT | bottom | 755.57 | 744.57 | -1.46% |
-| 2026-09-06T13:19 | ZKCUSDT | bottom | 0.049 | 0.0481 | -1.84% |
+| 2026-09-06T12:59 | BNBUSDT | bottom | 755.57 | 744.62 | -1.45% |
+| 2026-09-06T13:19 | ZKCUSDT | bottom | 0.049 | 0.0482 | -1.63% |
 | 2026-09-06T19:08 | ACEUSDT | bottom | 0.1663 | 0.1641 | -1.32% |
-| 2026-09-06T21:25 | XAUTUSDT | bottom | 4414.83 | 4411.58 | -0.07% |
+| 2026-09-06T21:25 | XAUTUSDT | bottom | 4414.83 | 4409.37 | -0.12% |
 | 2026-09-07T01:48 | SAHARAUSDT | bottom | 0.00921 | 0.00912 | -0.98% |
-| 2026-09-07T05:54 | GRTUSDT | bottom | 0.01905 | 0.01916 | +0.58% |
-| 2026-09-07T06:14 | JSTUSDT | bottom | 0.11073 | 0.1108 | +0.06% |
+| 2026-09-07T05:54 | GRTUSDT | bottom | 0.01905 | 0.01923 | +0.94% |
+| 2026-09-07T06:14 | JSTUSDT | bottom | 0.11073 | 0.11056 | -0.15% |
 | 2026-09-07T07:52 | RUNEUSDT | bottom | 0.474 | 0.478 | +0.84% |
-| 2026-09-07T07:52 | MUBUSDT | surge | 1043.39 | 1043.71 | +0.03% |
-| 2026-09-07T07:52 | ZAMAUSDT | bottom | 0.05411 | 0.05418 | +0.13% |
+| 2026-09-07T07:52 | MUBUSDT | surge | 1043.39 | 1044.25 | +0.08% |
+| 2026-09-07T07:52 | ZAMAUSDT | bottom | 0.05411 | 0.05424 | +0.24% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._

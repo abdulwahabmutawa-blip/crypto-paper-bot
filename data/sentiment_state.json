@@ -1,10 +1,10 @@
 {
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "holding": "RAY-USD",
-  "units": 1017.048149718603,
+  "holding": "ZEC-USD",
+  "units": 1.0313348126154627,
   "cash": 0.0,
-  "entry_price": 1.2971,
+  "entry_price": 1182.7,
   "bench_units": 1.332054612938296,
   "stopped": {
     "SHIB-USD": "2026-07-27T00:01:08+00:00",
@@ -678,6 +678,26 @@
       "value": 1319.21,
       "fee": 3.84,
       "reason": "Grok: RAY euphoric \u2014 StonkFun LaunchLab spike (scan 2026-09-07T00:41)"
+    },
+    {
+      "date": "2026-09-07",
+      "action": "SELL",
+      "ticker": "RAY-USD",
+      "price": 1.2063,
+      "units": 1017.0481,
+      "value": 1226.87,
+      "fee": 3.56,
+      "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
+    },
+    {
+      "date": "2026-09-07",
+      "action": "BUY",
+      "ticker": "ZEC-USD",
+      "price": 1182.7,
+      "units": 1.0313,
+      "value": 1219.76,
+      "fee": 3.55,
+      "reason": "Grok: ZEC euphoric \u2014 45% weekly privacy run, ETF buzz (scan 2026-09-07T08:42)"
     }
   ],
   "history": [
@@ -931,19 +951,13 @@
     },
     {
       "date": "2026-09-06",
-      "value": 1218.93,
+      "value": 1219.76,
       "bench": 1025.94,
-      "holding": "RAY-USD",
+      "holding": "ZEC-USD",
       "bench_asof": "2026-09-04"
     }
   ],
   "intraday": [
-    {
-      "ts": "2026-08-20T07:04:11+00:00",
-      "value": 1982.88,
-      "bench": 1024.43,
-      "holding": "MRNA"
-    },
     {
       "ts": "2026-08-20T07:17:43+00:00",
       "value": 1982.88,
@@ -9937,9 +9951,15 @@
       "value": 1218.93,
       "bench": 1025.94,
       "holding": "RAY-USD"
+    },
+    {
+      "ts": "2026-09-07T08:43:20+00:00",
+      "value": 1219.76,
+      "bench": 1025.94,
+      "holding": "ZEC-USD"
     }
   ],
-  "last_updated_utc": "2026-09-07T08:26:10+00:00",
+  "last_updated_utc": "2026-09-07T08:43:20+00:00",
   "restatement": {
     "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)",
     "voided_trades": [
@@ -10018,5 +10038,5 @@
     ],
     "voided_reason": "signal faded before any real fill was possible (market closed the whole window) \u2014 trades could never have existed"
   },
-  "costs_paid": 116.2235
+  "costs_paid": 123.329
 }
