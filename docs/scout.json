@@ -1,10 +1,26 @@
 {
-  "ts": "2026-09-07T08:14:46+00:00",
-  "scanned": 94,
+  "ts": "2026-09-07T08:20:41+00:00",
+  "scanned": 95,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ETHFIUSDT",
+      "signal": "ignition",
+      "score": 0.8289,
+      "raw_score": 0.8716,
+      "weight": 0.951,
+      "price": 0.5831,
+      "why": "trades 11.6x and volume 10.7x the prior 4h, 62% taker-buy, $94,795 burst \u2014 while price has only moved +1.4%",
+      "chg_24h": 0.0064,
+      "vol_surge": 10.69,
+      "chg_1h": 0.0137,
+      "market_surge": 8.1,
+      "actionable": false,
+      "status": "benched \u2014 hit 46%, mean +0.46% over last 560 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
-    "ignition": "benched \u2014 hit 46%, mean +0.46% over last 559 at 24h: not beating 4x the round trip",
+    "ignition": "benched \u2014 hit 46%, mean +0.46% over last 560 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 39%, mean +0.19% over last 217 at 24h: not beating 4x the round trip",
     "reversion": "probation \u2014 7/12 resolved 24h samples under ruleset 3",
     "heat": "benched \u2014 hit 31%, mean -2.42% over last 32 at 24h: not beating 4x the round trip",
@@ -43,19 +59,19 @@
       "avg_win_4h": 0.01747,
       "avg_loss_4h": -0.01709,
       "payoff_4h": 1.022,
-      "span_h_24h": 311.7,
-      "n_eff_24h": 12.99,
-      "n_24h": 559,
-      "hit_rate_24h": 0.462,
-      "mean_ret_24h": 0.00465,
+      "span_h_24h": 312.0,
+      "n_eff_24h": 13.0,
+      "n_24h": 560,
+      "hit_rate_24h": 0.461,
+      "mean_ret_24h": 0.00462,
       "median_ret_24h": -0.0018,
       "both_halves_24h": false,
       "days_24h": 12,
-      "mean_x_24h": 0.01904,
+      "mean_x_24h": 0.0189,
       "days_x_24h": 4,
       "avg_win_24h": 0.04783,
-      "avg_loss_24h": -0.03536,
-      "payoff_24h": 1.353
+      "avg_loss_24h": -0.03529,
+      "payoff_24h": 1.355
     },
     "breakout": {
       "span_h_1h": 332.3,
