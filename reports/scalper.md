@@ -1,6 +1,6 @@
 # Scalper — hyper-aggressive small-wins PAPER bot
 
-updated 2026-09-07T05:55:48+00:00 · runs 150 · equity **$1,010.53** (+1.05%) · cash $0.00 · open 10/10 · round trips 47
+updated 2026-09-07T06:12:08+00:00 · runs 151 · equity **$1,009.44** (+0.94%) · cash $0.00 · open 10/10 · round trips 47
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -33,15 +33,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-06T12:59 | BNBUSDT | bottom | 755.57 | 748.57 | -0.93% |
+| 2026-09-06T12:59 | BNBUSDT | bottom | 755.57 | 748.58 | -0.93% |
 | 2026-09-06T13:19 | ZKCUSDT | bottom | 0.049 | 0.0486 | -0.82% |
-| 2026-09-06T19:08 | ACEUSDT | bottom | 0.1663 | 0.1664 | +0.06% |
-| 2026-09-06T21:25 | XAUTUSDT | bottom | 4414.83 | 4393.29 | -0.49% |
-| 2026-09-07T00:01 | MSTRBUSDT | surge | 146.57 | 144.93 | -1.12% |
+| 2026-09-06T19:08 | ACEUSDT | bottom | 0.1663 | 0.1665 | +0.12% |
+| 2026-09-06T21:25 | XAUTUSDT | bottom | 4414.83 | 4386.93 | -0.63% |
+| 2026-09-07T00:01 | MSTRBUSDT | surge | 146.57 | 144.87 | -1.16% |
 | 2026-09-07T01:48 | SAHARAUSDT | bottom | 0.00921 | 0.00919 | -0.22% |
-| 2026-09-07T02:54 | VETUSDT | surge | 0.007347 | 0.007178 | -2.30% |
-| 2026-09-07T03:10 | BROCCOLI714USDT | bottom | 0.01894 | 0.01863 | -1.64% |
-| 2026-09-07T03:59 | XPLUSDT | bottom | 0.08835 | 0.08848 | +0.15% |
-| 2026-09-07T05:54 | GRTUSDT | bottom | 0.01905 | 0.01898 | -0.37% |
+| 2026-09-07T02:54 | VETUSDT | surge | 0.007347 | 0.007099 | -3.38% |
+| 2026-09-07T03:10 | BROCCOLI714USDT | bottom | 0.01894 | 0.01866 | -1.48% |
+| 2026-09-07T03:59 | XPLUSDT | bottom | 0.08835 | 0.08818 | -0.19% |
+| 2026-09-07T05:54 | GRTUSDT | bottom | 0.01905 | 0.01905 | +0.00% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
