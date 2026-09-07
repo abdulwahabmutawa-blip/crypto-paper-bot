@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-07T06:40:53+00:00",
+  "ts": "2026-09-07T06:46:17+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
@@ -7,9 +7,10 @@
       "ARB",
       "TAO",
       "ASTER",
+      "ETH",
+      "RAY",
+      "PUMP",
       "LIT",
-      "BTC",
-      "PENGU",
       "LINK"
     ],
     "reddit": [],
@@ -32,6 +33,16 @@
   },
   "heat": [
     {
+      "symbol": "RAY",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 0.0
+    },
+    {
       "symbol": "ZEC",
       "surfaces": 3,
       "sources": [
@@ -39,7 +50,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -3.6e-05,
+      "funding": -3.7e-05,
       "long_short": 0.41
     },
     {
@@ -49,17 +60,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 9.5e-05,
+      "funding": 9.1e-05,
       "long_short": 1.98
-    },
-    {
-      "symbol": "RAY",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": 0.0
     },
     {
       "symbol": "TAO",
@@ -96,12 +98,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "BTC",
+      "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 2e-05
     },
     {
       "symbol": "FIRO",
@@ -127,18 +129,18 @@
       "funding": 0.0001
     },
     {
-      "symbol": "PENGU",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "PROM",
       "surfaces": 1,
       "sources": [
         "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
       ],
       "funding": 5e-05
     },
