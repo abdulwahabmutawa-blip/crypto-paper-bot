@@ -1,37 +1,48 @@
 {
-  "ts": "2026-09-07T16:41:12+00:00",
+  "ts": "2026-09-07T16:48:04+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
       "TAO",
-      "ARB",
       "PUMP",
+      "ARB",
       "PENGU",
-      "MARSCOIN",
       "AERO",
+      "MARSCOIN",
       "TRUMP",
-      "FET"
+      "LIT"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "DOT",
-      "PUMP",
       "WLD",
       "ICP",
+      "PUMP",
       "AVAX",
       "LINK",
-      "TAO",
-      "XLM"
+      "XLM",
+      "TAO"
     ],
     "watcher": [
-      "ZEC",
-      "WLD",
-      "TAO"
+      "TAO",
+      "PUMP",
+      "WLD"
     ],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "PUMP",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 5e-05,
+      "long_short": 0.8
+    },
     {
       "symbol": "TAO",
       "surfaces": 3,
@@ -44,16 +55,6 @@
       "long_short": 2.02
     },
     {
-      "symbol": "PUMP",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 0.8
-    },
-    {
       "symbol": "WLD",
       "surfaces": 2,
       "sources": [
@@ -62,16 +63,6 @@
       ],
       "funding": 0.0001,
       "long_short": 1.87
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "watcher"
-      ],
-      "funding": 0.0001,
-      "long_short": 0.39
     },
     {
       "symbol": "AERO",
@@ -87,7 +78,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.9e-05
+      "funding": -1.7e-05
     },
     {
       "symbol": "AVAX",
@@ -106,14 +97,6 @@
       "funding": 0.0001
     },
     {
-      "symbol": "FET",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "ICP",
       "surfaces": 1,
       "sources": [
@@ -127,7 +110,15 @@
       "sources": [
         "movers"
       ],
-      "funding": 7.2e-05
+      "funding": 6.8e-05
+    },
+    {
+      "symbol": "LIT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "MARSCOIN",
@@ -135,7 +126,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.9e-05
+      "funding": 9.3e-05
     },
     {
       "symbol": "PENGU",
@@ -158,6 +149,14 @@
       "surfaces": 1,
       "sources": [
         "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
       ],
       "funding": 0.0001
     }
