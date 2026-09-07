@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-07T15:11:45+00:00",
-  "scanned": 102,
+  "ts": "2026-09-07T15:17:12+00:00",
+  "scanned": 103,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "GRAMUSDT",
+      "signal": "ignition",
+      "score": 0.5517,
+      "raw_score": 0.5819,
+      "weight": 0.948,
+      "price": 1.409,
+      "why": "trades 4.7x and volume 5.7x the prior 4h, 62% taker-buy, $99,664 burst \u2014 while price has only moved -0.2%",
+      "chg_24h": -0.0042,
+      "vol_surge": 5.73,
+      "chg_1h": -0.0021,
+      "market_surge": 12.85,
+      "actionable": false,
+      "status": "benched \u2014 hit 46%, mean +0.43% over last 552 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 46%, mean +0.43% over last 552 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 40%, mean +0.32% over last 218 at 24h: not beating 4x the round trip",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 14,
+    "count": 13,
     "baseline": 18.0,
     "wave": false
   },
@@ -58,19 +74,19 @@
       "payoff_24h": 1.332
     },
     "breakout": {
-      "span_h_1h": 332.6,
-      "n_eff_1h": 260,
-      "n_1h": 260,
-      "hit_rate_1h": 0.392,
-      "mean_ret_1h": -0.00086,
+      "span_h_1h": 333.8,
+      "n_eff_1h": 261,
+      "n_1h": 261,
+      "hit_rate_1h": 0.395,
+      "mean_ret_1h": -0.00074,
       "median_ret_1h": -0.0012,
       "both_halves_1h": false,
       "days_1h": 14,
-      "mean_x_1h": 0.00069,
+      "mean_x_1h": 0.00096,
       "days_x_1h": 5,
-      "avg_win_1h": 0.01964,
+      "avg_win_1h": 0.01974,
       "avg_loss_1h": -0.01788,
-      "payoff_1h": 1.099,
+      "payoff_1h": 1.104,
       "span_h_4h": 325.3,
       "n_eff_4h": 81.32,
       "n_4h": 250,
