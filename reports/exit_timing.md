@@ -1,6 +1,6 @@
 # Exit timing — the bot grading its own exits
 
-updated 2026-09-07T15:42:39+00:00 · 41 exits audited · early/late line ±3% · MEASUREMENT ONLY
+updated 2026-09-07T15:59:21+00:00 · 41 exits audited · early/late line ±3% · MEASUREMENT ONLY
 
 | verdict | n |
 |---|---|
@@ -25,9 +25,9 @@ updated 2026-09-07T15:42:39+00:00 · 41 exits audited · early/late line ±3% ·
 ## Market capture
 
 - book since inception (08-15, $40 stake): **-59.9%** — trading P&L only (-$23.97 over 42 closed trades), deposits excluded
-- account balance: $35.84 (of which **+$19.81 is deposited capital, not profit** — inferred as balance minus stake minus P&L; deposits are not tracked anywhere yet)
-- BTC since inception: +24.9% (book gap **-84.8pp**) · last 24h -2.0%
-- ETH since inception: +31.2% (book gap **-91.1pp**) · last 24h -1.8%
+- account balance: $35.70 (of which **+$19.67 is deposited capital, not profit** — inferred as balance minus stake minus P&L; deposits are not tracked anywhere yet)
+- BTC since inception: +25.0% (book gap **-84.9pp**) · last 24h -1.9%
+- ETH since inception: +31.3% (book gap **-91.2pp**) · last 24h -1.8%
 
 ## Alpha by regime (book minus BTC, daily, paired)
 
@@ -35,8 +35,8 @@ updated 2026-09-07T15:42:39+00:00 · 41 exits audited · early/late line ±3% ·
 
 | regime (BTC day) | days | avg book | avg gap vs BTC |
 |---|---|---|---|
-| red | 2 | -10.04% | **-7.53pp** |
-| flat | 17 | -2.49% | **-2.54pp** |
+| red | 1 | -20.08% | **-17.08pp** |
+| flat | 18 | -2.36% | **-2.29pp** |
 | green | 5 | -3.58% | **-9.06pp** |
 
 | date | regime | book | BTC | gap |
@@ -50,7 +50,7 @@ updated 2026-09-07T15:42:39+00:00 · 41 exits audited · early/late line ±3% ·
 | 2026-09-04 | flat | -11.55% | -1.98% | -9.57pp |
 | 2026-09-05 | flat | -6.35% | +0.21% | -6.56pp |
 | 2026-09-06 | flat | -12.56% | +0.64% | -13.20pp |
-| 2026-09-07 | red | +0.00% | -2.02% | +2.02pp |
+| 2026-09-07 | flat | +0.00% | -1.89% | +1.89pp |
 
 
 _giveback = in-hold peak the exit surrendered; post-24h run = what the coin did after we sold. High post-run with low giveback = selling too early; high giveback = selling too late._
