@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-07T07:36:11+00:00",
+  "ts": "2026-09-07T07:42:01+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
@@ -20,9 +20,9 @@
       "RAY",
       "WLD",
       "LINK",
-      "NEAR",
-      "PUMP",
       "PROM",
+      "ZEC",
+      "PUMP",
       "AVAX"
     ],
     "watcher": [
@@ -43,13 +43,24 @@
       "funding": 0.0
     },
     {
+      "symbol": "ZEC",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": -2.9e-05,
+      "long_short": 0.4
+    },
+    {
       "symbol": "LINK",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 7e-05,
+      "funding": 6.8e-05,
       "long_short": 2.03
     },
     {
@@ -73,16 +84,6 @@
       "long_short": 1.82
     },
     {
-      "symbol": "ZEC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "watcher"
-      ],
-      "funding": -3.1e-05,
-      "long_short": 0.4
-    },
-    {
       "symbol": "ARB",
       "surfaces": 1,
       "sources": [
@@ -96,7 +97,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 9.6e-05
+      "funding": 9e-05
     },
     {
       "symbol": "BTC",
@@ -104,7 +105,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.5e-05
+      "funding": 3.3e-05
     },
     {
       "symbol": "FIRO",
@@ -114,20 +115,12 @@
       ]
     },
     {
-      "symbol": "NEAR",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 3.6e-05
+      "funding": 3e-05
     },
     {
       "symbol": "PROM",
@@ -143,7 +136,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.7e-05
+      "funding": -1.8e-05
     },
     {
       "symbol": "WLD",
