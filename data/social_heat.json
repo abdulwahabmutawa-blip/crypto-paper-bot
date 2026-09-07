@@ -1,26 +1,26 @@
 {
-  "ts": "2026-09-07T23:34:21+00:00",
+  "ts": "2026-09-07T23:39:46+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
       "AERO",
       "ZEC",
       "LIT",
-      "ARB",
-      "INJ",
-      "DASH",
-      "PUMP",
       "TAO",
-      "WLD"
+      "ARB",
+      "PENGU",
+      "PUMP",
+      "INJ",
+      "FET"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "WLD",
       "INJ",
+      "WLD",
       "PUMP",
-      "DOT",
       "ICP",
+      "DOT",
       "XLM",
       "AVAX",
       "SUI"
@@ -43,7 +43,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 1.4e-05,
+      "funding": 1.6e-05,
       "long_short": 0.86
     },
     {
@@ -87,22 +87,13 @@
       "long_short": 2.07
     },
     {
-      "symbol": "WLD",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 4.3e-05
-    },
-    {
       "symbol": "ZEC",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "watcher"
       ],
-      "funding": 7e-05
+      "funding": 6.9e-05
     },
     {
       "symbol": "AERO",
@@ -118,7 +109,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.6e-05
+      "funding": 5.8e-05
     },
     {
       "symbol": "AVAX",
@@ -129,7 +120,7 @@
       "funding": 1.8e-05
     },
     {
-      "symbol": "DASH",
+      "symbol": "FET",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -152,6 +143,14 @@
       "funding": 5e-05
     },
     {
+      "symbol": "PENGU",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 2.2e-05
+    },
+    {
       "symbol": "SUI",
       "surfaces": 1,
       "sources": [
@@ -160,12 +159,20 @@
       "funding": 3e-05
     },
     {
+      "symbol": "WLD",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 4.2e-05
+    },
+    {
       "symbol": "XLM",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 6.7e-05
+      "funding": 7e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
