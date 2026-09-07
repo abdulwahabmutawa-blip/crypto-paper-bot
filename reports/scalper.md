@@ -1,6 +1,6 @@
 # Scalper — hyper-aggressive small-wins PAPER bot
 
-updated 2026-09-07T06:32:30+00:00 · runs 153 · equity **$1,008.58** (+0.86%) · cash $0.00 · open 10/10 · round trips 48
+updated 2026-09-07T06:48:43+00:00 · runs 154 · equity **$1,007.66** (+0.77%) · cash $0.00 · open 10/10 · round trips 48
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -33,15 +33,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-06T12:59 | BNBUSDT | bottom | 755.57 | 746.65 | -1.18% |
-| 2026-09-06T13:19 | ZKCUSDT | bottom | 0.049 | 0.0483 | -1.43% |
-| 2026-09-06T19:08 | ACEUSDT | bottom | 0.1663 | 0.1661 | -0.12% |
-| 2026-09-06T21:25 | XAUTUSDT | bottom | 4414.83 | 4391.52 | -0.53% |
-| 2026-09-07T00:01 | MSTRBUSDT | surge | 146.57 | 144.6 | -1.34% |
-| 2026-09-07T01:48 | SAHARAUSDT | bottom | 0.00921 | 0.0092 | -0.11% |
-| 2026-09-07T03:10 | BROCCOLI714USDT | bottom | 0.01894 | 0.01863 | -1.64% |
-| 2026-09-07T03:59 | XPLUSDT | bottom | 0.08835 | 0.08822 | -0.15% |
-| 2026-09-07T05:54 | GRTUSDT | bottom | 0.01905 | 0.01906 | +0.05% |
-| 2026-09-07T06:14 | JSTUSDT | bottom | 0.11073 | 0.11087 | +0.13% |
+| 2026-09-06T12:59 | BNBUSDT | bottom | 755.57 | 745.69 | -1.31% |
+| 2026-09-06T13:19 | ZKCUSDT | bottom | 0.049 | 0.0484 | -1.22% |
+| 2026-09-06T19:08 | ACEUSDT | bottom | 0.1663 | 0.165 | -0.78% |
+| 2026-09-06T21:25 | XAUTUSDT | bottom | 4414.83 | 4394.01 | -0.47% |
+| 2026-09-07T00:01 | MSTRBUSDT | surge | 146.57 | 144.33 | -1.53% |
+| 2026-09-07T01:48 | SAHARAUSDT | bottom | 0.00921 | 0.00918 | -0.33% |
+| 2026-09-07T03:10 | BROCCOLI714USDT | bottom | 0.01894 | 0.01865 | -1.53% |
+| 2026-09-07T03:59 | XPLUSDT | bottom | 0.08835 | 0.0884 | +0.06% |
+| 2026-09-07T05:54 | GRTUSDT | bottom | 0.01905 | 0.01903 | -0.10% |
+| 2026-09-07T06:14 | JSTUSDT | bottom | 0.11073 | 0.11072 | -0.01% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
