@@ -1,22 +1,22 @@
 {
-  "ts": "2026-09-07T06:46:21+00:00",
-  "scanned": 92,
+  "ts": "2026-09-07T06:52:16+00:00",
+  "scanned": 94,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "RAYUSDT",
-      "signal": "heat",
-      "score": 0.5592,
-      "raw_score": 0.6,
-      "weight": 0.932,
-      "price": 1.1805,
-      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.000%",
-      "chg_24h": 0.0707,
-      "vol_surge": null,
-      "chg_1h": null,
-      "market_surge": 3,
+      "symbol": "FORMUSDT",
+      "signal": "ignition",
+      "score": 0.8806,
+      "raw_score": 0.9259,
+      "weight": 0.951,
+      "price": 0.2684,
+      "why": "trades 26.9x and volume 16.1x the prior 4h, 71% taker-buy, $65,126 burst \u2014 while price has only moved +0.1%",
+      "chg_24h": -0.019,
+      "vol_surge": 16.12,
+      "chg_1h": 0.0011,
+      "market_surge": 0.0,
       "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean +0.51% at 24h: market beta, not signal"
+      "status": "benched \u2014 hit 46%, mean +0.46% over last 555 at 24h: not beating 4x the round trip"
     }
   ],
   "gate": {
@@ -27,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 15,
+    "count": 13,
     "baseline": 18.0,
     "wave": false
   },
