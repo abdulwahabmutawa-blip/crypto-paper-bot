@@ -1,6 +1,6 @@
 # Scalper — hyper-aggressive small-wins PAPER bot
 
-updated 2026-09-07T09:49:30+00:00 · runs 165 · equity **$1,001.16** (+0.12%) · cash $0.00 · open 10/10 · round trips 52
+updated 2026-09-07T10:05:42+00:00 · runs 166 · equity **$1,000.42** (+0.04%) · cash $-0.00 · open 10/10 · round trips 52
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -33,15 +33,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-06T12:59 | BNBUSDT | bottom | 755.57 | 744.49 | -1.47% |
-| 2026-09-06T19:08 | ACEUSDT | bottom | 0.1663 | 0.1662 | -0.06% |
-| 2026-09-06T21:25 | XAUTUSDT | bottom | 4414.83 | 4406 | -0.20% |
-| 2026-09-07T01:48 | SAHARAUSDT | bottom | 0.00921 | 0.00915 | -0.65% |
+| 2026-09-06T12:59 | BNBUSDT | bottom | 755.57 | 743.37 | -1.61% |
+| 2026-09-06T19:08 | ACEUSDT | bottom | 0.1663 | 0.1668 | +0.30% |
+| 2026-09-06T21:25 | XAUTUSDT | bottom | 4414.83 | 4401.83 | -0.29% |
+| 2026-09-07T01:48 | SAHARAUSDT | bottom | 0.00921 | 0.00913 | -0.87% |
 | 2026-09-07T05:54 | GRTUSDT | bottom | 0.01905 | 0.01924 | +1.00% |
 | 2026-09-07T06:14 | JSTUSDT | bottom | 0.11073 | 0.10944 | -1.16% |
 | 2026-09-07T07:52 | RUNEUSDT | bottom | 0.474 | 0.48 | +1.27% |
-| 2026-09-07T07:52 | MUBUSDT | surge | 1043.39 | 1042.33 | -0.10% |
-| 2026-09-07T07:52 | ZAMAUSDT | bottom | 0.05411 | 0.05436 | +0.46% |
-| 2026-09-07T09:48 | KITEUSDT | bottom | 0.1211 | 0.1216 | +0.41% |
+| 2026-09-07T07:52 | MUBUSDT | surge | 1043.39 | 1042.16 | -0.12% |
+| 2026-09-07T07:52 | ZAMAUSDT | bottom | 0.05411 | 0.05416 | +0.09% |
+| 2026-09-07T09:48 | KITEUSDT | bottom | 0.1211 | 0.1213 | +0.17% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
