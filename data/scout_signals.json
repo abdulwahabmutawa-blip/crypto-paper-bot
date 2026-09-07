@@ -1,54 +1,8 @@
 {
-  "ts": "2026-09-07T16:48:10+00:00",
-  "scanned": 100,
+  "ts": "2026-09-07T16:52:04+00:00",
+  "scanned": 101,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "BCHUSDT",
-      "signal": "ignition",
-      "score": 0.6826,
-      "raw_score": 0.7208,
-      "weight": 0.947,
-      "price": 267.5,
-      "why": "trades 7.0x and volume 11.7x the prior 4h, 68% taker-buy, $773,876 burst \u2014 while price has only moved +3.2%",
-      "chg_24h": 0.0437,
-      "vol_surge": 11.65,
-      "chg_1h": 0.0316,
-      "market_surge": 13.31,
-      "actionable": false,
-      "status": "benched \u2014 hit 46%, mean +0.43% over last 549 at 24h: not beating 4x the round trip"
-    },
-    {
-      "symbol": "BCHUSDT",
-      "signal": "breakout",
-      "score": 0.6709,
-      "raw_score": 0.7472,
-      "weight": 0.898,
-      "price": 267.5,
-      "why": "trades 7.0x, volume 11.7x, 68% taker-buy, +3.2% in an hour, at 86% of its 24h range",
-      "chg_24h": 0.0437,
-      "vol_surge": 11.65,
-      "chg_1h": 0.0316,
-      "market_surge": 13.31,
-      "actionable": false,
-      "status": "benched \u2014 hit 41%, mean +0.35% over last 217 at 24h: not beating 4x the round trip"
-    },
-    {
-      "symbol": "PUMPUSDT",
-      "signal": "heat",
-      "score": 0.5742,
-      "raw_score": 0.6,
-      "weight": 0.957,
-      "price": 0.004253,
-      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.005% \u00b7 L/S 0.8",
-      "chg_24h": 0.0976,
-      "vol_surge": null,
-      "chg_1h": null,
-      "market_surge": 3,
-      "actionable": false,
-      "status": "benched \u2014 hit 34%, mean -2.87% over last 29 at 24h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 46%, mean +0.43% over last 549 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 41%, mean +0.35% over last 217 at 24h: not beating 4x the round trip",
@@ -57,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 14,
+    "count": 13,
     "baseline": 18.0,
     "wave": false
   },
@@ -213,7 +167,7 @@
       "median_ret_24h": -0.01628,
       "both_halves_24h": false,
       "days_24h": 12,
-      "mean_x_24h": 0.0098,
+      "mean_x_24h": 0.01044,
       "days_x_24h": 4,
       "avg_win_24h": 0.08194,
       "avg_loss_24h": -0.09637,
