@@ -1,15 +1,15 @@
 {
-  "ts": "2026-09-07T14:50:12+00:00",
+  "ts": "2026-09-07T14:55:58+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
       "ZEC",
       "PUMP",
       "TAO",
-      "BTC",
       "PENGU",
-      "PENDLE",
-      "DOT"
+      "BTC",
+      "DOT",
+      "LIT"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,7 +21,7 @@
       "LINK",
       "AVAX",
       "LTC",
-      "ASTER"
+      "XLM"
     ],
     "watcher": [
       "ZEC",
@@ -73,20 +73,12 @@
       "long_short": 0.4
     },
     {
-      "symbol": "ASTER",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "AVAX",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 8.7e-05
+      "funding": 8.8e-05
     },
     {
       "symbol": "BTC",
@@ -94,7 +86,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.3e-05
+      "funding": 3.4e-05
     },
     {
       "symbol": "DOT",
@@ -125,7 +117,15 @@
       "sources": [
         "movers"
       ],
-      "funding": 9.2e-05
+      "funding": 9e-05
+    },
+    {
+      "symbol": "LIT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "LTC",
@@ -136,20 +136,20 @@
       "funding": 0.0001
     },
     {
-      "symbol": "PENDLE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "XLM",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
