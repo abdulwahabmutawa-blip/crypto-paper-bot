@@ -1,6 +1,6 @@
 # Scalper — hyper-aggressive small-wins PAPER bot
 
-updated 2026-09-07T18:02:11+00:00 · runs 194 · equity **$1,001.77** (+0.18%) · cash $0.00 · open 10/10 · round trips 59
+updated 2026-09-07T18:06:11+00:00 · runs 195 · equity **$1,003.00** (+0.30%) · cash $0.00 · open 10/10 · round trips 59
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -33,15 +33,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-06T21:25 | XAUTUSDT | bottom | 4414.83 | 4406.12 | -0.20% |
+| 2026-09-06T21:25 | XAUTUSDT | bottom | 4414.83 | 4406.51 | -0.19% |
 | 2026-09-07T01:48 | SAHARAUSDT | bottom | 0.00921 | 0.00939 | +1.95% |
-| 2026-09-07T05:54 | GRTUSDT | bottom | 0.01905 | 0.01924 | +1.00% |
+| 2026-09-07T05:54 | GRTUSDT | bottom | 0.01905 | 0.01926 | +1.10% |
 | 2026-09-07T07:52 | RUNEUSDT | bottom | 0.474 | 0.486 | +2.53% |
-| 2026-09-07T07:52 | MUBUSDT | surge | 1043.39 | 1043.06 | -0.03% |
-| 2026-09-07T09:48 | KITEUSDT | bottom | 0.1211 | 0.1189 | -1.82% |
-| 2026-09-07T13:11 | ZKPUSDT | surge | 0.0486 | 0.049 | +0.82% |
+| 2026-09-07T07:52 | MUBUSDT | surge | 1043.39 | 1042.89 | -0.05% |
+| 2026-09-07T09:48 | KITEUSDT | bottom | 0.1211 | 0.1186 | -2.06% |
+| 2026-09-07T13:11 | ZKPUSDT | surge | 0.0486 | 0.0492 | +1.23% |
 | 2026-09-07T13:11 | MINAUSDT | surge | 0.0821 | 0.082 | -0.12% |
-| 2026-09-07T15:57 | FILUSDT | surge | 0.8588 | 0.8576 | -0.14% |
-| 2026-09-07T17:10 | KAVAUSDT | surge | 0.05979 | 0.05915 | -1.07% |
+| 2026-09-07T15:57 | FILUSDT | surge | 0.8588 | 0.8584 | -0.05% |
+| 2026-09-07T17:10 | KAVAUSDT | surge | 0.05979 | 0.05966 | -0.22% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
