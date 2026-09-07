@@ -1,33 +1,33 @@
 {
-  "ts": "2026-09-07T11:03:26+00:00",
+  "ts": "2026-09-07T11:08:50+00:00",
   "scanned": 95,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "YGGUSDT",
+      "symbol": "JSTUSDT",
       "signal": "ignition",
-      "score": 0.8218,
-      "raw_score": 0.8734,
+      "score": 0.7832,
+      "raw_score": 0.8324,
       "weight": 0.941,
-      "price": 0.02494,
-      "why": "trades 102.9x and volume 79.8x the prior 4h, 65% taker-buy, $139,721 burst \u2014 while price has only moved +1.6%",
-      "chg_24h": 0.0361,
-      "vol_surge": 79.75,
-      "chg_1h": 0.0159,
-      "market_surge": 18.18,
+      "price": 0.10846,
+      "why": "trades 8.8x and volume 26.3x the prior 4h, 61% taker-buy, $230,111 burst \u2014 while price has only moved -0.9%",
+      "chg_24h": -0.0325,
+      "vol_surge": 26.29,
+      "chg_1h": -0.009,
+      "market_surge": 22.24,
       "actionable": false,
       "status": "benched \u2014 hit 45%, mean +0.32% over last 560 at 24h: not beating 4x the round trip"
     }
   ],
   "gate": {
     "ignition": "benched \u2014 hit 45%, mean +0.32% over last 560 at 24h: not beating 4x the round trip",
-    "breakout": "benched \u2014 hit 40%, mean +0.24% over last 218 at 24h: not beating 4x the round trip",
+    "breakout": "benched \u2014 hit 40%, mean +0.24% over last 219 at 24h: not beating 4x the round trip",
     "reversion": "probation \u2014 7/12 resolved 24h samples under ruleset 3",
     "heat": "benched \u2014 hit 32%, mean -2.45% over last 31 at 24h: not beating 4x the round trip",
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 14,
+    "count": 12,
     "baseline": 18.0,
     "wave": false
   },
@@ -100,19 +100,19 @@
       "avg_win_4h": 0.0376,
       "avg_loss_4h": -0.03002,
       "payoff_4h": 1.252,
-      "span_h_24h": 310.8,
-      "n_eff_24h": 12.95,
-      "n_24h": 218,
-      "hit_rate_24h": 0.399,
-      "mean_ret_24h": 0.00242,
+      "span_h_24h": 311.2,
+      "n_eff_24h": 12.97,
+      "n_24h": 219,
+      "hit_rate_24h": 0.402,
+      "mean_ret_24h": 0.00243,
       "median_ret_24h": -0.01358,
       "both_halves_24h": true,
       "days_24h": 12,
-      "mean_x_24h": 0.01029,
+      "mean_x_24h": 0.01033,
       "days_x_24h": 4,
-      "avg_win_24h": 0.07615,
+      "avg_win_24h": 0.07536,
       "avg_loss_24h": -0.04845,
-      "payoff_24h": 1.572
+      "payoff_24h": 1.555
     },
     "reversion": {
       "span_h_1h": 327.5,
