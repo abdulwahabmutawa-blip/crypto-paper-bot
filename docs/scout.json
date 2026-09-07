@@ -1,33 +1,17 @@
 {
-  "ts": "2026-09-07T11:08:50+00:00",
+  "ts": "2026-09-07T11:15:08+00:00",
   "scanned": 95,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "JSTUSDT",
-      "signal": "ignition",
-      "score": 0.7832,
-      "raw_score": 0.8324,
-      "weight": 0.941,
-      "price": 0.10846,
-      "why": "trades 8.8x and volume 26.3x the prior 4h, 61% taker-buy, $230,111 burst \u2014 while price has only moved -0.9%",
-      "chg_24h": -0.0325,
-      "vol_surge": 26.29,
-      "chg_1h": -0.009,
-      "market_surge": 22.24,
-      "actionable": false,
-      "status": "benched \u2014 hit 45%, mean +0.32% over last 560 at 24h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
-    "ignition": "benched \u2014 hit 45%, mean +0.32% over last 560 at 24h: not beating 4x the round trip",
+    "ignition": "benched \u2014 hit 46%, mean +0.32% over last 561 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 40%, mean +0.24% over last 219 at 24h: not beating 4x the round trip",
     "reversion": "probation \u2014 7/12 resolved 24h samples under ruleset 3",
     "heat": "benched \u2014 hit 32%, mean -2.45% over last 31 at 24h: not beating 4x the round trip",
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 14,
     "baseline": 18.0,
     "wave": false
   },
@@ -59,19 +43,19 @@
       "avg_win_4h": 0.01753,
       "avg_loss_4h": -0.01706,
       "payoff_4h": 1.027,
-      "span_h_24h": 310.4,
-      "n_eff_24h": 12.93,
-      "n_24h": 560,
-      "hit_rate_24h": 0.454,
+      "span_h_24h": 311.5,
+      "n_eff_24h": 12.98,
+      "n_24h": 561,
+      "hit_rate_24h": 0.455,
       "mean_ret_24h": 0.00321,
       "median_ret_24h": -0.00277,
       "both_halves_24h": false,
       "days_24h": 12,
-      "mean_x_24h": 0.0171,
+      "mean_x_24h": 0.01718,
       "days_x_24h": 4,
-      "avg_win_24h": 0.04701,
+      "avg_win_24h": 0.04685,
       "avg_loss_24h": -0.0361,
-      "payoff_24h": 1.302
+      "payoff_24h": 1.298
     },
     "breakout": {
       "span_h_1h": 329.8,
