@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-07T12:34:45+00:00",
-  "scanned": 94,
+  "ts": "2026-09-07T12:40:38+00:00",
+  "scanned": 96,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "METUSDT",
+      "signal": "ignition",
+      "score": 0.8276,
+      "raw_score": 0.8766,
+      "weight": 0.944,
+      "price": 0.211,
+      "why": "trades 53.1x and volume 54.6x the prior 4h, 66% taker-buy, $81,866 burst \u2014 while price has only moved +1.5%",
+      "chg_24h": -0.0275,
+      "vol_surge": 54.59,
+      "chg_1h": 0.0149,
+      "market_surge": 5.89,
+      "actionable": false,
+      "status": "benched \u2014 hit 46%, mean +0.36% over last 554 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 46%, mean +0.36% over last 554 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 40%, mean +0.27% over last 218 at 24h: not beating 4x the round trip",
@@ -51,7 +67,7 @@
       "median_ret_24h": -0.002,
       "both_halves_24h": false,
       "days_24h": 12,
-      "mean_x_24h": 0.01773,
+      "mean_x_24h": 0.01822,
       "days_x_24h": 4,
       "avg_win_24h": 0.04756,
       "avg_loss_24h": -0.03633,
