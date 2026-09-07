@@ -1,6 +1,6 @@
 # Social radar — which X chatter precedes rises (learning)
 
-updated 2026-09-07T00:37:32+00:00 · rows 8 · scored@24h-excess 8 · objective **BTC-excess 24h**
+updated 2026-09-07T00:44:24+00:00 · rows 8 · scored@24h-excess 8 · objective **BTC-excess 24h**
 
 _Grok harvests posts; this module counts. Observation only — nothing trades until a pattern clears the gate (n>=12, 4x fees, both halves, payoff) **and** the owner approves. Power: ~3.5 candidates/day, so only large (>=5pp) effects are readable in two weeks._
 
@@ -18,3 +18,7 @@ _Grok harvests posts; this module counts. Observation only — nothing trades un
 | H6_exchange_surface_words_exhaust | scanner/exchange-surface wording vs organic | 1/7 | -0.51 |
 | H7_extreme_velocity_contrarian | all-new handles vs familiar, 72h | 5/0 | — |
 | H8_novelty_pays | first ever appearance vs repeat | 8/0 | — |
+
+## Rejected this scan (the filter doing its job)
+
+DACT (no Binance USDT spot pair)
