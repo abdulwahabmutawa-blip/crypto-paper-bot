@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-07T17:17:57+00:00",
+  "ts": "2026-09-07T17:23:35+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
@@ -17,12 +17,12 @@
     "movers": [
       "ICP",
       "WLD",
-      "DOT",
       "PUMP",
+      "DOT",
       "AVAX",
       "LINK",
       "XLM",
-      "TAO"
+      "SUI"
     ],
     "watcher": [
       "TAO",
@@ -53,19 +53,8 @@
         "movers",
         "watcher"
       ],
-      "funding": 3.3e-05,
+      "funding": 2.5e-05,
       "long_short": 0.83
-    },
-    {
-      "symbol": "TAO",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": 5e-05,
-      "long_short": 2.01
     },
     {
       "symbol": "ICP",
@@ -76,6 +65,16 @@
       ],
       "funding": 0.0001,
       "long_short": 2.23
+    },
+    {
+      "symbol": "TAO",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "watcher"
+      ],
+      "funding": 5e-05,
+      "long_short": 2.01
     },
     {
       "symbol": "ZEC",
@@ -101,7 +100,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.3e-05
+      "funding": -2.6e-05
     },
     {
       "symbol": "AVAX",
@@ -109,7 +108,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 7.7e-05
+      "funding": 7.5e-05
     },
     {
       "symbol": "LINK",
@@ -117,7 +116,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.7e-05
+      "funding": 4.3e-05
     },
     {
       "symbol": "MARSCOIN",
@@ -125,7 +124,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.8e-05
+      "funding": 7.9e-05
     },
     {
       "symbol": "PENGU",
@@ -133,7 +132,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.5e-05
+      "funding": 2.1e-05
     },
     {
       "symbol": "RAY",
@@ -142,6 +141,14 @@
         "coingecko"
       ],
       "funding": 0.0
+    },
+    {
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -4.2e-05
     },
     {
       "symbol": "WLD",
