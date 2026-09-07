@@ -1,24 +1,8 @@
 {
-  "ts": "2026-09-07T23:39:50+00:00",
+  "ts": "2026-09-07T23:45:17+00:00",
   "scanned": 100,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "SOXLBUSDT",
-      "signal": "ignition",
-      "score": 0.9158,
-      "raw_score": 0.965,
-      "weight": 0.949,
-      "price": 125.09,
-      "why": "trades 11.8x and volume 22.7x the prior 4h, 90% taker-buy, $59,152 burst \u2014 while price has only moved -0.4%",
-      "chg_24h": 0.0134,
-      "vol_surge": 22.72,
-      "chg_1h": -0.0041,
-      "market_surge": 4.58,
-      "actionable": false,
-      "status": "benched \u2014 hit 46%, mean +0.41% over last 548 at 24h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 46%, mean +0.41% over last 548 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 41%, mean +0.32% over last 223 at 24h: not beating 4x the round trip",
@@ -33,19 +17,19 @@
   },
   "scorecard": {
     "ignition": {
-      "span_h_1h": 329.2,
-      "n_eff_1h": 329.23,
-      "n_1h": 639,
-      "hit_rate_1h": 0.397,
+      "span_h_1h": 334.7,
+      "n_eff_1h": 334.75,
+      "n_1h": 640,
+      "hit_rate_1h": 0.398,
       "mean_ret_1h": -7e-05,
-      "median_ret_1h": -0.00072,
+      "median_ret_1h": -0.00067,
       "both_halves_1h": false,
       "days_1h": 14,
       "mean_x_1h": -0.00074,
       "days_x_1h": 5,
-      "avg_win_1h": 0.01036,
+      "avg_win_1h": 0.01033,
       "avg_loss_1h": -0.00929,
-      "payoff_1h": 1.115,
+      "payoff_1h": 1.112,
       "span_h_4h": 329.2,
       "n_eff_4h": 82.31,
       "n_4h": 633,
