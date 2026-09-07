@@ -1,29 +1,29 @@
 {
-  "ts": "2026-09-07T07:03:11+00:00",
+  "ts": "2026-09-07T07:08:33+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
-      "ARB",
       "ZEC",
+      "ARB",
       "TAO",
       "PENGU",
-      "ETH",
+      "BTC",
       "PUMP",
       "LIT",
-      "ASTER",
-      "BTC"
+      "ETH",
+      "SOL"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "TAO",
-      "LINK",
       "RAY",
       "WLD",
+      "LINK",
       "NEAR",
       "PROM",
       "PUMP",
-      "ZEC"
+      "AVAX"
     ],
     "watcher": [
       "RAY",
@@ -32,17 +32,6 @@
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "ZEC",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": -3.8e-05,
-      "long_short": 0.4
-    },
     {
       "symbol": "PUMP",
       "surfaces": 2,
@@ -73,6 +62,16 @@
       "long_short": 1.82
     },
     {
+      "symbol": "ZEC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "watcher"
+      ],
+      "funding": -3.8e-05,
+      "long_short": 0.4
+    },
+    {
       "symbol": "ARB",
       "surfaces": 1,
       "sources": [
@@ -81,12 +80,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "ASTER",
+      "symbol": "AVAX",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
-      "funding": 5e-05
+      "funding": 0.0001
     },
     {
       "symbol": "BTC",
@@ -94,7 +93,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.4e-05
+      "funding": 4.2e-05
     },
     {
       "symbol": "ETH",
@@ -102,7 +101,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.2e-05
+      "funding": 2.1e-05
     },
     {
       "symbol": "FIRO",
@@ -117,7 +116,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 8.2e-05
+      "funding": 7.9e-05
     },
     {
       "symbol": "LIT",
@@ -141,7 +140,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.7e-05
+      "funding": 3.2e-05
     },
     {
       "symbol": "PROM",
@@ -150,6 +149,14 @@
         "movers"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -2.6e-05
     },
     {
       "symbol": "WLD",
