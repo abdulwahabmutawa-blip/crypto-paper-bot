@@ -1,10 +1,10 @@
 {
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "holding": "CASH",
-  "units": 0.0,
-  "cash": 1323.05,
-  "entry_price": null,
+  "holding": "ZEC-USD",
+  "units": 1.0726007829777544,
+  "cash": 0.0,
+  "entry_price": 1229.92,
   "bench_units": 1.332054612938296,
   "stopped": {
     "SHIB-USD": "2026-07-27T00:01:08+00:00",
@@ -668,6 +668,16 @@
       "value": 2456.07,
       "fee": 3.07,
       "reason": "Grok scans stale (26h) \u2014 hype unverifiable, flying blind is not a strategy"
+    },
+    {
+      "date": "2026-09-07",
+      "action": "BUY",
+      "ticker": "ZEC-USD",
+      "price": 1229.92,
+      "units": 1.0726,
+      "value": 1319.21,
+      "fee": 3.84,
+      "reason": "Grok: ZEC euphoric \u2014 Privacy ETF squeeze mania (scan 2026-09-06T23:43)"
     }
   ],
   "history": [
@@ -911,15 +921,16 @@
       "value": 1323.05,
       "bench": 1025.94,
       "holding": "CASH"
+    },
+    {
+      "date": "2026-09-05",
+      "value": 1319.21,
+      "bench": 1025.94,
+      "holding": "ZEC-USD",
+      "bench_asof": "2026-09-04"
     }
   ],
   "intraday": [
-    {
-      "ts": "2026-08-20T00:29:10+00:00",
-      "value": 1982.88,
-      "bench": 1024.43,
-      "holding": "MRNA"
-    },
     {
       "ts": "2026-08-20T00:42:40+00:00",
       "value": 1982.88,
@@ -9913,9 +9924,15 @@
       "value": 1323.05,
       "bench": 1025.94,
       "holding": "CASH"
+    },
+    {
+      "ts": "2026-09-07T00:03:24+00:00",
+      "value": 1319.21,
+      "bench": 1025.94,
+      "holding": "ZEC-USD"
     }
   ],
-  "last_updated_utc": "2026-09-06T23:44:42+00:00",
+  "last_updated_utc": "2026-09-07T00:03:24+00:00",
   "restatement": {
     "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)",
     "voided_trades": [
@@ -9994,5 +10011,5 @@
     ],
     "voided_reason": "signal faded before any real fill was possible (market closed the whole window) \u2014 trades could never have existed"
   },
-  "costs_paid": 112.3867
+  "costs_paid": 116.2235
 }
