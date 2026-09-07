@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-07T07:30:21+00:00",
+  "ts": "2026-09-07T07:36:11+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
@@ -7,12 +7,11 @@
       "ARB",
       "TAO",
       "PENGU",
-      "PUMP",
       "BTC",
-      "SOL",
       "LINK",
       "RAY",
-      "IOST"
+      "PUMP",
+      "SOL"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,9 +21,9 @@
       "WLD",
       "LINK",
       "NEAR",
-      "PROM",
       "PUMP",
-      "ZEC"
+      "PROM",
+      "AVAX"
     ],
     "watcher": [
       "RAY",
@@ -44,24 +43,13 @@
       "funding": 0.0
     },
     {
-      "symbol": "ZEC",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": -3.2e-05,
-      "long_short": 0.4
-    },
-    {
       "symbol": "LINK",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 7.1e-05,
+      "funding": 7e-05,
       "long_short": 2.03
     },
     {
@@ -85,6 +73,16 @@
       "long_short": 1.82
     },
     {
+      "symbol": "ZEC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "watcher"
+      ],
+      "funding": -3.1e-05,
+      "long_short": 0.4
+    },
+    {
       "symbol": "ARB",
       "surfaces": 1,
       "sources": [
@@ -93,12 +91,20 @@
       "funding": 0.0001
     },
     {
+      "symbol": "AVAX",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 9.6e-05
+    },
+    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 3.7e-05
+      "funding": 3.5e-05
     },
     {
       "symbol": "FIRO",
@@ -106,14 +112,6 @@
       "sources": [
         "coingecko"
       ]
-    },
-    {
-      "symbol": "IOST",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "NEAR",
@@ -129,7 +127,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.9e-05
+      "funding": 3.6e-05
     },
     {
       "symbol": "PROM",
