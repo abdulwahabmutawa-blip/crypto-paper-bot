@@ -1,19 +1,20 @@
 # Scalper — hyper-aggressive small-wins PAPER bot
 
-updated 2026-09-07T09:33:17+00:00 · runs 164 · equity **$1,003.57** (+0.36%) · cash $0.00 · open 10/10 · round trips 51
+updated 2026-09-07T09:49:30+00:00 · runs 165 · equity **$1,001.16** (+0.12%) · cash $0.00 · open 10/10 · round trips 52
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
-- hit 55% (break-even 54%) · mean +0.12%/trade · realized $+4.93 · worst day $-19.67 · trades/day 17.0
+- hit 54% (break-even 54%) · mean +0.05%/trade · realized $+1.80 · worst day $-22.80 · trades/day 17.3
 
 | shape | n | hit | mean | target% | stop% | time% |
 |---|---|---|---|---|---|---|
 | surge | 11 | 64% | +0.57% | 64% | 36% | 0% |
-| bottom | 40 | 52% | -0.01% | 50% | 42% | 8% |
+| bottom | 41 | 51% | -0.08% | 49% | 44% | 7% |
 
 ## Last 15 round trips
 | exit (UTC) | coin | shape | how | hours | net | P&L |
 |---|---|---|---|---|---|---|
+| 2026-09-07T09:48 | ZKCUSDT | bottom | STOP | 20.2 | -3.25% | $-3.13 |
 | 2026-09-07T07:52 | XPLUSDT | bottom | STOP | 3.8 | -3.25% | $-3.27 |
 | 2026-09-07T07:52 | BROCCOLI714USDT | bottom | STOP | 4.5 | -3.25% | $-3.57 |
 | 2026-09-07T07:52 | MSTRBUSDT | surge | STOP | 7.5 | -3.25% | $-3.27 |
@@ -28,20 +29,19 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | 2026-09-07T00:59 | CATIUSDT | surge | TARGET | 1.2 | +2.75% | $+2.89 |
 | 2026-09-07T00:01 | CAKEUSDT | bottom | TARGET | 9.2 | +2.75% | $+2.69 |
 | 2026-09-06T23:42 | EPICUSDT | bottom | TARGET | 0.8 | +2.75% | $+2.81 |
-| 2026-09-06T23:07 | ZKPUSDT | bottom | TARGET | 7.2 | +2.75% | $+2.79 |
 
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-06T12:59 | BNBUSDT | bottom | 755.57 | 745.55 | -1.33% |
-| 2026-09-06T13:19 | ZKCUSDT | bottom | 0.049 | 0.0482 | -1.63% |
-| 2026-09-06T19:08 | ACEUSDT | bottom | 0.1663 | 0.1666 | +0.18% |
-| 2026-09-06T21:25 | XAUTUSDT | bottom | 4414.83 | 4400.51 | -0.32% |
-| 2026-09-07T01:48 | SAHARAUSDT | bottom | 0.00921 | 0.00917 | -0.43% |
-| 2026-09-07T05:54 | GRTUSDT | bottom | 0.01905 | 0.01926 | +1.10% |
-| 2026-09-07T06:14 | JSTUSDT | bottom | 0.11073 | 0.10954 | -1.07% |
+| 2026-09-06T12:59 | BNBUSDT | bottom | 755.57 | 744.49 | -1.47% |
+| 2026-09-06T19:08 | ACEUSDT | bottom | 0.1663 | 0.1662 | -0.06% |
+| 2026-09-06T21:25 | XAUTUSDT | bottom | 4414.83 | 4406 | -0.20% |
+| 2026-09-07T01:48 | SAHARAUSDT | bottom | 0.00921 | 0.00915 | -0.65% |
+| 2026-09-07T05:54 | GRTUSDT | bottom | 0.01905 | 0.01924 | +1.00% |
+| 2026-09-07T06:14 | JSTUSDT | bottom | 0.11073 | 0.10944 | -1.16% |
 | 2026-09-07T07:52 | RUNEUSDT | bottom | 0.474 | 0.48 | +1.27% |
-| 2026-09-07T07:52 | MUBUSDT | surge | 1043.39 | 1044.14 | +0.07% |
-| 2026-09-07T07:52 | ZAMAUSDT | bottom | 0.05411 | 0.05457 | +0.85% |
+| 2026-09-07T07:52 | MUBUSDT | surge | 1043.39 | 1042.33 | -0.10% |
+| 2026-09-07T07:52 | ZAMAUSDT | bottom | 0.05411 | 0.05436 | +0.46% |
+| 2026-09-07T09:48 | KITEUSDT | bottom | 0.1211 | 0.1216 | +0.41% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
