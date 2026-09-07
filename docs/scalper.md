@@ -1,6 +1,6 @@
 # Scalper — hyper-aggressive small-wins PAPER bot
 
-updated 2026-09-07T22:58:00+00:00 · runs 213 · equity **$998.89** (-0.11%) · cash $0.00 · open 10/10 · round trips 71
+updated 2026-09-07T23:14:10+00:00 · runs 214 · equity **$1,003.06** (+0.31%) · cash $0.00 · open 10/10 · round trips 71
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -33,15 +33,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-07T07:52 | MUBUSDT | surge | 1043.39 | 1036.99 | -0.61% |
-| 2026-09-07T13:11 | ZKPUSDT | surge | 0.0486 | 0.0492 | +1.23% |
-| 2026-09-07T13:11 | MINAUSDT | surge | 0.0821 | 0.0814 | -0.85% |
-| 2026-09-07T17:10 | KAVAUSDT | surge | 0.05979 | 0.05843 | -2.27% |
-| 2026-09-07T20:14 | HBARUSDT | surge | 0.08249 | 0.08168 | -0.98% |
-| 2026-09-07T20:47 | PENDLEUSDT | surge | 2.236 | 2.227 | -0.40% |
-| 2026-09-07T21:35 | LINKUSDT | bottom | 12.761 | 12.686 | -0.59% |
-| 2026-09-07T21:51 | MEGAUSDT | surge | 0.04075 | 0.04011 | -1.57% |
-| 2026-09-07T22:56 | AEROUSDT | surge | 0.6278 | 0.6228 | -0.80% |
-| 2026-09-07T22:56 | INJUSDT | surge | 6.061 | 6.07 | +0.15% |
+| 2026-09-07T07:52 | MUBUSDT | surge | 1043.39 | 1035.1 | -0.79% |
+| 2026-09-07T13:11 | ZKPUSDT | surge | 0.0486 | 0.0496 | +2.06% |
+| 2026-09-07T13:11 | MINAUSDT | surge | 0.0821 | 0.0812 | -1.10% |
+| 2026-09-07T17:10 | KAVAUSDT | surge | 0.05979 | 0.05849 | -2.17% |
+| 2026-09-07T20:14 | HBARUSDT | surge | 0.08249 | 0.08212 | -0.45% |
+| 2026-09-07T20:47 | PENDLEUSDT | surge | 2.236 | 2.236 | +0.00% |
+| 2026-09-07T21:35 | LINKUSDT | bottom | 12.761 | 12.756 | -0.04% |
+| 2026-09-07T21:51 | MEGAUSDT | surge | 0.04075 | 0.04062 | -0.32% |
+| 2026-09-07T22:56 | AEROUSDT | surge | 0.6278 | 0.6163 | -1.83% |
+| 2026-09-07T22:56 | INJUSDT | surge | 6.061 | 6.186 | +2.06% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
