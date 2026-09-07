@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-07T11:37:31+00:00",
+  "ts": "2026-09-07T11:43:21+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
@@ -22,8 +22,8 @@
       "WLD",
       "LINK",
       "RAY",
-      "ZEC",
-      "LTC"
+      "LTC",
+      "AVAX"
     ],
     "watcher": [
       "ZEC",
@@ -43,17 +43,6 @@
       ],
       "funding": 5e-05,
       "long_short": 1.88
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": 3.4e-05,
-      "long_short": 0.41
     },
     {
       "symbol": "PUMP",
@@ -76,12 +65,30 @@
       "long_short": 1.75
     },
     {
+      "symbol": "ZEC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "watcher"
+      ],
+      "funding": 3.7e-05,
+      "long_short": 0.41
+    },
+    {
       "symbol": "ARB",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -5.4e-05
+      "funding": -5.6e-05
+    },
+    {
+      "symbol": "AVAX",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 9.4e-05
     },
     {
       "symbol": "BTC",
@@ -104,7 +111,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 7.2e-05
+      "funding": 8.3e-05
     },
     {
       "symbol": "LINK",
@@ -112,7 +119,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 8.3e-05
+      "funding": 8.4e-05
     },
     {
       "symbol": "LTC",
@@ -150,7 +157,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.3e-05
+      "funding": 3.5e-05
     },
     {
       "symbol": "UNI",
@@ -158,7 +165,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.1e-05
+      "funding": 7.3e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
