@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-07T07:14:21+00:00",
+  "ts": "2026-09-07T07:19:41+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
@@ -7,11 +7,12 @@
       "ARB",
       "TAO",
       "PENGU",
+      "SOL",
       "BTC",
       "PUMP",
-      "LIT",
+      "LINK",
       "ETH",
-      "SOL"
+      "NEAR"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -40,8 +41,28 @@
         "movers",
         "watcher"
       ],
-      "funding": -3.5e-05,
+      "funding": -3.4e-05,
       "long_short": 0.4
+    },
+    {
+      "symbol": "LINK",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 7.5e-05,
+      "long_short": 2.03
+    },
+    {
+      "symbol": "NEAR",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.08
     },
     {
       "symbol": "PUMP",
@@ -69,8 +90,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 5e-05,
-      "long_short": 1.82
+      "funding": 5e-05
     },
     {
       "symbol": "ARB",
@@ -86,7 +106,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.1e-05
+      "funding": 4e-05
     },
     {
       "symbol": "ETH",
@@ -94,7 +114,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.5e-05
+      "funding": 2.4e-05
     },
     {
       "symbol": "FIRO",
@@ -104,36 +124,12 @@
       ]
     },
     {
-      "symbol": "LINK",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 7.8e-05
-    },
-    {
-      "symbol": "LIT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "NEAR",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 3.5e-05
+      "funding": 3.9e-05
     },
     {
       "symbol": "PROM",
@@ -149,7 +145,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2e-05
+      "funding": -1.8e-05
     },
     {
       "symbol": "WLD",
