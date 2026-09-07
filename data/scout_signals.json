@@ -1,20 +1,35 @@
 {
-  "ts": "2026-09-07T00:00:37+00:00",
+  "ts": "2026-09-07T00:06:13+00:00",
   "scanned": 97,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "MSTRBUSDT",
+      "symbol": "SNDKBUSDT",
       "signal": "ignition",
-      "score": 0.7819,
-      "raw_score": 0.8222,
+      "score": 0.7482,
+      "raw_score": 0.7868,
       "weight": 0.951,
-      "price": 146.0,
-      "why": "trades 7.8x and volume 15.9x the prior 4h, 66% taker-buy, $169,312 burst \u2014 while price has only moved -0.2%",
-      "chg_24h": 0.0178,
-      "vol_surge": 15.87,
-      "chg_1h": -0.0018,
-      "market_surge": 11.26,
+      "price": 1786.07,
+      "why": "trades 6.7x and volume 11.1x the prior 4h, 71% taker-buy, $92,624 burst \u2014 while price has only moved +0.4%",
+      "chg_24h": 0.0129,
+      "vol_surge": 11.14,
+      "chg_1h": 0.0041,
+      "market_surge": 2.07,
+      "actionable": false,
+      "status": "benched \u2014 hit 47%, mean +0.49% over last 543 at 24h: not beating 4x the round trip"
+    },
+    {
+      "symbol": "TUTUSDT",
+      "signal": "ignition",
+      "score": 0.5978,
+      "raw_score": 0.6286,
+      "weight": 0.951,
+      "price": 0.02579,
+      "why": "trades 6.3x and volume 5.3x the prior 4h, 70% taker-buy, $86,886 burst \u2014 while price has only moved +1.2%",
+      "chg_24h": -0.0945,
+      "vol_surge": 5.31,
+      "chg_1h": 0.0118,
+      "market_surge": 0.0,
       "actionable": false,
       "status": "benched \u2014 hit 47%, mean +0.49% over last 543 at 24h: not beating 4x the round trip"
     }
@@ -27,7 +42,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 20,
+    "count": 19,
     "baseline": 18.0,
     "wave": false
   },
@@ -54,7 +69,7 @@
       "median_ret_4h": 0.00015,
       "both_halves_4h": false,
       "days_4h": 13,
-      "mean_x_4h": 0.00272,
+      "mean_x_4h": 0.00269,
       "days_x_4h": 4,
       "avg_win_4h": 0.01798,
       "avg_loss_4h": -0.01707,
