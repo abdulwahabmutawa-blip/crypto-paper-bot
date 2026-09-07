@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-07T07:08:33+00:00",
+  "ts": "2026-09-07T07:14:21+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
@@ -23,7 +23,7 @@
       "NEAR",
       "PROM",
       "PUMP",
-      "AVAX"
+      "ZEC"
     ],
     "watcher": [
       "RAY",
@@ -32,6 +32,17 @@
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "ZEC",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": -3.5e-05,
+      "long_short": 0.4
+    },
     {
       "symbol": "PUMP",
       "surfaces": 2,
@@ -62,28 +73,10 @@
       "long_short": 1.82
     },
     {
-      "symbol": "ZEC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "watcher"
-      ],
-      "funding": -3.8e-05,
-      "long_short": 0.4
-    },
-    {
       "symbol": "ARB",
       "surfaces": 1,
       "sources": [
         "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "AVAX",
-      "surfaces": 1,
-      "sources": [
-        "movers"
       ],
       "funding": 0.0001
     },
@@ -93,7 +86,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.2e-05
+      "funding": 4.1e-05
     },
     {
       "symbol": "ETH",
@@ -101,7 +94,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.1e-05
+      "funding": 2.5e-05
     },
     {
       "symbol": "FIRO",
@@ -116,7 +109,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 7.9e-05
+      "funding": 7.8e-05
     },
     {
       "symbol": "LIT",
@@ -140,7 +133,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.2e-05
+      "funding": 3.5e-05
     },
     {
       "symbol": "PROM",
@@ -156,7 +149,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.6e-05
+      "funding": -2e-05
     },
     {
       "symbol": "WLD",
