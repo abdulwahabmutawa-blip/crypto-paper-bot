@@ -1,6 +1,6 @@
 # Scalper — hyper-aggressive small-wins PAPER bot
 
-updated 2026-09-07T17:11:47+00:00 · runs 191 · equity **$1,005.79** (+0.58%) · cash $0.00 · open 10/10 · round trips 59
+updated 2026-09-07T17:28:26+00:00 · runs 192 · equity **$1,006.65** (+0.66%) · cash $0.00 · open 10/10 · round trips 59
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -33,15 +33,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-06T21:25 | XAUTUSDT | bottom | 4414.83 | 4410.84 | -0.09% |
+| 2026-09-06T21:25 | XAUTUSDT | bottom | 4414.83 | 4410.88 | -0.09% |
 | 2026-09-07T01:48 | SAHARAUSDT | bottom | 0.00921 | 0.00938 | +1.85% |
-| 2026-09-07T05:54 | GRTUSDT | bottom | 0.01905 | 0.01921 | +0.84% |
-| 2026-09-07T07:52 | RUNEUSDT | bottom | 0.474 | 0.484 | +2.11% |
-| 2026-09-07T07:52 | MUBUSDT | surge | 1043.39 | 1041.69 | -0.16% |
-| 2026-09-07T09:48 | KITEUSDT | bottom | 0.1211 | 0.12 | -0.91% |
+| 2026-09-07T05:54 | GRTUSDT | bottom | 0.01905 | 0.01925 | +1.05% |
+| 2026-09-07T07:52 | RUNEUSDT | bottom | 0.474 | 0.485 | +2.32% |
+| 2026-09-07T07:52 | MUBUSDT | surge | 1043.39 | 1042.39 | -0.10% |
+| 2026-09-07T09:48 | KITEUSDT | bottom | 0.1211 | 0.1197 | -1.16% |
 | 2026-09-07T13:11 | ZKPUSDT | surge | 0.0486 | 0.0491 | +1.03% |
-| 2026-09-07T13:11 | MINAUSDT | surge | 0.0821 | 0.0827 | +0.73% |
-| 2026-09-07T15:57 | FILUSDT | surge | 0.8588 | 0.8651 | +0.73% |
-| 2026-09-07T17:10 | KAVAUSDT | surge | 0.05979 | 0.06032 | +0.89% |
+| 2026-09-07T13:11 | MINAUSDT | surge | 0.0821 | 0.0821 | +0.00% |
+| 2026-09-07T15:57 | FILUSDT | surge | 0.8588 | 0.869 | +1.19% |
+| 2026-09-07T17:10 | KAVAUSDT | surge | 0.05979 | 0.06086 | +1.79% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
