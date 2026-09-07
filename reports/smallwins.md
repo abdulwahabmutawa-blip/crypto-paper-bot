@@ -1,6 +1,6 @@
 # Small-wins lab — paper study (owner request 2026-09-04)
 
-updated 2026-09-07T20:17:42+00:00 · runs 273 · open 468 · resolved 9262 · cost 0.25%/RT
+updated 2026-09-07T20:33:55+00:00 · runs 274 · open 477 · resolved 9265 · cost 0.25%/RT
 
 PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst day > -3 units.
 
@@ -33,7 +33,7 @@ PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst
 | range_bottom|t1.5|s1.5|h8 | 158 | 4 | 39.5 | 52% | 58% | -0.09% | 46% | 36% | 18% | -22.9% | fail |
 | range_bottom|t1.5|s1|h8 | 187 | 4 | 46.8 | 44% | 50% | -0.12% | 40% | 49% | 11% | -23.7% | fail |
 | ignition|t1.5|s1|h8 | 64 | 4 | 16.0 | 42% | 50% | -0.13% | 41% | 50% | 9% | -10.8% | fail |
-| range_bottom|t1|s1|h6 | 230 | 4 | 57.5 | 53% | 62% | -0.14% | 51% | 41% | 8% | -22.7% | fail |
+| range_bottom|t1|s1|h6 | 231 | 4 | 57.8 | 52% | 62% | -0.14% | 51% | 41% | 8% | -22.9% | fail |
 | momentum|t3|s2|h12 | 362 | 4 | 90.5 | 41% | 45% | -0.16% | 38% | 53% | 9% | -55.8% | fail |
 | ignition|t1|s1|h6 | 76 | 4 | 19.0 | 50% | 62% | -0.18% | 49% | 42% | 9% | -10.6% | fail |
 | momentum|t2|s2|h8 | 435 | 4 | 108.8 | 50% | 56% | -0.21% | 46% | 43% | 10% | -53.1% | fail |
@@ -54,11 +54,11 @@ PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst
 | dip_large|t3|s4|h48 | 178 | 3 | 59.3 | 54% | 61% | -0.45% | 54% | 46% | 1% | -45.8% | fail |
 | dip_mid|t2|s2|h8 | 178 | 3 | 59.3 | 44% | 56% | -0.46% | 44% | 54% | 1% | -46.8% | fail |
 | dip_large|t4|s2|h24 | 224 | 3 | 74.7 | 29% | 38% | -0.55% | 28% | 71% | 1% | -57.7% | fail |
+| dip_large|t5|s3|h48 | 169 | 3 | 56.3 | 34% | 41% | -0.55% | 34% | 66% | 0% | -45.0% | fail |
 | dip_mid|t3|s3|h24 | 144 | 3 | 48.0 | 44% | 54% | -0.56% | 44% | 54% | 2% | -57.3% | fail |
 | dip_mid|t3|s2|h12 | 165 | 3 | 55.0 | 34% | 45% | -0.58% | 32% | 65% | 4% | -56.5% | fail |
-| dip_large|t5|s3|h48 | 168 | 3 | 56.0 | 33% | 41% | -0.58% | 33% | 67% | 0% | -49.7% | fail |
 | dip_mid|t4|s2|h24 | 163 | 3 | 54.3 | 28% | 38% | -0.61% | 26% | 71% | 2% | -61.9% | fail |
 | dip_mid|t3|s4|h48 | 128 | 3 | 42.7 | 50% | 61% | -0.72% | 50% | 49% | 1% | -63.5% | fail |
-| dip_mid|t5|s3|h48 | 129 | 3 | 43.0 | 29% | 41% | -0.87% | 29% | 70% | 1% | -73.8% | fail |
+| dip_mid|t5|s3|h48 | 130 | 3 | 43.3 | 30% | 41% | -0.87% | 29% | 69% | 2% | -73.7% | fail |
 
 _hit = share of trades with positive net return; break-even = (stop+cost)/(target+stop); worst day = sum of unit returns on the worst UTC day. Paper only, one unit per trade, no keys, no orders._
