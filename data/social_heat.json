@@ -1,15 +1,15 @@
 {
-  "ts": "2026-09-07T15:22:52+00:00",
+  "ts": "2026-09-07T15:28:21+00:00",
   "sources": {
     "coingecko": [
-      "FIRO",
       "ZEC",
       "PENGU",
+      "TAO",
       "BTC",
       "PUMP",
-      "TAO",
-      "DOT",
-      "SOL"
+      "SOL",
+      "FET",
+      "ARB"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -17,11 +17,11 @@
       "WLD",
       "ICP",
       "PUMP",
-      "TAO",
       "LINK",
+      "TAO",
       "AVAX",
-      "SUI",
-      "XLM"
+      "XLM",
+      "SUI"
     ],
     "watcher": [
       "ZEC",
@@ -73,12 +73,20 @@
       "long_short": 0.4
     },
     {
+      "symbol": "ARB",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -3.6e-05
+    },
+    {
       "symbol": "AVAX",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 8.3e-05
+      "funding": 8.5e-05
     },
     {
       "symbol": "BTC",
@@ -86,22 +94,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.6e-05
+      "funding": 2.5e-05
     },
     {
-      "symbol": "DOT",
+      "symbol": "FET",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "FIRO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ]
     },
     {
       "symbol": "ICP",
@@ -117,7 +118,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 8e-05
+      "funding": 7.7e-05
     },
     {
       "symbol": "PENGU",
@@ -133,7 +134,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -5e-06
+      "funding": -8e-06
     },
     {
       "symbol": "SUI",
@@ -141,7 +142,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 1.7e-05
+      "funding": 1.3e-05
     },
     {
       "symbol": "XLM",
