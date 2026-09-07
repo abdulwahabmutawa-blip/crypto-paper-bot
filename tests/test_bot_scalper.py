@@ -84,3 +84,28 @@ def test_merge_keeps_trades_and_rederives_cash():
          "trades": [{"symbol": "X", "entry_ms": 1, "stake": 100.0, "pnl_usd": 10.0, "exit_ts": "t"}]}
     m = sc.merge_states(a, b)
     assert m["open"] == [] and len(m["trades"]) == 1 and abs(m["cash"] - 1010.0) < 1e-9 and m["runs"] == 4
+
+
+def test_bottom_limited_to_top_tier_and_three_seats(tmp_path, monkeypatch):
+    # 70 flat-bottom coins: only the first 60 qualify for "bottom", and at most 3 seats
+    def _bottom(n=120):
+        k = _flat(n=n - 4)
+        for i in range(4):
+            k.append(candle((n - 4 + i) * 900_000, 100, 100.2, 97.0, 97.2, 1000.0))
+        return k
+    kl = {"BTCUSDT": _flat(50000.0)}
+    kl.update({f"C{i:02d}USDT": _bottom() for i in range(70)})
+    st, sc = _run(tmp_path, monkeypatch, kl, 120 * 900_000 + 1000)
+    assert len(st["open"]) == 3 and all(p["shape"] == "bottom" for p in st["open"])
+    assert all(int(p["symbol"][1:3]) < 60 for p in st["open"])
+
+
+def test_surge_outranks_bottom(tmp_path, monkeypatch):
+    def _bottom(n=120):
+        k = _flat(n=n - 4)
+        for i in range(4):
+            k.append(candle((n - 4 + i) * 900_000, 100, 100.2, 97.0, 97.2, 1000.0))
+        return k
+    kl = {"BTCUSDT": _flat(50000.0), "AAAUSDT": _bottom(), "BBBUSDT": _bottom(), "ZZZUSDT": _surge()}
+    st, sc = _run(tmp_path, monkeypatch, kl, 120 * 900_000 + 1000)
+    assert st["open"][0]["symbol"] == "ZZZUSDT" and st["open"][0]["shape"] == "surge"

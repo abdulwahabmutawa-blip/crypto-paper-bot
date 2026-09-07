@@ -44,7 +44,13 @@ COST = lab.COST            # 0.25% per round trip
 COOLDOWN_H = 2.0
 MAX_TRADES_KEEP = 20000
 
-# entry shapes on the lab's 15m feature dict
+# entry shapes on the lab's 15m feature dict.
+# 2026-09-07 review of the first 52 round trips (owner: "what did it do
+# wrong"): surge 11 trades 64% +$6.06; bottom 41 trades 51% -$4.26. The
+# bottom shape fired on every dipping small cap in a soft tape and took
+# 9 of 10 seats; the lab restricts range_bottom to the 60 most liquid
+# coins, this port did not. Fix: surge has seat priority, bottom only in
+# the top-60 tier and capped at BOTTOM_MAX_SEATS.
 SHAPES = {
     "surge": lambda F: (F["v4h"] >= 2.0 and F["rp24"] >= 0.70
                         and 0.01 <= F["r4h"] <= 0.06 and 0.01 <= F["r24"] <= 0.20
@@ -52,6 +58,8 @@ SHAPES = {
     "bottom": lambda F: (F["rp24"] <= 0.15 and F["r24"] > -0.06
                          and F["btc24"] > -0.02),
 }
+BOTTOM_TIER = 60           # bottom only among the 60 most liquid coins
+BOTTOM_MAX_SEATS = 3       # never more than 3 of the 10 seats
 
 
 def _now():
@@ -230,7 +238,7 @@ def main():
                       if now_ms - t < COOLDOWN_H * 3600_000}
     held = {p["symbol"] for p in st["open"]}
     cands = []
-    for s in syms:
+    for tier, s in enumerate(syms):
         if s in held or s in st["cooldown"]:
             continue
         k = cache.get(s)
@@ -241,19 +249,24 @@ def main():
         if not F:
             continue
         for sh, f in SHAPES.items():
+            if sh == "bottom" and tier >= BOTTOM_TIER:
+                continue
             try:
                 if f(F):
-                    cands.append((F["v4h"] if sh == "surge" else 1.0 / max(F["rp24"], 0.01),
-                                  s, sh, F, int(closed[-1][6])))
+                    # surge ranks ahead of every bottom candidate
+                    rank = (1, F["v4h"]) if sh == "surge" else (0, 1.0 / max(F["rp24"], 0.01))
+                    cands.append((rank, s, sh, F, int(closed[-1][6])))
                     break
             except Exception:
                 pass
-    cands.sort(key=lambda c: -c[0])
+    cands.sort(key=lambda c: c[0], reverse=True)
     opened = 0
     for _, s, sh, F, ems in cands:
         free = SEATS - len(st["open"])
         if free <= 0 or st["cash"] < 5:
             break
+        if sh == "bottom" and sum(1 for p in st["open"] if p["shape"] == "bottom") >= BOTTOM_MAX_SEATS:
+            continue
         stake = round(st["cash"] / free, 4)
         st["cash"] = round(st["cash"] - stake, 4)
         st["open"].append({"symbol": s, "shape": sh, "entry": F["px"], "entry_ms": ems,
