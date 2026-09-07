@@ -1,22 +1,22 @@
 {
-  "ts": "2026-09-07T16:08:16+00:00",
-  "scanned": 102,
+  "ts": "2026-09-07T16:14:00+00:00",
+  "scanned": 101,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "VIRTUALUSDT",
-      "signal": "ignition",
-      "score": 0.6591,
-      "raw_score": 0.6952,
-      "weight": 0.948,
-      "price": 0.7216,
-      "why": "trades 4.3x and volume 13.9x the prior 4h, 77% taker-buy, $364,072 burst \u2014 while price has only moved -0.8%",
-      "chg_24h": 0.0385,
-      "vol_surge": 13.91,
-      "chg_1h": -0.0077,
-      "market_surge": 9.37,
+      "symbol": "TAOUSDT",
+      "signal": "heat",
+      "score": 0.5742,
+      "raw_score": 0.6,
+      "weight": 0.957,
+      "price": 259.8,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.005% \u00b7 L/S 2.02",
+      "chg_24h": 0.0561,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
       "actionable": false,
-      "status": "benched \u2014 hit 46%, mean +0.43% over last 549 at 24h: not beating 4x the round trip"
+      "status": "benched \u2014 hit 34%, mean -2.87% over last 29 at 24h: not beating 4x the round trip"
     }
   ],
   "gate": {
@@ -27,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 14,
+    "count": 13,
     "baseline": 18.0,
     "wave": false
   },
