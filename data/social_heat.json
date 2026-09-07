@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-07T21:54:02+00:00",
+  "ts": "2026-09-07T21:59:40+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
@@ -9,10 +9,11 @@
       "INJ",
       "AERO",
       "BTC",
-      "TAO",
       "RAY",
       "UNI",
-      "PENDLE"
+      "SOL",
+      "PENDLE",
+      "TAO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,10 +21,10 @@
       "INJ",
       "ICP",
       "WLD",
-      "PUMP",
       "DOT",
-      "XLM",
+      "PUMP",
       "AVAX",
+      "XLM",
       "LTC"
     ],
     "watcher": [
@@ -44,7 +45,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 4.9e-05,
+      "funding": 5e-05,
       "long_short": 0.85
     },
     {
@@ -110,7 +111,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 7.1e-05
+      "funding": 7e-05
     },
     {
       "symbol": "BTC",
@@ -133,7 +134,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -1.9e-05
+      "funding": -2e-05
     },
     {
       "symbol": "PENDLE",
@@ -149,7 +150,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.9e-05
+      "funding": 4.2e-05
     },
     {
       "symbol": "RAY",
@@ -158,6 +159,14 @@
         "coingecko"
       ],
       "funding": 0.0
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 1.8e-05
     },
     {
       "symbol": "UNI",
@@ -173,7 +182,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 9.1e-05
+      "funding": 8.5e-05
     },
     {
       "symbol": "XLM",
@@ -181,7 +190,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 6.4e-05
+      "funding": 6.8e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
