@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-07T15:45:28+00:00",
+  "ts": "2026-09-07T15:51:19+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
@@ -15,13 +15,13 @@
     "stocktwits": [],
     "movers": [
       "WLD",
-      "PUMP",
       "ICP",
-      "LINK",
+      "PUMP",
       "AVAX",
+      "LINK",
       "TAO",
       "XLM",
-      "SUI"
+      "LTC"
     ],
     "watcher": [
       "ZEC",
@@ -53,16 +53,6 @@
       "long_short": 0.79
     },
     {
-      "symbol": "SUI",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0,
-      "long_short": 2.43
-    },
-    {
       "symbol": "WLD",
       "surfaces": 2,
       "sources": [
@@ -88,7 +78,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -3.1e-05
+      "funding": -2.4e-05
     },
     {
       "symbol": "AVAX",
@@ -96,7 +86,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 8.1e-05
+      "funding": 8.2e-05
     },
     {
       "symbol": "BTC",
@@ -120,7 +110,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 7.2e-05
+      "funding": 7.4e-05
     },
     {
       "symbol": "LIT",
@@ -131,12 +121,28 @@
       "funding": 5e-05
     },
     {
+      "symbol": "LTC",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -4e-06
     },
     {
       "symbol": "XLM",
