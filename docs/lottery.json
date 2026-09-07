@@ -1,13 +1,13 @@
 {
   "created": "2026-08-15",
-  "held_symbol": null,
-  "entry_price": null,
-  "units": 0.0,
-  "entry_scan_ts": null,
-  "entry_source": null,
+  "held_symbol": "DOTUSDT",
+  "entry_price": 1.069,
+  "units": 33.27,
+  "entry_scan_ts": "2026-09-07T08:43:21+00:00",
+  "entry_source": "scout:surge",
   "stopped": {},
   "entries": {
-    "2026-09-06": 1
+    "2026-09-07": 1
   },
   "realized": [
     {
@@ -735,15 +735,40 @@
     }
   ],
   "last_value_usd": 35.57,
-  "last_updated_utc": "2026-09-07T14:58:18+00:00",
-  "open_position": null,
-  "spent_usd": null,
+  "last_updated_utc": "2026-09-07T15:03:34+00:00",
+  "open_position": {
+    "symbol": "DOTUSDT",
+    "entry_time": "2026-09-07T15:03:34+00:00",
+    "entry_price": 1.069,
+    "current_price": 1.069,
+    "units": 33.27,
+    "spent_usd": 35.5656,
+    "value_usd": 35.5656,
+    "pnl_usd": 0.0,
+    "pnl_pct": 0.0,
+    "source": "scout:surge"
+  },
+  "spent_usd": 35.5656,
   "no_pair": {
     "scan_ts": "2026-09-07T08:43:21+00:00",
     "syms": []
   },
   "wave_bonus_date": "2026-09-05",
   "book_hwm_usd": 44.27,
-  "entry_score": 0.6236,
-  "halt_flagged": "CIRCUIT BREAKER \u2014 2 losi"
+  "entry_score": 0.3428,
+  "entry_fee_usd": 0.026707,
+  "hwm": 1.069,
+  "move_max_qv": 0.0,
+  "move_qv_sum": 0.0,
+  "move_qv_n": 0,
+  "move_last_ms": 0,
+  "entry_time": "2026-09-07T15:03:34+00:00",
+  "stop_order": {
+    "order_id": "6186138974",
+    "stop": 1.036,
+    "limit": null,
+    "qty": 33.27,
+    "type": "STOP_LOSS",
+    "client_order_id": "lotstop-DOTUSDT-8793517990"
+  }
 }
