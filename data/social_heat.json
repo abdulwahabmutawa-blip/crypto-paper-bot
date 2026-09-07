@@ -1,16 +1,17 @@
 {
-  "ts": "2026-09-07T00:22:41+00:00",
+  "ts": "2026-09-07T00:28:31+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
       "ZEC",
-      "ARB",
       "TAO",
       "UNI",
       "SOL",
+      "BTC",
       "LINK",
+      "ARB",
       "RAY",
-      "BTC"
+      "DASH"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,8 +22,8 @@
       "NEAR",
       "LINK",
       "PROM",
-      "WLD",
-      "ZEN"
+      "ZEN",
+      "DASH"
     ],
     "watcher": [
       "ZEC",
@@ -61,8 +62,18 @@
         "movers",
         "watcher"
       ],
-      "funding": 3.7e-05,
+      "funding": 3.5e-05,
       "long_short": 0.37
+    },
+    {
+      "symbol": "DASH",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5.5e-05,
+      "long_short": 1.38
     },
     {
       "symbol": "LINK",
@@ -80,7 +91,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.6e-05
+      "funding": -2.3e-05
     },
     {
       "symbol": "BTC",
@@ -88,7 +99,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.2e-05
+      "funding": 2.3e-05
     },
     {
       "symbol": "FIRO",
@@ -119,7 +130,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 5.1e-05
     },
     {
       "symbol": "UNI",
@@ -127,15 +138,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.8e-05
-    },
-    {
-      "symbol": "WLD",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 6e-06
+      "funding": 7.3e-05
     },
     {
       "symbol": "ZEN",
