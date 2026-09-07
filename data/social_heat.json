@@ -1,16 +1,16 @@
 {
-  "ts": "2026-09-07T05:00:21+00:00",
+  "ts": "2026-09-07T05:05:41+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
       "ZEC",
       "TAO",
       "PUMP",
-      "RAY",
+      "ARB",
       "PENGU",
+      "LIT",
       "DASH",
-      "UNI",
-      "LIT"
+      "RAY"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,9 +19,9 @@
       "NEAR",
       "LINK",
       "PROM",
+      "ZEC",
       "RAY",
       "WLD",
-      "ZEC",
       "AVAX"
     ],
     "watcher": [
@@ -49,7 +49,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -1.8e-05,
+      "funding": -2e-05,
       "long_short": 0.42
     },
     {
@@ -63,12 +63,20 @@
       "long_short": 1.75
     },
     {
+      "symbol": "ARB",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "AVAX",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 9.8e-05
+      "funding": 0.0001
     },
     {
       "symbol": "DASH",
@@ -115,7 +123,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -3e-06
+      "funding": 2e-06
     },
     {
       "symbol": "PROM",
@@ -132,14 +140,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 8.1e-05
     },
     {
       "symbol": "WLD",
