@@ -1,6 +1,6 @@
 # Small-wins lab — paper study (owner request 2026-09-04)
 
-updated 2026-09-07T20:50:07+00:00 · runs 275 · open 465 · resolved 9277 · cost 0.25%/RT
+updated 2026-09-07T21:06:19+00:00 · runs 276 · open 495 · resolved 9282 · cost 0.25%/RT
 
 PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst day > -3 units.
 
@@ -11,7 +11,7 @@ PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst
 | ignition|t3|s4|h48 | 30 | 4 | 7.5 | 73% | 61% | +1.12% | 70% | 20% | 10% | +6.8% | watch |
 | calm_dip|t3|s3|h24 | 13 | 2 | 6.5 | 69% | 54% | +0.86% | 62% | 23% | 15% | -0.5% | watch |
 | calm_dip|t4|s2|h24 | 16 | 2 | 8.0 | 50% | 38% | +0.76% | 50% | 44% | 6% | -3.0% | watch |
-| momentum|t5|s3|h48 | 245 | 4 | 61.2 | 52% | 41% | +0.74% | 45% | 47% | 7% | -14.8% | watch |
+| momentum|t5|s3|h48 | 246 | 4 | 61.5 | 52% | 41% | +0.74% | 45% | 47% | 8% | -14.8% | watch |
 | range_bottom|t3|s4|h48 | 67 | 4 | 16.8 | 69% | 61% | +0.69% | 66% | 27% | 7% | -8.3% | watch |
 | ignition|t4|s2|h24 | 33 | 4 | 8.2 | 45% | 38% | +0.67% | 42% | 42% | 15% | -7.0% | watch |
 | momentum|t3|s4|h48 | 289 | 4 | 72.2 | 70% | 61% | +0.66% | 67% | 28% | 5% | -5.5% | watch |
@@ -37,18 +37,18 @@ PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst
 | momentum|t3|s2|h12 | 363 | 4 | 90.8 | 41% | 45% | -0.15% | 38% | 53% | 9% | -53.1% | fail |
 | ignition|t1|s1|h6 | 76 | 4 | 19.0 | 50% | 62% | -0.18% | 49% | 42% | 9% | -10.6% | fail |
 | momentum|t2|s2|h8 | 436 | 4 | 109.0 | 50% | 56% | -0.21% | 46% | 43% | 10% | -51.4% | fail |
+| dip_large|t1.5|s1.5|h8 | 307 | 3 | 102.3 | 50% | 58% | -0.23% | 50% | 49% | 0% | -31.3% | fail |
 | momentum|t1.5|s1|h8 | 591 | 4 | 147.8 | 41% | 50% | -0.23% | 40% | 59% | 2% | -57.2% | fail |
-| dip_large|t1.5|s1.5|h8 | 306 | 3 | 102.0 | 50% | 58% | -0.24% | 50% | 49% | 0% | -31.3% | fail |
 | dip_large|t2|s2|h8 | 266 | 3 | 88.7 | 49% | 56% | -0.27% | 49% | 50% | 2% | -36.7% | fail |
 | momentum|t1.5|s1.5|h8 | 511 | 4 | 127.8 | 49% | 58% | -0.27% | 48% | 49% | 4% | -61.6% | fail |
 | momentum|t1|s1|h6 | 702 | 4 | 175.5 | 49% | 62% | -0.27% | 49% | 50% | 1% | -69.3% | fail |
-| dip_large|t1.5|s1|h8 | 341 | 3 | 113.7 | 38% | 50% | -0.29% | 38% | 62% | 0% | -42.5% | fail |
+| dip_large|t1.5|s1|h8 | 342 | 3 | 114.0 | 39% | 50% | -0.29% | 39% | 61% | 0% | -42.5% | fail |
 | dip_mid|t1.5|s1|h8 | 212 | 3 | 70.7 | 38% | 50% | -0.29% | 38% | 62% | 0% | -28.8% | fail |
 | dip_large|t3|s2|h12 | 251 | 3 | 83.7 | 39% | 45% | -0.30% | 38% | 60% | 2% | -49.0% | fail |
 | dip_mid|t1|s1|h6 | 222 | 3 | 74.0 | 47% | 62% | -0.30% | 47% | 53% | 0% | -35.3% | fail |
 | calm_dip|t1.5|s1.5|h8 | 21 | 2 | 10.5 | 48% | 58% | -0.32% | 48% | 52% | 0% | -7.8% | fail |
 | calm_dip|t1.5|s1|h8 | 22 | 2 | 11.0 | 36% | 50% | -0.34% | 36% | 64% | 0% | -10.0% | fail |
-| dip_large|t1|s1|h6 | 363 | 3 | 121.0 | 45% | 62% | -0.35% | 45% | 55% | 0% | -42.5% | fail |
+| dip_large|t1|s1|h6 | 364 | 3 | 121.3 | 45% | 62% | -0.34% | 45% | 55% | 0% | -42.5% | fail |
 | dip_large|t3|s3|h24 | 210 | 3 | 70.0 | 48% | 54% | -0.35% | 48% | 51% | 1% | -46.0% | fail |
 | dip_mid|t1.5|s1.5|h8 | 198 | 3 | 66.0 | 45% | 58% | -0.39% | 45% | 55% | 0% | -39.5% | fail |
 | dip_large|t3|s4|h48 | 178 | 3 | 59.3 | 54% | 61% | -0.45% | 54% | 46% | 1% | -45.8% | fail |
@@ -58,7 +58,7 @@ PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst
 | dip_mid|t3|s3|h24 | 144 | 3 | 48.0 | 44% | 54% | -0.56% | 44% | 54% | 2% | -57.3% | fail |
 | dip_mid|t3|s2|h12 | 165 | 3 | 55.0 | 34% | 45% | -0.58% | 32% | 65% | 4% | -56.5% | fail |
 | dip_mid|t4|s2|h24 | 163 | 3 | 54.3 | 28% | 38% | -0.61% | 26% | 71% | 2% | -61.9% | fail |
-| dip_mid|t3|s4|h48 | 128 | 3 | 42.7 | 50% | 61% | -0.72% | 50% | 49% | 1% | -63.5% | fail |
+| dip_mid|t3|s4|h48 | 129 | 3 | 43.0 | 50% | 61% | -0.69% | 50% | 49% | 1% | -60.8% | fail |
 | dip_mid|t5|s3|h48 | 130 | 3 | 43.3 | 30% | 41% | -0.87% | 29% | 69% | 2% | -73.7% | fail |
 
 _hit = share of trades with positive net return; break-even = (stop+cost)/(target+stop); worst day = sum of unit returns on the worst UTC day. Paper only, one unit per trade, no keys, no orders._

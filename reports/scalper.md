@@ -1,6 +1,6 @@
 # Scalper — hyper-aggressive small-wins PAPER bot
 
-updated 2026-09-07T20:48:36+00:00 · runs 205 · equity **$1,009.18** (+0.92%) · cash $106.07 · open 9/10 · round trips 68
+updated 2026-09-07T21:04:47+00:00 · runs 206 · equity **$1,008.58** (+0.86%) · cash $106.07 · open 9/10 · round trips 68
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -33,14 +33,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-06T21:25 | XAUTUSDT | bottom | 4414.83 | 4408.67 | -0.14% |
-| 2026-09-07T07:52 | MUBUSDT | surge | 1043.39 | 1037.69 | -0.55% |
-| 2026-09-07T09:48 | KITEUSDT | bottom | 0.1211 | 0.1194 | -1.40% |
-| 2026-09-07T13:11 | ZKPUSDT | surge | 0.0486 | 0.0493 | +1.44% |
-| 2026-09-07T13:11 | MINAUSDT | surge | 0.0821 | 0.0819 | -0.24% |
-| 2026-09-07T17:10 | KAVAUSDT | surge | 0.05979 | 0.05872 | -1.79% |
-| 2026-09-07T20:14 | HBARUSDT | surge | 0.08249 | 0.08259 | +0.12% |
-| 2026-09-07T20:47 | PENDLEUSDT | surge | 2.236 | 2.22 | -0.72% |
-| 2026-09-07T20:47 | ZECUSDT | bottom | 1153.92 | 1153.69 | -0.02% |
+| 2026-09-06T21:25 | XAUTUSDT | bottom | 4414.83 | 4409.87 | -0.11% |
+| 2026-09-07T07:52 | MUBUSDT | surge | 1043.39 | 1038.25 | -0.49% |
+| 2026-09-07T09:48 | KITEUSDT | bottom | 0.1211 | 0.1196 | -1.24% |
+| 2026-09-07T13:11 | ZKPUSDT | surge | 0.0486 | 0.0491 | +1.03% |
+| 2026-09-07T13:11 | MINAUSDT | surge | 0.0821 | 0.0815 | -0.73% |
+| 2026-09-07T17:10 | KAVAUSDT | surge | 0.05979 | 0.05849 | -2.17% |
+| 2026-09-07T20:14 | HBARUSDT | surge | 0.08249 | 0.08272 | +0.28% |
+| 2026-09-07T20:47 | PENDLEUSDT | surge | 2.236 | 2.221 | -0.67% |
+| 2026-09-07T20:47 | ZECUSDT | bottom | 1153.92 | 1156.56 | +0.23% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
