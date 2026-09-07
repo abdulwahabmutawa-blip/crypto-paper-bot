@@ -1,6 +1,6 @@
 # Scalper — hyper-aggressive small-wins PAPER bot
 
-updated 2026-09-07T23:30:23+00:00 · runs 215 · equity **$1,000.25** (+0.03%) · cash $0.00 · open 10/10 · round trips 71
+updated 2026-09-07T23:46:31+00:00 · runs 216 · equity **$999.29** (-0.07%) · cash $0.00 · open 10/10 · round trips 71
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -33,15 +33,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-07T07:52 | MUBUSDT | surge | 1043.39 | 1034.81 | -0.82% |
-| 2026-09-07T13:11 | ZKPUSDT | surge | 0.0486 | 0.0492 | +1.23% |
-| 2026-09-07T13:11 | MINAUSDT | surge | 0.0821 | 0.0807 | -1.71% |
-| 2026-09-07T17:10 | KAVAUSDT | surge | 0.05979 | 0.0585 | -2.16% |
-| 2026-09-07T20:14 | HBARUSDT | surge | 0.08249 | 0.08179 | -0.85% |
-| 2026-09-07T20:47 | PENDLEUSDT | surge | 2.236 | 2.237 | +0.04% |
-| 2026-09-07T21:35 | LINKUSDT | bottom | 12.761 | 12.723 | -0.30% |
-| 2026-09-07T21:51 | MEGAUSDT | surge | 0.04075 | 0.04043 | -0.79% |
-| 2026-09-07T22:56 | AEROUSDT | surge | 0.6278 | 0.6183 | -1.51% |
-| 2026-09-07T22:56 | INJUSDT | surge | 6.061 | 6.151 | +1.48% |
+| 2026-09-07T07:52 | MUBUSDT | surge | 1043.39 | 1035.78 | -0.73% |
+| 2026-09-07T13:11 | ZKPUSDT | surge | 0.0486 | 0.0493 | +1.44% |
+| 2026-09-07T13:11 | MINAUSDT | surge | 0.0821 | 0.0809 | -1.46% |
+| 2026-09-07T17:10 | KAVAUSDT | surge | 0.05979 | 0.05815 | -2.74% |
+| 2026-09-07T20:14 | HBARUSDT | surge | 0.08249 | 0.08192 | -0.69% |
+| 2026-09-07T20:47 | PENDLEUSDT | surge | 2.236 | 2.221 | -0.67% |
+| 2026-09-07T21:35 | LINKUSDT | bottom | 12.761 | 12.751 | -0.08% |
+| 2026-09-07T21:51 | MEGAUSDT | surge | 0.04075 | 0.04018 | -1.40% |
+| 2026-09-07T22:56 | AEROUSDT | surge | 0.6278 | 0.6172 | -1.69% |
+| 2026-09-07T22:56 | INJUSDT | surge | 6.061 | 6.167 | +1.75% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
