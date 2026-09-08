@@ -1,37 +1,22 @@
 {
-  "ts": "2026-09-08T00:13:16+00:00",
+  "ts": "2026-09-08T00:18:42+00:00",
   "scanned": 99,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "CRCLBUSDT",
-      "signal": "ignition",
-      "score": 0.8414,
-      "raw_score": 0.8932,
-      "weight": 0.942,
-      "price": 101.26,
-      "why": "trades 8.8x and volume 12.1x the prior 4h, 83% taker-buy, $61,293 burst \u2014 while price has only moved -0.7%",
-      "chg_24h": -0.0393,
-      "vol_surge": 12.09,
-      "chg_1h": -0.0073,
-      "market_surge": 0.59,
+      "symbol": "SNDKBUSDT",
+      "signal": "breakout",
+      "score": 0.6964,
+      "raw_score": 0.7686,
+      "weight": 0.906,
+      "price": 1816.56,
+      "why": "trades 13.0x, volume 40.6x, 76% taker-buy, +2.1% in an hour, at 104% of its 24h range",
+      "chg_24h": 0.0163,
+      "vol_surge": 40.63,
+      "chg_1h": 0.0213,
+      "market_surge": 0.0,
       "actionable": false,
-      "status": "benched \u2014 hit 46%, mean +0.43% over last 544 at 24h: not beating 4x the round trip"
-    },
-    {
-      "symbol": "LDOUSDT",
-      "signal": "ignition",
-      "score": 0.7202,
-      "raw_score": 0.7646,
-      "weight": 0.942,
-      "price": 0.3924,
-      "why": "trades 5.8x and volume 31.1x the prior 4h, 80% taker-buy, $177,804 burst \u2014 while price has only moved -0.8%",
-      "chg_24h": -0.0572,
-      "vol_surge": 31.07,
-      "chg_1h": -0.0078,
-      "market_surge": 0.75,
-      "actionable": false,
-      "status": "benched \u2014 hit 46%, mean +0.43% over last 544 at 24h: not beating 4x the round trip"
+      "status": "benched \u2014 BTC-excess day mean +0.74% at 24h: market beta, not signal"
     }
   ],
   "gate": {
@@ -42,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 14,
     "baseline": 18.0,
     "wave": false
   },
