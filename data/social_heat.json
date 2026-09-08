@@ -1,15 +1,16 @@
 {
-  "ts": "2026-09-08T16:14:41+00:00",
+  "ts": "2026-09-08T16:21:37+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
       "DOT",
       "PENGU",
-      "BTC",
       "ARB",
+      "BTC",
       "RAY",
       "TAO",
-      "AERO"
+      "AERO",
+      "SOL"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,9 +20,9 @@
       "INJ",
       "DOT",
       "WLD",
-      "ADA",
       "ARB",
-      "NEAR"
+      "ADA",
+      "ZEC"
     ],
     "watcher": [
       "ZEC",
@@ -31,13 +32,24 @@
   },
   "heat": [
     {
+      "symbol": "ZEC",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": -0.000118,
+      "long_short": 0.48
+    },
+    {
       "symbol": "ARB",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 6.2e-05,
+      "funding": 6.1e-05,
       "long_short": 1.33
     },
     {
@@ -57,18 +69,8 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.009722,
+      "funding": -0.009573,
       "long_short": 1.35
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "watcher"
-      ],
-      "funding": -0.000113,
-      "long_short": 0.48
     },
     {
       "symbol": "ADA",
@@ -92,7 +94,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8e-05
+      "funding": 7.4e-05
     },
     {
       "symbol": "FORM",
@@ -111,20 +113,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "NEAR",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 2.5e-05
+      "funding": 1.8e-05
     },
     {
       "symbol": "RAY",
@@ -133,6 +127,14 @@
         "coingecko"
       ],
       "funding": 0.0
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 2.2e-05
     },
     {
       "symbol": "TAO",
