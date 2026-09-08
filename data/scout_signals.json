@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-08T03:30:46+00:00",
-  "scanned": 98,
+  "ts": "2026-09-08T03:36:35+00:00",
+  "scanned": 99,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "PLUMEUSDT",
+      "signal": "ignition",
+      "score": 0.8553,
+      "raw_score": 0.9147,
+      "weight": 0.935,
+      "price": 0.01425,
+      "why": "trades 11.9x and volume 19.8x the prior 4h, 79% taker-buy, $72,470 burst \u2014 while price has only moved +1.3%",
+      "chg_24h": 0.0128,
+      "vol_surge": 19.83,
+      "chg_1h": 0.0128,
+      "market_surge": 10.48,
+      "actionable": false,
+      "status": "benched \u2014 hit 47%, mean +0.52% over last 541 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 47%, mean +0.52% over last 541 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 41%, mean +0.38% over last 224 at 24h: not beating 4x the round trip",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 14,
+    "count": 15,
     "baseline": 18.0,
     "wave": false
   },
