@@ -1,8 +1,39 @@
 {
-  "ts": "2026-09-08T08:38:04+00:00",
+  "ts": "2026-09-08T08:43:18+00:00",
   "scanned": 101,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "1000CATUSDT",
+      "signal": "ignition",
+      "score": 0.7251,
+      "raw_score": 0.7738,
+      "weight": 0.937,
+      "price": 0.002212,
+      "why": "trades 7.6x and volume 14.2x the prior 4h, 60% taker-buy, $53,921 burst \u2014 while price has only moved -1.3%",
+      "chg_24h": 0.0811,
+      "vol_surge": 14.2,
+      "chg_1h": -0.0129,
+      "market_surge": 1.28,
+      "actionable": false,
+      "status": "benched \u2014 hit 48%, mean +0.64% over last 539 at 24h: not beating 4x the round trip"
+    },
+    {
+      "symbol": "AVAUSDT",
+      "signal": "revival",
+      "score": 0.4981,
+      "raw_score": 0.4981,
+      "weight": 1.0,
+      "price": 0.1703,
+      "why": "revival day-one: fell -17% last week on $0.31M/day quiet, volume arriving 4.1x today, only +10% off its 30d low",
+      "chg_24h": 0.0813,
+      "vol_surge": 4.1,
+      "chg_1h": null,
+      "market_surge": null,
+      "actionable": false,
+      "status": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 48%, mean +0.64% over last 539 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 42%, mean +0.46% over last 226 at 24h: not beating 4x the round trip",
