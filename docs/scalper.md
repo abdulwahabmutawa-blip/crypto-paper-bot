@@ -1,6 +1,6 @@
 # Scalper — hyper-aggressive small-wins PAPER bot
 
-updated 2026-09-08T11:48:18+00:00 · runs 260 · equity **$993.02** (-0.70%) · cash $0.00 · open 10/10 · round trips 89
+updated 2026-09-08T12:04:39+00:00 · runs 261 · equity **$993.36** (-0.66%) · cash $0.00 · open 10/10 · round trips 89
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -34,14 +34,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-07T13:11 | ZKPUSDT | surge | 0.0486 | 0.0493 | +1.44% |
-| 2026-09-07T13:11 | MINAUSDT | surge | 0.0821 | 0.0832 | +1.34% |
-| 2026-09-07T17:10 | KAVAUSDT | surge | 0.05979 | 0.05889 | -1.51% |
-| 2026-09-07T21:35 | LINKUSDT | bottom | 12.761 | 12.518 | -1.90% |
-| 2026-09-08T00:58 | SKHYBUSDT | surge | 184.72 | 180.55 | -2.26% |
-| 2026-09-08T07:58 | BNBUSDT | surge | 756.19 | 751.78 | -0.58% |
-| 2026-09-08T08:15 | ETCUSDT | surge | 8.08 | 8.06 | -0.25% |
-| 2026-09-08T10:34 | SAHARAUSDT | surge | 0.00947 | 0.00956 | +0.95% |
+| 2026-09-07T13:11 | MINAUSDT | surge | 0.0821 | 0.0836 | +1.83% |
+| 2026-09-07T17:10 | KAVAUSDT | surge | 0.05979 | 0.05904 | -1.25% |
+| 2026-09-07T21:35 | LINKUSDT | bottom | 12.761 | 12.451 | -2.43% |
+| 2026-09-08T00:58 | SKHYBUSDT | surge | 184.72 | 180.05 | -2.53% |
+| 2026-09-08T07:58 | BNBUSDT | surge | 756.19 | 751.18 | -0.66% |
+| 2026-09-08T08:15 | ETCUSDT | surge | 8.08 | 8.05 | -0.37% |
+| 2026-09-08T10:34 | SAHARAUSDT | surge | 0.00947 | 0.00955 | +0.84% |
 | 2026-09-08T11:07 | ZKCUSDT | surge | 0.0493 | 0.0489 | -0.81% |
-| 2026-09-08T11:30 | ATOMUSDT | surge | 1.687 | 1.685 | -0.12% |
+| 2026-09-08T11:30 | ATOMUSDT | surge | 1.687 | 1.698 | +0.65% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
