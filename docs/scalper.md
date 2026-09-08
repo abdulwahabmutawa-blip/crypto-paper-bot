@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-08T15:21:03+00:00 · runs 273 · equity **$999.91** (-0.01%) · cash $0.00 · open 10/10 · round trips 101
+updated 2026-09-08T15:37:24+00:00 · runs 274 · equity **$999.26** (-0.07%) · cash $0.00 · open 10/10 · round trips 101
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -35,15 +35,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-07T17:10 | KAVAUSDT | surge | 0.05979 | 0.05876 | -1.72% |
-| 2026-09-08T00:58 | SKHYBUSDT | surge | 184.72 | 189.35 | +2.51% |
-| 2026-09-08T07:58 | BNBUSDT | surge | 756.19 | 751.6 | -0.61% |
-| 2026-09-08T11:07 | ZKCUSDT | surge | 0.0493 | 0.0486 | -1.42% |
-| 2026-09-08T13:08 | HEIUSDT | surge | 0.1439 | 0.1417 | -1.53% |
-| 2026-09-08T13:57 | QQQBUSDT | bottom | 717.32 | 720.16 | +0.40% |
-| 2026-09-08T14:14 | TSLABUSDT | surge | 360.45 | 365.44 | +1.38% |
-| 2026-09-08T15:03 | FFUSDT | surge | 0.14155 | 0.14005 | -1.06% |
-| 2026-09-08T15:19 | MRVLBUSDT | surge | 230.1 | 230.36 | +0.11% |
-| 2026-09-08T15:19 | INTCBUSDT | surge | 103.55 | 104 | +0.43% |
+| 2026-09-07T17:10 | KAVAUSDT | surge | 0.05979 | 0.05886 | -1.56% |
+| 2026-09-08T00:58 | SKHYBUSDT | surge | 184.72 | 188.6 | +2.10% |
+| 2026-09-08T07:58 | BNBUSDT | surge | 756.19 | 751.08 | -0.68% |
+| 2026-09-08T11:07 | ZKCUSDT | surge | 0.0493 | 0.0482 | -2.23% |
+| 2026-09-08T13:08 | HEIUSDT | surge | 0.1439 | 0.1414 | -1.74% |
+| 2026-09-08T13:57 | QQQBUSDT | bottom | 717.32 | 719.89 | +0.36% |
+| 2026-09-08T14:14 | TSLABUSDT | surge | 360.45 | 365.89 | +1.51% |
+| 2026-09-08T15:03 | FFUSDT | surge | 0.14155 | 0.14075 | -0.57% |
+| 2026-09-08T15:19 | MRVLBUSDT | surge | 230.1 | 230.09 | -0.00% |
+| 2026-09-08T15:19 | INTCBUSDT | surge | 103.55 | 104.19 | +0.62% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
