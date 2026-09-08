@@ -1,14 +1,14 @@
 {
-  "ts": "2026-09-08T18:41:19+00:00",
+  "ts": "2026-09-08T18:45:59+00:00",
   "sources": {
     "coingecko": [
       "DOT",
       "LIT",
-      "ZEC",
-      "TAO",
       "ETH",
+      "ZEC",
       "SOL",
-      "NEAR"
+      "TAO",
+      "PUMP"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -40,23 +40,13 @@
       "long_short": 2.35
     },
     {
-      "symbol": "NEAR",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 6.8e-05,
-      "long_short": 1.96
-    },
-    {
       "symbol": "SOPH",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": -0.000358,
+      "funding": -0.000296,
       "long_short": 1.41
     },
     {
@@ -66,7 +56,7 @@
         "coingecko",
         "watcher"
       ],
-      "funding": -0.000148,
+      "funding": -0.000146,
       "long_short": 0.46
     },
     {
@@ -83,7 +73,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.4e-05
+      "funding": 6.5e-05
     },
     {
       "symbol": "FORM",
@@ -103,6 +93,22 @@
     },
     {
       "symbol": "LIT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "NEAR",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 6.8e-05
+    },
+    {
+      "symbol": "PUMP",
       "surfaces": 1,
       "sources": [
         "coingecko"
