@@ -1,24 +1,8 @@
 {
-  "ts": "2026-09-08T10:49:45+00:00",
-  "scanned": 102,
+  "ts": "2026-09-08T10:54:55+00:00",
+  "scanned": 103,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "BICOUSDT",
-      "signal": "breakout",
-      "score": 0.568,
-      "raw_score": 0.6297,
-      "weight": 0.902,
-      "price": 0.02411,
-      "why": "trades 6.0x, volume 6.0x, 75% taker-buy, +2.2% in an hour, at 90% of its 24h range",
-      "chg_24h": 0.0618,
-      "vol_surge": 5.97,
-      "chg_1h": 0.022,
-      "market_surge": 6.45,
-      "actionable": false,
-      "status": "benched \u2014 hit 42%, mean +0.46% over last 226 at 24h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 48%, mean +0.66% over last 543 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 42%, mean +0.46% over last 226 at 24h: not beating 4x the round trip",
@@ -27,21 +11,21 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 14,
+    "count": 15,
     "baseline": 17.0,
     "wave": false
   },
   "scorecard": {
     "ignition": {
-      "span_h_1h": 334.5,
-      "n_eff_1h": 334.48,
-      "n_1h": 635,
-      "hit_rate_1h": 0.402,
-      "mean_ret_1h": 6e-05,
-      "median_ret_1h": -0.00051,
+      "span_h_1h": 334.7,
+      "n_eff_1h": 334.65,
+      "n_1h": 637,
+      "hit_rate_1h": 0.4,
+      "mean_ret_1h": 3e-05,
+      "median_ret_1h": -0.00064,
       "both_halves_1h": false,
       "days_1h": 14,
-      "mean_x_1h": -5e-05,
+      "mean_x_1h": -0.00017,
       "days_x_1h": 6,
       "avg_win_1h": 0.01081,
       "avg_loss_1h": -0.00949,
