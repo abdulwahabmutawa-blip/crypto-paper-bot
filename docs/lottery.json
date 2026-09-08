@@ -1,15 +1,15 @@
 {
   "created": "2026-08-15",
-  "held_symbol": "KAITOUSDT",
-  "entry_price": 0.3399,
-  "units": 110.3,
-  "entry_scan_ts": "2026-09-08T11:13:19+00:00",
+  "held_symbol": "SENTUSDT",
+  "entry_price": 0.015170000000000001,
+  "units": 2397.0,
+  "entry_scan_ts": "2026-09-08T19:13:59+00:00",
   "entry_source": "scout:surge",
   "stopped": {
-    "DOTUSDT": "2026-09-08T15:04:11+00:00"
+    "KAITOUSDT": "2026-09-08T21:41:56+00:00"
   },
   "entries": {
-    "2026-09-08": 1
+    "2026-09-08": 2
   },
   "realized": [
     {
@@ -753,43 +753,62 @@
       "date": "2026-09-08",
       "exit": 1.127,
       "entry": 1.069
+    },
+    {
+      "symbol": "KAITOUSDT",
+      "source": "scout:surge",
+      "entry_score": 0.5223,
+      "entry_time": "2026-09-08T15:04:11+00:00",
+      "exit_time": "2026-09-08T21:41:56+00:00",
+      "entry_price": 0.3399,
+      "exit_price": 0.3297,
+      "units": 110.3,
+      "spent_usd": 37.491,
+      "got_usd": 36.3659,
+      "pnl_pct": -3.0,
+      "pnl_usd": -1.1532,
+      "fees_usd": 0.0281,
+      "reason": "PROTECTIVE STOP (-3.0% vs peak +1.1%) \u2014 the floor held at the exchange, between cycles",
+      "date": "2026-09-08",
+      "exit": 0.3297,
+      "entry": 0.3399
     }
   ],
-  "last_value_usd": 36.5,
-  "last_updated_utc": "2026-09-08T21:35:47+00:00",
+  "last_value_usd": 36.38,
+  "last_updated_utc": "2026-09-08T21:41:56+00:00",
   "open_position": {
-    "symbol": "KAITOUSDT",
-    "entry_time": "2026-09-08T15:04:11+00:00",
-    "entry_price": 0.3399,
-    "current_price": 0.3308,
-    "units": 110.3,
-    "spent_usd": 37.491,
-    "value_usd": 36.4872,
-    "pnl_usd": -1.0038,
-    "pnl_pct": -2.68,
+    "symbol": "SENTUSDT",
+    "entry_time": "2026-09-08T21:41:56+00:00",
+    "entry_price": 0.015170000000000001,
+    "current_price": 0.01517,
+    "units": 2397.0,
+    "spent_usd": 36.3625,
+    "value_usd": 36.3625,
+    "pnl_usd": 0.0,
+    "pnl_pct": -0.0,
     "source": "scout:surge"
   },
-  "spent_usd": 37.491,
+  "spent_usd": 36.3625,
   "no_pair": {
-    "scan_ts": "2026-09-08T11:13:19+00:00",
+    "scan_ts": "2026-09-08T19:13:59+00:00",
     "syms": []
   },
   "wave_bonus_date": "2026-09-05",
   "book_hwm_usd": 44.27,
-  "entry_score": 0.5223,
-  "entry_fee_usd": 0.028096,
-  "hwm": 0.3438,
-  "move_max_qv": 174332.11672,
-  "move_qv_sum": 473313.99160000007,
-  "move_qv_n": 5,
-  "move_last_ms": 1788897600000,
-  "entry_time": "2026-09-08T15:04:11+00:00",
+  "entry_score": 0.786,
+  "entry_fee_usd": 0.027245,
+  "hwm": 0.015170000000000001,
+  "move_max_qv": 0.0,
+  "move_qv_sum": 0.0,
+  "move_qv_n": 0,
+  "move_last_ms": 0,
+  "entry_time": "2026-09-08T21:41:56+00:00",
   "stop_order": {
-    "order_id": "1269840610",
-    "stop": 0.3297,
+    "order_id": "186771625",
+    "stop": 0.01471,
     "limit": null,
-    "qty": 110.30000000000001,
+    "qty": 2397.0,
     "type": "STOP_LOSS",
-    "client_order_id": "lotstop-KAITOUSDT-8879968458"
+    "client_order_id": "lotstop-SENTUSDT-8903762838"
   }
 }
