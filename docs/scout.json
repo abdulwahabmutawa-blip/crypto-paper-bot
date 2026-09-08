@@ -1,39 +1,8 @@
 {
-  "ts": "2026-09-08T14:18:06+00:00",
+  "ts": "2026-09-08T14:23:46+00:00",
   "scanned": 111,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "SCRUSDT",
-      "signal": "breakout",
-      "score": 0.7447,
-      "raw_score": 0.8293,
-      "weight": 0.898,
-      "price": 0.02444,
-      "why": "trades 10.5x, volume 11.0x, 61% taker-buy, +5.0% in an hour, at 84% of its 24h range",
-      "chg_24h": 0.1673,
-      "vol_surge": 10.96,
-      "chg_1h": 0.0503,
-      "market_surge": 0.0,
-      "actionable": false,
-      "status": "benched \u2014 hit 42%, mean +0.48% over last 232 at 24h: not beating 4x the round trip"
-    },
-    {
-      "symbol": "INJUSDT",
-      "signal": "ignition",
-      "score": 0.5877,
-      "raw_score": 0.6265,
-      "weight": 0.938,
-      "price": 6.454,
-      "why": "trades 4.5x and volume 9.0x the prior 4h, 80% taker-buy, $385,056 burst \u2014 while price has only moved +3.2%",
-      "chg_24h": 0.1213,
-      "vol_surge": 9.0,
-      "chg_1h": 0.0323,
-      "market_surge": 2.92,
-      "actionable": false,
-      "status": "benched \u2014 hit 48%, mean +0.69% over last 536 at 24h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 48%, mean +0.69% over last 536 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 42%, mean +0.48% over last 232 at 24h: not beating 4x the round trip",
@@ -42,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 14,
+    "count": 15,
     "baseline": 17.0,
     "wave": false
   },
@@ -89,19 +58,19 @@
       "payoff_24h": 1.401
     },
     "breakout": {
-      "span_h_1h": 333.8,
-      "n_eff_1h": 264,
-      "n_1h": 264,
-      "hit_rate_1h": 0.394,
-      "mean_ret_1h": -0.00065,
-      "median_ret_1h": -0.00136,
+      "span_h_1h": 334.5,
+      "n_eff_1h": 265,
+      "n_1h": 265,
+      "hit_rate_1h": 0.392,
+      "mean_ret_1h": -0.00074,
+      "median_ret_1h": -0.00139,
       "both_halves_1h": false,
       "days_1h": 14,
-      "mean_x_1h": 0.00049,
+      "mean_x_1h": 0.00023,
       "days_x_1h": 6,
       "avg_win_1h": 0.01954,
-      "avg_loss_1h": -0.01771,
-      "payoff_1h": 1.103,
+      "avg_loss_1h": -0.01776,
+      "payoff_1h": 1.1,
       "span_h_4h": 329.5,
       "n_eff_4h": 82.37,
       "n_4h": 259,
