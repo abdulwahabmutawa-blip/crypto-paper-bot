@@ -1,16 +1,15 @@
 {
-  "ts": "2026-09-08T07:04:41+00:00",
+  "ts": "2026-09-08T07:09:49+00:00",
   "sources": {
     "coingecko": [
       "SOPH",
-      "AERO",
       "BTC",
+      "AERO",
       "PENGU",
       "ETH",
       "ARB",
       "ZEC",
-      "INJ",
-      "TAO"
+      "INJ"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,7 +21,7 @@
       "WLD",
       "PUMP",
       "AVAX",
-      "SUI"
+      "ICP"
     ],
     "watcher": [
       "ZEC",
@@ -45,13 +44,23 @@
       "long_short": 1.63
     },
     {
+      "symbol": "ICP",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.23
+    },
+    {
       "symbol": "PUMP",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": 7e-06,
+      "funding": 8e-06,
       "long_short": 0.91
     },
     {
@@ -61,7 +70,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.001316,
+      "funding": -0.001375,
       "long_short": 0.69
     },
     {
@@ -96,7 +105,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 3e-05
+      "funding": 3.3e-05
     },
     {
       "symbol": "BTC",
@@ -104,7 +113,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.6e-05
+      "funding": 8.7e-05
     },
     {
       "symbol": "DOT",
@@ -120,7 +129,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -4e-06
+      "funding": -3e-06
     },
     {
       "symbol": "FET",
@@ -128,15 +137,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -2.5e-05
-    },
-    {
-      "symbol": "ICP",
-      "surfaces": 1,
-      "sources": [
-        "watcher"
-      ],
-      "funding": 0.0001
+      "funding": -2.1e-05
     },
     {
       "symbol": "PENGU",
@@ -145,22 +146,6 @@
         "coingecko"
       ],
       "funding": 4.4e-05
-    },
-    {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 8.8e-05
-    },
-    {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "WLD",
