@@ -1,15 +1,14 @@
 {
-  "ts": "2026-09-08T07:20:41+00:00",
+  "ts": "2026-09-08T07:26:31+00:00",
   "sources": {
     "coingecko": [
       "SOPH",
-      "BTC",
       "AERO",
+      "BTC",
+      "ARB",
       "ZEC",
       "ETH",
-      "ARB",
-      "PENGU",
-      "LIT"
+      "PENGU"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,7 +20,7 @@
       "WLD",
       "AVAX",
       "PUMP",
-      "ICP"
+      "SUI"
     ],
     "watcher": [
       "ZEC",
@@ -32,16 +31,6 @@
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "ICP",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": 0.0001,
-      "long_short": 2.23
-    },
     {
       "symbol": "INJ",
       "surfaces": 2,
@@ -59,7 +48,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -1e-06,
+      "funding": -2e-06,
       "long_short": 0.91
     },
     {
@@ -69,7 +58,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.001536,
+      "funding": -0.001634,
       "long_short": 0.69
     },
     {
@@ -79,7 +68,7 @@
         "coingecko",
         "watcher"
       ],
-      "funding": 9.7e-05,
+      "funding": 9.6e-05,
       "long_short": 0.42
     },
     {
@@ -96,7 +85,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.4e-05
+      "funding": 9.1e-05
     },
     {
       "symbol": "AVAX",
@@ -104,7 +93,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 3.6e-05
+      "funding": 3.8e-05
     },
     {
       "symbol": "BTC",
@@ -136,15 +125,15 @@
       "sources": [
         "movers"
       ],
-      "funding": -1.2e-05
+      "funding": -4e-06
     },
     {
-      "symbol": "LIT",
+      "symbol": "ICP",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "watcher"
       ],
-      "funding": 1.1e-05
+      "funding": 0.0001
     },
     {
       "symbol": "PENGU",
@@ -152,7 +141,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4e-05
+      "funding": 4.3e-05
+    },
+    {
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 6.2e-05
     },
     {
       "symbol": "WLD",
