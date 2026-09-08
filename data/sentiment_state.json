@@ -1,10 +1,10 @@
 {
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "holding": "ZEC-USD",
-  "units": 1.0313348126154627,
+  "holding": "SOPH-USD",
+  "units": 103083.52054961886,
   "cash": 0.0,
-  "entry_price": 1182.7,
+  "entry_price": 0.01124,
   "bench_units": 1.332054612938296,
   "stopped": {
     "SHIB-USD": "2026-07-27T00:01:08+00:00",
@@ -698,6 +698,26 @@
       "value": 1219.76,
       "fee": 3.55,
       "reason": "Grok: ZEC euphoric \u2014 45% weekly privacy run, ETF buzz (scan 2026-09-07T08:42)"
+    },
+    {
+      "date": "2026-09-08",
+      "action": "SELL",
+      "ticker": "ZEC-USD",
+      "price": 1130.0,
+      "units": 1.0313,
+      "value": 1165.41,
+      "fee": 3.38,
+      "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
+    },
+    {
+      "date": "2026-09-08",
+      "action": "BUY",
+      "ticker": "SOPH-USD",
+      "price": 0.01124,
+      "units": 103083.5205,
+      "value": 1158.66,
+      "fee": 3.37,
+      "reason": "Grok: SOPH euphoric \u2014 Binance top mover +123% volume surge (scan 2026-09-08T09:06)"
     }
   ],
   "history": [
@@ -951,19 +971,13 @@
     },
     {
       "date": "2026-09-06",
-      "value": 1167.91,
+      "value": 1158.66,
       "bench": 1025.94,
-      "holding": "ZEC-USD",
+      "holding": "SOPH-USD",
       "bench_asof": "2026-09-04"
     }
   ],
   "intraday": [
-    {
-      "ts": "2026-08-21T01:31:45+00:00",
-      "value": 1394.45,
-      "bench": 1015.82,
-      "holding": "CASH"
-    },
     {
       "ts": "2026-08-21T01:45:13+00:00",
       "value": 1394.45,
@@ -9957,9 +9971,15 @@
       "value": 1167.91,
       "bench": 1025.94,
       "holding": "ZEC-USD"
+    },
+    {
+      "ts": "2026-09-08T09:07:54+00:00",
+      "value": 1158.66,
+      "bench": 1025.94,
+      "holding": "SOPH-USD"
     }
   ],
-  "last_updated_utc": "2026-09-08T08:50:20+00:00",
+  "last_updated_utc": "2026-09-08T09:07:54+00:00",
   "restatement": {
     "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)",
     "voided_trades": [
@@ -10038,5 +10058,5 @@
     ],
     "voided_reason": "signal faded before any real fill was possible (market closed the whole window) \u2014 trades could never have existed"
   },
-  "costs_paid": 123.329
+  "costs_paid": 130.0786
 }
