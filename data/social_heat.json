@@ -1,15 +1,15 @@
 {
-  "ts": "2026-09-08T06:02:21+00:00",
+  "ts": "2026-09-08T06:08:21+00:00",
   "sources": {
     "coingecko": [
       "SOPH",
       "AERO",
-      "PENGU",
       "RAY",
+      "PENGU",
+      "BTC",
       "ZEC",
       "UNI",
-      "BTC",
-      "PUMP",
+      "SUI",
       "BONK"
     ],
     "reddit": [],
@@ -34,17 +34,6 @@
   },
   "heat": [
     {
-      "symbol": "PUMP",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": 9e-06,
-      "long_short": 0.93
-    },
-    {
       "symbol": "INJ",
       "surfaces": 2,
       "sources": [
@@ -55,14 +44,34 @@
       "long_short": 1.61
     },
     {
+      "symbol": "PUMP",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": 7e-06,
+      "long_short": 0.93
+    },
+    {
       "symbol": "SOPH",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": -0.00045,
-      "long_short": 0.76
+      "funding": -0.000462,
+      "long_short": 0.77
+    },
+    {
+      "symbol": "SUI",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.5
     },
     {
       "symbol": "ZEC",
@@ -88,7 +97,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 2.1e-05
+      "funding": 2.2e-05
     },
     {
       "symbol": "BONK",
@@ -103,7 +112,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.8e-05
+      "funding": 8.7e-05
     },
     {
       "symbol": "DOT",
@@ -119,7 +128,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 1e-05
+      "funding": 7e-06
     },
     {
       "symbol": "ICP",
@@ -135,7 +144,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.9e-05
+      "funding": 4.3e-05
     },
     {
       "symbol": "RAY",
@@ -144,14 +153,6 @@
         "coingecko"
       ],
       "funding": 0.0
-    },
-    {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "UNI",
