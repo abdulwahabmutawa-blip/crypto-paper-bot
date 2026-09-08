@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-08T14:15:38+00:00 · runs 269 · equity **$997.64** (-0.24%) · cash $0.00 · open 10/10 · round trips 98
+updated 2026-09-08T14:32:01+00:00 · runs 270 · equity **$998.17** (-0.18%) · cash $0.00 · open 10/10 · round trips 98
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -35,15 +35,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-07T17:10 | KAVAUSDT | surge | 0.05979 | 0.05902 | -1.29% |
-| 2026-09-08T00:58 | SKHYBUSDT | surge | 184.72 | 187.27 | +1.38% |
-| 2026-09-08T07:58 | BNBUSDT | surge | 756.19 | 750.39 | -0.77% |
-| 2026-09-08T11:07 | ZKCUSDT | surge | 0.0493 | 0.0493 | +0.00% |
-| 2026-09-08T13:08 | HEIUSDT | surge | 0.1439 | 0.1415 | -1.67% |
-| 2026-09-08T13:57 | PROMUSDT | surge | 6.034 | 6.057 | +0.38% |
-| 2026-09-08T13:57 | COTIUSDT | surge | 0.01804 | 0.01807 | +0.17% |
-| 2026-09-08T13:57 | QQQBUSDT | bottom | 717.32 | 717.37 | +0.01% |
-| 2026-09-08T14:14 | TSLABUSDT | surge | 360.45 | 362.11 | +0.46% |
-| 2026-09-08T14:14 | DOGSUSDT | surge | 4.912e-05 | 4.894e-05 | -0.37% |
+| 2026-09-07T17:10 | KAVAUSDT | surge | 0.05979 | 0.05874 | -1.76% |
+| 2026-09-08T00:58 | SKHYBUSDT | surge | 184.72 | 187.42 | +1.46% |
+| 2026-09-08T07:58 | BNBUSDT | surge | 756.19 | 749.3 | -0.91% |
+| 2026-09-08T11:07 | ZKCUSDT | surge | 0.0493 | 0.0491 | -0.41% |
+| 2026-09-08T13:08 | HEIUSDT | surge | 0.1439 | 0.1417 | -1.53% |
+| 2026-09-08T13:57 | PROMUSDT | surge | 6.034 | 6.142 | +1.79% |
+| 2026-09-08T13:57 | COTIUSDT | surge | 0.01804 | 0.01793 | -0.61% |
+| 2026-09-08T13:57 | QQQBUSDT | bottom | 717.32 | 717.99 | +0.09% |
+| 2026-09-08T14:14 | TSLABUSDT | surge | 360.45 | 363.58 | +0.87% |
+| 2026-09-08T14:14 | DOGSUSDT | surge | 4.912e-05 | 4.904e-05 | -0.16% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
