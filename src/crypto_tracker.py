@@ -186,6 +186,20 @@ def load_state():
     return json.loads(STATE.read_text()) if STATE.exists() else None
 
 
+def v4_pick(pick, held, board, seat_regime, severe=False):
+    """Only BTC can retain a seat under v4's documented exit dead-band.
+
+    Legacy altcoin positions must follow BTC/CASH on their next priced cycle;
+    the old rotation hysteresis otherwise prevents the v4 migration forever.
+    Stop, blacklist and R1 checks still run after this decision in main().
+    """
+    if severe:
+        return "CASH"
+    if pick == "CASH" and held == BENCH:
+        return exit_brake(pick, held, board, seat_regime)
+    return pick
+
+
 def init_state(close, pick, board, regime="TREND") -> dict:
     asof = str(close.index[-1].date())
     st = {
@@ -385,28 +399,7 @@ def main():
         if held != "CASH":
             st.setdefault("entry_regime", regime)
         seat_regime = st.get("entry_regime") or regime
-        # Churn brake: don't swap coins on a marginal re-rank. The incumbent
-        # keeps its seat unless it's disqualified or clearly outgunned.
-        kept = swap_brake(pick, held, board, regime)
-        if kept != pick:
-            print(f"[crypto-live] churn brake: {pick} "
-                  f"(mom {board[pick]['mom_pct']:+.1f}%, z {board[pick]['z']:+.2f}) "
-                  f"not clearly better than incumbent {held} "
-                  f"(mom {board[held]['mom_pct']:+.1f}%, z {board[held]['z']:+.2f}) "
-                  f"— holding")
-            pick = kept
-        # Exit dead-band: signal() flips to CASH at the same threshold it
-        # entered on — never surrender the seat on a boundary wobble. A
-        # sentinel-severe CASH is an order, not a wobble; it passes through.
-        if pick == "CASH" and held != "CASH" and not is_severe:
-            if exit_brake(pick, held, board, seat_regime) == held:
-                b = board[held]
-                metric = (f"mom {b['mom_pct']:+.1f}% > {MOM_EXIT:+.1f}%"
-                          if seat_regime == "TREND" else
-                          f"z {b['z']:+.2f} < {Z_EXIT:+.2f}")
-                print(f"[crypto-live] exit brake: {held} {metric} — "
-                      f"inside dead-band, holding")
-                pick = held
+        pick = v4_pick(pick, held, board, seat_regime, is_severe)
         # Failure stop (fleet review 2026-08-10): CHOP has a completion exit
         # but had no failure exit — a dip that keeps dying was held toward the
         # $750 floor. Runs after the brakes (it overrides their patience) and
@@ -431,8 +424,8 @@ def main():
             elif pick == sc["coin"]:
                 print(f"[crypto-live] {pick} is a stopped failed dip "
                       f"(z {board[pick]['z']:+.2f}, stopped {sc['date']}) — "
-                      f"keeping current seat")
-                pick = held
+                      f"remaining in CASH")
+                pick = "CASH"    # v4 cannot preserve a legacy alt to avoid stopped BTC
         # R1 kill floor, code-enforced (audit 2026-08-05)
         cur_val = st.get("cash", 0.0) if held == "CASH" \
             else st.get("units", 0.0) * board[held]["price"]
