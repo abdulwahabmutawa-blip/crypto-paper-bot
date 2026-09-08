@@ -1,6 +1,6 @@
 # Scalper — hyper-aggressive small-wins PAPER bot
 
-updated 2026-09-08T01:00:56+00:00 · runs 221 · equity **$1,008.06** (+0.81%) · cash $0.00 · open 10/10 · round trips 72
+updated 2026-09-08T01:20:39+00:00 · runs 222 · equity **$1,011.20** (+1.12%) · cash $0.00 · open 10/10 · round trips 72
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -33,15 +33,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-07T07:52 | MUBUSDT | surge | 1043.39 | 1047.66 | +0.41% |
-| 2026-09-07T13:11 | ZKPUSDT | surge | 0.0486 | 0.0489 | +0.62% |
-| 2026-09-07T13:11 | MINAUSDT | surge | 0.0821 | 0.0815 | -0.73% |
-| 2026-09-07T17:10 | KAVAUSDT | surge | 0.05979 | 0.05858 | -2.02% |
-| 2026-09-07T20:14 | HBARUSDT | surge | 0.08249 | 0.08247 | -0.02% |
-| 2026-09-07T20:47 | PENDLEUSDT | surge | 2.236 | 2.24 | +0.18% |
-| 2026-09-07T21:35 | LINKUSDT | bottom | 12.761 | 12.787 | +0.20% |
-| 2026-09-07T21:51 | MEGAUSDT | surge | 0.04075 | 0.04006 | -1.69% |
-| 2026-09-07T22:56 | AEROUSDT | surge | 0.6278 | 0.6409 | +2.09% |
-| 2026-09-08T00:58 | SKHYBUSDT | surge | 184.72 | 186.35 | +0.88% |
+| 2026-09-07T07:52 | MUBUSDT | surge | 1043.39 | 1044.74 | +0.13% |
+| 2026-09-07T13:11 | ZKPUSDT | surge | 0.0486 | 0.0492 | +1.23% |
+| 2026-09-07T13:11 | MINAUSDT | surge | 0.0821 | 0.0813 | -0.97% |
+| 2026-09-07T17:10 | KAVAUSDT | surge | 0.05979 | 0.05901 | -1.30% |
+| 2026-09-07T20:14 | HBARUSDT | surge | 0.08249 | 0.08251 | +0.02% |
+| 2026-09-07T20:47 | PENDLEUSDT | surge | 2.236 | 2.262 | +1.16% |
+| 2026-09-07T21:35 | LINKUSDT | bottom | 12.761 | 12.79 | +0.23% |
+| 2026-09-07T21:51 | MEGAUSDT | surge | 0.04075 | 0.04056 | -0.47% |
+| 2026-09-07T22:56 | AEROUSDT | surge | 0.6278 | 0.6428 | +2.39% |
+| 2026-09-08T00:58 | SKHYBUSDT | surge | 184.72 | 185.69 | +0.53% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
