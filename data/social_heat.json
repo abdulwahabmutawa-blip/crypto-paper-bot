@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-08T02:29:21+00:00",
+  "ts": "2026-09-08T02:34:41+00:00",
   "sources": {
     "coingecko": [
       "UNI",
@@ -25,7 +25,7 @@
       "FET",
       "DOT",
       "SUI",
-      "XLM"
+      "AVAX"
     ],
     "watcher": [
       "ZEC",
@@ -55,7 +55,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 3.1e-05,
+      "funding": 3.3e-05,
       "long_short": 0.87
     },
     {
@@ -92,7 +92,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.6e-05
+      "funding": 7.8e-05
+    },
+    {
+      "symbol": "AVAX",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 3.8e-05
     },
     {
       "symbol": "BTC",
@@ -100,7 +108,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.1e-05
+      "funding": 7.8e-05
     },
     {
       "symbol": "DOT",
@@ -116,7 +124,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 8e-05
+      "funding": 7.6e-05
     },
     {
       "symbol": "LIT",
@@ -148,7 +156,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-06
+      "funding": 1e-06
     },
     {
       "symbol": "SUI",
@@ -156,7 +164,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 8e-05
+      "funding": 7.9e-05
     },
     {
       "symbol": "TAO",
@@ -180,15 +188,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.7e-05
-    },
-    {
-      "symbol": "XLM",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
+      "funding": 4.3e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
