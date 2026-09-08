@@ -1,16 +1,16 @@
 {
-  "ts": "2026-09-08T00:29:41+00:00",
+  "ts": "2026-09-08T00:35:31+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
       "AERO",
       "LIT",
-      "PENGU",
       "ZEC",
+      "PENGU",
       "BTC",
-      "TAO",
       "PUMP",
-      "ARB",
+      "INJ",
+      "TAO",
       "UNI"
     ],
     "reddit": [],
@@ -23,7 +23,7 @@
       "DOT",
       "XLM",
       "AVAX",
-      "RLUSD"
+      "SUI"
     ],
     "watcher": [
       "TAO",
@@ -43,7 +43,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 1e-06,
+      "funding": 6e-06,
       "long_short": 0.87
     },
     {
@@ -67,6 +67,16 @@
       "long_short": 2.34
     },
     {
+      "symbol": "INJ",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.4
+    },
+    {
       "symbol": "TAO",
       "surfaces": 2,
       "sources": [
@@ -83,8 +93,7 @@
         "coingecko",
         "watcher"
       ],
-      "funding": 5e-05,
-      "long_short": 0.4
+      "funding": 5.1e-05
     },
     {
       "symbol": "AERO",
@@ -95,20 +104,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "ARB",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 2.9e-05
-    },
-    {
       "symbol": "AVAX",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -1.1e-05
+      "funding": -1.4e-05
     },
     {
       "symbol": "BTC",
@@ -126,20 +127,12 @@
       ]
     },
     {
-      "symbol": "INJ",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "LIT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 4.5e-05
     },
     {
       "symbol": "PENGU",
@@ -147,14 +140,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.1e-05
+      "funding": 2.3e-05
     },
     {
-      "symbol": "RLUSD",
+      "symbol": "SUI",
       "surfaces": 1,
       "sources": [
         "movers"
-      ]
+      ],
+      "funding": 7e-06
     },
     {
       "symbol": "UNI",
@@ -170,7 +164,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 3.5e-05
+      "funding": 3.2e-05
     },
     {
       "symbol": "XLM",
@@ -178,7 +172,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 7.8e-05
+      "funding": 7.9e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
