@@ -1,14 +1,14 @@
 {
-  "ts": "2026-09-08T18:29:41+00:00",
+  "ts": "2026-09-08T18:35:41+00:00",
   "sources": {
     "coingecko": [
       "DOT",
-      "ZEC",
       "LIT",
-      "SOPH",
-      "ETH",
+      "ZEC",
       "TAO",
-      "SOL"
+      "ETH",
+      "SOL",
+      "NEAR"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -30,17 +30,6 @@
   },
   "heat": [
     {
-      "symbol": "SOPH",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": -0.000617,
-      "long_short": 1.41
-    },
-    {
       "symbol": "DOT",
       "surfaces": 2,
       "sources": [
@@ -51,13 +40,33 @@
       "long_short": 2.35
     },
     {
+      "symbol": "NEAR",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 7e-05,
+      "long_short": 1.96
+    },
+    {
+      "symbol": "SOPH",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": -0.000481,
+      "long_short": 1.41
+    },
+    {
       "symbol": "ZEC",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "watcher"
       ],
-      "funding": -0.00015,
+      "funding": -0.000148,
       "long_short": 0.46
     },
     {
@@ -74,7 +83,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9e-05
+      "funding": 8.5e-05
     },
     {
       "symbol": "FORM",
@@ -99,14 +108,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "NEAR",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 7.2e-05
     },
     {
       "symbol": "SOL",
