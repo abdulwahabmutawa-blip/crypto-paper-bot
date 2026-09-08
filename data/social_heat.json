@@ -1,24 +1,25 @@
 {
-  "ts": "2026-09-08T06:13:51+00:00",
+  "ts": "2026-09-08T06:19:21+00:00",
   "sources": {
     "coingecko": [
       "SOPH",
       "AERO",
       "RAY",
-      "PENGU",
       "BTC",
       "ZEC",
+      "PENGU",
+      "AVAX",
+      "DASH",
       "UNI",
-      "SUI",
-      "BONK"
+      "SUI"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "SOPH",
       "INJ",
-      "WLD",
       "DOT",
+      "WLD",
       "FET",
       "PUMP",
       "SUI",
@@ -33,6 +34,16 @@
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "AVAX",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 2.6e-05,
+      "long_short": 2.71
+    },
     {
       "symbol": "INJ",
       "surfaces": 2,
@@ -50,7 +61,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 7e-06,
+      "funding": 9e-06,
       "long_short": 0.93
     },
     {
@@ -60,7 +71,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.000512,
+      "funding": -0.000573,
       "long_short": 0.77
     },
     {
@@ -80,8 +91,7 @@
         "coingecko",
         "watcher"
       ],
-      "funding": 0.0001,
-      "long_short": 0.42
+      "funding": 0.0001
     },
     {
       "symbol": "AERO",
@@ -92,27 +102,20 @@
       "funding": 5e-05
     },
     {
-      "symbol": "AVAX",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 2.4e-05
-    },
-    {
-      "symbol": "BONK",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ]
-    },
-    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 8.7e-05
+    },
+    {
+      "symbol": "DASH",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "DOT",
@@ -128,7 +131,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4e-06
+      "funding": -4e-06
     },
     {
       "symbol": "ICP",
@@ -144,7 +147,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.5e-05
+      "funding": 4.8e-05
     },
     {
       "symbol": "RAY",
