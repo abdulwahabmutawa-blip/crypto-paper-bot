@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-08T16:48:31+00:00",
+  "ts": "2026-09-08T16:54:13+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
@@ -21,7 +21,7 @@
       "INJ",
       "DOT",
       "WLD",
-      "ZEC",
+      "PUMP",
       "NEAR",
       "ADA"
     ],
@@ -33,17 +33,6 @@
   },
   "heat": [
     {
-      "symbol": "ZEC",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": -0.00014,
-      "long_short": 0.48
-    },
-    {
       "symbol": "DOT",
       "surfaces": 2,
       "sources": [
@@ -54,14 +43,34 @@
       "long_short": 2.47
     },
     {
+      "symbol": "PUMP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 0.88
+    },
+    {
       "symbol": "SOPH",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": -0.006986,
+      "funding": -0.006303,
       "long_short": 1.35
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "watcher"
+      ],
+      "funding": -0.000145,
+      "long_short": 0.48
     },
     {
       "symbol": "ADA",
@@ -85,7 +94,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 4.7e-05
     },
     {
       "symbol": "BTC",
@@ -93,7 +102,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7e-05
+      "funding": 6.8e-05
     },
     {
       "symbol": "ETH",
@@ -101,7 +110,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.3e-05
+      "funding": 6.5e-05
     },
     {
       "symbol": "FORM",
@@ -125,7 +134,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 7.9e-05
+      "funding": 7.8e-05
     },
     {
       "symbol": "PENGU",
@@ -133,15 +142,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.1e-05
-    },
-    {
-      "symbol": "PUMP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": 2.5e-05
     },
     {
       "symbol": "RAY",
