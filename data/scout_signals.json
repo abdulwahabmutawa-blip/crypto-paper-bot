@@ -1,37 +1,22 @@
 {
-  "ts": "2026-09-08T08:05:17+00:00",
-  "scanned": 102,
+  "ts": "2026-09-08T08:10:56+00:00",
+  "scanned": 103,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "SKHYBUSDT",
+      "symbol": "BICOUSDT",
       "signal": "ignition",
-      "score": 0.7426,
-      "raw_score": 0.7934,
+      "score": 0.8086,
+      "raw_score": 0.8639,
       "weight": 0.936,
-      "price": 180.25,
-      "why": "trades 7.6x and volume 11.5x the prior 4h, 66% taker-buy, $169,329 burst \u2014 while price has only moved -1.1%",
-      "chg_24h": 0.0002,
-      "vol_surge": 11.54,
-      "chg_1h": -0.0107,
-      "market_surge": 11.61,
+      "price": 0.02302,
+      "why": "trades 11.3x and volume 10.2x the prior 4h, 64% taker-buy, $54,871 burst \u2014 while price has only moved +1.9%",
+      "chg_24h": 0.0385,
+      "vol_surge": 10.22,
+      "chg_1h": 0.0186,
+      "market_surge": 2.81,
       "actionable": false,
       "status": "benched \u2014 hit 48%, mean +0.62% over last 540 at 24h: not beating 4x the round trip"
-    },
-    {
-      "symbol": "MEGAUSDT",
-      "signal": "breakout",
-      "score": 0.5502,
-      "raw_score": 0.6113,
-      "weight": 0.9,
-      "price": 0.04368,
-      "why": "trades 4.6x, volume 7.9x, 61% taker-buy, +2.2% in an hour, at 93% of its 24h range",
-      "chg_24h": 0.1363,
-      "vol_surge": 7.93,
-      "chg_1h": 0.0218,
-      "market_surge": 11.17,
-      "actionable": false,
-      "status": "benched \u2014 hit 42%, mean +0.46% over last 226 at 24h: not beating 4x the round trip"
     }
   ],
   "gate": {
@@ -42,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 13,
+    "count": 12,
     "baseline": 18.0,
     "wave": false
   },
