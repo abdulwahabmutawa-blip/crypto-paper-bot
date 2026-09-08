@@ -1,24 +1,8 @@
 {
-  "ts": "2026-09-08T07:43:29+00:00",
-  "scanned": 99,
+  "ts": "2026-09-08T07:48:56+00:00",
+  "scanned": 101,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "GIGGLEUSDT",
-      "signal": "ignition",
-      "score": 0.7063,
-      "raw_score": 0.7571,
-      "weight": 0.933,
-      "price": 38.63,
-      "why": "trades 7.8x and volume 13.1x the prior 4h, 67% taker-buy, $115,539 burst \u2014 while price has only moved +3.0%",
-      "chg_24h": 0.0151,
-      "vol_surge": 13.09,
-      "chg_1h": 0.0296,
-      "market_surge": 1.43,
-      "actionable": false,
-      "status": "benched \u2014 hit 48%, mean +0.61% over last 544 at 24h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 48%, mean +0.61% over last 544 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 42%, mean +0.46% over last 226 at 24h: not beating 4x the round trip",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 15,
+    "count": 16,
     "baseline": 18.0,
     "wave": false
   },
@@ -67,7 +51,7 @@
       "median_ret_24h": 0.0,
       "both_halves_24h": true,
       "days_24h": 12,
-      "mean_x_24h": 0.02102,
+      "mean_x_24h": 0.02171,
       "days_x_24h": 5,
       "avg_win_24h": 0.04758,
       "avg_loss_24h": -0.03527,
