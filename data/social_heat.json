@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-08T05:40:21+00:00",
+  "ts": "2026-09-08T05:46:07+00:00",
   "sources": {
     "coingecko": [
       "SOPH",
@@ -7,10 +7,12 @@
       "PENGU",
       "RAY",
       "ZEC",
+      "UNI",
       "BTC",
+      "ARB",
       "TAO",
       "PUMP",
-      "UNI"
+      "LINK"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,8 +21,8 @@
       "INJ",
       "WLD",
       "DOT",
-      "FET",
       "ICP",
+      "FET",
       "PUMP",
       "ARB"
     ],
@@ -41,8 +43,18 @@
         "movers",
         "watcher"
       ],
-      "funding": 1.4e-05,
+      "funding": 1.3e-05,
       "long_short": 0.9
+    },
+    {
+      "symbol": "ARB",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.28
     },
     {
       "symbol": "ICP",
@@ -71,7 +83,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.000359,
+      "funding": -0.000378,
       "long_short": 0.76
     },
     {
@@ -81,8 +93,7 @@
         "coingecko",
         "watcher"
       ],
-      "funding": 9.5e-05,
-      "long_short": 0.42
+      "funding": 9.7e-05
     },
     {
       "symbol": "AERO",
@@ -91,14 +102,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "ARB",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "BTC",
@@ -122,7 +125,15 @@
       "sources": [
         "movers"
       ],
-      "funding": 1.8e-05
+      "funding": 1e-05
+    },
+    {
+      "symbol": "LINK",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 8e-06
     },
     {
       "symbol": "PENGU",
@@ -130,7 +141,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.6e-05
+      "funding": 2.2e-05
     },
     {
       "symbol": "RAY",
