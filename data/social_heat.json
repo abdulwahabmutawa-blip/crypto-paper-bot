@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-08T19:36:33+00:00",
+  "ts": "2026-09-08T19:42:21+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
@@ -19,10 +19,10 @@
       "DOT",
       "SOPH",
       "INJ",
-      "WLD",
       "XRP",
       "NEAR",
-      "TRX"
+      "TRX",
+      "BNB"
     ],
     "watcher": [
       "DOT",
@@ -60,8 +60,16 @@
         "movers",
         "watcher"
       ],
-      "funding": -6.9e-05,
+      "funding": -6.5e-05,
       "long_short": 1.35
+    },
+    {
+      "symbol": "BNB",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0
     },
     {
       "symbol": "BTC",
@@ -69,7 +77,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.5e-05
+      "funding": 4.3e-05
     },
     {
       "symbol": "ETH",
@@ -77,7 +85,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.5e-05
+      "funding": 6.4e-05
     },
     {
       "symbol": "INJ",
@@ -101,7 +109,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 3.6e-05
+      "funding": 3.7e-05
     },
     {
       "symbol": "PENGU",
@@ -109,7 +117,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.1e-05
+      "funding": 1.5e-05
     },
     {
       "symbol": "PUMP",
@@ -133,15 +141,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 7e-06
-    },
-    {
-      "symbol": "WLD",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
+      "funding": 2e-06
     },
     {
       "symbol": "XPL",
@@ -157,7 +157,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 3.6e-05
+      "funding": 3.3e-05
     },
     {
       "symbol": "ZEC",
@@ -165,7 +165,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000132
+      "funding": -0.000124
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
