@@ -1,6 +1,6 @@
 # Scalper — hyper-aggressive small-wins PAPER bot
 
-updated 2026-09-08T06:37:06+00:00 · runs 241 · equity **$995.03** (-0.50%) · cash $0.00 · open 10/10 · round trips 77
+updated 2026-09-08T06:53:43+00:00 · runs 242 · equity **$995.87** (-0.41%) · cash $0.00 · open 10/10 · round trips 77
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -33,15 +33,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-07T07:52 | MUBUSDT | surge | 1043.39 | 1031.26 | -1.16% |
-| 2026-09-07T13:11 | ZKPUSDT | surge | 0.0486 | 0.0489 | +0.62% |
-| 2026-09-07T13:11 | MINAUSDT | surge | 0.0821 | 0.0815 | -0.73% |
-| 2026-09-07T17:10 | KAVAUSDT | surge | 0.05979 | 0.05853 | -2.11% |
-| 2026-09-07T20:14 | HBARUSDT | surge | 0.08249 | 0.08078 | -2.07% |
-| 2026-09-07T21:35 | LINKUSDT | bottom | 12.761 | 12.657 | -0.81% |
-| 2026-09-08T00:58 | SKHYBUSDT | surge | 184.72 | 180.53 | -2.27% |
-| 2026-09-08T05:45 | KAITOUSDT | surge | 0.3344 | 0.3367 | +0.69% |
-| 2026-09-08T06:02 | CAKEUSDT | surge | 2.308 | 2.289 | -0.82% |
-| 2026-09-08T06:35 | MEGAUSDT | surge | 0.04212 | 0.04202 | -0.24% |
+| 2026-09-07T07:52 | MUBUSDT | surge | 1043.39 | 1033.51 | -0.95% |
+| 2026-09-07T13:11 | ZKPUSDT | surge | 0.0486 | 0.0488 | +0.41% |
+| 2026-09-07T13:11 | MINAUSDT | surge | 0.0821 | 0.0816 | -0.61% |
+| 2026-09-07T17:10 | KAVAUSDT | surge | 0.05979 | 0.05864 | -1.92% |
+| 2026-09-07T20:14 | HBARUSDT | surge | 0.08249 | 0.08039 | -2.55% |
+| 2026-09-07T21:35 | LINKUSDT | bottom | 12.761 | 12.588 | -1.36% |
+| 2026-09-08T00:58 | SKHYBUSDT | surge | 184.72 | 181.88 | -1.54% |
+| 2026-09-08T05:45 | KAITOUSDT | surge | 0.3344 | 0.3371 | +0.81% |
+| 2026-09-08T06:02 | CAKEUSDT | surge | 2.308 | 2.292 | -0.69% |
+| 2026-09-08T06:35 | MEGAUSDT | surge | 0.04212 | 0.04226 | +0.33% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
