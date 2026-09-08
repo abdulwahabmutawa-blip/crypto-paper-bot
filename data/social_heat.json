@@ -1,17 +1,17 @@
 {
-  "ts": "2026-09-08T14:12:32+00:00",
+  "ts": "2026-09-08T14:18:01+00:00",
   "sources": {
     "coingecko": [
-      "ZEC",
       "AERO",
       "LIT",
-      "BTC",
+      "ZEC",
       "SOPH",
+      "BTC",
       "PUMP",
       "UNI",
       "RAY",
-      "DOT",
-      "LINK"
+      "ARB",
+      "INJ"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,10 +20,10 @@
       "FORM",
       "INJ",
       "ARB",
-      "ZKC",
       "WLD",
-      "TRX",
-      "BNB"
+      "DOT",
+      "ZKC",
+      "TRX"
     ],
     "watcher": [
       "ZEC",
@@ -40,8 +40,28 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.01906,
+      "funding": -0.019087,
       "long_short": 1.25
+    },
+    {
+      "symbol": "ARB",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.31
+    },
+    {
+      "symbol": "INJ",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.54
     },
     {
       "symbol": "ZEC",
@@ -50,7 +70,7 @@
         "coingecko",
         "watcher"
       ],
-      "funding": -1.7e-05,
+      "funding": -1.8e-05,
       "long_short": 0.44
     },
     {
@@ -60,22 +80,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "ARB",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "BNB",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0
     },
     {
       "symbol": "BTC",
@@ -89,7 +93,7 @@
       "symbol": "DOT",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
       "funding": 0.0001
     },
@@ -99,23 +103,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 3.8e-05
-    },
-    {
-      "symbol": "INJ",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "LINK",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 1.6e-05
+      "funding": 3.5e-05
     },
     {
       "symbol": "LIT",
@@ -123,7 +111,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.3e-05
+      "funding": 9e-06
     },
     {
       "symbol": "PUMP",
@@ -147,7 +135,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 1.7e-05
+      "funding": 1.9e-05
     },
     {
       "symbol": "UNI",
@@ -155,7 +143,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.7e-05
+      "funding": 1.5e-05
     },
     {
       "symbol": "WLD",
