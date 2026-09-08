@@ -1,22 +1,22 @@
 {
-  "ts": "2026-09-08T08:10:56+00:00",
-  "scanned": 103,
+  "ts": "2026-09-08T08:16:26+00:00",
+  "scanned": 101,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "BICOUSDT",
-      "signal": "ignition",
-      "score": 0.8086,
-      "raw_score": 0.8639,
-      "weight": 0.936,
-      "price": 0.02302,
-      "why": "trades 11.3x and volume 10.2x the prior 4h, 64% taker-buy, $54,871 burst \u2014 while price has only moved +1.9%",
-      "chg_24h": 0.0385,
-      "vol_surge": 10.22,
-      "chg_1h": 0.0186,
-      "market_surge": 2.81,
+      "symbol": "TUTUSDT",
+      "signal": "breakout",
+      "score": 0.5951,
+      "raw_score": 0.6612,
+      "weight": 0.9,
+      "price": 0.02595,
+      "why": "trades 5.4x, volume 7.4x, 64% taker-buy, +3.3% in an hour, at 99% of its 24h range",
+      "chg_24h": 0.0596,
+      "vol_surge": 7.38,
+      "chg_1h": 0.0326,
+      "market_surge": 6.03,
       "actionable": false,
-      "status": "benched \u2014 hit 48%, mean +0.62% over last 540 at 24h: not beating 4x the round trip"
+      "status": "benched \u2014 hit 42%, mean +0.46% over last 226 at 24h: not beating 4x the round trip"
     }
   ],
   "gate": {
@@ -27,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 15,
     "baseline": 18.0,
     "wave": false
   },

@@ -1,17 +1,16 @@
 {
-  "ts": "2026-09-08T08:10:51+00:00",
+  "ts": "2026-09-08T08:16:21+00:00",
   "sources": {
     "coingecko": [
       "SOPH",
-      "ZEC",
-      "PENGU",
-      "AERO",
       "ARB",
+      "ZEC",
+      "AERO",
+      "PENGU",
       "MARSCOIN",
-      "FORM",
-      "AAVE",
       "BTC",
-      "PUMP"
+      "FORM",
+      "AAVE"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,9 +20,9 @@
       "DOT",
       "FET",
       "PUMP",
-      "WLD",
+      "ARB",
       "AVAX",
-      "ARB"
+      "WLD"
     ],
     "watcher": [
       "ZEC",
@@ -35,24 +34,13 @@
   },
   "heat": [
     {
-      "symbol": "PUMP",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": -2e-06,
-      "long_short": 0.92
-    },
-    {
       "symbol": "ARB",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 5.6e-05,
+      "funding": 5.5e-05,
       "long_short": 1.33
     },
     {
@@ -66,13 +54,23 @@
       "long_short": 1.68
     },
     {
+      "symbol": "PUMP",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": 1e-06,
+      "long_short": 0.92
+    },
+    {
       "symbol": "SOPH",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": -0.002503,
+      "funding": -0.00276,
       "long_short": 0.7
     },
     {
@@ -82,7 +80,7 @@
         "coingecko",
         "watcher"
       ],
-      "funding": 8.7e-05,
+      "funding": 8.9e-05,
       "long_short": 0.43
     },
     {
@@ -91,7 +89,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.8e-05
+      "funding": 7.2e-05
     },
     {
       "symbol": "AERO",
@@ -107,7 +105,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 5.4e-05
+      "funding": 5.5e-05
     },
     {
       "symbol": "BTC",
@@ -131,7 +129,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.8e-05
+      "funding": 5.4e-05
     },
     {
       "symbol": "FORM",
@@ -163,7 +161,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.9e-05
+      "funding": 4.8e-05
     },
     {
       "symbol": "WLD",
