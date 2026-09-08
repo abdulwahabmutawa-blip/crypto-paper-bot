@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-08T21:28:44+00:00",
-  "scanned": 117,
+  "ts": "2026-09-08T21:33:47+00:00",
+  "scanned": 119,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "MIRAUSDT",
+      "signal": "ignition",
+      "score": 0.815,
+      "raw_score": 0.868,
+      "weight": 0.939,
+      "price": 0.05071,
+      "why": "trades 20.0x and volume 39.8x the prior 4h, 68% taker-buy, $51,555 burst \u2014 while price has only moved +2.1%",
+      "chg_24h": 0.0585,
+      "vol_surge": 39.83,
+      "chg_1h": 0.0207,
+      "market_surge": 3.55,
+      "actionable": false,
+      "status": "benched \u2014 hit 48%, mean +0.76% over last 526 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 48%, mean +0.76% over last 526 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 42%, mean +0.60% over last 229 at 24h: not beating 4x the round trip",
