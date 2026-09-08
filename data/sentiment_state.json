@@ -1,15 +1,16 @@
 {
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "holding": "SOPH-USD",
-  "units": 103083.52054961886,
+  "holding": "ZEC-USD",
+  "units": 0.8702985865393478,
   "cash": 0.0,
-  "entry_price": 0.01124,
+  "entry_price": 1158.76,
   "bench_units": 1.332054612938296,
   "stopped": {
     "SHIB-USD": "2026-07-27T00:01:08+00:00",
     "NLST": "2026-08-17T18:05:32+00:00",
-    "XRP-USD": "2026-08-21T01:30:56+00:00"
+    "XRP-USD": "2026-08-21T01:30:56+00:00",
+    "SOPH-USD": "2026-09-08T11:13:19+00:00"
   },
   "trades": [
     {
@@ -718,6 +719,26 @@
       "value": 1158.66,
       "fee": 3.37,
       "reason": "Grok: SOPH euphoric \u2014 Binance top mover +123% volume surge (scan 2026-09-08T09:06)"
+    },
+    {
+      "date": "2026-09-08",
+      "action": "SELL",
+      "ticker": "SOPH-USD",
+      "price": 0.00984,
+      "units": 103083.5205,
+      "value": 1014.34,
+      "fee": 2.94,
+      "reason": "STOP-LOSS hit (-12.5% from entry) \u2014 hype that bleeds gets cut"
+    },
+    {
+      "date": "2026-09-08",
+      "action": "BUY",
+      "ticker": "ZEC-USD",
+      "price": 1158.76,
+      "units": 0.8703,
+      "value": 1008.47,
+      "fee": 2.93,
+      "reason": "Grok: ZEC euphoric \u2014 Multi-year high on ETF inflows (scan 2026-09-08T11:13)"
     }
   ],
   "history": [
@@ -971,19 +992,13 @@
     },
     {
       "date": "2026-09-06",
-      "value": 1119.49,
+      "value": 1008.47,
       "bench": 1025.94,
-      "holding": "SOPH-USD",
+      "holding": "ZEC-USD",
       "bench_asof": "2026-09-04"
     }
   ],
   "intraday": [
-    {
-      "ts": "2026-08-20T22:32:43+00:00",
-      "value": 1590.35,
-      "bench": 1015.82,
-      "holding": "XRP-USD"
-    },
     {
       "ts": "2026-08-20T22:46:13+00:00",
       "value": 1593.26,
@@ -9977,9 +9992,15 @@
       "value": 1119.49,
       "bench": 1025.94,
       "holding": "SOPH-USD"
+    },
+    {
+      "ts": "2026-09-08T11:48:19+00:00",
+      "value": 1008.47,
+      "bench": 1025.94,
+      "holding": "ZEC-USD"
     }
   ],
-  "last_updated_utc": "2026-09-08T11:31:57+00:00",
+  "last_updated_utc": "2026-09-08T11:48:19+00:00",
   "restatement": {
     "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)",
     "voided_trades": [
@@ -10058,5 +10079,5 @@
     ],
     "voided_reason": "signal faded before any real fill was possible (market closed the whole window) \u2014 trades could never have existed"
   },
-  "costs_paid": 130.0786
+  "costs_paid": 135.9533
 }
