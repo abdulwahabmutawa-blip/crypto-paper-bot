@@ -68,10 +68,8 @@ def _now():
 
 def _load():
     if STATE.exists():
-        try:
-            return json.loads(STATE.read_text(encoding="utf-8"))
-        except Exception:
-            pass
+        # A corrupt existing ledger must fail loudly, never restart at $1,000.
+        return json.loads(STATE.read_text(encoding="utf-8"))
     return {"created": _now().isoformat(timespec="seconds"), "cash": START_USD,
             "open": [], "trades": [], "cooldown": {}, "runs": 0}
 
@@ -133,11 +131,17 @@ def report(st, marks):
     tr = st["trades"]
     eq = equity(st, marks)
     lines = [f"# Scalper — hyper-aggressive small-wins PAPER bot\n",
+             "**Execution caveat:** retrospective candle-close entries, observed later by a polling bot. "
+             "This is a signal simulation, not an executable forward-fill record. "
+             "Do not promote it on the trade count alone.\n",
              f"updated {now.isoformat(timespec='seconds')} · runs {st.get('runs', 0)} · "
              f"equity **${eq:,.2f}** ({(eq / START_USD - 1) * 100:+.2f}%) · cash ${st['cash']:,.2f} · "
              f"open {len(st['open'])}/{SEATS} · round trips {len(tr)}\n",
              f"Rule: {SEATS} seats, +{TARGET:.0%} target / -{STOP:.0%} stop / {MAX_H}h, cost {COST:.2%}/RT, "
              f"shapes surge + bottom on 15m candles. Judge on >= 100 round trips.\n"]
+    unpriced = [p["symbol"] for p in st["open"] if p["symbol"] not in marks]
+    if unpriced:
+        lines.append("**Unpriced positions (provisional equity at entry):** " + ", ".join(unpriced) + ". No stake was refunded.\n")
     if tr:
         rets = [r["ret"] for r in tr]
         hit = sum(1 for x in rets if x > 0) / len(rets)
@@ -188,6 +192,8 @@ def report(st, marks):
                     "holding": f"{len(st['open'])}/{SEATS} seats"},
         "intraday": (prev + [point])[-400:],
         "round_trips": len(tr), "cash": st["cash"],
+        "execution_model": "retrospective_candle_close",
+        "unpriced_positions": unpriced,
     }, indent=1), encoding="utf-8")
 
 
@@ -220,8 +226,7 @@ def main():
         r = lab.resolve({**p, "target": TARGET, "stop": STOP, "max_h": MAX_H}, k) if k else None
         if r is None:
             if now_ms - p["entry_ms"] > 48 * 3600_000 and not k:
-                st["cash"] += p["stake"]          # unpriceable for 2 days: return stake, no P&L
-                continue
+                print(f"[scalper] {p['symbol']} unpriceable: position retained; no fictional refund")
             still.append(p)
             continue
         ret, how, hrs = r

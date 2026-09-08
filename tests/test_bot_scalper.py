@@ -1,6 +1,7 @@
 """Scalper paper bot — offline cycle against fake candles. No network."""
 import json
 import sys
+import pytest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
@@ -109,3 +110,25 @@ def test_surge_outranks_bottom(tmp_path, monkeypatch):
     kl = {"BTCUSDT": _flat(50000.0), "AAAUSDT": _bottom(), "BBBUSDT": _bottom(), "ZZZUSDT": _surge()}
     st, sc = _run(tmp_path, monkeypatch, kl, 120 * 900_000 + 1000)
     assert st["open"][0]["symbol"] == "ZZZUSDT" and st["open"][0]["shape"] == "surge"
+
+
+def test_corrupt_state_does_not_reset_capital(tmp_path, monkeypatch):
+    import bot_scalper as sc
+    monkeypatch.setattr(sc, "STATE", tmp_path / "broken.json")
+    sc.STATE.write_text("{invalid")
+    with pytest.raises(json.JSONDecodeError):
+        sc._load()
+
+
+def test_missing_price_does_not_refund_stake(tmp_path, monkeypatch):
+    import bot_scalper as sc
+    p = {"symbol": "GONEUSDT", "entry_ms": 1, "entry_ts": "1970-01-01T00:00:00Z",
+         "entry": 100., "stake": 100., "shape": "surge"}
+    (tmp_path / "scalper_state.json").write_text(json.dumps(
+        {"cash": 900., "open": [p], "trades": [], "cooldown": {}, "runs": 1}))
+    kl = {"BTCUSDT": _flat(50000.), "QUIETUSDT": _flat()}
+    st, _ = _run(tmp_path, monkeypatch, kl, 72 * 3600_000)
+    assert st["cash"] == 900. and st["open"] == [p] and not st["trades"]
+    payload = json.loads((tmp_path / "scalper_dashboard_data.json").read_text())
+    assert payload["unpriced_positions"] == ["GONEUSDT"]
+    assert payload["execution_model"] == "retrospective_candle_close"

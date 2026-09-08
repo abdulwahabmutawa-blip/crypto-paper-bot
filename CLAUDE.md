@@ -4,19 +4,24 @@ Notion project page: https://app.notion.com/p/3a6632591142819289cecca55dc39533
 (Command Center → Trade Bot)
 
 ## What this is
-A 9-bot paper-trading fleet — crypto trend, congress, meanrev, commodity, allweather, hype,
-Hunter, Scholar (synthesis bot, added at the 2026-07-31 v2 review), plus a Watcher bot using
-Grok. The leveraged stock bot was retired 2026-07-31 by owner decision (docs/stocks.html is a
-frozen archive). Each bot manages **$1,000 of PAPER capital. No real money.**
-Runs itself on GitHub Actions; dashboards are bilingual (English/Arabic).
-Active roster after the owner's 2026-09-04/05 retirements: meanrev, sentiment (Watcher +
-sentinel_trader), scalper (small-wins paper bot, `src/bot_scalper.py`), plus the utilities
-(exit_auditor, unlock/announcement watch, social radar, smallwins_lab). Everything else is a
-frozen archive; see `reports/kill_criteria.md`.
+Four active $1,000 paper books run on GitHub Actions: crypto (BTC tide gauge v4),
+meanrev, sentiment (Watcher + sentinel_trader), and scalper (small-wins signal
+simulation). Utilities include the Watcher, exit auditor, unlock/announcement
+watch, social radar and smallwins lab. Retired dashboards are frozen archives;
+see `reports/kill_criteria.md`. Dashboards are bilingual (English/Arabic).
+
+The separate lottery/IBKR paths in this repository concern real-money trading
+on the VPS; they are not part of the Actions paper fleet. Never infer their
+live state from a paper-fleet update.
+
+Scalper candle-close entries are retrospective, observed later by the polling
+loop. Its results are signal research, not proof of executable fills. A method
+replacement requires a separate prospective record with realistic timing/costs.
 
 ## Where things are
 - `src/` — the bots. One `bot_*.py` / `*_tracker.py` per strategy, plus:
-  - `selection_engine.py` — **shared engine every bot runs through** (positions, fills, risk overlay).
+  - `selection_engine.py` — shared engine used by several fleet strategies; crypto,
+    sentiment and scalper also have their own position/accounting code.
   - `config.py`, `market_hours.py`, `sentinel_gate.py` — shared plumbing.
   - `*_dashboard_template.html` — the bilingual dashboard templates.
 - `.github/workflows/bot.yml` — the schedule that runs the fleet. Cycles commit themselves.

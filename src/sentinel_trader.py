@@ -68,9 +68,38 @@ def quotes(tickers):
         close = close.to_frame(tickers[0])
     close = market_hours.trim_incomplete_bars(close)
     filled = close.ffill()
+    if filled.empty:
+        return {}, close
     last = filled.iloc[-1]
     return ({t: float(last[t]) for t in tickers
              if t in filled.columns and pd.notna(last[t])}, close)
+
+
+def exchange_quotes(px, tickers):
+    """Use Binance for all requested coins, including those absent on Yahoo.
+
+    A failed exchange quote cannot fall back to an unrelated/stale Yahoo coin.
+    Return a receipt set so mark dates follow the price source actually used.
+    """
+    import binance_data
+    px = dict(px)
+    received = set()
+    for t in sorted(set(tickers)):
+        if not t.endswith("-USD"):
+            continue
+        bp = binance_data.price(t[:-4] + "USDT")
+        if bp is not None and bp > 0:
+            px[t] = float(bp)
+            received.add(t)
+        else:
+            px.pop(t, None)
+    return px, received
+
+
+def mark_date(holding, raw, received, now):
+    if holding == "CASH" or holding in received:
+        return str(now.date())
+    return market_hours.last_real_date(raw, holding)
 
 
 def main():
@@ -110,18 +139,13 @@ def main():
         print(f"[{KEY}] NEW sim {today}")
 
     cand_map = {ticker_of(h["symbol"]): h for h in euphoric}
-    px, rawc = quotes(list(cand_map)
-                      + ([st["holding"]] if st["holding"] != "CASH" else []))
+    requested = list(cand_map) + ([st["holding"]] if st["holding"] != "CASH" else [])
+    px, rawc = quotes(requested)
     # coins: price from Binance (the venue the fee model assumes), not Yahoo's
     # ambiguous "<SYM>-USD" lookup; a coin Binance does not list is untradeable
-    import binance_data
-    for t in list(px):
-        if t.endswith("-USD") and t != BENCH:
-            bp = binance_data.price(t[:-4] + "USDT")
-            if bp:
-                px[t] = float(bp)
-            elif t in cand_map:
-                px.pop(t, None)
+    px, received = exchange_quotes(px, requested)
+    if BENCH not in px:
+        raise RuntimeError("SPY benchmark quote missing; cycle deferred without changing state")
     tradeable = [t for t in cand_map if t in px]
     et_today = str(market_hours._et_now(now).date())
 
@@ -133,7 +157,7 @@ def main():
         marked 116 -> 174 within one session. A stock order fills only when
         its own bar for today's session has been delivered. Coins are 24/7."""
         if t.endswith("-USD"):
-            return True
+            return t in received
         return market_hours.last_real_date(rawc, t) == et_today
 
     def sell(reason) -> bool:
@@ -180,7 +204,8 @@ def main():
     # this, a dead Grok key left the book riding NET blind for 6 days (08-07..
     # 08-13) while the dashboard claimed the crowd was still euphoric.
     if stale and st["holding"] != "CASH" and market_hours.can_fill(st["holding"]):
-        sell(f"Grok scans stale ({stale_h:.0f}h) — hype unverifiable, "
+        age_text = "unknown age" if stale_h is None else f"{stale_h:.0f}h"
+        sell(f"Grok scans stale ({age_text}) — hype unverifiable, "
              f"flying blind is not a strategy")
 
     # 2.5) R1 kill floor, code-enforced (audit 2026-08-05)
@@ -255,8 +280,9 @@ def main():
     bench = st["bench_units"] * px[BENCH]
     # date the mark by the asset that determines its value (crypto trades
     # weekends; the equity bench does not), never by the wall clock
-    priced = BENCH if st["holding"] == "CASH" else st["holding"]
-    asof = market_hours.last_real_date(rawc, priced) or str(now.date())
+    asof = mark_date(st["holding"], rawc, received, now)
+    if asof is None:
+        raise RuntimeError("Holding quote has no observation date; refusing an undated mark")
     bench_asof = market_hours.last_real_date(rawc, BENCH)
     newest = st["history"][-1]["date"] if st["history"] else ""
     if asof < newest:
@@ -279,7 +305,7 @@ def main():
     # 5) dashboard (shared fleet template)
     board = []
     for h in hype:
-        t = to_ticker(h["symbol"])
+        t = ticker_of(h["symbol"])
         mood = h.get("mood", "mixed")
         board.append({
             "sym": h["symbol"].upper(), "price": round(px.get(t, 0), 2),

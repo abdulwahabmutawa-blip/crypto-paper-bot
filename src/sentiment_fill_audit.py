@@ -110,7 +110,7 @@ def main(path: str) -> int:
     for r in audited:
         if r["status"].startswith("VOID"):
             equity_path.append((r["commit_ts"][:16], r["action"] + " void", r["ticker"], 0,
-                                round(cash if held is None else units * px, 2)))
+                                equity_path[-1][-1] if equity_path else 1000.0))
             continue
         px = r["true"] if r["status"].startswith("RESTATED") and r["true"] else r["audit_price"]
         if r["action"] == "BUY":

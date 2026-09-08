@@ -19,11 +19,14 @@ on:
       - 'deploy/**'
       - 'requirements.txt'
       - '.github/workflows/tests.yml'
+      - '.github/workflows/bot.yml'
   pull_request:
     paths:
       - 'src/**'
       - 'tests/**'
       - 'deploy/**'
+      - '.github/workflows/bot.yml'
+      - '.github/workflows/tests.yml'
   workflow_dispatch: {}
 
 permissions:
