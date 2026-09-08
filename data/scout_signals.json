@@ -1,8 +1,39 @@
 {
-  "ts": "2026-09-08T19:53:45+00:00",
-  "scanned": 117,
+  "ts": "2026-09-08T19:59:15+00:00",
+  "scanned": 116,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SOXLBUSDT",
+      "signal": "ignition",
+      "score": 0.8345,
+      "raw_score": 0.8868,
+      "weight": 0.941,
+      "price": 123.36,
+      "why": "trades 8.3x and volume 56.7x the prior 4h, 87% taker-buy, $150,361 burst \u2014 while price has only moved -0.6%",
+      "chg_24h": -0.0268,
+      "vol_surge": 56.71,
+      "chg_1h": -0.0063,
+      "market_surge": 11.65,
+      "actionable": false,
+      "status": "benched \u2014 hit 48%, mean +0.77% over last 531 at 24h: not beating 4x the round trip"
+    },
+    {
+      "symbol": "NVDABUSDT",
+      "signal": "ignition",
+      "score": 0.7633,
+      "raw_score": 0.8112,
+      "weight": 0.941,
+      "price": 225.75,
+      "why": "trades 5.8x and volume 27.0x the prior 4h, 92% taker-buy, $82,407 burst \u2014 while price has only moved +0.0%",
+      "chg_24h": -0.0287,
+      "vol_surge": 27.03,
+      "chg_1h": 0.0004,
+      "market_surge": 10.63,
+      "actionable": false,
+      "status": "benched \u2014 hit 48%, mean +0.77% over last 531 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 48%, mean +0.77% over last 531 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 42%, mean +0.60% over last 229 at 24h: not beating 4x the round trip",
@@ -11,7 +42,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 10,
+    "count": 11,
     "baseline": 17.0,
     "wave": false
   },
