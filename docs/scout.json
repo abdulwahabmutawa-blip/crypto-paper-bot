@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-08T15:46:45+00:00",
-  "scanned": 112,
+  "ts": "2026-09-08T15:52:46+00:00",
+  "scanned": 111,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "DOTUSDT",
+      "signal": "breakout",
+      "score": 0.7424,
+      "raw_score": 0.8332,
+      "weight": 0.891,
+      "price": 1.2,
+      "why": "trades 6.0x, volume 9.7x, 64% taker-buy, +7.4% in an hour, at 100% of its 24h range",
+      "chg_24h": 0.1215,
+      "vol_surge": 9.74,
+      "chg_1h": 0.0743,
+      "market_surge": 0.0,
+      "actionable": false,
+      "status": "benched \u2014 hit 42%, mean +0.51% over last 230 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 48%, mean +0.74% over last 535 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 42%, mean +0.51% over last 230 at 24h: not beating 4x the round trip",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 24,
+    "count": 23,
     "baseline": 17.0,
     "wave": false
   },
@@ -58,19 +74,19 @@
       "payoff_24h": 1.438
     },
     "breakout": {
-      "span_h_1h": 334.8,
-      "n_eff_1h": 265,
-      "n_1h": 265,
-      "hit_rate_1h": 0.392,
-      "mean_ret_1h": -0.00087,
-      "median_ret_1h": -0.00139,
+      "span_h_1h": 334.9,
+      "n_eff_1h": 266,
+      "n_1h": 266,
+      "hit_rate_1h": 0.395,
+      "mean_ret_1h": -0.00084,
+      "median_ret_1h": -0.00136,
       "both_halves_1h": false,
       "days_1h": 14,
-      "mean_x_1h": -8e-05,
+      "mean_x_1h": -1e-05,
       "days_x_1h": 6,
-      "avg_win_1h": 0.01965,
+      "avg_win_1h": 0.01955,
       "avg_loss_1h": -0.01809,
-      "payoff_1h": 1.086,
+      "payoff_1h": 1.081,
       "span_h_4h": 330.8,
       "n_eff_4h": 82.7,
       "n_4h": 258,
