@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-08T18:18:10+00:00",
-  "scanned": 112,
+  "ts": "2026-09-08T18:23:47+00:00",
+  "scanned": 115,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "AVAUSDT",
+      "signal": "revival",
+      "score": 0.4422,
+      "raw_score": 0.4422,
+      "weight": 1.0,
+      "price": 0.1722,
+      "why": "revival day-one: fell -17% last week on $0.31M/day quiet, volume arriving 3.0x today, only +11% off its 30d low",
+      "chg_24h": 0.0864,
+      "vol_surge": 3.0,
+      "chg_1h": null,
+      "market_surge": null,
+      "actionable": false,
+      "status": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 48%, mean +0.74% over last 534 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 42%, mean +0.57% over last 228 at 24h: not beating 4x the round trip",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 20,
+    "count": 19,
     "baseline": 17.0,
     "wave": false
   },
