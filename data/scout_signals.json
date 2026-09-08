@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-08T19:08:47+00:00",
-  "scanned": 113,
+  "ts": "2026-09-08T19:16:30+00:00",
+  "scanned": 114,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "DOTUSDT",
+      "signal": "heat",
+      "score": 0.555,
+      "raw_score": 0.6,
+      "weight": 0.925,
+      "price": 1.236,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding +0.010% \u00b7 L/S 2.36",
+      "chg_24h": 0.1434,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.67% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 48%, mean +0.77% over last 532 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 42%, mean +0.57% over last 228 at 24h: not beating 4x the round trip",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 16,
+    "count": 14,
     "baseline": 17.0,
     "wave": false
   },
