@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-08T04:27:06+00:00",
+  "ts": "2026-09-08T04:31:57+00:00",
   "scanned": 99,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "FORMUSDT",
+      "signal": "breakout",
+      "score": 0.7267,
+      "raw_score": 0.8022,
+      "weight": 0.906,
+      "price": 0.2819,
+      "why": "trades 12.9x, volume 11.4x, 65% taker-buy, +3.9% in an hour, at 80% of its 24h range",
+      "chg_24h": 0.0633,
+      "vol_surge": 11.35,
+      "chg_1h": 0.0391,
+      "market_surge": 10.77,
+      "actionable": false,
+      "status": "benched \u2014 hit 41%, mean +0.38% over last 224 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 47%, mean +0.51% over last 544 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 hit 41%, mean +0.38% over last 224 at 24h: not beating 4x the round trip",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 15,
+    "count": 14,
     "baseline": 18.0,
     "wave": false
   },
