@@ -1,8 +1,8 @@
 {
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "holding": "ADA-USD",
-  "units": 5178.0272592989,
+  "holding": "BTC-USD",
+  "units": 0.014274095144590984,
   "cash": 0.0,
   "bench_units": 0.01552055830726173,
   "trades": [
@@ -1335,6 +1335,26 @@
       "value": 1116.9,
       "fee": 2.85,
       "reason": "Strongest eligible coin (+0.9% 7d momentum)"
+    },
+    {
+      "date": "2026-09-08",
+      "action": "SELL",
+      "ticker": "ADA-USD",
+      "price": 0.2153,
+      "units": 5178.027259,
+      "value": 1114.83,
+      "fee": 2.95,
+      "reason": "Signal flip"
+    },
+    {
+      "date": "2026-09-08",
+      "action": "BUY",
+      "ticker": "BTC-USD",
+      "price": 77700.1,
+      "units": 0.014274,
+      "value": 1109.1,
+      "fee": 2.78,
+      "reason": "Strongest eligible coin (+0.4% 7d momentum)"
     }
   ],
   "history": [
@@ -1664,19 +1684,13 @@
     },
     {
       "date": "2026-09-08",
-      "value": 1133.47,
-      "bench": 1215.51,
-      "holding": "ADA-USD"
+      "value": 1109.1,
+      "bench": 1205.95,
+      "holding": "BTC-USD"
     }
   ],
-  "last_updated_utc": "2026-09-08T13:24:56+00:00",
+  "last_updated_utc": "2026-09-08T13:41:20+00:00",
   "intraday": [
-    {
-      "ts": "2026-08-20T21:38:35+00:00",
-      "value": 1023.26,
-      "bench": 1129.9,
-      "holding": "XRP-USD"
-    },
     {
       "ts": "2026-08-20T21:52:05+00:00",
       "value": 1025.2,
@@ -10670,9 +10684,15 @@
       "value": 1133.47,
       "bench": 1215.51,
       "holding": "ADA-USD"
+    },
+    {
+      "ts": "2026-09-08T13:41:20+00:00",
+      "value": 1109.1,
+      "bench": 1205.95,
+      "holding": "BTC-USD"
     }
   ],
-  "costs_paid": 93.629,
+  "costs_paid": 99.3597,
   "entry_regime": "TREND",
-  "entry_price": 0.2157
+  "entry_price": 77700.1
 }

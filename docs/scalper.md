@@ -1,6 +1,8 @@
 # Scalper — hyper-aggressive small-wins PAPER bot
 
-updated 2026-09-08T13:26:28+00:00 · runs 266 · equity **$1,002.77** (+0.28%) · cash $0.00 · open 10/10 · round trips 93
+**Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
+
+updated 2026-09-08T13:42:50+00:00 · runs 267 · equity **$992.30** (-0.77%) · cash $0.00 · open 10/10 · round trips 93
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -33,15 +35,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-07T17:10 | KAVAUSDT | surge | 0.05979 | 0.05922 | -0.95% |
-| 2026-09-07T21:35 | LINKUSDT | bottom | 12.761 | 12.479 | -2.21% |
-| 2026-09-08T00:58 | SKHYBUSDT | surge | 184.72 | 182.7 | -1.09% |
-| 2026-09-08T07:58 | BNBUSDT | surge | 756.19 | 750.83 | -0.71% |
-| 2026-09-08T08:15 | ETCUSDT | surge | 8.08 | 8.24 | +1.98% |
-| 2026-09-08T11:07 | ZKCUSDT | surge | 0.0493 | 0.0497 | +0.81% |
-| 2026-09-08T12:35 | VETUSDT | surge | 0.00783 | 0.007822 | -0.10% |
-| 2026-09-08T13:08 | HEIUSDT | surge | 0.1439 | 0.1441 | +0.14% |
-| 2026-09-08T13:24 | SCRUSDT | surge | 0.0232 | 0.02358 | +1.64% |
-| 2026-09-08T13:24 | BICOUSDT | surge | 0.02422 | 0.02415 | -0.29% |
+| 2026-09-07T17:10 | KAVAUSDT | surge | 0.05979 | 0.059 | -1.32% |
+| 2026-09-07T21:35 | LINKUSDT | bottom | 12.761 | 12.344 | -3.27% |
+| 2026-09-08T00:58 | SKHYBUSDT | surge | 184.72 | 185.3 | +0.31% |
+| 2026-09-08T07:58 | BNBUSDT | surge | 756.19 | 743.78 | -1.64% |
+| 2026-09-08T08:15 | ETCUSDT | surge | 8.08 | 8.14 | +0.74% |
+| 2026-09-08T11:07 | ZKCUSDT | surge | 0.0493 | 0.0491 | -0.41% |
+| 2026-09-08T12:35 | VETUSDT | surge | 0.00783 | 0.007687 | -1.83% |
+| 2026-09-08T13:08 | HEIUSDT | surge | 0.1439 | 0.1428 | -0.76% |
+| 2026-09-08T13:24 | SCRUSDT | surge | 0.0232 | 0.02345 | +1.08% |
+| 2026-09-08T13:24 | BICOUSDT | surge | 0.02422 | 0.02323 | -4.09% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
