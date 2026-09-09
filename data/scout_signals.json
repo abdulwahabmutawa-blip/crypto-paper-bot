@@ -1,8 +1,26 @@
 {
-  "ts": "2026-09-09T12:13:05+00:00",
+  "ts": "2026-09-09T12:18:21+00:00",
   "scanned": 113,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "QKCUSDT",
+      "signal": "reversion",
+      "score": 0.4011,
+      "raw_score": 0.4011,
+      "weight": 1.0,
+      "price": 0.002707,
+      "why": "down -14% on the day (bottom decile of the market), now +0.5% over 15m with 3 green candles",
+      "chg_24h": -0.1438,
+      "vol_surge": 0.11,
+      "chg_1h": -0.004,
+      "market_surge": 0.0,
+      "oi_drop": null,
+      "funding": null,
+      "actionable": false,
+      "status": "probation \u2014 7/12 resolved 24h samples under ruleset 3"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 48%, mean +0.52% over last 542 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 BTC-excess day mean +0.43% at 24h: market beta, not signal",
