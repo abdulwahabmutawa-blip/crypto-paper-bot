@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-09T21:15:17+00:00",
+  "ts": "2026-09-09T21:20:41+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
@@ -8,9 +8,9 @@
       "SOL",
       "NEAR",
       "IOST",
-      "TRUMP",
-      "DASH",
-      "ARB"
+      "AI",
+      "ETHFI",
+      "TRUMP"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,9 +20,9 @@
       "NEAR",
       "ZEC",
       "RAY",
-      "PROM",
       "HOLO",
-      "DASH"
+      "PROM",
+      "XAUT"
     ],
     "watcher": [
       "ZEC",
@@ -50,18 +50,8 @@
         "movers",
         "watcher"
       ],
-      "funding": -9.5e-05,
+      "funding": -9e-05,
       "long_short": 0.42
-    },
-    {
-      "symbol": "DASH",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.33
     },
     {
       "symbol": "NEAR",
@@ -70,16 +60,24 @@
         "coingecko",
         "movers"
       ],
-      "funding": 9.1e-05,
+      "funding": 9.4e-05,
       "long_short": 1.9
     },
     {
-      "symbol": "ARB",
+      "symbol": "AI",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 7.6e-05
+      "funding": 0.0
+    },
+    {
+      "symbol": "ETHFI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "HOLO",
@@ -95,7 +93,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.4e-05
+      "funding": -1.6e-05
     },
     {
       "symbol": "PROM",
@@ -111,7 +109,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -6.1e-05
+      "funding": -5.1e-05
     },
     {
       "symbol": "RAY",
@@ -135,7 +133,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -5.9e-05
+      "funding": -6.1e-05
     },
     {
       "symbol": "TRUMP",
@@ -143,7 +141,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000208
+      "funding": -0.000214
+    },
+    {
+      "symbol": "XAUT",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 6e-06
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
