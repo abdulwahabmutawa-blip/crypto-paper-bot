@@ -1,20 +1,20 @@
 {
-  "ts": "2026-09-09T12:57:42+00:00",
-  "scanned": 114,
+  "ts": "2026-09-09T13:03:06+00:00",
+  "scanned": 113,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "JTOUSDT",
+      "symbol": "ZROUSDT",
       "signal": "ignition",
-      "score": 0.6982,
-      "raw_score": 0.7342,
+      "score": 0.5178,
+      "raw_score": 0.5445,
       "weight": 0.951,
-      "price": 0.4499,
-      "why": "trades 6.1x and volume 24.1x the prior 4h, 63% taker-buy, $116,831 burst \u2014 while price has only moved -0.7%",
-      "chg_24h": 0.0142,
-      "vol_surge": 24.13,
-      "chg_1h": -0.0071,
-      "market_surge": 12.37,
+      "price": 1.136,
+      "why": "trades 4.0x and volume 5.3x the prior 4h, 76% taker-buy, $67,499 burst \u2014 while price has only moved +1.4%",
+      "chg_24h": 0.0062,
+      "vol_surge": 5.26,
+      "chg_1h": 0.0143,
+      "market_surge": 2.13,
       "actionable": false,
       "status": "benched \u2014 hit 48%, mean +0.55% over last 540 at 24h: not beating 4x the round trip"
     }
@@ -23,11 +23,11 @@
     "ignition": "benched \u2014 hit 48%, mean +0.55% over last 540 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 BTC-excess day mean +0.73% at 24h: market beta, not signal",
     "reversion": "probation \u2014 7/12 resolved 24h samples under ruleset 3",
-    "heat": "benched \u2014 BTC-excess day mean -0.38% at 24h: market beta, not signal",
+    "heat": "benched \u2014 BTC-excess day mean -1.03% at 24h: market beta, not signal",
     "revival": "probation \u2014 1/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 13,
     "baseline": 16.0,
     "wave": false
   },
@@ -184,7 +184,7 @@
       "median_ret_24h": -0.01878,
       "both_halves_24h": false,
       "days_24h": 12,
-      "mean_x_24h": -0.00383,
+      "mean_x_24h": -0.01035,
       "days_x_24h": 6,
       "avg_win_24h": 0.07373,
       "avg_loss_24h": -0.10318,
