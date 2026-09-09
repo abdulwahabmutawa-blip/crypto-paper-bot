@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-09T06:45:55+00:00",
+  "ts": "2026-09-09T06:51:21+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
@@ -17,13 +17,13 @@
     "stocktwits": [],
     "movers": [
       "DOT",
-      "ZEC",
       "PUMP",
+      "ZEC",
       "PROM",
       "SAHARA",
       "NEAR",
-      "DASH",
-      "XRP"
+      "XRP",
+      "PEPE"
     ],
     "watcher": [
       "ZEC",
@@ -41,7 +41,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 6.8e-05,
+      "funding": 6.2e-05,
       "long_short": 0.46
     },
     {
@@ -53,6 +53,14 @@
       ],
       "funding": 0.0001,
       "long_short": 2.16
+    },
+    {
+      "symbol": "PEPE",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ]
     },
     {
       "symbol": "PUMP",
@@ -80,7 +88,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.1e-05
+      "funding": 9.7e-05
     },
     {
       "symbol": "ATOM",
@@ -88,7 +96,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.9e-05
+      "funding": 4e-05
     },
     {
       "symbol": "BTC",
@@ -96,15 +104,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.2e-05
-    },
-    {
-      "symbol": "DASH",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
+      "funding": 8.4e-05
     },
     {
       "symbol": "LIT",
@@ -129,13 +129,6 @@
         "coingecko"
       ],
       "funding": 3e-05
-    },
-    {
-      "symbol": "PEPE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ]
     },
     {
       "symbol": "PROM",
