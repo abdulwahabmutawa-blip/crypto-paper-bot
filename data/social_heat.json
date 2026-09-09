@@ -1,12 +1,12 @@
 {
-  "ts": "2026-09-09T14:03:27+00:00",
+  "ts": "2026-09-09T14:09:03+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
       "NEAR",
+      "LIT",
       "PENGU",
       "TRUMP",
-      "LIT",
       "BTC",
       "TAO",
       "PUMP"
@@ -16,12 +16,12 @@
     "movers": [
       "NEAR",
       "ZEC",
-      "DOT",
       "PUMP",
-      "MARSCOIN",
+      "DOT",
       "TAO",
-      "HOLO",
-      "SAHARA"
+      "SPCXB",
+      "MARSCOIN",
+      "DASH"
     ],
     "watcher": [
       "ZEC",
@@ -61,7 +61,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -9.9e-05,
+      "funding": -8.1e-05,
       "long_short": 0.42
     },
     {
@@ -71,7 +71,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 6e-06,
+      "funding": 3e-06,
       "long_short": 1.97
     },
     {
@@ -80,7 +80,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.4e-05
+      "funding": 3.5e-05
+    },
+    {
+      "symbol": "DASH",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -5.9e-05
     },
     {
       "symbol": "DOT",
@@ -89,14 +97,6 @@
         "movers"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "HOLO",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "LIT",
@@ -120,15 +120,14 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2e-05
+      "funding": 2.1e-05
     },
     {
-      "symbol": "SAHARA",
+      "symbol": "SPCXB",
       "surfaces": 1,
       "sources": [
         "movers"
-      ],
-      "funding": 5e-05
+      ]
     },
     {
       "symbol": "TRUMP",
@@ -136,7 +135,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000117
+      "funding": -0.000125
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
