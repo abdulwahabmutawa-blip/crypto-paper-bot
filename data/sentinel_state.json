@@ -4,103 +4,6 @@
       "risk_level": "caution",
       "risk_alerts": [
         {
-          "headline": "US government debt surpasses $40 trillion",
-          "markets": [
-            "both"
-          ],
-          "severity": "caution"
-        },
-        {
-          "headline": "Fed minutes signal possible rate hike if inflation persists",
-          "markets": [
-            "both"
-          ],
-          "severity": "caution"
-        },
-        {
-          "headline": "Treasury yields hit multi-year highs before buyback intervention",
-          "markets": [
-            "both"
-          ],
-          "severity": "caution"
-        }
-      ],
-      "hype": [
-        {
-          "symbol": "MRNA",
-          "mood": "euphoric",
-          "note": "Cancer vaccine trial success soars stock"
-        },
-        {
-          "symbol": "HYPE",
-          "mood": "euphoric",
-          "note": "Trump CFTC Hyperliquid US push"
-        },
-        {
-          "symbol": "BTC",
-          "mood": "euphoric",
-          "note": "Surge past 68k short squeeze"
-        },
-        {
-          "symbol": "ETH",
-          "mood": "euphoric",
-          "note": "Strong rally with risk-on"
-        },
-        {
-          "symbol": "COIN",
-          "mood": "mixed",
-          "note": "Clarity Act optimism lifts"
-        },
-        {
-          "symbol": "MSTR",
-          "mood": "mixed",
-          "note": "Trending with BTC move"
-        }
-      ],
-      "crypto_hype": [
-        {
-          "symbol": "HYPE",
-          "mood": "euphoric",
-          "note": "Trump CFTC brings to US jumps 11%+"
-        },
-        {
-          "symbol": "ETH",
-          "mood": "euphoric",
-          "note": "19%+ surge Treasury risk appetite"
-        },
-        {
-          "symbol": "BTC",
-          "mood": "euphoric",
-          "note": "Above 68k liquidates 1.4B shorts"
-        },
-        {
-          "symbol": "HEMI",
-          "mood": "euphoric",
-          "note": "Top Binance mover high volume"
-        },
-        {
-          "symbol": "SOL",
-          "mood": "euphoric",
-          "note": "Strong gains with majors"
-        },
-        {
-          "symbol": "PEPE",
-          "mood": "mixed",
-          "note": "Meme volume pop trending"
-        }
-      ],
-      "overall_mood": "Risk-on rebound as Treasury buybacks ease yields and boost stocks/crypto, with biotech and altcoin euphoria amid lingering debt and inflation caution.",
-      "ts": "2026-08-19T21:58:53+00:00",
-      "gauges": {
-        "vix": 14.9,
-        "crypto_fear_greed": 46,
-        "crypto_fng_label": "Fear"
-      }
-    },
-    {
-      "risk_level": "caution",
-      "risk_alerts": [
-        {
           "headline": "US public debt surpasses $40 trillion milestone",
           "markets": [
             "both"
@@ -10258,12 +10161,119 @@
           "output_tokens": 1184
         }
       }
+    },
+    {
+      "risk_level": "caution",
+      "risk_alerts": [
+        {
+          "headline": "Oil surges near $100 Brent on Iran-US Navy tensions, stoking inflation fears",
+          "markets": [
+            "both"
+          ],
+          "severity": "caution"
+        },
+        {
+          "headline": "Fed rate hike odds near 60% after strong jobs data, yields rise",
+          "markets": [
+            "both"
+          ],
+          "severity": "caution"
+        }
+      ],
+      "hype": [
+        {
+          "symbol": "FORM",
+          "mood": "euphoric",
+          "note": "Binance top mover +17%"
+        },
+        {
+          "symbol": "DOT",
+          "mood": "euphoric",
+          "note": "Top mover +11% on governance"
+        },
+        {
+          "symbol": "PENGU",
+          "mood": "mixed",
+          "note": "Trending meme searches"
+        },
+        {
+          "symbol": "USELESS",
+          "mood": "euphoric",
+          "note": "CoinGecko trending meme"
+        }
+      ],
+      "crypto_hype": [
+        {
+          "symbol": "DOT",
+          "mood": "euphoric",
+          "stage": "peaked",
+          "organic": true,
+          "promo_risk": "low",
+          "catalyst": "dotUSD stablecoin OpenGov vote",
+          "why": "Governance referendum 97% favor, short squeeze, on-chain up",
+          "note": "Binance mover after catalyst"
+        },
+        {
+          "symbol": "FORM",
+          "mood": "euphoric",
+          "stage": "peaked",
+          "organic": false,
+          "promo_risk": "high",
+          "catalyst": "none",
+          "why": "Top 24h mover, meme/launchpad chatter",
+          "note": "Volume spike no clear dated event"
+        },
+        {
+          "symbol": "ZEC",
+          "mood": "mixed",
+          "stage": "peaked",
+          "organic": true,
+          "promo_risk": "low",
+          "catalyst": "none",
+          "why": "Among top movers, weekly gains noted",
+          "note": "Outperforming majors briefly"
+        }
+      ],
+      "overall_mood": "Cautious risk-off in stocks from oil spike and hike bets, crypto holds greed amid mild pullback with selective alt pumps.",
+      "ts": "2026-09-09T03:14:11+00:00",
+      "gauges": {
+        "vix": 15.7,
+        "crypto_fear_greed": 66,
+        "crypto_fng_label": "Greed"
+      },
+      "usage": {
+        "input_tokens": 160616,
+        "input_tokens_details": {
+          "cached_tokens": 90624
+        },
+        "output_tokens": 1904,
+        "output_tokens_details": {
+          "reasoning_tokens": 1338
+        },
+        "total_tokens": 162520,
+        "num_sources_used": 0,
+        "num_server_side_tools_used": 16,
+        "cost_in_usd_ticks": 2585952000,
+        "server_side_tool_usage_details": {
+          "web_search_calls": 9,
+          "x_search_calls": 7,
+          "code_interpreter_calls": 0,
+          "file_search_calls": 0,
+          "mcp_calls": 0,
+          "document_search_calls": 0,
+          "image_generation_calls": 0
+        },
+        "context_details": {
+          "input_tokens": 69932,
+          "output_tokens": 1051
+        }
+      }
     }
   ],
   "month_count": {
     "2026-07": 35,
     "2026-08": 130,
-    "2026-09": 19
+    "2026-09": 20
   },
-  "last_scan_utc": "2026-09-08T19:13:59+00:00"
+  "last_scan_utc": "2026-09-09T03:14:11+00:00"
 }
