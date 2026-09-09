@@ -1,16 +1,16 @@
 {
-  "ts": "2026-09-09T05:00:11+00:00",
+  "ts": "2026-09-09T05:05:41+00:00",
   "sources": {
     "coingecko": [
       "LIT",
       "ZEC",
       "AERO",
+      "DOT",
       "PENGU",
-      "ASTER",
+      "OP",
+      "BTC",
       "TAO",
-      "ENA",
-      "INJ",
-      "PENDLE"
+      "ASTER"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,8 +19,8 @@
       "ZEC",
       "PROM",
       "PUMP",
-      "XRP",
       "DASH",
+      "XRP",
       "PEPE",
       "SAHARA"
     ],
@@ -33,6 +33,17 @@
   },
   "heat": [
     {
+      "symbol": "DOT",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.12
+    },
+    {
       "symbol": "ZEC",
       "surfaces": 3,
       "sources": [
@@ -40,18 +51,8 @@
         "movers",
         "watcher"
       ],
-      "funding": 4.9e-05,
-      "long_short": 0.43
-    },
-    {
-      "symbol": "DOT",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": 0.0001,
-      "long_short": 2.1
+      "funding": 6.2e-05,
+      "long_short": 0.56
     },
     {
       "symbol": "PUMP",
@@ -61,7 +62,7 @@
         "watcher"
       ],
       "funding": 5e-05,
-      "long_short": 0.91
+      "long_short": 0.92
     },
     {
       "symbol": "AERO",
@@ -80,26 +81,18 @@
       "funding": 5e-05
     },
     {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 7.3e-05
+    },
+    {
       "symbol": "DASH",
       "surfaces": 1,
       "sources": [
         "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -1.5e-05
-    },
-    {
-      "symbol": "INJ",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
       ],
       "funding": 0.0001
     },
@@ -112,7 +105,7 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PENDLE",
+      "symbol": "OP",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -125,7 +118,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.6e-05
+      "funding": 4.1e-05
     },
     {
       "symbol": "PEPE",
@@ -164,7 +157,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 7.1e-05
+      "funding": 7.2e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
