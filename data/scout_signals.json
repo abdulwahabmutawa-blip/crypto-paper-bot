@@ -1,39 +1,8 @@
 {
-  "ts": "2026-09-09T14:41:44+00:00",
-  "scanned": 110,
+  "ts": "2026-09-09T14:46:32+00:00",
+  "scanned": 109,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ZAMAUSDT",
-      "signal": "ignition",
-      "score": 0.8388,
-      "raw_score": 0.8821,
-      "weight": 0.951,
-      "price": 0.05184,
-      "why": "trades 25.7x and volume 16.7x the prior 4h, 71% taker-buy, $79,139 burst \u2014 while price has only moved +1.8%",
-      "chg_24h": 0.0049,
-      "vol_surge": 16.75,
-      "chg_1h": 0.0185,
-      "market_surge": 0.87,
-      "actionable": false,
-      "status": "benched \u2014 hit 48%, mean +0.53% over last 541 at 24h: not beating 4x the round trip"
-    },
-    {
-      "symbol": "ETHFIUSDT",
-      "signal": "ignition",
-      "score": 0.5635,
-      "raw_score": 0.5926,
-      "weight": 0.951,
-      "price": 0.6229,
-      "why": "trades 4.1x and volume 6.0x the prior 4h, 88% taker-buy, $54,523 burst \u2014 while price has only moved +1.7%",
-      "chg_24h": 0.0313,
-      "vol_surge": 6.03,
-      "chg_1h": 0.0166,
-      "market_surge": 2.29,
-      "actionable": false,
-      "status": "benched \u2014 hit 48%, mean +0.53% over last 541 at 24h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 48%, mean +0.53% over last 541 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 BTC-excess day mean +0.67% at 24h: market beta, not signal",
@@ -42,7 +11,7 @@
     "revival": "probation \u2014 1/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 13,
+    "count": 14,
     "baseline": 16.0,
     "wave": false
   },
@@ -56,7 +25,7 @@
       "median_ret_1h": -4e-05,
       "both_halves_1h": true,
       "days_1h": 14,
-      "mean_x_1h": 0.00028,
+      "mean_x_1h": 0.00031,
       "days_x_1h": 7,
       "avg_win_1h": 0.01108,
       "avg_loss_1h": -0.00931,
@@ -115,19 +84,19 @@
       "avg_win_4h": 0.03741,
       "avg_loss_4h": -0.02853,
       "payoff_4h": 1.311,
-      "span_h_24h": 310.1,
-      "n_eff_24h": 12.92,
-      "n_24h": 241,
-      "hit_rate_24h": 0.411,
-      "mean_ret_24h": 0.00395,
-      "median_ret_24h": -0.01323,
+      "span_h_24h": 310.6,
+      "n_eff_24h": 12.94,
+      "n_24h": 242,
+      "hit_rate_24h": 0.409,
+      "mean_ret_24h": 0.00389,
+      "median_ret_24h": -0.01315,
       "both_halves_24h": true,
       "days_24h": 12,
-      "mean_x_24h": 0.00668,
+      "mean_x_24h": 0.00671,
       "days_x_24h": 6,
       "avg_win_24h": 0.07296,
-      "avg_loss_24h": -0.04585,
-      "payoff_24h": 1.592
+      "avg_loss_24h": -0.04558,
+      "payoff_24h": 1.601
     },
     "reversion": {
       "span_h_1h": 327.7,
