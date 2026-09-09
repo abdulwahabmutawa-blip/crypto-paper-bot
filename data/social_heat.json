@@ -1,15 +1,16 @@
 {
-  "ts": "2026-09-09T08:10:11+00:00",
+  "ts": "2026-09-09T08:16:11+00:00",
   "sources": {
     "coingecko": [
       "LIT",
       "ZEC",
-      "AERO",
       "PUMP",
+      "AERO",
+      "PENDLE",
       "NEAR",
       "MARSCOIN",
-      "PENGU",
-      "DOT"
+      "BTC",
+      "TAO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,8 +21,8 @@
       "NEAR",
       "SAHARA",
       "DASH",
-      "XRP",
-      "PROM"
+      "TAO",
+      "XRP"
     ],
     "watcher": [
       "ZEC",
@@ -31,17 +32,6 @@
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "DOT",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": 0.0001,
-      "long_short": 2.12
-    },
     {
       "symbol": "PUMP",
       "surfaces": 3,
@@ -61,8 +51,18 @@
         "movers",
         "watcher"
       ],
-      "funding": 4e-06,
+      "funding": -3e-06,
       "long_short": 0.45
+    },
+    {
+      "symbol": "DOT",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.12
     },
     {
       "symbol": "NEAR",
@@ -71,8 +71,18 @@
         "coingecko",
         "movers"
       ],
-      "funding": 7.9e-05,
+      "funding": 7.2e-05,
       "long_short": 1.99
+    },
+    {
+      "symbol": "TAO",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 2.02
     },
     {
       "symbol": "AERO",
@@ -83,12 +93,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 9.8e-05
+    },
+    {
       "symbol": "DASH",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 4e-05
+      "funding": 3.6e-05
     },
     {
       "symbol": "LIT",
@@ -104,23 +122,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.8e-05
+      "funding": 5.2e-05
     },
     {
-      "symbol": "PENGU",
+      "symbol": "PENDLE",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 3.8e-05
-    },
-    {
-      "symbol": "PROM",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
+      "funding": 0.0001
     },
     {
       "symbol": "SAHARA",
