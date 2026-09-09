@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-09T01:05:34+00:00 · runs 310 · equity **$1,004.53** (+0.45%) · cash $0.00 · open 10/10 · round trips 108
+updated 2026-09-09T01:21:59+00:00 · runs 311 · equity **$1,003.90** (+0.39%) · cash $0.00 · open 10/10 · round trips 108
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -35,15 +35,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-08T07:58 | BNBUSDT | surge | 756.19 | 752.54 | -0.48% |
-| 2026-09-08T11:07 | ZKCUSDT | surge | 0.0493 | 0.0493 | +0.00% |
-| 2026-09-08T13:57 | QQQBUSDT | bottom | 717.32 | 719.17 | +0.26% |
-| 2026-09-08T14:14 | TSLABUSDT | surge | 360.45 | 366.8 | +1.76% |
-| 2026-09-08T15:19 | MRVLBUSDT | surge | 230.1 | 225.66 | -1.93% |
-| 2026-09-08T15:19 | INTCBUSDT | surge | 103.55 | 103.97 | +0.41% |
-| 2026-09-08T17:18 | SPCXBUSDT | surge | 152.91 | 153.37 | +0.30% |
-| 2026-09-08T19:13 | VETUSDT | surge | 0.007951 | 0.008041 | +1.13% |
-| 2026-09-09T00:47 | ATOMUSDT | surge | 1.851 | 1.85 | -0.05% |
-| 2026-09-09T01:04 | HBARUSDT | bottom | 0.07895 | 0.07895 | +0.00% |
+| 2026-09-08T07:58 | BNBUSDT | surge | 756.19 | 750.44 | -0.76% |
+| 2026-09-08T11:07 | ZKCUSDT | surge | 0.0493 | 0.0494 | +0.20% |
+| 2026-09-08T13:57 | QQQBUSDT | bottom | 717.32 | 719.4 | +0.29% |
+| 2026-09-08T14:14 | TSLABUSDT | surge | 360.45 | 366.95 | +1.80% |
+| 2026-09-08T15:19 | MRVLBUSDT | surge | 230.1 | 226.13 | -1.73% |
+| 2026-09-08T15:19 | INTCBUSDT | surge | 103.55 | 104.35 | +0.77% |
+| 2026-09-08T17:18 | SPCXBUSDT | surge | 152.91 | 153.25 | +0.22% |
+| 2026-09-08T19:13 | VETUSDT | surge | 0.007951 | 0.008059 | +1.36% |
+| 2026-09-09T00:47 | ATOMUSDT | surge | 1.851 | 1.832 | -1.03% |
+| 2026-09-09T01:04 | HBARUSDT | bottom | 0.07895 | 0.07874 | -0.27% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
