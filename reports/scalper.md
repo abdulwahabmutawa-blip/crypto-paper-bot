@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-09T12:35:54+00:00 · runs 352 · equity **$1,004.76** (+0.48%) · cash $0.00 · open 10/10 · round trips 119
+updated 2026-09-09T12:53:34+00:00 · runs 353 · equity **$1,004.83** (+0.48%) · cash $0.00 · open 10/10 · round trips 119
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -35,15 +35,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-08T13:57 | QQQBUSDT | bottom | 717.32 | 715.02 | -0.32% |
-| 2026-09-08T14:14 | TSLABUSDT | surge | 360.45 | 364.48 | +1.12% |
-| 2026-09-08T15:19 | INTCBUSDT | surge | 103.55 | 102.46 | -1.05% |
-| 2026-09-08T17:18 | SPCXBUSDT | surge | 152.91 | 151.8 | -0.73% |
-| 2026-09-09T01:04 | HBARUSDT | bottom | 0.07895 | 0.07871 | -0.30% |
-| 2026-09-09T03:34 | LTCUSDT | bottom | 53.9 | 54.18 | +0.52% |
-| 2026-09-09T08:40 | DASHUSDT | surge | 65.51 | 64.58 | -1.42% |
-| 2026-09-09T10:28 | HOLOUSDT | surge | 0.0676 | 0.0672 | -0.59% |
-| 2026-09-09T11:38 | CHIPUSDT | surge | 0.05885 | 0.05814 | -1.21% |
-| 2026-09-09T12:16 | IOUSDT | surge | 0.1432 | 0.1426 | -0.42% |
+| 2026-09-08T13:57 | QQQBUSDT | bottom | 717.32 | 715.34 | -0.28% |
+| 2026-09-08T14:14 | TSLABUSDT | surge | 360.45 | 364.49 | +1.12% |
+| 2026-09-08T15:19 | INTCBUSDT | surge | 103.55 | 102.63 | -0.89% |
+| 2026-09-08T17:18 | SPCXBUSDT | surge | 152.91 | 151.64 | -0.83% |
+| 2026-09-09T01:04 | HBARUSDT | bottom | 0.07895 | 0.07895 | +0.00% |
+| 2026-09-09T03:34 | LTCUSDT | bottom | 53.9 | 54.23 | +0.61% |
+| 2026-09-09T08:40 | DASHUSDT | surge | 65.51 | 64.85 | -1.01% |
+| 2026-09-09T10:28 | HOLOUSDT | surge | 0.0676 | 0.0669 | -1.04% |
+| 2026-09-09T11:38 | CHIPUSDT | surge | 0.05885 | 0.05794 | -1.55% |
+| 2026-09-09T12:16 | IOUSDT | surge | 0.1432 | 0.1425 | -0.49% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
