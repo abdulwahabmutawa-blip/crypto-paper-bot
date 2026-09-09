@@ -1,6 +1,6 @@
 # Exit timing — the bot grading its own exits
 
-updated 2026-09-08T23:59:53+00:00 · 42 exits audited · early/late line ±3% · MEASUREMENT ONLY
+updated 2026-09-09T00:16:23+00:00 · 42 exits audited · early/late line ±3% · MEASUREMENT ONLY
 
 | verdict | n |
 |---|---|
@@ -25,9 +25,9 @@ updated 2026-09-08T23:59:53+00:00 · 42 exits audited · early/late line ±3% ·
 ## Market capture
 
 - book since inception (08-15, $40 stake): **-58.1%** — trading P&L only (-$23.25 over 44 closed trades), deposits excluded
-- account balance: $35.80 (of which **+$19.05 is deposited capital, not profit** — inferred as balance minus stake minus P&L; deposits are not tracked anywhere yet)
-- BTC since inception: +24.4% (book gap **-82.6pp**) · last 24h -0.8%
-- ETH since inception: +32.0% (book gap **-90.2pp**) · last 24h -0.2%
+- account balance: $35.87 (of which **+$19.12 is deposited capital, not profit** — inferred as balance minus stake minus P&L; deposits are not tracked anywhere yet)
+- BTC since inception: +24.8% (book gap **-82.9pp**) · last 24h +0.2%
+- ETH since inception: +32.4% (book gap **-90.5pp**) · last 24h +0.3%
 
 ## Alpha by regime (book minus BTC, daily, paired)
 
@@ -36,12 +36,11 @@ updated 2026-09-08T23:59:53+00:00 · 42 exits audited · early/late line ±3% ·
 | regime (BTC day) | days | avg book | avg gap vs BTC |
 |---|---|---|---|
 | red | 1 | -20.08% | **-17.08pp** |
-| flat | 19 | -1.99% | **-1.91pp** |
+| flat | 20 | -1.89% | **-1.83pp** |
 | green | 5 | -3.58% | **-9.06pp** |
 
 | date | regime | book | BTC | gap |
 |---|---|---|---|---|
-| 2026-08-30 | flat | +26.83% | -0.70% | +27.53pp |
 | 2026-08-31 | flat | -5.67% | +1.16% | -6.83pp |
 | 2026-09-01 | flat | +0.00% | -1.45% | +1.45pp |
 | 2026-09-02 | flat | +0.00% | -0.13% | +0.13pp |
@@ -51,6 +50,7 @@ updated 2026-09-08T23:59:53+00:00 · 42 exits audited · early/late line ±3% ·
 | 2026-09-06 | flat | -12.56% | +0.64% | -13.20pp |
 | 2026-09-07 | flat | +0.00% | -1.53% | +1.53pp |
 | 2026-09-08 | flat | +4.50% | -0.83% | +5.33pp |
+| 2026-09-09 | flat | +0.00% | +0.24% | -0.24pp |
 
 
 _giveback = in-hold peak the exit surrendered; post-24h run = what the coin did after we sold. High post-run with low giveback = selling too early; high giveback = selling too late._
