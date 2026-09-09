@@ -1,22 +1,37 @@
 {
-  "ts": "2026-09-09T10:06:40+00:00",
+  "ts": "2026-09-09T10:12:18+00:00",
   "scanned": 111,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "SUIUSDT",
+      "symbol": "SNDKBUSDT",
       "signal": "ignition",
-      "score": 0.5533,
-      "raw_score": 0.5861,
+      "score": 0.7046,
+      "raw_score": 0.7464,
       "weight": 0.944,
-      "price": 0.8105,
-      "why": "trades 5.3x and volume 5.3x the prior 4h, 71% taker-buy, $791,990 burst \u2014 while price has only moved -1.4%",
-      "chg_24h": -0.0223,
-      "vol_surge": 5.29,
-      "chg_1h": -0.0138,
-      "market_surge": 1.73,
+      "price": 1727.94,
+      "why": "trades 6.1x and volume 19.9x the prior 4h, 76% taker-buy, $225,060 burst \u2014 while price has only moved -1.5%",
+      "chg_24h": -0.0182,
+      "vol_surge": 19.9,
+      "chg_1h": -0.0148,
+      "market_surge": 3.42,
       "actionable": false,
       "status": "benched \u2014 hit 48%, mean +0.52% over last 543 at 24h: not beating 4x the round trip"
+    },
+    {
+      "symbol": "ZECUSDT",
+      "signal": "heat",
+      "score": 0.5664,
+      "raw_score": 0.6,
+      "weight": 0.944,
+      "price": 1239.68,
+      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding -0.016% \u00b7 L/S 0.42",
+      "chg_24h": 0.076,
+      "vol_surge": null,
+      "chg_1h": null,
+      "market_surge": 3,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.38% at 24h: market beta, not signal"
     }
   ],
   "gate": {
@@ -27,7 +42,7 @@
     "revival": "probation \u2014 1/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 11,
+    "count": 10,
     "baseline": 16.0,
     "wave": false
   },
