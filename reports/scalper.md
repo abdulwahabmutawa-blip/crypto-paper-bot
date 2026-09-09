@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-09T22:19:07+00:00 · runs 386 · equity **$976.88** (-2.31%) · cash $0.00 · open 10/10 · round trips 137
+updated 2026-09-09T22:36:50+00:00 · runs 387 · equity **$975.48** (-2.45%) · cash $0.00 · open 10/10 · round trips 137
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -35,15 +35,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-09T03:34 | LTCUSDT | bottom | 53.9 | 53.18 | -1.34% |
-| 2026-09-09T14:02 | LITEBUSDT | surge | 1011.88 | 986.56 | -2.50% |
-| 2026-09-09T15:13 | MUBUSDT | surge | 1034.11 | 1023.15 | -1.06% |
-| 2026-09-09T15:36 | MRVLBUSDT | surge | 235.92 | 234.55 | -0.58% |
+| 2026-09-09T03:34 | LTCUSDT | bottom | 53.9 | 52.95 | -1.76% |
+| 2026-09-09T14:02 | LITEBUSDT | surge | 1011.88 | 983.55 | -2.80% |
+| 2026-09-09T15:13 | MUBUSDT | surge | 1034.11 | 1023.44 | -1.03% |
+| 2026-09-09T15:36 | MRVLBUSDT | surge | 235.92 | 234.31 | -0.68% |
 | 2026-09-09T15:36 | SKHYBUSDT | surge | 194.64 | 196.65 | +1.03% |
-| 2026-09-09T16:47 | INTCBUSDT | surge | 106.11 | 105.6 | -0.48% |
-| 2026-09-09T20:03 | MSTRBUSDT | bottom | 132.71 | 132.72 | +0.01% |
-| 2026-09-09T22:17 | MINAUSDT | surge | 0.0915 | 0.0923 | +0.87% |
-| 2026-09-09T22:17 | SAHARAUSDT | surge | 0.01043 | 0.01036 | -0.67% |
-| 2026-09-09T22:17 | CRCLBUSDT | bottom | 91.62 | 91.7 | +0.09% |
+| 2026-09-09T16:47 | INTCBUSDT | surge | 106.11 | 105.45 | -0.62% |
+| 2026-09-09T20:03 | MSTRBUSDT | bottom | 132.71 | 132.64 | -0.05% |
+| 2026-09-09T22:17 | MINAUSDT | surge | 0.0915 | 0.0915 | +0.00% |
+| 2026-09-09T22:17 | SAHARAUSDT | surge | 0.01043 | 0.01042 | -0.10% |
+| 2026-09-09T22:17 | CRCLBUSDT | bottom | 91.62 | 91.58 | -0.04% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
