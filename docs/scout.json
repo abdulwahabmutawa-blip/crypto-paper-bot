@@ -1,8 +1,39 @@
 {
-  "ts": "2026-09-09T22:12:37+00:00",
-  "scanned": 115,
+  "ts": "2026-09-09T22:18:35+00:00",
+  "scanned": 119,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ETCUSDT",
+      "signal": "ignition",
+      "score": 0.6385,
+      "raw_score": 0.6828,
+      "weight": 0.935,
+      "price": 7.97,
+      "why": "trades 5.2x and volume 8.8x the prior 4h, 75% taker-buy, $56,319 burst \u2014 while price has only moved -1.2%",
+      "chg_24h": -0.0765,
+      "vol_surge": 8.76,
+      "chg_1h": -0.0124,
+      "market_surge": 0.35,
+      "actionable": false,
+      "status": "benched \u2014 hit 46%, mean +0.27% over last 538 at 24h: not beating 4x the round trip"
+    },
+    {
+      "symbol": "ETHFIUSDT",
+      "signal": "ignition",
+      "score": 0.5363,
+      "raw_score": 0.5735,
+      "weight": 0.935,
+      "price": 0.6053,
+      "why": "trades 4.1x and volume 6.5x the prior 4h, 63% taker-buy, $59,804 burst \u2014 while price has only moved +0.4%",
+      "chg_24h": -0.0015,
+      "vol_surge": 6.47,
+      "chg_1h": 0.0038,
+      "market_surge": 0.64,
+      "actionable": false,
+      "status": "benched \u2014 hit 46%, mean +0.27% over last 538 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 46%, mean +0.27% over last 538 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 BTC-excess day mean +0.68% at 24h: market beta, not signal",
@@ -11,7 +42,7 @@
     "revival": "probation \u2014 2/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 11,
+    "count": 10,
     "baseline": 15.0,
     "wave": false
   },
