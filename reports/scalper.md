@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-09T09:36:42+00:00 · runs 342 · equity **$1,009.97** (+1.00%) · cash $0.00 · open 10/10 · round trips 113
+updated 2026-09-09T09:54:59+00:00 · runs 343 · equity **$1,004.31** (+0.43%) · cash $0.00 · open 10/10 · round trips 113
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -35,15 +35,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-08T11:07 | ZKCUSDT | surge | 0.0493 | 0.0495 | +0.41% |
-| 2026-09-08T13:57 | QQQBUSDT | bottom | 717.32 | 717.97 | +0.09% |
-| 2026-09-08T14:14 | TSLABUSDT | surge | 360.45 | 366.53 | +1.69% |
-| 2026-09-08T15:19 | MRVLBUSDT | surge | 230.1 | 225.15 | -2.15% |
-| 2026-09-08T15:19 | INTCBUSDT | surge | 103.55 | 103.11 | -0.42% |
-| 2026-09-08T17:18 | SPCXBUSDT | surge | 152.91 | 153.23 | +0.21% |
-| 2026-09-09T01:04 | HBARUSDT | bottom | 0.07895 | 0.0793 | +0.44% |
-| 2026-09-09T03:34 | LTCUSDT | bottom | 53.9 | 54.29 | +0.72% |
-| 2026-09-09T08:23 | ZECUSDT | surge | 1233.76 | 1242.06 | +0.67% |
-| 2026-09-09T08:40 | DASHUSDT | surge | 65.51 | 65.71 | +0.31% |
+| 2026-09-08T11:07 | ZKCUSDT | surge | 0.0493 | 0.0493 | +0.00% |
+| 2026-09-08T13:57 | QQQBUSDT | bottom | 717.32 | 716.18 | -0.16% |
+| 2026-09-08T14:14 | TSLABUSDT | surge | 360.45 | 365.53 | +1.41% |
+| 2026-09-08T15:19 | MRVLBUSDT | surge | 230.1 | 223.6 | -2.82% |
+| 2026-09-08T15:19 | INTCBUSDT | surge | 103.55 | 102.5 | -1.01% |
+| 2026-09-08T17:18 | SPCXBUSDT | surge | 152.91 | 152.87 | -0.03% |
+| 2026-09-09T01:04 | HBARUSDT | bottom | 0.07895 | 0.07898 | +0.04% |
+| 2026-09-09T03:34 | LTCUSDT | bottom | 53.9 | 54.16 | +0.48% |
+| 2026-09-09T08:23 | ZECUSDT | surge | 1233.76 | 1235.8 | +0.17% |
+| 2026-09-09T08:40 | DASHUSDT | surge | 65.51 | 64.43 | -1.65% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
