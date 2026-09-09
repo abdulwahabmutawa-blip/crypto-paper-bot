@@ -1,16 +1,15 @@
 {
-  "ts": "2026-09-09T08:04:11+00:00",
+  "ts": "2026-09-09T08:10:11+00:00",
   "sources": {
     "coingecko": [
       "LIT",
       "ZEC",
-      "PENGU",
       "AERO",
       "PUMP",
       "NEAR",
-      "PENDLE",
-      "RAY",
-      "MARSCOIN"
+      "MARSCOIN",
+      "PENGU",
+      "DOT"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,10 +18,10 @@
       "ZEC",
       "PUMP",
       "NEAR",
-      "DASH",
       "SAHARA",
-      "PROM",
-      "XRP"
+      "DASH",
+      "XRP",
+      "PROM"
     ],
     "watcher": [
       "ZEC",
@@ -32,6 +31,17 @@
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "DOT",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.12
+    },
     {
       "symbol": "PUMP",
       "surfaces": 3,
@@ -51,18 +61,8 @@
         "movers",
         "watcher"
       ],
-      "funding": 1e-05,
+      "funding": 4e-06,
       "long_short": 0.45
-    },
-    {
-      "symbol": "DOT",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": 0.0001,
-      "long_short": 2.12
     },
     {
       "symbol": "NEAR",
@@ -71,7 +71,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 8.2e-05,
+      "funding": 7.9e-05,
       "long_short": 1.99
     },
     {
@@ -88,7 +88,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.6e-05
+      "funding": 4e-05
     },
     {
       "symbol": "LIT",
@@ -104,15 +104,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6e-05
-    },
-    {
-      "symbol": "PENDLE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": 5.8e-05
     },
     {
       "symbol": "PENGU",
@@ -120,7 +112,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4e-05
+      "funding": 3.8e-05
     },
     {
       "symbol": "PROM",
@@ -129,14 +121,6 @@
         "movers"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "RAY",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0
     },
     {
       "symbol": "SAHARA",
