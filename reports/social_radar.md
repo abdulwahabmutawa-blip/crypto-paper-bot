@@ -1,20 +1,20 @@
 # Social radar — which X chatter precedes rises (learning)
 
-updated 2026-09-09T08:58:50+00:00 · rows 11 · scored@24h-excess 10 · objective **BTC-excess 24h**
+updated 2026-09-09T09:15:36+00:00 · rows 11 · scored@24h-excess 11 · objective **BTC-excess 24h**
 
 _Grok harvests posts; this module counts. Observation only — nothing trades until a pattern clears the gate (n>=12, 4x fees, both halves, payoff) **and** the owner approves. Power: ~3.5 candidates/day, so only large (>=5pp) effects are readable in two weeks._
 
-**All admitted rows**: n 10 · hit 20% · mean -0.78% · median +1.09%
+**All admitted rows**: n 11 · hit 18% · mean -0.77% · median -0.71%
 
 ## Pre-registered hypotheses
 
 | # | split | n(true/false) | edge (pp) |
 |---|---|---|---|
-| H1_quiet_entry_beats_hot | prior24h in [-2%,+5%] vs >+10% | 8/0 | — |
+| H1_quiet_entry_beats_hot | prior24h in [-2%,+5%] vs >+10% | 9/0 | — |
 | H2_breadth_beats_loudness | >=8 distinct handles & no T3 vs narrow+loud | 6/0 | — |
-| H3_official_chatter_worthless | link-heavy (announcement relay) vs organic | 0/8 | — |
+| H3_official_chatter_worthless | link-heavy (announcement relay) vs organic | 0/9 | — |
 | H4_occurred_catalyst_fades | occurred vs pending, 72h | 2/6 | 0.41 |
-| H5_volatility_gate | BTC 24h realized vol high vs low | 2/8 | -6.84 |
-| H6_exchange_surface_words_exhaust | scanner/exchange-surface wording vs organic | 1/9 | -1.45 |
+| H5_volatility_gate | BTC 24h realized vol high vs low | 2/9 | -6.69 |
+| H6_exchange_surface_words_exhaust | scanner/exchange-surface wording vs organic | 1/10 | -1.44 |
 | H7_extreme_velocity_contrarian | all-new handles vs familiar, 72h | 6/0 | — |
-| H8_novelty_pays | first ever appearance vs repeat | 9/1 | -3.37 |
+| H8_novelty_pays | first ever appearance vs repeat | 10/1 | -3.33 |
