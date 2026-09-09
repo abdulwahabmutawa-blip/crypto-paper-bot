@@ -1,14 +1,13 @@
 {
-  "ts": "2026-09-09T22:53:31+00:00",
+  "ts": "2026-09-09T22:59:11+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
       "PUMP",
       "RAY",
-      "MARSCOIN",
-      "UNI",
+      "XRP",
       "SOL",
-      "ZEC"
+      "MARSCOIN"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -27,17 +26,6 @@
   },
   "heat": [
     {
-      "symbol": "ZEC",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": -2.4e-05,
-      "long_short": 0.44
-    },
-    {
       "symbol": "IOST",
       "surfaces": 2,
       "sources": [
@@ -55,6 +43,16 @@
         "movers"
       ],
       "funding": 0.0
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": -2.2e-05,
+      "long_short": 0.44
     },
     {
       "symbol": "MARSCOIN",
@@ -78,7 +76,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2e-05
+      "funding": -2.6e-05
     },
     {
       "symbol": "PUMP",
@@ -101,15 +99,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -8.7e-05
+      "funding": -9e-05
     },
     {
-      "symbol": "UNI",
+      "symbol": "XRP",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 4.5e-05
+      "funding": -0.00011
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
