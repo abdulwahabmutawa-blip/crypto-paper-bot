@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-09T09:06:34+00:00",
+  "ts": "2026-09-09T09:12:23+00:00",
   "sources": {
     "coingecko": [
       "LIT",
@@ -21,8 +21,8 @@
       "DASH",
       "PUMP",
       "PROM",
-      "TAO",
-      "SAHARA"
+      "SAHARA",
+      "PEPE"
     ],
     "watcher": [
       "ZEC",
@@ -51,7 +51,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -7.3e-05,
+      "funding": -8.5e-05,
       "long_short": 0.45
     },
     {
@@ -71,18 +71,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 4.1e-05,
+      "funding": 4.2e-05,
       "long_short": 1.99
-    },
-    {
-      "symbol": "TAO",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.92
     },
     {
       "symbol": "AERO",
@@ -98,7 +88,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -9e-06
+      "funding": -1.6e-05
     },
     {
       "symbol": "DASH",
@@ -106,7 +96,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 9e-06
+      "funding": 6e-06
     },
     {
       "symbol": "LIT",
@@ -122,7 +112,14 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 4.8e-05
+    },
+    {
+      "symbol": "PEPE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
     },
     {
       "symbol": "PROM",
@@ -147,6 +144,14 @@
         "coingecko"
       ],
       "funding": 4.1e-05
+    },
+    {
+      "symbol": "TAO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."

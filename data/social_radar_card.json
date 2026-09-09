@@ -1,8 +1,8 @@
 {
- "updated": "2026-09-09T09:06:34+00:00",
+ "updated": "2026-09-09T09:12:23+00:00",
  "spec": "x_chatter_precursors_2026-08-23",
  "n_rows_total": 11,
- "n_scored_excess_24h": 10,
+ "n_scored_excess_24h": 11,
  "objective": "BTC-excess 24h",
  "hit_threshold": 0.03,
  "features": {
@@ -26,15 +26,21 @@
     "hit": 0.125,
     "mean": -0.01646,
     "median": -0.00854
+   },
+   "True": {
+    "n": 3,
+    "hit": 0.333,
+    "mean": 0.01566,
+    "median": 0.02259
    }
   },
   "handle": {},
   "all": {
    "all": {
-    "n": 10,
-    "hit": 0.2,
-    "mean": -0.00776,
-    "median": 0.01094
+    "n": 11,
+    "hit": 0.182,
+    "mean": -0.0077,
+    "median": -0.00715
    }
   }
  },
@@ -43,10 +49,10 @@
    "note": "prior24h in [-2%,+5%] vs >+10%",
    "horizon_h": 24,
    "group_true": {
-    "n": 8,
-    "hit": 0.125,
-    "mean": -0.00545,
-    "median": 0.01094
+    "n": 9,
+    "hit": 0.111,
+    "mean": -0.00564,
+    "median": -0.00715
    },
    "group_false": null
   },
@@ -66,10 +72,10 @@
    "horizon_h": 24,
    "group_true": null,
    "group_false": {
-    "n": 8,
-    "hit": 0.25,
-    "mean": -0.01067,
-    "median": 0.01094
+    "n": 9,
+    "hit": 0.222,
+    "mean": -0.01028,
+    "median": -0.00715
    }
   },
   "H4_occurred_catalyst_fades": {
@@ -99,12 +105,12 @@
     "median": -0.05942
    },
    "group_false": {
-    "n": 8,
-    "hit": 0.25,
-    "mean": 0.00592,
-    "median": 0.01629
+    "n": 9,
+    "hit": 0.222,
+    "mean": 0.00446,
+    "median": 0.01094
    },
-   "edge_pp": -6.84
+   "edge_pp": -6.69
   },
   "H6_exchange_surface_words_exhaust": {
    "note": "scanner/exchange-surface wording vs organic",
@@ -116,12 +122,12 @@
     "median": -0.02079
    },
    "group_false": {
-    "n": 9,
-    "hit": 0.222,
-    "mean": -0.00631,
+    "n": 10,
+    "hit": 0.2,
+    "mean": -0.00639,
     "median": 0.01094
    },
-   "edge_pp": -1.45
+   "edge_pp": -1.44
   },
   "H7_extreme_velocity_contrarian": {
    "note": "all-new handles vs familiar, 72h",
@@ -138,10 +144,10 @@
    "note": "first ever appearance vs repeat",
    "horizon_h": 24,
    "group_true": {
-    "n": 9,
-    "hit": 0.222,
-    "mean": -0.01113,
-    "median": -0.00854
+    "n": 10,
+    "hit": 0.2,
+    "mean": -0.01073,
+    "median": -0.00715
    },
    "group_false": {
     "n": 1,
@@ -149,7 +155,7 @@
     "mean": 0.02259,
     "median": 0.02259
    },
-   "edge_pp": -3.37
+   "edge_pp": -3.33
   }
  },
  "leaders": [],
