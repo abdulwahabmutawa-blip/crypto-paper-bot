@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-09T20:26:06+00:00",
+  "ts": "2026-09-09T20:31:47+00:00",
   "scanned": 113,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "HOLOUSDT",
+      "signal": "ignition",
+      "score": 0.6145,
+      "raw_score": 0.6537,
+      "weight": 0.94,
+      "price": 0.0651,
+      "why": "trades 4.4x and volume 9.5x the prior 4h, 62% taker-buy, $143,003 burst \u2014 while price has only moved -0.6%",
+      "chg_24h": 0.0109,
+      "vol_surge": 9.53,
+      "chg_1h": -0.0061,
+      "market_surge": 0.6,
+      "actionable": false,
+      "status": "benched \u2014 hit 46%, mean +0.34% over last 544 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 46%, mean +0.34% over last 544 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 BTC-excess day mean +0.68% at 24h: market beta, not signal",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 2/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 14,
+    "count": 13,
     "baseline": 16.0,
     "wave": false
   },

@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-09T20:26:01+00:00",
+  "ts": "2026-09-09T20:31:41+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
@@ -17,12 +17,12 @@
     "movers": [
       "IOST",
       "RAY",
-      "ZEC",
       "NEAR",
+      "ZEC",
       "SAHARA",
       "PROM",
-      "XAUT",
-      "PUMP"
+      "HOLO",
+      "XAUT"
     ],
     "watcher": [
       "ZEC",
@@ -50,7 +50,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.000125,
+      "funding": -0.000123,
       "long_short": 0.42
     },
     {
@@ -60,18 +60,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 7.2e-05,
+      "funding": 7.6e-05,
       "long_short": 1.9
-    },
-    {
-      "symbol": "PUMP",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": -5.5e-05,
-      "long_short": 1.01
     },
     {
       "symbol": "BTC",
@@ -80,6 +70,14 @@
         "coingecko"
       ],
       "funding": 6.8e-05
+    },
+    {
+      "symbol": "HOLO",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "LIT",
@@ -95,7 +93,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1e-05
+      "funding": -8e-06
     },
     {
       "symbol": "PROM",
@@ -104,6 +102,14 @@
         "movers"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -5.5e-05
     },
     {
       "symbol": "RAY",
@@ -127,7 +133,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -3.8e-05
+      "funding": -4e-05
     },
     {
       "symbol": "TRUMP",
@@ -135,7 +141,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000157
+      "funding": -0.000158
     },
     {
       "symbol": "XAUT",
