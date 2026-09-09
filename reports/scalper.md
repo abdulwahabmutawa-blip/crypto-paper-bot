@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-09T07:18:46+00:00 · runs 333 · equity **$1,006.79** (+0.68%) · cash $0.00 · open 10/10 · round trips 110
+updated 2026-09-09T07:35:26+00:00 · runs 334 · equity **$1,007.03** (+0.70%) · cash $0.00 · open 10/10 · round trips 110
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -35,15 +35,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-08T07:58 | BNBUSDT | surge | 756.19 | 755.47 | -0.10% |
+| 2026-09-08T07:58 | BNBUSDT | surge | 756.19 | 754.37 | -0.24% |
 | 2026-09-08T11:07 | ZKCUSDT | surge | 0.0493 | 0.0495 | +0.41% |
-| 2026-09-08T13:57 | QQQBUSDT | bottom | 717.32 | 719.21 | +0.26% |
-| 2026-09-08T14:14 | TSLABUSDT | surge | 360.45 | 367.36 | +1.92% |
-| 2026-09-08T15:19 | MRVLBUSDT | surge | 230.1 | 225.73 | -1.90% |
-| 2026-09-08T15:19 | INTCBUSDT | surge | 103.55 | 104.03 | +0.46% |
-| 2026-09-08T17:18 | SPCXBUSDT | surge | 152.91 | 153 | +0.06% |
-| 2026-09-09T00:47 | ATOMUSDT | surge | 1.851 | 1.869 | +0.97% |
-| 2026-09-09T01:04 | HBARUSDT | bottom | 0.07895 | 0.07964 | +0.87% |
-| 2026-09-09T03:34 | LTCUSDT | bottom | 53.9 | 54.53 | +1.17% |
+| 2026-09-08T13:57 | QQQBUSDT | bottom | 717.32 | 719.96 | +0.37% |
+| 2026-09-08T14:14 | TSLABUSDT | surge | 360.45 | 367.99 | +2.09% |
+| 2026-09-08T15:19 | MRVLBUSDT | surge | 230.1 | 226.21 | -1.69% |
+| 2026-09-08T15:19 | INTCBUSDT | surge | 103.55 | 104.2 | +0.63% |
+| 2026-09-08T17:18 | SPCXBUSDT | surge | 152.91 | 153.1 | +0.12% |
+| 2026-09-09T00:47 | ATOMUSDT | surge | 1.851 | 1.865 | +0.76% |
+| 2026-09-09T01:04 | HBARUSDT | bottom | 0.07895 | 0.07959 | +0.81% |
+| 2026-09-09T03:34 | LTCUSDT | bottom | 53.9 | 54.52 | +1.15% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
