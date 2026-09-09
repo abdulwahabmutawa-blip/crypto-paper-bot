@@ -1,24 +1,8 @@
 {
-  "ts": "2026-09-09T03:19:36+00:00",
-  "scanned": 113,
+  "ts": "2026-09-09T03:25:32+00:00",
+  "scanned": 111,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ACEUSDT",
-      "signal": "ignition",
-      "score": 0.7427,
-      "raw_score": 0.7943,
-      "weight": 0.935,
-      "price": 0.176,
-      "why": "trades 8.3x and volume 14.3x the prior 4h, 63% taker-buy, $74,963 burst \u2014 while price has only moved +1.7%",
-      "chg_24h": -0.0713,
-      "vol_surge": 14.31,
-      "chg_1h": 0.0173,
-      "market_surge": 0.0,
-      "actionable": false,
-      "status": "benched \u2014 hit 48%, mean +0.52% over last 535 at 24h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 48%, mean +0.52% over last 535 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 BTC-excess day mean +0.61% at 24h: market beta, not signal",
@@ -27,25 +11,25 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 13,
+    "count": 12,
     "baseline": 16.0,
     "wave": false
   },
   "scorecard": {
     "ignition": {
-      "span_h_1h": 334.4,
-      "n_eff_1h": 334.38,
-      "n_1h": 636,
-      "hit_rate_1h": 0.399,
-      "mean_ret_1h": 0.00052,
-      "median_ret_1h": -0.00038,
+      "span_h_1h": 334.9,
+      "n_eff_1h": 334.92,
+      "n_1h": 638,
+      "hit_rate_1h": 0.398,
+      "mean_ret_1h": 0.00047,
+      "median_ret_1h": -0.0004,
       "both_halves_1h": true,
       "days_1h": 14,
-      "mean_x_1h": -0.00033,
+      "mean_x_1h": -0.00052,
       "days_x_1h": 7,
       "avg_win_1h": 0.01087,
-      "avg_loss_1h": -0.00908,
-      "payoff_1h": 1.197,
+      "avg_loss_1h": -0.00912,
+      "payoff_1h": 1.192,
       "span_h_4h": 330.1,
       "n_eff_4h": 82.53,
       "n_4h": 619,
