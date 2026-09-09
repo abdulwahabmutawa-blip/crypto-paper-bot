@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-09T09:55:59+00:00",
-  "scanned": 110,
+  "ts": "2026-09-09T10:01:05+00:00",
+  "scanned": 111,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "NVDABUSDT",
+      "signal": "ignition",
+      "score": 0.8853,
+      "raw_score": 0.9378,
+      "weight": 0.944,
+      "price": 224.43,
+      "why": "trades 10.4x and volume 28.7x the prior 4h, 84% taker-buy, $51,866 burst \u2014 while price has only moved -0.8%",
+      "chg_24h": -0.0325,
+      "vol_surge": 28.69,
+      "chg_1h": -0.0084,
+      "market_surge": 4.89,
+      "actionable": false,
+      "status": "benched \u2014 hit 48%, mean +0.52% over last 543 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 48%, mean +0.52% over last 543 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 BTC-excess day mean +0.47% at 24h: market beta, not signal",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 1/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 11,
+    "count": 12,
     "baseline": 16.0,
     "wave": false
   },
