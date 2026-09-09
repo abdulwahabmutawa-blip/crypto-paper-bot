@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-09T00:16:20+00:00 · runs 307 · equity **$1,008.09** (+0.81%) · cash $0.00 · open 10/10 · round trips 106
+updated 2026-09-09T00:32:44+00:00 · runs 308 · equity **$1,003.63** (+0.36%) · cash $0.00 · open 10/10 · round trips 106
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -35,15 +35,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-08T00:58 | SKHYBUSDT | surge | 184.72 | 185.95 | +0.67% |
-| 2026-09-08T07:58 | BNBUSDT | surge | 756.19 | 754.61 | -0.21% |
-| 2026-09-08T11:07 | ZKCUSDT | surge | 0.0493 | 0.0495 | +0.41% |
-| 2026-09-08T13:57 | QQQBUSDT | bottom | 717.32 | 718.72 | +0.20% |
-| 2026-09-08T14:14 | TSLABUSDT | surge | 360.45 | 366.83 | +1.77% |
-| 2026-09-08T15:19 | MRVLBUSDT | surge | 230.1 | 224.85 | -2.28% |
-| 2026-09-08T15:19 | INTCBUSDT | surge | 103.55 | 103.83 | +0.27% |
-| 2026-09-08T17:18 | SPCXBUSDT | surge | 152.91 | 153.21 | +0.20% |
-| 2026-09-08T19:13 | VETUSDT | surge | 0.007951 | 0.008113 | +2.04% |
-| 2026-09-08T23:09 | DOTUSDT | surge | 1.247 | 1.244 | -0.24% |
+| 2026-09-08T00:58 | SKHYBUSDT | surge | 184.72 | 186 | +0.69% |
+| 2026-09-08T07:58 | BNBUSDT | surge | 756.19 | 755 | -0.16% |
+| 2026-09-08T11:07 | ZKCUSDT | surge | 0.0493 | 0.0497 | +0.81% |
+| 2026-09-08T13:57 | QQQBUSDT | bottom | 717.32 | 718.08 | +0.11% |
+| 2026-09-08T14:14 | TSLABUSDT | surge | 360.45 | 366.11 | +1.57% |
+| 2026-09-08T15:19 | MRVLBUSDT | surge | 230.1 | 224.22 | -2.56% |
+| 2026-09-08T15:19 | INTCBUSDT | surge | 103.55 | 103.17 | -0.37% |
+| 2026-09-08T17:18 | SPCXBUSDT | surge | 152.91 | 152.86 | -0.03% |
+| 2026-09-08T19:13 | VETUSDT | surge | 0.007951 | 0.008011 | +0.75% |
+| 2026-09-08T23:09 | DOTUSDT | surge | 1.247 | 1.219 | -2.25% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
