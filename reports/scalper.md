@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-09T15:15:19+00:00 · runs 361 · equity **$995.49** (-0.45%) · cash $0.00 · open 10/10 · round trips 126
+updated 2026-09-09T15:20:37+00:00 · runs 362 · equity **$996.52** (-0.35%) · cash $-0.00 · open 10/10 · round trips 126
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -35,15 +35,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-08T15:19 | INTCBUSDT | surge | 103.55 | 105.1 | +1.50% |
-| 2026-09-09T01:04 | HBARUSDT | bottom | 0.07895 | 0.07816 | -1.00% |
-| 2026-09-09T03:34 | LTCUSDT | bottom | 53.9 | 53.93 | +0.06% |
-| 2026-09-09T10:28 | HOLOUSDT | surge | 0.0676 | 0.0662 | -2.07% |
-| 2026-09-09T13:44 | NEARUSDT | surge | 2.59 | 2.581 | -0.35% |
-| 2026-09-09T14:02 | LITEBUSDT | surge | 1011.88 | 1013.78 | +0.19% |
-| 2026-09-09T14:20 | MINAUSDT | surge | 0.0932 | 0.0917 | -1.61% |
-| 2026-09-09T15:13 | DODOUSDT | surge | 0.01839 | 0.01838 | -0.05% |
-| 2026-09-09T15:13 | XTZUSDT | surge | 0.2737 | 0.2707 | -1.10% |
-| 2026-09-09T15:13 | MUBUSDT | surge | 1034.11 | 1020.58 | -1.31% |
+| 2026-09-08T15:19 | INTCBUSDT | surge | 103.55 | 105.07 | +1.47% |
+| 2026-09-09T01:04 | HBARUSDT | bottom | 0.07895 | 0.07821 | -0.94% |
+| 2026-09-09T03:34 | LTCUSDT | bottom | 53.9 | 53.92 | +0.04% |
+| 2026-09-09T10:28 | HOLOUSDT | surge | 0.0676 | 0.0663 | -1.92% |
+| 2026-09-09T13:44 | NEARUSDT | surge | 2.59 | 2.574 | -0.62% |
+| 2026-09-09T14:02 | LITEBUSDT | surge | 1011.88 | 1014.59 | +0.27% |
+| 2026-09-09T14:20 | MINAUSDT | surge | 0.0932 | 0.0913 | -2.04% |
+| 2026-09-09T15:13 | DODOUSDT | surge | 0.01839 | 0.01843 | +0.22% |
+| 2026-09-09T15:13 | XTZUSDT | surge | 0.2737 | 0.2722 | -0.55% |
+| 2026-09-09T15:13 | MUBUSDT | surge | 1034.11 | 1027.38 | -0.65% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
