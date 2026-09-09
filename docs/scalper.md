@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-09T20:43:20+00:00 · runs 380 · equity **$986.53** (-1.35%) · cash $0.00 · open 10/10 · round trips 134
+updated 2026-09-09T21:01:07+00:00 · runs 381 · equity **$986.13** (-1.39%) · cash $0.00 · open 10/10 · round trips 134
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -35,15 +35,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-09T01:04 | HBARUSDT | bottom | 0.07895 | 0.07728 | -2.12% |
-| 2026-09-09T03:34 | LTCUSDT | bottom | 53.9 | 53.66 | -0.45% |
-| 2026-09-09T14:02 | LITEBUSDT | surge | 1011.88 | 986.92 | -2.47% |
-| 2026-09-09T15:13 | DODOUSDT | surge | 0.01839 | 0.01848 | +0.49% |
-| 2026-09-09T15:13 | MUBUSDT | surge | 1034.11 | 1027.03 | -0.68% |
-| 2026-09-09T15:36 | MRVLBUSDT | surge | 235.92 | 235.08 | -0.36% |
-| 2026-09-09T15:36 | SKHYBUSDT | surge | 194.64 | 198.37 | +1.92% |
-| 2026-09-09T16:47 | INTCBUSDT | surge | 106.11 | 106.02 | -0.08% |
-| 2026-09-09T19:46 | XVGUSDT | surge | 0.003252 | 0.003203 | -1.51% |
-| 2026-09-09T20:03 | MSTRBUSDT | bottom | 132.71 | 133.45 | +0.56% |
+| 2026-09-09T01:04 | HBARUSDT | bottom | 0.07895 | 0.07716 | -2.27% |
+| 2026-09-09T03:34 | LTCUSDT | bottom | 53.9 | 53.72 | -0.33% |
+| 2026-09-09T14:02 | LITEBUSDT | surge | 1011.88 | 988.04 | -2.36% |
+| 2026-09-09T15:13 | DODOUSDT | surge | 0.01839 | 0.01844 | +0.27% |
+| 2026-09-09T15:13 | MUBUSDT | surge | 1034.11 | 1026.96 | -0.69% |
+| 2026-09-09T15:36 | MRVLBUSDT | surge | 235.92 | 235.25 | -0.28% |
+| 2026-09-09T15:36 | SKHYBUSDT | surge | 194.64 | 198.1 | +1.78% |
+| 2026-09-09T16:47 | INTCBUSDT | surge | 106.11 | 105.98 | -0.12% |
+| 2026-09-09T19:46 | XVGUSDT | surge | 0.003252 | 0.003199 | -1.63% |
+| 2026-09-09T20:03 | MSTRBUSDT | bottom | 132.71 | 133.42 | +0.54% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
