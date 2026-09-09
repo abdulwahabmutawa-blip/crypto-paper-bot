@@ -18,6 +18,12 @@ Scalper candle-close entries are retrospective, observed later by the polling
 loop. Its results are signal research, not proof of executable fills. A method
 replacement requires a separate prospective record with realistic timing/costs.
 
+`btc_execution_watch.py` now collects public BTC bid/ask depth and receipt
+latency each fleet cycle. It records NO_TRADE and hypothetical execution costs;
+it does not run a qualified strategy or place orders. See
+`reports/btc_execution_protocol.md`; immutable samples are in
+`data/btc_execution/`, latest summary in `reports/btc_execution.md`.
+
 ## Where things are
 - `src/` — the bots. One `bot_*.py` / `*_tracker.py` per strategy, plus:
   - `selection_engine.py` — shared engine used by several fleet strategies; crypto,
