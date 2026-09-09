@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-09T03:57:23+00:00",
+  "ts": "2026-09-09T04:02:41+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
@@ -20,15 +20,38 @@
       "PUMP",
       "ZKC",
       "XRP",
-      "SAHARA"
+      "PEPE"
     ],
     "watcher": [
+      "ZEC",
       "DOT",
-      "FORM"
+      "PUMP"
     ],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "PUMP",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 5e-05,
+      "long_short": 0.89
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 7e-06,
+      "long_short": 0.43
+    },
     {
       "symbol": "DOT",
       "surfaces": 2,
@@ -37,27 +60,7 @@
         "watcher"
       ],
       "funding": 0.0001,
-      "long_short": 2.13
-    },
-    {
-      "symbol": "FORM",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.23
-    },
-    {
-      "symbol": "PUMP",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 0.89
+      "long_short": 2.1
     },
     {
       "symbol": "XRP",
@@ -66,18 +69,16 @@
         "coingecko",
         "movers"
       ],
-      "funding": 3.8e-05,
-      "long_short": 2.33
+      "funding": 3.9e-05,
+      "long_short": 2.32
     },
     {
-      "symbol": "ZEC",
-      "surfaces": 2,
+      "symbol": "FORM",
+      "surfaces": 1,
       "sources": [
-        "coingecko",
         "movers"
       ],
-      "funding": 6e-06,
-      "long_short": 0.43
+      "funding": 5e-05
     },
     {
       "symbol": "LIT",
@@ -93,18 +94,17 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.5e-05
+      "funding": 2.7e-05
     },
     {
-      "symbol": "PROM",
+      "symbol": "PEPE",
       "surfaces": 1,
       "sources": [
         "movers"
-      ],
-      "funding": 5e-05
+      ]
     },
     {
-      "symbol": "SAHARA",
+      "symbol": "PROM",
       "surfaces": 1,
       "sources": [
         "movers"
@@ -117,7 +117,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1e-06
+      "funding": -2e-06
     },
     {
       "symbol": "VET",
