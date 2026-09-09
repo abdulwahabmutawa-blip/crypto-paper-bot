@@ -1,11 +1,13 @@
 {
   "created": "2026-08-15",
-  "held_symbol": "DODOUSDT",
-  "entry_price": 0.01857,
-  "units": 1897.6,
-  "entry_scan_ts": "2026-09-09T20:06:04+00:00",
-  "entry_source": "scout:surge",
-  "stopped": {},
+  "held_symbol": null,
+  "entry_price": null,
+  "units": 0.0,
+  "entry_scan_ts": null,
+  "entry_source": null,
+  "stopped": {
+    "DODOUSDT": "2026-09-09T22:09:04+00:00"
+  },
   "entries": {
     "2026-09-09": 1
   },
@@ -789,23 +791,31 @@
       "date": "2026-09-09",
       "exit": 0.0147,
       "entry": 0.015170000000000001
+    },
+    {
+      "symbol": "DODOUSDT",
+      "source": "scout:surge",
+      "entry_score": 0.3861,
+      "entry_time": "2026-09-09T21:45:24+00:00",
+      "exit_time": "2026-09-09T22:09:04+00:00",
+      "entry_price": 0.01857,
+      "exit_price": 0.018009999999999998,
+      "units": 1897.6,
+      "spent_usd": 35.2366,
+      "got_usd": 34.174,
+      "pnl_pct": -3.02,
+      "pnl_usd": -1.089,
+      "fees_usd": 0.0264,
+      "reason": "PROTECTIVE STOP (-3.0% vs peak +0.5%) \u2014 the floor held at the exchange, between cycles",
+      "date": "2026-09-09",
+      "exit": 0.018009999999999998,
+      "entry": 0.01857
     }
   ],
-  "last_value_usd": 35.14,
-  "last_updated_utc": "2026-09-09T22:03:26+00:00",
-  "open_position": {
-    "symbol": "DODOUSDT",
-    "entry_time": "2026-09-09T21:45:24+00:00",
-    "entry_price": 0.01857,
-    "current_price": 0.01851,
-    "units": 1897.6,
-    "spent_usd": 35.2384,
-    "value_usd": 35.1246,
-    "pnl_usd": -0.1138,
-    "pnl_pct": -0.32,
-    "source": "scout:surge"
-  },
-  "spent_usd": 35.2384,
+  "last_value_usd": 34.18,
+  "last_updated_utc": "2026-09-09T22:09:04+00:00",
+  "open_position": null,
+  "spent_usd": null,
   "no_pair": {
     "scan_ts": "2026-09-09T20:06:04+00:00",
     "syms": []
@@ -813,19 +823,5 @@
   "wave_bonus_date": "2026-09-05",
   "book_hwm_usd": 44.27,
   "entry_score": 0.3861,
-  "entry_fee_usd": 0.026403,
-  "hwm": 0.01866,
-  "move_max_qv": 0.0,
-  "move_qv_sum": 0.0,
-  "move_qv_n": 0,
-  "move_last_ms": 0,
-  "entry_time": "2026-09-09T21:45:24+00:00",
-  "stop_order": {
-    "order_id": "835048211",
-    "stop": 0.01801,
-    "limit": null,
-    "qty": 1897.5,
-    "type": "STOP_LOSS",
-    "client_order_id": "lotstop-DODOUSDT-8990355301"
-  }
+  "halt_flagged": "CIRCUIT BREAKER \u2014 2 losi"
 }
