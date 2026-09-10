@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-10T18:31:30+00:00 · runs 458 · equity **$932.15** (-6.79%) · cash $184.62 · open 8/10 · round trips 162
+updated 2026-09-10T18:47:41+00:00 · runs 459 · equity **$933.71** (-6.63%) · cash $184.62 · open 8/10 · round trips 162
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -35,13 +35,13 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-09T22:17 | CRCLBUSDT | bottom | 91.62 | 90.26 | -1.48% |
-| 2026-09-10T14:59 | METUSDT | surge | 0.217 | 0.2138 | -1.47% |
-| 2026-09-10T14:59 | INJUSDT | bottom | 5.885 | 5.965 | +1.36% |
-| 2026-09-10T14:59 | DOTUSDT | bottom | 1.083 | 1.1 | +1.57% |
-| 2026-09-10T15:31 | FFUSDT | surge | 0.1649 | 0.16669 | +1.09% |
-| 2026-09-10T15:31 | AAPLBUSDT | surge | 323.88 | 324.29 | +0.13% |
-| 2026-09-10T16:04 | SPCXBUSDT | surge | 151.92 | 148.47 | -2.27% |
-| 2026-09-10T18:30 | ETHFIUSDT | surge | 0.6981 | 0.6986 | +0.07% |
+| 2026-09-09T22:17 | CRCLBUSDT | bottom | 91.62 | 90.45 | -1.28% |
+| 2026-09-10T14:59 | METUSDT | surge | 0.217 | 0.2156 | -0.65% |
+| 2026-09-10T14:59 | INJUSDT | bottom | 5.885 | 5.954 | +1.17% |
+| 2026-09-10T14:59 | DOTUSDT | bottom | 1.083 | 1.103 | +1.85% |
+| 2026-09-10T15:31 | FFUSDT | surge | 0.1649 | 0.1671 | +1.33% |
+| 2026-09-10T15:31 | AAPLBUSDT | surge | 323.88 | 324.67 | +0.24% |
+| 2026-09-10T16:04 | SPCXBUSDT | surge | 151.92 | 149.03 | -1.90% |
+| 2026-09-10T18:30 | ETHFIUSDT | surge | 0.6981 | 0.6972 | -0.13% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
