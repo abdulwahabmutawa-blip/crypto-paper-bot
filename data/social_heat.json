@@ -1,25 +1,25 @@
 {
-  "ts": "2026-09-10T06:41:49+00:00",
+  "ts": "2026-09-10T06:47:31+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
       "PENGU",
       "NEAR",
       "LIT",
-      "REZ",
-      "RAY",
       "IOST",
-      "BTC",
-      "PUMP"
+      "PUMP",
+      "RAY"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "IOST",
       "NEAR",
       "SAHARA",
+      "IOST",
       "TRX",
-      "U"
+      "ZEC",
+      "U",
+      "RLUSD"
     ],
     "watcher": [
       "ZEC",
@@ -37,7 +37,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.00027,
+      "funding": -0.000275,
       "long_short": 1.04
     },
     {
@@ -48,26 +48,19 @@
         "movers",
         "watcher"
       ],
-      "funding": 2.8e-05,
+      "funding": 2.9e-05,
       "long_short": 1.93
     },
     {
       "symbol": "ZEC",
-      "surfaces": 2,
+      "surfaces": 3,
       "sources": [
         "coingecko",
+        "movers",
         "watcher"
       ],
-      "funding": -2e-06,
+      "funding": -0.0,
       "long_short": 0.46
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "LIT",
@@ -91,7 +84,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.6e-05
+      "funding": 1.5e-05
     },
     {
       "symbol": "RAY",
@@ -102,12 +95,11 @@
       "funding": 0.0
     },
     {
-      "symbol": "REZ",
+      "symbol": "RLUSD",
       "surfaces": 1,
       "sources": [
-        "coingecko"
-      ],
-      "funding": -0.003196
+        "movers"
+      ]
     },
     {
       "symbol": "SAHARA",
@@ -123,7 +115,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -4.9e-05
+      "funding": -5e-05
     },
     {
       "symbol": "U",
