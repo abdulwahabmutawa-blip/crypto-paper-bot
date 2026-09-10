@@ -1,24 +1,8 @@
 {
-  "ts": "2026-09-10T13:17:16+00:00",
-  "scanned": 132,
+  "ts": "2026-09-10T13:23:03+00:00",
+  "scanned": 134,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "\u725b\u6765USDT",
-      "signal": "ignition",
-      "score": 0.5259,
-      "raw_score": 0.5637,
-      "weight": 0.933,
-      "price": 0.07999,
-      "why": "trades 5.5x and volume 7.3x the prior 4h, 64% taker-buy, $376,248 burst \u2014 while price has only moved +3.9%",
-      "chg_24h": -0.1721,
-      "vol_surge": 7.27,
-      "chg_1h": 0.0392,
-      "market_surge": 3.39,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean +0.75% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.75% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.14% at 24h: market beta, not signal",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 2/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 6,
+    "count": 5,
     "baseline": 14.0,
     "wave": false
   },
