@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-10T11:43:30+00:00 · runs 433 · equity **$953.40** (-4.66%) · cash $92.49 · open 9/10 · round trips 149
+updated 2026-09-10T12:00:52+00:00 · runs 434 · equity **$948.49** (-5.15%) · cash $0.00 · open 10/10 · round trips 149
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -35,14 +35,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-09T15:13 | MUBUSDT | surge | 1034.11 | 1010.7 | -2.26% |
-| 2026-09-09T15:36 | MRVLBUSDT | surge | 235.92 | 231 | -2.09% |
-| 2026-09-09T15:36 | SKHYBUSDT | surge | 194.64 | 192.09 | -1.31% |
-| 2026-09-09T16:47 | INTCBUSDT | surge | 106.11 | 104.43 | -1.58% |
-| 2026-09-09T20:03 | MSTRBUSDT | bottom | 132.71 | 131.73 | -0.74% |
-| 2026-09-09T22:17 | CRCLBUSDT | bottom | 91.62 | 91.72 | +0.11% |
-| 2026-09-10T03:56 | ENAUSDT | bottom | 0.1503 | 0.1502 | -0.07% |
-| 2026-09-10T10:49 | RUNEUSDT | surge | 0.498 | 0.498 | +0.00% |
-| 2026-09-10T11:41 | FFUSDT | surge | 0.15745 | 0.1557 | -1.11% |
+| 2026-09-09T15:13 | MUBUSDT | surge | 1034.11 | 1008.72 | -2.46% |
+| 2026-09-09T15:36 | MRVLBUSDT | surge | 235.92 | 228.87 | -2.99% |
+| 2026-09-09T15:36 | SKHYBUSDT | surge | 194.64 | 191.24 | -1.75% |
+| 2026-09-09T16:47 | INTCBUSDT | surge | 106.11 | 103.39 | -2.56% |
+| 2026-09-09T20:03 | MSTRBUSDT | bottom | 132.71 | 131.32 | -1.05% |
+| 2026-09-09T22:17 | CRCLBUSDT | bottom | 91.62 | 91.46 | -0.17% |
+| 2026-09-10T03:56 | ENAUSDT | bottom | 0.1503 | 0.1493 | -0.67% |
+| 2026-09-10T10:49 | RUNEUSDT | surge | 0.498 | 0.496 | -0.40% |
+| 2026-09-10T11:41 | FFUSDT | surge | 0.15745 | 0.15527 | -1.38% |
+| 2026-09-10T11:58 | ETHFIUSDT | surge | 0.6458 | 0.6411 | -0.73% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
