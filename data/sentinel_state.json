@@ -4,86 +4,6 @@
       "risk_level": "caution",
       "risk_alerts": [
         {
-          "headline": "US debt tops $40T as Treasury doubles long-bond buybacks to curb yields",
-          "markets": [
-            "both"
-          ],
-          "severity": "caution"
-        },
-        {
-          "headline": "Trump announces 'economic warfare' on Iran with threats to backers",
-          "markets": [
-            "both"
-          ],
-          "severity": "caution"
-        }
-      ],
-      "hype": [
-        {
-          "symbol": "MRNA",
-          "mood": "euphoric",
-          "note": "cancer vaccine trial success stock doubles+"
-        },
-        {
-          "symbol": "MRK",
-          "mood": "euphoric",
-          "note": "partnered mRNA melanoma data lifts shares"
-        },
-        {
-          "symbol": "SKHY",
-          "mood": "euphoric",
-          "note": "massive $28B+ buyback sparks surge"
-        },
-        {
-          "symbol": "PURR",
-          "mood": "euphoric",
-          "note": "Hyperliquid treasury stock rips on Trump"
-        }
-      ],
-      "crypto_hype": [
-        {
-          "symbol": "HYPE",
-          "mood": "euphoric",
-          "note": "Trump CFTC Hyperliquid US path comments"
-        },
-        {
-          "symbol": "ETH",
-          "mood": "euphoric",
-          "note": "+18% to $2250 broad rally short squeeze"
-        },
-        {
-          "symbol": "BTC",
-          "mood": "euphoric",
-          "note": "hits $70k record short liqs $2.7B"
-        },
-        {
-          "symbol": "TRUMP",
-          "mood": "euphoric",
-          "note": "Binance top mover +18% meme heat"
-        },
-        {
-          "symbol": "RE",
-          "mood": "euphoric",
-          "note": "Binance +34% volume spike"
-        },
-        {
-          "symbol": "PEPE",
-          "mood": "mixed",
-          "note": "trending searches multi-surface heat"
-        }
-      ],
-      "overall_mood": "Risk-on crypto short-squeeze rally to BTC $70k/ETH surge plus biotech euphoria on vaccine data, tempered by debt milestone and Iran tensions with low VIX greed.",
-      "ts": "2026-08-20T04:48:06+00:00",
-      "gauges": {
-        "vix": 14.9,
-        "crypto_fear_greed": 62,
-        "crypto_fng_label": "Greed"
-      }
-    },
-    {
-      "risk_level": "caution",
-      "risk_alerts": [
-        {
           "headline": "Trump announces economic warfare on Iran, threatens consequences for backers",
           "markets": [
             "both"
@@ -10452,12 +10372,119 @@
           "output_tokens": 1524
         }
       }
+    },
+    {
+      "risk_level": "caution",
+      "risk_alerts": [
+        {
+          "headline": "Brent oil tops $100 on US-Iran tanker strikes escalation",
+          "markets": [
+            "both"
+          ],
+          "severity": "caution"
+        },
+        {
+          "headline": "US stocks fall 3rd day, 10y yields multi-year highs on inflation fears",
+          "markets": [
+            "stocks"
+          ],
+          "severity": "caution"
+        }
+      ],
+      "hype": [
+        {
+          "symbol": "ZEC",
+          "mood": "euphoric",
+          "note": "Privacy ETF mania, 2000%+ YTD run"
+        },
+        {
+          "symbol": "IOST",
+          "mood": "euphoric",
+          "note": "Short squeeze volume explosion"
+        },
+        {
+          "symbol": "NEAR",
+          "mood": "mixed",
+          "note": "ZEC tools beneficiary chatter"
+        },
+        {
+          "symbol": "BTC",
+          "mood": "mixed",
+          "note": "Resilient vs equities, gold-like"
+        }
+      ],
+      "crypto_hype": [
+        {
+          "symbol": "ZEC",
+          "mood": "euphoric",
+          "stage": "peaked",
+          "organic": true,
+          "promo_risk": "low",
+          "catalyst": "Grayscale ETF + Sept 14 vote",
+          "why": "ETF inflows, privacy narrative, rising independent talk",
+          "note": "Top10 mcap, governance catalyst"
+        },
+        {
+          "symbol": "NEAR",
+          "mood": "mixed",
+          "stage": "peaked",
+          "organic": true,
+          "promo_risk": "low",
+          "catalyst": "ZEC Intents volume share",
+          "why": "ZEC tool seller narrative, +10% mover",
+          "note": "Ecosystem fees buybacks"
+        },
+        {
+          "symbol": "IOST",
+          "mood": "euphoric",
+          "stage": "peaked",
+          "organic": false,
+          "promo_risk": "high",
+          "catalyst": "none",
+          "why": "Extreme neg funding short squeeze +31%",
+          "note": "Volume spike, liquidations cascade"
+        }
+      ],
+      "overall_mood": "Stocks risk-off on oil spike and yields from Iran escalation while crypto shows selective greed in privacy alts amid resilient BTC.",
+      "ts": "2026-09-10T04:08:41+00:00",
+      "gauges": {
+        "vix": 16.5,
+        "crypto_fear_greed": 69,
+        "crypto_fng_label": "Greed"
+      },
+      "usage": {
+        "input_tokens": 72349,
+        "input_tokens_details": {
+          "cached_tokens": 30208
+        },
+        "output_tokens": 2040,
+        "output_tokens_details": {
+          "reasoning_tokens": 1048
+        },
+        "total_tokens": 74389,
+        "num_sources_used": 0,
+        "num_server_side_tools_used": 11,
+        "cost_in_usd_ticks": 1605844000,
+        "server_side_tool_usage_details": {
+          "web_search_calls": 5,
+          "x_search_calls": 6,
+          "code_interpreter_calls": 0,
+          "file_search_calls": 0,
+          "mcp_calls": 0,
+          "document_search_calls": 0,
+          "image_generation_calls": 0
+        },
+        "context_details": {
+          "input_tokens": 43534,
+          "output_tokens": 1202
+        }
+      }
     }
   ],
   "month_count": {
     "2026-07": 35,
     "2026-08": 130,
-    "2026-09": 22
+    "2026-09": 23
   },
-  "last_scan_utc": "2026-09-09T20:06:04+00:00"
+  "last_scan_utc": "2026-09-10T04:08:41+00:00"
 }
