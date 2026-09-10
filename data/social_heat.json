@@ -1,21 +1,22 @@
 {
-  "ts": "2026-09-10T10:34:41+00:00",
+  "ts": "2026-09-10T10:40:31+00:00",
   "sources": {
     "coingecko": [
       "EGLD",
-      "ZEC",
-      "PUMP",
-      "ARB",
       "PENGU",
-      "SOL",
-      "LIT",
-      "ETH"
+      "ZEC",
+      "RAY",
+      "IOST",
+      "BTC",
+      "PUMP",
+      "LIT"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "RAY",
       "TRX",
+      "SAHARA",
       "RLUSD"
     ],
     "watcher": [
@@ -27,22 +28,41 @@
   },
   "heat": [
     {
+      "symbol": "IOST",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "watcher"
+      ],
+      "funding": -0.001284,
+      "long_short": 1.25
+    },
+    {
+      "symbol": "RAY",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0
+    },
+    {
       "symbol": "ZEC",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "watcher"
       ],
-      "funding": 4.4e-05,
+      "funding": 4.6e-05,
       "long_short": 0.49
     },
     {
-      "symbol": "ARB",
+      "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5.9e-05
+      "funding": 7.2e-05
     },
     {
       "symbol": "EGLD",
@@ -50,23 +70,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.001349
-    },
-    {
-      "symbol": "ETH",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -7e-06
-    },
-    {
-      "symbol": "IOST",
-      "surfaces": 1,
-      "sources": [
-        "watcher"
-      ],
-      "funding": -0.001234
+      "funding": -0.001383
     },
     {
       "symbol": "LIT",
@@ -82,7 +86,7 @@
       "sources": [
         "watcher"
       ],
-      "funding": 1.4e-05
+      "funding": 1.9e-05
     },
     {
       "symbol": "PENGU",
@@ -90,7 +94,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.4e-05
+      "funding": 4.6e-05
     },
     {
       "symbol": "PUMP",
@@ -98,15 +102,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.1e-05
-    },
-    {
-      "symbol": "RAY",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0
+      "funding": 3.8e-05
     },
     {
       "symbol": "RLUSD",
@@ -116,12 +112,12 @@
       ]
     },
     {
-      "symbol": "SOL",
+      "symbol": "SAHARA",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
-      "funding": -2.2e-05
+      "funding": -0.000223
     },
     {
       "symbol": "TRX",
