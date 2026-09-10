@@ -2,20 +2,21 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-10T03:06:08+00:00 · runs 403 · equity **$972.85** (-2.72%) · cash $193.61 · open 8/10 · round trips 142
+updated 2026-09-10T03:23:40+00:00 · runs 404 · equity **$969.88** (-3.01%) · cash $287.26 · open 7/10 · round trips 143
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
-- hit 50% (break-even 54%) · mean -0.16%/trade · realized $-22.78 · worst day $-27.16 · trades/day 23.7
+- hit 50% (break-even 54%) · mean -0.18%/trade · realized $-25.93 · worst day $-27.16 · trades/day 23.8
 
 | shape | n | hit | mean | target% | stop% | time% |
 |---|---|---|---|---|---|---|
-| surge | 88 | 52% | -0.10% | 48% | 43% | 9% |
+| surge | 89 | 52% | -0.13% | 47% | 44% | 9% |
 | bottom | 54 | 46% | -0.25% | 44% | 44% | 11% |
 
 ## Last 15 round trips
 | exit (UTC) | coin | shape | how | hours | net | P&L |
 |---|---|---|---|---|---|---|
+| 2026-09-10T03:21 | SAHARAUSDT | surge | STOP | 0.0 | -3.25% | $-3.15 |
 | 2026-09-10T02:05 | MINAUSDT | surge | STOP | 1.5 | -3.25% | $-3.25 |
 | 2026-09-10T00:37 | SAHARAUSDT | surge | STOP | 2.0 | -3.25% | $-3.14 |
 | 2026-09-10T00:20 | MINAUSDT | surge | TARGET | 0.0 | +2.75% | $+2.72 |
@@ -30,18 +31,16 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | 2026-09-09T16:30 | HOLOUSDT | surge | STOP | 6.0 | -3.25% | $-3.20 |
 | 2026-09-09T15:54 | PHAUSDT | surge | TARGET | 0.0 | +2.75% | $+2.71 |
 | 2026-09-09T15:36 | XTZUSDT | surge | STOP | 0.2 | -3.25% | $-3.29 |
-| 2026-09-09T15:36 | MINAUSDT | surge | STOP | 1.0 | -3.25% | $-3.29 |
 
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-09T03:34 | LTCUSDT | bottom | 53.9 | 53.02 | -1.63% |
-| 2026-09-09T15:13 | MUBUSDT | surge | 1034.11 | 1023.53 | -1.02% |
-| 2026-09-09T15:36 | MRVLBUSDT | surge | 235.92 | 233.93 | -0.84% |
-| 2026-09-09T15:36 | SKHYBUSDT | surge | 194.64 | 194.21 | -0.22% |
-| 2026-09-09T16:47 | INTCBUSDT | surge | 106.11 | 104.85 | -1.19% |
-| 2026-09-09T20:03 | MSTRBUSDT | bottom | 132.71 | 133.75 | +0.78% |
-| 2026-09-09T22:17 | CRCLBUSDT | bottom | 91.62 | 93.01 | +1.52% |
-| 2026-09-10T03:04 | SAHARAUSDT | surge | 0.01106 | 0.01086 | -1.81% |
+| 2026-09-09T03:34 | LTCUSDT | bottom | 53.9 | 53.01 | -1.65% |
+| 2026-09-09T15:13 | MUBUSDT | surge | 1034.11 | 1021.21 | -1.25% |
+| 2026-09-09T15:36 | MRVLBUSDT | surge | 235.92 | 233.02 | -1.23% |
+| 2026-09-09T15:36 | SKHYBUSDT | surge | 194.64 | 193.4 | -0.64% |
+| 2026-09-09T16:47 | INTCBUSDT | surge | 106.11 | 104.5 | -1.52% |
+| 2026-09-09T20:03 | MSTRBUSDT | bottom | 132.71 | 133.6 | +0.67% |
+| 2026-09-09T22:17 | CRCLBUSDT | bottom | 91.62 | 92.91 | +1.41% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
