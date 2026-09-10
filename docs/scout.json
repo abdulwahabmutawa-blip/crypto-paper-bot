@@ -1,22 +1,24 @@
 {
-  "ts": "2026-09-10T17:35:45+00:00",
+  "ts": "2026-09-10T17:41:23+00:00",
   "scanned": 128,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "DASHUSDT",
-      "signal": "ignition",
-      "score": 0.6133,
-      "raw_score": 0.6609,
-      "weight": 0.928,
-      "price": 56.4,
-      "why": "trades 4.3x and volume 11.8x the prior 4h, 77% taker-buy, $490,312 burst \u2014 while price has only moved +2.2%",
-      "chg_24h": -0.1274,
-      "vol_surge": 11.79,
-      "chg_1h": 0.0217,
-      "market_surge": 5.32,
+      "symbol": "SCUSDT",
+      "signal": "reversion",
+      "score": 0.5195,
+      "raw_score": 0.5195,
+      "weight": 1.0,
+      "price": 0.000813,
+      "why": "down -18% on the day (bottom decile of the market), now +1.0% over 15m with 5 green candles",
+      "chg_24h": -0.179,
+      "vol_surge": 0.96,
+      "chg_1h": 0.0175,
+      "market_surge": 0.0,
+      "oi_drop": null,
+      "funding": 0.0,
       "actionable": false,
-      "status": "benched \u2014 hit 43%, mean -0.19% over last 541 at 24h: not beating 4x the round trip"
+      "status": "probation \u2014 8/12 resolved 24h samples under ruleset 3"
     }
   ],
   "gate": {
@@ -27,7 +29,7 @@
     "revival": "probation \u2014 2/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 8,
+    "count": 7,
     "baseline": 14.0,
     "wave": false
   },
