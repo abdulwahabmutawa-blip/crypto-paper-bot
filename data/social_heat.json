@@ -1,14 +1,14 @@
 {
-  "ts": "2026-09-10T20:12:21+00:00",
+  "ts": "2026-09-10T20:18:11+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
-      "ZEC",
       "NEAR",
-      "LIT",
+      "ZEC",
+      "ZRO",
+      "RAY",
       "PUMP",
-      "ETHFI",
-      "RAY"
+      "ETHFI"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -17,8 +17,8 @@
       "VTHO",
       "RAY",
       "MARSCOIN",
-      "RLUSD",
-      "U"
+      "U",
+      "RLUSD"
     ],
     "watcher": [
       "ZEC"
@@ -42,19 +42,11 @@
         "coingecko",
         "watcher"
       ],
-      "funding": 7.4e-05,
+      "funding": 7.2e-05,
       "long_short": 0.52
     },
     {
       "symbol": "ETHFI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "LIT",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -67,7 +59,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000167
+      "funding": 0.000164
     },
     {
       "symbol": "NEAR",
@@ -91,7 +83,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.2e-05
+      "funding": 2e-05
     },
     {
       "symbol": "RLUSD",
@@ -113,7 +105,15 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.005523
+      "funding": -0.005552
+    },
+    {
+      "symbol": "ZRO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "\u725b\u6765",
@@ -121,7 +121,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000369
+      "funding": 0.000376
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
