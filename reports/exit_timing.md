@@ -1,12 +1,12 @@
 # Exit timing — the bot grading its own exits
 
-updated 2026-09-10T21:52:03+00:00 · 45 exits audited · early/late line ±3% · MEASUREMENT ONLY
+updated 2026-09-10T22:09:13+00:00 · 46 exits audited · early/late line ±3% · MEASUREMENT ONLY
 
 | verdict | n |
 |---|---|
 | TOO_EARLY | 17 |
 | TOO_LATE | 9 |
-| BOTH | 15 |
+| BOTH | 16 |
 | WELL_TIMED | 4 |
 
 | exit family | n | avg giveback | avg post-24h run | well-timed |
@@ -16,7 +16,7 @@ updated 2026-09-10T21:52:03+00:00 · 45 exits audited · early/late line ±3% ·
 | Grok scans stale | 1 | +1.6% | +3.1% | 0 |
 | Hype faded | 7 | +6.1% | +10.7% | 0 |
 | MOMENTUM GONE | 2 | +0.6% | +12.3% | 0 |
-| PROTECTIVE STOP | 7 | +6.7% | +3.3% | 0 |
+| PROTECTIVE STOP | 8 | +6.3% | +5.0% | 0 |
 | RATCHET | 4 | +9.2% | +3.7% | 0 |
 | STALLED | 12 | +1.5% | +9.7% | 3 |
 | STOP-LOSS | 2 | +11.5% | +8.8% | 0 |
