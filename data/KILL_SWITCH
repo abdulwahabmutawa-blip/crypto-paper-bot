@@ -1,0 +1,16 @@
+Live trading STOPPED by owner decision, 2026-09-10.
+
+Why: the surge lane shipped 2026-09-05 went 8 round trips, 1 win, net -$6.13
+in five days (7 of 8 exits on the -3% protective stop). The 3-year backtest of
+the same +5/-3/48h rule returned -34.5% over 488 trades, negative every year.
+Lifetime book: 47 realized trades, net -$26.55, $33.15 against a $44.27 peak.
+The owner's pre-registered kill line (net profit by 2026-09-11) will not be met.
+
+State when stopped: FLAT, no open position, so nothing is stranded.
+
+NOTE: guard() in src/binance_live.py refuses EVERY action while this file
+exists, sells included. Only safe because the book is flat. If a position is
+ever open, delete this file before expecting an exit to fire.
+
+To resume: delete this file. Code and ledger are untouched and the lane can be
+re-armed with LOTTERY_SURGE=1 / LOTTERY_LEGACY_SCOUT=1 in /etc/lottery.env.
