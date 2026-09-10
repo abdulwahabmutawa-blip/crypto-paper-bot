@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-10T16:54:09+00:00 · runs 452 · equity **$932.46** (-6.75%) · cash $185.65 · open 8/10 · round trips 161
+updated 2026-09-10T17:10:24+00:00 · runs 453 · equity **$933.36** (-6.66%) · cash $185.65 · open 8/10 · round trips 161
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -35,13 +35,13 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-09T22:17 | CRCLBUSDT | bottom | 91.62 | 90.73 | -0.97% |
-| 2026-09-10T14:59 | METUSDT | surge | 0.217 | 0.2166 | -0.18% |
-| 2026-09-10T14:59 | INJUSDT | bottom | 5.885 | 5.87 | -0.25% |
-| 2026-09-10T14:59 | DOTUSDT | bottom | 1.083 | 1.086 | +0.28% |
-| 2026-09-10T15:31 | FFUSDT | surge | 0.1649 | 0.16469 | -0.13% |
-| 2026-09-10T15:31 | AAPLBUSDT | surge | 323.88 | 323.77 | -0.03% |
-| 2026-09-10T16:04 | SPCXBUSDT | surge | 151.92 | 151 | -0.61% |
-| 2026-09-10T16:04 | KAVAUSDT | surge | 0.06458 | 0.06323 | -2.09% |
+| 2026-09-09T22:17 | CRCLBUSDT | bottom | 91.62 | 91 | -0.68% |
+| 2026-09-10T14:59 | METUSDT | surge | 0.217 | 0.2179 | +0.41% |
+| 2026-09-10T14:59 | INJUSDT | bottom | 5.885 | 5.905 | +0.34% |
+| 2026-09-10T14:59 | DOTUSDT | bottom | 1.083 | 1.087 | +0.37% |
+| 2026-09-10T15:31 | FFUSDT | surge | 0.1649 | 0.16542 | +0.32% |
+| 2026-09-10T15:31 | AAPLBUSDT | surge | 323.88 | 323.35 | -0.16% |
+| 2026-09-10T16:04 | SPCXBUSDT | surge | 151.92 | 150.3 | -1.07% |
+| 2026-09-10T16:04 | KAVAUSDT | surge | 0.06458 | 0.06293 | -2.55% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
