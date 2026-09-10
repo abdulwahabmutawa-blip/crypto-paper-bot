@@ -1,6 +1,6 @@
 # Exit timing — the bot grading its own exits
 
-updated 2026-09-10T04:52:34+00:00 · 45 exits audited · early/late line ±3% · MEASUREMENT ONLY
+updated 2026-09-10T05:10:10+00:00 · 45 exits audited · early/late line ±3% · MEASUREMENT ONLY
 
 | verdict | n |
 |---|---|
@@ -51,7 +51,7 @@ updated 2026-09-10T04:52:34+00:00 · 45 exits audited · early/late line ±3% ·
 | 2026-09-07 | flat | +0.00% | -1.53% | +1.53pp |
 | 2026-09-08 | flat | +4.50% | -0.83% | +5.33pp |
 | 2026-09-09 | flat | -13.39% | -0.19% | -13.20pp |
-| 2026-09-10 | flat | -7.31% | +0.00% | -7.31pp |
+| 2026-09-10 | flat | -7.31% | +0.01% | -7.32pp |
 
 
 _giveback = in-hold peak the exit surrendered; post-24h run = what the coin did after we sold. High post-run with low giveback = selling too early; high giveback = selling too late._
