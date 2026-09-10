@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-10T00:39:54+00:00 · runs 394 · equity **$977.95** (-2.20%) · cash $193.57 · open 8/10 · round trips 141
+updated 2026-09-10T00:57:26+00:00 · runs 395 · equity **$975.94** (-2.41%) · cash $193.57 · open 8/10 · round trips 141
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -35,13 +35,13 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-09T03:34 | LTCUSDT | bottom | 53.9 | 53.25 | -1.21% |
-| 2026-09-09T15:13 | MUBUSDT | surge | 1034.11 | 1021.14 | -1.25% |
-| 2026-09-09T15:36 | MRVLBUSDT | surge | 235.92 | 234.2 | -0.73% |
-| 2026-09-09T15:36 | SKHYBUSDT | surge | 194.64 | 193.34 | -0.67% |
-| 2026-09-09T16:47 | INTCBUSDT | surge | 106.11 | 105.2 | -0.86% |
-| 2026-09-09T20:03 | MSTRBUSDT | bottom | 132.71 | 133.97 | +0.95% |
-| 2026-09-09T22:17 | CRCLBUSDT | bottom | 91.62 | 92.48 | +0.94% |
-| 2026-09-10T00:20 | MINAUSDT | surge | 0.0939 | 0.0942 | +0.32% |
+| 2026-09-09T03:34 | LTCUSDT | bottom | 53.9 | 53 | -1.67% |
+| 2026-09-09T15:13 | MUBUSDT | surge | 1034.11 | 1018.86 | -1.47% |
+| 2026-09-09T15:36 | MRVLBUSDT | surge | 235.92 | 232.63 | -1.39% |
+| 2026-09-09T15:36 | SKHYBUSDT | surge | 194.64 | 192.04 | -1.34% |
+| 2026-09-09T16:47 | INTCBUSDT | surge | 106.11 | 104.82 | -1.22% |
+| 2026-09-09T20:03 | MSTRBUSDT | bottom | 132.71 | 133.67 | +0.72% |
+| 2026-09-09T22:17 | CRCLBUSDT | bottom | 91.62 | 92.8 | +1.29% |
+| 2026-09-10T00:20 | MINAUSDT | surge | 0.0939 | 0.0944 | +0.53% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
