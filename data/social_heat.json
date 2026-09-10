@@ -1,16 +1,16 @@
 {
-  "ts": "2026-09-10T20:52:29+00:00",
+  "ts": "2026-09-10T20:58:20+00:00",
   "sources": {
     "coingecko": [
       "ZRO",
       "PENGU",
-      "RAY",
       "NEAR",
-      "ETH",
-      "MARSCOIN",
-      "EGLD",
       "ZEC",
-      "LIT"
+      "RAY",
+      "BTC",
+      "SOL",
+      "MARSCOIN",
+      "EGLD"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -36,7 +36,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 0.000107,
+      "funding": 9.4e-05,
       "long_short": 0.84
     },
     {
@@ -46,7 +46,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 0.0,
+      "funding": -4e-06,
       "long_short": 2.06
     },
     {
@@ -65,8 +65,16 @@
         "coingecko",
         "watcher"
       ],
-      "funding": 6.6e-05,
+      "funding": 6.9e-05,
       "long_short": 0.52
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 6.9e-05
     },
     {
       "symbol": "EGLD",
@@ -74,23 +82,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3e-06
-    },
-    {
-      "symbol": "ETH",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -8e-06
-    },
-    {
-      "symbol": "LIT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": 1.7e-05
     },
     {
       "symbol": "PENGU",
@@ -108,6 +100,14 @@
       ]
     },
     {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 1.1e-05
+    },
+    {
       "symbol": "U",
       "surfaces": 1,
       "sources": [
@@ -120,7 +120,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.006132
+      "funding": -0.006321
     },
     {
       "symbol": "ZRO",
