@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-10T11:26:13+00:00 · runs 432 · equity **$954.44** (-4.56%) · cash $184.99 · open 8/10 · round trips 149
+updated 2026-09-10T11:43:30+00:00 · runs 433 · equity **$953.40** (-4.66%) · cash $92.49 · open 9/10 · round trips 149
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -35,13 +35,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-09T15:13 | MUBUSDT | surge | 1034.11 | 1010.54 | -2.28% |
-| 2026-09-09T15:36 | MRVLBUSDT | surge | 235.92 | 230.9 | -2.13% |
-| 2026-09-09T15:36 | SKHYBUSDT | surge | 194.64 | 191.54 | -1.59% |
-| 2026-09-09T16:47 | INTCBUSDT | surge | 106.11 | 104.33 | -1.68% |
-| 2026-09-09T20:03 | MSTRBUSDT | bottom | 132.71 | 131.61 | -0.83% |
-| 2026-09-09T22:17 | CRCLBUSDT | bottom | 91.62 | 91.69 | +0.08% |
+| 2026-09-09T15:13 | MUBUSDT | surge | 1034.11 | 1010.7 | -2.26% |
+| 2026-09-09T15:36 | MRVLBUSDT | surge | 235.92 | 231 | -2.09% |
+| 2026-09-09T15:36 | SKHYBUSDT | surge | 194.64 | 192.09 | -1.31% |
+| 2026-09-09T16:47 | INTCBUSDT | surge | 106.11 | 104.43 | -1.58% |
+| 2026-09-09T20:03 | MSTRBUSDT | bottom | 132.71 | 131.73 | -0.74% |
+| 2026-09-09T22:17 | CRCLBUSDT | bottom | 91.62 | 91.72 | +0.11% |
 | 2026-09-10T03:56 | ENAUSDT | bottom | 0.1503 | 0.1502 | -0.07% |
-| 2026-09-10T10:49 | RUNEUSDT | surge | 0.498 | 0.501 | +0.60% |
+| 2026-09-10T10:49 | RUNEUSDT | surge | 0.498 | 0.498 | +0.00% |
+| 2026-09-10T11:41 | FFUSDT | surge | 0.15745 | 0.1557 | -1.11% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
