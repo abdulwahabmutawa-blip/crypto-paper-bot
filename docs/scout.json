@@ -1,24 +1,8 @@
 {
-  "ts": "2026-09-10T22:42:26+00:00",
-  "scanned": 118,
+  "ts": "2026-09-10T22:48:07+00:00",
+  "scanned": 116,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ONDOUSDT",
-      "signal": "ignition",
-      "score": 0.8484,
-      "raw_score": 0.9093,
-      "weight": 0.933,
-      "price": 0.3451,
-      "why": "trades 10.9x and volume 44.4x the prior 4h, 70% taker-buy, $479,453 burst \u2014 while price has only moved -0.6%",
-      "chg_24h": -0.0366,
-      "vol_surge": 44.4,
-      "chg_1h": -0.0063,
-      "market_surge": 13.43,
-      "actionable": false,
-      "status": "benched \u2014 hit 42%, mean -0.22% over last 538 at 24h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 42%, mean -0.22% over last 538 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 BTC-excess day mean -0.01% at 24h: market beta, not signal",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 2/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 11,
     "baseline": 13.0,
     "wave": false
   },
