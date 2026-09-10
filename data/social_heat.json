@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-10T06:47:31+00:00",
+  "ts": "2026-09-10T06:52:51+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
@@ -15,9 +15,8 @@
     "movers": [
       "NEAR",
       "SAHARA",
-      "IOST",
-      "TRX",
       "ZEC",
+      "TRX",
       "U",
       "RLUSD"
     ],
@@ -30,17 +29,6 @@
   },
   "heat": [
     {
-      "symbol": "IOST",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": -0.000275,
-      "long_short": 1.04
-    },
-    {
       "symbol": "NEAR",
       "surfaces": 3,
       "sources": [
@@ -48,7 +36,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 2.9e-05,
+      "funding": 3.4e-05,
       "long_short": 1.93
     },
     {
@@ -59,8 +47,18 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.0,
+      "funding": 3e-06,
       "long_short": 0.46
+    },
+    {
+      "symbol": "IOST",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "watcher"
+      ],
+      "funding": -0.000257,
+      "long_short": 1.04
     },
     {
       "symbol": "LIT",
@@ -84,7 +82,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.5e-05
+      "funding": 1.8e-05
     },
     {
       "symbol": "RAY",
@@ -107,7 +105,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -4e-06
+      "funding": -0.0
     },
     {
       "symbol": "TRX",
