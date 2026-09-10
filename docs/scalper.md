@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-10T22:43:30+00:00 · runs 474 · equity **$931.25** (-6.87%) · cash $186.76 · open 8/10 · round trips 167
+updated 2026-09-10T22:59:54+00:00 · runs 475 · equity **$931.44** (-6.86%) · cash $186.76 · open 8/10 · round trips 167
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,12 +36,12 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-10T14:59 | METUSDT | surge | 0.217 | 0.2146 | -1.11% |
-| 2026-09-10T14:59 | INJUSDT | bottom | 5.885 | 5.954 | +1.17% |
-| 2026-09-10T15:31 | AAPLBUSDT | surge | 323.88 | 326.1 | +0.69% |
-| 2026-09-10T19:51 | FFUSDT | surge | 0.16816 | 0.16997 | +1.08% |
+| 2026-09-10T14:59 | INJUSDT | bottom | 5.885 | 5.957 | +1.22% |
+| 2026-09-10T15:31 | AAPLBUSDT | surge | 323.88 | 325.96 | +0.64% |
+| 2026-09-10T19:51 | FFUSDT | surge | 0.16816 | 0.16914 | +0.58% |
 | 2026-09-10T21:17 | WLFIUSDT | surge | 0.0565 | 0.0563 | -0.35% |
-| 2026-09-10T21:17 | REZUSDT | bottom | 0.003125 | 0.003126 | +0.03% |
-| 2026-09-10T21:50 | EIGENUSDT | surge | 0.2177 | 0.2169 | -0.37% |
+| 2026-09-10T21:17 | REZUSDT | bottom | 0.003125 | 0.003129 | +0.13% |
+| 2026-09-10T21:50 | EIGENUSDT | surge | 0.2177 | 0.2182 | +0.23% |
 | 2026-09-10T22:42 | THEUSDT | bottom | 0.0663 | 0.0662 | -0.15% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
