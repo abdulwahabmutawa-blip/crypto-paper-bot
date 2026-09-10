@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-10T07:37:31+00:00",
+  "ts": "2026-09-10T07:42:43+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
@@ -15,10 +15,10 @@
     "movers": [
       "SAHARA",
       "RAY",
-      "NEAR",
-      "TRX",
       "SNDKB",
-      "U"
+      "TRX",
+      "U",
+      "RLUSD"
     ],
     "watcher": [
       "ZEC",
@@ -30,13 +30,12 @@
   "heat": [
     {
       "symbol": "NEAR",
-      "surfaces": 3,
+      "surfaces": 2,
       "sources": [
         "coingecko",
-        "movers",
         "watcher"
       ],
-      "funding": 4e-05,
+      "funding": 3.6e-05,
       "long_short": 1.92
     },
     {
@@ -46,7 +45,7 @@
         "coingecko",
         "watcher"
       ],
-      "funding": 7e-06,
+      "funding": 1e-05,
       "long_short": 0.48
     },
     {
@@ -55,7 +54,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.9e-05
+      "funding": 8.5e-05
     },
     {
       "symbol": "IOST",
@@ -63,7 +62,7 @@
       "sources": [
         "watcher"
       ],
-      "funding": -0.000196
+      "funding": -0.000182
     },
     {
       "symbol": "LIT",
@@ -87,7 +86,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.2e-05
+      "funding": 3.4e-05
     },
     {
       "symbol": "RAY",
@@ -98,12 +97,19 @@
       "funding": 0.0
     },
     {
+      "symbol": "RLUSD",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
+    },
+    {
       "symbol": "SAHARA",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -9.9e-05
+      "funding": -0.000105
     },
     {
       "symbol": "SNDKB",
@@ -118,7 +124,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.00018
+      "funding": -0.000178
     },
     {
       "symbol": "TRX",
@@ -126,7 +132,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -9.1e-05
+      "funding": -9.2e-05
     },
     {
       "symbol": "U",
