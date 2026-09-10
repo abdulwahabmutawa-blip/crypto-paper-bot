@@ -1,11 +1,13 @@
 {
   "created": "2026-08-15",
-  "held_symbol": "NEWTUSDT",
-  "entry_price": 0.04755,
-  "units": 718.8,
-  "entry_scan_ts": "2026-09-09T20:06:04+00:00",
-  "entry_source": "scout:surge",
-  "stopped": {},
+  "held_symbol": null,
+  "entry_price": null,
+  "units": 0.0,
+  "entry_scan_ts": null,
+  "entry_source": null,
+  "stopped": {
+    "NEWTUSDT": "2026-09-10T04:26:41+00:00"
+  },
   "entries": {
     "2026-09-10": 1
   },
@@ -808,43 +810,37 @@
       "date": "2026-09-09",
       "exit": 0.018009999999999998,
       "entry": 0.01857
+    },
+    {
+      "symbol": "NEWTUSDT",
+      "source": "scout:surge",
+      "entry_score": 0.8215,
+      "entry_time": "2026-09-10T03:42:59+00:00",
+      "exit_time": "2026-09-10T04:26:41+00:00",
+      "entry_price": 0.04755,
+      "exit_price": 0.04611,
+      "units": 718.8,
+      "spent_usd": 34.1742,
+      "got_usd": 33.1393,
+      "pnl_pct": -3.03,
+      "pnl_usd": -1.0605,
+      "fees_usd": 0.0256,
+      "reason": "PROTECTIVE STOP (-3.0% vs peak +2.5%) \u2014 the floor held at the exchange, between cycles",
+      "date": "2026-09-10",
+      "exit": 0.04611,
+      "entry": 0.04755
     }
   ],
-  "last_value_usd": 33.78,
-  "last_updated_utc": "2026-09-10T04:21:38+00:00",
-  "open_position": {
-    "symbol": "NEWTUSDT",
-    "entry_time": "2026-09-10T03:42:59+00:00",
-    "entry_price": 0.04755,
-    "current_price": 0.04698,
-    "units": 718.8,
-    "spent_usd": 34.1789,
-    "value_usd": 33.7692,
-    "pnl_usd": -0.4097,
-    "pnl_pct": -1.2,
-    "source": "scout:surge"
-  },
-  "spent_usd": 34.1789,
+  "last_value_usd": 33.15,
+  "last_updated_utc": "2026-09-10T04:26:41+00:00",
+  "open_position": null,
+  "spent_usd": null,
   "no_pair": {
-    "scan_ts": "2026-09-09T20:06:04+00:00",
+    "scan_ts": "2026-09-10T04:16:30+00:00",
     "syms": []
   },
   "wave_bonus_date": "2026-09-05",
   "book_hwm_usd": 44.27,
   "entry_score": 0.8215,
-  "entry_fee_usd": 0.025622,
-  "hwm": 0.04872,
-  "move_max_qv": 0.0,
-  "move_qv_sum": 0.0,
-  "move_qv_n": 0,
-  "move_last_ms": 0,
-  "entry_time": "2026-09-10T03:42:59+00:00",
-  "stop_order": {
-    "order_id": "202137540",
-    "stop": 0.04612,
-    "limit": null,
-    "qty": 718.7,
-    "type": "STOP_LOSS",
-    "client_order_id": "lotstop-NEWTUSDT-9011811770"
-  }
+  "halt_flagged": "CIRCUIT BREAKER \u2014 2 losi"
 }
