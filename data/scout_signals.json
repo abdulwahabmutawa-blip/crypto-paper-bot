@@ -1,10 +1,26 @@
 {
-  "ts": "2026-09-10T03:19:35+00:00",
+  "ts": "2026-09-10T03:25:00+00:00",
   "scanned": 126,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "REUSDT",
+      "signal": "ignition",
+      "score": 0.8003,
+      "raw_score": 0.8504,
+      "weight": 0.941,
+      "price": 0.4255,
+      "why": "trades 8.8x and volume 13.2x the prior 4h, 70% taker-buy, $57,609 burst \u2014 while price has only moved +1.1%",
+      "chg_24h": -0.0408,
+      "vol_surge": 13.23,
+      "chg_1h": 0.0112,
+      "market_surge": 5.22,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.62% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
-    "ignition": "benched \u2014 BTC-excess day mean +0.67% at 24h: market beta, not signal",
+    "ignition": "benched \u2014 BTC-excess day mean +0.62% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.62% at 24h: market beta, not signal",
     "reversion": "probation \u2014 6/12 resolved 24h samples under ruleset 3",
     "heat": "benched \u2014 BTC-excess day mean -1.77% at 24h: market beta, not signal",
@@ -43,19 +59,19 @@
       "avg_win_4h": 0.0203,
       "avg_loss_4h": -0.01597,
       "payoff_4h": 1.271,
-      "span_h_24h": 310.8,
-      "n_eff_24h": 12.95,
-      "n_24h": 532,
-      "hit_rate_24h": 0.442,
-      "mean_ret_24h": 0.00078,
-      "median_ret_24h": -0.00434,
+      "span_h_24h": 311.8,
+      "n_eff_24h": 12.99,
+      "n_24h": 533,
+      "hit_rate_24h": 0.441,
+      "mean_ret_24h": 0.00061,
+      "median_ret_24h": -0.00445,
       "both_halves_24h": false,
       "days_24h": 12,
-      "mean_x_24h": 0.00666,
+      "mean_x_24h": 0.00616,
       "days_x_24h": 7,
       "avg_win_24h": 0.04275,
-      "avg_loss_24h": -0.03517,
-      "payoff_24h": 1.215
+      "avg_loss_24h": -0.03537,
+      "payoff_24h": 1.209
     },
     "breakout": {
       "span_h_1h": 328.3,
