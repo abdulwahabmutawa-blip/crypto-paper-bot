@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-10T03:58:50+00:00 · runs 406 · equity **$969.05** (-3.09%) · cash $287.23 · open 7/10 · round trips 144
+updated 2026-09-10T04:16:30+00:00 · runs 407 · equity **$969.93** (-3.01%) · cash $287.23 · open 7/10 · round trips 144
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -35,12 +35,12 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-09T15:13 | MUBUSDT | surge | 1034.11 | 1022.2 | -1.15% |
-| 2026-09-09T15:36 | MRVLBUSDT | surge | 235.92 | 233.31 | -1.11% |
-| 2026-09-09T15:36 | SKHYBUSDT | surge | 194.64 | 192.81 | -0.94% |
-| 2026-09-09T16:47 | INTCBUSDT | surge | 106.11 | 104.65 | -1.38% |
-| 2026-09-09T20:03 | MSTRBUSDT | bottom | 132.71 | 133.49 | +0.59% |
-| 2026-09-09T22:17 | CRCLBUSDT | bottom | 91.62 | 92.79 | +1.28% |
-| 2026-09-10T03:56 | ENAUSDT | bottom | 0.1503 | 0.1499 | -0.27% |
+| 2026-09-09T15:13 | MUBUSDT | surge | 1034.11 | 1022.61 | -1.11% |
+| 2026-09-09T15:36 | MRVLBUSDT | surge | 235.92 | 233.59 | -0.99% |
+| 2026-09-09T15:36 | SKHYBUSDT | surge | 194.64 | 193.11 | -0.79% |
+| 2026-09-09T16:47 | INTCBUSDT | surge | 106.11 | 104.76 | -1.27% |
+| 2026-09-09T20:03 | MSTRBUSDT | bottom | 132.71 | 133.57 | +0.65% |
+| 2026-09-09T22:17 | CRCLBUSDT | bottom | 91.62 | 93 | +1.51% |
+| 2026-09-10T03:56 | ENAUSDT | bottom | 0.1503 | 0.1502 | -0.07% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
