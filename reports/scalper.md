@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-10T17:26:36+00:00 · runs 454 · equity **$936.00** (-6.40%) · cash $185.65 · open 8/10 · round trips 161
+updated 2026-09-10T17:42:47+00:00 · runs 455 · equity **$938.86** (-6.11%) · cash $185.65 · open 8/10 · round trips 161
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -35,13 +35,13 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-09T22:17 | CRCLBUSDT | bottom | 91.62 | 91.21 | -0.45% |
-| 2026-09-10T14:59 | METUSDT | surge | 0.217 | 0.2177 | +0.32% |
-| 2026-09-10T14:59 | INJUSDT | bottom | 5.885 | 5.953 | +1.16% |
-| 2026-09-10T14:59 | DOTUSDT | bottom | 1.083 | 1.095 | +1.11% |
-| 2026-09-10T15:31 | FFUSDT | surge | 0.1649 | 0.16615 | +0.76% |
-| 2026-09-10T15:31 | AAPLBUSDT | surge | 323.88 | 324.3 | +0.13% |
-| 2026-09-10T16:04 | SPCXBUSDT | surge | 151.92 | 150.92 | -0.66% |
-| 2026-09-10T16:04 | KAVAUSDT | surge | 0.06458 | 0.06292 | -2.57% |
+| 2026-09-09T22:17 | CRCLBUSDT | bottom | 91.62 | 91.24 | -0.41% |
+| 2026-09-10T14:59 | METUSDT | surge | 0.217 | 0.2212 | +1.94% |
+| 2026-09-10T14:59 | INJUSDT | bottom | 5.885 | 5.942 | +0.97% |
+| 2026-09-10T14:59 | DOTUSDT | bottom | 1.083 | 1.101 | +1.66% |
+| 2026-09-10T15:31 | FFUSDT | surge | 0.1649 | 0.16538 | +0.29% |
+| 2026-09-10T15:31 | AAPLBUSDT | surge | 323.88 | 325.4 | +0.47% |
+| 2026-09-10T16:04 | SPCXBUSDT | surge | 151.92 | 151.67 | -0.16% |
+| 2026-09-10T16:04 | KAVAUSDT | surge | 0.06458 | 0.06336 | -1.89% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
