@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-10T13:29:15+00:00 · runs 439 · equity **$932.26** (-6.77%) · cash $837.54 · open 1/10 · round trips 158
+updated 2026-09-10T13:46:35+00:00 · runs 440 · equity **$933.96** (-6.60%) · cash $837.54 · open 1/10 · round trips 158
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -35,6 +35,6 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-09T22:17 | CRCLBUSDT | bottom | 91.62 | 89.83 | -1.95% |
+| 2026-09-09T22:17 | CRCLBUSDT | bottom | 91.62 | 91.44 | -0.20% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
