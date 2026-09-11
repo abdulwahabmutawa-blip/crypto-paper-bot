@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-11T16:06:35+00:00 · runs 537 · equity **$913.42** (-8.66%) · cash $0.00 · open 10/10 · round trips 201
+updated 2026-09-11T16:23:11+00:00 · runs 538 · equity **$911.54** (-8.85%) · cash $0.00 · open 10/10 · round trips 201
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -35,15 +35,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-11T08:21 | KAVAUSDT | surge | 0.06512 | 0.06574 | +0.95% |
-| 2026-09-11T13:14 | POLUSDT | surge | 0.09563 | 0.09561 | -0.02% |
-| 2026-09-11T13:47 | AAPLBUSDT | surge | 333.04 | 333.59 | +0.17% |
-| 2026-09-11T13:47 | BTCUSDT | surge | 77877.3 | 78014 | +0.18% |
-| 2026-09-11T14:04 | CRCLBUSDT | surge | 94.88 | 93.15 | -1.82% |
-| 2026-09-11T14:21 | HOLOUSDT | surge | 0.0626 | 0.0638 | +1.92% |
-| 2026-09-11T15:48 | GOOGLBUSDT | surge | 341.35 | 341.64 | +0.08% |
-| 2026-09-11T16:04 | SOXLBUSDT | surge | 123.42 | 123.71 | +0.23% |
-| 2026-09-11T16:04 | DOGSUSDT | surge | 5.183e-05 | 5.223e-05 | +0.77% |
-| 2026-09-11T16:04 | PLUMEUSDT | surge | 0.01336 | 0.01345 | +0.67% |
+| 2026-09-11T08:21 | KAVAUSDT | surge | 0.06512 | 0.0655 | +0.58% |
+| 2026-09-11T13:14 | POLUSDT | surge | 0.09563 | 0.09687 | +1.30% |
+| 2026-09-11T13:47 | AAPLBUSDT | surge | 333.04 | 334.02 | +0.29% |
+| 2026-09-11T13:47 | BTCUSDT | surge | 77877.3 | 77487.2 | -0.50% |
+| 2026-09-11T14:04 | CRCLBUSDT | surge | 94.88 | 92.03 | -3.00% |
+| 2026-09-11T14:21 | HOLOUSDT | surge | 0.0626 | 0.0641 | +2.40% |
+| 2026-09-11T15:48 | GOOGLBUSDT | surge | 341.35 | 341.12 | -0.07% |
+| 2026-09-11T16:04 | SOXLBUSDT | surge | 123.42 | 122.51 | -0.74% |
+| 2026-09-11T16:04 | DOGSUSDT | surge | 5.183e-05 | 5.204e-05 | +0.41% |
+| 2026-09-11T16:04 | PLUMEUSDT | surge | 0.01336 | 0.01341 | +0.37% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
