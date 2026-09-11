@@ -1,10 +1,10 @@
 {
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "holding": "USO",
-  "units": 5.661598301022493,
-  "cash": 0.0,
-  "entry_price": 153.7449951171875,
+  "holding": "CASH",
+  "units": 0.0,
+  "cash": 869.3000517119024,
+  "entry_price": null,
   "bench_units": 1.332054612938296,
   "stopped": {
     "SHIB-USD": "2026-07-27T00:01:08+00:00",
@@ -819,6 +819,16 @@
       "value": 870.44,
       "fee": 1.0,
       "reason": "Grok: USO euphoric \u2014 oil war surge retail chase (scan 2026-09-10T14:08)"
+    },
+    {
+      "date": "2026-09-11",
+      "action": "SELL",
+      "ticker": "USO",
+      "price": 153.72000122,
+      "units": 5.6616,
+      "value": 870.3,
+      "fee": 1.0,
+      "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
     }
   ],
   "history": [
@@ -1097,18 +1107,12 @@
     },
     {
       "date": "2026-09-11",
-      "value": 867.7,
-      "bench": 1017.52,
-      "holding": "USO"
+      "value": 869.3,
+      "bench": 1018.42,
+      "holding": "CASH"
     }
   ],
   "intraday": [
-    {
-      "ts": "2026-08-22T17:51:53+00:00",
-      "value": 1518.86,
-      "bench": 1019.98,
-      "holding": "MRNA"
-    },
     {
       "ts": "2026-08-22T18:05:22+00:00",
       "value": 1518.86,
@@ -10102,9 +10106,15 @@
       "value": 867.7,
       "bench": 1017.52,
       "holding": "USO"
+    },
+    {
+      "ts": "2026-09-11T15:13:03+00:00",
+      "value": 869.3,
+      "bench": 1018.42,
+      "holding": "CASH"
     }
   ],
-  "last_updated_utc": "2026-09-11T14:56:13+00:00",
+  "last_updated_utc": "2026-09-11T15:13:03+00:00",
   "restatement": {
     "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)",
     "voided_trades": [
@@ -10183,5 +10193,5 @@
     ],
     "voided_reason": "signal faded before any real fill was possible (market closed the whole window) \u2014 trades could never have existed"
   },
-  "costs_paid": 153.3347
+  "costs_paid": 154.3355
 }
