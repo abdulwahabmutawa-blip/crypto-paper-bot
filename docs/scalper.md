@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-11T01:32:07+00:00 · runs 485 · equity **$925.18** (-7.48%) · cash $0.00 · open 10/10 · round trips 168
+updated 2026-09-11T01:50:23+00:00 · runs 486 · equity **$924.48** (-7.55%) · cash $0.00 · open 10/10 · round trips 168
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -35,15 +35,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-10T14:59 | METUSDT | surge | 0.217 | 0.213 | -1.84% |
-| 2026-09-10T14:59 | INJUSDT | bottom | 5.885 | 5.922 | +0.63% |
-| 2026-09-10T15:31 | AAPLBUSDT | surge | 323.88 | 325.72 | +0.57% |
-| 2026-09-10T19:51 | FFUSDT | surge | 0.16816 | 0.16916 | +0.59% |
-| 2026-09-10T21:17 | WLFIUSDT | surge | 0.0565 | 0.0564 | -0.18% |
-| 2026-09-10T21:17 | REZUSDT | bottom | 0.003125 | 0.003092 | -1.06% |
-| 2026-09-10T21:50 | EIGENUSDT | surge | 0.2177 | 0.2165 | -0.55% |
+| 2026-09-10T14:59 | METUSDT | surge | 0.217 | 0.2124 | -2.12% |
+| 2026-09-10T14:59 | INJUSDT | bottom | 5.885 | 5.93 | +0.76% |
+| 2026-09-10T15:31 | AAPLBUSDT | surge | 323.88 | 325.64 | +0.54% |
+| 2026-09-10T19:51 | FFUSDT | surge | 0.16816 | 0.16886 | +0.42% |
+| 2026-09-10T21:17 | WLFIUSDT | surge | 0.0565 | 0.0566 | +0.18% |
+| 2026-09-10T21:17 | REZUSDT | bottom | 0.003125 | 0.003059 | -2.11% |
+| 2026-09-10T21:50 | EIGENUSDT | surge | 0.2177 | 0.2147 | -1.38% |
 | 2026-09-10T22:42 | THEUSDT | bottom | 0.0663 | 0.0663 | +0.00% |
-| 2026-09-10T23:31 | DEXEUSDT | surge | 1.906 | 1.921 | +0.79% |
-| 2026-09-11T00:20 | THETAUSDT | surge | 0.1805 | 0.1782 | -1.27% |
+| 2026-09-10T23:31 | DEXEUSDT | surge | 1.906 | 1.938 | +1.68% |
+| 2026-09-11T00:20 | THETAUSDT | surge | 0.1805 | 0.1786 | -1.05% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
