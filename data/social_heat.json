@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-11T19:47:31+00:00",
+  "ts": "2026-09-11T19:53:06+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
@@ -15,12 +15,12 @@
     "movers": [
       "RAY",
       "ZEC",
-      "\u725b\u6765",
       "ETH",
-      "HOLO",
       "SOL",
+      "HOLO",
+      "NEAR",
       "BNB",
-      "NEAR"
+      "MARSCOIN"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -52,7 +52,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.000147,
+      "funding": -0.000143,
       "long_short": 0.47
     },
     {
@@ -61,7 +61,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.5e-05
+      "funding": 2.4e-05
     },
     {
       "symbol": "BNB",
@@ -85,7 +85,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.6e-05
+      "funding": -1e-05
+    },
+    {
+      "symbol": "MARSCOIN",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "NEAR",
@@ -93,7 +101,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -1.7e-05
+      "funding": -2.2e-05
     },
     {
       "symbol": "PENGU",
@@ -101,7 +109,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.5e-05
+      "funding": -1.8e-05
     },
     {
       "symbol": "SOL",
@@ -118,14 +126,6 @@
         "coingecko"
       ],
       "funding": 0.0
-    },
-    {
-      "symbol": "\u725b\u6765",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.000234
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
