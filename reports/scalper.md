@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-11T12:54:34+00:00 · runs 525 · equity **$907.43** (-9.26%) · cash $0.00 · open 10/10 · round trips 186
+updated 2026-09-11T12:58:59+00:00 · runs 526 · equity **$907.60** (-9.24%) · cash $0.00 · open 10/10 · round trips 186
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -35,15 +35,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-10T14:59 | INJUSDT | bottom | 5.885 | 5.933 | +0.82% |
-| 2026-09-10T15:31 | AAPLBUSDT | surge | 323.88 | 325.84 | +0.61% |
-| 2026-09-11T08:21 | KAVAUSDT | surge | 0.06512 | 0.06536 | +0.37% |
-| 2026-09-11T10:54 | POLUSDT | surge | 0.09415 | 0.09574 | +1.69% |
-| 2026-09-11T10:54 | ORCLBUSDT | surge | 164.06 | 163.33 | -0.44% |
-| 2026-09-11T10:54 | ADAUSDT | bottom | 0.2028 | 0.209 | +3.06% |
-| 2026-09-11T11:11 | DOGSUSDT | surge | 4.927e-05 | 5.033e-05 | +2.15% |
-| 2026-09-11T11:11 | LINKUSDT | bottom | 11.369 | 11.664 | +2.59% |
-| 2026-09-11T12:52 | SOXLBUSDT | surge | 119.88 | 121.25 | +1.14% |
-| 2026-09-11T12:52 | BMNRBUSDT | surge | 24.62 | 25.01 | +1.58% |
+| 2026-09-10T14:59 | INJUSDT | bottom | 5.885 | 5.916 | +0.53% |
+| 2026-09-10T15:31 | AAPLBUSDT | surge | 323.88 | 325.91 | +0.63% |
+| 2026-09-11T08:21 | KAVAUSDT | surge | 0.06512 | 0.06539 | +0.41% |
+| 2026-09-11T10:54 | POLUSDT | surge | 0.09415 | 0.09561 | +1.55% |
+| 2026-09-11T10:54 | ORCLBUSDT | surge | 164.06 | 164.21 | +0.09% |
+| 2026-09-11T10:54 | ADAUSDT | bottom | 0.2028 | 0.2083 | +2.71% |
+| 2026-09-11T11:11 | DOGSUSDT | surge | 4.927e-05 | 5.062e-05 | +2.74% |
+| 2026-09-11T11:11 | LINKUSDT | bottom | 11.369 | 11.641 | +2.39% |
+| 2026-09-11T12:52 | SOXLBUSDT | surge | 119.88 | 121.88 | +1.67% |
+| 2026-09-11T12:52 | BMNRBUSDT | surge | 24.62 | 24.88 | +1.06% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
