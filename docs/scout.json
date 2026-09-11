@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-11T00:13:06+00:00",
-  "scanned": 116,
+  "ts": "2026-09-11T00:18:25+00:00",
+  "scanned": 114,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "PAXGUSDT",
+      "signal": "ignition",
+      "score": 0.7411,
+      "raw_score": 0.7943,
+      "weight": 0.933,
+      "price": 4327.79,
+      "why": "trades 5.4x and volume 10.9x the prior 4h, 92% taker-buy, $243,804 burst \u2014 while price has only moved +0.0%",
+      "chg_24h": -0.0163,
+      "vol_surge": 10.93,
+      "chg_1h": 0.0004,
+      "market_surge": 3.62,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.37% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.37% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.01% at 24h: market beta, not signal",
