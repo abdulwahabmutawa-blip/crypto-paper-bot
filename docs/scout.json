@@ -1,8 +1,39 @@
 {
-  "ts": "2026-09-11T01:29:26+00:00",
-  "scanned": 115,
+  "ts": "2026-09-11T01:35:16+00:00",
+  "scanned": 116,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "WBTCUSDT",
+      "signal": "ignition",
+      "score": 0.9179,
+      "raw_score": 0.9817,
+      "weight": 0.935,
+      "price": 76830.3,
+      "why": "trades 29.7x and volume 28.9x the prior 4h, 94% taker-buy, $96,924 burst \u2014 while price has only moved +0.1%",
+      "chg_24h": -0.0154,
+      "vol_surge": 28.92,
+      "chg_1h": 0.0009,
+      "market_surge": 7.31,
+      "actionable": false,
+      "status": "benched \u2014 hit 42%, mean -0.21% over last 545 at 24h: not beating 4x the round trip"
+    },
+    {
+      "symbol": "ZROUSDT",
+      "signal": "ignition",
+      "score": 0.8632,
+      "raw_score": 0.9232,
+      "weight": 0.935,
+      "price": 1.028,
+      "why": "trades 12.2x and volume 81.4x the prior 4h, 71% taker-buy, $304,433 burst \u2014 while price has only moved -0.2%",
+      "chg_24h": -0.0172,
+      "vol_surge": 81.38,
+      "chg_1h": -0.0019,
+      "market_surge": 22.15,
+      "actionable": false,
+      "status": "benched \u2014 hit 42%, mean -0.21% over last 545 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 42%, mean -0.21% over last 545 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 BTC-excess day mean -0.01% at 24h: market beta, not signal",
