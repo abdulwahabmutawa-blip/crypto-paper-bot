@@ -129,6 +129,14 @@ elif flag.exists():
     print("[runner] red flag cleared — cycle completed")
 PY
 
+# 3c) FUNDING CARRY paper book (2026-09-11). Deliberately placed AFTER the
+#     real book's cycle and after $rc is captured, so it can never delay an
+#     exit or clobber PIPESTATUS. Read-only public endpoints, no keys, cannot
+#     trade. It lives here rather than in the Actions fleet because funding
+#     data is on fapi.binance.com, which has no public mirror and answers 451
+#     to US IPs — Actions runners are US-hosted, this box is not.
+python3 src/bot_carry.py || echo "[runner] carry book failed — funding is credited from history, so nothing is lost"
+
 # 4) publish where GitHub Pages can serve it (data/ is not served):
 #    state verbatim, ledger trimmed for the phone page
 cp -f data/lottery_state.json docs/lottery.json 2>/dev/null || true
@@ -142,6 +150,7 @@ for f in data/lottery_state.json data/lottery_ledger.jsonl \
          data/sentinel_state.json data/sentinel_verdict.json \
          data/announcements.json data/surge_signals.json data/surge_log.jsonl \
          data/social_radar_log.jsonl data/social_radar_card.json data/social_radar_state.json reports/social_radar.md \
+         data/carry_state.json reports/carry.md \
          docs/sentinel.html \
          docs/lottery.json docs/scout.json docs/lottery_ledger.jsonl; do
   git add "$f" 2>/dev/null || true
