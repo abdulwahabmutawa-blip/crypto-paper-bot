@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-11T02:25:37+00:00 · runs 488 · equity **$921.01** (-7.90%) · cash $0.00 · open 10/10 · round trips 169
+updated 2026-09-11T02:43:15+00:00 · runs 489 · equity **$923.35** (-7.67%) · cash $0.00 · open 10/10 · round trips 169
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -35,15 +35,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-10T14:59 | METUSDT | surge | 0.217 | 0.2111 | -2.72% |
-| 2026-09-10T14:59 | INJUSDT | bottom | 5.885 | 5.94 | +0.93% |
-| 2026-09-10T15:31 | AAPLBUSDT | surge | 323.88 | 325.57 | +0.52% |
-| 2026-09-10T19:51 | FFUSDT | surge | 0.16816 | 0.16816 | +0.00% |
-| 2026-09-10T21:17 | WLFIUSDT | surge | 0.0565 | 0.0566 | +0.18% |
-| 2026-09-10T21:50 | EIGENUSDT | surge | 0.2177 | 0.2152 | -1.15% |
+| 2026-09-10T14:59 | METUSDT | surge | 0.217 | 0.2101 | -3.18% |
+| 2026-09-10T14:59 | INJUSDT | bottom | 5.885 | 5.95 | +1.10% |
+| 2026-09-10T15:31 | AAPLBUSDT | surge | 323.88 | 325.61 | +0.53% |
+| 2026-09-10T19:51 | FFUSDT | surge | 0.16816 | 0.16905 | +0.53% |
+| 2026-09-10T21:17 | WLFIUSDT | surge | 0.0565 | 0.0569 | +0.71% |
+| 2026-09-10T21:50 | EIGENUSDT | surge | 0.2177 | 0.2151 | -1.19% |
 | 2026-09-10T22:42 | THEUSDT | bottom | 0.0663 | 0.0662 | -0.15% |
-| 2026-09-10T23:31 | DEXEUSDT | surge | 1.906 | 1.931 | +1.31% |
-| 2026-09-11T00:20 | THETAUSDT | surge | 0.1805 | 0.1769 | -1.99% |
-| 2026-09-11T02:23 | EGLDUSDT | bottom | 4.794 | 4.768 | -0.54% |
+| 2026-09-10T23:31 | DEXEUSDT | surge | 1.906 | 1.934 | +1.47% |
+| 2026-09-11T00:20 | THETAUSDT | surge | 0.1805 | 0.1782 | -1.27% |
+| 2026-09-11T02:23 | EGLDUSDT | bottom | 4.794 | 4.814 | +0.42% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
