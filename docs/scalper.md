@@ -2,20 +2,22 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-11T12:37:37+00:00 · runs 524 · equity **$908.27** (-9.17%) · cash $0.00 · open 10/10 · round trips 184
+updated 2026-09-11T12:54:34+00:00 · runs 525 · equity **$907.43** (-9.26%) · cash $0.00 · open 10/10 · round trips 186
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
-- hit 43% (break-even 54%) · mean -0.55%/trade · realized $-98.74 · worst day $-50.94 · trades/day 26.3
+- hit 43% (break-even 54%) · mean -0.58%/trade · realized $-104.68 · worst day $-50.94 · trades/day 26.6
 
 | shape | n | hit | mean | target% | stop% | time% |
 |---|---|---|---|---|---|---|
-| surge | 122 | 44% | -0.58% | 41% | 52% | 7% |
+| surge | 124 | 44% | -0.62% | 40% | 53% | 6% |
 | bottom | 62 | 42% | -0.50% | 40% | 47% | 13% |
 
 ## Last 15 round trips
 | exit (UTC) | coin | shape | how | hours | net | P&L |
 |---|---|---|---|---|---|---|
+| 2026-09-11T12:52 | THETAUSDT | surge | STOP | 0.8 | -3.25% | $-3.00 |
+| 2026-09-11T12:52 | 0GUSDT | surge | STOP | 2.0 | -3.25% | $-2.94 |
 | 2026-09-11T11:28 | AEROUSDT | surge | STOP | 1.8 | -3.25% | $-3.10 |
 | 2026-09-11T11:11 | ORCAUSDT | surge | STOP | 4.2 | -3.25% | $-2.92 |
 | 2026-09-11T11:11 | FFUSDT | surge | STOP | 15.0 | -3.25% | $-3.02 |
@@ -29,21 +31,19 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | 2026-09-11T07:47 | THETAUSDT | surge | TARGET | 7.2 | +2.75% | $+2.48 |
 | 2026-09-11T06:30 | XTZUSDT | surge | STOP | 1.8 | -3.25% | $-3.01 |
 | 2026-09-11T05:54 | DEXEUSDT | surge | STOP | 6.0 | -3.25% | $-3.03 |
-| 2026-09-11T04:44 | ORCAUSDT | surge | TARGET | 0.8 | +2.75% | $+2.48 |
-| 2026-09-11T02:58 | METUSDT | surge | STOP | 11.8 | -3.25% | $-3.02 |
 
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-10T14:59 | INJUSDT | bottom | 5.885 | 5.923 | +0.65% |
-| 2026-09-10T15:31 | AAPLBUSDT | surge | 323.88 | 325.7 | +0.56% |
-| 2026-09-11T08:21 | KAVAUSDT | surge | 0.06512 | 0.06577 | +1.00% |
-| 2026-09-11T10:37 | 0GUSDT | surge | 0.195 | 0.1963 | +0.67% |
-| 2026-09-11T10:54 | POLUSDT | surge | 0.09415 | 0.09441 | +0.28% |
-| 2026-09-11T10:54 | ORCLBUSDT | surge | 164.06 | 162.76 | -0.79% |
-| 2026-09-11T10:54 | ADAUSDT | bottom | 0.2028 | 0.2067 | +1.92% |
-| 2026-09-11T11:11 | DOGSUSDT | surge | 4.927e-05 | 5.024e-05 | +1.97% |
-| 2026-09-11T11:11 | LINKUSDT | bottom | 11.369 | 11.526 | +1.38% |
-| 2026-09-11T11:45 | THETAUSDT | surge | 0.1953 | 0.1957 | +0.20% |
+| 2026-09-10T14:59 | INJUSDT | bottom | 5.885 | 5.933 | +0.82% |
+| 2026-09-10T15:31 | AAPLBUSDT | surge | 323.88 | 325.84 | +0.61% |
+| 2026-09-11T08:21 | KAVAUSDT | surge | 0.06512 | 0.06536 | +0.37% |
+| 2026-09-11T10:54 | POLUSDT | surge | 0.09415 | 0.09574 | +1.69% |
+| 2026-09-11T10:54 | ORCLBUSDT | surge | 164.06 | 163.33 | -0.44% |
+| 2026-09-11T10:54 | ADAUSDT | bottom | 0.2028 | 0.209 | +3.06% |
+| 2026-09-11T11:11 | DOGSUSDT | surge | 4.927e-05 | 5.033e-05 | +2.15% |
+| 2026-09-11T11:11 | LINKUSDT | bottom | 11.369 | 11.664 | +2.59% |
+| 2026-09-11T12:52 | SOXLBUSDT | surge | 119.88 | 121.25 | +1.14% |
+| 2026-09-11T12:52 | BMNRBUSDT | surge | 24.62 | 25.01 | +1.58% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
