@@ -1,24 +1,8 @@
 {
-  "ts": "2026-09-11T09:45:09+00:00",
-  "scanned": 105,
+  "ts": "2026-09-11T09:50:36+00:00",
+  "scanned": 107,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "HBARUSDT",
-      "signal": "ignition",
-      "score": 0.7451,
-      "raw_score": 0.8003,
-      "weight": 0.931,
-      "price": 0.07409,
-      "why": "trades 20.8x and volume 6.4x the prior 4h, 63% taker-buy, $75,267 burst \u2014 while price has only moved -0.6%",
-      "chg_24h": -0.025,
-      "vol_surge": 6.35,
-      "chg_1h": -0.0064,
-      "market_surge": 2.46,
-      "actionable": false,
-      "status": "benched \u2014 hit 42%, mean -0.10% over last 548 at 24h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 42%, mean -0.10% over last 548 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 BTC-excess day mean -1.54% at 24h: market beta, not signal",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 2/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 10,
     "baseline": 13.0,
     "wave": false
   },
