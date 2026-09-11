@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-11T03:37:07+00:00",
-  "scanned": 113,
+  "ts": "2026-09-11T03:42:45+00:00",
+  "scanned": 111,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "TUTUSDT",
+      "signal": "ignition",
+      "score": 0.8696,
+      "raw_score": 0.9281,
+      "weight": 0.937,
+      "price": 0.01977,
+      "why": "trades 14.9x and volume 37.6x the prior 4h, 91% taker-buy, $387,407 burst \u2014 while price has only moved -1.9%",
+      "chg_24h": -0.0393,
+      "vol_surge": 37.56,
+      "chg_1h": -0.0193,
+      "market_surge": 9.61,
+      "actionable": false,
+      "status": "benched \u2014 hit 43%, mean -0.08% over last 545 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 43%, mean -0.08% over last 545 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 BTC-excess day mean -0.01% at 24h: market beta, not signal",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 2/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 11,
     "baseline": 13.0,
     "wave": false
   },
