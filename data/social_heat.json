@@ -1,15 +1,13 @@
 {
-  "ts": "2026-09-11T06:53:54+00:00",
+  "ts": "2026-09-11T06:59:41+00:00",
   "sources": {
     "coingecko": [
       "RAY",
       "LIT",
       "ZEC",
       "PUMP",
-      "ETH",
-      "MARSCOIN",
-      "PENGU",
-      "MET"
+      "MET",
+      "PENGU"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,8 +17,7 @@
       "MARSCOIN",
       "ETHFI",
       "UNI",
-      "U",
-      "RLUSD"
+      "U"
     ],
     "watcher": [
       "RAY",
@@ -29,17 +26,6 @@
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "MARSCOIN",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.02
-    },
     {
       "symbol": "RAY",
       "surfaces": 3,
@@ -51,12 +37,14 @@
       "funding": 0.0
     },
     {
-      "symbol": "ETH",
-      "surfaces": 1,
+      "symbol": "MARSCOIN",
+      "surfaces": 2,
       "sources": [
-        "coingecko"
+        "movers",
+        "watcher"
       ],
-      "funding": 4.9e-05
+      "funding": 5e-05,
+      "long_short": 1.02
     },
     {
       "symbol": "ETHFI",
@@ -64,7 +52,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.3e-05
+      "funding": 4e-05
     },
     {
       "symbol": "LIT",
@@ -96,14 +84,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.1e-05
-    },
-    {
-      "symbol": "RLUSD",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
+      "funding": 3.5e-05
     },
     {
       "symbol": "U",
@@ -118,7 +99,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 2.1e-05
+      "funding": 1.8e-05
     },
     {
       "symbol": "ZEC",
@@ -126,7 +107,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.5e-05
+      "funding": 3.5e-05
     },
     {
       "symbol": "\u725b\u6765",
