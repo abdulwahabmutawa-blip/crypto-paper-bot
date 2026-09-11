@@ -1,26 +1,25 @@
 {
-  "ts": "2026-09-11T06:43:26+00:00",
+  "ts": "2026-09-11T06:48:31+00:00",
   "sources": {
     "coingecko": [
       "RAY",
       "LIT",
       "ZEC",
       "PUMP",
-      "PENGU",
       "ETH",
-      "ARB",
-      "NEAR",
-      "MET",
-      "ZRO"
+      "MARSCOIN",
+      "PENGU",
+      "MET"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "\u725b\u6765",
       "RAY",
-      "MARSCOIN",
       "ETHFI",
+      "MARSCOIN",
       "UNI",
+      "NEAR",
       "U"
     ],
     "watcher": [
@@ -30,6 +29,17 @@
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "MARSCOIN",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.02
+    },
     {
       "symbol": "RAY",
       "surfaces": 3,
@@ -41,30 +51,12 @@
       "funding": 0.0
     },
     {
-      "symbol": "MARSCOIN",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.02
-    },
-    {
-      "symbol": "ARB",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 4.7e-05
+      "funding": 4.8e-05
     },
     {
       "symbol": "ETHFI",
@@ -94,9 +86,9 @@
       "symbol": "NEAR",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
-      "funding": 7.3e-05
+      "funding": 6.9e-05
     },
     {
       "symbol": "PENGU",
@@ -104,7 +96,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.4e-05
+      "funding": 1.1e-05
     },
     {
       "symbol": "PUMP",
@@ -112,7 +104,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.5e-05
+      "funding": 4.1e-05
     },
     {
       "symbol": "U",
@@ -127,7 +119,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 2.7e-05
+      "funding": 2.4e-05
     },
     {
       "symbol": "ZEC",
@@ -135,15 +127,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.1e-05
-    },
-    {
-      "symbol": "ZRO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": 5.3e-05
     },
     {
       "symbol": "\u725b\u6765",
