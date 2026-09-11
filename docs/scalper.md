@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-11T13:16:23+00:00 · runs 527 · equity **$907.22** (-9.28%) · cash $0.00 · open 10/10 · round trips 189
+updated 2026-09-11T13:32:58+00:00 · runs 528 · equity **$903.89** (-9.61%) · cash $0.00 · open 10/10 · round trips 189
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -35,15 +35,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-10T14:59 | INJUSDT | bottom | 5.885 | 5.886 | +0.02% |
-| 2026-09-10T15:31 | AAPLBUSDT | surge | 323.88 | 326.23 | +0.73% |
-| 2026-09-11T08:21 | KAVAUSDT | surge | 0.06512 | 0.06522 | +0.15% |
-| 2026-09-11T10:54 | ORCLBUSDT | surge | 164.06 | 163.81 | -0.15% |
-| 2026-09-11T11:11 | LINKUSDT | bottom | 11.369 | 11.656 | +2.52% |
-| 2026-09-11T12:52 | SOXLBUSDT | surge | 119.88 | 121.47 | +1.33% |
-| 2026-09-11T12:52 | BMNRBUSDT | surge | 24.62 | 24.7 | +0.32% |
-| 2026-09-11T13:14 | DOGSUSDT | surge | 5.069e-05 | 5.013e-05 | -1.10% |
-| 2026-09-11T13:14 | POLUSDT | surge | 0.09563 | 0.09693 | +1.36% |
-| 2026-09-11T13:14 | MORPHOUSDT | surge | 2.375 | 2.373 | -0.08% |
+| 2026-09-10T14:59 | INJUSDT | bottom | 5.885 | 5.896 | +0.19% |
+| 2026-09-10T15:31 | AAPLBUSDT | surge | 323.88 | 328.93 | +1.56% |
+| 2026-09-11T08:21 | KAVAUSDT | surge | 0.06512 | 0.06524 | +0.18% |
+| 2026-09-11T10:54 | ORCLBUSDT | surge | 164.06 | 161.72 | -1.43% |
+| 2026-09-11T11:11 | LINKUSDT | bottom | 11.369 | 11.635 | +2.34% |
+| 2026-09-11T12:52 | SOXLBUSDT | surge | 119.88 | 118.87 | -0.84% |
+| 2026-09-11T12:52 | BMNRBUSDT | surge | 24.62 | 24.46 | -0.65% |
+| 2026-09-11T13:14 | DOGSUSDT | surge | 5.069e-05 | 5.012e-05 | -1.12% |
+| 2026-09-11T13:14 | POLUSDT | surge | 0.09563 | 0.09685 | +1.28% |
+| 2026-09-11T13:14 | MORPHOUSDT | surge | 2.375 | 2.37 | -0.21% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
