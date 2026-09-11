@@ -1,8 +1,39 @@
 {
-  "ts": "2026-09-11T02:51:46+00:00",
+  "ts": "2026-09-11T02:57:26+00:00",
   "scanned": 110,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "MITOUSDT",
+      "signal": "ignition",
+      "score": 0.8077,
+      "raw_score": 0.8601,
+      "weight": 0.939,
+      "price": 0.0125,
+      "why": "trades 9.9x and volume 8.7x the prior 4h, 69% taker-buy, $54,725 burst \u2014 while price has only moved -1.0%",
+      "chg_24h": -0.0896,
+      "vol_surge": 8.69,
+      "chg_1h": -0.0103,
+      "market_surge": 4.11,
+      "actionable": false,
+      "status": "benched \u2014 hit 43%, mean -0.12% over last 542 at 24h: not beating 4x the round trip"
+    },
+    {
+      "symbol": "POLUSDT",
+      "signal": "ignition",
+      "score": 0.5893,
+      "raw_score": 0.6276,
+      "weight": 0.939,
+      "price": 0.09259,
+      "why": "trades 4.3x and volume 6.9x the prior 4h, 73% taker-buy, $79,904 burst \u2014 while price has only moved +0.0%",
+      "chg_24h": -0.0466,
+      "vol_surge": 6.93,
+      "chg_1h": 0.0004,
+      "market_surge": 2.78,
+      "actionable": false,
+      "status": "benched \u2014 hit 43%, mean -0.12% over last 542 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 43%, mean -0.12% over last 542 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 BTC-excess day mean -0.01% at 24h: market beta, not signal",
