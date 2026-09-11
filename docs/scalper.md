@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-11T11:46:51+00:00 · runs 521 · equity **$902.65** (-9.73%) · cash $0.00 · open 10/10 · round trips 184
+updated 2026-09-11T12:03:45+00:00 · runs 522 · equity **$901.94** (-9.81%) · cash $0.00 · open 10/10 · round trips 184
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -35,15 +35,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-10T14:59 | INJUSDT | bottom | 5.885 | 5.856 | -0.49% |
-| 2026-09-10T15:31 | AAPLBUSDT | surge | 323.88 | 326.81 | +0.90% |
-| 2026-09-11T08:21 | KAVAUSDT | surge | 0.06512 | 0.06535 | +0.35% |
-| 2026-09-11T10:37 | 0GUSDT | surge | 0.195 | 0.1972 | +1.13% |
-| 2026-09-11T10:54 | POLUSDT | surge | 0.09415 | 0.0935 | -0.69% |
-| 2026-09-11T10:54 | ORCLBUSDT | surge | 164.06 | 162.29 | -1.08% |
-| 2026-09-11T10:54 | ADAUSDT | bottom | 0.2028 | 0.2024 | -0.20% |
-| 2026-09-11T11:11 | DOGSUSDT | surge | 4.927e-05 | 4.992e-05 | +1.32% |
-| 2026-09-11T11:11 | LINKUSDT | bottom | 11.369 | 11.417 | +0.42% |
-| 2026-09-11T11:45 | THETAUSDT | surge | 0.1953 | 0.1951 | -0.10% |
+| 2026-09-10T14:59 | INJUSDT | bottom | 5.885 | 5.848 | -0.63% |
+| 2026-09-10T15:31 | AAPLBUSDT | surge | 323.88 | 326.2 | +0.72% |
+| 2026-09-11T08:21 | KAVAUSDT | surge | 0.06512 | 0.06548 | +0.55% |
+| 2026-09-11T10:37 | 0GUSDT | surge | 0.195 | 0.1977 | +1.38% |
+| 2026-09-11T10:54 | POLUSDT | surge | 0.09415 | 0.09294 | -1.29% |
+| 2026-09-11T10:54 | ORCLBUSDT | surge | 164.06 | 161.7 | -1.44% |
+| 2026-09-11T10:54 | ADAUSDT | bottom | 0.2028 | 0.2027 | -0.05% |
+| 2026-09-11T11:11 | DOGSUSDT | surge | 4.927e-05 | 5.016e-05 | +1.81% |
+| 2026-09-11T11:11 | LINKUSDT | bottom | 11.369 | 11.416 | +0.41% |
+| 2026-09-11T11:45 | THETAUSDT | surge | 0.1953 | 0.194 | -0.67% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
