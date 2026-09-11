@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-11T05:16:41+00:00",
+  "ts": "2026-09-11T05:21:55+00:00",
   "sources": {
     "coingecko": [
       "RAY",
@@ -16,9 +16,10 @@
     "movers": [
       "\u725b\u6765",
       "RAY",
-      "MARSCOIN",
       "ETHFI",
-      "UNI"
+      "MARSCOIN",
+      "UNI",
+      "U"
     ],
     "watcher": [
       "ZEC",
@@ -54,7 +55,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 5.8e-05,
+      "funding": 5.3e-05,
       "long_short": 1.37
     },
     {
@@ -73,7 +74,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.4e-05
+      "funding": 8.3e-05
     },
     {
       "symbol": "ETHFI",
@@ -81,7 +82,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 3.7e-05
+      "funding": 3.8e-05
     },
     {
       "symbol": "LINK",
@@ -89,7 +90,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.1e-05
+      "funding": 3e-05
     },
     {
       "symbol": "PENGU",
@@ -113,7 +114,14 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2e-06
+      "funding": -3e-06
+    },
+    {
+      "symbol": "U",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
     },
     {
       "symbol": "VTHO",
@@ -121,7 +129,7 @@
       "sources": [
         "watcher"
       ],
-      "funding": -0.002357
+      "funding": -0.002339
     },
     {
       "symbol": "\u725b\u6765",
@@ -129,7 +137,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 8.4e-05
+      "funding": 7.2e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
