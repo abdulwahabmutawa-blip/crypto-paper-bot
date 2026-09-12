@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-12T05:49:05+00:00 · runs 587 · equity **$911.01** (-8.90%) · cash $0.00 · open 10/10 · round trips 206
+updated 2026-09-12T05:54:06+00:00 · runs 588 · equity **$910.39** (-8.96%) · cash $0.00 · open 10/10 · round trips 206
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -35,14 +35,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-11T13:14 | POLUSDT | surge | 0.09563 | 0.0959 | +0.28% |
-| 2026-09-11T13:47 | AAPLBUSDT | surge | 333.04 | 332.96 | -0.02% |
-| 2026-09-11T13:47 | BTCUSDT | surge | 77877.3 | 77240 | -0.82% |
+| 2026-09-11T13:14 | POLUSDT | surge | 0.09563 | 0.09586 | +0.24% |
+| 2026-09-11T13:47 | AAPLBUSDT | surge | 333.04 | 332.94 | -0.03% |
+| 2026-09-11T13:47 | BTCUSDT | surge | 77877.3 | 77260.8 | -0.79% |
 | 2026-09-11T15:48 | GOOGLBUSDT | surge | 341.35 | 338.98 | -0.69% |
 | 2026-09-11T16:04 | SOXLBUSDT | surge | 123.42 | 123.17 | -0.20% |
-| 2026-09-11T16:04 | PLUMEUSDT | surge | 0.01336 | 0.01339 | +0.22% |
-| 2026-09-11T16:38 | KAITOUSDT | surge | 0.3105 | 0.3124 | +0.61% |
-| 2026-09-11T16:38 | CAKEUSDT | surge | 2.196 | 2.225 | +1.32% |
+| 2026-09-11T16:04 | PLUMEUSDT | surge | 0.01336 | 0.01337 | +0.07% |
+| 2026-09-11T16:38 | KAITOUSDT | surge | 0.3105 | 0.3117 | +0.39% |
+| 2026-09-11T16:38 | CAKEUSDT | surge | 2.196 | 2.219 | +1.05% |
 | 2026-09-11T20:35 | SPCXBUSDT | surge | 150.6 | 150.12 | -0.32% |
 | 2026-09-12T02:18 | ACEUSDT | surge | 0.1653 | 0.1627 | -1.57% |
 
