@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-12T16:55:41+00:00 · runs 626 · equity **$899.18** (-10.08%) · cash $0.00 · open 10/10 · round trips 219
+updated 2026-09-12T17:13:26+00:00 · runs 627 · equity **$897.85** (-10.22%) · cash $0.00 · open 10/10 · round trips 219
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -35,15 +35,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-11T20:35 | SPCXBUSDT | surge | 150.6 | 150.14 | -0.31% |
-| 2026-09-12T10:53 | PROMUSDT | surge | 5.762 | 5.664 | -1.70% |
-| 2026-09-12T14:31 | KAVAUSDT | surge | 0.07024 | 0.07038 | +0.20% |
-| 2026-09-12T14:31 | NEIROUSDT | surge | 8.935e-05 | 8.9e-05 | -0.39% |
-| 2026-09-12T16:00 | ORDIUSDT | surge | 4.305 | 4.267 | -0.88% |
-| 2026-09-12T16:18 | CHIPUSDT | surge | 0.0501 | 0.04902 | -2.16% |
-| 2026-09-12T16:18 | PYTHUSDT | surge | 0.05484 | 0.05449 | -0.64% |
-| 2026-09-12T16:18 | PENDLEUSDT | surge | 2.187 | 2.195 | +0.37% |
-| 2026-09-12T16:53 | WLFIUSDT | surge | 0.0591 | 0.0594 | +0.51% |
-| 2026-09-12T16:53 | ZAMAUSDT | surge | 0.04911 | 0.04951 | +0.81% |
+| 2026-09-11T20:35 | SPCXBUSDT | surge | 150.6 | 150.07 | -0.35% |
+| 2026-09-12T10:53 | PROMUSDT | surge | 5.762 | 5.727 | -0.61% |
+| 2026-09-12T14:31 | KAVAUSDT | surge | 0.07024 | 0.07047 | +0.33% |
+| 2026-09-12T14:31 | NEIROUSDT | surge | 8.935e-05 | 8.892e-05 | -0.48% |
+| 2026-09-12T16:00 | ORDIUSDT | surge | 4.305 | 4.259 | -1.07% |
+| 2026-09-12T16:18 | CHIPUSDT | surge | 0.0501 | 0.04872 | -2.75% |
+| 2026-09-12T16:18 | PYTHUSDT | surge | 0.05484 | 0.0545 | -0.62% |
+| 2026-09-12T16:18 | PENDLEUSDT | surge | 2.187 | 2.197 | +0.46% |
+| 2026-09-12T16:53 | WLFIUSDT | surge | 0.0591 | 0.0584 | -1.18% |
+| 2026-09-12T16:53 | ZAMAUSDT | surge | 0.04911 | 0.04937 | +0.53% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
