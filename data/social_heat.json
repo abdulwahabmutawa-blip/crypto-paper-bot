@@ -1,13 +1,14 @@
 {
-  "ts": "2026-09-12T12:12:09+00:00",
+  "ts": "2026-09-12T12:18:00+00:00",
   "sources": {
     "coingecko": [
-      "PENGU",
       "AI",
       "NEAR",
+      "PENGU",
       "ETH",
-      "SOL",
       "ZEC",
+      "SOL",
+      "BTC",
       "PUMP",
       "ETHFI",
       "PENDLE"
@@ -35,7 +36,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 6.3e-05,
+      "funding": 6.4e-05,
       "long_short": 0.54
     },
     {
@@ -60,7 +61,15 @@
       "sources": [
         "movers"
       ],
-      "funding": 5e-05
+      "funding": 5.2e-05
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 4e-05
     },
     {
       "symbol": "ETH",
@@ -68,7 +77,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.1e-05
+      "funding": 6.2e-05
     },
     {
       "symbol": "ETHFI",
@@ -76,7 +85,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.6e-05
+      "funding": -2.4e-05
     },
     {
       "symbol": "HOLO",
@@ -100,7 +109,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.7e-05
+      "funding": 0.0001
     },
     {
       "symbol": "PENGU",
@@ -108,7 +117,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.4e-05
+      "funding": 3.5e-05
     },
     {
       "symbol": "PEPE",
@@ -139,7 +148,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000336
+      "funding": -0.000312
     },
     {
       "symbol": "SOL",
@@ -147,7 +156,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.7e-05
+      "funding": 5.5e-05
     },
     {
       "symbol": "UNI",
@@ -155,7 +164,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.7e-05
+      "funding": 5.1e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
