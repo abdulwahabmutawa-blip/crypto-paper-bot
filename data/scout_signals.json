@@ -1,22 +1,22 @@
 {
-  "ts": "2026-09-12T03:49:54+00:00",
+  "ts": "2026-09-12T03:55:53+00:00",
   "scanned": 114,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "THETAUSDT",
-      "signal": "ignition",
-      "score": 0.6593,
-      "raw_score": 0.6904,
-      "weight": 0.955,
-      "price": 0.1917,
-      "why": "trades 5.0x and volume 8.8x the prior 4h, 75% taker-buy, $81,743 burst \u2014 while price has only moved -0.7%",
-      "chg_24h": 0.0709,
-      "vol_surge": 8.79,
-      "chg_1h": -0.0073,
-      "market_surge": 3.46,
+      "symbol": "CHZUSDT",
+      "signal": "breakout",
+      "score": 0.6821,
+      "raw_score": 0.7587,
+      "weight": 0.899,
+      "price": 0.01499,
+      "why": "trades 24.1x, volume 22.6x, 63% taker-buy, +2.7% in an hour, at 92% of its 24h range",
+      "chg_24h": 0.1007,
+      "vol_surge": 22.58,
+      "chg_1h": 0.0267,
+      "market_surge": 0.0,
       "actionable": false,
-      "status": "benched \u2014 hit 45%, mean +0.13% over last 542 at 24h: not beating 4x the round trip"
+      "status": "benched \u2014 BTC-excess day mean -0.34% at 24h: market beta, not signal"
     }
   ],
   "gate": {
