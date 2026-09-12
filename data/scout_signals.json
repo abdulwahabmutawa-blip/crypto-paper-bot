@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-12T04:56:49+00:00",
-  "scanned": 115,
+  "ts": "2026-09-12T05:02:07+00:00",
+  "scanned": 116,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ALLOUSDT",
+      "signal": "revival",
+      "score": 0.4913,
+      "raw_score": 0.4913,
+      "weight": 1.0,
+      "price": 0.2358,
+      "why": "revival day-one: fell -9% last week on $1.37M/day quiet, volume arriving 6.3x today, only +12% off its 30d low \u00b7 serial exploder: 2 runs in 2y",
+      "chg_24h": 0.0831,
+      "vol_surge": 6.3,
+      "chg_1h": null,
+      "market_surge": null,
+      "actionable": false,
+      "status": "probation \u2014 2/12 resolved 24h samples under ruleset 3"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 45%, mean +0.12% over last 546 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 BTC-excess day mean -0.70% at 24h: market beta, not signal",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 2/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 15,
+    "count": 13,
     "baseline": 12.0,
     "wave": false
   },
