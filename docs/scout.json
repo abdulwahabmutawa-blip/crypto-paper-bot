@@ -1,39 +1,8 @@
 {
-  "ts": "2026-09-12T02:00:53+00:00",
-  "scanned": 114,
+  "ts": "2026-09-12T02:06:01+00:00",
+  "scanned": 113,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ACEUSDT",
-      "signal": "breakout",
-      "score": 0.6998,
-      "raw_score": 0.7784,
-      "weight": 0.899,
-      "price": 0.1664,
-      "why": "trades 17.3x, volume 33.6x, 63% taker-buy, +3.3% in an hour, at 96% of its 24h range",
-      "chg_24h": 0.064,
-      "vol_surge": 33.56,
-      "chg_1h": 0.0329,
-      "market_surge": 0.0,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.34% at 24h: market beta, not signal"
-    },
-    {
-      "symbol": "ALLOUSDT",
-      "signal": "revival",
-      "score": 0.3213,
-      "raw_score": 0.3213,
-      "weight": 1.0,
-      "price": 0.2433,
-      "why": "revival day-one: fell -9% last week on $1.37M/day quiet, volume arriving 3.4x today, only +15% off its 30d low \u00b7 serial exploder: 2 runs in 2y",
-      "chg_24h": 0.1428,
-      "vol_surge": 3.4,
-      "chg_1h": null,
-      "market_surge": null,
-      "actionable": false,
-      "status": "probation \u2014 2/12 resolved 24h samples under ruleset 3"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.61% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.34% at 24h: market beta, not signal",
@@ -42,7 +11,7 @@
     "revival": "probation \u2014 2/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 15,
+    "count": 14,
     "baseline": 12.0,
     "wave": false
   },
