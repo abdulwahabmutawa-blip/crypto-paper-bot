@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-12T13:22:39+00:00 · runs 614 · equity **$906.79** (-9.32%) · cash $0.00 · open 10/10 · round trips 209
+updated 2026-09-12T13:40:20+00:00 · runs 615 · equity **$911.40** (-8.86%) · cash $0.00 · open 10/10 · round trips 209
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -35,15 +35,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-11T13:47 | AAPLBUSDT | surge | 333.04 | 333.04 | +0.00% |
-| 2026-09-11T13:47 | BTCUSDT | surge | 77877.3 | 77295.8 | -0.75% |
-| 2026-09-11T15:48 | GOOGLBUSDT | surge | 341.35 | 339.59 | -0.52% |
-| 2026-09-11T16:04 | SOXLBUSDT | surge | 123.42 | 121.97 | -1.17% |
-| 2026-09-11T16:04 | PLUMEUSDT | surge | 0.01336 | 0.01335 | -0.07% |
-| 2026-09-11T16:38 | KAITOUSDT | surge | 0.3105 | 0.3095 | -0.32% |
-| 2026-09-11T20:35 | SPCXBUSDT | surge | 150.6 | 150.1 | -0.33% |
-| 2026-09-12T10:53 | PROMUSDT | surge | 5.762 | 5.671 | -1.58% |
-| 2026-09-12T11:28 | THEUSDT | surge | 0.0672 | 0.066 | -1.79% |
-| 2026-09-12T13:20 | REZUSDT | surge | 0.003333 | 0.003351 | +0.54% |
+| 2026-09-11T13:47 | AAPLBUSDT | surge | 333.04 | 333.06 | +0.01% |
+| 2026-09-11T13:47 | BTCUSDT | surge | 77877.3 | 77299.6 | -0.74% |
+| 2026-09-11T15:48 | GOOGLBUSDT | surge | 341.35 | 339.34 | -0.59% |
+| 2026-09-11T16:04 | SOXLBUSDT | surge | 123.42 | 122.03 | -1.13% |
+| 2026-09-11T16:04 | PLUMEUSDT | surge | 0.01336 | 0.01334 | -0.15% |
+| 2026-09-11T16:38 | KAITOUSDT | surge | 0.3105 | 0.3094 | -0.35% |
+| 2026-09-11T20:35 | SPCXBUSDT | surge | 150.6 | 150.11 | -0.33% |
+| 2026-09-12T10:53 | PROMUSDT | surge | 5.762 | 5.803 | +0.71% |
+| 2026-09-12T11:28 | THEUSDT | surge | 0.0672 | 0.0657 | -2.23% |
+| 2026-09-12T13:20 | REZUSDT | surge | 0.003333 | 0.003456 | +3.69% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
