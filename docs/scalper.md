@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-12T16:20:08+00:00 · runs 624 · equity **$902.73** (-9.73%) · cash $0.00 · open 10/10 · round trips 217
+updated 2026-09-12T16:37:52+00:00 · runs 625 · equity **$898.87** (-10.11%) · cash $0.00 · open 10/10 · round trips 217
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -35,15 +35,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-11T16:38 | KAITOUSDT | surge | 0.3105 | 0.3094 | -0.35% |
-| 2026-09-11T20:35 | SPCXBUSDT | surge | 150.6 | 150.14 | -0.31% |
-| 2026-09-12T10:53 | PROMUSDT | surge | 5.762 | 5.705 | -0.99% |
-| 2026-09-12T14:31 | KAVAUSDT | surge | 0.07024 | 0.07065 | +0.58% |
-| 2026-09-12T14:31 | NEIROUSDT | surge | 8.935e-05 | 8.852e-05 | -0.93% |
-| 2026-09-12T14:31 | CFGUSDT | surge | 0.1115 | 0.1089 | -2.33% |
-| 2026-09-12T16:00 | ORDIUSDT | surge | 4.305 | 4.305 | +0.00% |
-| 2026-09-12T16:18 | CHIPUSDT | surge | 0.0501 | 0.04998 | -0.24% |
-| 2026-09-12T16:18 | PYTHUSDT | surge | 0.05484 | 0.05482 | -0.04% |
-| 2026-09-12T16:18 | PENDLEUSDT | surge | 2.187 | 2.195 | +0.37% |
+| 2026-09-11T16:38 | KAITOUSDT | surge | 0.3105 | 0.3095 | -0.32% |
+| 2026-09-11T20:35 | SPCXBUSDT | surge | 150.6 | 150.16 | -0.29% |
+| 2026-09-12T10:53 | PROMUSDT | surge | 5.762 | 5.673 | -1.54% |
+| 2026-09-12T14:31 | KAVAUSDT | surge | 0.07024 | 0.07033 | +0.13% |
+| 2026-09-12T14:31 | NEIROUSDT | surge | 8.935e-05 | 8.87e-05 | -0.73% |
+| 2026-09-12T14:31 | CFGUSDT | surge | 0.1115 | 0.1081 | -3.05% |
+| 2026-09-12T16:00 | ORDIUSDT | surge | 4.305 | 4.274 | -0.72% |
+| 2026-09-12T16:18 | CHIPUSDT | surge | 0.0501 | 0.04913 | -1.94% |
+| 2026-09-12T16:18 | PYTHUSDT | surge | 0.05484 | 0.05454 | -0.55% |
+| 2026-09-12T16:18 | PENDLEUSDT | surge | 2.187 | 2.198 | +0.50% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
