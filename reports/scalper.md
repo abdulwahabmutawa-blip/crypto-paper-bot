@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-12T14:33:32+00:00 · runs 618 · equity **$907.85** (-9.21%) · cash $0.00 · open 10/10 · round trips 213
+updated 2026-09-12T14:51:16+00:00 · runs 619 · equity **$908.41** (-9.16%) · cash $0.00 · open 10/10 · round trips 213
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -35,15 +35,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-11T15:48 | GOOGLBUSDT | surge | 341.35 | 339.68 | -0.49% |
-| 2026-09-11T16:04 | SOXLBUSDT | surge | 123.42 | 122.24 | -0.96% |
-| 2026-09-11T16:04 | PLUMEUSDT | surge | 0.01336 | 0.01333 | -0.22% |
-| 2026-09-11T16:38 | KAITOUSDT | surge | 0.3105 | 0.3091 | -0.45% |
-| 2026-09-11T20:35 | SPCXBUSDT | surge | 150.6 | 150.12 | -0.32% |
-| 2026-09-12T10:53 | PROMUSDT | surge | 5.762 | 5.716 | -0.80% |
-| 2026-09-12T14:31 | KAVAUSDT | surge | 0.07024 | 0.07023 | -0.01% |
-| 2026-09-12T14:31 | NEIROUSDT | surge | 8.935e-05 | 8.91e-05 | -0.28% |
-| 2026-09-12T14:31 | CFGUSDT | surge | 0.1115 | 0.1111 | -0.36% |
-| 2026-09-12T14:31 | ETHFIUSDT | surge | 0.7646 | 0.7688 | +0.55% |
+| 2026-09-11T15:48 | GOOGLBUSDT | surge | 341.35 | 339.57 | -0.52% |
+| 2026-09-11T16:04 | SOXLBUSDT | surge | 123.42 | 122.23 | -0.96% |
+| 2026-09-11T16:04 | PLUMEUSDT | surge | 0.01336 | 0.01337 | +0.07% |
+| 2026-09-11T16:38 | KAITOUSDT | surge | 0.3105 | 0.309 | -0.48% |
+| 2026-09-11T20:35 | SPCXBUSDT | surge | 150.6 | 150.11 | -0.33% |
+| 2026-09-12T10:53 | PROMUSDT | surge | 5.762 | 5.732 | -0.52% |
+| 2026-09-12T14:31 | KAVAUSDT | surge | 0.07024 | 0.07022 | -0.03% |
+| 2026-09-12T14:31 | NEIROUSDT | surge | 8.935e-05 | 9.009e-05 | +0.83% |
+| 2026-09-12T14:31 | CFGUSDT | surge | 0.1115 | 0.1107 | -0.72% |
+| 2026-09-12T14:31 | ETHFIUSDT | surge | 0.7646 | 0.764 | -0.08% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
