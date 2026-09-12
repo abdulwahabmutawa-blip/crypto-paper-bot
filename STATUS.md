@@ -1,25 +1,28 @@
-# Fleet status — 2026-09-11 (UTC)
+# Fleet status — 2026-09-12 (UTC)
 
 | Bot | Holds | 24h change | Value |
 |---|---|---|---|
-| crypto | BTC-USD | No new trade | $1,100.16 (09-11 mark, was $1,117.93) |
-| meanrev | HD | No new trade — mkt-hours marks only | $1,236.28 (09-10 close, was $1,255.81) |
-| sentiment | USO | 1 rotation: ZEC-USD → USO (09-10 14:08, hype faded off Grok list) | $896.68 (09-10 mark, was $929.68) |
-| scalper | 10 open seats | 27 round trips closed (171 lifetime), 6W/21L, net -$48.30; open seats 7→10 | $922.20 (was $971.45) |
-| smallwins (lab) | 317 open seats | 88 runs, 1,456 newly resolved (20,000 lifetime) — paper study, no $ book | n/a |
-| Watcher | — (no capital) | 4 scans (12:21, 14:13, 22:10, 22:11 UTC) — risk level "caution" each time | n/a |
+| crypto | BTC-USD | No new trade | $1,102.40 (09-12 mark, was $1,100.16) |
+| meanrev | HD | No new trade — mkt-hours marks only | $1,248.77 (09-11 close, was $1,236.28) |
+| sentiment | CASH | Sold USO → cash, "hype faded" signal | $869.30 (was $896.68 holding USO) |
+| scalper | 10 open seats | 35 round trips closed (206 lifetime), 17W/18L, net -$11.72 | $911.32 (was $922.20) |
+| smallwins (lab) | 464 open seats | 654 runs, 20,000 resolved lifetime — paper study, no $ book | n/a |
+| Watcher (sentinel) | — (no capital) | 4 scans, risk level "caution" each time | n/a |
+| carry (new, VPS) | BTCUSDT spot+perp | New book, opened 09-11 21:02 UTC, 1 funding settlement | Net $-1.14 on $2,000 |
 | retired (8, frozen) | congress, commodity, allweather, hunter, hypecrypto, scholar, stock, analyst | No state file changed in 24h | — |
-| lottery — REAL MONEY | flat, kill-switched | Owner stopped live entries 09-10 (surge lane -$6.13/5d, 3y backtest -34.5%); not part of paper fleet | not evaluated here |
-| hype-ibkr — REAL MONEY | not evaluated | Logging stopped ~17:51 UTC 09-10 (same daily pattern) | not part of paper fleet |
+| lottery — REAL MONEY | flat, kill-switched | Still flat since 09-10 kill switch; 260 log commits, no position | $33.15, not part of paper fleet |
+| hype-ibkr — REAL MONEY | not evaluated | No update since 09-10 17:50 UTC (still stalled) | not part of paper fleet |
 
 ## Changed
-- **sentiment**: ZEC-USD → USO at 09-10 14:08, on a Grok "hype faded" signal. Book down to $896.68 from $929.68 (-3.5%).
-- **scalper**: 27 new closed round trips (144→171 lifetime), open seats up 7→10, losing stretch (6W/21L, -$48.30 net). Equity $922.20, down from $971.45 (-5.1%).
-- **crypto**, **meanrev**: no trades; still holding BTC-USD and HD, both drifted down slightly with the market (-1.6% each).
-- **lottery** (real money, out of scope): owner pulled the kill switch 09-10 on the surge lane after a losing backtest — flagging only because it's a new file in the repo, not a paper-fleet event.
-- Paper-fleet cron: 88 cycle commits in 24h, steady ~17-18 min cadence, no gaps. No error/fix/revert commit messages in the window.
+- **sentiment**: sold USO → CASH, no new position yet ("hype faded off Grok's list"). Book down to $869.30 from $896.68 (-3.1%).
+- **scalper**: 35 new closed round trips (171→206 lifetime), open seats steady at 10, losing stretch continues (17W/18L, -$11.72 net). Equity $911.32, down from $922.20 (-1.0%).
+- **crypto**, **meanrev**: no trades; still holding BTC-USD and HD, both drifted up slightly (+0.2%, +1.0%).
+- **New book**: `carry` (funding-carry, delta-neutral BTC spot+perp) appeared 09-11 in `src/bot_carry.py`/`reports/carry.md` — runs on the VPS, not GitHub Actions, $2,000 paper capital (separate from the $1,000 fleet books), 1 funding settlement banked, net -$1.14 so far.
+- **New, unexplained**: an `oracle/` prediction-scoring system started logging (`oracle: ...` commits) — not documented in CLAUDE.md and not a position-holding bot; flagging rather than describing further.
+- Paper-fleet cron: 87 cycle commits in 24h, steady ~17-18 min cadence, no gaps >21 min. No error/fix/revert commit messages in the window.
 
 ## Needs a look
-- Bot roster mismatch persists: this digest's assumed list (trend, regime, congress, meanrev, commodity, allweather, hype, Hunter) still doesn't match what's active. Per `CLAUDE.md`, only 4 books trade daily (crypto, meanrev, sentiment, scalper); the other 8 remain frozen archives (0 state changes in 24h).
-- This session's clone was shallow with a stale/truncated ref that made it look like the fleet had gone dark for ~44h (2026-09-09 05:02 → 2026-09-11 01:36). A full unshallow fetch showed that gap was a clone artifact, not a real outage — cycles ran continuously at normal cadence throughout. No actual fleet downtime found. Flagging in case the checkout can be fixed to always fetch full history upfront, so this doesn't need re-diagnosing daily.
+- `carry` and `oracle` are new since yesterday's digest and aren't described in CLAUDE.md — worth the owner confirming these are intentional additions to what gets tracked here.
+- `hype-ibkr` (real money) still hasn't logged since 09-10 17:50 UTC — flagged yesterday too, still stale.
+- Bot roster mismatch persists: this digest's assumed list (trend, regime, congress, meanrev, commodity, allweather, hype, Hunter) still doesn't match what's active. Per `CLAUDE.md`, the paper fleet is crypto, meanrev, sentiment, scalper; the other 8 named remain frozen archives (0 state changes in 24h).
 - Everything else: no exceptions, no stale prices, no impossible states found in the data touched this window.
