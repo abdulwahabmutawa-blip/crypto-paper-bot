@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-12T00:09:23+00:00",
-  "scanned": 112,
+  "ts": "2026-09-12T00:14:53+00:00",
+  "scanned": 113,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ORCAUSDT",
+      "signal": "breakout",
+      "score": 0.6822,
+      "raw_score": 0.7597,
+      "weight": 0.898,
+      "price": 1.496,
+      "why": "trades 32.4x, volume 36.7x, 71% taker-buy, +2.2% in an hour, at 101% of its 24h range",
+      "chg_24h": 0.0603,
+      "vol_surge": 36.68,
+      "chg_1h": 0.0219,
+      "market_surge": 10.92,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.34% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.65% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.34% at 24h: market beta, not signal",
