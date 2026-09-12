@@ -1,63 +1,17 @@
 {
-  "ts": "2026-09-12T09:08:54+00:00",
-  "scanned": 119,
+  "ts": "2026-09-12T09:14:30+00:00",
+  "scanned": 118,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "CRCLBUSDT",
-      "signal": "ignition",
-      "score": 0.9365,
-      "raw_score": 0.9745,
-      "weight": 0.961,
-      "price": 91.36,
-      "why": "trades 11.3x and volume 20.1x the prior 4h, 91% taker-buy, $60,071 burst \u2014 while price has only moved +0.2%",
-      "chg_24h": 0.0025,
-      "vol_surge": 20.09,
-      "chg_1h": 0.0016,
-      "market_surge": 0.43,
-      "actionable": false,
-      "status": "benched \u2014 hit 45%, mean +0.04% over last 545 at 24h: not beating 4x the round trip"
-    },
-    {
-      "symbol": "REZUSDT",
-      "signal": "ignition",
-      "score": 0.6789,
-      "raw_score": 0.7064,
-      "weight": 0.961,
-      "price": 0.003329,
-      "why": "trades 13.4x and volume 5.4x the prior 4h, 60% taker-buy, $220,552 burst \u2014 while price has only moved +3.1%",
-      "chg_24h": 0.0705,
-      "vol_surge": 5.36,
-      "chg_1h": 0.0313,
-      "market_surge": 6.91,
-      "actionable": false,
-      "status": "benched \u2014 hit 45%, mean +0.04% over last 545 at 24h: not beating 4x the round trip"
-    },
-    {
-      "symbol": "REZUSDT",
-      "signal": "breakout",
-      "score": 0.6124,
-      "raw_score": 0.6858,
-      "weight": 0.893,
-      "price": 0.003329,
-      "why": "trades 13.4x, volume 5.4x, 60% taker-buy, +3.1% in an hour, at 81% of its 24h range",
-      "chg_24h": 0.0705,
-      "vol_surge": 5.36,
-      "chg_1h": 0.0313,
-      "market_surge": 6.91,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.68% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 45%, mean +0.04% over last 545 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 BTC-excess day mean -0.68% at 24h: market beta, not signal",
     "reversion": "probation \u2014 13 rows but only 5.5 independent 24h windows (span 133h): overlapping labels are not a sample",
-    "heat": "benched \u2014 BTC-excess day mean -2.48% at 24h: market beta, not signal",
+    "heat": "benched \u2014 BTC-excess day mean -2.49% at 24h: market beta, not signal",
     "revival": "probation \u2014 2/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 11,
+    "count": 12,
     "baseline": 12.0,
     "wave": false
   },
@@ -220,7 +174,7 @@
       "median_ret_24h": -0.01628,
       "both_halves_24h": false,
       "days_24h": 12,
-      "mean_x_24h": -0.02476,
+      "mean_x_24h": -0.02487,
       "days_x_24h": 9,
       "avg_win_24h": 0.0646,
       "avg_loss_24h": -0.10066,
