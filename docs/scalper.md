@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-12T03:12:55+00:00 · runs 578 · equity **$916.10** (-8.39%) · cash $0.00 · open 10/10 · round trips 206
+updated 2026-09-12T03:30:14+00:00 · runs 579 · equity **$914.09** (-8.59%) · cash $0.00 · open 10/10 · round trips 206
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -35,15 +35,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-11T13:14 | POLUSDT | surge | 0.09563 | 0.09666 | +1.08% |
-| 2026-09-11T13:47 | AAPLBUSDT | surge | 333.04 | 332.62 | -0.13% |
-| 2026-09-11T13:47 | BTCUSDT | surge | 77877.3 | 77310 | -0.73% |
-| 2026-09-11T15:48 | GOOGLBUSDT | surge | 341.35 | 338.68 | -0.78% |
-| 2026-09-11T16:04 | SOXLBUSDT | surge | 123.42 | 123.14 | -0.23% |
-| 2026-09-11T16:04 | PLUMEUSDT | surge | 0.01336 | 0.01353 | +1.27% |
-| 2026-09-11T16:38 | KAITOUSDT | surge | 0.3105 | 0.3142 | +1.19% |
-| 2026-09-11T16:38 | CAKEUSDT | surge | 2.196 | 2.242 | +2.09% |
-| 2026-09-11T20:35 | SPCXBUSDT | surge | 150.6 | 150.18 | -0.28% |
-| 2026-09-12T02:18 | ACEUSDT | surge | 0.1653 | 0.1668 | +0.91% |
+| 2026-09-11T13:14 | POLUSDT | surge | 0.09563 | 0.09642 | +0.83% |
+| 2026-09-11T13:47 | AAPLBUSDT | surge | 333.04 | 332.75 | -0.09% |
+| 2026-09-11T13:47 | BTCUSDT | surge | 77877.3 | 77280 | -0.77% |
+| 2026-09-11T15:48 | GOOGLBUSDT | surge | 341.35 | 338.61 | -0.80% |
+| 2026-09-11T16:04 | SOXLBUSDT | surge | 123.42 | 123.11 | -0.25% |
+| 2026-09-11T16:04 | PLUMEUSDT | surge | 0.01336 | 0.01347 | +0.82% |
+| 2026-09-11T16:38 | KAITOUSDT | surge | 0.3105 | 0.3134 | +0.93% |
+| 2026-09-11T16:38 | CAKEUSDT | surge | 2.196 | 2.232 | +1.64% |
+| 2026-09-11T20:35 | SPCXBUSDT | surge | 150.6 | 150.16 | -0.29% |
+| 2026-09-12T02:18 | ACEUSDT | surge | 0.1653 | 0.1656 | +0.18% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
