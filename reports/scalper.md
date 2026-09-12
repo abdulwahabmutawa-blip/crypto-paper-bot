@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-12T22:42:24+00:00 · runs 646 · equity **$885.74** (-11.43%) · cash $0.00 · open 10/10 · round trips 229
+updated 2026-09-12T23:00:27+00:00 · runs 647 · equity **$884.89** (-11.51%) · cash $0.00 · open 10/10 · round trips 229
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -35,15 +35,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-12T14:31 | NEIROUSDT | surge | 8.935e-05 | 8.711e-05 | -2.51% |
-| 2026-09-12T16:18 | PYTHUSDT | surge | 0.05484 | 0.05498 | +0.26% |
-| 2026-09-12T16:18 | PENDLEUSDT | surge | 2.187 | 2.184 | -0.14% |
-| 2026-09-12T16:53 | ZAMAUSDT | surge | 0.04911 | 0.04836 | -1.53% |
+| 2026-09-12T14:31 | NEIROUSDT | surge | 8.935e-05 | 8.713e-05 | -2.48% |
+| 2026-09-12T16:18 | PYTHUSDT | surge | 0.05484 | 0.05491 | +0.13% |
+| 2026-09-12T16:18 | PENDLEUSDT | surge | 2.187 | 2.172 | -0.69% |
+| 2026-09-12T16:53 | ZAMAUSDT | surge | 0.04911 | 0.04838 | -1.49% |
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-09-12T20:15 | PUMPUSDT | surge | 0.003852 | 0.003783 | -1.79% |
-| 2026-09-12T20:51 | INJUSDT | surge | 6.063 | 5.999 | -1.06% |
-| 2026-09-12T22:04 | KAVAUSDT | surge | 0.07173 | 0.07183 | +0.14% |
-| 2026-09-12T22:22 | DOTUSDT | bottom | 1.025 | 1.019 | -0.59% |
-| 2026-09-12T22:40 | DASHUSDT | bottom | 54.86 | 54.86 | +0.00% |
+| 2026-09-12T20:15 | PUMPUSDT | surge | 0.003852 | 0.003785 | -1.74% |
+| 2026-09-12T20:51 | INJUSDT | surge | 6.063 | 5.987 | -1.25% |
+| 2026-09-12T22:04 | KAVAUSDT | surge | 0.07173 | 0.07203 | +0.42% |
+| 2026-09-12T22:22 | DOTUSDT | bottom | 1.025 | 1.016 | -0.88% |
+| 2026-09-12T22:40 | DASHUSDT | bottom | 54.86 | 54.77 | -0.16% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
