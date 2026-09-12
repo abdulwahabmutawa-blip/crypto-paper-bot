@@ -1,24 +1,8 @@
 {
-  "ts": "2026-09-12T18:15:24+00:00",
+  "ts": "2026-09-12T18:20:52+00:00",
   "scanned": 74,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "BCHUSDT",
-      "signal": "ignition",
-      "score": 0.7186,
-      "raw_score": 0.7533,
-      "weight": 0.954,
-      "price": 227.6,
-      "why": "trades 4.9x and volume 10.0x the prior 4h, 87% taker-buy, $119,840 burst \u2014 while price has only moved -0.5%",
-      "chg_24h": -0.0022,
-      "vol_surge": 10.0,
-      "chg_1h": -0.0048,
-      "market_surge": 2.24,
-      "actionable": false,
-      "status": "benched \u2014 hit 44%, mean +0.01% over last 557 at 24h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 44%, mean +0.01% over last 557 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 BTC-excess day mean -0.42% at 24h: market beta, not signal",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 2/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 16,
+    "count": 14,
     "baseline": 12.0,
     "wave": false
   },
