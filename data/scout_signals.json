@@ -1,33 +1,17 @@
 {
-  "ts": "2026-09-12T00:14:53+00:00",
-  "scanned": 113,
+  "ts": "2026-09-12T00:20:22+00:00",
+  "scanned": 112,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ORCAUSDT",
-      "signal": "breakout",
-      "score": 0.6822,
-      "raw_score": 0.7597,
-      "weight": 0.898,
-      "price": 1.496,
-      "why": "trades 32.4x, volume 36.7x, 71% taker-buy, +2.2% in an hour, at 101% of its 24h range",
-      "chg_24h": 0.0603,
-      "vol_surge": 36.68,
-      "chg_1h": 0.0219,
-      "market_surge": 10.92,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.34% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
-    "ignition": "benched \u2014 BTC-excess day mean +0.65% at 24h: market beta, not signal",
+    "ignition": "benched \u2014 BTC-excess day mean +0.73% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.34% at 24h: market beta, not signal",
     "reversion": "probation \u2014 13 rows but only 5.5 independent 24h windows (span 133h): overlapping labels are not a sample",
     "heat": "benched \u2014 BTC-excess day mean -2.56% at 24h: market beta, not signal",
     "revival": "probation \u2014 2/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 11,
+    "count": 12,
     "baseline": 12.0,
     "wave": false
   },
@@ -59,19 +43,19 @@
       "avg_win_4h": 0.02052,
       "avg_loss_4h": -0.01727,
       "payoff_4h": 1.188,
-      "span_h_24h": 310.6,
-      "n_eff_24h": 12.94,
-      "n_24h": 536,
-      "hit_rate_24h": 0.442,
-      "mean_ret_24h": 0.00074,
+      "span_h_24h": 310.9,
+      "n_eff_24h": 12.95,
+      "n_24h": 537,
+      "hit_rate_24h": 0.443,
+      "mean_ret_24h": 0.00076,
       "median_ret_24h": -0.00487,
       "both_halves_24h": false,
       "days_24h": 12,
-      "mean_x_24h": 0.00648,
+      "mean_x_24h": 0.0073,
       "days_x_24h": 9,
-      "avg_win_24h": 0.04578,
+      "avg_win_24h": 0.04562,
       "avg_loss_24h": -0.03788,
-      "payoff_24h": 1.209
+      "payoff_24h": 1.204
     },
     "breakout": {
       "span_h_1h": 325.3,
