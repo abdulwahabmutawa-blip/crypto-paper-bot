@@ -1,15 +1,16 @@
 {
-  "ts": "2026-09-12T03:44:06+00:00",
+  "ts": "2026-09-12T03:49:47+00:00",
   "sources": {
     "coingecko": [
-      "PENGU",
       "LIT",
+      "PENGU",
       "RAY",
       "PUMP",
-      "UNI",
-      "ZEC",
       "BTC",
-      "NEAR"
+      "ZEC",
+      "SOL",
+      "OP",
+      "UNI"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -28,6 +29,16 @@
   },
   "heat": [
     {
+      "symbol": "SOL",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 6.1e-05,
+      "long_short": 2.27
+    },
+    {
       "symbol": "UNI",
       "surfaces": 2,
       "sources": [
@@ -44,7 +55,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -8.4e-05,
+      "funding": -8.1e-05,
       "long_short": 0.52
     },
     {
@@ -61,7 +72,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.6e-05
+      "funding": 5.3e-05
     },
     {
       "symbol": "ETH",
@@ -69,7 +80,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 2e-06
+      "funding": 0.0
     },
     {
       "symbol": "HOLO",
@@ -88,12 +99,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "NEAR",
+      "symbol": "OP",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -7.5e-05
+      "funding": -3e-05
     },
     {
       "symbol": "PENGU",
@@ -101,7 +112,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.1e-05
+      "funding": -8e-06
     },
     {
       "symbol": "PUMP",
@@ -109,7 +120,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.4e-05
+      "funding": 1.2e-05
     },
     {
       "symbol": "RAY",
@@ -120,20 +131,12 @@
       "funding": 0.0
     },
     {
-      "symbol": "SOL",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 6.1e-05
-    },
-    {
       "symbol": "WLD",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -2e-05
+      "funding": -2.3e-05
     },
     {
       "symbol": "XRP",
