@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-12T22:26:22+00:00",
-  "scanned": 66,
+  "ts": "2026-09-12T22:31:44+00:00",
+  "scanned": 67,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "THEUSDT",
+      "signal": "breakout",
+      "score": 0.7611,
+      "raw_score": 0.8438,
+      "weight": 0.902,
+      "price": 0.0703,
+      "why": "trades 11.4x, volume 22.2x, 65% taker-buy, +5.2% in an hour, at 95% of its 24h range",
+      "chg_24h": 0.1108,
+      "vol_surge": 22.23,
+      "chg_1h": 0.0524,
+      "market_surge": 0.51,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.42% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 44%, mean +0.07% over last 546 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 BTC-excess day mean -0.42% at 24h: market beta, not signal",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 2/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 14,
+    "count": 15,
     "baseline": 12.0,
     "wave": false
   },
@@ -25,7 +41,7 @@
       "median_ret_1h": -0.00022,
       "both_halves_1h": true,
       "days_1h": 14,
-      "mean_x_1h": 0.00037,
+      "mean_x_1h": 0.00035,
       "days_x_1h": 10,
       "avg_win_1h": 0.01091,
       "avg_loss_1h": -0.00969,
