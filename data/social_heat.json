@@ -1,15 +1,16 @@
 {
-  "ts": "2026-09-12T15:44:23+00:00",
+  "ts": "2026-09-12T15:50:18+00:00",
   "sources": {
     "coingecko": [
-      "PENGU",
       "AI",
+      "PENGU",
       "LIT",
-      "SOL",
-      "LSK",
-      "ETHFI",
       "UNI",
-      "NEAR"
+      "SOL",
+      "STORJ",
+      "LSK",
+      "BTC",
+      "ETHFI"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -30,7 +31,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 4.6e-05,
+      "funding": 4.9e-05,
       "long_short": 1.34
     },
     {
@@ -40,6 +41,14 @@
         "coingecko"
       ],
       "funding": 0.0
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "ETHFI",
@@ -63,15 +72,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.006527
-    },
-    {
-      "symbol": "NEAR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -0.000108
+      "funding": -0.006519
     },
     {
       "symbol": "PENGU",
@@ -79,7 +80,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.1e-05
+      "funding": 2.5e-05
     },
     {
       "symbol": "REZ",
@@ -87,7 +88,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.0007
+      "funding": -0.000653
     },
     {
       "symbol": "SOL",
@@ -95,7 +96,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1e-05
+      "funding": 1.2e-05
+    },
+    {
+      "symbol": "STORJ",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0
     },
     {
       "symbol": "THE",
@@ -111,7 +120,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -6.3e-05
+      "funding": -6.5e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
