@@ -1,5 +1,5 @@
 {
- "ts": "2026-09-12T08:08:56+00:00",
+ "ts": "2026-09-12T08:14:54+00:00",
  "candidates": [
   {
    "symbol": "SKYUSDT",
@@ -15,6 +15,19 @@
    "oi_chg_24h": 0.09144694313493185
   },
   {
+   "symbol": "BERAUSDT",
+   "signal": "surge",
+   "score": 0.4255,
+   "actionable": true,
+   "price": 0.1942,
+   "why": "v24 2.6x, top 2% of range, r24 +13.2%, BTC +0.1%",
+   "v24": 2.6,
+   "pos24": 0.982,
+   "r24": 0.1324,
+   "funding": 5e-05,
+   "oi_chg_24h": 0.15967700986698108
+  },
+  {
    "symbol": "ETHFIUSDT",
    "signal": "surge",
    "score": 0.3746,
@@ -24,13 +37,13 @@
    "v24": 2.409,
    "pos24": 0.933,
    "r24": 0.0796,
-   "funding": 3.281e-05,
+   "funding": 2.326e-05,
    "oi_chg_24h": -0.0574045056607464
   }
  ],
  "note": "SURGE lane (2026-09-05). Ranked opinion; the book decides.",
  "btc_24h": 0.0005,
- "shortlist": 52,
+ "shortlist": 50,
  "skipped": [
   {
    "symbol": "ETHUSDT",
@@ -65,20 +78,16 @@
    "why": "v24 1.18 < 1.6"
   },
   {
-   "symbol": "LTCUSDT",
-   "why": "v24 0.69 < 1.6"
-  },
-  {
    "symbol": "XLMUSDT",
    "why": "v24 0.88 < 1.6"
   },
   {
-   "symbol": "TRUMPUSDT",
-   "why": "v24 0.65 < 1.6"
-  },
-  {
    "symbol": "AAVEUSDT",
    "why": "v24 1.04 < 1.6"
+  },
+  {
+   "symbol": "VTHOUSDT",
+   "why": "pos24 0.69 < 0.8"
   },
   {
    "symbol": "SOPHUSDT",
@@ -103,10 +112,6 @@
   {
    "symbol": "MINAUSDT",
    "why": "r24 +16.9% outside 3%..15%"
-  },
-  {
-   "symbol": "GRAMUSDT",
-   "why": "v24 0.92 < 1.6"
   },
   {
    "symbol": "SOXLBUSDT",
@@ -191,6 +196,14 @@
   {
    "symbol": "PUNDIXUSDT",
    "why": "pos24 0.29 < 0.8"
+  },
+  {
+   "symbol": "SCUSDT",
+   "why": "v24 1.23 < 1.6"
+  },
+  {
+   "symbol": "ZAMAUSDT",
+   "why": "v24 0.48 < 1.6"
   }
  ]
 }
