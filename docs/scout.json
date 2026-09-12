@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-12T09:48:04+00:00",
-  "scanned": 116,
+  "ts": "2026-09-12T09:53:52+00:00",
+  "scanned": 115,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "GIGGLEUSDT",
+      "signal": "ignition",
+      "score": 0.7094,
+      "raw_score": 0.7382,
+      "weight": 0.961,
+      "price": 35.56,
+      "why": "trades 6.0x and volume 16.8x the prior 4h, 68% taker-buy, $122,989 burst \u2014 while price has only moved -0.9%",
+      "chg_24h": 0.0517,
+      "vol_surge": 16.78,
+      "chg_1h": -0.0089,
+      "market_surge": 0.64,
+      "actionable": false,
+      "status": "benched \u2014 hit 45%, mean +0.06% over last 545 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 45%, mean +0.06% over last 545 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 BTC-excess day mean -0.68% at 24h: market beta, not signal",
