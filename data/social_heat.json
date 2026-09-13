@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-13T18:19:53+00:00",
+  "ts": "2026-09-13T18:25:15+00:00",
   "sources": {
     "coingecko": [
       "LSK",
@@ -18,10 +18,11 @@
       "LSK",
       "REZ",
       "STEEM",
-      "VTHO",
       "FIL",
+      "VTHO",
       "UNI",
-      "BTC"
+      "BTC",
+      "SUI"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -34,7 +35,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 7.1e-05,
+      "funding": 7.2e-05,
       "long_short": 1.66
     },
     {
@@ -44,7 +45,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 6e-05,
+      "funding": 6.3e-05,
       "long_short": 1.93
     },
     {
@@ -54,7 +55,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.001532,
+      "funding": -0.001473,
       "long_short": 0.91
     },
     {
@@ -68,12 +69,22 @@
       "long_short": 1.45
     },
     {
+      "symbol": "SUI",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 1.2e-05,
+      "long_short": 2.14
+    },
+    {
       "symbol": "PENDLE",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -2.9e-05
+      "funding": -3.4e-05
     },
     {
       "symbol": "PENGU",
@@ -81,7 +92,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.6e-05
+      "funding": 2.1e-05
     },
     {
       "symbol": "STEEM",
@@ -89,15 +100,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.005348
-    },
-    {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 1e-05
+      "funding": -0.005249
     },
     {
       "symbol": "UNI",
@@ -105,7 +108,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -1e-06
+      "funding": 1e-06
     },
     {
       "symbol": "VTHO",
@@ -113,7 +116,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001189
+      "funding": -0.001191
     },
     {
       "symbol": "XRP",
@@ -121,7 +124,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -9.4e-05
+      "funding": -9.3e-05
     },
     {
       "symbol": "ZEC",
@@ -129,7 +132,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.5e-05
+      "funding": 6.9e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
