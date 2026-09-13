@@ -1,22 +1,52 @@
 {
-  "ts": "2026-09-13T14:10:45+00:00",
-  "scanned": 92,
+  "ts": "2026-09-13T14:15:52+00:00",
+  "scanned": 89,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "BLURUSDT",
+      "symbol": "INJUSDT",
       "signal": "breakout",
-      "score": 0.768,
-      "raw_score": 0.8697,
+      "score": 0.747,
+      "raw_score": 0.846,
       "weight": 0.883,
-      "price": 0.01998,
-      "why": "trades 9.4x, volume 7.4x, 64% taker-buy, +6.8% in an hour, at 95% of its 24h range",
-      "chg_24h": 0.1598,
-      "vol_surge": 7.38,
-      "chg_1h": 0.0679,
-      "market_surge": 12.08,
+      "price": 6.123,
+      "why": "trades 9.1x, volume 24.3x, 82% taker-buy, +4.2% in an hour, at 85% of its 24h range",
+      "chg_24h": 0.03,
+      "vol_surge": 24.29,
+      "chg_1h": 0.0424,
+      "market_surge": 4.84,
       "actionable": false,
       "status": "benched \u2014 BTC-excess day mean -0.50% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "ZECUSDT",
+      "signal": "ignition",
+      "score": 0.5504,
+      "raw_score": 0.5837,
+      "weight": 0.943,
+      "price": 1104.96,
+      "why": "trades 5.0x and volume 6.7x the prior 4h, 65% taker-buy, $2,873,617 burst \u2014 while price has only moved +1.9%",
+      "chg_24h": -0.0407,
+      "vol_surge": 6.67,
+      "chg_1h": 0.0189,
+      "market_surge": 1.15,
+      "actionable": false,
+      "status": "benched \u2014 hit 45%, mean +0.17% over last 558 at 24h: not beating 4x the round trip"
+    },
+    {
+      "symbol": "BCHUSDT",
+      "signal": "ignition",
+      "score": 0.508,
+      "raw_score": 0.5387,
+      "weight": 0.943,
+      "price": 225.5,
+      "why": "trades 4.1x and volume 5.1x the prior 4h, 67% taker-buy, $50,726 burst \u2014 while price has only moved +0.8%",
+      "chg_24h": -0.0213,
+      "vol_surge": 5.08,
+      "chg_1h": 0.008,
+      "market_surge": 1.23,
+      "actionable": false,
+      "status": "benched \u2014 hit 45%, mean +0.17% over last 558 at 24h: not beating 4x the round trip"
     }
   ],
   "gate": {
@@ -27,7 +57,7 @@
     "revival": "probation \u2014 3/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 27,
+    "count": 25,
     "baseline": 12.0,
     "wave": true
   },
