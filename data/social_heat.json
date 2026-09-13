@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-13T20:05:18+00:00",
+  "ts": "2026-09-13T20:11:02+00:00",
   "sources": {
     "coingecko": [
       "LSK",
@@ -9,16 +9,18 @@
       "SOL",
       "LINK",
       "TAO",
-      "XRP"
+      "PENGU",
+      "CAKE",
+      "LIT"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "LSK",
       "STEEM",
-      "REZ",
       "FIL",
       "VTHO",
+      "REZ",
       "BTC"
     ],
     "watcher": [],
@@ -32,7 +34,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 8.2e-05,
+      "funding": 8.3e-05,
       "long_short": 1.64
     },
     {
@@ -52,8 +54,16 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.00206,
+      "funding": -0.002053,
       "long_short": 0.89
+    },
+    {
+      "symbol": "CAKE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "LINK",
@@ -61,7 +71,23 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -7.3e-05
+      "funding": -7.1e-05
+    },
+    {
+      "symbol": "LIT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "PENGU",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "REZ",
@@ -85,7 +111,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.006169
+      "funding": -0.006123
     },
     {
       "symbol": "TAO",
@@ -101,15 +127,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000865
-    },
-    {
-      "symbol": "XRP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -5.7e-05
+      "funding": -0.000876
     },
     {
       "symbol": "ZEC",
@@ -117,7 +135,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.5e-05
+      "funding": 7.3e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
