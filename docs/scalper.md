@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-13T06:04:04+00:00 · runs 674 · equity **$886.70** (-11.33%) · cash $0.00 · open 10/10 · round trips 234
+updated 2026-09-13T06:21:52+00:00 · runs 675 · equity **$883.94** (-11.61%) · cash $0.00 · open 10/10 · round trips 234
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -35,15 +35,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-12T16:18 | PYTHUSDT | surge | 0.05484 | 0.05542 | +1.06% |
-| 2026-09-12T16:18 | PENDLEUSDT | surge | 2.187 | 2.168 | -0.87% |
-| 2026-09-12T16:53 | ZAMAUSDT | surge | 0.04911 | 0.04832 | -1.61% |
+| 2026-09-12T16:18 | PYTHUSDT | surge | 0.05484 | 0.0549 | +0.11% |
+| 2026-09-12T16:18 | PENDLEUSDT | surge | 2.187 | 2.161 | -1.19% |
+| 2026-09-12T16:53 | ZAMAUSDT | surge | 0.04911 | 0.04834 | -1.57% |
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-09-12T20:15 | PUMPUSDT | surge | 0.003852 | 0.003838 | -0.36% |
-| 2026-09-12T22:22 | DOTUSDT | bottom | 1.025 | 1.015 | -0.98% |
-| 2026-09-12T22:40 | DASHUSDT | bottom | 54.86 | 55.98 | +2.04% |
-| 2026-09-13T01:14 | WLDUSDT | bottom | 0.3994 | 0.3977 | -0.43% |
-| 2026-09-13T02:19 | ORDIUSDT | surge | 4.248 | 4.17 | -1.84% |
-| 2026-09-13T03:40 | STXUSDT | surge | 0.2757 | 0.2791 | +1.23% |
+| 2026-09-12T20:15 | PUMPUSDT | surge | 0.003852 | 0.003805 | -1.22% |
+| 2026-09-12T22:22 | DOTUSDT | bottom | 1.025 | 1.016 | -0.88% |
+| 2026-09-12T22:40 | DASHUSDT | bottom | 54.86 | 55.69 | +1.51% |
+| 2026-09-13T01:14 | WLDUSDT | bottom | 0.3994 | 0.3962 | -0.80% |
+| 2026-09-13T02:19 | ORDIUSDT | surge | 4.248 | 4.174 | -1.74% |
+| 2026-09-13T03:40 | STXUSDT | surge | 0.2757 | 0.2781 | +0.87% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
