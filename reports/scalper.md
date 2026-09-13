@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-13T23:36:34+00:00 · runs 739 · equity **$875.34** (-12.47%) · cash $264.20 · open 7/10 · round trips 269
+updated 2026-09-13T23:52:51+00:00 · runs 740 · equity **$875.06** (-12.49%) · cash $264.20 · open 7/10 · round trips 269
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,11 +36,11 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-09-13T12:30 | CRVUSDT | surge | 0.3503 | 0.347 | -0.94% |
-| 2026-09-13T17:46 | ICPUSDT | surge | 2.784 | 2.772 | -0.43% |
-| 2026-09-13T19:41 | CAKEUSDT | surge | 2.269 | 2.227 | -1.85% |
-| 2026-09-13T22:13 | SAGAUSDT | bottom | 0.01706 | 0.01704 | -0.12% |
-| 2026-09-13T22:13 | PUMPUSDT | bottom | 0.003592 | 0.003529 | -1.75% |
+| 2026-09-13T12:30 | CRVUSDT | surge | 0.3503 | 0.3465 | -1.08% |
+| 2026-09-13T17:46 | ICPUSDT | surge | 2.784 | 2.759 | -0.90% |
+| 2026-09-13T19:41 | CAKEUSDT | surge | 2.269 | 2.224 | -1.98% |
+| 2026-09-13T22:13 | SAGAUSDT | bottom | 0.01706 | 0.01714 | +0.47% |
+| 2026-09-13T22:13 | PUMPUSDT | bottom | 0.003592 | 0.003525 | -1.87% |
 | 2026-09-13T22:29 | PEPEUSDT | bottom | 3.36e-06 | 3.37e-06 | +0.30% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
