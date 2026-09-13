@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-13T00:29:39+00:00",
-  "scanned": 60,
+  "ts": "2026-09-13T00:35:34+00:00",
+  "scanned": 62,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ZROUSDT",
+      "signal": "ignition",
+      "score": 0.8606,
+      "raw_score": 0.903,
+      "weight": 0.953,
+      "price": 1.031,
+      "why": "trades 40.9x and volume 201.0x the prior 4h, 72% taker-buy, $273,739 burst \u2014 while price has only moved +1.1%",
+      "chg_24h": 0.0518,
+      "vol_surge": 200.99,
+      "chg_1h": 0.0108,
+      "market_surge": 21.21,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.80% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.80% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.87% at 24h: market beta, not signal",
