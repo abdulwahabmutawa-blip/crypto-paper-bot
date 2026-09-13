@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-13T09:55:39+00:00 · runs 687 · equity **$872.19** (-12.78%) · cash $0.00 · open 10/10 · round trips 241
+updated 2026-09-13T10:13:21+00:00 · runs 688 · equity **$871.56** (-12.84%) · cash $0.00 · open 10/10 · round trips 241
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -35,15 +35,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-12T16:18 | PYTHUSDT | surge | 0.05484 | 0.05393 | -1.66% |
-| 2026-09-12T16:53 | ZAMAUSDT | surge | 0.04911 | 0.04844 | -1.36% |
+| 2026-09-12T16:18 | PYTHUSDT | surge | 0.05484 | 0.0536 | -2.26% |
+| 2026-09-12T16:53 | ZAMAUSDT | surge | 0.04911 | 0.04861 | -1.02% |
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-09-12T22:22 | DOTUSDT | bottom | 1.025 | 1.005 | -1.95% |
-| 2026-09-12T22:40 | DASHUSDT | bottom | 54.86 | 54.58 | -0.51% |
-| 2026-09-13T03:40 | STXUSDT | surge | 0.2757 | 0.2736 | -0.76% |
-| 2026-09-13T08:06 | NEWTUSDT | surge | 0.04608 | 0.04534 | -1.61% |
-| 2026-09-13T09:00 | GMTUSDT | surge | 0.00781 | 0.00785 | +0.51% |
-| 2026-09-13T09:53 | DODOUSDT | surge | 0.01812 | 0.01824 | +0.66% |
-| 2026-09-13T09:53 | GLMUSDT | surge | 0.1216 | 0.1208 | -0.66% |
+| 2026-09-12T22:22 | DOTUSDT | bottom | 1.025 | 1.006 | -1.85% |
+| 2026-09-12T22:40 | DASHUSDT | bottom | 54.86 | 54.55 | -0.57% |
+| 2026-09-13T03:40 | STXUSDT | surge | 0.2757 | 0.2746 | -0.40% |
+| 2026-09-13T08:06 | NEWTUSDT | surge | 0.04608 | 0.04526 | -1.78% |
+| 2026-09-13T09:00 | GMTUSDT | surge | 0.00781 | 0.0078 | -0.13% |
+| 2026-09-13T09:53 | DODOUSDT | surge | 0.01812 | 0.01813 | +0.06% |
+| 2026-09-13T09:53 | GLMUSDT | surge | 0.1216 | 0.1215 | -0.08% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
