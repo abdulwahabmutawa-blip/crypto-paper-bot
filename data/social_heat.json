@@ -1,15 +1,14 @@
 {
-  "ts": "2026-09-13T02:16:48+00:00",
+  "ts": "2026-09-13T02:22:09+00:00",
   "sources": {
     "coingecko": [
       "LSK",
       "PENGU",
       "PEPE",
       "ILV",
+      "ETH",
       "NEAR",
       "SHIB",
-      "INJ",
-      "RSR",
       "BTC"
     ],
     "reddit": [],
@@ -21,7 +20,7 @@
       "PUMP",
       "UNI",
       "THE",
-      "NEAR",
+      "ETH",
       "DOGE"
     ],
     "watcher": [],
@@ -29,24 +28,24 @@
   },
   "heat": [
     {
+      "symbol": "ETH",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5.7e-05,
+      "long_short": 2.8
+    },
+    {
       "symbol": "LSK",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": -0.008305,
+      "funding": -0.008744,
       "long_short": 0.61
-    },
-    {
-      "symbol": "NEAR",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": -4.1e-05,
-      "long_short": 1.65
     },
     {
       "symbol": "BTC",
@@ -54,7 +53,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.3e-05
+      "funding": 6.7e-05
     },
     {
       "symbol": "DOGE",
@@ -73,12 +72,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "INJ",
+      "symbol": "NEAR",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -4.5e-05
+      "funding": -4.3e-05
     },
     {
       "symbol": "PENGU",
@@ -86,7 +85,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.4e-05
+      "funding": 4.7e-05
     },
     {
       "symbol": "PEPE",
@@ -101,7 +100,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 2e-06
+      "funding": 8e-06
     },
     {
       "symbol": "REZ",
@@ -109,15 +108,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -1e-06
-    },
-    {
-      "symbol": "RSR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": 6e-06
     },
     {
       "symbol": "SHIB",
@@ -148,7 +139,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000374
+      "funding": 0.00039
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
