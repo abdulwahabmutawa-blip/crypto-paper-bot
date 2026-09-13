@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-13T11:42:41+00:00 · runs 694 · equity **$866.33** (-13.37%) · cash $0.00 · open 10/10 · round trips 242
+updated 2026-09-13T11:59:20+00:00 · runs 695 · equity **$869.56** (-13.04%) · cash $0.00 · open 10/10 · round trips 242
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -35,15 +35,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-12T16:18 | PYTHUSDT | surge | 0.05484 | 0.05367 | -2.13% |
-| 2026-09-12T16:53 | ZAMAUSDT | surge | 0.04911 | 0.0483 | -1.65% |
+| 2026-09-12T16:18 | PYTHUSDT | surge | 0.05484 | 0.05396 | -1.60% |
+| 2026-09-12T16:53 | ZAMAUSDT | surge | 0.04911 | 0.0484 | -1.45% |
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-09-12T22:22 | DOTUSDT | bottom | 1.025 | 1.01 | -1.46% |
-| 2026-09-12T22:40 | DASHUSDT | bottom | 54.86 | 54.17 | -1.26% |
-| 2026-09-13T03:40 | STXUSDT | surge | 0.2757 | 0.2713 | -1.60% |
-| 2026-09-13T09:00 | GMTUSDT | surge | 0.00781 | 0.00768 | -1.66% |
-| 2026-09-13T09:53 | DODOUSDT | surge | 0.01812 | 0.01814 | +0.11% |
-| 2026-09-13T09:53 | GLMUSDT | surge | 0.1216 | 0.1196 | -1.64% |
-| 2026-09-13T11:08 | POLYXUSDT | surge | 0.0413 | 0.0415 | +0.48% |
+| 2026-09-12T22:22 | DOTUSDT | bottom | 1.025 | 1.006 | -1.85% |
+| 2026-09-12T22:40 | DASHUSDT | bottom | 54.86 | 54.01 | -1.55% |
+| 2026-09-13T03:40 | STXUSDT | surge | 0.2757 | 0.2709 | -1.74% |
+| 2026-09-13T09:00 | GMTUSDT | surge | 0.00781 | 0.00769 | -1.54% |
+| 2026-09-13T09:53 | DODOUSDT | surge | 0.01812 | 0.01813 | +0.06% |
+| 2026-09-13T09:53 | GLMUSDT | surge | 0.1216 | 0.1219 | +0.25% |
+| 2026-09-13T11:08 | POLYXUSDT | surge | 0.0413 | 0.0423 | +2.42% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
