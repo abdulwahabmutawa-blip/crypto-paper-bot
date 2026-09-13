@@ -1,24 +1,8 @@
 {
-  "ts": "2026-09-13T20:22:08+00:00",
-  "scanned": 96,
+  "ts": "2026-09-13T20:27:44+00:00",
+  "scanned": 94,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "KAVAUSDT",
-      "signal": "ignition",
-      "score": 0.8236,
-      "raw_score": 0.8678,
-      "weight": 0.949,
-      "price": 0.06312,
-      "why": "trades 10.8x and volume 9.3x the prior 4h, 65% taker-buy, $54,683 burst \u2014 while price has only moved +1.1%",
-      "chg_24h": -0.1129,
-      "vol_surge": 9.3,
-      "chg_1h": 0.0109,
-      "market_surge": 0.82,
-      "actionable": false,
-      "status": "benched \u2014 hit 46%, mean +0.21% over last 550 at 24h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 46%, mean +0.21% over last 550 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 BTC-excess day mean -0.65% at 24h: market beta, not signal",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 3/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 16,
+    "count": 15,
     "baseline": 13.0,
     "wave": false
   },
