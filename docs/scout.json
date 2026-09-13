@@ -1,30 +1,14 @@
 {
-  "ts": "2026-09-13T02:00:23+00:00",
+  "ts": "2026-09-13T02:05:54+00:00",
   "scanned": 62,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "COTIUSDT",
-      "signal": "ignition",
-      "score": 0.8062,
-      "raw_score": 0.8469,
-      "weight": 0.952,
-      "price": 0.01753,
-      "why": "trades 8.5x and volume 30.7x the prior 4h, 72% taker-buy, $73,243 burst \u2014 while price has only moved +0.9%",
-      "chg_24h": 0.0122,
-      "vol_surge": 30.65,
-      "chg_1h": 0.0092,
-      "market_surge": 7.61,
-      "actionable": false,
-      "status": "benched \u2014 hit 45%, mean +0.12% over last 545 at 24h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 45%, mean +0.12% over last 545 at 24h: not beating 4x the round trip",
-    "breakout": "benched \u2014 BTC-excess day mean -0.87% at 24h: market beta, not signal",
+    "breakout": "benched \u2014 BTC-excess day mean -0.92% at 24h: market beta, not signal",
     "reversion": "probation \u2014 13 rows but only 5.5 independent 24h windows (span 133h): overlapping labels are not a sample",
     "heat": "benched \u2014 BTC-excess day mean -2.34% at 24h: market beta, not signal",
-    "revival": "probation \u2014 2/12 resolved 24h samples under ruleset 3"
+    "revival": "probation \u2014 3/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
     "count": 24,
@@ -100,19 +84,19 @@
       "avg_win_4h": 0.03719,
       "avg_loss_4h": -0.02901,
       "payoff_4h": 1.282,
-      "span_h_24h": 310.0,
-      "n_eff_24h": 12.92,
-      "n_24h": 228,
-      "hit_rate_24h": 0.377,
-      "mean_ret_24h": -0.00606,
-      "median_ret_24h": -0.01561,
+      "span_h_24h": 311.8,
+      "n_eff_24h": 12.99,
+      "n_24h": 229,
+      "hit_rate_24h": 0.376,
+      "mean_ret_24h": -0.00629,
+      "median_ret_24h": -0.01602,
       "both_halves_24h": false,
       "days_24h": 12,
-      "mean_x_24h": -0.00873,
+      "mean_x_24h": -0.0092,
       "days_x_24h": 10,
       "avg_win_24h": 0.05939,
-      "avg_loss_24h": -0.04946,
-      "payoff_24h": 1.201
+      "avg_loss_24h": -0.04953,
+      "payoff_24h": 1.199
     },
     "reversion": {
       "span_h_1h": 278.8,
@@ -221,16 +205,16 @@
       "avg_win_4h": 0.00209,
       "avg_loss_4h": -0.0306,
       "payoff_4h": 0.068,
-      "span_h_24h": 12.1,
-      "n_eff_24h": 0.5,
-      "n_24h": 2,
+      "span_h_24h": 92.3,
+      "n_eff_24h": 3,
+      "n_24h": 3,
       "hit_rate_24h": 0.0,
-      "mean_ret_24h": -0.02827,
-      "median_ret_24h": -0.02028,
-      "days_24h": 1,
-      "mean_x_24h": -0.02737,
-      "days_x_24h": 1,
-      "avg_loss_24h": -0.02827
+      "mean_ret_24h": -0.04433,
+      "median_ret_24h": -0.03627,
+      "days_24h": 2,
+      "mean_x_24h": -0.05182,
+      "days_x_24h": 2,
+      "avg_loss_24h": -0.04433
     }
   },
   "note": "READ-ONLY scout. Ranked opinion only \u2014 the book decides."
