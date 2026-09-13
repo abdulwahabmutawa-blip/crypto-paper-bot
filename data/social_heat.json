@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-13T04:09:36+00:00",
+  "ts": "2026-09-13T04:15:17+00:00",
   "sources": {
     "coingecko": [
       "LSK",
@@ -20,13 +20,23 @@
       "PUMP",
       "UNI",
       "THE",
-      "ZEC",
-      "DOGE"
+      "DOGE",
+      "ETH"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "ETH",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 8.7e-05,
+      "long_short": 2.82
+    },
     {
       "symbol": "LSK",
       "surfaces": 2,
@@ -34,7 +44,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.018373,
+      "funding": -0.017812,
       "long_short": 0.72
     },
     {
@@ -43,15 +53,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 5.8e-05
-    },
-    {
-      "symbol": "ETH",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 8.4e-05
+      "funding": 5.7e-05
     },
     {
       "symbol": "LIT",
@@ -75,7 +77,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2e-05
+      "funding": 2.6e-05
     },
     {
       "symbol": "PEPE",
@@ -90,7 +92,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.5e-05
+      "funding": 4.8e-05
     },
     {
       "symbol": "RAY",
@@ -130,15 +132,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 6.2e-05
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 8.5e-05
+      "funding": 6.4e-05
     },
     {
       "symbol": "\u725b\u6765",
@@ -146,7 +140,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000127
+      "funding": 0.000126
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
