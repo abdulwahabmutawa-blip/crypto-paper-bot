@@ -1,17 +1,33 @@
 {
-  "ts": "2026-09-13T02:33:33+00:00",
-  "scanned": 61,
+  "ts": "2026-09-13T02:38:53+00:00",
+  "scanned": 60,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "TRUMPUSDT",
+      "signal": "ignition",
+      "score": 0.5512,
+      "raw_score": 0.5784,
+      "weight": 0.953,
+      "price": 1.985,
+      "why": "trades 4.6x and volume 5.3x the prior 4h, 65% taker-buy, $63,938 burst \u2014 while price has only moved +0.0%",
+      "chg_24h": -0.002,
+      "vol_surge": 5.27,
+      "chg_1h": 0.0,
+      "market_surge": 1.09,
+      "actionable": false,
+      "status": "benched \u2014 hit 45%, mean +0.12% over last 548 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
-    "ignition": "benched \u2014 hit 45%, mean +0.12% over last 546 at 24h: not beating 4x the round trip",
+    "ignition": "benched \u2014 hit 45%, mean +0.12% over last 548 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 BTC-excess day mean -0.92% at 24h: market beta, not signal",
     "reversion": "probation \u2014 13 rows but only 5.5 independent 24h windows (span 133h): overlapping labels are not a sample",
     "heat": "benched \u2014 BTC-excess day mean -2.34% at 24h: market beta, not signal",
     "revival": "probation \u2014 3/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 23,
+    "count": 22,
     "baseline": 12.0,
     "wave": false
   },
@@ -38,24 +54,24 @@
       "median_ret_4h": 0.00047,
       "both_halves_4h": true,
       "days_4h": 13,
-      "mean_x_4h": 0.00253,
+      "mean_x_4h": 0.00252,
       "days_x_4h": 10,
       "avg_win_4h": 0.02047,
       "avg_loss_4h": -0.01683,
       "payoff_4h": 1.216,
-      "span_h_24h": 310.4,
-      "n_eff_24h": 12.93,
-      "n_24h": 546,
-      "hit_rate_24h": 0.447,
-      "mean_ret_24h": 0.00118,
-      "median_ret_24h": -0.00434,
+      "span_h_24h": 310.7,
+      "n_eff_24h": 12.95,
+      "n_24h": 548,
+      "hit_rate_24h": 0.449,
+      "mean_ret_24h": 0.00121,
+      "median_ret_24h": -0.00423,
       "both_halves_24h": false,
       "days_24h": 12,
-      "mean_x_24h": 0.0082,
+      "mean_x_24h": 0.0086,
       "days_x_24h": 10,
-      "avg_win_24h": 0.04441,
+      "avg_win_24h": 0.04415,
       "avg_loss_24h": -0.03643,
-      "payoff_24h": 1.219
+      "payoff_24h": 1.212
     },
     "breakout": {
       "span_h_1h": 333.5,
