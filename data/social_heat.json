@@ -1,16 +1,17 @@
 {
-  "ts": "2026-09-13T16:17:18+00:00",
+  "ts": "2026-09-13T16:23:08+00:00",
   "sources": {
     "coingecko": [
       "LSK",
-      "PENGU",
       "ZEC",
+      "PENGU",
+      "BTC",
       "RAY",
       "CVC",
-      "BTC",
+      "FIL",
       "ARB",
-      "SOL",
-      "FIL"
+      "ETH",
+      "LIT"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -30,7 +31,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.003877,
+      "funding": -0.00384,
       "long_short": 0.88
     },
     {
@@ -55,7 +56,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.015341
+      "funding": -0.014551
+    },
+    {
+      "symbol": "ETH",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -5.9e-05
     },
     {
       "symbol": "FIL",
@@ -66,12 +75,20 @@
       "funding": 0.0001
     },
     {
+      "symbol": "LIT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 2.8e-05
+      "funding": 2.1e-05
     },
     {
       "symbol": "RAY",
@@ -90,14 +107,6 @@
       "funding": 4.3e-05
     },
     {
-      "symbol": "SOL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -1e-06
-    },
-    {
       "symbol": "VTHO",
       "surfaces": 1,
       "sources": [
@@ -111,7 +120,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.2e-05
+      "funding": 6.1e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
