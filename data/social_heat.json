@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-13T20:49:48+00:00",
+  "ts": "2026-09-13T20:55:18+00:00",
   "sources": {
     "coingecko": [
       "LSK",
@@ -21,7 +21,9 @@
       "FIL",
       "VTHO",
       "REZ",
-      "BTC"
+      "NEAR",
+      "BTC",
+      "SOL"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -34,7 +36,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 9.1e-05,
+      "funding": 9.2e-05,
       "long_short": 1.64
     },
     {
@@ -54,7 +56,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.001342,
+      "funding": -0.001192,
       "long_short": 0.89
     },
     {
@@ -66,6 +68,16 @@
       ],
       "funding": 5e-05,
       "long_short": 1.58
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 7.7e-05,
+      "long_short": 2.29
     },
     {
       "symbol": "CAKE",
@@ -81,7 +93,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -5.1e-05
+      "funding": -4.7e-05
     },
     {
       "symbol": "LTC",
@@ -89,7 +101,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.7e-05
+      "funding": -1.8e-05
+    },
+    {
+      "symbol": "NEAR",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "PENGU",
@@ -100,20 +120,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "SOL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 7.7e-05
-    },
-    {
       "symbol": "STEEM",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -0.006267
+      "funding": -0.006261
     },
     {
       "symbol": "VTHO",
@@ -121,7 +133,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001089
+      "funding": -0.001148
     },
     {
       "symbol": "ZEC",
