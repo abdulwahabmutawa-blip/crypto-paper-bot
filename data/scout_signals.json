@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-13T17:19:14+00:00",
-  "scanned": 93,
+  "ts": "2026-09-13T17:24:52+00:00",
+  "scanned": 94,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "NEARUSDT",
+      "signal": "ignition",
+      "score": 0.7163,
+      "raw_score": 0.7596,
+      "weight": 0.943,
+      "price": 2.366,
+      "why": "trades 8.4x and volume 14.8x the prior 4h, 60% taker-buy, $747,357 burst \u2014 while price has only moved +3.0%",
+      "chg_24h": -0.0096,
+      "vol_surge": 14.8,
+      "chg_1h": 0.03,
+      "market_surge": 5.99,
+      "actionable": false,
+      "status": "benched \u2014 hit 45%, mean +0.16% over last 555 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 45%, mean +0.16% over last 555 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 BTC-excess day mean -0.58% at 24h: market beta, not signal",
