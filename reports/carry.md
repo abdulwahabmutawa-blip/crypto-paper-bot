@@ -1,6 +1,6 @@
 # Funding carry (paper)
 
-Updated 2026-09-13T00:53:47+00:00. Paper book, no keys, no orders. Capital $2,000 (study floor); the owner's real $33 tracked alongside to show the size effect.
+Updated 2026-09-13T00:58:56+00:00. Paper book, no keys, no orders. Capital $2,000 (study floor); the owner's real $33 tracked alongside to show the size effect.
 
 - **Net $-1.00** = $+0.20 funding collected, $1.20 fees paid
 - Annualised: held back until day 14 (2 so far) — too few settlements to annualise honestly
