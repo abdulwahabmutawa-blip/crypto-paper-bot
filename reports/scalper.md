@@ -2,20 +2,21 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-13T11:59:20+00:00 · runs 695 · equity **$869.56** (-13.04%) · cash $0.00 · open 10/10 · round trips 242
+updated 2026-09-13T12:15:47+00:00 · runs 696 · equity **$875.12** (-12.49%) · cash $0.00 · open 10/10 · round trips 243
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
-- hit 43% (break-even 54%) · mean -0.54%/trade · realized $-124.05 · worst day $-50.94 · trades/day 26.9
+- hit 44% (break-even 54%) · mean -0.52%/trade · realized $-121.76 · worst day $-50.94 · trades/day 27.0
 
 | shape | n | hit | mean | target% | stop% | time% |
 |---|---|---|---|---|---|---|
-| surge | 176 | 43% | -0.59% | 40% | 51% | 9% |
+| surge | 177 | 44% | -0.57% | 40% | 51% | 9% |
 | bottom | 66 | 44% | -0.40% | 42% | 45% | 12% |
 
 ## Last 15 round trips
 | exit (UTC) | coin | shape | how | hours | net | P&L |
 |---|---|---|---|---|---|---|
+| 2026-09-13T12:14 | POLYXUSDT | surge | TARGET | 0.8 | +2.75% | $+2.29 |
 | 2026-09-13T11:08 | NEWTUSDT | surge | STOP | 2.8 | -3.25% | $-2.80 |
 | 2026-09-13T09:53 | API3USDT | surge | TARGET | 1.2 | +2.75% | $+2.37 |
 | 2026-09-13T09:53 | WLDUSDT | bottom | STOP | 8.5 | -3.25% | $-2.83 |
@@ -30,20 +31,19 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | 2026-09-13T01:30 | KAVAUSDT | surge | TARGET | 3.2 | +2.75% | $+2.46 |
 | 2026-09-13T01:14 | NEIROUSDT | surge | STOP | 10.5 | -3.25% | $-2.92 |
 | 2026-09-12T22:40 | PARTIUSDT | surge | STOP | 3.5 | -3.25% | $-2.83 |
-| 2026-09-12T22:22 | JTOUSDT | surge | STOP | 3.8 | -3.25% | $-3.21 |
 
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
-| 2026-09-12T16:18 | PYTHUSDT | surge | 0.05484 | 0.05396 | -1.60% |
-| 2026-09-12T16:53 | ZAMAUSDT | surge | 0.04911 | 0.0484 | -1.45% |
+| 2026-09-12T16:18 | PYTHUSDT | surge | 0.05484 | 0.0542 | -1.17% |
+| 2026-09-12T16:53 | ZAMAUSDT | surge | 0.04911 | 0.04877 | -0.69% |
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-09-12T22:22 | DOTUSDT | bottom | 1.025 | 1.006 | -1.85% |
-| 2026-09-12T22:40 | DASHUSDT | bottom | 54.86 | 54.01 | -1.55% |
-| 2026-09-13T03:40 | STXUSDT | surge | 0.2757 | 0.2709 | -1.74% |
-| 2026-09-13T09:00 | GMTUSDT | surge | 0.00781 | 0.00769 | -1.54% |
-| 2026-09-13T09:53 | DODOUSDT | surge | 0.01812 | 0.01813 | +0.06% |
-| 2026-09-13T09:53 | GLMUSDT | surge | 0.1216 | 0.1219 | +0.25% |
-| 2026-09-13T11:08 | POLYXUSDT | surge | 0.0413 | 0.0423 | +2.42% |
+| 2026-09-12T22:22 | DOTUSDT | bottom | 1.025 | 1.007 | -1.76% |
+| 2026-09-12T22:40 | DASHUSDT | bottom | 54.86 | 53.99 | -1.59% |
+| 2026-09-13T03:40 | STXUSDT | surge | 0.2757 | 0.2716 | -1.49% |
+| 2026-09-13T09:00 | GMTUSDT | surge | 0.00781 | 0.00772 | -1.15% |
+| 2026-09-13T09:53 | DODOUSDT | surge | 0.01812 | 0.01806 | -0.33% |
+| 2026-09-13T09:53 | GLMUSDT | surge | 0.1216 | 0.1223 | +0.58% |
+| 2026-09-13T12:14 | POLYXUSDT | surge | 0.0423 | 0.0441 | +4.26% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
