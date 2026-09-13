@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-13T20:48:31+00:00 · runs 728 · equity **$888.71** (-11.13%) · cash $0.00 · open 10/10 · round trips 262
+updated 2026-09-13T21:04:56+00:00 · runs 729 · equity **$887.71** (-11.23%) · cash $0.00 · open 10/10 · round trips 262
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -37,13 +37,13 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
 | 2026-09-12T22:22 | DOTUSDT | bottom | 1.025 | 1.017 | -0.78% |
-| 2026-09-12T22:40 | DASHUSDT | bottom | 54.86 | 54.74 | -0.22% |
-| 2026-09-13T03:40 | STXUSDT | surge | 0.2757 | 0.2729 | -1.02% |
-| 2026-09-13T12:30 | CRVUSDT | surge | 0.3503 | 0.3516 | +0.37% |
-| 2026-09-13T17:30 | MBLUSDT | surge | 0.00082 | 0.000807 | -1.59% |
+| 2026-09-12T22:40 | DASHUSDT | bottom | 54.86 | 54.72 | -0.26% |
+| 2026-09-13T03:40 | STXUSDT | surge | 0.2757 | 0.2719 | -1.38% |
+| 2026-09-13T12:30 | CRVUSDT | surge | 0.3503 | 0.3527 | +0.69% |
+| 2026-09-13T17:30 | MBLUSDT | surge | 0.00082 | 0.000805 | -1.83% |
 | 2026-09-13T17:46 | ICPUSDT | surge | 2.784 | 2.784 | +0.00% |
-| 2026-09-13T18:52 | ARUSDT | surge | 2.867 | 2.819 | -1.67% |
-| 2026-09-13T19:41 | CAKEUSDT | surge | 2.269 | 2.286 | +0.75% |
-| 2026-09-13T20:30 | XTZUSDT | surge | 0.3011 | 0.2977 | -1.13% |
+| 2026-09-13T18:52 | ARUSDT | surge | 2.867 | 2.816 | -1.78% |
+| 2026-09-13T19:41 | CAKEUSDT | surge | 2.269 | 2.277 | +0.35% |
+| 2026-09-13T20:30 | XTZUSDT | surge | 0.3011 | 0.2968 | -1.43% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
