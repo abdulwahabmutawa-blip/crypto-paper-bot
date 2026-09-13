@@ -1,16 +1,16 @@
 {
-  "ts": "2026-09-13T13:31:48+00:00",
+  "ts": "2026-09-13T13:37:37+00:00",
   "sources": {
     "coingecko": [
       "LSK",
       "CVC",
-      "LIT",
       "PENGU",
+      "TAO",
       "SOL",
-      "SUI",
-      "ZEC",
+      "LIT",
+      "BTC",
       "ETH",
-      "TAO"
+      "ZEC"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -32,8 +32,16 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.008021,
+      "funding": -0.007936,
       "long_short": 1.03
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "CVC",
@@ -49,7 +57,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.9e-05
+      "funding": -2.6e-05
     },
     {
       "symbol": "LIT",
@@ -65,7 +73,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.5e-05
+      "funding": -1.3e-05
     },
     {
       "symbol": "PUMP",
@@ -73,7 +81,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 3.7e-05
+      "funding": 3.9e-05
     },
     {
       "symbol": "REZ",
@@ -81,7 +89,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 3.5e-05
+      "funding": 2.1e-05
     },
     {
       "symbol": "SOL",
@@ -89,15 +97,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -5.2e-05
-    },
-    {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -2.2e-05
+      "funding": -5.1e-05
     },
     {
       "symbol": "TAO",
@@ -121,7 +121,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000916
+      "funding": -0.00089
     },
     {
       "symbol": "ZEC",
@@ -129,7 +129,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.7e-05
+      "funding": 5.8e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
