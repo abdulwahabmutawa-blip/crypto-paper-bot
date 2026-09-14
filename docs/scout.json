@@ -1,24 +1,37 @@
 {
-  "ts": "2026-09-14T20:43:24+00:00",
-  "scanned": 113,
+  "ts": "2026-09-14T20:48:54+00:00",
+  "scanned": 112,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "SOXLBUSDT",
-      "signal": "reversion",
-      "score": 0.2846,
-      "raw_score": 0.2846,
-      "weight": 1.0,
-      "price": 102.53,
-      "why": "down -12% on the day (bottom decile of the market), now +0.4% over 15m with 9 green candles",
-      "chg_24h": -0.1247,
-      "vol_surge": 1.43,
-      "chg_1h": -0.0008,
-      "market_surge": 0.13,
-      "oi_drop": null,
-      "funding": null,
+      "symbol": "PENDLEUSDT",
+      "signal": "breakout",
+      "score": 0.525,
+      "raw_score": 0.5821,
+      "weight": 0.902,
+      "price": 2.413,
+      "why": "trades 5.0x, volume 6.1x, 62% taker-buy, +2.5% in an hour, at 99% of its 24h range",
+      "chg_24h": 0.1238,
+      "vol_surge": 6.12,
+      "chg_1h": 0.0255,
+      "market_surge": 4.66,
       "actionable": false,
-      "status": "probation \u2014 15 rows but only 7.8 independent 24h windows (span 188h): overlapping labels are not a sample"
+      "status": "benched \u2014 BTC-excess day mean -1.00% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "SYNUSDT",
+      "signal": "revival",
+      "score": 0.4538,
+      "raw_score": 0.4538,
+      "weight": 1.0,
+      "price": 0.08864,
+      "why": "revival day-one: fell -12% last week on $0.43M/day quiet, volume arriving 3.1x today, only +15% off its 30d low \u00b7 serial exploder: 9 runs in 2y",
+      "chg_24h": 0.1014,
+      "vol_surge": 3.1,
+      "chg_1h": null,
+      "market_surge": null,
+      "actionable": false,
+      "status": "probation \u2014 3/12 resolved 24h samples under ruleset 3"
     }
   ],
   "gate": {
