@@ -1,86 +1,86 @@
 {
-  "generated_utc": "2026-09-14T14:47:16+00:00",
+  "generated_utc": "2026-09-14T14:51:22+00:00",
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "live_ts": "2026-09-14T14:45:00+00:00",
+  "live_ts": "2026-09-14T14:50:00+00:00",
   "current": {
     "date": "2026-09-14",
-    "value": 1254.48,
-    "bench": 1010.53,
+    "value": 1255.2,
+    "bench": 1010.14,
     "holding": "HD"
   },
   "board": [
     {
       "sym": "AMZN",
-      "price": 252.37,
+      "price": 252.35,
+      "line": "z -1.52",
+      "tag": "oversold",
+      "on": true,
+      "pick": false,
+      "fill": 25.272946802888185
+    },
+    {
+      "sym": "JPM",
+      "price": 351.17,
       "line": "z -1.51",
       "tag": "oversold",
       "on": true,
       "pick": false,
-      "fill": 25.22132941041258
+      "fill": 25.188766376140553
     },
     {
       "sym": "UNH",
-      "price": 384.23,
-      "line": "z -1.48",
+      "price": 384.39,
+      "line": "z -1.46",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 24.661651059138247
-    },
-    {
-      "sym": "JPM",
-      "price": 351.49,
-      "line": "z -1.43",
-      "tag": "normal",
-      "on": false,
-      "pick": false,
-      "fill": 23.85166296087336
+      "fill": 24.320584851663227
     },
     {
       "sym": "NVDA",
-      "price": 210.67,
-      "line": "z -1.36",
+      "price": 210.56,
+      "line": "z -1.37",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 22.588117187228747
+      "fill": 22.83538067279068
     },
     {
       "sym": "HD",
-      "price": 310.16,
-      "line": "z -1.28",
+      "price": 310.34,
+      "line": "z -1.26",
       "tag": "HELD",
       "on": false,
       "pick": true,
-      "fill": 21.250723319374373
+      "fill": 21.012336965943028
     },
     {
       "sym": "PEP",
-      "price": 137.17,
-      "line": "z -0.94",
+      "price": 137.22,
+      "line": "z -0.91",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 15.62992031928799
+      "fill": 15.23361097752696
     },
     {
       "sym": "MRK",
-      "price": 144.51,
+      "price": 144.48,
       "line": "z -0.70",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 11.58847081407594
+      "fill": 11.67548826284029
     },
     {
       "sym": "JNJ",
-      "price": 268.4,
-      "line": "z -0.26",
+      "price": 268.55,
+      "line": "z -0.22",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 4.27647820401805
+      "fill": 3.6975994408753343
     },
     {
       "sym": "KO",
@@ -89,16 +89,16 @@
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 0.8884154945214374
+      "fill": 0.8314269376563889
     },
     {
       "sym": "MSFT",
-      "price": 500.0,
-      "line": "z +0.55",
+      "price": 499.95,
+      "line": "z +0.54",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": -9.100978437988875
+      "fill": -9.023282502507678
     }
   ],
   "board_title": "16 mega-caps, most oversold first (z < -1.5 = buy zone)",
@@ -109,6 +109,36 @@
     "board_note": "Buys panic, sells relief: enter the most stretched mega-cap below -1.5 z, exit when it recovers to average."
   },
   "intraday": [
+    {
+      "ts": "2026-08-24T07:01:25+00:00",
+      "value": 1196.26,
+      "bench": 1019.83,
+      "holding": "UNH"
+    },
+    {
+      "ts": "2026-08-24T07:14:55+00:00",
+      "value": 1196.26,
+      "bench": 1019.83,
+      "holding": "UNH"
+    },
+    {
+      "ts": "2026-08-24T07:29:15+00:00",
+      "value": 1196.26,
+      "bench": 1019.83,
+      "holding": "UNH"
+    },
+    {
+      "ts": "2026-08-24T07:42:44+00:00",
+      "value": 1196.26,
+      "bench": 1019.83,
+      "holding": "UNH"
+    },
+    {
+      "ts": "2026-08-24T07:56:13+00:00",
+      "value": 1196.26,
+      "bench": 1019.83,
+      "holding": "UNH"
+    },
     {
       "ts": "2026-08-24T09:05:57+00:00",
       "value": 1196.26,
@@ -9074,39 +9104,9 @@
       "holding": "HD"
     },
     {
-      "ts": "2026-09-14T13:24:58+00:00",
-      "value": 1248.77,
-      "bench": 1017.88,
-      "holding": "HD"
-    },
-    {
-      "ts": "2026-09-14T13:41:19+00:00",
-      "value": 1256.98,
-      "bench": 1010.82,
-      "holding": "HD"
-    },
-    {
-      "ts": "2026-09-14T13:57:39+00:00",
-      "value": 1255.79,
-      "bench": 1012.32,
-      "holding": "HD"
-    },
-    {
-      "ts": "2026-09-14T14:14:06+00:00",
-      "value": 1255.73,
-      "bench": 1013.2,
-      "holding": "HD"
-    },
-    {
-      "ts": "2026-09-14T14:30:40+00:00",
-      "value": 1253.38,
-      "bench": 1010.83,
-      "holding": "HD"
-    },
-    {
-      "ts": "2026-09-14T14:47:16+00:00",
-      "value": 1254.48,
-      "bench": 1010.53,
+      "ts": "2026-09-14T14:51:22+00:00",
+      "value": 1255.2,
+      "bench": 1010.14,
       "holding": "HD"
     }
   ],
@@ -9465,8 +9465,8 @@
     },
     {
       "date": "2026-09-14",
-      "value": 1254.48,
-      "bench": 1010.53,
+      "value": 1255.2,
+      "bench": 1010.14,
       "holding": "HD"
     }
   ],
@@ -9478,5 +9478,5 @@
   },
   "costs_paid": 5.8276,
   "frozen": null,
-  "thoughts": "I'm holding HD. Most oversold mega-cap (z < -1.5) \u2014 buying the dip. I bought at $318.95; it's now $310.16 (-2.8% since I got in). My safety net: if the price falls to $282.99 (12% below its recent high), I sell automatically \u2014 no exceptions. Closest challenger on my list is AMZN, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
+  "thoughts": "I'm holding HD. Most oversold mega-cap (z < -1.5) \u2014 buying the dip. I bought at $318.95; it's now $310.34 (-2.7% since I got in). My safety net: if the price falls to $282.99 (12% below its recent high), I sell automatically \u2014 no exceptions. Closest challenger on my list is AMZN, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
 }
