@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-14T11:15:59+00:00 · runs 782 · equity **$892.35** (-10.77%) · cash $0.00 · open 10/10 · round trips 284
+updated 2026-09-14T11:32:16+00:00 · runs 783 · equity **$894.55** (-10.55%) · cash $0.00 · open 10/10 · round trips 284
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-09-13T17:46 | ICPUSDT | surge | 2.784 | 2.744 | -1.44% |
+| 2026-09-13T17:46 | ICPUSDT | surge | 2.784 | 2.746 | -1.36% |
 | 2026-09-14T00:07 | TRXUSDT | bottom | 0.3384 | 0.3402 | +0.53% |
-| 2026-09-14T02:18 | AEROUSDT | surge | 0.5712 | 0.5718 | +0.11% |
-| 2026-09-14T03:23 | TRUMPUSDT | surge | 2.003 | 1.994 | -0.45% |
-| 2026-09-14T04:02 | ONDOUSDT | surge | 0.353 | 0.355 | +0.57% |
-| 2026-09-14T06:21 | JTOUSDT | surge | 0.4401 | 0.4393 | -0.18% |
-| 2026-09-14T07:31 | ZROUSDT | surge | 1.043 | 1.028 | -1.44% |
-| 2026-09-14T10:09 | MSTRBUSDT | surge | 132.09 | 130.81 | -0.97% |
-| 2026-09-14T11:14 | XLMUSDT | surge | 0.189 | 0.1906 | +0.85% |
+| 2026-09-14T02:18 | AEROUSDT | surge | 0.5712 | 0.575 | +0.67% |
+| 2026-09-14T03:23 | TRUMPUSDT | surge | 2.003 | 1.996 | -0.35% |
+| 2026-09-14T04:02 | ONDOUSDT | surge | 0.353 | 0.3564 | +0.96% |
+| 2026-09-14T06:21 | JTOUSDT | surge | 0.4401 | 0.4402 | +0.02% |
+| 2026-09-14T07:31 | ZROUSDT | surge | 1.043 | 1.033 | -0.96% |
+| 2026-09-14T10:09 | MSTRBUSDT | surge | 132.09 | 131.32 | -0.58% |
+| 2026-09-14T11:14 | XLMUSDT | surge | 0.189 | 0.1911 | +1.11% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
