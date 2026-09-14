@@ -1,14 +1,15 @@
 {
-  "ts": "2026-09-14T06:03:48+00:00",
+  "ts": "2026-09-14T06:09:09+00:00",
   "sources": {
     "coingecko": [
       "TAO",
-      "PENGU",
       "LIT",
+      "PENGU",
       "LSK",
       "FIL",
       "ZEC",
       "BTC",
+      "PUMP",
       "XRP"
     ],
     "reddit": [],
@@ -16,11 +17,12 @@
     "movers": [
       "CVC",
       "REZ",
-      "LSK",
       "FIL",
+      "LSK",
       "NEAR",
       "XRP",
-      "BTC"
+      "BTC",
+      "ETH"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -43,7 +45,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 9.1e-05,
+      "funding": 9.3e-05,
       "long_short": 1.81
     },
     {
@@ -53,7 +55,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.008059,
+      "funding": -0.007888,
       "long_short": 0.99
     },
     {
@@ -72,7 +74,15 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.011323
+      "funding": -0.011907
+    },
+    {
+      "symbol": "ETH",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 9.4e-05
     },
     {
       "symbol": "LIT",
@@ -88,7 +98,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -4.4e-05
+      "funding": -4.1e-05
     },
     {
       "symbol": "PENGU",
@@ -96,7 +106,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.4e-05
+      "funding": 4.8e-05
+    },
+    {
+      "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 4.2e-05
     },
     {
       "symbol": "REZ",
@@ -104,7 +122,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 1.1e-05
+      "funding": 1.5e-05
     },
     {
       "symbol": "TAO",
@@ -120,7 +138,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.2e-05
+      "funding": 2.1e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
