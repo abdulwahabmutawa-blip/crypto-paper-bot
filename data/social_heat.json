@@ -1,13 +1,13 @@
 {
-  "ts": "2026-09-14T03:34:48+00:00",
+  "ts": "2026-09-14T03:40:07+00:00",
   "sources": {
     "coingecko": [
       "LSK",
       "LIT",
-      "ETH",
       "PENGU",
+      "ETH",
       "RAY",
-      "BTC"
+      "APT"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -15,8 +15,8 @@
       "REZ",
       "CVC",
       "FIL",
-      "UNI",
       "NEAR",
+      "UNI",
       "XRP",
       "BTC"
     ],
@@ -25,14 +25,20 @@
   },
   "heat": [
     {
-      "symbol": "BTC",
-      "surfaces": 2,
+      "symbol": "APT",
+      "surfaces": 1,
       "sources": [
-        "coingecko",
+        "coingecko"
+      ],
+      "funding": 1.3e-05
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
         "movers"
       ],
-      "funding": 0.0001,
-      "long_short": 1.6
+      "funding": 0.0001
     },
     {
       "symbol": "CVC",
@@ -40,7 +46,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.005053
+      "funding": -0.005066
     },
     {
       "symbol": "ETH",
@@ -48,7 +54,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.6e-05
+      "funding": 4.5e-05
     },
     {
       "symbol": "FIL",
@@ -72,7 +78,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.006327
+      "funding": -0.006363
     },
     {
       "symbol": "NEAR",
@@ -80,7 +86,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.0001
+      "funding": 9.6e-05
     },
     {
       "symbol": "PENGU",
@@ -88,7 +94,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.2e-05
+      "funding": 3.9e-05
     },
     {
       "symbol": "RAY",
@@ -120,7 +126,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 2.9e-05
+      "funding": 3.1e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
