@@ -1,30 +1,30 @@
 {
-  "ts": "2026-09-14T18:35:27+00:00",
+  "ts": "2026-09-14T18:40:35+00:00",
   "sources": {
     "coingecko": [
-      "PENGU",
-      "LIT",
       "LSK",
-      "PUMP",
-      "ZRO",
+      "LIT",
       "ENA",
       "ZEC",
-      "NEAR",
+      "PENGU",
+      "PUMP",
       "SOL",
-      "XLM",
-      "DOT"
+      "ZRO",
+      "ETH",
+      "XRP",
+      "NEAR"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "NEAR",
       "XLM",
-      "ZEC",
       "XRP",
-      "ENA",
+      "ZEC",
       "PEPE",
       "UNI",
-      "ADA"
+      "ENA",
+      "SUI"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -51,14 +51,14 @@
       "long_short": 1.48
     },
     {
-      "symbol": "XLM",
+      "symbol": "XRP",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 0.0001,
-      "long_short": 1.03
+      "funding": 7.9e-05,
+      "long_short": 2.2
     },
     {
       "symbol": "ZEC",
@@ -71,20 +71,12 @@
       "long_short": 0.49
     },
     {
-      "symbol": "ADA",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 8.6e-05
-    },
-    {
-      "symbol": "DOT",
+      "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 6.6e-05
+      "funding": 4.4e-05
     },
     {
       "symbol": "LIT",
@@ -100,7 +92,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.001801
+      "funding": -0.001784
     },
     {
       "symbol": "PENGU",
@@ -123,7 +115,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.4e-05
+      "funding": 3.3e-05
     },
     {
       "symbol": "SOL",
@@ -134,6 +126,14 @@
       "funding": 0.0001
     },
     {
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5.6e-05
+    },
+    {
       "symbol": "UNI",
       "surfaces": 1,
       "sources": [
@@ -142,12 +142,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "XRP",
+      "symbol": "XLM",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 7.8e-05
+      "funding": 0.0001
     },
     {
       "symbol": "ZRO",

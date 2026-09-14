@@ -1,37 +1,22 @@
 {
-  "ts": "2026-09-14T18:35:33+00:00",
+  "ts": "2026-09-14T18:40:42+00:00",
   "scanned": 111,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "COTIUSDT",
-      "signal": "ignition",
-      "score": 0.8407,
-      "raw_score": 0.8812,
-      "weight": 0.954,
-      "price": 0.01666,
-      "why": "trades 14.2x and volume 37.1x the prior 4h, 73% taker-buy, $146,084 burst \u2014 while price has only moved +2.0%",
-      "chg_24h": 0.0316,
-      "vol_surge": 37.1,
-      "chg_1h": 0.0202,
-      "market_surge": 0.0,
+      "symbol": "ATOMUSDT",
+      "signal": "breakout",
+      "score": 0.7079,
+      "raw_score": 0.7848,
+      "weight": 0.902,
+      "price": 1.613,
+      "why": "trades 11.9x, volume 13.2x, 67% taker-buy, +3.2% in an hour, at 95% of its 24h range",
+      "chg_24h": -0.0062,
+      "vol_surge": 13.23,
+      "chg_1h": 0.032,
+      "market_surge": 15.53,
       "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean +0.61% at 24h: market beta, not signal"
-    },
-    {
-      "symbol": "WLFIUSDT",
-      "signal": "ignition",
-      "score": 0.7935,
-      "raw_score": 0.8318,
-      "weight": 0.954,
-      "price": 0.0583,
-      "why": "trades 8.6x and volume 12.6x the prior 4h, 75% taker-buy, $166,484 burst \u2014 while price has only moved +1.9%",
-      "chg_24h": 0.021,
-      "vol_surge": 12.6,
-      "chg_1h": 0.0192,
-      "market_surge": 8.83,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean +0.61% at 24h: market beta, not signal"
+      "status": "benched \u2014 BTC-excess day mean -1.09% at 24h: market beta, not signal"
     }
   ],
   "gate": {
