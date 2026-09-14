@@ -1,24 +1,25 @@
 {
-  "ts": "2026-09-14T21:56:18+00:00",
+  "ts": "2026-09-14T22:01:44+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
-      "UNI",
       "BTC",
-      "SOL",
-      "PENGU",
+      "UNI",
       "ETH",
-      "PUMP",
+      "SOL",
       "LIT",
+      "PUMP",
+      "PENGU",
+      "PENDLE",
       "NEAR",
-      "XRP",
-      "PENDLE"
+      "ADA",
+      "SUI"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "XLM",
       "ZEC",
+      "XLM",
       "NEAR",
       "XRP",
       "UNI",
@@ -48,17 +49,7 @@
         "movers"
       ],
       "funding": 0.0001,
-      "long_short": 1.36
-    },
-    {
-      "symbol": "XRP",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 2.04
+      "long_short": 1.37
     },
     {
       "symbol": "ZEC",
@@ -67,8 +58,16 @@
         "coingecko",
         "movers"
       ],
-      "funding": -7e-05,
-      "long_short": 0.47
+      "funding": -7.4e-05,
+      "long_short": 0.46
+    },
+    {
+      "symbol": "ADA",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "BTC",
@@ -84,7 +83,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 1.6e-05
+      "funding": 1.5e-05
     },
     {
       "symbol": "ETH",
@@ -92,7 +91,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.1e-05
+      "funding": 4.2e-05
     },
     {
       "symbol": "LINK",
@@ -100,7 +99,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 5e-05
+      "funding": 5.2e-05
     },
     {
       "symbol": "LIT",
@@ -116,7 +115,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.9e-05
+      "funding": 7.7e-05
     },
     {
       "symbol": "PENGU",
@@ -124,7 +123,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.5e-05
+      "funding": 1.3e-05
     },
     {
       "symbol": "PEPE",
@@ -139,7 +138,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.4e-05
+      "funding": 2.5e-05
     },
     {
       "symbol": "SOL",
@@ -150,7 +149,23 @@
       "funding": 0.0001
     },
     {
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "XLM",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "XRP",
       "surfaces": 1,
       "sources": [
         "movers"
