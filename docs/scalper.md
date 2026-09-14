@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-14T01:46:53+00:00 · runs 747 · equity **$877.08** (-12.29%) · cash $173.52 · open 8/10 · round trips 270
+updated 2026-09-14T02:03:10+00:00 · runs 748 · equity **$880.92** (-11.91%) · cash $86.76 · open 9/10 · round trips 270
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,12 +36,13 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-09-13T12:30 | CRVUSDT | surge | 0.3503 | 0.3467 | -1.03% |
-| 2026-09-13T17:46 | ICPUSDT | surge | 2.784 | 2.765 | -0.68% |
-| 2026-09-13T19:41 | CAKEUSDT | surge | 2.269 | 2.264 | -0.22% |
-| 2026-09-13T22:13 | SAGAUSDT | bottom | 0.01706 | 0.01719 | +0.76% |
-| 2026-09-13T22:29 | PEPEUSDT | bottom | 3.36e-06 | 3.37e-06 | +0.30% |
-| 2026-09-14T00:07 | TRXUSDT | bottom | 0.3384 | 0.3385 | +0.03% |
-| 2026-09-14T01:29 | LAUSDT | surge | 0.0668 | 0.0677 | +1.35% |
+| 2026-09-13T12:30 | CRVUSDT | surge | 0.3503 | 0.3498 | -0.14% |
+| 2026-09-13T17:46 | ICPUSDT | surge | 2.784 | 2.794 | +0.36% |
+| 2026-09-13T19:41 | CAKEUSDT | surge | 2.269 | 2.273 | +0.18% |
+| 2026-09-13T22:13 | SAGAUSDT | bottom | 0.01706 | 0.0173 | +1.41% |
+| 2026-09-13T22:29 | PEPEUSDT | bottom | 3.36e-06 | 3.4e-06 | +1.19% |
+| 2026-09-14T00:07 | TRXUSDT | bottom | 0.3384 | 0.3384 | +0.00% |
+| 2026-09-14T01:29 | LAUSDT | surge | 0.0668 | 0.0686 | +2.69% |
+| 2026-09-14T02:01 | BABYUSDT | surge | 0.01249 | 0.01238 | -0.88% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
