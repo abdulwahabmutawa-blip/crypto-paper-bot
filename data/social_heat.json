@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-14T15:29:27+00:00",
+  "ts": "2026-09-14T15:34:39+00:00",
   "sources": {
     "coingecko": [
       "AVAX",
@@ -21,7 +21,7 @@
       "ZEC",
       "XRP",
       "BTC",
-      "SOL"
+      "SUI"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -34,18 +34,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 4.2e-05,
+      "funding": 4e-05,
       "long_short": 1.82
-    },
-    {
-      "symbol": "SOL",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 2.16
     },
     {
       "symbol": "ZEC",
@@ -54,7 +44,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -6.5e-05,
+      "funding": -6.7e-05,
       "long_short": 0.5
     },
     {
@@ -63,7 +53,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.2e-05
+      "funding": 2.1e-05
     },
     {
       "symbol": "BTC",
@@ -71,7 +61,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.8e-05
+      "funding": 4.6e-05
     },
     {
       "symbol": "ENA",
@@ -87,7 +77,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.007225
+      "funding": -0.007019
     },
     {
       "symbol": "NEAR",
@@ -95,7 +85,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -4.4e-05
+      "funding": -4.2e-05
     },
     {
       "symbol": "PENGU",
@@ -103,7 +93,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -6e-06
+      "funding": -4e-06
     },
     {
       "symbol": "REZ",
@@ -111,7 +101,23 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000134
+      "funding": -0.000151
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -7e-05
     },
     {
       "symbol": "UNI",
@@ -119,7 +125,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.3e-05
+      "funding": 7.1e-05
     },
     {
       "symbol": "XLM",
@@ -135,7 +141,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 8.3e-05
+      "funding": 8.1e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
