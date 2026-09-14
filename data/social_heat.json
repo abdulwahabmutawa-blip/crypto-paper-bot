@@ -1,15 +1,15 @@
 {
-  "ts": "2026-09-14T15:23:45+00:00",
+  "ts": "2026-09-14T15:29:27+00:00",
   "sources": {
     "coingecko": [
       "AVAX",
-      "UNI",
       "LSK",
+      "UNI",
       "FIL",
       "PENGU",
       "SOL",
       "ZEC",
-      "BTC"
+      "ENA"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -17,26 +17,16 @@
       "REZ",
       "XLM",
       "FIL",
-      "ZEC",
       "NEAR",
+      "ZEC",
       "XRP",
-      "UNI",
-      "BTC"
+      "BTC",
+      "SOL"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "BTC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5.1e-05,
-      "long_short": 1.32
-    },
     {
       "symbol": "FIL",
       "surfaces": 2,
@@ -44,18 +34,18 @@
         "coingecko",
         "movers"
       ],
-      "funding": 4.7e-05,
+      "funding": 4.2e-05,
       "long_short": 1.82
     },
     {
-      "symbol": "UNI",
+      "symbol": "SOL",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 7.3e-05,
-      "long_short": 1.32
+      "funding": 0.0001,
+      "long_short": 2.16
     },
     {
       "symbol": "ZEC",
@@ -64,7 +54,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -6.3e-05,
+      "funding": -6.5e-05,
       "long_short": 0.5
     },
     {
@@ -73,7 +63,23 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.3e-05
+      "funding": 2.2e-05
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 4.8e-05
+    },
+    {
+      "symbol": "ENA",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 4e-05
     },
     {
       "symbol": "LSK",
@@ -81,7 +87,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.00736
+      "funding": -0.007225
     },
     {
       "symbol": "NEAR",
@@ -97,7 +103,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -7e-06
+      "funding": -6e-06
     },
     {
       "symbol": "REZ",
@@ -105,15 +111,15 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000118
+      "funding": -0.000134
     },
     {
-      "symbol": "SOL",
+      "symbol": "UNI",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0001
+      "funding": 7.3e-05
     },
     {
       "symbol": "XLM",
