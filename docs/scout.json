@@ -1,8 +1,39 @@
 {
-  "ts": "2026-09-14T19:58:33+00:00",
-  "scanned": 110,
+  "ts": "2026-09-14T20:04:22+00:00",
+  "scanned": 111,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "CRVUSDT",
+      "signal": "ignition",
+      "score": 0.7657,
+      "raw_score": 0.8018,
+      "weight": 0.955,
+      "price": 0.3545,
+      "why": "trades 6.8x and volume 28.0x the prior 4h, 74% taker-buy, $105,145 burst \u2014 while price has only moved +0.2%",
+      "chg_24h": 0.0135,
+      "vol_surge": 27.98,
+      "chg_1h": 0.002,
+      "market_surge": 3.85,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.62% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "MUBUSDT",
+      "signal": "ignition",
+      "score": 0.7112,
+      "raw_score": 0.7447,
+      "weight": 0.955,
+      "price": 922.54,
+      "why": "trades 5.0x and volume 27.5x the prior 4h, 86% taker-buy, $210,833 burst \u2014 while price has only moved -0.8%",
+      "chg_24h": -0.0174,
+      "vol_surge": 27.5,
+      "chg_1h": -0.008,
+      "market_surge": 0.84,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.62% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.62% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -1.00% at 24h: market beta, not signal",
@@ -11,7 +42,7 @@
     "revival": "probation \u2014 3/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 10,
+    "count": 11,
     "baseline": 13.0,
     "wave": false
   },

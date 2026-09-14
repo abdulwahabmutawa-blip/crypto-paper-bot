@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-14T19:58:28+00:00",
+  "ts": "2026-09-14T20:04:15+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
@@ -25,22 +25,12 @@
       "UNI",
       "ENA",
       "PEPE",
-      "BTC"
+      "LINK"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "BTC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 2.3e-05,
-      "long_short": 1.21
-    },
     {
       "symbol": "ENA",
       "surfaces": 2,
@@ -59,7 +49,7 @@
         "movers"
       ],
       "funding": 0.0001,
-      "long_short": 1.52
+      "long_short": 1.51
     },
     {
       "symbol": "UNI",
@@ -69,7 +59,7 @@
         "movers"
       ],
       "funding": 0.0001,
-      "long_short": 1.31
+      "long_short": 1.34
     },
     {
       "symbol": "XRP",
@@ -79,7 +69,7 @@
         "movers"
       ],
       "funding": 0.0001,
-      "long_short": 2.14
+      "long_short": 2.06
     },
     {
       "symbol": "ZEC",
@@ -88,7 +78,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 8e-06
+      "funding": 4e-06,
+      "long_short": 0.48
     },
     {
       "symbol": "AAVE",
@@ -96,7 +87,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.2e-05
+      "funding": 2.1e-05
     },
     {
       "symbol": "AERO",
@@ -104,7 +95,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -6.7e-05
+      "funding": -6.4e-05
     },
     {
       "symbol": "ARB",
@@ -115,12 +106,28 @@
       "funding": 0.0001
     },
     {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 2.2e-05
+    },
+    {
+      "symbol": "LINK",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 4.1e-05
+    },
+    {
       "symbol": "LSK",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -0.001286
+      "funding": -0.001362
     },
     {
       "symbol": "PENGU",
