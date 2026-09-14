@@ -1,34 +1,46 @@
 {
-  "ts": "2026-09-14T21:33:35+00:00",
+  "ts": "2026-09-14T21:39:25+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
-      "UNI",
       "BTC",
+      "UNI",
       "ETH",
       "SOL",
-      "XRP",
       "PENGU",
-      "LIT",
       "PENDLE",
-      "AAVE"
+      "PUMP",
+      "SUI",
+      "XRP",
+      "LIT",
+      "NEAR"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "XLM",
-      "NEAR",
-      "XRP",
       "ZEC",
+      "XRP",
+      "NEAR",
       "UNI",
       "ENA",
       "PEPE",
-      "SUI"
+      "LINK"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "NEAR",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.54
+    },
     {
       "symbol": "UNI",
       "surfaces": 2,
@@ -56,16 +68,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": -4.5e-05,
+      "funding": -5.5e-05,
       "long_short": 0.47
-    },
-    {
-      "symbol": "AAVE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5.3e-05
     },
     {
       "symbol": "BTC",
@@ -81,7 +85,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 3.8e-05
+      "funding": 2.9e-05
     },
     {
       "symbol": "ETH",
@@ -89,7 +93,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.2e-05
+      "funding": 3.9e-05
+    },
+    {
+      "symbol": "LINK",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 4.4e-05
     },
     {
       "symbol": "LIT",
@@ -100,20 +112,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "NEAR",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "PENDLE",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0001
+      "funding": 9e-05
     },
     {
       "symbol": "PENGU",
@@ -121,7 +125,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.8e-05
+      "funding": 9e-06
     },
     {
       "symbol": "PEPE",
@@ -129,6 +133,14 @@
       "sources": [
         "movers"
       ]
+    },
+    {
+      "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 2e-05
     },
     {
       "symbol": "SOL",
@@ -142,7 +154,7 @@
       "symbol": "SUI",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
       "funding": 0.0001
     },
