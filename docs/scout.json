@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-14T07:33:03+00:00",
-  "scanned": 94,
+  "ts": "2026-09-14T07:38:41+00:00",
+  "scanned": 95,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "XLMUSDT",
+      "signal": "ignition",
+      "score": 0.7191,
+      "raw_score": 0.7483,
+      "weight": 0.961,
+      "price": 0.1846,
+      "why": "trades 5.2x and volume 17.6x the prior 4h, 83% taker-buy, $540,481 burst \u2014 while price has only moved +0.6%",
+      "chg_24h": 0.0278,
+      "vol_surge": 17.65,
+      "chg_1h": 0.006,
+      "market_surge": 15.26,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.60% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.60% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -1.84% at 24h: market beta, not signal",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 3/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 11,
     "baseline": 13.0,
     "wave": false
   },
