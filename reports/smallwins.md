@@ -1,6 +1,6 @@
 # Small-wins lab — paper study (owner request 2026-09-04)
 
-updated 2026-09-15T21:58:04+00:00 · runs 979 · open 262 · resolved 20000 · cost 0.25%/RT
+updated 2026-09-15T22:14:37+00:00 · runs 980 · open 286 · resolved 20000 · cost 0.25%/RT
 
 PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst day > -3 units.
 
@@ -25,11 +25,11 @@ PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst
 | ignition|t1.5|s1|h8 | 223 | 6 | 37.2 | 38% | 50% | -0.26% | 37% | 56% | 7% | -15.3% | fail |
 | range_bottom|t2|s2|h8 | 531 | 6 | 88.5 | 46% | 56% | -0.26% | 35% | 37% | 28% | -117.7% | fail |
 | range_bottom|t1.5|s1|h8 | 828 | 6 | 138.0 | 39% | 50% | -0.27% | 36% | 57% | 7% | -97.9% | fail |
-| range_bottom|t1|s1|h6 | 964 | 6 | 160.7 | 47% | 62% | -0.28% | 45% | 49% | 6% | -105.0% | fail |
+| range_bottom|t1|s1|h6 | 963 | 6 | 160.5 | 47% | 62% | -0.28% | 45% | 49% | 6% | -105.0% | fail |
 | dip_mid|t2|s2|h8 | 455 | 6 | 75.8 | 48% | 56% | -0.30% | 47% | 49% | 3% | -36.0% | fail |
 | ignition|t1|s1|h6 | 260 | 6 | 43.3 | 45% | 62% | -0.30% | 45% | 48% | 7% | -16.1% | fail |
 | dip_mid|t1.5|s1.5|h8 | 523 | 6 | 87.2 | 48% | 58% | -0.31% | 48% | 52% | 0% | -47.9% | fail |
-| dip_mid|t1.5|s1|h8 | 569 | 6 | 94.8 | 37% | 50% | -0.34% | 37% | 63% | 0% | -57.5% | fail |
+| dip_mid|t1.5|s1|h8 | 568 | 6 | 94.7 | 36% | 50% | -0.34% | 36% | 64% | 0% | -57.5% | fail |
 | calm_dip|t1|s1|h6 | 11 | 5 | 2.2 | 45% | 62% | -0.34% | 45% | 55% | 0% | -5.0% | fail |
 | btc_lag|t1.5|s1.5|h8 | 11 | 1 | 11.0 | 45% | 58% | -0.35% | 36% | 45% | 18% | -3.9% | fail |
 | dip_mid|t5|s3|h48 | 391 | 6 | 65.2 | 36% | 41% | -0.37% | 36% | 64% | 0% | -71.2% | fail |
@@ -51,7 +51,6 @@ PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst
 | dip_large|t2|s2|h8 | 611 | 6 | 101.8 | 42% | 56% | -0.55% | 40% | 56% | 4% | -136.1% | fail |
 | range_bottom|t4|s2|h24 | 389 | 6 | 64.8 | 30% | 38% | -0.57% | 23% | 67% | 10% | -153.1% | fail |
 | dip_large|t3|s2|h12 | 570 | 6 | 95.0 | 33% | 45% | -0.60% | 30% | 64% | 6% | -119.3% | fail |
-| calm_dip|t1.5|s1|h8 | 10 | 4 | 2.5 | 30% | 50% | -0.60% | 20% | 70% | 10% | -5.0% | fail |
 | momentum|t3|s3|h24 | 378 | 6 | 63.0 | 43% | 54% | -0.61% | 40% | 51% | 8% | -120.1% | fail |
 | dip_mid|t3|s4|h48 | 378 | 6 | 63.0 | 52% | 61% | -0.61% | 52% | 47% | 1% | -94.1% | fail |
 | dip_large|t4|s2|h24 | 548 | 6 | 91.3 | 27% | 38% | -0.61% | 26% | 71% | 2% | -119.6% | fail |
@@ -59,6 +58,7 @@ PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst
 | btc_lag|t5|s3|h48 | 9 | 3 | 3.0 | 44% | 41% | -0.62% | 22% | 56% | 22% | -3.2% | fail |
 | range_bottom|t3|s3|h24 | 336 | 6 | 56.0 | 41% | 54% | -0.63% | 37% | 49% | 14% | -150.4% | fail |
 | momentum|t3|s2|h12 | 405 | 6 | 67.5 | 32% | 45% | -0.65% | 28% | 62% | 9% | -60.7% | fail |
+| calm_dip|t1.5|s1|h8 | 11 | 5 | 2.2 | 27% | 50% | -0.66% | 18% | 73% | 9% | -5.0% | fail |
 | range_bottom|t3|s4|h48 | 272 | 6 | 45.3 | 50% | 61% | -0.66% | 47% | 44% | 8% | -150.0% | fail |
 | momentum|t4|s2|h24 | 382 | 6 | 63.7 | 27% | 38% | -0.68% | 24% | 69% | 7% | -71.2% | fail |
 | dip_large|t3|s3|h24 | 506 | 6 | 84.3 | 42% | 54% | -0.71% | 41% | 56% | 3% | -112.4% | fail |
@@ -67,7 +67,7 @@ PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst
 | dip_large|t3|s4|h48 | 456 | 6 | 76.0 | 48% | 61% | -0.80% | 48% | 50% | 2% | -116.9% | fail |
 | momentum|t3|s4|h48 | 357 | 6 | 59.5 | 47% | 61% | -0.83% | 47% | 48% | 4% | -185.2% | fail |
 | calm_dip|t5|s3|h48 | 11 | 5 | 2.2 | 27% | 41% | -0.85% | 27% | 64% | 9% | -9.8% | fail |
-| calm_dip|t1.5|s1.5|h8 | 10 | 5 | 2.0 | 30% | 58% | -0.95% | 20% | 70% | 10% | -7.0% | fail |
+| calm_dip|t1.5|s1.5|h8 | 11 | 5 | 2.2 | 27% | 58% | -1.02% | 18% | 73% | 9% | -7.0% | fail |
 | momentum|t5|s3|h48 | 322 | 6 | 53.7 | 28% | 41% | -1.05% | 25% | 67% | 9% | -143.0% | fail |
 
 _hit = share of trades with positive net return; break-even = (stop+cost)/(target+stop); worst day = sum of unit returns on the worst UTC day. Paper only, one unit per trade, no keys, no orders._
