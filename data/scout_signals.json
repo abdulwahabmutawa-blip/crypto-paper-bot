@@ -1,24 +1,8 @@
 {
-  "ts": "2026-09-15T09:33:52+00:00",
+  "ts": "2026-09-15T09:39:45+00:00",
   "scanned": 100,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "HEMIUSDT",
-      "signal": "ignition",
-      "score": 0.7921,
-      "raw_score": 0.8391,
-      "weight": 0.944,
-      "price": 0.00657,
-      "why": "trades 35.3x and volume 32.9x the prior 4h, 67% taker-buy, $201,899 burst \u2014 while price has only moved +3.1%",
-      "chg_24h": 0.0666,
-      "vol_surge": 32.86,
-      "chg_1h": 0.0314,
-      "market_surge": 2.71,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean +0.45% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.45% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.91% at 24h: market beta, not signal",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 3/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 7,
+    "count": 6,
     "baseline": 13.0,
     "wave": false
   },
