@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-15T18:31:49+00:00 · runs 896 · equity **$879.18** (-12.08%) · cash $536.46 · open 4/10 · round trips 323
+updated 2026-09-15T18:48:54+00:00 · runs 897 · equity **$876.15** (-12.38%) · cash $536.46 · open 4/10 · round trips 323
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,8 +36,8 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-09-15T03:20 | JSTUSDT | surge | 0.11522 | 0.11475 | -0.41% |
-| 2026-09-15T03:37 | BANKUSDT | bottom | 0.0274 | 0.0272 | -0.73% |
-| 2026-09-15T03:37 | GRAMUSDT | bottom | 1.341 | 1.331 | -0.75% |
+| 2026-09-15T03:20 | JSTUSDT | surge | 0.11522 | 0.11469 | -0.46% |
+| 2026-09-15T03:37 | BANKUSDT | bottom | 0.0274 | 0.0266 | -2.92% |
+| 2026-09-15T03:37 | GRAMUSDT | bottom | 1.341 | 1.313 | -2.09% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
