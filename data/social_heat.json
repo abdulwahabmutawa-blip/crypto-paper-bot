@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-15T05:30:18+00:00",
+  "ts": "2026-09-15T05:35:25+00:00",
   "sources": {
     "coingecko": [
       "ARB",
@@ -16,11 +16,11 @@
     "movers": [
       "XLM",
       "UNI",
-      "ZEC",
       "XRP",
+      "ZEC",
       "NEAR",
       "LINK",
-      "ENA",
+      "PEPE",
       "U"
     ],
     "watcher": [],
@@ -34,7 +34,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 2e-05,
+      "funding": 2.5e-05,
       "long_short": 1.5
     },
     {
@@ -44,7 +44,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 4.8e-05,
+      "funding": 5e-05,
       "long_short": 0.46
     },
     {
@@ -61,7 +61,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.1e-05
+      "funding": -2e-06
     },
     {
       "symbol": "BTC",
@@ -69,15 +69,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.1e-05
-    },
-    {
-      "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 1e-06
+      "funding": 8.2e-05
     },
     {
       "symbol": "LINK",
@@ -93,7 +85,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.002192
+      "funding": -0.002227
     },
     {
       "symbol": "NEAR",
@@ -101,7 +93,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4e-05
+      "funding": 3.3e-05
     },
     {
       "symbol": "PENGU",
@@ -109,7 +101,14 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4e-06
+      "funding": 8e-06
+    },
+    {
+      "symbol": "PEPE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
     },
     {
       "symbol": "U",
@@ -124,7 +123,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.005271
+      "funding": -0.005315
     },
     {
       "symbol": "XLM",
@@ -140,7 +139,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 7.7e-05
+      "funding": 7.5e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
