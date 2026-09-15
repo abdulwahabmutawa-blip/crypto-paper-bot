@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-15T20:27:54+00:00",
-  "scanned": 106,
+  "ts": "2026-09-15T20:33:22+00:00",
+  "scanned": 105,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "JSTUSDT",
+      "signal": "ignition",
+      "score": 0.8967,
+      "raw_score": 0.952,
+      "weight": 0.942,
+      "price": 0.11412,
+      "why": "trades 9.5x and volume 28.3x the prior 4h, 90% taker-buy, $71,828 burst \u2014 while price has only moved -0.1%",
+      "chg_24h": 0.0128,
+      "vol_surge": 28.32,
+      "chg_1h": -0.001,
+      "market_surge": 4.75,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.59% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.59% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.73% at 24h: market beta, not signal",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 9,
+    "count": 8,
     "baseline": 13.0,
     "wave": false
   },
