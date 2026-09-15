@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-15T16:41:24+00:00",
-  "scanned": 97,
+  "ts": "2026-09-15T16:46:44+00:00",
+  "scanned": 99,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ARUSDT",
+      "signal": "ignition",
+      "score": 0.8849,
+      "raw_score": 0.9364,
+      "weight": 0.945,
+      "price": 2.601,
+      "why": "trades 21.8x and volume 29.9x the prior 4h, 85% taker-buy, $105,417 burst \u2014 while price has only moved +1.1%",
+      "chg_24h": -0.0847,
+      "vol_surge": 29.88,
+      "chg_1h": 0.0109,
+      "market_surge": 8.11,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.54% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.54% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.94% at 24h: market beta, not signal",
