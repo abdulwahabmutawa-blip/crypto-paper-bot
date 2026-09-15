@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-15T14:35:50+00:00",
+  "ts": "2026-09-15T14:41:17+00:00",
   "sources": {
     "coingecko": [
       "ARB",
@@ -7,7 +7,8 @@
       "SOL",
       "PENGU",
       "ZEC",
-      "XRP",
+      "LSK",
+      "SUI",
       "PENDLE",
       "KMNO"
     ],
@@ -15,8 +16,8 @@
     "stocktwits": [],
     "movers": [
       "FF",
-      "XLM",
       "ENA",
+      "XLM",
       "RLUSD",
       "U"
     ],
@@ -30,7 +31,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.8e-05
+      "funding": 6.3e-05
     },
     {
       "symbol": "BTC",
@@ -38,7 +39,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.7e-05
+      "funding": 9.8e-05
     },
     {
       "symbol": "ENA",
@@ -62,7 +63,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.2e-05
+      "funding": -4e-06
+    },
+    {
+      "symbol": "LSK",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -0.001885
     },
     {
       "symbol": "PENDLE",
@@ -70,7 +79,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.6e-05
+      "funding": 2.2e-05
     },
     {
       "symbol": "PENGU",
@@ -93,7 +102,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -5.8e-05
+      "funding": -5.6e-05
+    },
+    {
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "U",
@@ -111,20 +128,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "XRP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -3e-05
-    },
-    {
       "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 6e-06
+      "funding": 9e-06
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
