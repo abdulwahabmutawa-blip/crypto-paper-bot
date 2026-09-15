@@ -1,24 +1,22 @@
 {
-  "ts": "2026-09-15T22:06:58+00:00",
-  "scanned": 104,
+  "ts": "2026-09-15T22:12:24+00:00",
+  "scanned": 100,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "RAYUSDT",
-      "signal": "reversion",
-      "score": 0.3749,
-      "raw_score": 0.3749,
+      "symbol": "ACEUSDT",
+      "signal": "revival",
+      "score": 0.574,
+      "raw_score": 0.574,
       "weight": 1.0,
-      "price": 1.2265,
-      "why": "down -12% on the day (bottom decile of the market), now +0.8% over 15m with 3 green candles",
-      "chg_24h": -0.122,
-      "vol_surge": 0.24,
-      "chg_1h": 0.0016,
-      "market_surge": 0.0,
-      "oi_drop": null,
-      "funding": 0.0,
+      "price": 0.1567,
+      "why": "revival day-one: fell -21% last week on $1.84M/day quiet, volume arriving 5.7x today, only +19% off its 30d low \u00b7 serial exploder: 6 runs in 2y",
+      "chg_24h": 0.0405,
+      "vol_surge": 5.7,
+      "chg_1h": null,
+      "market_surge": null,
       "actionable": false,
-      "status": "probation \u2014 record spans 7 UTC days (need 8): regime luck, not a signal"
+      "status": "probation \u2014 5/12 resolved 24h samples under ruleset 3"
     }
   ],
   "gate": {
@@ -29,7 +27,7 @@
     "revival": "probation \u2014 5/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 7,
+    "count": 8,
     "baseline": 13.0,
     "wave": false
   },
