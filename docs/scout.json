@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-15T07:32:43+00:00",
-  "scanned": 103,
+  "ts": "2026-09-15T07:38:32+00:00",
+  "scanned": 104,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ACEUSDT",
+      "signal": "ignition",
+      "score": 0.7882,
+      "raw_score": 0.8305,
+      "weight": 0.949,
+      "price": 0.1605,
+      "why": "trades 16.2x and volume 19.0x the prior 4h, 60% taker-buy, $76,667 burst \u2014 while price has only moved +2.8%",
+      "chg_24h": 0.082,
+      "vol_surge": 18.99,
+      "chg_1h": 0.0282,
+      "market_surge": 6.0,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.43% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.43% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.91% at 24h: market beta, not signal",
