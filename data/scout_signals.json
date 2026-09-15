@@ -1,8 +1,39 @@
 {
-  "ts": "2026-09-15T19:14:51+00:00",
-  "scanned": 104,
+  "ts": "2026-09-15T19:20:25+00:00",
+  "scanned": 103,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "EIGENUSDT",
+      "signal": "ignition",
+      "score": 0.8356,
+      "raw_score": 0.8861,
+      "weight": 0.943,
+      "price": 0.1948,
+      "why": "trades 34.6x and volume 69.6x the prior 4h, 68% taker-buy, $506,433 burst \u2014 while price has only moved -1.4%",
+      "chg_24h": -0.0647,
+      "vol_surge": 69.59,
+      "chg_1h": -0.0137,
+      "market_surge": 33.77,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.60% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "CRVUSDT",
+      "signal": "ignition",
+      "score": 0.6136,
+      "raw_score": 0.6507,
+      "weight": 0.943,
+      "price": 0.3375,
+      "why": "trades 4.4x and volume 11.0x the prior 4h, 62% taker-buy, $87,682 burst \u2014 while price has only moved -1.3%",
+      "chg_24h": -0.0543,
+      "vol_surge": 10.96,
+      "chg_1h": -0.0129,
+      "market_surge": 5.91,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.60% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.60% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.69% at 24h: market beta, not signal",
