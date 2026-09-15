@@ -2,20 +2,21 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-15T18:14:36+00:00 · runs 895 · equity **$880.77** (-11.92%) · cash $446.78 · open 5/10 · round trips 322
+updated 2026-09-15T18:31:49+00:00 · runs 896 · equity **$879.18** (-12.08%) · cash $536.46 · open 4/10 · round trips 323
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
-- hit 46% (break-even 54%) · mean -0.37%/trade · realized $-116.20 · worst day $-50.94 · trades/day 29.3
+- hit 46% (break-even 54%) · mean -0.38%/trade · realized $-119.21 · worst day $-50.94 · trades/day 29.4
 
 | shape | n | hit | mean | target% | stop% | time% |
 |---|---|---|---|---|---|---|
-| surge | 248 | 48% | -0.33% | 44% | 47% | 8% |
+| surge | 249 | 47% | -0.35% | 44% | 47% | 8% |
 | bottom | 74 | 42% | -0.49% | 41% | 46% | 14% |
 
 ## Last 15 round trips
 | exit (UTC) | coin | shape | how | hours | net | P&L |
 |---|---|---|---|---|---|---|
+| 2026-09-15T18:29 | DODOUSDT | surge | STOP | 14.2 | -3.25% | $-3.01 |
 | 2026-09-15T17:38 | METABUSDT | surge | TIME | 24.0 | +0.08% | $+0.07 |
 | 2026-09-15T16:12 | SKHYBUSDT | surge | STOP | 2.2 | -3.25% | $-2.79 |
 | 2026-09-15T15:03 | TUTUSDT | surge | TARGET | 1.2 | +2.75% | $+2.36 |
@@ -30,15 +31,13 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | 2026-09-15T09:59 | COTIUSDT | surge | STOP | 0.5 | -3.25% | $-2.83 |
 | 2026-09-15T09:09 | COTIUSDT | surge | TARGET | 1.5 | +2.75% | $+2.22 |
 | 2026-09-15T08:36 | SAGAUSDT | surge | STOP | 0.0 | -3.25% | $-3.07 |
-| 2026-09-15T08:03 | VANAUSDT | surge | TARGET | 0.0 | +2.75% | $+2.53 |
 
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-09-15T03:20 | JSTUSDT | surge | 0.11522 | 0.11568 | +0.40% |
-| 2026-09-15T03:37 | BANKUSDT | bottom | 0.0274 | 0.0273 | -0.36% |
-| 2026-09-15T03:37 | GRAMUSDT | bottom | 1.341 | 1.33 | -0.82% |
-| 2026-09-15T04:09 | DODOUSDT | surge | 0.01822 | 0.01775 | -2.58% |
+| 2026-09-15T03:20 | JSTUSDT | surge | 0.11522 | 0.11475 | -0.41% |
+| 2026-09-15T03:37 | BANKUSDT | bottom | 0.0274 | 0.0272 | -0.73% |
+| 2026-09-15T03:37 | GRAMUSDT | bottom | 1.341 | 1.331 | -0.75% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
