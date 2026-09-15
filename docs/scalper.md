@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-15T14:14:13+00:00 · runs 881 · equity **$886.19** (-11.38%) · cash $94.32 · open 9/10 · round trips 318
+updated 2026-09-15T14:31:25+00:00 · runs 882 · equity **$886.57** (-11.34%) · cash $94.32 · open 9/10 · round trips 318
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,13 +36,13 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-09-14T17:15 | METABUSDT | surge | 663.73 | 665.55 | +0.27% |
+| 2026-09-14T17:15 | METABUSDT | surge | 663.73 | 668.58 | +0.73% |
 | 2026-09-15T03:20 | JSTUSDT | surge | 0.11522 | 0.11589 | +0.58% |
 | 2026-09-15T03:37 | BANKUSDT | bottom | 0.0274 | 0.0275 | +0.36% |
-| 2026-09-15T03:37 | GRAMUSDT | bottom | 1.341 | 1.339 | -0.15% |
-| 2026-09-15T04:09 | DODOUSDT | surge | 0.01822 | 0.0178 | -2.31% |
-| 2026-09-15T12:27 | INJUSDT | bottom | 5.912 | 5.896 | -0.27% |
-| 2026-09-15T13:33 | SKHYBUSDT | surge | 179.14 | 179.04 | -0.06% |
-| 2026-09-15T13:33 | TUTUSDT | surge | 0.01988 | 0.02001 | +0.65% |
+| 2026-09-15T03:37 | GRAMUSDT | bottom | 1.341 | 1.332 | -0.67% |
+| 2026-09-15T04:09 | DODOUSDT | surge | 0.01822 | 0.01781 | -2.25% |
+| 2026-09-15T12:27 | INJUSDT | bottom | 5.912 | 5.889 | -0.39% |
+| 2026-09-15T13:33 | SKHYBUSDT | surge | 179.14 | 178.99 | -0.08% |
+| 2026-09-15T13:33 | TUTUSDT | surge | 0.01988 | 0.02012 | +1.21% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
