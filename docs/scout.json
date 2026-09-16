@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-16T01:36:21+00:00",
-  "scanned": 101,
+  "ts": "2026-09-16T01:41:34+00:00",
+  "scanned": 102,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "FFUSDT",
+      "signal": "ignition",
+      "score": 0.7398,
+      "raw_score": 0.7887,
+      "weight": 0.938,
+      "price": 0.13844,
+      "why": "trades 6.6x and volume 15.8x the prior 4h, 72% taker-buy, $78,716 burst \u2014 while price has only moved -0.2%",
+      "chg_24h": 0.0791,
+      "vol_surge": 15.84,
+      "chg_1h": -0.0016,
+      "market_surge": 0.36,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.46% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.46% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.76% at 24h: market beta, not signal",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 5/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 9,
+    "count": 8,
     "baseline": 12.0,
     "wave": false
   },
