@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-16T05:14:39+00:00",
+  "ts": "2026-09-16T05:19:47+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
@@ -7,11 +7,10 @@
       "BTC",
       "XRP",
       "LIT",
-      "ZEC",
-      "PENGU",
-      "AVAX",
       "SOL",
-      "LSK"
+      "TRUMP",
+      "PUMP",
+      "AVAX"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,8 +20,7 @@
       "SAGA",
       "ZEC",
       "PAXG",
-      "RLUSD",
-      "U"
+      "RLUSD"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -35,28 +33,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": -9.5e-05,
+      "funding": -0.0001,
       "long_short": 1.32
-    },
-    {
-      "symbol": "LSK",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": -0.000748,
-      "long_short": 1.6
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 7.6e-05,
-      "long_short": 0.52
     },
     {
       "symbol": "AVAX",
@@ -90,20 +68,28 @@
       "funding": 5e-05
     },
     {
+      "symbol": "LSK",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -0.000738
+    },
+    {
       "symbol": "PAXG",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 4.6e-05
+      "funding": 4.8e-05
     },
     {
-      "symbol": "PENGU",
+      "symbol": "PUMP",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 4.3e-05
     },
     {
       "symbol": "RLUSD",
@@ -126,14 +112,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.3e-05
+      "funding": -2.2e-05
     },
     {
-      "symbol": "U",
+      "symbol": "TRUMP",
       "surfaces": 1,
       "sources": [
-        "movers"
-      ]
+        "coingecko"
+      ],
+      "funding": 9e-06
     },
     {
       "symbol": "XRP",
@@ -141,7 +128,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -4.3e-05
+      "funding": -4e-05
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 7e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
