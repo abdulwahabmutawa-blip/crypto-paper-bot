@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-16T12:38:15+00:00",
+  "ts": "2026-09-16T12:43:55+00:00",
   "scanned": 103,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "LAUSDT",
+      "signal": "breakout",
+      "score": 0.6253,
+      "raw_score": 0.6909,
+      "weight": 0.905,
+      "price": 0.0684,
+      "why": "trades 5.0x, volume 8.1x, 73% taker-buy, +3.5% in an hour, at 91% of its 24h range",
+      "chg_24h": 0.0411,
+      "vol_surge": 8.13,
+      "chg_1h": 0.0348,
+      "market_surge": 0.0,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -1.17% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.42% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -1.17% at 24h: market beta, not signal",
