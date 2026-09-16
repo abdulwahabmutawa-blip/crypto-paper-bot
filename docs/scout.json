@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-16T23:19:05+00:00",
-  "scanned": 94,
+  "ts": "2026-09-16T23:24:55+00:00",
+  "scanned": 97,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "APTUSDT",
+      "signal": "breakout",
+      "score": 0.5624,
+      "raw_score": 0.6235,
+      "weight": 0.902,
+      "price": 0.549,
+      "why": "trades 5.3x, volume 6.9x, 74% taker-buy, +2.0% in an hour, at 93% of its 24h range",
+      "chg_24h": -0.0018,
+      "vol_surge": 6.88,
+      "chg_1h": 0.0204,
+      "market_surge": 2.84,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.73% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.44% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.73% at 24h: market beta, not signal",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 6/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 16,
+    "count": 18,
     "baseline": 11.0,
     "wave": false
   },
