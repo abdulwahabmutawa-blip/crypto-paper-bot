@@ -1,16 +1,17 @@
 {
-  "ts": "2026-09-16T12:15:59+00:00",
+  "ts": "2026-09-16T12:21:19+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
       "TRUMP",
       "SYN",
       "ARB",
-      "ZEC",
-      "LSK",
-      "LIT",
       "PENGU",
-      "ONDO"
+      "LIT",
+      "LSK",
+      "ZEC",
+      "ONDO",
+      "NEAR"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -35,7 +36,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.000157,
+      "funding": -0.000158,
       "long_short": 1.54
     },
     {
@@ -45,8 +46,18 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.000677,
+      "funding": -0.000672,
       "long_short": 1.35
+    },
+    {
+      "symbol": "NEAR",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 4.5e-05,
+      "long_short": 1.74
     },
     {
       "symbol": "SYN",
@@ -55,7 +66,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 8e-06,
+      "funding": 6e-06,
       "long_short": 0.91
     },
     {
@@ -100,20 +111,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "NEAR",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 4.8e-05
-    },
-    {
       "symbol": "ONDO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -4e-06
+      "funding": -8e-06
     },
     {
       "symbol": "PAXG",
@@ -121,7 +124,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 3e-05
+      "funding": 2.9e-05
     },
     {
       "symbol": "PENGU",
@@ -137,7 +140,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3e-06
+      "funding": -3e-06
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
