@@ -1,24 +1,8 @@
 {
-  "ts": "2026-09-16T05:25:14+00:00",
+  "ts": "2026-09-16T05:31:02+00:00",
   "scanned": 100,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ZECUSDT",
-      "signal": "breakout",
-      "score": 0.496,
-      "raw_score": 0.5487,
-      "weight": 0.904,
-      "price": 1173.9,
-      "why": "trades 4.3x, volume 5.3x, 66% taker-buy, +2.9% in an hour, at 93% of its 24h range",
-      "chg_24h": 0.0279,
-      "vol_surge": 5.25,
-      "chg_1h": 0.0289,
-      "market_surge": 4.25,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -1.48% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.42% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -1.48% at 24h: market beta, not signal",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 5/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 10,
+    "count": 9,
     "baseline": 12.0,
     "wave": false
   },
