@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-16T06:15:12+00:00 · runs 940 · equity **$876.81** (-12.32%) · cash $351.10 · open 6/10 · round trips 326
+updated 2026-09-16T06:31:35+00:00 · runs 941 · equity **$877.39** (-12.26%) · cash $263.33 · open 7/10 · round trips 326
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,10 +36,11 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-09-16T05:40 | SKHYBUSDT | surge | 178.8 | 180.55 | +0.98% |
-| 2026-09-16T05:40 | ZECUSDT | surge | 1160.83 | 1160.69 | -0.01% |
-| 2026-09-16T05:40 | ACEUSDT | bottom | 0.15 | 0.15 | +0.00% |
-| 2026-09-16T05:40 | HBARUSDT | bottom | 0.0746 | 0.07447 | -0.17% |
-| 2026-09-16T06:13 | AAVEUSDT | bottom | 121.06 | 121.01 | -0.04% |
+| 2026-09-16T05:40 | SKHYBUSDT | surge | 178.8 | 180.47 | +0.93% |
+| 2026-09-16T05:40 | ZECUSDT | surge | 1160.83 | 1169.27 | +0.73% |
+| 2026-09-16T05:40 | ACEUSDT | bottom | 0.15 | 0.1504 | +0.27% |
+| 2026-09-16T05:40 | HBARUSDT | bottom | 0.0746 | 0.07448 | -0.16% |
+| 2026-09-16T06:13 | AAVEUSDT | bottom | 121.06 | 120.64 | -0.35% |
+| 2026-09-16T06:30 | HEMIUSDT | surge | 0.00694 | 0.00694 | +0.00% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
