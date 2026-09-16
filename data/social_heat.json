@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-16T10:48:19+00:00",
+  "ts": "2026-09-16T10:53:49+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
@@ -8,8 +8,8 @@
       "ARB",
       "LIT",
       "BTC",
-      "TRUMP",
       "PENGU",
+      "LSK",
       "SUI"
     ],
     "reddit": [],
@@ -20,9 +20,9 @@
       "ARB",
       "MARSCOIN",
       "ZEC",
+      "NEAR",
       "PAXG",
-      "ENA",
-      "NEAR"
+      "ENA"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -35,8 +35,18 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.000154,
+      "funding": -0.000166,
       "long_short": 1.46
+    },
+    {
+      "symbol": "LSK",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -0.000803,
+      "long_short": 1.5
     },
     {
       "symbol": "SYN",
@@ -45,7 +55,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -5.6e-05,
+      "funding": -5.5e-05,
       "long_short": 0.84
     },
     {
@@ -55,7 +65,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -9.1e-05,
+      "funding": -9.2e-05,
       "long_short": 0.45
     },
     {
@@ -90,14 +100,6 @@
       "funding": 5e-05
     },
     {
-      "symbol": "LSK",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -0.00082
-    },
-    {
       "symbol": "MARSCOIN",
       "surfaces": 1,
       "sources": [
@@ -111,7 +113,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 5.8e-05
+      "funding": 5.5e-05
     },
     {
       "symbol": "PAXG",
@@ -135,15 +137,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7e-06
-    },
-    {
-      "symbol": "TRUMP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 2.3e-05
+      "funding": 6e-06
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
