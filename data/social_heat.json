@@ -1,16 +1,17 @@
 {
-  "ts": "2026-09-16T01:02:59+00:00",
+  "ts": "2026-09-16T01:08:49+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
       "TRUMP",
       "ARB",
+      "PENGU",
       "BTC",
       "LIT",
       "XLM",
+      "ETH",
       "ZEC",
-      "PENGU",
-      "UNI"
+      "AAVE"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -31,8 +32,16 @@
         "coingecko",
         "movers"
       ],
-      "funding": -7.2e-05,
+      "funding": -7.8e-05,
       "long_short": 1.2
+    },
+    {
+      "symbol": "AAVE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "BTC",
@@ -41,6 +50,14 @@
         "coingecko"
       ],
       "funding": 3.2e-05
+    },
+    {
+      "symbol": "ETH",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -6e-06
     },
     {
       "symbol": "FF",
@@ -86,7 +103,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.5e-05
+      "funding": 4e-05
     },
     {
       "symbol": "U",
@@ -96,20 +113,12 @@
       ]
     },
     {
-      "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5.6e-05
-    },
-    {
       "symbol": "XLM",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 1.2e-05
+      "funding": 9e-06
     },
     {
       "symbol": "ZEC",
