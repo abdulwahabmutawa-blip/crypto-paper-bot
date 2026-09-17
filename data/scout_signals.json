@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-17T11:04:53+00:00",
+  "ts": "2026-09-17T11:10:05+00:00",
   "scanned": 100,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "DOTUSDT",
+      "signal": "breakout",
+      "score": 0.6785,
+      "raw_score": 0.7506,
+      "weight": 0.904,
+      "price": 1.039,
+      "why": "trades 14.0x, volume 16.7x, 63% taker-buy, +2.4% in an hour, at 98% of its 24h range",
+      "chg_24h": 0.0866,
+      "vol_surge": 16.67,
+      "chg_1h": 0.0236,
+      "market_surge": 6.94,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.01% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.66% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.01% at 24h: market beta, not signal",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 6/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 18,
+    "count": 20,
     "baseline": 12.0,
     "wave": false
   },
