@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-17T22:43:41+00:00",
+  "ts": "2026-09-17T22:49:49+00:00",
   "sources": {
     "coingecko": [
       "TRUMP",
@@ -11,7 +11,8 @@
       "COTI",
       "XRP",
       "SOL",
-      "LIT"
+      "ARB",
+      "BTC"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,11 +20,11 @@
       "ONE",
       "AVA",
       "MARSCOIN",
-      "UNI",
       "NEAR",
-      "SYN",
+      "UNI",
       "ZEC",
-      "PUMP"
+      "PUMP",
+      "SYN"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -56,8 +57,16 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.000349,
+      "funding": -0.000352,
       "long_short": 0.36
+    },
+    {
+      "symbol": "ARB",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 8.4e-05
     },
     {
       "symbol": "AVA",
@@ -65,7 +74,15 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.005052
+      "funding": -0.004908
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 9.2e-05
     },
     {
       "symbol": "COTI",
@@ -73,7 +90,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000174
+      "funding": -0.000153
     },
     {
       "symbol": "FIRO",
@@ -81,14 +98,6 @@
       "sources": [
         "coingecko"
       ]
-    },
-    {
-      "symbol": "LIT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -4.9e-05
     },
     {
       "symbol": "MARSCOIN",
@@ -120,7 +129,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.7e-05
+      "funding": 4.9e-05
     },
     {
       "symbol": "SOL",
@@ -152,7 +161,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -6.8e-05
+      "funding": -6.9e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
