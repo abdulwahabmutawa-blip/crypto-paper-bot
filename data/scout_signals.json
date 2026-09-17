@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-17T06:21:33+00:00",
-  "scanned": 101,
+  "ts": "2026-09-17T06:26:54+00:00",
+  "scanned": 99,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SAGAUSDT",
+      "signal": "breakout",
+      "score": 0.7895,
+      "raw_score": 0.8733,
+      "weight": 0.904,
+      "price": 0.02233,
+      "why": "trades 11.3x, volume 7.7x, 63% taker-buy, +6.5% in an hour, at 100% of its 24h range",
+      "chg_24h": 0.1147,
+      "vol_surge": 7.75,
+      "chg_1h": 0.0654,
+      "market_surge": 5.21,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.13% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.56% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.13% at 24h: market beta, not signal",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 6/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 13,
+    "count": 14,
     "baseline": 11.0,
     "wave": false
   },
