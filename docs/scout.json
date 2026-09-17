@@ -1,22 +1,22 @@
 {
-  "ts": "2026-09-17T22:55:35+00:00",
+  "ts": "2026-09-17T23:01:20+00:00",
   "scanned": 104,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "MMTUSDT",
-      "signal": "revival",
-      "score": 0.6481,
-      "raw_score": 0.6481,
-      "weight": 1.0,
-      "price": 0.1431,
-      "why": "revival day-one: fell -22% last week on $0.58M/day quiet, volume arriving 4.6x today, only +16% off its 30d low \u00b7 serial exploder: 2 runs in 2y \u2014 ON A WAVE DAY (breadth 31 vs 12 base)",
-      "chg_24h": 0.1384,
-      "vol_surge": 4.6,
-      "chg_1h": null,
-      "market_surge": null,
+      "symbol": "APTUSDT",
+      "signal": "breakout",
+      "score": 0.6336,
+      "raw_score": 0.7128,
+      "weight": 0.889,
+      "price": 0.595,
+      "why": "trades 7.2x, volume 19.9x, 64% taker-buy, +2.1% in an hour, at 98% of its 24h range",
+      "chg_24h": 0.106,
+      "vol_surge": 19.91,
+      "chg_1h": 0.0206,
+      "market_surge": 8.8,
       "actionable": false,
-      "status": "probation \u2014 6/12 resolved 24h samples under ruleset 3"
+      "status": "benched \u2014 BTC-excess day mean +0.77% at 24h: market beta, not signal"
     }
   ],
   "gate": {
@@ -27,7 +27,7 @@
     "revival": "probation \u2014 6/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 31,
+    "count": 33,
     "baseline": 12.0,
     "wave": true
   },
