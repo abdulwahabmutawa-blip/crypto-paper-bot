@@ -1,17 +1,17 @@
 # Oracle scoreboard
 
-generation `gen-000-baserate` · forecaster `baserate_v1` · 2026-09-16T05:05:55+00:00
+generation `gen-000-baserate` · forecaster `baserate_v1` · 2026-09-17T05:10:36+00:00
 
-- predictions written: **9967**
-- resolved and scored: **294**
-- annulled: **1** (rate 0.3% — OK)
+- predictions written: **10317**
+- resolved and scored: **585**
+- annulled: **3** (rate 0.5% — OK)
 
-- observed event rate: **0.3367**
-- Brier (forecaster): 0.268285
-- Brier (baseline):   0.268285
+- observed event rate: **0.3385**
+- Brier (forecaster): 0.269386
+- Brier (baseline):   0.269386
 - paired mean d: 0.00000000 (sd 0.000000)
-- cluster rho: **0.0** (mean group 294.0)
-- **n_eff 294.0 / 100 required**
+- cluster rho: **0.0** (mean group 292.49)
+- **n_eff 585.0 / 100 required**
 
 > **verdict: indistinguishable from baseline** (90% CI [0.0, 0.0])
 
