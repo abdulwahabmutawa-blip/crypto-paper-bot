@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-18T17:20:47+00:00",
-  "scanned": 128,
+  "ts": "2026-09-18T17:25:54+00:00",
+  "scanned": 131,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "WBTCUSDT",
+      "signal": "ignition",
+      "score": 0.7798,
+      "raw_score": 0.826,
+      "weight": 0.944,
+      "price": 80689.79,
+      "why": "trades 6.4x and volume 15.6x the prior 4h, 92% taker-buy, $155,987 burst \u2014 while price has only moved -0.3%",
+      "chg_24h": 0.0501,
+      "vol_surge": 15.59,
+      "chg_1h": -0.003,
+      "market_surge": 11.45,
+      "actionable": false,
+      "status": "benched \u2014 hit 48%, mean +0.49% over last 684 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 48%, mean +0.49% over last 684 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 BTC-excess day mean -0.28% at 24h: market beta, not signal",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 11/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 52,
+    "count": 53,
     "baseline": 12.0,
     "wave": true
   },
