@@ -1,17 +1,16 @@
 {
-  "ts": "2026-09-18T10:27:19+00:00",
+  "ts": "2026-09-18T10:32:48+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
-      "NEAR",
       "UNI",
-      "PENGU",
+      "NEAR",
       "ZEC",
+      "PENGU",
       "ARB",
-      "RAY",
       "SUI",
       "RENDER",
-      "PUMP"
+      "STRK"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -23,7 +22,7 @@
       "ONE",
       "COTI",
       "WLD",
-      "\u725b\u6765"
+      "ONDO"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -80,7 +79,15 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.00132
+      "funding": 0.001281
+    },
+    {
+      "symbol": "ONDO",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "ONE",
@@ -88,7 +95,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.003236
+      "funding": -0.003125
     },
     {
       "symbol": "PENGU",
@@ -99,7 +106,7 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PUMP",
+      "symbol": "RENDER",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -107,15 +114,7 @@
       "funding": 5e-05
     },
     {
-      "symbol": "RAY",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0
-    },
-    {
-      "symbol": "RENDER",
+      "symbol": "STRK",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -144,15 +143,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.9e-05
-    },
-    {
-      "symbol": "\u725b\u6765",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.000184
+      "funding": 7e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
