@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-18T01:54:26+00:00",
-  "scanned": 106,
+  "ts": "2026-09-18T01:59:53+00:00",
+  "scanned": 109,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "UNIUSDT",
+      "signal": "breakout",
+      "score": 0.5866,
+      "raw_score": 0.6635,
+      "weight": 0.884,
+      "price": 7.998,
+      "why": "trades 5.8x, volume 6.6x, 64% taker-buy, +3.6% in an hour, at 97% of its 24h range",
+      "chg_24h": 0.1813,
+      "vol_surge": 6.57,
+      "chg_1h": 0.0357,
+      "market_surge": 3.31,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.24% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.74% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.24% at 24h: market beta, not signal",
