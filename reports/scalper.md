@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-18T07:25:50+00:00 · runs 1120 · equity **$929.40** (-7.06%) · cash $0.00 · open 10/10 · round trips 382
+updated 2026-09-18T07:42:07+00:00 · runs 1121 · equity **$930.45** (-6.95%) · cash $0.00 · open 10/10 · round trips 382
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -37,13 +37,13 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
 | 2026-09-17T10:23 | DODOUSDT | surge | 0.01812 | 0.01801 | -0.61% |
-| 2026-09-17T15:38 | INTCBUSDT | surge | 109.9 | 111.9 | +1.82% |
-| 2026-09-17T16:13 | BMNRBUSDT | surge | 23.97 | 24.6 | +2.63% |
-| 2026-09-18T01:20 | AXSUSDT | surge | 0.995 | 1 | +0.50% |
+| 2026-09-17T15:38 | INTCBUSDT | surge | 109.9 | 112.16 | +2.06% |
+| 2026-09-17T16:13 | BMNRBUSDT | surge | 23.97 | 24.62 | +2.71% |
+| 2026-09-18T01:20 | AXSUSDT | surge | 0.995 | 0.999 | +0.40% |
 | 2026-09-18T01:20 | RENDERUSDT | surge | 1.477 | 1.499 | +1.49% |
-| 2026-09-18T03:31 | BCHUSDT | surge | 246.2 | 247.1 | +0.37% |
-| 2026-09-18T04:24 | TRBUSDT | surge | 17.56 | 17.72 | +0.91% |
-| 2026-09-18T04:41 | SEIUSDT | surge | 0.04638 | 0.04685 | +1.01% |
-| 2026-09-18T07:24 | 币安人生USDT | surge | 0.5254 | 0.5222 | -0.61% |
+| 2026-09-18T03:31 | BCHUSDT | surge | 246.2 | 247.6 | +0.57% |
+| 2026-09-18T04:24 | TRBUSDT | surge | 17.56 | 17.69 | +0.74% |
+| 2026-09-18T04:41 | SEIUSDT | surge | 0.04638 | 0.04679 | +0.88% |
+| 2026-09-18T07:24 | 币安人生USDT | surge | 0.5254 | 0.5279 | +0.48% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
