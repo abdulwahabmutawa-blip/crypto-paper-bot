@@ -1,20 +1,35 @@
 {
-  "ts": "2026-09-18T16:01:44+00:00",
-  "scanned": 125,
+  "ts": "2026-09-18T16:07:26+00:00",
+  "scanned": 127,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "AUSDT",
+      "symbol": "MMTUSDT",
       "signal": "breakout",
-      "score": 0.7516,
-      "raw_score": 0.825,
+      "score": 0.6151,
+      "raw_score": 0.6752,
       "weight": 0.911,
-      "price": 0.0921,
-      "why": "trades 17.9x, volume 20.1x, 68% taker-buy, +4.4% in an hour, at 95% of its 24h range",
-      "chg_24h": 0.1971,
-      "vol_surge": 20.08,
-      "chg_1h": 0.0442,
-      "market_surge": 0.0,
+      "price": 0.1513,
+      "why": "trades 4.8x, volume 19.7x, 70% taker-buy, +3.3% in an hour, at 92% of its 24h range",
+      "chg_24h": 0.0832,
+      "vol_surge": 19.68,
+      "chg_1h": 0.0335,
+      "market_surge": 4.04,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.28% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "ZAMAUSDT",
+      "signal": "breakout",
+      "score": 0.5909,
+      "raw_score": 0.6486,
+      "weight": 0.911,
+      "price": 0.05872,
+      "why": "trades 5.7x, volume 5.1x, 67% taker-buy, +4.6% in an hour, at 92% of its 24h range",
+      "chg_24h": 0.1638,
+      "vol_surge": 5.07,
+      "chg_1h": 0.0458,
+      "market_surge": 5.66,
       "actionable": false,
       "status": "benched \u2014 BTC-excess day mean -0.28% at 24h: market beta, not signal"
     }
@@ -27,7 +42,7 @@
     "revival": "probation \u2014 11/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 52,
+    "count": 64,
     "baseline": 12.0,
     "wave": true
   },
@@ -95,7 +110,7 @@
       "median_ret_4h": -0.00432,
       "both_halves_4h": false,
       "days_4h": 15,
-      "mean_x_4h": -0.00011,
+      "mean_x_4h": -0.00022,
       "days_x_4h": 15,
       "avg_win_4h": 0.03828,
       "avg_loss_4h": -0.02843,
