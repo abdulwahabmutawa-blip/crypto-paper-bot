@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-18T06:43:48+00:00",
+  "ts": "2026-09-18T06:49:38+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
@@ -19,12 +19,12 @@
     "movers": [
       "ONE",
       "COTI",
-      "ARB",
       "NEAR",
+      "ARB",
       "UNI",
       "GENIUS",
       "WLD",
-      "AVA"
+      "ZEC"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -47,7 +47,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 0.00015,
+      "funding": 0.00014,
       "long_short": 1.23
     },
     {
@@ -81,12 +81,13 @@
       "long_short": 1.16
     },
     {
-      "symbol": "AVA",
-      "surfaces": 1,
+      "symbol": "ZEC",
+      "surfaces": 2,
       "sources": [
+        "coingecko",
         "movers"
       ],
-      "funding": -0.006622
+      "funding": -0.000216
     },
     {
       "symbol": "BTC",
@@ -94,7 +95,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.3e-05
+      "funding": 8.1e-05
     },
     {
       "symbol": "COTI",
@@ -102,7 +103,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -1.9e-05
+      "funding": -1.6e-05
     },
     {
       "symbol": "FIRO",
@@ -117,7 +118,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.004231
+      "funding": -0.004234
     },
     {
       "symbol": "PENGU",
@@ -125,7 +126,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3e-06
+      "funding": 5e-06
     },
     {
       "symbol": "TAO",
@@ -141,15 +142,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 0.000352
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -0.000231
+      "funding": 0.00034
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
