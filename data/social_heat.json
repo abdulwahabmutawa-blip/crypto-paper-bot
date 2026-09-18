@@ -1,15 +1,16 @@
 {
-  "ts": "2026-09-18T04:24:22+00:00",
+  "ts": "2026-09-18T04:30:20+00:00",
   "sources": {
     "coingecko": [
-      "PENGU",
       "UNI",
+      "PENGU",
       "ARB",
       "NEAR",
       "FIRO",
       "ZEC",
-      "BTC",
       "LIT",
+      "PUMP",
+      "BTC",
       "FET"
     ],
     "reddit": [],
@@ -18,11 +19,11 @@
       "AVA",
       "COTI",
       "ARB",
+      "ONE",
       "NEAR",
       "UNI",
-      "ONE",
-      "MARSCOIN",
-      "GENIUS"
+      "GENIUS",
+      "MARSCOIN"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -64,7 +65,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.005601
+      "funding": -0.005807
     },
     {
       "symbol": "BTC",
@@ -72,7 +73,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.3e-05
+      "funding": 6.2e-05
     },
     {
       "symbol": "COTI",
@@ -80,7 +81,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 7e-06
+      "funding": 8e-06
     },
     {
       "symbol": "FET",
@@ -103,7 +104,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 5.4e-05
+      "funding": 6.8e-05
     },
     {
       "symbol": "LIT",
@@ -119,7 +120,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000202
+      "funding": 0.000195
     },
     {
       "symbol": "ONE",
@@ -127,10 +128,18 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000619
+      "funding": -0.000669
     },
     {
       "symbol": "PENGU",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "PUMP",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -143,7 +152,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000281
+      "funding": -0.000296
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
