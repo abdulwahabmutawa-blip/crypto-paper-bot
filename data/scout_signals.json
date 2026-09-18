@@ -1,24 +1,8 @@
 {
-  "ts": "2026-09-18T19:45:45+00:00",
-  "scanned": 134,
+  "ts": "2026-09-18T19:51:24+00:00",
+  "scanned": 133,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "SUSDT",
-      "signal": "breakout",
-      "score": 0.676,
-      "raw_score": 0.7388,
-      "weight": 0.915,
-      "price": 0.03331,
-      "why": "trades 12.1x, volume 11.4x, 61% taker-buy, +2.1% in an hour, at 92% of its 24h range",
-      "chg_24h": 0.2426,
-      "vol_surge": 11.42,
-      "chg_1h": 0.0215,
-      "market_surge": 10.02,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.53% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 47%, mean +0.46% over last 679 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 BTC-excess day mean -0.53% at 24h: market beta, not signal",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 11/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 79,
+    "count": 77,
     "baseline": 12.0,
     "wave": true
   },
@@ -231,7 +215,7 @@
       "median_ret_24h": -0.03627,
       "both_halves_24h": false,
       "days_24h": 5,
-      "mean_x_24h": -0.03653,
+      "mean_x_24h": -0.03473,
       "days_x_24h": 5,
       "avg_win_24h": 0.00942,
       "avg_loss_24h": -0.04701,
