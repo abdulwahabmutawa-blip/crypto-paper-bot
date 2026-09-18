@@ -2,20 +2,21 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-18T07:09:30+00:00 · runs 1119 · equity **$932.64** (-6.74%) · cash $0.00 · open 10/10 · round trips 381
+updated 2026-09-18T07:25:50+00:00 · runs 1120 · equity **$929.40** (-7.06%) · cash $0.00 · open 10/10 · round trips 382
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
-- hit 50% (break-even 54%) · mean -0.19%/trade · realized $-74.54 · worst day $-50.94 · trades/day 27.2
+- hit 50% (break-even 54%) · mean -0.20%/trade · realized $-77.58 · worst day $-50.94 · trades/day 27.3
 
 | shape | n | hit | mean | target% | stop% | time% |
 |---|---|---|---|---|---|---|
-| surge | 299 | 52% | -0.10% | 48% | 43% | 9% |
+| surge | 300 | 52% | -0.11% | 48% | 44% | 9% |
 | bottom | 82 | 41% | -0.53% | 40% | 46% | 13% |
 
 ## Last 15 round trips
 | exit (UTC) | coin | shape | how | hours | net | P&L |
 |---|---|---|---|---|---|---|
+| 2026-09-18T07:24 | REZUSDT | surge | STOP | 1.2 | -3.25% | $-3.04 |
 | 2026-09-18T05:46 | 币安人生USDT | surge | TARGET | 2.0 | +2.75% | $+2.50 |
 | 2026-09-18T04:41 | AUSDT | surge | TARGET | 3.0 | +2.75% | $+2.65 |
 | 2026-09-18T04:24 | SEIUSDT | surge | TARGET | 1.5 | +2.75% | $+2.73 |
@@ -30,20 +31,19 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | 2026-09-18T00:32 | TRUMPUSDT | surge | TIME | 24.0 | +0.37% | $+0.36 |
 | 2026-09-18T00:15 | ROSEUSDT | surge | STOP | 0.2 | -3.25% | $-3.23 |
 | 2026-09-17T23:59 | WLDUSDT | surge | TARGET | 23.5 | +2.75% | $+2.66 |
-| 2026-09-17T17:29 | PROVEUSDT | surge | TARGET | 0.5 | +2.75% | $+2.58 |
 
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-09-17T10:23 | DODOUSDT | surge | 0.01812 | 0.01816 | +0.22% |
-| 2026-09-17T15:38 | INTCBUSDT | surge | 109.9 | 111.78 | +1.71% |
-| 2026-09-17T16:13 | BMNRBUSDT | surge | 23.97 | 24.61 | +2.67% |
-| 2026-09-18T01:20 | AXSUSDT | surge | 0.995 | 0.997 | +0.20% |
-| 2026-09-18T01:20 | RENDERUSDT | surge | 1.477 | 1.498 | +1.42% |
-| 2026-09-18T03:31 | BCHUSDT | surge | 246.2 | 247.2 | +0.41% |
-| 2026-09-18T04:24 | TRBUSDT | surge | 17.56 | 17.71 | +0.85% |
-| 2026-09-18T04:41 | SEIUSDT | surge | 0.04638 | 0.04664 | +0.56% |
-| 2026-09-18T05:46 | REZUSDT | surge | 0.004053 | 0.004046 | -0.17% |
+| 2026-09-17T10:23 | DODOUSDT | surge | 0.01812 | 0.01801 | -0.61% |
+| 2026-09-17T15:38 | INTCBUSDT | surge | 109.9 | 111.9 | +1.82% |
+| 2026-09-17T16:13 | BMNRBUSDT | surge | 23.97 | 24.6 | +2.63% |
+| 2026-09-18T01:20 | AXSUSDT | surge | 0.995 | 1 | +0.50% |
+| 2026-09-18T01:20 | RENDERUSDT | surge | 1.477 | 1.499 | +1.49% |
+| 2026-09-18T03:31 | BCHUSDT | surge | 246.2 | 247.1 | +0.37% |
+| 2026-09-18T04:24 | TRBUSDT | surge | 17.56 | 17.72 | +0.91% |
+| 2026-09-18T04:41 | SEIUSDT | surge | 0.04638 | 0.04685 | +1.01% |
+| 2026-09-18T07:24 | 币安人生USDT | surge | 0.5254 | 0.5222 | -0.61% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
