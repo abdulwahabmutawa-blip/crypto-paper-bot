@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-18T05:15:21+00:00 · runs 1112 · equity **$931.33** (-6.87%) · cash $0.00 · open 10/10 · round trips 380
+updated 2026-09-18T05:31:38+00:00 · runs 1113 · equity **$931.15** (-6.89%) · cash $0.00 · open 10/10 · round trips 380
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-09-17T10:23 | DODOUSDT | surge | 0.01812 | 0.01843 | +1.71% |
-| 2026-09-17T15:38 | INTCBUSDT | surge | 109.9 | 110.86 | +0.87% |
-| 2026-09-17T16:13 | BMNRBUSDT | surge | 23.97 | 24.51 | +2.25% |
-| 2026-09-18T01:20 | AXSUSDT | surge | 0.995 | 1.008 | +1.31% |
-| 2026-09-18T01:20 | RENDERUSDT | surge | 1.477 | 1.504 | +1.83% |
-| 2026-09-18T03:31 | 币安人生USDT | surge | 0.5087 | 0.5098 | +0.22% |
-| 2026-09-18T03:31 | BCHUSDT | surge | 246.2 | 247.7 | +0.61% |
-| 2026-09-18T04:24 | TRBUSDT | surge | 17.56 | 17.66 | +0.57% |
+| 2026-09-17T10:23 | DODOUSDT | surge | 0.01812 | 0.01837 | +1.38% |
+| 2026-09-17T15:38 | INTCBUSDT | surge | 109.9 | 110.72 | +0.75% |
+| 2026-09-17T16:13 | BMNRBUSDT | surge | 23.97 | 24.47 | +2.09% |
+| 2026-09-18T01:20 | AXSUSDT | surge | 0.995 | 1.005 | +1.01% |
+| 2026-09-18T01:20 | RENDERUSDT | surge | 1.477 | 1.496 | +1.29% |
+| 2026-09-18T03:31 | 币安人生USDT | surge | 0.5087 | 0.5187 | +1.97% |
+| 2026-09-18T03:31 | BCHUSDT | surge | 246.2 | 247.5 | +0.53% |
+| 2026-09-18T04:24 | TRBUSDT | surge | 17.56 | 17.6 | +0.23% |
 | 2026-09-18T04:41 | SEIUSDT | surge | 0.04638 | 0.04632 | -0.13% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
