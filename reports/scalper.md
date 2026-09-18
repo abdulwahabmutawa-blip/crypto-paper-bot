@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-18T08:47:31+00:00 · runs 1125 · equity **$931.06** (-6.89%) · cash $0.00 · open 10/10 · round trips 383
+updated 2026-09-18T09:03:50+00:00 · runs 1126 · equity **$932.17** (-6.78%) · cash $0.00 · open 10/10 · round trips 383
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -37,13 +37,13 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
 | 2026-09-17T10:23 | DODOUSDT | surge | 0.01812 | 0.018 | -0.66% |
-| 2026-09-17T15:38 | INTCBUSDT | surge | 109.9 | 112.14 | +2.04% |
-| 2026-09-18T01:20 | AXSUSDT | surge | 0.995 | 0.998 | +0.30% |
-| 2026-09-18T01:20 | RENDERUSDT | surge | 1.477 | 1.517 | +2.71% |
-| 2026-09-18T03:31 | BCHUSDT | surge | 246.2 | 249.8 | +1.46% |
-| 2026-09-18T04:24 | TRBUSDT | surge | 17.56 | 17.72 | +0.91% |
-| 2026-09-18T04:41 | SEIUSDT | surge | 0.04638 | 0.0468 | +0.91% |
-| 2026-09-18T07:24 | 币安人生USDT | surge | 0.5254 | 0.5131 | -2.34% |
-| 2026-09-18T08:29 | AUSDT | surge | 0.0852 | 0.0863 | +1.29% |
+| 2026-09-17T15:38 | INTCBUSDT | surge | 109.9 | 111.28 | +1.26% |
+| 2026-09-18T01:20 | AXSUSDT | surge | 0.995 | 1.001 | +0.60% |
+| 2026-09-18T01:20 | RENDERUSDT | surge | 1.477 | 1.519 | +2.84% |
+| 2026-09-18T03:31 | BCHUSDT | surge | 246.2 | 250.2 | +1.62% |
+| 2026-09-18T04:24 | TRBUSDT | surge | 17.56 | 17.76 | +1.14% |
+| 2026-09-18T04:41 | SEIUSDT | surge | 0.04638 | 0.04695 | +1.23% |
+| 2026-09-18T07:24 | 币安人生USDT | surge | 0.5254 | 0.5161 | -1.77% |
+| 2026-09-18T08:29 | AUSDT | surge | 0.0852 | 0.0865 | +1.53% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
