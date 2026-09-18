@@ -1,24 +1,8 @@
 {
-  "ts": "2026-09-18T10:10:55+00:00",
-  "scanned": 122,
+  "ts": "2026-09-18T10:16:08+00:00",
+  "scanned": 123,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "MMTUSDT",
-      "signal": "breakout",
-      "score": 0.7345,
-      "raw_score": 0.808,
-      "weight": 0.909,
-      "price": 0.1507,
-      "why": "trades 8.5x, volume 26.2x, 75% taker-buy, +3.4% in an hour, at 93% of its 24h range",
-      "chg_24h": 0.1572,
-      "vol_surge": 26.17,
-      "chg_1h": 0.0343,
-      "market_surge": 9.75,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.24% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 47%, mean +0.37% over last 691 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 BTC-excess day mean -0.24% at 24h: market beta, not signal",
@@ -27,21 +11,21 @@
     "revival": "probation \u2014 7/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 69,
+    "count": 73,
     "baseline": 12.0,
     "wave": true
   },
   "scorecard": {
     "ignition": {
-      "span_h_1h": 334.0,
-      "n_eff_1h": 334.04,
-      "n_1h": 732,
-      "hit_rate_1h": 0.414,
-      "mean_ret_1h": 0.00088,
+      "span_h_1h": 334.9,
+      "n_eff_1h": 334.86,
+      "n_1h": 733,
+      "hit_rate_1h": 0.415,
+      "mean_ret_1h": 0.0009,
       "median_ret_1h": 0.0,
       "both_halves_1h": false,
       "days_1h": 15,
-      "mean_x_1h": 0.00103,
+      "mean_x_1h": 0.00106,
       "days_x_1h": 15,
       "avg_win_1h": 0.01112,
       "avg_loss_1h": -0.00939,
