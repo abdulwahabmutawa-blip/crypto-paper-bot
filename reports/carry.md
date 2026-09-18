@@ -1,6 +1,6 @@
 # Funding carry (paper)
 
-Updated 2026-09-18T11:36:20+00:00. Paper book, no keys, no orders. Capital $2,000 (study floor); the owner's real $33 tracked alongside to show the size effect.
+Updated 2026-09-18T11:42:07+00:00. Paper book, no keys, no orders. Capital $2,000 (study floor); the owner's real $33 tracked alongside to show the size effect.
 
 - **Net $+0.00** = $+1.20 funding collected, $1.20 fees paid
 - Annualised: held back until day 14 (7 so far) — too few settlements to annualise honestly
@@ -11,8 +11,8 @@ Updated 2026-09-18T11:36:20+00:00. Paper book, no keys, no orders. Capital $2,00
 
 | symbol | trailing 7d APR (perp leg) | on capital | spot |
 |---|---|---|---|
-| BTCUSDT | +6.4% | +3.2% | 78,125.72 |
-| ETHUSDT | +2.2% | +1.1% | 2,510.07 |
+| BTCUSDT | +6.4% | +3.2% | 78,066.03 |
+| ETHUSDT | +2.2% | +1.1% | 2,508.81 |
 
 Entry bar 1.46% APR on capital (derived: a 0.12% round trip paid back inside 30 days), exit at 0%, 21 settlements (7d) trailing. Fees: spot 0.075% + futures 0.045% per side, VIP0 with the BNB discount.
 
