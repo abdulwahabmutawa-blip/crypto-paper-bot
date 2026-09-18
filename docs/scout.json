@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-18T22:52:33+00:00",
-  "scanned": 136,
+  "ts": "2026-09-18T22:58:22+00:00",
+  "scanned": 134,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ASTERUSDT",
+      "signal": "breakout",
+      "score": 0.6629,
+      "raw_score": 0.7198,
+      "weight": 0.921,
+      "price": 0.779,
+      "why": "trades 7.3x, volume 6.7x, 80% taker-buy, +2.5% in an hour, at 98% of its 24h range",
+      "chg_24h": 0.0513,
+      "vol_surge": 6.67,
+      "chg_1h": 0.025,
+      "market_surge": 2.94,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.49% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 48%, mean +0.50% over last 676 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 BTC-excess day mean -0.49% at 24h: market beta, not signal",
@@ -215,7 +231,7 @@
       "median_ret_24h": -0.03627,
       "both_halves_24h": false,
       "days_24h": 5,
-      "mean_x_24h": -0.03473,
+      "mean_x_24h": -0.03416,
       "days_x_24h": 5,
       "avg_win_24h": 0.00942,
       "avg_loss_24h": -0.04701,
