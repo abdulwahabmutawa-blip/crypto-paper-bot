@@ -1,24 +1,8 @@
 {
-  "ts": "2026-09-18T18:16:39+00:00",
+  "ts": "2026-09-18T18:22:07+00:00",
   "scanned": 131,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ZENUSDT",
-      "signal": "breakout",
-      "score": 0.6372,
-      "raw_score": 0.6957,
-      "weight": 0.916,
-      "price": 7.527,
-      "why": "trades 5.5x, volume 5.6x, 62% taker-buy, +6.1% in an hour, at 98% of its 24h range",
-      "chg_24h": 0.0331,
-      "vol_surge": 5.65,
-      "chg_1h": 0.0609,
-      "market_surge": 2.6,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.30% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 hit 48%, mean +0.47% over last 683 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 BTC-excess day mean -0.30% at 24h: market beta, not signal",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 11/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 58,
+    "count": 57,
     "baseline": 12.0,
     "wave": true
   },
