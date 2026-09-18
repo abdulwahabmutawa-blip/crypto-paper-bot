@@ -1,17 +1,33 @@
 {
-  "ts": "2026-09-18T09:36:26+00:00",
-  "scanned": 120,
+  "ts": "2026-09-18T09:42:02+00:00",
+  "scanned": 122,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "HBARUSDT",
+      "signal": "ignition",
+      "score": 0.8562,
+      "raw_score": 0.9041,
+      "weight": 0.947,
+      "price": 0.07741,
+      "why": "trades 10.2x and volume 22.5x the prior 4h, 69% taker-buy, $545,418 burst \u2014 while price has only moved +0.7%",
+      "chg_24h": 0.0362,
+      "vol_surge": 22.54,
+      "chg_1h": 0.0073,
+      "market_surge": 8.35,
+      "actionable": false,
+      "status": "benched \u2014 hit 47%, mean +0.31% over last 691 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 hit 47%, mean +0.31% over last 691 at 24h: not beating 4x the round trip",
-    "breakout": "benched \u2014 BTC-excess day mean -0.20% at 24h: market beta, not signal",
+    "breakout": "benched \u2014 BTC-excess day mean -0.22% at 24h: market beta, not signal",
     "reversion": "benched \u2014 BTC-excess day mean +0.48% at 24h: market beta, not signal",
     "heat": "probation \u2014 39 rows but only 6.4 independent 24h windows (span 153h): overlapping labels are not a sample",
     "revival": "probation \u2014 7/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 51,
+    "count": 50,
     "baseline": 12.0,
     "wave": true
   },
@@ -84,19 +100,19 @@
       "avg_win_4h": 0.0377,
       "avg_loss_4h": -0.02903,
       "payoff_4h": 1.299,
-      "span_h_24h": 311.1,
-      "n_eff_24h": 12.96,
-      "n_24h": 247,
-      "hit_rate_24h": 0.397,
-      "mean_ret_24h": -0.0033,
-      "median_ret_24h": -0.01324,
+      "span_h_24h": 311.9,
+      "n_eff_24h": 13.0,
+      "n_24h": 248,
+      "hit_rate_24h": 0.395,
+      "mean_ret_24h": -0.00329,
+      "median_ret_24h": -0.01186,
       "both_halves_24h": false,
       "days_24h": 14,
-      "mean_x_24h": -0.00201,
+      "mean_x_24h": -0.00222,
       "days_x_24h": 14,
       "avg_win_24h": 0.06194,
-      "avg_loss_24h": -0.05023,
-      "payoff_24h": 1.233
+      "avg_loss_24h": -0.04988,
+      "payoff_24h": 1.242
     },
     "reversion": {
       "span_h_1h": 252.3,
