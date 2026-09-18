@@ -1,33 +1,17 @@
 {
-  "ts": "2026-09-18T14:15:55+00:00",
+  "ts": "2026-09-18T14:21:44+00:00",
   "scanned": 119,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "HEIUSDT",
-      "signal": "breakout",
-      "score": 0.7166,
-      "raw_score": 0.7875,
-      "weight": 0.91,
-      "price": 0.1361,
-      "why": "trades 6.7x, volume 19.6x, 70% taker-buy, +4.7% in an hour, at 87% of its 24h range",
-      "chg_24h": 0.0637,
-      "vol_surge": 19.65,
-      "chg_1h": 0.0469,
-      "market_surge": 1.66,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.24% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
-    "ignition": "benched \u2014 hit 47%, mean +0.42% over last 682 at 24h: not beating 4x the round trip",
+    "ignition": "benched \u2014 hit 47%, mean +0.42% over last 683 at 24h: not beating 4x the round trip",
     "breakout": "benched \u2014 BTC-excess day mean -0.24% at 24h: market beta, not signal",
     "reversion": "benched \u2014 BTC-excess day mean +0.48% at 24h: market beta, not signal",
     "heat": "probation \u2014 39 rows but only 6.4 independent 24h windows (span 153h): overlapping labels are not a sample",
     "revival": "probation \u2014 11/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 48,
+    "count": 49,
     "baseline": 12.0,
     "wave": true
   },
@@ -59,17 +43,17 @@
       "avg_win_4h": 0.02115,
       "avg_loss_4h": -0.01643,
       "payoff_4h": 1.288,
-      "span_h_24h": 311.1,
-      "n_eff_24h": 12.96,
-      "n_24h": 682,
+      "span_h_24h": 311.8,
+      "n_eff_24h": 12.99,
+      "n_24h": 683,
       "hit_rate_24h": 0.474,
-      "mean_ret_24h": 0.00419,
+      "mean_ret_24h": 0.00424,
       "median_ret_24h": -8e-05,
       "both_halves_24h": false,
       "days_24h": 14,
-      "mean_x_24h": 0.00983,
+      "mean_x_24h": 0.0097,
       "days_x_24h": 14,
-      "avg_win_24h": 0.0476,
+      "avg_win_24h": 0.04758,
       "avg_loss_24h": -0.03869,
       "payoff_24h": 1.23
     },
