@@ -1,24 +1,24 @@
 {
-  "ts": "2026-09-19T00:26:49+00:00",
+  "ts": "2026-09-19T00:32:37+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
-      "ZEC",
       "NEAR",
+      "ZEC",
       "STRK",
       "PENGU",
-      "TAO",
-      "ONDO",
       "BTC",
-      "UNI"
+      "ONDO",
+      "MORPHO",
+      "TAO"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "STRK",
       "G",
-      "ARB",
+      "STRK",
       "APT",
+      "ARB",
       "NEAR",
       "INJ",
       "\u725b\u6765",
@@ -49,16 +49,6 @@
       "long_short": 1.54
     },
     {
-      "symbol": "UNI",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 2.04
-    },
-    {
       "symbol": "APT",
       "surfaces": 1,
       "sources": [
@@ -80,7 +70,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.9e-05
+      "funding": 8.1e-05
     },
     {
       "symbol": "FIRO",
@@ -95,7 +85,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000514
+      "funding": 0.000553
     },
     {
       "symbol": "INJ",
@@ -104,6 +94,14 @@
         "movers"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "MORPHO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "ONDO",
@@ -130,12 +128,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "UNI",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 4.4e-05
+      "funding": 3.9e-05
     },
     {
       "symbol": "\u725b\u6765",
@@ -143,7 +149,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000314
+      "funding": 0.00032
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
