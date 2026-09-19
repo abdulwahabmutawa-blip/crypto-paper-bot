@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-19T07:38:27+00:00",
+  "ts": "2026-09-19T07:44:28+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
@@ -7,21 +7,21 @@
       "UNI",
       "TAO",
       "NEAR",
-      "BTC",
-      "SOL",
       "ARB",
-      "AR"
+      "PENGU",
+      "BTC",
+      "SOL"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "AR",
       "F",
-      "INJ",
       "STRK",
       "ONE",
-      "ZAMA",
+      "INJ",
       "G",
+      "ZAMA",
       "PROVE"
     ],
     "watcher": [],
@@ -30,13 +30,11 @@
   "heat": [
     {
       "symbol": "AR",
-      "surfaces": 2,
+      "surfaces": 1,
       "sources": [
-        "coingecko",
         "movers"
       ],
-      "funding": 7.4e-05,
-      "long_short": 1.79
+      "funding": 7.2e-05
     },
     {
       "symbol": "ARB",
@@ -52,7 +50,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.8e-05
+      "funding": 0.0001
     },
     {
       "symbol": "F",
@@ -60,7 +58,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.003008
+      "funding": -0.003039
     },
     {
       "symbol": "FIRO",
@@ -75,7 +73,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 7.2e-05
+      "funding": 0.000103
     },
     {
       "symbol": "INJ",
@@ -99,7 +97,15 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000717
+      "funding": -0.00073
+    },
+    {
+      "symbol": "PENGU",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "PROVE",
@@ -155,7 +161,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -8.1e-05
+      "funding": -7.9e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
