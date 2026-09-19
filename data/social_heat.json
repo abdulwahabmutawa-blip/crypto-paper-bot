@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-19T01:40:37+00:00",
+  "ts": "2026-09-19T01:45:46+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
@@ -21,13 +21,23 @@
       "ONE",
       "ZAMA",
       "APT",
-      "\u725b\u6765",
-      "INJ"
+      "NEAR",
+      "\u725b\u6765"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "NEAR",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.46
+    },
     {
       "symbol": "STRK",
       "surfaces": 2,
@@ -68,7 +78,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.6e-05
+      "funding": 8.8e-05
     },
     {
       "symbol": "F",
@@ -76,7 +86,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.010782
+      "funding": -0.010542
     },
     {
       "symbol": "FIRO",
@@ -91,23 +101,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000595
-    },
-    {
-      "symbol": "INJ",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "NEAR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": 0.000614
     },
     {
       "symbol": "ONE",
@@ -115,7 +109,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000535
+      "funding": -0.000507
     },
     {
       "symbol": "PENGU",
@@ -147,7 +141,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -6e-06
+      "funding": -7e-06
     },
     {
       "symbol": "\u725b\u6765",
@@ -155,7 +149,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000404
+      "funding": 0.000408
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
