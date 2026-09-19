@@ -1,28 +1,28 @@
 {
-  "ts": "2026-09-19T14:45:39+00:00",
+  "ts": "2026-09-19T14:51:17+00:00",
   "sources": {
     "coingecko": [
       "TRUMP",
+      "FIRO",
       "ZAMA",
       "ZEC",
       "PENGU",
       "BTC",
-      "NEAR",
       "ENA",
-      "FIRO",
-      "TAO",
-      "UNI",
-      "ARB"
+      "NEAR",
+      "ARB",
+      "AR",
+      "UNI"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "AR",
       "ONE",
+      "AR",
       "ZAMA",
       "SYN",
-      "SAGA",
       "STRK",
+      "SAGA",
       "F",
       "ENA"
     ],
@@ -30,6 +30,16 @@
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "AR",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 6.9e-05,
+      "long_short": 1.46
+    },
     {
       "symbol": "ENA",
       "surfaces": 2,
@@ -49,14 +59,6 @@
       ],
       "funding": 5e-05,
       "long_short": 2.52
-    },
-    {
-      "symbol": "AR",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 6.5e-05
     },
     {
       "symbol": "ARB",
@@ -80,7 +82,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.003384
+      "funding": -0.003499
     },
     {
       "symbol": "FIRO",
@@ -103,7 +105,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000866
+      "funding": -0.000898
     },
     {
       "symbol": "PENGU",
@@ -138,20 +140,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "TRUMP",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000111
+      "funding": -0.000115
     },
     {
       "symbol": "UNI",
@@ -167,7 +161,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.3e-05
+      "funding": 1.4e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
