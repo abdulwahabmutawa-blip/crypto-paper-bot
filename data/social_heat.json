@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-19T19:37:07+00:00",
+  "ts": "2026-09-19T19:43:16+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
@@ -7,10 +7,11 @@
       "ZEC",
       "PENGU",
       "NEAR",
-      "ONDO",
-      "ONE",
       "ENA",
-      "PEPE"
+      "ONDO",
+      "SUI",
+      "SOL",
+      "TAO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,9 +21,9 @@
       "SYN",
       "G",
       "XTZ",
-      "AR",
       "BANK",
-      "ENA"
+      "ENA",
+      "AR"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -39,23 +40,13 @@
       "long_short": 1.74
     },
     {
-      "symbol": "ONE",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": -0.000327,
-      "long_short": 1.06
-    },
-    {
       "symbol": "ZAMA",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 9e-06,
+      "funding": 1e-05,
       "long_short": 2.16
     },
     {
@@ -72,7 +63,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000384
+      "funding": -0.000379
     },
     {
       "symbol": "FIRO",
@@ -87,7 +78,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000309
+      "funding": 0.000306
     },
     {
       "symbol": "NEAR",
@@ -106,6 +97,14 @@
       "funding": 5e-05
     },
     {
+      "symbol": "ONE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -0.000341
+    },
+    {
       "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
@@ -114,17 +113,34 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PEPE",
+      "symbol": "SOL",
       "surfaces": 1,
       "sources": [
         "coingecko"
-      ]
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "SYN",
       "surfaces": 1,
       "sources": [
         "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "TAO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
       ],
       "funding": 5e-05
     },
