@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-19T16:22:47+00:00",
+  "ts": "2026-09-19T16:28:07+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
@@ -24,8 +24,8 @@
       "SYN",
       "G",
       "SAGA",
-      "ENA",
-      "AVAX"
+      "BANK",
+      "ENA"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -38,18 +38,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 5.7e-05,
+      "funding": 3.4e-05,
       "long_short": 1.5
-    },
-    {
-      "symbol": "AVAX",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 2.5
     },
     {
       "symbol": "ZAMA",
@@ -58,8 +48,24 @@
         "coingecko",
         "movers"
       ],
-      "funding": -1.3e-05,
+      "funding": -8e-06,
       "long_short": 2.05
+    },
+    {
+      "symbol": "AVAX",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "BANK",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -0.000166
     },
     {
       "symbol": "ENA",
@@ -82,7 +88,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000812
+      "funding": 0.000848
     },
     {
       "symbol": "NEAR",
@@ -98,7 +104,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000794
+      "funding": -0.000764
     },
     {
       "symbol": "PENGU",
@@ -154,7 +160,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000222
+      "funding": -0.000226
     },
     {
       "symbol": "UNI",
@@ -170,7 +176,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.8e-05
+      "funding": 5e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
