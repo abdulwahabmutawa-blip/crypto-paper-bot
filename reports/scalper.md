@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-19T11:09:21+00:00 · runs 1217 · equity **$943.01** (-5.70%) · cash $0.00 · open 10/10 · round trips 420
+updated 2026-09-19T11:27:09+00:00 · runs 1218 · equity **$945.34** (-5.47%) · cash $0.00 · open 10/10 · round trips 420
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-09-18T11:16 | DODOUSDT | surge | 0.01835 | 0.01812 | -1.25% |
-| 2026-09-18T16:52 | MUBUSDT | surge | 993.73 | 1007.58 | +1.39% |
-| 2026-09-18T20:06 | SNDKBUSDT | surge | 1790.7 | 1783.53 | -0.40% |
-| 2026-09-18T20:42 | SENTUSDT | surge | 0.01781 | 0.01797 | +0.90% |
-| 2026-09-19T04:49 | PROVEUSDT | surge | 0.2182 | 0.2138 | -2.02% |
-| 2026-09-19T08:27 | VETUSDT | surge | 0.008627 | 0.008516 | -1.29% |
-| 2026-09-19T08:45 | ACEUSDT | surge | 0.1575 | 0.1563 | -0.76% |
-| 2026-09-19T10:49 | HOMEUSDT | surge | 0.00634 | 0.00635 | +0.16% |
-| 2026-09-19T10:49 | INJUSDT | surge | 7.519 | 7.467 | -0.69% |
+| 2026-09-18T11:16 | DODOUSDT | surge | 0.01835 | 0.01819 | -0.87% |
+| 2026-09-18T16:52 | MUBUSDT | surge | 993.73 | 1007.37 | +1.37% |
+| 2026-09-18T20:06 | SNDKBUSDT | surge | 1790.7 | 1783.36 | -0.41% |
+| 2026-09-18T20:42 | SENTUSDT | surge | 0.01781 | 0.01805 | +1.35% |
+| 2026-09-19T04:49 | PROVEUSDT | surge | 0.2182 | 0.2143 | -1.79% |
+| 2026-09-19T08:27 | VETUSDT | surge | 0.008627 | 0.008551 | -0.88% |
+| 2026-09-19T08:45 | ACEUSDT | surge | 0.1575 | 0.1562 | -0.83% |
+| 2026-09-19T10:49 | HOMEUSDT | surge | 0.00634 | 0.00637 | +0.47% |
+| 2026-09-19T10:49 | INJUSDT | surge | 7.519 | 7.532 | +0.17% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
