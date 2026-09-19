@@ -1,54 +1,8 @@
 {
-  "ts": "2026-09-19T12:31:13+00:00",
+  "ts": "2026-09-19T12:36:21+00:00",
   "scanned": 136,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "METUSDT",
-      "signal": "ignition",
-      "score": 0.7973,
-      "raw_score": 0.8446,
-      "weight": 0.944,
-      "price": 0.2683,
-      "why": "trades 37.5x and volume 30.2x the prior 4h, 67% taker-buy, $165,643 burst \u2014 while price has only moved +2.9%",
-      "chg_24h": 0.0881,
-      "vol_surge": 30.22,
-      "chg_1h": 0.0288,
-      "market_surge": 16.32,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean +0.58% at 24h: market beta, not signal"
-    },
-    {
-      "symbol": "RENDERUSDT",
-      "signal": "ignition",
-      "score": 0.7723,
-      "raw_score": 0.8181,
-      "weight": 0.944,
-      "price": 1.621,
-      "why": "trades 9.4x and volume 14.2x the prior 4h, 61% taker-buy, $238,930 burst \u2014 while price has only moved +2.5%",
-      "chg_24h": 0.0672,
-      "vol_surge": 14.22,
-      "chg_1h": 0.0247,
-      "market_surge": 8.76,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean +0.58% at 24h: market beta, not signal"
-    },
-    {
-      "symbol": "RENDERUSDT",
-      "signal": "breakout",
-      "score": 0.6867,
-      "raw_score": 0.7489,
-      "weight": 0.917,
-      "price": 1.621,
-      "why": "trades 9.4x, volume 14.2x, 61% taker-buy, +2.5% in an hour, at 89% of its 24h range",
-      "chg_24h": 0.0672,
-      "vol_surge": 14.22,
-      "chg_1h": 0.0247,
-      "market_surge": 8.76,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.22% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.58% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.22% at 24h: market beta, not signal",
@@ -57,7 +11,7 @@
     "revival": "probation \u2014 11/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 49,
+    "count": 44,
     "baseline": 18.0,
     "wave": true
   },
