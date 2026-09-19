@@ -1,17 +1,15 @@
 {
-  "ts": "2026-09-19T04:27:17+00:00",
+  "ts": "2026-09-19T04:32:38+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
       "TRUMP",
-      "PENGU",
       "NEAR",
-      "TAO",
       "ZEC",
-      "ARB",
+      "PENGU",
+      "TAO",
       "BTC",
-      "OP",
-      "XMR"
+      "STRK"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,8 +18,8 @@
       "ONE",
       "F",
       "STRK",
-      "INJ",
       "ZAMA",
+      "INJ",
       "APT",
       "FIL"
     ],
@@ -29,6 +27,16 @@
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "STRK",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.54
+    },
     {
       "symbol": "APT",
       "surfaces": 1,
@@ -38,20 +46,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "ARB",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 7.8e-05
+      "funding": 7.7e-05
     },
     {
       "symbol": "F",
@@ -59,7 +59,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.00326
+      "funding": -0.003246
     },
     {
       "symbol": "FIL",
@@ -106,29 +106,13 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001171
-    },
-    {
-      "symbol": "OP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": -0.001187
     },
     {
       "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
         "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "STRK",
-      "surfaces": 1,
-      "sources": [
-        "movers"
       ],
       "funding": 5e-05
     },
@@ -149,14 +133,6 @@
       "funding": 5e-05
     },
     {
-      "symbol": "XMR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.000539
-    },
-    {
       "symbol": "ZAMA",
       "surfaces": 1,
       "sources": [
@@ -170,7 +146,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -6.1e-05
+      "funding": -6.3e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
