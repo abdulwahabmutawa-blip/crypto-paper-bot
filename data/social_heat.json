@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-19T17:13:06+00:00",
+  "ts": "2026-09-19T17:18:43+00:00",
   "sources": {
     "coingecko": [
       "TRUMP",
@@ -21,10 +21,10 @@
       "ZAMA",
       "AR",
       "SYN",
-      "G",
       "BANK",
       "ENA",
-      "FIL"
+      "FIL",
+      "AVAX"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -37,8 +37,18 @@
         "coingecko",
         "movers"
       ],
-      "funding": 4.5e-05,
+      "funding": 5e-05,
       "long_short": 1.55
+    },
+    {
+      "symbol": "AVAX",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.57
     },
     {
       "symbol": "FIL",
@@ -57,7 +67,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.000584,
+      "funding": -0.000576,
       "long_short": 1.11
     },
     {
@@ -67,16 +77,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": -1.4e-05,
+      "funding": -2.1e-05,
       "long_short": 2.3
-    },
-    {
-      "symbol": "AVAX",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "BANK",
@@ -84,7 +86,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000503
+      "funding": -0.000528
     },
     {
       "symbol": "BTC",
@@ -92,7 +94,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.6e-05
+      "funding": 9.3e-05
     },
     {
       "symbol": "ENA",
@@ -108,14 +110,6 @@
       "sources": [
         "coingecko"
       ]
-    },
-    {
-      "symbol": "G",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.001102
     },
     {
       "symbol": "NEAR",
@@ -147,7 +141,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000197
+      "funding": -0.000185
     },
     {
       "symbol": "ZEC",
@@ -155,7 +149,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.7e-05
+      "funding": 8e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."

@@ -1,22 +1,37 @@
 {
-  "ts": "2026-09-19T17:13:13+00:00",
-  "scanned": 123,
+  "ts": "2026-09-19T17:18:49+00:00",
+  "scanned": 122,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "WIFUSDT",
-      "signal": "ignition",
-      "score": 0.6896,
-      "raw_score": 0.7267,
-      "weight": 0.949,
-      "price": 0.2162,
-      "why": "trades 5.2x and volume 28.0x the prior 4h, 83% taker-buy, $135,129 burst \u2014 while price has only moved +1.5%",
-      "chg_24h": 0.0581,
-      "vol_surge": 27.97,
-      "chg_1h": 0.015,
-      "market_surge": 11.59,
+      "symbol": "ORDIUSDT",
+      "signal": "breakout",
+      "score": 0.6954,
+      "raw_score": 0.7526,
+      "weight": 0.924,
+      "price": 4.816,
+      "why": "trades 6.9x, volume 12.2x, 67% taker-buy, +3.4% in an hour, at 92% of its 24h range",
+      "chg_24h": 0.0837,
+      "vol_surge": 12.15,
+      "chg_1h": 0.0344,
+      "market_surge": 5.05,
       "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean +0.71% at 24h: market beta, not signal"
+      "status": "benched \u2014 BTC-excess day mean -0.07% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "PENGUUSDT",
+      "signal": "breakout",
+      "score": 0.671,
+      "raw_score": 0.7261,
+      "weight": 0.924,
+      "price": 0.008302,
+      "why": "trades 5.3x, volume 12.0x, 61% taker-buy, +4.9% in an hour, at 96% of its 24h range",
+      "chg_24h": 0.0739,
+      "vol_surge": 11.97,
+      "chg_1h": 0.0494,
+      "market_surge": 8.53,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.07% at 24h: market beta, not signal"
     }
   ],
   "gate": {
@@ -27,7 +42,7 @@
     "revival": "probation \u2014 11/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 34,
+    "count": 32,
     "baseline": 20.0,
     "wave": false
   },
@@ -54,7 +69,7 @@
       "median_ret_4h": 0.0,
       "both_halves_4h": true,
       "days_4h": 15,
-      "mean_x_4h": 0.00239,
+      "mean_x_4h": 0.00236,
       "days_x_4h": 15,
       "avg_win_4h": 0.02331,
       "avg_loss_4h": -0.01597,
