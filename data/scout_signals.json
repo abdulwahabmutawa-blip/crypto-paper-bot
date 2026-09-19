@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-19T23:24:25+00:00",
-  "scanned": 122,
+  "ts": "2026-09-19T23:30:26+00:00",
+  "scanned": 118,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ALGOUSDT",
+      "signal": "breakout",
+      "score": 0.5742,
+      "raw_score": 0.6262,
+      "weight": 0.917,
+      "price": 0.1041,
+      "why": "trades 4.9x, volume 6.1x, 73% taker-buy, +3.4% in an hour, at 101% of its 24h range",
+      "chg_24h": 0.0635,
+      "vol_surge": 6.08,
+      "chg_1h": 0.0338,
+      "market_surge": 4.55,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.46% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.50% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.46% at 24h: market beta, not signal",
