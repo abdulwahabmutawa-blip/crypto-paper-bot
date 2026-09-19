@@ -1,18 +1,17 @@
 {
-  "ts": "2026-09-19T23:46:33+00:00",
+  "ts": "2026-09-19T23:51:48+00:00",
   "sources": {
     "coingecko": [
       "TRUMP",
       "FIRO",
       "NEAR",
-      "PENGU",
-      "ZEC",
       "BTC",
-      "INJ",
       "ENA",
       "PUMP",
-      "LIT",
-      "AR"
+      "INJ",
+      "ZEC",
+      "ONE",
+      "SOL"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -31,16 +30,6 @@
   },
   "heat": [
     {
-      "symbol": "AR",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.67
-    },
-    {
       "symbol": "ENA",
       "surfaces": 2,
       "sources": [
@@ -49,6 +38,24 @@
       ],
       "funding": 5e-05,
       "long_short": 1.78
+    },
+    {
+      "symbol": "ONE",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -5.2e-05,
+      "long_short": 0.97
+    },
+    {
+      "symbol": "AR",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "AVAX",
@@ -64,7 +71,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000155
+      "funding": -0.000143
     },
     {
       "symbol": "BTC",
@@ -87,7 +94,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 5e-05
+      "funding": 5.8e-05
     },
     {
       "symbol": "INJ",
@@ -98,36 +105,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "LIT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -0.000186
-    },
-    {
       "symbol": "NEAR",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "ONE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -6.6e-05
-    },
-    {
-      "symbol": "PENGU",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "PUMP",
@@ -138,12 +121,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "TRUMP",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -6.1e-05
+      "funding": -5.9e-05
     },
     {
       "symbol": "XTZ",
@@ -151,7 +142,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000357
+      "funding": -0.000364
     },
     {
       "symbol": "ZAMA",
