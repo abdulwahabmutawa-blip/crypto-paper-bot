@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-19T21:22:41+00:00 · runs 1253 · equity **$941.43** (-5.86%) · cash $0.00 · open 10/10 · round trips 438
+updated 2026-09-19T21:40:26+00:00 · runs 1254 · equity **$938.91** (-6.11%) · cash $0.00 · open 10/10 · round trips 438
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-09-19T08:27 | VETUSDT | surge | 0.008627 | 0.008637 | +0.12% |
-| 2026-09-19T08:45 | ACEUSDT | surge | 0.1575 | 0.1536 | -2.48% |
-| 2026-09-19T12:23 | TAOUSDT | surge | 267.9 | 260.7 | -2.69% |
-| 2026-09-19T17:30 | 0GUSDT | surge | 0.2276 | 0.2261 | -0.66% |
-| 2026-09-19T20:09 | FLOKIUSDT | surge | 2.663e-05 | 2.601e-05 | -2.33% |
-| 2026-09-19T20:27 | HOMEUSDT | surge | 0.00654 | 0.00641 | -1.99% |
-| 2026-09-19T20:45 | BERAUSDT | surge | 0.2195 | 0.2184 | -0.50% |
-| 2026-09-19T20:45 | PEPEUSDT | surge | 4.23e-06 | 4.15e-06 | -1.89% |
-| 2026-09-19T21:20 | UNIUSDT | bottom | 8.594 | 8.485 | -1.27% |
+| 2026-09-19T08:27 | VETUSDT | surge | 0.008627 | 0.008652 | +0.29% |
+| 2026-09-19T08:45 | ACEUSDT | surge | 0.1575 | 0.1542 | -2.10% |
+| 2026-09-19T12:23 | TAOUSDT | surge | 267.9 | 261.7 | -2.31% |
+| 2026-09-19T17:30 | 0GUSDT | surge | 0.2276 | 0.2263 | -0.57% |
+| 2026-09-19T20:09 | FLOKIUSDT | surge | 2.663e-05 | 2.6e-05 | -2.37% |
+| 2026-09-19T20:27 | HOMEUSDT | surge | 0.00654 | 0.00642 | -1.83% |
+| 2026-09-19T20:45 | BERAUSDT | surge | 0.2195 | 0.2133 | -2.82% |
+| 2026-09-19T20:45 | PEPEUSDT | surge | 4.23e-06 | 4.07e-06 | -3.78% |
+| 2026-09-19T21:20 | UNIUSDT | bottom | 8.594 | 8.535 | -0.69% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
