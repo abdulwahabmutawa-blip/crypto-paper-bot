@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-19T22:56:10+00:00 · runs 1259 · equity **$945.70** (-5.43%) · cash $91.90 · open 9/10 · round trips 441
+updated 2026-09-19T23:13:25+00:00 · runs 1260 · equity **$946.14** (-5.39%) · cash $91.90 · open 9/10 · round trips 441
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,13 +36,13 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-09-19T08:27 | VETUSDT | surge | 0.008627 | 0.008695 | +0.79% |
-| 2026-09-19T08:45 | ACEUSDT | surge | 0.1575 | 0.1549 | -1.65% |
-| 2026-09-19T12:23 | TAOUSDT | surge | 267.9 | 265.1 | -1.05% |
-| 2026-09-19T17:30 | 0GUSDT | surge | 0.2276 | 0.2266 | -0.44% |
+| 2026-09-19T08:27 | VETUSDT | surge | 0.008627 | 0.008703 | +0.88% |
+| 2026-09-19T08:45 | ACEUSDT | surge | 0.1575 | 0.1554 | -1.33% |
+| 2026-09-19T12:23 | TAOUSDT | surge | 267.9 | 264.7 | -1.19% |
+| 2026-09-19T17:30 | 0GUSDT | surge | 0.2276 | 0.2264 | -0.53% |
 | 2026-09-19T20:27 | HOMEUSDT | surge | 0.00654 | 0.00659 | +0.76% |
-| 2026-09-19T21:20 | UNIUSDT | bottom | 8.594 | 8.638 | +0.51% |
-| 2026-09-19T21:56 | SOLUSDT | bottom | 110.33 | 110.78 | +0.41% |
-| 2026-09-19T21:56 | DASHUSDT | bottom | 57.97 | 58.76 | +1.36% |
+| 2026-09-19T21:20 | UNIUSDT | bottom | 8.594 | 8.67 | +0.88% |
+| 2026-09-19T21:56 | SOLUSDT | bottom | 110.33 | 110.72 | +0.35% |
+| 2026-09-19T21:56 | DASHUSDT | bottom | 57.97 | 58.72 | +1.29% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
