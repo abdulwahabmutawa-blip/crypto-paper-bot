@@ -1,17 +1,17 @@
 {
-  "ts": "2026-09-19T18:30:47+00:00",
+  "ts": "2026-09-19T18:36:28+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
-      "TRUMP",
       "ZEC",
-      "ZAMA",
+      "TRUMP",
       "NEAR",
+      "ZAMA",
       "AVAX",
       "PENGU",
       "PEPE",
-      "SUI",
-      "AAVE"
+      "ONE",
+      "UNI"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -30,22 +30,24 @@
   },
   "heat": [
     {
+      "symbol": "ONE",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -0.00043,
+      "long_short": 1.08
+    },
+    {
       "symbol": "ZAMA",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 8e-06,
+      "funding": 9e-06,
       "long_short": 2.14
-    },
-    {
-      "symbol": "AAVE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "AR",
@@ -53,7 +55,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 8.2e-05
+      "funding": 9.1e-05
     },
     {
       "symbol": "AVAX",
@@ -92,7 +94,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000636
+      "funding": 0.000603
     },
     {
       "symbol": "NEAR",
@@ -101,14 +103,6 @@
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "ONE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -0.000468
     },
     {
       "symbol": "PENGU",
@@ -126,14 +120,6 @@
       ]
     },
     {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "SYN",
       "surfaces": 1,
       "sources": [
@@ -147,7 +133,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000161
+      "funding": -0.000156
+    },
+    {
+      "symbol": "UNI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "XTZ",
@@ -155,7 +149,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000838
+      "funding": -0.000792
     },
     {
       "symbol": "ZEC",
