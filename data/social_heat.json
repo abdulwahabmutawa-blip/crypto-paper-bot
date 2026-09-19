@@ -1,15 +1,14 @@
 {
-  "ts": "2026-09-19T06:37:06+00:00",
+  "ts": "2026-09-19T06:42:36+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
       "ZEC",
-      "BTC",
       "NEAR",
-      "SOL",
+      "ARB",
       "AR",
-      "APT",
-      "TAO"
+      "TAO",
+      "SOL"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -18,10 +17,10 @@
       "AR",
       "STRK",
       "F",
-      "INJ",
       "ZAMA",
+      "INJ",
       "FIL",
-      "UNI"
+      "PROVE"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -38,7 +37,7 @@
       "long_short": 1.6
     },
     {
-      "symbol": "APT",
+      "symbol": "ARB",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -46,20 +45,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 7.5e-05
-    },
-    {
       "symbol": "F",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -0.003512
+      "funding": -0.00345
     },
     {
       "symbol": "FIL",
@@ -82,7 +73,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000164
+      "funding": 0.000146
     },
     {
       "symbol": "INJ",
@@ -99,6 +90,14 @@
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "PROVE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "SOL",
@@ -123,14 +122,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "ZAMA",
