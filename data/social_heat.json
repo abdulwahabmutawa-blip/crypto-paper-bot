@@ -1,18 +1,15 @@
 {
-  "ts": "2026-09-19T17:18:43+00:00",
+  "ts": "2026-09-19T17:24:12+00:00",
   "sources": {
     "coingecko": [
       "TRUMP",
       "NEAR",
       "ZAMA",
       "ZEC",
-      "FIRO",
       "PENGU",
-      "AVAX",
+      "FIRO",
       "BTC",
-      "ONE",
-      "AR",
-      "FIL"
+      "AVAX"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -24,52 +21,12 @@
       "BANK",
       "ENA",
       "FIL",
-      "AVAX"
+      "G"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "AR",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.55
-    },
-    {
-      "symbol": "AVAX",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 2.57
-    },
-    {
-      "symbol": "FIL",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.65
-    },
-    {
-      "symbol": "ONE",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": -0.000576,
-      "long_short": 1.11
-    },
     {
       "symbol": "ZAMA",
       "surfaces": 2,
@@ -77,8 +34,24 @@
         "coingecko",
         "movers"
       ],
-      "funding": -2.1e-05,
+      "funding": -1.7e-05,
       "long_short": 2.3
+    },
+    {
+      "symbol": "AR",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5.7e-05
+    },
+    {
+      "symbol": "AVAX",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "BANK",
@@ -86,7 +59,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000528
+      "funding": -0.000547
     },
     {
       "symbol": "BTC",
@@ -94,7 +67,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.3e-05
+      "funding": 8.7e-05
     },
     {
       "symbol": "ENA",
@@ -105,11 +78,27 @@
       "funding": 5e-05
     },
     {
+      "symbol": "FIL",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "FIRO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ]
+    },
+    {
+      "symbol": "G",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.001077
     },
     {
       "symbol": "NEAR",
@@ -118,6 +107,14 @@
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "ONE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -0.000573
     },
     {
       "symbol": "PENGU",
@@ -141,7 +138,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000185
+      "funding": -0.00017
     },
     {
       "symbol": "ZEC",
@@ -149,7 +146,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8e-05
+      "funding": 8.4e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
