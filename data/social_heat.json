@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-20T15:50:19+00:00",
+  "ts": "2026-09-20T15:56:18+00:00",
   "sources": {
     "coingecko": [
       "ZAMA",
@@ -8,11 +8,10 @@
       "NEAR",
       "ONE",
       "AVAX",
-      "PENGU",
       "ENA",
+      "SUI",
       "HBAR",
-      "ARB",
-      "SUI"
+      "PENGU"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,11 +19,11 @@
       "CELR",
       "ONE",
       "AVAX",
+      "NEAR",
       "INJ",
       "HBAR",
-      "NEAR",
-      "ZAMA",
-      "PEPE"
+      "PEPE",
+      "ENA"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -41,13 +40,23 @@
       "long_short": 2.19
     },
     {
+      "symbol": "ENA",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.93
+    },
+    {
       "symbol": "HBAR",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 5.6e-05,
+      "funding": 5.4e-05,
       "long_short": 1.79
     },
     {
@@ -67,26 +76,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.003484,
+      "funding": -0.003209,
       "long_short": 1.18
-    },
-    {
-      "symbol": "ZAMA",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": -1.6e-05,
-      "long_short": 2.53
-    },
-    {
-      "symbol": "ARB",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -2.4e-05
     },
     {
       "symbol": "CELR",
@@ -94,15 +85,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.011536
-    },
-    {
-      "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": -0.011538
     },
     {
       "symbol": "FIRO",
@@ -141,6 +124,14 @@
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "ZAMA",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -7e-06
     },
     {
       "symbol": "ZEC",
