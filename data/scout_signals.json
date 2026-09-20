@@ -1,26 +1,10 @@
 {
-  "ts": "2026-09-20T15:33:23+00:00",
+  "ts": "2026-09-20T15:38:32+00:00",
   "scanned": 119,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "RENDERUSDT",
-      "signal": "ignition",
-      "score": 0.7244,
-      "raw_score": 0.7674,
-      "weight": 0.944,
-      "price": 1.549,
-      "why": "trades 7.1x and volume 10.2x the prior 4h, 64% taker-buy, $95,946 burst \u2014 while price has only moved +1.1%",
-      "chg_24h": -0.0208,
-      "vol_surge": 10.19,
-      "chg_1h": 0.0111,
-      "market_surge": 0.54,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean +0.50% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
-    "ignition": "benched \u2014 BTC-excess day mean +0.50% at 24h: market beta, not signal",
+    "ignition": "benched \u2014 BTC-excess day mean +0.51% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.03% at 24h: market beta, not signal",
     "reversion": "probation \u2014 record spans 7 UTC days (need 8): regime luck, not a signal",
     "heat": "probation \u2014 29 rows but only 4.6 independent 24h windows (span 110h): overlapping labels are not a sample",
@@ -59,19 +43,19 @@
       "avg_win_4h": 0.02334,
       "avg_loss_4h": -0.01616,
       "payoff_4h": 1.445,
-      "span_h_24h": 311.0,
+      "span_h_24h": 311.1,
       "n_eff_24h": 12.96,
-      "n_24h": 682,
+      "n_24h": 683,
       "hit_rate_24h": 0.469,
-      "mean_ret_24h": 0.00435,
-      "median_ret_24h": -0.0005,
+      "mean_ret_24h": 0.00434,
+      "median_ret_24h": -0.00059,
       "both_halves_24h": false,
       "days_24h": 14,
-      "mean_x_24h": 0.00504,
+      "mean_x_24h": 0.00505,
       "days_x_24h": 14,
       "avg_win_24h": 0.04799,
-      "avg_loss_24h": -0.03825,
-      "payoff_24h": 1.255
+      "avg_loss_24h": -0.03815,
+      "payoff_24h": 1.258
     },
     "breakout": {
       "span_h_1h": 330.4,
