@@ -1,8 +1,39 @@
 {
-  "ts": "2026-09-20T10:03:55+00:00",
-  "scanned": 120,
+  "ts": "2026-09-20T10:09:45+00:00",
+  "scanned": 121,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "XPLUSDT",
+      "signal": "ignition",
+      "score": 0.7202,
+      "raw_score": 0.7597,
+      "weight": 0.948,
+      "price": 0.09034,
+      "why": "trades 7.6x and volume 6.7x the prior 4h, 79% taker-buy, $107,439 burst \u2014 while price has only moved +0.4%",
+      "chg_24h": -0.0068,
+      "vol_surge": 6.7,
+      "chg_1h": 0.0037,
+      "market_surge": 2.19,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.62% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "DASHUSDT",
+      "signal": "ignition",
+      "score": 0.64,
+      "raw_score": 0.6751,
+      "weight": 0.948,
+      "price": 55.68,
+      "why": "trades 5.5x and volume 7.0x the prior 4h, 79% taker-buy, $177,974 burst \u2014 while price has only moved -0.7%",
+      "chg_24h": -0.0864,
+      "vol_surge": 6.99,
+      "chg_1h": -0.0066,
+      "market_surge": 2.27,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.62% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.62% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.19% at 24h: market beta, not signal",
@@ -11,7 +42,7 @@
     "revival": "probation \u2014 11/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 17,
+    "count": 16,
     "baseline": 26.0,
     "wave": false
   },
