@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-20T11:43:49+00:00 · runs 1307 · equity **$921.09** (-7.89%) · cash $184.89 · open 8/10 · round trips 472
+updated 2026-09-20T12:00:21+00:00 · runs 1308 · equity **$921.68** (-7.83%) · cash $184.89 · open 8/10 · round trips 472
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,12 +36,12 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-09-19T21:56 | SOLUSDT | bottom | 110.33 | 108.39 | -1.76% |
-| 2026-09-20T02:44 | XRPUSDT | bottom | 1.3972 | 1.3773 | -1.42% |
-| 2026-09-20T07:13 | STXUSDT | surge | 0.3194 | 0.3151 | -1.35% |
-| 2026-09-20T08:52 | DOGEUSDT | bottom | 0.08475 | 0.0849 | +0.18% |
-| 2026-09-20T11:09 | ACEUSDT | surge | 0.1609 | 0.1624 | +0.93% |
-| 2026-09-20T11:25 | CAKEUSDT | surge | 2.468 | 2.484 | +0.65% |
-| 2026-09-20T11:25 | PROVEUSDT | surge | 0.2249 | 0.2252 | +0.13% |
+| 2026-09-19T21:56 | SOLUSDT | bottom | 110.33 | 108.52 | -1.64% |
+| 2026-09-20T02:44 | XRPUSDT | bottom | 1.3972 | 1.3805 | -1.20% |
+| 2026-09-20T07:13 | STXUSDT | surge | 0.3194 | 0.316 | -1.06% |
+| 2026-09-20T08:52 | DOGEUSDT | bottom | 0.08475 | 0.08516 | +0.48% |
+| 2026-09-20T11:09 | ACEUSDT | surge | 0.1609 | 0.1627 | +1.12% |
+| 2026-09-20T11:25 | CAKEUSDT | surge | 2.468 | 2.474 | +0.24% |
+| 2026-09-20T11:25 | PROVEUSDT | surge | 0.2249 | 0.225 | +0.04% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
