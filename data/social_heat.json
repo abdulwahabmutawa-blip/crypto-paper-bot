@@ -1,31 +1,32 @@
 {
-  "ts": "2026-09-20T03:17:32+00:00",
+  "ts": "2026-09-20T03:23:11+00:00",
   "sources": {
     "coingecko": [
       "TRUMP",
-      "AVAX",
       "ENA",
+      "AVAX",
       "ZEC",
-      "ONE",
       "NEAR",
       "PENGU",
-      "BTC",
+      "ONE",
       "ZAMA",
-      "TAO",
       "G",
-      "OP",
-      "SUI"
+      "BTC",
+      "TAO",
+      "INJ",
+      "PUMP",
+      "OP"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "G",
       "ONE",
+      "G",
       "ZAMA",
       "BANK",
       "AVAX",
       "INJ",
-      "AR",
+      "XTZ",
       "ENA"
     ],
     "watcher": [],
@@ -59,8 +60,18 @@
         "coingecko",
         "movers"
       ],
-      "funding": 7.7e-05,
+      "funding": 5.6e-05,
       "long_short": 1.05
+    },
+    {
+      "symbol": "INJ",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.08
     },
     {
       "symbol": "ONE",
@@ -69,7 +80,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.000181,
+      "funding": -0.000194,
       "long_short": 0.99
     },
     {
@@ -79,16 +90,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 5e-05,
-      "long_short": 2.21
-    },
-    {
-      "symbol": "AR",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
+      "funding": 5e-05
     },
     {
       "symbol": "BANK",
@@ -103,14 +105,6 @@
       "surfaces": 1,
       "sources": [
         "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "INJ",
-      "surfaces": 1,
-      "sources": [
-        "movers"
       ],
       "funding": 0.0001
     },
@@ -139,12 +133,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "SUI",
+      "symbol": "PUMP",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0001
+      "funding": 5e-05
     },
     {
       "symbol": "TAO",
@@ -160,7 +154,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6e-06
+      "funding": 4e-06
+    },
+    {
+      "symbol": "XTZ",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -6.1e-05
     },
     {
       "symbol": "ZEC",
