@@ -1,17 +1,18 @@
 {
-  "ts": "2026-09-20T21:50:48+00:00",
+  "ts": "2026-09-20T21:56:16+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
-      "ZEC",
-      "TRUMP",
-      "FIRO",
       "AVAX",
-      "FET",
+      "FIRO",
+      "TRUMP",
+      "ZEC",
       "PENGU",
-      "ENA",
       "ONDO",
-      "SUI"
+      "ENA",
+      "FET",
+      "SUI",
+      "ZAMA"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,8 +21,8 @@
       "NEAR",
       "AVAX",
       "STRK",
-      "ENA",
       "ZAMA",
+      "ENA",
       "CAKE",
       "HBAR"
     ],
@@ -58,6 +59,16 @@
       ],
       "funding": 0.0001,
       "long_short": 1.78
+    },
+    {
+      "symbol": "ZAMA",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 2.25
     },
     {
       "symbol": "CAKE",
@@ -128,21 +139,13 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.1e-05
+      "funding": 6.6e-05
     },
     {
       "symbol": "TRUMP",
       "surfaces": 1,
       "sources": [
         "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "ZAMA",
-      "surfaces": 1,
-      "sources": [
-        "movers"
       ],
       "funding": 5e-05
     },
