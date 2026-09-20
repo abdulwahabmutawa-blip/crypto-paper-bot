@@ -1,16 +1,16 @@
 {
-  "ts": "2026-09-20T22:29:17+00:00",
+  "ts": "2026-09-20T22:34:34+00:00",
   "sources": {
     "coingecko": [
       "TRUMP",
-      "AVAX",
       "NEAR",
+      "AVAX",
       "FIRO",
       "PENGU",
       "ZEC",
       "ONDO",
-      "ZAMA",
-      "AERO"
+      "ARB",
+      "TAO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,13 +21,23 @@
       "STRK",
       "ENA",
       "ARB",
-      "ZAMA",
-      "HBAR"
+      "HBAR",
+      "ZAMA"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "ARB",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 8.4e-05,
+      "long_short": 1.53
+    },
     {
       "symbol": "AVAX",
       "surfaces": 2,
@@ -47,32 +57,6 @@
       ],
       "funding": 0.0001,
       "long_short": 1.76
-    },
-    {
-      "symbol": "ZAMA",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 2.23
-    },
-    {
-      "symbol": "AERO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "ARB",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 8.2e-05
     },
     {
       "symbol": "ENA",
@@ -95,7 +79,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 5.7e-05
+      "funding": 5.5e-05
     },
     {
       "symbol": "ONDO",
@@ -130,10 +114,26 @@
       "funding": 5e-05
     },
     {
+      "symbol": "TAO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "TRUMP",
       "surfaces": 1,
       "sources": [
         "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "ZAMA",
+      "surfaces": 1,
+      "sources": [
+        "movers"
       ],
       "funding": 5e-05
     },
