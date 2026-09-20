@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-20T21:34:45+00:00",
+  "ts": "2026-09-20T21:39:58+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
@@ -18,13 +18,13 @@
     "stocktwits": [],
     "movers": [
       "SAGA",
-      "CELR",
       "NEAR",
-      "STRK",
+      "CELR",
       "AVAX",
+      "STRK",
       "ENA",
       "HBAR",
-      "ARB"
+      "ZAMA"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -61,12 +61,14 @@
       "long_short": 1.78
     },
     {
-      "symbol": "ARB",
-      "surfaces": 1,
+      "symbol": "ZAMA",
+      "surfaces": 2,
       "sources": [
+        "coingecko",
         "movers"
       ],
-      "funding": 6.5e-05
+      "funding": 5e-05,
+      "long_short": 2.25
     },
     {
       "symbol": "CELR",
@@ -74,7 +76,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.004587
+      "funding": -0.004532
     },
     {
       "symbol": "FIRO",
@@ -137,18 +139,10 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7e-05
+      "funding": 6.8e-05
     },
     {
       "symbol": "TRUMP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "ZAMA",
       "surfaces": 1,
       "sources": [
         "coingecko"
