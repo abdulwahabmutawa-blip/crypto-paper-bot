@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-20T18:21:26+00:00 · runs 1331 · equity **$925.69** (-7.43%) · cash $0.00 · open 10/10 · round trips 486
+updated 2026-09-20T18:39:22+00:00 · runs 1332 · equity **$923.72** (-7.63%) · cash $0.00 · open 10/10 · round trips 486
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-09-19T21:56 | SOLUSDT | bottom | 110.33 | 110.2 | -0.12% |
-| 2026-09-20T02:44 | XRPUSDT | bottom | 1.3972 | 1.4084 | +0.80% |
-| 2026-09-20T11:25 | CAKEUSDT | surge | 2.468 | 2.496 | +1.13% |
+| 2026-09-19T21:56 | SOLUSDT | bottom | 110.33 | 109.88 | -0.41% |
+| 2026-09-20T02:44 | XRPUSDT | bottom | 1.3972 | 1.407 | +0.70% |
+| 2026-09-20T11:25 | CAKEUSDT | surge | 2.468 | 2.516 | +1.94% |
 | 2026-09-20T14:10 | BNCBUSDT | surge | 6.68 | 6.53 | -2.25% |
-| 2026-09-20T14:10 | TRXUSDT | surge | 0.3466 | 0.3436 | -0.87% |
-| 2026-09-20T16:49 | ATOMUSDT | surge | 1.765 | 1.765 | +0.00% |
-| 2026-09-20T16:49 | APTUSDT | surge | 0.747 | 0.752 | +0.67% |
+| 2026-09-20T14:10 | TRXUSDT | surge | 0.3466 | 0.3435 | -0.89% |
+| 2026-09-20T16:49 | ATOMUSDT | surge | 1.765 | 1.761 | -0.23% |
+| 2026-09-20T16:49 | APTUSDT | surge | 0.747 | 0.742 | -0.67% |
 | 2026-09-20T18:19 | RUNEUSDT | surge | 0.564 | 0.563 | -0.18% |
-| 2026-09-20T18:19 | ALGOUSDT | surge | 0.1114 | 0.1123 | +0.81% |
+| 2026-09-20T18:19 | ALGOUSDT | surge | 0.1114 | 0.1113 | -0.09% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
