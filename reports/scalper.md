@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-20T21:26:20+00:00 · runs 1342 · equity **$916.94** (-8.31%) · cash $0.00 · open 10/10 · round trips 488
+updated 2026-09-20T21:44:20+00:00 · runs 1343 · equity **$917.50** (-8.25%) · cash $0.00 · open 10/10 · round trips 488
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-09-19T21:56 | SOLUSDT | bottom | 110.33 | 109.7 | -0.57% |
-| 2026-09-20T02:44 | XRPUSDT | bottom | 1.3972 | 1.3989 | +0.12% |
-| 2026-09-20T14:10 | BNCBUSDT | surge | 6.68 | 6.54 | -2.10% |
-| 2026-09-20T14:10 | TRXUSDT | surge | 0.3466 | 0.3429 | -1.07% |
-| 2026-09-20T16:49 | ATOMUSDT | surge | 1.765 | 1.762 | -0.17% |
-| 2026-09-20T16:49 | APTUSDT | surge | 0.747 | 0.736 | -1.47% |
-| 2026-09-20T18:19 | RUNEUSDT | surge | 0.564 | 0.559 | -0.89% |
-| 2026-09-20T18:19 | ALGOUSDT | surge | 0.1114 | 0.1089 | -2.24% |
+| 2026-09-19T21:56 | SOLUSDT | bottom | 110.33 | 109.65 | -0.62% |
+| 2026-09-20T02:44 | XRPUSDT | bottom | 1.3972 | 1.3991 | +0.14% |
+| 2026-09-20T14:10 | BNCBUSDT | surge | 6.68 | 6.55 | -1.95% |
+| 2026-09-20T14:10 | TRXUSDT | surge | 0.3466 | 0.3428 | -1.10% |
+| 2026-09-20T16:49 | ATOMUSDT | surge | 1.765 | 1.76 | -0.28% |
+| 2026-09-20T16:49 | APTUSDT | surge | 0.747 | 0.74 | -0.94% |
+| 2026-09-20T18:19 | RUNEUSDT | surge | 0.564 | 0.56 | -0.71% |
+| 2026-09-20T18:19 | ALGOUSDT | surge | 0.1114 | 0.1088 | -2.33% |
 | 2026-09-20T21:18 | KMNOUSDT | surge | 0.0321 | 0.03199 | -0.34% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
