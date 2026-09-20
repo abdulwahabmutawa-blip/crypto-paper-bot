@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-20T16:01:44+00:00",
+  "ts": "2026-09-20T16:07:46+00:00",
   "sources": {
     "coingecko": [
       "ZAMA",
@@ -21,10 +21,10 @@
       "AVAX",
       "ONE",
       "NEAR",
-      "HBAR",
       "INJ",
-      "PEPE",
-      "ENA"
+      "HBAR",
+      "PROVE",
+      "ZAMA"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -38,7 +38,7 @@
         "movers"
       ],
       "funding": 0.0001,
-      "long_short": 2.19
+      "long_short": 2.23
     },
     {
       "symbol": "HBAR",
@@ -47,7 +47,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 5.2e-05,
+      "funding": 5e-05,
       "long_short": 1.91
     },
     {
@@ -67,8 +67,18 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.002893,
+      "funding": -0.002657,
       "long_short": 1.15
+    },
+    {
+      "symbol": "ZAMA",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 2e-06,
+      "long_short": 2.42
     },
     {
       "symbol": "ARB",
@@ -76,7 +86,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.6e-05
+      "funding": -1.4e-05
     },
     {
       "symbol": "BTC",
@@ -84,7 +94,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.5e-05
+      "funding": 7.2e-05
     },
     {
       "symbol": "CELR",
@@ -92,15 +102,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.011565
-    },
-    {
-      "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
+      "funding": -0.011585
     },
     {
       "symbol": "FIRO",
@@ -126,11 +128,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PEPE",
+      "symbol": "PROVE",
       "surfaces": 1,
       "sources": [
         "movers"
-      ]
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "TRUMP",
@@ -138,15 +141,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000105
-    },
-    {
-      "symbol": "ZAMA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0
+      "funding": -0.000103
     },
     {
       "symbol": "ZEC",
