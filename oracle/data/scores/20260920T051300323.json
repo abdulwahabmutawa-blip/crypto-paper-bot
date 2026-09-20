@@ -1,0 +1,76 @@
+{
+ "annulment_alarm": 0.08,
+ "annulment_rate": 0.0061,
+ "annulment_target": 0.04,
+ "brier_baseline": 0.243779,
+ "brier_forecaster": 0.243779,
+ "cluster_rho": 0.0126,
+ "comparators": {
+  "age_v1": {
+   "brier": 0.182639,
+   "n": 298,
+   "n_eff": 298.0,
+   "paired_d_90ci": [
+    -0.00230597,
+    0.00020755
+   ],
+   "paired_mean_d_vs_baseline": -0.00104921,
+   "verdict": "indistinguishable from baseline"
+  },
+  "liqtier_v1": {
+   "brier": 0.182104,
+   "n": 298,
+   "n_eff": 298.0,
+   "paired_d_90ci": [
+    -0.00135783,
+    0.00032931
+   ],
+   "paired_mean_d_vs_baseline": -0.00051426,
+   "verdict": "indistinguishable from baseline"
+  },
+  "momo_v1": {
+   "brier": 0.181929,
+   "n": 298,
+   "n_eff": 298.0,
+   "paired_d_90ci": [
+    -0.00140061,
+    0.0007227
+   ],
+   "paired_mean_d_vs_baseline": -0.00033895,
+   "verdict": "indistinguishable from baseline"
+  },
+  "ownrate_v1": {
+   "brier": 0.18702,
+   "n": 298,
+   "n_eff": 298.0,
+   "paired_d_90ci": [
+    -0.01230058,
+    0.00144007
+   ],
+   "paired_mean_d_vs_baseline": -0.00543026,
+   "verdict": "indistinguishable from baseline"
+  }
+ },
+ "forecaster_id": "baserate_v1",
+ "generated_utc": "2026-09-20T05:13:00+00:00",
+ "generation_id": "gen-000-baserate",
+ "mean_group_size": 294.4,
+ "n_annulled": 9,
+ "n_eff": 312.7,
+ "n_eff_required_for_claim": 100,
+ "n_predictions_written": 11369,
+ "n_required_for_target": null,
+ "n_required_note": "nominal paired n; multiply by (1+(m-1)*rho) for the clustered reality",
+ "n_resolution_records": 1481,
+ "n_scored": 1472,
+ "observed_event_rate": 0.30435,
+ "paired_d_90ci": [
+  0.0,
+  0.0
+ ],
+ "paired_mean_d": 0.0,
+ "paired_sd_d": 0.0,
+ "status": "scored",
+ "target_delta_bss_0.02": 0.00487558,
+ "verdict": "indistinguishable from baseline"
+}
