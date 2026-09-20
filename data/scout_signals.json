@@ -1,24 +1,8 @@
 {
-  "ts": "2026-09-20T03:23:19+00:00",
-  "scanned": 126,
+  "ts": "2026-09-20T03:28:30+00:00",
+  "scanned": 130,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "SHIBUSDT",
-      "signal": "ignition",
-      "score": 0.6893,
-      "raw_score": 0.7232,
-      "weight": 0.953,
-      "price": 5.41e-06,
-      "why": "trades 5.2x and volume 9.5x the prior 4h, 84% taker-buy, $122,959 burst \u2014 while price has only moved -1.3%",
-      "chg_24h": -0.0092,
-      "vol_surge": 9.51,
-      "chg_1h": -0.0128,
-      "market_surge": 4.63,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean +0.64% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.64% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.15% at 24h: market beta, not signal",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 11/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 23,
+    "count": 24,
     "baseline": 25.0,
     "wave": false
   },
