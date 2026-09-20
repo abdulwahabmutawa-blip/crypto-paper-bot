@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-20T14:21:21+00:00",
+  "ts": "2026-09-20T14:26:37+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
@@ -23,7 +23,7 @@
       "BANK",
       "HBAR",
       "INJ",
-      "TRX"
+      "NEAR"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -40,13 +40,23 @@
       "long_short": 2.31
     },
     {
+      "symbol": "NEAR",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.63
+    },
+    {
       "symbol": "ONE",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": -0.003014,
+      "funding": -0.003067,
       "long_short": 1.2
     },
     {
@@ -56,7 +66,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -1e-05,
+      "funding": -1.8e-05,
       "long_short": 2.13
     },
     {
@@ -81,7 +91,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.010629
+      "funding": -0.010736
     },
     {
       "symbol": "ETH",
@@ -104,21 +114,13 @@
       "sources": [
         "movers"
       ],
-      "funding": 2.1e-05
+      "funding": 1.9e-05
     },
     {
       "symbol": "INJ",
       "surfaces": 1,
       "sources": [
         "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "NEAR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
       ],
       "funding": 0.0001
     },
@@ -137,14 +139,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "TRX",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "ZEC",
