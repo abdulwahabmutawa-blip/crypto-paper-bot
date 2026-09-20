@@ -1,16 +1,16 @@
 {
-  "ts": "2026-09-20T22:07:07+00:00",
+  "ts": "2026-09-20T22:12:58+00:00",
   "sources": {
     "coingecko": [
-      "NEAR",
       "TRUMP",
+      "NEAR",
       "AVAX",
       "FIRO",
       "PENGU",
       "ZEC",
       "ONDO",
-      "FET",
-      "BTC"
+      "ZAMA",
+      "FET"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -49,12 +49,14 @@
       "long_short": 1.76
     },
     {
-      "symbol": "BTC",
-      "surfaces": 1,
+      "symbol": "ZAMA",
+      "surfaces": 2,
       "sources": [
-        "coingecko"
+        "coingecko",
+        "movers"
       ],
-      "funding": 3.9e-05
+      "funding": 5e-05,
+      "long_short": 2.23
     },
     {
       "symbol": "CAKE",
@@ -93,7 +95,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 6.3e-05
+      "funding": 6.2e-05
     },
     {
       "symbol": "ONDO",
@@ -132,14 +134,6 @@
       "surfaces": 1,
       "sources": [
         "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "ZAMA",
-      "surfaces": 1,
-      "sources": [
-        "movers"
       ],
       "funding": 5e-05
     },
