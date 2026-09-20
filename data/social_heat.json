@@ -1,16 +1,17 @@
 {
-  "ts": "2026-09-20T15:10:39+00:00",
+  "ts": "2026-09-20T15:16:19+00:00",
   "sources": {
     "coingecko": [
-      "ZEC",
       "ZAMA",
+      "ZEC",
       "FIRO",
-      "NEAR",
       "ONE",
-      "PENGU",
+      "NEAR",
       "AVAX",
+      "PENGU",
+      "HBAR",
       "SUI",
-      "ONDO"
+      "ARB"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,7 +23,7 @@
       "ZAMA",
       "INJ",
       "BANK",
-      "PEPE"
+      "NEAR"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -39,13 +40,33 @@
       "long_short": 2.19
     },
     {
+      "symbol": "HBAR",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 3.9e-05,
+      "long_short": 1.79
+    },
+    {
+      "symbol": "NEAR",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.66
+    },
+    {
       "symbol": "ONE",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": -0.003638,
+      "funding": -0.003383,
       "long_short": 1.18
     },
     {
@@ -55,8 +76,16 @@
         "coingecko",
         "movers"
       ],
-      "funding": -7e-05,
+      "funding": -5.8e-05,
       "long_short": 2.53
+    },
+    {
+      "symbol": "ARB",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -6e-06
     },
     {
       "symbol": "BANK",
@@ -72,7 +101,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.01124
+      "funding": -0.011309
     },
     {
       "symbol": "FIRO",
@@ -80,14 +109,6 @@
       "sources": [
         "coingecko"
       ]
-    },
-    {
-      "symbol": "HBAR",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 3.6e-05
     },
     {
       "symbol": "INJ",
@@ -98,35 +119,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "NEAR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "ONDO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "PEPE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
     },
     {
       "symbol": "SUI",
