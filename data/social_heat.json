@@ -1,16 +1,17 @@
 {
-  "ts": "2026-09-20T10:25:46+00:00",
+  "ts": "2026-09-20T10:31:46+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
       "ONE",
       "STRK",
+      "BTC",
+      "INJ",
       "NEAR",
       "ZEC",
-      "SUI",
+      "FET",
       "PENGU",
-      "INJ",
-      "TAO"
+      "SUI"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,12 +23,22 @@
       "AVAX",
       "STRK",
       "ENA",
-      "PEPE"
+      "INJ"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "INJ",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.91
+    },
     {
       "symbol": "ONE",
       "surfaces": 2,
@@ -35,7 +46,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.001029,
+      "funding": -0.001082,
       "long_short": 1.15
     },
     {
@@ -62,7 +73,15 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.00012
+      "funding": -0.000103
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "CELR",
@@ -70,7 +89,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.00442
+      "funding": -0.004686
     },
     {
       "symbol": "ENA",
@@ -81,19 +100,19 @@
       "funding": 5e-05
     },
     {
-      "symbol": "FIRO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ]
-    },
-    {
-      "symbol": "INJ",
+      "symbol": "FET",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "FIRO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ]
     },
     {
       "symbol": "NEAR",
@@ -112,27 +131,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PEPE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
-    },
-    {
       "symbol": "SUI",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "ZAMA",
