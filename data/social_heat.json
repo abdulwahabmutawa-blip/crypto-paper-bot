@@ -1,18 +1,18 @@
 {
-  "ts": "2026-09-20T16:18:49+00:00",
+  "ts": "2026-09-20T16:24:22+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
-      "ZAMA",
       "FIRO",
       "NEAR",
+      "ZAMA",
+      "TRUMP",
       "AVAX",
       "ONE",
-      "TRUMP",
       "PENGU",
       "BTC",
       "ARB",
-      "ENA"
+      "INJ"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,10 +20,10 @@
       "CELR",
       "AVAX",
       "NEAR",
+      "INJ",
+      "ENA",
       "ONE",
       "HBAR",
-      "INJ",
-      "ZAMA",
       "PROVE"
     ],
     "watcher": [],
@@ -39,6 +39,16 @@
       ],
       "funding": 0.0001,
       "long_short": 2.23
+    },
+    {
+      "symbol": "INJ",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.87
     },
     {
       "symbol": "NEAR",
@@ -57,18 +67,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.002183,
+      "funding": -0.001832,
       "long_short": 1.15
-    },
-    {
-      "symbol": "ZAMA",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 1.9e-05,
-      "long_short": 2.42
     },
     {
       "symbol": "ARB",
@@ -76,7 +76,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -6e-06
+      "funding": -2e-06
     },
     {
       "symbol": "BTC",
@@ -84,7 +84,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.1e-05
+      "funding": 6.8e-05
     },
     {
       "symbol": "CELR",
@@ -92,13 +92,13 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.011483
+      "funding": -0.011357
     },
     {
       "symbol": "ENA",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
       "funding": 5e-05
     },
@@ -115,15 +115,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.9e-05
-    },
-    {
-      "symbol": "INJ",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
+      "funding": 4.7e-05
     },
     {
       "symbol": "PENGU",
@@ -148,6 +140,14 @@
         "coingecko"
       ],
       "funding": -9.2e-05
+    },
+    {
+      "symbol": "ZAMA",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 2.5e-05
     },
     {
       "symbol": "ZEC",
