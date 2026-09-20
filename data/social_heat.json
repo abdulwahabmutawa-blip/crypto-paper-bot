@@ -1,17 +1,18 @@
 {
-  "ts": "2026-09-20T02:38:13+00:00",
+  "ts": "2026-09-20T02:43:29+00:00",
   "sources": {
     "coingecko": [
       "TRUMP",
-      "AVAX",
       "ENA",
+      "AVAX",
       "BTC",
       "ZEC",
       "ZAMA",
       "ONE",
-      "PENGU",
       "NEAR",
-      "FIRO"
+      "FIRO",
+      "ARB",
+      "INJ"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,8 +23,8 @@
       "ZAMA",
       "ENA",
       "INJ",
-      "AR",
-      "AVAX"
+      "AVAX",
+      "AR"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -50,13 +51,23 @@
       "long_short": 1.91
     },
     {
+      "symbol": "INJ",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.13
+    },
+    {
       "symbol": "ONE",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": -0.000124,
+      "funding": -0.000135,
       "long_short": 0.96
     },
     {
@@ -74,6 +85,14 @@
       "surfaces": 1,
       "sources": [
         "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ARB",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
       ],
       "funding": 0.0001
     },
@@ -106,15 +125,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000163
-    },
-    {
-      "symbol": "INJ",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
+      "funding": 0.000174
     },
     {
       "symbol": "NEAR",
@@ -125,20 +136,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "PENGU",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "TRUMP",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 4e-05
+      "funding": 4.1e-05
     },
     {
       "symbol": "ZEC",
