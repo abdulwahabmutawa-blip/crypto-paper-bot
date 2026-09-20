@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-20T19:54:16+00:00",
+  "ts": "2026-09-20T19:59:45+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
@@ -24,7 +24,7 @@
       "AVAX",
       "ENA",
       "HBAR",
-      "PROVE"
+      "ZEC"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -51,6 +51,16 @@
       "long_short": 1.74
     },
     {
+      "symbol": "ZEC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 0.62
+    },
+    {
       "symbol": "AVAX",
       "surfaces": 1,
       "sources": [
@@ -72,7 +82,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.007246
+      "funding": -0.007091
     },
     {
       "symbol": "FIRO",
@@ -87,7 +97,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 8.6e-05
+      "funding": 8e-05
     },
     {
       "symbol": "LINK",
@@ -106,20 +116,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PROVE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 4.9e-05
-    },
-    {
       "symbol": "SAGA",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 5e-05
+      "funding": 7.5e-05
     },
     {
       "symbol": "STRK",
@@ -160,14 +162,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
