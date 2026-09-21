@@ -1,17 +1,17 @@
 {
-  "ts": "2026-09-21T07:31:17+00:00",
+  "ts": "2026-09-21T07:36:47+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
-      "PENGU",
-      "SUI",
       "ZEC",
+      "SUI",
+      "PENGU",
       "AVAX",
-      "PUMP",
-      "BTC",
+      "ZAMA",
       "SEI",
-      "AR",
-      "TAO",
+      "BTC",
+      "FET",
+      "PUMP",
       "XRP"
     ],
     "reddit": [],
@@ -22,9 +22,9 @@
       "ZAMA",
       "SUI",
       "AVAX",
+      "ONE",
       "PUMP",
-      "ENA",
-      "ONE"
+      "ENA"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -37,7 +37,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 1.9e-05,
+      "funding": 2.1e-05,
       "long_short": 2.39
     },
     {
@@ -67,16 +67,18 @@
         "coingecko",
         "movers"
       ],
-      "funding": 2.4e-05,
+      "funding": 2.2e-05,
       "long_short": 2.25
     },
     {
-      "symbol": "AR",
-      "surfaces": 1,
+      "symbol": "ZAMA",
+      "surfaces": 2,
       "sources": [
-        "coingecko"
+        "coingecko",
+        "movers"
       ],
-      "funding": 2e-05
+      "funding": 5e-05,
+      "long_short": 1.73
     },
     {
       "symbol": "BTC",
@@ -84,7 +86,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.6e-05
+      "funding": 9.7e-05
     },
     {
       "symbol": "ENA",
@@ -95,12 +97,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "FET",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "ONE",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -0.000445
+      "funding": -0.000453
     },
     {
       "symbol": "PENGU",
@@ -127,28 +137,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "XRP",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "ZAMA",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "ZEC",
