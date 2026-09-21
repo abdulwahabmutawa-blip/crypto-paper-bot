@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-21T08:22:09+00:00",
+  "ts": "2026-09-21T08:27:31+00:00",
   "scanned": 131,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "TAOUSDT",
+      "signal": "breakout",
+      "score": 0.5764,
+      "raw_score": 0.6348,
+      "weight": 0.908,
+      "price": 278.2,
+      "why": "trades 4.9x, volume 6.6x, 71% taker-buy, +3.3% in an hour, at 97% of its 24h range",
+      "chg_24h": 0.1022,
+      "vol_surge": 6.58,
+      "chg_1h": 0.0334,
+      "market_surge": 4.43,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.11% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.36% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.11% at 24h: market beta, not signal",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 11/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 32,
+    "count": 35,
     "baseline": 28.0,
     "wave": false
   },
