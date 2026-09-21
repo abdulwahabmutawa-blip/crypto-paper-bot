@@ -1,15 +1,16 @@
 {
-  "ts": "2026-09-21T21:31:26+00:00",
+  "ts": "2026-09-21T21:36:46+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
       "PENGU",
       "TRUMP",
       "TAO",
-      "BTC",
       "ZEC",
+      "BTC",
       "NEAR",
-      "ONDO"
+      "ONDO",
+      "FET"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,13 +21,23 @@
       "TAO",
       "ONE",
       "FET",
-      "SUI",
-      "DOGE"
+      "DOGE",
+      "SUI"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "FET",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.87
+    },
     {
       "symbol": "TAO",
       "surfaces": 2,
@@ -43,18 +54,10 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.4e-05
+      "funding": 5.7e-05
     },
     {
       "symbol": "DOGE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "FET",
       "surfaces": 1,
       "sources": [
         "movers"
@@ -98,7 +101,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000147
+      "funding": -0.000161
     },
     {
       "symbol": "PENGU",
@@ -121,7 +124,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000336
+      "funding": -0.000315
     },
     {
       "symbol": "SUI",
