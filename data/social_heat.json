@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-21T11:52:07+00:00",
+  "ts": "2026-09-21T11:57:16+00:00",
   "sources": {
     "coingecko": [
       "SUI",
@@ -19,11 +19,11 @@
       "SEI",
       "SUI",
       "SAGA",
-      "ONE",
       "NEAR",
       "FET",
       "TAO",
-      "HBAR"
+      "ZAMA",
+      "ONE"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -70,6 +70,16 @@
       "long_short": 1.67
     },
     {
+      "symbol": "ZAMA",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.72
+    },
+    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
@@ -86,20 +96,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "HBAR",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -0.000103
-    },
-    {
       "symbol": "ONE",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -0.000139
+      "funding": -0.000137
     },
     {
       "symbol": "PENGU",
@@ -134,20 +136,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "ZAMA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 7.8e-05
+      "funding": 7.5e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
