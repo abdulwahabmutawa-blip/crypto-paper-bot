@@ -1,27 +1,27 @@
 {
-  "ts": "2026-09-21T08:11:33+00:00",
+  "ts": "2026-09-21T08:16:46+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
       "SUI",
-      "ZEC",
       "PENGU",
+      "ZEC",
       "ZAMA",
-      "TAO",
+      "BTC",
       "AVAX",
-      "FET"
+      "EGLD"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "SAGA",
       "NEAR",
-      "SUI",
       "ZAMA",
+      "SUI",
       "AVAX",
       "PUMP",
-      "FET",
-      "TAO"
+      "TAO",
+      "FET"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -34,18 +34,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 4.2e-05,
+      "funding": 3.8e-05,
       "long_short": 2.38
-    },
-    {
-      "symbol": "FET",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.49
     },
     {
       "symbol": "NEAR",
@@ -64,18 +54,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 2.4e-05,
+      "funding": 2.3e-05,
       "long_short": 2.24
-    },
-    {
-      "symbol": "TAO",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.51
     },
     {
       "symbol": "ZAMA",
@@ -84,7 +64,32 @@
         "coingecko",
         "movers"
       ],
-      "funding": 5e-05
+      "funding": 5e-05,
+      "long_short": 1.66
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "EGLD",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -0.000526
+    },
+    {
+      "symbol": "FET",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "PENGU",
@@ -104,6 +109,14 @@
     },
     {
       "symbol": "SAGA",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "TAO",
       "surfaces": 1,
       "sources": [
         "movers"
