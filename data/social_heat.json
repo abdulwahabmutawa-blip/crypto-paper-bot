@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-21T07:54:04+00:00",
+  "ts": "2026-09-21T07:59:36+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
@@ -17,12 +17,12 @@
     "movers": [
       "SAGA",
       "NEAR",
-      "SUI",
       "ZAMA",
-      "ONE",
+      "SUI",
       "AVAX",
       "PUMP",
-      "ENA"
+      "ENA",
+      "FET"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -35,8 +35,18 @@
         "coingecko",
         "movers"
       ],
-      "funding": 3.2e-05,
+      "funding": 3.4e-05,
       "long_short": 2.39
+    },
+    {
+      "symbol": "FET",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.45
     },
     {
       "symbol": "NEAR",
@@ -55,7 +65,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 2.3e-05,
+      "funding": 2.6e-05,
       "long_short": 2.25
     },
     {
@@ -83,22 +93,6 @@
         "movers"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "FET",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "ONE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -0.000495
     },
     {
       "symbol": "PENGU",
