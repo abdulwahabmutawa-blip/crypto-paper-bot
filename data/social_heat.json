@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-21T21:47:37+00:00",
+  "ts": "2026-09-21T21:53:16+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
@@ -9,7 +9,8 @@
       "NEAR",
       "BTC",
       "ZEC",
-      "AVAX"
+      "ONDO",
+      "FET"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -28,6 +29,16 @@
   },
   "heat": [
     {
+      "symbol": "FET",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.87
+    },
+    {
       "symbol": "TAO",
       "surfaces": 2,
       "sources": [
@@ -38,31 +49,15 @@
       "long_short": 1.72
     },
     {
-      "symbol": "AVAX",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 9.7e-05
-    },
-    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 6.1e-05
+      "funding": 5.9e-05
     },
     {
       "symbol": "DOGE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "FET",
       "surfaces": 1,
       "sources": [
         "movers"
@@ -93,12 +88,20 @@
       "funding": 0.0001
     },
     {
+      "symbol": "ONDO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "ONE",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -0.000199
+      "funding": -0.000203
     },
     {
       "symbol": "PENGU",
@@ -121,7 +124,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000261
+      "funding": -0.000232
     },
     {
       "symbol": "SUI",
