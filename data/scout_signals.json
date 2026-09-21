@@ -1,8 +1,26 @@
 {
-  "ts": "2026-09-21T03:45:40+00:00",
+  "ts": "2026-09-21T03:51:24+00:00",
   "scanned": 124,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ONEUSDT",
+      "signal": "reversion",
+      "score": 0.5065,
+      "raw_score": 0.5065,
+      "weight": 1.0,
+      "price": 0.00357,
+      "why": "down -15% on the day (bottom decile of the market), now +4.9% over 15m with 4 green candles",
+      "chg_24h": -0.1511,
+      "vol_surge": 1.53,
+      "chg_1h": 0.0378,
+      "market_surge": 0.0,
+      "oi_drop": 0.117,
+      "funding": -0.00191,
+      "actionable": false,
+      "status": "probation \u2014 record spans 7 UTC days (need 8): regime luck, not a signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.40% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.33% at 24h: market beta, not signal",
@@ -11,7 +29,7 @@
     "revival": "probation \u2014 11/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 33,
+    "count": 31,
     "baseline": 26.0,
     "wave": false
   },
