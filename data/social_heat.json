@@ -1,15 +1,16 @@
 {
-  "ts": "2026-09-21T06:29:26+00:00",
+  "ts": "2026-09-21T06:35:17+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
       "PENGU",
       "XRP",
+      "SUI",
       "ZEC",
       "FET",
-      "SUI",
-      "ZAMA",
-      "ENA"
+      "PUMP",
+      "ENA",
+      "ONDO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -48,24 +49,24 @@
       "long_short": 1.7
     },
     {
-      "symbol": "SUI",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 6.1e-05,
-      "long_short": 2.28
-    },
-    {
-      "symbol": "ZAMA",
+      "symbol": "PUMP",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
       "funding": 5e-05,
-      "long_short": 1.64
+      "long_short": 0.73
+    },
+    {
+      "symbol": "SUI",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5.1e-05,
+      "long_short": 2.28
     },
     {
       "symbol": "AVAX",
@@ -73,7 +74,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 2.8e-05
+      "funding": 2.4e-05
     },
     {
       "symbol": "FET",
@@ -89,10 +90,10 @@
       "sources": [
         "movers"
       ],
-      "funding": 4e-05
+      "funding": 3.8e-05
     },
     {
-      "symbol": "PENGU",
+      "symbol": "ONDO",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -100,10 +101,10 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PUMP",
+      "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
       "funding": 5e-05
     },
@@ -122,6 +123,14 @@
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "ZAMA",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "ZEC",
