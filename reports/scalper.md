@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-21T17:34:50+00:00 · runs 1416 · equity **$945.42** (-5.46%) · cash $0.00 · open 10/10 · round trips 517
+updated 2026-09-21T17:51:11+00:00 · runs 1417 · equity **$942.77** (-5.72%) · cash $0.00 · open 10/10 · round trips 517
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-09-21T09:19 | BTCUSDT | surge | 83925.5 | 85918.3 | +2.37% |
-| 2026-09-21T13:53 | MUBUSDT | surge | 1060.18 | 1038.98 | -2.00% |
-| 2026-09-21T14:28 | BCHUSDT | surge | 267.7 | 263.9 | -1.42% |
-| 2026-09-21T14:28 | LTCUSDT | surge | 62.05 | 62.2 | +0.24% |
-| 2026-09-21T15:39 | TSLABUSDT | surge | 374.57 | 373.09 | -0.40% |
+| 2026-09-21T09:19 | BTCUSDT | surge | 83925.5 | 85806.8 | +2.24% |
+| 2026-09-21T13:53 | MUBUSDT | surge | 1060.18 | 1039.54 | -1.95% |
+| 2026-09-21T14:28 | BCHUSDT | surge | 267.7 | 263.1 | -1.72% |
+| 2026-09-21T14:28 | LTCUSDT | surge | 62.05 | 61.66 | -0.63% |
+| 2026-09-21T15:39 | TSLABUSDT | surge | 374.57 | 373.93 | -0.17% |
 | 2026-09-21T15:55 | BANKUSDT | surge | 0.0352 | 0.035 | -0.57% |
-| 2026-09-21T16:11 | AMDBUSDT | surge | 609.45 | 606.59 | -0.47% |
-| 2026-09-21T16:44 | FLOKIUSDT | surge | 2.885e-05 | 2.903e-05 | +0.62% |
-| 2026-09-21T17:17 | QQQBUSDT | surge | 738.89 | 738.87 | -0.00% |
+| 2026-09-21T16:11 | AMDBUSDT | surge | 609.45 | 608 | -0.24% |
+| 2026-09-21T16:44 | FLOKIUSDT | surge | 2.885e-05 | 2.844e-05 | -1.42% |
+| 2026-09-21T17:17 | QQQBUSDT | surge | 738.89 | 739.45 | +0.08% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
