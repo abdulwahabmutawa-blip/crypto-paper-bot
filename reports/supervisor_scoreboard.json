@@ -1,18 +1,18 @@
 {
- "updated_utc": "2026-09-20T13:55:00+00:00",
- "run_note": "Sunday 2026-09-20, 13:55Z. One-day gap since the 09-19 run. (1) SIM-INTEGRITY ALERT UNCHANGED: scalper/TVKUSDT seat (booked 2026-09-12T17:16:36Z at 0.05405, priced off a dead 2023-11-27 Binance candle) is still open, now day 8 against its 24h rule, still 86.17 of the book frozen at a price with no live market. Not fixed by the bot; reported again. (2) THE WATCHER IS STILL DOWN, now 9 DAYS: sentinel last scanned 2026-09-11T15:12:52Z, no change. sentiment (flat CASH, 869.30), lottery (real-money, flat CASH at 33.15, no_pair feed frozen at the same dead scan) and hype_ibkr (never traded, now 9.83 days stale vs 8.8 last run - getting worse, not better) all remain gated on it. (3) FILL-INTEGRITY AUDIT: only new fills fleet-wide since 09-19 were 55 scalper round trips (24 wins/31 stops, net -34.50); checked entry_ms vs entry_ts skew on all 55, zero flagged. No new equity fills (meanrev, sentiment unchanged trade counts) to check against market hours or day range. (4) LOOP HEALTH GOOD: git-commit gap math on data/ over the last 24h shows max gap 6.2 min, median ~5.2 min - the VPS-driven cycle loop is healthy. gh Actions run list is dominated by deploy-pages noise; paper-trade-cycle itself fires far less often than the git commit cadence, confirming the fleet runs off the external VPS trigger, not GH cron. (5) No R1 breaches, no bot under $800. Active 4-book roster (crypto, meanrev, scalper, sentiment) all still above their prior marks-of-record; crypto's only mover today, down 1.02% in lockstep with BTC (beta). meanrev unchanged - weekend, no new equity session. (6) Closed 3 judgments today (scalper TVKUSDT, sentiment skip, lottery skip), all alpha 0 - each bot did exactly what was advised (held/stayed cash), so there was no counterfactual to diverge from. Reissued the same 3 judgments for today since none of the underlying conditions (frozen seat, dead Watcher) have resolved.",
+ "updated_utc": "2026-09-21T14:20:00+00:00",
+ "run_note": "Monday 2026-09-21, ~14:15Z. (1) SIM-INTEGRITY ALERT UNCHANGED: scalper/TVKUSDT seat (booked 2026-09-12 at 0.05405, dead 2023-11-27 candle) still open, day 9; 86.17 of the 953.94 book frozen. (2) WATCHER STILL DOWN ~10 days (last scan 2026-09-11T15:12Z, risk_level unparsed); sentiment flat cash, lottery no_pair feed frozen, hype_ibkr never traded and state ~10.9d stale. (3) FILL AUDIT: 33 new scalper round trips (24 wins, net +34.94), zero entry_ms/entry_ts skew flags; no new equity fills. (4) LOOP HEALTHY: 346 data commits in 24h, max gap 6.2 min; no failed Actions runs in last 30. (5) No R1 breaches, none under $800; sentiment 869.30 still below 900. (6) Crypto +6.31% in lockstep with BTC (+5.6%); meanrev -1.17% (HD -1.3% vs SPY +0.75%); scalper +4.76%. (7) Closed 3 judgments alpha 0, reissued same 3.",
  "fleet_snapshot": {
-  "as_of": "2026-09-18 close for equity books, 2026-09-20 ~13:44Z for crypto/real-money books",
+  "as_of": "2026-09-21 ~14:00Z",
   "roster_note": "Active roster cut from 10 books to 4 by owner decisions on 2026-09-04 and 2026-09-05. The old $8,000/$10,000 baseline no longer describes the live fleet; both are reported.",
   "active_paper_bots": 4,
   "baseline_usd": 4000,
-  "total_value_usd": 4141.01,
-  "total_pnl_usd": 141.01,
-  "total_pnl_pct": 3.53,
+  "total_value_usd": 4242.65,
+  "total_pnl_usd": 242.65,
+  "total_pnl_pct": 6.07,
   "active_bots": {
-   "meanrev": 1213.18,
-   "crypto": 1147.96,
-   "scalper": 910.57,
+   "meanrev": 1199.04,
+   "crypto": 1220.37,
+   "scalper": 953.94,
    "sentiment": 869.3
   },
   "retired_frozen_archives": {
@@ -29,18 +29,18 @@
   "real_money_boxes": {
    "lottery_usd": 33.15,
    "lottery_hwm_usd": 44.27,
-   "hype_ibkr": "never traded, state 9.83d stale",
-   "carry_owner_net_usd": 0.00883
+   "hype_ibkr": "never traded, state ~10.9d stale",
+   "carry_owner_net_usd": 0.7526
   },
-  "caveat": "scalper's 910.57 still includes ~86.17 marked at a dead 2023 price (TVKUSDT), unresolved a 2nd day running."
+  "caveat": "scalper's 953.94 still includes ~86.17 marked at a dead 2023 price (TVKUSDT), unresolved a 3rd day running."
  },
- "total_judgments": 278,
- "judgments_closed": 275,
+ "total_judgments": 281,
+ "judgments_closed": 278,
  "judgments_open": 3,
  "open_ids": [
-  "2026-09-20-scalper-1",
-  "2026-09-20-sentiment-1",
-  "2026-09-20-lottery-1"
+  "2026-09-21-scalper-1",
+  "2026-09-21-sentiment-1",
+  "2026-09-21-lottery-1"
  ],
  "cumulative_alpha_usd": -712.7,
  "win_rate_closed_pct": 8.8,
@@ -54,7 +54,7 @@
  },
  "per_bot": {
   "sentiment": {
-   "closed": 21,
+   "closed": 22,
    "alpha": -1161.24,
    "wins": 2,
    "losses": 6
@@ -96,7 +96,7 @@
    "losses": 0
   },
   "lottery": {
-   "closed": 7,
+   "closed": 8,
    "alpha": 11.08,
    "wins": 2,
    "losses": 1
@@ -132,7 +132,7 @@
    "losses": 2
   },
   "scalper": {
-   "closed": 1,
+   "closed": 2,
    "alpha": 0.0,
    "wins": 0,
    "losses": 0
@@ -162,7 +162,7 @@
    "bot": "sentinel + social_radar",
    "real_money": false,
    "silent_from": "2026-09-11T15:12:52Z",
-   "silent_hours": 189,
+   "silent_hours": 239,
    "status": "DOWN. Final scan returned risk_level 'unparsed', no risk_alerts, no crypto_hype key; no scan since. September scan count 27 vs August 130.",
    "downstream": [
     "sentiment: entry input absent, flat in cash 8 days",
@@ -175,7 +175,7 @@
    "bot": "hype_ibkr",
    "real_money": true,
    "silent_from": "2026-09-10T17:50:16Z",
-   "silent_hours": 210,
+   "silent_hours": 261,
    "status": "Live book (paper=false) created 2026-09-05, zero entries and zero realized legs in 14 days, state stale 8.8 days."
   },
   {
@@ -188,7 +188,7 @@
  "loop_health": {
   "cycle_commits_7d": 610,
   "gaps_over_90min_7d": 0,
-  "largest_gap_24h_min": 58.5,
+  "largest_gap_24h_min": 6.2,
   "median_gap_24h_min": 17.7,
   "cron_gap": false,
   "failed_runs": [
@@ -205,7 +205,7 @@
    "sentiment 869.30 (-13.1%)"
   ],
   "below_1000": [
-   "scalper 945.08",
+   "scalper 953.94",
    "sentiment 869.30"
   ],
   "R4_dead_money": "sentiment is 8 consecutive days in cash against a bench that is flat; well short of the 30-day R4 bar, and the cause is a dead input feed, not an unreachable entry rule. Watch it.",
