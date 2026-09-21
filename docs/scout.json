@@ -1,8 +1,39 @@
 {
-  "ts": "2026-09-21T19:55:52+00:00",
-  "scanned": 155,
+  "ts": "2026-09-21T20:01:26+00:00",
+  "scanned": 160,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SNXXBUSDT",
+      "signal": "ignition",
+      "score": 0.9042,
+      "raw_score": 0.9438,
+      "weight": 0.958,
+      "price": 17.41,
+      "why": "trades 11.5x and volume 16.3x the prior 4h, 82% taker-buy, $219,128 burst \u2014 while price has only moved +0.5%",
+      "chg_24h": -0.0091,
+      "vol_surge": 16.34,
+      "chg_1h": 0.0046,
+      "market_surge": 1.56,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.30% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "TAOUSDT",
+      "signal": "breakout",
+      "score": 0.8193,
+      "raw_score": 0.8915,
+      "weight": 0.919,
+      "price": 305.3,
+      "why": "trades 19.1x, volume 19.8x, 69% taker-buy, +6.5% in an hour, at 94% of its 24h range",
+      "chg_24h": 0.1597,
+      "vol_surge": 19.8,
+      "chg_1h": 0.0652,
+      "market_surge": 15.37,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.28% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.30% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.28% at 24h: market beta, not signal",
@@ -11,7 +42,7 @@
     "revival": "probation \u2014 11/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 46,
+    "count": 45,
     "baseline": 32.0,
     "wave": false
   },
