@@ -1,23 +1,22 @@
 {
-  "ts": "2026-09-21T08:27:26+00:00",
+  "ts": "2026-09-21T08:33:15+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
-      "SUI",
       "PENGU",
+      "SUI",
+      "ZEC",
       "ZAMA",
       "BTC",
-      "ZEC",
-      "ARB",
-      "AVAX"
+      "ARB"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "SAGA",
       "NEAR",
-      "ZAMA",
       "SUI",
+      "ZAMA",
       "AVAX",
       "PUMP",
       "TAO",
@@ -27,16 +26,6 @@
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "AVAX",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 4.4e-05,
-      "long_short": 2.38
-    },
     {
       "symbol": "NEAR",
       "surfaces": 2,
@@ -54,7 +43,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 2.3e-05,
+      "funding": 2.5e-05,
       "long_short": 2.24
     },
     {
@@ -73,7 +62,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8e-06
+      "funding": -6e-06
+    },
+    {
+      "symbol": "AVAX",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 4.4e-05
     },
     {
       "symbol": "BTC",
