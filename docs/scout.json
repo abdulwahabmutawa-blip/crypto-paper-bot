@@ -1,22 +1,22 @@
 {
-  "ts": "2026-09-21T15:00:52+00:00",
-  "scanned": 155,
+  "ts": "2026-09-21T15:06:27+00:00",
+  "scanned": 158,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "FLOKIUSDT",
-      "signal": "breakout",
-      "score": 0.7749,
-      "raw_score": 0.8423,
-      "weight": 0.92,
-      "price": 2.895e-05,
-      "why": "trades 9.6x, volume 12.5x, 61% taker-buy, +5.4% in an hour, at 98% of its 24h range",
-      "chg_24h": 0.1507,
-      "vol_surge": 12.55,
-      "chg_1h": 0.0543,
-      "market_surge": 17.2,
+      "symbol": "AVAUSDT",
+      "signal": "ignition",
+      "score": 0.7167,
+      "raw_score": 0.7482,
+      "weight": 0.958,
+      "price": 0.2451,
+      "why": "trades 6.3x and volume 26.7x the prior 4h, 69% taker-buy, $110,680 burst \u2014 while price has only moved +1.1%",
+      "chg_24h": 0.08,
+      "vol_surge": 26.72,
+      "chg_1h": 0.0107,
+      "market_surge": 8.88,
       "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.12% at 24h: market beta, not signal"
+      "status": "benched \u2014 BTC-excess day mean +0.44% at 24h: market beta, not signal"
     }
   ],
   "gate": {
@@ -27,8 +27,8 @@
     "revival": "probation \u2014 11/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 98,
-    "baseline": 29.0,
+    "count": 86,
+    "baseline": 30.0,
     "wave": true
   },
   "scorecard": {
@@ -59,19 +59,19 @@
       "avg_win_4h": 0.02302,
       "avg_loss_4h": -0.01607,
       "payoff_4h": 1.432,
-      "span_h_24h": 311.6,
-      "n_eff_24h": 12.98,
-      "n_24h": 673,
-      "hit_rate_24h": 0.49,
-      "mean_ret_24h": 0.0068,
-      "median_ret_24h": 0.0011,
+      "span_h_24h": 311.8,
+      "n_eff_24h": 12.99,
+      "n_24h": 674,
+      "hit_rate_24h": 0.491,
+      "mean_ret_24h": 0.0069,
+      "median_ret_24h": 0.00119,
       "both_halves_24h": false,
       "days_24h": 14,
       "mean_x_24h": 0.00444,
       "days_x_24h": 14,
-      "avg_win_24h": 0.05004,
+      "avg_win_24h": 0.0501,
       "avg_loss_24h": -0.03837,
-      "payoff_24h": 1.304
+      "payoff_24h": 1.306
     },
     "breakout": {
       "span_h_1h": 332.3,
