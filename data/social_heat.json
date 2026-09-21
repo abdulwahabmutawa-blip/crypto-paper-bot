@@ -1,16 +1,15 @@
 {
-  "ts": "2026-09-21T03:17:46+00:00",
+  "ts": "2026-09-21T03:23:11+00:00",
   "sources": {
     "coingecko": [
-      "NEAR",
       "TRUMP",
+      "NEAR",
       "PENGU",
-      "FIRO",
       "AVAX",
-      "SUI",
+      "FIRO",
       "AERO",
-      "ENA",
-      "BTC"
+      "ZEC",
+      "SUI"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,9 +19,9 @@
       "AVAX",
       "STRK",
       "SUI",
+      "ZAMA",
       "CAKE",
-      "ENA",
-      "ZAMA"
+      "ENA"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -37,16 +36,6 @@
       ],
       "funding": 0.0001,
       "long_short": 2.4
-    },
-    {
-      "symbol": "ENA",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 2.12
     },
     {
       "symbol": "NEAR",
@@ -65,7 +54,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 6.4e-05,
+      "funding": 6.9e-05,
       "long_short": 2.34
     },
     {
@@ -77,15 +66,15 @@
       "funding": 5e-05
     },
     {
-      "symbol": "BTC",
+      "symbol": "CAKE",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
-      "funding": 8.1e-05
+      "funding": 5e-05
     },
     {
-      "symbol": "CAKE",
+      "symbol": "ENA",
       "surfaces": 1,
       "sources": [
         "movers"
@@ -138,6 +127,14 @@
         "movers"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
