@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-21T15:17:37+00:00",
+  "ts": "2026-09-21T15:23:29+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
@@ -9,10 +9,10 @@
       "ZEC",
       "PENGU",
       "BTC",
-      "ZAMA",
-      "SOL",
       "TAO",
-      "FET"
+      "SOL",
+      "ZAMA",
+      "ENA"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,25 +21,15 @@
       "SEI",
       "SUI",
       "PEPE",
+      "ZAMA",
       "\u725b\u6765",
-      "PROVE",
       "FET",
-      "ZAMA"
+      "ARB"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "FET",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.87
-    },
     {
       "symbol": "SUI",
       "surfaces": 2,
@@ -61,12 +51,36 @@
       "long_short": 1.7
     },
     {
+      "symbol": "ARB",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 7.7e-05
+      "funding": 7.2e-05
+    },
+    {
+      "symbol": "ENA",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "FET",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "FIRO",
@@ -104,15 +118,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 9e-06
-    },
-    {
-      "symbol": "PROVE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -0.002107
+      "funding": 2e-06
     },
     {
       "symbol": "SEI",
@@ -160,7 +166,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000216
+      "funding": 0.000219
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
