@@ -1,16 +1,17 @@
 {
-  "ts": "2026-09-21T00:58:37+00:00",
+  "ts": "2026-09-21T01:04:47+00:00",
   "sources": {
     "coingecko": [
       "TRUMP",
-      "NEAR",
-      "AVAX",
       "FIRO",
+      "AVAX",
+      "NEAR",
       "AERO",
       "SUI",
       "PENGU",
       "SEI",
-      "XRP"
+      "ZEC",
+      "ARB"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -18,16 +19,26 @@
       "SAGA",
       "NEAR",
       "AVAX",
+      "ONE",
       "ARB",
-      "CAKE",
       "SUI",
-      "ENA",
-      "ONDO"
+      "CAKE",
+      "ENA"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "ARB",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 3.7e-05,
+      "long_short": 1.61
+    },
     {
       "symbol": "AVAX",
       "surfaces": 2,
@@ -36,7 +47,7 @@
         "movers"
       ],
       "funding": 0.0001,
-      "long_short": 2.2
+      "long_short": 2.33
     },
     {
       "symbol": "NEAR",
@@ -55,8 +66,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 3.8e-05,
-      "long_short": 2.95
+      "funding": 3.6e-05,
+      "long_short": 2.84
     },
     {
       "symbol": "AERO",
@@ -65,14 +76,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "ARB",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 4.4e-05
     },
     {
       "symbol": "CAKE",
@@ -98,12 +101,12 @@
       ]
     },
     {
-      "symbol": "ONDO",
+      "symbol": "ONE",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 5e-05
+      "funding": -0.000487
     },
     {
       "symbol": "PENGU",
@@ -138,7 +141,7 @@
       "funding": 5e-05
     },
     {
-      "symbol": "XRP",
+      "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
         "coingecko"
