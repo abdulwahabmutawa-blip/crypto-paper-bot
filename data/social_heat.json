@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-21T16:13:46+00:00",
+  "ts": "2026-09-21T16:19:36+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
@@ -18,13 +18,13 @@
     "stocktwits": [],
     "movers": [
       "PHA",
-      "PEPE",
       "SEI",
+      "PEPE",
       "SUI",
-      "FET",
       "ONE",
       "SAGA",
-      "ARB"
+      "FET",
+      "XPL"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -49,20 +49,12 @@
       "long_short": 2.18
     },
     {
-      "symbol": "ARB",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 4.8e-05
+      "funding": 4.7e-05
     },
     {
       "symbol": "DOGE",
@@ -101,7 +93,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000339
+      "funding": -0.000376
     },
     {
       "symbol": "PENGU",
@@ -117,7 +109,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -6.3e-05
+      "funding": -7.5e-05
     },
     {
       "symbol": "SAGA",
@@ -125,7 +117,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -1.8e-05
+      "funding": -1.7e-05
     },
     {
       "symbol": "SEI",
@@ -152,6 +144,14 @@
       "funding": 5e-05
     },
     {
+      "symbol": "XPL",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "ZAMA",
       "surfaces": 1,
       "sources": [
@@ -165,7 +165,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -3e-06
+      "funding": 3e-06
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
