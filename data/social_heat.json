@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-21T02:44:29+00:00",
+  "ts": "2026-09-21T02:50:03+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
@@ -21,10 +21,10 @@
       "NEAR",
       "AVAX",
       "SUI",
+      "ZAMA",
       "STRK",
       "CAKE",
-      "ZAMA",
-      "HBAR"
+      "ENA"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -39,6 +39,16 @@
       ],
       "funding": 0.0001,
       "long_short": 2.39
+    },
+    {
+      "symbol": "ENA",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 2.13
     },
     {
       "symbol": "NEAR",
@@ -57,7 +67,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 5.5e-05,
+      "funding": 5.6e-05,
       "long_short": 2.68
     },
     {
@@ -69,20 +79,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 9.5e-05
+      "funding": 9.2e-05
     },
     {
       "symbol": "FIRO",
@@ -90,14 +92,6 @@
       "sources": [
         "coingecko"
       ]
-    },
-    {
-      "symbol": "HBAR",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 2e-06
     },
     {
       "symbol": "LIT",
