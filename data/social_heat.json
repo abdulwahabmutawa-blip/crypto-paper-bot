@@ -1,16 +1,17 @@
 {
-  "ts": "2026-09-21T06:40:38+00:00",
+  "ts": "2026-09-21T06:46:15+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
       "PENGU",
-      "XRP",
       "SUI",
+      "XRP",
       "ZEC",
-      "FET",
+      "BTC",
       "PUMP",
-      "ENA",
-      "ONDO"
+      "ZAMA",
+      "AVAX",
+      "ENA"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,15 +20,25 @@
       "NEAR",
       "SUI",
       "AVAX",
-      "ZAMA",
       "ENA",
       "PUMP",
-      "HBAR"
+      "ZAMA",
+      "FET"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "AVAX",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 1.6e-05,
+      "long_short": 2.34
+    },
     {
       "symbol": "ENA",
       "surfaces": 2,
@@ -65,40 +76,33 @@
         "coingecko",
         "movers"
       ],
-      "funding": 4.8e-05,
+      "funding": 3.9e-05,
       "long_short": 2.28
     },
     {
-      "symbol": "AVAX",
-      "surfaces": 1,
+      "symbol": "ZAMA",
+      "surfaces": 2,
       "sources": [
+        "coingecko",
         "movers"
       ],
-      "funding": 2.1e-05
+      "funding": 5e-05
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 9.4e-05
     },
     {
       "symbol": "FET",
       "surfaces": 1,
       "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "HBAR",
-      "surfaces": 1,
-      "sources": [
         "movers"
       ],
-      "funding": 3.4e-05
-    },
-    {
-      "symbol": "ONDO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": 0.0001
     },
     {
       "symbol": "PENGU",
@@ -123,14 +127,6 @@
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "ZAMA",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "ZEC",
