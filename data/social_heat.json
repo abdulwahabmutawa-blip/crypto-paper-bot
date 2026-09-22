@@ -1,17 +1,16 @@
 {
-  "ts": "2026-09-22T14:00:07+00:00",
+  "ts": "2026-09-22T14:05:37+00:00",
   "sources": {
     "coingecko": [
-      "NEAR",
       "PENGU",
+      "NEAR",
       "TRUMP",
       "UNI",
       "FIRO",
       "TAO",
-      "PEPE",
       "BTC",
-      "BCH",
-      "SUI"
+      "SUI",
+      "XRP"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -30,16 +29,6 @@
   },
   "heat": [
     {
-      "symbol": "BCH",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.45
-    },
-    {
       "symbol": "PENGU",
       "surfaces": 2,
       "sources": [
@@ -50,14 +39,6 @@
       "long_short": 0.91
     },
     {
-      "symbol": "PEPE",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ]
-    },
-    {
       "symbol": "TAO",
       "surfaces": 2,
       "sources": [
@@ -65,7 +46,15 @@
         "movers"
       ],
       "funding": 5e-05,
-      "long_short": 1.77
+      "long_short": 1.78
+    },
+    {
+      "symbol": "BCH",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "BTC",
@@ -73,7 +62,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.2e-05
+      "funding": 4.1e-05
     },
     {
       "symbol": "DOGE",
@@ -104,7 +93,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000132
+      "funding": 0.000122
     },
     {
       "symbol": "MUBARAK",
@@ -112,7 +101,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000292
+      "funding": 0.000299
     },
     {
       "symbol": "NEAR",
@@ -121,6 +110,13 @@
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "PEPE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
     },
     {
       "symbol": "SUI",
@@ -140,6 +136,14 @@
     },
     {
       "symbol": "UNI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "XRP",
       "surfaces": 1,
       "sources": [
         "coingecko"
