@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-22T04:29:38+00:00",
+  "ts": "2026-09-22T04:35:28+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
@@ -7,11 +7,11 @@
       "PENGU",
       "NEAR",
       "TAO",
-      "UNI",
       "BTC",
+      "ZEC",
       "SUI",
       "LIT",
-      "ZEC"
+      "BONK"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,8 +21,8 @@
       "FORM",
       "TAO",
       "DOGE",
-      "PENGU",
       "ONE",
+      "PENGU",
       "FET"
     ],
     "watcher": [],
@@ -58,12 +58,19 @@
       "long_short": 1.77
     },
     {
+      "symbol": "BONK",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ]
+    },
+    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0001
+      "funding": 9.8e-05
     },
     {
       "symbol": "DOGE",
@@ -118,7 +125,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.00014
+      "funding": -0.000141
     },
     {
       "symbol": "PHA",
@@ -130,14 +137,6 @@
     },
     {
       "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "UNI",
       "surfaces": 1,
       "sources": [
         "coingecko"
