@@ -1,14 +1,15 @@
 {
-  "ts": "2026-09-22T16:19:46+00:00",
+  "ts": "2026-09-22T16:24:56+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
+      "TAO",
       "BTC",
       "PENGU",
-      "TAO",
       "SUI",
-      "ZEC",
-      "UNI"
+      "ONDO",
+      "BCH",
+      "ARB"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -17,15 +18,25 @@
       "BCH",
       "MARSCOIN",
       "NEAR",
-      "SNDKB",
       "TAO",
+      "SNDKB",
       "XRP",
-      "HBAR"
+      "ZEC"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "BCH",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.39
+    },
     {
       "symbol": "NEAR",
       "surfaces": 2,
@@ -47,12 +58,12 @@
       "long_short": 1.76
     },
     {
-      "symbol": "BCH",
+      "symbol": "ARB",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
-      "funding": 0.0001
+      "funding": -0.000105
     },
     {
       "symbol": "BTC",
@@ -60,15 +71,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.6e-05
-    },
-    {
-      "symbol": "HBAR",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
+      "funding": 1.5e-05
     },
     {
       "symbol": "MARSCOIN",
@@ -84,7 +87,15 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000251
+      "funding": 0.000264
+    },
+    {
+      "symbol": "ONDO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "PENGU",
@@ -110,14 +121,6 @@
       "funding": 0.0001
     },
     {
-      "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "XRP",
       "surfaces": 1,
       "sources": [
@@ -129,7 +132,7 @@
       "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
       "funding": 0.0001
     }
