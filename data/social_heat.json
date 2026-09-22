@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-22T18:49:17+00:00",
+  "ts": "2026-09-22T18:54:19+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
@@ -7,6 +7,7 @@
       "TAO",
       "ZRO",
       "SOL",
+      "BTC",
       "APE"
     ],
     "reddit": [],
@@ -17,9 +18,9 @@
       "BCH",
       "ZRO",
       "TAO",
-      "PENGU",
       "NEAR",
-      "SNDKB"
+      "SNDKB",
+      "DASH"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -34,16 +35,6 @@
       ],
       "funding": 0.0001,
       "long_short": 1.65
-    },
-    {
-      "symbol": "PENGU",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 0.92
     },
     {
       "symbol": "TAO",
@@ -62,7 +53,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 4.4e-05,
+      "funding": 5e-05,
       "long_short": 1.24
     },
     {
@@ -82,12 +73,28 @@
       "funding": 0.0001
     },
     {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -1.6e-05
+    },
+    {
+      "symbol": "DASH",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "MARSCOIN",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 5e-05
+      "funding": 5.3e-05
     },
     {
       "symbol": "MUBARAK",
@@ -95,7 +102,15 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000288
+      "funding": 0.000282
+    },
+    {
+      "symbol": "PENGU",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "SNDKB",
@@ -110,7 +125,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.5e-05
+      "funding": 1.6e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
