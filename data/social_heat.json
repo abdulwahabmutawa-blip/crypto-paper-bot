@@ -1,15 +1,15 @@
 {
-  "ts": "2026-09-22T16:30:27+00:00",
+  "ts": "2026-09-22T16:36:20+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
-      "TAO",
       "BTC",
+      "TAO",
       "PENGU",
       "SUI",
       "ONDO",
-      "BCH",
-      "ARB"
+      "ARB",
+      "LIT"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,23 +20,13 @@
       "NEAR",
       "TAO",
       "SNDKB",
-      "XRP",
-      "FIL"
+      "PENGU",
+      "XRP"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "BCH",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.39
-    },
     {
       "symbol": "NEAR",
       "surfaces": 2,
@@ -46,6 +36,16 @@
       ],
       "funding": 0.0001,
       "long_short": 1.68
+    },
+    {
+      "symbol": "PENGU",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.0
     },
     {
       "symbol": "TAO",
@@ -63,7 +63,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -9.6e-05
+      "funding": -9.2e-05
+    },
+    {
+      "symbol": "BCH",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "BTC",
@@ -74,12 +82,12 @@
       "funding": 1.3e-05
     },
     {
-      "symbol": "FIL",
+      "symbol": "LIT",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
-      "funding": 0.0001
+      "funding": 1.2e-05
     },
     {
       "symbol": "MARSCOIN",
@@ -95,18 +103,10 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000289
+      "funding": 0.000313
     },
     {
       "symbol": "ONDO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
         "coingecko"
