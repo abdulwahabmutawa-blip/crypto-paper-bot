@@ -1,22 +1,67 @@
 {
-  "ts": "2026-09-22T23:03:51+00:00",
-  "scanned": 145,
+  "ts": "2026-09-22T23:09:22+00:00",
+  "scanned": 146,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "RAYUSDT",
-      "signal": "ignition",
-      "score": 0.75,
-      "raw_score": 0.7828,
-      "weight": 0.958,
-      "price": 1.8013,
-      "why": "trades 9.4x and volume 9.0x the prior 4h, 60% taker-buy, $96,004 burst \u2014 while price has only moved +2.7%",
-      "chg_24h": -0.0207,
-      "vol_surge": 9.0,
-      "chg_1h": 0.0273,
-      "market_surge": 0.85,
+      "symbol": "ARBUSDT",
+      "signal": "breakout",
+      "score": 0.7901,
+      "raw_score": 0.8469,
+      "weight": 0.933,
+      "price": 0.2298,
+      "why": "trades 7.7x, volume 9.7x, 66% taker-buy, +5.6% in an hour, at 94% of its 24h range",
+      "chg_24h": -0.0017,
+      "vol_surge": 9.73,
+      "chg_1h": 0.0561,
+      "market_surge": 2.5,
       "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean +0.33% at 24h: market beta, not signal"
+      "status": "benched \u2014 BTC-excess day mean -0.34% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "ATOMUSDT",
+      "signal": "breakout",
+      "score": 0.7564,
+      "raw_score": 0.8107,
+      "weight": 0.933,
+      "price": 1.858,
+      "why": "trades 9.2x, volume 9.2x, 74% taker-buy, +3.6% in an hour, at 102% of its 24h range",
+      "chg_24h": 0.022,
+      "vol_surge": 9.21,
+      "chg_1h": 0.0363,
+      "market_surge": 2.3,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.34% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "INJUSDT",
+      "signal": "breakout",
+      "score": 0.6314,
+      "raw_score": 0.6768,
+      "weight": 0.933,
+      "price": 8.02,
+      "why": "trades 5.0x, volume 11.4x, 76% taker-buy, +2.8% in an hour, at 97% of its 24h range",
+      "chg_24h": 0.009,
+      "vol_surge": 11.42,
+      "chg_1h": 0.0279,
+      "market_surge": 3.31,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.34% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "ZENUSDT",
+      "signal": "breakout",
+      "score": 0.505,
+      "raw_score": 0.5413,
+      "weight": 0.933,
+      "price": 8.211,
+      "why": "trades 4.8x, volume 5.4x, 64% taker-buy, +2.0% in an hour, at 92% of its 24h range",
+      "chg_24h": 0.0581,
+      "vol_surge": 5.41,
+      "chg_1h": 0.0203,
+      "market_surge": 2.79,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.34% at 24h: market beta, not signal"
     }
   ],
   "gate": {
@@ -27,7 +72,7 @@
     "revival": "probation \u2014 9/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 25,
+    "count": 29,
     "baseline": 31.0,
     "wave": false
   },
