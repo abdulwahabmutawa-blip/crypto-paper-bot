@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-22T03:43:46+00:00",
+  "ts": "2026-09-22T03:49:16+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
@@ -18,17 +18,27 @@
     "movers": [
       "PHA",
       "PEPE",
-      "ONE",
       "FORM",
+      "ONE",
       "TAO",
       "DOGE",
       "FET",
-      "SEI"
+      "PENGU"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "PENGU",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 0.88
+    },
     {
       "symbol": "PEPE",
       "surfaces": 2,
@@ -53,7 +63,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.8e-05
+      "funding": 0.0001
     },
     {
       "symbol": "DOGE",
@@ -108,15 +118,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -5.3e-05
-    },
-    {
-      "symbol": "PENGU",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": -7.3e-05
     },
     {
       "symbol": "PHA",
@@ -125,14 +127,6 @@
         "movers"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "SEI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "SUI",
