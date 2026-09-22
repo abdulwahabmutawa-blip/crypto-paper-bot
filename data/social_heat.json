@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-22T03:27:47+00:00",
+  "ts": "2026-09-22T03:33:16+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
@@ -7,22 +7,22 @@
       "NEAR",
       "BTC",
       "TAO",
-      "SUI",
-      "LIT",
       "PEPE",
+      "SUI",
       "ZAMA",
-      "FET"
+      "UNI",
+      "LIT"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "PHA",
       "PEPE",
-      "FORM",
       "ONE",
       "TAO",
+      "FORM",
       "DOGE",
-      "SUI",
+      "SEI",
       "FET"
     ],
     "watcher": [],
@@ -30,32 +30,12 @@
   },
   "heat": [
     {
-      "symbol": "FET",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.7
-    },
-    {
       "symbol": "PEPE",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ]
-    },
-    {
-      "symbol": "SUI",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 2.21
     },
     {
       "symbol": "TAO",
@@ -73,10 +53,18 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.4e-05
+      "funding": 9.6e-05
     },
     {
       "symbol": "DOGE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "FET",
       "surfaces": 1,
       "sources": [
         "movers"
@@ -120,7 +108,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -1e-05
+      "funding": -2e-05
     },
     {
       "symbol": "PENGU",
@@ -137,6 +125,30 @@
         "movers"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "SEI",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "UNI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "ZAMA",
