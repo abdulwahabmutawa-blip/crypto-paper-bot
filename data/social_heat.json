@@ -1,30 +1,29 @@
 {
-  "ts": "2026-09-22T15:06:46+00:00",
+  "ts": "2026-09-22T15:12:17+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
       "PENGU",
-      "FIRO",
-      "UNI",
       "BTC",
-      "PYTH",
+      "UNI",
       "XRP",
+      "PYTH",
+      "TAO",
       "ZEC",
       "SUI",
-      "SOL",
-      "TAO"
+      "FIRO"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "MUBARAK",
       "BCH",
-      "MARSCOIN",
       "FORM",
+      "MARSCOIN",
       "TAO",
       "NEAR",
       "HBAR",
-      "PENGU"
+      "XRP"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -41,16 +40,6 @@
       "long_short": 1.74
     },
     {
-      "symbol": "PENGU",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.02
-    },
-    {
       "symbol": "TAO",
       "surfaces": 2,
       "sources": [
@@ -59,6 +48,16 @@
       ],
       "funding": 5e-05,
       "long_short": 1.88
+    },
+    {
+      "symbol": "XRP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.23
     },
     {
       "symbol": "BCH",
@@ -105,7 +104,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 6.7e-05
+      "funding": 5.2e-05
     },
     {
       "symbol": "MUBARAK",
@@ -113,7 +112,15 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000298
+      "funding": 0.000293
+    },
+    {
+      "symbol": "PENGU",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "PYTH",
@@ -121,15 +128,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.6e-05
-    },
-    {
-      "symbol": "SOL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 8e-06
+      "funding": -2.6e-05
     },
     {
       "symbol": "SUI",
@@ -141,14 +140,6 @@
     },
     {
       "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "XRP",
       "surfaces": 1,
       "sources": [
         "coingecko"
