@@ -1,34 +1,43 @@
 {
-  "ts": "2026-09-22T00:57:46+00:00",
+  "ts": "2026-09-22T01:03:19+00:00",
   "sources": {
     "coingecko": [
+      "PENGU",
       "FIRO",
       "TRUMP",
-      "PENGU",
       "TAO",
       "NEAR",
-      "SUI",
       "BTC",
-      "AERO",
-      "LIT",
-      "AVAX"
+      "ETH",
+      "PEPE",
+      "SUI",
+      "ARB",
+      "AERO"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "FORM",
       "PHA",
+      "FORM",
       "PEPE",
       "TAO",
       "FET",
       "SUI",
-      "ONE",
-      "DOGE"
+      "DOGE",
+      "ONE"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "PEPE",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ]
+    },
     {
       "symbol": "SUI",
       "surfaces": 2,
@@ -37,7 +46,7 @@
         "movers"
       ],
       "funding": 0.0001,
-      "long_short": 2.17
+      "long_short": 2.3
     },
     {
       "symbol": "TAO",
@@ -47,7 +56,7 @@
         "movers"
       ],
       "funding": 5e-05,
-      "long_short": 1.7
+      "long_short": 1.78
     },
     {
       "symbol": "AERO",
@@ -58,12 +67,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "AVAX",
+      "symbol": "ARB",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0001
+      "funding": 9e-06
     },
     {
       "symbol": "BTC",
@@ -71,7 +80,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.2e-05
+      "funding": 8.1e-05
     },
     {
       "symbol": "DOGE",
@@ -80,6 +89,14 @@
         "movers"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "ETH",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5.5e-05
     },
     {
       "symbol": "FET",
@@ -105,14 +122,6 @@
       "funding": 5e-05
     },
     {
-      "symbol": "LIT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "NEAR",
       "surfaces": 1,
       "sources": [
@@ -126,7 +135,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000107
+      "funding": -8.9e-05
     },
     {
       "symbol": "PENGU",
@@ -135,13 +144,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "PEPE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
     },
     {
       "symbol": "PHA",
