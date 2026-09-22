@@ -1,18 +1,18 @@
 {
-  "ts": "2026-09-22T04:46:46+00:00",
+  "ts": "2026-09-22T04:52:47+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
       "PEPE",
       "NEAR",
-      "TAO",
       "PENGU",
       "BTC",
+      "TAO",
       "ZEC",
       "SUI",
-      "ETH",
       "BONK",
-      "SOL"
+      "SOL",
+      "ZAMA"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -24,7 +24,7 @@
       "TAO",
       "DOGE",
       "PENGU",
-      "ONE"
+      "FET"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -71,7 +71,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.3e-05
+      "funding": 9e-05
     },
     {
       "symbol": "DOGE",
@@ -82,12 +82,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "ETH",
+      "symbol": "FET",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
-      "funding": 8.7e-05
+      "funding": 0.0001
     },
     {
       "symbol": "FIRO",
@@ -110,7 +110,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000164
+      "funding": 0.000177
     },
     {
       "symbol": "NEAR",
@@ -119,14 +119,6 @@
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "ONE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -0.000142
     },
     {
       "symbol": "PHA",
@@ -151,6 +143,14 @@
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "ZAMA",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "ZEC",
