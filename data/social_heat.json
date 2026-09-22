@@ -1,20 +1,19 @@
 {
-  "ts": "2026-09-22T11:09:46+00:00",
+  "ts": "2026-09-22T11:15:16+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
       "NEAR",
-      "TRUMP",
       "FIRO",
-      "TAO",
       "PEPE",
-      "SUI",
-      "ARB",
-      "BTC",
-      "ETH",
+      "TAO",
+      "TRUMP",
       "AVAX",
-      "ADA",
-      "FET"
+      "SUI",
+      "BTC",
+      "ARB",
+      "ONDO",
+      "PENDLE"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -25,23 +24,13 @@
       "PEPE",
       "TAO",
       "NEAR",
-      "PENGU",
-      "FET"
+      "FET",
+      "PENGU"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "FET",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 2.34
-    },
     {
       "symbol": "NEAR",
       "surfaces": 2,
@@ -81,20 +70,12 @@
       "long_short": 1.79
     },
     {
-      "symbol": "ADA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "ARB",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -4.9e-05
+      "funding": -4.8e-05
     },
     {
       "symbol": "AVAX",
@@ -110,13 +91,13 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.5e-05
+      "funding": 7.4e-05
     },
     {
-      "symbol": "ETH",
+      "symbol": "FET",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
       "funding": 0.0001
     },
@@ -141,7 +122,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000152
+      "funding": 0.000142
     },
     {
       "symbol": "MUBARAK",
@@ -149,7 +130,23 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000225
+      "funding": 0.000228
+    },
+    {
+      "symbol": "ONDO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "PENDLE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -8.1e-05
     },
     {
       "symbol": "SUI",
@@ -165,7 +162,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000193
+      "funding": -0.000194
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
