@@ -1,17 +1,18 @@
 {
-  "ts": "2026-09-22T14:38:36+00:00",
+  "ts": "2026-09-22T14:44:36+00:00",
   "sources": {
     "coingecko": [
-      "PENGU",
       "NEAR",
       "FIRO",
+      "PENGU",
       "UNI",
-      "ZEC",
       "TAO",
-      "BTC",
       "XRP",
-      "ARB",
-      "SUI"
+      "ZEC",
+      "SUI",
+      "BTC",
+      "BCH",
+      "PYTH"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -23,12 +24,22 @@
       "TAO",
       "PEPE",
       "NEAR",
-      "PENGU"
+      "DOGE"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "BCH",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.51
+    },
     {
       "symbol": "NEAR",
       "surfaces": 2,
@@ -38,16 +49,6 @@
       ],
       "funding": 0.0001,
       "long_short": 1.7
-    },
-    {
-      "symbol": "PENGU",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 0.91
     },
     {
       "symbol": "TAO",
@@ -60,28 +61,20 @@
       "long_short": 1.78
     },
     {
-      "symbol": "ARB",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -0.000112
-    },
-    {
-      "symbol": "BCH",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 2.7e-05
+      "funding": 2.5e-05
+    },
+    {
+      "symbol": "DOGE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "FIRO",
@@ -104,7 +97,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 8.6e-05
+      "funding": 7.3e-05
     },
     {
       "symbol": "MUBARAK",
@@ -112,7 +105,15 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000307
+      "funding": 0.000304
+    },
+    {
+      "symbol": "PENGU",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "PEPE",
@@ -120,6 +121,14 @@
       "sources": [
         "movers"
       ]
+    },
+    {
+      "symbol": "PYTH",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -5e-06
     },
     {
       "symbol": "SUI",
