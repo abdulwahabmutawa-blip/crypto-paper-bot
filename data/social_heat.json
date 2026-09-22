@@ -1,18 +1,19 @@
 {
-  "ts": "2026-09-22T01:19:46+00:00",
+  "ts": "2026-09-22T01:25:36+00:00",
   "sources": {
     "coingecko": [
       "TRUMP",
-      "FIRO",
       "PENGU",
+      "FIRO",
       "TAO",
       "BTC",
       "NEAR",
-      "XRP",
-      "ARB",
-      "PEPE",
       "SUI",
-      "ETH"
+      "ZEC",
+      "AERO",
+      "ETH",
+      "XRP",
+      "ARB"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -23,21 +24,13 @@
       "TAO",
       "FET",
       "DOGE",
-      "SUI",
-      "ONE"
+      "ONE",
+      "SUI"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "PEPE",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ]
-    },
     {
       "symbol": "SUI",
       "surfaces": 2,
@@ -59,12 +52,20 @@
       "long_short": 1.78
     },
     {
+      "symbol": "AERO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "ARB",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-06
+      "funding": 8e-06
     },
     {
       "symbol": "BTC",
@@ -72,7 +73,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.7e-05
+      "funding": 8.8e-05
     },
     {
       "symbol": "DOGE",
@@ -88,7 +89,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.7e-05
+      "funding": 7.1e-05
     },
     {
       "symbol": "FET",
@@ -127,7 +128,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -2.8e-05
+      "funding": 0.0
     },
     {
       "symbol": "PENGU",
@@ -136,6 +137,13 @@
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "PEPE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
     },
     {
       "symbol": "PHA",
@@ -155,6 +163,14 @@
     },
     {
       "symbol": "XRP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
         "coingecko"
