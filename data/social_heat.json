@@ -1,14 +1,14 @@
 {
-  "ts": "2026-09-22T19:38:58+00:00",
+  "ts": "2026-09-22T19:44:48+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
       "NEAR",
       "TAO",
-      "SOL",
-      "LINK",
+      "FET",
       "ZEC",
-      "HBAR"
+      "XRP",
+      "SUI"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -18,24 +18,14 @@
       "BCH",
       "ZRO",
       "PENGU",
-      "SNDKB",
       "HBAR",
+      "SNDKB",
       "TAO"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "HBAR",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 2.15
-    },
     {
       "symbol": "PENGU",
       "surfaces": 2,
@@ -65,10 +55,18 @@
       "funding": 0.0001
     },
     {
-      "symbol": "LINK",
+      "symbol": "FET",
       "surfaces": 1,
       "sources": [
         "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "HBAR",
+      "surfaces": 1,
+      "sources": [
+        "movers"
       ],
       "funding": 0.0001
     },
@@ -78,7 +76,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000126
+      "funding": 0.000128
     },
     {
       "symbol": "MUBARAK",
@@ -86,7 +84,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000205
+      "funding": 0.000182
     },
     {
       "symbol": "NEAR",
@@ -104,12 +102,20 @@
       ]
     },
     {
-      "symbol": "SOL",
+      "symbol": "SUI",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 2.2e-05
+      "funding": 0.0001
+    },
+    {
+      "symbol": "XRP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "ZEC",
