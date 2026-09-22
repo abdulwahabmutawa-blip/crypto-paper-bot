@@ -1,13 +1,13 @@
 {
-  "ts": "2026-09-22T23:09:18+00:00",
+  "ts": "2026-09-22T23:14:52+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
       "NEAR",
       "BTC",
       "UNI",
-      "XLM",
-      "TAO"
+      "ZEC",
+      "XLM"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -46,6 +46,16 @@
       "long_short": 1.5
     },
     {
+      "symbol": "ZEC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 0.45
+    },
+    {
       "symbol": "BCH",
       "surfaces": 1,
       "sources": [
@@ -59,7 +69,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1e-06
+      "funding": 3e-06
     },
     {
       "symbol": "DASH",
@@ -75,7 +85,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000294
+      "funding": 0.000285
     },
     {
       "symbol": "MUBARAK",
@@ -83,7 +93,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000437
+      "funding": 0.000429
     },
     {
       "symbol": "NEAR",
@@ -94,26 +104,10 @@
       "funding": 0.0001
     },
     {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "XLM",
       "surfaces": 1,
       "sources": [
         "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "movers"
       ],
       "funding": 0.0001
     },
