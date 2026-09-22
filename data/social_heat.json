@@ -1,16 +1,17 @@
 {
-  "ts": "2026-09-22T08:27:48+00:00",
+  "ts": "2026-09-22T08:33:39+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
       "PENGU",
-      "PEPE",
       "TAO",
+      "PEPE",
       "NEAR",
-      "ZEC",
       "BTC",
+      "ZEC",
       "SOL",
-      "AAVE"
+      "ARB",
+      "DOGE"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,8 +21,8 @@
       "FORM",
       "MARSCOIN",
       "TAO",
-      "PENGU",
       "FET",
+      "PENGU",
       "HBAR"
     ],
     "watcher": [],
@@ -53,11 +54,19 @@
         "coingecko",
         "movers"
       ],
-      "funding": 7e-05,
+      "funding": 6.8e-05,
       "long_short": 1.75
     },
     {
-      "symbol": "AAVE",
+      "symbol": "ARB",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 1.8e-05
+    },
+    {
+      "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -65,7 +74,7 @@
       "funding": 0.0001
     },
     {
-      "symbol": "BTC",
+      "symbol": "DOGE",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -78,7 +87,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000132
+      "funding": 0.000126
     },
     {
       "symbol": "FIRO",
@@ -109,7 +118,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000251
+      "funding": 0.000264
     },
     {
       "symbol": "MUBARAK",
@@ -117,7 +126,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000419
+      "funding": 0.000408
     },
     {
       "symbol": "NEAR",
