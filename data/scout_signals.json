@@ -1,17 +1,34 @@
 {
-  "ts": "2026-09-22T04:00:49+00:00",
-  "scanned": 157,
+  "ts": "2026-09-22T04:06:21+00:00",
+  "scanned": 156,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SOXSBUSDT",
+      "signal": "reversion",
+      "score": 0.5319,
+      "raw_score": 0.5319,
+      "weight": 1.0,
+      "price": 34.48,
+      "why": "down -15% on the day (bottom decile of the market), now +0.7% over 15m with 4 green candles",
+      "chg_24h": -0.1491,
+      "vol_surge": 4.44,
+      "chg_1h": 0.0126,
+      "market_surge": 0.36,
+      "oi_drop": null,
+      "funding": null,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.04% at 24h: market beta, not signal",
-    "breakout": "benched \u2014 BTC-excess day mean -0.55% at 24h: market beta, not signal",
+    "breakout": "benched \u2014 BTC-excess day mean -0.56% at 24h: market beta, not signal",
     "reversion": "actionable",
     "heat": "probation \u2014 17 rows but only 3.0 independent 24h windows (span 73h): overlapping labels are not a sample",
     "revival": "probation \u2014 11/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 41,
+    "count": 40,
     "baseline": 36.0,
     "wave": false
   },
@@ -84,19 +101,19 @@
       "avg_win_4h": 0.03571,
       "avg_loss_4h": -0.02858,
       "payoff_4h": 1.25,
-      "span_h_24h": 309.6,
-      "n_eff_24h": 12.9,
-      "n_24h": 285,
-      "hit_rate_24h": 0.491,
-      "mean_ret_24h": 0.01486,
-      "median_ret_24h": 0.0,
+      "span_h_24h": 311.5,
+      "n_eff_24h": 12.98,
+      "n_24h": 286,
+      "hit_rate_24h": 0.493,
+      "mean_ret_24h": 0.01483,
+      "median_ret_24h": 0.00061,
       "both_halves_24h": false,
       "days_24h": 14,
-      "mean_x_24h": -0.00548,
+      "mean_x_24h": -0.00557,
       "days_x_24h": 14,
-      "avg_win_24h": 0.07729,
+      "avg_win_24h": 0.0768,
       "avg_loss_24h": -0.04815,
-      "payoff_24h": 1.605
+      "payoff_24h": 1.595
     },
     "reversion": {
       "span_h_1h": 302.1,

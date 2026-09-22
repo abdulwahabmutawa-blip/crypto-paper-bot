@@ -1,17 +1,17 @@
 {
-  "ts": "2026-09-22T04:00:45+00:00",
+  "ts": "2026-09-22T04:06:17+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
       "NEAR",
-      "FIRO",
       "TAO",
       "PEPE",
-      "SUI",
+      "FIRO",
       "BTC",
-      "ZAMA",
+      "SUI",
       "LIT",
-      "UNI"
+      "ZAMA",
+      "ARB"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,11 +19,11 @@
       "PHA",
       "PEPE",
       "FORM",
+      "DOGE",
       "TAO",
       "ONE",
-      "DOGE",
-      "FET",
-      "PENGU"
+      "PENGU",
+      "FET"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -37,7 +37,7 @@
         "movers"
       ],
       "funding": 5e-05,
-      "long_short": 0.88
+      "long_short": 0.87
     },
     {
       "symbol": "PEPE",
@@ -55,7 +55,15 @@
         "movers"
       ],
       "funding": 5e-05,
-      "long_short": 1.79
+      "long_short": 1.77
+    },
+    {
+      "symbol": "ARB",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 2.2e-05
     },
     {
       "symbol": "BTC",
@@ -118,7 +126,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -9.5e-05
+      "funding": -0.000116
     },
     {
       "symbol": "PHA",
@@ -130,14 +138,6 @@
     },
     {
       "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "UNI",
       "surfaces": 1,
       "sources": [
         "coingecko"
