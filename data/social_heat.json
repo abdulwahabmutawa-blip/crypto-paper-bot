@@ -1,15 +1,16 @@
 {
-  "ts": "2026-09-22T16:41:40+00:00",
+  "ts": "2026-09-22T16:47:07+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
-      "BTC",
-      "TAO",
       "PENGU",
-      "SUI",
+      "TAO",
+      "BTC",
       "ONDO",
+      "SUI",
       "ARB",
-      "LIT"
+      "ASTER",
+      "UNI"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -63,7 +64,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -9.2e-05
+      "funding": -8.3e-05
+    },
+    {
+      "symbol": "ASTER",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "BCH",
@@ -79,15 +88,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.3e-05
-    },
-    {
-      "symbol": "LIT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 1.5e-05
+      "funding": 1.2e-05
     },
     {
       "symbol": "MARSCOIN",
@@ -103,7 +104,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000343
+      "funding": 0.000363
     },
     {
       "symbol": "ONDO",
@@ -122,6 +123,14 @@
     },
     {
       "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "UNI",
       "surfaces": 1,
       "sources": [
         "coingecko"
