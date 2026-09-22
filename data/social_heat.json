@@ -1,14 +1,13 @@
 {
-  "ts": "2026-09-22T19:10:38+00:00",
+  "ts": "2026-09-22T19:16:18+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
       "NEAR",
       "TAO",
       "BTC",
-      "ZRO",
       "SOL",
-      "ZEC"
+      "XRP"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,8 +18,8 @@
       "ZRO",
       "PENGU",
       "HBAR",
-      "TAO",
-      "SNDKB"
+      "SNDKB",
+      "TAO"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -47,16 +46,6 @@
       "long_short": 1.84
     },
     {
-      "symbol": "ZRO",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.28
-    },
-    {
       "symbol": "BCH",
       "surfaces": 1,
       "sources": [
@@ -70,7 +59,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.2e-05
+      "funding": -2.4e-05
     },
     {
       "symbol": "HBAR",
@@ -86,7 +75,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 8.3e-05
+      "funding": 9.1e-05
     },
     {
       "symbol": "MUBARAK",
@@ -94,7 +83,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000253
+      "funding": 0.000236
     },
     {
       "symbol": "NEAR",
@@ -120,12 +109,20 @@
       "funding": 1.8e-05
     },
     {
-      "symbol": "ZEC",
+      "symbol": "XRP",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "ZRO",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
