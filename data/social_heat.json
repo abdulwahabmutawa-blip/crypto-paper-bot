@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-22T19:33:18+00:00",
+  "ts": "2026-09-22T19:38:58+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
@@ -18,9 +18,9 @@
       "BCH",
       "ZRO",
       "PENGU",
-      "HBAR",
       "SNDKB",
-      "DASH"
+      "HBAR",
+      "TAO"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -47,15 +47,17 @@
       "long_short": 0.93
     },
     {
-      "symbol": "BCH",
-      "surfaces": 1,
+      "symbol": "TAO",
+      "surfaces": 2,
       "sources": [
+        "coingecko",
         "movers"
       ],
-      "funding": 0.0001
+      "funding": 5e-05,
+      "long_short": 1.84
     },
     {
-      "symbol": "DASH",
+      "symbol": "BCH",
       "surfaces": 1,
       "sources": [
         "movers"
@@ -76,7 +78,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000129
+      "funding": 0.000126
     },
     {
       "symbol": "MUBARAK",
@@ -84,7 +86,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000209
+      "funding": 0.000205
     },
     {
       "symbol": "NEAR",
@@ -108,14 +110,6 @@
         "coingecko"
       ],
       "funding": 2.2e-05
-    },
-    {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "ZEC",
