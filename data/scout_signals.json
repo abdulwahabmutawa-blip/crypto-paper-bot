@@ -1,22 +1,37 @@
 {
-  "ts": "2026-09-22T21:02:32+00:00",
-  "scanned": 148,
+  "ts": "2026-09-22T21:07:51+00:00",
+  "scanned": 150,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "PLUMEUSDT",
+      "symbol": "LUNCUSDT",
       "signal": "ignition",
-      "score": 0.7931,
-      "raw_score": 0.8287,
+      "score": 0.8559,
+      "raw_score": 0.8943,
       "weight": 0.957,
-      "price": 0.01618,
-      "why": "trades 9.0x and volume 10.5x the prior 4h, 62% taker-buy, $185,330 burst \u2014 while price has only moved +1.5%",
-      "chg_24h": 0.0865,
-      "vol_surge": 10.55,
-      "chg_1h": 0.0151,
-      "market_surge": 8.79,
+      "price": 5.659e-05,
+      "why": "trades 15.4x and volume 30.5x the prior 4h, 81% taker-buy, $167,919 burst \u2014 while price has only moved +2.3%",
+      "chg_24h": 0.0254,
+      "vol_surge": 30.49,
+      "chg_1h": 0.023,
+      "market_surge": 14.31,
       "actionable": false,
       "status": "benched \u2014 BTC-excess day mean -0.30% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "LUNCUSDT",
+      "signal": "breakout",
+      "score": 0.7291,
+      "raw_score": 0.7831,
+      "weight": 0.931,
+      "price": 5.659e-05,
+      "why": "trades 15.4x, volume 30.5x, 81% taker-buy, +2.3% in an hour, at 88% of its 24h range",
+      "chg_24h": 0.0254,
+      "vol_surge": 30.49,
+      "chg_1h": 0.023,
+      "market_surge": 14.31,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.34% at 24h: market beta, not signal"
     }
   ],
   "gate": {
