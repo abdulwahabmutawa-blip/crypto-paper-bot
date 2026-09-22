@@ -1,104 +1,104 @@
 {
-  "generated_utc": "2026-09-22T14:26:54+00:00",
+  "generated_utc": "2026-09-22T14:44:40+00:00",
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "live_ts": "2026-09-22T14:25:00+00:00",
+  "live_ts": "2026-09-22T14:40:00+00:00",
   "current": {
     "date": "2026-09-22",
-    "value": 1218.07,
-    "bench": 1030.72,
+    "value": 1219.81,
+    "bench": 1030.18,
     "holding": "HD"
   },
   "board": [
     {
       "sym": "JPM",
-      "price": 341.29,
-      "line": "z -2.80",
+      "price": 339.67,
+      "line": "z -2.98",
       "tag": "oversold",
       "on": true,
       "pick": false,
-      "fill": 46.592153480841674
+      "fill": 49.60852201985252
     },
     {
       "sym": "PEP",
-      "price": 130.66,
-      "line": "z -1.73",
+      "price": 130.74,
+      "line": "z -1.72",
       "tag": "oversold",
       "on": true,
       "pick": false,
-      "fill": 28.88233540994017
+      "fill": 28.58638569937505
     },
     {
       "sym": "UNH",
-      "price": 376.1,
-      "line": "z -1.21",
+      "price": 376.83,
+      "line": "z -1.13",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 20.111977643997346
+      "fill": 18.91537539694
     },
     {
       "sym": "HD",
-      "price": 301.16,
-      "line": "z -1.12",
+      "price": 301.59,
+      "line": "z -1.09",
       "tag": "HELD",
       "on": false,
       "pick": true,
-      "fill": 18.71597823401175
-    },
-    {
-      "sym": "XOM",
-      "price": 158.84,
-      "line": "z -0.95",
-      "tag": "normal",
-      "on": false,
-      "pick": false,
-      "fill": 15.763504741575582
+      "fill": 18.15638048797229
     },
     {
       "sym": "CVX",
-      "price": 203.78,
-      "line": "z -0.90",
+      "price": 204.16,
+      "line": "z -0.83",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 14.955896584662973
+      "fill": 13.869814686200883
+    },
+    {
+      "sym": "XOM",
+      "price": 159.42,
+      "line": "z -0.79",
+      "tag": "normal",
+      "on": false,
+      "pick": false,
+      "fill": 13.164111979123682
     },
     {
       "sym": "JNJ",
-      "price": 266.11,
-      "line": "z -0.89",
+      "price": 268.32,
+      "line": "z -0.33",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 14.88716990754174
-    },
-    {
-      "sym": "KO",
-      "price": 88.0,
-      "line": "z -0.23",
-      "tag": "normal",
-      "on": false,
-      "pick": false,
-      "fill": 3.8417018077873712
+      "fill": 5.431610928274047
     },
     {
       "sym": "MSFT",
-      "price": 497.55,
-      "line": "z -0.21",
+      "price": 497.32,
+      "line": "z -0.25",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 3.5803113393268227
+      "fill": 4.1392429524335395
+    },
+    {
+      "sym": "KO",
+      "price": 88.19,
+      "line": "z -0.03",
+      "tag": "normal",
+      "on": false,
+      "pick": false,
+      "fill": 0.5615313900978521
     },
     {
       "sym": "AMZN",
-      "price": 256.59,
-      "line": "z +0.16",
+      "price": 256.85,
+      "line": "z +0.21",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": -2.6406730874699567
+      "fill": -3.5208118279699963
     }
   ],
   "board_title": "16 mega-caps, most oversold first (z < -1.5 = buy zone)",
@@ -109,12 +109,6 @@
     "board_note": "Buys panic, sells relief: enter the most stretched mega-cap below -1.5 z, exit when it recovers to average."
   },
   "intraday": [
-    {
-      "ts": "2026-08-29T23:00:11+00:00",
-      "value": 1220.17,
-      "bench": 1024.8,
-      "holding": "WMT"
-    },
     {
       "ts": "2026-08-29T23:13:42+00:00",
       "value": 1220.17,
@@ -9108,6 +9102,12 @@
       "value": 1218.07,
       "bench": 1030.72,
       "holding": "HD"
+    },
+    {
+      "ts": "2026-09-22T14:44:40+00:00",
+      "value": 1219.81,
+      "bench": 1030.18,
+      "holding": "HD"
     }
   ],
   "trades": [
@@ -9501,8 +9501,8 @@
     },
     {
       "date": "2026-09-22",
-      "value": 1218.07,
-      "bench": 1030.72,
+      "value": 1219.81,
+      "bench": 1030.18,
       "holding": "HD"
     }
   ],
@@ -9514,5 +9514,5 @@
   },
   "costs_paid": 5.8276,
   "frozen": null,
-  "thoughts": "I'm holding HD. Most oversold mega-cap (z < -1.5) \u2014 buying the dip. I bought at $318.95; it's now $301.16 (-5.6% since I got in). My safety net: if the price falls to $282.99 (12% below its recent high), I sell automatically \u2014 no exceptions. Closest challenger on my list is JPM, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
+  "thoughts": "I'm holding HD. Most oversold mega-cap (z < -1.5) \u2014 buying the dip. I bought at $318.95; it's now $301.59 (-5.4% since I got in). My safety net: if the price falls to $282.99 (12% below its recent high), I sell automatically \u2014 no exceptions. Closest challenger on my list is JPM, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
 }
