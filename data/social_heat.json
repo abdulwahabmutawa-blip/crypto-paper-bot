@@ -1,16 +1,15 @@
 {
-  "ts": "2026-09-22T23:59:20+00:00",
+  "ts": "2026-09-23T00:05:27+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
       "ZEC",
       "NEAR",
-      "SUI",
+      "UNI",
       "TAO",
-      "FET",
-      "ONDO",
-      "VIRTUAL",
-      "BTC"
+      "PYTH",
+      "SOL",
+      "FET"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,8 +18,8 @@
       "MARSCOIN",
       "BCH",
       "ZRO",
-      "PENGU",
       "UNI",
+      "PENGU",
       "ZEC",
       "DASH"
     ],
@@ -36,7 +35,17 @@
         "movers"
       ],
       "funding": 5e-05,
-      "long_short": 1.04
+      "long_short": 1.03
+    },
+    {
+      "symbol": "UNI",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.52
     },
     {
       "symbol": "ZEC",
@@ -46,7 +55,7 @@
         "movers"
       ],
       "funding": 0.0001,
-      "long_short": 0.45
+      "long_short": 0.44
     },
     {
       "symbol": "BCH",
@@ -55,14 +64,6 @@
         "movers"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 1e-05
     },
     {
       "symbol": "DASH",
@@ -86,7 +87,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000311
+      "funding": 0.000299
     },
     {
       "symbol": "MUBARAK",
@@ -94,7 +95,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000338
+      "funding": 0.000332
     },
     {
       "symbol": "NEAR",
@@ -105,20 +106,20 @@
       "funding": 0.0001
     },
     {
-      "symbol": "ONDO",
+      "symbol": "PYTH",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 4.3e-05
     },
     {
-      "symbol": "SUI",
+      "symbol": "SOL",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 8.9e-05
+      "funding": 7.9e-05
     },
     {
       "symbol": "TAO",
@@ -126,23 +127,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9e-05
-    },
-    {
-      "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "VIRTUAL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": 9.4e-05
     },
     {
       "symbol": "ZRO",
