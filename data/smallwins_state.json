@@ -6765,29 +6765,6 @@
   },
   {
    "symbol": "ZECUSDT",
-   "tactic": "range_bottom|t1|s1|h6",
-   "shape": "range_bottom",
-   "target": 0.01,
-   "stop": 0.01,
-   "max_h": 6,
-   "entry": 1488.93,
-   "entry_ms": 1790202599999,
-   "entry_ts": "2026-09-23T22:40:21+00:00",
-   "feat": {
-    "r1h": -0.01438,
-    "r4h": -0.02233,
-    "r24": -0.03591,
-    "v4h": 0.37727,
-    "tbs4h": 0.5114,
-    "rp24": 0.014,
-    "rng24": 0.13027,
-    "btc1": -0.00025,
-    "btc4": 0.00294,
-    "btc24": -0.02016
-   }
-  },
-  {
-   "symbol": "ZECUSDT",
    "tactic": "range_bottom|t1.5|s1.5|h8",
    "shape": "range_bottom",
    "target": 0.015,
@@ -7199,36 +7176,55 @@
     "btc4": 0.00305,
     "btc24": -0.01784
    }
+  },
+  {
+   "symbol": "ZECUSDT",
+   "tactic": "range_bottom|t1|s1|h6",
+   "shape": "range_bottom",
+   "target": 0.01,
+   "stop": 0.01,
+   "max_h": 6,
+   "entry": 1496.75,
+   "entry_ms": 1790204399999,
+   "entry_ts": "2026-09-23T23:12:51+00:00",
+   "feat": {
+    "r1h": -0.01134,
+    "r4h": -0.01612,
+    "r24": -0.03634,
+    "v4h": 0.41464,
+    "tbs4h": 0.5234,
+    "rp24": 0.09964,
+    "rng24": 0.13772,
+    "btc1": -0.00068,
+    "btc4": 0.00197,
+    "btc24": -0.02138
+   }
+  },
+  {
+   "symbol": "TIAUSDT",
+   "tactic": "range_bottom|t1|s1|h6",
+   "shape": "range_bottom",
+   "target": 0.01,
+   "stop": 0.01,
+   "max_h": 6,
+   "entry": 0.4608,
+   "entry_ms": 1790204399999,
+   "entry_ts": "2026-09-23T23:12:51+00:00",
+   "feat": {
+    "r1h": -0.00346,
+    "r4h": 0.00065,
+    "r24": -0.0569,
+    "v4h": 0.40172,
+    "tbs4h": 0.57176,
+    "rp24": 0.06634,
+    "rng24": 0.18208,
+    "btc1": -0.00068,
+    "btc4": 0.00197,
+    "btc24": -0.02138
+   }
   }
  ],
  "resolved": [
-  {
-   "symbol": "HOMEUSDT",
-   "tactic": "momentum|t4|s2|h24",
-   "shape": "momentum",
-   "target": 0.04,
-   "stop": 0.02,
-   "max_h": 24,
-   "entry": 0.0062,
-   "entry_ms": 1789806599999,
-   "entry_ts": "2026-09-19T08:30:04+00:00",
-   "feat": {
-    "r1h": -0.01587,
-    "r4h": 0.02479,
-    "r24": 0.10124,
-    "v4h": 7.23302,
-    "tbs4h": 0.5307,
-    "rp24": 0.72093,
-    "rng24": 0.15412,
-    "btc1": 0.00306,
-    "btc4": 0.00408,
-    "btc24": 0.04275
-   },
-   "ret": 0.0375,
-   "how": "TARGET",
-   "hours": 8.0,
-   "exit_ts": "2026-09-19T16:51:28+00:00"
-  },
   {
    "symbol": "COTIUSDT",
    "tactic": "dip_mid|t2|s2|h8",
@@ -547201,8 +547197,35 @@
    "how": "STOP",
    "hours": 0.25,
    "exit_ts": "2026-09-23T22:56:37+00:00"
+  },
+  {
+   "symbol": "ZECUSDT",
+   "tactic": "range_bottom|t1|s1|h6",
+   "shape": "range_bottom",
+   "target": 0.01,
+   "stop": 0.01,
+   "max_h": 6,
+   "entry": 1488.93,
+   "entry_ms": 1790202599999,
+   "entry_ts": "2026-09-23T22:40:21+00:00",
+   "feat": {
+    "r1h": -0.01438,
+    "r4h": -0.02233,
+    "r24": -0.03591,
+    "v4h": 0.37727,
+    "tbs4h": 0.5114,
+    "rp24": 0.014,
+    "rng24": 0.13027,
+    "btc1": -0.00025,
+    "btc4": 0.00294,
+    "btc24": -0.02016
+   },
+   "ret": 0.0075,
+   "how": "TARGET",
+   "hours": 0.25,
+   "exit_ts": "2026-09-23T23:12:51+00:00"
   }
  ],
- "runs": 1682,
- "updated": "2026-09-23T22:56:37+00:00"
+ "runs": 1683,
+ "updated": "2026-09-23T23:12:51+00:00"
 }
