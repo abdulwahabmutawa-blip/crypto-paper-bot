@@ -1,28 +1,27 @@
-# Fleet status — 2026-09-22 (UTC)
+# Fleet status — 2026-09-23 (UTC)
 
 | Bot | Holds | 24h change | Value |
 |---|---|---|---|
-| crypto | BTC-USD | No new trade (last: 09-08); marked up with BTC | $1,220.40 (was $1,161.98) |
-| meanrev | HD | No new trade (last: 09-03); fresh close landed (data_asof 09-21) | $1,202.18 (was $1,213.18) |
-| sentiment | CASH | No trade — still in cash, feed stuck since 09-11 | $869.30 (unchanged) |
-| scalper | 10/10 seats | Routine churn: closed trips 497→521 (24 round trips), net +$18.42 | $942.34 (was $923.92) |
-| smallwins (lab) | 492 open seats | 13 new runs (1516→1529); open 464→492; resolved capped at 20,000 | n/a — research only |
-| Watcher (grok_sentinel) | — (no capital) | STILL STUCK: 0 new scans since 09-11 15:12 UTC (now ~11 days) | n/a |
+| crypto | BTC-USD | No new trade; marked up with BTC | $1,243.18 (was $1,222.28) |
+| meanrev | HD | No new trade; data_asof now 09-22 (fresh) | $1,235.18 (was $1,202.18) |
+| sentiment | CASH | No trade — still in cash | $869.30 (unchanged) |
+| scalper | 10/10 seats | 39 closed round trips (519→558), net +$33.27 | $983.90 (was $953.79) |
+| smallwins (lab) | 409 open seats | 90 new runs (1526→1616); open 504→409 | n/a — research only |
+| Watcher (grok_sentinel) | — (no capital) | STILL STUCK: 0 new scans since 09-11 15:12 UTC (now ~12 days) | n/a |
 | social_radar | — (no capital) | Same root staleness — `last_scan_utc` unchanged since 09-11 15:29 UTC | n/a |
 | retired (8, frozen) | congress, commodity, allweather, hunter, hypecrypto, scholar, analyst, stock | No state file changed in 24h | — |
 
 Lottery/carry/hype-ibkr (VPS, real-money paths) are out of scope for this digest per CLAUDE.md — not shown.
 
 ## Changed
-- **crypto**: no trade; BTC-USD marked up to $1,220.40 from $1,161.98 (+5.0%).
-- **meanrev**: no trade; $1,213.18 → $1,202.18 (-0.9%); daily close is no longer stale (now dated 09-21).
+- **crypto**: no trade; BTC-USD marked up $1,222.28 → $1,243.18 (+1.7%).
+- **meanrev**: no trade; $1,202.18 → $1,235.18 (+2.7%); HD close data_asof advanced to 09-22.
 - **sentiment**: no trade; flat in cash at $869.30.
-- **scalper**: 24 closed round trips (497→521, e.g. FLOKIUSDT +$2.60, DOGEUSDT +$2.75), equity up $923.92 → $942.34.
-- **smallwins**: 13 new lab runs; open seats 464→492.
-- Paper-fleet cron: 94 cycle commits in this 24h window, steady ~16-17 min cadence, no gaps over 20 min.
-- BTC execution watch: still collecting (ACCEPTED quotes, NO_TRADE, ~25bps est. cost) — no strategy qualified, nothing changed.
+- **scalper**: 39 closed round trips (519→558, 28 wins/11 losses), net +$33.27; equity $953.79 → $983.90.
+- **smallwins**: 90 new lab runs; open seats 504→409.
+- Paper-fleet cron: 86 cycle commits in this 24h window, steady ~17 min cadence, no gap over 20 min, no RED FLAG/error commits found.
 
 ## Needs a look
-- **Watcher (grok_sentinel)**: no new scan — verdict timestamp still 2026-09-11T15:12:52 UTC, now ~11 days stale. This is why sentiment's trading stays suspended.
-- **social_radar**: same root staleness — `last_scan_utc` in state hasn't moved since 2026-09-11T15:29:50 UTC either, despite the dashboard file re-rendering each cycle. Same underlying cause as the Watcher (both consume Grok scans); unresolved 11 days running.
-- No error/exception text found in any cycle commit message across the 24h window; no cron gaps beyond normal cadence.
+- **Watcher (grok_sentinel)**: no new scan — verdict timestamp still 2026-09-11T15:12:52 UTC, now ~12 days stale. This is why sentiment's trading stays gated.
+- **social_radar**: same root staleness — `last_scan_utc` in state hasn't moved since 2026-09-11T15:29:50 UTC either, 12 days running.
+- **scalper/TVKUSDT seat**: still open, entered 2026-09-12 (now day 11) — per the 09-22 supervisor note this seat was flagged for booking against a dead/stale candle (~$86 of the book potentially mispriced). Today's dashboard `unpriced_positions` list is empty, so the flag may have cleared or may just not be firing — worth confirming which before trusting scalper's marked value.
