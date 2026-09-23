@@ -1,15 +1,15 @@
 {
-  "ts": "2026-09-23T14:09:47+00:00",
+  "ts": "2026-09-23T14:15:38+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
       "PENGU",
-      "UNI",
       "ZEC",
+      "UNI",
       "MET",
       "LIT",
       "AERO",
-      "BTC"
+      "AAVE"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -17,11 +17,11 @@
       "ZRO",
       "PENGU",
       "BCH",
-      "NIL",
-      "DASH",
       "NEAR",
-      "ZEC",
-      "ARB"
+      "ARB",
+      "ZAMA",
+      "UNI",
+      "ZEC"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -48,6 +48,16 @@
       "long_short": 1.35
     },
     {
+      "symbol": "UNI",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.87
+    },
+    {
       "symbol": "ZEC",
       "surfaces": 2,
       "sources": [
@@ -56,6 +66,14 @@
       ],
       "funding": 0.0001,
       "long_short": 0.44
+    },
+    {
+      "symbol": "AAVE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "AERO",
@@ -71,26 +89,10 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.0001
+      "funding": 9.7e-05
     },
     {
       "symbol": "BCH",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 2.4e-05
-    },
-    {
-      "symbol": "DASH",
       "surfaces": 1,
       "sources": [
         "movers"
@@ -103,7 +105,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.2e-05
+      "funding": 5e-05
     },
     {
       "symbol": "MET",
@@ -111,23 +113,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -7.9e-05
+      "funding": -6.9e-05
     },
     {
-      "symbol": "NIL",
+      "symbol": "ZAMA",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "ZRO",
