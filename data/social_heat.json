@@ -1,15 +1,13 @@
 {
-  "ts": "2026-09-23T23:52:29+00:00",
+  "ts": "2026-09-23T23:57:35+00:00",
   "sources": {
     "coingecko": [
       "NIL",
       "RAY",
       "NEAR",
       "PENGU",
-      "BTC",
-      "SOL",
-      "TAO",
-      "MET",
+      "PUMP",
+      "LIT",
       "XRP",
       "ENA"
     ],
@@ -20,7 +18,8 @@
       "SAGA",
       "ZRO",
       "PROVE",
-      "U"
+      "TRX",
+      "RLUSD"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -37,14 +36,6 @@
       "long_short": 1.16
     },
     {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 1e-06
-    },
-    {
       "symbol": "ENA",
       "surfaces": 1,
       "sources": [
@@ -53,12 +44,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "MET",
+      "symbol": "LIT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": -8e-06
     },
     {
       "symbol": "NEAR",
@@ -82,7 +73,15 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.1e-05
+      "funding": 4.5e-05
+    },
+    {
+      "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 3.8e-05
     },
     {
       "symbol": "RAY",
@@ -93,6 +92,13 @@
       "funding": 0.0
     },
     {
+      "symbol": "RLUSD",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
+    },
+    {
       "symbol": "SAGA",
       "surfaces": 1,
       "sources": [
@@ -101,27 +107,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "SOL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 1.1e-05
-    },
-    {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "U",
+      "symbol": "TRX",
       "surfaces": 1,
       "sources": [
         "movers"
-      ]
+      ],
+      "funding": -2e-05
     },
     {
       "symbol": "XRP",
@@ -129,7 +120,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -4.7e-05
+      "funding": -4.9e-05
     },
     {
       "symbol": "ZRO",
