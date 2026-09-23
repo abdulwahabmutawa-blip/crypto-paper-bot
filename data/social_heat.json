@@ -1,16 +1,16 @@
 {
-  "ts": "2026-09-23T07:52:26+00:00",
+  "ts": "2026-09-23T07:57:47+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
       "ARB",
       "UNI",
+      "ZEC",
       "NEAR",
       "BTC",
-      "ZEC",
+      "TAO",
       "ONDO",
-      "XRP",
-      "TAO"
+      "ZRO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -18,8 +18,8 @@
       "NIL",
       "BCH",
       "MUBARAK",
-      "MARSCOIN",
       "ZRO",
+      "MARSCOIN",
       "PENGU",
       "UNI",
       "ARB"
@@ -59,6 +59,16 @@
       "long_short": 1.68
     },
     {
+      "symbol": "ZRO",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.48
+    },
+    {
       "symbol": "BCH",
       "surfaces": 1,
       "sources": [
@@ -72,7 +82,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0
+      "funding": 3e-06
     },
     {
       "symbol": "MARSCOIN",
@@ -80,7 +90,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000132
+      "funding": 0.000144
     },
     {
       "symbol": "MUBARAK",
@@ -88,7 +98,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 8.4e-05
+      "funding": 9e-05
     },
     {
       "symbol": "NEAR",
@@ -123,28 +133,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "XRP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "ZRO",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
