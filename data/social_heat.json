@@ -1,16 +1,16 @@
 {
-  "ts": "2026-09-23T20:40:44+00:00",
+  "ts": "2026-09-23T20:46:26+00:00",
   "sources": {
     "coingecko": [
-      "UNI",
       "RAY",
-      "PENGU",
+      "TAO",
+      "UNI",
       "NEAR",
       "BTC",
       "LIT",
-      "TAO",
+      "PENGU",
       "SOL",
-      "ZRO"
+      "ENA"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -18,10 +18,10 @@
       "SAGA",
       "NIL",
       "ZRO",
+      "MARSCOIN",
       "NEAR",
       "PROVE",
-      "MARSCOIN",
-      "BCH",
+      "ZAMA",
       "ZEC"
     ],
     "watcher": [],
@@ -39,30 +39,20 @@
       "long_short": 1.8
     },
     {
-      "symbol": "ZRO",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.77
-    },
-    {
-      "symbol": "BCH",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -1.9e-05
+      "funding": -1.7e-05
+    },
+    {
+      "symbol": "ENA",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "LIT",
@@ -70,7 +60,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000134
+      "funding": -0.000146
     },
     {
       "symbol": "MARSCOIN",
@@ -78,7 +68,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000206
+      "funding": 0.000201
     },
     {
       "symbol": "NIL",
@@ -102,7 +92,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 2e-05
+      "funding": -5e-06
     },
     {
       "symbol": "RAY",
@@ -126,7 +116,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -3e-05
+      "funding": -2.9e-05
     },
     {
       "symbol": "TAO",
@@ -142,7 +132,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.6e-05
+      "funding": 1.7e-05
+    },
+    {
+      "symbol": "ZAMA",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "ZEC",
@@ -151,6 +149,14 @@
         "movers"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "ZRO",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
