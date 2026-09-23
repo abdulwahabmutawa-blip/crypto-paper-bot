@@ -1,24 +1,25 @@
 {
-  "ts": "2026-09-23T14:21:24+00:00",
+  "ts": "2026-09-23T14:27:11+00:00",
   "sources": {
     "coingecko": [
-      "NEAR",
       "PENGU",
+      "NEAR",
+      "LIT",
+      "MET",
       "ZEC",
       "UNI",
-      "MET",
-      "LIT",
       "AERO",
-      "AAVE"
+      "BTC",
+      "TAO"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "ZRO",
       "PENGU",
-      "BCH",
       "ARB",
       "UNI",
+      "BCH",
       "ZAMA",
       "NEAR",
       "ZEC"
@@ -68,14 +69,6 @@
       "long_short": 0.44
     },
     {
-      "symbol": "AAVE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "AERO",
       "surfaces": 1,
       "sources": [
@@ -100,12 +93,20 @@
       "funding": 0.0001
     },
     {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 9.4e-05
+    },
+    {
       "symbol": "LIT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": -1.7e-05
     },
     {
       "symbol": "MET",
@@ -113,7 +114,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.2e-05
+      "funding": -0.00018
+    },
+    {
+      "symbol": "TAO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "ZAMA",
@@ -129,7 +138,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 6e-06
+      "funding": -8e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
