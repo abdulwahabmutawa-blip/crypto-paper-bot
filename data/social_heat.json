@@ -1,17 +1,18 @@
 {
-  "ts": "2026-09-23T12:18:47+00:00",
+  "ts": "2026-09-23T12:24:01+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
       "NEAR",
       "ZEC",
-      "UNI",
+      "MET",
       "BTC",
       "SUI",
-      "MET",
+      "UNI",
       "SKY",
-      "BCH",
-      "ZRO"
+      "ZRO",
+      "TIA",
+      "ZAMA"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,9 +20,9 @@
       "BCH",
       "ZRO",
       "NIL",
-      "PENGU",
       "UNI",
       "APT",
+      "PENGU",
       "ZAMA",
       "ARB"
     ],
@@ -29,16 +30,6 @@
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "BCH",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.79
-    },
     {
       "symbol": "PENGU",
       "surfaces": 2,
@@ -58,6 +49,16 @@
       ],
       "funding": 0.0001,
       "long_short": 1.8
+    },
+    {
+      "symbol": "ZAMA",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.07
     },
     {
       "symbol": "ZRO",
@@ -86,12 +87,20 @@
       "funding": 0.0001
     },
     {
+      "symbol": "BCH",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 4.8e-05
+      "funding": 4.6e-05
     },
     {
       "symbol": "MET",
@@ -99,7 +108,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000254
+      "funding": -0.000252
     },
     {
       "symbol": "NEAR",
@@ -134,10 +143,10 @@
       "funding": 0.0001
     },
     {
-      "symbol": "ZAMA",
+      "symbol": "TIA",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
       "funding": 5e-05
     },
