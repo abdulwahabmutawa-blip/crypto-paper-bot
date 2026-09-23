@@ -1,8 +1,54 @@
 {
-  "ts": "2026-09-23T06:50:53+00:00",
-  "scanned": 153,
+  "ts": "2026-09-23T06:56:33+00:00",
+  "scanned": 152,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ZKUSDT",
+      "signal": "ignition",
+      "score": 0.8238,
+      "raw_score": 0.8591,
+      "weight": 0.959,
+      "price": 0.01262,
+      "why": "trades 20.4x and volume 44.6x the prior 4h, 77% taker-buy, $114,238 burst \u2014 while price has only moved +3.4%",
+      "chg_24h": 0.0684,
+      "vol_surge": 44.55,
+      "chg_1h": 0.0336,
+      "market_surge": 11.38,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.43% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "ZKUSDT",
+      "signal": "breakout",
+      "score": 0.7608,
+      "raw_score": 0.8093,
+      "weight": 0.94,
+      "price": 0.01262,
+      "why": "trades 20.4x, volume 44.6x, 77% taker-buy, +3.4% in an hour, at 88% of its 24h range",
+      "chg_24h": 0.0684,
+      "vol_surge": 44.55,
+      "chg_1h": 0.0336,
+      "market_surge": 11.38,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.30% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "PLUMEUSDT",
+      "signal": "breakout",
+      "score": 0.5296,
+      "raw_score": 0.5634,
+      "weight": 0.94,
+      "price": 0.01706,
+      "why": "trades 4.5x, volume 5.3x, 66% taker-buy, +3.2% in an hour, at 95% of its 24h range",
+      "chg_24h": 0.1608,
+      "vol_surge": 5.26,
+      "chg_1h": 0.0321,
+      "market_surge": 3.48,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.30% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.43% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.30% at 24h: market beta, not signal",
