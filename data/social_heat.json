@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-23T08:42:57+00:00",
+  "ts": "2026-09-23T08:48:27+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
@@ -24,22 +24,12 @@
       "MUBARAK",
       "UNI",
       "MARSCOIN",
-      "ARB"
+      "ZEC"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "ARB",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.49
-    },
     {
       "symbol": "BCH",
       "surfaces": 2,
@@ -71,12 +61,30 @@
       "long_short": 1.66
     },
     {
+      "symbol": "ZEC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 0.45
+    },
+    {
+      "symbol": "ARB",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 1.9e-05
+      "funding": 2e-05
     },
     {
       "symbol": "ENA",
@@ -92,7 +100,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.8e-05
+      "funding": 3.6e-05
     },
     {
       "symbol": "MARSCOIN",
@@ -141,14 +149,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "ZRO",
