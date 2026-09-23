@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-23T12:35:37+00:00",
+  "ts": "2026-09-23T12:41:23+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
@@ -17,14 +17,14 @@
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "BCH",
       "ZRO",
       "NIL",
+      "BCH",
       "PENGU",
       "APT",
       "ZAMA",
-      "UNI",
-      "ARB"
+      "ARB",
+      "DASH"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -39,16 +39,6 @@
       ],
       "funding": 5e-05,
       "long_short": 1.46
-    },
-    {
-      "symbol": "UNI",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.8
     },
     {
       "symbol": "ZAMA",
@@ -100,7 +90,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.7e-05
+      "funding": 4.3e-05
+    },
+    {
+      "symbol": "DASH",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "MET",
@@ -108,7 +106,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000236
+      "funding": -0.00023
     },
     {
       "symbol": "NEAR",
@@ -149,6 +147,14 @@
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "UNI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "ZEC",
