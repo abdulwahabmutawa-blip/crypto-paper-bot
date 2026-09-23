@@ -1,16 +1,16 @@
 {
-  "ts": "2026-09-23T22:11:01+00:00",
+  "ts": "2026-09-23T22:16:48+00:00",
   "sources": {
     "coingecko": [
       "RAY",
-      "BTC",
       "NEAR",
-      "PENGU",
+      "BTC",
       "ZEC",
-      "LIT",
+      "PENGU",
       "SOL",
+      "LIT",
       "ETH",
-      "DOGE"
+      "SUI"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,10 +19,10 @@
       "SAGA",
       "ZRO",
       "PROVE",
-      "MARSCOIN",
       "NEAR",
-      "INJ",
-      "ARB"
+      "BCH",
+      "ARB",
+      "INJ"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -47,20 +47,20 @@
       "funding": -4e-05
     },
     {
+      "symbol": "BCH",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -7e-06
-    },
-    {
-      "symbol": "DOGE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -1.1e-05
+      "funding": -8e-06
     },
     {
       "symbol": "ETH",
@@ -68,7 +68,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.9e-05
+      "funding": 4.8e-05
     },
     {
       "symbol": "INJ",
@@ -84,15 +84,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000105
-    },
-    {
-      "symbol": "MARSCOIN",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.000213
+      "funding": -9.8e-05
     },
     {
       "symbol": "NIL",
@@ -116,7 +108,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -3.9e-05
+      "funding": -3.2e-05
     },
     {
       "symbol": "RAY",
@@ -141,6 +133,14 @@
         "coingecko"
       ],
       "funding": 7e-06
+    },
+    {
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 7e-05
     },
     {
       "symbol": "ZEC",
