@@ -1,14 +1,16 @@
 {
-  "ts": "2026-09-23T20:12:19+00:00",
+  "ts": "2026-09-23T20:17:48+00:00",
   "sources": {
     "coingecko": [
-      "RAY",
-      "PENGU",
       "UNI",
-      "BTC",
+      "PENGU",
+      "RAY",
       "NEAR",
+      "BTC",
+      "TAO",
       "LIT",
-      "TAO"
+      "ZRO",
+      "SUI"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,7 +21,7 @@
       "NEAR",
       "PROVE",
       "MARSCOIN",
-      "BCH",
+      "ZAMA",
       "ARB"
     ],
     "watcher": [],
@@ -37,20 +39,22 @@
       "long_short": 1.8
     },
     {
+      "symbol": "ZRO",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.77
+    },
+    {
       "symbol": "ARB",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -0.0
-    },
-    {
-      "symbol": "BCH",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
+      "funding": -8e-06
     },
     {
       "symbol": "BTC",
@@ -66,7 +70,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000124
+      "funding": -0.000129
     },
     {
       "symbol": "MARSCOIN",
@@ -74,7 +78,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000188
+      "funding": 0.00019
     },
     {
       "symbol": "NIL",
@@ -117,6 +121,14 @@
       "funding": 5e-05
     },
     {
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 8.6e-05
+    },
+    {
       "symbol": "TAO",
       "surfaces": 1,
       "sources": [
@@ -133,7 +145,7 @@
       "funding": 1.3e-05
     },
     {
-      "symbol": "ZRO",
+      "symbol": "ZAMA",
       "surfaces": 1,
       "sources": [
         "movers"
