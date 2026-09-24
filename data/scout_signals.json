@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-24T00:52:47+00:00",
-  "scanned": 163,
+  "ts": "2026-09-24T00:58:27+00:00",
+  "scanned": 165,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "PAXGUSDT",
+      "signal": "ignition",
+      "score": 0.7763,
+      "raw_score": 0.8206,
+      "weight": 0.946,
+      "price": 4298.14,
+      "why": "trades 7.1x and volume 12.1x the prior 4h, 76% taker-buy, $269,203 burst \u2014 while price has only moved +0.2%",
+      "chg_24h": -0.0131,
+      "vol_surge": 12.15,
+      "chg_1h": 0.0024,
+      "market_surge": 1.96,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.32% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.32% at 24h: market beta, not signal",
     "breakout": "benched \u2014 only one half of the last 317 paid at 24h: regime luck, not a signal",
@@ -43,19 +59,19 @@
       "avg_win_4h": 0.02157,
       "avg_loss_4h": -0.01733,
       "payoff_4h": 1.245,
-      "span_h_24h": 311.4,
+      "span_h_24h": 311.5,
       "n_eff_24h": 12.98,
-      "n_24h": 688,
-      "hit_rate_24h": 0.558,
-      "mean_ret_24h": 0.01463,
-      "median_ret_24h": 0.00672,
+      "n_24h": 689,
+      "hit_rate_24h": 0.557,
+      "mean_ret_24h": 0.01452,
+      "median_ret_24h": 0.00665,
       "both_halves_24h": true,
       "days_24h": 14,
-      "mean_x_24h": 0.00316,
+      "mean_x_24h": 0.00317,
       "days_x_24h": 14,
       "avg_win_24h": 0.0518,
-      "avg_loss_24h": -0.03739,
-      "payoff_24h": 1.385
+      "avg_loss_24h": -0.03748,
+      "payoff_24h": 1.382
     },
     "breakout": {
       "span_h_1h": 324.5,
