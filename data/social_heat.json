@@ -1,18 +1,17 @@
 {
-  "ts": "2026-09-24T17:13:00+00:00",
+  "ts": "2026-09-24T17:18:23+00:00",
   "sources": {
     "coingecko": [
       "ONDO",
       "LTC",
-      "NEAR",
       "PENGU",
       "HYPE",
-      "FET",
-      "XPL",
+      "NEAR",
       "ZRO",
       "ZEC",
+      "AAVE",
       "BTC",
-      "QNT"
+      "FET"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -23,8 +22,8 @@
       "LTC",
       "NIL",
       "FET",
-      "ETC",
-      "INJ"
+      "INJ",
+      "ETC"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -61,12 +60,20 @@
       "long_short": 2.27
     },
     {
+      "symbol": "AAVE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 4e-06
+      "funding": 5e-06
     },
     {
       "symbol": "ETC",
@@ -82,7 +89,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6e-06
+      "funding": 7e-06
     },
     {
       "symbol": "INJ",
@@ -98,7 +105,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000232
+      "funding": -0.000223
     },
     {
       "symbol": "NEAR",
@@ -122,26 +129,10 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.0
+      "funding": 6e-06
     },
     {
       "symbol": "PENGU",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "QNT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -3.7e-05
-    },
-    {
-      "symbol": "XPL",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -154,7 +145,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0
+      "funding": -3e-06
     },
     {
       "symbol": "ZRO",
