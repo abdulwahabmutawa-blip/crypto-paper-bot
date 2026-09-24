@@ -1,16 +1,16 @@
 {
-  "ts": "2026-09-24T19:20:05+00:00",
+  "ts": "2026-09-24T19:25:46+00:00",
   "sources": {
     "coingecko": [
       "ONDO",
-      "LTC",
-      "NEAR",
       "PENGU",
-      "BTC",
+      "NEAR",
+      "LTC",
       "ZEC",
+      "BTC",
+      "TAO",
       "LINK",
-      "QNT",
-      "HYPE"
+      "XRP"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,8 +19,8 @@
       "NOM",
       "ONDO",
       "XPL",
-      "FET",
       "LTC",
+      "FET",
       "NIL",
       "ETC"
     ],
@@ -54,7 +54,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0
+      "funding": 1e-06
     },
     {
       "symbol": "ETC",
@@ -73,14 +73,6 @@
       "funding": 0.0001
     },
     {
-      "symbol": "HYPE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -1.7e-05
-    },
-    {
       "symbol": "LINK",
       "surfaces": 1,
       "sources": [
@@ -94,7 +86,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -5.4e-05
+      "funding": -4.3e-05
     },
     {
       "symbol": "NEAR",
@@ -129,12 +121,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "QNT",
+      "symbol": "TAO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -4e-05
+      "funding": 5e-05
     },
     {
       "symbol": "XPL",
@@ -145,12 +137,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "XRP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -5e-06
+    },
+    {
       "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 2.6e-05
+      "funding": 3.1e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
