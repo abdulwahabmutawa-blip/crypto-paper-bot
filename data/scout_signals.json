@@ -1,22 +1,22 @@
 {
-  "ts": "2026-09-24T21:38:22+00:00",
+  "ts": "2026-09-24T21:43:48+00:00",
   "scanned": 137,
   "ruleset": 3,
   "candidates": [
     {
       "symbol": "AVAXUSDT",
-      "signal": "ignition",
-      "score": 0.8287,
-      "raw_score": 0.8723,
-      "weight": 0.95,
-      "price": 10.556,
-      "why": "trades 9.9x and volume 15.8x the prior 4h, 66% taker-buy, $1,549,210 burst \u2014 while price has only moved +1.6%",
-      "chg_24h": 0.018,
-      "vol_surge": 15.8,
-      "chg_1h": 0.0157,
-      "market_surge": 8.7,
+      "signal": "breakout",
+      "score": 0.5495,
+      "raw_score": 0.5821,
+      "weight": 0.944,
+      "price": 10.625,
+      "why": "trades 5.2x, volume 6.1x, 61% taker-buy, +2.4% in an hour, at 89% of its 24h range",
+      "chg_24h": 0.0233,
+      "vol_surge": 6.14,
+      "chg_1h": 0.0235,
+      "market_surge": 0.89,
       "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean +0.39% at 24h: market beta, not signal"
+      "status": "benched \u2014 BTC-excess day mean +0.38% at 24h: market beta, not signal"
     }
   ],
   "gate": {
@@ -27,7 +27,7 @@
     "revival": "probation \u2014 9/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 31,
+    "count": 28,
     "baseline": 25.0,
     "wave": false
   },
