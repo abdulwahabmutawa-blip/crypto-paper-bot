@@ -1,39 +1,8 @@
 {
-  "ts": "2026-09-24T08:13:31+00:00",
-  "scanned": 156,
+  "ts": "2026-09-24T08:19:13+00:00",
+  "scanned": 162,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ENSUSDT",
-      "signal": "ignition",
-      "score": 0.7193,
-      "raw_score": 0.7635,
-      "weight": 0.942,
-      "price": 6.89,
-      "why": "trades 6.6x and volume 31.2x the prior 4h, 75% taker-buy, $91,507 burst \u2014 while price has only moved +1.5%",
-      "chg_24h": -0.0364,
-      "vol_surge": 31.16,
-      "chg_1h": 0.0147,
-      "market_surge": 8.53,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean +0.45% at 24h: market beta, not signal"
-    },
-    {
-      "symbol": "ETCUSDT",
-      "signal": "ignition",
-      "score": 0.5597,
-      "raw_score": 0.5942,
-      "weight": 0.942,
-      "price": 9.59,
-      "why": "trades 7.1x and volume 5.7x the prior 4h, 60% taker-buy, $224,135 burst \u2014 while price has only moved +3.3%",
-      "chg_24h": 0.0105,
-      "vol_surge": 5.72,
-      "chg_1h": 0.0334,
-      "market_surge": 3.61,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean +0.45% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.45% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.23% at 24h: market beta, not signal",
@@ -42,7 +11,7 @@
     "revival": "probation \u2014 9/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 9,
+    "count": 8,
     "baseline": 26.0,
     "wave": false
   },
