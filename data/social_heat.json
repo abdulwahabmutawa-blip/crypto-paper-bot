@@ -1,18 +1,18 @@
 {
-  "ts": "2026-09-24T08:19:08+00:00",
+  "ts": "2026-09-24T08:24:30+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
-      "ZEC",
       "LIT",
-      "NIL",
+      "ZEC",
       "ZRO",
-      "RAY",
+      "NIL",
+      "LTC",
       "PENGU",
       "SUI",
-      "LTC",
       "BTC",
-      "ZAMA"
+      "LSK",
+      "SOL"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -30,6 +30,16 @@
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "LSK",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -0.001706,
+      "long_short": 1.47
+    },
     {
       "symbol": "LTC",
       "surfaces": 2,
@@ -51,15 +61,6 @@
       "long_short": 0.82
     },
     {
-      "symbol": "RAY",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0
-    },
-    {
       "symbol": "ZRO",
       "surfaces": 2,
       "sources": [
@@ -75,7 +76,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.4e-05
+      "funding": 2.8e-05
     },
     {
       "symbol": "LIT",
@@ -84,14 +85,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "LSK",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -0.001707
     },
     {
       "symbol": "NEAR",
@@ -118,6 +111,14 @@
       "funding": 5e-05
     },
     {
+      "symbol": "RAY",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0
+    },
+    {
       "symbol": "RLUSD",
       "surfaces": 1,
       "sources": [
@@ -125,12 +126,20 @@
       ]
     },
     {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 1.3e-05
+    },
+    {
       "symbol": "SUI",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5.6e-05
+      "funding": 5.1e-05
     },
     {
       "symbol": "U",
@@ -138,14 +147,6 @@
       "sources": [
         "movers"
       ]
-    },
-    {
-      "symbol": "ZAMA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "ZEC",
