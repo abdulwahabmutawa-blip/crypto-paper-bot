@@ -1,39 +1,8 @@
 {
-  "ts": "2026-09-24T17:23:50+00:00",
+  "ts": "2026-09-24T17:29:29+00:00",
   "scanned": 139,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "PROMUSDT",
-      "signal": "ignition",
-      "score": 0.862,
-      "raw_score": 0.9112,
-      "weight": 0.946,
-      "price": 5.378,
-      "why": "trades 17.6x and volume 12.4x the prior 4h, 72% taker-buy, $78,296 burst \u2014 while price has only moved +0.7%",
-      "chg_24h": 0.0492,
-      "vol_surge": 12.36,
-      "chg_1h": 0.0071,
-      "market_surge": 1.91,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean +0.41% at 24h: market beta, not signal"
-    },
-    {
-      "symbol": "TRBUSDT",
-      "signal": "breakout",
-      "score": 0.5112,
-      "raw_score": 0.5409,
-      "weight": 0.945,
-      "price": 21.42,
-      "why": "trades 4.8x, volume 5.4x, 60% taker-buy, +2.3% in an hour, at 95% of its 24h range",
-      "chg_24h": 0.1395,
-      "vol_surge": 5.37,
-      "chg_1h": 0.0234,
-      "market_surge": 0.0,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean +0.41% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.41% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.41% at 24h: market beta, not signal",
@@ -42,7 +11,7 @@
     "revival": "probation \u2014 9/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 24,
+    "count": 27,
     "baseline": 25.0,
     "wave": false
   },
