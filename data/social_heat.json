@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-24T17:29:22+00:00",
+  "ts": "2026-09-24T17:34:38+00:00",
   "sources": {
     "coingecko": [
       "ONDO",
@@ -7,8 +7,8 @@
       "PENGU",
       "NEAR",
       "ZRO",
-      "HYPE",
-      "ZEC",
+      "FET",
+      "TAO",
       "AAVE",
       "BTC",
       "UNI"
@@ -19,8 +19,8 @@
       "NOM",
       "LSK",
       "ONDO",
-      "NIL",
       "LTC",
+      "NIL",
       "ETC",
       "FET",
       "INJ"
@@ -29,6 +29,16 @@
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "FET",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.24
+    },
     {
       "symbol": "LTC",
       "surfaces": 2,
@@ -63,7 +73,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3e-06
+      "funding": 4e-06
     },
     {
       "symbol": "ETC",
@@ -72,22 +82,6 @@
         "movers"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "FET",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "HYPE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 6e-06
     },
     {
       "symbol": "INJ",
@@ -103,7 +97,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000175
+      "funding": -0.000157
     },
     {
       "symbol": "NEAR",
@@ -127,10 +121,18 @@
       "sources": [
         "movers"
       ],
-      "funding": 3.3e-05
+      "funding": 3.6e-05
     },
     {
       "symbol": "PENGU",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "TAO",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -144,14 +146,6 @@
         "coingecko"
       ],
       "funding": 1.9e-05
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -1.1e-05
     },
     {
       "symbol": "ZRO",
