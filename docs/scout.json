@@ -1,24 +1,8 @@
 {
-  "ts": "2026-09-24T22:11:31+00:00",
-  "scanned": 138,
+  "ts": "2026-09-24T22:16:40+00:00",
+  "scanned": 139,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "PENGUUSDT",
-      "signal": "ignition",
-      "score": 0.5756,
-      "raw_score": 0.6059,
-      "weight": 0.95,
-      "price": 0.009767,
-      "why": "trades 5.2x and volume 7.2x the prior 4h, 65% taker-buy, $237,756 burst \u2014 while price has only moved -1.8%",
-      "chg_24h": -0.0176,
-      "vol_surge": 7.2,
-      "chg_1h": -0.0176,
-      "market_surge": 2.91,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean +0.39% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.39% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.38% at 24h: market beta, not signal",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 9/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 26,
+    "count": 25,
     "baseline": 25.0,
     "wave": false
   },
