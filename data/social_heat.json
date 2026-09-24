@@ -1,14 +1,16 @@
 {
-  "ts": "2026-09-24T18:02:39+00:00",
+  "ts": "2026-09-24T18:08:18+00:00",
   "sources": {
     "coingecko": [
       "ONDO",
       "NEAR",
-      "LTC",
       "PENGU",
-      "ZRO",
+      "LTC",
       "HYPE",
       "SUI",
+      "ARB",
+      "ZRO",
+      "FET",
       "BTC"
     ],
     "reddit": [],
@@ -21,12 +23,22 @@
       "NIL",
       "FET",
       "ETC",
-      "INJ"
+      "NEAR"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "FET",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.2
+    },
     {
       "symbol": "LTC",
       "surfaces": 2,
@@ -38,6 +50,16 @@
       "long_short": 2.12
     },
     {
+      "symbol": "NEAR",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.52
+    },
+    {
       "symbol": "ONDO",
       "surfaces": 2,
       "sources": [
@@ -46,6 +68,14 @@
       ],
       "funding": 5e-05,
       "long_short": 2.22
+    },
+    {
+      "symbol": "ARB",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -0.000186
     },
     {
       "symbol": "BTC",
@@ -64,28 +94,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "FET",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "HYPE",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -2e-06
-    },
-    {
-      "symbol": "INJ",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
+      "funding": -5e-06
     },
     {
       "symbol": "LSK",
@@ -93,15 +107,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -4.1e-05
-    },
-    {
-      "symbol": "NEAR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": -2.2e-05
     },
     {
       "symbol": "NIL",
@@ -133,7 +139,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.2e-05
+      "funding": 4.1e-05
     },
     {
       "symbol": "ZRO",
