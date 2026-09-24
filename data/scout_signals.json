@@ -1,39 +1,8 @@
 {
-  "ts": "2026-09-24T00:19:52+00:00",
-  "scanned": 164,
+  "ts": "2026-09-24T00:25:24+00:00",
+  "scanned": 167,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "SAHARAUSDT",
-      "signal": "ignition",
-      "score": 0.8196,
-      "raw_score": 0.8673,
-      "weight": 0.945,
-      "price": 0.00957,
-      "why": "trades 19.4x and volume 41.0x the prior 4h, 68% taker-buy, $53,242 burst \u2014 while price has only moved +2.1%",
-      "chg_24h": -0.0353,
-      "vol_surge": 41.03,
-      "chg_1h": 0.0213,
-      "market_surge": 6.76,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean +0.26% at 24h: market beta, not signal"
-    },
-    {
-      "symbol": "MUBUSDT",
-      "signal": "ignition",
-      "score": 0.7304,
-      "raw_score": 0.7729,
-      "weight": 0.945,
-      "price": 1071.28,
-      "why": "trades 4.6x and volume 29.9x the prior 4h, 99% taker-buy, $107,776 burst \u2014 while price has only moved -0.3%",
-      "chg_24h": -0.0212,
-      "vol_surge": 29.91,
-      "chg_1h": -0.0031,
-      "market_surge": 2.92,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean +0.26% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.26% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.12% at 24h: market beta, not signal",
@@ -42,7 +11,7 @@
     "revival": "probation \u2014 9/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 7,
+    "count": 8,
     "baseline": 27.0,
     "wave": false
   },
