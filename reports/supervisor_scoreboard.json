@@ -1,18 +1,18 @@
 {
-  "updated_utc": "2026-09-23T08:30:00+00:00",
-  "run_note": "Wednesday 2026-09-23, ~08:10Z. (1) SIM-INTEGRITY ALERT UNCHANGED: scalper/TVKUSDT dead-candle seat, day 11. (2) Watcher down ~12 days (last scan 09-11T15:12Z); sentiment/lottery/hype_ibkr idle, hype_ibkr state 12.6d stale. (3) Fill audit: 29 scalper closes + 9 opens, max entry skew 0.24h, no flags; no equity fills. (4) Loop healthy: 86 data commits/24h, max gap 17.9 min; one deploy-pages failure 23:27Z, cycles unaffected. (5) No R1, none under 800; sentiment 869.30 below 900. (6) meanrev +33.00 (HD +2.74% vs flat SPY, no catalyst found); scalper +34.27 (22/29 winners); crypto flat with BTC. (7) Closed 3 judgments alpha 0; issued 5 (3 carried, 2 no_change).",
+  "updated_utc": "2026-09-24T08:30:00+00:00",
+  "run_note": "Thursday 2026-09-24, ~08:10Z. (1) SIM-INTEGRITY ALERT UNCHANGED: scalper/TVKUSDT dead-candle seat, day 12. (2) Watcher down ~13 days (last scan 09-11T15:12Z); sentiment/lottery/hype_ibkr idle. (3) Fill audit: 23 scalper closes + 5 opens, max skew 0.24h, all new entries inside Binance 15m ranges; no equity fills. (4) Loop healthy: 89 data commits/24h, max gap 17.8 min; one cancelled paper-trade-cycle run 09-23T20:34Z, cycles unaffected. (5) No R1, none under 800; sentiment 869.30 below 900. (6) Red day: BTC -2.1% on 87k rejection (crypto -24.28 beta), HD -2.8% on 5.11% 10y (meanrev -34.50), scalper -43.18 on 17 stops. (7) Closed 3 judgments alpha 0; issued 5.",
   "fleet_snapshot": {
-    "as_of": "2026-09-23 ~08:10Z",
+    "as_of": "2026-09-24 ~08:10Z",
     "roster_note": "Active roster cut from 10 books to 4 by owner decisions on 2026-09-04 and 2026-09-05. The old $8,000/$10,000 baseline no longer describes the live fleet; both are reported.",
     "active_paper_bots": 4,
     "baseline_usd": 4000,
-    "total_value_usd": 4312.83,
-    "total_pnl_usd": 312.83,
-    "total_pnl_pct": 7.82,
+    "total_value_usd": 4210.87,
+    "total_pnl_usd": 210.87,
+    "total_pnl_pct": 5.27,
     "active_bots": {
-      "meanrev": 1235.18,
-      "crypto": 1229.61,
-      "scalper": 978.74,
+      "meanrev": 1200.68,
+      "crypto": 1205.33,
+      "scalper": 935.56,
       "sentiment": 869.3
     },
     "retired_frozen_archives": {
@@ -29,27 +29,27 @@
     "real_money_boxes": {
       "lottery_usd": 33.15,
       "lottery_hwm_usd": 44.27,
-      "hype_ibkr": "never traded, state ~12.6d stale",
-      "carry_owner_net_usd": 1.025
+      "hype_ibkr": "never traded, state ~13.6d stale",
+      "carry_owner_net_usd": 1.088
     },
-    "caveat": "scalper's 978.74 still includes ~86.17 marked at a dead 2023 price (TVKUSDT), open since 2026-09-12, now day 11."
+    "caveat": "scalper's 935.56 still includes ~86.17 marked at a dead 2023 price (TVKUSDT), open since 2026-09-12, now day 12."
   },
-  "total_judgments": 289,
-  "judgments_closed": 286,
+  "total_judgments": 294,
+  "judgments_closed": 291,
   "judgments_open": 3,
   "open_ids": [
-    "2026-09-23-scalper-1",
-    "2026-09-23-sentiment-1",
-    "2026-09-23-lottery-1"
+    "2026-09-24-scalper-1",
+    "2026-09-24-sentiment-1",
+    "2026-09-24-lottery-1"
   ],
   "cumulative_alpha_usd": -712.7,
-  "win_rate_closed_pct": 8.4,
+  "win_rate_closed_pct": 8.2,
   "win_rate_note": "Most closed judgments are no_change (alpha 0), so the headline rate carries no information - read the DIRECTIONAL record. This run closed three, all neutral (scalper/sentiment/lottery advice matched the bots' own behavior exactly, alpha 0 each). Cumulative alpha is still dominated by the single -1,111.03 sentiment call from 08-31.",
   "directional_record": {
     "scored": 43,
     "wins": 24,
     "losses": 19,
-    "neutral": 243,
+    "neutral": 248,
     "basis": "sign of realized alpha on closed judgments; the sparse legacy outcome field is not used"
   },
   "per_bot": {
@@ -188,13 +188,14 @@
   "loop_health": {
     "cycle_commits_7d": 612,
     "gaps_over_90min_7d": 0,
-    "largest_gap_24h_min": 17.9,
+    "largest_gap_24h_min": 17.8,
     "median_gap_24h_min": 16.4,
     "cron_gap": false,
     "failed_runs": [
       "paper-trade-cycle 2026-09-18T19:59:51Z",
       "deploy-pages 2026-09-19T08:53:19Z",
-      "deploy-pages 2026-09-22T23:27:44Z"
+      "deploy-pages 2026-09-22T23:27:44Z",
+      "paper-trade-cycle 2026-09-23T20:34:09Z cancelled"
     ]
   },
   "kill_criteria_flags": {
@@ -206,10 +207,10 @@
       "sentiment 869.30 (-13.1%)"
     ],
     "below_1000": [
-      "scalper 978.74",
+      "scalper 935.56",
       "sentiment 869.30"
     ],
-    "R4_dead_money": "sentiment is 11 consecutive days in cash against a bench that is roughly flat; well short of the 30-day R4 bar, and the cause is a dead input feed, not an unreachable entry rule. Watch it.",
+    "R4_dead_money": "sentiment 13 consecutive days in cash; bench roughly flat. Short of the 30-day R4 bar; cause is the dead watcher feed.",
     "probation": "none newly assigned; R2/R3 windows are scheduled-review items and the roster has shrunk to 4 books"
   },
   "win_rate_scored_pct": 55.8
