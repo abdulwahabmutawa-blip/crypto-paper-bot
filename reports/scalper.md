@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-24T13:24:17+00:00 · runs 1667 · equity **$921.41** (-7.86%) · cash $460.86 · open 5/10 · round trips 585
+updated 2026-09-24T13:40:51+00:00 · runs 1668 · equity **$921.34** (-7.87%) · cash $0.00 · open 10/10 · round trips 585
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,9 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-09-23T14:40 | BNBUSDT | bottom | 760.19 | 774.65 | +1.90% |
-| 2026-09-23T14:40 | BTCUSDT | bottom | 84041.7 | 83820 | -0.26% |
-| 2026-09-24T13:06 | MINAUSDT | surge | 0.1516 | 0.1516 | +0.00% |
-| 2026-09-24T13:06 | MUBUSDT | bottom | 1048.13 | 1047.26 | -0.08% |
+| 2026-09-23T14:40 | BNBUSDT | bottom | 760.19 | 777.11 | +2.23% |
+| 2026-09-23T14:40 | BTCUSDT | bottom | 84041.7 | 84330 | +0.34% |
+| 2026-09-24T13:06 | MINAUSDT | surge | 0.1516 | 0.1487 | -1.91% |
+| 2026-09-24T13:06 | MUBUSDT | bottom | 1048.13 | 1049.51 | +0.13% |
+| 2026-09-24T13:39 | GIGGLEUSDT | surge | 41.48 | 41.16 | -0.77% |
+| 2026-09-24T13:39 | COMPUSDT | surge | 23.7 | 23.76 | +0.25% |
+| 2026-09-24T13:39 | CAKEUSDT | surge | 2.667 | 2.665 | -0.07% |
+| 2026-09-24T13:39 | MORPHOUSDT | surge | 2.849 | 2.879 | +1.05% |
+| 2026-09-24T13:39 | RENDERUSDT | surge | 1.834 | 1.838 | +0.22% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
