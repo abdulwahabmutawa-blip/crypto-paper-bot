@@ -1,17 +1,18 @@
 {
-  "ts": "2026-09-24T20:42:47+00:00",
+  "ts": "2026-09-24T20:48:05+00:00",
   "sources": {
     "coingecko": [
       "ONDO",
       "NEAR",
-      "LTC",
-      "ZEC",
       "PENGU",
+      "ZEC",
+      "LTC",
       "FET",
-      "ENA",
-      "TAO",
+      "HYPE",
       "BTC",
-      "HYPE"
+      "TAO",
+      "LIT",
+      "XPL"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,9 +20,9 @@
       "LSK",
       "ONDO",
       "XPL",
+      "NOM",
       "NIL",
       "LTC",
-      "NOM",
       "FET",
       "ETC"
     ],
@@ -60,20 +61,22 @@
       "long_short": 1.78
     },
     {
+      "symbol": "XPL",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.04
+    },
+    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 7e-06
-    },
-    {
-      "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": 6e-06
     },
     {
       "symbol": "ETC",
@@ -89,7 +92,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -7.4e-05
+      "funding": -7.2e-05
+    },
+    {
+      "symbol": "LIT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 3.2e-05
     },
     {
       "symbol": "LSK",
@@ -140,20 +151,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "XPL",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5.9e-05
+      "funding": 5.8e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
