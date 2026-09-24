@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-24T07:33:57+00:00 · runs 1645 · equity **$934.19** (-6.58%) · cash $469.27 · open 5/10 · round trips 581
+updated 2026-09-24T07:50:26+00:00 · runs 1646 · equity **$935.56** (-6.44%) · cash $375.42 · open 6/10 · round trips 581
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,9 +36,10 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-09-23T14:40 | BNBUSDT | bottom | 760.19 | 777.2 | +2.24% |
-| 2026-09-23T14:40 | MSTRBUSDT | bottom | 162.61 | 161.33 | -0.79% |
-| 2026-09-23T14:40 | BTCUSDT | bottom | 84041.7 | 84550 | +0.60% |
-| 2026-09-24T07:32 | LTCUSDT | surge | 67.97 | 68.04 | +0.10% |
+| 2026-09-23T14:40 | BNBUSDT | bottom | 760.19 | 776.93 | +2.20% |
+| 2026-09-23T14:40 | MSTRBUSDT | bottom | 162.61 | 161.56 | -0.65% |
+| 2026-09-23T14:40 | BTCUSDT | bottom | 84041.7 | 84450 | +0.49% |
+| 2026-09-24T07:32 | LTCUSDT | surge | 67.97 | 68.64 | +0.99% |
+| 2026-09-24T07:48 | ONDOUSDT | surge | 0.4397 | 0.4423 | +0.59% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
