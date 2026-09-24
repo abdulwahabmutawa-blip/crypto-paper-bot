@@ -1,16 +1,18 @@
 {
-  "ts": "2026-09-24T00:30:17+00:00",
+  "ts": "2026-09-24T00:35:46+00:00",
   "sources": {
     "coingecko": [
       "NIL",
       "NEAR",
       "PUMP",
       "PENGU",
-      "UNI",
-      "RAY",
       "LIT",
       "ONDO",
-      "POL"
+      "POL",
+      "RAY",
+      "UNI",
+      "XRP",
+      "FET"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -18,9 +20,10 @@
       "NIL",
       "SAGA",
       "ZRO",
-      "PROVE",
       "MARSCOIN",
-      "TRX"
+      "PROVE",
+      "TRX",
+      "U"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -37,12 +40,20 @@
       "long_short": 1.08
     },
     {
+      "symbol": "FET",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "LIT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 2.7e-05
+      "funding": 3e-05
     },
     {
       "symbol": "MARSCOIN",
@@ -50,7 +61,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000173
+      "funding": 0.000178
     },
     {
       "symbol": "NEAR",
@@ -82,7 +93,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.00013
+      "funding": -0.000118
     },
     {
       "symbol": "PROVE",
@@ -98,7 +109,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.2e-05
+      "funding": 4.6e-05
     },
     {
       "symbol": "RAY",
@@ -122,7 +133,14 @@
       "sources": [
         "movers"
       ],
-      "funding": 9e-06
+      "funding": 1.6e-05
+    },
+    {
+      "symbol": "U",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
     },
     {
       "symbol": "UNI",
@@ -130,7 +148,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.4e-05
+      "funding": 5.8e-05
+    },
+    {
+      "symbol": "XRP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -5.4e-05
     },
     {
       "symbol": "ZRO",
