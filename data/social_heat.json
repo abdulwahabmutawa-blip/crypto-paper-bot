@@ -1,19 +1,18 @@
 {
-  "ts": "2026-09-24T09:30:14+00:00",
+  "ts": "2026-09-24T09:35:39+00:00",
   "sources": {
     "coingecko": [
-      "NEAR",
-      "ZRO",
       "NIL",
-      "ONDO",
+      "NEAR",
       "ZEC",
+      "ZRO",
+      "ONDO",
       "LIT",
-      "PENGU",
-      "LTC",
-      "APT",
       "SUI",
+      "PENGU",
+      "RAY",
       "ARB",
-      "ENA"
+      "LTC"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -52,6 +51,15 @@
       "long_short": 0.75
     },
     {
+      "symbol": "RAY",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0
+    },
+    {
       "symbol": "ZRO",
       "surfaces": 2,
       "sources": [
@@ -62,28 +70,12 @@
       "long_short": 1.77
     },
     {
-      "symbol": "APT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "ARB",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000162
-    },
-    {
-      "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": -0.000159
     },
     {
       "symbol": "LIT",
@@ -99,7 +91,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000371
+      "funding": -0.000331
     },
     {
       "symbol": "NEAR",
@@ -107,7 +99,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.9e-05
+      "funding": 0.0001
     },
     {
       "symbol": "NOM",
@@ -115,7 +107,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.8e-05
+      "funding": 3.9e-05
     },
     {
       "symbol": "ONDO",
@@ -134,14 +126,6 @@
       "funding": 5e-05
     },
     {
-      "symbol": "RAY",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0
-    },
-    {
       "symbol": "RLUSD",
       "surfaces": 1,
       "sources": [
@@ -154,7 +138,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.4e-05
+      "funding": 4.5e-05
     },
     {
       "symbol": "U",
