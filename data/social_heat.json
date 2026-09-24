@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-24T04:24:36+00:00",
+  "ts": "2026-09-24T04:30:23+00:00",
   "sources": {
     "coingecko": [
       "NIL",
@@ -22,7 +22,10 @@
       "SAGA",
       "ZRO",
       "LTC",
-      "PROVE"
+      "NEAR",
+      "PROVE",
+      "BCH",
+      "INJ"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -37,6 +40,16 @@
       ],
       "funding": 0.0001,
       "long_short": 2.61
+    },
+    {
+      "symbol": "NEAR",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.77
     },
     {
       "symbol": "NIL",
@@ -59,20 +72,28 @@
       "long_short": 1.76
     },
     {
+      "symbol": "BCH",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "INJ",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "LIT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -4.7e-05
-    },
-    {
-      "symbol": "NEAR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": -4.2e-05
     },
     {
       "symbol": "PENGU",
@@ -88,7 +109,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -8.3e-05
+      "funding": -8.9e-05
     },
     {
       "symbol": "RAY",
@@ -112,7 +133,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.6e-05
+      "funding": 6.7e-05
     },
     {
       "symbol": "SUI",
@@ -144,7 +165,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.9e-05
+      "funding": -2.8e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
