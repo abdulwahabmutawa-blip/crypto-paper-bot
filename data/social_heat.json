@@ -1,32 +1,31 @@
 {
-  "ts": "2026-09-25T12:11:02+00:00",
+  "ts": "2026-09-25T12:16:30+00:00",
   "sources": {
     "coingecko": [
-      "ONDO",
       "NEAR",
+      "ONDO",
       "ENA",
       "PENGU",
       "LINK",
       "SUI",
       "SOL",
       "BTC",
-      "XPL",
       "ZEC",
-      "AERO",
-      "FET",
-      "QI"
+      "XPL",
+      "QI",
+      "PHA"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "XPL",
       "FET",
+      "ONDO",
       "SUI",
       "ENA",
-      "ONDO",
       "NEAR",
       "LINK",
-      "XLM"
+      "NIL"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -41,16 +40,6 @@
       ],
       "funding": 5e-05,
       "long_short": 1.84
-    },
-    {
-      "symbol": "FET",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 3.6e-05,
-      "long_short": 2.35
     },
     {
       "symbol": "LINK",
@@ -89,7 +78,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 9.8e-05
+      "funding": 0.0001,
+      "long_short": 2.32
     },
     {
       "symbol": "XPL",
@@ -98,15 +88,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 7e-06
-    },
-    {
-      "symbol": "AERO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": 9e-06
     },
     {
       "symbol": "BTC",
@@ -114,7 +96,23 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.2e-05
+      "funding": -1.3e-05
+    },
+    {
+      "symbol": "FET",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 4.1e-05
+    },
+    {
+      "symbol": "NIL",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "PENGU",
@@ -123,6 +121,14 @@
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "PHA",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -0.000641
     },
     {
       "symbol": "QI",
@@ -136,14 +142,6 @@
       "surfaces": 1,
       "sources": [
         "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "XLM",
-      "surfaces": 1,
-      "sources": [
-        "movers"
       ],
       "funding": 0.0001
     },
