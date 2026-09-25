@@ -1,16 +1,17 @@
 {
-  "ts": "2026-09-25T06:32:59+00:00",
+  "ts": "2026-09-25T06:38:38+00:00",
   "sources": {
     "coingecko": [
       "ONDO",
-      "XPL",
       "QNT",
-      "PENGU",
-      "FET",
-      "NEAR",
+      "XPL",
       "BTC",
+      "ZEC",
       "PLUME",
-      "SUI"
+      "FET",
+      "PENGU",
+      "HYPE",
+      "AERO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,8 +22,8 @@
       "BROCCOLI714",
       "LINK",
       "XLM",
-      "NEAR",
-      "SUI"
+      "SUI",
+      "LTC"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -39,16 +40,6 @@
       "long_short": 2.14
     },
     {
-      "symbol": "NEAR",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 4.2e-05,
-      "long_short": 1.62
-    },
-    {
       "symbol": "ONDO",
       "surfaces": 2,
       "sources": [
@@ -59,24 +50,22 @@
       "long_short": 1.76
     },
     {
-      "symbol": "SUI",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 3.1e-05,
-      "long_short": 2.58
-    },
-    {
       "symbol": "XPL",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 3.5e-05,
+      "funding": 3e-05,
       "long_short": 1.31
+    },
+    {
+      "symbol": "AERO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "BROCCOLI714",
@@ -84,7 +73,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -2.4e-05
+      "funding": -2e-05
     },
     {
       "symbol": "BTC",
@@ -92,10 +81,26 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.9e-05
+      "funding": 4.7e-05
+    },
+    {
+      "symbol": "HYPE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -2.3e-05
     },
     {
       "symbol": "LINK",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "LTC",
       "surfaces": 1,
       "sources": [
         "movers"
@@ -124,13 +129,29 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000156
+      "funding": -0.000151
+    },
+    {
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 3e-05
     },
     {
       "symbol": "XLM",
       "surfaces": 1,
       "sources": [
         "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
       ],
       "funding": 0.0001
     }
