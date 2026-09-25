@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-25T19:10:41+00:00",
-  "scanned": 132,
+  "ts": "2026-09-25T19:16:17+00:00",
+  "scanned": 135,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "EIGENUSDT",
+      "signal": "breakout",
+      "score": 0.7587,
+      "raw_score": 0.8054,
+      "weight": 0.942,
+      "price": 0.2586,
+      "why": "trades 6.6x, volume 17.1x, 91% taker-buy, +4.0% in an hour, at 106% of its 24h range",
+      "chg_24h": 0.0418,
+      "vol_surge": 17.09,
+      "chg_1h": 0.0398,
+      "market_surge": 9.95,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.66% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "benched \u2014 BTC-excess day mean +0.66% at 24h: market beta, not signal",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 9/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 26,
+    "count": 25,
     "baseline": 28.0,
     "wave": false
   },
