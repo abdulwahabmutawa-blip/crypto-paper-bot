@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-25T14:26:24+00:00 · runs 1758 · equity **$920.11** (-7.99%) · cash $0.00 · open 10/10 · round trips 618
+updated 2026-09-25T14:43:45+00:00 · runs 1759 · equity **$922.89** (-7.71%) · cash $0.00 · open 10/10 · round trips 618
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-09-24T15:34 | ENSUSDT | surge | 7.13 | 7.09 | -0.56% |
-| 2026-09-24T20:01 | AMDBUSDT | surge | 629.27 | 632.03 | +0.44% |
+| 2026-09-24T15:34 | ENSUSDT | surge | 7.13 | 7.1 | -0.42% |
+| 2026-09-24T20:01 | AMDBUSDT | surge | 629.27 | 629.83 | +0.09% |
 | 2026-09-25T06:41 | BANKUSDT | surge | 0.0353 | 0.0346 | -1.98% |
-| 2026-09-25T10:21 | BABYUSDT | surge | 0.01287 | 0.01278 | -0.70% |
-| 2026-09-25T13:32 | VTHOUSDT | surge | 0.000782 | 0.00078 | -0.26% |
-| 2026-09-25T13:49 | REZUSDT | surge | 0.004111 | 0.004108 | -0.07% |
-| 2026-09-25T13:49 | JTOUSDT | surge | 0.5348 | 0.5345 | -0.06% |
-| 2026-09-25T14:24 | NEARUSDT | surge | 5.053 | 5.04 | -0.26% |
-| 2026-09-25T14:24 | AEROUSDT | surge | 0.7838 | 0.7801 | -0.47% |
+| 2026-09-25T10:21 | BABYUSDT | surge | 0.01287 | 0.0128 | -0.54% |
+| 2026-09-25T13:32 | VTHOUSDT | surge | 0.000782 | 0.000774 | -1.02% |
+| 2026-09-25T13:49 | REZUSDT | surge | 0.004111 | 0.004136 | +0.61% |
+| 2026-09-25T13:49 | JTOUSDT | surge | 0.5348 | 0.5341 | -0.13% |
+| 2026-09-25T14:24 | NEARUSDT | surge | 5.053 | 5.063 | +0.20% |
+| 2026-09-25T14:24 | AEROUSDT | surge | 0.7838 | 0.8015 | +2.26% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
