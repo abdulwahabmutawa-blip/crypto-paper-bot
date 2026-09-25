@@ -1,22 +1,24 @@
 {
-  "ts": "2026-09-25T02:19:02+00:00",
+  "ts": "2026-09-25T02:24:47+00:00",
   "sources": {
     "coingecko": [
       "ONDO",
       "PENGU",
       "NEAR",
       "LIT",
-      "QI",
       "XPL",
+      "QI",
       "HYPE",
-      "ENA"
+      "SAGA",
+      "ENA",
+      "FET"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "ONDO",
-      "XPL",
       "SAGA",
+      "XPL",
       "FET",
       "LTC",
       "XLM",
@@ -38,6 +40,16 @@
       "long_short": 1.94
     },
     {
+      "symbol": "FET",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.29
+    },
+    {
       "symbol": "ONDO",
       "surfaces": 2,
       "sources": [
@@ -46,6 +58,16 @@
       ],
       "funding": 5e-05,
       "long_short": 1.89
+    },
+    {
+      "symbol": "SAGA",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.06
     },
     {
       "symbol": "XPL",
@@ -66,14 +88,6 @@
       "funding": 0.0001
     },
     {
-      "symbol": "FET",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "HYPE",
       "surfaces": 1,
       "sources": [
@@ -87,7 +101,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.00012
+      "funding": -0.000122
     },
     {
       "symbol": "LTC",
@@ -119,14 +133,6 @@
       "sources": [
         "coingecko"
       ]
-    },
-    {
-      "symbol": "SAGA",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "XLM",
