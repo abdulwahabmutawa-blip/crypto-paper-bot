@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-25T22:38:26+00:00",
+  "ts": "2026-09-25T22:43:33+00:00",
   "sources": {
     "coingecko": [
       "TRUMP",
@@ -24,7 +24,7 @@
       "ENA",
       "SUI",
       "WLD",
-      "PUMP"
+      "FET"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -69,6 +69,14 @@
       "funding": 5e-05
     },
     {
+      "symbol": "FET",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "MUBARAK",
       "surfaces": 1,
       "sources": [
@@ -97,14 +105,6 @@
       "surfaces": 1,
       "sources": [
         "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "PUMP",
-      "surfaces": 1,
-      "sources": [
-        "movers"
       ],
       "funding": 5e-05
     },
@@ -161,7 +161,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.8e-05
+      "funding": 6.9e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
