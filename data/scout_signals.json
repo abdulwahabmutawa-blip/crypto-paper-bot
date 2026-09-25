@@ -1,39 +1,8 @@
 {
-  "ts": "2026-09-25T09:56:23+00:00",
-  "scanned": 129,
+  "ts": "2026-09-25T10:02:31+00:00",
+  "scanned": 133,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ARUSDT",
-      "signal": "ignition",
-      "score": 0.72,
-      "raw_score": 0.7579,
-      "weight": 0.95,
-      "price": 4.748,
-      "why": "trades 10.2x and volume 5.0x the prior 4h, 71% taker-buy, $75,208 burst \u2014 while price has only moved +1.9%",
-      "chg_24h": 0.1103,
-      "vol_surge": 5.04,
-      "chg_1h": 0.0187,
-      "market_surge": 3.11,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean +0.56% at 24h: market beta, not signal"
-    },
-    {
-      "symbol": "STRKUSDT",
-      "signal": "ignition",
-      "score": 0.6684,
-      "raw_score": 0.7036,
-      "weight": 0.95,
-      "price": 0.04039,
-      "why": "trades 6.5x and volume 8.9x the prior 4h, 64% taker-buy, $53,848 burst \u2014 while price has only moved +1.4%",
-      "chg_24h": 0.0467,
-      "vol_surge": 8.87,
-      "chg_1h": 0.0143,
-      "market_surge": 3.96,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean +0.56% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.56% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.40% at 24h: market beta, not signal",
@@ -42,9 +11,9 @@
     "revival": "probation \u2014 9/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 56,
+    "count": 49,
     "baseline": 26.0,
-    "wave": true
+    "wave": false
   },
   "scorecard": {
     "ignition": {
