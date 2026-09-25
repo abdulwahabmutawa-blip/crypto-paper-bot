@@ -1,26 +1,41 @@
 {
-  "ts": "2026-09-25T00:59:55+00:00",
-  "scanned": 136,
+  "ts": "2026-09-25T01:05:33+00:00",
+  "scanned": 139,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "SUIUSDT",
-      "signal": "breakout",
-      "score": 0.66,
-      "raw_score": 0.6999,
-      "weight": 0.943,
-      "price": 1.0492,
-      "why": "trades 6.1x, volume 8.0x, 61% taker-buy, +3.2% in an hour, at 95% of its 24h range",
-      "chg_24h": 0.104,
-      "vol_surge": 8.03,
-      "chg_1h": 0.0316,
-      "market_surge": 3.77,
+      "symbol": "BCHUSDT",
+      "signal": "ignition",
+      "score": 0.6465,
+      "raw_score": 0.6805,
+      "weight": 0.95,
+      "price": 341.2,
+      "why": "trades 6.1x and volume 7.9x the prior 4h, 63% taker-buy, $527,993 burst \u2014 while price has only moved +0.7%",
+      "chg_24h": 0.0139,
+      "vol_surge": 7.92,
+      "chg_1h": 0.0071,
+      "market_surge": 2.23,
       "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean +0.50% at 24h: market beta, not signal"
+      "status": "benched \u2014 BTC-excess day mean +0.58% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "ZROUSDT",
+      "signal": "ignition",
+      "score": 0.6268,
+      "raw_score": 0.6598,
+      "weight": 0.95,
+      "price": 1.452,
+      "why": "trades 5.8x and volume 7.1x the prior 4h, 69% taker-buy, $79,428 burst \u2014 while price has only moved +0.9%",
+      "chg_24h": -0.0465,
+      "vol_surge": 7.05,
+      "chg_1h": 0.009,
+      "market_surge": 0.01,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.58% at 24h: market beta, not signal"
     }
   ],
   "gate": {
-    "ignition": "benched \u2014 BTC-excess day mean +0.64% at 24h: market beta, not signal",
+    "ignition": "benched \u2014 BTC-excess day mean +0.58% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.50% at 24h: market beta, not signal",
     "reversion": "benched \u2014 BTC-excess day mean +0.80% at 24h: market beta, not signal",
     "heat": "probation \u2014 2/12 resolved 24h samples under ruleset 3",
@@ -28,7 +43,7 @@
   },
   "breadth": {
     "count": 33,
-    "baseline": 25.0,
+    "baseline": 26.0,
     "wave": false
   },
   "scorecard": {
@@ -59,19 +74,19 @@
       "avg_win_4h": 0.02081,
       "avg_loss_4h": -0.01713,
       "payoff_4h": 1.215,
-      "span_h_24h": 311.8,
-      "n_eff_24h": 12.99,
-      "n_24h": 704,
-      "hit_rate_24h": 0.536,
-      "mean_ret_24h": 0.01128,
+      "span_h_24h": 311.9,
+      "n_eff_24h": 13.0,
+      "n_24h": 705,
+      "hit_rate_24h": 0.535,
+      "mean_ret_24h": 0.01123,
       "median_ret_24h": 0.00468,
       "both_halves_24h": true,
       "days_24h": 14,
-      "mean_x_24h": 0.00637,
+      "mean_x_24h": 0.00583,
       "days_x_24h": 14,
       "avg_win_24h": 0.05009,
-      "avg_loss_24h": -0.03813,
-      "payoff_24h": 1.314
+      "avg_loss_24h": -0.03808,
+      "payoff_24h": 1.315
     },
     "breakout": {
       "span_h_1h": 329.5,
