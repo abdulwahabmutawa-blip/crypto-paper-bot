@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-25T06:16:37+00:00",
+  "ts": "2026-09-25T06:21:46+00:00",
   "sources": {
     "coingecko": [
       "ONDO",
@@ -22,8 +22,8 @@
       "BROCCOLI714",
       "XLM",
       "LINK",
-      "NEAR",
-      "LTC"
+      "SUI",
+      "NEAR"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -60,13 +60,23 @@
       "long_short": 1.76
     },
     {
+      "symbol": "SUI",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 2.8e-05,
+      "long_short": 2.58
+    },
+    {
       "symbol": "XPL",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 4.8e-05,
+      "funding": 4.4e-05,
       "long_short": 1.31
     },
     {
@@ -75,7 +85,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -3e-05
+      "funding": -2.4e-05
     },
     {
       "symbol": "BTC",
@@ -83,18 +93,10 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.1e-05
+      "funding": 5.2e-05
     },
     {
       "symbol": "LINK",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "LTC",
       "surfaces": 1,
       "sources": [
         "movers"
@@ -123,15 +125,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000156
-    },
-    {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 2.1e-05
+      "funding": -0.00016
     },
     {
       "symbol": "XLM",
