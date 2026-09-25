@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-25T18:04:31+00:00 · runs 1771 · equity **$937.19** (-6.28%) · cash $0.00 · open 10/10 · round trips 626
+updated 2026-09-25T18:22:21+00:00 · runs 1772 · equity **$937.16** (-6.28%) · cash $0.00 · open 10/10 · round trips 626
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-09-24T20:01 | AMDBUSDT | surge | 629.27 | 629.53 | +0.04% |
-| 2026-09-25T06:41 | BANKUSDT | surge | 0.0353 | 0.0347 | -1.70% |
-| 2026-09-25T13:32 | VTHOUSDT | surge | 0.000782 | 0.000773 | -1.15% |
-| 2026-09-25T14:59 | SUIUSDT | surge | 1.1108 | 1.1241 | +1.20% |
-| 2026-09-25T15:57 | KMNOUSDT | surge | 0.04228 | 0.0419 | -0.90% |
-| 2026-09-25T16:15 | KORUBUSDT | surge | 21.59 | 21.55 | -0.19% |
-| 2026-09-25T16:51 | SKHYBUSDT | surge | 191.35 | 191.37 | +0.01% |
-| 2026-09-25T17:08 | DODOUSDT | surge | 0.01899 | 0.01871 | -1.47% |
-| 2026-09-25T18:02 | REZUSDT | surge | 0.004321 | 0.004352 | +0.72% |
+| 2026-09-24T20:01 | AMDBUSDT | surge | 629.27 | 630.99 | +0.27% |
+| 2026-09-25T06:41 | BANKUSDT | surge | 0.0353 | 0.0349 | -1.13% |
+| 2026-09-25T13:32 | VTHOUSDT | surge | 0.000782 | 0.000776 | -0.77% |
+| 2026-09-25T14:59 | SUIUSDT | surge | 1.1108 | 1.1382 | +2.47% |
+| 2026-09-25T15:57 | KMNOUSDT | surge | 0.04228 | 0.04136 | -2.18% |
+| 2026-09-25T16:15 | KORUBUSDT | surge | 21.59 | 21.63 | +0.19% |
+| 2026-09-25T16:51 | SKHYBUSDT | surge | 191.35 | 191.35 | +0.00% |
+| 2026-09-25T17:08 | DODOUSDT | surge | 0.01899 | 0.01869 | -1.58% |
+| 2026-09-25T18:02 | REZUSDT | surge | 0.004321 | 0.004288 | -0.76% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
