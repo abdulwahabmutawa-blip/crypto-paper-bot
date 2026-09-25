@@ -1,18 +1,19 @@
 {
-  "ts": "2026-09-25T14:08:38+00:00",
+  "ts": "2026-09-25T14:14:15+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
       "PHA",
       "ONDO",
-      "PENGU",
       "ENA",
-      "SUI",
+      "PENGU",
       "ZEC",
-      "BTC",
+      "SUI",
+      "AERO",
       "LINK",
-      "QNT",
-      "SOL"
+      "RAY",
+      "SOL",
+      "BTC"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,8 +23,8 @@
       "FET",
       "ENA",
       "NEAR",
-      "LINK",
       "SUI",
+      "LINK",
       "ONDO"
     ],
     "watcher": [],
@@ -81,12 +82,20 @@
       "long_short": 2.19
     },
     {
+      "symbol": "AERO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -2.7e-05
+      "funding": -2.5e-05
     },
     {
       "symbol": "FET",
@@ -110,7 +119,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000686
+      "funding": -0.000697
     },
     {
       "symbol": "QI",
@@ -120,12 +129,12 @@
       ]
     },
     {
-      "symbol": "QNT",
+      "symbol": "RAY",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -2.8e-05
+      "funding": 0.0
     },
     {
       "symbol": "SOL",
@@ -141,7 +150,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.1e-05
+      "funding": 4.9e-05
     },
     {
       "symbol": "ZEC",
