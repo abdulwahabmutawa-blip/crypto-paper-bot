@@ -1,8 +1,54 @@
 {
-  "ts": "2026-09-25T07:22:42+00:00",
-  "scanned": 134,
+  "ts": "2026-09-25T07:28:34+00:00",
+  "scanned": 132,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "LDOUSDT",
+      "signal": "breakout",
+      "score": 0.7686,
+      "raw_score": 0.8168,
+      "weight": 0.941,
+      "price": 0.4507,
+      "why": "trades 11.7x, volume 29.5x, 80% taker-buy, +3.4% in an hour, at 97% of its 24h range",
+      "chg_24h": 0.1333,
+      "vol_surge": 29.49,
+      "chg_1h": 0.034,
+      "market_surge": 9.35,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.37% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "CFGUSDT",
+      "signal": "ignition",
+      "score": 0.5571,
+      "raw_score": 0.5876,
+      "weight": 0.948,
+      "price": 0.1527,
+      "why": "trades 4.1x and volume 6.4x the prior 4h, 76% taker-buy, $69,253 burst \u2014 while price has only moved +1.0%",
+      "chg_24h": 0.0923,
+      "vol_surge": 6.43,
+      "chg_1h": 0.0099,
+      "market_surge": 1.26,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.51% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "LSKUSDT",
+      "signal": "reversion",
+      "score": 0.314,
+      "raw_score": 0.314,
+      "weight": 1.0,
+      "price": 0.3482,
+      "why": "down -16% on the day (bottom decile of the market), now +0.8% over 15m with 3 green candles",
+      "chg_24h": -0.1601,
+      "vol_surge": 0.34,
+      "chg_1h": -0.0043,
+      "market_surge": 0.0,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.80% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.51% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.37% at 24h: market beta, not signal",
