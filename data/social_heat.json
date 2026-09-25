@@ -1,17 +1,18 @@
 {
-  "ts": "2026-09-25T20:40:09+00:00",
+  "ts": "2026-09-25T20:45:17+00:00",
   "sources": {
     "coingecko": [
       "TRUMP",
       "AERO",
-      "NEAR",
       "PENGU",
+      "NEAR",
       "ENA",
       "ONDO",
       "LINK",
       "BTC",
+      "QNT",
       "SUI",
-      "HYPE"
+      "PHA"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -50,13 +51,23 @@
       "long_short": 1.42
     },
     {
+      "symbol": "PHA",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 0.7
+    },
+    {
       "symbol": "SUI",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 5.2e-05,
+      "funding": 4.9e-05,
       "long_short": 2.36
     },
     {
@@ -73,15 +84,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.8e-05
-    },
-    {
-      "symbol": "HYPE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -1e-05
+      "funding": 4.7e-05
     },
     {
       "symbol": "LINK",
@@ -116,19 +119,19 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PHA",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "QI",
       "surfaces": 1,
       "sources": [
         "movers"
       ]
+    },
+    {
+      "symbol": "QNT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 8.2e-05
     },
     {
       "symbol": "SEI",
