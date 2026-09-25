@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-25T04:32:26+00:00",
+  "ts": "2026-09-25T04:38:09+00:00",
   "sources": {
     "coingecko": [
       "ONDO",
@@ -7,16 +7,17 @@
       "PENGU",
       "QNT",
       "LTC",
-      "SOL",
       "ZRO",
       "HYPE",
-      "LIT"
+      "LIT",
+      "BTC",
+      "NEAR"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "XPL",
       "ONDO",
+      "XPL",
       "BROCCOLI714",
       "FET",
       "XLM",
@@ -54,7 +55,15 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.1e-05
+      "funding": 3.1e-05
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5.5e-05
     },
     {
       "symbol": "DASH",
@@ -86,7 +95,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3e-06
+      "funding": 6e-06
     },
     {
       "symbol": "LINK",
@@ -102,10 +111,18 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000161
+      "funding": -0.000153
     },
     {
       "symbol": "LTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "NEAR",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -126,15 +143,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.4e-05
-    },
-    {
-      "symbol": "SOL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 6.3e-05
+      "funding": -2.8e-05
     },
     {
       "symbol": "XLM",
