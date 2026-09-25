@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-25T17:11:00+00:00 · runs 1768 · equity **$932.61** (-6.74%) · cash $0.00 · open 10/10 · round trips 624
+updated 2026-09-25T17:28:49+00:00 · runs 1769 · equity **$934.82** (-6.52%) · cash $0.00 · open 10/10 · round trips 624
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-09-24T20:01 | AMDBUSDT | surge | 629.27 | 629.68 | +0.07% |
-| 2026-09-25T06:41 | BANKUSDT | surge | 0.0353 | 0.0349 | -1.13% |
-| 2026-09-25T13:32 | VTHOUSDT | surge | 0.000782 | 0.000775 | -0.90% |
-| 2026-09-25T13:49 | REZUSDT | surge | 0.004111 | 0.004171 | +1.46% |
-| 2026-09-25T14:59 | SUIUSDT | surge | 1.1108 | 1.1166 | +0.52% |
-| 2026-09-25T15:57 | KMNOUSDT | surge | 0.04228 | 0.04179 | -1.16% |
-| 2026-09-25T16:15 | KORUBUSDT | surge | 21.59 | 21.41 | -0.83% |
-| 2026-09-25T16:51 | SKHYBUSDT | surge | 191.35 | 191.58 | +0.12% |
-| 2026-09-25T17:08 | DODOUSDT | surge | 0.01899 | 0.01882 | -0.90% |
+| 2026-09-24T20:01 | AMDBUSDT | surge | 629.27 | 629.56 | +0.05% |
+| 2026-09-25T06:41 | BANKUSDT | surge | 0.0353 | 0.0347 | -1.70% |
+| 2026-09-25T13:32 | VTHOUSDT | surge | 0.000782 | 0.000774 | -1.02% |
+| 2026-09-25T13:49 | REZUSDT | surge | 0.004111 | 0.004219 | +2.63% |
+| 2026-09-25T14:59 | SUIUSDT | surge | 1.1108 | 1.1199 | +0.82% |
+| 2026-09-25T15:57 | KMNOUSDT | surge | 0.04228 | 0.04231 | +0.07% |
+| 2026-09-25T16:15 | KORUBUSDT | surge | 21.59 | 21.45 | -0.65% |
+| 2026-09-25T16:51 | SKHYBUSDT | surge | 191.35 | 191.64 | +0.15% |
+| 2026-09-25T17:08 | DODOUSDT | surge | 0.01899 | 0.01885 | -0.74% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
