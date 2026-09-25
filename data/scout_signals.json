@@ -1,8 +1,69 @@
 {
-  "ts": "2026-09-25T00:03:26+00:00",
-  "scanned": 135,
+  "ts": "2026-09-25T00:08:42+00:00",
+  "scanned": 137,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SYNUSDT",
+      "signal": "ignition",
+      "score": 0.8228,
+      "raw_score": 0.8661,
+      "weight": 0.95,
+      "price": 0.20687,
+      "why": "trades 13.4x and volume 16.5x the prior 4h, 65% taker-buy, $69,799 burst \u2014 while price has only moved +1.9%",
+      "chg_24h": -0.0591,
+      "vol_surge": 16.47,
+      "chg_1h": 0.0188,
+      "market_surge": 7.33,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.48% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "MSTRBUSDT",
+      "signal": "ignition",
+      "score": 0.6579,
+      "raw_score": 0.6925,
+      "weight": 0.95,
+      "price": 162.67,
+      "why": "trades 5.2x and volume 8.9x the prior 4h, 74% taker-buy, $51,588 burst \u2014 while price has only moved +0.8%",
+      "chg_24h": -0.0004,
+      "vol_surge": 8.9,
+      "chg_1h": 0.0082,
+      "market_surge": 0.03,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.48% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "RENDERUSDT",
+      "signal": "ignition",
+      "score": 0.6293,
+      "raw_score": 0.6624,
+      "weight": 0.95,
+      "price": 1.877,
+      "why": "trades 6.3x and volume 6.7x the prior 4h, 62% taker-buy, $68,477 burst \u2014 while price has only moved +0.4%",
+      "chg_24h": 0.0839,
+      "vol_surge": 6.69,
+      "chg_1h": 0.0043,
+      "market_surge": 1.37,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.48% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "XLMUSDT",
+      "signal": "breakout",
+      "score": 0.5516,
+      "raw_score": 0.5862,
+      "weight": 0.941,
+      "price": 0.2196,
+      "why": "trades 5.4x, volume 6.4x, 61% taker-buy, +2.0% in an hour, at 96% of its 24h range",
+      "chg_24h": 0.0882,
+      "vol_surge": 6.38,
+      "chg_1h": 0.0204,
+      "market_surge": 5.45,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.50% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.48% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.50% at 24h: market beta, not signal",
@@ -11,7 +72,7 @@
     "revival": "probation \u2014 9/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 26,
+    "count": 30,
     "baseline": 25.0,
     "wave": false
   },
