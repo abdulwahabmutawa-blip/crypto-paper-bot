@@ -1,18 +1,18 @@
 {
-  "ts": "2026-09-25T11:32:27+00:00",
+  "ts": "2026-09-25T11:37:47+00:00",
   "sources": {
     "coingecko": [
       "ONDO",
       "NEAR",
-      "PENGU",
       "LINK",
+      "PENGU",
       "SUI",
-      "AERO",
-      "XPL",
       "BTC",
-      "TAO",
       "ENA",
-      "QI"
+      "XPL",
+      "AERO",
+      "QI",
+      "FET"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,10 +21,10 @@
       "XPL",
       "FET",
       "SUI",
-      "NEAR",
       "ENA",
+      "NEAR",
       "LINK",
-      "XLM"
+      "WLD"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -39,6 +39,16 @@
       ],
       "funding": 5e-05,
       "long_short": 1.96
+    },
+    {
+      "symbol": "FET",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 2e-05,
+      "long_short": 2.38
     },
     {
       "symbol": "LINK",
@@ -77,8 +87,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 5.2e-05,
-      "long_short": 2.49
+      "funding": 5.8e-05
     },
     {
       "symbol": "XPL",
@@ -87,7 +96,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 3e-05
+      "funding": 2.6e-05
     },
     {
       "symbol": "AERO",
@@ -106,14 +115,6 @@
       "funding": -4e-06
     },
     {
-      "symbol": "FET",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 2.2e-05
-    },
-    {
       "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
@@ -129,20 +130,12 @@
       ]
     },
     {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "XLM",
+      "symbol": "WLD",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 0.0001
+      "funding": 1.1e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
