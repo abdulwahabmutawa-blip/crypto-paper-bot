@@ -1,20 +1,20 @@
 {
-  "ts": "2026-09-25T09:39:24+00:00",
+  "ts": "2026-09-25T09:44:46+00:00",
   "sources": {
     "coingecko": [
       "ONDO",
-      "QNT",
       "XPL",
+      "QNT",
       "PENGU",
       "NEAR",
       "LINK",
       "BTC",
-      "SEI",
       "ZEC",
+      "ENA",
+      "HYPE",
+      "FET",
       "XRP",
-      "SOL",
-      "ICP",
-      "JTO"
+      "SOL"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -25,13 +25,33 @@
       "FET",
       "NEAR",
       "LINK",
-      "WLD",
-      "XLM"
+      "ENA",
+      "WLD"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "ENA",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 1.9e-05,
+      "long_short": 1.95
+    },
+    {
+      "symbol": "FET",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.35
+    },
     {
       "symbol": "LINK",
       "surfaces": 2,
@@ -69,8 +89,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 4e-06,
-      "long_short": 1.31
+      "funding": 7e-06
     },
     {
       "symbol": "BROCCOLI714",
@@ -78,7 +97,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -1e-05
+      "funding": -2e-06
     },
     {
       "symbol": "BTC",
@@ -86,26 +105,10 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9e-06
+      "funding": 8e-06
     },
     {
-      "symbol": "FET",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "ICP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 2.6e-05
-    },
-    {
-      "symbol": "JTO",
+      "symbol": "HYPE",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -126,15 +129,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000212
-    },
-    {
-      "symbol": "SEI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": -0.00021
     },
     {
       "symbol": "SOL",
@@ -150,15 +145,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 1.7e-05
-    },
-    {
-      "symbol": "XLM",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
+      "funding": 1.6e-05
     },
     {
       "symbol": "XRP",
