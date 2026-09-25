@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-25T17:57:43+00:00",
-  "scanned": 135,
+  "ts": "2026-09-25T18:03:17+00:00",
+  "scanned": 136,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "REZUSDT",
+      "signal": "breakout",
+      "score": 0.7572,
+      "raw_score": 0.8013,
+      "weight": 0.945,
+      "price": 0.004348,
+      "why": "trades 19.6x, volume 14.3x, 61% taker-buy, +4.1% in an hour, at 97% of its 24h range",
+      "chg_24h": 0.1285,
+      "vol_surge": 14.34,
+      "chg_1h": 0.0414,
+      "market_surge": 8.05,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.66% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "benched \u2014 BTC-excess day mean +0.66% at 24h: market beta, not signal",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 9/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 24,
+    "count": 26,
     "baseline": 28.0,
     "wave": false
   },
