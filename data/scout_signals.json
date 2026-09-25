@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-25T20:23:14+00:00",
-  "scanned": 134,
+  "ts": "2026-09-25T20:28:52+00:00",
+  "scanned": 136,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "WLDUSDT",
+      "signal": "breakout",
+      "score": 0.5685,
+      "raw_score": 0.6035,
+      "weight": 0.942,
+      "price": 0.4829,
+      "why": "trades 5.0x, volume 5.4x, 64% taker-buy, +3.8% in an hour, at 97% of its 24h range",
+      "chg_24h": 0.0909,
+      "vol_surge": 5.39,
+      "chg_1h": 0.0383,
+      "market_surge": 3.44,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.65% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.72% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.65% at 24h: market beta, not signal",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 9/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 25,
+    "count": 27,
     "baseline": 27.0,
     "wave": false
   },
@@ -25,7 +41,7 @@
       "median_ret_1h": 0.00018,
       "both_halves_1h": false,
       "days_1h": 15,
-      "mean_x_1h": 0.00145,
+      "mean_x_1h": 0.00148,
       "days_x_1h": 15,
       "avg_win_1h": 0.01203,
       "avg_loss_1h": -0.01085,
