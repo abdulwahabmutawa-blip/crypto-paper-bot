@@ -1,33 +1,17 @@
 {
-  "ts": "2026-09-25T20:28:52+00:00",
-  "scanned": 136,
+  "ts": "2026-09-25T20:34:31+00:00",
+  "scanned": 135,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "WLDUSDT",
-      "signal": "breakout",
-      "score": 0.5685,
-      "raw_score": 0.6035,
-      "weight": 0.942,
-      "price": 0.4829,
-      "why": "trades 5.0x, volume 5.4x, 64% taker-buy, +3.8% in an hour, at 97% of its 24h range",
-      "chg_24h": 0.0909,
-      "vol_surge": 5.39,
-      "chg_1h": 0.0383,
-      "market_surge": 3.44,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean +0.65% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.72% at 24h: market beta, not signal",
-    "breakout": "benched \u2014 BTC-excess day mean +0.65% at 24h: market beta, not signal",
+    "breakout": "benched \u2014 BTC-excess day mean +0.71% at 24h: market beta, not signal",
     "reversion": "actionable",
     "heat": "probation \u2014 0/12 resolved 24h samples under ruleset 3",
     "revival": "probation \u2014 9/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 27,
+    "count": 29,
     "baseline": 27.0,
     "wave": false
   },
@@ -100,19 +84,19 @@
       "avg_win_4h": 0.03461,
       "avg_loss_4h": -0.02712,
       "payoff_4h": 1.276,
-      "span_h_24h": 307.2,
-      "n_eff_24h": 12.8,
-      "n_24h": 334,
-      "hit_rate_24h": 0.521,
-      "mean_ret_24h": 0.02255,
+      "span_h_24h": 308.3,
+      "n_eff_24h": 12.85,
+      "n_24h": 335,
+      "hit_rate_24h": 0.522,
+      "mean_ret_24h": 0.02333,
       "median_ret_24h": 0.00563,
       "both_halves_24h": true,
       "days_24h": 13,
-      "mean_x_24h": 0.00653,
+      "mean_x_24h": 0.00712,
       "days_x_24h": 13,
-      "avg_win_24h": 0.08024,
+      "avg_win_24h": 0.0814,
       "avg_loss_24h": -0.04148,
-      "payoff_24h": 1.935
+      "payoff_24h": 1.963
     },
     "reversion": {
       "span_h_1h": 314.9,
