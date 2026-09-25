@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-25T10:13:43+00:00",
+  "ts": "2026-09-25T10:19:52+00:00",
   "scanned": 132,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "COTIUSDT",
+      "signal": "breakout",
+      "score": 0.7174,
+      "raw_score": 0.76,
+      "weight": 0.944,
+      "price": 0.0167,
+      "why": "trades 11.0x, volume 16.4x, 71% taker-buy, +2.2% in an hour, at 97% of its 24h range",
+      "chg_24h": 0.0916,
+      "vol_surge": 16.37,
+      "chg_1h": 0.022,
+      "market_surge": 3.98,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.40% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.56% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.40% at 24h: market beta, not signal",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 9/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 57,
+    "count": 55,
     "baseline": 26.0,
     "wave": true
   },
@@ -43,19 +59,19 @@
       "avg_win_4h": 0.02074,
       "avg_loss_4h": -0.01693,
       "payoff_4h": 1.225,
-      "span_h_24h": 310.8,
-      "n_eff_24h": 12.95,
-      "n_24h": 725,
-      "hit_rate_24h": 0.532,
-      "mean_ret_24h": 0.01116,
-      "median_ret_24h": 0.00458,
+      "span_h_24h": 311.1,
+      "n_eff_24h": 12.96,
+      "n_24h": 726,
+      "hit_rate_24h": 0.533,
+      "mean_ret_24h": 0.01117,
+      "median_ret_24h": 0.00468,
       "both_halves_24h": true,
       "days_24h": 14,
-      "mean_x_24h": 0.00562,
+      "mean_x_24h": 0.0056,
       "days_x_24h": 14,
-      "avg_win_24h": 0.04993,
+      "avg_win_24h": 0.04984,
       "avg_loss_24h": -0.03809,
-      "payoff_24h": 1.311
+      "payoff_24h": 1.308
     },
     "breakout": {
       "span_h_1h": 334.1,
