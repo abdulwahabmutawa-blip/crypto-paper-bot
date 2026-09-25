@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-25T19:51:51+00:00 · runs 1777 · equity **$938.59** (-6.14%) · cash $0.00 · open 10/10 · round trips 628
+updated 2026-09-25T20:09:37+00:00 · runs 1778 · equity **$936.99** (-6.30%) · cash $0.00 · open 10/10 · round trips 628
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-09-24T20:01 | AMDBUSDT | surge | 629.27 | 631.53 | +0.36% |
-| 2026-09-25T06:41 | BANKUSDT | surge | 0.0353 | 0.0346 | -1.98% |
-| 2026-09-25T13:32 | VTHOUSDT | surge | 0.000782 | 0.000786 | +0.51% |
-| 2026-09-25T16:15 | KORUBUSDT | surge | 21.59 | 21.6 | +0.05% |
-| 2026-09-25T16:51 | SKHYBUSDT | surge | 191.35 | 191.49 | +0.07% |
-| 2026-09-25T17:08 | DODOUSDT | surge | 0.01899 | 0.01875 | -1.26% |
-| 2026-09-25T18:02 | REZUSDT | surge | 0.004321 | 0.004374 | +1.23% |
-| 2026-09-25T18:38 | ZKUSDT | surge | 0.01278 | 0.01272 | -0.47% |
-| 2026-09-25T19:49 | MUBARAKUSDT | surge | 0.05443 | 0.05435 | -0.15% |
+| 2026-09-24T20:01 | AMDBUSDT | surge | 629.27 | 630.14 | +0.14% |
+| 2026-09-25T06:41 | BANKUSDT | surge | 0.0353 | 0.0347 | -1.70% |
+| 2026-09-25T13:32 | VTHOUSDT | surge | 0.000782 | 0.000784 | +0.26% |
+| 2026-09-25T16:15 | KORUBUSDT | surge | 21.59 | 21.53 | -0.28% |
+| 2026-09-25T16:51 | SKHYBUSDT | surge | 191.35 | 191.42 | +0.04% |
+| 2026-09-25T17:08 | DODOUSDT | surge | 0.01899 | 0.01873 | -1.37% |
+| 2026-09-25T18:02 | REZUSDT | surge | 0.004321 | 0.004317 | -0.09% |
+| 2026-09-25T18:38 | ZKUSDT | surge | 0.01278 | 0.01271 | -0.55% |
+| 2026-09-25T19:49 | MUBARAKUSDT | surge | 0.05443 | 0.05457 | +0.26% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
