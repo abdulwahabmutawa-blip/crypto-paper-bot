@@ -1,8 +1,37 @@
 {
-  "ts": "2026-09-26T17:18:10+00:00",
-  "scanned": 119,
+  "ts": "2026-09-26T17:23:42+00:00",
+  "scanned": 120,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "GALAUSDT",
+      "signal": "ignition",
+      "score": 0.6217,
+      "raw_score": 0.6551,
+      "weight": 0.949,
+      "price": 0.002364,
+      "why": "trades 8.0x and volume 6.4x the prior 4h, 61% taker-buy, $98,361 burst \u2014 while price has only moved +3.2%",
+      "chg_24h": 0.1181,
+      "vol_surge": 6.43,
+      "chg_1h": 0.0323,
+      "market_surge": 3.54,
+      "actionable": true
+    },
+    {
+      "symbol": "KITEUSDT",
+      "signal": "breakout",
+      "score": 0.516,
+      "raw_score": 0.553,
+      "weight": 0.933,
+      "price": 0.1452,
+      "why": "trades 4.7x, volume 5.4x, 63% taker-buy, +2.6% in an hour, at 94% of its 24h range",
+      "chg_24h": 0.1109,
+      "vol_surge": 5.37,
+      "chg_1h": 0.0261,
+      "market_surge": 3.41,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +40,7 @@
     "revival": "probation \u2014 8/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 24,
+    "count": 26,
     "baseline": 26.0,
     "wave": false
   },
