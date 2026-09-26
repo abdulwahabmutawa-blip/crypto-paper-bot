@@ -1,24 +1,8 @@
 {
-  "ts": "2026-09-26T00:38:24+00:00",
-  "scanned": 139,
+  "ts": "2026-09-26T00:43:30+00:00",
+  "scanned": 138,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "TUTUSDT",
-      "signal": "ignition",
-      "score": 0.8157,
-      "raw_score": 0.8614,
-      "weight": 0.947,
-      "price": 0.02564,
-      "why": "trades 10.0x and volume 12.3x the prior 4h, 60% taker-buy, $51,160 burst \u2014 while price has only moved -1.5%",
-      "chg_24h": -0.0447,
-      "vol_surge": 12.3,
-      "chg_1h": -0.0154,
-      "market_surge": 0.87,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean +0.60% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.60% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.73% at 24h: market beta, not signal",
@@ -27,23 +11,23 @@
     "revival": "probation \u2014 9/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 22,
+    "count": 24,
     "baseline": 27.0,
     "wave": false
   },
   "scorecard": {
     "ignition": {
-      "span_h_1h": 334.6,
-      "n_eff_1h": 334.57,
-      "n_1h": 776,
-      "hit_rate_1h": 0.421,
-      "mean_ret_1h": 0.0008,
+      "span_h_1h": 334.9,
+      "n_eff_1h": 334.85,
+      "n_1h": 777,
+      "hit_rate_1h": 0.422,
+      "mean_ret_1h": 0.00082,
       "median_ret_1h": 0.0,
       "both_halves_1h": false,
       "days_1h": 14,
-      "mean_x_1h": 0.00063,
+      "mean_x_1h": 0.00064,
       "days_x_1h": 14,
-      "avg_win_1h": 0.01201,
+      "avg_win_1h": 0.012,
       "avg_loss_1h": -0.01084,
       "payoff_1h": 1.107,
       "span_h_4h": 329.6,
