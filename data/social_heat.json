@@ -1,18 +1,19 @@
 {
-  "ts": "2026-09-26T17:51:25+00:00",
+  "ts": "2026-09-26T17:57:25+00:00",
   "sources": {
     "coingecko": [
       "TRUMP",
-      "PENGU",
       "QNT",
+      "PENGU",
       "NEAR",
-      "BTC",
       "ONDO",
       "FOGO",
       "SUI",
+      "BTC",
+      "WLD",
+      "ZEC",
       "TAO",
-      "PUMP",
-      "LINK"
+      "AERO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,24 +23,14 @@
       "DASH",
       "RUNE",
       "FIL",
-      "MUBARAK",
       "TAO",
+      "MUBARAK",
       "PUMP"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "PUMP",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 0.88
-    },
     {
       "symbol": "TAO",
       "surfaces": 2,
@@ -49,6 +40,24 @@
       ],
       "funding": 5e-05,
       "long_short": 2.04
+    },
+    {
+      "symbol": "WLD",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.14
+    },
+    {
+      "symbol": "AERO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.000163
     },
     {
       "symbol": "BTC",
@@ -83,14 +92,6 @@
       "funding": 5e-05
     },
     {
-      "symbol": "LINK",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 7.1e-05
-    },
-    {
       "symbol": "MUBARAK",
       "surfaces": 1,
       "sources": [
@@ -104,7 +105,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.7e-05
+      "funding": 8.1e-05
     },
     {
       "symbol": "ONDO",
@@ -123,6 +124,14 @@
       "funding": 5e-05
     },
     {
+      "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "QNT",
       "surfaces": 1,
       "sources": [
@@ -136,7 +145,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.006001
+      "funding": -0.006076
     },
     {
       "symbol": "RUNE",
@@ -152,7 +161,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.7e-05
+      "funding": 0.0001
     },
     {
       "symbol": "TRUMP",
@@ -163,10 +172,10 @@
       "funding": 5e-05
     },
     {
-      "symbol": "WLD",
+      "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
       "funding": 0.0001
     }
