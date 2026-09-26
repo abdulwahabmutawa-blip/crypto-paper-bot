@@ -1,18 +1,19 @@
 {
-  "ts": "2026-09-26T06:09:26+00:00",
+  "ts": "2026-09-26T06:14:56+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
-      "ONDO",
-      "PHA",
       "NEAR",
       "ENA",
+      "ONDO",
+      "PHA",
       "TAO",
       "AERO",
       "PUMP",
-      "ZEC",
       "SUI",
-      "SOL"
+      "ZEC",
+      "QNT",
+      "BTC"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -24,7 +25,7 @@
       "SEI",
       "SUI",
       "WLD",
-      "NEAR"
+      "SAGA"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -39,16 +40,6 @@
       ],
       "funding": 5e-05,
       "long_short": 1.75
-    },
-    {
-      "symbol": "NEAR",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": -1e-05,
-      "long_short": 1.58
     },
     {
       "symbol": "PHA",
@@ -89,12 +80,28 @@
       "funding": 5e-05
     },
     {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5.4e-05
+    },
+    {
       "symbol": "MUBARAK",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "NEAR",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -1e-05
     },
     {
       "symbol": "ONDO",
@@ -113,20 +120,28 @@
       "funding": 5e-05
     },
     {
+      "symbol": "QNT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 3.7e-05
+    },
+    {
+      "symbol": "SAGA",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "SEI",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "SOL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -1.9e-05
     },
     {
       "symbol": "TAO",
