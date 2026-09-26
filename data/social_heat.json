@@ -1,20 +1,20 @@
 {
-  "ts": "2026-09-26T04:03:10+00:00",
+  "ts": "2026-09-26T04:08:23+00:00",
   "sources": {
     "coingecko": [
-      "PENGU",
-      "PHA",
       "NEAR",
+      "PHA",
+      "PENGU",
       "ENA",
-      "AERO",
       "BTC",
+      "AERO",
       "ONDO",
-      "ZEC",
-      "XPL",
-      "UNI",
       "AAVE",
+      "ZEC",
       "SUI",
-      "SOL"
+      "XPL",
+      "SOL",
+      "PUMP"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,8 +22,8 @@
       "PHA",
       "MUBARAK",
       "SAGA",
-      "QI",
       "ENA",
+      "QI",
       "SEI",
       "SUI",
       "PUMP"
@@ -51,6 +51,16 @@
       ],
       "funding": 5e-05,
       "long_short": 0.71
+    },
+    {
+      "symbol": "PUMP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 0.77
     },
     {
       "symbol": "SUI",
@@ -84,7 +94,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.1e-05
+      "funding": 3.3e-05
     },
     {
       "symbol": "MUBARAK",
@@ -119,14 +129,6 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PUMP",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "QI",
       "surfaces": 1,
       "sources": [
@@ -155,15 +157,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.8e-05
-    },
-    {
-      "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": 1.7e-05
     },
     {
       "symbol": "XPL",
