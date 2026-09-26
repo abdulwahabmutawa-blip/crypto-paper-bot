@@ -1,37 +1,8 @@
 {
-  "ts": "2026-09-26T11:09:54+00:00",
+  "ts": "2026-09-26T11:15:25+00:00",
   "scanned": 135,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "KMNOUSDT",
-      "signal": "ignition",
-      "score": 0.8027,
-      "raw_score": 0.8494,
-      "weight": 0.945,
-      "price": 0.04504,
-      "why": "trades 13.2x and volume 20.0x the prior 4h, 65% taker-buy, $166,334 burst \u2014 while price has only moved +2.5%",
-      "chg_24h": 0.1375,
-      "vol_surge": 20.0,
-      "chg_1h": 0.0248,
-      "market_surge": 9.19,
-      "actionable": true
-    },
-    {
-      "symbol": "KMNOUSDT",
-      "signal": "breakout",
-      "score": 0.7097,
-      "raw_score": 0.7566,
-      "weight": 0.938,
-      "price": 0.04504,
-      "why": "trades 13.2x, volume 20.0x, 65% taker-buy, +2.5% in an hour, at 87% of its 24h range",
-      "chg_24h": 0.1375,
-      "vol_surge": 20.0,
-      "chg_1h": 0.0248,
-      "market_surge": 9.19,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -40,7 +11,7 @@
     "revival": "probation \u2014 8/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 24,
+    "count": 22,
     "baseline": 26.0,
     "wave": false
   },
@@ -72,19 +43,19 @@
       "avg_win_4h": 0.02211,
       "avg_loss_4h": -0.01679,
       "payoff_4h": 1.317,
-      "span_h_24h": 311.6,
-      "n_eff_24h": 12.98,
-      "n_24h": 742,
-      "hit_rate_24h": 0.549,
-      "mean_ret_24h": 0.01506,
-      "median_ret_24h": 0.00682,
+      "span_h_24h": 311.9,
+      "n_eff_24h": 12.99,
+      "n_24h": 745,
+      "hit_rate_24h": 0.548,
+      "mean_ret_24h": 0.01498,
+      "median_ret_24h": 0.00672,
       "both_halves_24h": true,
       "days_24h": 14,
-      "mean_x_24h": 0.00908,
+      "mean_x_24h": 0.00924,
       "days_x_24h": 14,
-      "avg_win_24h": 0.0541,
-      "avg_loss_24h": -0.03747,
-      "payoff_24h": 1.444
+      "avg_win_24h": 0.054,
+      "avg_loss_24h": -0.03731,
+      "payoff_24h": 1.447
     },
     "breakout": {
       "span_h_1h": 331.9,
@@ -113,19 +84,19 @@
       "avg_win_4h": 0.03649,
       "avg_loss_4h": -0.0264,
       "payoff_4h": 1.382,
-      "span_h_24h": 309.1,
-      "n_eff_24h": 12.88,
-      "n_24h": 349,
-      "hit_rate_24h": 0.539,
-      "mean_ret_24h": 0.02606,
-      "median_ret_24h": 0.00674,
+      "span_h_24h": 309.8,
+      "n_eff_24h": 12.91,
+      "n_24h": 353,
+      "hit_rate_24h": 0.533,
+      "mean_ret_24h": 0.02545,
+      "median_ret_24h": 0.0065,
       "both_halves_24h": true,
       "days_24h": 14,
-      "mean_x_24h": 0.00972,
+      "mean_x_24h": 0.00881,
       "days_x_24h": 14,
       "avg_win_24h": 0.08183,
-      "avg_loss_24h": -0.04034,
-      "payoff_24h": 2.029
+      "avg_loss_24h": -0.04003,
+      "payoff_24h": 2.044
     },
     "reversion": {
       "span_h_1h": 318.1,
