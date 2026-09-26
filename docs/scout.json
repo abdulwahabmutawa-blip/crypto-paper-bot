@@ -1,37 +1,8 @@
 {
-  "ts": "2026-09-26T04:51:33+00:00",
-  "scanned": 137,
+  "ts": "2026-09-26T04:56:53+00:00",
+  "scanned": 138,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "VETUSDT",
-      "signal": "breakout",
-      "score": 0.7817,
-      "raw_score": 0.829,
-      "weight": 0.943,
-      "price": 0.009783,
-      "why": "trades 18.7x, volume 27.2x, 86% taker-buy, +3.4% in an hour, at 104% of its 24h range",
-      "chg_24h": 0.0603,
-      "vol_surge": 27.19,
-      "chg_1h": 0.0344,
-      "market_surge": 4.6,
-      "actionable": true
-    },
-    {
-      "symbol": "BABYUSDT",
-      "signal": "ignition",
-      "score": 0.6315,
-      "raw_score": 0.6661,
-      "weight": 0.948,
-      "price": 0.01336,
-      "why": "trades 4.1x and volume 10.4x the prior 4h, 66% taker-buy, $243,536 burst \u2014 while price has only moved +0.6%",
-      "chg_24h": 0.0559,
-      "vol_surge": 10.36,
-      "chg_1h": 0.006,
-      "market_surge": 0.85,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -40,7 +11,7 @@
     "revival": "probation \u2014 9/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 31,
+    "count": 30,
     "baseline": 27.0,
     "wave": false
   },
