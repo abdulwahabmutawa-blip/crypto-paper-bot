@@ -1,20 +1,35 @@
 {
-  "ts": "2026-09-26T01:21:45+00:00",
-  "scanned": 136,
+  "ts": "2026-09-26T01:27:02+00:00",
+  "scanned": 138,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "DOTUSDT",
+      "symbol": "ADAUSDT",
+      "signal": "ignition",
+      "score": 0.5978,
+      "raw_score": 0.6313,
+      "weight": 0.947,
+      "price": 0.2589,
+      "why": "trades 4.8x and volume 7.0x the prior 4h, 71% taker-buy, $1,032,159 burst \u2014 while price has only moved +0.5%",
+      "chg_24h": 0.0338,
+      "vol_surge": 6.99,
+      "chg_1h": 0.005,
+      "market_surge": 1.12,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.79% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "VTHOUSDT",
       "signal": "breakout",
-      "score": 0.6405,
-      "raw_score": 0.6777,
+      "score": 0.5483,
+      "raw_score": 0.5802,
       "weight": 0.945,
-      "price": 1.249,
-      "why": "trades 5.0x, volume 9.7x, 73% taker-buy, +3.0% in an hour, at 97% of its 24h range",
-      "chg_24h": 0.0775,
-      "vol_surge": 9.67,
-      "chg_1h": 0.0297,
-      "market_surge": 6.91,
+      "price": 0.000812,
+      "why": "trades 4.2x, volume 6.6x, 69% taker-buy, +2.5% in an hour, at 99% of its 24h range",
+      "chg_24h": 0.0898,
+      "vol_surge": 6.65,
+      "chg_1h": 0.0253,
+      "market_surge": 0.03,
       "actionable": true
     }
   ],
@@ -26,7 +41,7 @@
     "revival": "probation \u2014 9/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 27,
+    "count": 25,
     "baseline": 27.0,
     "wave": false
   },
