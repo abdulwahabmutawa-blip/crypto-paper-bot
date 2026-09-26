@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-26T14:30:17+00:00",
+  "ts": "2026-09-26T14:36:19+00:00",
   "sources": {
     "coingecko": [
       "SUI",
@@ -7,12 +7,12 @@
       "TRUMP",
       "PENGU",
       "TAO",
+      "ONDO",
       "AERO",
       "ENA",
-      "ONDO",
-      "ZEC",
-      "LINK",
-      "ARB"
+      "SEI",
+      "ARB",
+      "MORPHO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -23,8 +23,8 @@
       "ENA",
       "WLD",
       "XPL",
-      "PUMP",
-      "BABY"
+      "BABY",
+      "PUMP"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -54,7 +54,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.1e-05
+      "funding": -5e-06
     },
     {
       "symbol": "BABY",
@@ -73,12 +73,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "LINK",
+      "symbol": "MORPHO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 7.1e-05
+      "funding": 5e-05
     },
     {
       "symbol": "MUBARAK",
@@ -126,7 +126,15 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.005228
+      "funding": -0.005126
+    },
+    {
+      "symbol": "SEI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "SUI",
@@ -134,7 +142,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.2e-05
+      "funding": 5.7e-05
     },
     {
       "symbol": "TAO",
@@ -167,14 +175,6 @@
         "movers"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
