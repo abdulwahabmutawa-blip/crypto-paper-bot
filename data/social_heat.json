@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-26T04:24:29+00:00",
+  "ts": "2026-09-26T04:29:37+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
@@ -24,8 +24,8 @@
       "ENA",
       "SEI",
       "SUI",
-      "PUMP",
-      "WLD"
+      "QI",
+      "PUMP"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -117,7 +117,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -5e-06
+      "funding": -7e-06
     },
     {
       "symbol": "ONDO",
@@ -136,6 +136,13 @@
       "funding": 5e-05
     },
     {
+      "symbol": "QI",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
+    },
+    {
       "symbol": "SAGA",
       "surfaces": 1,
       "sources": [
@@ -145,14 +152,6 @@
     },
     {
       "symbol": "SEI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "WLD",
       "surfaces": 1,
       "sources": [
         "movers"
