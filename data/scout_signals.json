@@ -1,37 +1,8 @@
 {
-  "ts": "2026-09-26T11:26:50+00:00",
-  "scanned": 133,
+  "ts": "2026-09-26T11:32:32+00:00",
+  "scanned": 135,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "VTHOUSDT",
-      "signal": "ignition",
-      "score": 0.8021,
-      "raw_score": 0.847,
-      "weight": 0.947,
-      "price": 0.000814,
-      "why": "trades 8.5x and volume 57.6x the prior 4h, 75% taker-buy, $1,683,793 burst \u2014 while price has only moved +1.2%",
-      "chg_24h": 0.064,
-      "vol_surge": 57.62,
-      "chg_1h": 0.0124,
-      "market_surge": 3.47,
-      "actionable": true
-    },
-    {
-      "symbol": "SENTUSDT",
-      "signal": "ignition",
-      "score": 0.7448,
-      "raw_score": 0.7865,
-      "weight": 0.947,
-      "price": 0.02388,
-      "why": "trades 6.7x and volume 14.2x the prior 4h, 73% taker-buy, $82,191 burst \u2014 while price has only moved +0.5%",
-      "chg_24h": 0.0742,
-      "vol_surge": 14.23,
-      "chg_1h": 0.0055,
-      "market_surge": 7.31,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -40,7 +11,7 @@
     "revival": "probation \u2014 8/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 21,
+    "count": 25,
     "baseline": 26.0,
     "wave": false
   },
