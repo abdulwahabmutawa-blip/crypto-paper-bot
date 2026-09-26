@@ -1,8 +1,37 @@
 {
-  "ts": "2026-09-26T05:58:51+00:00",
-  "scanned": 140,
+  "ts": "2026-09-26T06:04:22+00:00",
+  "scanned": 139,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "QNTUSDT",
+      "signal": "breakout",
+      "score": 0.7225,
+      "raw_score": 0.7678,
+      "weight": 0.941,
+      "price": 102.98,
+      "why": "trades 6.2x, volume 13.9x, 82% taker-buy, +3.9% in an hour, at 86% of its 24h range",
+      "chg_24h": 0.0395,
+      "vol_surge": 13.86,
+      "chg_1h": 0.0387,
+      "market_surge": 2.9,
+      "actionable": true
+    },
+    {
+      "symbol": "QNTUSDT",
+      "signal": "ignition",
+      "score": 0.6698,
+      "raw_score": 0.7065,
+      "weight": 0.948,
+      "price": 102.98,
+      "why": "trades 6.2x and volume 13.9x the prior 4h, 82% taker-buy, $218,091 burst \u2014 while price has only moved +3.9%",
+      "chg_24h": 0.0395,
+      "vol_surge": 13.86,
+      "chg_1h": 0.0387,
+      "market_surge": 2.9,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
