@@ -1,8 +1,23 @@
 {
-  "ts": "2026-09-26T10:31:11+00:00",
-  "scanned": 137,
+  "ts": "2026-09-26T10:36:41+00:00",
+  "scanned": 135,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ETHFIUSDT",
+      "signal": "breakout",
+      "score": 0.5531,
+      "raw_score": 0.5909,
+      "weight": 0.936,
+      "price": 0.7312,
+      "why": "trades 4.5x, volume 6.6x, 67% taker-buy, +2.7% in an hour, at 94% of its 24h range",
+      "chg_24h": 0.0486,
+      "vol_surge": 6.58,
+      "chg_1h": 0.0267,
+      "market_surge": 1.57,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 8/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 23,
+    "count": 24,
     "baseline": 26.0,
     "wave": false
   },
@@ -84,19 +99,19 @@
       "avg_win_4h": 0.03668,
       "avg_loss_4h": -0.0264,
       "payoff_4h": 1.389,
-      "span_h_24h": 308.9,
-      "n_eff_24h": 12.87,
-      "n_24h": 348,
-      "hit_rate_24h": 0.537,
-      "mean_ret_24h": 0.0261,
+      "span_h_24h": 309.1,
+      "n_eff_24h": 12.88,
+      "n_24h": 349,
+      "hit_rate_24h": 0.539,
+      "mean_ret_24h": 0.02606,
       "median_ret_24h": 0.00674,
       "both_halves_24h": true,
       "days_24h": 14,
-      "mean_x_24h": 0.00988,
+      "mean_x_24h": 0.00972,
       "days_x_24h": 14,
-      "avg_win_24h": 0.08221,
+      "avg_win_24h": 0.08183,
       "avg_loss_24h": -0.04034,
-      "payoff_24h": 2.038
+      "payoff_24h": 2.029
     },
     "reversion": {
       "span_h_1h": 318.1,
