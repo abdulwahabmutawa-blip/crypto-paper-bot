@@ -1,8 +1,23 @@
 {
-  "ts": "2026-09-26T15:14:52+00:00",
-  "scanned": 120,
+  "ts": "2026-09-26T15:20:41+00:00",
+  "scanned": 122,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ATOMUSDT",
+      "signal": "breakout",
+      "score": 0.6315,
+      "raw_score": 0.6761,
+      "weight": 0.934,
+      "price": 1.873,
+      "why": "trades 8.8x, volume 6.2x, 60% taker-buy, +2.0% in an hour, at 98% of its 24h range",
+      "chg_24h": 0.0431,
+      "vol_surge": 6.17,
+      "chg_1h": 0.0202,
+      "market_surge": 2.36,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 8/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 26,
+    "count": 30,
     "baseline": 26.0,
     "wave": false
   },
