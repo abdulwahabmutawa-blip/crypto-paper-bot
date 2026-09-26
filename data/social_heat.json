@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-26T06:25:46+00:00",
+  "ts": "2026-09-26T06:31:40+00:00",
   "sources": {
     "coingecko": [
       "PHA",
@@ -23,8 +23,8 @@
       "PUMP",
       "SUI",
       "SEI",
-      "SAGA",
-      "WLD"
+      "BABY",
+      "SAGA"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -61,20 +61,18 @@
       "long_short": 0.75
     },
     {
-      "symbol": "WLD",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.68
-    },
-    {
       "symbol": "AERO",
       "surfaces": 1,
       "sources": [
         "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "BABY",
+      "surfaces": 1,
+      "sources": [
+        "movers"
       ],
       "funding": 5e-05
     },
@@ -84,7 +82,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -6.1e-05
+      "funding": -6.3e-05
     },
     {
       "symbol": "MUBARAK",
@@ -100,7 +98,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -9e-06
+      "funding": -8e-06
     },
     {
       "symbol": "ONDO",
@@ -151,12 +149,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "WLD",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 8.6e-05
+      "funding": 8.5e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
