@@ -1,23 +1,8 @@
 {
-  "ts": "2026-09-26T09:36:45+00:00",
-  "scanned": 140,
+  "ts": "2026-09-26T09:41:52+00:00",
+  "scanned": 137,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "DODOUSDT",
-      "signal": "ignition",
-      "score": 0.7259,
-      "raw_score": 0.7682,
-      "weight": 0.945,
-      "price": 0.01847,
-      "why": "trades 5.4x and volume 391.5x the prior 4h, 99% taker-buy, $453,853 burst \u2014 while price has only moved -1.8%",
-      "chg_24h": 0.0022,
-      "vol_surge": 391.51,
-      "chg_1h": -0.0176,
-      "market_surge": 42.46,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -26,24 +11,24 @@
     "revival": "probation \u2014 8/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 24,
+    "count": 23,
     "baseline": 26.0,
     "wave": false
   },
   "scorecard": {
     "ignition": {
-      "span_h_1h": 334.5,
-      "n_eff_1h": 334.51,
-      "n_1h": 793,
+      "span_h_1h": 334.8,
+      "n_eff_1h": 334.79,
+      "n_1h": 794,
       "hit_rate_1h": 0.416,
-      "mean_ret_1h": 0.00074,
+      "mean_ret_1h": 0.00072,
       "median_ret_1h": 0.0,
       "both_halves_1h": false,
       "days_1h": 15,
-      "mean_x_1h": 0.00033,
+      "mean_x_1h": 0.00031,
       "days_x_1h": 15,
       "avg_win_1h": 0.01226,
-      "avg_loss_1h": -0.0108,
+      "avg_loss_1h": -0.01081,
       "payoff_1h": 1.134,
       "span_h_4h": 331.7,
       "n_eff_4h": 82.93,
@@ -58,19 +43,19 @@
       "avg_win_4h": 0.02198,
       "avg_loss_4h": -0.01677,
       "payoff_4h": 1.311,
-      "span_h_24h": 310.4,
-      "n_eff_24h": 12.94,
-      "n_24h": 736,
+      "span_h_24h": 311.8,
+      "n_eff_24h": 12.99,
+      "n_24h": 737,
       "hit_rate_24h": 0.548,
-      "mean_ret_24h": 0.01452,
+      "mean_ret_24h": 0.01474,
       "median_ret_24h": 0.00672,
       "both_halves_24h": true,
       "days_24h": 14,
-      "mean_x_24h": 0.00895,
+      "mean_x_24h": 0.0092,
       "days_x_24h": 14,
-      "avg_win_24h": 0.05347,
+      "avg_win_24h": 0.05376,
       "avg_loss_24h": -0.03773,
-      "payoff_24h": 1.417
+      "payoff_24h": 1.425
     },
     "breakout": {
       "span_h_1h": 331.1,
