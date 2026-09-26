@@ -1,20 +1,62 @@
 {
-  "ts": "2026-09-26T14:52:33+00:00",
-  "scanned": 122,
+  "ts": "2026-09-26T14:58:09+00:00",
+  "scanned": 123,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "ZROUSDT",
+      "symbol": "0GUSDT",
+      "signal": "ignition",
+      "score": 0.8162,
+      "raw_score": 0.8628,
+      "weight": 0.946,
+      "price": 0.2693,
+      "why": "trades 18.9x and volume 31.0x the prior 4h, 65% taker-buy, $147,705 burst \u2014 while price has only moved +2.0%",
+      "chg_24h": 0.0682,
+      "vol_surge": 31.04,
+      "chg_1h": 0.0201,
+      "market_surge": 15.29,
+      "actionable": true
+    },
+    {
+      "symbol": "\u725b\u6765USDT",
       "signal": "breakout",
-      "score": 0.7458,
-      "raw_score": 0.7994,
+      "score": 0.6229,
+      "raw_score": 0.6676,
       "weight": 0.933,
-      "price": 1.643,
-      "why": "trades 22.0x, volume 27.5x, 60% taker-buy, +4.1% in an hour, at 89% of its 24h range",
-      "chg_24h": 0.0662,
-      "vol_surge": 27.46,
-      "chg_1h": 0.0412,
-      "market_surge": 5.33,
+      "price": 0.10615,
+      "why": "trades 5.0x, volume 10.0x, 61% taker-buy, +3.4% in an hour, at 89% of its 24h range",
+      "chg_24h": 0.0355,
+      "vol_surge": 9.95,
+      "chg_1h": 0.0344,
+      "market_surge": 9.16,
+      "actionable": true
+    },
+    {
+      "symbol": "\u725b\u6765USDT",
+      "signal": "ignition",
+      "score": 0.5828,
+      "raw_score": 0.6161,
+      "weight": 0.946,
+      "price": 0.10615,
+      "why": "trades 5.0x and volume 10.0x the prior 4h, 61% taker-buy, $145,677 burst \u2014 while price has only moved +3.4%",
+      "chg_24h": 0.0355,
+      "vol_surge": 9.95,
+      "chg_1h": 0.0344,
+      "market_surge": 9.16,
+      "actionable": true
+    },
+    {
+      "symbol": "DOTUSDT",
+      "signal": "breakout",
+      "score": 0.5381,
+      "raw_score": 0.5767,
+      "weight": 0.933,
+      "price": 1.255,
+      "why": "trades 5.5x, volume 5.7x, 64% taker-buy, +2.0% in an hour, at 100% of its 24h range",
+      "chg_24h": 0.0575,
+      "vol_surge": 5.67,
+      "chg_1h": 0.0203,
+      "market_surge": 1.56,
       "actionable": true
     }
   ],
@@ -26,7 +68,7 @@
     "revival": "probation \u2014 8/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 35,
+    "count": 30,
     "baseline": 26.0,
     "wave": false
   },
