@@ -1,30 +1,31 @@
 {
-  "ts": "2026-09-26T04:29:37+00:00",
+  "ts": "2026-09-26T04:34:47+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
       "ENA",
-      "BTC",
-      "PHA",
-      "AERO",
-      "PENGU",
       "ONDO",
+      "AERO",
+      "PHA",
+      "PENGU",
+      "BTC",
       "ZEC",
+      "SEI",
       "SUI",
-      "PUMP",
+      "MET",
       "AAVE",
-      "MET"
+      "PUMP"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "PHA",
-      "SAGA",
       "MUBARAK",
       "ENA",
       "SEI",
+      "SAGA",
       "SUI",
-      "QI",
+      "WLD",
       "PUMP"
     ],
     "watcher": [],
@@ -62,6 +63,16 @@
       "long_short": 0.77
     },
     {
+      "symbol": "SEI",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.32
+    },
+    {
       "symbol": "SUI",
       "surfaces": 2,
       "sources": [
@@ -93,7 +104,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.5e-05
+      "funding": 3.7e-05
     },
     {
       "symbol": "MET",
@@ -117,7 +128,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -7e-06
+      "funding": -8e-06
     },
     {
       "symbol": "ONDO",
@@ -136,13 +147,6 @@
       "funding": 5e-05
     },
     {
-      "symbol": "QI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
-    },
-    {
       "symbol": "SAGA",
       "surfaces": 1,
       "sources": [
@@ -151,7 +155,7 @@
       "funding": 5e-05
     },
     {
-      "symbol": "SEI",
+      "symbol": "WLD",
       "surfaces": 1,
       "sources": [
         "movers"
