@@ -1,37 +1,8 @@
 {
-  "ts": "2026-09-26T16:16:22+00:00",
-  "scanned": 121,
+  "ts": "2026-09-26T16:21:50+00:00",
+  "scanned": 120,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "SUSDT",
-      "signal": "ignition",
-      "score": 0.8813,
-      "raw_score": 0.9276,
-      "weight": 0.95,
-      "price": 0.04114,
-      "why": "trades 17.9x and volume 35.7x the prior 4h, 74% taker-buy, $162,242 burst \u2014 while price has only moved +0.3%",
-      "chg_24h": 0.0015,
-      "vol_surge": 35.7,
-      "chg_1h": 0.0034,
-      "market_surge": 0.44,
-      "actionable": true
-    },
-    {
-      "symbol": "SHIBUSDT",
-      "signal": "ignition",
-      "score": 0.6122,
-      "raw_score": 0.6444,
-      "weight": 0.95,
-      "price": 6.02e-06,
-      "why": "trades 6.3x and volume 5.9x the prior 4h, 62% taker-buy, $113,632 burst \u2014 while price has only moved +0.3%",
-      "chg_24h": 0.0238,
-      "vol_surge": 5.9,
-      "chg_1h": 0.0033,
-      "market_surge": 5.22,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -40,7 +11,7 @@
     "revival": "probation \u2014 8/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 29,
+    "count": 26,
     "baseline": 26.0,
     "wave": false
   },
@@ -87,19 +58,19 @@
       "payoff_24h": 1.448
     },
     "breakout": {
-      "span_h_1h": 333.6,
-      "n_eff_1h": 333.56,
-      "n_1h": 394,
-      "hit_rate_1h": 0.426,
-      "mean_ret_1h": 0.0017,
+      "span_h_1h": 333.7,
+      "n_eff_1h": 333.74,
+      "n_1h": 395,
+      "hit_rate_1h": 0.425,
+      "mean_ret_1h": 0.00169,
       "median_ret_1h": -0.00243,
       "both_halves_1h": true,
       "days_1h": 15,
-      "mean_x_1h": -0.00117,
+      "mean_x_1h": -0.00119,
       "days_x_1h": 15,
       "avg_win_1h": 0.02271,
-      "avg_loss_1h": -0.01657,
-      "payoff_1h": 1.371,
+      "avg_loss_1h": -0.01649,
+      "payoff_1h": 1.377,
       "span_h_4h": 330.6,
       "n_eff_4h": 82.65,
       "n_4h": 388,
