@@ -1,8 +1,23 @@
 {
-  "ts": "2026-09-26T10:58:45+00:00",
-  "scanned": 135,
+  "ts": "2026-09-26T11:04:32+00:00",
+  "scanned": 138,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "GALAUSDT",
+      "signal": "breakout",
+      "score": 0.5541,
+      "raw_score": 0.592,
+      "weight": 0.936,
+      "price": 0.002257,
+      "why": "trades 4.3x, volume 5.8x, 80% taker-buy, +2.9% in an hour, at 99% of its 24h range",
+      "chg_24h": 0.0809,
+      "vol_surge": 5.75,
+      "chg_1h": 0.0292,
+      "market_surge": 3.8,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 8/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 24,
+    "count": 23,
     "baseline": 26.0,
     "wave": false
   },
@@ -43,19 +58,19 @@
       "avg_win_4h": 0.02211,
       "avg_loss_4h": -0.01679,
       "payoff_4h": 1.317,
-      "span_h_24h": 310.8,
-      "n_eff_24h": 12.95,
-      "n_24h": 740,
+      "span_h_24h": 311.6,
+      "n_eff_24h": 12.98,
+      "n_24h": 742,
       "hit_rate_24h": 0.549,
-      "mean_ret_24h": 0.01502,
+      "mean_ret_24h": 0.01506,
       "median_ret_24h": 0.00682,
       "both_halves_24h": true,
       "days_24h": 14,
-      "mean_x_24h": 0.00913,
+      "mean_x_24h": 0.00908,
       "days_x_24h": 14,
-      "avg_win_24h": 0.05407,
-      "avg_loss_24h": -0.03756,
-      "payoff_24h": 1.44
+      "avg_win_24h": 0.0541,
+      "avg_loss_24h": -0.03747,
+      "payoff_24h": 1.444
     },
     "breakout": {
       "span_h_1h": 331.9,
