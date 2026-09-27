@@ -1,23 +1,8 @@
 {
-  "ts": "2026-09-27T17:54:31+00:00",
-  "scanned": 116,
+  "ts": "2026-09-27T18:00:24+00:00",
+  "scanned": 118,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "VTHOUSDT",
-      "signal": "ignition",
-      "score": 0.7935,
-      "raw_score": 0.8451,
-      "weight": 0.939,
-      "price": 0.000777,
-      "why": "trades 7.1x and volume 38.8x the prior 4h, 91% taker-buy, $654,862 burst \u2014 while price has only moved +0.6%",
-      "chg_24h": -0.0501,
-      "vol_surge": 38.85,
-      "chg_1h": 0.0065,
-      "market_surge": 1.62,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -26,7 +11,7 @@
     "revival": "probation \u2014 8/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 11,
     "baseline": 22.0,
     "wave": false
   },
