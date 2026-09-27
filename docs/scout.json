@@ -1,8 +1,23 @@
 {
-  "ts": "2026-09-27T01:09:22+00:00",
+  "ts": "2026-09-27T01:15:21+00:00",
   "scanned": 125,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "CRCLBUSDT",
+      "signal": "ignition",
+      "score": 0.7444,
+      "raw_score": 0.7836,
+      "weight": 0.95,
+      "price": 89.0,
+      "why": "trades 4.8x and volume 15.9x the prior 4h, 97% taker-buy, $134,295 burst \u2014 while price has only moved -0.0%",
+      "chg_24h": 0.0166,
+      "vol_surge": 15.92,
+      "chg_1h": -0.0004,
+      "market_surge": 2.08,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "benched \u2014 BTC-excess day mean +0.77% at 24h: market beta, not signal",
