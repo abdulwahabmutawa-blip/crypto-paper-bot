@@ -1,17 +1,17 @@
 {
-  "ts": "2026-09-27T22:20:27+00:00",
+  "ts": "2026-09-27T22:26:26+00:00",
   "sources": {
     "coingecko": [
       "QNT",
-      "NEAR",
       "TRUMP",
-      "PUMP",
+      "NEAR",
       "PENGU",
-      "RAY",
+      "PUMP",
       "ZEC",
+      "RAY",
+      "ONDO",
       "WLD",
-      "TAO",
-      "LINK"
+      "HYPE"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -38,6 +38,16 @@
       ],
       "funding": 0.0001,
       "long_short": 1.59
+    },
+    {
+      "symbol": "ONDO",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 2.01
     },
     {
       "symbol": "PUMP",
@@ -83,23 +93,15 @@
       "sources": [
         "movers"
       ],
-      "funding": 7.9e-05
+      "funding": 8e-05
     },
     {
-      "symbol": "LINK",
+      "symbol": "HYPE",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 3.8e-05
-    },
-    {
-      "symbol": "ONDO",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
+      "funding": -3.3e-05
     },
     {
       "symbol": "PENGU",
@@ -124,14 +126,6 @@
         "movers"
       ],
       "funding": 2.5e-05
-    },
-    {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "TRUMP",
