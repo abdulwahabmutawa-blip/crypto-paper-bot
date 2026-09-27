@@ -1,17 +1,18 @@
 {
-  "ts": "2026-09-27T21:40:27+00:00",
+  "ts": "2026-09-27T21:45:47+00:00",
   "sources": {
     "coingecko": [
       "QNT",
       "TRUMP",
+      "PUMP",
       "NEAR",
       "PENGU",
-      "PUMP",
-      "SUI",
       "RAY",
-      "SOL",
       "ENA",
-      "HBAR"
+      "TAO",
+      "GRT",
+      "HYPE",
+      "LINK"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -23,12 +24,22 @@
       "WLD",
       "ONDO",
       "TAO",
-      "GRAM"
+      "ENA"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "ENA",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.81
+    },
     {
       "symbol": "NEAR",
       "surfaces": 2,
@@ -60,38 +71,38 @@
       "long_short": 0.63
     },
     {
-      "symbol": "SUI",
+      "symbol": "TAO",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 3.8e-05,
-      "long_short": 2.39
+      "funding": 5e-05,
+      "long_short": 2.06
     },
     {
-      "symbol": "ENA",
+      "symbol": "GRT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": -0.000238
     },
     {
-      "symbol": "GRAM",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.000115
-    },
-    {
-      "symbol": "HBAR",
+      "symbol": "HYPE",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0001
+      "funding": -3e-05
+    },
+    {
+      "symbol": "LINK",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 2.9e-05
     },
     {
       "symbol": "ONDO",
@@ -118,20 +129,12 @@
       "funding": 0.0
     },
     {
-      "symbol": "SOL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -2.8e-05
-    },
-    {
-      "symbol": "TAO",
+      "symbol": "SUI",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 5e-05
+      "funding": 4.1e-05
     },
     {
       "symbol": "TRUMP",
