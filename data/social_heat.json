@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-27T19:48:36+00:00",
+  "ts": "2026-09-27T19:53:58+00:00",
   "sources": {
     "coingecko": [
       "QNT",
@@ -24,7 +24,7 @@
       "WLD",
       "ENA",
       "GRAM",
-      "ZEC"
+      "ONDO"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -49,6 +49,16 @@
       ],
       "funding": 0.0001,
       "long_short": 1.64
+    },
+    {
+      "symbol": "ONDO",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.96
     },
     {
       "symbol": "PUMP",
@@ -77,8 +87,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 9.5e-05,
-      "long_short": 2.41
+      "funding": 9e-05
     },
     {
       "symbol": "WLD",
@@ -95,7 +104,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 6.5e-05
+      "funding": 5.9e-05
     },
     {
       "symbol": "HYPE",
@@ -104,14 +113,6 @@
         "coingecko"
       ],
       "funding": -1.7e-05
-    },
-    {
-      "symbol": "ONDO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "RENDER",
@@ -136,14 +137,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
