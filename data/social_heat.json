@@ -1,18 +1,18 @@
 {
-  "ts": "2026-09-27T06:40:38+00:00",
+  "ts": "2026-09-27T06:46:29+00:00",
   "sources": {
     "coingecko": [
       "QNT",
       "NEAR",
       "ZEC",
-      "PENGU",
       "TAO",
-      "PHA",
+      "PENGU",
+      "ONDO",
       "SUI",
       "ENA",
-      "AERO",
       "LINK",
-      "WLD"
+      "PLUME",
+      "PHA"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,8 +20,8 @@
       "QNT",
       "RUNE",
       "MARSCOIN",
-      "DASH",
       "WLD",
+      "DASH",
       "NEAR",
       "GRAM",
       "ZEC"
@@ -47,18 +47,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": -7.4e-05,
+      "funding": -4.6e-05,
       "long_short": 0.78
-    },
-    {
-      "symbol": "WLD",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 2.47
     },
     {
       "symbol": "ZEC",
@@ -69,14 +59,6 @@
       ],
       "funding": 0.0001,
       "long_short": 0.45
-    },
-    {
-      "symbol": "AERO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "DASH",
@@ -108,13 +90,21 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.9e-05
+      "funding": 5.8e-05
     },
     {
       "symbol": "MARSCOIN",
       "surfaces": 1,
       "sources": [
         "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "ONDO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
       ],
       "funding": 5e-05
     },
@@ -128,6 +118,14 @@
     },
     {
       "symbol": "PHA",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "PLUME",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -157,6 +155,14 @@
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "WLD",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
