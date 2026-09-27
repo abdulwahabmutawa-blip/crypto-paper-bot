@@ -1,20 +1,34 @@
 {
-  "ts": "2026-09-27T22:59:16+00:00",
-  "scanned": 111,
+  "ts": "2026-09-27T23:04:53+00:00",
+  "scanned": 112,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "RAREUSDT",
-      "signal": "breakout",
-      "score": 0.6627,
-      "raw_score": 0.7065,
-      "weight": 0.938,
-      "price": 0.02245,
-      "why": "trades 6.0x, volume 6.1x, 62% taker-buy, +5.3% in an hour, at 83% of its 24h range",
-      "chg_24h": 0.0228,
-      "vol_surge": 6.12,
-      "chg_1h": 0.0535,
-      "market_surge": 1.14,
+      "symbol": "ICPUSDT",
+      "signal": "ignition",
+      "score": 0.8764,
+      "raw_score": 0.9334,
+      "weight": 0.939,
+      "price": 3.114,
+      "why": "trades 10.6x and volume 26.6x the prior 4h, 83% taker-buy, $617,977 burst \u2014 while price has only moved -1.0%",
+      "chg_24h": -0.0272,
+      "vol_surge": 26.56,
+      "chg_1h": -0.0095,
+      "market_surge": 15.97,
+      "actionable": true
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "signal": "ignition",
+      "score": 0.7487,
+      "raw_score": 0.7973,
+      "weight": 0.939,
+      "price": 154.36,
+      "why": "trades 7.2x and volume 8.7x the prior 4h, 82% taker-buy, $193,236 burst \u2014 while price has only moved +0.5%",
+      "chg_24h": -0.0028,
+      "vol_surge": 8.73,
+      "chg_1h": 0.0055,
+      "market_surge": 2.17,
       "actionable": true
     }
   ],
@@ -26,7 +40,7 @@
     "revival": "probation \u2014 8/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 15,
+    "count": 16,
     "baseline": 20.0,
     "wave": false
   },
