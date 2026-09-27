@@ -1,8 +1,23 @@
 {
-  "ts": "2026-09-27T20:38:39+00:00",
-  "scanned": 111,
+  "ts": "2026-09-27T20:44:25+00:00",
+  "scanned": 114,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ONEUSDT",
+      "signal": "breakout",
+      "score": 0.7454,
+      "raw_score": 0.7921,
+      "weight": 0.941,
+      "price": 0.002412,
+      "why": "trades 6.0x, volume 9.5x, 82% taker-buy, +4.9% in an hour, at 94% of its 24h range",
+      "chg_24h": 0.078,
+      "vol_surge": 9.51,
+      "chg_1h": 0.0492,
+      "market_surge": 7.38,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 8/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 16,
+    "count": 15,
     "baseline": 21.0,
     "wave": false
   },
