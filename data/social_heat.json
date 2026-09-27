@@ -1,18 +1,18 @@
 {
-  "ts": "2026-09-27T06:00:18+00:00",
+  "ts": "2026-09-27T06:05:36+00:00",
   "sources": {
     "coingecko": [
       "QNT",
       "NEAR",
       "ZEC",
       "PENGU",
-      "BTC",
       "TAO",
-      "WLD",
+      "PHA",
+      "ONDO",
       "SUI",
       "AERO",
-      "PHA",
-      "ONDO"
+      "WLD",
+      "GRAM"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -31,6 +31,16 @@
   },
   "heat": [
     {
+      "symbol": "GRAM",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 2.5
+    },
+    {
       "symbol": "NEAR",
       "surfaces": 2,
       "sources": [
@@ -38,7 +48,7 @@
         "movers"
       ],
       "funding": 0.0001,
-      "long_short": 1.56
+      "long_short": 1.54
     },
     {
       "symbol": "QNT",
@@ -47,7 +57,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.000227,
+      "funding": -0.000208,
       "long_short": 0.78
     },
     {
@@ -58,7 +68,7 @@
         "movers"
       ],
       "funding": 0.0001,
-      "long_short": 2.46
+      "long_short": 2.47
     },
     {
       "symbol": "AERO",
@@ -69,28 +79,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 3.5e-05
-    },
-    {
       "symbol": "DASH",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "GRAM",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "MARSCOIN",
@@ -130,7 +124,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.004735
+      "funding": -0.004873
     },
     {
       "symbol": "RUNE",
