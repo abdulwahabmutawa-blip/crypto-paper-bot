@@ -1,34 +1,41 @@
-# Fleet status — 2026-09-26 (UTC)
+# Fleet status — 2026-09-27 (UTC)
 
 | Bot | Holds | 24h change | Value |
 |---|---|---|---|
-| crypto | BTC-USD | No new trade; roughly flat with BTC | $1,198.69 (was $1,202.78) |
-| meanrev | HD | No new trade; data_asof 09-25 (normal 1-day lag, feed_delayed=false) | $1,185.35 (was $1,181.55) |
+| crypto | BTC-USD | No trade; TREND regime intact | $1,203.75 (was $1,199.41 pre-outage) |
+| meanrev | HD | No trade; data_asof 09-25 (weekend, feed_delayed=false) | $1,185.35 (unchanged since Fri close) |
 | sentiment | CASH | No trade — still in cash | $869.30 (unchanged) |
-| scalper | 10/10 seats | 38 closed round trips (642 total), 23W/15L, net +$19.54 | $942.71 (was $926.38) |
-| smallwins (lab) | 486 open seats | 89 new runs (1793→1882); open 477→486 | n/a — research only |
-| Watcher (grok_sentinel) | — (no capital) | STILL STUCK: 0 new scans since 09-11 15:12 UTC (~15 days) | n/a |
-| social_radar | — (no capital) | Same root staleness — `last_scan_utc` unchanged since 09-11 15:29 UTC | n/a |
-| retired (8, frozen) | congress, commodity, allweather, hunter, hypecrypto, scholar, analyst, stock | No state file changed in 24h | — |
+| scalper | 10/10 seats | ~100 round trips settled once loop resumed | $934.32 (was $932.41 pre-outage) |
+| smallwins (lab) | 578 open seats | 264 new runs (1705→1969); open 248→578 | n/a — research only |
+| Watcher (grok_sentinel) | — (no capital) | STILL STUCK: 0 new scans since 09-11 15:12 UTC (~16 days) | n/a |
+| social_radar | — (no capital) | Same root staleness — unchanged since 09-11 15:29 UTC | n/a |
+| retired (8, frozen) | congress, commodity, allweather, hunter, hypecrypto, scholar, analyst, stock | No change | — |
 
-Lottery/carry/hype-ibkr (VPS, real-money paths) are out of scope for this digest per CLAUDE.md — not shown.
+Lottery/carry/hype-ibkr (VPS, real-money paths) out of scope for this digest per CLAUDE.md.
 
 ## Changed
-- **crypto**: no trade; BTC-USD roughly flat, $1,202.78 → $1,198.69.
-- **meanrev**: no trade; HD marked up $1,181.55 → $1,185.35.
-- **sentiment**: no trade; flat in cash at $869.30.
-- **scalper**: 38 closed round trips (23W/15L), net +$19.54; equity $926.38 → $942.71; open seats
-  steady at 10/10 (refilled as closed).
-- **smallwins**: 89 new lab runs; open seats up 477 → 486.
-- Paper-fleet cron: 88 cycle commits in this 24h window, steady ~13–18 min cadence, no gap over
-  25 min, no error/RED FLAG commits found.
+- **Paper-fleet cron outage**: zero cycle commits from 2026-09-24 05:11 UTC to 2026-09-27 01:43
+  UTC — a ~68.5h gap, far beyond the workflow's own documented worst case (~11.25h). Loop resumed
+  on its own at 01:43 UTC today and has run normally since (13 cycle commits, ~13-17 min apart).
+- The VPS lottery process (separate, real-money, out of scope) shows the identical blackout window
+  (last commit 09-24 05:11, resumed 01:45 today) on a different host.
+- crypto: no trade; BTC-USD marked $1,199.41 → $1,203.75 across the gap.
+- scalper: ~100 round trips settled on resume — candle-close exits are retrospective/backdated
+  (per CLAUDE.md), so these reflect market moves during the outage, not live decisions made then.
+  Equity $932.41 → $934.32; seats back to 10/10.
+- smallwins: 264 new lab runs once resumed; open seats 248 → 578.
+- meanrev, sentiment: no trades; both flat.
 
 ## Needs a look
-- **scalper/TVKUSDT seat**: still open, entered 2026-09-12 — now day 14. Supervisor last logged
-  this 2026-09-24 (judgment `2026-09-24-scalper-1`, status "open") as a SIM-INTEGRITY issue: priced
-  off a dead 2023-11-27 Binance candle (delisted pair), so the +3%/-3%/24h rule can never fire. No
-  newer supervisor judgment on it found in the last 24h.
-- **Watcher (grok_sentinel)**: no new scan — verdict timestamp still 2026-09-11T15:12:52 UTC,
-  ~15 days stale. This is why sentiment stays gated in cash.
-- **social_radar**: same root staleness — `last_scan_utc` unchanged since 2026-09-11T15:29:50 UTC,
-  ~15 days running.
+- **Outage cause unknown**: no RED FLAG commit, no state_preflight failure recorded for the
+  2026-09-24 05:11 → 2026-09-27 01:43 window. Repo data alone can't explain it — check GitHub
+  Actions run history and the VPS lottery logs directly.
+- **`reports/supervisor_scoreboard.json` looks stale/wrong**: its `run_note`/`loop_health` (last
+  touched by the commit that ended the outage) claims "loop healthy, 175 commits/48h, max gap 34
+  min" as of 2026-09-26T12:30 — a time when git shows zero commits for ~31h already. Don't trust
+  that file's loop-health numbers until it's regenerated.
+- **scalper/TVKUSDT seat**: still open, day 15 (entered 2026-09-12) — known SIM-INTEGRITY issue,
+  priced off a dead 2023-11-27 Binance candle (delisted pair, ~$86 of book unpriced). Reported to
+  owner, not yet fixed.
+- **Watcher (grok_sentinel) / social_radar**: still silent since 2026-09-11 (~16 days). Sentiment
+  stays gated in cash as a result.
