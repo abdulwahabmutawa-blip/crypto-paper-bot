@@ -1,8 +1,23 @@
 {
-  "ts": "2026-09-27T12:18:53+00:00",
-  "scanned": 119,
+  "ts": "2026-09-27T12:24:24+00:00",
+  "scanned": 118,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "\u725b\u6765USDT",
+      "signal": "ignition",
+      "score": 0.5431,
+      "raw_score": 0.5759,
+      "weight": 0.943,
+      "price": 0.11295,
+      "why": "trades 4.1x and volume 7.5x the prior 4h, 66% taker-buy, $231,972 burst \u2014 while price has only moved +1.6%",
+      "chg_24h": 0.1077,
+      "vol_surge": 7.51,
+      "chg_1h": 0.016,
+      "market_surge": 3.54,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 8/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 15,
+    "count": 16,
     "baseline": 23.0,
     "wave": false
   },
