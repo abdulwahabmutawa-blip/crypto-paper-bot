@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-27T05:04:26+00:00",
+  "ts": "2026-09-27T05:09:41+00:00",
   "sources": {
     "coingecko": [
       "QNT",
@@ -20,10 +20,10 @@
       "RARE",
       "RUNE",
       "DASH",
+      "WLD",
       "GRAM",
       "FIL",
-      "WLD",
-      "ZEC"
+      "MARSCOIN"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -36,18 +36,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.00045,
+      "funding": -0.000432,
       "long_short": 0.71
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 0.43
     },
     {
       "symbol": "BTC",
@@ -55,7 +45,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.4e-05
+      "funding": 3.6e-05
     },
     {
       "symbol": "DASH",
@@ -90,12 +80,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "MARSCOIN",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "NEAR",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 6.8e-05
+      "funding": 6.9e-05
     },
     {
       "symbol": "PENGU",
@@ -111,7 +109,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.002626
+      "funding": -0.002612
     },
     {
       "symbol": "RAY",
@@ -135,7 +133,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.1e-05
+      "funding": 7.8e-05
     },
     {
       "symbol": "TAO",
@@ -159,7 +157,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.2e-05
+      "funding": 8.4e-05
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
