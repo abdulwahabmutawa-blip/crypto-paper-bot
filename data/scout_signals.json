@@ -1,23 +1,8 @@
 {
-  "ts": "2026-09-27T12:52:24+00:00",
+  "ts": "2026-09-27T12:57:52+00:00",
   "scanned": 119,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "JASMYUSDT",
-      "signal": "breakout",
-      "score": 0.8049,
-      "raw_score": 0.8518,
-      "weight": 0.945,
-      "price": 0.00529,
-      "why": "trades 34.5x, volume 23.3x, 60% taker-buy, +5.8% in an hour, at 91% of its 24h range",
-      "chg_24h": 0.1277,
-      "vol_surge": 23.28,
-      "chg_1h": 0.058,
-      "market_surge": 17.48,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -26,7 +11,7 @@
     "revival": "probation \u2014 8/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 17,
+    "count": 15,
     "baseline": 23.0,
     "wave": false
   },
