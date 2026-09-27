@@ -1,8 +1,23 @@
 {
-  "ts": "2026-09-27T07:02:40+00:00",
-  "scanned": 118,
+  "ts": "2026-09-27T07:08:51+00:00",
+  "scanned": 117,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "COTIUSDT",
+      "signal": "ignition",
+      "score": 0.8514,
+      "raw_score": 0.8981,
+      "weight": 0.948,
+      "price": 0.01483,
+      "why": "trades 13.1x and volume 12.0x the prior 4h, 67% taker-buy, $87,382 burst \u2014 while price has only moved +0.8%",
+      "chg_24h": -0.0723,
+      "vol_surge": 11.97,
+      "chg_1h": 0.0082,
+      "market_surge": 2.35,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -84,19 +99,19 @@
       "avg_win_4h": 0.03608,
       "avg_loss_4h": -0.02593,
       "payoff_4h": 1.391,
-      "span_h_24h": 308.0,
-      "n_eff_24h": 12.83,
-      "n_24h": 365,
-      "hit_rate_24h": 0.54,
-      "mean_ret_24h": 0.02917,
-      "median_ret_24h": 0.00768,
+      "span_h_24h": 309.0,
+      "n_eff_24h": 12.87,
+      "n_24h": 366,
+      "hit_rate_24h": 0.541,
+      "mean_ret_24h": 0.02922,
+      "median_ret_24h": 0.00772,
       "both_halves_24h": true,
       "days_24h": 14,
-      "mean_x_24h": 0.01966,
+      "mean_x_24h": 0.01919,
       "days_x_24h": 14,
-      "avg_win_24h": 0.08469,
+      "avg_win_24h": 0.08451,
       "avg_loss_24h": -0.03711,
-      "payoff_24h": 2.282
+      "payoff_24h": 2.278
     },
     "reversion": {
       "span_h_1h": 291.9,
