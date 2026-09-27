@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-27T23:20:39+00:00",
+  "ts": "2026-09-27T23:26:40+00:00",
   "sources": {
     "coingecko": [
       "QNT",
@@ -10,7 +10,9 @@
       "TAO",
       "ONDO",
       "BTC",
+      "SUI",
       "ICP",
+      "GRT",
       "ENA"
     ],
     "reddit": [],
@@ -23,7 +25,7 @@
       "ONDO",
       "WLD",
       "GRAM",
-      "BABY"
+      "ARB"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -70,12 +72,22 @@
       "long_short": 0.73
     },
     {
-      "symbol": "BABY",
+      "symbol": "SUI",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 2.4e-05,
+      "long_short": 2.49
+    },
+    {
+      "symbol": "ARB",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 5e-05
+      "funding": 0.0001
     },
     {
       "symbol": "BTC",
@@ -99,7 +111,15 @@
       "sources": [
         "movers"
       ],
-      "funding": 5.9e-05
+      "funding": 7.2e-05
+    },
+    {
+      "symbol": "GRT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -0.000202
     },
     {
       "symbol": "ICP",
@@ -116,14 +136,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 2.5e-05
     },
     {
       "symbol": "TAO",
