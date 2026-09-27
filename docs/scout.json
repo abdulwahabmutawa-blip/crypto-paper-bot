@@ -1,23 +1,8 @@
 {
-  "ts": "2026-09-27T12:40:49+00:00",
+  "ts": "2026-09-27T12:46:31+00:00",
   "scanned": 121,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "XVGUSDT",
-      "signal": "ignition",
-      "score": 0.6447,
-      "raw_score": 0.6837,
-      "weight": 0.943,
-      "price": 0.003502,
-      "why": "trades 7.4x and volume 5.7x the prior 4h, 63% taker-buy, $145,808 burst \u2014 while price has only moved +0.5%",
-      "chg_24h": 0.1052,
-      "vol_surge": 5.65,
-      "chg_1h": 0.0049,
-      "market_surge": 9.65,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -26,7 +11,7 @@
     "revival": "probation \u2014 8/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 15,
+    "count": 16,
     "baseline": 23.0,
     "wave": false
   },
@@ -58,19 +43,19 @@
       "avg_win_4h": 0.02193,
       "avg_loss_4h": -0.01682,
       "payoff_4h": 1.304,
-      "span_h_24h": 310.8,
-      "n_eff_24h": 12.95,
-      "n_24h": 776,
+      "span_h_24h": 311.3,
+      "n_eff_24h": 12.97,
+      "n_24h": 777,
       "hit_rate_24h": 0.564,
-      "mean_ret_24h": 0.01712,
-      "median_ret_24h": 0.00836,
+      "mean_ret_24h": 0.01709,
+      "median_ret_24h": 0.0083,
       "both_halves_24h": true,
       "days_24h": 14,
-      "mean_x_24h": 0.01023,
+      "mean_x_24h": 0.01016,
       "days_x_24h": 14,
       "avg_win_24h": 0.05479,
-      "avg_loss_24h": -0.03719,
-      "payoff_24h": 1.473
+      "avg_loss_24h": -0.03711,
+      "payoff_24h": 1.476
     },
     "breakout": {
       "span_h_1h": 332.9,
