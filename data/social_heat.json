@@ -1,28 +1,28 @@
 {
-  "ts": "2026-09-27T06:23:16+00:00",
+  "ts": "2026-09-27T06:29:26+00:00",
   "sources": {
     "coingecko": [
       "QNT",
       "NEAR",
       "ZEC",
-      "PENGU",
       "TAO",
-      "PHA",
-      "GRAM",
-      "ONDO",
+      "PENGU",
       "SUI",
-      "WLD",
-      "AERO"
+      "PHA",
+      "ONDO",
+      "BTC",
+      "AERO",
+      "LINK"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "QNT",
-      "RARE",
       "RUNE",
+      "RARE",
       "DASH",
-      "MARSCOIN",
       "WLD",
+      "MARSCOIN",
       "NEAR",
       "GRAM"
     ],
@@ -30,16 +30,6 @@
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "GRAM",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 2.5
-    },
     {
       "symbol": "NEAR",
       "surfaces": 2,
@@ -57,18 +47,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.000125,
+      "funding": -0.000111,
       "long_short": 0.78
-    },
-    {
-      "symbol": "WLD",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 2.47
     },
     {
       "symbol": "AERO",
@@ -79,12 +59,36 @@
       "funding": 5e-05
     },
     {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 3.2e-05
+    },
+    {
       "symbol": "DASH",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "GRAM",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "LINK",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 6.2e-05
     },
     {
       "symbol": "MARSCOIN",
@@ -124,7 +128,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.005283
+      "funding": -0.005325
     },
     {
       "symbol": "RUNE",
@@ -149,6 +153,14 @@
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "WLD",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "ZEC",
