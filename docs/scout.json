@@ -1,8 +1,23 @@
 {
-  "ts": "2026-09-27T10:39:25+00:00",
-  "scanned": 121,
+  "ts": "2026-09-27T10:45:12+00:00",
+  "scanned": 120,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "MARSCOINUSDT",
+      "signal": "ignition",
+      "score": 0.5099,
+      "raw_score": 0.5391,
+      "weight": 0.946,
+      "price": 0.1342,
+      "why": "trades 5.6x and volume 5.3x the prior 4h, 64% taker-buy, $143,578 burst \u2014 while price has only moved +3.2%",
+      "chg_24h": 0.158,
+      "vol_surge": 5.28,
+      "chg_1h": 0.0315,
+      "market_surge": 1.15,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -84,19 +99,19 @@
       "avg_win_4h": 0.03614,
       "avg_loss_4h": -0.02562,
       "payoff_4h": 1.41,
-      "span_h_24h": 311.5,
+      "span_h_24h": 311.6,
       "n_eff_24h": 12.98,
-      "n_24h": 371,
-      "hit_rate_24h": 0.542,
-      "mean_ret_24h": 0.02906,
-      "median_ret_24h": 0.00768,
+      "n_24h": 372,
+      "hit_rate_24h": 0.543,
+      "mean_ret_24h": 0.02917,
+      "median_ret_24h": 0.00772,
       "both_halves_24h": true,
       "days_24h": 14,
-      "mean_x_24h": 0.01702,
+      "mean_x_24h": 0.01712,
       "days_x_24h": 14,
-      "avg_win_24h": 0.08379,
+      "avg_win_24h": 0.08373,
       "avg_loss_24h": -0.03679,
-      "payoff_24h": 2.278
+      "payoff_24h": 2.276
     },
     "reversion": {
       "span_h_1h": 305.2,
