@@ -1,8 +1,23 @@
 {
-  "ts": "2026-09-27T16:20:33+00:00",
-  "scanned": 122,
+  "ts": "2026-09-27T16:26:27+00:00",
+  "scanned": 118,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SKYUSDT",
+      "signal": "ignition",
+      "score": 0.8641,
+      "raw_score": 0.9222,
+      "weight": 0.937,
+      "price": 0.07605,
+      "why": "trades 15.7x and volume 14.2x the prior 4h, 86% taker-buy, $111,697 burst \u2014 while price has only moved +1.7%",
+      "chg_24h": -0.0183,
+      "vol_surge": 14.16,
+      "chg_1h": 0.0167,
+      "market_surge": 35.75,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -38,7 +53,7 @@
       "median_ret_4h": -0.00085,
       "both_halves_4h": false,
       "days_4h": 15,
-      "mean_x_4h": 0.00097,
+      "mean_x_4h": 0.0009,
       "days_x_4h": 15,
       "avg_win_4h": 0.02213,
       "avg_loss_4h": -0.01719,
