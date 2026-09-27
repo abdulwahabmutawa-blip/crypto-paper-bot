@@ -1,28 +1,28 @@
 {
-  "ts": "2026-09-27T15:29:28+00:00",
+  "ts": "2026-09-27T15:34:48+00:00",
   "sources": {
     "coingecko": [
       "QNT",
-      "TRUMP",
       "NEAR",
+      "TRUMP",
       "SUI",
-      "PENGU",
       "ONDO",
+      "PENGU",
       "PUMP",
       "ZEC",
       "SOL",
-      "WLD",
-      "AERO"
+      "AERO",
+      "TAO"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "QNT",
       "GRAM",
-      "NEAR",
       "PUMP",
-      "WLD",
+      "NEAR",
       "SUI",
+      "WLD",
       "ZEC",
       "BTC"
     ],
@@ -37,7 +37,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 2.3e-05,
+      "funding": 2.8e-05,
       "long_short": 1.68
     },
     {
@@ -67,18 +67,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 8.4e-05,
+      "funding": 8.8e-05,
       "long_short": 2.36
-    },
-    {
-      "symbol": "WLD",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 2.11
     },
     {
       "symbol": "ZEC",
@@ -87,7 +77,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 2.6e-05
+      "funding": 3.2e-05,
+      "long_short": 0.46
     },
     {
       "symbol": "AERO",
@@ -135,7 +126,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.3e-05
+      "funding": -2.4e-05
+    },
+    {
+      "symbol": "TAO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "TRUMP",
@@ -144,6 +143,14 @@
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "WLD",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
