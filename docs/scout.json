@@ -1,8 +1,23 @@
 {
-  "ts": "2026-09-27T03:25:10+00:00",
-  "scanned": 117,
+  "ts": "2026-09-27T03:30:19+00:00",
+  "scanned": 119,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "WUSDT",
+      "signal": "breakout",
+      "score": 0.7714,
+      "raw_score": 0.8103,
+      "weight": 0.952,
+      "price": 0.01405,
+      "why": "trades 10.0x, volume 7.2x, 69% taker-buy, +4.7% in an hour, at 93% of its 24h range",
+      "chg_24h": 0.1479,
+      "vol_surge": 7.19,
+      "chg_1h": 0.0469,
+      "market_surge": 0.0,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 8/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 17,
+    "count": 16,
     "baseline": 25.0,
     "wave": false
   },
@@ -43,19 +58,19 @@
       "avg_win_4h": 0.02226,
       "avg_loss_4h": -0.01698,
       "payoff_4h": 1.311,
-      "span_h_24h": 311.4,
+      "span_h_24h": 311.5,
       "n_eff_24h": 12.98,
-      "n_24h": 752,
+      "n_24h": 753,
       "hit_rate_24h": 0.555,
-      "mean_ret_24h": 0.01576,
+      "mean_ret_24h": 0.01582,
       "median_ret_24h": 0.0077,
       "both_halves_24h": true,
       "days_24h": 14,
-      "mean_x_24h": 0.0085,
+      "mean_x_24h": 0.00888,
       "days_x_24h": 14,
-      "avg_win_24h": 0.05418,
+      "avg_win_24h": 0.05419,
       "avg_loss_24h": -0.03772,
-      "payoff_24h": 1.436
+      "payoff_24h": 1.437
     },
     "breakout": {
       "span_h_1h": 328.3,
