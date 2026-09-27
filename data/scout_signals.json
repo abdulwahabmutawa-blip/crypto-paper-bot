@@ -1,8 +1,23 @@
 {
-  "ts": "2026-09-27T17:32:42+00:00",
-  "scanned": 119,
+  "ts": "2026-09-27T17:37:53+00:00",
+  "scanned": 118,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "WLFIUSDT",
+      "signal": "breakout",
+      "score": 0.7152,
+      "raw_score": 0.7609,
+      "weight": 0.94,
+      "price": 0.0589,
+      "why": "trades 21.4x, volume 13.7x, 70% taker-buy, +2.3% in an hour, at 88% of its 24h range",
+      "chg_24h": -0.0051,
+      "vol_surge": 13.66,
+      "chg_1h": 0.0226,
+      "market_surge": 12.88,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
