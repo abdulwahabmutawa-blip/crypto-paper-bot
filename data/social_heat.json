@@ -1,17 +1,17 @@
 {
-  "ts": "2026-09-27T11:29:19+00:00",
+  "ts": "2026-09-27T11:34:37+00:00",
   "sources": {
     "coingecko": [
       "QNT",
       "TRUMP",
-      "SUI",
       "NEAR",
+      "SUI",
       "PENGU",
-      "SOL",
       "TAO",
+      "SOL",
       "WLD",
-      "BTC",
-      "ONDO"
+      "RAY",
+      "BTC"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -23,22 +23,12 @@
       "GRAM",
       "ZEC",
       "RUNE",
-      "NEAR"
+      "SUI"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "NEAR",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.64
-    },
     {
       "symbol": "QNT",
       "surfaces": 2,
@@ -48,6 +38,16 @@
       ],
       "funding": 0.0001,
       "long_short": 0.76
+    },
+    {
+      "symbol": "SUI",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 2.4
     },
     {
       "symbol": "WLD",
@@ -72,7 +72,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4e-05
+      "funding": 3.9e-05
     },
     {
       "symbol": "GRAM",
@@ -91,12 +91,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "ONDO",
+      "symbol": "NEAR",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 0.0001
     },
     {
       "symbol": "PENGU",
@@ -105,6 +105,14 @@
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "RAY",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0
     },
     {
       "symbol": "RUNE",
@@ -120,15 +128,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.8e-05
-    },
-    {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": 7.4e-05
     },
     {
       "symbol": "TAO",
