@@ -1,8 +1,23 @@
 {
-  "ts": "2026-09-27T13:03:12+00:00",
-  "scanned": 118,
+  "ts": "2026-09-27T13:08:43+00:00",
+  "scanned": 119,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "MORPHOUSDT",
+      "signal": "ignition",
+      "score": 0.8148,
+      "raw_score": 0.864,
+      "weight": 0.943,
+      "price": 2.694,
+      "why": "trades 11.6x and volume 12.5x the prior 4h, 60% taker-buy, $93,084 burst \u2014 while price has only moved -1.5%",
+      "chg_24h": -0.0239,
+      "vol_surge": 12.53,
+      "chg_1h": -0.0146,
+      "market_surge": 3.87,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
