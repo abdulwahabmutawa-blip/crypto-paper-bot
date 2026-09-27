@@ -1,20 +1,34 @@
 {
-  "ts": "2026-09-27T01:49:42+00:00",
-  "scanned": 125,
+  "ts": "2026-09-27T01:54:53+00:00",
+  "scanned": 121,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "SAGAUSDT",
+      "symbol": "OPUSDT",
       "signal": "ignition",
-      "score": 0.6513,
-      "raw_score": 0.6863,
+      "score": 0.7339,
+      "raw_score": 0.7734,
       "weight": 0.949,
-      "price": 0.03289,
-      "why": "trades 6.8x and volume 12.7x the prior 4h, 63% taker-buy, $285,654 burst \u2014 while price has only moved +3.8%",
-      "chg_24h": -0.0502,
-      "vol_surge": 12.74,
-      "chg_1h": 0.0375,
-      "market_surge": 2.02,
+      "price": 0.145,
+      "why": "trades 5.7x and volume 16.0x the prior 4h, 88% taker-buy, $89,562 burst \u2014 while price has only moved +0.9%",
+      "chg_24h": 0.0021,
+      "vol_surge": 15.99,
+      "chg_1h": 0.009,
+      "market_surge": 3.2,
+      "actionable": true
+    },
+    {
+      "symbol": "SEIUSDT",
+      "signal": "ignition",
+      "score": 0.6982,
+      "raw_score": 0.7358,
+      "weight": 0.949,
+      "price": 0.07266,
+      "why": "trades 6.6x and volume 18.2x the prior 4h, 64% taker-buy, $238,186 burst \u2014 while price has only moved +1.5%",
+      "chg_24h": -0.0496,
+      "vol_surge": 18.19,
+      "chg_1h": 0.0147,
+      "market_surge": 3.39,
       "actionable": true
     }
   ],
@@ -26,7 +40,7 @@
     "revival": "probation \u2014 8/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 18,
+    "count": 17,
     "baseline": 25.0,
     "wave": false
   },
