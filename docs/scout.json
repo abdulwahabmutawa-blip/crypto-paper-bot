@@ -1,23 +1,8 @@
 {
-  "ts": "2026-09-27T11:51:17+00:00",
+  "ts": "2026-09-27T11:56:41+00:00",
   "scanned": 119,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "RENDERUSDT",
-      "signal": "ignition",
-      "score": 0.5803,
-      "raw_score": 0.6141,
-      "weight": 0.945,
-      "price": 2.042,
-      "why": "trades 4.8x and volume 5.5x the prior 4h, 83% taker-buy, $165,230 burst \u2014 while price has only moved -1.0%",
-      "chg_24h": 0.0225,
-      "vol_surge": 5.55,
-      "chg_1h": -0.0102,
-      "market_surge": 4.27,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -26,7 +11,7 @@
     "revival": "probation \u2014 8/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 14,
+    "count": 15,
     "baseline": 23.0,
     "wave": false
   },
