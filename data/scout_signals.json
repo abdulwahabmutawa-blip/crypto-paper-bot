@@ -1,8 +1,23 @@
 {
-  "ts": "2026-09-27T08:43:33+00:00",
-  "scanned": 114,
+  "ts": "2026-09-27T08:49:12+00:00",
+  "scanned": 118,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "XVGUSDT",
+      "signal": "breakout",
+      "score": 0.7172,
+      "raw_score": 0.7557,
+      "weight": 0.949,
+      "price": 0.003672,
+      "why": "trades 6.9x, volume 6.0x, 62% taker-buy, +5.9% in an hour, at 96% of its 24h range",
+      "chg_24h": 0.1801,
+      "vol_surge": 5.99,
+      "chg_1h": 0.0588,
+      "market_surge": 0.0,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -17,10 +32,10 @@
   },
   "scorecard": {
     "ignition": {
-      "span_h_1h": 334.0,
-      "n_eff_1h": 334.0,
-      "n_1h": 827,
-      "hit_rate_1h": 0.42,
+      "span_h_1h": 334.4,
+      "n_eff_1h": 334.36,
+      "n_1h": 828,
+      "hit_rate_1h": 0.419,
       "mean_ret_1h": 0.0008,
       "median_ret_1h": 0.0,
       "both_halves_1h": true,
@@ -28,8 +43,8 @@
       "mean_x_1h": 0.00062,
       "days_x_1h": 15,
       "avg_win_1h": 0.01221,
-      "avg_loss_1h": -0.0108,
-      "payoff_1h": 1.13,
+      "avg_loss_1h": -0.01078,
+      "payoff_1h": 1.133,
       "span_h_4h": 330.2,
       "n_eff_4h": 82.56,
       "n_4h": 815,
