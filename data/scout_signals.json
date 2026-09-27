@@ -1,37 +1,8 @@
 {
-  "ts": "2026-09-27T18:57:42+00:00",
-  "scanned": 115,
+  "ts": "2026-09-27T19:03:45+00:00",
+  "scanned": 117,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "XAIUSDT",
-      "signal": "ignition",
-      "score": 0.6548,
-      "raw_score": 0.6966,
-      "weight": 0.94,
-      "price": 0.00997,
-      "why": "trades 6.3x and volume 12.4x the prior 4h, 64% taker-buy, $79,482 burst \u2014 while price has only moved +2.6%",
-      "chg_24h": 0.0777,
-      "vol_surge": 12.36,
-      "chg_1h": 0.0257,
-      "market_surge": 6.12,
-      "actionable": true
-    },
-    {
-      "symbol": "NEARUSDT",
-      "signal": "breakout",
-      "score": 0.5578,
-      "raw_score": 0.5915,
-      "weight": 0.943,
-      "price": 5.429,
-      "why": "trades 4.7x, volume 5.3x, 69% taker-buy, +3.5% in an hour, at 91% of its 24h range",
-      "chg_24h": 0.1273,
-      "vol_surge": 5.32,
-      "chg_1h": 0.0353,
-      "market_surge": 2.85,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
