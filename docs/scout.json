@@ -1,32 +1,33 @@
 {
-  "ts": "2026-09-27T00:02:00+00:00",
-  "scanned": 123,
+  "ts": "2026-09-27T00:07:28+00:00",
+  "scanned": 122,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "PUMPUSDT",
+      "symbol": "CHIPUSDT",
       "signal": "ignition",
-      "score": 0.5665,
-      "raw_score": 0.5982,
+      "score": 0.8403,
+      "raw_score": 0.8873,
       "weight": 0.947,
-      "price": 0.004386,
-      "why": "trades 4.8x and volume 6.0x the prior 4h, 67% taker-buy, $192,572 burst \u2014 while price has only moved +0.5%",
-      "chg_24h": 0.0443,
-      "vol_surge": 5.97,
-      "chg_1h": 0.0046,
-      "market_surge": 0.85,
-      "actionable": true
+      "price": 0.04884,
+      "why": "trades 19.8x and volume 22.2x the prior 4h, 60% taker-buy, $96,445 burst \u2014 while price has only moved -0.5%",
+      "chg_24h": -0.0265,
+      "vol_surge": 22.21,
+      "chg_1h": -0.0053,
+      "market_surge": 1.79,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.68% at 24h: market beta, not signal"
     }
   ],
   "gate": {
-    "ignition": "actionable",
+    "ignition": "benched \u2014 BTC-excess day mean +0.68% at 24h: market beta, not signal",
     "breakout": "actionable",
     "reversion": "actionable",
     "heat": "probation \u2014 0/12 resolved 24h samples under ruleset 3",
     "revival": "probation \u2014 8/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 14,
+    "count": 17,
     "baseline": 25.0,
     "wave": false
   },
@@ -58,19 +59,19 @@
       "avg_win_4h": 0.02235,
       "avg_loss_4h": -0.01688,
       "payoff_4h": 1.324,
-      "span_h_24h": 311.4,
-      "n_eff_24h": 12.98,
-      "n_24h": 746,
-      "hit_rate_24h": 0.558,
-      "mean_ret_24h": 0.01595,
-      "median_ret_24h": 0.00785,
+      "span_h_24h": 311.9,
+      "n_eff_24h": 12.99,
+      "n_24h": 747,
+      "hit_rate_24h": 0.557,
+      "mean_ret_24h": 0.01589,
+      "median_ret_24h": 0.0077,
       "both_halves_24h": true,
-      "days_24h": 13,
-      "mean_x_24h": 0.00965,
-      "days_x_24h": 13,
+      "days_24h": 14,
+      "mean_x_24h": 0.00679,
+      "days_x_24h": 14,
       "avg_win_24h": 0.05412,
-      "avg_loss_24h": -0.03764,
-      "payoff_24h": 1.438
+      "avg_loss_24h": -0.0376,
+      "payoff_24h": 1.439
     },
     "breakout": {
       "span_h_1h": 333.8,
