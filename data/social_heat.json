@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-27T18:46:27+00:00",
+  "ts": "2026-09-27T18:51:46+00:00",
   "sources": {
     "coingecko": [
       "QNT",
@@ -19,10 +19,10 @@
       "PUMP",
       "NEAR",
       "SUI",
+      "ENA",
       "WLD",
       "GRAM",
-      "ENA",
-      "ONDO"
+      "ZEC"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -35,18 +35,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 4.5e-05,
-      "long_short": 1.69
-    },
-    {
-      "symbol": "ONDO",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
       "funding": 5e-05,
-      "long_short": 1.96
+      "long_short": 1.69
     },
     {
       "symbol": "PUMP",
@@ -79,6 +69,16 @@
       "long_short": 2.36
     },
     {
+      "symbol": "ZEC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 0.56
+    },
+    {
       "symbol": "ENA",
       "surfaces": 1,
       "sources": [
@@ -92,7 +92,15 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000124
+      "funding": 0.000116
+    },
+    {
+      "symbol": "ONDO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "PENGU",
@@ -123,14 +131,6 @@
       "surfaces": 1,
       "sources": [
         "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
       ],
       "funding": 0.0001
     }
