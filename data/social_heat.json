@@ -1,17 +1,19 @@
 {
-  "ts": "2026-09-27T02:00:19+00:00",
+  "ts": "2026-09-27T02:06:17+00:00",
   "sources": {
     "coingecko": [
       "QNT",
-      "PENGU",
       "NEAR",
+      "PENGU",
       "TRUMP",
       "ZEC",
       "ONDO",
-      "BTC",
       "AERO",
+      "ENA",
+      "ETH",
+      "HYPE",
       "SUI",
-      "ETH"
+      "GRAM"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -23,12 +25,22 @@
       "MARSCOIN",
       "GRAM",
       "FIL",
-      "BABY"
+      "MUBARAK"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "GRAM",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 2.36
+    },
     {
       "symbol": "QNT",
       "surfaces": 2,
@@ -36,8 +48,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.00107,
-      "long_short": 0.72
+      "funding": -0.001091,
+      "long_short": 0.77
     },
     {
       "symbol": "AERO",
@@ -48,22 +60,6 @@
       "funding": 5.3e-05
     },
     {
-      "symbol": "BABY",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5.6e-05
-    },
-    {
       "symbol": "DASH",
       "surfaces": 1,
       "sources": [
@@ -72,12 +68,20 @@
       "funding": 0.0001
     },
     {
+      "symbol": "ENA",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 8.1e-05
+      "funding": 8.2e-05
     },
     {
       "symbol": "FIL",
@@ -88,12 +92,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "GRAM",
+      "symbol": "HYPE",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 2.3e-05
     },
     {
       "symbol": "MARSCOIN",
@@ -101,7 +105,15 @@
       "sources": [
         "movers"
       ],
-      "funding": 6.6e-05
+      "funding": 6.1e-05
+    },
+    {
+      "symbol": "MUBARAK",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.000159
     },
     {
       "symbol": "NEAR",
@@ -133,7 +145,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.002938
+      "funding": -0.002951
     },
     {
       "symbol": "RUNE",
@@ -149,7 +161,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.9e-05
+      "funding": 2e-05
     },
     {
       "symbol": "TRUMP",
