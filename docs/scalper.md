@@ -2,20 +2,21 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-27T16:07:20+00:00 · runs 1939 · equity **$929.04** (-7.10%) · cash $0.00 · open 10/10 · round trips 699
+updated 2026-09-27T16:23:45+00:00 · runs 1940 · equity **$929.19** (-7.08%) · cash $0.00 · open 10/10 · round trips 700
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
-- hit 52% (break-even 54%) · mean -0.09%/trade · realized $-68.79 · worst day $-50.94 · trades/day 30.4
+- hit 52% (break-even 54%) · mean -0.09%/trade · realized $-66.11 · worst day $-50.94 · trades/day 30.4
 
 | shape | n | hit | mean | target% | stop% | time% |
 |---|---|---|---|---|---|---|
-| surge | 597 | 53% | -0.03% | 50% | 43% | 7% |
+| surge | 598 | 53% | -0.02% | 50% | 43% | 7% |
 | bottom | 102 | 44% | -0.46% | 40% | 45% | 15% |
 
 ## Last 15 round trips
 | exit (UTC) | coin | shape | how | hours | net | P&L |
 |---|---|---|---|---|---|---|
+| 2026-09-27T16:22 | WUSDT | surge | TARGET | 0.5 | +2.75% | $+2.68 |
 | 2026-09-27T16:05 | PUMPUSDT | surge | TARGET | 1.2 | +2.75% | $+2.61 |
 | 2026-09-27T15:49 | REUSDT | surge | STOP | 10.8 | -3.25% | $-2.93 |
 | 2026-09-27T15:33 | AMPUSDT | bottom | TARGET | 0.0 | +2.75% | $+2.61 |
@@ -30,20 +31,19 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | 2026-09-27T10:01 | MOVRUSDT | surge | TARGET | 0.2 | +2.75% | $+2.55 |
 | 2026-09-27T09:26 | STXUSDT | surge | STOP | 3.5 | -3.25% | $-3.12 |
 | 2026-09-27T08:15 | PYTHUSDT | surge | TARGET | 2.2 | +2.75% | $+2.57 |
-| 2026-09-27T07:57 | SUPERUSDT | surge | TARGET | 9.5 | +2.75% | $+2.70 |
 
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
 | 2026-09-26T20:51 | TRXUSDT | bottom | 0.335 | 0.3339 | -0.33% |
-| 2026-09-27T05:36 | JSTUSDT | surge | 0.12466 | 0.12532 | +0.53% |
-| 2026-09-27T10:01 | SOLUSDT | surge | 124.47 | 122.02 | -1.97% |
-| 2026-09-27T12:58 | MMTUSDT | surge | 0.1833 | 0.1844 | +0.60% |
-| 2026-09-27T13:54 | OPNUSDT | surge | 0.0574 | 0.0574 | +0.00% |
+| 2026-09-27T05:36 | JSTUSDT | surge | 0.12466 | 0.12531 | +0.52% |
+| 2026-09-27T10:01 | SOLUSDT | surge | 124.47 | 122.16 | -1.86% |
+| 2026-09-27T12:58 | MMTUSDT | surge | 0.1833 | 0.1841 | +0.44% |
+| 2026-09-27T13:54 | OPNUSDT | surge | 0.0574 | 0.0563 | -1.92% |
 | 2026-09-27T14:43 | CAKEUSDT | surge | 2.844 | 2.792 | -1.83% |
-| 2026-09-27T15:33 | WUSDT | surge | 0.01512 | 0.01526 | +0.93% |
-| 2026-09-27T15:49 | HYPEUSDT | bottom | 91.19 | 91.6 | +0.45% |
-| 2026-09-27T16:05 | AMPUSDT | bottom | 0.000632 | 0.000628 | -0.63% |
+| 2026-09-27T15:49 | HYPEUSDT | bottom | 91.19 | 91.43 | +0.26% |
+| 2026-09-27T16:05 | AMPUSDT | bottom | 0.000632 | 0.000629 | -0.47% |
+| 2026-09-27T16:22 | XVGUSDT | surge | 0.003598 | 0.003606 | +0.22% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
