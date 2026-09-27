@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-27T07:48:18+00:00",
+  "ts": "2026-09-27T07:53:48+00:00",
   "sources": {
     "coingecko": [
       "QNT",
@@ -17,12 +17,12 @@
     "movers": [
       "QNT",
       "RUNE",
-      "DASH",
       "MARSCOIN",
+      "DASH",
       "WLD",
       "NEAR",
       "GRAM",
-      "ZEC"
+      "SUI"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -59,14 +59,14 @@
       "long_short": 2.03
     },
     {
-      "symbol": "ZEC",
+      "symbol": "SUI",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 0.0001,
-      "long_short": 0.44
+      "funding": 8.2e-05,
+      "long_short": 2.38
     },
     {
       "symbol": "DASH",
@@ -90,7 +90,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.9e-05
+      "funding": 6.2e-05
     },
     {
       "symbol": "MARSCOIN",
@@ -117,14 +117,6 @@
       "funding": 5e-05
     },
     {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 8.3e-05
-    },
-    {
       "symbol": "TAO",
       "surfaces": 1,
       "sources": [
@@ -137,6 +129,14 @@
       "surfaces": 1,
       "sources": [
         "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
       ],
       "funding": 0.0001
     }

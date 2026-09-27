@@ -1,23 +1,8 @@
 {
-  "ts": "2026-09-27T07:48:23+00:00",
-  "scanned": 116,
+  "ts": "2026-09-27T07:53:54+00:00",
+  "scanned": 115,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "AXSUSDT",
-      "signal": "ignition",
-      "score": 0.6261,
-      "raw_score": 0.6612,
-      "weight": 0.947,
-      "price": 1.184,
-      "why": "trades 4.5x and volume 24.2x the prior 4h, 61% taker-buy, $90,634 burst \u2014 while price has only moved +0.9%",
-      "chg_24h": -0.0025,
-      "vol_surge": 24.2,
-      "chg_1h": 0.0085,
-      "market_surge": 0.22,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -26,7 +11,7 @@
     "revival": "probation \u2014 8/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 18,
+    "count": 17,
     "baseline": 24.0,
     "wave": false
   },
