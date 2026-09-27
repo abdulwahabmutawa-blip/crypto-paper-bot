@@ -1,17 +1,17 @@
 {
-  "ts": "2026-09-27T04:58:38+00:00",
+  "ts": "2026-09-27T05:04:26+00:00",
   "sources": {
     "coingecko": [
       "QNT",
       "ZEC",
+      "TAO",
+      "NEAR",
       "PENGU",
       "ENA",
-      "NEAR",
-      "TAO",
+      "BTC",
       "SUI",
-      "RAY",
       "XRP",
-      "BTC"
+      "RAY"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,8 +22,8 @@
       "DASH",
       "GRAM",
       "FIL",
-      "MARSCOIN",
-      "WLD"
+      "WLD",
+      "ZEC"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -36,8 +36,18 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.00046,
-      "long_short": 0.74
+      "funding": -0.00045,
+      "long_short": 0.71
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 0.43
     },
     {
       "symbol": "BTC",
@@ -80,20 +90,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "MARSCOIN",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "NEAR",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 6.9e-05
+      "funding": 6.8e-05
     },
     {
       "symbol": "PENGU",
@@ -109,7 +111,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.002643
+      "funding": -0.002626
     },
     {
       "symbol": "RAY",
@@ -133,7 +135,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.5e-05
+      "funding": 7.1e-05
     },
     {
       "symbol": "TAO",
@@ -157,15 +159,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8e-05
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": 8.2e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
