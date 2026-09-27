@@ -1,15 +1,15 @@
 {
-  "ts": "2026-09-27T07:42:25+00:00",
+  "ts": "2026-09-27T07:48:18+00:00",
   "sources": {
     "coingecko": [
       "QNT",
       "NEAR",
       "ZEC",
       "PENGU",
-      "LINK",
-      "GRAM",
-      "RUNE",
       "TAO",
+      "LINK",
+      "RUNE",
+      "SUI",
       "ONDO"
     ],
     "reddit": [],
@@ -17,8 +17,8 @@
     "movers": [
       "QNT",
       "RUNE",
-      "MARSCOIN",
       "DASH",
+      "MARSCOIN",
       "WLD",
       "NEAR",
       "GRAM",
@@ -28,16 +28,6 @@
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "GRAM",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 2.53
-    },
     {
       "symbol": "NEAR",
       "surfaces": 2,
@@ -87,12 +77,20 @@
       "funding": 0.0001
     },
     {
+      "symbol": "GRAM",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "LINK",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5.8e-05
+      "funding": 5.9e-05
     },
     {
       "symbol": "MARSCOIN",
@@ -117,6 +115,14 @@
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 8.3e-05
     },
     {
       "symbol": "TAO",
