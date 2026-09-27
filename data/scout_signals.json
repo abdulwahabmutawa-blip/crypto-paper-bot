@@ -1,8 +1,23 @@
 {
-  "ts": "2026-09-27T16:03:23+00:00",
-  "scanned": 119,
+  "ts": "2026-09-27T16:08:45+00:00",
+  "scanned": 118,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "LSKUSDT",
+      "signal": "ignition",
+      "score": 0.5872,
+      "raw_score": 0.6267,
+      "weight": 0.937,
+      "price": 0.3269,
+      "why": "trades 5.6x and volume 5.5x the prior 4h, 76% taker-buy, $52,787 burst \u2014 while price has only moved -0.9%",
+      "chg_24h": -0.039,
+      "vol_surge": 5.5,
+      "chg_1h": -0.0094,
+      "market_surge": 0.29,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
