@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-27T10:17:06+00:00",
+  "ts": "2026-09-27T10:22:58+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
@@ -20,16 +20,26 @@
       "QNT",
       "WLD",
       "MARSCOIN",
-      "GRAM",
       "DASH",
+      "GRAM",
       "RUNE",
       "ZEC",
-      "SUI"
+      "NEAR"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "NEAR",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.6
+    },
     {
       "symbol": "QNT",
       "surfaces": 2,
@@ -39,16 +49,6 @@
       ],
       "funding": 0.0001,
       "long_short": 0.73
-    },
-    {
-      "symbol": "SUI",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 7e-05,
-      "long_short": 2.41
     },
     {
       "symbol": "WLD",
@@ -67,7 +67,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 1.8e-05,
+      "funding": 1.4e-05,
       "long_short": 0.43
     },
     {
@@ -101,14 +101,6 @@
         "movers"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "NEAR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "ONDO",
@@ -149,6 +141,14 @@
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 6.8e-05
     },
     {
       "symbol": "TRUMP",
