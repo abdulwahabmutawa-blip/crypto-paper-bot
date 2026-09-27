@@ -1,8 +1,23 @@
 {
-  "ts": "2026-09-27T19:59:44+00:00",
-  "scanned": 118,
+  "ts": "2026-09-27T20:05:32+00:00",
+  "scanned": 116,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ARBUSDT",
+      "signal": "ignition",
+      "score": 0.6842,
+      "raw_score": 0.7263,
+      "weight": 0.942,
+      "price": 0.231,
+      "why": "trades 7.6x and volume 7.5x the prior 4h, 68% taker-buy, $553,681 burst \u2014 while price has only moved +1.4%",
+      "chg_24h": 0.0359,
+      "vol_surge": 7.53,
+      "chg_1h": 0.014,
+      "market_surge": 3.93,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
