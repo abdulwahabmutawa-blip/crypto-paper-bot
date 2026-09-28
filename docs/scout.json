@@ -1,37 +1,8 @@
 {
-  "ts": "2026-09-28T10:07:57+00:00",
+  "ts": "2026-09-28T10:13:43+00:00",
   "scanned": 135,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "IOTAUSDT",
-      "signal": "breakout",
-      "score": 0.7263,
-      "raw_score": 0.7727,
-      "weight": 0.94,
-      "price": 0.0535,
-      "why": "trades 6.6x, volume 13.0x, 81% taker-buy, +3.7% in an hour, at 85% of its 24h range",
-      "chg_24h": 0.0492,
-      "vol_surge": 13.02,
-      "chg_1h": 0.0368,
-      "market_surge": 5.93,
-      "actionable": true
-    },
-    {
-      "symbol": "IOTAUSDT",
-      "signal": "ignition",
-      "score": 0.6725,
-      "raw_score": 0.7224,
-      "weight": 0.931,
-      "price": 0.0535,
-      "why": "trades 6.6x and volume 13.0x the prior 4h, 81% taker-buy, $126,704 burst \u2014 while price has only moved +3.7%",
-      "chg_24h": 0.0492,
-      "vol_surge": 13.02,
-      "chg_1h": 0.0368,
-      "market_surge": 5.93,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
