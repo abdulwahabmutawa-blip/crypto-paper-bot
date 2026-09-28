@@ -1,37 +1,8 @@
 {
-  "ts": "2026-09-28T19:58:04+00:00",
-  "scanned": 155,
+  "ts": "2026-09-28T20:03:24+00:00",
+  "scanned": 154,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "TSLABUSDT",
-      "signal": "ignition",
-      "score": 0.6398,
-      "raw_score": 0.6924,
-      "weight": 0.924,
-      "price": 357.73,
-      "why": "trades 4.1x and volume 9.7x the prior 4h, 79% taker-buy, $58,677 burst \u2014 while price has only moved -0.5%",
-      "chg_24h": -0.0423,
-      "vol_surge": 9.71,
-      "chg_1h": -0.0049,
-      "market_surge": 9.39,
-      "actionable": true
-    },
-    {
-      "symbol": "SOXLBUSDT",
-      "signal": "ignition",
-      "score": 0.6261,
-      "raw_score": 0.6776,
-      "weight": 0.924,
-      "price": 142.55,
-      "why": "trades 4.7x and volume 27.6x the prior 4h, 60% taker-buy, $52,834 burst \u2014 while price has only moved -0.4%",
-      "chg_24h": -0.0735,
-      "vol_surge": 27.56,
-      "chg_1h": -0.0039,
-      "market_surge": 0.76,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -40,7 +11,7 @@
     "revival": "probation \u2014 7/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 11,
     "baseline": 18.0,
     "wave": false
   },
