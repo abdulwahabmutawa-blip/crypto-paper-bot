@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-28T12:39:40+00:00",
+  "ts": "2026-09-28T12:45:18+00:00",
   "sources": {
     "coingecko": [
       "QNT",
@@ -8,13 +8,13 @@
       "HBAR",
       "NEAR",
       "BTC",
-      "PENGU",
-      "LINK",
       "ONDO",
+      "LINK",
       "SUI",
+      "PENGU",
       "PUMP",
       "SEI",
-      "ALGO"
+      "XLM"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -26,7 +26,7 @@
       "PUMP",
       "SEI",
       "XLM",
-      "GRAM"
+      "LINK"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -39,8 +39,18 @@
         "coingecko",
         "movers"
       ],
-      "funding": -1.3e-05,
+      "funding": -1.1e-05,
       "long_short": 1.52
+    },
+    {
+      "symbol": "LINK",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.96
     },
     {
       "symbol": "PUMP",
@@ -59,7 +69,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.000196,
+      "funding": -0.000202,
       "long_short": 0.86
     },
     {
@@ -73,10 +83,11 @@
       "long_short": 2.31
     },
     {
-      "symbol": "ALGO",
-      "surfaces": 1,
+      "symbol": "XLM",
+      "surfaces": 2,
       "sources": [
-        "coingecko"
+        "coingecko",
+        "movers"
       ],
       "funding": 0.0001
     },
@@ -86,7 +97,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.5e-05
+      "funding": 6.4e-05
     },
     {
       "symbol": "FIRO",
@@ -94,22 +105,6 @@
       "sources": [
         "coingecko"
       ]
-    },
-    {
-      "symbol": "GRAM",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "LINK",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "MARSCOIN",
@@ -125,7 +120,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.7e-05
+      "funding": 6e-05
     },
     {
       "symbol": "ONDO",
@@ -141,7 +136,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.00154
+      "funding": -0.00159
     },
     {
       "symbol": "PENGU",
@@ -165,15 +160,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -9.1e-05
-    },
-    {
-      "symbol": "XLM",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
+      "funding": -9.4e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
