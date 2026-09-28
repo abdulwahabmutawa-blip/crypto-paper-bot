@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-28T02:13:33+00:00 · runs 1977 · equity **$943.93** (-5.61%) · cash $0.00 · open 10/10 · round trips 722
+updated 2026-09-28T02:30:01+00:00 · runs 1978 · equity **$944.39** (-5.56%) · cash $0.00 · open 10/10 · round trips 722
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-09-27T05:36 | JSTUSDT | surge | 0.12466 | 0.12703 | +1.90% |
-| 2026-09-27T12:58 | MMTUSDT | surge | 0.1833 | 0.1812 | -1.15% |
-| 2026-09-27T14:43 | CAKEUSDT | surge | 2.844 | 2.8 | -1.55% |
-| 2026-09-27T15:49 | HYPEUSDT | bottom | 91.19 | 90.5 | -0.76% |
+| 2026-09-27T05:36 | JSTUSDT | surge | 0.12466 | 0.12746 | +2.25% |
+| 2026-09-27T12:58 | MMTUSDT | surge | 0.1833 | 0.1815 | -0.98% |
+| 2026-09-27T14:43 | CAKEUSDT | surge | 2.844 | 2.794 | -1.76% |
+| 2026-09-27T15:49 | HYPEUSDT | bottom | 91.19 | 90.84 | -0.38% |
 | 2026-09-28T00:49 | JASMYUSDT | surge | 0.00534 | 0.00532 | -0.37% |
-| 2026-09-28T01:06 | PUMPUSDT | surge | 0.005169 | 0.005177 | +0.15% |
-| 2026-09-28T01:38 | IMXUSDT | surge | 0.1895 | 0.1889 | -0.32% |
-| 2026-09-28T02:12 | IOTAUSDT | surge | 0.0526 | 0.0536 | +1.90% |
-| 2026-09-28T02:12 | HBARUSDT | surge | 0.09647 | 0.09728 | +0.84% |
+| 2026-09-28T01:06 | PUMPUSDT | surge | 0.005169 | 0.005214 | +0.87% |
+| 2026-09-28T01:38 | IMXUSDT | surge | 0.1895 | 0.1902 | +0.37% |
+| 2026-09-28T02:12 | IOTAUSDT | surge | 0.0526 | 0.0531 | +0.95% |
+| 2026-09-28T02:12 | HBARUSDT | surge | 0.09647 | 0.09661 | +0.15% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
