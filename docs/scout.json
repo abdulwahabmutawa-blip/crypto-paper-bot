@@ -1,23 +1,8 @@
 {
-  "ts": "2026-09-28T10:47:24+00:00",
+  "ts": "2026-09-28T10:53:14+00:00",
   "scanned": 135,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "NMRUSDT",
-      "signal": "breakout",
-      "score": 0.7434,
-      "raw_score": 0.7917,
-      "weight": 0.939,
-      "price": 10.56,
-      "why": "trades 6.1x, volume 6.3x, 76% taker-buy, +6.9% in an hour, at 83% of its 24h range",
-      "chg_24h": 0.0887,
-      "vol_surge": 6.25,
-      "chg_1h": 0.0688,
-      "market_surge": 9.64,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -26,7 +11,7 @@
     "revival": "probation \u2014 8/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 9,
+    "count": 10,
     "baseline": 18.0,
     "wave": false
   },
