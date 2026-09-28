@@ -1,8 +1,23 @@
 {
-  "ts": "2026-09-28T19:36:19+00:00",
-  "scanned": 155,
+  "ts": "2026-09-28T19:42:15+00:00",
+  "scanned": 153,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "NVDABUSDT",
+      "signal": "ignition",
+      "score": 0.6837,
+      "raw_score": 0.7399,
+      "weight": 0.924,
+      "price": 228.72,
+      "why": "trades 5.5x and volume 9.5x the prior 4h, 78% taker-buy, $100,037 burst \u2014 while price has only moved -0.5%",
+      "chg_24h": 0.0142,
+      "vol_surge": 9.52,
+      "chg_1h": -0.0053,
+      "market_surge": 2.47,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -120,7 +135,7 @@
       "median_ret_4h": 0.00546,
       "both_halves_4h": true,
       "days_4h": 11,
-      "mean_x_4h": 0.01946,
+      "mean_x_4h": 0.01837,
       "days_x_4h": 11,
       "avg_win_4h": 0.04593,
       "avg_loss_4h": -0.02327,
