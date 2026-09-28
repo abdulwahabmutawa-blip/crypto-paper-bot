@@ -1,18 +1,18 @@
 {
- "updated_utc": "2026-09-28T06:10:00+00:00",
- "run_note": "Monday 2026-09-28 ~06:00Z; covers 09-26 12:10Z -> now (no 09-27 run). (1) SIM-INTEGRITY ALERT UNCHANGED: scalper/TVKUSDT dead-candle seat, day 16. (2) Watcher down ~16.6 days; sentiment/lottery/hype_ibkr idle. (3) Fill audit: 78 scalper closes + 74 opens, 152/152 inside Binance 15m ranges, no skew >1h; no equity fills. (4) Loop healthy and faster: 605 data commits/42h, median gap 5.1 min, max 6.2 min; no failed runs (4 cancelled = handoffs). (5) No R1, none under 800; sentiment 869.30 below 900. (6) BTC -1.6% (crypto -19.23, beta); scalper -32.51 over the window (stops 39 > targets 34); meanrev flat (weekend). (7) Closed 3 judgments alpha 0; issued 5.",
+ "updated_utc": "2026-09-28T18:00:00+00:00",
+ "run_note": "Second Monday run, ~17:55Z; covers 06:00Z -> 17:50Z. (1) SIM-INTEGRITY ALERT UNCHANGED: scalper/TVKUSDT dead-candle seat, day 16. (2) Watcher down ~17.1 days; sentiment/lottery/hype_ibkr idle. (3) Fill audit: 23 scalper entries + 19 exits, 42/42 inside Binance 15m ranges, no skew >1h; no NYSE equity fills (meanrev held HD). (4) Loop healthy: 169 data commits in ~11.7h, median gap 5.2 min, max 6.2; 30/30 recent runs green. (5) No R1, none under 800; sentiment 869.30 below 900. (6) Monday: SPY -0.5%, HD -0.5% (meanrev -4.57, beta); BTC up to 83.9k (crypto +11.85 since 06Z); scalper -7.01 since 06Z (stops 11 > targets 8). (7) Closed 3 judgments alpha 0; issued 5.",
  "fleet_snapshot": {
-  "as_of": "2026-09-28 ~05:50Z",
+  "as_of": "2026-09-28 ~17:50Z",
   "roster_note": "Active roster cut from 10 books to 4 by owner decisions on 2026-09-04 and 2026-09-05. The old $8,000/$10,000 baseline no longer describes the live fleet; both are reported.",
   "active_paper_bots": 4,
   "baseline_usd": 4000,
-  "total_value_usd": 4159.23,
-  "total_pnl_usd": 159.23,
-  "total_pnl_pct": 3.98,
+  "total_value_usd": 4159.5,
+  "total_pnl_usd": 159.5,
+  "total_pnl_pct": 3.99,
   "active_bots": {
-   "meanrev": 1185.35,
-   "crypto": 1186.59,
-   "scalper": 917.99,
+   "meanrev": 1180.78,
+   "crypto": 1198.44,
+   "scalper": 910.98,
    "sentiment": 869.3
   },
   "retired_frozen_archives": {
@@ -30,31 +30,31 @@
    "lottery_usd": 33.15,
    "lottery_hwm_usd": 44.27,
    "hype_ibkr": "never traded, state ~17.5d stale",
-   "carry_owner_net_usd": 1.28
+   "carry_owner_net_usd": 1.32
   },
-  "caveat": "scalper's 917.99 still includes 86.17 marked at a dead 2023 price (TVKUSDT), open since 2026-09-12, now day 16."
+  "caveat": "scalper's 910.98 still includes 86.17 marked at a dead 2023 price (TVKUSDT), open since 2026-09-12, now day 16."
  },
- "total_judgments": 304,
- "judgments_closed": 301,
+ "total_judgments": 309,
+ "judgments_closed": 306,
  "judgments_open": 3,
  "open_ids": [
-  "2026-09-28-scalper-1",
-  "2026-09-28-sentiment-1",
-  "2026-09-28-lottery-1"
+  "2026-09-28-scalper-2",
+  "2026-09-28-sentiment-2",
+  "2026-09-28-lottery-2"
  ],
  "cumulative_alpha_usd": -712.7,
- "win_rate_closed_pct": 8.0,
+ "win_rate_closed_pct": 7.8,
  "win_rate_note": "Most closed judgments are no_change (alpha 0), so the headline rate carries no information - read the DIRECTIONAL record. This run closed three, all neutral (scalper/sentiment/lottery advice matched the bots' own behavior exactly, alpha 0 each). Cumulative alpha is still dominated by the single -1,111.03 sentiment call from 08-31.",
  "directional_record": {
   "scored": 43,
   "wins": 24,
   "losses": 19,
-  "neutral": 258,
+  "neutral": 263,
   "basis": "sign of realized alpha on closed judgments; the sparse legacy outcome field is not used"
  },
  "per_bot": {
   "sentiment": {
-   "closed": 27,
+   "closed": 28,
    "alpha": -1161.24,
    "wins": 2,
    "losses": 6
@@ -66,7 +66,7 @@
    "losses": 2
   },
   "meanrev": {
-   "closed": 33,
+   "closed": 34,
    "alpha": -13.64,
    "wins": 0,
    "losses": 1
@@ -96,7 +96,7 @@
    "losses": 0
   },
   "lottery": {
-   "closed": 13,
+   "closed": 14,
    "alpha": 11.08,
    "wins": 2,
    "losses": 1
@@ -120,7 +120,7 @@
    "losses": 1
   },
   "crypto": {
-   "closed": 38,
+   "closed": 39,
    "alpha": 106.83,
    "wins": 7,
    "losses": 0
@@ -132,7 +132,7 @@
    "losses": 2
   },
   "scalper": {
-   "closed": 7,
+   "closed": 8,
    "alpha": 0,
    "wins": 0,
    "losses": 0
