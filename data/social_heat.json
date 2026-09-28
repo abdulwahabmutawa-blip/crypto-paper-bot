@@ -1,20 +1,20 @@
 {
-  "ts": "2026-09-28T23:13:36+00:00",
+  "ts": "2026-09-28T23:18:57+00:00",
   "sources": {
     "coingecko": [
-      "FIRO",
       "QNT",
+      "FIRO",
       "TRUMP",
       "NEAR",
       "HBAR",
       "LINK",
       "ONDO",
-      "UNI",
       "XLM",
-      "SUI",
+      "UNI",
       "PENGU",
-      "AVAX",
-      "BTC"
+      "SUI",
+      "AAVE",
+      "AVAX"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -63,6 +63,14 @@
       "long_short": 1.88
     },
     {
+      "symbol": "AAVE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 2.3e-05
+    },
+    {
       "symbol": "ALGO",
       "surfaces": 1,
       "sources": [
@@ -79,14 +87,6 @@
       "funding": 0.0001
     },
     {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 3.1e-05
-    },
-    {
       "symbol": "FIRO",
       "surfaces": 1,
       "sources": [
@@ -99,7 +99,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 6.1e-05
+      "funding": 7.3e-05
     },
     {
       "symbol": "MUBARAK",
@@ -139,7 +139,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000175
+      "funding": -0.000167
     },
     {
       "symbol": "SUI",
@@ -147,7 +147,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1e-06
+      "funding": 4e-06
     },
     {
       "symbol": "TRUMP",
@@ -155,7 +155,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2e-05
+      "funding": -1.6e-05
     },
     {
       "symbol": "TRX",
@@ -171,7 +171,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.2e-05
+      "funding": 6.6e-05
     },
     {
       "symbol": "\u725b\u6765",
@@ -179,7 +179,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 8.6e-05
+      "funding": 9.3e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
