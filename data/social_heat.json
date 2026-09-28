@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-28T20:41:56+00:00",
+  "ts": "2026-09-28T20:47:49+00:00",
   "sources": {
     "coingecko": [
       "QNT",
@@ -9,24 +9,25 @@
       "TRUMP",
       "LINK",
       "BTC",
+      "PENGU",
       "XLM",
       "ALGO",
-      "PENGU",
-      "ONDO",
       "ENA",
-      "ZEC"
+      "ONDO",
+      "ZEC",
+      "AERO"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "HBAR",
-      "MARSCOIN",
       "QNT",
+      "MARSCOIN",
       "ALGO",
-      "\u725b\u6765",
       "MUBARAK",
+      "\u725b\u6765",
       "LINK",
-      "ONE"
+      "XLM"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -69,8 +70,26 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.000144,
+      "funding": -0.00015,
       "long_short": 0.85
+    },
+    {
+      "symbol": "XLM",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.84
+    },
+    {
+      "symbol": "AERO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 9.3e-05
     },
     {
       "symbol": "BTC",
@@ -128,14 +147,6 @@
       "funding": 5e-05
     },
     {
-      "symbol": "ONE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -0.001729
-    },
-    {
       "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
@@ -149,15 +160,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -6.7e-05
-    },
-    {
-      "symbol": "XLM",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": -7.1e-05
     },
     {
       "symbol": "ZEC",
@@ -173,7 +176,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000178
+      "funding": 0.000179
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
