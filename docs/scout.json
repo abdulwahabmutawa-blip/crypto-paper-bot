@@ -1,8 +1,23 @@
 {
-  "ts": "2026-09-28T05:33:24+00:00",
+  "ts": "2026-09-28T05:39:18+00:00",
   "scanned": 128,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "CAKEUSDT",
+      "signal": "ignition",
+      "score": 0.5993,
+      "raw_score": 0.643,
+      "weight": 0.932,
+      "price": 2.697,
+      "why": "trades 7.7x and volume 5.1x the prior 4h, 62% taker-buy, $246,905 burst \u2014 while price has only moved -1.9%",
+      "chg_24h": -0.0214,
+      "vol_surge": 5.09,
+      "chg_1h": -0.0193,
+      "market_surge": 4.12,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
