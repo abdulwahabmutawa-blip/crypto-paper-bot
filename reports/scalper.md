@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-28T12:42:57+00:00 · runs 2016 · equity **$914.41** (-8.56%) · cash $462.87 · open 5/10 · round trips 739
+updated 2026-09-28T12:59:19+00:00 · runs 2017 · equity **$916.79** (-8.32%) · cash $370.30 · open 6/10 · round trips 739
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,9 +36,10 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-09-27T15:49 | HYPEUSDT | bottom | 91.19 | 89.98 | -1.33% |
-| 2026-09-28T03:34 | MSTRBUSDT | bottom | 156.65 | 157 | +0.22% |
-| 2026-09-28T12:08 | NVDABUSDT | surge | 227.9 | 229.06 | +0.51% |
-| 2026-09-28T12:08 | JSTUSDT | surge | 0.12933 | 0.13116 | +1.41% |
+| 2026-09-27T15:49 | HYPEUSDT | bottom | 91.19 | 90.3 | -0.98% |
+| 2026-09-28T03:34 | MSTRBUSDT | bottom | 156.65 | 158.31 | +1.06% |
+| 2026-09-28T12:08 | NVDABUSDT | surge | 227.9 | 229.72 | +0.80% |
+| 2026-09-28T12:08 | JSTUSDT | surge | 0.12933 | 0.13102 | +1.31% |
+| 2026-09-28T12:57 | 牛来USDT | surge | 0.11297 | 0.11434 | +1.21% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
