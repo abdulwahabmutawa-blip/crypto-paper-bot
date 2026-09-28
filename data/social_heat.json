@@ -1,24 +1,25 @@
 {
-  "ts": "2026-09-28T06:40:25+00:00",
+  "ts": "2026-09-28T06:45:44+00:00",
   "sources": {
     "coingecko": [
       "QNT",
       "NEAR",
-      "SUI",
+      "ONDO",
       "SEI",
       "ZEC",
-      "ONDO",
       "BTC",
-      "PUMP",
+      "SUI",
       "PENGU",
-      "TAO"
+      "PUMP",
+      "HBAR",
+      "MARSCOIN"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "QNT",
-      "SEI",
       "PUMP",
+      "SEI",
       "MARSCOIN",
       "ONDO",
       "GRAM"
@@ -27,6 +28,16 @@
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "MARSCOIN",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.1
+    },
     {
       "symbol": "ONDO",
       "surfaces": 2,
@@ -54,7 +65,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -5e-06,
+      "funding": -2.2e-05,
       "long_short": 0.74
     },
     {
@@ -84,12 +95,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "MARSCOIN",
+      "symbol": "HBAR",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 0.0001
     },
     {
       "symbol": "NEAR",
@@ -114,14 +125,6 @@
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "ZEC",
