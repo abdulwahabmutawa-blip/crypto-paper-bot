@@ -1,18 +1,20 @@
 {
-  "ts": "2026-09-28T07:02:22+00:00",
+  "ts": "2026-09-28T07:08:09+00:00",
   "sources": {
     "coingecko": [
       "QNT",
       "NEAR",
-      "SUI",
       "ONDO",
+      "SUI",
+      "PENGU",
       "BTC",
       "SEI",
-      "PENGU",
       "ZEC",
-      "PUMP",
+      "LIT",
+      "WLD",
       "HBAR",
-      "TAO"
+      "PUMP",
+      "MARSCOIN"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,13 +24,22 @@
       "PUMP",
       "MARSCOIN",
       "ONDO",
-      "GRAM",
-      "SUI"
+      "GRAM"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "MARSCOIN",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.05
+    },
     {
       "symbol": "ONDO",
       "surfaces": 2,
@@ -47,7 +58,7 @@
         "movers"
       ],
       "funding": 5e-05,
-      "long_short": 1.25
+      "long_short": 1.26
     },
     {
       "symbol": "QNT",
@@ -56,7 +67,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -6.1e-05,
+      "funding": -7.7e-05,
       "long_short": 0.83
     },
     {
@@ -67,17 +78,7 @@
         "movers"
       ],
       "funding": 0.0001,
-      "long_short": 2.36
-    },
-    {
-      "symbol": "SUI",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 2.45
+      "long_short": 2.34
     },
     {
       "symbol": "BTC",
@@ -85,7 +86,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.5e-05
+      "funding": -2.3e-05
     },
     {
       "symbol": "GRAM",
@@ -93,7 +94,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 5.6e-05
+      "funding": 6.4e-05
     },
     {
       "symbol": "HBAR",
@@ -104,12 +105,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "MARSCOIN",
+      "symbol": "LIT",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 2.4e-05
     },
     {
       "symbol": "NEAR",
@@ -128,12 +129,20 @@
       "funding": 5e-05
     },
     {
-      "symbol": "TAO",
+      "symbol": "SUI",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 0.0001
+    },
+    {
+      "symbol": "WLD",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "ZEC",
