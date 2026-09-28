@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-28T12:17:21+00:00",
+  "ts": "2026-09-28T12:23:20+00:00",
   "sources": {
     "coingecko": [
       "QNT",
@@ -20,26 +20,16 @@
       "QNT",
       "HBAR",
       "ONE",
-      "PUMP",
       "MARSCOIN",
+      "PUMP",
       "SEI",
-      "GRAM",
-      "LINK"
+      "LINK",
+      "XLM"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "GRAM",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 2.32
-    },
     {
       "symbol": "HBAR",
       "surfaces": 2,
@@ -47,7 +37,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -2.4e-05,
+      "funding": -1.8e-05,
       "long_short": 1.52
     },
     {
@@ -57,7 +47,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.000109,
+      "funding": -0.000131,
       "long_short": 0.86
     },
     {
@@ -74,7 +64,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.2e-05
+      "funding": 6.4e-05
     },
     {
       "symbol": "FIRO",
@@ -82,6 +72,14 @@
       "sources": [
         "coingecko"
       ]
+    },
+    {
+      "symbol": "GRAM",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "LINK",
@@ -105,7 +103,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.7e-05
+      "funding": 8.1e-05
     },
     {
       "symbol": "ONDO",
@@ -121,7 +119,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001513
+      "funding": -0.001527
     },
     {
       "symbol": "PENGU",
@@ -162,6 +160,14 @@
         "coingecko"
       ],
       "funding": -9.2e-05
+    },
+    {
+      "symbol": "XLM",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
