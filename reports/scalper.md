@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-28T05:14:16+00:00 · runs 1988 · equity **$923.53** (-7.65%) · cash $0.00 · open 10/10 · round trips 727
+updated 2026-09-28T05:30:43+00:00 · runs 1989 · equity **$919.77** (-8.02%) · cash $0.00 · open 10/10 · round trips 727
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-09-27T05:36 | JSTUSDT | surge | 0.12466 | 0.12816 | +2.81% |
-| 2026-09-27T12:58 | MMTUSDT | surge | 0.1833 | 0.1828 | -0.27% |
-| 2026-09-27T15:49 | HYPEUSDT | bottom | 91.19 | 89.93 | -1.38% |
-| 2026-09-28T01:06 | PUMPUSDT | surge | 0.005169 | 0.005172 | +0.06% |
-| 2026-09-28T02:12 | HBARUSDT | surge | 0.09647 | 0.09515 | -1.37% |
-| 2026-09-28T03:01 | BABYUSDT | bottom | 0.01357 | 0.0135 | -0.52% |
-| 2026-09-28T03:34 | MSTRBUSDT | bottom | 156.65 | 156.4 | -0.16% |
-| 2026-09-28T03:50 | SEIUSDT | surge | 0.0828 | 0.08107 | -2.09% |
-| 2026-09-28T04:40 | ONDOUSDT | surge | 0.5915 | 0.5812 | -1.74% |
+| 2026-09-27T05:36 | JSTUSDT | surge | 0.12466 | 0.12825 | +2.88% |
+| 2026-09-27T12:58 | MMTUSDT | surge | 0.1833 | 0.1795 | -2.07% |
+| 2026-09-27T15:49 | HYPEUSDT | bottom | 91.19 | 89.52 | -1.83% |
+| 2026-09-28T01:06 | PUMPUSDT | surge | 0.005169 | 0.00517 | +0.02% |
+| 2026-09-28T02:12 | HBARUSDT | surge | 0.09647 | 0.09533 | -1.18% |
+| 2026-09-28T03:01 | BABYUSDT | bottom | 0.01357 | 0.01338 | -1.40% |
+| 2026-09-28T03:34 | MSTRBUSDT | bottom | 156.65 | 155.53 | -0.71% |
+| 2026-09-28T03:50 | SEIUSDT | surge | 0.0828 | 0.08128 | -1.84% |
+| 2026-09-28T04:40 | ONDOUSDT | surge | 0.5915 | 0.5755 | -2.70% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
