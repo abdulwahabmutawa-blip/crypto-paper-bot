@@ -1,23 +1,8 @@
 {
-  "ts": "2026-09-28T23:24:41+00:00",
-  "scanned": 146,
+  "ts": "2026-09-28T23:30:21+00:00",
+  "scanned": 145,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "FETUSDT",
-      "signal": "ignition",
-      "score": 0.6346,
-      "raw_score": 0.6875,
-      "weight": 0.923,
-      "price": 0.2256,
-      "why": "trades 4.0x and volume 14.3x the prior 4h, 85% taker-buy, $410,094 burst \u2014 while price has only moved +1.4%",
-      "chg_24h": -0.0795,
-      "vol_surge": 14.26,
-      "chg_1h": 0.0139,
-      "market_surge": 3.44,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -26,7 +11,7 @@
     "revival": "probation \u2014 6/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 13,
     "baseline": 18.0,
     "wave": false
   },
