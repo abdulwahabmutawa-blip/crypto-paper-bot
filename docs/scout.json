@@ -1,8 +1,23 @@
 {
-  "ts": "2026-09-28T09:10:43+00:00",
+  "ts": "2026-09-28T09:16:41+00:00",
   "scanned": 131,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "CRCLBUSDT",
+      "signal": "ignition",
+      "score": 0.7357,
+      "raw_score": 0.7902,
+      "weight": 0.931,
+      "price": 85.74,
+      "why": "trades 7.5x and volume 19.2x the prior 4h, 61% taker-buy, $937,463 burst \u2014 while price has only moved -0.4%",
+      "chg_24h": -0.0459,
+      "vol_surge": 19.24,
+      "chg_1h": -0.0044,
+      "market_surge": 7.95,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 8/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 11,
+    "count": 13,
     "baseline": 18.0,
     "wave": false
   },
@@ -30,19 +45,19 @@
       "avg_win_1h": 0.01259,
       "avg_loss_1h": -0.01105,
       "payoff_1h": 1.14,
-      "span_h_4h": 331.6,
-      "n_eff_4h": 82.9,
-      "n_4h": 818,
-      "hit_rate_4h": 0.43,
-      "mean_ret_4h": 0.00085,
+      "span_h_4h": 332.0,
+      "n_eff_4h": 82.99,
+      "n_4h": 819,
+      "hit_rate_4h": 0.431,
+      "mean_ret_4h": 0.00093,
       "median_ret_4h": -0.00152,
       "both_halves_4h": false,
       "days_4h": 15,
-      "mean_x_4h": -0.00023,
+      "mean_x_4h": 0.0002,
       "days_x_4h": 15,
-      "avg_win_4h": 0.02193,
+      "avg_win_4h": 0.02205,
       "avg_loss_4h": -0.01777,
-      "payoff_4h": 1.235,
+      "payoff_4h": 1.241,
       "span_h_24h": 311.2,
       "n_eff_24h": 12.97,
       "n_24h": 779,
