@@ -1,8 +1,23 @@
 {
-  "ts": "2026-09-28T17:56:51+00:00",
-  "scanned": 155,
+  "ts": "2026-09-28T18:02:34+00:00",
+  "scanned": 153,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "LINEAUSDT",
+      "signal": "breakout",
+      "score": 0.7341,
+      "raw_score": 0.7776,
+      "weight": 0.944,
+      "price": 0.003063,
+      "why": "trades 11.2x, volume 6.3x, 61% taker-buy, +5.0% in an hour, at 95% of its 24h range",
+      "chg_24h": 0.046,
+      "vol_surge": 6.33,
+      "chg_1h": 0.0504,
+      "market_surge": 5.81,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 7/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 11,
     "baseline": 18.0,
     "wave": false
   },
