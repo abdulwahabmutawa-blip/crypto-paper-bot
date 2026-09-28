@@ -1,23 +1,8 @@
 {
-  "ts": "2026-09-28T20:36:21+00:00",
-  "scanned": 153,
+  "ts": "2026-09-28T20:42:01+00:00",
+  "scanned": 154,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "0GUSDT",
-      "signal": "breakout",
-      "score": 0.66,
-      "raw_score": 0.6984,
-      "weight": 0.945,
-      "price": 0.2683,
-      "why": "trades 4.1x, volume 10.3x, 75% taker-buy, +4.6% in an hour, at 93% of its 24h range",
-      "chg_24h": 0.0098,
-      "vol_surge": 10.33,
-      "chg_1h": 0.0464,
-      "market_surge": 11.28,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -26,7 +11,7 @@
     "revival": "probation \u2014 7/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 10,
     "baseline": 18.0,
     "wave": false
   },
