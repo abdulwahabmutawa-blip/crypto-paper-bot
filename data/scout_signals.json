@@ -1,23 +1,8 @@
 {
-  "ts": "2026-09-28T07:08:14+00:00",
+  "ts": "2026-09-28T07:13:43+00:00",
   "scanned": 133,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "APEUSDT",
-      "signal": "ignition",
-      "score": 0.7625,
-      "raw_score": 0.8181,
-      "weight": 0.932,
-      "price": 0.1601,
-      "why": "trades 13.8x and volume 6.9x the prior 4h, 71% taker-buy, $51,115 burst \u2014 while price has only moved +1.2%",
-      "chg_24h": 0.0328,
-      "vol_surge": 6.87,
-      "chg_1h": 0.012,
-      "market_surge": 2.99,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -26,7 +11,7 @@
     "revival": "probation \u2014 8/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 10,
+    "count": 11,
     "baseline": 18.0,
     "wave": false
   },
@@ -58,19 +43,19 @@
       "avg_win_4h": 0.02194,
       "avg_loss_4h": -0.01758,
       "payoff_4h": 1.248,
-      "span_h_24h": 311.4,
-      "n_eff_24h": 12.98,
-      "n_24h": 776,
-      "hit_rate_24h": 0.557,
-      "mean_ret_24h": 0.01654,
-      "median_ret_24h": 0.00739,
+      "span_h_24h": 311.8,
+      "n_eff_24h": 12.99,
+      "n_24h": 777,
+      "hit_rate_24h": 0.556,
+      "mean_ret_24h": 0.0164,
+      "median_ret_24h": 0.00717,
       "both_halves_24h": true,
       "days_24h": 14,
-      "mean_x_24h": 0.01046,
+      "mean_x_24h": 0.01028,
       "days_x_24h": 14,
       "avg_win_24h": 0.05597,
-      "avg_loss_24h": -0.03766,
-      "payoff_24h": 1.486
+      "avg_loss_24h": -0.03782,
+      "payoff_24h": 1.48
     },
     "breakout": {
       "span_h_1h": 326.8,
