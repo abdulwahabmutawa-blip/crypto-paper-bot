@@ -1,8 +1,23 @@
 {
-  "ts": "2026-09-28T04:48:24+00:00",
+  "ts": "2026-09-28T04:54:07+00:00",
   "scanned": 130,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "MMTUSDT",
+      "signal": "ignition",
+      "score": 0.8165,
+      "raw_score": 0.8761,
+      "weight": 0.932,
+      "price": 0.1861,
+      "why": "trades 10.2x and volume 11.0x the prior 4h, 83% taker-buy, $69,102 burst \u2014 while price has only moved +3.2%",
+      "chg_24h": 0.0946,
+      "vol_surge": 11.04,
+      "chg_1h": 0.0322,
+      "market_surge": 9.76,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 8/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 13,
+    "count": 12,
     "baseline": 19.0,
     "wave": false
   },
