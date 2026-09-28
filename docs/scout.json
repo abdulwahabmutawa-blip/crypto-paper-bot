@@ -1,8 +1,23 @@
 {
-  "ts": "2026-09-28T12:00:54+00:00",
-  "scanned": 137,
+  "ts": "2026-09-28T12:06:14+00:00",
+  "scanned": 138,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SOXLBUSDT",
+      "signal": "ignition",
+      "score": 0.779,
+      "raw_score": 0.8358,
+      "weight": 0.932,
+      "price": 145.28,
+      "why": "trades 8.3x and volume 15.2x the prior 4h, 80% taker-buy, $63,757 burst \u2014 while price has only moved +1.9%",
+      "chg_24h": -0.0567,
+      "vol_surge": 15.22,
+      "chg_1h": 0.0192,
+      "market_surge": 7.77,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -107,7 +122,7 @@
       "median_ret_1h": 0.00221,
       "both_halves_1h": false,
       "days_1h": 11,
-      "mean_x_1h": 0.00412,
+      "mean_x_1h": 0.00477,
       "days_x_1h": 11,
       "avg_win_1h": 0.01407,
       "avg_loss_1h": -0.01701,
