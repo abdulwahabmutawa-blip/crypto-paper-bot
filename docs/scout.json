@@ -1,23 +1,8 @@
 {
-  "ts": "2026-09-28T00:10:33+00:00",
-  "scanned": 119,
+  "ts": "2026-09-28T00:15:51+00:00",
+  "scanned": 118,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "CRCLBUSDT",
-      "signal": "ignition",
-      "score": 0.8865,
-      "raw_score": 0.9512,
-      "weight": 0.932,
-      "price": 88.35,
-      "why": "trades 23.0x and volume 21.1x the prior 4h, 85% taker-buy, $220,609 burst \u2014 while price has only moved -0.5%",
-      "chg_24h": -0.0067,
-      "vol_surge": 21.11,
-      "chg_1h": -0.0046,
-      "market_surge": 7.08,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -26,7 +11,7 @@
     "revival": "probation \u2014 8/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 14,
+    "count": 15,
     "baseline": 20.0,
     "wave": false
   },
