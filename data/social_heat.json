@@ -1,16 +1,17 @@
 {
-  "ts": "2026-09-28T04:20:46+00:00",
+  "ts": "2026-09-28T04:26:38+00:00",
   "sources": {
     "coingecko": [
       "QNT",
-      "PUMP",
       "NEAR",
+      "PUMP",
       "ONDO",
       "PENGU",
       "BTC",
       "SEI",
-      "TAO",
-      "VIRTUAL"
+      "LINK",
+      "ZEC",
+      "APT"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -65,7 +66,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 8.4e-05,
+      "funding": 8.2e-05,
       "long_short": 0.77
     },
     {
@@ -79,12 +80,20 @@
       "long_short": 2.26
     },
     {
+      "symbol": "APT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -2.2e-05
+      "funding": -2e-05
     },
     {
       "symbol": "GRAM",
@@ -93,6 +102,14 @@
         "movers"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "LINK",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "PENGU",
@@ -111,26 +128,18 @@
       "funding": 0.0001
     },
     {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "VIRTUAL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "WLD",
       "surfaces": 1,
       "sources": [
         "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
       ],
       "funding": 0.0001
     }
