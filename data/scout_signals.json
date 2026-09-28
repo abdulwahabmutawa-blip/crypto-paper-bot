@@ -1,8 +1,23 @@
 {
-  "ts": "2026-09-28T21:21:21+00:00",
-  "scanned": 149,
+  "ts": "2026-09-28T21:26:45+00:00",
+  "scanned": 152,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "PYTHUSDT",
+      "signal": "ignition",
+      "score": 0.7103,
+      "raw_score": 0.7687,
+      "weight": 0.924,
+      "price": 0.08019,
+      "why": "trades 8.4x and volume 7.2x the prior 4h, 73% taker-buy, $69,674 burst \u2014 while price has only moved +1.2%",
+      "chg_24h": -0.0498,
+      "vol_surge": 7.17,
+      "chg_1h": 0.0117,
+      "market_surge": 2.56,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 6/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 11,
+    "count": 10,
     "baseline": 18.0,
     "wave": false
   },
