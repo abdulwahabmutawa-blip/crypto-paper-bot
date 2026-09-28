@@ -2,20 +2,22 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-28T14:54:20+00:00 · runs 2024 · equity **$900.11** (-9.99%) · cash $90.06 · open 9/10 · round trips 744
+updated 2026-09-28T15:10:48+00:00 · runs 2025 · equity **$905.21** (-9.48%) · cash $178.17 · open 8/10 · round trips 746
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
-- hit 51% (break-even 54%) · mean -0.12%/trade · realized $-90.19 · worst day $-50.94 · trades/day 31.0
+- hit 51% (break-even 54%) · mean -0.13%/trade · realized $-96.14 · worst day $-50.94 · trades/day 31.1
 
 | shape | n | hit | mean | target% | stop% | time% |
 |---|---|---|---|---|---|---|
-| surge | 634 | 53% | -0.06% | 50% | 43% | 7% |
+| surge | 636 | 53% | -0.07% | 49% | 44% | 7% |
 | bottom | 110 | 44% | -0.47% | 40% | 45% | 15% |
 
 ## Last 15 round trips
 | exit (UTC) | coin | shape | how | hours | net | P&L |
 |---|---|---|---|---|---|---|
+| 2026-09-28T15:09 | ALGOUSDT | surge | STOP | 0.5 | -3.25% | $-2.93 |
+| 2026-09-28T15:09 | IOTAUSDT | surge | STOP | 1.8 | -3.25% | $-3.03 |
 | 2026-09-28T14:52 | DOTUSDT | bottom | STOP | 1.5 | -3.25% | $-3.03 |
 | 2026-09-28T14:36 | HYPEUSDT | bottom | STOP | 22.5 | -3.25% | $-2.84 |
 | 2026-09-28T14:03 | 牛来USDT | surge | STOP | 0.8 | -3.25% | $-3.03 |
@@ -29,20 +31,17 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | 2026-09-28T07:28 | MUBARAKUSDT | surge | STOP | 0.2 | -3.25% | $-3.06 |
 | 2026-09-28T07:28 | HBARUSDT | surge | TARGET | 5.0 | +2.75% | $+2.66 |
 | 2026-09-28T06:55 | PUMPUSDT | surge | STOP | 5.5 | -3.25% | $-3.40 |
-| 2026-09-28T05:45 | ONDOUSDT | surge | STOP | 1.0 | -3.25% | $-2.97 |
-| 2026-09-28T05:45 | SEIUSDT | surge | STOP | 1.8 | -3.25% | $-3.07 |
 
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-09-28T03:34 | MSTRBUSDT | bottom | 156.65 | 155.45 | -0.77% |
-| 2026-09-28T12:08 | NVDABUSDT | surge | 227.9 | 229.34 | +0.63% |
-| 2026-09-28T12:08 | JSTUSDT | surge | 0.12933 | 0.13143 | +1.62% |
-| 2026-09-28T13:14 | IOTAUSDT | surge | 0.054 | 0.0523 | -3.15% |
-| 2026-09-28T13:14 | PROMUSDT | surge | 6.412 | 6.358 | -0.84% |
-| 2026-09-28T13:47 | NIGHTUSDT | surge | 0.02751 | 0.02708 | -1.56% |
-| 2026-09-28T14:19 | ALGOUSDT | surge | 0.1338 | 0.1276 | -4.63% |
-| 2026-09-28T14:36 | WUSDT | bottom | 0.01377 | 0.0135 | -1.96% |
+| 2026-09-28T03:34 | MSTRBUSDT | bottom | 156.65 | 156.73 | +0.05% |
+| 2026-09-28T12:08 | NVDABUSDT | surge | 227.9 | 230.41 | +1.10% |
+| 2026-09-28T12:08 | JSTUSDT | surge | 0.12933 | 0.13154 | +1.71% |
+| 2026-09-28T13:14 | PROMUSDT | surge | 6.412 | 6.333 | -1.23% |
+| 2026-09-28T13:47 | NIGHTUSDT | surge | 0.02751 | 0.02757 | +0.22% |
+| 2026-09-28T14:36 | WUSDT | bottom | 0.01377 | 0.01362 | -1.09% |
+| 2026-09-28T15:09 | ADAUSDT | bottom | 0.241 | 0.2426 | +0.66% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
