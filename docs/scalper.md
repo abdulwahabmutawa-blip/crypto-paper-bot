@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-28T05:47:07+00:00 · runs 1990 · equity **$917.50** (-8.25%) · cash $367.59 · open 6/10 · round trips 731
+updated 2026-09-28T05:51:03+00:00 · runs 1991 · equity **$917.99** (-8.20%) · cash $367.59 · open 6/10 · round trips 731
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,10 +36,10 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-09-27T15:49 | HYPEUSDT | bottom | 91.19 | 89.23 | -2.15% |
-| 2026-09-28T01:06 | PUMPUSDT | surge | 0.005169 | 0.00515 | -0.37% |
-| 2026-09-28T02:12 | HBARUSDT | surge | 0.09647 | 0.09639 | -0.08% |
-| 2026-09-28T03:01 | BABYUSDT | bottom | 0.01357 | 0.01345 | -0.88% |
-| 2026-09-28T03:34 | MSTRBUSDT | bottom | 156.65 | 155.71 | -0.60% |
+| 2026-09-27T15:49 | HYPEUSDT | bottom | 91.19 | 89.2 | -2.18% |
+| 2026-09-28T01:06 | PUMPUSDT | surge | 0.005169 | 0.005168 | -0.02% |
+| 2026-09-28T02:12 | HBARUSDT | surge | 0.09647 | 0.09634 | -0.13% |
+| 2026-09-28T03:01 | BABYUSDT | bottom | 0.01357 | 0.01347 | -0.74% |
+| 2026-09-28T03:34 | MSTRBUSDT | bottom | 156.65 | 155.85 | -0.51% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
