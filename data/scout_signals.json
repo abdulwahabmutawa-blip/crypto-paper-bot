@@ -1,8 +1,23 @@
 {
-  "ts": "2026-09-28T01:49:54+00:00",
+  "ts": "2026-09-28T01:55:33+00:00",
   "scanned": 116,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "MSTRBUSDT",
+      "signal": "ignition",
+      "score": 0.7047,
+      "raw_score": 0.7562,
+      "weight": 0.932,
+      "price": 158.35,
+      "why": "trades 4.6x and volume 27.6x the prior 4h, 98% taker-buy, $498,539 burst \u2014 while price has only moved -0.9%",
+      "chg_24h": -0.0129,
+      "vol_surge": 27.62,
+      "chg_1h": -0.0091,
+      "market_surge": 16.77,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 8/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 13,
     "baseline": 19.0,
     "wave": false
   },
@@ -43,19 +58,19 @@
       "avg_win_4h": 0.02206,
       "avg_loss_4h": -0.01703,
       "payoff_4h": 1.295,
-      "span_h_24h": 311.7,
+      "span_h_24h": 311.8,
       "n_eff_24h": 12.99,
-      "n_24h": 769,
-      "hit_rate_24h": 0.56,
-      "mean_ret_24h": 0.01704,
+      "n_24h": 771,
+      "hit_rate_24h": 0.562,
+      "mean_ret_24h": 0.0172,
       "median_ret_24h": 0.0077,
       "both_halves_24h": true,
       "days_24h": 14,
-      "mean_x_24h": 0.00928,
+      "mean_x_24h": 0.01069,
       "days_x_24h": 14,
-      "avg_win_24h": 0.05572,
+      "avg_win_24h": 0.05582,
       "avg_loss_24h": -0.037,
-      "payoff_24h": 1.506
+      "payoff_24h": 1.509
     },
     "breakout": {
       "span_h_1h": 334.1,
