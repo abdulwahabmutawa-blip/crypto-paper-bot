@@ -1,17 +1,17 @@
 {
-  "ts": "2026-09-28T10:02:39+00:00",
+  "ts": "2026-09-28T10:07:50+00:00",
   "sources": {
     "coingecko": [
       "QNT",
       "HBAR",
       "NEAR",
       "ONDO",
-      "TAO",
-      "ENA",
       "SUI",
-      "MARSCOIN",
-      "PENGU",
+      "TAO",
       "BTC",
+      "ENA",
+      "PENGU",
+      "GRAM",
       "ALGO"
     ],
     "reddit": [],
@@ -21,8 +21,8 @@
       "HBAR",
       "MARSCOIN",
       "PUMP",
-      "SEI",
       "GRAM",
+      "SEI",
       "\u725b\u6765",
       "RLUSD"
     ],
@@ -31,24 +31,24 @@
   },
   "heat": [
     {
+      "symbol": "GRAM",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5.6e-05,
+      "long_short": 2.13
+    },
+    {
       "symbol": "HBAR",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 6.2e-05,
+      "funding": 5.5e-05,
       "long_short": 1.57
-    },
-    {
-      "symbol": "MARSCOIN",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.05
     },
     {
       "symbol": "QNT",
@@ -57,7 +57,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 8.6e-05,
+      "funding": 9.4e-05,
       "long_short": 0.8
     },
     {
@@ -74,7 +74,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4e-06
+      "funding": 6e-06
     },
     {
       "symbol": "ENA",
@@ -85,12 +85,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "GRAM",
+      "symbol": "MARSCOIN",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 5.5e-05
+      "funding": 5e-05
     },
     {
       "symbol": "NEAR",
@@ -161,7 +161,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000107
+      "funding": 0.000102
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
