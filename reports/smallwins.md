@@ -1,6 +1,6 @@
 # Small-wins lab — paper study (owner request 2026-09-04)
 
-updated 2026-09-28T13:17:25+00:00 · runs 2088 · open 236 · resolved 20000 · cost 0.25%/RT
+updated 2026-09-28T13:33:48+00:00 · runs 2089 · open 244 · resolved 20000 · cost 0.25%/RT
 
 PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst day > -3 units.
 
@@ -39,7 +39,7 @@ PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst
 | momentum|t3|s2|h12 | 627 | 7 | 89.6 | 38% | 45% | -0.33% | 35% | 57% | 9% | -109.0% | fail |
 | dip_large|t1.5|s1.5|h8 | 548 | 7 | 78.3 | 47% | 58% | -0.34% | 47% | 53% | 1% | -45.5% | fail |
 | range_bottom|t1.5|s1|h8 | 676 | 6 | 112.7 | 36% | 50% | -0.34% | 34% | 61% | 5% | -141.2% | fail |
-| momentum|t1.5|s1.5|h8 | 848 | 7 | 121.1 | 46% | 58% | -0.36% | 45% | 53% | 2% | -115.2% | fail |
+| momentum|t1.5|s1.5|h8 | 847 | 7 | 121.0 | 46% | 58% | -0.36% | 45% | 53% | 2% | -115.2% | fail |
 | momentum|t1.5|s1|h8 | 953 | 7 | 136.1 | 35% | 50% | -0.37% | 35% | 64% | 1% | -127.0% | fail |
 | range_bottom|t1.5|s1.5|h8 | 542 | 6 | 90.3 | 45% | 58% | -0.37% | 42% | 51% | 8% | -136.1% | fail |
 | momentum|t1|s1|h6 | 1049 | 7 | 149.9 | 43% | 62% | -0.39% | 43% | 57% | 1% | -144.3% | fail |
@@ -51,7 +51,7 @@ PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst
 | range_bottom|t3|s2|h12 | 356 | 7 | 50.9 | 38% | 45% | -0.43% | 30% | 57% | 13% | -130.7% | fail |
 | calm_dip|t4|s2|h24 | 16 | 4 | 4.0 | 38% | 38% | -0.44% | 19% | 62% | 19% | -15.7% | fail |
 | dip_large|t3|s3|h24 | 404 | 7 | 57.7 | 47% | 54% | -0.44% | 46% | 53% | 1% | -99.1% | fail |
-| range_bottom|t4|s2|h24 | 320 | 7 | 45.7 | 32% | 38% | -0.46% | 26% | 65% | 9% | -134.6% | fail |
+| range_bottom|t4|s2|h24 | 321 | 7 | 45.9 | 32% | 38% | -0.45% | 26% | 65% | 9% | -130.8% | fail |
 | range_bottom|t3|s4|h48 | 215 | 6 | 35.8 | 52% | 61% | -0.48% | 51% | 43% | 6% | -92.7% | fail |
 | dip_large|t5|s3|h48 | 365 | 7 | 52.1 | 35% | 41% | -0.48% | 34% | 65% | 1% | -109.5% | fail |
 | range_bottom|t3|s3|h24 | 268 | 6 | 44.7 | 46% | 54% | -0.51% | 40% | 50% | 10% | -104.3% | fail |
