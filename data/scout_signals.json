@@ -1,8 +1,25 @@
 {
-  "ts": "2026-09-28T06:51:26+00:00",
-  "scanned": 131,
+  "ts": "2026-09-28T06:56:53+00:00",
+  "scanned": 135,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "GLMRUSDT",
+      "signal": "reversion",
+      "score": 0.3954,
+      "raw_score": 0.3954,
+      "weight": 1.0,
+      "price": 0.007745,
+      "why": "down -14% on the day (bottom decile of the market), now +1.0% over 15m with 2 green candles",
+      "chg_24h": -0.1372,
+      "vol_surge": 1.14,
+      "chg_1h": -0.0022,
+      "market_surge": 0.0,
+      "oi_drop": null,
+      "funding": 0.0,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,25 +28,25 @@
     "revival": "probation \u2014 8/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 11,
+    "count": 10,
     "baseline": 18.0,
     "wave": false
   },
   "scorecard": {
     "ignition": {
-      "span_h_1h": 334.4,
-      "n_eff_1h": 334.39,
-      "n_1h": 826,
+      "span_h_1h": 334.6,
+      "n_eff_1h": 334.58,
+      "n_1h": 827,
       "hit_rate_1h": 0.416,
-      "mean_ret_1h": 0.00069,
+      "mean_ret_1h": 0.00068,
       "median_ret_1h": 0.0,
       "both_halves_1h": false,
       "days_1h": 15,
       "mean_x_1h": 0.00059,
       "days_x_1h": 15,
       "avg_win_1h": 0.01258,
-      "avg_loss_1h": -0.01103,
-      "payoff_1h": 1.14,
+      "avg_loss_1h": -0.01101,
+      "payoff_1h": 1.142,
       "span_h_4h": 330.8,
       "n_eff_4h": 82.71,
       "n_4h": 821,
