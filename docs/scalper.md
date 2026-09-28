@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-28T08:01:58+00:00 · runs 1999 · equity **$906.20** (-9.38%) · cash $459.75 · open 5/10 · round trips 736
+updated 2026-09-28T08:18:15+00:00 · runs 2000 · equity **$907.29** (-9.27%) · cash $459.75 · open 5/10 · round trips 736
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,9 +36,9 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-09-27T15:49 | HYPEUSDT | bottom | 91.19 | 89.13 | -2.26% |
-| 2026-09-28T03:34 | MSTRBUSDT | bottom | 156.65 | 155.01 | -1.05% |
-| 2026-09-28T06:23 | PROMUSDT | surge | 6.433 | 6.259 | -2.70% |
-| 2026-09-28T07:44 | ADAUSDT | bottom | 0.2432 | 0.2435 | +0.12% |
+| 2026-09-27T15:49 | HYPEUSDT | bottom | 91.19 | 89.16 | -2.23% |
+| 2026-09-28T03:34 | MSTRBUSDT | bottom | 156.65 | 155.39 | -0.80% |
+| 2026-09-28T06:23 | PROMUSDT | surge | 6.433 | 6.283 | -2.33% |
+| 2026-09-28T07:44 | ADAUSDT | bottom | 0.2432 | 0.2448 | +0.66% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
