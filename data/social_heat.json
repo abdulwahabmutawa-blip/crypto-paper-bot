@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-29T23:07:47+00:00",
+  "ts": "2026-09-29T23:13:38+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
@@ -17,13 +17,13 @@
     "stocktwits": [],
     "movers": [
       "PUMP",
-      "0G",
       "QNT",
+      "0G",
       "ICP",
       "AAVE",
       "AVAX",
       "BABY",
-      "CRV"
+      "NEAR"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -38,6 +38,16 @@
       ],
       "funding": 0.0001,
       "long_short": 2.78
+    },
+    {
+      "symbol": "NEAR",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.59
     },
     {
       "symbol": "PUMP",
@@ -56,7 +66,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 5e-06,
+      "funding": 8e-06,
       "long_short": 0.86
     },
     {
@@ -82,14 +92,6 @@
         "movers"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "CRV",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "ENA",
@@ -122,14 +124,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "NEAR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "PENGU",
