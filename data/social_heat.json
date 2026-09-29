@@ -1,37 +1,57 @@
 {
-  "ts": "2026-09-29T08:33:29+00:00",
+  "ts": "2026-09-29T08:38:37+00:00",
   "sources": {
     "coingecko": [
       "QNT",
       "HBAR",
       "FIRO",
       "NEAR",
-      "PENGU",
       "ONDO",
-      "ZEC",
-      "PUMP",
-      "LINK",
-      "XLM",
+      "PENGU",
+      "AAVE",
       "UNI",
-      "TAO",
-      "BTC"
+      "AVAX",
+      "LINK",
+      "PUMP",
+      "ZEC",
+      "TAO"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "NMR",
-      "HBAR",
       "MUBARAK",
+      "HBAR",
       "AAVE",
-      "ALGO",
-      "XLM",
       "LINK",
+      "XLM",
+      "ALGO",
       "AVAX"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "AAVE",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.82
+    },
+    {
+      "symbol": "AVAX",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.44
+    },
     {
       "symbol": "HBAR",
       "surfaces": 2,
@@ -53,46 +73,12 @@
       "long_short": 2.01
     },
     {
-      "symbol": "XLM",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.78
-    },
-    {
-      "symbol": "AAVE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "ALGO",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "AVAX",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 6.6e-05
     },
     {
       "symbol": "FIRO",
@@ -123,7 +109,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001561
+      "funding": -0.001525
     },
     {
       "symbol": "ONDO",
@@ -172,6 +158,14 @@
         "coingecko"
       ],
       "funding": 3e-05
+    },
+    {
+      "symbol": "XLM",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "ZEC",
