@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-29T16:19:39+00:00",
+  "ts": "2026-09-29T16:25:25+00:00",
   "sources": {
     "coingecko": [
       "QNT",
@@ -21,11 +21,11 @@
       "0G",
       "CRV",
       "AAVE",
-      "ICP",
       "NMR",
-      "PUMP",
+      "ICP",
       "AVAX",
-      "QNT"
+      "QNT",
+      "BABY"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -58,18 +58,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 9.3e-05,
+      "funding": 9.6e-05,
       "long_short": 2.08
-    },
-    {
-      "symbol": "PUMP",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.41
     },
     {
       "symbol": "QNT",
@@ -78,11 +68,19 @@
         "coingecko",
         "movers"
       ],
-      "funding": 3e-05,
+      "funding": 3.2e-05,
       "long_short": 0.9
     },
     {
       "symbol": "0G",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "BABY",
       "surfaces": 1,
       "sources": [
         "movers"
@@ -95,7 +93,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.8e-05
+      "funding": 2e-05
     },
     {
       "symbol": "CRV",
@@ -111,7 +109,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.8e-05
+      "funding": 9.3e-05
     },
     {
       "symbol": "NEAR",
@@ -119,7 +117,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.1e-05
+      "funding": 4.2e-05
     },
     {
       "symbol": "NMR",
@@ -127,7 +125,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001645
+      "funding": -0.001608
     },
     {
       "symbol": "ONDO",
@@ -146,12 +144,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "SOL",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -2.7e-05
+      "funding": -2.6e-05
     },
     {
       "symbol": "ZRO",
