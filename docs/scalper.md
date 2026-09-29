@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-29T10:49:23+00:00 · runs 2090 · equity **$919.71** (-8.03%) · cash $0.00 · open 10/10 · round trips 775
+updated 2026-09-29T11:06:27+00:00 · runs 2091 · equity **$918.20** (-8.18%) · cash $0.00 · open 10/10 · round trips 775
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-09-28T12:08 | NVDABUSDT | surge | 227.9 | 230.72 | +1.24% |
-| 2026-09-28T12:08 | JSTUSDT | surge | 0.12933 | 0.13084 | +1.17% |
-| 2026-09-28T23:32 | GRAMUSDT | bottom | 1.574 | 1.574 | +0.00% |
-| 2026-09-29T02:55 | CRCLBUSDT | bottom | 85 | 86.5 | +1.76% |
-| 2026-09-29T04:01 | SPCXBUSDT | bottom | 145.83 | 146.99 | +0.80% |
-| 2026-09-29T06:44 | CRVUSDT | surge | 0.3959 | 0.3948 | -0.28% |
-| 2026-09-29T09:39 | 币安人生USDT | surge | 0.5147 | 0.5136 | -0.21% |
-| 2026-09-29T10:13 | ATOMUSDT | surge | 1.778 | 1.768 | -0.56% |
+| 2026-09-28T12:08 | NVDABUSDT | surge | 227.9 | 230.58 | +1.18% |
+| 2026-09-28T12:08 | JSTUSDT | surge | 0.12933 | 0.13098 | +1.28% |
+| 2026-09-28T23:32 | GRAMUSDT | bottom | 1.574 | 1.569 | -0.32% |
+| 2026-09-29T02:55 | CRCLBUSDT | bottom | 85 | 86.61 | +1.89% |
+| 2026-09-29T04:01 | SPCXBUSDT | bottom | 145.83 | 146.97 | +0.78% |
+| 2026-09-29T06:44 | CRVUSDT | surge | 0.3959 | 0.3904 | -1.39% |
+| 2026-09-29T09:39 | 币安人生USDT | surge | 0.5147 | 0.5131 | -0.31% |
+| 2026-09-29T10:13 | ATOMUSDT | surge | 1.778 | 1.764 | -0.79% |
 | 2026-09-29T10:47 | BABYUSDT | surge | 0.01356 | 0.01358 | +0.15% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
