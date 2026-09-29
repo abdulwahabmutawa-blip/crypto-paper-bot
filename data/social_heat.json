@@ -1,44 +1,34 @@
 {
-  "ts": "2026-09-29T06:51:37+00:00",
+  "ts": "2026-09-29T06:56:46+00:00",
   "sources": {
     "coingecko": [
       "QNT",
       "FIRO",
-      "HBAR",
       "ZEC",
+      "HBAR",
       "NEAR",
       "PENGU",
       "ONDO",
       "LINK",
-      "ALGO",
-      "ENA"
+      "HYPE",
+      "BTC"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "NMR",
       "HBAR",
-      "ALGO",
       "MUBARAK",
+      "ALGO",
       "MARSCOIN",
-      "LINK",
       "XLM",
+      "LINK",
       "AAVE"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "ALGO",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.9
-    },
     {
       "symbol": "HBAR",
       "surfaces": 2,
@@ -56,7 +46,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 7e-06,
+      "funding": 2e-06,
       "long_short": 1.96
     },
     {
@@ -65,15 +55,23 @@
       "sources": [
         "movers"
       ],
-      "funding": 4e-06
+      "funding": 5e-06
     },
     {
-      "symbol": "ENA",
+      "symbol": "ALGO",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 7e-05
     },
     {
       "symbol": "FIRO",
@@ -81,6 +79,14 @@
       "sources": [
         "coingecko"
       ]
+    },
+    {
+      "symbol": "HYPE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 3e-05
     },
     {
       "symbol": "MARSCOIN",
@@ -112,7 +118,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001996
+      "funding": -0.002023
     },
     {
       "symbol": "ONDO",
@@ -136,7 +142,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -9.4e-05
+      "funding": -9.1e-05
     },
     {
       "symbol": "XLM",
