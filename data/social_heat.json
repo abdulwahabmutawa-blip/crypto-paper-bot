@@ -1,20 +1,19 @@
 {
-  "ts": "2026-09-29T19:13:37+00:00",
+  "ts": "2026-09-29T19:18:59+00:00",
   "sources": {
     "coingecko": [
       "QNT",
       "TRUMP",
+      "PENGU",
       "NEAR",
       "HBAR",
-      "PENGU",
       "AAVE",
-      "PUMP",
       "ZEC",
       "ONDO",
-      "ZRO",
+      "AERO",
       "ICP",
       "VIRTUAL",
-      "AERO"
+      "TAO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -25,8 +24,8 @@
       "PUMP",
       "ICP",
       "AAVE",
-      "AVAX",
-      "BABY"
+      "BABY",
+      "AVAX"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -53,16 +52,6 @@
       "long_short": 2.22
     },
     {
-      "symbol": "PUMP",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.49
-    },
-    {
       "symbol": "QNT",
       "surfaces": 2,
       "sources": [
@@ -86,7 +75,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8e-05
+      "funding": 8.2e-05
     },
     {
       "symbol": "AVAX",
@@ -94,7 +83,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 1.2e-05
+      "funding": 8e-06
     },
     {
       "symbol": "BABY",
@@ -126,7 +115,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.002027
+      "funding": -0.002004
     },
     {
       "symbol": "ONDO",
@@ -138,6 +127,22 @@
     },
     {
       "symbol": "PENGU",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "TAO",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -167,14 +172,6 @@
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "ZRO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 2.5e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
