@@ -1,19 +1,20 @@
 {
-  "ts": "2026-09-29T02:40:26+00:00",
+  "ts": "2026-09-29T02:46:28+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
       "QNT",
       "TRUMP",
-      "HBAR",
       "NEAR",
+      "HBAR",
+      "LINK",
       "ONDO",
       "PENGU",
-      "LINK",
       "ZEC",
+      "XLM",
+      "HYPE",
       "DASH",
-      "BTC",
-      "HYPE"
+      "ALGO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -31,6 +32,16 @@
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "ALGO",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.78
+    },
     {
       "symbol": "HBAR",
       "surfaces": 2,
@@ -52,20 +63,14 @@
       "long_short": 1.82
     },
     {
-      "symbol": "ALGO",
-      "surfaces": 1,
+      "symbol": "XLM",
+      "surfaces": 2,
       "sources": [
+        "coingecko",
         "movers"
       ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 2.8e-05
+      "funding": 0.0001,
+      "long_short": 1.85
     },
     {
       "symbol": "DASH",
@@ -88,7 +93,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.5e-05
+      "funding": 1.8e-05
     },
     {
       "symbol": "MARSCOIN",
@@ -96,7 +101,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 8.3e-05
+      "funding": 9.1e-05
     },
     {
       "symbol": "MUBARAK",
@@ -120,7 +125,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000426
+      "funding": -0.000406
     },
     {
       "symbol": "ONDO",
@@ -136,7 +141,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9e-06
+      "funding": 1.2e-05
     },
     {
       "symbol": "QNT",
@@ -152,15 +157,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000155
-    },
-    {
-      "symbol": "XLM",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
+      "funding": -0.000163
     },
     {
       "symbol": "ZEC",
