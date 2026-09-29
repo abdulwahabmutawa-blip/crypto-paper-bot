@@ -1,29 +1,30 @@
 {
-  "ts": "2026-09-29T20:04:46+00:00",
+  "ts": "2026-09-29T20:10:37+00:00",
   "sources": {
     "coingecko": [
       "QNT",
-      "HBAR",
       "PENGU",
       "NEAR",
+      "HBAR",
+      "ZEC",
       "TRUMP",
       "AAVE",
-      "ZEC",
       "AVAX",
-      "TAO",
-      "LINK"
+      "LINK",
+      "ENA",
+      "PUMP"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "0G",
       "ICP",
-      "PUMP",
       "AAVE",
-      "NMR",
+      "PUMP",
       "AVAX",
+      "QNT",
       "BABY",
-      "QNT"
+      "NMR"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -46,8 +47,18 @@
         "coingecko",
         "movers"
       ],
-      "funding": -7e-06,
+      "funding": -6e-06,
       "long_short": 2.8
+    },
+    {
+      "symbol": "PUMP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.4
     },
     {
       "symbol": "QNT",
@@ -56,7 +67,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 7.3e-05,
+      "funding": 6.9e-05,
       "long_short": 0.86
     },
     {
@@ -72,6 +83,14 @@
       "surfaces": 1,
       "sources": [
         "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "ENA",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
       ],
       "funding": 5e-05
     },
@@ -97,7 +116,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -4.5e-05
+      "funding": -4.3e-05
     },
     {
       "symbol": "NEAR",
@@ -113,26 +132,10 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001654
+      "funding": -0.001621
     },
     {
       "symbol": "PENGU",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "PUMP",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "TAO",
       "surfaces": 1,
       "sources": [
         "coingecko"
