@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-29T19:27:19+00:00 · runs 2121 · equity **$890.61** (-10.94%) · cash $0.00 · open 10/10 · round trips 799
+updated 2026-09-29T19:44:24+00:00 · runs 2122 · equity **$887.60** (-11.24%) · cash $0.00 · open 10/10 · round trips 799
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-09-29T04:01 | SPCXBUSDT | bottom | 145.83 | 148.85 | +2.07% |
-| 2026-09-29T15:13 | SKHYBUSDT | surge | 187.89 | 187.26 | -0.34% |
-| 2026-09-29T15:31 | NIGHTUSDT | surge | 0.03196 | 0.03158 | -1.19% |
-| 2026-09-29T15:31 | CHZUSDT | surge | 0.01635 | 0.01616 | -1.16% |
-| 2026-09-29T16:59 | ICPUSDT | surge | 3.359 | 3.406 | +1.40% |
-| 2026-09-29T17:35 | XLMUSDT | bottom | 0.2216 | 0.2238 | +0.99% |
-| 2026-09-29T17:53 | COTIUSDT | surge | 0.01344 | 0.01336 | -0.60% |
-| 2026-09-29T18:10 | CRCLBUSDT | bottom | 83.55 | 83.86 | +0.37% |
-| 2026-09-29T18:51 | SKYUSDT | surge | 0.08693 | 0.08508 | -2.13% |
+| 2026-09-29T04:01 | SPCXBUSDT | bottom | 145.83 | 148.92 | +2.12% |
+| 2026-09-29T15:13 | SKHYBUSDT | surge | 187.89 | 186.61 | -0.68% |
+| 2026-09-29T15:31 | NIGHTUSDT | surge | 0.03196 | 0.03189 | -0.22% |
+| 2026-09-29T15:31 | CHZUSDT | surge | 0.01635 | 0.01614 | -1.28% |
+| 2026-09-29T16:59 | ICPUSDT | surge | 3.359 | 3.401 | +1.25% |
+| 2026-09-29T17:35 | XLMUSDT | bottom | 0.2216 | 0.2227 | +0.50% |
+| 2026-09-29T17:53 | COTIUSDT | surge | 0.01344 | 0.01304 | -2.98% |
+| 2026-09-29T18:10 | CRCLBUSDT | bottom | 83.55 | 83.25 | -0.36% |
+| 2026-09-29T18:51 | SKYUSDT | surge | 0.08693 | 0.08494 | -2.29% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
