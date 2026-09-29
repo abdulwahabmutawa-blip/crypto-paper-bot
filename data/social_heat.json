@@ -1,15 +1,17 @@
 {
-  "ts": "2026-09-29T21:12:18+00:00",
+  "ts": "2026-09-29T21:18:08+00:00",
   "sources": {
     "coingecko": [
-      "QNT",
       "TRUMP",
+      "QNT",
       "PENGU",
       "HBAR",
-      "ZEC",
       "PUMP",
+      "ZEC",
+      "NEAR",
+      "TAO",
       "AAVE",
-      "NEAR"
+      "SUI"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,8 +21,8 @@
       "ICP",
       "AAVE",
       "AVAX",
-      "NMR",
       "QNT",
+      "NMR",
       "CRV"
     ],
     "watcher": [],
@@ -54,7 +56,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 1e-05,
+      "funding": 1.1e-05,
       "long_short": 0.85
     },
     {
@@ -71,7 +73,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 1.2e-05
+      "funding": 1.9e-05
     },
     {
       "symbol": "CRV",
@@ -111,10 +113,26 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001029
+      "funding": -0.000983
     },
     {
       "symbol": "PENGU",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "TAO",
       "surfaces": 1,
       "sources": [
         "coingecko"
