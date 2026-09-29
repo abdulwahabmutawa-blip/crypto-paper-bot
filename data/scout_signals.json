@@ -1,8 +1,23 @@
 {
-  "ts": "2026-09-28T23:58:43+00:00",
+  "ts": "2026-09-29T00:04:11+00:00",
   "scanned": 145,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "IOUSDT",
+      "signal": "ignition",
+      "score": 0.8127,
+      "raw_score": 0.8795,
+      "weight": 0.924,
+      "price": 0.1578,
+      "why": "trades 21.1x and volume 28.0x the prior 4h, 65% taker-buy, $51,084 burst \u2014 while price has only moved +1.3%",
+      "chg_24h": -0.0744,
+      "vol_surge": 28.03,
+      "chg_1h": 0.0128,
+      "market_surge": 5.71,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 6/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 11,
     "baseline": 18.0,
     "wave": false
   },
