@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-29T07:53:29+00:00",
+  "ts": "2026-09-29T07:59:26+00:00",
   "sources": {
     "coingecko": [
       "QNT",
@@ -7,14 +7,14 @@
       "FIRO",
       "NEAR",
       "ZEC",
-      "ONDO",
       "PENGU",
-      "PUMP",
-      "AERO",
-      "BTC",
-      "LINK",
+      "ONDO",
+      "XLM",
+      "ALGO",
       "CRV",
-      "SOL"
+      "SUI",
+      "AAVE",
+      "LINK"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -23,15 +23,35 @@
       "HBAR",
       "MUBARAK",
       "ALGO",
-      "AAVE",
       "XLM",
       "LINK",
-      "MARSCOIN"
+      "AAVE",
+      "AVAX"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "AAVE",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 8.9e-05,
+      "long_short": 1.86
+    },
+    {
+      "symbol": "ALGO",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.04
+    },
     {
       "symbol": "HBAR",
       "surfaces": 2,
@@ -53,36 +73,22 @@
       "long_short": 2.01
     },
     {
-      "symbol": "AAVE",
-      "surfaces": 1,
+      "symbol": "XLM",
+      "surfaces": 2,
       "sources": [
+        "coingecko",
         "movers"
       ],
-      "funding": 8.1e-05
+      "funding": 0.0001,
+      "long_short": 1.76
     },
     {
-      "symbol": "AERO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 6.8e-05
-    },
-    {
-      "symbol": "ALGO",
+      "symbol": "AVAX",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 6.8e-05
     },
     {
       "symbol": "CRV",
@@ -98,14 +104,6 @@
       "sources": [
         "coingecko"
       ]
-    },
-    {
-      "symbol": "MARSCOIN",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "MUBARAK",
@@ -129,7 +127,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001797
+      "funding": -0.001786
     },
     {
       "symbol": "ONDO",
@@ -148,36 +146,20 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PUMP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "QNT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -4.7e-05
+      "funding": -3e-05
     },
     {
-      "symbol": "SOL",
+      "symbol": "SUI",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 4.8e-05
-    },
-    {
-      "symbol": "XLM",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
+      "funding": 7.3e-05
     },
     {
       "symbol": "ZEC",
