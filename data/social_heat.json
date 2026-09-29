@@ -1,19 +1,20 @@
 {
-  "ts": "2026-09-29T04:43:02+00:00",
+  "ts": "2026-09-29T04:48:19+00:00",
   "sources": {
     "coingecko": [
       "QNT",
       "FIRO",
-      "NEAR",
       "HBAR",
+      "NEAR",
       "LINK",
       "ZEC",
+      "PENGU",
       "BTC",
       "UNI",
-      "PENGU",
       "ICP",
       "AVAX",
-      "ETH"
+      "ETH",
+      "ALGO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -32,6 +33,16 @@
   },
   "heat": [
     {
+      "symbol": "ALGO",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.73
+    },
+    {
       "symbol": "HBAR",
       "surfaces": 2,
       "sources": [
@@ -48,16 +59,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 9.7e-05,
+      "funding": 9.2e-05,
       "long_short": 1.86
-    },
-    {
-      "symbol": "ALGO",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "AVAX",
@@ -81,7 +84,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.5e-05
+      "funding": 8e-05
     },
     {
       "symbol": "FIRO",
@@ -96,7 +99,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.4e-05
+      "funding": 6.1e-05
     },
     {
       "symbol": "MARSCOIN",
@@ -128,7 +131,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000502
+      "funding": -0.000512
     },
     {
       "symbol": "PENGU",
@@ -144,7 +147,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000118
+      "funding": -0.000119
     },
     {
       "symbol": "UNI",
