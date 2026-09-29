@@ -2,20 +2,21 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-09-29T12:31:41+00:00 · runs 2096 · equity **$923.18** (-7.68%) · cash $0.00 · open 10/10 · round trips 779
+updated 2026-09-29T12:48:44+00:00 · runs 2097 · equity **$918.20** (-8.18%) · cash $0.00 · open 10/10 · round trips 780
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
-- hit 52% (break-even 54%) · mean -0.09%/trade · realized $-77.43 · worst day $-50.94 · trades/day 31.2
+- hit 52% (break-even 54%) · mean -0.10%/trade · realized $-80.31 · worst day $-50.94 · trades/day 31.2
 
 | shape | n | hit | mean | target% | stop% | time% |
 |---|---|---|---|---|---|---|
-| surge | 665 | 53% | -0.04% | 50% | 43% | 7% |
+| surge | 666 | 53% | -0.04% | 50% | 43% | 7% |
 | bottom | 114 | 45% | -0.41% | 41% | 45% | 14% |
 
 ## Last 15 round trips
 | exit (UTC) | coin | shape | how | hours | net | P&L |
 |---|---|---|---|---|---|---|
+| 2026-09-29T12:46 | 币安人生USDT | surge | STOP | 3.0 | -3.25% | $-2.88 |
 | 2026-09-29T12:29 | BABYUSDT | surge | TARGET | 1.5 | +2.75% | $+2.64 |
 | 2026-09-29T12:29 | CRCLBUSDT | bottom | TARGET | 9.5 | +2.75% | $+2.48 |
 | 2026-09-29T12:29 | JSTUSDT | surge | TIME | 24.0 | +0.49% | $+0.45 |
@@ -30,20 +31,19 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | 2026-09-29T06:28 | ICPUSDT | surge | TARGET | 2.0 | +2.75% | $+2.61 |
 | 2026-09-29T05:55 | XLMUSDT | surge | STOP | 10.0 | -3.25% | $-3.11 |
 | 2026-09-29T05:39 | DODOUSDT | surge | STOP | 13.8 | -3.25% | $-2.90 |
-| 2026-09-29T04:01 | ICPUSDT | surge | TARGET | 0.2 | +2.75% | $+2.62 |
 
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-09-28T23:32 | GRAMUSDT | bottom | 1.574 | 1.563 | -0.70% |
-| 2026-09-29T04:01 | SPCXBUSDT | bottom | 145.83 | 146.91 | +0.74% |
-| 2026-09-29T06:44 | CRVUSDT | surge | 0.3959 | 0.4006 | +1.19% |
-| 2026-09-29T09:39 | 币安人生USDT | surge | 0.5147 | 0.5097 | -0.97% |
-| 2026-09-29T10:13 | ATOMUSDT | surge | 1.778 | 1.775 | -0.17% |
-| 2026-09-29T12:29 | INITUSDT | surge | 0.10059 | 0.09956 | -1.02% |
-| 2026-09-29T12:29 | BABYUSDT | surge | 0.01387 | 0.01389 | +0.14% |
-| 2026-09-29T12:29 | AAVEUSDT | surge | 171.83 | 173.85 | +1.18% |
-| 2026-09-29T12:29 | COMPUSDT | surge | 25.37 | 25.39 | +0.08% |
+| 2026-09-28T23:32 | GRAMUSDT | bottom | 1.574 | 1.555 | -1.21% |
+| 2026-09-29T04:01 | SPCXBUSDT | bottom | 145.83 | 146.88 | +0.72% |
+| 2026-09-29T06:44 | CRVUSDT | surge | 0.3959 | 0.3943 | -0.40% |
+| 2026-09-29T10:13 | ATOMUSDT | surge | 1.778 | 1.757 | -1.18% |
+| 2026-09-29T12:29 | INITUSDT | surge | 0.10059 | 0.10079 | +0.20% |
+| 2026-09-29T12:29 | BABYUSDT | surge | 0.01387 | 0.0139 | +0.22% |
+| 2026-09-29T12:29 | AAVEUSDT | surge | 171.83 | 173.04 | +0.70% |
+| 2026-09-29T12:29 | COMPUSDT | surge | 25.37 | 25.21 | -0.63% |
+| 2026-09-29T12:46 | COINBUSDT | surge | 197.33 | 197.12 | -0.11% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
