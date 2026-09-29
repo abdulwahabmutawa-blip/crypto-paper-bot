@@ -1,30 +1,30 @@
 {
-  "ts": "2026-09-29T18:45:17+00:00",
+  "ts": "2026-09-29T18:51:17+00:00",
   "sources": {
     "coingecko": [
       "QNT",
       "TRUMP",
-      "AAVE",
       "NEAR",
-      "PENGU",
-      "ZEC",
       "HBAR",
+      "PENGU",
+      "AAVE",
       "LINK",
-      "PUMP",
+      "ZEC",
       "ONDO",
+      "PUMP",
+      "ZRO",
       "SUI",
-      "ENA",
-      "AVAX"
+      "ENA"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "0G",
       "NMR",
-      "QNT",
       "ICP",
-      "PUMP",
       "AAVE",
+      "PUMP",
+      "QNT",
       "AVAX",
       "BABY"
     ],
@@ -41,16 +41,6 @@
       ],
       "funding": 0.0001,
       "long_short": 1.54
-    },
-    {
-      "symbol": "AVAX",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 4.8e-05,
-      "long_short": 2.77
     },
     {
       "symbol": "PUMP",
@@ -79,6 +69,14 @@
         "movers"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "AVAX",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 3.9e-05
     },
     {
       "symbol": "BABY",
@@ -118,7 +116,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.2e-05
+      "funding": -1.6e-05
     },
     {
       "symbol": "NEAR",
@@ -134,7 +132,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.002196
+      "funding": -0.002163
     },
     {
       "symbol": "ONDO",
@@ -175,6 +173,14 @@
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "ZRO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 3.4e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
