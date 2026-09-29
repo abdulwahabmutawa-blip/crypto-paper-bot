@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-29T13:56:27+00:00",
+  "ts": "2026-09-29T14:01:42+00:00",
   "sources": {
     "coingecko": [
       "QNT",
@@ -24,7 +24,7 @@
       "AVAX",
       "PUMP",
       "BABY",
-      "QNT"
+      "XLM"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -38,7 +38,7 @@
         "movers"
       ],
       "funding": 0.0001,
-      "long_short": 1.76
+      "long_short": 1.66
     },
     {
       "symbol": "AVAX",
@@ -59,16 +59,6 @@
       ],
       "funding": 5e-05,
       "long_short": 1.37
-    },
-    {
-      "symbol": "QNT",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 1.8e-05,
-      "long_short": 0.91
     },
     {
       "symbol": "0G",
@@ -92,7 +82,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.1e-05
+      "funding": 4.3e-05
     },
     {
       "symbol": "ETH",
@@ -100,7 +90,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.2e-05
+      "funding": 9e-05
     },
     {
       "symbol": "HBAR",
@@ -140,7 +130,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.002298
+      "funding": -0.002288
     },
     {
       "symbol": "PENGU",
@@ -151,12 +141,28 @@
       "funding": 5e-05
     },
     {
+      "symbol": "QNT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 1.8e-05
+    },
+    {
       "symbol": "SUI",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0
+      "funding": 6e-06
+    },
+    {
+      "symbol": "XLM",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."

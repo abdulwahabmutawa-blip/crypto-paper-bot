@@ -1,22 +1,36 @@
 {
-  "ts": "2026-09-29T13:56:32+00:00",
-  "scanned": 134,
+  "ts": "2026-09-29T14:01:47+00:00",
+  "scanned": 132,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "SNDKBUSDT",
+      "symbol": "ETHFIUSDT",
       "signal": "ignition",
-      "score": 0.5514,
-      "raw_score": 0.5904,
+      "score": 0.7923,
+      "raw_score": 0.8482,
       "weight": 0.934,
-      "price": 1715.89,
-      "why": "trades 5.4x and volume 5.1x the prior 4h, 65% taker-buy, $88,942 burst \u2014 while price has only moved -0.7%",
-      "chg_24h": -0.0022,
-      "vol_surge": 5.11,
-      "chg_1h": -0.0075,
-      "market_surge": 0.94,
+      "price": 0.7682,
+      "why": "trades 14.1x and volume 10.8x the prior 4h, 62% taker-buy, $484,762 burst \u2014 while price has only moved +2.2%",
+      "chg_24h": 0.1174,
+      "vol_surge": 10.82,
+      "chg_1h": 0.0224,
+      "market_surge": 10.88,
       "actionable": false,
       "status": "benched \u2014 BTC-excess day mean +0.72% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "ETHFIUSDT",
+      "signal": "breakout",
+      "score": 0.7053,
+      "raw_score": 0.7432,
+      "weight": 0.949,
+      "price": 0.7682,
+      "why": "trades 14.1x, volume 10.8x, 62% taker-buy, +2.2% in an hour, at 86% of its 24h range",
+      "chg_24h": 0.1174,
+      "vol_surge": 10.82,
+      "chg_1h": 0.0224,
+      "market_surge": 10.88,
+      "actionable": true
     }
   ],
   "gate": {
@@ -27,7 +41,7 @@
     "revival": "probation \u2014 6/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 19,
+    "count": 20,
     "baseline": 17.0,
     "wave": false
   },
@@ -59,19 +73,19 @@
       "avg_win_4h": 0.02154,
       "avg_loss_4h": -0.01775,
       "payoff_4h": 1.214,
-      "span_h_24h": 311.2,
+      "span_h_24h": 311.3,
       "n_eff_24h": 12.97,
-      "n_24h": 776,
-      "hit_rate_24h": 0.552,
-      "mean_ret_24h": 0.01583,
-      "median_ret_24h": 0.0069,
+      "n_24h": 777,
+      "hit_rate_24h": 0.551,
+      "mean_ret_24h": 0.01577,
+      "median_ret_24h": 0.00682,
       "both_halves_24h": true,
       "days_24h": 14,
-      "mean_x_24h": 0.00723,
+      "mean_x_24h": 0.00719,
       "days_x_24h": 14,
       "avg_win_24h": 0.05649,
-      "avg_loss_24h": -0.0389,
-      "payoff_24h": 1.452
+      "avg_loss_24h": -0.03887,
+      "payoff_24h": 1.453
     },
     "breakout": {
       "span_h_1h": 333.6,
