@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-29T09:06:37+00:00",
+  "ts": "2026-09-29T09:12:23+00:00",
   "sources": {
     "coingecko": [
       "QNT",
@@ -20,12 +20,12 @@
     "movers": [
       "NMR",
       "AAVE",
-      "MUBARAK",
       "QNT",
       "LINK",
       "XLM",
       "AVAX",
-      "ALGO"
+      "MARSCOIN",
+      "HBAR"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -42,13 +42,23 @@
       "long_short": 1.81
     },
     {
+      "symbol": "HBAR",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.57
+    },
+    {
       "symbol": "LINK",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": -2.7e-05,
+      "funding": -2.5e-05,
       "long_short": 1.91
     },
     {
@@ -58,16 +68,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 7.1e-05,
+      "funding": 8.2e-05,
       "long_short": 0.88
-    },
-    {
-      "symbol": "ALGO",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "AVAX",
@@ -85,15 +87,7 @@
       ]
     },
     {
-      "symbol": "HBAR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "MUBARAK",
+      "symbol": "MARSCOIN",
       "surfaces": 1,
       "sources": [
         "movers"
@@ -106,7 +100,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.1e-05
+      "funding": 6.2e-05
     },
     {
       "symbol": "NMR",
@@ -114,7 +108,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001274
+      "funding": -0.001203
     },
     {
       "symbol": "ONDO",
@@ -154,7 +148,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.2e-05
+      "funding": 3.5e-05
     },
     {
       "symbol": "XLM",
