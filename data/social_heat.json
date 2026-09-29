@@ -1,15 +1,16 @@
 {
-  "ts": "2026-09-29T20:21:24+00:00",
+  "ts": "2026-09-29T20:26:49+00:00",
   "sources": {
     "coingecko": [
       "QNT",
-      "PENGU",
       "NEAR",
-      "HBAR",
-      "ZEC",
-      "AAVE",
+      "PENGU",
       "TRUMP",
+      "ZEC",
+      "HBAR",
+      "AAVE",
       "AVAX",
+      "PUMP",
       "SOL"
     ],
     "reddit": [],
@@ -45,8 +46,18 @@
         "coingecko",
         "movers"
       ],
-      "funding": -6e-06,
+      "funding": -9e-06,
       "long_short": 2.8
+    },
+    {
+      "symbol": "PUMP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.4
     },
     {
       "symbol": "QNT",
@@ -55,7 +66,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 5.4e-05,
+      "funding": 4.6e-05,
       "long_short": 0.86
     },
     {
@@ -104,21 +115,13 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001514
+      "funding": -0.001467
     },
     {
       "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
         "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "PUMP",
-      "surfaces": 1,
-      "sources": [
-        "movers"
       ],
       "funding": 5e-05
     },
