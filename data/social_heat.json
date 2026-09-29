@@ -1,17 +1,17 @@
 {
-  "ts": "2026-09-29T06:34:57+00:00",
+  "ts": "2026-09-29T06:40:37+00:00",
   "sources": {
     "coingecko": [
       "QNT",
       "FIRO",
-      "NEAR",
       "ZEC",
+      "NEAR",
       "HBAR",
       "ALGO",
-      "ONDO",
-      "UNI",
       "PENGU",
-      "CRV"
+      "ONDO",
+      "LINK",
+      "UNI"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -50,20 +50,22 @@
       "long_short": 1.52
     },
     {
+      "symbol": "LINK",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 2.1e-05,
+      "long_short": 1.96
+    },
+    {
       "symbol": "AAVE",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 3e-06
-    },
-    {
-      "symbol": "CRV",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": 2e-06
     },
     {
       "symbol": "FIRO",
@@ -71,14 +73,6 @@
       "sources": [
         "coingecko"
       ]
-    },
-    {
-      "symbol": "LINK",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 2.6e-05
     },
     {
       "symbol": "MARSCOIN",
@@ -110,7 +104,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001873
+      "funding": -0.001932
     },
     {
       "symbol": "ONDO",
@@ -134,7 +128,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.00011
+      "funding": -0.000103
     },
     {
       "symbol": "UNI",
