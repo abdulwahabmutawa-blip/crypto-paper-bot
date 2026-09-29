@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-29T21:06:29+00:00",
+  "ts": "2026-09-29T21:12:18+00:00",
   "sources": {
     "coingecko": [
       "QNT",
@@ -15,13 +15,13 @@
     "stocktwits": [],
     "movers": [
       "0G",
-      "ICP",
       "PUMP",
+      "ICP",
       "AAVE",
       "AVAX",
       "NMR",
-      "CRV",
-      "BABY"
+      "QNT",
+      "CRV"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -48,6 +48,16 @@
       "long_short": 1.39
     },
     {
+      "symbol": "QNT",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 1e-05,
+      "long_short": 0.85
+    },
+    {
       "symbol": "0G",
       "surfaces": 1,
       "sources": [
@@ -61,15 +71,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 8e-06
-    },
-    {
-      "symbol": "BABY",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
+      "funding": 1.2e-05
     },
     {
       "symbol": "CRV",
@@ -109,7 +111,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001101
+      "funding": -0.001029
     },
     {
       "symbol": "PENGU",
@@ -118,14 +120,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "QNT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 1.3e-05
     },
     {
       "symbol": "TRUMP",
