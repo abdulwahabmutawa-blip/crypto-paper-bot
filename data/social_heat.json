@@ -1,20 +1,20 @@
 {
-  "ts": "2026-09-29T11:42:29+00:00",
+  "ts": "2026-09-29T11:47:46+00:00",
   "sources": {
     "coingecko": [
       "QNT",
       "AVAX",
       "AAVE",
-      "NEAR",
-      "SUI",
       "HBAR",
+      "NEAR",
       "PENGU",
+      "SUI",
       "LINK",
-      "ZEC",
-      "ONDO",
       "HYPE",
-      "FIRO",
-      "TAO"
+      "TAO",
+      "ZEC",
+      "PUMP",
+      "ONDO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -23,8 +23,8 @@
       "AVAX",
       "XLM",
       "LINK",
-      "NMR",
       "PUMP",
+      "NMR",
       "TAO",
       "ADA"
     ],
@@ -59,8 +59,18 @@
         "coingecko",
         "movers"
       ],
-      "funding": 9.8e-05,
+      "funding": 0.0001,
       "long_short": 1.82
+    },
+    {
+      "symbol": "PUMP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.42
     },
     {
       "symbol": "TAO",
@@ -79,13 +89,6 @@
         "movers"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "FIRO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ]
     },
     {
       "symbol": "HBAR",
@@ -109,7 +112,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.4e-05
+      "funding": 2.5e-05
     },
     {
       "symbol": "NMR",
@@ -117,7 +120,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001558
+      "funding": -0.00158
     },
     {
       "symbol": "ONDO",
@@ -136,14 +139,6 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PUMP",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "QNT",
       "surfaces": 1,
       "sources": [
@@ -157,7 +152,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2e-06
+      "funding": -5e-06
     },
     {
       "symbol": "XLM",
