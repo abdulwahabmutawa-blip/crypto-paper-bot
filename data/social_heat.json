@@ -1,19 +1,18 @@
 {
-  "ts": "2026-09-29T05:50:26+00:00",
+  "ts": "2026-09-29T05:55:46+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
       "QNT",
-      "NEAR",
       "HBAR",
+      "NEAR",
       "ALGO",
       "ONDO",
-      "ZEC",
       "PENGU",
       "LINK",
+      "ZEC",
       "ENA",
-      "AERO",
-      "UNI"
+      "MARSCOIN"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -62,20 +61,22 @@
       "long_short": 1.92
     },
     {
+      "symbol": "MARSCOIN",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.08
+    },
+    {
       "symbol": "AAVE",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 3e-06
-    },
-    {
-      "symbol": "AERO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.000117
+      "funding": 6e-06
     },
     {
       "symbol": "ENA",
@@ -91,14 +92,6 @@
       "sources": [
         "coingecko"
       ]
-    },
-    {
-      "symbol": "MARSCOIN",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "MUBARAK",
@@ -122,7 +115,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001119
+      "funding": -0.001226
     },
     {
       "symbol": "ONDO",
@@ -146,15 +139,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000139
-    },
-    {
-      "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": -0.000141
     },
     {
       "symbol": "XLM",
