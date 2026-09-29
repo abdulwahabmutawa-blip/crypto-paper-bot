@@ -1,20 +1,34 @@
 {
-  "ts": "2026-09-29T23:46:39+00:00",
+  "ts": "2026-09-29T23:52:34+00:00",
   "scanned": 137,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "FILUSDT",
+      "symbol": "GIGGLEUSDT",
       "signal": "ignition",
-      "score": 0.634,
-      "raw_score": 0.6796,
+      "score": 0.863,
+      "raw_score": 0.9249,
       "weight": 0.933,
-      "price": 1.0564,
-      "why": "trades 5.3x and volume 20.1x the prior 4h, 65% taker-buy, $341,667 burst \u2014 while price has only moved -1.8%",
-      "chg_24h": -0.0053,
-      "vol_surge": 20.07,
-      "chg_1h": -0.0179,
-      "market_surge": 4.24,
+      "price": 37.1,
+      "why": "trades 11.9x and volume 41.9x the prior 4h, 80% taker-buy, $66,788 burst \u2014 while price has only moved -1.0%",
+      "chg_24h": 0.0005,
+      "vol_surge": 41.92,
+      "chg_1h": -0.0096,
+      "market_surge": 7.22,
+      "actionable": true
+    },
+    {
+      "symbol": "VTHOUSDT",
+      "signal": "ignition",
+      "score": 0.6496,
+      "raw_score": 0.6963,
+      "weight": 0.933,
+      "price": 0.00069,
+      "why": "trades 4.2x and volume 18.8x the prior 4h, 78% taker-buy, $108,476 burst \u2014 while price has only moved +0.6%",
+      "chg_24h": -0.0281,
+      "vol_surge": 18.83,
+      "chg_1h": 0.0058,
+      "market_surge": 1.16,
       "actionable": true
     }
   ],
@@ -26,7 +40,7 @@
     "revival": "probation \u2014 5/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 13,
+    "count": 14,
     "baseline": 16.0,
     "wave": false
   },
