@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-29T11:47:46+00:00",
+  "ts": "2026-09-29T11:53:01+00:00",
   "sources": {
     "coingecko": [
       "QNT",
@@ -21,12 +21,12 @@
     "movers": [
       "AAVE",
       "AVAX",
-      "XLM",
-      "LINK",
       "PUMP",
       "NMR",
-      "TAO",
-      "ADA"
+      "XLM",
+      "LINK",
+      "QNT",
+      "TAO"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -73,22 +73,23 @@
       "long_short": 1.42
     },
     {
+      "symbol": "QNT",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 6.7e-05,
+      "long_short": 0.93
+    },
+    {
       "symbol": "TAO",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 5e-05,
-      "long_short": 1.75
-    },
-    {
-      "symbol": "ADA",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
+      "funding": 5e-05
     },
     {
       "symbol": "HBAR",
@@ -120,7 +121,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.00158
+      "funding": -0.001605
     },
     {
       "symbol": "ONDO",
@@ -139,20 +140,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "QNT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5.8e-05
-    },
-    {
       "symbol": "SUI",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -5e-06
+      "funding": -1e-05
     },
     {
       "symbol": "XLM",
