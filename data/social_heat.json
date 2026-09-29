@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-29T01:32:36+00:00",
+  "ts": "2026-09-29T01:38:15+00:00",
   "sources": {
     "coingecko": [
       "FIRO",
@@ -8,12 +8,15 @@
       "QNT",
       "NEAR",
       "LINK",
-      "PENGU",
-      "SUI",
       "ONDO",
-      "UNI",
+      "ZEC",
+      "PENGU",
       "AVAX",
-      "ALGO"
+      "BTC",
+      "SUI",
+      "ALGO",
+      "UNI",
+      "INJ"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -25,7 +28,7 @@
       "\u725b\u6765",
       "MUBARAK",
       "XLM",
-      "TRX"
+      "RLUSD"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -70,6 +73,14 @@
       "funding": 0.0001
     },
     {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 1.3e-05
+    },
+    {
       "symbol": "FIRO",
       "surfaces": 1,
       "sources": [
@@ -77,12 +88,20 @@
       ]
     },
     {
+      "symbol": "INJ",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "MARSCOIN",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 7.4e-05
+      "funding": 8.6e-05
     },
     {
       "symbol": "MUBARAK",
@@ -114,7 +133,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.4e-05
+      "funding": 2.6e-05
     },
     {
       "symbol": "QNT",
@@ -122,7 +141,14 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.2e-05
+      "funding": 5.4e-05
+    },
+    {
+      "symbol": "RLUSD",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
     },
     {
       "symbol": "SUI",
@@ -130,7 +156,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3e-05
+      "funding": 3.3e-05
     },
     {
       "symbol": "TRUMP",
@@ -138,15 +164,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -5.4e-05
-    },
-    {
-      "symbol": "TRX",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -0.000167
+      "funding": -6.6e-05
     },
     {
       "symbol": "UNI",
@@ -154,13 +172,21 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.5e-05
+      "funding": 5.8e-05
     },
     {
       "symbol": "XLM",
       "surfaces": 1,
       "sources": [
         "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
       ],
       "funding": 0.0001
     },

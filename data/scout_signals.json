@@ -1,8 +1,24 @@
 {
-  "ts": "2026-09-29T01:32:40+00:00",
-  "scanned": 145,
+  "ts": "2026-09-29T01:38:20+00:00",
+  "scanned": 144,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "WLFIUSDT",
+      "signal": "ignition",
+      "score": 0.646,
+      "raw_score": 0.6992,
+      "weight": 0.924,
+      "price": 0.0562,
+      "why": "trades 7.3x and volume 7.3x the prior 4h, 64% taker-buy, $79,804 burst \u2014 while price has only moved -1.4%",
+      "chg_24h": -0.031,
+      "vol_surge": 7.26,
+      "chg_1h": -0.014,
+      "market_surge": 1.67,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.62% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.62% at 24h: market beta, not signal",
     "breakout": "actionable",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 6/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 7,
+    "count": 8,
     "baseline": 18.0,
     "wave": false
   },
