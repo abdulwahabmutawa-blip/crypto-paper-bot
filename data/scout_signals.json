@@ -1,23 +1,8 @@
 {
-  "ts": "2026-09-29T18:33:46+00:00",
+  "ts": "2026-09-29T18:39:45+00:00",
   "scanned": 135,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "AEROUSDT",
-      "signal": "ignition",
-      "score": 0.6063,
-      "raw_score": 0.6506,
-      "weight": 0.932,
-      "price": 0.8149,
-      "why": "trades 7.0x and volume 6.2x the prior 4h, 70% taker-buy, $111,390 burst \u2014 while price has only moved +2.4%",
-      "chg_24h": -0.0022,
-      "vol_surge": 6.21,
-      "chg_1h": 0.0237,
-      "market_surge": 3.11,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -53,7 +38,7 @@
       "median_ret_4h": -0.00141,
       "both_halves_4h": false,
       "days_4h": 15,
-      "mean_x_4h": 0.00027,
+      "mean_x_4h": 0.0003,
       "days_x_4h": 15,
       "avg_win_4h": 0.02153,
       "avg_loss_4h": -0.01802,
