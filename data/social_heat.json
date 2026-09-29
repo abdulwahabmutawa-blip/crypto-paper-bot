@@ -1,20 +1,19 @@
 {
-  "ts": "2026-09-29T08:49:36+00:00",
+  "ts": "2026-09-29T08:55:37+00:00",
   "sources": {
     "coingecko": [
       "QNT",
       "HBAR",
-      "FIRO",
       "NEAR",
+      "FIRO",
       "ONDO",
       "PENGU",
-      "ZEC",
       "AAVE",
       "TAO",
+      "ZEC",
+      "PUMP",
       "UNI",
-      "AVAX",
-      "LINK",
-      "XLM"
+      "LINK"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -43,16 +42,6 @@
       "long_short": 1.82
     },
     {
-      "symbol": "AVAX",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 2.44
-    },
-    {
       "symbol": "HBAR",
       "surfaces": 2,
       "sources": [
@@ -69,21 +58,19 @@
         "coingecko",
         "movers"
       ],
-      "funding": -3.8e-05,
+      "funding": -3.3e-05,
       "long_short": 2.01
     },
     {
-      "symbol": "XLM",
-      "surfaces": 2,
+      "symbol": "ALGO",
+      "surfaces": 1,
       "sources": [
-        "coingecko",
         "movers"
       ],
-      "funding": 0.0001,
-      "long_short": 1.78
+      "funding": 0.0001
     },
     {
-      "symbol": "ALGO",
+      "symbol": "AVAX",
       "surfaces": 1,
       "sources": [
         "movers"
@@ -111,7 +98,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.3e-05
+      "funding": 8.5e-05
     },
     {
       "symbol": "NMR",
@@ -119,7 +106,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.00143
+      "funding": -0.00136
     },
     {
       "symbol": "ONDO",
@@ -138,12 +125,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "QNT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 3.3e-05
+      "funding": 5e-05
     },
     {
       "symbol": "TAO",
@@ -159,7 +154,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3e-05
+      "funding": 3.1e-05
+    },
+    {
+      "symbol": "XLM",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "ZEC",
