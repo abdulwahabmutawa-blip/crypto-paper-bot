@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-30T04:32:03+00:00",
+  "ts": "2026-09-30T04:37:07+00:00",
   "sources": {
     "coingecko": [
       "QNT",
@@ -8,10 +8,11 @@
       "LIT",
       "NEAR",
       "HBAR",
-      "ASTER",
       "SUI",
-      "HYPE",
-      "XRP"
+      "ASTER",
+      "XRP",
+      "AVAX",
+      "INJ"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -30,13 +31,23 @@
   },
   "heat": [
     {
+      "symbol": "AVAX",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.75
+    },
+    {
       "symbol": "NEAR",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": -1.8e-05,
+      "funding": -1.7e-05,
       "long_short": 1.65
     },
     {
@@ -84,14 +95,6 @@
       "funding": 5e-05
     },
     {
-      "symbol": "AVAX",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "BABY",
       "surfaces": 1,
       "sources": [
@@ -105,21 +108,21 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.2e-05
-    },
-    {
-      "symbol": "HYPE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -4.9e-05
+      "funding": 7.7e-05
     },
     {
       "symbol": "ICP",
       "surfaces": 1,
       "sources": [
         "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "INJ",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
       ],
       "funding": 0.0001
     },
