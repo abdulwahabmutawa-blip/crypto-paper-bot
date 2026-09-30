@@ -1,37 +1,8 @@
 {
-  "ts": "2026-09-30T00:36:43+00:00",
-  "scanned": 134,
+  "ts": "2026-09-30T00:42:01+00:00",
+  "scanned": 137,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ASTERUSDT",
-      "signal": "breakout",
-      "score": 0.655,
-      "raw_score": 0.6953,
-      "weight": 0.942,
-      "price": 0.7414,
-      "why": "trades 6.6x, volume 9.1x, 65% taker-buy, +2.1% in an hour, at 96% of its 24h range",
-      "chg_24h": 0.0496,
-      "vol_surge": 9.08,
-      "chg_1h": 0.0215,
-      "market_surge": 4.29,
-      "actionable": true
-    },
-    {
-      "symbol": "ZROUSDT",
-      "signal": "breakout",
-      "score": 0.5668,
-      "raw_score": 0.6017,
-      "weight": 0.942,
-      "price": 1.728,
-      "why": "trades 5.3x, volume 5.8x, 66% taker-buy, +2.7% in an hour, at 96% of its 24h range",
-      "chg_24h": 0.1038,
-      "vol_surge": 5.85,
-      "chg_1h": 0.0273,
-      "market_surge": 4.68,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -40,7 +11,7 @@
     "revival": "probation \u2014 5/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 13,
+    "count": 14,
     "baseline": 16.0,
     "wave": false
   },
