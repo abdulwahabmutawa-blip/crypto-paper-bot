@@ -1,18 +1,19 @@
 {
-  "ts": "2026-09-30T08:14:17+00:00",
+  "ts": "2026-09-30T08:19:42+00:00",
   "sources": {
     "coingecko": [
       "QNT",
       "LIT",
-      "ZRO",
       "MOVR",
+      "ZRO",
       "PENGU",
-      "HBAR",
       "PUMP",
+      "HBAR",
+      "ONDO",
       "NEAR",
       "LINK",
-      "ZEC",
-      "TAO"
+      "ASTER",
+      "ZEC"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -31,13 +32,23 @@
   },
   "heat": [
     {
+      "symbol": "ASTER",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 2.8e-05,
+      "long_short": 1.36
+    },
+    {
       "symbol": "NEAR",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 8.8e-05,
+      "funding": 9.4e-05,
       "long_short": 1.44
     },
     {
@@ -57,7 +68,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.000103,
+      "funding": -0.000102,
       "long_short": 0.89
     },
     {
@@ -79,14 +90,6 @@
       "funding": 5e-05
     },
     {
-      "symbol": "ASTER",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 2.4e-05
-    },
-    {
       "symbol": "BABY",
       "surfaces": 1,
       "sources": [
@@ -100,7 +103,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.3e-05
+      "funding": -2.1e-05
     },
     {
       "symbol": "ICP",
@@ -132,7 +135,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000445
+      "funding": -0.000434
+    },
+    {
+      "symbol": "ONDO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 1.4e-05
     },
     {
       "symbol": "PENGU",
@@ -141,14 +152,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 2.4e-05
     },
     {
       "symbol": "ZEC",

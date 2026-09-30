@@ -1,8 +1,37 @@
 {
-  "ts": "2026-09-30T08:14:22+00:00",
-  "scanned": 128,
+  "ts": "2026-09-30T08:19:49+00:00",
+  "scanned": 131,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "GLMRUSDT",
+      "signal": "breakout",
+      "score": 0.5968,
+      "raw_score": 0.6336,
+      "weight": 0.942,
+      "price": 0.009425,
+      "why": "trades 5.7x, volume 5.9x, 63% taker-buy, +3.5% in an hour, at 90% of its 24h range",
+      "chg_24h": 0.2397,
+      "vol_surge": 5.88,
+      "chg_1h": 0.035,
+      "market_surge": 0.0,
+      "actionable": true
+    },
+    {
+      "symbol": "GLMRUSDT",
+      "signal": "ignition",
+      "score": 0.507,
+      "raw_score": 0.5457,
+      "weight": 0.929,
+      "price": 0.009425,
+      "why": "trades 5.7x and volume 5.9x the prior 4h, 63% taker-buy, $143,975 burst \u2014 while price has only moved +3.5%",
+      "chg_24h": 0.2397,
+      "vol_surge": 5.88,
+      "chg_1h": 0.035,
+      "market_surge": 0.0,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
