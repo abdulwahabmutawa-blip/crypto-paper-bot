@@ -1,8 +1,51 @@
 {
-  "ts": "2026-09-30T01:20:16+00:00",
-  "scanned": 136,
+  "ts": "2026-09-30T01:25:52+00:00",
+  "scanned": 135,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "COMPUSDT",
+      "signal": "breakout",
+      "score": 0.876,
+      "raw_score": 0.9319,
+      "weight": 0.94,
+      "price": 26.65,
+      "why": "trades 276.3x, volume 355.0x, 72% taker-buy, +7.6% in an hour, at 91% of its 24h range",
+      "chg_24h": 0.1489,
+      "vol_surge": 355.04,
+      "chg_1h": 0.0759,
+      "market_surge": 31.74,
+      "actionable": true
+    },
+    {
+      "symbol": "TSLABUSDT",
+      "signal": "ignition",
+      "score": 0.8265,
+      "raw_score": 0.8878,
+      "weight": 0.931,
+      "price": 354.32,
+      "why": "trades 7.6x and volume 21.1x the prior 4h, 94% taker-buy, $121,220 burst \u2014 while price has only moved -0.1%",
+      "chg_24h": -0.008,
+      "vol_surge": 21.14,
+      "chg_1h": -0.0011,
+      "market_surge": 6.64,
+      "actionable": true
+    },
+    {
+      "symbol": "RAYUSDT",
+      "signal": "ignition",
+      "score": 0.6586,
+      "raw_score": 0.7074,
+      "weight": 0.931,
+      "price": 1.9414,
+      "why": "trades 4.7x and volume 10.2x the prior 4h, 85% taker-buy, $78,440 burst \u2014 while price has only moved +1.8%",
+      "chg_24h": 0.0553,
+      "vol_surge": 10.23,
+      "chg_1h": 0.0175,
+      "market_surge": 2.63,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +54,7 @@
     "revival": "probation \u2014 5/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 19,
+    "count": 21,
     "baseline": 16.0,
     "wave": false
   },
@@ -43,19 +86,19 @@
       "avg_win_4h": 0.02153,
       "avg_loss_4h": -0.01784,
       "payoff_4h": 1.207,
-      "span_h_24h": 311.0,
-      "n_eff_24h": 12.96,
-      "n_24h": 768,
-      "hit_rate_24h": 0.56,
-      "mean_ret_24h": 0.01672,
+      "span_h_24h": 311.7,
+      "n_eff_24h": 12.99,
+      "n_24h": 771,
+      "hit_rate_24h": 0.562,
+      "mean_ret_24h": 0.01683,
       "median_ret_24h": 0.00749,
       "both_halves_24h": true,
       "days_24h": 14,
       "mean_x_24h": 0.0114,
       "days_x_24h": 14,
-      "avg_win_24h": 0.0567,
+      "avg_win_24h": 0.05662,
       "avg_loss_24h": -0.0383,
-      "payoff_24h": 1.481
+      "payoff_24h": 1.478
     },
     "breakout": {
       "span_h_1h": 327.9,
