@@ -1,28 +1,26 @@
 {
-  "ts": "2026-09-30T10:05:38+00:00",
+  "ts": "2026-09-30T10:10:46+00:00",
   "sources": {
     "coingecko": [
-      "QNT",
       "MOVR",
+      "QNT",
       "ENA",
+      "LIT",
       "PENGU",
       "NEAR",
-      "LIT",
-      "AVAX",
       "ASTER",
-      "ZRO",
-      "ONDO",
-      "KSM",
-      "PUMP"
+      "AVAX",
+      "LINK",
+      "FET"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "MOVR",
-      "PUMP",
       "0G",
-      "ZRO",
+      "PUMP",
       "QNT",
+      "ZRO",
       "NEAR",
       "ASTER",
       "WLD"
@@ -62,33 +60,14 @@
       "long_short": 1.49
     },
     {
-      "symbol": "PUMP",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.41
-    },
-    {
       "symbol": "QNT",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": -0.000111,
+      "funding": -0.000109,
       "long_short": 0.89
-    },
-    {
-      "symbol": "ZRO",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "0G",
@@ -104,7 +83,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4e-05
+      "funding": 3.8e-05
     },
     {
       "symbol": "ENA",
@@ -115,23 +94,23 @@
       "funding": 5e-05
     },
     {
-      "symbol": "KSM",
+      "symbol": "FET",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000619
+      "funding": 0.0001
+    },
+    {
+      "symbol": "LINK",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 8e-06
     },
     {
       "symbol": "LIT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "ONDO",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -147,12 +126,28 @@
       "funding": 5e-05
     },
     {
+      "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "WLD",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 8.4e-05
+      "funding": 8.8e-05
+    },
+    {
+      "symbol": "ZRO",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
