@@ -1,19 +1,19 @@
 {
-  "ts": "2026-09-30T13:25:49+00:00",
+  "ts": "2026-09-30T13:31:21+00:00",
   "sources": {
     "coingecko": [
       "QNT",
-      "NEAR",
       "PENGU",
+      "NEAR",
       "TRUMP",
       "LIT",
       "AVAX",
       "MOVR",
       "ZEC",
+      "BTC",
       "HBAR",
-      "ONDO",
-      "VIRTUAL",
-      "ASTER"
+      "ENA",
+      "VIRTUAL"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -32,14 +32,14 @@
   },
   "heat": [
     {
-      "symbol": "ASTER",
+      "symbol": "ENA",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
       "funding": 5e-05,
-      "long_short": 1.45
+      "long_short": 1.55
     },
     {
       "symbol": "MOVR",
@@ -77,18 +77,10 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001048
+      "funding": -0.001011
     },
     {
-      "symbol": "AVAX",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 3.3e-05
-    },
-    {
-      "symbol": "ENA",
+      "symbol": "ASTER",
       "surfaces": 1,
       "sources": [
         "movers"
@@ -96,12 +88,28 @@
       "funding": 5e-05
     },
     {
+      "symbol": "AVAX",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 3.6e-05
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "HBAR",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 3.7e-05
+      "funding": 3.5e-05
     },
     {
       "symbol": "LIT",
@@ -110,14 +118,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "ONDO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -4e-06
     },
     {
       "symbol": "PENGU",
@@ -165,7 +165,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.7e-05
+      "funding": 4.9e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
