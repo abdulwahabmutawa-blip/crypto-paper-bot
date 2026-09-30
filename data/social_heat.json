@@ -1,16 +1,17 @@
 {
-  "ts": "2026-09-30T02:44:47+00:00",
+  "ts": "2026-09-30T02:50:07+00:00",
   "sources": {
     "coingecko": [
       "LIT",
       "PENGU",
       "QNT",
       "NEAR",
-      "HBAR",
       "PUMP",
+      "SUI",
+      "ZEC",
+      "ASTER",
       "HYPE",
-      "XRP",
-      "SUI"
+      "ONDO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,8 +22,8 @@
       "ICP",
       "AVAX",
       "AAVE",
-      "BABY",
-      "NEAR"
+      "NEAR",
+      "BABY"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -35,7 +36,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -6e-06,
+      "funding": -1.1e-05,
       "long_short": 1.54
     },
     {
@@ -75,6 +76,14 @@
       "funding": 0.0001
     },
     {
+      "symbol": "ASTER",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "AVAX",
       "surfaces": 1,
       "sources": [
@@ -89,14 +98,6 @@
         "movers"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "HBAR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "HYPE",
@@ -123,6 +124,14 @@
       "funding": 5e-05
     },
     {
+      "symbol": "ONDO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 3.8e-05
+    },
+    {
       "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
@@ -139,12 +148,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "XRP",
+      "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -4e-06
+      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
