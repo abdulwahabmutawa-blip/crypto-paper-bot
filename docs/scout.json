@@ -1,8 +1,23 @@
 {
-  "ts": "2026-09-30T11:18:23+00:00",
-  "scanned": 128,
+  "ts": "2026-09-30T11:24:01+00:00",
+  "scanned": 129,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "NILUSDT",
+      "signal": "breakout",
+      "score": 0.7452,
+      "raw_score": 0.7903,
+      "weight": 0.943,
+      "price": 0.09437,
+      "why": "trades 8.6x, volume 5.9x, 68% taker-buy, +5.4% in an hour, at 98% of its 24h range",
+      "chg_24h": 0.1452,
+      "vol_surge": 5.93,
+      "chg_1h": 0.0541,
+      "market_surge": 5.12,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 5/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 18,
+    "count": 19,
     "baseline": 16.0,
     "wave": false
   },
@@ -92,7 +107,7 @@
       "median_ret_24h": 0.00625,
       "both_halves_24h": true,
       "days_24h": 14,
-      "mean_x_24h": 0.01607,
+      "mean_x_24h": 0.01698,
       "days_x_24h": 14,
       "avg_win_24h": 0.07951,
       "avg_loss_24h": -0.03949,
