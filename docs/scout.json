@@ -1,8 +1,23 @@
 {
-  "ts": "2026-09-30T10:49:53+00:00",
-  "scanned": 129,
+  "ts": "2026-09-30T10:55:34+00:00",
+  "scanned": 130,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "PENGUUSDT",
+      "signal": "breakout",
+      "score": 0.7633,
+      "raw_score": 0.8095,
+      "weight": 0.943,
+      "price": 0.01026,
+      "why": "trades 10.2x, volume 31.5x, 77% taker-buy, +3.4% in an hour, at 93% of its 24h range",
+      "chg_24h": 0.0682,
+      "vol_surge": 31.51,
+      "chg_1h": 0.0338,
+      "market_surge": 13.43,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 5/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 22,
+    "count": 19,
     "baseline": 16.0,
     "wave": false
   },
@@ -38,7 +53,7 @@
       "median_ret_4h": -0.00139,
       "both_halves_4h": false,
       "days_4h": 15,
-      "mean_x_4h": 0.00122,
+      "mean_x_4h": 0.00114,
       "days_x_4h": 15,
       "avg_win_4h": 0.02161,
       "avg_loss_4h": -0.01784,
