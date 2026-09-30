@@ -1,32 +1,32 @@
 {
-  "ts": "2026-09-30T09:20:38+00:00",
+  "ts": "2026-09-30T09:26:37+00:00",
   "sources": {
     "coingecko": [
       "QNT",
       "MOVR",
       "LIT",
-      "PENGU",
-      "ENA",
       "NEAR",
+      "ENA",
+      "PENGU",
       "ZRO",
       "ONDO",
       "SOL",
       "AVAX",
       "ASTER",
-      "SUI",
-      "ICP"
+      "ICP",
+      "FET"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "MOVR",
-      "PUMP",
-      "0G",
-      "ZRO",
       "QNT",
-      "ASTER",
+      "PUMP",
+      "ZRO",
+      "0G",
       "NEAR",
-      "ENA"
+      "ASTER",
+      "WLD"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -39,18 +39,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 4.8e-05,
+      "funding": 4.9e-05,
       "long_short": 1.38
-    },
-    {
-      "symbol": "ENA",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.49
     },
     {
       "symbol": "MOVR",
@@ -59,7 +49,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.00015,
+      "funding": -0.000114,
       "long_short": 0.97
     },
     {
@@ -79,7 +69,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -9.6e-05,
+      "funding": -0.000101,
       "long_short": 0.87
     },
     {
@@ -89,7 +79,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 5e-05
+      "funding": 5e-05,
+      "long_short": 1.38
     },
     {
       "symbol": "0G",
@@ -105,7 +96,23 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.9e-05
+      "funding": 5e-05
+    },
+    {
+      "symbol": "ENA",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "FET",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "ICP",
@@ -153,15 +160,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.8e-05
+      "funding": 2.1e-05
     },
     {
-      "symbol": "SUI",
+      "symbol": "WLD",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
-      "funding": 3.7e-05
+      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
