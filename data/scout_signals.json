@@ -1,23 +1,8 @@
 {
-  "ts": "2026-09-30T10:27:28+00:00",
+  "ts": "2026-09-30T10:32:52+00:00",
   "scanned": 131,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "NOMUSDT",
-      "signal": "breakout",
-      "score": 0.7513,
-      "raw_score": 0.7975,
-      "weight": 0.942,
-      "price": 0.002223,
-      "why": "trades 15.1x, volume 6.9x, 66% taker-buy, +4.8% in an hour, at 94% of its 24h range",
-      "chg_24h": 0.0803,
-      "vol_surge": 6.92,
-      "chg_1h": 0.0481,
-      "market_surge": 5.55,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -26,7 +11,7 @@
     "revival": "probation \u2014 5/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 20,
+    "count": 18,
     "baseline": 16.0,
     "wave": false
   },
@@ -58,19 +43,19 @@
       "avg_win_4h": 0.02165,
       "avg_loss_4h": -0.01784,
       "payoff_4h": 1.214,
-      "span_h_24h": 310.5,
-      "n_eff_24h": 12.94,
-      "n_24h": 794,
+      "span_h_24h": 310.7,
+      "n_eff_24h": 12.95,
+      "n_24h": 795,
       "hit_rate_24h": 0.548,
-      "mean_ret_24h": 0.01526,
+      "mean_ret_24h": 0.01525,
       "median_ret_24h": 0.00574,
       "both_halves_24h": true,
       "days_24h": 14,
-      "mean_x_24h": 0.00922,
+      "mean_x_24h": 0.00923,
       "days_x_24h": 14,
-      "avg_win_24h": 0.05594,
+      "avg_win_24h": 0.05583,
       "avg_loss_24h": -0.03791,
-      "payoff_24h": 1.475
+      "payoff_24h": 1.473
     },
     "breakout": {
       "span_h_1h": 333.7,
