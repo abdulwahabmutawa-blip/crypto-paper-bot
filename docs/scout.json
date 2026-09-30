@@ -1,8 +1,23 @@
 {
-  "ts": "2026-09-30T04:37:11+00:00",
-  "scanned": 133,
+  "ts": "2026-09-30T04:42:40+00:00",
+  "scanned": 132,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "MORPHOUSDT",
+      "signal": "ignition",
+      "score": 0.54,
+      "raw_score": 0.5826,
+      "weight": 0.927,
+      "price": 2.578,
+      "why": "trades 5.5x and volume 6.5x the prior 4h, 61% taker-buy, $119,162 burst \u2014 while price has only moved +2.1%",
+      "chg_24h": 0.0523,
+      "vol_surge": 6.54,
+      "chg_1h": 0.0214,
+      "market_surge": 2.88,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,25 +26,25 @@
     "revival": "probation \u2014 5/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 18,
+    "count": 19,
     "baseline": 16.0,
     "wave": false
   },
   "scorecard": {
     "ignition": {
-      "span_h_1h": 332.9,
-      "n_eff_1h": 332.95,
-      "n_1h": 837,
-      "hit_rate_1h": 0.391,
+      "span_h_1h": 334.4,
+      "n_eff_1h": 334.35,
+      "n_1h": 838,
+      "hit_rate_1h": 0.39,
       "mean_ret_1h": 0.00013,
-      "median_ret_1h": -0.00034,
+      "median_ret_1h": -0.0003,
       "both_halves_1h": false,
       "days_1h": 15,
-      "mean_x_1h": 0.00016,
+      "mean_x_1h": 0.00021,
       "days_x_1h": 15,
-      "avg_win_1h": 0.01242,
+      "avg_win_1h": 0.01239,
       "avg_loss_1h": -0.01129,
-      "payoff_1h": 1.1,
+      "payoff_1h": 1.098,
       "span_h_4h": 331.2,
       "n_eff_4h": 82.8,
       "n_4h": 831,
