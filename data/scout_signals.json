@@ -1,37 +1,8 @@
 {
-  "ts": "2026-09-30T05:44:23+00:00",
-  "scanned": 130,
+  "ts": "2026-09-30T05:49:27+00:00",
+  "scanned": 129,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "PHAUSDT",
-      "signal": "breakout",
-      "score": 0.5758,
-      "raw_score": 0.6113,
-      "weight": 0.942,
-      "price": 0.0741,
-      "why": "trades 4.2x, volume 5.3x, 92% taker-buy, +3.3% in an hour, at 89% of its 24h range",
-      "chg_24h": 0.1799,
-      "vol_surge": 5.31,
-      "chg_1h": 0.0335,
-      "market_surge": 0.0,
-      "actionable": true
-    },
-    {
-      "symbol": "PHAUSDT",
-      "signal": "ignition",
-      "score": 0.5057,
-      "raw_score": 0.5461,
-      "weight": 0.926,
-      "price": 0.0741,
-      "why": "trades 4.2x and volume 5.3x the prior 4h, 92% taker-buy, $100,810 burst \u2014 while price has only moved +3.3%",
-      "chg_24h": 0.1799,
-      "vol_surge": 5.31,
-      "chg_1h": 0.0335,
-      "market_surge": 0.0,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -40,7 +11,7 @@
     "revival": "probation \u2014 5/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 19,
+    "count": 21,
     "baseline": 16.0,
     "wave": false
   },
