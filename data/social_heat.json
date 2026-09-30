@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-30T04:42:36+00:00",
+  "ts": "2026-09-30T04:48:17+00:00",
   "sources": {
     "coingecko": [
       "QNT",
@@ -10,36 +10,26 @@
       "HBAR",
       "SUI",
       "ASTER",
-      "XRP",
-      "AVAX",
-      "INJ"
+      "INJ",
+      "BTC",
+      "XRP"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "QNT",
+      "ZRO",
       "PUMP",
+      "QNT",
       "0G",
       "BABY",
       "AVAX",
       "AAVE",
-      "NEAR",
-      "ICP"
+      "NEAR"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "AVAX",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 2.75
-    },
     {
       "symbol": "NEAR",
       "surfaces": 2,
@@ -95,6 +85,14 @@
       "funding": 5e-05
     },
     {
+      "symbol": "AVAX",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "BABY",
       "surfaces": 1,
       "sources": [
@@ -103,20 +101,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 3.2e-05
+    },
+    {
       "symbol": "HBAR",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 7.4e-05
-    },
-    {
-      "symbol": "ICP",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
+      "funding": 7.3e-05
     },
     {
       "symbol": "INJ",
@@ -156,7 +154,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.8e-05
+      "funding": 1.9e-05
+    },
+    {
+      "symbol": "ZRO",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -5e-06
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
