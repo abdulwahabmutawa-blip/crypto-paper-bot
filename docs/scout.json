@@ -1,8 +1,37 @@
 {
-  "ts": "2026-09-30T11:40:41+00:00",
+  "ts": "2026-09-30T11:45:57+00:00",
   "scanned": 132,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "CHIPUSDT",
+      "signal": "ignition",
+      "score": 0.8038,
+      "raw_score": 0.869,
+      "weight": 0.925,
+      "price": 0.04508,
+      "why": "trades 9.1x and volume 42.5x the prior 4h, 74% taker-buy, $118,717 burst \u2014 while price has only moved +1.2%",
+      "chg_24h": 0.0018,
+      "vol_surge": 42.49,
+      "chg_1h": 0.0119,
+      "market_surge": 8.66,
+      "actionable": true
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "signal": "ignition",
+      "score": 0.6462,
+      "raw_score": 0.6986,
+      "weight": 0.925,
+      "price": 0.09594,
+      "why": "trades 6.4x and volume 8.3x the prior 4h, 63% taker-buy, $1,766,308 burst \u2014 while price has only moved +0.8%",
+      "chg_24h": 0.0077,
+      "vol_surge": 8.27,
+      "chg_1h": 0.0082,
+      "market_surge": 9.38,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
