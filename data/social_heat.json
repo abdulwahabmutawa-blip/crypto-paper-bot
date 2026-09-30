@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-30T12:29:36+00:00",
+  "ts": "2026-09-30T12:35:10+00:00",
   "sources": {
     "coingecko": [
       "QNT",
@@ -19,17 +19,27 @@
     "movers": [
       "MOVR",
       "QNT",
-      "ZRO",
       "NEAR",
+      "ZRO",
       "WLD",
       "ASTER",
       "ICP",
-      "TRX"
+      "ENA"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "ENA",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.54
+    },
     {
       "symbol": "MOVR",
       "surfaces": 2,
@@ -57,7 +67,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 9.5e-05,
+      "funding": 9.1e-05,
       "long_short": 0.76
     },
     {
@@ -75,14 +85,6 @@
         "coingecko"
       ],
       "funding": 1.7e-05
-    },
-    {
-      "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "ICP",
@@ -125,20 +127,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "TRX",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "VIRTUAL",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 4.6e-05
+      "funding": 4.7e-05
     },
     {
       "symbol": "WLD",
