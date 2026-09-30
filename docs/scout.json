@@ -1,8 +1,23 @@
 {
-  "ts": "2026-09-30T14:42:51+00:00",
-  "scanned": 133,
+  "ts": "2026-09-30T14:48:13+00:00",
+  "scanned": 134,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "PROMUSDT",
+      "signal": "ignition",
+      "score": 0.7613,
+      "raw_score": 0.8187,
+      "weight": 0.93,
+      "price": 6.589,
+      "why": "trades 8.7x and volume 8.8x the prior 4h, 62% taker-buy, $114,200 burst \u2014 while price has only moved -0.1%",
+      "chg_24h": 0.102,
+      "vol_surge": 8.78,
+      "chg_1h": -0.0014,
+      "market_surge": 0.0,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 5/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 14,
+    "count": 16,
     "baseline": 16.0,
     "wave": false
   },
@@ -38,7 +53,7 @@
       "median_ret_4h": -0.00138,
       "both_halves_4h": false,
       "days_4h": 15,
-      "mean_x_4h": 0.00165,
+      "mean_x_4h": 0.00164,
       "days_x_4h": 15,
       "avg_win_4h": 0.02266,
       "avg_loss_4h": -0.01767,
