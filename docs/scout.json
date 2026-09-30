@@ -1,8 +1,23 @@
 {
-  "ts": "2026-09-30T21:24:23+00:00",
-  "scanned": 138,
+  "ts": "2026-09-30T21:29:43+00:00",
+  "scanned": 139,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "CFGUSDT",
+      "signal": "ignition",
+      "score": 0.6971,
+      "raw_score": 0.7544,
+      "weight": 0.924,
+      "price": 0.1489,
+      "why": "trades 6.3x and volume 9.9x the prior 4h, 69% taker-buy, $62,531 burst \u2014 while price has only moved +0.8%",
+      "chg_24h": -0.0359,
+      "vol_surge": 9.93,
+      "chg_1h": 0.0081,
+      "market_surge": 3.14,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 5/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 11,
+    "count": 12,
     "baseline": 16.0,
     "wave": false
   },
@@ -66,7 +81,7 @@
       "median_ret_1h": -0.0019,
       "both_halves_1h": true,
       "days_1h": 15,
-      "mean_x_1h": 0.00127,
+      "mean_x_1h": 0.00125,
       "days_x_1h": 15,
       "avg_win_1h": 0.02372,
       "avg_loss_1h": -0.01651,
