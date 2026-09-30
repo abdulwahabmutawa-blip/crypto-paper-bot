@@ -1,6 +1,6 @@
 # BTC execution observations
 
-Updated: 2026-09-30T15:59:31.786+00:00
+Updated: 2026-09-30T16:16:48.404+00:00
 Quote status: ACCEPTED
 Decision: NO_TRADE — no strategy has qualified for a forward trading trial
 
