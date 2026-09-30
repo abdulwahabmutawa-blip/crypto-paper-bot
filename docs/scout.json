@@ -1,23 +1,8 @@
 {
-  "ts": "2026-09-30T21:40:15+00:00",
-  "scanned": 138,
+  "ts": "2026-09-30T21:46:03+00:00",
+  "scanned": 137,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "NIGHTUSDT",
-      "signal": "breakout",
-      "score": 0.6252,
-      "raw_score": 0.6644,
-      "weight": 0.941,
-      "price": 0.03909,
-      "why": "trades 4.2x, volume 11.4x, 63% taker-buy, +4.2% in an hour, at 88% of its 24h range",
-      "chg_24h": 0.2,
-      "vol_surge": 11.42,
-      "chg_1h": 0.0418,
-      "market_surge": 4.94,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -26,25 +11,25 @@
     "revival": "probation \u2014 5/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 14,
     "baseline": 16.0,
     "wave": false
   },
   "scorecard": {
     "ignition": {
-      "span_h_1h": 333.8,
-      "n_eff_1h": 333.77,
-      "n_1h": 854,
+      "span_h_1h": 334.2,
+      "n_eff_1h": 334.15,
+      "n_1h": 855,
       "hit_rate_1h": 0.385,
-      "mean_ret_1h": 0.0003,
-      "median_ret_1h": -0.00036,
+      "mean_ret_1h": 0.00028,
+      "median_ret_1h": -0.00041,
       "both_halves_1h": false,
       "days_1h": 15,
-      "mean_x_1h": 0.00116,
+      "mean_x_1h": 0.00115,
       "days_x_1h": 15,
       "avg_win_1h": 0.01286,
-      "avg_loss_1h": -0.01124,
-      "payoff_1h": 1.144,
+      "avg_loss_1h": -0.01125,
+      "payoff_1h": 1.143,
       "span_h_4h": 331.0,
       "n_eff_4h": 82.75,
       "n_4h": 846,
