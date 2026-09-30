@@ -1,8 +1,23 @@
 {
-  "ts": "2026-09-30T04:20:49+00:00",
-  "scanned": 132,
+  "ts": "2026-09-30T04:26:12+00:00",
+  "scanned": 133,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ARBUSDT",
+      "signal": "ignition",
+      "score": 0.7527,
+      "raw_score": 0.8111,
+      "weight": 0.928,
+      "price": 0.2026,
+      "why": "trades 6.6x and volume 12.1x the prior 4h, 79% taker-buy, $304,807 burst \u2014 while price has only moved +0.1%",
+      "chg_24h": 0.0207,
+      "vol_surge": 12.1,
+      "chg_1h": 0.001,
+      "market_surge": 1.0,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 5/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 21,
+    "count": 20,
     "baseline": 16.0,
     "wave": false
   },
