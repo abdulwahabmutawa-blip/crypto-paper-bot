@@ -1,8 +1,23 @@
 {
-  "ts": "2026-09-30T19:47:43+00:00",
-  "scanned": 137,
+  "ts": "2026-09-30T19:53:15+00:00",
+  "scanned": 136,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "EIGENUSDT",
+      "signal": "ignition",
+      "score": 0.8112,
+      "raw_score": 0.8779,
+      "weight": 0.924,
+      "price": 0.2426,
+      "why": "trades 10.4x and volume 26.4x the prior 4h, 61% taker-buy, $514,873 burst \u2014 while price has only moved -1.0%",
+      "chg_24h": -0.0399,
+      "vol_surge": 26.43,
+      "chg_1h": -0.0098,
+      "market_surge": 16.8,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 5/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 13,
+    "count": 14,
     "baseline": 16.0,
     "wave": false
   },
