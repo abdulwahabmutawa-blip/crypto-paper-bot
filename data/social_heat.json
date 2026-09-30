@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-30T17:22:49+00:00",
+  "ts": "2026-09-30T17:28:29+00:00",
   "sources": {
     "coingecko": [
       "QNT",
@@ -11,7 +11,8 @@
       "SOL",
       "SUI",
       "HYPE",
-      "PUMP"
+      "PUMP",
+      "HBAR"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -23,22 +24,12 @@
       "ENA",
       "ZRO",
       "ASTER",
-      "HYPE"
+      "PUMP"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "HYPE",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.62
-    },
     {
       "symbol": "NEAR",
       "surfaces": 2,
@@ -50,13 +41,23 @@
       "long_short": 1.35
     },
     {
+      "symbol": "PUMP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.46
+    },
+    {
       "symbol": "QNT",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": -0.000813,
+      "funding": -0.000829,
       "long_short": 0.98
     },
     {
@@ -72,6 +73,22 @@
       "surfaces": 1,
       "sources": [
         "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "HBAR",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 7.2e-05
+    },
+    {
+      "symbol": "HYPE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
       ],
       "funding": 5e-05
     },
@@ -97,18 +114,10 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.4e-05
+      "funding": -1.3e-05
     },
     {
       "symbol": "PENGU",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "PUMP",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -121,7 +130,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -8e-06
+      "funding": -7e-06
     },
     {
       "symbol": "SUI",
