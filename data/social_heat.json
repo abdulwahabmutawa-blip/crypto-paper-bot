@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-30T03:58:09+00:00",
+  "ts": "2026-09-30T04:03:46+00:00",
   "sources": {
     "coingecko": [
       "QNT",
@@ -25,22 +25,12 @@
       "AAVE",
       "BABY",
       "NEAR",
-      "ICP"
+      "WLD"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "ICP",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 2.51
-    },
     {
       "symbol": "NEAR",
       "surfaces": 2,
@@ -48,8 +38,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": -2.3e-05,
-      "long_short": 1.64
+      "funding": -2.5e-05,
+      "long_short": 1.65
     },
     {
       "symbol": "PUMP",
@@ -69,7 +59,7 @@
         "movers"
       ],
       "funding": 0.0001,
-      "long_short": 0.87
+      "long_short": 0.84
     },
     {
       "symbol": "0G",
@@ -109,10 +99,18 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.7e-05
+      "funding": 3.8e-05
     },
     {
       "symbol": "HBAR",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ICP",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -125,7 +123,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.8e-05
+      "funding": 7e-05
     },
     {
       "symbol": "LIT",
@@ -157,7 +155,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8e-06
+      "funding": 1.3e-05
+    },
+    {
+      "symbol": "WLD",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -5.3e-05
     },
     {
       "symbol": "ZEC",
