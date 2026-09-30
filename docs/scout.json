@@ -1,37 +1,8 @@
 {
-  "ts": "2026-09-30T09:37:14+00:00",
-  "scanned": 129,
+  "ts": "2026-09-30T09:42:40+00:00",
+  "scanned": 130,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "JSTUSDT",
-      "signal": "ignition",
-      "score": 0.757,
-      "raw_score": 0.8166,
-      "weight": 0.927,
-      "price": 0.1285,
-      "why": "trades 5.9x and volume 20.4x the prior 4h, 96% taker-buy, $66,420 burst \u2014 while price has only moved +0.3%",
-      "chg_24h": -0.0114,
-      "vol_surge": 20.38,
-      "chg_1h": 0.003,
-      "market_surge": 2.61,
-      "actionable": true
-    },
-    {
-      "symbol": "GALAUSDT",
-      "signal": "ignition",
-      "score": 0.6483,
-      "raw_score": 0.6994,
-      "weight": 0.927,
-      "price": 0.002319,
-      "why": "trades 5.5x and volume 10.5x the prior 4h, 75% taker-buy, $64,763 burst \u2014 while price has only moved +2.4%",
-      "chg_24h": 0.022,
-      "vol_surge": 10.46,
-      "chg_1h": 0.0243,
-      "market_surge": 2.09,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -40,7 +11,7 @@
     "revival": "probation \u2014 5/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 19,
+    "count": 17,
     "baseline": 16.0,
     "wave": false
   },
