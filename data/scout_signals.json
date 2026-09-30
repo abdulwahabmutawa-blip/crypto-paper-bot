@@ -1,20 +1,20 @@
 {
-  "ts": "2026-09-30T20:20:53+00:00",
-  "scanned": 140,
+  "ts": "2026-09-30T20:26:43+00:00",
+  "scanned": 139,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "GOOGLBUSDT",
-      "signal": "ignition",
-      "score": 0.8337,
-      "raw_score": 0.9032,
-      "weight": 0.923,
-      "price": 349.21,
-      "why": "trades 42.7x and volume 43.9x the prior 4h, 62% taker-buy, $155,380 burst \u2014 while price has only moved +0.1%",
-      "chg_24h": 0.0238,
-      "vol_surge": 43.91,
-      "chg_1h": 0.001,
-      "market_surge": 9.26,
+      "symbol": "TRBUSDT",
+      "signal": "breakout",
+      "score": 0.6712,
+      "raw_score": 0.7133,
+      "weight": 0.941,
+      "price": 21.34,
+      "why": "trades 6.0x, volume 8.5x, 72% taker-buy, +3.0% in an hour, at 93% of its 24h range",
+      "chg_24h": 0.0606,
+      "vol_surge": 8.47,
+      "chg_1h": 0.0304,
+      "market_surge": 2.28,
       "actionable": true
     }
   ],
@@ -26,7 +26,7 @@
     "revival": "probation \u2014 5/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 11,
     "baseline": 16.0,
     "wave": false
   },
