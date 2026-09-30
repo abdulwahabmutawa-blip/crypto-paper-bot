@@ -1,23 +1,8 @@
 {
-  "ts": "2026-09-30T14:48:13+00:00",
-  "scanned": 134,
+  "ts": "2026-09-30T14:53:46+00:00",
+  "scanned": 133,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "PROMUSDT",
-      "signal": "ignition",
-      "score": 0.7613,
-      "raw_score": 0.8187,
-      "weight": 0.93,
-      "price": 6.589,
-      "why": "trades 8.7x and volume 8.8x the prior 4h, 62% taker-buy, $114,200 burst \u2014 while price has only moved -0.1%",
-      "chg_24h": 0.102,
-      "vol_surge": 8.78,
-      "chg_1h": -0.0014,
-      "market_surge": 0.0,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -26,25 +11,25 @@
     "revival": "probation \u2014 5/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 16,
+    "count": 15,
     "baseline": 16.0,
     "wave": false
   },
   "scorecard": {
     "ignition": {
-      "span_h_1h": 334.4,
-      "n_eff_1h": 334.44,
-      "n_1h": 864,
-      "hit_rate_1h": 0.388,
-      "mean_ret_1h": 0.00028,
-      "median_ret_1h": -0.00043,
+      "span_h_1h": 334.6,
+      "n_eff_1h": 334.63,
+      "n_1h": 866,
+      "hit_rate_1h": 0.389,
+      "mean_ret_1h": 0.0003,
+      "median_ret_1h": -0.00041,
       "both_halves_1h": false,
       "days_1h": 15,
-      "mean_x_1h": 0.00037,
+      "mean_x_1h": 0.00042,
       "days_x_1h": 15,
-      "avg_win_1h": 0.01281,
+      "avg_win_1h": 0.0128,
       "avg_loss_1h": -0.01116,
-      "payoff_1h": 1.148,
+      "payoff_1h": 1.147,
       "span_h_4h": 331.4,
       "n_eff_4h": 82.85,
       "n_4h": 845,
