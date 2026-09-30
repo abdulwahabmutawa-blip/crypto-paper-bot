@@ -1,23 +1,8 @@
 {
-  "ts": "2026-09-30T02:33:34+00:00",
-  "scanned": 134,
+  "ts": "2026-09-30T02:39:20+00:00",
+  "scanned": 132,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "TRBUSDT",
-      "signal": "breakout",
-      "score": 0.6372,
-      "raw_score": 0.6778,
-      "weight": 0.94,
-      "price": 21.15,
-      "why": "trades 5.3x, volume 15.1x, 75% taker-buy, +2.5% in an hour, at 90% of its 24h range",
-      "chg_24h": 0.142,
-      "vol_surge": 15.1,
-      "chg_1h": 0.0252,
-      "market_surge": 4.08,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -26,7 +11,7 @@
     "revival": "probation \u2014 5/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 26,
+    "count": 23,
     "baseline": 16.0,
     "wave": false
   },
