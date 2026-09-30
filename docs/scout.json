@@ -1,51 +1,8 @@
 {
-  "ts": "2026-09-30T01:25:52+00:00",
+  "ts": "2026-09-30T01:31:41+00:00",
   "scanned": 135,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "COMPUSDT",
-      "signal": "breakout",
-      "score": 0.876,
-      "raw_score": 0.9319,
-      "weight": 0.94,
-      "price": 26.65,
-      "why": "trades 276.3x, volume 355.0x, 72% taker-buy, +7.6% in an hour, at 91% of its 24h range",
-      "chg_24h": 0.1489,
-      "vol_surge": 355.04,
-      "chg_1h": 0.0759,
-      "market_surge": 31.74,
-      "actionable": true
-    },
-    {
-      "symbol": "TSLABUSDT",
-      "signal": "ignition",
-      "score": 0.8265,
-      "raw_score": 0.8878,
-      "weight": 0.931,
-      "price": 354.32,
-      "why": "trades 7.6x and volume 21.1x the prior 4h, 94% taker-buy, $121,220 burst \u2014 while price has only moved -0.1%",
-      "chg_24h": -0.008,
-      "vol_surge": 21.14,
-      "chg_1h": -0.0011,
-      "market_surge": 6.64,
-      "actionable": true
-    },
-    {
-      "symbol": "RAYUSDT",
-      "signal": "ignition",
-      "score": 0.6586,
-      "raw_score": 0.7074,
-      "weight": 0.931,
-      "price": 1.9414,
-      "why": "trades 4.7x and volume 10.2x the prior 4h, 85% taker-buy, $78,440 burst \u2014 while price has only moved +1.8%",
-      "chg_24h": 0.0553,
-      "vol_surge": 10.23,
-      "chg_1h": 0.0175,
-      "market_surge": 2.63,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -54,25 +11,25 @@
     "revival": "probation \u2014 5/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 21,
+    "count": 22,
     "baseline": 16.0,
     "wave": false
   },
   "scorecard": {
     "ignition": {
-      "span_h_1h": 334.6,
-      "n_eff_1h": 334.64,
-      "n_1h": 835,
+      "span_h_1h": 334.8,
+      "n_eff_1h": 334.82,
+      "n_1h": 836,
       "hit_rate_1h": 0.4,
-      "mean_ret_1h": 0.00033,
+      "mean_ret_1h": 0.00032,
       "median_ret_1h": -1e-05,
       "both_halves_1h": false,
       "days_1h": 15,
-      "mean_x_1h": 0.00074,
+      "mean_x_1h": 0.00055,
       "days_x_1h": 15,
       "avg_win_1h": 0.01247,
-      "avg_loss_1h": -0.01125,
-      "payoff_1h": 1.108,
+      "avg_loss_1h": -0.01124,
+      "payoff_1h": 1.109,
       "span_h_4h": 331.4,
       "n_eff_4h": 82.85,
       "n_4h": 831,
