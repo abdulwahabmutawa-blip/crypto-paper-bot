@@ -1,8 +1,23 @@
 {
-  "ts": "2026-09-30T00:25:11+00:00",
+  "ts": "2026-09-30T00:30:52+00:00",
   "scanned": 136,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "AAVEUSDT",
+      "signal": "ignition",
+      "score": 0.5125,
+      "raw_score": 0.5499,
+      "weight": 0.932,
+      "price": 163.01,
+      "why": "trades 4.5x and volume 5.5x the prior 4h, 69% taker-buy, $325,813 burst \u2014 while price has only moved -1.6%",
+      "chg_24h": 0.0897,
+      "vol_surge": 5.5,
+      "chg_1h": -0.0164,
+      "market_surge": 1.2,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 5/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 13,
     "baseline": 16.0,
     "wave": false
   },
