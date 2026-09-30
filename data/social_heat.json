@@ -1,18 +1,19 @@
 {
-  "ts": "2026-09-30T12:35:10+00:00",
+  "ts": "2026-09-30T12:40:58+00:00",
   "sources": {
     "coingecko": [
       "QNT",
       "NEAR",
-      "MOVR",
       "LIT",
-      "PENGU",
-      "TRUMP",
+      "MOVR",
       "ZEC",
-      "TAO",
       "AVAX",
+      "TRUMP",
+      "PENGU",
+      "ZRO",
+      "HBAR",
       "ENA",
-      "VIRTUAL"
+      "TAO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,8 +23,8 @@
       "NEAR",
       "ZRO",
       "WLD",
-      "ASTER",
       "ICP",
+      "ASTER",
       "ENA"
     ],
     "watcher": [],
@@ -71,6 +72,16 @@
       "long_short": 0.76
     },
     {
+      "symbol": "ZRO",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.49
+    },
+    {
       "symbol": "ASTER",
       "surfaces": 1,
       "sources": [
@@ -84,7 +95,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.7e-05
+      "funding": 1.9e-05
+    },
+    {
+      "symbol": "HBAR",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 4.7e-05
     },
     {
       "symbol": "ICP",
@@ -127,20 +146,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "VIRTUAL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 4.7e-05
-    },
-    {
       "symbol": "WLD",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 6.5e-05
+      "funding": 7.9e-05
     },
     {
       "symbol": "ZEC",
@@ -149,14 +160,6 @@
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "ZRO",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
