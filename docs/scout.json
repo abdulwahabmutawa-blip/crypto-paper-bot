@@ -1,8 +1,23 @@
 {
-  "ts": "2026-09-30T20:49:33+00:00",
+  "ts": "2026-09-30T20:55:28+00:00",
   "scanned": 138,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SNXXBUSDT",
+      "signal": "ignition",
+      "score": 0.7506,
+      "raw_score": 0.8123,
+      "weight": 0.924,
+      "price": 16.71,
+      "why": "trades 8.0x and volume 8.6x the prior 4h, 74% taker-buy, $99,247 burst \u2014 while price has only moved -0.2%",
+      "chg_24h": 0.0115,
+      "vol_surge": 8.62,
+      "chg_1h": -0.0024,
+      "market_surge": 5.8,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -43,18 +58,18 @@
       "avg_win_4h": 0.02303,
       "avg_loss_4h": -0.01778,
       "payoff_4h": 1.295,
-      "span_h_24h": 309.3,
-      "n_eff_24h": 12.89,
-      "n_24h": 784,
-      "hit_rate_24h": 0.527,
-      "mean_ret_24h": 0.01387,
-      "median_ret_24h": 0.00424,
+      "span_h_24h": 310.3,
+      "n_eff_24h": 12.93,
+      "n_24h": 785,
+      "hit_rate_24h": 0.526,
+      "mean_ret_24h": 0.0138,
+      "median_ret_24h": 0.00417,
       "both_halves_24h": true,
       "days_24h": 14,
-      "mean_x_24h": 0.01064,
+      "mean_x_24h": 0.01059,
       "days_x_24h": 14,
       "avg_win_24h": 0.05639,
-      "avg_loss_24h": -0.03719,
+      "avg_loss_24h": -0.03721,
       "payoff_24h": 1.516
     },
     "breakout": {
