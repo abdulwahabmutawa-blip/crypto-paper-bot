@@ -1,8 +1,37 @@
 {
-  "ts": "2026-09-30T07:23:36+00:00",
-  "scanned": 133,
+  "ts": "2026-09-30T07:28:54+00:00",
+  "scanned": 134,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SKHYBUSDT",
+      "signal": "ignition",
+      "score": 0.7016,
+      "raw_score": 0.7568,
+      "weight": 0.927,
+      "price": 186.52,
+      "why": "trades 4.3x and volume 31.5x the prior 4h, 100% taker-buy, $55,598 burst \u2014 while price has only moved +0.6%",
+      "chg_24h": 0.0125,
+      "vol_surge": 31.45,
+      "chg_1h": 0.0058,
+      "market_surge": 7.95,
+      "actionable": true
+    },
+    {
+      "symbol": "ARKUSDT",
+      "signal": "breakout",
+      "score": 0.665,
+      "raw_score": 0.706,
+      "weight": 0.942,
+      "price": 0.2924,
+      "why": "trades 5.6x, volume 6.7x, 66% taker-buy, +5.0% in an hour, at 91% of its 24h range",
+      "chg_24h": 0.2105,
+      "vol_surge": 6.68,
+      "chg_1h": 0.0495,
+      "market_surge": 3.18,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -11,7 +40,7 @@
     "revival": "probation \u2014 5/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 18,
+    "count": 17,
     "baseline": 16.0,
     "wave": false
   },
@@ -43,19 +72,19 @@
       "avg_win_4h": 0.02155,
       "avg_loss_4h": -0.0179,
       "payoff_4h": 1.204,
-      "span_h_24h": 310.9,
-      "n_eff_24h": 12.96,
-      "n_24h": 789,
+      "span_h_24h": 311.3,
+      "n_eff_24h": 12.97,
+      "n_24h": 790,
       "hit_rate_24h": 0.556,
-      "mean_ret_24h": 0.01629,
+      "mean_ret_24h": 0.01621,
       "median_ret_24h": 0.00691,
       "both_halves_24h": true,
       "days_24h": 14,
-      "mean_x_24h": 0.00996,
+      "mean_x_24h": 0.00985,
       "days_x_24h": 14,
       "avg_win_24h": 0.05645,
-      "avg_loss_24h": -0.03808,
-      "payoff_24h": 1.482
+      "avg_loss_24h": -0.0381,
+      "payoff_24h": 1.481
     },
     "breakout": {
       "span_h_1h": 332.3,
