@@ -1,16 +1,17 @@
 {
-  "ts": "2026-09-30T06:00:39+00:00",
+  "ts": "2026-09-30T06:06:15+00:00",
   "sources": {
     "coingecko": [
       "QNT",
+      "LIT",
       "PENGU",
       "NEAR",
-      "LIT",
       "PUMP",
       "ZRO",
+      "AVAX",
+      "UNI",
       "LINK",
       "ADA",
-      "SUI",
       "PHA"
     ],
     "reddit": [],
@@ -21,8 +22,8 @@
       "PUMP",
       "0G",
       "BABY",
-      "AVAX",
       "NEAR",
+      "AVAX",
       "AAVE"
     ],
     "watcher": [],
@@ -30,13 +31,23 @@
   },
   "heat": [
     {
+      "symbol": "AVAX",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.71
+    },
+    {
       "symbol": "NEAR",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 1.7e-05,
+      "funding": 2.1e-05,
       "long_short": 1.55
     },
     {
@@ -47,7 +58,7 @@
         "movers"
       ],
       "funding": 5e-05,
-      "long_short": 1.32
+      "long_short": 1.35
     },
     {
       "symbol": "QNT",
@@ -56,7 +67,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 1.4e-05,
+      "funding": 1.1e-05,
       "long_short": 0.89
     },
     {
@@ -66,8 +77,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 3.1e-05,
-      "long_short": 1.21
+      "funding": 3.5e-05,
+      "long_short": 1.12
     },
     {
       "symbol": "0G",
@@ -83,21 +94,13 @@
       "sources": [
         "movers"
       ],
-      "funding": 8.9e-05
+      "funding": 8.3e-05
     },
     {
       "symbol": "ADA",
       "surfaces": 1,
       "sources": [
         "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "AVAX",
-      "surfaces": 1,
-      "sources": [
-        "movers"
       ],
       "funding": 0.0001
     },
@@ -115,7 +118,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.5e-05
+      "funding": 6.4e-05
     },
     {
       "symbol": "LIT",
@@ -142,7 +145,7 @@
       "funding": 5e-05
     },
     {
-      "symbol": "SUI",
+      "symbol": "UNI",
       "surfaces": 1,
       "sources": [
         "coingecko"
