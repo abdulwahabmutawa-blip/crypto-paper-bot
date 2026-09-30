@@ -1,17 +1,17 @@
 {
-  "ts": "2026-09-30T11:51:38+00:00",
+  "ts": "2026-09-30T11:57:19+00:00",
   "sources": {
     "coingecko": [
       "QNT",
       "TRUMP",
+      "NEAR",
       "MOVR",
       "PENGU",
-      "NEAR",
       "LIT",
       "ZEC",
-      "ENA",
-      "BTC",
       "TAO",
+      "PUMP",
+      "ENA",
       "ETH",
       "ASTER"
     ],
@@ -23,9 +23,9 @@
       "ZRO",
       "NEAR",
       "WLD",
-      "PUMP",
       "ASTER",
-      "0G"
+      "0G",
+      "PUMP"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -62,13 +62,23 @@
       "long_short": 1.47
     },
     {
+      "symbol": "PUMP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.44
+    },
+    {
       "symbol": "QNT",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 5.5e-05,
+      "funding": 6.1e-05,
       "long_short": 0.78
     },
     {
@@ -78,14 +88,6 @@
         "movers"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 6.2e-05
     },
     {
       "symbol": "ENA",
@@ -101,7 +103,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.6e-05
+      "funding": 7.3e-05
     },
     {
       "symbol": "LIT",
@@ -120,20 +122,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PUMP",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "TAO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 4.6e-05
+      "funding": 4.9e-05
     },
     {
       "symbol": "TRUMP",
@@ -149,7 +143,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.8e-05
+      "funding": 5.4e-05
     },
     {
       "symbol": "ZEC",
