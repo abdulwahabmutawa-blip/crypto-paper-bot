@@ -1,8 +1,37 @@
 {
-  "ts": "2026-09-30T02:11:03+00:00",
+  "ts": "2026-09-30T02:16:37+00:00",
   "scanned": 133,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "COMPUSDT",
+      "signal": "ignition",
+      "score": 0.8398,
+      "raw_score": 0.904,
+      "weight": 0.929,
+      "price": 26.28,
+      "why": "trades 18.9x and volume 34.2x the prior 4h, 67% taker-buy, $51,781 burst \u2014 while price has only moved +0.5%",
+      "chg_24h": 0.1316,
+      "vol_surge": 34.24,
+      "chg_1h": 0.0054,
+      "market_surge": 4.86,
+      "actionable": true
+    },
+    {
+      "symbol": "MUBUSDT",
+      "signal": "ignition",
+      "score": 0.7827,
+      "raw_score": 0.8426,
+      "weight": 0.929,
+      "price": 1068.88,
+      "why": "trades 6.4x and volume 91.5x the prior 4h, 97% taker-buy, $165,929 burst \u2014 while price has only moved -0.2%",
+      "chg_24h": 0.0161,
+      "vol_surge": 91.53,
+      "chg_1h": -0.0023,
+      "market_surge": 11.32,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
