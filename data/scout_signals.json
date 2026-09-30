@@ -1,23 +1,8 @@
 {
-  "ts": "2026-09-30T01:08:48+00:00",
-  "scanned": 135,
+  "ts": "2026-09-30T01:14:22+00:00",
+  "scanned": 137,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ARUSDT",
-      "signal": "ignition",
-      "score": 0.7214,
-      "raw_score": 0.7757,
-      "weight": 0.93,
-      "price": 4.31,
-      "why": "trades 6.6x and volume 18.8x the prior 4h, 85% taker-buy, $78,577 burst \u2014 while price has only moved +2.1%",
-      "chg_24h": 0.0118,
-      "vol_surge": 18.79,
-      "chg_1h": 0.0213,
-      "market_surge": 5.15,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "actionable",
     "breakout": "actionable",
@@ -26,25 +11,25 @@
     "revival": "probation \u2014 5/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 17,
+    "count": 18,
     "baseline": 16.0,
     "wave": false
   },
   "scorecard": {
     "ignition": {
-      "span_h_1h": 334.4,
-      "n_eff_1h": 334.45,
-      "n_1h": 834,
+      "span_h_1h": 334.8,
+      "n_eff_1h": 334.82,
+      "n_1h": 835,
       "hit_rate_1h": 0.399,
       "mean_ret_1h": 0.00031,
-      "median_ret_1h": -1e-05,
+      "median_ret_1h": -5e-05,
       "both_halves_1h": false,
-      "days_1h": 14,
-      "mean_x_1h": 0.00054,
-      "days_x_1h": 14,
+      "days_1h": 15,
+      "mean_x_1h": 0.00056,
+      "days_x_1h": 15,
       "avg_win_1h": 0.01249,
-      "avg_loss_1h": -0.01126,
-      "payoff_1h": 1.109,
+      "avg_loss_1h": -0.01124,
+      "payoff_1h": 1.111,
       "span_h_4h": 331.8,
       "n_eff_4h": 82.94,
       "n_4h": 832,
