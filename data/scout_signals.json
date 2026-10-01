@@ -1,36 +1,22 @@
 {
-  "ts": "2026-10-01T01:55:25+00:00",
+  "ts": "2026-10-01T02:00:58+00:00",
   "scanned": 138,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "CRVUSDT",
+      "symbol": "CAKEUSDT",
       "signal": "ignition",
-      "score": 0.8435,
-      "raw_score": 0.9119,
+      "score": 0.8145,
+      "raw_score": 0.8806,
       "weight": 0.925,
-      "price": 0.3969,
-      "why": "trades 11.7x and volume 39.7x the prior 4h, 71% taker-buy, $289,315 burst \u2014 while price has only moved +0.6%",
-      "chg_24h": 0.0089,
-      "vol_surge": 39.72,
-      "chg_1h": 0.0063,
-      "market_surge": 2.63,
+      "price": 2.578,
+      "why": "trades 14.1x and volume 31.7x the prior 4h, 62% taker-buy, $174,783 burst \u2014 while price has only moved -1.0%",
+      "chg_24h": 0.0,
+      "vol_surge": 31.72,
+      "chg_1h": -0.0096,
+      "market_surge": 6.9,
       "actionable": false,
       "status": "benched \u2014 BTC-excess day mean +0.58% at 24h: market beta, not signal"
-    },
-    {
-      "symbol": "PLUMEUSDT",
-      "signal": "breakout",
-      "score": 0.7961,
-      "raw_score": 0.8469,
-      "weight": 0.94,
-      "price": 0.01986,
-      "why": "trades 9.0x, volume 8.7x, 73% taker-buy, +4.9% in an hour, at 100% of its 24h range",
-      "chg_24h": 0.1127,
-      "vol_surge": 8.73,
-      "chg_1h": 0.0486,
-      "market_surge": 8.25,
-      "actionable": true
     }
   ],
   "gate": {
@@ -41,7 +27,7 @@
     "revival": "probation \u2014 5/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 11,
     "baseline": 15.0,
     "wave": false
   },
