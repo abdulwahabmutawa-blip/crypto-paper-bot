@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-01T19:25:16+00:00 · runs 2288 · equity **$861.30** (-13.87%) · cash $0.00 · open 10/10 · round trips 870
+updated 2026-10-01T19:43:03+00:00 · runs 2289 · equity **$862.93** (-13.71%) · cash $0.00 · open 10/10 · round trips 870
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -38,12 +38,12 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
 | 2026-10-01T12:13 | UNIUSDT | surge | 9.062 | 9.061 | -0.01% |
 | 2026-10-01T13:23 | BNCBUSDT | surge | 6.03 | 5.99 | -0.66% |
-| 2026-10-01T14:33 | MSTRBUSDT | surge | 157.17 | 160.35 | +2.02% |
-| 2026-10-01T15:43 | ACEUSDT | surge | 0.19 | 0.1864 | -1.89% |
-| 2026-10-01T15:43 | PEPEUSDT | surge | 4.39e-06 | 4.41e-06 | +0.46% |
-| 2026-10-01T16:01 | AAVEUSDT | surge | 168.32 | 167.16 | -0.69% |
-| 2026-10-01T17:18 | DYDXUSDT | surge | 0.14774 | 0.148 | +0.18% |
-| 2026-10-01T17:36 | SKHYBUSDT | surge | 188.77 | 192.65 | +2.06% |
-| 2026-10-01T18:47 | PORTALUSDT | surge | 0.01831 | 0.01782 | -2.68% |
+| 2026-10-01T14:33 | MSTRBUSDT | surge | 157.17 | 160.58 | +2.17% |
+| 2026-10-01T15:43 | ACEUSDT | surge | 0.19 | 0.1862 | -2.00% |
+| 2026-10-01T15:43 | PEPEUSDT | surge | 4.39e-06 | 4.42e-06 | +0.68% |
+| 2026-10-01T16:01 | AAVEUSDT | surge | 168.32 | 168.12 | -0.12% |
+| 2026-10-01T17:18 | DYDXUSDT | surge | 0.14774 | 0.14777 | +0.02% |
+| 2026-10-01T17:36 | SKHYBUSDT | surge | 188.77 | 192.81 | +2.14% |
+| 2026-10-01T18:47 | PORTALUSDT | surge | 0.01831 | 0.01802 | -1.58% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
