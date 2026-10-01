@@ -1,8 +1,24 @@
 {
-  "ts": "2026-10-01T05:08:36+00:00",
-  "scanned": 137,
+  "ts": "2026-10-01T05:14:35+00:00",
+  "scanned": 136,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "JTOUSDT",
+      "signal": "ignition",
+      "score": 0.6631,
+      "raw_score": 0.7161,
+      "weight": 0.926,
+      "price": 0.5511,
+      "why": "trades 5.2x and volume 10.9x the prior 4h, 63% taker-buy, $67,309 burst \u2014 while price has only moved -0.0%",
+      "chg_24h": -0.0113,
+      "vol_surge": 10.91,
+      "chg_1h": -0.0004,
+      "market_surge": 5.17,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.63% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.63% at 24h: market beta, not signal",
     "breakout": "actionable",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 5/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 16,
+    "count": 17,
     "baseline": 15.0,
     "wave": false
   },
