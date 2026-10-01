@@ -1,43 +1,43 @@
 {
-  "ts": "2026-10-01T05:03:01+00:00",
+  "ts": "2026-10-01T05:08:31+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
       "QNT",
-      "ONDO",
-      "PUMP",
       "PENGU",
+      "ONDO",
       "LIT",
-      "SUI",
       "BTC",
-      "ENA",
-      "TAO"
+      "SUI",
+      "PUMP",
+      "HYPE",
+      "STX"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "MOVR",
-      "NEAR",
       "ENA",
-      "WLD",
+      "NEAR",
       "FET",
+      "WLD",
       "TRUMP",
-      "HYPE",
-      "ADA"
+      "QNT",
+      "HYPE"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
     {
-      "symbol": "ENA",
+      "symbol": "HYPE",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
       "funding": 5e-05,
-      "long_short": 1.88
+      "long_short": 1.5
     },
     {
       "symbol": "NEAR",
@@ -50,12 +50,14 @@
       "long_short": 1.35
     },
     {
-      "symbol": "ADA",
-      "surfaces": 1,
+      "symbol": "QNT",
+      "surfaces": 2,
       "sources": [
+        "coingecko",
         "movers"
       ],
-      "funding": 0.0001
+      "funding": 7.1e-05,
+      "long_short": 0.91
     },
     {
       "symbol": "BTC",
@@ -63,7 +65,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.6e-05
+      "funding": 4.9e-05
+    },
+    {
+      "symbol": "ENA",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "FET",
@@ -72,14 +82,6 @@
         "movers"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "HYPE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "LIT",
@@ -103,7 +105,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.2e-05
+      "funding": 3.3e-05
     },
     {
       "symbol": "PENGU",
@@ -122,12 +124,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "QNT",
+      "symbol": "STX",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 7.4e-05
+      "funding": 0.0001
     },
     {
       "symbol": "SUI",
@@ -136,14 +138,6 @@
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "TRUMP",
