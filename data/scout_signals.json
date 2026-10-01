@@ -1,8 +1,23 @@
 {
-  "ts": "2026-10-01T17:18:34+00:00",
-  "scanned": 128,
+  "ts": "2026-10-01T17:23:44+00:00",
+  "scanned": 127,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "WIFUSDT",
+      "signal": "breakout",
+      "score": 0.6763,
+      "raw_score": 0.7195,
+      "weight": 0.94,
+      "price": 0.2576,
+      "why": "trades 5.5x, volume 8.3x, 67% taker-buy, +4.1% in an hour, at 95% of its 24h range",
+      "chg_24h": 0.025,
+      "vol_surge": 8.34,
+      "chg_1h": 0.0412,
+      "market_surge": 3.41,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.27% at 24h: market beta, not signal",
     "breakout": "actionable",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 2/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 14,
+    "count": 16,
     "baseline": 14.0,
     "wave": false
   },
