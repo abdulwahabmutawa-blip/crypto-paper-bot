@@ -1,14 +1,15 @@
 {
-  "ts": "2026-10-01T14:02:28+00:00",
+  "ts": "2026-10-01T14:07:58+00:00",
   "sources": {
     "coingecko": [
-      "TRUMP",
       "NEAR",
+      "TRUMP",
       "QNT",
       "MOVR",
-      "BTC",
       "PENGU",
+      "BTC",
       "SOL",
+      "HYPE",
       "ZEC"
     ],
     "reddit": [],
@@ -17,15 +18,24 @@
       "MOVR",
       "NOM",
       "HYPE",
-      "NIGHT",
       "AAVE",
-      "UNI",
-      "SNDKB"
+      "NIGHT",
+      "UNI"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "HYPE",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -6e-06,
+      "long_short": 1.61
+    },
     {
       "symbol": "MOVR",
       "surfaces": 2,
@@ -50,15 +60,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.5e-05
-    },
-    {
-      "symbol": "HYPE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 2e-06
+      "funding": 6.6e-05
     },
     {
       "symbol": "NEAR",
@@ -66,7 +68,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1e-05
+      "funding": 8e-06
     },
     {
       "symbol": "NIGHT",
@@ -98,14 +100,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000875
-    },
-    {
-      "symbol": "SNDKB",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
+      "funding": -0.000862
     },
     {
       "symbol": "SOL",
@@ -113,7 +108,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -6e-05
+      "funding": -5.7e-05
     },
     {
       "symbol": "TRUMP",
@@ -121,7 +116,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000177
+      "funding": -0.000178
     },
     {
       "symbol": "UNI",
@@ -129,7 +124,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 8.6e-05
+      "funding": 8.7e-05
     },
     {
       "symbol": "ZEC",
