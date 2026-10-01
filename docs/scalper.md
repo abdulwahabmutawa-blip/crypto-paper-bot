@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-01T21:48:20+00:00 · runs 2296 · equity **$863.31** (-13.67%) · cash $0.00 · open 10/10 · round trips 871
+updated 2026-10-01T22:06:10+00:00 · runs 2297 · equity **$866.76** (-13.32%) · cash $0.00 · open 10/10 · round trips 871
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-01T12:13 | UNIUSDT | surge | 9.062 | 9.022 | -0.44% |
+| 2026-10-01T12:13 | UNIUSDT | surge | 9.062 | 9.095 | +0.36% |
 | 2026-10-01T13:23 | BNCBUSDT | surge | 6.03 | 5.99 | -0.66% |
-| 2026-10-01T14:33 | MSTRBUSDT | surge | 157.17 | 159.7 | +1.61% |
-| 2026-10-01T15:43 | ACEUSDT | surge | 0.19 | 0.1877 | -1.21% |
-| 2026-10-01T15:43 | PEPEUSDT | surge | 4.39e-06 | 4.42e-06 | +0.68% |
-| 2026-10-01T16:01 | AAVEUSDT | surge | 168.32 | 169.67 | +0.80% |
-| 2026-10-01T17:18 | DYDXUSDT | surge | 0.14774 | 0.14918 | +0.97% |
-| 2026-10-01T17:36 | SKHYBUSDT | surge | 188.77 | 191.83 | +1.62% |
-| 2026-10-01T19:58 | SKYUSDT | surge | 0.08311 | 0.08399 | +1.06% |
+| 2026-10-01T14:33 | MSTRBUSDT | surge | 157.17 | 160.38 | +2.04% |
+| 2026-10-01T15:43 | ACEUSDT | surge | 0.19 | 0.1887 | -0.68% |
+| 2026-10-01T15:43 | PEPEUSDT | surge | 4.39e-06 | 4.44e-06 | +1.14% |
+| 2026-10-01T16:01 | AAVEUSDT | surge | 168.32 | 171.45 | +1.86% |
+| 2026-10-01T17:18 | DYDXUSDT | surge | 0.14774 | 0.15 | +1.53% |
+| 2026-10-01T17:36 | SKHYBUSDT | surge | 188.77 | 192.02 | +1.72% |
+| 2026-10-01T19:58 | SKYUSDT | surge | 0.08311 | 0.08411 | +1.20% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
