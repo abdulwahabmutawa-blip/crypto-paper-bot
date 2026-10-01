@@ -1,33 +1,19 @@
-# Fleet status — 2026-09-30 (UTC)
+# Fleet status — 2026-10-01 (UTC)
 
 | Bot | Holds | 24h change | Value |
 |---|---|---|---|
-| crypto | BTC-USD | No trade; BTC drifted down | $1,188.50 (was $1,193.62) |
-| meanrev | HD | No trade; last EOD print 09-29 (next print pending) | $1,165.45 (was $1,172.37 on 09-28) |
-| sentiment | CASH | No trade — still gated in cash | $869.30 (unchanged) |
-| scalper | 10/10 seats | 46 round trips closed (25 stop, 18 target, 3 time), net ≈ −$25.42 | $892.03 (was $908.02) |
-| Watcher (grok_sentinel) | — (no capital) | Still silent, 0 scans since 09-11 15:12 UTC (~19 days) | n/a |
-| social_radar | — (no capital) | Same staleness, unchanged since 09-11 15:29 UTC | n/a |
-| retired (8, frozen) | congress, commodity, allweather, hunter, hypecrypto, scholar, analyst, stock | No state-file changes in 24h | — |
-
-Lottery and the oracle-bot side process are separate, non-paper-fleet activity — out of scope per CLAUDE.md.
+| crypto | BTC-USD | No trade; BTC drifted up, bench $1,303.98 | $1,199.26 (was $1,192.17) |
+| meanrev | HD | No trade; last close down with sector, bench $1,015.56 | $1,150.41 (was $1,165.45) |
+| sentiment | CASH | No activity — Watcher feed stale (see below) | $869.30 (flat) |
+| scalper | 10 open seats | 30 round trips, 14 stops / 13 targets / 3 open-still | $871.07 (was ~$883.21) |
+| Watcher (sentinel) | — | No new scan | last scan 2026-09-11 |
 
 ## Changed
-- Cron loop healthy: 87 cycle commits in 24h (09-29 05:09 → 09-30 05:07), median gap 17 min, max
-  gap 19 min. All 6 GitHub Actions runs in the window that have finished are `completed/success`;
-  the two most recent are still `in_progress`/`pending`, consistent with this workflow's normal
-  long-running self-looping design, not an error.
-- crypto: no trade, still holding BTC-USD; value down ~0.4%.
-- meanrev: no trade, still holding HD; value down ~0.6% with the market. Daily history's last
-  entry is 09-29 — HD prices once/day at close, so no 09-30 print exists yet at digest time.
-- scalper: 46 closes in the 24h window (25 stop, 18 target, 3 time-exit), netting ≈ −$25.42;
-  seats stayed full at 10/10.
-- sentiment: no trades, flat.
+- scalper: 30 round trips in 24h, net −$12.93 (14 stops vs 13 targets); no ticker list change.
+- crypto, meanrev, sentiment: no position changes, no new trades.
+- One cron gap: 2026-09-30 11:44→12:32 UTC (~47 min between cycles); self-recovered, cadence back to ~18 min since.
 
 ## Needs a look
-- **scalper/TVKUSDT dead seat**: still open since 2026-09-12 (day 18+), entered off a `surge`
-  shape that never closed — known issue, not yet fixed.
-- **Watcher / social_radar**: silent for ~19 days (since 09-11). Sentiment stays in cash as a
-  direct result.
-- **`reports/supervisor_scoreboard.json` is stale**: last touched 2026-09-28T18:00 UTC (~35h
-  before this digest), not regenerated since — don't trust its loop-health numbers as current.
+- Watcher (sentinel) has not produced a scan since 2026-09-11 (~20 days). sentiment, lottery, and hype_ibkr stay idle while it's down — this is a pre-existing, known issue, not new today.
+- scalper's TVKUSDT seat (stake $86.17, ~10% of book) has been open since 2026-09-12 (day 19) carrying a corrupted entry timestamp (resolves to Nov 2023) — the known dead-candle sim-integrity issue, still unresolved.
+- This fleet is currently 4 active paper books (crypto, meanrev, sentiment, scalper) plus the non-capital Watcher, per CLAUDE.md/kill_criteria.md. The bots named in today's digest request (trend, regime, congress, commodity, allweather, hype, Hunter) were retired by owner overrides on 2026-09-04/09-05 and are frozen archives, not live — reporting on the actual current roster instead.
