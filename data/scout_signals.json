@@ -1,23 +1,8 @@
 {
-  "ts": "2026-10-01T11:27:42+00:00",
+  "ts": "2026-10-01T11:33:08+00:00",
   "scanned": 144,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "OPNUSDT",
-      "signal": "breakout",
-      "score": 0.6125,
-      "raw_score": 0.6461,
-      "weight": 0.948,
-      "price": 0.0619,
-      "why": "trades 6.5x, volume 5.1x, 62% taker-buy, +3.9% in an hour, at 96% of its 24h range",
-      "chg_24h": 0.1321,
-      "vol_surge": 5.11,
-      "chg_1h": 0.0386,
-      "market_surge": 1.51,
-      "actionable": true
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.50% at 24h: market beta, not signal",
     "breakout": "actionable",
@@ -26,7 +11,7 @@
     "revival": "probation \u2014 5/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 14,
     "baseline": 15.0,
     "wave": false
   },
@@ -53,7 +38,7 @@
       "median_ret_4h": -0.00154,
       "both_halves_4h": true,
       "days_4h": 15,
-      "mean_x_4h": 0.00071,
+      "mean_x_4h": 0.00064,
       "days_x_4h": 15,
       "avg_win_4h": 0.02248,
       "avg_loss_4h": -0.01808,
@@ -99,19 +84,19 @@
       "avg_win_4h": 0.0387,
       "avg_loss_4h": -0.02557,
       "payoff_4h": 1.513,
-      "span_h_24h": 310.7,
-      "n_eff_24h": 12.95,
-      "n_24h": 423,
-      "hit_rate_24h": 0.511,
-      "mean_ret_24h": 0.02307,
+      "span_h_24h": 311.3,
+      "n_eff_24h": 12.97,
+      "n_24h": 424,
+      "hit_rate_24h": 0.509,
+      "mean_ret_24h": 0.02278,
       "median_ret_24h": 0.00336,
       "both_halves_24h": true,
       "days_24h": 14,
-      "mean_x_24h": 0.012,
+      "mean_x_24h": 0.01156,
       "days_x_24h": 14,
       "avg_win_24h": 0.08273,
-      "avg_loss_24h": -0.04117,
-      "payoff_24h": 2.009
+      "avg_loss_24h": -0.04147,
+      "payoff_24h": 1.995
     },
     "reversion": {
       "span_h_1h": 212.3,
