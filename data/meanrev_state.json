@@ -1,9 +1,9 @@
 {
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "holding": "HD",
-  "units": 4.0446106575012335,
-  "cash": 0.0,
+  "holding": "CASH",
+  "units": 0.0,
+  "cash": 1133.3577287476257,
   "bench_units": 1.3319835726361926,
   "trades": [
     {
@@ -108,6 +108,25 @@
       "value": 1290.05,
       "fee": 1.61,
       "reason": "Most oversold mega-cap (z < -1.5) \u2014 buying the dip"
+    },
+    {
+      "date": "2026-10-01",
+      "action": "SELL",
+      "ticker": "HD",
+      "price": 280.56500244,
+      "units": 4.0446,
+      "value": 1134.78,
+      "fee": 1.42,
+      "reason": "TRAILING STOP \u2014 fell 12% from high-water $321.58"
+    },
+    {
+      "date": "2026-10-01",
+      "action": "TO CASH",
+      "ticker": "\u2014",
+      "price": 0,
+      "units": 0,
+      "value": 1133.36,
+      "reason": "TRAILING STOP \u2014 fell 12% from high-water $321.58"
     }
   ],
   "history": [
@@ -435,15 +454,15 @@
       "value": 1150.41,
       "bench": 1015.56,
       "holding": "HD"
+    },
+    {
+      "date": "2026-10-01",
+      "value": 1133.36,
+      "bench": 1017.94,
+      "holding": "CASH"
     }
   ],
   "intraday": [
-    {
-      "ts": "2026-09-05T11:28:08+00:00",
-      "value": 1298.52,
-      "bench": 1025.95,
-      "holding": "HD"
-    },
     {
       "ts": "2026-09-05T11:43:09+00:00",
       "value": 1298.52,
@@ -9437,11 +9456,20 @@
       "value": 1150.41,
       "bench": 1015.56,
       "holding": "HD"
+    },
+    {
+      "ts": "2026-10-01T13:41:06+00:00",
+      "value": 1133.36,
+      "bench": 1017.94,
+      "holding": "CASH"
     }
   ],
-  "last_updated_utc": "2026-10-01T13:23:38+00:00",
+  "last_updated_utc": "2026-10-01T13:41:06+00:00",
   "feed_delayed": false,
-  "data_asof": "2026-09-30",
-  "hwm": 321.57501220703125,
-  "costs_paid": 5.8276
+  "data_asof": "2026-10-01",
+  "costs_paid": 7.2461,
+  "stopped": {
+    "ticker": "HD",
+    "date": "2026-10-01"
+  }
 }
