@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-01T15:43:47+00:00",
+  "ts": "2026-10-01T15:49:13+00:00",
   "sources": {
     "coingecko": [
       "TRUMP",
@@ -7,29 +7,40 @@
       "QNT",
       "PENGU",
       "ZEC",
-      "ONDO",
-      "SUI",
       "BTC",
+      "ONDO",
       "LIT",
-      "INJ",
-      "UNI"
+      "SUI",
+      "ALICE",
+      "UNI",
+      "MOVR"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "MOVR",
-      "AAVE",
-      "NIGHT",
       "NOM",
-      "HYPE",
-      "FET",
+      "NIGHT",
+      "AAVE",
       "UNI",
-      "PEPE"
+      "FET",
+      "PEPE",
+      "HYPE"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "MOVR",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 0.71
+    },
     {
       "symbol": "UNI",
       "surfaces": 2,
@@ -37,7 +48,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 8.6e-05,
+      "funding": 8.9e-05,
       "long_short": 1.54
     },
     {
@@ -46,7 +57,15 @@
       "sources": [
         "movers"
       ],
-      "funding": 3.5e-05
+      "funding": 3.4e-05
+    },
+    {
+      "symbol": "ALICE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "BTC",
@@ -54,7 +73,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.1e-05
+      "funding": 7.2e-05
     },
     {
       "symbol": "FET",
@@ -70,15 +89,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -8e-05
-    },
-    {
-      "symbol": "INJ",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": -7.9e-05
     },
     {
       "symbol": "LIT",
@@ -89,20 +100,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "MOVR",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "NEAR",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 2.8e-05
+      "funding": 3e-05
     },
     {
       "symbol": "NIGHT",
@@ -110,7 +113,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.3e-05
+      "funding": 3.5e-05
     },
     {
       "symbol": "NOM",
@@ -134,7 +137,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.5e-05
+      "funding": 1.2e-05
     },
     {
       "symbol": "PEPE",
@@ -149,7 +152,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000599
+      "funding": -0.000575
     },
     {
       "symbol": "SUI",
@@ -157,7 +160,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2e-05
+      "funding": 1.8e-05
     },
     {
       "symbol": "TRUMP",
@@ -165,7 +168,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000344
+      "funding": -0.000349
     },
     {
       "symbol": "ZEC",
