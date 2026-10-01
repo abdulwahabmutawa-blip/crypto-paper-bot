@@ -1,17 +1,33 @@
 {
-  "ts": "2026-10-01T11:49:50+00:00",
+  "ts": "2026-10-01T11:55:35+00:00",
   "scanned": 143,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "PENGUUSDT",
+      "signal": "ignition",
+      "score": 0.7022,
+      "raw_score": 0.7599,
+      "weight": 0.924,
+      "price": 0.009642,
+      "why": "trades 5.6x and volume 31.6x the prior 4h, 84% taker-buy, $1,015,425 burst \u2014 while price has only moved -1.0%",
+      "chg_24h": -0.0437,
+      "vol_surge": 31.61,
+      "chg_1h": -0.01,
+      "market_surge": 12.52,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.54% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
-    "ignition": "benched \u2014 BTC-excess day mean +0.55% at 24h: market beta, not signal",
+    "ignition": "benched \u2014 BTC-excess day mean +0.54% at 24h: market beta, not signal",
     "breakout": "actionable",
     "reversion": "benched \u2014 only one half of the last 23 paid at 24h: regime luck, not a signal",
     "heat": "probation \u2014 0/12 resolved 24h samples under ruleset 3",
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 11,
     "baseline": 15.0,
     "wave": false
   },
@@ -43,19 +59,19 @@
       "avg_win_4h": 0.02245,
       "avg_loss_4h": -0.01802,
       "payoff_4h": 1.245,
-      "span_h_24h": 311.5,
+      "span_h_24h": 311.6,
       "n_eff_24h": 12.98,
-      "n_24h": 806,
+      "n_24h": 808,
       "hit_rate_24h": 0.509,
-      "mean_ret_24h": 0.0115,
-      "median_ret_24h": 0.00293,
+      "mean_ret_24h": 0.01141,
+      "median_ret_24h": 0.00284,
       "both_halves_24h": true,
       "days_24h": 14,
-      "mean_x_24h": 0.00553,
+      "mean_x_24h": 0.00544,
       "days_x_24h": 14,
-      "avg_win_24h": 0.05483,
-      "avg_loss_24h": -0.03703,
-      "payoff_24h": 1.481
+      "avg_win_24h": 0.05471,
+      "avg_loss_24h": -0.03708,
+      "payoff_24h": 1.475
     },
     "breakout": {
       "span_h_1h": 334.0,
