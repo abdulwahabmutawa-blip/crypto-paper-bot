@@ -1,33 +1,17 @@
 {
-  "ts": "2026-10-01T00:26:24+00:00",
-  "scanned": 136,
+  "ts": "2026-10-01T00:32:04+00:00",
+  "scanned": 137,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "SUSDT",
-      "signal": "ignition",
-      "score": 0.6749,
-      "raw_score": 0.7312,
-      "weight": 0.923,
-      "price": 0.04116,
-      "why": "trades 6.9x and volume 8.1x the prior 4h, 72% taker-buy, $87,308 burst \u2014 while price has only moved +1.0%",
-      "chg_24h": 0.0973,
-      "vol_surge": 8.11,
-      "chg_1h": 0.0103,
-      "market_surge": 6.82,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean +0.70% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
-    "ignition": "benched \u2014 BTC-excess day mean +0.70% at 24h: market beta, not signal",
+    "ignition": "benched \u2014 BTC-excess day mean +0.63% at 24h: market beta, not signal",
     "breakout": "actionable",
     "reversion": "benched \u2014 only one half of the last 23 paid at 24h: regime luck, not a signal",
     "heat": "probation \u2014 0/12 resolved 24h samples under ruleset 3",
     "revival": "probation \u2014 5/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 17,
+    "count": 15,
     "baseline": 15.0,
     "wave": false
   },
@@ -59,19 +43,19 @@
       "avg_win_4h": 0.02275,
       "avg_loss_4h": -0.01787,
       "payoff_4h": 1.273,
-      "span_h_24h": 311.2,
+      "span_h_24h": 311.4,
       "n_eff_24h": 12.97,
-      "n_24h": 785,
+      "n_24h": 786,
       "hit_rate_24h": 0.522,
-      "mean_ret_24h": 0.01331,
+      "mean_ret_24h": 0.01326,
       "median_ret_24h": 0.00381,
       "both_halves_24h": true,
       "days_24h": 14,
-      "mean_x_24h": 0.00704,
+      "mean_x_24h": 0.00626,
       "days_x_24h": 14,
       "avg_win_24h": 0.05608,
-      "avg_loss_24h": -0.03713,
-      "payoff_24h": 1.51
+      "avg_loss_24h": -0.03709,
+      "payoff_24h": 1.512
     },
     "breakout": {
       "span_h_1h": 327.6,
@@ -95,7 +79,7 @@
       "median_ret_4h": -0.00234,
       "both_halves_4h": true,
       "days_4h": 14,
-      "mean_x_4h": 0.00322,
+      "mean_x_4h": 0.00312,
       "days_x_4h": 14,
       "avg_win_4h": 0.0389,
       "avg_loss_4h": -0.02584,
