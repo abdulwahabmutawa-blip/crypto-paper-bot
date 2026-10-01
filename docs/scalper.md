@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-01T11:04:42+00:00 · runs 2259 · equity **$863.55** (-13.65%) · cash $0.00 · open 10/10 · round trips 848
+updated 2026-10-01T11:23:04+00:00 · runs 2260 · equity **$865.47** (-13.45%) · cash $0.00 · open 10/10 · round trips 848
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-09-30T14:11 | GOOGLBUSDT | surge | 350.03 | 350.98 | +0.27% |
-| 2026-09-30T14:29 | SPCXBUSDT | surge | 151.73 | 151.64 | -0.06% |
-| 2026-10-01T00:15 | HYPEUSDT | surge | 90.39 | 89.61 | -0.86% |
-| 2026-10-01T05:00 | SNXXBUSDT | surge | 17.38 | 17.32 | -0.35% |
-| 2026-10-01T06:00 | SNDKBUSDT | surge | 1784.63 | 1767.15 | -0.98% |
-| 2026-10-01T07:45 | MEGAUSDT | surge | 0.04587 | 0.04566 | -0.46% |
-| 2026-10-01T08:37 | OPNUSDT | surge | 0.0602 | 0.0603 | +0.17% |
-| 2026-10-01T10:22 | HUMAUSDT | surge | 0.03363 | 0.0343 | +1.99% |
-| 2026-10-01T10:40 | POLUSDT | bottom | 0.11047 | 0.11057 | +0.09% |
+| 2026-09-30T14:11 | GOOGLBUSDT | surge | 350.03 | 349.25 | -0.22% |
+| 2026-09-30T14:29 | SPCXBUSDT | surge | 151.73 | 151.41 | -0.21% |
+| 2026-10-01T00:15 | HYPEUSDT | surge | 90.39 | 89.77 | -0.69% |
+| 2026-10-01T05:00 | SNXXBUSDT | surge | 17.38 | 17.13 | -1.44% |
+| 2026-10-01T06:00 | SNDKBUSDT | surge | 1784.63 | 1759.11 | -1.43% |
+| 2026-10-01T07:45 | MEGAUSDT | surge | 0.04587 | 0.04674 | +1.90% |
+| 2026-10-01T08:37 | OPNUSDT | surge | 0.0602 | 0.0616 | +2.33% |
+| 2026-10-01T10:22 | HUMAUSDT | surge | 0.03363 | 0.03428 | +1.93% |
+| 2026-10-01T10:40 | POLUSDT | bottom | 0.11047 | 0.11061 | +0.13% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
