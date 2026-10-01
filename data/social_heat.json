@@ -1,16 +1,16 @@
 {
-  "ts": "2026-10-01T09:13:28+00:00",
+  "ts": "2026-10-01T09:18:49+00:00",
   "sources": {
     "coingecko": [
       "QNT",
       "NEAR",
       "MOVR",
       "PENGU",
-      "TAO",
-      "BTC",
-      "XRP",
+      "PUMP",
       "HYPE",
-      "ARB"
+      "TAO",
+      "ARB",
+      "ETH"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,9 +19,9 @@
       "NIGHT",
       "FET",
       "HYPE",
-      "QNT",
-      "AAVE",
       "NEAR",
+      "AAVE",
+      "QNT",
       "SNDKB"
     ],
     "watcher": [],
@@ -55,7 +55,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 2e-05,
+      "funding": 1.6e-05,
       "long_short": 1.52
     },
     {
@@ -65,7 +65,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.000324,
+      "funding": -0.000345,
       "long_short": 0.86
     },
     {
@@ -74,7 +74,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 8.6e-05
+      "funding": 8.8e-05
     },
     {
       "symbol": "ARB",
@@ -82,15 +82,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -8e-05
+      "funding": -8.7e-05
     },
     {
-      "symbol": "BTC",
+      "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 3.6e-05
+      "funding": 3.9e-05
     },
     {
       "symbol": "FET",
@@ -117,6 +117,14 @@
       "funding": 5e-05
     },
     {
+      "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "SNDKB",
       "surfaces": 1,
       "sources": [
@@ -130,14 +138,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "XRP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 2.8e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
