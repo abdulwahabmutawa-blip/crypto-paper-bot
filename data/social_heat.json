@@ -1,33 +1,44 @@
 {
-  "ts": "2026-10-01T03:45:16+00:00",
+  "ts": "2026-10-01T03:50:46+00:00",
   "sources": {
     "coingecko": [
       "QNT",
       "NEAR",
+      "PENGU",
       "PUMP",
-      "ONDO",
-      "TRUMP",
-      "PLUME",
       "SUI",
-      "TAO",
-      "ADA"
+      "ONDO",
+      "PLUME",
+      "UNI",
+      "ENA",
+      "TRUMP"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "MOVR",
-      "ENA",
       "WLD",
+      "ENA",
       "NEAR",
       "ARK",
-      "TRUMP",
       "FET",
+      "TRUMP",
       "AAVE"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "ENA",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.8
+    },
     {
       "symbol": "NEAR",
       "surfaces": 2,
@@ -57,28 +68,12 @@
       "funding": -2.5e-05
     },
     {
-      "symbol": "ADA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "ARK",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -0.00373
-    },
-    {
-      "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
+      "funding": -0.003814
     },
     {
       "symbol": "FET",
@@ -102,7 +97,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.8e-05
+      "funding": 2.1e-05
+    },
+    {
+      "symbol": "PENGU",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 4.3e-05
     },
     {
       "symbol": "PLUME",
@@ -110,7 +113,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.1e-05
+      "funding": 2e-05
     },
     {
       "symbol": "PUMP",
@@ -126,7 +129,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.2e-05
+      "funding": 7.8e-05
     },
     {
       "symbol": "SUI",
@@ -137,12 +140,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "TAO",
+      "symbol": "UNI",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 0.0001
     },
     {
       "symbol": "WLD",
