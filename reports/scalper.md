@@ -2,20 +2,21 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-01T04:45:11+00:00 · runs 2236 · equity **$871.77** (-12.82%) · cash $0.00 · open 10/10 · round trips 840
+updated 2026-10-01T05:02:58+00:00 · runs 2237 · equity **$871.07** (-12.89%) · cash $0.00 · open 10/10 · round trips 841
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
-- hit 51% (break-even 54%) · mean -0.15%/trade · realized $-127.78 · worst day $-50.94 · trades/day 31.1
+- hit 51% (break-even 54%) · mean -0.15%/trade · realized $-125.33 · worst day $-50.94 · trades/day 31.1
 
 | shape | n | hit | mean | target% | stop% | time% |
 |---|---|---|---|---|---|---|
-| surge | 722 | 52% | -0.12% | 49% | 44% | 7% |
+| surge | 723 | 52% | -0.11% | 49% | 44% | 7% |
 | bottom | 118 | 46% | -0.36% | 42% | 44% | 14% |
 
 ## Last 15 round trips
 | exit (UTC) | coin | shape | how | hours | net | P&L |
 |---|---|---|---|---|---|---|
+| 2026-10-01T05:00 | SOXLBUSDT | surge | TARGET | 1.8 | +2.75% | $+2.45 |
 | 2026-10-01T04:07 | SNXXBUSDT | surge | TARGET | 12.2 | +2.75% | $+2.47 |
 | 2026-10-01T03:13 | PROMUSDT | surge | STOP | 11.8 | -3.25% | $-2.99 |
 | 2026-10-01T00:15 | STXUSDT | surge | STOP | 1.5 | -3.25% | $-2.86 |
@@ -30,20 +31,19 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | 2026-09-30T15:55 | CHZUSDT | surge | TIME | 24.0 | -0.50% | $-0.43 |
 | 2026-09-30T15:38 | REZUSDT | surge | TARGET | 2.5 | +2.75% | $+2.41 |
 | 2026-09-30T15:20 | SKHYBUSDT | surge | TIME | 24.0 | -1.19% | $-1.11 |
-| 2026-09-30T14:29 | ARKMUSDT | surge | STOP | 1.0 | -3.25% | $-2.98 |
 
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-09-30T05:38 | LINKUSDT | bottom | 14.394 | 14.469 | +0.52% |
-| 2026-09-30T08:24 | AXSUSDT | surge | 1.166 | 1.158 | -0.69% |
-| 2026-09-30T13:02 | ZENUSDT | surge | 7.433 | 7.405 | -0.38% |
-| 2026-09-30T14:11 | GOOGLBUSDT | surge | 350.03 | 353.58 | +1.01% |
-| 2026-09-30T14:29 | SPCXBUSDT | surge | 151.73 | 151.58 | -0.10% |
-| 2026-10-01T00:15 | HYPEUSDT | surge | 90.39 | 88.74 | -1.83% |
-| 2026-10-01T00:15 | SUSDT | surge | 0.04092 | 0.04077 | -0.37% |
-| 2026-10-01T03:13 | SOXLBUSDT | surge | 150.96 | 154.51 | +2.35% |
-| 2026-10-01T04:07 | ALGOUSDT | surge | 0.1302 | 0.1287 | -1.15% |
+| 2026-09-30T05:38 | LINKUSDT | bottom | 14.394 | 14.494 | +0.69% |
+| 2026-09-30T08:24 | AXSUSDT | surge | 1.166 | 1.156 | -0.86% |
+| 2026-09-30T13:02 | ZENUSDT | surge | 7.433 | 7.388 | -0.61% |
+| 2026-09-30T14:11 | GOOGLBUSDT | surge | 350.03 | 354.04 | +1.15% |
+| 2026-09-30T14:29 | SPCXBUSDT | surge | 151.73 | 151.59 | -0.09% |
+| 2026-10-01T00:15 | HYPEUSDT | surge | 90.39 | 88.77 | -1.79% |
+| 2026-10-01T00:15 | SUSDT | surge | 0.04092 | 0.04068 | -0.59% |
+| 2026-10-01T04:07 | ALGOUSDT | surge | 0.1302 | 0.1276 | -2.00% |
+| 2026-10-01T05:00 | SNXXBUSDT | surge | 17.38 | 17.37 | -0.06% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
