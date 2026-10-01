@@ -1,26 +1,26 @@
 {
-  "ts": "2026-10-01T14:52:38+00:00",
+  "ts": "2026-10-01T14:57:47+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
-      "MOVR",
       "QNT",
       "TRUMP",
-      "BTC",
-      "SOL",
-      "ENA",
-      "PENGU",
-      "LIT",
+      "MOVR",
       "ZEC",
-      "HYPE"
+      "ENA",
+      "LIT",
+      "PENGU",
+      "UNI",
+      "SUI",
+      "BTC"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "MOVR",
       "NOM",
-      "AAVE",
       "NIGHT",
+      "AAVE",
       "HYPE",
       "UNI",
       "FET",
@@ -30,16 +30,6 @@
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "HYPE",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": -7.4e-05,
-      "long_short": 1.61
-    },
     {
       "symbol": "MOVR",
       "surfaces": 2,
@@ -51,12 +41,22 @@
       "long_short": 0.64
     },
     {
+      "symbol": "UNI",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 8.3e-05,
+      "long_short": 1.51
+    },
+    {
       "symbol": "AAVE",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 5.6e-05
+      "funding": 5.2e-05
     },
     {
       "symbol": "BTC",
@@ -83,6 +83,14 @@
       "funding": 0.0001
     },
     {
+      "symbol": "HYPE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -8.4e-05
+    },
+    {
       "symbol": "LINK",
       "surfaces": 1,
       "sources": [
@@ -104,7 +112,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.8e-05
+      "funding": 2.3e-05
     },
     {
       "symbol": "NIGHT",
@@ -139,12 +147,12 @@
       "funding": -0.000785
     },
     {
-      "symbol": "SOL",
+      "symbol": "SUI",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -3.7e-05
+      "funding": 4.2e-05
     },
     {
       "symbol": "TRUMP",
@@ -152,15 +160,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000239
-    },
-    {
-      "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 8.3e-05
+      "funding": -0.00025
     },
     {
       "symbol": "ZEC",
