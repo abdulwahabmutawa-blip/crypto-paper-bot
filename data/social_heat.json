@@ -1,16 +1,16 @@
 {
-  "ts": "2026-10-01T12:45:37+00:00",
+  "ts": "2026-10-01T12:51:02+00:00",
   "sources": {
     "coingecko": [
-      "TRUMP",
       "QNT",
-      "MOVR",
+      "TRUMP",
       "PENGU",
+      "MOVR",
       "NEAR",
-      "ZEC",
-      "HYPE",
       "XRP",
-      "ENA"
+      "HYPE",
+      "ZEC",
+      "PUMP"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,8 +19,7 @@
       "NOM",
       "NIGHT",
       "HYPE",
-      "SNDKB",
-      "FET"
+      "SNDKB"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -33,7 +32,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 7e-06,
+      "funding": 4e-06,
       "long_short": 1.55
     },
     {
@@ -45,22 +44,6 @@
       ],
       "funding": 5e-05,
       "long_short": 0.67
-    },
-    {
-      "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "FET",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "NEAR",
@@ -95,12 +78,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "QNT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000854
+      "funding": -0.000846
     },
     {
       "symbol": "SNDKB",
@@ -115,7 +106,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000218
+      "funding": -0.000216
     },
     {
       "symbol": "XRP",
@@ -123,7 +114,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2e-06
+      "funding": -1e-06
     },
     {
       "symbol": "ZEC",
@@ -131,7 +122,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.1e-05
+      "funding": 9.3e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
