@@ -1,17 +1,17 @@
 {
-  "ts": "2026-10-01T16:44:37+00:00",
+  "ts": "2026-10-01T16:50:18+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
       "MEGA",
-      "TRUMP",
-      "QNT",
-      "PENGU",
-      "BTC",
       "MOVR",
+      "QNT",
+      "BTC",
+      "PENGU",
+      "TRUMP",
       "ZEC",
-      "AAVE",
-      "SUI"
+      "SUI",
+      "HYPE"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,24 +20,12 @@
       "NOM",
       "NIGHT",
       "AAVE",
-      "SNDKB",
-      "PEPE",
-      "UNI"
+      "SNDKB"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "AAVE",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 1.3e-05,
-      "long_short": 1.88
-    },
     {
       "symbol": "MOVR",
       "surfaces": 2,
@@ -49,6 +37,14 @@
       "long_short": 0.69
     },
     {
+      "symbol": "AAVE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 1.2e-05
+    },
+    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
@@ -57,12 +53,20 @@
       "funding": 7.9e-05
     },
     {
+      "symbol": "HYPE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -4.4e-05
+    },
+    {
       "symbol": "MEGA",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -0.00028
+      "funding": -0.000274
     },
     {
       "symbol": "NEAR",
@@ -70,7 +74,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.1e-05
+      "funding": 3.2e-05
     },
     {
       "symbol": "NIGHT",
@@ -78,7 +82,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.7e-05
+      "funding": 5e-05
     },
     {
       "symbol": "NOM",
@@ -97,19 +101,12 @@
       "funding": 2e-06
     },
     {
-      "symbol": "PEPE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
-    },
-    {
       "symbol": "QNT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000404
+      "funding": -0.000391
     },
     {
       "symbol": "SNDKB",
@@ -124,7 +121,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.3e-05
+      "funding": 3.6e-05
     },
     {
       "symbol": "TRUMP",
@@ -132,15 +129,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000364
-    },
-    {
-      "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 9e-05
+      "funding": -0.000363
     },
     {
       "symbol": "ZEC",
