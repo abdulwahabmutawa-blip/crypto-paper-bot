@@ -1,25 +1,25 @@
 {
-  "ts": "2026-10-01T03:56:39+00:00",
+  "ts": "2026-10-01T04:01:46+00:00",
   "sources": {
     "coingecko": [
       "QNT",
       "NEAR",
       "PENGU",
       "PUMP",
-      "SUI",
-      "ONDO",
       "PLUME",
-      "UNI",
+      "ONDO",
       "ENA",
-      "TRUMP"
+      "SUI",
+      "MOVR",
+      "RAY"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "MOVR",
       "NEAR",
-      "ENA",
       "WLD",
+      "ENA",
       "ARK",
       "FET",
       "TRUMP",
@@ -40,6 +40,16 @@
       "long_short": 1.8
     },
     {
+      "symbol": "MOVR",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 0.77
+    },
+    {
       "symbol": "NEAR",
       "surfaces": 2,
       "sources": [
@@ -48,16 +58,6 @@
       ],
       "funding": 0.0001,
       "long_short": 1.38
-    },
-    {
-      "symbol": "TRUMP",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.66
     },
     {
       "symbol": "AAVE",
@@ -73,7 +73,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.00396
+      "funding": -0.00408
     },
     {
       "symbol": "FET",
@@ -82,14 +82,6 @@
         "movers"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "MOVR",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "ONDO",
@@ -105,7 +97,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.9e-05
+      "funding": 5e-05
     },
     {
       "symbol": "PLUME",
@@ -113,7 +105,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8e-06
+      "funding": 2e-06
     },
     {
       "symbol": "PUMP",
@@ -129,7 +121,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.8e-05
+      "funding": 8.2e-05
+    },
+    {
+      "symbol": "RAY",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0
     },
     {
       "symbol": "SUI",
@@ -140,12 +140,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "UNI",
+      "symbol": "TRUMP",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
-      "funding": 0.0001
+      "funding": 5e-05
     },
     {
       "symbol": "WLD",
