@@ -1,8 +1,23 @@
 {
-  "ts": "2026-10-01T09:41:41+00:00",
-  "scanned": 137,
+  "ts": "2026-10-01T09:46:44+00:00",
+  "scanned": 139,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ARUSDT",
+      "signal": "breakout",
+      "score": 0.8199,
+      "raw_score": 0.8667,
+      "weight": 0.946,
+      "price": 4.499,
+      "why": "trades 51.5x, volume 34.2x, 66% taker-buy, +5.9% in an hour, at 96% of its 24h range",
+      "chg_24h": 0.0496,
+      "vol_surge": 34.19,
+      "chg_1h": 0.0588,
+      "market_surge": 18.75,
+      "actionable": true
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.60% at 24h: market beta, not signal",
     "breakout": "actionable",
@@ -11,7 +26,7 @@
     "revival": "probation \u2014 5/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 11,
     "baseline": 15.0,
     "wave": false
   },

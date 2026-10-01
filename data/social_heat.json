@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-01T09:41:36+00:00",
+  "ts": "2026-10-01T09:46:39+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
@@ -16,14 +16,14 @@
     "reddit": [],
     "stocktwits": [],
     "movers": [
+      "NOM",
       "MOVR",
       "NIGHT",
       "FET",
-      "AAVE",
-      "HYPE",
       "QNT",
-      "UNI",
-      "NEAR"
+      "HYPE",
+      "AAVE",
+      "UNI"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -50,23 +50,13 @@
       "long_short": 0.68
     },
     {
-      "symbol": "NEAR",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": -1.1e-05,
-      "long_short": 1.52
-    },
-    {
       "symbol": "QNT",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": -0.000437,
+      "funding": -0.000456,
       "long_short": 0.86
     },
     {
@@ -75,7 +65,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 9.8e-05
+      "funding": 9.7e-05
     },
     {
       "symbol": "ASTER",
@@ -110,12 +100,28 @@
       "funding": 5e-05
     },
     {
+      "symbol": "NEAR",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -1.3e-05
+    },
+    {
       "symbol": "NIGHT",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 4.2e-05
+      "funding": 2.6e-05
+    },
+    {
+      "symbol": "NOM",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "ONDO",
@@ -147,7 +153,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 7.2e-05
+      "funding": 7.1e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
