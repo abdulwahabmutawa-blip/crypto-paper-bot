@@ -1,37 +1,22 @@
 {
-  "ts": "2026-10-02T04:57:50+00:00",
-  "scanned": 130,
+  "ts": "2026-10-02T05:02:59+00:00",
+  "scanned": 132,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "WIFUSDT",
+      "symbol": "MORPHOUSDT",
       "signal": "breakout",
-      "score": 0.6582,
-      "raw_score": 0.7155,
+      "score": 0.6898,
+      "raw_score": 0.7498,
       "weight": 0.92,
-      "price": 0.2679,
-      "why": "trades 5.9x, volume 6.9x, 76% taker-buy, +4.1% in an hour, at 95% of its 24h range",
-      "chg_24h": 0.076,
-      "vol_surge": 6.89,
-      "chg_1h": 0.0408,
-      "market_surge": 5.32,
+      "price": 2.628,
+      "why": "trades 10.0x, volume 14.3x, 60% taker-buy, +2.5% in an hour, at 97% of its 24h range",
+      "chg_24h": 0.0421,
+      "vol_surge": 14.28,
+      "chg_1h": 0.0254,
+      "market_surge": 3.74,
       "actionable": false,
       "status": "benched \u2014 BTC-excess day mean +0.71% at 24h: market beta, not signal"
-    },
-    {
-      "symbol": "TRUMPUSDT",
-      "signal": "ignition",
-      "score": 0.5819,
-      "raw_score": 0.6359,
-      "weight": 0.915,
-      "price": 2.105,
-      "why": "trades 4.5x and volume 21.1x the prior 4h, 61% taker-buy, $641,342 burst \u2014 while price has only moved +1.8%",
-      "chg_24h": -0.0173,
-      "vol_surge": 21.07,
-      "chg_1h": 0.0179,
-      "market_surge": 4.42,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.01% at 24h: market beta, not signal"
     }
   ],
   "gate": {
@@ -42,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 14,
+    "count": 15,
     "baseline": 14.0,
     "wave": false
   },
