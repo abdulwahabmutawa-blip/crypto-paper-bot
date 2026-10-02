@@ -1,22 +1,37 @@
 {
-  "ts": "2026-10-02T07:59:54+00:00",
-  "scanned": 130,
+  "ts": "2026-10-02T08:05:11+00:00",
+  "scanned": 131,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "ICPUSDT",
+      "symbol": "AXSUSDT",
       "signal": "ignition",
-      "score": 0.6441,
-      "raw_score": 0.7017,
+      "score": 0.7785,
+      "raw_score": 0.848,
       "weight": 0.918,
-      "price": 3.314,
-      "why": "trades 6.4x and volume 6.3x the prior 4h, 81% taker-buy, $123,874 burst \u2014 while price has only moved +0.6%",
-      "chg_24h": 0.0036,
-      "vol_surge": 6.33,
-      "chg_1h": 0.0061,
-      "market_surge": 3.12,
+      "price": 1.221,
+      "why": "trades 29.4x and volume 13.8x the prior 4h, 67% taker-buy, $87,914 burst \u2014 while price has only moved +2.8%",
+      "chg_24h": 0.0675,
+      "vol_surge": 13.79,
+      "chg_1h": 0.0278,
+      "market_surge": 6.2,
       "actionable": false,
       "status": "benched \u2014 BTC-excess day mean +0.06% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "ZKUSDT",
+      "signal": "breakout",
+      "score": 0.6944,
+      "raw_score": 0.7523,
+      "weight": 0.923,
+      "price": 0.01377,
+      "why": "trades 5.9x, volume 9.4x, 76% taker-buy, +4.2% in an hour, at 98% of its 24h range",
+      "chg_24h": 0.1314,
+      "vol_surge": 9.38,
+      "chg_1h": 0.0416,
+      "market_surge": 16.58,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.73% at 24h: market beta, not signal"
     }
   ],
   "gate": {
@@ -27,7 +42,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 14,
+    "count": 13,
     "baseline": 14.0,
     "wave": false
   },
