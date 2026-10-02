@@ -1,16 +1,18 @@
 {
-  "ts": "2026-10-02T10:13:10+00:00",
+  "ts": "2026-10-02T10:18:59+00:00",
   "sources": {
     "coingecko": [
       "SAND",
       "TRUMP",
-      "QNT",
       "NEAR",
-      "ENA",
       "PENGU",
-      "BTC",
+      "QNT",
+      "ENA",
+      "ENJ",
+      "SUI",
       "MANA",
-      "SKY"
+      "SKY",
+      "AAVE"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,12 +24,22 @@
       "PEPE",
       "MEGA",
       "ADA",
-      "LTC"
+      "ALICE"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "AAVE",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.59
+    },
     {
       "symbol": "SAND",
       "surfaces": 2,
@@ -35,16 +47,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.015451,
+      "funding": -0.015847,
       "long_short": 1.16
-    },
-    {
-      "symbol": "AAVE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "ADA",
@@ -55,12 +59,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "BTC",
+      "symbol": "ALICE",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
-      "funding": 0.0001
+      "funding": 5e-05
     },
     {
       "symbol": "ENA",
@@ -68,7 +72,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.0
+      "funding": 1e-06
+    },
+    {
+      "symbol": "ENJ",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "GTC",
@@ -76,15 +88,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.003755
-    },
-    {
-      "symbol": "LTC",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
+      "funding": -0.003904
     },
     {
       "symbol": "MANA",
@@ -92,7 +96,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.003839
+      "funding": -0.003999
     },
     {
       "symbol": "MEGA",
@@ -108,7 +112,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.7e-05
+      "funding": 9.3e-05
     },
     {
       "symbol": "PENGU",
@@ -131,7 +135,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000867
+      "funding": -0.000844
     },
     {
       "symbol": "SKY",
@@ -140,6 +144,14 @@
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 4.5e-05
     },
     {
       "symbol": "TRUMP",
