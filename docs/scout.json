@@ -1,8 +1,39 @@
 {
-  "ts": "2026-10-02T02:36:54+00:00",
-  "scanned": 128,
+  "ts": "2026-10-02T02:42:07+00:00",
+  "scanned": 127,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "DEXEUSDT",
+      "signal": "ignition",
+      "score": 0.789,
+      "raw_score": 0.8623,
+      "weight": 0.915,
+      "price": 1.968,
+      "why": "trades 11.7x and volume 32.2x the prior 4h, 69% taker-buy, $223,209 burst \u2014 while price has only moved +2.4%",
+      "chg_24h": 0.0656,
+      "vol_surge": 32.2,
+      "chg_1h": 0.0239,
+      "market_surge": 0.0,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.06% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "DEXEUSDT",
+      "signal": "breakout",
+      "score": 0.7099,
+      "raw_score": 0.7625,
+      "weight": 0.931,
+      "price": 1.968,
+      "why": "trades 11.7x, volume 32.2x, 69% taker-buy, +2.4% in an hour, at 81% of its 24h range",
+      "chg_24h": 0.0656,
+      "vol_surge": 32.2,
+      "chg_1h": 0.0239,
+      "market_surge": 0.0,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.62% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.06% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.62% at 24h: market beta, not signal",
@@ -11,7 +42,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 17,
+    "count": 18,
     "baseline": 14.0,
     "wave": false
   },
