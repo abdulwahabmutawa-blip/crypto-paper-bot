@@ -1,15 +1,15 @@
 {
-  "ts": "2026-10-02T05:24:55+00:00",
+  "ts": "2026-10-02T05:30:14+00:00",
   "sources": {
     "coingecko": [
       "QNT",
-      "PENGU",
       "BTC",
-      "ENA",
+      "PENGU",
       "NEAR",
-      "AERO",
-      "ZEC",
-      "LIT"
+      "ENA",
+      "SOL",
+      "LIT",
+      "ZEC"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,7 +21,7 @@
       "AAVE",
       "PEPE",
       "LTC",
-      "SOL"
+      "UNI"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -34,14 +34,6 @@
         "movers"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "AERO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "ALICE",
@@ -65,7 +57,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -7e-06
+      "funding": -1e-05
     },
     {
       "symbol": "LIT",
@@ -89,7 +81,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000505
+      "funding": -0.0005
     },
     {
       "symbol": "NEAR",
@@ -97,7 +89,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -5.6e-05
+      "funding": -6e-05
     },
     {
       "symbol": "NOM",
@@ -128,10 +120,18 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.001072
+      "funding": -0.001085
     },
     {
       "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "UNI",
       "surfaces": 1,
       "sources": [
         "movers"
