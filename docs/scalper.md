@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-02T15:31:41+00:00 · runs 2360 · equity **$893.98** (-10.60%) · cash $0.00 · open 10/10 · round trips 904
+updated 2026-10-02T15:36:27+00:00 · runs 2361 · equity **$894.13** (-10.59%) · cash $0.00 · open 10/10 · round trips 904
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-01T23:36 | DYDXUSDT | surge | 0.15245 | 0.15239 | -0.04% |
-| 2026-10-02T00:45 | PLUMEUSDT | bottom | 0.01859 | 0.0184 | -1.02% |
-| 2026-10-02T06:28 | CVXUSDT | surge | 2.34 | 2.34 | +0.00% |
+| 2026-10-01T23:36 | DYDXUSDT | surge | 0.15245 | 0.15215 | -0.20% |
+| 2026-10-02T00:45 | PLUMEUSDT | bottom | 0.01859 | 0.01841 | -0.97% |
+| 2026-10-02T06:28 | CVXUSDT | surge | 2.34 | 2.346 | +0.26% |
 | 2026-10-02T12:31 | CHIPUSDT | surge | 0.04492 | 0.045 | +0.18% |
-| 2026-10-02T12:49 | TRUMPUSDT | surge | 2.178 | 2.137 | -1.88% |
+| 2026-10-02T12:49 | TRUMPUSDT | surge | 2.178 | 2.138 | -1.84% |
 | 2026-10-02T13:07 | DODOUSDT | surge | 0.01872 | 0.01875 | +0.16% |
-| 2026-10-02T13:25 | SKYUSDT | surge | 0.09134 | 0.09367 | +2.55% |
-| 2026-10-02T15:11 | BATUSDT | surge | 0.1012 | 0.0998 | -1.38% |
-| 2026-10-02T15:29 | TSLABUSDT | surge | 371.22 | 372.35 | +0.30% |
+| 2026-10-02T13:25 | SKYUSDT | surge | 0.09134 | 0.09305 | +1.87% |
+| 2026-10-02T15:11 | BATUSDT | surge | 0.1012 | 0.1003 | -0.89% |
+| 2026-10-02T15:29 | TSLABUSDT | surge | 371.22 | 373.14 | +0.52% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
