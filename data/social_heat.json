@@ -1,27 +1,27 @@
 {
-  "ts": "2026-10-02T05:13:45+00:00",
+  "ts": "2026-10-02T05:19:36+00:00",
   "sources": {
     "coingecko": [
       "QNT",
       "PENGU",
       "BTC",
-      "NEAR",
       "ENA",
-      "SEI",
-      "PENDLE",
-      "SUPER"
+      "NEAR",
+      "AERO",
+      "ZEC",
+      "LIT"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "MEGA",
       "ALICE",
-      "AAVE",
       "NOM",
+      "AAVE",
       "ZRO",
       "PEPE",
-      "SOL",
-      "LTC"
+      "LTC",
+      "SOL"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -34,6 +34,14 @@
         "movers"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "AERO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "ALICE",
@@ -57,7 +65,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1e-05
+      "funding": -8e-06
+    },
+    {
+      "symbol": "LIT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "LTC",
@@ -73,7 +89,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000529
+      "funding": -0.000519
     },
     {
       "symbol": "NEAR",
@@ -81,7 +97,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -5e-05
+      "funding": -5.4e-05
     },
     {
       "symbol": "NOM",
@@ -90,14 +106,6 @@
         "movers"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "PENDLE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "PENGU",
@@ -120,15 +128,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.001054
-    },
-    {
-      "symbol": "SEI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": -0.001066
     },
     {
       "symbol": "SOL",
@@ -139,12 +139,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "SUPER",
+      "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 0.0001
     },
     {
       "symbol": "ZRO",
