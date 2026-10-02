@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-02T18:06:08+00:00 · runs 2370 · equity **$881.38** (-11.86%) · cash $0.00 · open 10/10 · round trips 911
+updated 2026-10-02T18:22:39+00:00 · runs 2371 · equity **$874.89** (-12.51%) · cash $0.00 · open 10/10 · round trips 911
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-01T23:36 | DYDXUSDT | surge | 0.15245 | 0.1511 | -0.89% |
-| 2026-10-02T12:31 | CHIPUSDT | surge | 0.04492 | 0.04463 | -0.65% |
-| 2026-10-02T13:07 | DODOUSDT | surge | 0.01872 | 0.01901 | +1.55% |
-| 2026-10-02T15:29 | TSLABUSDT | surge | 371.22 | 371.86 | +0.17% |
-| 2026-10-02T15:52 | SPCXBUSDT | surge | 157.12 | 158.35 | +0.78% |
-| 2026-10-02T17:48 | VTHOUSDT | surge | 0.000686 | 0.000684 | -0.29% |
-| 2026-10-02T17:48 | CRCLBUSDT | bottom | 80.95 | 80.96 | +0.01% |
-| 2026-10-02T17:48 | FETUSDT | bottom | 0.2253 | 0.226 | +0.31% |
-| 2026-10-02T17:48 | PEPEUSDT | bottom | 4.29e-06 | 4.29e-06 | +0.00% |
+| 2026-10-01T23:36 | DYDXUSDT | surge | 0.15245 | 0.14909 | -2.20% |
+| 2026-10-02T12:31 | CHIPUSDT | surge | 0.04492 | 0.04416 | -1.69% |
+| 2026-10-02T13:07 | DODOUSDT | surge | 0.01872 | 0.01874 | +0.11% |
+| 2026-10-02T15:29 | TSLABUSDT | surge | 371.22 | 371.03 | -0.05% |
+| 2026-10-02T15:52 | SPCXBUSDT | surge | 157.12 | 158.57 | +0.92% |
+| 2026-10-02T17:48 | VTHOUSDT | surge | 0.000686 | 0.000677 | -1.31% |
+| 2026-10-02T17:48 | CRCLBUSDT | bottom | 80.95 | 80.73 | -0.27% |
+| 2026-10-02T17:48 | FETUSDT | bottom | 0.2253 | 0.2219 | -1.51% |
+| 2026-10-02T17:48 | PEPEUSDT | bottom | 4.29e-06 | 4.27e-06 | -0.47% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
