@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-02T07:21:18+00:00",
+  "ts": "2026-10-02T07:27:00+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -19,12 +19,12 @@
     "movers": [
       "AAVE",
       "ZRO",
-      "LTC",
       "PEPE",
+      "LTC",
       "MEGA",
-      "UNI",
+      "ALICE",
       "PUMP",
-      "BTC"
+      "UNI"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -39,16 +39,6 @@
       ],
       "funding": 0.0001,
       "long_short": 1.63
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 9.8e-05,
-      "long_short": 0.91
     },
     {
       "symbol": "PUMP",
@@ -67,8 +57,24 @@
         "coingecko",
         "movers"
       ],
-      "funding": 9.5e-05,
+      "funding": 9.4e-05,
       "long_short": 1.49
+    },
+    {
+      "symbol": "ALICE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 9.7e-05
     },
     {
       "symbol": "ENA",
@@ -92,7 +98,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000303
+      "funding": -0.000282
     },
     {
       "symbol": "NEAR",
@@ -100,7 +106,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -5.8e-05
+      "funding": -5.5e-05
     },
     {
       "symbol": "PENGU",
@@ -123,7 +129,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.001089
+      "funding": -0.001068
     },
     {
       "symbol": "SOL",
