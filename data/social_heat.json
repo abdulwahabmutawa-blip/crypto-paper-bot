@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-02T16:39:04+00:00",
+  "ts": "2026-10-02T16:44:48+00:00",
   "sources": {
     "coingecko": [
       "SC",
@@ -22,8 +22,8 @@
       "ZRO",
       "AAVE",
       "PUMP",
-      "SPCXB",
-      "LTC"
+      "LTC",
+      "TRUMP"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -56,8 +56,18 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.007136,
+      "funding": -0.00696,
       "long_short": 0.89
+    },
+    {
+      "symbol": "TRUMP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.78
     },
     {
       "symbol": "WLD",
@@ -75,7 +85,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1e-05
+      "funding": 9e-06
     },
     {
       "symbol": "GTC",
@@ -83,7 +93,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.009086
+      "funding": -0.009264
     },
     {
       "symbol": "LTC",
@@ -115,7 +125,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.001068
+      "funding": -0.00107
     },
     {
       "symbol": "SC",
@@ -124,21 +134,6 @@
         "coingecko"
       ],
       "funding": 0.0
-    },
-    {
-      "symbol": "SPCXB",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
-    },
-    {
-      "symbol": "TRUMP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "ZRO",
