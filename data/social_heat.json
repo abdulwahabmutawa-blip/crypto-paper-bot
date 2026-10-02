@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-02T05:35:55+00:00",
+  "ts": "2026-10-02T05:41:24+00:00",
   "sources": {
     "coingecko": [
       "QNT",
@@ -7,9 +7,10 @@
       "PENGU",
       "NEAR",
       "ENA",
+      "ZRO",
+      "ZEC",
       "SOL",
-      "LIT",
-      "ZEC"
+      "AERO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -17,8 +18,8 @@
       "MEGA",
       "ALICE",
       "ZRO",
-      "AAVE",
       "NOM",
+      "AAVE",
       "PEPE",
       "LTC",
       "UNI"
@@ -28,12 +29,30 @@
   },
   "heat": [
     {
+      "symbol": "ZRO",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.52
+    },
+    {
       "symbol": "AAVE",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "AERO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "ALICE",
@@ -57,15 +76,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -9e-06
-    },
-    {
-      "symbol": "LIT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": -8e-06
     },
     {
       "symbol": "LTC",
@@ -81,7 +92,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000488
+      "funding": -0.000472
     },
     {
       "symbol": "NEAR",
@@ -89,7 +100,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -6.3e-05
+      "funding": -6.6e-05
     },
     {
       "symbol": "NOM",
@@ -120,7 +131,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.001098
+      "funding": -0.001111
     },
     {
       "symbol": "SOL",
@@ -145,14 +156,6 @@
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "ZRO",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
