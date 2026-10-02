@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-02T00:00:48+00:00",
+  "ts": "2026-10-02T00:06:36+00:00",
   "sources": {
     "coingecko": [
       "TRUMP",
@@ -22,22 +22,22 @@
       "ZRO",
       "PEPE",
       "SNDKB",
-      "BTC",
-      "LTC"
+      "SUI",
+      "FET"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
     {
-      "symbol": "BTC",
+      "symbol": "FET",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 2.7e-05,
-      "long_short": 1.04
+      "funding": 0.0001,
+      "long_short": 2.26
     },
     {
       "symbol": "AAVE",
@@ -45,7 +45,15 @@
       "sources": [
         "movers"
       ],
-      "funding": 1.4e-05
+      "funding": 1.2e-05
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 2.5e-05
     },
     {
       "symbol": "ENA",
@@ -53,15 +61,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.5e-05
-    },
-    {
-      "symbol": "FET",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": 2.8e-05
     },
     {
       "symbol": "LIT",
@@ -72,20 +72,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "LTC",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -4.1e-05
-    },
-    {
       "symbol": "MOVR",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 3.1e-05
+      "funding": 3.4e-05
     },
     {
       "symbol": "NEAR",
@@ -93,7 +85,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.2e-05
+      "funding": 4.6e-05
     },
     {
       "symbol": "NOM",
@@ -124,7 +116,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000394
+      "funding": -0.000398
     },
     {
       "symbol": "SNDKB",
@@ -139,7 +131,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.9e-05
+      "funding": 3.7e-05
+    },
+    {
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "TRUMP",
@@ -147,7 +147,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000154
+      "funding": -0.000153
     },
     {
       "symbol": "ZEC",
