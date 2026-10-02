@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-02T10:36:36+00:00",
+  "ts": "2026-10-02T10:41:48+00:00",
   "sources": {
     "coingecko": [
       "TRUMP",
@@ -7,25 +7,25 @@
       "NEAR",
       "QNT",
       "PENGU",
-      "ENA",
       "SUI",
+      "ZRO",
+      "ENA",
       "AAVE",
       "ENJ",
-      "SKY",
-      "MANA",
-      "BTC"
+      "BTC",
+      "LINK"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "SAND",
       "GTC",
-      "AAVE",
       "ZRO",
+      "AAVE",
       "MEGA",
       "PEPE",
-      "PUMP",
-      "ADA"
+      "WLD",
+      "PUMP"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -48,16 +48,18 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.016721,
+      "funding": -0.016966,
       "long_short": 1.16
     },
     {
-      "symbol": "ADA",
-      "surfaces": 1,
+      "symbol": "ZRO",
+      "surfaces": 2,
       "sources": [
+        "coingecko",
         "movers"
       ],
-      "funding": 0.0001
+      "funding": 5e-05,
+      "long_short": 1.57
     },
     {
       "symbol": "BTC",
@@ -73,7 +75,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8e-06
+      "funding": 9e-06
     },
     {
       "symbol": "ENJ",
@@ -89,15 +91,15 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.004668
+      "funding": -0.004889
     },
     {
-      "symbol": "MANA",
+      "symbol": "LINK",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -0.004336
+      "funding": 9.3e-05
     },
     {
       "symbol": "MEGA",
@@ -144,15 +146,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000816
-    },
-    {
-      "symbol": "SKY",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": -0.000804
     },
     {
       "symbol": "SUI",
@@ -160,7 +154,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.8e-05
+      "funding": 3.5e-05
     },
     {
       "symbol": "TRUMP",
@@ -171,12 +165,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "ZRO",
+      "symbol": "WLD",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 5e-05
+      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
