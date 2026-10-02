@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-02T00:47:07+00:00 · runs 2307 · equity **$867.77** (-13.22%) · cash $0.00 · open 10/10 · round trips 876
+updated 2026-10-02T01:04:19+00:00 · runs 2308 · equity **$865.87** (-13.41%) · cash $0.00 · open 10/10 · round trips 876
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-01T12:13 | UNIUSDT | surge | 9.062 | 8.992 | -0.77% |
-| 2026-10-01T13:23 | BNCBUSDT | surge | 6.03 | 6.01 | -0.33% |
-| 2026-10-01T14:33 | MSTRBUSDT | surge | 157.17 | 160.94 | +2.40% |
-| 2026-10-01T15:43 | PEPEUSDT | surge | 4.39e-06 | 4.43e-06 | +0.91% |
-| 2026-10-01T17:36 | SKHYBUSDT | surge | 188.77 | 191.04 | +1.20% |
-| 2026-10-01T23:36 | DYDXUSDT | surge | 0.15245 | 0.15171 | -0.49% |
-| 2026-10-02T00:28 | MORPHOUSDT | surge | 2.571 | 2.559 | -0.47% |
-| 2026-10-02T00:45 | RESOLVUSDT | surge | 0.02067 | 0.02061 | -0.29% |
-| 2026-10-02T00:45 | PLUMEUSDT | bottom | 0.01859 | 0.01854 | -0.27% |
+| 2026-10-01T12:13 | UNIUSDT | surge | 9.062 | 8.949 | -1.25% |
+| 2026-10-01T13:23 | BNCBUSDT | surge | 6.03 | 6.02 | -0.17% |
+| 2026-10-01T14:33 | MSTRBUSDT | surge | 157.17 | 160.72 | +2.26% |
+| 2026-10-01T15:43 | PEPEUSDT | surge | 4.39e-06 | 4.42e-06 | +0.68% |
+| 2026-10-01T17:36 | SKHYBUSDT | surge | 188.77 | 191.3 | +1.34% |
+| 2026-10-01T23:36 | DYDXUSDT | surge | 0.15245 | 0.15081 | -1.08% |
+| 2026-10-02T00:28 | MORPHOUSDT | surge | 2.571 | 2.564 | -0.27% |
+| 2026-10-02T00:45 | RESOLVUSDT | surge | 0.02067 | 0.02047 | -0.97% |
+| 2026-10-02T00:45 | PLUMEUSDT | bottom | 0.01859 | 0.01844 | -0.81% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
