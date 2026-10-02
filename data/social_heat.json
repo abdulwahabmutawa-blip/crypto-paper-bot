@@ -1,17 +1,17 @@
 {
-  "ts": "2026-10-02T16:33:36+00:00",
+  "ts": "2026-10-02T16:39:04+00:00",
   "sources": {
     "coingecko": [
       "SC",
       "PENGU",
-      "QNT",
       "BTC",
+      "QNT",
       "NEAR",
+      "PUMP",
       "TRUMP",
       "WLD",
-      "LIT",
       "SAND",
-      "ZRO"
+      "AAVE"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,13 +22,33 @@
       "ZRO",
       "AAVE",
       "PUMP",
-      "LTC",
-      "SPCXB"
+      "SPCXB",
+      "LTC"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "AAVE",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.49
+    },
+    {
+      "symbol": "PUMP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.33
+    },
     {
       "symbol": "SAND",
       "surfaces": 2,
@@ -36,7 +56,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.007341,
+      "funding": -0.007136,
       "long_short": 0.89
     },
     {
@@ -50,30 +70,12 @@
       "long_short": 1.95
     },
     {
-      "symbol": "ZRO",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.54
-    },
-    {
-      "symbol": "AAVE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 1.1e-05
+      "funding": 1e-05
     },
     {
       "symbol": "GTC",
@@ -81,15 +83,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.00902
-    },
-    {
-      "symbol": "LIT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": -0.009086
     },
     {
       "symbol": "LTC",
@@ -105,7 +99,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.3e-05
+      "funding": 3.1e-05
     },
     {
       "symbol": "PENGU",
@@ -116,20 +110,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PUMP",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "QNT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -0.001077
+      "funding": -0.001068
     },
     {
       "symbol": "SC",
@@ -151,6 +137,14 @@
       "surfaces": 1,
       "sources": [
         "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "ZRO",
+      "surfaces": 1,
+      "sources": [
+        "movers"
       ],
       "funding": 5e-05
     }
