@@ -1,21 +1,21 @@
 {
-  "ts": "2026-10-03T06:12:46+00:00",
+  "ts": "2026-10-03T06:18:36+00:00",
   "sources": {
     "coingecko": [
       "SAND",
       "GALA",
       "PENGU",
       "QNT",
-      "SC",
-      "LIT",
-      "MANA",
       "SOL",
-      "ASTER",
+      "MANA",
+      "LIT",
+      "SC",
+      "UNI",
+      "ENJ",
       "AERO",
-      "AAVE",
-      "ADA",
-      "NEAR",
-      "TAO"
+      "AVAX",
+      "ASTER",
+      "AAVE"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -24,8 +24,8 @@
       "NIGHT",
       "MANA",
       "ENJ",
-      "WLD",
       "SPCXB",
+      "WLD",
       "QNT",
       "TRX"
     ],
@@ -34,13 +34,23 @@
   },
   "heat": [
     {
+      "symbol": "ENJ",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -0.00265,
+      "long_short": 1.84
+    },
+    {
       "symbol": "MANA",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": -0.003852,
+      "funding": -0.003948,
       "long_short": 1.92
     },
     {
@@ -50,7 +60,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.000385,
+      "funding": -0.000372,
       "long_short": 0.98
     },
     {
@@ -60,7 +70,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.009144,
+      "funding": -0.00888,
       "long_short": 0.88
     },
     {
@@ -69,15 +79,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.2e-05
-    },
-    {
-      "symbol": "ADA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": 7.1e-05
     },
     {
       "symbol": "AERO",
@@ -96,12 +98,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "ENJ",
+      "symbol": "AVAX",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
-      "funding": -0.00275
+      "funding": 0.0001
     },
     {
       "symbol": "GALA",
@@ -109,7 +111,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1e-05
+      "funding": 8e-06
     },
     {
       "symbol": "LIT",
@@ -118,14 +120,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "NEAR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 3.8e-05
     },
     {
       "symbol": "NIGHT",
@@ -141,7 +135,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -6e-06
+      "funding": -1.4e-05
     },
     {
       "symbol": "SC",
@@ -157,7 +151,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1e-05
+      "funding": 1.1e-05
     },
     {
       "symbol": "SPCXB",
@@ -167,20 +161,20 @@
       ]
     },
     {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "TRX",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -0.000363
+      "funding": -0.000358
+    },
+    {
+      "symbol": "UNI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "WLD",
