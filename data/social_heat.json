@@ -1,20 +1,21 @@
 {
-  "ts": "2026-10-03T07:14:16+00:00",
+  "ts": "2026-10-03T07:19:39+00:00",
   "sources": {
     "coingecko": [
       "SAND",
-      "LIT",
       "GALA",
+      "LIT",
       "MANA",
-      "PUMP",
-      "BTC",
       "HYPE",
-      "QNT",
-      "AERO",
-      "INJ",
+      "BTC",
       "NEAR",
-      "SUI",
-      "ONDO"
+      "QNT",
+      "PUMP",
+      "AERO",
+      "ONDO",
+      "LINK",
+      "ARB",
+      "INJ"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,10 +23,10 @@
       "SAND",
       "NIGHT",
       "QNT",
-      "MANA",
       "ENJ",
       "SPCXB",
       "WLD",
+      "UNI",
       "TRX"
     ],
     "watcher": [],
@@ -33,23 +34,13 @@
   },
   "heat": [
     {
-      "symbol": "MANA",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": -0.004514,
-      "long_short": 2.14
-    },
-    {
       "symbol": "QNT",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": -0.000307,
+      "funding": -0.000306,
       "long_short": 1.01
     },
     {
@@ -59,7 +50,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.00683,
+      "funding": -0.006616,
       "long_short": 0.88
     },
     {
@@ -69,6 +60,14 @@
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "ARB",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 3e-05
     },
     {
       "symbol": "BTC",
@@ -84,7 +83,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.002014
+      "funding": -0.001955
     },
     {
       "symbol": "GALA",
@@ -92,7 +91,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.5e-05
+      "funding": 3e-05
     },
     {
       "symbol": "HYPE",
@@ -111,6 +110,14 @@
       "funding": 0.0001
     },
     {
+      "symbol": "LINK",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "LIT",
       "surfaces": 1,
       "sources": [
@@ -119,12 +126,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "MANA",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -0.004532
+    },
+    {
       "symbol": "NEAR",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 6.4e-05
+      "funding": 6.6e-05
     },
     {
       "symbol": "NIGHT",
@@ -140,7 +155,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7e-06
+      "funding": 2e-06
     },
     {
       "symbol": "PUMP",
@@ -158,20 +173,20 @@
       ]
     },
     {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "TRX",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -0.000318
+      "funding": -0.000313
+    },
+    {
+      "symbol": "UNI",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "WLD",
