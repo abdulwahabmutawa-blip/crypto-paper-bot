@@ -1,18 +1,19 @@
 {
-  "ts": "2026-10-03T04:05:48+00:00",
+  "ts": "2026-10-03T04:11:10+00:00",
   "sources": {
     "coingecko": [
       "SC",
       "SAND",
-      "QNT",
-      "BTC",
-      "ZEC",
       "PENGU",
+      "QNT",
+      "ZEC",
+      "BTC",
       "LINK",
-      "ETH",
       "TAO",
-      "NEAR",
-      "AERO"
+      "GALA",
+      "ETH",
+      "WLD",
+      "NEAR"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,7 +23,7 @@
       "ENJ",
       "WLD",
       "SPCXB",
-      "TRUMP",
+      "QNT",
       "UNI",
       "AAVE"
     ],
@@ -31,14 +32,34 @@
   },
   "heat": [
     {
+      "symbol": "QNT",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -0.00057,
+      "long_short": 1.0
+    },
+    {
       "symbol": "SAND",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": -0.013116,
+      "funding": -0.01282,
       "long_short": 1.01
+    },
+    {
+      "symbol": "WLD",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.09
     },
     {
       "symbol": "AAVE",
@@ -46,15 +67,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 6e-06
-    },
-    {
-      "symbol": "AERO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": 9e-06
     },
     {
       "symbol": "BTC",
@@ -62,7 +75,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.7e-05
+      "funding": 2.6e-05
     },
     {
       "symbol": "ENJ",
@@ -70,7 +83,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.002859
+      "funding": -0.002875
     },
     {
       "symbol": "ETH",
@@ -79,6 +92,14 @@
         "coingecko"
       ],
       "funding": 3e-06
+    },
+    {
+      "symbol": "GALA",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 8.2e-05
     },
     {
       "symbol": "LINK",
@@ -94,7 +115,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -3.4e-05
+      "funding": -3.7e-05
     },
     {
       "symbol": "NIGHT",
@@ -110,15 +131,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.9e-05
-    },
-    {
-      "symbol": "QNT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -0.000587
+      "funding": 3.1e-05
     },
     {
       "symbol": "SC",
@@ -144,23 +157,7 @@
       "funding": 5e-05
     },
     {
-      "symbol": "TRUMP",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "WLD",
       "surfaces": 1,
       "sources": [
         "movers"
