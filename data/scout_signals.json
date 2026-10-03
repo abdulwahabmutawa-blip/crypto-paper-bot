@@ -1,8 +1,24 @@
 {
-  "ts": "2026-10-03T00:46:20+00:00",
-  "scanned": 152,
+  "ts": "2026-10-03T00:52:23+00:00",
+  "scanned": 149,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SUPERUSDT",
+      "signal": "breakout",
+      "score": 0.5871,
+      "raw_score": 0.6388,
+      "weight": 0.919,
+      "price": 0.2438,
+      "why": "trades 5.2x, volume 6.0x, 65% taker-buy, +4.1% in an hour, at 88% of its 24h range",
+      "chg_24h": 0.0577,
+      "vol_surge": 5.99,
+      "chg_1h": 0.0405,
+      "market_surge": 1.83,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.65% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.21% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.65% at 24h: market beta, not signal",
@@ -38,7 +54,7 @@
       "median_ret_4h": -0.00229,
       "both_halves_4h": false,
       "days_4h": 14,
-      "mean_x_4h": -5e-05,
+      "mean_x_4h": -4e-05,
       "days_x_4h": 14,
       "avg_win_4h": 0.02163,
       "avg_loss_4h": -0.01857,
