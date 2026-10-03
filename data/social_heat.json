@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-03T13:41:16+00:00",
+  "ts": "2026-10-03T13:46:48+00:00",
   "sources": {
     "coingecko": [
       "QNT",
@@ -19,12 +19,12 @@
     "movers": [
       "SAND",
       "ZRO",
-      "SPCXB",
       "WLD",
+      "SPCXB",
       "QNT",
-      "TRX",
       "NIGHT",
-      "RLUSD"
+      "UNI",
+      "TRX"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -37,7 +37,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.001242,
+      "funding": -0.001239,
       "long_short": 1.09
     },
     {
@@ -47,7 +47,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.005078,
+      "funding": -0.005073,
       "long_short": 1.02
     },
     {
@@ -84,7 +84,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9e-06
+      "funding": 8e-06
     },
     {
       "symbol": "MOVR",
@@ -92,7 +92,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000208
+      "funding": -0.000211
     },
     {
       "symbol": "NEAR",
@@ -135,13 +135,6 @@
       "funding": 0.0
     },
     {
-      "symbol": "RLUSD",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
-    },
-    {
       "symbol": "SPCXB",
       "surfaces": 1,
       "sources": [
@@ -154,7 +147,15 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000126
+      "funding": -0.000128
+    },
+    {
+      "symbol": "UNI",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
