@@ -1,19 +1,18 @@
 {
-  "ts": "2026-10-03T17:23:28+00:00",
+  "ts": "2026-10-03T17:29:19+00:00",
   "sources": {
     "coingecko": [
+      "STRK",
       "QNT",
       "NEAR",
-      "STRK",
       "PUMP",
       "BTC",
-      "PENGU",
-      "TAO",
       "ZRO",
+      "SAND",
       "ONDO",
-      "MORPHO",
+      "PENGU",
       "LIT",
-      "ZAMA"
+      "TAO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,11 +20,11 @@
       "SAND",
       "ZRO",
       "WLD",
-      "PUMP",
       "QNT",
+      "PUMP",
       "BNB",
-      "SUI",
-      "AVAX"
+      "AVAX",
+      "SUI"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -48,8 +47,18 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.001072,
+      "funding": -0.001082,
       "long_short": 1.12
+    },
+    {
+      "symbol": "SAND",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -0.005851,
+      "long_short": 1.14
     },
     {
       "symbol": "ZRO",
@@ -75,7 +84,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000111
+      "funding": 0.000119
     },
     {
       "symbol": "BTC",
@@ -83,18 +92,10 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.1e-05
+      "funding": 6e-05
     },
     {
       "symbol": "LIT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "MORPHO",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -124,14 +125,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "SAND",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -0.005818
     },
     {
       "symbol": "STRK",
@@ -164,14 +157,6 @@
         "movers"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "ZAMA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 8e-06
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
