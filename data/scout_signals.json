@@ -1,33 +1,17 @@
 {
-  "ts": "2026-10-03T02:22:08+00:00",
-  "scanned": 149,
+  "ts": "2026-10-03T02:27:44+00:00",
+  "scanned": 148,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ICPUSDT",
-      "signal": "breakout",
-      "score": 0.6848,
-      "raw_score": 0.7419,
-      "weight": 0.923,
-      "price": 3.375,
-      "why": "trades 7.3x, volume 9.3x, 73% taker-buy, +2.3% in an hour, at 98% of its 24h range",
-      "chg_24h": 0.0215,
-      "vol_surge": 9.3,
-      "chg_1h": 0.023,
-      "market_surge": 5.3,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean +0.23% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
-    "ignition": "benched \u2014 BTC-excess day mean +0.18% at 24h: market beta, not signal",
+    "ignition": "benched \u2014 BTC-excess day mean +0.08% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.23% at 24h: market beta, not signal",
     "reversion": "benched \u2014 only one half of the last 23 paid at 24h: regime luck, not a signal",
     "heat": "probation \u2014 0/12 resolved 24h samples under ruleset 3",
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 11,
+    "count": 12,
     "baseline": 15.0,
     "wave": false
   },
@@ -59,19 +43,19 @@
       "avg_win_4h": 0.02152,
       "avg_loss_4h": -0.01853,
       "payoff_4h": 1.161,
-      "span_h_24h": 311.3,
+      "span_h_24h": 311.4,
       "n_eff_24h": 12.97,
-      "n_24h": 821,
+      "n_24h": 822,
       "hit_rate_24h": 0.471,
-      "mean_ret_24h": 0.00554,
+      "mean_ret_24h": 0.00542,
       "median_ret_24h": -0.0012,
       "both_halves_24h": false,
       "days_24h": 14,
-      "mean_x_24h": 0.00183,
+      "mean_x_24h": 0.0008,
       "days_x_24h": 14,
       "avg_win_24h": 0.05084,
-      "avg_loss_24h": -0.03757,
-      "payoff_24h": 1.353
+      "avg_loss_24h": -0.0377,
+      "payoff_24h": 1.349
     },
     "breakout": {
       "span_h_1h": 334.4,
