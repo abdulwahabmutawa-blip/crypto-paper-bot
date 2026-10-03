@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-03T16:28:26+00:00",
+  "ts": "2026-10-03T16:34:16+00:00",
   "sources": {
     "coingecko": [
       "ZRO",
@@ -24,7 +24,7 @@
       "QNT",
       "BNB",
       "TRX",
-      "RLUSD"
+      "SUI"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -37,7 +37,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.001007,
+      "funding": -0.001012,
       "long_short": 1.08
     },
     {
@@ -47,8 +47,18 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.005236,
+      "funding": -0.005324,
       "long_short": 1.15
+    },
+    {
+      "symbol": "SUI",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.11
     },
     {
       "symbol": "ZRO",
@@ -66,7 +76,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.5e-05
+      "funding": 5.5e-05
     },
     {
       "symbol": "BTC",
@@ -74,7 +84,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.4e-05
+      "funding": 5.6e-05
     },
     {
       "symbol": "MORPHO",
@@ -101,27 +111,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "RLUSD",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
-    },
-    {
       "symbol": "STRK",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "TAO",
@@ -137,7 +132,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.00013
+      "funding": -0.000127
     },
     {
       "symbol": "VIRTUAL",
@@ -161,7 +156,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.5e-05
+      "funding": 2e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
