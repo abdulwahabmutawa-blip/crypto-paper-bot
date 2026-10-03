@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-03T13:28:56+00:00 · runs 2441 · equity **$862.64** (-13.74%) · cash $167.25 · open 8/10 · round trips 924
+updated 2026-10-03T13:46:17+00:00 · runs 2442 · equity **$862.72** (-13.73%) · cash $167.25 · open 8/10 · round trips 924
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,12 +36,12 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-02T15:29 | TSLABUSDT | surge | 371.22 | 370.93 | -0.08% |
-| 2026-10-02T15:52 | SPCXBUSDT | surge | 157.12 | 159.21 | +1.33% |
-| 2026-10-02T17:48 | CRCLBUSDT | bottom | 80.95 | 82.15 | +1.48% |
-| 2026-10-02T18:54 | BNBUSDT | bottom | 761.25 | 772.56 | +1.49% |
-| 2026-10-03T01:28 | SNDKBUSDT | bottom | 1718.8 | 1716.06 | -0.16% |
-| 2026-10-03T03:31 | INJUSDT | surge | 7.685 | 7.573 | -1.46% |
-| 2026-10-03T12:34 | ARUSDT | surge | 4.646 | 4.611 | -0.75% |
+| 2026-10-02T15:29 | TSLABUSDT | surge | 371.22 | 370.94 | -0.08% |
+| 2026-10-02T15:52 | SPCXBUSDT | surge | 157.12 | 159.11 | +1.27% |
+| 2026-10-02T17:48 | CRCLBUSDT | bottom | 80.95 | 82.17 | +1.51% |
+| 2026-10-02T18:54 | BNBUSDT | bottom | 761.25 | 773.54 | +1.61% |
+| 2026-10-03T01:28 | SNDKBUSDT | bottom | 1718.8 | 1717.26 | -0.09% |
+| 2026-10-03T03:31 | INJUSDT | surge | 7.685 | 7.615 | -0.91% |
+| 2026-10-03T12:34 | ARUSDT | surge | 4.646 | 4.582 | -1.38% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
