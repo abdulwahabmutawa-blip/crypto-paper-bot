@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-03T18:08:20+00:00",
+  "ts": "2026-10-03T18:13:47+00:00",
   "sources": {
     "coingecko": [
       "STRK",
@@ -20,12 +20,12 @@
     "movers": [
       "SAND",
       "ZRO",
+      "QNT",
       "WLD",
       "PUMP",
-      "QNT",
       "BNB",
-      "UNI",
-      "SUI"
+      "SUI",
+      "AVAX"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -48,7 +48,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.001115,
+      "funding": -0.001125,
       "long_short": 1.11
     },
     {
@@ -58,7 +58,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.005844,
+      "funding": -0.005823,
       "long_short": 1.15
     },
     {
@@ -80,12 +80,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "AVAX",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "BNB",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 0.000156
+      "funding": 0.00016
     },
     {
       "symbol": "BTC",
@@ -93,7 +101,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.1e-05
+      "funding": 5.9e-05
     },
     {
       "symbol": "HYPE",
@@ -142,14 +150,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "VIRTUAL",
