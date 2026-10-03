@@ -1,18 +1,19 @@
 {
-  "ts": "2026-10-03T17:06:23+00:00",
+  "ts": "2026-10-03T17:12:17+00:00",
   "sources": {
     "coingecko": [
-      "NEAR",
-      "BTC",
       "QNT",
       "STRK",
-      "ZRO",
+      "BTC",
+      "NEAR",
       "PENGU",
       "PUMP",
+      "ZRO",
       "FET",
       "TAO",
-      "MORPHO",
       "SAND",
+      "ONDO",
+      "MORPHO",
       "VIRTUAL"
     ],
     "reddit": [],
@@ -24,8 +25,8 @@
       "PUMP",
       "QNT",
       "BNB",
-      "TRX",
-      "SUI"
+      "SUI",
+      "AVAX"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -48,7 +49,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.001059,
+      "funding": -0.001068,
       "long_short": 1.12
     },
     {
@@ -58,7 +59,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.005653,
+      "funding": -0.005706,
       "long_short": 1.14
     },
     {
@@ -72,12 +73,20 @@
       "long_short": 1.22
     },
     {
+      "symbol": "AVAX",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "BNB",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 9.3e-05
+      "funding": 0.0001
     },
     {
       "symbol": "BTC",
@@ -85,7 +94,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.1e-05
+      "funding": 6e-05
     },
     {
       "symbol": "FET",
@@ -110,6 +119,14 @@
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "ONDO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "PENGU",
@@ -142,14 +159,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "TRX",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -0.000114
     },
     {
       "symbol": "VIRTUAL",
