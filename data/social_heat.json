@@ -1,20 +1,19 @@
 {
-  "ts": "2026-10-03T17:12:17+00:00",
+  "ts": "2026-10-03T17:18:08+00:00",
   "sources": {
     "coingecko": [
       "QNT",
-      "STRK",
-      "BTC",
       "NEAR",
-      "PENGU",
+      "STRK",
       "PUMP",
-      "ZRO",
-      "FET",
+      "BTC",
+      "PENGU",
       "TAO",
-      "SAND",
+      "ZRO",
       "ONDO",
       "MORPHO",
-      "VIRTUAL"
+      "LIT",
+      "ZAMA"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -25,8 +24,8 @@
       "PUMP",
       "QNT",
       "BNB",
-      "SUI",
-      "AVAX"
+      "AVAX",
+      "SUI"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -49,18 +48,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.001068,
+      "funding": -0.001069,
       "long_short": 1.12
-    },
-    {
-      "symbol": "SAND",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": -0.005706,
-      "long_short": 1.14
     },
     {
       "symbol": "ZRO",
@@ -86,7 +75,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.0001
+      "funding": 0.000107
     },
     {
       "symbol": "BTC",
@@ -97,12 +86,12 @@
       "funding": 6e-05
     },
     {
-      "symbol": "FET",
+      "symbol": "LIT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0001
+      "funding": 5e-05
     },
     {
       "symbol": "MORPHO",
@@ -137,6 +126,14 @@
       "funding": 5e-05
     },
     {
+      "symbol": "SAND",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -0.005772
+    },
+    {
       "symbol": "STRK",
       "surfaces": 1,
       "sources": [
@@ -161,20 +158,20 @@
       "funding": 5e-05
     },
     {
-      "symbol": "VIRTUAL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "WLD",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "ZAMA",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 1e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
