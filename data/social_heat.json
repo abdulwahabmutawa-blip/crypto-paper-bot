@@ -1,18 +1,18 @@
 {
-  "ts": "2026-10-03T16:45:11+00:00",
+  "ts": "2026-10-03T16:50:36+00:00",
   "sources": {
     "coingecko": [
-      "ZRO",
       "NEAR",
       "BTC",
+      "ZRO",
       "PENGU",
       "QNT",
-      "VIRTUAL",
       "MORPHO",
-      "TAO",
       "STRK",
+      "TAO",
       "SAND",
-      "SOL"
+      "FET",
+      "PUMP"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -23,12 +23,23 @@
       "PUMP",
       "QNT",
       "BNB",
-      "TRX"
+      "TRX",
+      "SUI"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "PUMP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.37
+    },
     {
       "symbol": "QNT",
       "surfaces": 2,
@@ -36,7 +47,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.001025,
+      "funding": -0.001028,
       "long_short": 1.08
     },
     {
@@ -46,7 +57,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.005488,
+      "funding": -0.00556,
       "long_short": 1.15
     },
     {
@@ -65,7 +76,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 6.7e-05
+      "funding": 7.4e-05
     },
     {
       "symbol": "BTC",
@@ -73,7 +84,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6e-05
+      "funding": 6.1e-05
+    },
+    {
+      "symbol": "FET",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "MORPHO",
@@ -100,28 +119,20 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PUMP",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "SOL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 4e-06
-    },
-    {
       "symbol": "STRK",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "TAO",
@@ -137,15 +148,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000121
-    },
-    {
-      "symbol": "VIRTUAL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": -0.000118
     },
     {
       "symbol": "WLD",
