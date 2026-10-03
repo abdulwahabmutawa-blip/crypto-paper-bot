@@ -1,8 +1,24 @@
 {
-  "ts": "2026-10-03T11:58:17+00:00",
+  "ts": "2026-10-03T12:03:45+00:00",
   "scanned": 136,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "PUMPUSDT",
+      "signal": "ignition",
+      "score": 0.4493,
+      "raw_score": 0.4998,
+      "weight": 0.899,
+      "price": 0.005705,
+      "why": "trades 4.4x and volume 5.8x the prior 4h, 65% taker-buy, $172,327 burst \u2014 while price has only moved +3.3%",
+      "chg_24h": -0.0185,
+      "vol_surge": 5.84,
+      "chg_1h": 0.033,
+      "market_surge": 0.63,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.06% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.06% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.39% at 24h: market beta, not signal",
