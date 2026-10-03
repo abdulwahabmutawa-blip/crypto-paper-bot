@@ -1,17 +1,15 @@
 {
-  "ts": "2026-10-03T22:45:12+00:00",
+  "ts": "2026-10-03T22:50:48+00:00",
   "sources": {
     "coingecko": [
       "QNT",
-      "PUMP",
-      "PENGU",
       "TAO",
+      "PENGU",
       "STRK",
+      "PUMP",
       "ZRO",
-      "PEPE",
-      "XRP",
       "ZEC",
-      "BTC"
+      "ENA"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -30,6 +28,16 @@
   },
   "heat": [
     {
+      "symbol": "ENA",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.65
+    },
+    {
       "symbol": "PUMP",
       "surfaces": 2,
       "sources": [
@@ -46,7 +54,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.001153,
+      "funding": -0.00114,
       "long_short": 1.11
     },
     {
@@ -70,22 +78,6 @@
       "long_short": 1.27
     },
     {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -4e-06
-    },
-    {
-      "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
@@ -94,19 +86,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PEPE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ]
-    },
-    {
       "symbol": "SAND",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -0.005634
+      "funding": -0.005636
     },
     {
       "symbol": "STRK",
@@ -131,14 +116,6 @@
         "movers"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "XRP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 3.7e-05
     },
     {
       "symbol": "ZEC",
