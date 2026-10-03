@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-02T23:46:57+00:00 · runs 2391 · equity **$871.97** (-12.80%) · cash $251.95 · open 7/10 · round trips 917
+updated 2026-10-03T00:04:06+00:00 · runs 2392 · equity **$872.18** (-12.78%) · cash $251.95 · open 7/10 · round trips 917
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,11 +36,11 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-02T13:07 | DODOUSDT | surge | 0.01872 | 0.01844 | -1.50% |
-| 2026-10-02T15:29 | TSLABUSDT | surge | 371.22 | 371.29 | +0.02% |
-| 2026-10-02T15:52 | SPCXBUSDT | surge | 157.12 | 159.1 | +1.26% |
-| 2026-10-02T17:48 | CRCLBUSDT | bottom | 80.95 | 81.68 | +0.90% |
-| 2026-10-02T18:54 | XPLUSDT | bottom | 0.09145 | 0.09348 | +2.22% |
-| 2026-10-02T18:54 | BNBUSDT | bottom | 761.25 | 768.24 | +0.92% |
+| 2026-10-02T13:07 | DODOUSDT | surge | 0.01872 | 0.01847 | -1.34% |
+| 2026-10-02T15:29 | TSLABUSDT | surge | 371.22 | 371.38 | +0.04% |
+| 2026-10-02T15:52 | SPCXBUSDT | surge | 157.12 | 159.08 | +1.25% |
+| 2026-10-02T17:48 | CRCLBUSDT | bottom | 80.95 | 81.8 | +1.05% |
+| 2026-10-02T18:54 | XPLUSDT | bottom | 0.09145 | 0.09333 | +2.06% |
+| 2026-10-02T18:54 | BNBUSDT | bottom | 761.25 | 768.85 | +1.00% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
