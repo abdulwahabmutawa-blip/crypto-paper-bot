@@ -1,22 +1,37 @@
 {
-  "ts": "2026-10-03T00:29:12+00:00",
+  "ts": "2026-10-03T00:34:52+00:00",
   "scanned": 151,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "PUMPUSDT",
+      "symbol": "ETCUSDT",
       "signal": "ignition",
-      "score": 0.5267,
-      "raw_score": 0.5808,
+      "score": 0.6759,
+      "raw_score": 0.7452,
       "weight": 0.907,
-      "price": 0.005452,
-      "why": "trades 4.6x and volume 5.6x the prior 4h, 74% taker-buy, $251,742 burst \u2014 while price has only moved +1.0%",
-      "chg_24h": -0.0607,
-      "vol_surge": 5.55,
-      "chg_1h": 0.0102,
-      "market_surge": 1.03,
+      "price": 8.88,
+      "why": "trades 4.2x and volume 12.4x the prior 4h, 98% taker-buy, $80,238 burst \u2014 while price has only moved +0.7%",
+      "chg_24h": 0.0034,
+      "vol_surge": 12.36,
+      "chg_1h": 0.0068,
+      "market_surge": 2.46,
       "actionable": false,
       "status": "benched \u2014 BTC-excess day mean +0.25% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "PYTHUSDT",
+      "signal": "breakout",
+      "score": 0.6681,
+      "raw_score": 0.7286,
+      "weight": 0.917,
+      "price": 0.08108,
+      "why": "trades 6.0x, volume 12.7x, 71% taker-buy, +3.5% in an hour, at 98% of its 24h range",
+      "chg_24h": 0.086,
+      "vol_surge": 12.65,
+      "chg_1h": 0.0348,
+      "market_surge": 6.91,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.70% at 24h: market beta, not signal"
     }
   ],
   "gate": {
@@ -27,7 +42,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 13,
+    "count": 11,
     "baseline": 15.0,
     "wave": false
   },
