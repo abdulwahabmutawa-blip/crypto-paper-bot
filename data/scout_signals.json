@@ -1,8 +1,39 @@
 {
-  "ts": "2026-10-03T21:11:22+00:00",
-  "scanned": 104,
+  "ts": "2026-10-03T21:16:54+00:00",
+  "scanned": 105,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "GALAUSDT",
+      "signal": "ignition",
+      "score": 0.7876,
+      "raw_score": 0.8751,
+      "weight": 0.9,
+      "price": 0.00255,
+      "why": "trades 15.9x and volume 13.3x the prior 4h, 63% taker-buy, $52,742 burst \u2014 while price has only moved +1.3%",
+      "chg_24h": 0.0071,
+      "vol_surge": 13.28,
+      "chg_1h": 0.0127,
+      "market_surge": 0.76,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.17% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "MUBARAKUSDT",
+      "signal": "ignition",
+      "score": 0.5867,
+      "raw_score": 0.6519,
+      "weight": 0.9,
+      "price": 0.06348,
+      "why": "trades 4.3x and volume 10.0x the prior 4h, 62% taker-buy, $82,622 burst \u2014 while price has only moved +0.9%",
+      "chg_24h": 0.0309,
+      "vol_surge": 9.97,
+      "chg_1h": 0.0089,
+      "market_surge": 3.72,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.17% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.17% at 24h: market beta, not signal",
     "breakout": "benched \u2014 only one half of the last 395 paid at 24h: regime luck, not a signal",
@@ -11,7 +42,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 19,
+    "count": 20,
     "baseline": 15.0,
     "wave": false
   },
