@@ -1,17 +1,33 @@
 {
-  "ts": "2026-10-03T18:58:23+00:00",
+  "ts": "2026-10-03T19:03:51+00:00",
   "scanned": 111,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "BCHUSDT",
+      "signal": "ignition",
+      "score": 0.8703,
+      "raw_score": 0.967,
+      "weight": 0.9,
+      "price": 314.2,
+      "why": "trades 14.7x and volume 28.8x the prior 4h, 88% taker-buy, $496,075 burst \u2014 while price has only moved -0.1%",
+      "chg_24h": 0.0421,
+      "vol_surge": 28.82,
+      "chg_1h": -0.0013,
+      "market_surge": 17.94,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.12% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.12% at 24h: market beta, not signal",
     "breakout": "benched \u2014 only one half of the last 394 paid at 24h: regime luck, not a signal",
-    "reversion": "benched \u2014 only one half of the last 25 paid at 24h: regime luck, not a signal",
+    "reversion": "benched \u2014 only one half of the last 26 paid at 24h: regime luck, not a signal",
     "heat": "probation \u2014 0/12 resolved 24h samples under ruleset 3",
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 17,
+    "count": 16,
     "baseline": 15.0,
     "wave": false
   },
@@ -125,19 +141,19 @@
       "avg_win_4h": 0.04304,
       "avg_loss_4h": -0.02476,
       "payoff_4h": 1.739,
-      "span_h_24h": 293.6,
-      "n_eff_24h": 12.23,
-      "n_24h": 25,
-      "hit_rate_24h": 0.52,
-      "mean_ret_24h": 0.00999,
-      "median_ret_24h": 0.00422,
+      "span_h_24h": 298.0,
+      "n_eff_24h": 12.41,
+      "n_24h": 26,
+      "hit_rate_24h": 0.538,
+      "mean_ret_24h": 0.01212,
+      "median_ret_24h": 0.00536,
       "both_halves_24h": false,
       "days_24h": 11,
-      "mean_x_24h": 0.01319,
+      "mean_x_24h": 0.01454,
       "days_x_24h": 11,
-      "avg_win_24h": 0.05864,
+      "avg_win_24h": 0.05912,
       "avg_loss_24h": -0.0427,
-      "payoff_24h": 1.373
+      "payoff_24h": 1.384
     }
   },
   "note": "READ-ONLY scout. Ranked opinion only \u2014 the book decides."
