@@ -1,18 +1,18 @@
 {
-  "ts": "2026-10-03T13:57:40+00:00",
+  "ts": "2026-10-03T14:03:29+00:00",
   "sources": {
     "coingecko": [
       "QNT",
       "ZRO",
-      "WLD",
       "NEAR",
+      "WLD",
       "SAND",
-      "AAVE",
-      "BTC",
       "MOVR",
       "PUMP",
-      "AERO",
-      "XRP"
+      "XRP",
+      "ZEC",
+      "RAY",
+      "ARB"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,10 +21,10 @@
       "ZRO",
       "WLD",
       "QNT",
-      "SPCXB",
       "NIGHT",
+      "SPCXB",
       "UNI",
-      "AVAX"
+      "TRX"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -37,7 +37,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.001231,
+      "funding": -0.001234,
       "long_short": 1.09
     },
     {
@@ -47,8 +47,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.005025,
-      "long_short": 1.02
+      "funding": -0.004971,
+      "long_short": 1.06
     },
     {
       "symbol": "WLD",
@@ -58,7 +58,7 @@
         "movers"
       ],
       "funding": 0.0001,
-      "long_short": 1.74
+      "long_short": 1.73
     },
     {
       "symbol": "ZRO",
@@ -68,39 +68,15 @@
         "movers"
       ],
       "funding": 5e-05,
-      "long_short": 1.34
+      "long_short": 1.24
     },
     {
-      "symbol": "AAVE",
+      "symbol": "ARB",
       "surfaces": 1,
       "sources": [
         "coingecko"
-      ],
-      "funding": -1.1e-05
-    },
-    {
-      "symbol": "AERO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "AVAX",
-      "surfaces": 1,
-      "sources": [
-        "movers"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 4e-06
     },
     {
       "symbol": "MOVR",
@@ -108,7 +84,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000204
+      "funding": -0.000203
     },
     {
       "symbol": "NEAR",
@@ -135,11 +111,27 @@
       "funding": 5e-05
     },
     {
+      "symbol": "RAY",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0
+    },
+    {
       "symbol": "SPCXB",
       "surfaces": 1,
       "sources": [
         "movers"
       ]
+    },
+    {
+      "symbol": "TRX",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -0.000132
     },
     {
       "symbol": "UNI",
@@ -156,6 +148,14 @@
         "coingecko"
       ],
       "funding": 3e-06
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
