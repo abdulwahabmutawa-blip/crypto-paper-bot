@@ -1,16 +1,17 @@
 {
-  "ts": "2026-10-03T20:54:02+00:00",
+  "ts": "2026-10-03T20:59:48+00:00",
   "sources": {
     "coingecko": [
       "STRK",
-      "PENGU",
       "PUMP",
-      "AERO",
-      "QNT",
+      "PENGU",
       "ZRO",
       "AAVE",
-      "ZEC",
-      "BTC"
+      "AERO",
+      "QNT",
+      "BTC",
+      "UNI",
+      "HBAR"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,7 +23,7 @@
       "WLD",
       "AVAX",
       "SUI",
-      "UNI"
+      "TAO"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -45,7 +46,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.001256,
+      "funding": -0.001263,
       "long_short": 1.15
     },
     {
@@ -88,7 +89,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.2e-05
+      "funding": 1.3e-05
+    },
+    {
+      "symbol": "HBAR",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 8.9e-05
     },
     {
       "symbol": "PENGU",
@@ -104,7 +113,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.005732
+      "funding": -0.00571
     },
     {
       "symbol": "STRK",
@@ -123,10 +132,18 @@
       "funding": 0.0001
     },
     {
-      "symbol": "UNI",
+      "symbol": "TAO",
       "surfaces": 1,
       "sources": [
         "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "UNI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
       ],
       "funding": 0.0001
     },
@@ -135,14 +152,6 @@
       "surfaces": 1,
       "sources": [
         "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
       ],
       "funding": 0.0001
     }
