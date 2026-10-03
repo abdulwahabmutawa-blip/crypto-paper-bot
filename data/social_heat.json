@@ -1,17 +1,17 @@
 {
-  "ts": "2026-10-03T02:43:42+00:00",
+  "ts": "2026-10-03T02:49:16+00:00",
   "sources": {
     "coingecko": [
       "SC",
       "PENGU",
-      "BTC",
-      "SOL",
-      "QNT",
       "NEAR",
+      "BTC",
+      "QNT",
       "AERO",
+      "SOL",
       "LIT",
-      "ZEC",
-      "AAVE"
+      "ENJ",
+      "GALA"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -23,21 +23,21 @@
       "SPCXB",
       "AAVE",
       "QNT",
-      "UNI"
+      "LTC"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
     {
-      "symbol": "AAVE",
+      "symbol": "ENJ",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 2.9e-05,
-      "long_short": 1.51
+      "funding": -0.002738,
+      "long_short": 1.83
     },
     {
       "symbol": "QNT",
@@ -46,8 +46,16 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.000736,
+      "funding": -0.000726,
       "long_short": 0.98
+    },
+    {
+      "symbol": "AAVE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 2.2e-05
     },
     {
       "symbol": "AERO",
@@ -63,15 +71,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.2e-05
+      "funding": 2.9e-05
     },
     {
-      "symbol": "ENJ",
+      "symbol": "GALA",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
-      "funding": -0.002629
+      "funding": 0.0001
     },
     {
       "symbol": "LIT",
@@ -82,12 +90,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "LTC",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 2.7e-05
+    },
+    {
       "symbol": "NEAR",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 3.5e-05
+      "funding": 2.4e-05
     },
     {
       "symbol": "NIGHT",
@@ -95,7 +111,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.9e-05
+      "funding": 5e-05
     },
     {
       "symbol": "PENGU",
@@ -111,7 +127,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.015589
+      "funding": -0.015537
     },
     {
       "symbol": "SC",
@@ -137,26 +153,10 @@
       ]
     },
     {
-      "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "WLD",
       "surfaces": 1,
       "sources": [
         "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
       ],
       "funding": 0.0001
     }
