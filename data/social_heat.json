@@ -1,19 +1,19 @@
 {
-  "ts": "2026-10-04T20:32:57+00:00",
+  "ts": "2026-10-04T20:38:42+00:00",
   "sources": {
     "coingecko": [
-      "NEAR",
-      "QNT",
       "FET",
-      "PENGU",
+      "NEAR",
       "LIT",
-      "PUMP",
-      "DOGE",
-      "STRK",
+      "QNT",
+      "PENGU",
       "ROBO",
+      "STRK",
+      "ORCA",
+      "BTC",
+      "DOGE",
       "SUI",
-      "AERO",
-      "VIRTUAL"
+      "PUMP"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,10 +22,10 @@
       "STRK",
       "MUBARAK",
       "NEAR",
-      "DOGE",
       "LTC",
-      "ADA",
-      "SUI"
+      "DOGE",
+      "SUI",
+      "ADA"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -90,12 +90,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "AERO",
+      "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 3.9e-05
     },
     {
       "symbol": "LIT",
@@ -111,7 +111,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 7.5e-05
+      "funding": 7.6e-05
     },
     {
       "symbol": "MUBARAK",
@@ -119,7 +119,15 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000139
+      "funding": 0.000141
+    },
+    {
+      "symbol": "ORCA",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -0.001376
     },
     {
       "symbol": "PENGU",
@@ -143,18 +151,10 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.002781
+      "funding": -0.002798
     },
     {
       "symbol": "ROBO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "VIRTUAL",
       "surfaces": 1,
       "sources": [
         "coingecko"
