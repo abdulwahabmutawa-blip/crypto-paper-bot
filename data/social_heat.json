@@ -1,29 +1,30 @@
 {
-  "ts": "2026-10-04T16:04:46+00:00",
+  "ts": "2026-10-04T16:10:38+00:00",
   "sources": {
     "coingecko": [
-      "FET",
       "STRK",
       "PUMP",
-      "QNT",
       "SUI",
-      "BTC",
+      "FET",
       "PENGU",
-      "NEAR",
+      "BTC",
       "SOL",
+      "QNT",
+      "NEAR",
       "TAO",
+      "ONDO",
       "AERO"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "STRK",
       "PUMP",
+      "STRK",
       "FET",
       "SUI",
-      "TAO",
       "NEAR",
-      "QNT",
+      "TAO",
+      "SAND",
       "LTC"
     ],
     "watcher": [],
@@ -57,18 +58,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 1.7e-05,
+      "funding": 2.1e-05,
       "long_short": 1.26
-    },
-    {
-      "symbol": "QNT",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": -0.002022,
-      "long_short": 1.28
     },
     {
       "symbol": "STRK",
@@ -87,7 +78,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 0.0001
+      "funding": 0.0001,
+      "long_short": 1.99
     },
     {
       "symbol": "TAO",
@@ -112,7 +104,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.7e-05
+      "funding": 3.5e-05
     },
     {
       "symbol": "LTC",
@@ -123,12 +115,36 @@
       "funding": 0.0001
     },
     {
+      "symbol": "ONDO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-06
+    },
+    {
       "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "QNT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -0.002038
+    },
+    {
+      "symbol": "SAND",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -0.000222
     },
     {
       "symbol": "SOL",
