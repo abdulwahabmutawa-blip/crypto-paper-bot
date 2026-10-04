@@ -1,26 +1,26 @@
 {
-  "ts": "2026-10-04T23:03:40+00:00",
+  "ts": "2026-10-04T23:09:36+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
-      "PENGU",
       "NEAR",
-      "ZEC",
+      "PENGU",
       "FET",
       "AERO",
+      "ZEC",
+      "ARB",
       "SUI",
       "LIT",
-      "HYPE",
-      "VIRTUAL"
+      "QNT"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "FET",
-      "ADA",
       "STRK",
-      "MUBARAK",
+      "ADA",
       "ZEC",
+      "MUBARAK",
       "NEAR",
       "DOGE",
       "PUMP"
@@ -56,7 +56,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -2.9e-05,
+      "funding": -2.6e-05,
       "long_short": 1.22
     },
     {
@@ -86,20 +86,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "ARB",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 2e-05
+    },
+    {
       "symbol": "DOGE",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "HYPE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "LIT",
@@ -126,6 +126,14 @@
       "funding": 5e-05
     },
     {
+      "symbol": "QNT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -0.003377
+    },
+    {
       "symbol": "STRK",
       "surfaces": 1,
       "sources": [
@@ -139,15 +147,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -6.4e-05
-    },
-    {
-      "symbol": "VIRTUAL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": -6.9e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
