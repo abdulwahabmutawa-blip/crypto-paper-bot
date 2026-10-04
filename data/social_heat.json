@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-04T17:29:28+00:00",
+  "ts": "2026-10-04T17:35:16+00:00",
   "sources": {
     "coingecko": [
       "SUI",
@@ -20,12 +20,12 @@
     "movers": [
       "PUMP",
       "FET",
-      "STRK",
       "NEAR",
-      "SUI",
+      "STRK",
       "LTC",
+      "SUI",
       "TAO",
-      "ZEC"
+      "QNT"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -62,6 +62,16 @@
       "long_short": 1.19
     },
     {
+      "symbol": "QNT",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -0.002277,
+      "long_short": 1.28
+    },
+    {
       "symbol": "STRK",
       "surfaces": 2,
       "sources": [
@@ -73,16 +83,6 @@
     },
     {
       "symbol": "SUI",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 2.14
-    },
-    {
-      "symbol": "ZEC",
       "surfaces": 2,
       "sources": [
         "coingecko",
@@ -131,14 +131,6 @@
       "funding": 5e-05
     },
     {
-      "symbol": "QNT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -0.002259
-    },
-    {
       "symbol": "TAO",
       "surfaces": 1,
       "sources": [
@@ -153,6 +145,14 @@
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
