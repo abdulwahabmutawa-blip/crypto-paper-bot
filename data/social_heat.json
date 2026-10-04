@@ -1,18 +1,18 @@
 {
-  "ts": "2026-10-04T04:57:49+00:00",
+  "ts": "2026-10-04T05:03:06+00:00",
   "sources": {
     "coingecko": [
       "QNT",
       "PUMP",
       "PENGU",
       "ZRO",
-      "SOL",
-      "UNI",
-      "HYPE",
-      "ENA",
-      "NEAR",
       "SAND",
-      "STRK"
+      "STRK",
+      "SOL",
+      "HYPE",
+      "ZEC",
+      "UNI",
+      "AXS"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,9 +21,9 @@
       "PUMP",
       "ZRO",
       "ONE",
-      "QNT",
       "TAO",
       "WLD",
+      "QNT",
       "NEAR"
     ],
     "watcher": [],
@@ -31,47 +31,7 @@
   },
   "heat": [
     {
-      "symbol": "NEAR",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.41
-    },
-    {
       "symbol": "PUMP",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.32
-    },
-    {
-      "symbol": "QNT",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": -0.000742,
-      "long_short": 1.03
-    },
-    {
-      "symbol": "STRK",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.42
-    },
-    {
-      "symbol": "ZRO",
       "surfaces": 2,
       "sources": [
         "coingecko",
@@ -81,12 +41,42 @@
       "long_short": 1.3
     },
     {
-      "symbol": "ENA",
+      "symbol": "QNT",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -0.000748,
+      "long_short": 1.07
+    },
+    {
+      "symbol": "STRK",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.47
+    },
+    {
+      "symbol": "ZRO",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.33
+    },
+    {
+      "symbol": "AXS",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 4.4e-05
+      "funding": -0.000211
     },
     {
       "symbol": "HYPE",
@@ -97,12 +87,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "NEAR",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "ONE",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -0.007086
+      "funding": -0.007034
     },
     {
       "symbol": "PENGU",
@@ -118,7 +116,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.003462
+      "funding": -0.003382
     },
     {
       "symbol": "SOL",
@@ -126,7 +124,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.9e-05
+      "funding": 8e-05
     },
     {
       "symbol": "TAO",
@@ -149,6 +147,14 @@
       "surfaces": 1,
       "sources": [
         "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
       ],
       "funding": 0.0001
     }
