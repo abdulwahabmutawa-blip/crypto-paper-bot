@@ -1,39 +1,8 @@
 {
-  "ts": "2026-10-04T19:37:43+00:00",
-  "scanned": 102,
+  "ts": "2026-10-04T19:43:33+00:00",
+  "scanned": 100,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "GRAMUSDT",
-      "signal": "ignition",
-      "score": 0.6679,
-      "raw_score": 0.7488,
-      "weight": 0.892,
-      "price": 1.536,
-      "why": "trades 5.0x and volume 24.0x the prior 4h, 80% taker-buy, $200,569 burst \u2014 while price has only moved +0.1%",
-      "chg_24h": 0.0159,
-      "vol_surge": 24.03,
-      "chg_1h": 0.0013,
-      "market_surge": 1.0,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.05% at 24h: market beta, not signal"
-    },
-    {
-      "symbol": "ZROUSDT",
-      "signal": "ignition",
-      "score": 0.4858,
-      "raw_score": 0.5447,
-      "weight": 0.892,
-      "price": 2.016,
-      "why": "trades 4.6x and volume 5.8x the prior 4h, 67% taker-buy, $226,199 burst \u2014 while price has only moved +2.0%",
-      "chg_24h": -0.0307,
-      "vol_surge": 5.8,
-      "chg_1h": 0.0202,
-      "market_surge": 0.0,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.05% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.05% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.16% at 24h: market beta, not signal",
@@ -42,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 13,
+    "count": 11,
     "baseline": 14.0,
     "wave": false
   },
