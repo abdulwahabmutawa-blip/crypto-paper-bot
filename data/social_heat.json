@@ -1,17 +1,18 @@
 {
-  "ts": "2026-10-04T07:43:48+00:00",
+  "ts": "2026-10-04T07:49:38+00:00",
   "sources": {
     "coingecko": [
-      "ZRO",
       "PUMP",
-      "QNT",
+      "ZRO",
       "PENGU",
-      "ONDO",
+      "QNT",
       "STRK",
       "PHA",
-      "ENA",
+      "ONDO",
       "HYPE",
       "PYTH",
+      "NEAR",
+      "UNI",
       "SUI"
     ],
     "reddit": [],
@@ -30,16 +31,6 @@
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "ENA",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 4.6e-05,
-      "long_short": 1.68
-    },
     {
       "symbol": "PUMP",
       "surfaces": 2,
@@ -76,7 +67,15 @@
       "sources": [
         "movers"
       ],
-      "funding": 6.1e-05
+      "funding": 6e-05
+    },
+    {
+      "symbol": "ENA",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 4.4e-05
     },
     {
       "symbol": "HYPE",
@@ -87,12 +86,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "NEAR",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "ONDO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 2.7e-05
+      "funding": 3e-05
     },
     {
       "symbol": "ONE",
@@ -100,7 +107,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.006821
+      "funding": -0.006802
     },
     {
       "symbol": "PENGU",
@@ -132,7 +139,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000743
+      "funding": -0.00074
     },
     {
       "symbol": "SUI",
@@ -140,7 +147,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.2e-05
+      "funding": 7.8e-05
     },
     {
       "symbol": "TAO",
@@ -149,6 +156,14 @@
         "movers"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "UNI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 3.7e-05
     },
     {
       "symbol": "WLD",
