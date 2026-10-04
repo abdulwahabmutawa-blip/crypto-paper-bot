@@ -1,19 +1,19 @@
 {
-  "ts": "2026-10-04T11:06:36+00:00",
+  "ts": "2026-10-04T11:12:23+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
       "BEAM",
-      "NEAR",
-      "STRK",
       "PUMP",
-      "ONDO",
-      "ZEC",
+      "STRK",
       "SOL",
-      "ARB",
+      "ONDO",
+      "NEAR",
       "BTC",
       "QNT",
-      "ZRO"
+      "ZRO",
+      "ZEC",
+      "FET"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,16 +21,26 @@
       "STRK",
       "PUMP",
       "NEAR",
-      "FET",
       "TAO",
+      "FET",
       "SAND",
       "BNB",
-      "LTC"
+      "ENA"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "FET",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.67
+    },
     {
       "symbol": "NEAR",
       "surfaces": 2,
@@ -58,16 +68,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 4.5e-05,
+      "funding": 4.8e-05,
       "long_short": 1.52
-    },
-    {
-      "symbol": "ARB",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 8e-05
     },
     {
       "symbol": "BEAM",
@@ -82,7 +84,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 7.3e-05
+      "funding": 7.4e-05
     },
     {
       "symbol": "BTC",
@@ -90,23 +92,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.5e-05
+      "funding": 2.6e-05
     },
     {
-      "symbol": "FET",
+      "symbol": "ENA",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "LTC",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
+      "funding": 5e-05
     },
     {
       "symbol": "ONDO",
@@ -130,7 +124,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.001186
+      "funding": -0.001203
     },
     {
       "symbol": "SAND",
@@ -138,7 +132,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001345
+      "funding": -0.001343
     },
     {
       "symbol": "SOL",
