@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-04T22:08:48+00:00",
+  "ts": "2026-10-04T22:14:12+00:00",
   "sources": {
     "coingecko": [
       "FET",
@@ -22,9 +22,9 @@
       "NEAR",
       "ADA",
       "DOGE",
-      "ZEC",
       "MUBARAK",
-      "SUI"
+      "ZEC",
+      "PUMP"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -49,6 +49,16 @@
       ],
       "funding": 0.0001,
       "long_short": 1.34
+    },
+    {
+      "symbol": "PUMP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -2.7e-05,
+      "long_short": 1.21
     },
     {
       "symbol": "ZEC",
@@ -82,7 +92,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.1e-05
+      "funding": 6e-05
     },
     {
       "symbol": "DOGE",
@@ -98,7 +108,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.2e-05
+      "funding": 7.5e-05
     },
     {
       "symbol": "LIT",
@@ -125,20 +135,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PUMP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -2.5e-05
-    },
-    {
       "symbol": "QNT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -0.003335
+      "funding": -0.003357
     },
     {
       "symbol": "STRK",
@@ -147,14 +149,6 @@
         "movers"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -2.5e-05
     },
     {
       "symbol": "TAO",
