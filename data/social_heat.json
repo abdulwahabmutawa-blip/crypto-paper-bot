@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-04T18:41:19+00:00",
+  "ts": "2026-10-04T18:47:16+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
@@ -19,12 +19,12 @@
     "movers": [
       "FET",
       "NEAR",
-      "PUMP",
       "SUI",
       "STRK",
-      "ZEC",
       "LTC",
-      "TAO"
+      "PUMP",
+      "ZEC",
+      "DOGE"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -89,6 +89,14 @@
       "funding": 5e-05
     },
     {
+      "symbol": "DOGE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "ENA",
       "surfaces": 1,
       "sources": [
@@ -110,7 +118,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 9.3e-05
+      "funding": 9e-05
     },
     {
       "symbol": "PENGU",
@@ -126,15 +134,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.002536
-    },
-    {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
+      "funding": -0.002552
     },
     {
       "symbol": "ZEC",
