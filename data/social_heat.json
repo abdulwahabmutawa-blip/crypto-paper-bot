@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-04T12:20:17+00:00",
+  "ts": "2026-10-04T12:26:19+00:00",
   "sources": {
     "coingecko": [
       "SOL",
@@ -21,12 +21,12 @@
     "movers": [
       "STRK",
       "PUMP",
-      "SAND",
       "FET",
       "NEAR",
+      "SAND",
       "TAO",
       "BNB",
-      "SOL"
+      "ENA"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -53,23 +53,13 @@
       "long_short": 1.22
     },
     {
-      "symbol": "SOL",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.73
-    },
-    {
       "symbol": "STRK",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 2.8e-05,
+      "funding": 2.5e-05,
       "long_short": 1.39
     },
     {
@@ -95,7 +85,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 7e-05
+      "funding": 6.9e-05
     },
     {
       "symbol": "BTC",
@@ -103,7 +93,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.5e-05
+      "funding": 2.8e-05
+    },
+    {
+      "symbol": "ENA",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 2e-05
     },
     {
       "symbol": "ETH",
@@ -111,7 +109,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.7e-05
+      "funding": 4.8e-05
     },
     {
       "symbol": "FET",
@@ -127,7 +125,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.7e-05
+      "funding": -2.9e-05
     },
     {
       "symbol": "PENGU",
@@ -150,7 +148,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.0015
+      "funding": -0.001515
     },
     {
       "symbol": "SAND",
@@ -158,7 +156,15 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001128
+      "funding": -0.001097
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "XRP",
