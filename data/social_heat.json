@@ -1,24 +1,23 @@
 {
-  "ts": "2026-10-04T21:24:19+00:00",
+  "ts": "2026-10-04T21:29:36+00:00",
   "sources": {
     "coingecko": [
       "FET",
       "PENGU",
+      "NEAR",
       "LIT",
       "ROBO",
-      "QNT",
-      "PUMP",
       "ZEC",
-      "HNT",
-      "NEAR"
+      "AERO",
+      "STRK"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "STRK",
       "FET",
-      "MUBARAK",
       "DOGE",
+      "MUBARAK",
       "NEAR",
       "ADA",
       "PUMP",
@@ -49,14 +48,14 @@
       "long_short": 1.34
     },
     {
-      "symbol": "PUMP",
+      "symbol": "STRK",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 6e-06,
-      "long_short": 1.19
+      "funding": 5e-05,
+      "long_short": 1.4
     },
     {
       "symbol": "ADA",
@@ -67,19 +66,20 @@
       "funding": 0.0001
     },
     {
+      "symbol": "AERO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "DOGE",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "HNT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ]
     },
     {
       "symbol": "LIT",
@@ -95,7 +95,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 8.4e-05
+      "funding": 7.3e-05
     },
     {
       "symbol": "PENGU",
@@ -106,12 +106,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "QNT",
+      "symbol": "PUMP",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
-      "funding": -0.003127
+      "funding": -3e-06
     },
     {
       "symbol": "ROBO",
@@ -122,20 +122,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "STRK",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "SUI",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 3.9e-05
+      "funding": 3.4e-05
     },
     {
       "symbol": "ZEC",
