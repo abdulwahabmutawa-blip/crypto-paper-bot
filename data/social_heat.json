@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-04T05:19:18+00:00",
+  "ts": "2026-10-04T05:24:46+00:00",
   "sources": {
     "coingecko": [
       "ZRO",
@@ -22,13 +22,23 @@
       "ONE",
       "QNT",
       "TAO",
-      "WLD",
-      "ENA"
+      "NEAR",
+      "BNB"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "NEAR",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.42
+    },
     {
       "symbol": "PUMP",
       "surfaces": 2,
@@ -46,7 +56,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.000731,
+      "funding": -0.000728,
       "long_short": 1.07
     },
     {
@@ -78,12 +88,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "ENA",
+      "symbol": "BNB",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 4.6e-05
+      "funding": 7.5e-05
     },
     {
       "symbol": "HYPE",
@@ -102,20 +112,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "NEAR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "ONE",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -0.006858
+      "funding": -0.006805
     },
     {
       "symbol": "PENGU",
@@ -131,7 +133,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.003214
+      "funding": -0.003159
     },
     {
       "symbol": "TAO",
@@ -140,14 +142,6 @@
         "movers"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "WLD",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
