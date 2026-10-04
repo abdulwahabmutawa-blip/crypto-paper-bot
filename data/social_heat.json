@@ -1,15 +1,17 @@
 {
-  "ts": "2026-10-04T01:04:22+00:00",
+  "ts": "2026-10-04T01:09:48+00:00",
   "sources": {
     "coingecko": [
-      "PUMP",
       "QNT",
+      "PUMP",
       "STRK",
       "PENGU",
       "TAO",
       "ZRO",
+      "NEAR",
       "SAND",
-      "SOL"
+      "ONDO",
+      "FET"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -17,16 +19,26 @@
       "ZRO",
       "PUMP",
       "SAND",
-      "WLD",
       "QNT",
+      "WLD",
       "TAO",
       "NEAR",
-      "ENA"
+      "BNB"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "NEAR",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.38
+    },
     {
       "symbol": "PUMP",
       "surfaces": 2,
@@ -44,7 +56,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.000994,
+      "funding": -0.00099,
       "long_short": 1.1
     },
     {
@@ -54,7 +66,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.005574,
+      "funding": -0.005562,
       "long_short": 1.16
     },
     {
@@ -74,24 +86,31 @@
         "coingecko",
         "movers"
       ],
-      "funding": 5e-05,
-      "long_short": 1.27
-    },
-    {
-      "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
       "funding": 5e-05
     },
     {
-      "symbol": "NEAR",
+      "symbol": "BNB",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
+      "funding": 0.000174
+    },
+    {
+      "symbol": "FET",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "ONDO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "PENGU",
@@ -100,14 +119,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "SOL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 3.3e-05
     },
     {
       "symbol": "STRK",
