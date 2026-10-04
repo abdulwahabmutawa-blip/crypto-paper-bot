@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-04T19:32:29+00:00",
+  "ts": "2026-10-04T19:37:36+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
@@ -25,7 +25,7 @@
       "ADA",
       "SUI",
       "LTC",
-      "TAO"
+      "PUMP"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -52,6 +52,16 @@
       "long_short": 1.33
     },
     {
+      "symbol": "PUMP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.15
+    },
+    {
       "symbol": "SUI",
       "surfaces": 2,
       "sources": [
@@ -60,16 +70,6 @@
       ],
       "funding": 0.0001,
       "long_short": 2.16
-    },
-    {
-      "symbol": "TAO",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.44
     },
     {
       "symbol": "ADA",
@@ -93,7 +93,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -5e-06
+      "funding": 4e-06
     },
     {
       "symbol": "ENA",
@@ -117,7 +117,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 7.9e-05
+      "funding": 7.6e-05
     },
     {
       "symbol": "MUBARAK",
@@ -125,18 +125,10 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000193
+      "funding": 0.000188
     },
     {
       "symbol": "PENGU",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "PUMP",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -148,6 +140,14 @@
       "surfaces": 1,
       "sources": [
         "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "TAO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
       ],
       "funding": 5e-05
     },
