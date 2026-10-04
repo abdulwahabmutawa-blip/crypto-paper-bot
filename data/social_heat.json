@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-04T21:29:36+00:00",
+  "ts": "2026-10-04T21:35:18+00:00",
   "sources": {
     "coingecko": [
       "FET",
@@ -16,12 +16,12 @@
     "movers": [
       "STRK",
       "FET",
-      "DOGE",
       "MUBARAK",
+      "DOGE",
       "NEAR",
       "ADA",
-      "PUMP",
-      "SUI"
+      "SUI",
+      "LTC"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -90,12 +90,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "LTC",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 7.7e-05
+    },
+    {
       "symbol": "MUBARAK",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 7.3e-05
+      "funding": 6.2e-05
     },
     {
       "symbol": "PENGU",
@@ -104,14 +112,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "PUMP",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -3e-06
     },
     {
       "symbol": "ROBO",
@@ -127,7 +127,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 3.4e-05
+      "funding": 2.4e-05
     },
     {
       "symbol": "ZEC",
