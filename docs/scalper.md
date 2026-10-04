@@ -2,20 +2,21 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-04T09:10:46+00:00 · runs 2513 · equity **$857.37** (-14.26%) · cash $0.00 · open 10/10 · round trips 942
+updated 2026-10-04T09:27:17+00:00 · runs 2514 · equity **$857.54** (-14.25%) · cash $0.00 · open 10/10 · round trips 943
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
-- hit 51% (break-even 54%) · mean -0.15%/trade · realized $-140.29 · worst day $-50.94 · trades/day 31.4
+- hit 51% (break-even 54%) · mean -0.15%/trade · realized $-137.94 · worst day $-50.94 · trades/day 31.4
 
 | shape | n | hit | mean | target% | stop% | time% |
 |---|---|---|---|---|---|---|
-| surge | 815 | 52% | -0.12% | 49% | 44% | 7% |
+| surge | 816 | 52% | -0.11% | 49% | 44% | 7% |
 | bottom | 127 | 46% | -0.38% | 40% | 44% | 16% |
 
 ## Last 15 round trips
 | exit (UTC) | coin | shape | how | hours | net | P&L |
 |---|---|---|---|---|---|---|
+| 2026-10-04T09:25 | IOTAUSDT | surge | TARGET | 0.5 | +2.75% | $+2.34 |
 | 2026-10-04T08:36 | WUSDT | surge | TARGET | 4.5 | +2.75% | $+2.28 |
 | 2026-10-04T08:03 | ZKUSDT | surge | TARGET | 13.8 | +2.75% | $+2.32 |
 | 2026-10-04T03:55 | INJUSDT | surge | TIME | 24.0 | -1.69% | $-1.43 |
@@ -30,20 +31,19 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | 2026-10-03T16:59 | STXUSDT | surge | TARGET | 2.5 | +2.75% | $+2.30 |
 | 2026-10-03T16:42 | ZROUSDT | surge | STOP | 0.0 | -3.25% | $-2.88 |
 | 2026-10-03T16:25 | AVAUSDT | surge | STOP | 0.5 | -3.25% | $-2.97 |
-| 2026-10-03T16:08 | SPCXBUSDT | surge | TIME | 24.0 | +0.92% | $+0.90 |
 
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-03T15:50 | MORPHOUSDT | surge | 2.724 | 2.765 | +1.51% |
-| 2026-10-03T17:17 | BNBUSDT | surge | 789.96 | 791.28 | +0.17% |
-| 2026-10-03T17:51 | ATOMUSDT | surge | 1.733 | 1.746 | +0.75% |
-| 2026-10-03T18:08 | OPUSDT | surge | 0.1355 | 0.1336 | -1.40% |
-| 2026-10-03T20:30 | KAITOUSDT | surge | 0.3545 | 0.3464 | -2.28% |
-| 2026-10-03T21:36 | DODOUSDT | surge | 0.01896 | 0.01867 | -1.53% |
-| 2026-10-04T01:33 | METUSDT | surge | 0.315 | 0.3083 | -2.13% |
-| 2026-10-04T08:03 | ACEUSDT | surge | 0.1863 | 0.1873 | +0.54% |
-| 2026-10-04T08:36 | IOTAUSDT | surge | 0.0592 | 0.0602 | +1.69% |
+| 2026-10-03T15:50 | MORPHOUSDT | surge | 2.724 | 2.778 | +1.98% |
+| 2026-10-03T17:17 | BNBUSDT | surge | 789.96 | 794.41 | +0.56% |
+| 2026-10-03T17:51 | ATOMUSDT | surge | 1.733 | 1.747 | +0.81% |
+| 2026-10-03T18:08 | OPUSDT | surge | 0.1355 | 0.1339 | -1.18% |
+| 2026-10-03T20:30 | KAITOUSDT | surge | 0.3545 | 0.346 | -2.40% |
+| 2026-10-03T21:36 | DODOUSDT | surge | 0.01896 | 0.0186 | -1.90% |
+| 2026-10-04T01:33 | METUSDT | surge | 0.315 | 0.3063 | -2.76% |
+| 2026-10-04T08:03 | ACEUSDT | surge | 0.1863 | 0.1888 | +1.34% |
+| 2026-10-04T09:25 | IOTAUSDT | surge | 0.0607 | 0.0597 | -1.65% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
