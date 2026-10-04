@@ -1,19 +1,17 @@
 {
-  "ts": "2026-10-04T16:33:06+00:00",
+  "ts": "2026-10-04T16:38:38+00:00",
   "sources": {
     "coingecko": [
-      "STRK",
-      "FET",
       "SUI",
+      "FET",
       "PENGU",
+      "STRK",
       "PUMP",
       "QNT",
-      "BTC",
-      "TAO",
-      "NEAR",
       "SOL",
+      "TAO",
       "ONDO",
-      "ZEC"
+      "SAND"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -42,23 +40,13 @@
       "long_short": 1.79
     },
     {
-      "symbol": "NEAR",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.45
-    },
-    {
       "symbol": "PUMP",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 3.7e-05,
+      "funding": 4.2e-05,
       "long_short": 1.26
     },
     {
@@ -88,27 +76,19 @@
         "coingecko",
         "movers"
       ],
-      "funding": 5e-05
+      "funding": 5e-05,
+      "long_short": 1.39
     },
     {
-      "symbol": "ZEC",
-      "surfaces": 2,
+      "symbol": "LTC",
+      "surfaces": 1,
       "sources": [
-        "coingecko",
         "movers"
       ],
       "funding": 0.0001
     },
     {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 4.1e-05
-    },
-    {
-      "symbol": "LTC",
+      "symbol": "NEAR",
       "surfaces": 1,
       "sources": [
         "movers"
@@ -121,7 +101,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1e-06
+      "funding": 2e-06
     },
     {
       "symbol": "PENGU",
@@ -137,13 +117,29 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.002117
+      "funding": -0.002125
+    },
+    {
+      "symbol": "SAND",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -0.000173
     },
     {
       "symbol": "SOL",
       "surfaces": 1,
       "sources": [
         "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 1,
+      "sources": [
+        "movers"
       ],
       "funding": 0.0001
     }
