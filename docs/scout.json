@@ -1,8 +1,54 @@
 {
-  "ts": "2026-10-04T06:03:33+00:00",
-  "scanned": 99,
+  "ts": "2026-10-04T06:08:53+00:00",
+  "scanned": 97,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "BCHUSDT",
+      "signal": "ignition",
+      "score": 0.8494,
+      "raw_score": 0.9428,
+      "weight": 0.901,
+      "price": 317.8,
+      "why": "trades 33.5x and volume 53.6x the prior 4h, 77% taker-buy, $693,091 burst \u2014 while price has only moved +0.0%",
+      "chg_24h": 0.0284,
+      "vol_surge": 53.64,
+      "chg_1h": 0.0003,
+      "market_surge": 26.02,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.11% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "NOMUSDT",
+      "signal": "breakout",
+      "score": 0.8302,
+      "raw_score": 0.8985,
+      "weight": 0.924,
+      "price": 0.002593,
+      "why": "trades 21.2x, volume 34.5x, 61% taker-buy, +7.2% in an hour, at 99% of its 24h range",
+      "chg_24h": 0.0519,
+      "vol_surge": 34.53,
+      "chg_1h": 0.0724,
+      "market_surge": 12.41,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.55% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "IOUSDT",
+      "signal": "breakout",
+      "score": 0.765,
+      "raw_score": 0.8279,
+      "weight": 0.924,
+      "price": 0.1746,
+      "why": "trades 10.8x, volume 32.1x, 76% taker-buy, +4.1% in an hour, at 98% of its 24h range",
+      "chg_24h": 0.1387,
+      "vol_surge": 32.15,
+      "chg_1h": 0.0405,
+      "market_surge": 11.5,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.55% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.11% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.55% at 24h: market beta, not signal",
