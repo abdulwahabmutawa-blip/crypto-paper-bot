@@ -1,8 +1,41 @@
 {
-  "ts": "2026-10-04T19:49:31+00:00",
+  "ts": "2026-10-04T19:54:53+00:00",
   "scanned": 100,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SEIUSDT",
+      "signal": "ignition",
+      "score": 0.8061,
+      "raw_score": 0.9037,
+      "weight": 0.892,
+      "price": 0.07425,
+      "why": "trades 9.0x and volume 20.0x the prior 4h, 84% taker-buy, $370,285 burst \u2014 while price has only moved +0.6%",
+      "chg_24h": 0.0507,
+      "vol_surge": 19.98,
+      "chg_1h": 0.0062,
+      "market_surge": 15.4,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.05% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "GLMRUSDT",
+      "signal": "reversion",
+      "score": 0.4557,
+      "raw_score": 0.4557,
+      "weight": 1.0,
+      "price": 0.011562,
+      "why": "down -17% on the day (bottom decile of the market), now +1.9% over 15m with 4 green candles",
+      "chg_24h": -0.1681,
+      "vol_surge": 1.47,
+      "chg_1h": 0.014,
+      "market_surge": 0.0,
+      "oi_drop": null,
+      "funding": 0.0,
+      "actionable": false,
+      "status": "benched \u2014 only one half of the last 25 paid at 24h: regime luck, not a signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.05% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.16% at 24h: market beta, not signal",
@@ -11,7 +44,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 14,
     "baseline": 14.0,
     "wave": false
   },
