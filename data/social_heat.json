@@ -1,14 +1,14 @@
 {
-  "ts": "2026-10-04T02:55:16+00:00",
+  "ts": "2026-10-04T03:00:38+00:00",
   "sources": {
     "coingecko": [
-      "STRK",
       "PUMP",
-      "NEAR",
+      "STRK",
+      "ZRO",
       "SAND",
+      "NEAR",
       "BTC",
       "PENGU",
-      "ZRO",
       "SUI",
       "RENDER",
       "QNT"
@@ -16,14 +16,14 @@
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "ZRO",
       "ONE",
+      "ZRO",
       "PUMP",
       "QNT",
       "TAO",
       "WLD",
-      "SAND",
-      "NEAR"
+      "NEAR",
+      "BNB"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -56,18 +56,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.000874,
+      "funding": -0.000864,
       "long_short": 1.07
-    },
-    {
-      "symbol": "SAND",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": -0.004898,
-      "long_short": 1.19
     },
     {
       "symbol": "ZRO",
@@ -78,6 +68,14 @@
       ],
       "funding": 5e-05,
       "long_short": 1.3
+    },
+    {
+      "symbol": "BNB",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.000129
     },
     {
       "symbol": "BTC",
@@ -93,7 +91,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.007603
+      "funding": -0.007582
     },
     {
       "symbol": "PENGU",
@@ -110,6 +108,14 @@
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "SAND",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -0.004851
     },
     {
       "symbol": "STRK",
