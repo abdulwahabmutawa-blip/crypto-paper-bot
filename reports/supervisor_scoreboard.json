@@ -1,18 +1,18 @@
 {
- "updated_utc": "2026-10-02T08:55:00+00:00",
- "run_note": "Friday run ~08:45Z; covers 10-01 08:00Z -> 10-02 08:45Z. (1) SIM-INTEGRITY ALERT UNCHANGED: scalper/TVKUSDT dead-candle seat, day 20 (86.17 marked at 2023 price). (2) 44 scalper legs audited vs Binance 1m: 11/88 prices outside hold-window range by 0.1-0.8% (worst: NIGHT entry +0.8% above high, ZEN stop -0.45%); watch item. (3) meanrev JNJ buy 10-01 12:46 ET verified in range 258.33-263.98. (4) No cron gap: largest cycle-commit gap 18 min, 88 commits, no failed runs. (5) Watcher down ~21d; sentiment/lottery/hype_ibkr idle. (6) No new R1; scalper 882.21 and sentiment 869.30 below 900. (7) Closed 3 judgments (scalper-1 alpha -17.17), issued 5.",
+ "updated_utc": "2026-10-04T21:05:00+00:00",
+ "run_note": "Sunday run ~21:00Z 10-04 (logged 10-05); covers 10-02 08:45Z -> 10-04 20:35Z. (1) NEW SIM-INTEGRITY ALERT: scalper ENJUSDT 10-02 12:13Z entry booked at 0.03292 while market traded 0.0388-0.0403 (15.2% below), phantom ~+5 vs real; strict audit 36/79 entries outside the fill-minute range (stale signal-candle close, two-sided). (2) TVKUSDT dead seat day 22, unchanged. (3) Exit-side 'outside range' misses are all conservative (ret is net of 0.25% cost), so the 10-02 watch item is mostly explained. (4) No cron gap: 223 cycle commits, max gap 17.9 min, no failed runs. (5) Watcher down ~24d. (6) No R1; scalper 850.50 and sentiment 869.30 below 900. (7) Closed 2 judgments (scalper-1 alpha +31.71), issued 5.",
  "fleet_snapshot": {
-  "as_of": "2026-10-02 ~08:45Z",
+  "as_of": "2026-10-04 ~20:35Z",
   "roster_note": "Active roster cut from 10 books to 4 by owner decisions on 2026-09-04 and 2026-09-05. The old $8,000/$10,000 baseline no longer describes the live fleet; both are reported.",
   "active_paper_bots": 4,
   "baseline_usd": 4000,
-  "total_value_usd": 4111.38,
-  "total_pnl_usd": 111.38,
-  "total_pnl_pct": 2.8,
+  "total_value_usd": 4055.01,
+  "total_pnl_usd": 55.01,
+  "total_pnl_pct": 1.38,
   "active_bots": {
-   "meanrev": 1127.41,
-   "crypto": 1232.46,
-   "scalper": 882.21,
+   "meanrev": 1115.82,
+   "crypto": 1219.39,
+   "scalper": 850.5,
    "sentiment": 869.3
   },
   "retired_frozen_archives": {
@@ -29,31 +29,31 @@
   "real_money_boxes": {
    "lottery_usd": 33.15,
    "lottery_hwm_usd": 44.27,
-   "hype_ibkr": "never traded, state ~19.6d stale",
-   "carry_owner_net_usd": 1.51
+   "hype_ibkr": "never traded, state ~24d stale",
+   "carry_history_net_usd": 2.06
   },
-  "caveat": "scalper's 882.21 still includes 86.17 marked at a dead 2023 price (TVKUSDT), open since 2026-09-12, now day 20."
+  "caveat": "scalper's 850.50 includes 86.17 marked at a dead 2023 price (TVKUSDT), open since 2026-09-12, now day 22."
  },
- "total_judgments": 325,
- "judgments_closed": 323,
+ "total_judgments": 330,
+ "judgments_closed": 328,
  "judgments_open": 2,
  "open_ids": [
-  "2026-10-02-scalper-1",
-  "2026-10-02-sentiment-1"
+  "2026-10-05-scalper-1",
+  "2026-10-05-sentiment-1"
  ],
- "cumulative_alpha_usd": -711.7,
- "win_rate_closed_pct": 7.7,
+ "cumulative_alpha_usd": -679.99,
+ "win_rate_closed_pct": 7.9,
  "win_rate_note": "Most closed judgments are no_change (alpha 0), so the headline rate carries no information - read the DIRECTIONAL record. This run closed three, all neutral (scalper/sentiment/lottery advice matched the bots' own behavior exactly, alpha 0 each). Cumulative alpha is still dominated by the single -1,111.03 sentiment call from 08-31. New this run: a directional scalper skip_new_entries call (2026-09-30-scalper-2), scored next run on book equity vs 883.21.",
  "directional_record": {
-  "scored": 45,
-  "wins": 25,
+  "scored": 46,
+  "wins": 26,
   "losses": 20,
-  "neutral": 278,
+  "neutral": 282,
   "basis": "sign of realized alpha on closed judgments; the sparse legacy outcome field is not used"
  },
  "per_bot": {
   "sentiment": {
-   "closed": 30,
+   "closed": 31,
    "alpha": -1161.24,
    "wins": 2,
    "losses": 6
@@ -65,7 +65,7 @@
    "losses": 2
   },
   "meanrev": {
-   "closed": 36,
+   "closed": 37,
    "alpha": -13.64,
    "wins": 0,
    "losses": 1
@@ -119,7 +119,7 @@
    "losses": 1
   },
   "crypto": {
-   "closed": 41,
+   "closed": 42,
    "alpha": 106.83,
    "wins": 7,
    "losses": 0
@@ -131,13 +131,13 @@
    "losses": 2
   },
   "scalper": {
-   "closed": 11,
-   "alpha": -17.17,
-   "wins": 0,
+   "closed": 12,
+   "alpha": 14.54,
+   "wins": 1,
    "losses": 1
   },
   "carry": {
-   "closed": 1,
+   "closed": 2,
    "alpha": 0,
    "wins": 0,
    "losses": 0
@@ -160,6 +160,14 @@
    "impact_usd": 86.17,
    "scope": "1 of 448 scalper seats/trades carries a candle/wall-clock skew over 6h - isolated, a delisted-pair gap in the universe filter (which already excludes pegged assets: U, BFUSD, XAUT, PAXG)",
    "status": "reported to owner, not fixed by supervisor"
+  },
+  {
+   "date": "2026-10-05",
+   "bot": "scalper",
+   "asset": "ENJUSDT",
+   "finding": "Seat booked 2026-10-02T12:13:59Z at 0.03292 = close of the 11:45-12:00Z 15m candle; market traded 0.0388-0.0403 in the fill minute (15.2% below). Booked TARGET +2.55; a real fill near 0.039 never reached a 3% target (later high 0.04079) and would have stopped out (~-2.8). Systemic: 36 of 79 entries since 10-02 lie outside the 3-minute range at fill time because fills use the signal-candle close 10-14 min late; two-sided, typically 0.1-1%, but surge entries (the shape this bot selects) can gap far.",
+   "impact_usd": 5.4,
+   "status": "reported to owner, not fixed by supervisor"
   }
  ],
  "frozen_bots": [
@@ -167,7 +175,7 @@
    "bot": "sentinel + social_radar",
    "real_money": false,
    "silent_from": "2026-09-11T15:12:52Z",
-   "silent_hours": 449,
+   "silent_hours": 582,
    "status": "DOWN. Final scan returned risk_level 'unparsed', no risk_alerts, no crypto_hype key; no scan since. September scan count 27 vs August 130.",
    "downstream": [
     "sentiment: entry input absent, flat in cash 19 days",
@@ -180,7 +188,7 @@
    "bot": "hype_ibkr",
    "real_money": true,
    "silent_from": "2026-09-10T17:50:16Z",
-   "silent_hours": 470,
+   "silent_hours": 603,
    "status": "Live book (paper=false) created 2026-09-05, zero entries and zero realized legs, state stale 19.6 days."
   },
   {
@@ -191,17 +199,15 @@
   }
  ],
  "loop_health": {
-  "window": "2026-10-01T08:00Z -> 2026-10-02T08:45Z",
-  "cycle_commits_window": 88,
-  "largest_gap_window_min": 137.9,
-  "largest_gap_window": "2026-09-28T17:23:56Z -> 19:41:48Z",
+  "window": "2026-10-02T08:45Z -> 2026-10-04T20:35Z",
+  "cycle_commits_window": 223,
+  "largest_gap_window_min": 17.9,
+  "largest_gap_window": "2026-10-04T03:42Z -> 04:00Z",
   "cron_gap": false,
   "gaps_over_90min_7d": 1,
-  "largest_gap_24h_min": 18.0,
-  "median_gap_24h_min": 17.1,
+  "median_gap_min": 16.5,
   "failed_runs": [],
-  "cancelled_runs_note": "paper-trade-cycle 09-30 00:37Z cancelled at 06:00Z on handoff to the next job; cycle commits continuous across it",
-  "cadence_note": "cycle: commits every ~17 min since 09-28 19:41Z; lottery VPS commits ~5 min in between; last 30 workflow runs: 28 deploy-pages + 1 oracle-cycle success, 1 paper-trade-cycle in progress"
+  "cadence_note": "last 30 workflow runs: 28 deploy-pages + 1 vps-alive success, 1 paper-trade-cycle in progress; lottery VPS commits ~5 min"
  },
  "kill_criteria_flags": {
   "R1_breach_below_750": [
@@ -209,15 +215,15 @@
   ],
   "below_800": [],
   "below_900_drawdown_flag": [
-   "sentiment 869.30 (-13.1%)",
-   "scalper 882.21 (-11.8%)"
+   "scalper 850.50 (-15.0%)",
+   "sentiment 869.30 (-13.1%)"
   ],
   "below_1000": [
-   "scalper 883.21",
+   "scalper 850.50",
    "sentiment 869.30"
   ],
-  "R4_dead_money": "sentiment 19 calendar days (13 trading days) in cash; short of the 30-day R4 bar; cause is the dead watcher feed.",
+  "R4_dead_money": "sentiment 24 calendar days (~16 trading days) in cash; short of the 30-day R4 bar; cause is the dead watcher feed.",
   "probation": "none newly assigned; R2/R3 windows are scheduled-review items and the roster has shrunk to 4 books"
  },
- "win_rate_scored_pct": 55.6
+ "win_rate_scored_pct": 56.5
 }
