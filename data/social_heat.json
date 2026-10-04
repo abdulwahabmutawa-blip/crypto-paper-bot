@@ -1,16 +1,17 @@
 {
-  "ts": "2026-10-04T00:35:48+00:00",
+  "ts": "2026-10-04T00:41:39+00:00",
   "sources": {
     "coingecko": [
       "PUMP",
-      "TAO",
       "QNT",
-      "ZRO",
+      "TAO",
       "STRK",
       "PENGU",
-      "GALA",
-      "LINK",
-      "AERO"
+      "ZRO",
+      "SAND",
+      "ONDO",
+      "AERO",
+      "INJ"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,22 +23,12 @@
       "TAO",
       "NEAR",
       "QNT",
-      "LINK"
+      "BNB"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "LINK",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 8.7e-05,
-      "long_short": 1.79
-    },
     {
       "symbol": "PUMP",
       "surfaces": 2,
@@ -55,8 +46,18 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.000996,
+      "funding": -0.001001,
       "long_short": 1.08
+    },
+    {
+      "symbol": "SAND",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -0.005495,
+      "long_short": 1.23
     },
     {
       "symbol": "TAO",
@@ -87,12 +88,20 @@
       "funding": 5e-05
     },
     {
-      "symbol": "GALA",
+      "symbol": "BNB",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.000177
+    },
+    {
+      "symbol": "INJ",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5.8e-05
+      "funding": 8.3e-05
     },
     {
       "symbol": "NEAR",
@@ -103,7 +112,7 @@
       "funding": 0.0001
     },
     {
-      "symbol": "PENGU",
+      "symbol": "ONDO",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -111,12 +120,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "SAND",
+      "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
-      "funding": -0.005408
+      "funding": 5e-05
     },
     {
       "symbol": "STRK",
