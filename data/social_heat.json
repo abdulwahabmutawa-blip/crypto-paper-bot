@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-04T16:50:17+00:00",
+  "ts": "2026-10-04T16:56:18+00:00",
   "sources": {
     "coingecko": [
       "SUI",
@@ -21,10 +21,10 @@
       "PUMP",
       "FET",
       "NEAR",
-      "SUI",
       "TAO",
+      "SUI",
       "ZEC",
-      "LTC"
+      "SAND"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -57,8 +57,18 @@
         "coingecko",
         "movers"
       ],
-      "funding": 4.9e-05,
+      "funding": 5e-05,
       "long_short": 1.26
+    },
+    {
+      "symbol": "SAND",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -0.000155,
+      "long_short": 1.14
     },
     {
       "symbol": "STRK",
@@ -77,8 +87,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 0.0001,
-      "long_short": 1.99
+      "funding": 0.0001
     },
     {
       "symbol": "AERO",
@@ -89,20 +98,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "LTC",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "ONDO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0
+      "funding": 4e-06
     },
     {
       "symbol": "PENGU",
@@ -118,15 +119,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.002164
-    },
-    {
-      "symbol": "SAND",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -0.000163
+      "funding": -0.002179
     },
     {
       "symbol": "SOL",
