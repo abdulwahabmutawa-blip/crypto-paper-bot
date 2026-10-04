@@ -1,18 +1,19 @@
 {
-  "ts": "2026-10-04T16:56:18+00:00",
+  "ts": "2026-10-04T17:01:49+00:00",
   "sources": {
     "coingecko": [
       "SUI",
       "FET",
       "STRK",
-      "PENGU",
-      "QNT",
       "PUMP",
-      "ONDO",
+      "PENGU",
       "SAND",
+      "QNT",
+      "NEAR",
       "SOL",
+      "ONDO",
       "AERO",
-      "NEAR"
+      "HYPE"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -24,7 +25,7 @@
       "TAO",
       "SUI",
       "ZEC",
-      "SAND"
+      "LTC"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -38,7 +39,7 @@
         "movers"
       ],
       "funding": 0.0001,
-      "long_short": 1.79
+      "long_short": 1.9
     },
     {
       "symbol": "NEAR",
@@ -48,7 +49,7 @@
         "movers"
       ],
       "funding": 0.0001,
-      "long_short": 1.45
+      "long_short": 1.32
     },
     {
       "symbol": "PUMP",
@@ -58,17 +59,7 @@
         "movers"
       ],
       "funding": 5e-05,
-      "long_short": 1.26
-    },
-    {
-      "symbol": "SAND",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": -0.000155,
-      "long_short": 1.14
+      "long_short": 1.19
     },
     {
       "symbol": "STRK",
@@ -87,7 +78,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 0.0001
+      "funding": 0.0001,
+      "long_short": 2.14
     },
     {
       "symbol": "AERO",
@@ -98,12 +90,28 @@
       "funding": 5e-05
     },
     {
+      "symbol": "HYPE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "LTC",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "ONDO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 4e-06
+      "funding": 5e-06
     },
     {
       "symbol": "PENGU",
@@ -119,7 +127,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.002179
+      "funding": -0.002193
+    },
+    {
+      "symbol": "SAND",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -0.00015
     },
     {
       "symbol": "SOL",
