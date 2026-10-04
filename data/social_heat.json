@@ -1,19 +1,19 @@
 {
-  "ts": "2026-10-04T17:35:16+00:00",
+  "ts": "2026-10-04T17:40:34+00:00",
   "sources": {
     "coingecko": [
-      "SUI",
       "PUMP",
-      "PENGU",
-      "FET",
-      "STRK",
+      "SUI",
       "NEAR",
+      "FET",
+      "VIRTUAL",
+      "PENGU",
+      "STRK",
       "LIT",
       "ENA",
-      "VIRTUAL",
-      "QNT",
+      "ZEC",
       "AERO",
-      "ZEC"
+      "HYPE"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,8 +22,8 @@
       "FET",
       "NEAR",
       "STRK",
-      "LTC",
       "SUI",
+      "LTC",
       "TAO",
       "QNT"
     ],
@@ -62,16 +62,6 @@
       "long_short": 1.19
     },
     {
-      "symbol": "QNT",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": -0.002277,
-      "long_short": 1.28
-    },
-    {
       "symbol": "STRK",
       "surfaces": 2,
       "sources": [
@@ -88,7 +78,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 0.0001
+      "funding": 0.0001,
+      "long_short": 2.14
     },
     {
       "symbol": "AERO",
@@ -100,6 +91,14 @@
     },
     {
       "symbol": "ENA",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "HYPE",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -129,6 +128,14 @@
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "QNT",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -0.002288
     },
     {
       "symbol": "TAO",
