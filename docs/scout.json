@@ -1,8 +1,24 @@
 {
-  "ts": "2026-10-04T23:09:42+00:00",
-  "scanned": 105,
+  "ts": "2026-10-04T23:15:26+00:00",
+  "scanned": 108,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "AEROUSDT",
+      "signal": "breakout",
+      "score": 0.7116,
+      "raw_score": 0.7803,
+      "weight": 0.912,
+      "price": 0.89,
+      "why": "trades 12.7x, volume 10.4x, 77% taker-buy, +2.5% in an hour, at 99% of its 24h range",
+      "chg_24h": 0.0465,
+      "vol_surge": 10.44,
+      "chg_1h": 0.0246,
+      "market_surge": 2.0,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.67% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.13% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.67% at 24h: market beta, not signal",
