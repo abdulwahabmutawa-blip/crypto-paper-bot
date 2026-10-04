@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-04T23:32:08+00:00",
+  "ts": "2026-10-04T23:37:29+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
@@ -18,12 +18,12 @@
     "movers": [
       "BEAMX",
       "FET",
-      "ADA",
       "STRK",
-      "MUBARAK",
+      "ADA",
       "ZEC",
+      "PUMP",
       "DOGE",
-      "SAND"
+      "MUBARAK"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -38,6 +38,16 @@
       ],
       "funding": 0.0001,
       "long_short": 2.07
+    },
+    {
+      "symbol": "PUMP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -2.6e-05,
+      "long_short": 1.22
     },
     {
       "symbol": "ZEC",
@@ -71,7 +81,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.9e-05
+      "funding": 1.6e-05
     },
     {
       "symbol": "BEAMX",
@@ -87,7 +97,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.5e-05
+      "funding": 7.4e-05
     },
     {
       "symbol": "DOGE",
@@ -130,22 +140,6 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PUMP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -2.3e-05
-    },
-    {
-      "symbol": "SAND",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -0.001002
-    },
-    {
       "symbol": "STRK",
       "surfaces": 1,
       "sources": [
@@ -159,7 +153,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -8.2e-05
+      "funding": -8.6e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
