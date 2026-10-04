@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-04T19:09:49+00:00",
+  "ts": "2026-10-04T19:15:29+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
@@ -19,12 +19,12 @@
     "movers": [
       "FET",
       "MUBARAK",
-      "NEAR",
       "STRK",
+      "NEAR",
       "SUI",
       "LTC",
       "ADA",
-      "TAO"
+      "DOGE"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -82,7 +82,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -3.9e-05
+      "funding": -3.5e-05
+    },
+    {
+      "symbol": "DOGE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "ENA",
@@ -106,7 +114,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 8.9e-05
+      "funding": 8.6e-05
     },
     {
       "symbol": "MUBARAK",
@@ -114,7 +122,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000183
+      "funding": 0.000194
     },
     {
       "symbol": "PENGU",
@@ -134,14 +142,6 @@
     },
     {
       "symbol": "STRK",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "TAO",
       "surfaces": 1,
       "sources": [
         "movers"
