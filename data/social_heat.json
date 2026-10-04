@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-04T05:46:58+00:00",
+  "ts": "2026-10-04T05:52:35+00:00",
   "sources": {
     "coingecko": [
       "ZRO",
@@ -8,10 +8,9 @@
       "PENGU",
       "AERO",
       "AAVE",
-      "PENDLE",
+      "QNT",
       "SUI",
-      "ONDO",
-      "SAND"
+      "ZEC"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,8 +19,8 @@
       "PUMP",
       "ZRO",
       "ONE",
-      "QNT",
       "TAO",
+      "QNT",
       "WLD",
       "ENA"
     ],
@@ -38,6 +37,16 @@
       ],
       "funding": 5e-05,
       "long_short": 1.3
+    },
+    {
+      "symbol": "QNT",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -0.000712,
+      "long_short": 1.07
     },
     {
       "symbol": "STRK",
@@ -84,28 +93,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "ONDO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "ONE",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -0.006721
-    },
-    {
-      "symbol": "PENDLE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": -0.006681
     },
     {
       "symbol": "PENGU",
@@ -114,22 +107,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "QNT",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -0.000713
-    },
-    {
-      "symbol": "SAND",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -0.002895
     },
     {
       "symbol": "SUI",
@@ -152,6 +129,14 @@
       "surfaces": 1,
       "sources": [
         "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
       ],
       "funding": 0.0001
     }
