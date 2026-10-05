@@ -1,18 +1,16 @@
 {
-  "ts": "2026-10-05T05:16:27+00:00",
+  "ts": "2026-10-05T05:22:12+00:00",
   "sources": {
     "coingecko": [
       "FET",
-      "PENGU",
       "QNT",
+      "PENGU",
+      "STRK",
       "BTC",
       "NEAR",
-      "STRK",
       "ENA",
       "TAO",
-      "PUMP",
-      "AERO",
-      "ONDO"
+      "ADA"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,15 +19,25 @@
       "MUBARAK",
       "FET",
       "STRK",
-      "ADA",
       "BEAMX",
+      "ADA",
       "NEAR",
-      "DOGE"
+      "SUI"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "ADA",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.17
+    },
     {
       "symbol": "FET",
       "surfaces": 2,
@@ -47,7 +55,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 8.1e-05,
+      "funding": 8.7e-05,
       "long_short": 1.42
     },
     {
@@ -59,22 +67,6 @@
       ],
       "funding": 5e-05,
       "long_short": 1.28
-    },
-    {
-      "symbol": "ADA",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "AERO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "BEAMX",
@@ -93,14 +85,6 @@
       "funding": 7.2e-05
     },
     {
-      "symbol": "DOGE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "ENA",
       "surfaces": 1,
       "sources": [
@@ -114,7 +98,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001242
+      "funding": -0.001249
     },
     {
       "symbol": "MUBARAK",
@@ -125,14 +109,6 @@
       "funding": 5e-05
     },
     {
-      "symbol": "ONDO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 4.4e-05
-    },
-    {
       "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
@@ -141,20 +117,20 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PUMP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 2.4e-05
-    },
-    {
       "symbol": "QNT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -0.003818
+      "funding": -0.0038
+    },
+    {
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 7.7e-05
     },
     {
       "symbol": "TAO",
