@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-05T18:38:49+00:00",
+  "ts": "2026-10-05T18:44:20+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -23,7 +23,7 @@
       "ADA",
       "SPCXB",
       "ENA",
-      "HYPE"
+      "ZRO"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -40,23 +40,13 @@
       "long_short": 1.52
     },
     {
-      "symbol": "HYPE",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.39
-    },
-    {
       "symbol": "RLC",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": -0.00068,
+      "funding": -0.000611,
       "long_short": 0.91
     },
     {
@@ -81,7 +71,15 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001764
+      "funding": -0.001748
+    },
+    {
+      "symbol": "HYPE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "MOVR",
@@ -89,7 +87,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001184
+      "funding": -0.001165
     },
     {
       "symbol": "MUBARAK",
@@ -97,7 +95,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 6.8e-05
+      "funding": 6.5e-05
     },
     {
       "symbol": "NEAR",
@@ -129,7 +127,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.001219
+      "funding": -0.001212
     },
     {
       "symbol": "SOL",
@@ -152,7 +150,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000114
+      "funding": -0.000119
+    },
+    {
+      "symbol": "ZRO",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
