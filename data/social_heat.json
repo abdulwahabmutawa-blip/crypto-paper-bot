@@ -1,19 +1,19 @@
 {
-  "ts": "2026-10-05T02:56:40+00:00",
+  "ts": "2026-10-05T03:02:20+00:00",
   "sources": {
     "coingecko": [
-      "SUI",
       "FET",
-      "SOL",
+      "PENGU",
       "BTC",
+      "SOL",
       "ONDO",
+      "SUI",
       "ADA",
       "AERO",
-      "PENGU",
-      "NIL",
-      "NEAR",
-      "HYPE",
-      "GALA"
+      "GALA",
+      "LINK",
+      "QNT",
+      "NIL"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,11 +21,11 @@
       "GTC",
       "FET",
       "BEAMX",
-      "STRK",
       "ADA",
+      "STRK",
       "SUI",
       "DOGE",
-      "MUBARAK"
+      "ZEC"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -39,7 +39,7 @@
         "movers"
       ],
       "funding": 0.0001,
-      "long_short": 2.18
+      "long_short": 2.15
     },
     {
       "symbol": "FET",
@@ -49,7 +49,7 @@
         "movers"
       ],
       "funding": 0.0001,
-      "long_short": 2.18
+      "long_short": 2.16
     },
     {
       "symbol": "SUI",
@@ -58,8 +58,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": -2.7e-05,
-      "long_short": 2.14
+      "funding": -1.9e-05,
+      "long_short": 2.12
     },
     {
       "symbol": "AERO",
@@ -83,7 +83,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.2e-05
+      "funding": 6.9e-05
     },
     {
       "symbol": "DOGE",
@@ -99,7 +99,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.8e-05
+      "funding": 9.4e-05
     },
     {
       "symbol": "GTC",
@@ -107,31 +107,15 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001065
+      "funding": -0.001009
     },
     {
-      "symbol": "HYPE",
+      "symbol": "LINK",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "MUBARAK",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "NEAR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": 1e-06
     },
     {
       "symbol": "NIL",
@@ -139,7 +123,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2e-06
+      "funding": -1.4e-05
     },
     {
       "symbol": "ONDO",
@@ -147,7 +131,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.9e-05
+      "funding": 3.7e-05
     },
     {
       "symbol": "PENGU",
@@ -158,12 +142,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "QNT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -0.00405
+    },
+    {
       "symbol": "SOL",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 9.8e-05
+      "funding": 9.6e-05
     },
     {
       "symbol": "STRK",
@@ -172,6 +164,14 @@
         "movers"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
