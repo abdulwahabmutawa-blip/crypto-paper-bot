@@ -1,15 +1,14 @@
 {
-  "ts": "2026-10-05T16:04:29+00:00",
+  "ts": "2026-10-05T16:10:07+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
       "ENA",
-      "PUMP",
-      "NEAR",
       "ZRO",
+      "PUMP",
+      "HYPE",
       "BTC",
-      "QNT",
-      "XRP"
+      "QNT"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -18,9 +17,9 @@
       "MOVR",
       "ADA",
       "ENA",
-      "NEAR",
       "PENGU",
       "HYPE",
+      "NEAR",
       "ZRO"
     ],
     "watcher": [],
@@ -38,14 +37,14 @@
       "long_short": 1.52
     },
     {
-      "symbol": "NEAR",
+      "symbol": "HYPE",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 4.1e-05,
-      "long_short": 1.39
+      "funding": 5e-05,
+      "long_short": 1.43
     },
     {
       "symbol": "PENGU",
@@ -81,7 +80,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.5e-05
+      "funding": -1.3e-05
     },
     {
       "symbol": "GTC",
@@ -89,15 +88,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.002158
-    },
-    {
-      "symbol": "HYPE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
+      "funding": -0.002131
     },
     {
       "symbol": "MOVR",
@@ -105,7 +96,15 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001503
+      "funding": -0.00152
+    },
+    {
+      "symbol": "NEAR",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 4.6e-05
     },
     {
       "symbol": "PUMP",
@@ -121,15 +120,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.001575
-    },
-    {
-      "symbol": "XRP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": -0.001553
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
