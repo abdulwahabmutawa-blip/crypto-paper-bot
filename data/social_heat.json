@@ -1,16 +1,15 @@
 {
-  "ts": "2026-10-05T15:36:52+00:00",
+  "ts": "2026-10-05T15:42:37+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
       "ENA",
       "BTC",
-      "PUMP",
-      "NEAR",
-      "LIT",
-      "QNT",
       "ARB",
-      "TAO"
+      "ZEC",
+      "LIT",
+      "BONK",
+      "NEAR"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,8 +19,8 @@
       "ADA",
       "ENA",
       "PENGU",
-      "NEAR",
       "HYPE",
+      "NEAR",
       "PEPE"
     ],
     "watcher": [],
@@ -45,7 +44,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 1.5e-05,
+      "funding": 2e-05,
       "long_short": 1.43
     },
     {
@@ -72,7 +71,14 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.5e-05
+      "funding": 1.6e-05
+    },
+    {
+      "symbol": "BONK",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ]
     },
     {
       "symbol": "BTC",
@@ -80,7 +86,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.1e-05
+      "funding": -1.4e-05
     },
     {
       "symbol": "GTC",
@@ -88,7 +94,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.002283
+      "funding": -0.002264
     },
     {
       "symbol": "HYPE",
@@ -112,7 +118,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001475
+      "funding": -0.001493
     },
     {
       "symbol": "PEPE",
@@ -122,28 +128,12 @@
       ]
     },
     {
-      "symbol": "PUMP",
+      "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "QNT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -0.00169
-    },
-    {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
