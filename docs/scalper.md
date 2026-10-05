@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-05T19:47:02+00:00 · runs 2636 · equity **$827.12** (-17.29%) · cash $0.00 · open 10/10 · round trips 979
+updated 2026-10-05T20:03:43+00:00 · runs 2637 · equity **$829.95** (-17.00%) · cash $0.00 · open 10/10 · round trips 979
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-04T21:53 | SHIBUSDT | surge | 5.94e-06 | 5.87e-06 | -1.18% |
-| 2026-10-04T23:15 | FLOKIUSDT | surge | 2.915e-05 | 2.895e-05 | -0.69% |
-| 2026-10-05T00:04 | MEMEUSDT | surge | 0.000625 | 0.000618 | -1.12% |
-| 2026-10-05T03:31 | ADAUSDT | surge | 0.2696 | 0.2652 | -1.63% |
-| 2026-10-05T14:49 | SPCXBUSDT | surge | 166.62 | 169.83 | +1.93% |
-| 2026-10-05T16:00 | WDCBUSDT | surge | 442.05 | 438.4 | -0.83% |
-| 2026-10-05T16:36 | TSLABUSDT | surge | 378.15 | 379.78 | +0.43% |
-| 2026-10-05T19:28 | MRNABUSDT | surge | 203.03 | 202.08 | -0.47% |
-| 2026-10-05T19:45 | FILUSDT | surge | 1.1317 | 1.1304 | -0.11% |
+| 2026-10-04T21:53 | SHIBUSDT | surge | 5.94e-06 | 5.89e-06 | -0.84% |
+| 2026-10-04T23:15 | FLOKIUSDT | surge | 2.915e-05 | 2.904e-05 | -0.38% |
+| 2026-10-05T00:04 | MEMEUSDT | surge | 0.000625 | 0.000621 | -0.64% |
+| 2026-10-05T03:31 | ADAUSDT | surge | 0.2696 | 0.2661 | -1.30% |
+| 2026-10-05T14:49 | SPCXBUSDT | surge | 166.62 | 170.87 | +2.55% |
+| 2026-10-05T16:00 | WDCBUSDT | surge | 442.05 | 441.33 | -0.16% |
+| 2026-10-05T16:36 | TSLABUSDT | surge | 378.15 | 378.71 | +0.15% |
+| 2026-10-05T19:28 | MRNABUSDT | surge | 203.03 | 203.03 | +0.00% |
+| 2026-10-05T19:45 | FILUSDT | surge | 1.1317 | 1.1363 | +0.41% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
