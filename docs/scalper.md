@@ -2,20 +2,22 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-05T14:34:15+00:00 · runs 2621 · equity **$837.39** (-16.26%) · cash $0.00 · open 10/10 · round trips 970
+updated 2026-10-05T14:52:01+00:00 · runs 2622 · equity **$836.52** (-16.35%) · cash $0.00 · open 10/10 · round trips 972
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
-- hit 51% (break-even 54%) · mean -0.16%/trade · realized $-150.41 · worst day $-50.94 · trades/day 31.3
+- hit 51% (break-even 54%) · mean -0.17%/trade · realized $-156.02 · worst day $-50.94 · trades/day 31.4
 
 | shape | n | hit | mean | target% | stop% | time% |
 |---|---|---|---|---|---|---|
-| surge | 843 | 51% | -0.13% | 48% | 44% | 7% |
+| surge | 845 | 51% | -0.13% | 48% | 44% | 7% |
 | bottom | 127 | 46% | -0.38% | 40% | 44% | 16% |
 
 ## Last 15 round trips
 | exit (UTC) | coin | shape | how | hours | net | P&L |
 |---|---|---|---|---|---|---|
+| 2026-10-05T14:49 | VIRTUALUSDT | surge | STOP | 9.2 | -3.25% | $-2.64 |
+| 2026-10-05T14:49 | LDOUSDT | surge | STOP | 11.0 | -3.25% | $-2.97 |
 | 2026-10-05T07:55 | GRTUSDT | surge | TARGET | 3.2 | +2.75% | $+2.15 |
 | 2026-10-05T05:29 | SCRUSDT | surge | STOP | 0.2 | -3.25% | $-2.73 |
 | 2026-10-05T04:55 | BROCCOLI714USDT | surge | STOP | 11.2 | -3.25% | $-2.64 |
@@ -29,21 +31,19 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | 2026-10-04T22:09 | GUNUSDT | surge | STOP | 10.5 | -3.25% | $-2.75 |
 | 2026-10-04T21:53 | DODOUSDT | surge | TIME | 24.0 | -2.04% | $-1.74 |
 | 2026-10-04T18:37 | SENTUSDT | surge | STOP | 2.8 | -3.25% | $-3.28 |
-| 2026-10-04T17:59 | CHIPUSDT | surge | TARGET | 1.5 | +2.75% | $+2.28 |
-| 2026-10-04T17:43 | BNBUSDT | surge | TIME | 24.0 | -0.35% | $-0.30 |
 
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
 | 2026-10-04T21:53 | SHIBUSDT | surge | 5.94e-06 | 5.88e-06 | -1.01% |
-| 2026-10-04T22:58 | MSTRBUSDT | surge | 165.16 | 163.15 | -1.22% |
-| 2026-10-04T23:15 | FLOKIUSDT | surge | 2.915e-05 | 2.871e-05 | -1.51% |
-| 2026-10-05T00:04 | MEMEUSDT | surge | 0.000625 | 0.000612 | -2.08% |
-| 2026-10-05T03:31 | ADAUSDT | surge | 0.2696 | 0.2694 | -0.07% |
-| 2026-10-05T03:31 | LDOUSDT | surge | 0.4723 | 0.46 | -2.60% |
-| 2026-10-05T04:55 | PENGUUSDT | surge | 0.009789 | 0.009675 | -1.16% |
-| 2026-10-05T05:29 | VIRTUALUSDT | surge | 0.8669 | 0.8387 | -3.25% |
-| 2026-10-05T07:55 | PENDLEUSDT | surge | 2.521 | 2.481 | -1.59% |
+| 2026-10-04T22:58 | MSTRBUSDT | surge | 165.16 | 162.82 | -1.42% |
+| 2026-10-04T23:15 | FLOKIUSDT | surge | 2.915e-05 | 2.874e-05 | -1.41% |
+| 2026-10-05T00:04 | MEMEUSDT | surge | 0.000625 | 0.000613 | -1.92% |
+| 2026-10-05T03:31 | ADAUSDT | surge | 0.2696 | 0.2693 | -0.11% |
+| 2026-10-05T04:55 | PENGUUSDT | surge | 0.009789 | 0.009641 | -1.51% |
+| 2026-10-05T07:55 | PENDLEUSDT | surge | 2.521 | 2.465 | -2.22% |
+| 2026-10-05T14:49 | SPCXBUSDT | surge | 166.62 | 166.92 | +0.18% |
+| 2026-10-05T14:49 | FILUSDT | surge | 1.1008 | 1.1054 | +0.42% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
