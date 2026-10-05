@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-05T02:58:59+00:00 · runs 2580 · equity **$851.93** (-14.81%) · cash $0.00 · open 10/10 · round trips 963
+updated 2026-10-05T03:15:59+00:00 · runs 2581 · equity **$851.72** (-14.83%) · cash $0.00 · open 10/10 · round trips 963
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-04T08:03 | ACEUSDT | surge | 0.1863 | 0.1883 | +1.07% |
-| 2026-10-04T15:15 | ATOMUSDT | surge | 1.787 | 1.754 | -1.85% |
-| 2026-10-04T17:27 | BROCCOLI714USDT | surge | 0.02759 | 0.02756 | -0.11% |
-| 2026-10-04T17:43 | RUNEUSDT | surge | 0.811 | 0.794 | -2.10% |
-| 2026-10-04T18:37 | VIRTUALUSDT | surge | 0.849 | 0.8595 | +1.24% |
+| 2026-10-04T08:03 | ACEUSDT | surge | 0.1863 | 0.1868 | +0.27% |
+| 2026-10-04T15:15 | ATOMUSDT | surge | 1.787 | 1.749 | -2.13% |
+| 2026-10-04T17:27 | BROCCOLI714USDT | surge | 0.02759 | 0.02746 | -0.47% |
+| 2026-10-04T17:43 | RUNEUSDT | surge | 0.811 | 0.793 | -2.22% |
+| 2026-10-04T18:37 | VIRTUALUSDT | surge | 0.849 | 0.8711 | +2.60% |
 | 2026-10-04T21:53 | SHIBUSDT | surge | 5.94e-06 | 5.96e-06 | +0.34% |
-| 2026-10-04T22:58 | MSTRBUSDT | surge | 165.16 | 164.98 | -0.11% |
-| 2026-10-04T23:15 | FLOKIUSDT | surge | 2.915e-05 | 2.914e-05 | -0.03% |
-| 2026-10-05T00:04 | MEMEUSDT | surge | 0.000625 | 0.000624 | -0.16% |
+| 2026-10-04T22:58 | MSTRBUSDT | surge | 165.16 | 164.56 | -0.36% |
+| 2026-10-04T23:15 | FLOKIUSDT | surge | 2.915e-05 | 2.931e-05 | +0.55% |
+| 2026-10-05T00:04 | MEMEUSDT | surge | 0.000625 | 0.00062 | -0.80% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
