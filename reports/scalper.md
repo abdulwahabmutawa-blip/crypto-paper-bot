@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-05T22:16:29+00:00 · runs 2645 · equity **$835.50** (-16.45%) · cash $0.00 · open 10/10 · round trips 982
+updated 2026-10-05T22:33:04+00:00 · runs 2646 · equity **$836.37** (-16.36%) · cash $0.00 · open 10/10 · round trips 982
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-04T23:15 | FLOKIUSDT | surge | 2.915e-05 | 2.944e-05 | +0.99% |
-| 2026-10-05T00:04 | MEMEUSDT | surge | 0.000625 | 0.000627 | +0.32% |
-| 2026-10-05T03:31 | ADAUSDT | surge | 0.2696 | 0.2728 | +1.19% |
-| 2026-10-05T16:00 | WDCBUSDT | surge | 442.05 | 440.82 | -0.28% |
-| 2026-10-05T16:36 | TSLABUSDT | surge | 378.15 | 379.13 | +0.26% |
-| 2026-10-05T19:28 | MRNABUSDT | surge | 203.03 | 203.1 | +0.03% |
-| 2026-10-05T20:18 | SPCXBUSDT | surge | 171.35 | 171.18 | -0.10% |
-| 2026-10-05T20:35 | ICPUSDT | surge | 3.547 | 3.565 | +0.51% |
-| 2026-10-05T22:14 | DIAUSDT | surge | 0.1825 | 0.18 | -1.37% |
+| 2026-10-04T23:15 | FLOKIUSDT | surge | 2.915e-05 | 2.939e-05 | +0.82% |
+| 2026-10-05T00:04 | MEMEUSDT | surge | 0.000625 | 0.000626 | +0.16% |
+| 2026-10-05T03:31 | ADAUSDT | surge | 0.2696 | 0.2726 | +1.11% |
+| 2026-10-05T16:00 | WDCBUSDT | surge | 442.05 | 440.81 | -0.28% |
+| 2026-10-05T16:36 | TSLABUSDT | surge | 378.15 | 379.27 | +0.30% |
+| 2026-10-05T19:28 | MRNABUSDT | surge | 203.03 | 203.78 | +0.37% |
+| 2026-10-05T20:18 | SPCXBUSDT | surge | 171.35 | 171.17 | -0.11% |
+| 2026-10-05T20:35 | ICPUSDT | surge | 3.547 | 3.587 | +1.13% |
+| 2026-10-05T22:14 | DIAUSDT | surge | 0.1825 | 0.1809 | -0.88% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
