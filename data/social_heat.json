@@ -1,16 +1,16 @@
 {
-  "ts": "2026-10-05T22:57:45+00:00",
+  "ts": "2026-10-05T23:03:28+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
-      "SUI",
-      "PENGU",
       "LIT",
+      "PENGU",
       "ZEC",
-      "LINK",
-      "PUMP",
       "QNT",
-      "TAO"
+      "SUI",
+      "HYPE",
+      "LINK",
+      "PUMP"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,12 +22,22 @@
       "SPCXB",
       "ZRO",
       "NEAR",
-      "GTC"
+      "HYPE"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "HYPE",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.43
+    },
     {
       "symbol": "NEAR",
       "surfaces": 2,
@@ -36,7 +46,7 @@
         "movers"
       ],
       "funding": 0.0001,
-      "long_short": 1.28
+      "long_short": 1.27
     },
     {
       "symbol": "FIL",
@@ -47,20 +57,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "GTC",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -0.00105
-    },
-    {
       "symbol": "LINK",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 6e-05
+      "funding": 6.3e-05
     },
     {
       "symbol": "LIT",
@@ -76,7 +78,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000959
+      "funding": -0.00096
     },
     {
       "symbol": "MUBARAK",
@@ -100,7 +102,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.9e-05
+      "funding": 5e-05
     },
     {
       "symbol": "QNT",
@@ -108,7 +110,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000537
+      "funding": -0.00051
     },
     {
       "symbol": "RLC",
@@ -116,7 +118,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000227
+      "funding": -0.00025
     },
     {
       "symbol": "SPCXB",
@@ -132,14 +134,6 @@
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "ZEC",
