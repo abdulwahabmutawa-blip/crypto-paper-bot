@@ -1,17 +1,15 @@
 {
-  "ts": "2026-10-05T08:32:48+00:00",
+  "ts": "2026-10-05T08:38:34+00:00",
   "sources": {
     "coingecko": [
       "FET",
       "PUMP",
       "PENGU",
-      "QNT",
-      "NEAR",
-      "SOL",
-      "ETH",
       "HYPE",
-      "ZRO",
-      "ENA"
+      "NEAR",
+      "QNT",
+      "ETH",
+      "LIT"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,25 +18,15 @@
       "FET",
       "MUBARAK",
       "ADA",
-      "ENA",
+      "STRK",
       "NEAR",
-      "PEPE",
-      "STRK"
+      "ENA",
+      "PEPE"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "ENA",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.5
-    },
     {
       "symbol": "FET",
       "surfaces": 2,
@@ -68,12 +56,20 @@
       "funding": 0.0001
     },
     {
+      "symbol": "ENA",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 7e-05
+      "funding": 6.9e-05
     },
     {
       "symbol": "GTC",
@@ -81,10 +77,18 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.003214
+      "funding": -0.003359
     },
     {
       "symbol": "HYPE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "LIT",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -120,7 +124,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.1e-05
+      "funding": 2e-05
     },
     {
       "symbol": "QNT",
@@ -128,29 +132,13 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.002857
-    },
-    {
-      "symbol": "SOL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 2.2e-05
+      "funding": -0.002831
     },
     {
       "symbol": "STRK",
       "surfaces": 1,
       "sources": [
         "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "ZRO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
       ],
       "funding": 5e-05
     }
