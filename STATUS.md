@@ -1,20 +1,21 @@
-# Fleet status — 2026-10-04 (UTC)
+# Fleet status — 2026-10-05 (UTC)
 
 | Bot | Holds | 24h change | Value |
 |---|---|---|---|
-| crypto | BTC-USD | No trade; small BTC drift | $1,210.52 (was $1,206.91 on 10-02) |
-| meanrev | JNJ | No trade; no new daily mark (weekend) | $1,115.82 (last mark 10-02, Fri) |
-| sentiment | CASH | No activity — Watcher feed stale (see below) | $869.30 (flat) |
-| scalper | 10/10 seats (full) | 21 round trips, 6 targets / 9 stops / 6 time-exits, net -$13.13 | $853.24 (was $868.34) |
-| Watcher (sentinel) | — | No new scan | last scan 2026-09-11 (day 23) |
+| crypto (BTC tide gauge v4) | BTC-USD | No trade; price drift only | $1,220.53 (bench $1,327.11) |
+| meanrev | JNJ | No trade; no new daily mark yet | $1,115.82 (last mark Fri 10-02) |
+| sentiment | CASH | No activity — Watcher feed still down | $869.30 (flat) |
+| scalper | 10/10 seats (full) | 28 round trips: 13 target / 12 stop / 3 time, net -$4.95 realized | $842.16 (was $853.24) |
+| Watcher (sentinel) | — | No new scan | last scan 2026-09-11 (24 days down) |
 
 ## Changed
-- scalper: 21 round trips closed (6 TARGET / 9 STOP / 6 TIME), net -$13.13 realized; seats filled 9 → 10 (full book).
-- crypto, sentiment: no position changes, no new trades.
-- meanrev: no position change; no new daily mark posted 10-03 or 10-04 — stock market closed (Sat/Sun), last mark is Friday 10-02. Expected, not an error.
+- scalper: 28 round trips closed (13 TARGET / 12 STOP / 3 TIME), net -$4.95 realized; 10/10 seats stayed full all cycle.
+- crypto: no trade; value drifted $1,234.86 → $1,220.53 as BTC pulled back (bench also down, to $1,327.11).
+- meanrev, sentiment: no position changes, no trades.
+- Cron: 90 cycle commits in the last 24h, no gap over the usual ~17min cadence — no missed/failed cycles found.
 
 ## Needs a look
-- Watcher (sentinel) has not produced a scan since 2026-09-11 (23 days now, up from 22 yesterday). sentiment stays idle while it's down — pre-existing, known issue, not new today.
-- scalper's TVKUSDT seat (stake $86.17) has been open since 2026-09-12 (day 21) carrying the corrupted entry timestamp (resolves to Nov 2023). Flagged before and still unresolved.
-- Git history visible to this session only goes back to 2026-10-04 01:37 UTC (~3.5h), not a true 24h window — the shallow clone's 50-commit cap is eaten by frequent `lottery:` commits (unrelated VPS real-money path, out of scope here per CLAUDE.md). Round-trip/P&L stats above come from the full trade log embedded in `data/scalper_state.json` (reliable), but cron-cadence claims for hours before 01:37 UTC can't be verified from commits.
-- This fleet is 4 active paper books (crypto, meanrev, sentiment, scalper) plus the non-capital Watcher, per CLAUDE.md/kill_criteria.md — unchanged from yesterday.
+- Watcher (sentinel) hasn't produced a scan since 2026-09-11 — 24 days down now (pre-existing, not new today). sentiment stays idle while it's down.
+- scalper's TVKUSDT seat (opened 2026-09-12) is still open 23 days later — same stuck seat flagged in prior digests, unresolved.
+- meanrev's last daily mark is Fri 2026-10-02 (data_asof); today's cycle (05:12 UTC) ran before Monday's NYSE open, so no new mark yet — expected, not an error, but worth re-checking later today.
+- Scheduled-task note: this routine's own prompt lists a 9-bot roster (trend, regime, congress, meanrev, commodity, allweather, hype, Hunter, Watcher) that no longer matches the repo. Per CLAUDE.md/`reports/kill_criteria.md`, the actual active fleet is 4 paper books (crypto, meanrev, sentiment, scalper) + the non-capital Watcher; congress, allweather, commodity, hunter, hypecrypto, scholar, analyst and stock are retired frozen archives (owner overrides 2026-09-04/09-05). Reported against the real roster, not the stale prompt list.
