@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-05T10:37:29+00:00 · runs 2607 · equity **$848.10** (-15.19%) · cash $0.00 · open 10/10 · round trips 970
+updated 2026-10-05T10:55:16+00:00 · runs 2608 · equity **$851.62** (-14.84%) · cash $0.00 · open 10/10 · round trips 970
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-04T21:53 | SHIBUSDT | surge | 5.94e-06 | 5.95e-06 | +0.17% |
-| 2026-10-04T22:58 | MSTRBUSDT | surge | 165.16 | 164.21 | -0.58% |
-| 2026-10-04T23:15 | FLOKIUSDT | surge | 2.915e-05 | 2.948e-05 | +1.13% |
-| 2026-10-05T00:04 | MEMEUSDT | surge | 0.000625 | 0.000618 | -1.12% |
-| 2026-10-05T03:31 | ADAUSDT | surge | 0.2696 | 0.2736 | +1.48% |
-| 2026-10-05T03:31 | LDOUSDT | surge | 0.4723 | 0.4693 | -0.64% |
-| 2026-10-05T04:55 | PENGUUSDT | surge | 0.009789 | 0.00972 | -0.70% |
-| 2026-10-05T05:29 | VIRTUALUSDT | surge | 0.8669 | 0.866 | -0.10% |
-| 2026-10-05T07:55 | PENDLEUSDT | surge | 2.521 | 2.479 | -1.67% |
+| 2026-10-04T21:53 | SHIBUSDT | surge | 5.94e-06 | 5.98e-06 | +0.67% |
+| 2026-10-04T22:58 | MSTRBUSDT | surge | 165.16 | 164.18 | -0.59% |
+| 2026-10-04T23:15 | FLOKIUSDT | surge | 2.915e-05 | 2.99e-05 | +2.57% |
+| 2026-10-05T00:04 | MEMEUSDT | surge | 0.000625 | 0.000622 | -0.48% |
+| 2026-10-05T03:31 | ADAUSDT | surge | 0.2696 | 0.2743 | +1.74% |
+| 2026-10-05T03:31 | LDOUSDT | surge | 0.4723 | 0.4717 | -0.13% |
+| 2026-10-05T04:55 | PENGUUSDT | surge | 0.009789 | 0.009799 | +0.10% |
+| 2026-10-05T05:29 | VIRTUALUSDT | surge | 0.8669 | 0.869 | +0.24% |
+| 2026-10-05T07:55 | PENDLEUSDT | surge | 2.521 | 2.469 | -2.06% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
