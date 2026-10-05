@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-05T14:04:48+00:00",
+  "ts": "2026-10-05T14:10:29+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
@@ -7,10 +7,11 @@
       "BTC",
       "PUMP",
       "HYPE",
-      "QNT",
       "SOL",
-      "ZEC",
-      "TAO"
+      "AAVE",
+      "QNT",
+      "TAO",
+      "ZEC"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,13 +22,23 @@
       "ENA",
       "FET",
       "PEPE",
-      "NEAR",
-      "AAVE"
+      "AAVE",
+      "NEAR"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "AAVE",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.55
+    },
     {
       "symbol": "NEAR",
       "surfaces": 2,
@@ -35,16 +46,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 3.3e-05,
+      "funding": 2.9e-05,
       "long_short": 1.44
-    },
-    {
-      "symbol": "AAVE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "ADA",
@@ -60,7 +63,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.7e-05
+      "funding": 1.9e-05
     },
     {
       "symbol": "ENA",
@@ -84,7 +87,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.002297
+      "funding": -0.002256
     },
     {
       "symbol": "HYPE",
@@ -100,7 +103,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001168
+      "funding": -0.001153
     },
     {
       "symbol": "PENGU",
@@ -131,7 +134,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.001945
+      "funding": -0.001944
     },
     {
       "symbol": "SOL",
