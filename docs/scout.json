@@ -1,39 +1,8 @@
 {
-  "ts": "2026-10-05T05:10:50+00:00",
-  "scanned": 109,
+  "ts": "2026-10-05T05:16:34+00:00",
+  "scanned": 110,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "NEARUSDT",
-      "signal": "breakout",
-      "score": 0.6911,
-      "raw_score": 0.7529,
-      "weight": 0.918,
-      "price": 5.002,
-      "why": "trades 7.4x, volume 10.3x, 65% taker-buy, +3.0% in an hour, at 84% of its 24h range",
-      "chg_24h": 0.0416,
-      "vol_surge": 10.31,
-      "chg_1h": 0.0305,
-      "market_surge": 7.18,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean +0.61% at 24h: market beta, not signal"
-    },
-    {
-      "symbol": "NEARUSDT",
-      "signal": "ignition",
-      "score": 0.6568,
-      "raw_score": 0.7323,
-      "weight": 0.897,
-      "price": 5.002,
-      "why": "trades 7.4x and volume 10.3x the prior 4h, 65% taker-buy, $3,220,394 burst \u2014 while price has only moved +3.0%",
-      "chg_24h": 0.0416,
-      "vol_surge": 10.31,
-      "chg_1h": 0.0305,
-      "market_surge": 7.18,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean +0.20% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.20% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.61% at 24h: market beta, not signal",
