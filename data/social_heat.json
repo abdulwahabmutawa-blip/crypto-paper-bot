@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-05T19:00:05+00:00",
+  "ts": "2026-10-05T19:05:49+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -20,11 +20,11 @@
       "RLC",
       "GTC",
       "MOVR",
-      "ADA",
       "MUBARAK",
       "SPCXB",
+      "ADA",
       "ENA",
-      "ZRO"
+      "HYPE"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -41,24 +41,24 @@
       "long_short": 1.52
     },
     {
-      "symbol": "RLC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": -0.000443,
-      "long_short": 0.91
-    },
-    {
-      "symbol": "ZRO",
+      "symbol": "HYPE",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
       "funding": 5e-05,
-      "long_short": 1.39
+      "long_short": 1.42
+    },
+    {
+      "symbol": "RLC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -0.000392,
+      "long_short": 0.8
     },
     {
       "symbol": "ADA",
@@ -74,7 +74,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-06
+      "funding": 4e-06
     },
     {
       "symbol": "GTC",
@@ -82,15 +82,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.00169
-    },
-    {
-      "symbol": "HYPE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": -0.001678
     },
     {
       "symbol": "MOVR",
@@ -98,7 +90,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001087
+      "funding": -0.001061
     },
     {
       "symbol": "MUBARAK",
@@ -106,7 +98,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 7e-05
+      "funding": 7.4e-05
     },
     {
       "symbol": "NEAR",
@@ -130,7 +122,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.001209
+      "funding": -0.001211
     },
     {
       "symbol": "SOL",
@@ -153,7 +145,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000125
+      "funding": -0.000121
     },
     {
       "symbol": "ZEC",
@@ -162,6 +154,14 @@
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "ZRO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
