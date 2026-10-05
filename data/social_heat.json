@@ -1,17 +1,17 @@
 {
-  "ts": "2026-10-05T02:17:42+00:00",
+  "ts": "2026-10-05T02:23:26+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
       "SUI",
-      "NEAR",
       "SOL",
-      "NIL",
-      "PUMP",
-      "ENA",
-      "BTC",
+      "LINK",
       "TAO",
-      "LINK"
+      "NEAR",
+      "FET",
+      "NIL",
+      "BTC",
+      "STRK"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,8 +21,8 @@
       "STRK",
       "ADA",
       "SUI",
-      "MUBARAK",
       "DOGE",
+      "BNB",
       "ZEC"
     ],
     "watcher": [],
@@ -30,13 +30,33 @@
   },
   "heat": [
     {
+      "symbol": "FET",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.18
+    },
+    {
+      "symbol": "STRK",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.28
+    },
+    {
       "symbol": "SUI",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": -6.3e-05,
+      "funding": -6.1e-05,
       "long_short": 2.14
     },
     {
@@ -56,6 +76,14 @@
       "funding": 5e-05
     },
     {
+      "symbol": "BNB",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 9.6e-05
+    },
+    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
@@ -72,36 +100,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "FET",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "LINK",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 2.3e-05
-    },
-    {
-      "symbol": "MUBARAK",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
+      "funding": 2e-05
     },
     {
       "symbol": "NEAR",
@@ -109,7 +113,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.2e-05
+      "funding": 8.1e-05
     },
     {
       "symbol": "NIL",
@@ -117,7 +121,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.6e-05
+      "funding": 3.3e-05
     },
     {
       "symbol": "PENGU",
@@ -128,28 +132,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PUMP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 4.4e-05
-    },
-    {
       "symbol": "SOL",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "STRK",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "TAO",
