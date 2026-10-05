@@ -1,19 +1,17 @@
 {
-  "ts": "2026-10-05T00:05:48+00:00",
+  "ts": "2026-10-05T00:11:38+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
-      "NEAR",
       "PUMP",
-      "ARB",
+      "NEAR",
       "AERO",
-      "BTC",
+      "ENA",
       "QNT",
       "ZEC",
-      "FET",
-      "ENA",
-      "XRP",
-      "TAO"
+      "SKY",
+      "BTC",
+      "FET"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,9 +20,9 @@
       "FET",
       "STRK",
       "ADA",
-      "PUMP",
-      "ZEC",
       "DOGE",
+      "SAND",
+      "ZEC",
       "MUBARAK"
     ],
     "watcher": [],
@@ -40,16 +38,6 @@
       ],
       "funding": 0.0001,
       "long_short": 2.14
-    },
-    {
-      "symbol": "PUMP",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": -1.3e-05,
-      "long_short": 1.22
     },
     {
       "symbol": "ZEC",
@@ -78,14 +66,6 @@
       "funding": 5e-05
     },
     {
-      "symbol": "ARB",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 1.7e-05
-    },
-    {
       "symbol": "BEAMX",
       "surfaces": 1,
       "sources": [
@@ -99,7 +79,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.4e-05
+      "funding": 7.7e-05
     },
     {
       "symbol": "DOGE",
@@ -142,12 +122,36 @@
       "funding": 5e-05
     },
     {
+      "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -3e-06
+    },
+    {
       "symbol": "QNT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -0.003398
+      "funding": -0.003414
+    },
+    {
+      "symbol": "SAND",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -0.000935
+    },
+    {
+      "symbol": "SKY",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "STRK",
@@ -156,22 +160,6 @@
         "movers"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "XRP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
