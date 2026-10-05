@@ -1,14 +1,14 @@
 {
-  "ts": "2026-10-05T20:06:49+00:00",
+  "ts": "2026-10-05T20:12:18+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
       "QNT",
       "NEAR",
-      "RLC",
       "FET",
-      "PUMP",
-      "TAO"
+      "RLC",
+      "TAO",
+      "HYPE"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -27,6 +27,16 @@
   },
   "heat": [
     {
+      "symbol": "HYPE",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.41
+    },
+    {
       "symbol": "NEAR",
       "surfaces": 2,
       "sources": [
@@ -43,7 +53,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.000345,
+      "funding": -0.000289,
       "long_short": 0.74
     },
     {
@@ -68,15 +78,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001509
-    },
-    {
-      "symbol": "HYPE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
+      "funding": -0.001497
     },
     {
       "symbol": "MOVR",
@@ -84,7 +86,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.00093
+      "funding": -0.000923
     },
     {
       "symbol": "MUBARAK",
@@ -103,20 +105,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PUMP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 2.8e-05
-    },
-    {
       "symbol": "QNT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -0.001204
+      "funding": -0.001197
     },
     {
       "symbol": "SPCXB",
