@@ -2,20 +2,21 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-05T21:59:50+00:00 · runs 2644 · equity **$835.55** (-16.44%) · cash $0.00 · open 10/10 · round trips 981
+updated 2026-10-05T22:16:29+00:00 · runs 2645 · equity **$835.50** (-16.45%) · cash $0.00 · open 10/10 · round trips 982
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
-- hit 50% (break-even 54%) · mean -0.18%/trade · realized $-165.30 · worst day $-50.94 · trades/day 31.6
+- hit 50% (break-even 54%) · mean -0.18%/trade · realized $-165.93 · worst day $-50.94 · trades/day 31.7
 
 | shape | n | hit | mean | target% | stop% | time% |
 |---|---|---|---|---|---|---|
-| surge | 854 | 51% | -0.15% | 48% | 45% | 7% |
+| surge | 855 | 51% | -0.15% | 48% | 45% | 7% |
 | bottom | 127 | 46% | -0.38% | 40% | 44% | 16% |
 
 ## Last 15 round trips
 | exit (UTC) | coin | shape | how | hours | net | P&L |
 |---|---|---|---|---|---|---|
+| 2026-10-05T22:14 | SHIBUSDT | surge | TIME | 24.0 | -0.76% | $-0.63 |
 | 2026-10-05T20:35 | FILUSDT | surge | TARGET | 0.5 | +2.75% | $+2.17 |
 | 2026-10-05T20:18 | SPCXBUSDT | surge | TARGET | 5.2 | +2.75% | $+2.30 |
 | 2026-10-05T19:45 | PARTIUSDT | surge | STOP | 2.2 | -3.25% | $-2.65 |
@@ -30,20 +31,19 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | 2026-10-05T07:55 | GRTUSDT | surge | TARGET | 3.2 | +2.75% | $+2.15 |
 | 2026-10-05T05:29 | SCRUSDT | surge | STOP | 0.2 | -3.25% | $-2.73 |
 | 2026-10-05T04:55 | BROCCOLI714USDT | surge | STOP | 11.2 | -3.25% | $-2.64 |
-| 2026-10-05T04:55 | ACEUSDT | surge | TARGET | 20.5 | +2.75% | $+2.39 |
 
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-04T21:53 | SHIBUSDT | surge | 5.94e-06 | 5.91e-06 | -0.51% |
-| 2026-10-04T23:15 | FLOKIUSDT | surge | 2.915e-05 | 2.934e-05 | +0.65% |
-| 2026-10-05T00:04 | MEMEUSDT | surge | 0.000625 | 0.000625 | +0.00% |
-| 2026-10-05T03:31 | ADAUSDT | surge | 0.2696 | 0.2697 | +0.04% |
-| 2026-10-05T16:00 | WDCBUSDT | surge | 442.05 | 440.37 | -0.38% |
-| 2026-10-05T16:36 | TSLABUSDT | surge | 378.15 | 378.92 | +0.20% |
-| 2026-10-05T19:28 | MRNABUSDT | surge | 203.03 | 203.22 | +0.09% |
-| 2026-10-05T20:18 | SPCXBUSDT | surge | 171.35 | 171.08 | -0.16% |
-| 2026-10-05T20:35 | ICPUSDT | surge | 3.547 | 3.584 | +1.04% |
+| 2026-10-04T23:15 | FLOKIUSDT | surge | 2.915e-05 | 2.944e-05 | +0.99% |
+| 2026-10-05T00:04 | MEMEUSDT | surge | 0.000625 | 0.000627 | +0.32% |
+| 2026-10-05T03:31 | ADAUSDT | surge | 0.2696 | 0.2728 | +1.19% |
+| 2026-10-05T16:00 | WDCBUSDT | surge | 442.05 | 440.82 | -0.28% |
+| 2026-10-05T16:36 | TSLABUSDT | surge | 378.15 | 379.13 | +0.26% |
+| 2026-10-05T19:28 | MRNABUSDT | surge | 203.03 | 203.1 | +0.03% |
+| 2026-10-05T20:18 | SPCXBUSDT | surge | 171.35 | 171.18 | -0.10% |
+| 2026-10-05T20:35 | ICPUSDT | surge | 3.547 | 3.565 | +0.51% |
+| 2026-10-05T22:14 | DIAUSDT | surge | 0.1825 | 0.18 | -1.37% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
