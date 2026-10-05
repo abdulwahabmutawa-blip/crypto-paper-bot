@@ -1,8 +1,39 @@
 {
-  "ts": "2026-10-05T07:43:12+00:00",
+  "ts": "2026-10-05T07:48:33+00:00",
   "scanned": 112,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "PENDLEUSDT",
+      "signal": "ignition",
+      "score": 0.7073,
+      "raw_score": 0.792,
+      "weight": 0.893,
+      "price": 2.508,
+      "why": "trades 8.8x and volume 7.8x the prior 4h, 76% taker-buy, $92,943 burst \u2014 while price has only moved +1.7%",
+      "chg_24h": 0.0129,
+      "vol_surge": 7.79,
+      "chg_1h": 0.0174,
+      "market_surge": 7.79,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.28% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "TSTUSDT",
+      "signal": "ignition",
+      "score": 0.6528,
+      "raw_score": 0.731,
+      "weight": 0.893,
+      "price": 0.01943,
+      "why": "trades 6.1x and volume 10.7x the prior 4h, 66% taker-buy, $86,666 burst \u2014 while price has only moved +1.1%",
+      "chg_24h": 0.1212,
+      "vol_surge": 10.71,
+      "chg_1h": 0.0109,
+      "market_surge": 2.03,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.28% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.28% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.67% at 24h: market beta, not signal",
