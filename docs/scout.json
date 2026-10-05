@@ -1,24 +1,8 @@
 {
-  "ts": "2026-10-05T16:26:47+00:00",
-  "scanned": 129,
+  "ts": "2026-10-05T16:31:58+00:00",
+  "scanned": 130,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "CAKEUSDT",
-      "signal": "ignition",
-      "score": 0.7833,
-      "raw_score": 0.8861,
-      "weight": 0.884,
-      "price": 2.444,
-      "why": "trades 12.6x and volume 10.5x the prior 4h, 67% taker-buy, $147,377 burst \u2014 while price has only moved -1.3%",
-      "chg_24h": -0.0173,
-      "vol_surge": 10.47,
-      "chg_1h": -0.0129,
-      "market_surge": 10.97,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean +0.49% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.49% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.54% at 24h: market beta, not signal",
@@ -27,25 +11,25 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 13,
+    "count": 12,
     "baseline": 13.0,
     "wave": false
   },
   "scorecard": {
     "ignition": {
-      "span_h_1h": 333.4,
-      "n_eff_1h": 333.41,
-      "n_1h": 890,
-      "hit_rate_1h": 0.346,
+      "span_h_1h": 334.3,
+      "n_eff_1h": 334.27,
+      "n_1h": 891,
+      "hit_rate_1h": 0.347,
       "mean_ret_1h": -0.00083,
       "median_ret_1h": -0.00085,
       "both_halves_1h": false,
       "days_1h": 15,
-      "mean_x_1h": 1e-05,
+      "mean_x_1h": 2e-05,
       "days_x_1h": 15,
-      "avg_win_1h": 0.01119,
+      "avg_win_1h": 0.01117,
       "avg_loss_1h": -0.01082,
-      "payoff_1h": 1.034,
+      "payoff_1h": 1.033,
       "span_h_4h": 330.9,
       "n_eff_4h": 82.72,
       "n_4h": 875,
