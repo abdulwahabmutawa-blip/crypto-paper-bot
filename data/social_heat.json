@@ -1,17 +1,18 @@
 {
-  "ts": "2026-10-06T06:06:48+00:00",
+  "ts": "2026-10-06T06:12:38+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
       "SOL",
-      "PENGU",
-      "QNT",
       "ZRO",
-      "ENA",
+      "RLC",
+      "BTC",
       "FET",
-      "RAY",
-      "PUMP",
-      "AVAX"
+      "PENGU",
+      "AVAX",
+      "ENA",
+      "ICP",
+      "AAVE"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,8 +22,8 @@
       "ZRO",
       "SPCXB",
       "NEAR",
-      "MOVR",
       "AVAX",
+      "MOVR",
       "HYPE"
     ],
     "watcher": [],
@@ -50,6 +51,16 @@
       "long_short": 1.25
     },
     {
+      "symbol": "RLC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -0.000638,
+      "long_short": 0.65
+    },
+    {
       "symbol": "ZRO",
       "surfaces": 2,
       "sources": [
@@ -58,6 +69,22 @@
       ],
       "funding": 5e-05,
       "long_short": 1.4
+    },
+    {
+      "symbol": "AAVE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 3e-05
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 1.5e-05
     },
     {
       "symbol": "ENA",
@@ -92,12 +119,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "ICP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "MOVR",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -0.000598
+      "funding": -0.000572
     },
     {
       "symbol": "PENGU",
@@ -105,39 +140,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.3e-05
-    },
-    {
-      "symbol": "PUMP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 3e-06
-    },
-    {
-      "symbol": "QNT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -0.000445
-    },
-    {
-      "symbol": "RAY",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0
-    },
-    {
-      "symbol": "RLC",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -0.000623
+      "funding": -8e-06
     },
     {
       "symbol": "SOL",
@@ -145,7 +148,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -3e-05
+      "funding": -3.2e-05
     },
     {
       "symbol": "SPCXB",
