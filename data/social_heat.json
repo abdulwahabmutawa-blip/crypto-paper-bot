@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-06T00:20:36+00:00",
+  "ts": "2026-10-06T00:25:48+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
@@ -20,25 +20,15 @@
       "MOVR",
       "MUBARAK",
       "FIL",
-      "NEAR",
       "ZRO",
+      "NEAR",
       "SPCXB",
-      "ADA"
+      "AAVE"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "ADA",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 2.46
-    },
     {
       "symbol": "NEAR",
       "surfaces": 2,
@@ -58,6 +48,22 @@
       ],
       "funding": 5e-05,
       "long_short": 1.42
+    },
+    {
+      "symbol": "AAVE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -1.5e-05
+    },
+    {
+      "symbol": "ADA",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "FIL",
@@ -89,7 +95,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.00101
+      "funding": -0.001029
     },
     {
       "symbol": "MUBARAK",
@@ -121,7 +127,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000305
+      "funding": -0.000291
     },
     {
       "symbol": "RLC",
@@ -129,7 +135,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000419
+      "funding": -0.00037
     },
     {
       "symbol": "SPCXB",
