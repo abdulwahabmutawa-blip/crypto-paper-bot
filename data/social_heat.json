@@ -1,17 +1,18 @@
 {
-  "ts": "2026-10-06T14:08:30+00:00",
+  "ts": "2026-10-06T14:14:07+00:00",
   "sources": {
     "coingecko": [
       "RLC",
       "NMR",
-      "PENGU",
       "ENA",
-      "NEAR",
       "ZRO",
-      "ETHFI",
+      "PENGU",
+      "NEAR",
       "LIT",
-      "SOL",
-      "ZEC"
+      "PUMP",
+      "BTC",
+      "ARB",
+      "UNI"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,8 +23,8 @@
       "API3",
       "ZRO",
       "SPCXB",
-      "FIL",
-      "AVAX"
+      "AVAX",
+      "FIL"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -65,7 +66,15 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.003561
+      "funding": -0.003484
+    },
+    {
+      "symbol": "ARB",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -4.5e-05
     },
     {
       "symbol": "AVAX",
@@ -76,15 +85,15 @@
       "funding": 0.0001
     },
     {
-      "symbol": "ENA",
+      "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 2.1e-05
     },
     {
-      "symbol": "ETHFI",
+      "symbol": "ENA",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -121,7 +130,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000625
+      "funding": -0.000612
     },
     {
       "symbol": "PENGU",
@@ -132,12 +141,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "SOL",
+      "symbol": "PUMP",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 6.7e-05
+      "funding": 5e-05
     },
     {
       "symbol": "SPCXB",
@@ -147,12 +156,12 @@
       ]
     },
     {
-      "symbol": "ZEC",
+      "symbol": "UNI",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 8.6e-05
+      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
