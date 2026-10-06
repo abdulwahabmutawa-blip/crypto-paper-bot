@@ -1,39 +1,8 @@
 {
-  "ts": "2026-10-06T01:10:44+00:00",
-  "scanned": 134,
+  "ts": "2026-10-06T01:16:34+00:00",
+  "scanned": 135,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "MORPHOUSDT",
-      "signal": "breakout",
-      "score": 0.7099,
-      "raw_score": 0.7827,
-      "weight": 0.907,
-      "price": 2.808,
-      "why": "trades 21.5x, volume 79.1x, 65% taker-buy, +3.3% in an hour, at 96% of its 24h range",
-      "chg_24h": 0.0159,
-      "vol_surge": 79.1,
-      "chg_1h": 0.0327,
-      "market_surge": 27.26,
-      "actionable": false,
-      "status": "benched \u2014 hit 36%, mean +0.67% over last 365 at 24h: not beating 4x the round trip"
-    },
-    {
-      "symbol": "AVAXUSDT",
-      "signal": "ignition",
-      "score": 0.5544,
-      "raw_score": 0.6258,
-      "weight": 0.886,
-      "price": 11.217,
-      "why": "trades 5.4x and volume 5.1x the prior 4h, 78% taker-buy, $810,548 burst \u2014 while price has only moved +0.6%",
-      "chg_24h": 0.0213,
-      "vol_surge": 5.07,
-      "chg_1h": 0.0056,
-      "market_surge": 5.16,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean +0.18% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.18% at 24h: market beta, not signal",
     "breakout": "benched \u2014 hit 36%, mean +0.67% over last 365 at 24h: not beating 4x the round trip",
@@ -42,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 13,
+    "count": 12,
     "baseline": 13.0,
     "wave": false
   },
