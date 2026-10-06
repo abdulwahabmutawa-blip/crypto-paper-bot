@@ -1,16 +1,16 @@
 {
-  "ts": "2026-10-06T01:16:27+00:00",
+  "ts": "2026-10-06T01:21:48+00:00",
   "sources": {
     "coingecko": [
       "LIT",
       "QNT",
-      "PENGU",
-      "NEAR",
-      "ONDO",
       "SUI",
-      "SOL",
       "ZEC",
-      "BTC"
+      "ONDO",
+      "NEAR",
+      "BTC",
+      "AVAX",
+      "ICP"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -45,8 +45,16 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.000269,
+      "funding": -0.000266,
       "long_short": 1.17
+    },
+    {
+      "symbol": "AVAX",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "BTC",
@@ -54,13 +62,21 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.4e-05
+      "funding": -1.7e-05
     },
     {
       "symbol": "FIL",
       "surfaces": 1,
       "sources": [
         "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ICP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
       ],
       "funding": 0.0001
     },
@@ -78,7 +94,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001058
+      "funding": -0.001076
     },
     {
       "symbol": "MUBARAK",
@@ -97,28 +113,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PENGU",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "RLC",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -0.000246
-    },
-    {
-      "symbol": "SOL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 2e-05
+      "funding": -0.000239
     },
     {
       "symbol": "SPCXB",
