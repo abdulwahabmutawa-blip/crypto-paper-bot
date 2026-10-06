@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-06T13:34:52+00:00",
+  "ts": "2026-10-06T13:40:29+00:00",
   "sources": {
     "coingecko": [
       "RLC",
@@ -24,22 +24,12 @@
       "SPCXB",
       "FIL",
       "AVAX",
-      "NEAR"
+      "ZEC"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "NEAR",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.38
-    },
     {
       "symbol": "RLC",
       "surfaces": 2,
@@ -47,8 +37,18 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.00019,
+      "funding": -0.000217,
       "long_short": 0.58
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 0.59
     },
     {
       "symbol": "ZRO",
@@ -66,7 +66,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.003998
+      "funding": -0.00393
     },
     {
       "symbol": "AVAX",
@@ -90,7 +90,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4e-05
+      "funding": 3.7e-05
     },
     {
       "symbol": "ETHFI",
@@ -117,6 +117,14 @@
       "funding": 5e-05
     },
     {
+      "symbol": "NEAR",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "NMR",
       "surfaces": 1,
       "sources": [
@@ -138,7 +146,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000641
+      "funding": -0.000642
     },
     {
       "symbol": "PENGU",
@@ -154,14 +162,6 @@
       "sources": [
         "movers"
       ]
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
