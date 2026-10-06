@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-06T12:00:49+00:00",
+  "ts": "2026-10-06T12:06:30+00:00",
   "sources": {
     "coingecko": [
       "RLC",
@@ -20,12 +20,12 @@
     "movers": [
       "RLC",
       "ORCA",
+      "API3",
       "ZRO",
       "SPCXB",
       "FIL",
-      "NEAR",
       "AVAX",
-      "ZEC"
+      "NEAR"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -48,18 +48,16 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.000214,
+      "funding": -0.000195,
       "long_short": 0.53
     },
     {
-      "symbol": "ZEC",
-      "surfaces": 2,
+      "symbol": "API3",
+      "surfaces": 1,
       "sources": [
-        "coingecko",
         "movers"
       ],
-      "funding": 0.0001,
-      "long_short": 0.6
+      "funding": -0.004391
     },
     {
       "symbol": "AVAX",
@@ -75,7 +73,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2e-05
+      "funding": -1.8e-05
     },
     {
       "symbol": "ETH",
@@ -83,7 +81,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9e-06
+      "funding": 1.1e-05
     },
     {
       "symbol": "FIL",
@@ -107,7 +105,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.009981
+      "funding": -0.012458
     },
     {
       "symbol": "ONDO",
@@ -123,7 +121,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000835
+      "funding": -0.000826
     },
     {
       "symbol": "PENGU",
@@ -139,7 +137,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000851
+      "funding": -0.00086
     },
     {
       "symbol": "SPCXB",
@@ -163,6 +161,14 @@
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "ZRO",
