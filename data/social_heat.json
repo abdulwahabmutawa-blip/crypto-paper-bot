@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-06T08:42:38+00:00",
+  "ts": "2026-10-06T08:47:50+00:00",
   "sources": {
     "coingecko": [
       "RLC",
@@ -23,8 +23,8 @@
       "SPCXB",
       "NEAR",
       "AVAX",
-      "AAVE",
-      "QNT"
+      "ZEC",
+      "AAVE"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -51,24 +51,24 @@
       "long_short": 1.19
     },
     {
-      "symbol": "QNT",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": -0.000588,
-      "long_short": 1.24
-    },
-    {
       "symbol": "RLC",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": -0.000442,
+      "funding": -0.000444,
       "long_short": 0.61
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 0.68
     },
     {
       "symbol": "ZRO",
@@ -86,7 +86,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 7.4e-05
+      "funding": 7.6e-05
     },
     {
       "symbol": "FIL",
@@ -110,7 +110,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1e-05
+      "funding": 1.2e-05
+    },
+    {
+      "symbol": "QNT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -0.000599
     },
     {
       "symbol": "SOL",
@@ -118,7 +126,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -3.4e-05
+      "funding": -3.3e-05
     },
     {
       "symbol": "SPCXB",
@@ -133,7 +141,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -4.3e-05
+      "funding": -4.4e-05
     },
     {
       "symbol": "TAO",
@@ -142,14 +150,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
