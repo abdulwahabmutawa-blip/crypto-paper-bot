@@ -1,16 +1,15 @@
 {
-  "ts": "2026-10-06T05:27:11+00:00",
+  "ts": "2026-10-06T05:32:50+00:00",
   "sources": {
     "coingecko": [
-      "QNT",
       "NEAR",
       "PENGU",
-      "SOL",
+      "QNT",
+      "AVAX",
       "PUMP",
-      "ONDO",
+      "SOL",
       "LIT",
-      "ZEC",
-      "AVAX"
+      "RLC"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -49,6 +48,16 @@
       "long_short": 1.18
     },
     {
+      "symbol": "RLC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -0.000426,
+      "long_short": 0.63
+    },
+    {
       "symbol": "FIL",
       "surfaces": 1,
       "sources": [
@@ -62,7 +71,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001412
+      "funding": -0.001402
     },
     {
       "symbol": "LIT",
@@ -78,15 +87,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000755
-    },
-    {
-      "symbol": "ONDO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": -0.000737
     },
     {
       "symbol": "PENGU",
@@ -94,7 +95,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.5e-05
+      "funding": -1.9e-05
     },
     {
       "symbol": "PUMP",
@@ -102,7 +103,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.3e-05
+      "funding": 1.1e-05
     },
     {
       "symbol": "QNT",
@@ -110,15 +111,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000384
-    },
-    {
-      "symbol": "RLC",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -0.000401
+      "funding": -0.00039
     },
     {
       "symbol": "SOL",
@@ -126,7 +119,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.5e-05
+      "funding": -1.6e-05
     },
     {
       "symbol": "SPCXB",
@@ -134,14 +127,6 @@
       "sources": [
         "movers"
       ]
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "ZRO",
