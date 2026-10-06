@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-06T05:48:58+00:00 · runs 2670 · equity **$822.21** (-17.78%) · cash $0.00 · open 10/10 · round trips 989
+updated 2026-10-06T06:40:16+00:00 · runs 2671 · equity **$827.54** (-17.25%) · cash $0.00 · open 10/10 · round trips 989
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-05T16:00 | WDCBUSDT | surge | 442.05 | 440.29 | -0.40% |
-| 2026-10-05T16:36 | TSLABUSDT | surge | 378.15 | 380.51 | +0.62% |
-| 2026-10-05T19:28 | MRNABUSDT | surge | 203.03 | 206.28 | +1.60% |
-| 2026-10-05T20:18 | SPCXBUSDT | surge | 171.35 | 172.14 | +0.46% |
-| 2026-10-05T23:04 | FILUSDT | surge | 1.179 | 1.1941 | +1.28% |
-| 2026-10-06T03:44 | SENTUSDT | surge | 0.02544 | 0.02517 | -1.06% |
-| 2026-10-06T03:44 | PARTIUSDT | surge | 0.0323 | 0.0322 | -0.31% |
-| 2026-10-06T03:44 | CHIPUSDT | surge | 0.05384 | 0.0538 | -0.07% |
-| 2026-10-06T05:12 | VTHOUSDT | surge | 0.000739 | 0.000736 | -0.41% |
+| 2026-10-05T16:00 | WDCBUSDT | surge | 442.05 | 441.77 | -0.06% |
+| 2026-10-05T16:36 | TSLABUSDT | surge | 378.15 | 380.88 | +0.72% |
+| 2026-10-05T19:28 | MRNABUSDT | surge | 203.03 | 207.58 | +2.24% |
+| 2026-10-05T20:18 | SPCXBUSDT | surge | 171.35 | 173.57 | +1.30% |
+| 2026-10-05T23:04 | FILUSDT | surge | 1.179 | 1.1951 | +1.37% |
+| 2026-10-06T03:44 | SENTUSDT | surge | 0.02544 | 0.0253 | -0.55% |
+| 2026-10-06T03:44 | PARTIUSDT | surge | 0.0323 | 0.0324 | +0.31% |
+| 2026-10-06T03:44 | CHIPUSDT | surge | 0.05384 | 0.05535 | +2.80% |
+| 2026-10-06T05:12 | VTHOUSDT | surge | 0.000739 | 0.000739 | +0.00% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
