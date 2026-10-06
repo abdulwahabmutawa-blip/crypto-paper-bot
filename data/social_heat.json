@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-06T07:41:01+00:00",
+  "ts": "2026-10-06T07:46:39+00:00",
   "sources": {
     "coingecko": [
       "RLC",
@@ -23,13 +23,23 @@
       "SPCXB",
       "AVAX",
       "NEAR",
-      "HYPE",
+      "AAVE",
       "ZEC"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "AAVE",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5.8e-05,
+      "long_short": 1.64
+    },
     {
       "symbol": "AVAX",
       "surfaces": 2,
@@ -57,7 +67,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.000635,
+      "funding": -0.000613,
       "long_short": 0.63
     },
     {
@@ -77,16 +87,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 5e-05,
-      "long_short": 1.41
-    },
-    {
-      "symbol": "AAVE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5.5e-05
+      "funding": 5e-05
     },
     {
       "symbol": "BTC",
@@ -94,7 +95,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -7e-06
+      "funding": -9e-06
     },
     {
       "symbol": "FET",
@@ -113,14 +114,6 @@
       "funding": 0.0001
     },
     {
-      "symbol": "HYPE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
@@ -134,7 +127,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.1e-05
+      "funding": 2e-05
     },
     {
       "symbol": "QNT",
@@ -142,7 +135,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.00056
+      "funding": -0.000558
     },
     {
       "symbol": "SPCXB",
