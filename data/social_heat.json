@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-06T13:57:49+00:00",
+  "ts": "2026-10-06T14:02:59+00:00",
   "sources": {
     "coingecko": [
       "RLC",
@@ -17,18 +17,28 @@
     "stocktwits": [],
     "movers": [
       "RLC",
+      "NMR",
       "ORCA",
       "API3",
       "ZRO",
       "SPCXB",
       "AVAX",
-      "FIL",
-      "ZEC"
+      "FIL"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "NMR",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -0.02,
+      "long_short": 0.82
+    },
     {
       "symbol": "RLC",
       "surfaces": 2,
@@ -36,18 +46,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.000286,
-      "long_short": 0.58
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 9.4e-05,
-      "long_short": 0.59
+      "funding": -0.000304,
+      "long_short": 0.63
     },
     {
       "symbol": "ZRO",
@@ -57,7 +57,7 @@
         "movers"
       ],
       "funding": 5e-05,
-      "long_short": 1.38
+      "long_short": 1.37
     },
     {
       "symbol": "API3",
@@ -65,7 +65,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.003689
+      "funding": -0.003628
     },
     {
       "symbol": "AVAX",
@@ -81,7 +81,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.9e-05
+      "funding": 5e-05
     },
     {
       "symbol": "ETHFI",
@@ -116,20 +116,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "NMR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -0.02
-    },
-    {
       "symbol": "ORCA",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -0.000631
+      "funding": -0.000628
     },
     {
       "symbol": "PENGU",
@@ -145,7 +137,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.2e-05
+      "funding": 6.5e-05
     },
     {
       "symbol": "SPCXB",
@@ -153,6 +145,14 @@
       "sources": [
         "movers"
       ]
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 8.9e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
