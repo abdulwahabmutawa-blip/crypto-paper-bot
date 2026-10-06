@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-06T20:47:41+00:00 · runs 2716 · equity **$832.60** (-16.74%) · cash $0.00 · open 10/10 · round trips 1017
+updated 2026-10-06T21:05:29+00:00 · runs 2717 · equity **$834.68** (-16.53%) · cash $0.00 · open 10/10 · round trips 1017
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-05T23:04 | FILUSDT | surge | 1.179 | 1.1592 | -1.68% |
+| 2026-10-05T23:04 | FILUSDT | surge | 1.179 | 1.1627 | -1.38% |
 | 2026-10-06T07:31 | WLFIUSDT | surge | 0.0564 | 0.0563 | -0.18% |
-| 2026-10-06T07:49 | GRAMUSDT | surge | 1.573 | 1.537 | -2.29% |
-| 2026-10-06T14:15 | CRCLBUSDT | surge | 86.06 | 84.47 | -1.85% |
+| 2026-10-06T07:49 | GRAMUSDT | surge | 1.573 | 1.529 | -2.80% |
+| 2026-10-06T14:15 | CRCLBUSDT | surge | 86.06 | 84.5 | -1.81% |
 | 2026-10-06T16:51 | MAGICUSDT | surge | 0.0673 | 0.0672 | -0.15% |
-| 2026-10-06T19:10 | TIAUSDT | surge | 0.483 | 0.4796 | -0.70% |
-| 2026-10-06T19:15 | METUSDT | surge | 0.3358 | 0.331 | -1.43% |
-| 2026-10-06T20:45 | RESOLVUSDT | surge | 0.02178 | 0.02154 | -1.10% |
-| 2026-10-06T20:45 | INJUSDT | surge | 8.085 | 8.088 | +0.04% |
+| 2026-10-06T19:10 | TIAUSDT | surge | 0.483 | 0.4852 | +0.46% |
+| 2026-10-06T19:15 | METUSDT | surge | 0.3358 | 0.3335 | -0.68% |
+| 2026-10-06T20:45 | RESOLVUSDT | surge | 0.02178 | 0.02159 | -0.87% |
+| 2026-10-06T20:45 | INJUSDT | surge | 8.085 | 8.127 | +0.52% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
