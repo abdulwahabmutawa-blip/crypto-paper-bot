@@ -1,16 +1,15 @@
 {
-  "ts": "2026-10-06T01:05:21+00:00",
+  "ts": "2026-10-06T01:10:38+00:00",
   "sources": {
     "coingecko": [
-      "NEAR",
-      "PENGU",
       "LIT",
       "QNT",
+      "PENGU",
+      "NEAR",
       "ONDO",
-      "ZEC",
       "SUI",
-      "ZRO",
-      "ICP",
+      "SOL",
+      "ZEC",
       "BTC"
     ],
     "reddit": [],
@@ -23,7 +22,7 @@
       "NEAR",
       "SPCXB",
       "ZRO",
-      "HYPE"
+      "QNT"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -40,14 +39,14 @@
       "long_short": 1.21
     },
     {
-      "symbol": "ZRO",
+      "symbol": "QNT",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 5e-05,
-      "long_short": 1.47
+      "funding": -0.000269,
+      "long_short": 1.17
     },
     {
       "symbol": "BTC",
@@ -55,29 +54,13 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.6e-05
+      "funding": -1.4e-05
     },
     {
       "symbol": "FIL",
       "surfaces": 1,
       "sources": [
         "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "HYPE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "ICP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
       ],
       "funding": 0.0001
     },
@@ -95,7 +78,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001047
+      "funding": -0.001058
     },
     {
       "symbol": "MUBARAK",
@@ -122,20 +105,20 @@
       "funding": 5e-05
     },
     {
-      "symbol": "QNT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -0.000271
-    },
-    {
       "symbol": "RLC",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -0.000274
+      "funding": -0.000264
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 1.9e-05
     },
     {
       "symbol": "SPCXB",
@@ -159,6 +142,14 @@
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "ZRO",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
