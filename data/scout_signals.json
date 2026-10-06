@@ -1,8 +1,24 @@
 {
-  "ts": "2026-10-06T17:18:20+00:00",
+  "ts": "2026-10-06T17:23:45+00:00",
   "scanned": 130,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "CAKEUSDT",
+      "signal": "ignition",
+      "score": 0.7733,
+      "raw_score": 0.8688,
+      "weight": 0.89,
+      "price": 2.42,
+      "why": "trades 9.8x and volume 13.0x the prior 4h, 61% taker-buy, $84,343 burst \u2014 while price has only moved -0.9%",
+      "chg_24h": -0.0102,
+      "vol_surge": 12.96,
+      "chg_1h": -0.0094,
+      "market_surge": 4.38,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.01% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.01% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.18% at 24h: market beta, not signal",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 16,
+    "count": 15,
     "baseline": 13.0,
     "wave": false
   },
