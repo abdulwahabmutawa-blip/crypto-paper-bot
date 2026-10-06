@@ -1,8 +1,24 @@
 {
-  "ts": "2026-10-06T18:12:17+00:00",
-  "scanned": 129,
+  "ts": "2026-10-06T18:17:55+00:00",
+  "scanned": 130,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ASTERUSDT",
+      "signal": "ignition",
+      "score": 0.6638,
+      "raw_score": 0.7467,
+      "weight": 0.889,
+      "price": 0.7508,
+      "why": "trades 6.7x and volume 9.6x the prior 4h, 72% taker-buy, $375,633 burst \u2014 while price has only moved +1.7%",
+      "chg_24h": 0.026,
+      "vol_surge": 9.6,
+      "chg_1h": 0.0165,
+      "market_surge": 4.54,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.02% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.02% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.18% at 24h: market beta, not signal",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 19,
+    "count": 18,
     "baseline": 13.0,
     "wave": false
   },
