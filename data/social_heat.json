@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-06T08:53:38+00:00",
+  "ts": "2026-10-06T08:59:18+00:00",
   "sources": {
     "coingecko": [
       "RLC",
@@ -19,12 +19,12 @@
     "movers": [
       "RLC",
       "FIL",
-      "ZRO",
       "SPCXB",
+      "ZRO",
       "NEAR",
       "AVAX",
       "ZEC",
-      "AAVE"
+      "QNT"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -51,13 +51,23 @@
       "long_short": 1.19
     },
     {
+      "symbol": "QNT",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -0.000614,
+      "long_short": 1.24
+    },
+    {
       "symbol": "RLC",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": -0.000444,
+      "funding": -0.000458,
       "long_short": 0.61
     },
     {
@@ -77,16 +87,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 5e-05,
-      "long_short": 1.42
-    },
-    {
-      "symbol": "AAVE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 7.7e-05
+      "funding": 5e-05
     },
     {
       "symbol": "BTC",
@@ -94,7 +95,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -3.5e-05
+      "funding": -3.6e-05
     },
     {
       "symbol": "FET",
@@ -118,15 +119,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.3e-05
-    },
-    {
-      "symbol": "QNT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -0.000608
+      "funding": 1.7e-05
     },
     {
       "symbol": "SPCXB",
@@ -141,7 +134,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -4.8e-05
+      "funding": -4.7e-05
     },
     {
       "symbol": "TAO",
