@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-06T07:35:48+00:00",
+  "ts": "2026-10-06T07:41:01+00:00",
   "sources": {
     "coingecko": [
       "RLC",
@@ -22,24 +22,14 @@
       "ZRO",
       "SPCXB",
       "AVAX",
-      "HYPE",
       "NEAR",
-      "AAVE"
+      "HYPE",
+      "ZEC"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "AAVE",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5.4e-05,
-      "long_short": 1.64
-    },
     {
       "symbol": "AVAX",
       "surfaces": 2,
@@ -67,8 +57,18 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.000644,
+      "funding": -0.000635,
       "long_short": 0.63
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 0.68
     },
     {
       "symbol": "ZRO",
@@ -81,12 +81,20 @@
       "long_short": 1.41
     },
     {
+      "symbol": "AAVE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5.5e-05
+    },
+    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -5e-06
+      "funding": -7e-06
     },
     {
       "symbol": "FET",
@@ -126,7 +134,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.2e-05
+      "funding": 2.1e-05
     },
     {
       "symbol": "QNT",
@@ -134,7 +142,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000554
+      "funding": -0.00056
     },
     {
       "symbol": "SPCXB",
@@ -142,14 +150,6 @@
       "sources": [
         "movers"
       ]
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."

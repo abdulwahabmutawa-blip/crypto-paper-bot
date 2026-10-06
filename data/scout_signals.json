@@ -1,8 +1,39 @@
 {
-  "ts": "2026-10-06T07:35:55+00:00",
-  "scanned": 131,
+  "ts": "2026-10-06T07:41:08+00:00",
+  "scanned": 129,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "LPTUSDT",
+      "signal": "breakout",
+      "score": 0.7693,
+      "raw_score": 0.8491,
+      "weight": 0.906,
+      "price": 1.877,
+      "why": "trades 46.7x, volume 43.4x, 62% taker-buy, +5.6% in an hour, at 103% of its 24h range",
+      "chg_24h": 0.0735,
+      "vol_surge": 43.42,
+      "chg_1h": 0.0563,
+      "market_surge": 27.46,
+      "actionable": false,
+      "status": "benched \u2014 hit 35%, mean +0.55% over last 363 at 24h: not beating 4x the round trip"
+    },
+    {
+      "symbol": "GRAMUSDT",
+      "signal": "breakout",
+      "score": 0.5465,
+      "raw_score": 0.6032,
+      "weight": 0.906,
+      "price": 1.575,
+      "why": "trades 4.1x, volume 7.3x, 76% taker-buy, +2.3% in an hour, at 104% of its 24h range",
+      "chg_24h": 0.0142,
+      "vol_surge": 7.29,
+      "chg_1h": 0.0227,
+      "market_surge": 4.14,
+      "actionable": false,
+      "status": "benched \u2014 hit 35%, mean +0.55% over last 363 at 24h: not beating 4x the round trip"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.15% at 24h: market beta, not signal",
     "breakout": "benched \u2014 hit 35%, mean +0.55% over last 363 at 24h: not beating 4x the round trip",
@@ -11,7 +42,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 18,
+    "count": 17,
     "baseline": 13.0,
     "wave": false
   },
