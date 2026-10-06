@@ -1,18 +1,18 @@
 {
-  "ts": "2026-10-06T00:37:14+00:00",
+  "ts": "2026-10-06T00:43:14+00:00",
   "sources": {
     "coingecko": [
-      "NEAR",
-      "QNT",
-      "ZEC",
-      "LIT",
       "PENGU",
+      "NEAR",
+      "LIT",
+      "ZEC",
+      "QNT",
+      "ONDO",
       "ZRO",
       "HYPE",
-      "ONDO",
-      "RENDER",
+      "BTC",
       "ADA",
-      "ENA"
+      "TAO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,14 +22,24 @@
       "MUBARAK",
       "FIL",
       "NEAR",
-      "ZRO",
       "SPCXB",
-      "QNT"
+      "ZRO",
+      "HYPE"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "HYPE",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.43
+    },
     {
       "symbol": "NEAR",
       "surfaces": 2,
@@ -39,16 +49,6 @@
       ],
       "funding": 0.0001,
       "long_short": 1.21
-    },
-    {
-      "symbol": "QNT",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": -0.000274,
-      "long_short": 1.15
     },
     {
       "symbol": "ZRO",
@@ -69,12 +69,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "ENA",
+      "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": -2.1e-05
     },
     {
       "symbol": "FIL",
@@ -83,14 +83,6 @@
         "movers"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "HYPE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "LIT",
@@ -106,7 +98,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001035
+      "funding": -0.001047
     },
     {
       "symbol": "MUBARAK",
@@ -133,12 +125,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "RENDER",
+      "symbol": "QNT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": -0.000272
     },
     {
       "symbol": "RLC",
@@ -146,7 +138,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.00031
+      "funding": -0.000301
     },
     {
       "symbol": "SPCXB",
@@ -154,6 +146,14 @@
       "sources": [
         "movers"
       ]
+    },
+    {
+      "symbol": "TAO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "ZEC",
