@@ -1,28 +1,27 @@
 {
-  "ts": "2026-10-07T12:45:34+00:00",
+  "ts": "2026-10-07T12:51:19+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
-      "QNT",
-      "ORCA",
       "BTC",
+      "QNT",
       "SUI",
-      "AERO",
-      "PENGU",
       "RAY",
-      "XRP",
-      "ARB",
-      "ZEC",
+      "ORCA",
+      "PENGU",
       "SOL",
-      "POL"
+      "ZEC",
+      "AERO",
+      "ARB"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
+      "RAY",
       "ORCA",
       "SAND",
-      "PUMP",
-      "RLUSD"
+      "RLUSD",
+      "U"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -35,8 +34,17 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.00076,
+      "funding": -0.000757,
       "long_short": 0.88
+    },
+    {
+      "symbol": "RAY",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0
     },
     {
       "symbol": "AERO",
@@ -52,7 +60,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.5e-05
+      "funding": -1.7e-05
     },
     {
       "symbol": "BTC",
@@ -60,7 +68,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1e-05
+      "funding": -8e-06
     },
     {
       "symbol": "NEAR",
@@ -68,7 +76,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3e-05
+      "funding": 3.5e-05
     },
     {
       "symbol": "PENGU",
@@ -76,23 +84,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.9e-05
-    },
-    {
-      "symbol": "POL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 1e-06
-    },
-    {
-      "symbol": "PUMP",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
+      "funding": -1.7e-05
     },
     {
       "symbol": "QNT",
@@ -100,15 +92,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000559
-    },
-    {
-      "symbol": "RAY",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0
+      "funding": -0.000558
     },
     {
       "symbol": "RLUSD",
@@ -123,7 +107,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001211
+      "funding": -0.0012
     },
     {
       "symbol": "SOL",
@@ -131,7 +115,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -7.4e-05
+      "funding": -7.1e-05
     },
     {
       "symbol": "SUI",
@@ -142,12 +126,11 @@
       "funding": 0.0001
     },
     {
-      "symbol": "XRP",
+      "symbol": "U",
       "surfaces": 1,
       "sources": [
-        "coingecko"
-      ],
-      "funding": -3.5e-05
+        "movers"
+      ]
     },
     {
       "symbol": "ZEC",
