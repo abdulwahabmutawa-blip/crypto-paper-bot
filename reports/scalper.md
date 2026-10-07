@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-07T06:22:37+00:00 · runs 2749 · equity **$815.31** (-18.47%) · cash $240.47 · open 7/10 · round trips 1039
+updated 2026-10-07T06:40:29+00:00 · runs 2750 · equity **$815.21** (-18.48%) · cash $240.47 · open 7/10 · round trips 1039
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -37,10 +37,10 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
 | 2026-10-07T01:53 | TRXUSDT | bottom | 0.3352 | 0.3332 | -0.60% |
-| 2026-10-07T02:47 | SPCXBUSDT | bottom | 168.44 | 169.52 | +0.64% |
-| 2026-10-07T02:47 | AVAXUSDT | bottom | 11.021 | 11.24 | +1.99% |
-| 2026-10-07T03:58 | STXUSDT | surge | 0.3916 | 0.3996 | +2.04% |
-| 2026-10-07T05:26 | ACEUSDT | surge | 0.1989 | 0.1969 | -1.01% |
-| 2026-10-07T05:26 | PUMPUSDT | surge | 0.006381 | 0.006455 | +1.16% |
+| 2026-10-07T02:47 | SPCXBUSDT | bottom | 168.44 | 169.72 | +0.76% |
+| 2026-10-07T02:47 | AVAXUSDT | bottom | 11.021 | 11.276 | +2.31% |
+| 2026-10-07T03:58 | STXUSDT | surge | 0.3916 | 0.403 | +2.91% |
+| 2026-10-07T05:26 | ACEUSDT | surge | 0.1989 | 0.1936 | -2.66% |
+| 2026-10-07T05:26 | PUMPUSDT | surge | 0.006381 | 0.006467 | +1.35% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
