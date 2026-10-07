@@ -1,27 +1,11 @@
 {
-  "ts": "2026-10-07T20:41:54+00:00",
-  "scanned": 139,
+  "ts": "2026-10-07T20:47:44+00:00",
+  "scanned": 137,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "CRVUSDT",
-      "signal": "ignition",
-      "score": 0.7784,
-      "raw_score": 0.8816,
-      "weight": 0.883,
-      "price": 0.3598,
-      "why": "trades 12.4x and volume 28.0x the prior 4h, 64% taker-buy, $176,167 burst \u2014 while price has only moved +1.1%",
-      "chg_24h": -0.0148,
-      "vol_surge": 27.96,
-      "chg_1h": 0.0112,
-      "market_surge": 8.44,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.06% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.06% at 24h: market beta, not signal",
-    "breakout": "benched \u2014 hit 35%, mean +0.18% over last 358 at 24h: not beating 4x the round trip",
+    "breakout": "benched \u2014 hit 34%, mean +0.15% over last 359 at 24h: not beating 4x the round trip",
     "reversion": "actionable",
     "heat": "probation \u2014 0/12 resolved 24h samples under ruleset 3",
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
@@ -100,19 +84,19 @@
       "avg_win_4h": 0.03925,
       "avg_loss_4h": -0.02634,
       "payoff_4h": 1.49,
-      "span_h_24h": 306.7,
-      "n_eff_24h": 12.78,
-      "n_24h": 358,
-      "hit_rate_24h": 0.346,
-      "mean_ret_24h": 0.00177,
-      "median_ret_24h": -0.0145,
+      "span_h_24h": 311.3,
+      "n_eff_24h": 12.97,
+      "n_24h": 359,
+      "hit_rate_24h": 0.345,
+      "mean_ret_24h": 0.00146,
+      "median_ret_24h": -0.01452,
       "both_halves_24h": false,
       "days_24h": 14,
-      "mean_x_24h": 0.02331,
+      "mean_x_24h": 0.02316,
       "days_x_24h": 14,
       "avg_win_24h": 0.08517,
-      "avg_loss_24h": -0.04484,
-      "payoff_24h": 1.899
+      "avg_loss_24h": -0.04512,
+      "payoff_24h": 1.887
     },
     "reversion": {
       "span_h_1h": 315.2,
