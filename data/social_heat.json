@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-07T13:52:49+00:00",
+  "ts": "2026-10-07T13:57:59+00:00",
   "sources": {
     "coingecko": [
       "RAY",
@@ -16,14 +16,25 @@
     "stocktwits": [],
     "movers": [
       "RAY",
-      "ORCA",
       "SAND",
+      "ORCA",
+      "PUMP",
       "RLUSD"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "PUMP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.2
+    },
     {
       "symbol": "RAY",
       "surfaces": 2,
@@ -47,7 +58,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-06
+      "funding": 6e-06
     },
     {
       "symbol": "NEAR",
@@ -55,7 +66,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.1e-05
+      "funding": 5.2e-05
     },
     {
       "symbol": "ORCA",
@@ -63,7 +74,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.00064
+      "funding": -0.000646
     },
     {
       "symbol": "PENGU",
@@ -71,15 +82,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2e-06
-    },
-    {
-      "symbol": "PUMP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 4.8e-05
+      "funding": 9e-06
     },
     {
       "symbol": "QNT",
@@ -87,7 +90,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000552
+      "funding": -0.000553
     },
     {
       "symbol": "RLUSD",
@@ -102,7 +105,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.00113
+      "funding": -0.001118
     },
     {
       "symbol": "SUI",
@@ -118,7 +121,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -8e-06
+      "funding": -7e-06
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
