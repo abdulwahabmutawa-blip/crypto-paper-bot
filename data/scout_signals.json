@@ -1,24 +1,8 @@
 {
-  "ts": "2026-10-07T09:27:26+00:00",
+  "ts": "2026-10-07T09:32:41+00:00",
   "scanned": 141,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "SNDKBUSDT",
-      "signal": "ignition",
-      "score": 0.6689,
-      "raw_score": 0.7602,
-      "weight": 0.88,
-      "price": 1628.68,
-      "why": "trades 7.7x and volume 6.7x the prior 4h, 79% taker-buy, $161,968 burst \u2014 while price has only moved -0.5%",
-      "chg_24h": -0.0377,
-      "vol_surge": 6.66,
-      "chg_1h": -0.0051,
-      "market_surge": 2.22,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean +0.01% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.01% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.29% at 24h: market beta, not signal",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 11,
+    "count": 10,
     "baseline": 13.0,
     "wave": false
   },
