@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-07T12:24:24+00:00 · runs 2770 · equity **$800.42** (-19.96%) · cash $470.53 · open 4/10 · round trips 1047
+updated 2026-10-07T12:29:35+00:00 · runs 2771 · equity **$800.24** (-19.98%) · cash $470.53 · open 4/10 · round trips 1047
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,8 +36,8 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-07T01:53 | TRXUSDT | bottom | 0.3352 | 0.3339 | -0.39% |
-| 2026-10-07T02:47 | SPCXBUSDT | bottom | 168.44 | 168.74 | +0.18% |
-| 2026-10-07T02:47 | AVAXUSDT | bottom | 11.021 | 11.017 | -0.04% |
+| 2026-10-07T01:53 | TRXUSDT | bottom | 0.3352 | 0.3337 | -0.45% |
+| 2026-10-07T02:47 | SPCXBUSDT | bottom | 168.44 | 168.69 | +0.15% |
+| 2026-10-07T02:47 | AVAXUSDT | bottom | 11.021 | 11.003 | -0.16% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
