@@ -1,24 +1,8 @@
 {
-  "ts": "2026-10-07T19:24:45+00:00",
-  "scanned": 138,
+  "ts": "2026-10-07T19:30:27+00:00",
+  "scanned": 139,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "XPLUSDT",
-      "signal": "ignition",
-      "score": 0.536,
-      "raw_score": 0.6063,
-      "weight": 0.884,
-      "price": 0.0877,
-      "why": "trades 4.1x and volume 6.4x the prior 4h, 81% taker-buy, $101,148 burst \u2014 while price has only moved +0.9%",
-      "chg_24h": -0.0284,
-      "vol_surge": 6.39,
-      "chg_1h": 0.0085,
-      "market_surge": 2.24,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean +0.07% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.07% at 24h: market beta, not signal",
     "breakout": "benched \u2014 hit 35%, mean +0.24% over last 359 at 24h: not beating 4x the round trip",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 10,
+    "count": 9,
     "baseline": 13.0,
     "wave": false
   },
