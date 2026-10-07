@@ -1,8 +1,24 @@
 {
-  "ts": "2026-10-07T21:31:55+00:00",
-  "scanned": 138,
+  "ts": "2026-10-07T21:37:10+00:00",
+  "scanned": 139,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "STXUSDT",
+      "signal": "ignition",
+      "score": 0.8238,
+      "raw_score": 0.9319,
+      "weight": 0.884,
+      "price": 0.3652,
+      "why": "trades 13.0x and volume 12.2x the prior 4h, 78% taker-buy, $80,728 burst \u2014 while price has only moved -0.5%",
+      "chg_24h": -0.0457,
+      "vol_surge": 12.17,
+      "chg_1h": -0.0054,
+      "market_surge": 2.58,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.06% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.06% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.08% at 24h: market beta, not signal",
@@ -43,19 +59,19 @@
       "avg_win_4h": 0.02081,
       "avg_loss_4h": -0.01785,
       "payoff_4h": 1.166,
-      "span_h_24h": 311.5,
-      "n_eff_24h": 12.98,
-      "n_24h": 847,
+      "span_h_24h": 311.8,
+      "n_eff_24h": 12.99,
+      "n_24h": 848,
       "hit_rate_24h": 0.425,
-      "mean_ret_24h": -0.00151,
+      "mean_ret_24h": -0.00157,
       "median_ret_24h": -0.00474,
       "both_halves_24h": false,
       "days_24h": 14,
       "mean_x_24h": -0.00056,
       "days_x_24h": 14,
       "avg_win_24h": 0.04522,
-      "avg_loss_24h": -0.03844,
-      "payoff_24h": 1.176
+      "avg_loss_24h": -0.03848,
+      "payoff_24h": 1.175
     },
     "breakout": {
       "span_h_1h": 327.1,
