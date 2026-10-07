@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-07T16:03:51+00:00",
+  "ts": "2026-10-07T16:09:05+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -18,6 +18,8 @@
       "RAY",
       "ORCA",
       "SNDKB",
+      "NEAR",
+      "TRX",
       "RLUSD",
       "U"
     ],
@@ -25,6 +27,16 @@
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "NEAR",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 4.5e-05,
+      "long_short": 1.38
+    },
     {
       "symbol": "RAY",
       "surfaces": 2,
@@ -40,15 +52,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.2e-05
-    },
-    {
-      "symbol": "NEAR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 3.8e-05
+      "funding": 1.6e-05
     },
     {
       "symbol": "ORCA",
@@ -56,7 +60,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001014
+      "funding": -0.001021
     },
     {
       "symbol": "PENGU",
@@ -87,7 +91,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001126
+      "funding": -0.001104
     },
     {
       "symbol": "SNDKB",
@@ -102,7 +106,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.1e-05
+      "funding": 3.2e-05
     },
     {
       "symbol": "SUI",
@@ -110,7 +114,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.6e-05
+      "funding": 8.5e-05
     },
     {
       "symbol": "TRUMP",
@@ -118,7 +122,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000145
+      "funding": -0.000157
+    },
+    {
+      "symbol": "TRX",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -0.000112
     },
     {
       "symbol": "U",
