@@ -1,21 +1,21 @@
 {
-  "ts": "2026-10-07T04:09:10+00:00",
+  "ts": "2026-10-07T04:14:23+00:00",
   "sources": {
     "coingecko": [
       "SUI",
       "BTC",
-      "NEAR",
+      "PENGU",
       "ORCA",
       "ZEC",
-      "PENGU",
-      "PUMP",
-      "TAO",
+      "NEAR",
       "POL",
-      "AAVE",
       "QNT",
-      "INJ",
-      "LIT",
-      "BNB"
+      "PUMP",
+      "AAVE",
+      "TAO",
+      "SOL",
+      "HYPE",
+      "AVAX"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -23,9 +23,10 @@
       "NMR",
       "ORCA",
       "API3",
+      "RLC",
       "MARSCOIN",
       "XAUT",
-      "RLC",
+      "PUMP",
       "INJ"
     ],
     "watcher": [],
@@ -33,24 +34,24 @@
   },
   "heat": [
     {
-      "symbol": "INJ",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": -0.000136,
-      "long_short": 1.27
-    },
-    {
       "symbol": "ORCA",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": -0.000897,
+      "funding": -0.000901,
       "long_short": 0.81
+    },
+    {
+      "symbol": "PUMP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 3.3e-05,
+      "long_short": 1.13
     },
     {
       "symbol": "AAVE",
@@ -58,7 +59,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.8e-05
+      "funding": 7.7e-05
     },
     {
       "symbol": "API3",
@@ -66,15 +67,15 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.004484
+      "funding": -0.004352
     },
     {
-      "symbol": "BNB",
+      "symbol": "AVAX",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0
+      "funding": -2.4e-05
     },
     {
       "symbol": "BTC",
@@ -82,15 +83,23 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -4.9e-05
+      "funding": -4.8e-05
     },
     {
-      "symbol": "LIT",
+      "symbol": "HYPE",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 3.4e-05
+    },
+    {
+      "symbol": "INJ",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -0.000135
     },
     {
       "symbol": "MARSCOIN",
@@ -106,7 +115,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.1e-05
+      "funding": 4.3e-05
     },
     {
       "symbol": "NMR",
@@ -114,7 +123,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.004549
+      "funding": -0.004682
     },
     {
       "symbol": "PENGU",
@@ -130,15 +139,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000103
-    },
-    {
-      "symbol": "PUMP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 3.1e-05
+      "funding": -0.000101
     },
     {
       "symbol": "QNT",
@@ -146,7 +147,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000111
+      "funding": -0.000112
     },
     {
       "symbol": "RLC",
@@ -154,7 +155,15 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.00027
+      "funding": -0.000265
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -7.8e-05
     },
     {
       "symbol": "SUI",
@@ -162,7 +171,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.3e-05
+      "funding": 5.1e-05
     },
     {
       "symbol": "TAO",
@@ -170,7 +179,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.3e-05
+      "funding": -1.7e-05
     },
     {
       "symbol": "XAUT",
@@ -178,7 +187,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 3e-05
+      "funding": 3.3e-05
     },
     {
       "symbol": "ZEC",
@@ -186,7 +195,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.9e-05
+      "funding": 3.8e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
