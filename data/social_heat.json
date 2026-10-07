@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-07T14:47:27+00:00",
+  "ts": "2026-10-07T14:52:49+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -17,9 +17,10 @@
     "stocktwits": [],
     "movers": [
       "RAY",
-      "ORCA",
       "SAND",
+      "ORCA",
       "SNDKB",
+      "U",
       "RLUSD"
     ],
     "watcher": [],
@@ -49,7 +50,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2e-06
+      "funding": 3e-06
     },
     {
       "symbol": "ENA",
@@ -65,7 +66,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.5e-05
+      "funding": 2.7e-05
     },
     {
       "symbol": "ORCA",
@@ -73,7 +74,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000746
+      "funding": -0.000818
     },
     {
       "symbol": "PENGU",
@@ -81,7 +82,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.6e-05
+      "funding": 5e-05
     },
     {
       "symbol": "PUMP",
@@ -89,7 +90,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.7e-05
+      "funding": 4.8e-05
     },
     {
       "symbol": "QNT",
@@ -97,7 +98,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000571
+      "funding": -0.000564
     },
     {
       "symbol": "RLUSD",
@@ -112,7 +113,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001202
+      "funding": -0.00122
     },
     {
       "symbol": "SNDKB",
@@ -130,12 +131,19 @@
       "funding": 0.0001
     },
     {
+      "symbol": "U",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
+    },
+    {
       "symbol": "XRP",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -6e-06
+      "funding": -5e-06
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
