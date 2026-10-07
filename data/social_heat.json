@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-07T06:57:21+00:00",
+  "ts": "2026-10-07T07:03:20+00:00",
   "sources": {
     "coingecko": [
       "ORCA",
@@ -20,12 +20,12 @@
     "movers": [
       "NMR",
       "ORCA",
+      "SAND",
       "ZRO",
-      "MARSCOIN",
       "PUMP",
+      "ZEC",
       "NEAR",
-      "XAUT",
-      "INJ"
+      "AVAX"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -38,8 +38,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 6.9e-05,
-      "long_short": 1.29
+      "funding": 6.8e-05,
+      "long_short": 1.26
     },
     {
       "symbol": "ORCA",
@@ -48,8 +48,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.001043,
-      "long_short": 0.84
+      "funding": -0.001074,
+      "long_short": 0.88
     },
     {
       "symbol": "PUMP",
@@ -59,7 +59,7 @@
         "movers"
       ],
       "funding": 5e-05,
-      "long_short": 1.19
+      "long_short": 1.21
     },
     {
       "symbol": "ZRO",
@@ -72,28 +72,20 @@
       "long_short": 1.39
     },
     {
+      "symbol": "AVAX",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -2.4e-05
+    },
+    {
       "symbol": "FET",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 4.1e-05
-    },
-    {
-      "symbol": "INJ",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -0.000147
-    },
-    {
-      "symbol": "MARSCOIN",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
+      "funding": 2.7e-05
     },
     {
       "symbol": "NMR",
@@ -101,7 +93,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.004019
+      "funding": -0.004031
     },
     {
       "symbol": "ONDO",
@@ -109,7 +101,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.4e-05
+      "funding": 4.2e-05
     },
     {
       "symbol": "PENGU",
@@ -125,7 +117,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -6.7e-05
+      "funding": -6.3e-05
     },
     {
       "symbol": "QNT",
@@ -133,7 +125,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000335
+      "funding": -0.000348
     },
     {
       "symbol": "RAY",
@@ -144,12 +136,20 @@
       "funding": 0.0
     },
     {
+      "symbol": "SAND",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -0.00236
+    },
+    {
       "symbol": "SUI",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 4.1e-05
+      "funding": 4e-05
     },
     {
       "symbol": "TAO",
@@ -160,12 +160,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "XAUT",
+      "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 3e-05
+      "funding": 3.6e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
