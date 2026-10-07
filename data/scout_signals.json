@@ -1,8 +1,54 @@
 {
-  "ts": "2026-10-07T14:19:38+00:00",
-  "scanned": 145,
+  "ts": "2026-10-07T14:25:24+00:00",
+  "scanned": 147,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "NVDABUSDT",
+      "signal": "ignition",
+      "score": 0.7171,
+      "raw_score": 0.8139,
+      "weight": 0.881,
+      "price": 238.11,
+      "why": "trades 9.4x and volume 5.0x the prior 4h, 86% taker-buy, $172,403 burst \u2014 while price has only moved +0.2%",
+      "chg_24h": -0.0148,
+      "vol_surge": 5.01,
+      "chg_1h": 0.0019,
+      "market_surge": 4.66,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.07% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "MUBUSDT",
+      "signal": "ignition",
+      "score": 0.7111,
+      "raw_score": 0.8072,
+      "weight": 0.881,
+      "price": 1057.96,
+      "why": "trades 11.8x and volume 11.2x the prior 4h, 62% taker-buy, $115,504 burst \u2014 while price has only moved +3.9%",
+      "chg_24h": -0.0035,
+      "vol_surge": 11.15,
+      "chg_1h": 0.0394,
+      "market_surge": 1.74,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.07% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "C98USDT",
+      "signal": "ignition",
+      "score": 0.6641,
+      "raw_score": 0.7538,
+      "weight": 0.881,
+      "price": 0.01655,
+      "why": "trades 5.7x and volume 8.7x the prior 4h, 87% taker-buy, $51,682 burst \u2014 while price has only moved +0.4%",
+      "chg_24h": -0.1799,
+      "vol_surge": 8.73,
+      "chg_1h": 0.0042,
+      "market_surge": 0.0,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.07% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.07% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.73% at 24h: market beta, not signal",
@@ -11,7 +57,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 7,
+    "count": 8,
     "baseline": 13.0,
     "wave": false
   },
@@ -51,7 +97,7 @@
       "median_ret_24h": -0.00383,
       "both_halves_24h": false,
       "days_24h": 14,
-      "mean_x_24h": 0.0007,
+      "mean_x_24h": 0.00069,
       "days_x_24h": 14,
       "avg_win_24h": 0.04534,
       "avg_loss_24h": -0.0372,
