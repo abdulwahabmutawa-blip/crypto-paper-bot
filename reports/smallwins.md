@@ -1,6 +1,6 @@
 # Small-wins lab — paper study (owner request 2026-09-04)
 
-updated 2026-10-07T18:08:19+00:00 · runs 2861 · open 332 · resolved 20000 · cost 0.25%/RT
+updated 2026-10-07T18:25:57+00:00 · runs 2862 · open 337 · resolved 20000 · cost 0.25%/RT
 
 PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst day > -3 units.
 
@@ -25,8 +25,8 @@ PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst
 | dip_mid|t1|s1|h6 | 597 | 7 | 85.3 | 51% | 62% | -0.23% | 51% | 49% | 0% | -38.3% | fail |
 | ignition|t3|s3|h24 | 95 | 7 | 13.6 | 51% | 54% | -0.24% | 38% | 37% | 25% | -18.3% | fail |
 | dip_large|t5|s3|h48 | 389 | 7 | 55.6 | 38% | 41% | -0.28% | 34% | 61% | 5% | -59.5% | fail |
+| range_bottom|t1|s1|h6 | 847 | 7 | 121.0 | 46% | 62% | -0.30% | 45% | 49% | 6% | -149.5% | fail |
 | range_bottom|t1.5|s1|h8 | 727 | 7 | 103.9 | 38% | 50% | -0.30% | 34% | 58% | 8% | -149.7% | fail |
-| range_bottom|t1|s1|h6 | 846 | 7 | 120.9 | 46% | 62% | -0.30% | 44% | 49% | 6% | -150.3% | fail |
 | range_bottom|t2|s2|h8 | 496 | 7 | 70.9 | 45% | 56% | -0.30% | 36% | 39% | 25% | -168.4% | fail |
 | dip_large|t3|s2|h12 | 515 | 7 | 73.6 | 39% | 45% | -0.31% | 37% | 59% | 4% | -78.3% | fail |
 | ignition|t3|s4|h48 | 90 | 7 | 12.9 | 56% | 61% | -0.31% | 49% | 37% | 14% | -38.9% | fail |
@@ -47,7 +47,7 @@ PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst
 | momentum|t1|s1|h6 | 884 | 7 | 126.3 | 43% | 62% | -0.38% | 43% | 56% | 2% | -77.5% | fail |
 | range_bottom|t3|s2|h12 | 433 | 7 | 61.9 | 37% | 45% | -0.40% | 25% | 50% | 25% | -181.7% | fail |
 | dip_large|t1|s1|h6 | 712 | 7 | 101.7 | 41% | 62% | -0.42% | 41% | 59% | 0% | -90.5% | fail |
-| momentum|t1.5|s1.5|h8 | 687 | 7 | 98.1 | 43% | 58% | -0.43% | 42% | 54% | 4% | -76.2% | fail |
+| momentum|t1.5|s1.5|h8 | 686 | 7 | 98.0 | 43% | 58% | -0.43% | 42% | 54% | 4% | -76.2% | fail |
 | ignition|t1.5|s1.5|h8 | 148 | 7 | 21.1 | 43% | 58% | -0.43% | 35% | 47% | 18% | -19.5% | fail |
 | range_bottom|t3|s3|h24 | 323 | 7 | 46.1 | 45% | 54% | -0.47% | 37% | 45% | 18% | -177.8% | fail |
 | momentum|t3|s2|h12 | 516 | 7 | 73.7 | 35% | 45% | -0.50% | 31% | 59% | 9% | -77.1% | fail |
