@@ -1,17 +1,16 @@
 {
-  "ts": "2026-10-07T20:47:38+00:00",
+  "ts": "2026-10-07T20:53:05+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
-      "PENGU",
       "TRUMP",
+      "PENGU",
       "MET",
       "SUI",
-      "ZEC",
       "BTC",
       "HYPE",
-      "ORCA",
-      "ZRO"
+      "ZEC",
+      "ASTER"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -39,12 +38,20 @@
       "long_short": 1.36
     },
     {
+      "symbol": "ASTER",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -5e-06
+      "funding": -7e-06
     },
     {
       "symbol": "HYPE",
@@ -52,7 +59,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.0
+      "funding": -1e-06
     },
     {
       "symbol": "MET",
@@ -60,15 +67,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.003809
-    },
-    {
-      "symbol": "ORCA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -0.000506
+      "funding": -0.003599
     },
     {
       "symbol": "PENGU",
@@ -107,7 +106,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000282
+      "funding": -0.000272
     },
     {
       "symbol": "SNDKB",
@@ -122,7 +121,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.6e-05
+      "funding": 4.9e-05
     },
     {
       "symbol": "TRUMP",
@@ -130,7 +129,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000285
+      "funding": -0.00028
     },
     {
       "symbol": "U",
@@ -146,14 +145,6 @@
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "ZRO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 3.8e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
