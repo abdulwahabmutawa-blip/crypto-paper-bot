@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-08T22:44:21+00:00 · runs 2896 · equity **$770.29** (-22.97%) · cash $151.47 · open 8/10 · round trips 1083
+updated 2026-10-08T23:01:17+00:00 · runs 2897 · equity **$770.48** (-22.95%) · cash $75.74 · open 9/10 · round trips 1083
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,12 +36,13 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-08T04:39 | NVDABUSDT | bottom | 237.11 | 231.64 | -2.31% |
-| 2026-10-08T20:37 | AEROUSDT | surge | 0.8244 | 0.8285 | +0.50% |
-| 2026-10-08T20:37 | FILUSDT | surge | 1.0745 | 1.0698 | -0.44% |
+| 2026-10-08T04:39 | NVDABUSDT | bottom | 237.11 | 231.62 | -2.32% |
+| 2026-10-08T20:37 | AEROUSDT | surge | 0.8244 | 0.8281 | +0.45% |
+| 2026-10-08T20:37 | FILUSDT | surge | 1.0745 | 1.0779 | +0.32% |
 | 2026-10-08T20:37 | TRXUSDT | bottom | 0.333 | 0.3329 | -0.03% |
-| 2026-10-08T20:37 | METUSDT | bottom | 0.4396 | 0.4383 | -0.30% |
-| 2026-10-08T21:11 | MUBARAKUSDT | surge | 0.07694 | 0.07501 | -2.51% |
-| 2026-10-08T22:38 | PYTHUSDT | surge | 0.08358 | 0.08296 | -0.74% |
+| 2026-10-08T20:37 | METUSDT | bottom | 0.4396 | 0.4398 | +0.05% |
+| 2026-10-08T21:11 | MUBARAKUSDT | surge | 0.07694 | 0.07555 | -1.81% |
+| 2026-10-08T22:38 | PYTHUSDT | surge | 0.08358 | 0.08261 | -1.16% |
+| 2026-10-08T22:59 | TIAUSDT | surge | 0.5114 | 0.5058 | -1.10% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
