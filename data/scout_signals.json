@@ -1,39 +1,8 @@
 {
-  "ts": "2026-10-08T01:11:16+00:00",
+  "ts": "2026-10-08T01:17:06+00:00",
   "scanned": 140,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "SUIUSDT",
-      "signal": "ignition",
-      "score": 0.6653,
-      "raw_score": 0.7517,
-      "weight": 0.885,
-      "price": 1.1424,
-      "why": "trades 7.1x and volume 7.4x the prior 4h, 82% taker-buy, $723,760 burst \u2014 while price has only moved +0.9%",
-      "chg_24h": -0.0238,
-      "vol_surge": 7.37,
-      "chg_1h": 0.0087,
-      "market_surge": 2.15,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.28% at 24h: market beta, not signal"
-    },
-    {
-      "symbol": "TIAUSDT",
-      "signal": "ignition",
-      "score": 0.4622,
-      "raw_score": 0.5223,
-      "weight": 0.885,
-      "price": 0.4785,
-      "why": "trades 4.3x and volume 5.5x the prior 4h, 61% taker-buy, $87,249 burst \u2014 while price has only moved +1.6%",
-      "chg_24h": -0.012,
-      "vol_surge": 5.52,
-      "chg_1h": 0.0161,
-      "market_surge": 2.24,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.28% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.28% at 24h: market beta, not signal",
     "breakout": "benched \u2014 hit 34%, mean +0.06% over last 360 at 24h: not beating 4x the round trip",
@@ -42,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 12,
+    "count": 11,
     "baseline": 13.0,
     "wave": false
   },
@@ -74,19 +43,19 @@
       "avg_win_4h": 0.02069,
       "avg_loss_4h": -0.01799,
       "payoff_4h": 1.15,
-      "span_h_24h": 311.4,
+      "span_h_24h": 311.5,
       "n_eff_24h": 12.98,
-      "n_24h": 848,
-      "hit_rate_24h": 0.42,
-      "mean_ret_24h": -0.00229,
-      "median_ret_24h": -0.00507,
+      "n_24h": 849,
+      "hit_rate_24h": 0.419,
+      "mean_ret_24h": -0.00235,
+      "median_ret_24h": -0.00533,
       "both_halves_24h": false,
       "days_24h": 14,
-      "mean_x_24h": -0.00281,
+      "mean_x_24h": -0.0028,
       "days_x_24h": 14,
       "avg_win_24h": 0.0452,
-      "avg_loss_24h": -0.03904,
-      "payoff_24h": 1.158
+      "avg_loss_24h": -0.03907,
+      "payoff_24h": 1.157
     },
     "breakout": {
       "span_h_1h": 330.8,
