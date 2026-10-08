@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-08T04:07:29+00:00 · runs 2827 · equity **$798.50** (-20.15%) · cash $160.77 · open 8/10 · round trips 1052
+updated 2026-10-08T04:24:17+00:00 · runs 2828 · equity **$791.33** (-20.87%) · cash $160.77 · open 8/10 · round trips 1052
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,12 +36,12 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-08T01:51 | LINKUSDT | bottom | 13.313 | 13.17 | -1.07% |
-| 2026-10-08T02:08 | MSTRBUSDT | bottom | 153.72 | 151.65 | -1.35% |
-| 2026-10-08T02:25 | BOMEUSDT | surge | 0.001061 | 0.0010443 | -1.57% |
-| 2026-10-08T02:58 | CRVUSDT | surge | 0.3923 | 0.3943 | +0.51% |
-| 2026-10-08T02:58 | ENAUSDT | bottom | 0.2257 | 0.2223 | -1.51% |
-| 2026-10-08T03:15 | JTOUSDT | surge | 0.5609 | 0.5651 | +0.75% |
-| 2026-10-08T03:15 | LDOUSDT | surge | 0.4624 | 0.4605 | -0.41% |
+| 2026-10-08T01:51 | LINKUSDT | bottom | 13.313 | 13.045 | -2.01% |
+| 2026-10-08T02:08 | MSTRBUSDT | bottom | 153.72 | 150.77 | -1.92% |
+| 2026-10-08T02:25 | BOMEUSDT | surge | 0.001061 | 0.0010331 | -2.63% |
+| 2026-10-08T02:58 | CRVUSDT | surge | 0.3923 | 0.3876 | -1.20% |
+| 2026-10-08T02:58 | ENAUSDT | bottom | 0.2257 | 0.2176 | -3.59% |
+| 2026-10-08T03:15 | JTOUSDT | surge | 0.5609 | 0.5575 | -0.61% |
+| 2026-10-08T03:15 | LDOUSDT | surge | 0.4624 | 0.4544 | -1.73% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
