@@ -1,24 +1,8 @@
 {
-  "ts": "2026-10-08T01:33:56+00:00",
+  "ts": "2026-10-08T01:39:34+00:00",
   "scanned": 141,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "STRKUSDT",
-      "signal": "ignition",
-      "score": 0.673,
-      "raw_score": 0.7604,
-      "weight": 0.885,
-      "price": 0.04941,
-      "why": "trades 5.6x and volume 12.4x the prior 4h, 77% taker-buy, $160,464 burst \u2014 while price has only moved +0.3%",
-      "chg_24h": -0.0498,
-      "vol_surge": 12.39,
-      "chg_1h": 0.003,
-      "market_surge": 4.25,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.28% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.28% at 24h: market beta, not signal",
     "breakout": "benched \u2014 hit 34%, mean +0.06% over last 360 at 24h: not beating 4x the round trip",
@@ -54,7 +38,7 @@
       "median_ret_4h": -0.00276,
       "both_halves_4h": false,
       "days_4h": 14,
-      "mean_x_4h": -9e-05,
+      "mean_x_4h": -8e-05,
       "days_x_4h": 14,
       "avg_win_4h": 0.02069,
       "avg_loss_4h": -0.01799,
