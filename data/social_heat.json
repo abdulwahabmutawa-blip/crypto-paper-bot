@@ -1,16 +1,16 @@
 {
-  "ts": "2026-10-08T14:50:39+00:00",
+  "ts": "2026-10-08T14:56:37+00:00",
   "sources": {
     "coingecko": [
       "TRUMP",
       "STRK",
-      "OGN",
       "PYTH",
-      "PENGU",
+      "OGN",
       "NEAR",
+      "PENGU",
       "ONDO",
-      "BTC",
       "ZEC",
+      "MET",
       "SUI"
     ],
     "reddit": [],
@@ -22,13 +22,23 @@
       "ONDO",
       "QNT",
       "AAVE",
-      "WLD",
-      "XAUT"
+      "XAUT",
+      "WLD"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "MET",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -0.000726,
+      "long_short": 0.75
+    },
     {
       "symbol": "OGN",
       "surfaces": 2,
@@ -36,7 +46,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.008167,
+      "funding": -0.007819,
       "long_short": 0.65
     },
     {
@@ -65,23 +75,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 8.9e-05
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 4.3e-05
-    },
-    {
-      "symbol": "MET",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -0.000746
+      "funding": 8.3e-05
     },
     {
       "symbol": "NEAR",
@@ -89,7 +83,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.8e-05
+      "funding": -2e-05
     },
     {
       "symbol": "PENGU",
@@ -97,7 +91,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 4.9e-05
     },
     {
       "symbol": "PYTH",
@@ -105,7 +99,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3e-05
+      "funding": 2.1e-05
     },
     {
       "symbol": "QNT",
@@ -113,7 +107,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000334
+      "funding": -0.000325
     },
     {
       "symbol": "SUI",
@@ -121,7 +115,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7e-05
+      "funding": 6.6e-05
     },
     {
       "symbol": "TRUMP",
@@ -129,7 +123,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000155
+      "funding": -0.000158
     },
     {
       "symbol": "WLD",
@@ -137,7 +131,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 8e-05
+      "funding": 8.1e-05
     },
     {
       "symbol": "XAUT",
@@ -145,7 +139,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 2.1e-05
+      "funding": 1.9e-05
     },
     {
       "symbol": "ZEC",
