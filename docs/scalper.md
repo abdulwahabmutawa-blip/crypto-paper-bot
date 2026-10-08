@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-08T22:40:10+00:00 · runs 2895 · equity **$770.73** (-22.93%) · cash $151.47 · open 8/10 · round trips 1083
+updated 2026-10-08T22:44:21+00:00 · runs 2896 · equity **$770.29** (-22.97%) · cash $151.47 · open 8/10 · round trips 1083
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,12 +36,12 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-08T04:39 | NVDABUSDT | bottom | 237.11 | 231.65 | -2.30% |
-| 2026-10-08T20:37 | AEROUSDT | surge | 0.8244 | 0.8261 | +0.21% |
-| 2026-10-08T20:37 | FILUSDT | surge | 1.0745 | 1.071 | -0.33% |
+| 2026-10-08T04:39 | NVDABUSDT | bottom | 237.11 | 231.64 | -2.31% |
+| 2026-10-08T20:37 | AEROUSDT | surge | 0.8244 | 0.8285 | +0.50% |
+| 2026-10-08T20:37 | FILUSDT | surge | 1.0745 | 1.0698 | -0.44% |
 | 2026-10-08T20:37 | TRXUSDT | bottom | 0.333 | 0.3329 | -0.03% |
-| 2026-10-08T20:37 | METUSDT | bottom | 0.4396 | 0.439 | -0.14% |
-| 2026-10-08T21:11 | MUBARAKUSDT | surge | 0.07694 | 0.07496 | -2.57% |
-| 2026-10-08T22:38 | PYTHUSDT | surge | 0.08358 | 0.08351 | -0.08% |
+| 2026-10-08T20:37 | METUSDT | bottom | 0.4396 | 0.4383 | -0.30% |
+| 2026-10-08T21:11 | MUBARAKUSDT | surge | 0.07694 | 0.07501 | -2.51% |
+| 2026-10-08T22:38 | PYTHUSDT | surge | 0.08358 | 0.08296 | -0.74% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
