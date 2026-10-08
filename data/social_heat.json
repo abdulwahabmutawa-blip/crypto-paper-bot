@@ -1,14 +1,16 @@
 {
-  "ts": "2026-10-08T03:30:23+00:00",
+  "ts": "2026-10-08T03:35:26+00:00",
   "sources": {
     "coingecko": [
-      "BTC",
       "MET",
-      "ORCA",
-      "NEAR",
-      "W",
       "PENGU",
-      "SUI"
+      "BTC",
+      "NEAR",
+      "ORCA",
+      "W",
+      "RAY",
+      "QNT",
+      "LINK"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,7 +22,7 @@
       "SNDKB",
       "TRX",
       "BNB",
-      "ADA"
+      "AVAX"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -33,7 +35,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.001071,
+      "funding": -0.001115,
       "long_short": 0.89
     },
     {
@@ -43,16 +45,25 @@
         "coingecko",
         "movers"
       ],
-      "funding": 8.9e-05,
+      "funding": 8.6e-05,
       "long_short": 1.24
     },
     {
-      "symbol": "ADA",
+      "symbol": "RAY",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0
+    },
+    {
+      "symbol": "AVAX",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 3e-06
+      "funding": -8.8e-05
     },
     {
       "symbol": "BNB",
@@ -68,7 +79,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1e-06
+      "funding": -2e-06
+    },
+    {
+      "symbol": "LINK",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 7.5e-05
     },
     {
       "symbol": "ORCA",
@@ -76,7 +95,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000492
+      "funding": -0.000489
     },
     {
       "symbol": "PENGU",
@@ -84,15 +103,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.1e-05
+      "funding": 3e-05
     },
     {
-      "symbol": "RAY",
+      "symbol": "QNT",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
-      "funding": 0.0
+      "funding": -7.9e-05
     },
     {
       "symbol": "SAND",
@@ -100,7 +119,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000176
+      "funding": -0.00017
     },
     {
       "symbol": "SNDKB",
@@ -108,14 +127,6 @@
       "sources": [
         "movers"
       ]
-    },
-    {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 1.1e-05
     },
     {
       "symbol": "TRX",
@@ -131,7 +142,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.4e-05
+      "funding": 1.6e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
