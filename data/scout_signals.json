@@ -1,8 +1,39 @@
 {
-  "ts": "2026-10-08T12:49:58+00:00",
-  "scanned": 127,
+  "ts": "2026-10-08T12:55:39+00:00",
+  "scanned": 128,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "DOGEUSDT",
+      "signal": "ignition",
+      "score": 0.631,
+      "raw_score": 0.717,
+      "weight": 0.88,
+      "price": 0.08708,
+      "why": "trades 4.6x and volume 15.7x the prior 4h, 73% taker-buy, $1,652,758 burst \u2014 while price has only moved -0.1%",
+      "chg_24h": -0.0185,
+      "vol_surge": 15.66,
+      "chg_1h": -0.0008,
+      "market_surge": 4.2,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.10% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "TAOUSDT",
+      "signal": "ignition",
+      "score": 0.558,
+      "raw_score": 0.634,
+      "weight": 0.88,
+      "price": 278.3,
+      "why": "trades 6.3x and volume 5.7x the prior 4h, 62% taker-buy, $462,581 burst \u2014 while price has only moved -0.6%",
+      "chg_24h": -0.0426,
+      "vol_surge": 5.7,
+      "chg_1h": -0.0057,
+      "market_surge": 3.51,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.10% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.10% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.22% at 24h: market beta, not signal",
@@ -11,7 +42,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 15,
+    "count": 17,
     "baseline": 13.0,
     "wave": false
   },
