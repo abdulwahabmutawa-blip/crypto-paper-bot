@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-08T02:26:37+00:00 · runs 2821 · equity **$801.22** (-19.88%) · cash $317.84 · open 6/10 · round trips 1049
+updated 2026-10-08T02:43:29+00:00 · runs 2822 · equity **$800.31** (-19.97%) · cash $317.84 · open 6/10 · round trips 1049
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,10 +36,10 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-07T02:47 | SPCXBUSDT | bottom | 168.44 | 168.42 | -0.01% |
-| 2026-10-08T01:51 | LINKUSDT | bottom | 13.313 | 13.274 | -0.29% |
-| 2026-10-08T02:08 | OGNUSDT | surge | 0.02358 | 0.02316 | -1.78% |
-| 2026-10-08T02:08 | MSTRBUSDT | bottom | 153.72 | 153.74 | +0.01% |
-| 2026-10-08T02:25 | BOMEUSDT | surge | 0.001061 | 0.001061 | +0.00% |
+| 2026-10-07T02:47 | SPCXBUSDT | bottom | 168.44 | 168.44 | +0.00% |
+| 2026-10-08T01:51 | LINKUSDT | bottom | 13.313 | 13.283 | -0.23% |
+| 2026-10-08T02:08 | OGNUSDT | surge | 0.02358 | 0.0231 | -2.04% |
+| 2026-10-08T02:08 | MSTRBUSDT | bottom | 153.72 | 153.91 | +0.12% |
+| 2026-10-08T02:25 | BOMEUSDT | surge | 0.001061 | 0.0010495 | -1.08% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
