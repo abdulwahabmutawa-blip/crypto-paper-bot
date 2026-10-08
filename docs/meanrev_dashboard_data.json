@@ -1,86 +1,68 @@
 {
-  "generated_utc": "2026-10-08T17:26:20+00:00",
+  "generated_utc": "2026-10-08T17:43:48+00:00",
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "live_ts": "2026-10-08T17:25:00+00:00",
+  "live_ts": "2026-10-08T17:40:00+00:00",
   "current": {
     "date": "2026-10-08",
-    "value": 1113.99,
-    "bench": 1026.88,
+    "value": 1111.03,
+    "bench": 1028.96,
     "holding": "JNJ"
   },
   "board": [
     {
-      "sym": "MRK",
-      "price": 140.89,
-      "line": "z -1.48",
-      "tag": "normal",
-      "on": false,
-      "pick": false,
-      "fill": 24.703989567622088
+      "sym": "JNJ",
+      "price": 254.98,
+      "line": "z -1.56",
+      "tag": "HELD",
+      "on": true,
+      "pick": true,
+      "fill": 25.95650663829622
     },
     {
-      "sym": "JNJ",
-      "price": 255.66,
-      "line": "z -1.47",
-      "tag": "HELD",
-      "on": false,
-      "pick": true,
-      "fill": 24.462124365617314
+      "sym": "MRK",
+      "price": 140.75,
+      "line": "z -1.52",
+      "tag": "oversold",
+      "on": true,
+      "pick": false,
+      "fill": 25.320423446436774
     },
     {
       "sym": "JPM",
-      "price": 330.24,
-      "line": "z -1.02",
+      "price": 330.4,
+      "line": "z -1.01",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 17.07881857754587
+      "fill": 16.791346504766437
     },
     {
       "sym": "PEP",
-      "price": 126.64,
-      "line": "z -0.75",
+      "price": 126.45,
+      "line": "z -0.79",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 12.471872359834919
+      "fill": 13.243037362049915
     },
     {
       "sym": "UNH",
-      "price": 372.47,
-      "line": "z -0.60",
+      "price": 372.58,
+      "line": "z -0.57",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 9.953577086393851
+      "fill": 9.508138031782348
     },
     {
       "sym": "HD",
-      "price": 293.82,
-      "line": "z -0.07",
+      "price": 294.61,
+      "line": "z +0.01",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 1.2051711243518144
-    },
-    {
-      "sym": "GOOGL",
-      "price": 347.16,
-      "line": "z +0.42",
-      "tag": "normal",
-      "on": false,
-      "pick": false,
-      "fill": -7.066801537337931
-    },
-    {
-      "sym": "NVDA",
-      "price": 230.07,
-      "line": "z +0.47",
-      "tag": "normal",
-      "on": false,
-      "pick": false,
-      "fill": -7.916629114758436
+      "fill": -0.13031148722198166
     },
     {
       "sym": "KO",
@@ -89,16 +71,34 @@
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": -8.068257972151168
+      "fill": -7.976388993717834
     },
     {
-      "sym": "AMZN",
-      "price": 254.97,
-      "line": "z +0.77",
+      "sym": "GOOGL",
+      "price": 347.56,
+      "line": "z +0.51",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": -12.886894635148124
+      "fill": -8.422583081886355
+    },
+    {
+      "sym": "NVDA",
+      "price": 231.21,
+      "line": "z +0.60",
+      "tag": "normal",
+      "on": false,
+      "pick": false,
+      "fill": -10.06621941103628
+    },
+    {
+      "sym": "AMZN",
+      "price": 255.14,
+      "line": "z +0.81",
+      "tag": "normal",
+      "on": false,
+      "pick": false,
+      "fill": -13.521039046771936
     }
   ],
   "board_title": "16 mega-caps, most oversold first (z < -1.5 = buy zone)",
@@ -109,12 +109,6 @@
     "board_note": "Buys panic, sells relief: enter the most stretched mega-cap below -1.5 z, exit when it recovers to average."
   },
   "intraday": [
-    {
-      "ts": "2026-09-11T17:28:07+00:00",
-      "value": 1252.9,
-      "bench": 1020.43,
-      "holding": "HD"
-    },
     {
       "ts": "2026-09-11T18:38:51+00:00",
       "value": 1249.19,
@@ -9108,6 +9102,12 @@
       "value": 1113.99,
       "bench": 1026.88,
       "holding": "JNJ"
+    },
+    {
+      "ts": "2026-10-08T17:43:48+00:00",
+      "value": 1111.03,
+      "bench": 1028.96,
+      "holding": "JNJ"
     }
   ],
   "trades": [
@@ -9602,8 +9602,8 @@
     },
     {
       "date": "2026-10-08",
-      "value": 1113.99,
-      "bench": 1026.88,
+      "value": 1111.03,
+      "bench": 1028.96,
       "holding": "JNJ"
     }
   ],
@@ -9615,5 +9615,5 @@
   },
   "costs_paid": 8.6628,
   "frozen": null,
-  "thoughts": "I'm holding JNJ. Most oversold mega-cap (z < -1.5) \u2014 buying the dip. I bought at $259.78; it's now $255.66 (-1.6% since I got in). My safety net: if the price falls to $229.12 (12% below its recent high), I sell automatically \u2014 no exceptions."
+  "thoughts": "I'm holding JNJ. Most oversold mega-cap (z < -1.5) \u2014 buying the dip. I bought at $259.78; it's now $254.98 (-1.8% since I got in). My safety net: if the price falls to $229.12 (12% below its recent high), I sell automatically \u2014 no exceptions. Closest challenger on my list is MRK, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
 }
