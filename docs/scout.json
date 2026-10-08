@@ -1,8 +1,24 @@
 {
-  "ts": "2026-10-08T14:12:32+00:00",
+  "ts": "2026-10-08T14:17:35+00:00",
   "scanned": 129,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ENJUSDT",
+      "signal": "ignition",
+      "score": 0.7118,
+      "raw_score": 0.8135,
+      "weight": 0.875,
+      "price": 0.03165,
+      "why": "trades 18.0x and volume 25.3x the prior 4h, 62% taker-buy, $59,193 burst \u2014 while price has only moved +3.7%",
+      "chg_24h": 0.0872,
+      "vol_surge": 25.35,
+      "chg_1h": 0.037,
+      "market_surge": 2.43,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.06% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.06% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.20% at 24h: market beta, not signal",
