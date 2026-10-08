@@ -1,37 +1,22 @@
 {
-  "ts": "2026-10-08T07:28:29+00:00",
-  "scanned": 130,
+  "ts": "2026-10-08T07:33:56+00:00",
+  "scanned": 129,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "BOMEUSDT",
+      "symbol": "ALGOUSDT",
       "signal": "breakout",
-      "score": 0.556,
-      "raw_score": 0.6184,
+      "score": 0.7704,
+      "raw_score": 0.857,
       "weight": 0.899,
-      "price": 0.0010671,
-      "why": "trades 4.6x, volume 5.7x, 80% taker-buy, +3.4% in an hour, at 85% of its 24h range",
-      "chg_24h": 0.0822,
-      "vol_surge": 5.71,
-      "chg_1h": 0.0343,
-      "market_surge": 2.2,
+      "price": 0.1242,
+      "why": "trades 12.8x, volume 13.9x, 62% taker-buy, +5.9% in an hour, at 88% of its 24h range",
+      "chg_24h": 0.035,
+      "vol_surge": 13.9,
+      "chg_1h": 0.0588,
+      "market_surge": 5.34,
       "actionable": false,
       "status": "benched \u2014 BTC-excess day mean +0.46% at 24h: market beta, not signal"
-    },
-    {
-      "symbol": "BOMEUSDT",
-      "signal": "ignition",
-      "score": 0.4775,
-      "raw_score": 0.5414,
-      "weight": 0.882,
-      "price": 0.0010671,
-      "why": "trades 4.6x and volume 5.7x the prior 4h, 80% taker-buy, $54,172 burst \u2014 while price has only moved +3.4%",
-      "chg_24h": 0.0822,
-      "vol_surge": 5.71,
-      "chg_1h": 0.0343,
-      "market_surge": 2.2,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.03% at 24h: market beta, not signal"
     }
   ],
   "gate": {
@@ -42,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 11,
+    "count": 12,
     "baseline": 13.0,
     "wave": false
   },
