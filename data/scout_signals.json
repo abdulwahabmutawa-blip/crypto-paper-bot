@@ -1,24 +1,8 @@
 {
-  "ts": "2026-10-08T12:22:16+00:00",
-  "scanned": 127,
+  "ts": "2026-10-08T12:27:58+00:00",
+  "scanned": 126,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "PENDLEUSDT",
-      "signal": "ignition",
-      "score": 0.6393,
-      "raw_score": 0.7248,
-      "weight": 0.882,
-      "price": 2.242,
-      "why": "trades 4.0x and volume 22.6x the prior 4h, 92% taker-buy, $198,937 burst \u2014 while price has only moved -0.6%",
-      "chg_24h": 0.0049,
-      "vol_surge": 22.58,
-      "chg_1h": -0.0062,
-      "market_surge": 11.23,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean +0.09% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.09% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.22% at 24h: market beta, not signal",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 16,
+    "count": 17,
     "baseline": 13.0,
     "wave": false
   },
@@ -67,7 +51,7 @@
       "median_ret_24h": -0.00692,
       "both_halves_24h": false,
       "days_24h": 14,
-      "mean_x_24h": 0.00094,
+      "mean_x_24h": 0.00086,
       "days_x_24h": 14,
       "avg_win_24h": 0.04629,
       "avg_loss_24h": -0.03859,
