@@ -1,27 +1,27 @@
 {
-  "ts": "2026-10-09T11:49:33+00:00",
+  "ts": "2026-10-09T11:55:17+00:00",
   "sources": {
     "coingecko": [
       "TRUMP",
       "STRK",
       "NEAR",
+      "PENGU",
       "BTC",
       "PYTH",
-      "PENGU",
       "KAIA",
-      "UNI",
-      "RLC"
+      "ZEC",
+      "UNI"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
+      "KAIA",
       "RLC",
       "STRK",
       "ZRO",
       "DOT",
-      "APT",
       "QNT",
-      "ZEC",
+      "APT",
       "CRCLB"
     ],
     "watcher": [],
@@ -29,14 +29,14 @@
   },
   "heat": [
     {
-      "symbol": "RLC",
+      "symbol": "KAIA",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": -0.001593,
-      "long_short": 0.84
+      "funding": -0.02,
+      "long_short": 1.06
     },
     {
       "symbol": "STRK",
@@ -45,7 +45,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 3e-05,
+      "funding": 3.3e-05,
       "long_short": 1.02
     },
     {
@@ -62,7 +62,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.9e-05
+      "funding": 3.6e-05
     },
     {
       "symbol": "CRCLB",
@@ -80,20 +80,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "KAIA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -0.02
-    },
-    {
       "symbol": "NEAR",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 7e-05
+      "funding": 6.3e-05
     },
     {
       "symbol": "PENGU",
@@ -101,7 +93,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3e-05
+      "funding": 2e-05
     },
     {
       "symbol": "PYTH",
@@ -109,7 +101,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -9e-06
+      "funding": -1e-05
     },
     {
       "symbol": "QNT",
@@ -117,7 +109,15 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000111
+      "funding": -0.000126
+    },
+    {
+      "symbol": "RLC",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -0.001591
     },
     {
       "symbol": "TRUMP",
@@ -125,7 +125,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.6e-05
+      "funding": 2.6e-05
     },
     {
       "symbol": "UNI",
@@ -133,15 +133,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.1e-05
+      "funding": 4.9e-05
     },
     {
       "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
-      "funding": 6.5e-05
+      "funding": 6e-05
     },
     {
       "symbol": "ZRO",
