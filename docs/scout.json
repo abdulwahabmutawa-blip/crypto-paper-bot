@@ -1,8 +1,26 @@
 {
-  "ts": "2026-10-09T00:14:25+00:00",
-  "scanned": 163,
+  "ts": "2026-10-09T00:19:54+00:00",
+  "scanned": 160,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "KORUBUSDT",
+      "signal": "reversion",
+      "score": 0.4231,
+      "raw_score": 0.4231,
+      "weight": 1.0,
+      "price": 17.83,
+      "why": "down -12% on the day (bottom decile of the market), now +0.8% over 15m with 4 green candles",
+      "chg_24h": -0.1222,
+      "vol_surge": 2.81,
+      "chg_1h": 0.0011,
+      "market_surge": 0.0,
+      "oi_drop": null,
+      "funding": null,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.47% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.54% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.19% at 24h: market beta, not signal",
@@ -11,7 +29,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 13,
+    "count": 12,
     "baseline": 13.0,
     "wave": false
   },
