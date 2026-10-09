@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-09T23:15:30+00:00",
+  "ts": "2026-10-09T23:20:49+00:00",
   "sources": {
     "coingecko": [
       "TRUMP",
@@ -23,7 +23,7 @@
       "ATOM",
       "NEAR",
       "WLD",
-      "QNT"
+      "CRCLB"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -46,18 +46,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 9e-05,
+      "funding": 8.9e-05,
       "long_short": 1.29
-    },
-    {
-      "symbol": "QNT",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": -0.000104,
-      "long_short": 1.03
     },
     {
       "symbol": "RLC",
@@ -66,7 +56,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.005268,
+      "funding": -0.005137,
       "long_short": 1.05
     },
     {
@@ -76,7 +66,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 1e-06,
+      "funding": 4e-06,
       "long_short": 1.04
     },
     {
@@ -93,7 +83,14 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.3e-05
+      "funding": 6.2e-05
+    },
+    {
+      "symbol": "CRCLB",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
     },
     {
       "symbol": "KAIA",
@@ -101,7 +98,15 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001971
+      "funding": -0.001979
+    },
+    {
+      "symbol": "QNT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -0.0001
     },
     {
       "symbol": "SOL",
@@ -109,7 +114,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.7e-05
+      "funding": 9.5e-05
     },
     {
       "symbol": "TRUMP",
@@ -125,7 +130,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.1e-05
+      "funding": 2.2e-05
     },
     {
       "symbol": "WLD",
@@ -133,7 +138,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -3e-06
+      "funding": -1.2e-05
     },
     {
       "symbol": "ZEC",
@@ -141,7 +146,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.3e-05
+      "funding": 8.4e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
