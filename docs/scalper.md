@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-09T05:01:50+00:00 · runs 2920 · equity **$763.45** (-23.65%) · cash $0.00 · open 10/10 · round trips 1090
+updated 2026-10-09T05:18:50+00:00 · runs 2921 · equity **$764.82** (-23.52%) · cash $0.00 · open 10/10 · round trips 1090
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-08T20:37 | FILUSDT | surge | 1.0745 | 1.0772 | +0.25% |
-| 2026-10-08T20:37 | TRXUSDT | bottom | 0.333 | 0.3319 | -0.33% |
-| 2026-10-08T21:11 | MUBARAKUSDT | surge | 0.07694 | 0.07538 | -2.03% |
-| 2026-10-09T00:52 | ALGOUSDT | bottom | 0.1177 | 0.1189 | +1.02% |
-| 2026-10-09T02:12 | ONTUSDT | surge | 0.06075 | 0.0606 | -0.25% |
-| 2026-10-09T02:28 | ONEUSDT | surge | 0.0022 | 0.002139 | -2.77% |
-| 2026-10-09T02:44 | AEROUSDT | surge | 0.8432 | 0.8391 | -0.49% |
-| 2026-10-09T03:01 | 牛来USDT | surge | 0.07519 | 0.075 | -0.25% |
-| 2026-10-09T04:59 | METUSDT | bottom | 0.4358 | 0.4335 | -0.53% |
+| 2026-10-08T20:37 | FILUSDT | surge | 1.0745 | 1.0759 | +0.13% |
+| 2026-10-08T20:37 | TRXUSDT | bottom | 0.333 | 0.3324 | -0.18% |
+| 2026-10-08T21:11 | MUBARAKUSDT | surge | 0.07694 | 0.07606 | -1.14% |
+| 2026-10-09T00:52 | ALGOUSDT | bottom | 0.1177 | 0.1199 | +1.87% |
+| 2026-10-09T02:12 | ONTUSDT | surge | 0.06075 | 0.06038 | -0.61% |
+| 2026-10-09T02:28 | ONEUSDT | surge | 0.0022 | 0.002146 | -2.45% |
+| 2026-10-09T02:44 | AEROUSDT | surge | 0.8432 | 0.8342 | -1.07% |
+| 2026-10-09T03:01 | 牛来USDT | surge | 0.07519 | 0.07503 | -0.21% |
+| 2026-10-09T04:59 | METUSDT | bottom | 0.4358 | 0.4362 | +0.09% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
