@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-09T00:53:42+00:00 · runs 2904 · equity **$763.93** (-23.61%) · cash $222.01 · open 7/10 · round trips 1088
+updated 2026-10-09T01:09:49+00:00 · runs 2905 · equity **$764.97** (-23.50%) · cash $222.01 · open 7/10 · round trips 1088
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,11 +36,11 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-08T04:39 | NVDABUSDT | bottom | 237.11 | 231.56 | -2.34% |
-| 2026-10-08T20:37 | AEROUSDT | surge | 0.8244 | 0.8228 | -0.19% |
-| 2026-10-08T20:37 | FILUSDT | surge | 1.0745 | 1.0692 | -0.49% |
-| 2026-10-08T20:37 | TRXUSDT | bottom | 0.333 | 0.3327 | -0.09% |
-| 2026-10-08T21:11 | MUBARAKUSDT | surge | 0.07694 | 0.07608 | -1.12% |
-| 2026-10-09T00:52 | ALGOUSDT | bottom | 0.1177 | 0.118 | +0.25% |
+| 2026-10-08T04:39 | NVDABUSDT | bottom | 237.11 | 231.43 | -2.40% |
+| 2026-10-08T20:37 | AEROUSDT | surge | 0.8244 | 0.8257 | +0.16% |
+| 2026-10-08T20:37 | FILUSDT | surge | 1.0745 | 1.0736 | -0.08% |
+| 2026-10-08T20:37 | TRXUSDT | bottom | 0.333 | 0.3326 | -0.12% |
+| 2026-10-08T21:11 | MUBARAKUSDT | surge | 0.07694 | 0.07635 | -0.77% |
+| 2026-10-09T00:52 | ALGOUSDT | bottom | 0.1177 | 0.1184 | +0.59% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
