@@ -1,24 +1,8 @@
 {
-  "ts": "2026-10-09T17:18:57+00:00",
+  "ts": "2026-10-09T17:24:35+00:00",
   "scanned": 128,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "INTCBUSDT",
-      "signal": "ignition",
-      "score": 0.8271,
-      "raw_score": 0.9539,
-      "weight": 0.867,
-      "price": 105.46,
-      "why": "trades 9.8x and volume 29.2x the prior 4h, 86% taker-buy, $175,625 burst \u2014 while price has only moved -0.2%",
-      "chg_24h": -0.01,
-      "vol_surge": 29.23,
-      "chg_1h": -0.0015,
-      "market_surge": 16.7,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.57% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.57% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.07% at 24h: market beta, not signal",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 1/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 28,
+    "count": 38,
     "baseline": 14.0,
     "wave": true
   },
@@ -59,19 +43,19 @@
       "avg_win_4h": 0.02266,
       "avg_loss_4h": -0.01871,
       "payoff_4h": 1.212,
-      "span_h_24h": 310.0,
-      "n_eff_24h": 12.92,
-      "n_24h": 858,
-      "hit_rate_24h": 0.362,
-      "mean_ret_24h": -0.00836,
+      "span_h_24h": 310.9,
+      "n_eff_24h": 12.96,
+      "n_24h": 859,
+      "hit_rate_24h": 0.363,
+      "mean_ret_24h": -0.00833,
       "median_ret_24h": -0.01243,
       "both_halves_24h": false,
       "days_24h": 14,
       "mean_x_24h": -0.00569,
       "days_x_24h": 14,
-      "avg_win_24h": 0.04405,
+      "avg_win_24h": 0.04398,
       "avg_loss_24h": -0.04023,
-      "payoff_24h": 1.095
+      "payoff_24h": 1.093
     },
     "breakout": {
       "span_h_1h": 334.2,
