@@ -1,16 +1,17 @@
 {
-  "ts": "2026-10-09T04:20:20+00:00",
+  "ts": "2026-10-09T04:25:43+00:00",
   "sources": {
     "coingecko": [
       "STRK",
       "NEAR",
       "PENGU",
-      "SOL",
       "PYTH",
-      "XRP",
+      "PEPE",
+      "SOL",
       "ZEC",
-      "AERO",
-      "INJ"
+      "XRP",
+      "INJ",
+      "TIA"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,9 +21,9 @@
       "RLC",
       "TIA",
       "DOT",
-      "ONDO",
       "FIL",
-      "CRCLB"
+      "CRCLB",
+      "ONDO"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -35,16 +36,18 @@
         "coingecko",
         "movers"
       ],
-      "funding": -5e-06,
+      "funding": -1e-05,
       "long_short": 1.35
     },
     {
-      "symbol": "AERO",
-      "surfaces": 1,
+      "symbol": "TIA",
+      "surfaces": 2,
       "sources": [
-        "coingecko"
+        "coingecko",
+        "movers"
       ],
-      "funding": 5e-05
+      "funding": 4.2e-05,
+      "long_short": 2.38
     },
     {
       "symbol": "CRCLB",
@@ -59,7 +62,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -1.9e-05
+      "funding": -6e-06
     },
     {
       "symbol": "FIL",
@@ -67,7 +70,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 9.8e-05
+      "funding": 9.7e-05
     },
     {
       "symbol": "INJ",
@@ -75,7 +78,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -8.7e-05
+      "funding": -8.1e-05
     },
     {
       "symbol": "NEAR",
@@ -91,7 +94,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000382
+      "funding": -0.000401
     },
     {
       "symbol": "ONDO",
@@ -107,7 +110,14 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -3.7e-05
+      "funding": -3.8e-05
+    },
+    {
+      "symbol": "PEPE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ]
     },
     {
       "symbol": "PYTH",
@@ -115,7 +125,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.5e-05
+      "funding": 3.6e-05
     },
     {
       "symbol": "RLC",
@@ -123,7 +133,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -3.7e-05
+      "funding": -4.4e-05
     },
     {
       "symbol": "SOL",
@@ -131,15 +141,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.8e-05
-    },
-    {
-      "symbol": "TIA",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 3.8e-05
+      "funding": 4e-05
     },
     {
       "symbol": "XRP",
@@ -147,7 +149,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000145
+      "funding": -0.000144
     },
     {
       "symbol": "ZEC",
