@@ -1,18 +1,17 @@
 {
-  "ts": "2026-10-09T08:35:40+00:00",
+  "ts": "2026-10-09T08:41:21+00:00",
   "sources": {
     "coingecko": [
       "STRK",
       "BTC",
-      "NEAR",
       "KAIA",
+      "NEAR",
       "RLC",
       "PENGU",
+      "PUMP",
       "PYTH",
-      "APT",
-      "ZEC",
       "HYPE",
-      "MET"
+      "SUI"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -31,23 +30,13 @@
   },
   "heat": [
     {
-      "symbol": "APT",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.29
-    },
-    {
       "symbol": "RLC",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": -0.000235,
+      "funding": -0.000254,
       "long_short": 0.71
     },
     {
@@ -57,8 +46,16 @@
         "coingecko",
         "movers"
       ],
-      "funding": 3e-06,
+      "funding": -1e-06,
       "long_short": 1.14
+    },
+    {
+      "symbol": "APT",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "BTC",
@@ -82,7 +79,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -5.8e-05
+      "funding": -5.9e-05
     },
     {
       "symbol": "KAIA",
@@ -90,15 +87,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.002473
-    },
-    {
-      "symbol": "MET",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -0.000297
+      "funding": -0.003001
     },
     {
       "symbol": "NEAR",
@@ -106,7 +95,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.3e-05
+      "funding": 2.8e-05
     },
     {
       "symbol": "OGN",
@@ -114,7 +103,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000351
+      "funding": -0.000339
     },
     {
       "symbol": "ONDO",
@@ -122,7 +111,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 1.2e-05
+      "funding": 1.7e-05
     },
     {
       "symbol": "PENGU",
@@ -130,7 +119,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.5e-05
+      "funding": 1.8e-05
+    },
+    {
+      "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 7e-06
     },
     {
       "symbol": "PYTH",
@@ -138,7 +135,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.6e-05
+      "funding": 2.5e-05
+    },
+    {
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -1.3e-05
     },
     {
       "symbol": "TIA",
@@ -146,15 +151,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -3.1e-05
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 3.8e-05
+      "funding": -2.8e-05
     },
     {
       "symbol": "ZRO",
