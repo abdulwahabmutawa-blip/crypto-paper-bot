@@ -1,69 +1,8 @@
 {
-  "ts": "2026-10-09T13:39:12+00:00",
-  "scanned": 159,
+  "ts": "2026-10-09T13:44:55+00:00",
+  "scanned": 162,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "CRCLBUSDT",
-      "signal": "ignition",
-      "score": 0.7566,
-      "raw_score": 0.8687,
-      "weight": 0.871,
-      "price": 81.01,
-      "why": "trades 13.1x and volume 15.1x the prior 4h, 63% taker-buy, $469,488 burst \u2014 while price has only moved -1.6%",
-      "chg_24h": 0.0208,
-      "vol_surge": 15.06,
-      "chg_1h": -0.0159,
-      "market_surge": 3.85,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.44% at 24h: market beta, not signal"
-    },
-    {
-      "symbol": "NVDABUSDT",
-      "signal": "ignition",
-      "score": 0.6448,
-      "raw_score": 0.7403,
-      "weight": 0.871,
-      "price": 232.2,
-      "why": "trades 7.0x and volume 8.3x the prior 4h, 70% taker-buy, $120,878 burst \u2014 while price has only moved -0.8%",
-      "chg_24h": -0.0122,
-      "vol_surge": 8.27,
-      "chg_1h": -0.0077,
-      "market_surge": 2.49,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.44% at 24h: market beta, not signal"
-    },
-    {
-      "symbol": "SPCXBUSDT",
-      "signal": "ignition",
-      "score": 0.5821,
-      "raw_score": 0.6683,
-      "weight": 0.871,
-      "price": 164.98,
-      "why": "trades 5.6x and volume 8.1x the prior 4h, 63% taker-buy, $566,105 burst \u2014 while price has only moved -0.5%",
-      "chg_24h": -0.0128,
-      "vol_surge": 8.06,
-      "chg_1h": -0.0055,
-      "market_surge": 2.0,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.44% at 24h: market beta, not signal"
-    },
-    {
-      "symbol": "PLUMEUSDT",
-      "signal": "ignition",
-      "score": 0.5461,
-      "raw_score": 0.627,
-      "weight": 0.871,
-      "price": 0.01775,
-      "why": "trades 5.4x and volume 6.4x the prior 4h, 72% taker-buy, $51,970 burst \u2014 while price has only moved -1.1%",
-      "chg_24h": -0.0226,
-      "vol_surge": 6.37,
-      "chg_1h": -0.0111,
-      "market_surge": 2.34,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.44% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.44% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.32% at 24h: market beta, not signal",
@@ -72,7 +11,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 14,
+    "count": 13,
     "baseline": 13.0,
     "wave": false
   },
@@ -112,7 +51,7 @@
       "median_ret_24h": -0.01198,
       "both_halves_24h": false,
       "days_24h": 14,
-      "mean_x_24h": -0.00438,
+      "mean_x_24h": -0.00442,
       "days_x_24h": 14,
       "avg_win_24h": 0.04452,
       "avg_loss_24h": -0.04036,
