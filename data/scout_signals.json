@@ -1,8 +1,24 @@
 {
-  "ts": "2026-10-09T05:32:56+00:00",
+  "ts": "2026-10-09T05:38:19+00:00",
   "scanned": 166,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "CRVUSDT",
+      "signal": "ignition",
+      "score": 0.6293,
+      "raw_score": 0.716,
+      "weight": 0.879,
+      "price": 0.3486,
+      "why": "trades 5.3x and volume 10.7x the prior 4h, 62% taker-buy, $186,731 burst \u2014 while price has only moved +0.1%",
+      "chg_24h": -0.1006,
+      "vol_surge": 10.73,
+      "chg_1h": 0.0006,
+      "market_surge": 3.3,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.33% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.33% at 24h: market beta, not signal",
     "breakout": "benched \u2014 hit 32%, mean -0.25% over last 335 at 24h: not beating 4x the round trip",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 0/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 13,
+    "count": 14,
     "baseline": 13.0,
     "wave": false
   },
