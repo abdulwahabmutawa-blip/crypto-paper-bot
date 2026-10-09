@@ -1,24 +1,8 @@
 {
-  "ts": "2026-10-09T18:52:46+00:00",
-  "scanned": 124,
+  "ts": "2026-10-09T18:57:57+00:00",
+  "scanned": 126,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "PIXELUSDT",
-      "signal": "ignition",
-      "score": 0.7502,
-      "raw_score": 0.8642,
-      "weight": 0.868,
-      "price": 0.00649,
-      "why": "trades 11.4x and volume 10.5x the prior 4h, 69% taker-buy, $56,618 burst \u2014 while price has only moved +2.4%",
-      "chg_24h": 0.1883,
-      "vol_surge": 10.47,
-      "chg_1h": 0.0237,
-      "market_surge": 5.43,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.59% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.59% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.07% at 24h: market beta, not signal",
@@ -27,9 +11,9 @@
     "revival": "probation \u2014 1/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 28,
+    "count": 26,
     "baseline": 14.0,
-    "wave": true
+    "wave": false
   },
   "scorecard": {
     "ignition": {
@@ -141,19 +125,19 @@
       "avg_win_4h": 0.0258,
       "avg_loss_4h": -0.02412,
       "payoff_4h": 1.07,
-      "span_h_24h": 297.5,
-      "n_eff_24h": 12.39,
-      "n_24h": 26,
-      "hit_rate_24h": 0.5,
-      "mean_ret_24h": 0.00534,
+      "span_h_24h": 298.0,
+      "n_eff_24h": 12.42,
+      "n_24h": 27,
+      "hit_rate_24h": 0.519,
+      "mean_ret_24h": 0.00582,
       "median_ret_24h": 0.00422,
       "both_halves_24h": false,
       "days_24h": 10,
-      "mean_x_24h": 0.00622,
+      "mean_x_24h": 0.00624,
       "days_x_24h": 10,
-      "avg_win_24h": 0.05248,
+      "avg_win_24h": 0.05004,
       "avg_loss_24h": -0.0418,
-      "payoff_24h": 1.256
+      "payoff_24h": 1.197
     },
     "revival": {
       "span_h_1h": 24.9,
