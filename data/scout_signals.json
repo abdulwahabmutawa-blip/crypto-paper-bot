@@ -1,22 +1,22 @@
 {
-  "ts": "2026-10-09T14:11:40+00:00",
-  "scanned": 161,
+  "ts": "2026-10-09T14:17:37+00:00",
+  "scanned": 160,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "ENSOUSDT",
-      "signal": "ignition",
-      "score": 0.7526,
-      "raw_score": 0.863,
-      "weight": 0.872,
-      "price": 0.947,
-      "why": "trades 11.2x and volume 19.4x the prior 4h, 60% taker-buy, $58,785 burst \u2014 while price has only moved +1.5%",
-      "chg_24h": 0.0021,
-      "vol_surge": 19.41,
-      "chg_1h": 0.015,
-      "market_surge": 4.22,
+      "symbol": "CRCLBUSDT",
+      "signal": "breakout",
+      "score": 0.6856,
+      "raw_score": 0.7635,
+      "weight": 0.898,
+      "price": 84.82,
+      "why": "trades 15.6x, volume 10.8x, 62% taker-buy, +2.9% in an hour, at 97% of its 24h range",
+      "chg_24h": 0.0568,
+      "vol_surge": 10.8,
+      "chg_1h": 0.0286,
+      "market_surge": 3.84,
       "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.47% at 24h: market beta, not signal"
+      "status": "benched \u2014 BTC-excess day mean +0.21% at 24h: market beta, not signal"
     }
   ],
   "gate": {
@@ -59,19 +59,19 @@
       "avg_win_4h": 0.02274,
       "avg_loss_4h": -0.0186,
       "payoff_4h": 1.222,
-      "span_h_24h": 311.6,
-      "n_eff_24h": 12.98,
-      "n_24h": 859,
+      "span_h_24h": 312.0,
+      "n_eff_24h": 13.0,
+      "n_24h": 860,
       "hit_rate_24h": 0.37,
-      "mean_ret_24h": -0.00781,
+      "mean_ret_24h": -0.00783,
       "median_ret_24h": -0.01198,
       "both_halves_24h": false,
       "days_24h": 14,
-      "mean_x_24h": -0.00471,
+      "mean_x_24h": -0.00474,
       "days_x_24h": 14,
       "avg_win_24h": 0.04403,
-      "avg_loss_24h": -0.04039,
-      "payoff_24h": 1.09
+      "avg_loss_24h": -0.04036,
+      "payoff_24h": 1.091
     },
     "breakout": {
       "span_h_1h": 333.1,
