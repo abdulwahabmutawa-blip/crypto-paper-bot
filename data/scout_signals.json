@@ -1,26 +1,10 @@
 {
-  "ts": "2026-10-09T01:31:53+00:00",
-  "scanned": 165,
+  "ts": "2026-10-09T01:37:14+00:00",
+  "scanned": 166,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "VETUSDT",
-      "signal": "ignition",
-      "score": 0.8098,
-      "raw_score": 0.9276,
-      "weight": 0.873,
-      "price": 0.007635,
-      "why": "trades 13.0x and volume 28.3x the prior 4h, 77% taker-buy, $65,669 burst \u2014 while price has only moved +0.6%",
-      "chg_24h": -0.0456,
-      "vol_surge": 28.3,
-      "chg_1h": 0.0059,
-      "market_surge": 1.13,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.51% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
-    "ignition": "benched \u2014 BTC-excess day mean -0.51% at 24h: market beta, not signal",
+    "ignition": "benched \u2014 BTC-excess day mean -0.33% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.23% at 24h: market beta, not signal",
     "reversion": "benched \u2014 BTC-excess day mean +0.47% at 24h: market beta, not signal",
     "heat": "probation \u2014 0/12 resolved 24h samples under ruleset 3",
@@ -59,19 +43,19 @@
       "avg_win_4h": 0.02305,
       "avg_loss_4h": -0.01862,
       "payoff_4h": 1.238,
-      "span_h_24h": 311.6,
-      "n_eff_24h": 12.98,
-      "n_24h": 856,
+      "span_h_24h": 311.8,
+      "n_eff_24h": 12.99,
+      "n_24h": 857,
       "hit_rate_24h": 0.387,
-      "mean_ret_24h": -0.00552,
+      "mean_ret_24h": -0.00528,
       "median_ret_24h": -0.00947,
       "both_halves_24h": false,
       "days_24h": 14,
-      "mean_x_24h": -0.00505,
+      "mean_x_24h": -0.00327,
       "days_x_24h": 14,
-      "avg_win_24h": 0.0456,
+      "avg_win_24h": 0.04604,
       "avg_loss_24h": -0.03994,
-      "payoff_24h": 1.142
+      "payoff_24h": 1.153
     },
     "breakout": {
       "span_h_1h": 329.4,
