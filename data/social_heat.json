@@ -1,16 +1,16 @@
 {
-  "ts": "2026-10-09T18:36:23+00:00",
+  "ts": "2026-10-09T18:41:48+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
       "TRUMP",
       "PUMP",
       "STRK",
-      "BTC",
-      "AERO",
-      "BAT",
       "SUI",
+      "ZEC",
+      "AERO",
       "RAY",
+      "BAT",
       "MAGIC"
     ],
     "reddit": [],
@@ -23,7 +23,7 @@
       "ZEC",
       "WLD",
       "QNT",
-      "PEPE"
+      "ENA"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -36,7 +36,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -9.6e-05,
+      "funding": -9.5e-05,
       "long_short": 0.99
     },
     {
@@ -46,8 +46,18 @@
         "coingecko",
         "movers"
       ],
-      "funding": 4.3e-05,
+      "funding": 4e-05,
       "long_short": 0.98
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 3.4e-05,
+      "long_short": 0.77
     },
     {
       "symbol": "AERO",
@@ -55,7 +65,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.8e-05
+      "funding": 2.3e-05
     },
     {
       "symbol": "BAT",
@@ -63,15 +73,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000341
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 3.5e-05
+      "funding": -0.000336
     },
     {
       "symbol": "CRCLB",
@@ -81,12 +83,20 @@
       ]
     },
     {
+      "symbol": "ENA",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -8.8e-05
+    },
+    {
       "symbol": "KAIA",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -0.002028
+      "funding": -0.002031
     },
     {
       "symbol": "PENGU",
@@ -97,19 +107,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PEPE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
-    },
-    {
       "symbol": "PUMP",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 3.6e-05
+      "funding": 3.9e-05
     },
     {
       "symbol": "QNT",
@@ -117,7 +120,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000148
+      "funding": -0.00015
     },
     {
       "symbol": "RAY",
@@ -133,7 +136,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -6e-06
+      "funding": -1e-05
     },
     {
       "symbol": "TRUMP",
@@ -141,7 +144,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.2e-05
+      "funding": 1.9e-05
     },
     {
       "symbol": "WLD",
@@ -149,15 +152,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -1.8e-05
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 3.3e-05
+      "funding": -2.3e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
