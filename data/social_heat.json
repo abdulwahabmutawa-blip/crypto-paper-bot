@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-10T10:57:41+00:00",
+  "ts": "2026-10-10T11:03:24+00:00",
   "sources": {
     "coingecko": [
       "TRUMP",
@@ -7,12 +7,12 @@
       "PENGU",
       "BTC",
       "QNT",
-      "SUI",
       "ZEC",
-      "MAGIC",
+      "SUI",
       "STRK",
-      "SOL",
-      "TAO"
+      "MAGIC",
+      "AAVE",
+      "SOL"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -24,7 +24,7 @@
       "SUI",
       "FET",
       "AAVE",
-      "AVAX"
+      "ENA"
     ],
     "watcher": [
       "KAIA",
@@ -42,8 +42,18 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.004442,
-      "long_short": 1.02
+      "funding": -0.004507,
+      "long_short": 1.08
+    },
+    {
+      "symbol": "AAVE",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 2.2e-05,
+      "long_short": 1.68
     },
     {
       "symbol": "NEAR",
@@ -53,7 +63,7 @@
         "movers"
       ],
       "funding": 0.0001,
-      "long_short": 1.24
+      "long_short": 1.2
     },
     {
       "symbol": "SUI",
@@ -62,8 +72,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 5.6e-05,
-      "long_short": 2.05
+      "funding": 5.7e-05,
+      "long_short": 2.04
     },
     {
       "symbol": "WLD",
@@ -73,15 +83,7 @@
         "watcher"
       ],
       "funding": 0.0001,
-      "long_short": 1.62
-    },
-    {
-      "symbol": "AAVE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 2.3e-05
+      "long_short": 1.65
     },
     {
       "symbol": "ADA",
@@ -92,20 +94,20 @@
       "funding": 0.0001
     },
     {
-      "symbol": "AVAX",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5.5e-05
-    },
-    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -3e-05
+      "funding": -2.9e-05
+    },
+    {
+      "symbol": "ENA",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 3e-06
     },
     {
       "symbol": "FET",
@@ -121,7 +123,7 @@
       "sources": [
         "watcher"
       ],
-      "funding": -0.002271
+      "funding": -0.002169
     },
     {
       "symbol": "PENGU",
@@ -137,7 +139,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -7e-05
+      "funding": -7.2e-05
     },
     {
       "symbol": "SOL",
@@ -145,18 +147,10 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.9e-05
+      "funding": 2e-05
     },
     {
       "symbol": "STRK",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "TAO",
       "surfaces": 1,
       "sources": [
         "coingecko"
