@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-10T16:55:57+00:00",
+  "ts": "2026-10-10T17:01:30+00:00",
   "sources": {
     "coingecko": [
       "STRK",
@@ -17,13 +17,13 @@
     "stocktwits": [],
     "movers": [
       "LUMIA",
-      "STRK",
       "RLC",
+      "STRK",
       "NEAR",
       "WLD",
       "ADA",
       "SUI",
-      "MAGIC"
+      "FET"
     ],
     "watcher": [
       "KAIA",
@@ -34,16 +34,6 @@
   },
   "heat": [
     {
-      "symbol": "MAGIC",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": -0.003538,
-      "long_short": 1.01
-    },
-    {
       "symbol": "NEAR",
       "surfaces": 2,
       "sources": [
@@ -51,7 +41,7 @@
         "movers"
       ],
       "funding": 0.0001,
-      "long_short": 1.04
+      "long_short": 1.03
     },
     {
       "symbol": "STRK",
@@ -60,7 +50,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 2.2e-05,
+      "funding": -6e-06,
       "long_short": 1.01
     },
     {
@@ -70,8 +60,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 6.1e-05,
-      "long_short": 2.07
+      "funding": 5.9e-05,
+      "long_short": 2.09
     },
     {
       "symbol": "WLD",
@@ -81,7 +71,7 @@
         "watcher"
       ],
       "funding": 0.0001,
-      "long_short": 1.79
+      "long_short": 1.77
     },
     {
       "symbol": "ADA",
@@ -98,6 +88,14 @@
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "FET",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "HYPE",
@@ -124,6 +122,14 @@
       "funding": 5e-05
     },
     {
+      "symbol": "MAGIC",
+      "surfaces": 1,
+      "sources": [
+        "watcher"
+      ],
+      "funding": -0.003489
+    },
+    {
       "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
@@ -137,7 +143,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.003691
+      "funding": -0.0038
     },
     {
       "symbol": "SOL",
@@ -169,7 +175,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.3e-05
+      "funding": 2.1e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
