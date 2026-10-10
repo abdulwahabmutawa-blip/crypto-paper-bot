@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-10T09:34:36+00:00",
+  "ts": "2026-10-10T09:40:11+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
@@ -18,11 +18,11 @@
       "MAGIC",
       "WLD",
       "NEAR",
-      "KAIA",
       "ADA",
-      "AAVE",
       "SUI",
-      "QNT"
+      "AAVE",
+      "QNT",
+      "AVAX"
     ],
     "watcher": [
       "KAIA",
@@ -39,18 +39,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 2.7e-05,
+      "funding": 2.6e-05,
       "long_short": 1.67
-    },
-    {
-      "symbol": "KAIA",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": -0.002351,
-      "long_short": 1.15
     },
     {
       "symbol": "MAGIC",
@@ -59,7 +49,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.00291,
+      "funding": -0.003017,
       "long_short": 0.96
     },
     {
@@ -79,7 +69,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 4.9e-05,
+      "funding": 4.7e-05,
       "long_short": 2.04
     },
     {
@@ -89,7 +79,8 @@
         "movers",
         "watcher"
       ],
-      "funding": 0.0001
+      "funding": 0.0001,
+      "long_short": 1.61
     },
     {
       "symbol": "ADA",
@@ -108,12 +99,28 @@
       "funding": 5e-05
     },
     {
+      "symbol": "AVAX",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 9e-05
+    },
+    {
+      "symbol": "KAIA",
+      "surfaces": 1,
+      "sources": [
+        "watcher"
+      ],
+      "funding": -0.00233
+    },
+    {
       "symbol": "LUMIA",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000115
+      "funding": -0.000108
     },
     {
       "symbol": "ORCA",
@@ -121,7 +128,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000264
+      "funding": -0.000279
     },
     {
       "symbol": "PENGU",
@@ -137,7 +144,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -3.1e-05
+      "funding": -3.7e-05
     },
     {
       "symbol": "STRK",
