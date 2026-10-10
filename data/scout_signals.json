@@ -1,24 +1,8 @@
 {
-  "ts": "2026-10-10T21:37:28+00:00",
-  "scanned": 109,
+  "ts": "2026-10-10T21:42:47+00:00",
+  "scanned": 107,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "UNIUSDT",
-      "signal": "ignition",
-      "score": 0.6421,
-      "raw_score": 0.7347,
-      "weight": 0.874,
-      "price": 7.64,
-      "why": "trades 5.8x and volume 16.9x the prior 4h, 72% taker-buy, $561,818 burst \u2014 while price has only moved +1.1%",
-      "chg_24h": 0.0488,
-      "vol_surge": 16.87,
-      "chg_1h": 0.0111,
-      "market_surge": 4.08,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.97% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.97% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.07% at 24h: market beta, not signal",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 2/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 21,
+    "count": 19,
     "baseline": 15.0,
     "wave": false
   },
@@ -163,19 +147,21 @@
       "mean_ret_1h": 0.01589,
       "median_ret_1h": -0.0053,
       "days_1h": 1,
+      "mean_x_1h": 0.0142,
+      "days_x_1h": 1,
       "avg_win_1h": 0.08704,
       "avg_loss_1h": -0.00782,
       "payoff_1h": 11.126,
-      "span_h_4h": 6.8,
-      "n_eff_4h": 1.7,
-      "n_4h": 3,
-      "hit_rate_4h": 0.667,
-      "mean_ret_4h": 0.01669,
+      "span_h_4h": 7.0,
+      "n_eff_4h": 1.76,
+      "n_4h": 4,
+      "hit_rate_4h": 0.5,
+      "mean_ret_4h": 0.00978,
       "median_ret_4h": 0.01828,
       "days_4h": 1,
       "avg_win_4h": 0.06634,
-      "avg_loss_4h": -0.08262,
-      "payoff_4h": 0.803
+      "avg_loss_4h": -0.04679,
+      "payoff_4h": 1.418
     },
     "revival": {
       "span_h_1h": 41.4,
