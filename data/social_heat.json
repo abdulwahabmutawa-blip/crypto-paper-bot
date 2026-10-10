@@ -1,19 +1,18 @@
 {
-  "ts": "2026-10-10T14:07:54+00:00",
+  "ts": "2026-10-10T14:13:21+00:00",
   "sources": {
     "coingecko": [
       "TRUMP",
       "BTC",
-      "PENGU",
       "NEAR",
+      "STRK",
       "AERO",
       "HYPE",
-      "STRK",
       "QNT",
-      "ONDO",
-      "ZEC",
+      "ETH",
+      "PENGU",
       "ZRO",
-      "AAVE"
+      "ONDO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,10 +21,10 @@
       "NEAR",
       "WLD",
       "ADA",
-      "STRK",
       "SUI",
-      "KAIA",
-      "UNI"
+      "STRK",
+      "UNI",
+      "ONDO"
     ],
     "watcher": [
       "KAIA",
@@ -36,23 +35,13 @@
   },
   "heat": [
     {
-      "symbol": "KAIA",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": -0.000875,
-      "long_short": 1.23
-    },
-    {
       "symbol": "MAGIC",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": -0.004538,
+      "funding": -0.004504,
       "long_short": 0.98
     },
     {
@@ -64,6 +53,16 @@
       ],
       "funding": 0.0001,
       "long_short": 1.13
+    },
+    {
+      "symbol": "ONDO",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 4.9e-05,
+      "long_short": 2.15
     },
     {
       "symbol": "STRK",
@@ -84,14 +83,6 @@
       ],
       "funding": 0.0001,
       "long_short": 1.72
-    },
-    {
-      "symbol": "AAVE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 1.8e-05
     },
     {
       "symbol": "ADA",
@@ -115,7 +106,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.6e-05
+      "funding": -1.4e-05
+    },
+    {
+      "symbol": "ETH",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 3.4e-05
     },
     {
       "symbol": "HYPE",
@@ -123,15 +122,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.1e-05
+      "funding": 1.4e-05
     },
     {
-      "symbol": "ONDO",
+      "symbol": "KAIA",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "watcher"
       ],
-      "funding": 4.5e-05
+      "funding": -0.000847
     },
     {
       "symbol": "PENGU",
@@ -155,7 +154,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 8.6e-05
+      "funding": 8.7e-05
     },
     {
       "symbol": "TRUMP",
@@ -171,15 +170,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 3e-06
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5.5e-05
+      "funding": 2e-06
     },
     {
       "symbol": "ZRO",
