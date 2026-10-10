@@ -1,8 +1,24 @@
 {
-  "ts": "2026-10-10T01:07:15+00:00",
+  "ts": "2026-10-10T01:12:48+00:00",
   "scanned": 127,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SOXLBUSDT",
+      "signal": "ignition",
+      "score": 0.8276,
+      "raw_score": 0.949,
+      "weight": 0.872,
+      "price": 141.29,
+      "why": "trades 41.3x and volume 106.3x the prior 4h, 85% taker-buy, $55,991 burst \u2014 while price has only moved +0.6%",
+      "chg_24h": -0.0095,
+      "vol_surge": 106.29,
+      "chg_1h": 0.0056,
+      "market_surge": 2.61,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.26% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.26% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.07% at 24h: market beta, not signal",
