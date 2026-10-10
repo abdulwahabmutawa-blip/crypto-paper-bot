@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-10T11:30:41+00:00",
+  "ts": "2026-10-10T11:36:00+00:00",
   "sources": {
     "coingecko": [
       "TRUMP",
@@ -7,11 +7,10 @@
       "BTC",
       "PENGU",
       "QNT",
-      "MAGIC",
-      "STRK",
-      "SUI",
       "BAT",
-      "SOL"
+      "SOL",
+      "ZRO",
+      "STRK"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,8 +20,8 @@
       "NEAR",
       "ADA",
       "SUI",
-      "FET",
       "AAVE",
+      "FET",
       "ONDO"
     ],
     "watcher": [
@@ -35,13 +34,12 @@
   "heat": [
     {
       "symbol": "MAGIC",
-      "surfaces": 3,
+      "surfaces": 2,
       "sources": [
-        "coingecko",
         "movers",
         "watcher"
       ],
-      "funding": -0.004611,
+      "funding": -0.004619,
       "long_short": 1.08
     },
     {
@@ -53,16 +51,6 @@
       ],
       "funding": 0.0001,
       "long_short": 1.2
-    },
-    {
-      "symbol": "SUI",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5.4e-05,
-      "long_short": 2.04
     },
     {
       "symbol": "WLD",
@@ -80,7 +68,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 2.4e-05
+      "funding": 2.6e-05
     },
     {
       "symbol": "ADA",
@@ -96,7 +84,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000261
+      "funding": -0.000287
     },
     {
       "symbol": "BTC",
@@ -104,7 +92,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.7e-05
+      "funding": -2.6e-05
     },
     {
       "symbol": "FET",
@@ -120,7 +108,7 @@
       "sources": [
         "watcher"
       ],
-      "funding": -0.001779
+      "funding": -0.00169
     },
     {
       "symbol": "ONDO",
@@ -144,7 +132,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -7e-05
+      "funding": -6.9e-05
     },
     {
       "symbol": "SOL",
@@ -163,7 +151,23 @@
       "funding": 5e-05
     },
     {
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5.7e-05
+    },
+    {
       "symbol": "TRUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "ZRO",
       "surfaces": 1,
       "sources": [
         "coingecko"
