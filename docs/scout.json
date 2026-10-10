@@ -1,39 +1,8 @@
 {
-  "ts": "2026-10-10T09:40:18+00:00",
-  "scanned": 126,
+  "ts": "2026-10-10T09:45:27+00:00",
+  "scanned": 125,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "PROMUSDT",
-      "signal": "ignition",
-      "score": 0.7297,
-      "raw_score": 0.8368,
-      "weight": 0.872,
-      "price": 5.345,
-      "why": "trades 13.8x and volume 7.7x the prior 4h, 75% taker-buy, $279,000 burst \u2014 while price has only moved -1.8%",
-      "chg_24h": -0.0065,
-      "vol_surge": 7.75,
-      "chg_1h": -0.0176,
-      "market_surge": 9.69,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.71% at 24h: market beta, not signal"
-    },
-    {
-      "symbol": "INJUSDT",
-      "signal": "breakout",
-      "score": 0.6854,
-      "raw_score": 0.7607,
-      "weight": 0.901,
-      "price": 7.206,
-      "why": "trades 9.6x, volume 11.8x, 73% taker-buy, +2.1% in an hour, at 102% of its 24h range",
-      "chg_24h": 0.0115,
-      "vol_surge": 11.76,
-      "chg_1h": 0.0207,
-      "market_surge": 6.11,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.02% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.71% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.02% at 24h: market beta, not signal",
