@@ -1,8 +1,24 @@
 {
-  "ts": "2026-10-10T05:49:28+00:00",
-  "scanned": 125,
+  "ts": "2026-10-10T05:54:32+00:00",
+  "scanned": 124,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "LDOUSDT",
+      "signal": "breakout",
+      "score": 0.5496,
+      "raw_score": 0.612,
+      "weight": 0.898,
+      "price": 0.4401,
+      "why": "trades 4.4x, volume 6.4x, 81% taker-buy, +2.8% in an hour, at 94% of its 24h range",
+      "chg_24h": 0.0366,
+      "vol_surge": 6.36,
+      "chg_1h": 0.0278,
+      "market_surge": 6.4,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.01% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.51% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.01% at 24h: market beta, not signal",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 1/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 25,
+    "count": 24,
     "baseline": 14.0,
     "wave": false
   },
