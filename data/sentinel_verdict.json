@@ -1,6 +1,35 @@
 {
-  "ts": "2026-09-11T15:12:52+00:00",
-  "risk_level": "unparsed",
-  "risk_alerts": [],
+  "ts": "2026-10-10T09:17:31+00:00",
+  "risk_level": "caution",
+  "risk_alerts": [
+    {
+      "headline": "Elevated Treasury yields near multi-year highs and Fed hike odds pressure risk assets",
+      "markets": [
+        "both"
+      ],
+      "severity": "caution"
+    },
+    {
+      "headline": "Crypto sees ~$1B liquidations and continued BTC/ETH ETF outflows",
+      "markets": [
+        "crypto"
+      ],
+      "severity": "caution"
+    },
+    {
+      "headline": "XRP Ledger decade-old bug patched that could mint billions XRP; no exploit found",
+      "markets": [
+        "crypto"
+      ],
+      "severity": "caution"
+    },
+    {
+      "headline": "Tech/AI pullback on OpenAI revenue concerns; telecoms hit by SpaceX spectrum deal",
+      "markets": [
+        "stocks"
+      ],
+      "severity": "caution"
+    }
+  ],
   "note": "consumed by every risk-gated bot via sentinel_gate.severe(); verdicts older than 24h are treated as UNKNOWN, not calm"
 }
