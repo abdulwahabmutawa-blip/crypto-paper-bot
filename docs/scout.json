@@ -1,8 +1,39 @@
 {
-  "ts": "2026-10-10T18:39:47+00:00",
-  "scanned": 119,
+  "ts": "2026-10-10T18:45:27+00:00",
+  "scanned": 117,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SUSDT",
+      "signal": "breakout",
+      "score": 0.7101,
+      "raw_score": 0.7951,
+      "weight": 0.893,
+      "price": 0.04708,
+      "why": "trades 15.3x, volume 26.2x, 62% taker-buy, +3.9% in an hour, at 84% of its 24h range",
+      "chg_24h": 0.068,
+      "vol_surge": 26.22,
+      "chg_1h": 0.0386,
+      "market_surge": 19.18,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.01% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "SUSDT",
+      "signal": "ignition",
+      "score": 0.708,
+      "raw_score": 0.8091,
+      "weight": 0.875,
+      "price": 0.04708,
+      "why": "trades 15.3x and volume 26.2x the prior 4h, 62% taker-buy, $304,940 burst \u2014 while price has only moved +3.9%",
+      "chg_24h": 0.068,
+      "vol_surge": 26.22,
+      "chg_1h": 0.0386,
+      "market_surge": 19.18,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.65% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.65% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.01% at 24h: market beta, not signal",
@@ -11,7 +42,7 @@
     "revival": "probation \u2014 2/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 23,
+    "count": 25,
     "baseline": 15.0,
     "wave": false
   },
