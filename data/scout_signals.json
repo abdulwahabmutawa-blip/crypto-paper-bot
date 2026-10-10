@@ -1,8 +1,39 @@
 {
-  "ts": "2026-10-10T01:50:46+00:00",
-  "scanned": 125,
+  "ts": "2026-10-10T01:56:19+00:00",
+  "scanned": 124,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "DOTUSDT",
+      "signal": "breakout",
+      "score": 0.7486,
+      "raw_score": 0.8327,
+      "weight": 0.899,
+      "price": 1.286,
+      "why": "trades 13.5x, volume 11.9x, 66% taker-buy, +4.8% in an hour, at 96% of its 24h range",
+      "chg_24h": 0.1242,
+      "vol_surge": 11.94,
+      "chg_1h": 0.0481,
+      "market_surge": 11.13,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.62% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "FILUSDT",
+      "signal": "ignition",
+      "score": 0.6172,
+      "raw_score": 0.707,
+      "weight": 0.873,
+      "price": 1.0923,
+      "why": "trades 4.1x and volume 19.5x the prior 4h, 88% taker-buy, $268,419 burst \u2014 while price has only moved +1.0%",
+      "chg_24h": 0.0012,
+      "vol_surge": 19.46,
+      "chg_1h": 0.0105,
+      "market_surge": 14.97,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.46% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.46% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.62% at 24h: market beta, not signal",
@@ -11,7 +42,7 @@
     "revival": "probation \u2014 1/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 25,
+    "count": 27,
     "baseline": 14.0,
     "wave": false
   },
