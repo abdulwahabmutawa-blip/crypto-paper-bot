@@ -4,87 +4,6 @@
       "risk_level": "caution",
       "risk_alerts": [
         {
-          "headline": "Walmart hikes outlook but stock plunges 8-10% on weak US comps/sales concerns",
-          "markets": [
-            "stocks"
-          ],
-          "severity": "caution"
-        },
-        {
-          "headline": "Treasury yields reverse after Bessent buyback; stocks open lower",
-          "markets": [
-            "stocks"
-          ],
-          "severity": "caution"
-        }
-      ],
-      "hype": [
-        {
-          "symbol": "WMT",
-          "mood": "fearful",
-          "note": "Earnings beat/outlook up but sales miss crushes stock"
-        },
-        {
-          "symbol": "HYPE",
-          "mood": "euphoric",
-          "note": "Trump Hyperliquid CFTC comments spark calls"
-        },
-        {
-          "symbol": "XRP",
-          "mood": "euphoric",
-          "note": "Big mover on banker-hours flow and rally"
-        }
-      ],
-      "crypto_hype": [
-        {
-          "symbol": "HYPE",
-          "mood": "euphoric",
-          "note": "Trump CFTC onshore comments fuel surge",
-          "stage": "peaked"
-        },
-        {
-          "symbol": "XRP",
-          "mood": "euphoric",
-          "note": "15-24% jump with onchain banker pattern",
-          "stage": "peaked"
-        },
-        {
-          "symbol": "PEPE",
-          "mood": "euphoric",
-          "note": "Meme leader in broad risk-on pump",
-          "stage": "peaked"
-        },
-        {
-          "symbol": "BOME",
-          "mood": "euphoric",
-          "note": "Top Binance mover meme frenzy",
-          "stage": "peaked"
-        },
-        {
-          "symbol": "PUMP",
-          "mood": "euphoric",
-          "note": "Trending search and volume spike",
-          "stage": "peaked"
-        },
-        {
-          "symbol": "ACE",
-          "mood": "euphoric",
-          "note": "Largest 24h gainer high volume",
-          "stage": "peaked"
-        }
-      ],
-      "overall_mood": "Crypto euphoric on BTC breakout above $71k from Treasury liquidity, Clarity Act push and short squeeze while stocks cautious amid WMT drop and yield whipsaw.",
-      "ts": "2026-08-20T17:04:09+00:00",
-      "gauges": {
-        "vix": 15.6,
-        "crypto_fear_greed": 62,
-        "crypto_fng_label": "Greed"
-      }
-    },
-    {
-      "risk_level": "caution",
-      "risk_alerts": [
-        {
           "headline": "Clarity Act progress critical by mid-Sept or BTC pressure risk",
           "markets": [
             "crypto"
@@ -10648,13 +10567,144 @@
           "output_tokens": 1443
         }
       }
+    },
+    {
+      "risk_level": "caution",
+      "risk_alerts": [
+        {
+          "headline": "Crypto ETF outflows and $1B+ liquidations amid high yields",
+          "markets": [
+            "crypto"
+          ],
+          "severity": "caution"
+        },
+        {
+          "headline": "Tech/AI stocks pull back on OpenAI revenue concerns",
+          "markets": [
+            "stocks"
+          ],
+          "severity": "caution"
+        },
+        {
+          "headline": "Elevated oil prices and Treasury yields pressure risk assets",
+          "markets": [
+            "both"
+          ],
+          "severity": "caution"
+        }
+      ],
+      "hype": [
+        {
+          "symbol": "MP",
+          "mood": "euphoric",
+          "note": "Rare earths surge on Trump China tariff threats"
+        },
+        {
+          "symbol": "STRK",
+          "mood": "euphoric",
+          "note": "L1 quantum pivot rumors drive big gains"
+        },
+        {
+          "symbol": "NEAR",
+          "mood": "mixed",
+          "note": "ETF and Intents buzz after recent dip"
+        }
+      ],
+      "crypto_hype": [
+        {
+          "symbol": "STRK",
+          "mood": "euphoric",
+          "stage": "peaked",
+          "organic": true,
+          "promo_risk": "low",
+          "catalyst": "L1 split quantum 2027 proposal",
+          "why": "Founder comments sparked volume and independent talk",
+          "note": "Top mover post-catalyst cheer"
+        },
+        {
+          "symbol": "NEAR",
+          "mood": "mixed",
+          "stage": "peaked",
+          "organic": true,
+          "promo_risk": "low",
+          "catalyst": "FastNEAR acquisition Intents volume",
+          "why": "Ecosystem news and ETF inflows after exploit recovery",
+          "note": "Binance mover rebound chatter"
+        },
+        {
+          "symbol": "WLD",
+          "mood": "euphoric",
+          "stage": "peaked",
+          "organic": false,
+          "promo_risk": "high",
+          "catalyst": "none",
+          "why": "Short liquidations and retail pump posts dominate",
+          "note": "Top mover victory-lap volume"
+        },
+        {
+          "symbol": "LUMIA",
+          "mood": "euphoric",
+          "stage": "peaked",
+          "organic": false,
+          "promo_risk": "high",
+          "catalyst": "none",
+          "why": "Speculative volume spike no clear catalyst",
+          "note": "Extreme 24h gainer shilling"
+        },
+        {
+          "symbol": "RLC",
+          "mood": "mixed",
+          "stage": "peaked",
+          "organic": false,
+          "promo_risk": "high",
+          "catalyst": "none",
+          "why": "Funding extremes and mover lists only",
+          "note": "Perp shorts paying crowd cheer"
+        }
+      ],
+      "overall_mood": "Cautious greed as stocks rebound near highs ahead of earnings while crypto stabilizes in greed territory with selective alt rotation after liquidations and outflows.",
+      "ts": "2026-10-10T17:22:41+00:00",
+      "gauges": {
+        "vix": 14.8,
+        "crypto_fear_greed": 64,
+        "crypto_fng_label": "Greed"
+      },
+      "usage": {
+        "input_tokens": 200107,
+        "input_tokens_details": {
+          "cached_tokens": 128128
+        },
+        "output_tokens": 2303,
+        "output_tokens_details": {
+          "reasoning_tokens": 953
+        },
+        "total_tokens": 202410,
+        "num_sources_used": 0,
+        "num_server_side_tools_used": 17,
+        "cost_in_usd_ticks": 6574288000,
+        "server_side_tool_usage_details": {
+          "web_search_calls": 8,
+          "x_search_calls": 9,
+          "x_posts_fetched": 45,
+          "x_users_fetched": 0,
+          "code_interpreter_calls": 0,
+          "file_search_calls": 0,
+          "mcp_calls": 0,
+          "document_search_calls": 0,
+          "image_generation_calls": 0
+        },
+        "context_details": {
+          "input_tokens": 68830,
+          "output_tokens": 1208
+        }
+      }
     }
   ],
   "month_count": {
     "2026-07": 35,
     "2026-08": 130,
     "2026-09": 27,
-    "2026-10": 1
+    "2026-10": 2
   },
-  "last_scan_utc": "2026-10-10T09:17:31+00:00"
+  "last_scan_utc": "2026-10-10T17:22:41+00:00"
 }
