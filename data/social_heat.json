@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-10T14:02:31+00:00",
+  "ts": "2026-10-10T14:07:54+00:00",
   "sources": {
     "coingecko": [
       "TRUMP",
@@ -24,8 +24,8 @@
       "ADA",
       "STRK",
       "SUI",
-      "UNI",
-      "ONDO"
+      "KAIA",
+      "UNI"
     ],
     "watcher": [
       "KAIA",
@@ -36,13 +36,23 @@
   },
   "heat": [
     {
+      "symbol": "KAIA",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": -0.000875,
+      "long_short": 1.23
+    },
+    {
       "symbol": "MAGIC",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": -0.004564,
+      "funding": -0.004538,
       "long_short": 0.98
     },
     {
@@ -54,16 +64,6 @@
       ],
       "funding": 0.0001,
       "long_short": 1.13
-    },
-    {
-      "symbol": "ONDO",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 4.4e-05,
-      "long_short": 2.11
     },
     {
       "symbol": "STRK",
@@ -91,7 +91,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.1e-05
+      "funding": 1.8e-05
     },
     {
       "symbol": "ADA",
@@ -115,7 +115,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.5e-05
+      "funding": -1.6e-05
     },
     {
       "symbol": "HYPE",
@@ -123,15 +123,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9e-06
+      "funding": 1.1e-05
     },
     {
-      "symbol": "KAIA",
+      "symbol": "ONDO",
       "surfaces": 1,
       "sources": [
-        "watcher"
+        "coingecko"
       ],
-      "funding": -0.000904
+      "funding": 4.5e-05
     },
     {
       "symbol": "PENGU",
@@ -171,7 +171,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 6e-06
+      "funding": 3e-06
     },
     {
       "symbol": "ZEC",
@@ -179,7 +179,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.6e-05
+      "funding": 5.5e-05
     },
     {
       "symbol": "ZRO",
