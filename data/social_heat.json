@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-11T05:54:05+00:00",
+  "ts": "2026-10-11T05:59:41+00:00",
   "sources": {
     "coingecko": [
       "STRK",
@@ -23,7 +23,7 @@
       "CHIP",
       "CFX",
       "NEAR",
-      "UNI"
+      "ENA"
     ],
     "watcher": [
       "STRK",
@@ -41,7 +41,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 6.9e-05,
+      "funding": 6.8e-05,
       "long_short": 1.02
     },
     {
@@ -52,7 +52,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 2e-06,
+      "funding": -2e-06,
       "long_short": 0.72
     },
     {
@@ -73,7 +73,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 1.1e-05,
+      "funding": 1e-06,
       "long_short": 1.18
     },
     {
@@ -90,7 +90,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -8e-06
+      "funding": -9e-06
     },
     {
       "symbol": "CFX",
@@ -98,7 +98,15 @@
       "sources": [
         "movers"
       ],
-      "funding": 3.6e-05
+      "funding": 3.8e-05
+    },
+    {
+      "symbol": "ENA",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "ERA",
@@ -106,7 +114,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.011293
+      "funding": -0.011709
     },
     {
       "symbol": "ETH",
@@ -146,15 +154,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8e-05
-    },
-    {
-      "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 8e-05
+      "funding": 8.1e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
