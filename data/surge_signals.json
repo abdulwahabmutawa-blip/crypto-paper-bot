@@ -1,5 +1,5 @@
 {
- "ts": "2026-10-11T15:38:28+00:00",
+ "ts": "2026-10-11T15:44:07+00:00",
  "candidates": [
   {
    "symbol": "ROSEUSDT",
@@ -11,14 +11,31 @@
    "v24": 2.845,
    "pos24": 0.901,
    "r24": 0.1159,
-   "funding": 7.092e-05,
+   "funding": 7.201e-05,
    "oi_chg_24h": 0.09797071550748271
+  },
+  {
+   "symbol": "APTUSDT",
+   "signal": "surge",
+   "score": 0.2245,
+   "actionable": true,
+   "price": 0.9217,
+   "why": "v24 1.6x, top 17% of range, r24 +12.6%, BTC +0.2%",
+   "v24": 1.619,
+   "pos24": 0.832,
+   "r24": 0.1258,
+   "funding": 0.0001,
+   "oi_chg_24h": 0.05348316967904698
   }
  ],
  "note": "SURGE lane (2026-09-05). Ranked opinion; the book decides.",
  "btc_24h": 0.0017,
- "shortlist": 39,
+ "shortlist": 45,
  "skipped": [
+  {
+   "symbol": "NEARUSDT",
+   "why": "v24 0.51 < 1.6"
+  },
   {
    "symbol": "WLDUSDT",
    "why": "v24 0.96 < 1.6"
@@ -32,6 +49,10 @@
    "why": "pos24 0.42 < 0.8"
   },
   {
+   "symbol": "ENAUSDT",
+   "why": "v24 0.52 < 1.6"
+  },
+  {
    "symbol": "RLCUSDT",
    "why": "v24 0.74 < 1.6"
   },
@@ -40,8 +61,16 @@
    "why": "pos24 0.77 < 0.8"
   },
   {
+   "symbol": "AVAXUSDT",
+   "why": "v24 0.32 < 1.6"
+  },
+  {
    "symbol": "FETUSDT",
    "why": "v24 0.59 < 1.6"
+  },
+  {
+   "symbol": "TAOUSDT",
+   "why": "v24 0.45 < 1.6"
   },
   {
    "symbol": "ARBUSDT",
@@ -60,6 +89,10 @@
    "why": "pos24 0.72 < 0.8"
   },
   {
+   "symbol": "XLMUSDT",
+   "why": "v24 0.48 < 1.6"
+  },
+  {
    "symbol": "OPUSDT",
    "why": "v24 1.03 < 1.6"
   },
@@ -70,10 +103,6 @@
   {
    "symbol": "SENTUSDT",
    "why": "pos24 0.46 < 0.8"
-  },
-  {
-   "symbol": "BATUSDT",
-   "why": "v24 1.58 < 1.6"
   },
   {
    "symbol": "ETHFIUSDT",
@@ -112,12 +141,20 @@
    "why": "v24 1.03 < 1.6"
   },
   {
+   "symbol": "NEOUSDT",
+   "why": "r24 +1.2% outside 3%..15%"
+  },
+  {
    "symbol": "WALUSDT",
    "why": "pos24 0.28 < 0.8"
   },
   {
-   "symbol": "NEOUSDT",
-   "why": "r24 +1.2% outside 3%..15%"
+   "symbol": "XPLUSDT",
+   "why": "v24 0.43 < 1.6"
+  },
+  {
+   "symbol": "CAKEUSDT",
+   "why": "v24 0.76 < 1.6"
   },
   {
    "symbol": "ARPAUSDT",
@@ -128,48 +165,32 @@
    "why": "pos24 0.54 < 0.8"
   },
   {
-   "symbol": "CAKEUSDT",
-   "why": "v24 0.76 < 1.6"
-  },
-  {
    "symbol": "LAUSDT",
    "why": "pos24 0.50 < 0.8"
-  },
-  {
-   "symbol": "VELODROMEUSDT",
-   "why": "pos24 0.70 < 0.8"
   },
   {
    "symbol": "MEGAUSDT",
    "why": "v24 1.27 < 1.6"
   },
   {
-   "symbol": "BOMEUSDT",
-   "why": "v24 1.04 < 1.6"
+   "symbol": "VELODROMEUSDT",
+   "why": "pos24 0.70 < 0.8"
   },
   {
-   "symbol": "IOUSDT",
-   "why": "v24 1.40 < 1.6"
+   "symbol": "BOMEUSDT",
+   "why": "v24 1.04 < 1.6"
   },
   {
    "symbol": "CRVUSDT",
    "why": "v24 0.40 < 1.6"
   },
   {
+   "symbol": "IOUSDT",
+   "why": "v24 1.40 < 1.6"
+  },
+  {
    "symbol": "NMRUSDT",
    "why": "v24 0.21 < 1.6"
-  },
-  {
-   "symbol": "HFTUSDT",
-   "why": "pos24 0.24 < 0.8"
-  },
-  {
-   "symbol": "JTOUSDT",
-   "why": "v24 0.51 < 1.6"
-  },
-  {
-   "symbol": "BANKUSDT",
-   "why": "pos24 0.42 < 0.8"
   }
  ]
 }
