@@ -1,5 +1,5 @@
 {
- "ts": "2026-10-11T06:36:01+00:00",
+ "ts": "2026-10-11T06:41:27+00:00",
  "candidates": [
   {
    "symbol": "ZKUSDT",
@@ -11,7 +11,7 @@
    "v24": 3.846,
    "pos24": 0.845,
    "r24": 0.139,
-   "funding": 2.343e-05,
+   "funding": 2.502e-05,
    "oi_chg_24h": 0.11002536924973905
   },
   {
@@ -39,12 +39,29 @@
    "r24": 0.143,
    "funding": 5e-05,
    "oi_chg_24h": 0.07599023044106867
+  },
+  {
+   "symbol": "BBUSDT",
+   "signal": "surge",
+   "score": 0.2714,
+   "actionable": true,
+   "price": 0.00987,
+   "why": "v24 1.7x, top 7% of range, r24 +6.5%, BTC +0.2%",
+   "v24": 1.749,
+   "pos24": 0.931,
+   "r24": 0.0647,
+   "funding": 5e-05,
+   "oi_chg_24h": 0.013932610351598429
   }
  ],
  "note": "SURGE lane (2026-09-05). Ranked opinion; the book decides.",
  "btc_24h": 0.0025,
- "shortlist": 31,
+ "shortlist": 34,
  "skipped": [
+  {
+   "symbol": "APTUSDT",
+   "why": "v24 1.22 < 1.6"
+  },
   {
    "symbol": "INJUSDT",
    "why": "v24 1.12 < 1.6"
@@ -72,6 +89,10 @@
   {
    "symbol": "SUSDT",
    "why": "pos24 0.74 < 0.8"
+  },
+  {
+   "symbol": "ORCAUSDT",
+   "why": "v24 0.33 < 1.6"
   },
   {
    "symbol": "ETHFIUSDT",
