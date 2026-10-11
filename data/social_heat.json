@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-11T01:32:11+00:00",
+  "ts": "2026-10-11T01:40:11+00:00",
   "sources": {
     "coingecko": [
       "STRK",
@@ -28,8 +28,8 @@
     ],
     "watcher": [
       "STRK",
-      "NEAR",
-      "LUMIA"
+      "TIA",
+      "NEAR"
     ],
     "cryptopanic": []
   },
@@ -53,25 +53,16 @@
         "movers",
         "watcher"
       ],
-      "funding": -3e-06,
+      "funding": 2e-05,
       "long_short": 0.7
     },
     {
-      "symbol": "LUMIA",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.4
-    },
-    {
       "symbol": "TIA",
-      "surfaces": 2,
+      "surfaces": 3,
       "sources": [
         "coingecko",
-        "movers"
+        "movers",
+        "watcher"
       ],
       "funding": 3.8e-05,
       "long_short": 1.98
@@ -90,7 +81,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -3.1e-05
+      "funding": -2.9e-05
     },
     {
       "symbol": "CFX",
@@ -98,7 +89,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 5.2e-05
+      "funding": 5.9e-05
     },
     {
       "symbol": "ENA",
@@ -114,7 +105,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.00663
+      "funding": -0.006499
     },
     {
       "symbol": "FET",
@@ -133,6 +124,14 @@
       "funding": 5e-05
     },
     {
+      "symbol": "LUMIA",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
@@ -146,7 +145,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -9.8e-05
+      "funding": -9.6e-05
     },
     {
       "symbol": "SUI",
