@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-11T19:33:06+00:00 · runs 3143 · equity **$787.10** (-21.29%) · cash $0.00 · open 10/10 · round trips 1174
+updated 2026-10-11T19:49:32+00:00 · runs 3144 · equity **$788.84** (-21.12%) · cash $0.00 · open 10/10 · round trips 1174
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-10T22:49 | CAKEUSDT | surge | 2.261 | 2.308 | +2.08% |
-| 2026-10-11T03:38 | TRXUSDT | bottom | 0.3303 | 0.3306 | +0.09% |
-| 2026-10-11T09:49 | ARBUSDT | surge | 0.1995 | 0.1974 | -1.05% |
-| 2026-10-11T09:49 | BIOUSDT | surge | 0.02956 | 0.02993 | +1.25% |
-| 2026-10-11T15:40 | XLMUSDT | surge | 0.202 | 0.2028 | +0.40% |
-| 2026-10-11T16:29 | TRBUSDT | surge | 19.73 | 19.34 | -1.98% |
-| 2026-10-11T17:51 | MSTRBUSDT | surge | 158.04 | 157.3 | -0.47% |
+| 2026-10-10T22:49 | CAKEUSDT | surge | 2.261 | 2.312 | +2.26% |
+| 2026-10-11T03:38 | TRXUSDT | bottom | 0.3303 | 0.3305 | +0.06% |
+| 2026-10-11T09:49 | ARBUSDT | surge | 0.1995 | 0.1982 | -0.65% |
+| 2026-10-11T09:49 | BIOUSDT | surge | 0.02956 | 0.03019 | +2.13% |
+| 2026-10-11T15:40 | XLMUSDT | surge | 0.202 | 0.2031 | +0.54% |
+| 2026-10-11T16:29 | TRBUSDT | surge | 19.73 | 19.42 | -1.57% |
+| 2026-10-11T17:51 | MSTRBUSDT | surge | 158.04 | 157.32 | -0.46% |
 | 2026-10-11T18:25 | PEPEUSDT | surge | 4.2e-06 | 4.16e-06 | -0.95% |
-| 2026-10-11T19:31 | IOUSDT | surge | 0.1778 | 0.1769 | -0.51% |
+| 2026-10-11T19:31 | IOUSDT | surge | 0.1778 | 0.1773 | -0.28% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
