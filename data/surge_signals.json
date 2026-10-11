@@ -1,5 +1,5 @@
 {
- "ts": "2026-10-11T07:54:23+00:00",
+ "ts": "2026-10-11T07:59:28+00:00",
  "candidates": [
   {
    "symbol": "NEOUSDT",
@@ -11,21 +11,34 @@
    "v24": 6.062,
    "pos24": 0.875,
    "r24": 0.0924,
-   "funding": 5.837e-05,
+   "funding": 5.235e-05,
    "oi_chg_24h": 0.19755749625943064
   },
   {
-   "symbol": "BBUSDT",
+   "symbol": "DUSKUSDT",
    "signal": "surge",
-   "score": 0.329,
+   "score": 0.7904,
    "actionable": true,
-   "price": 0.01034,
-   "why": "v24 2.1x, top 8% of range, r24 +12.2%, BTC +0.5%",
-   "v24": 2.148,
-   "pos24": 0.919,
-   "r24": 0.1215,
-   "funding": 2.04e-06,
-   "oi_chg_24h": 0.08441453732449133
+   "price": 0.087,
+   "why": "v24 5.9x, top 20% of range, r24 +9.2%, BTC +0.5%",
+   "v24": 5.928,
+   "pos24": 0.8,
+   "r24": 0.0916,
+   "funding": 5e-05,
+   "oi_chg_24h": -0.014843141410077476
+  },
+  {
+   "symbol": "VELODROMEUSDT",
+   "signal": "surge",
+   "score": 0.6059,
+   "actionable": true,
+   "price": 0.04169,
+   "why": "v24 4.0x, top 9% of range, r24 +14.0%, BTC +0.5%",
+   "v24": 4.008,
+   "pos24": 0.907,
+   "r24": 0.1403,
+   "funding": 5e-05,
+   "oi_chg_24h": 0.08053919950152055
   }
  ],
  "note": "SURGE lane (2026-09-05). Ranked opinion; the book decides.",
@@ -77,12 +90,12 @@
    "why": "v24 1.04 < 1.6"
   },
   {
-   "symbol": "ORCAUSDT",
-   "why": "v24 0.33 < 1.6"
-  },
-  {
    "symbol": "ETHFIUSDT",
    "why": "v24 0.70 < 1.6"
+  },
+  {
+   "symbol": "BELUSDT",
+   "why": "pos24 0.30 < 0.8"
   },
   {
    "symbol": "EIGENUSDT",
@@ -97,36 +110,36 @@
    "why": "v24 0.78 < 1.6"
   },
   {
-   "symbol": "CTSIUSDT",
-   "why": "v24 1.07 < 1.6"
-  },
-  {
    "symbol": "ACTUSDT",
    "why": "pos24 0.33 < 0.8"
   },
   {
+   "symbol": "CTSIUSDT",
+   "why": "v24 1.07 < 1.6"
+  },
+  {
    "symbol": "ALGOUSDT",
-   "why": "v24 0.58 < 1.6"
+   "why": "v24 0.56 < 1.6"
   },
   {
    "symbol": "SENTUSDT",
-   "why": "v24 1.20 < 1.6"
+   "why": "v24 1.11 < 1.6"
   },
   {
    "symbol": "MAVUSDT",
-   "why": "pos24 0.34 < 0.8"
+   "why": "pos24 0.32 < 0.8"
+  },
+  {
+   "symbol": "BBUSDT",
+   "why": "pos24 0.52 < 0.8"
   },
   {
    "symbol": "CKBUSDT",
-   "why": "OI +20% in 24h > 20%"
-  },
-  {
-   "symbol": "VELODROMEUSDT",
-   "why": "r24 +16.0% outside 3%..15%"
+   "why": "pos24 0.71 < 0.8"
   },
   {
    "symbol": "NILUSDT",
-   "why": "v24 0.54 < 1.6"
+   "why": "v24 0.55 < 1.6"
   },
   {
    "symbol": "NMRUSDT",
@@ -134,15 +147,11 @@
   },
   {
    "symbol": "FRAXUSDT",
-   "why": "pos24 0.39 < 0.8"
+   "why": "pos24 0.34 < 0.8"
   },
   {
    "symbol": "VTHOUSDT",
    "why": "v24 1.35 < 1.6"
-  },
-  {
-   "symbol": "DUSKUSDT",
-   "why": "pos24 0.78 < 0.8"
   },
   {
    "symbol": "HFTUSDT",
@@ -154,7 +163,7 @@
   },
   {
    "symbol": "ZAMAUSDT",
-   "why": "v24 0.45 < 1.6"
+   "why": "v24 0.54 < 1.6"
   }
  ]
 }
