@@ -1,8 +1,54 @@
 {
-  "ts": "2026-10-11T23:13:09+00:00",
+  "ts": "2026-10-11T23:18:40+00:00",
   "scanned": 113,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ALGOUSDT",
+      "signal": "breakout",
+      "score": 0.5118,
+      "raw_score": 0.5732,
+      "weight": 0.893,
+      "price": 0.1274,
+      "why": "trades 5.2x, volume 5.5x, 68% taker-buy, +2.2% in an hour, at 82% of its 24h range",
+      "chg_24h": 0.0814,
+      "vol_surge": 5.52,
+      "chg_1h": 0.0225,
+      "market_surge": 1.06,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.27% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "ONDOUSDT",
+      "signal": "breakout",
+      "score": 0.5051,
+      "raw_score": 0.5656,
+      "weight": 0.893,
+      "price": 0.5225,
+      "why": "trades 4.6x, volume 5.8x, 68% taker-buy, +2.3% in an hour, at 98% of its 24h range",
+      "chg_24h": 0.0547,
+      "vol_surge": 5.84,
+      "chg_1h": 0.0233,
+      "market_surge": 5.85,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.27% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "ALGOUSDT",
+      "signal": "ignition",
+      "score": 0.4922,
+      "raw_score": 0.5593,
+      "weight": 0.88,
+      "price": 0.1274,
+      "why": "trades 5.2x and volume 5.5x the prior 4h, 68% taker-buy, $69,095 burst \u2014 while price has only moved +2.2%",
+      "chg_24h": 0.0814,
+      "vol_surge": 5.52,
+      "chg_1h": 0.0225,
+      "market_surge": 1.06,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.20% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.20% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.27% at 24h: market beta, not signal",
@@ -11,7 +57,7 @@
     "revival": "probation \u2014 3/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 20,
+    "count": 22,
     "baseline": 17.0,
     "wave": false
   },
