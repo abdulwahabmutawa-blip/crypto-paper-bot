@@ -1,17 +1,33 @@
 {
-  "ts": "2026-10-11T12:03:15+00:00",
-  "scanned": 101,
+  "ts": "2026-10-11T12:08:48+00:00",
+  "scanned": 99,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "FETUSDT",
+      "signal": "breakout",
+      "score": 0.5901,
+      "raw_score": 0.6549,
+      "weight": 0.901,
+      "price": 0.2301,
+      "why": "trades 5.8x, volume 7.4x, 65% taker-buy, +2.4% in an hour, at 98% of its 24h range",
+      "chg_24h": 0.0079,
+      "vol_surge": 7.43,
+      "chg_1h": 0.0236,
+      "market_surge": 5.83,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.31% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
-    "ignition": "benched \u2014 BTC-excess day mean -0.68% at 24h: market beta, not signal",
+    "ignition": "benched \u2014 BTC-excess day mean -0.69% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.31% at 24h: market beta, not signal",
     "reversion": "benched \u2014 BTC-excess day mean -0.55% at 24h: market beta, not signal",
     "heat": "probation \u2014 1/12 resolved 24h samples under ruleset 3",
     "revival": "probation \u2014 3/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 17,
+    "count": 20,
     "baseline": 16.0,
     "wave": false
   },
@@ -43,19 +59,19 @@
       "avg_win_4h": 0.023,
       "avg_loss_4h": -0.01869,
       "payoff_4h": 1.23,
-      "span_h_24h": 310.7,
-      "n_eff_24h": 12.94,
-      "n_24h": 852,
-      "hit_rate_24h": 0.369,
+      "span_h_24h": 311.7,
+      "n_eff_24h": 12.99,
+      "n_24h": 853,
+      "hit_rate_24h": 0.368,
       "mean_ret_24h": -0.00808,
       "median_ret_24h": -0.00992,
       "both_halves_24h": false,
       "days_24h": 14,
-      "mean_x_24h": -0.00684,
+      "mean_x_24h": -0.00687,
       "days_x_24h": 14,
       "avg_win_24h": 0.04136,
-      "avg_loss_24h": -0.03949,
-      "payoff_24h": 1.047
+      "avg_loss_24h": -0.03942,
+      "payoff_24h": 1.049
     },
     "breakout": {
       "span_h_1h": 334.2,
