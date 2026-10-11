@@ -1,5 +1,5 @@
 {
- "ts": "2026-10-11T08:15:39+00:00",
+ "ts": "2026-10-11T08:21:17+00:00",
  "candidates": [
   {
    "symbol": "DUSKUSDT",
@@ -28,6 +28,19 @@
    "oi_chg_24h": 0.08066823177388249
   },
   {
+   "symbol": "MANTAUSDT",
+   "signal": "surge",
+   "score": 0.4422,
+   "actionable": true,
+   "price": 0.07198,
+   "why": "v24 3.0x, top 12% of range, r24 +6.7%, BTC +0.3%",
+   "v24": 3.008,
+   "pos24": 0.882,
+   "r24": 0.0672,
+   "funding": 5e-05,
+   "oi_chg_24h": -0.008230159103077783
+  },
+  {
    "symbol": "MAGICUSDT",
    "signal": "surge",
    "score": 0.3229,
@@ -37,7 +50,7 @@
    "v24": 1.981,
    "pos24": 0.978,
    "r24": 0.0941,
-   "funding": -0.00094359,
+   "funding": -0.00089919,
    "oi_chg_24h": -0.2989915154268189
   },
   {
@@ -56,8 +69,16 @@
  ],
  "note": "SURGE lane (2026-09-05). Ranked opinion; the book decides.",
  "btc_24h": 0.0026,
- "shortlist": 33,
+ "shortlist": 36,
  "skipped": [
+  {
+   "symbol": "ERAUSDT",
+   "why": "pos24 0.38 < 0.8"
+  },
+  {
+   "symbol": "RLCUSDT",
+   "why": "v24 0.57 < 1.6"
+  },
   {
    "symbol": "ZKUSDT",
    "why": "r24 +17.2% outside 3%..15%"
@@ -115,12 +136,12 @@
    "why": "pos24 0.69 < 0.8"
   },
   {
-   "symbol": "WUSDT",
-   "why": "v24 0.77 < 1.6"
-  },
-  {
    "symbol": "NEOUSDT",
    "why": "pos24 0.69 < 0.8"
+  },
+  {
+   "symbol": "WUSDT",
+   "why": "v24 0.77 < 1.6"
   },
   {
    "symbol": "CTSIUSDT",
