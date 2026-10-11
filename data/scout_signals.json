@@ -1,8 +1,24 @@
 {
-  "ts": "2026-10-11T09:54:47+00:00",
-  "scanned": 101,
+  "ts": "2026-10-11T10:00:35+00:00",
+  "scanned": 102,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ZROUSDT",
+      "signal": "breakout",
+      "score": 0.6801,
+      "raw_score": 0.7557,
+      "weight": 0.9,
+      "price": 2.089,
+      "why": "trades 6.9x, volume 9.7x, 74% taker-buy, +3.2% in an hour, at 92% of its 24h range",
+      "chg_24h": 0.0608,
+      "vol_surge": 9.73,
+      "chg_1h": 0.0316,
+      "market_surge": 5.16,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.36% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.64% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.36% at 24h: market beta, not signal",
@@ -11,21 +27,21 @@
     "revival": "probation \u2014 3/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 18,
+    "count": 20,
     "baseline": 15.0,
     "wave": false
   },
   "scorecard": {
     "ignition": {
-      "span_h_1h": 334.6,
-      "n_eff_1h": 334.6,
-      "n_1h": 895,
+      "span_h_1h": 334.9,
+      "n_eff_1h": 334.88,
+      "n_1h": 896,
       "hit_rate_1h": 0.318,
-      "mean_ret_1h": -0.00076,
+      "mean_ret_1h": -0.00077,
       "median_ret_1h": -0.00134,
       "both_halves_1h": false,
       "days_1h": 15,
-      "mean_x_1h": -0.00044,
+      "mean_x_1h": -0.00047,
       "days_x_1h": 15,
       "avg_win_1h": 0.01172,
       "avg_loss_1h": -0.01047,
