@@ -1,5 +1,5 @@
 {
- "ts": "2026-10-11T15:04:33+00:00",
+ "ts": "2026-10-11T15:10:30+00:00",
  "candidates": [
   {
    "symbol": "CFXUSDT",
@@ -11,7 +11,7 @@
    "v24": 14.049,
    "pos24": 0.889,
    "r24": 0.1167,
-   "funding": -0.00028489,
+   "funding": -0.00026787,
    "oi_chg_24h": 0.16981299290143248
   },
   {
@@ -43,11 +43,15 @@
  ],
  "note": "SURGE lane (2026-09-05). Ranked opinion; the book decides.",
  "btc_24h": 0.0017,
- "shortlist": 35,
+ "shortlist": 36,
  "skipped": [
   {
    "symbol": "WLDUSDT",
    "why": "v24 0.96 < 1.6"
+  },
+  {
+   "symbol": "TIAUSDT",
+   "why": "pos24 0.62 < 0.8"
   },
   {
    "symbol": "ENAUSDT",
@@ -122,16 +126,12 @@
    "why": "v24 1.00 < 1.6"
   },
   {
-   "symbol": "\u5e01\u5b89\u4eba\u751fUSDT",
-   "why": "v24 0.82 < 1.6"
-  },
-  {
    "symbol": "PLUMEUSDT",
    "why": "v24 1.03 < 1.6"
   },
   {
-   "symbol": "WALUSDT",
-   "why": "pos24 0.28 < 0.8"
+   "symbol": "\u5e01\u5b89\u4eba\u751fUSDT",
+   "why": "v24 0.82 < 1.6"
   },
   {
    "symbol": "CAKEUSDT",
@@ -172,6 +172,10 @@
   {
    "symbol": "JTOUSDT",
    "why": "v24 0.51 < 1.6"
+  },
+  {
+   "symbol": "BANKUSDT",
+   "why": "pos24 0.42 < 0.8"
   }
  ]
 }
