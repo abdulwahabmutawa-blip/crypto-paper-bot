@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-11T13:11:58+00:00 · runs 3122 · equity **$768.48** (-23.15%) · cash $0.00 · open 10/10 · round trips 1159
+updated 2026-10-11T13:28:29+00:00 · runs 3123 · equity **$770.12** (-22.99%) · cash $0.00 · open 10/10 · round trips 1159
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-10T22:49 | CAKEUSDT | surge | 2.261 | 2.248 | -0.57% |
-| 2026-10-11T03:38 | TRXUSDT | bottom | 0.3303 | 0.3307 | +0.12% |
-| 2026-10-11T03:38 | AVAXUSDT | bottom | 10.234 | 10.495 | +2.55% |
-| 2026-10-11T03:38 | ADAUSDT | bottom | 0.2473 | 0.2472 | -0.04% |
-| 2026-10-11T08:22 | ACHUSDT | surge | 0.00617 | 0.00609 | -1.30% |
-| 2026-10-11T09:49 | ARBUSDT | surge | 0.1995 | 0.1978 | -0.85% |
-| 2026-10-11T09:49 | BIOUSDT | surge | 0.02956 | 0.02965 | +0.30% |
-| 2026-10-11T10:42 | BOMEUSDT | surge | 0.0011399 | 0.0011142 | -2.25% |
-| 2026-10-11T12:04 | 币安人生USDT | surge | 0.5913 | 0.593 | +0.29% |
+| 2026-10-10T22:49 | CAKEUSDT | surge | 2.261 | 2.25 | -0.49% |
+| 2026-10-11T03:38 | TRXUSDT | bottom | 0.3303 | 0.3305 | +0.06% |
+| 2026-10-11T03:38 | AVAXUSDT | bottom | 10.234 | 10.537 | +2.96% |
+| 2026-10-11T03:38 | ADAUSDT | bottom | 0.2473 | 0.2479 | +0.24% |
+| 2026-10-11T08:22 | ACHUSDT | surge | 0.00617 | 0.0062 | +0.49% |
+| 2026-10-11T09:49 | ARBUSDT | surge | 0.1995 | 0.1977 | -0.90% |
+| 2026-10-11T09:49 | BIOUSDT | surge | 0.02956 | 0.02976 | +0.68% |
+| 2026-10-11T10:42 | BOMEUSDT | surge | 0.0011399 | 0.0011096 | -2.66% |
+| 2026-10-11T12:04 | 币安人生USDT | surge | 0.5913 | 0.5915 | +0.03% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
