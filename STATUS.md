@@ -1,22 +1,23 @@
-# Fleet status — 2026-10-10 (UTC)
+# Fleet status — 2026-10-11 (UTC)
 
 | Bot | Holds | 24h change | Value |
 |---|---|---|---|
-| crypto (BTC tide gauge v4) | BTC-USD | No trade; small bounce with BTC | $1,179.48 (bench $1,282.48) |
-| meanrev | JNJ | No trade; new daily mark landed (up) | $1,139.44 (was $1,117.63) |
-| sentiment | CASH | No activity — Watcher feed still down | $869.30 (flat) |
-| scalper | 10/10 seats | 32 round trips: 18 target / 12 stop / 2 time, net +$7.29 realized | $770.86 (was $763.45) |
-| Watcher (sentinel) | — | No new scan | last scan 2026-09-11 (~29 days down) |
+| crypto (BTC tide gauge v4) | BTC-USD | No trade; flat with BTC | $1,183.51 (bench $1,286.86) |
+| meanrev | JNJ | No trade; no new mark — stock market closed (weekend) | $1,139.44 (last mark 10-09) |
+| sentiment | CASH | No trade — still parked; Watcher resumed but sentiment hasn't acted on it yet | $869.30 (flat) |
+| scalper | 10/10 seats | 26 round trips: 11 TARGET / 10 STOP / 5 TIME, net −$5.16 realized | $769.63 (was ~$770.86) |
+| Watcher (sentinel) | — | **Resumed scanning** after ~29 days silent — 3 scans in this window | last scan 2026-10-11 01:38 UTC |
 
 ## Changed
-- scalper: 32 round trips closed (18 TARGET / 12 STOP / 2 TIME), net +$7.29 realized; value up $763.45 → $770.86; seats stayed 10/10 (fresh entries: TSLABUSDT, CRCLBUSDT, MSTRBUSDT, CAKEUSDT, BABABUSDT, ATOMUSDT, CYBERUSDT, RAYUSDT, ALTUSDT). Yesterday's garbled non-ASCII-symbol seat is gone (closed out).
-- meanrev: no trade; new daily mark landed (2026-10-09), value $1,117.63 → $1,139.44, bench also up ($1,030.81 → $1,036.99).
-- crypto: no trade; value up $1,178.82 → $1,179.48 (bench $1,281.76 → $1,282.48), still tracking BTC.
-- sentiment: no position changes, no trades — still parked in cash at $869.30.
-- Cron: 90 cycle commits in the 24h window, steady ~16-18min cadence, no gap over 18min — no missed/failed cycles.
-- One scheduled bot.yml run (queued 23:32 UTC, 0 jobs) was later marked "cancelled" (~3h after queuing) — no cycle gap resulted, cadence held throughout; all other runs in the window show conclusion "success".
+- **Watcher (sentinel) came back online.** No scan from 2026-09-11 to 2026-10-10 09:17 UTC (~29 days down, flagged in yesterday's and prior digests); it then scanned 3 times in this window (10-10 09:17, 10-10 17:32, 10-11 01:38), all with clean `risk_level`/`crypto_hype` output (previously returning "unparsed"). Downstream `sentiment` bot has not yet made a trade off the restored feed — still 100% cash.
+- scalper: 26 round trips closed (11 TARGET / 10 STOP / 5 TIME), net −$5.16 realized; value $770.86 → $769.63; seats held steady at 10/10 with several fresh entries (AXSUSDT, WLDUSDT, DUSKUSDT, CAKEUSDT, TRXUSDT, AVAXUSDT, ADAUSDT, ROSEUSDT, LAUSDT). The long-stuck TVKUSDT seat (opened 2026-09-12) is still open, unchanged.
+- crypto: no trade, value essentially flat ($1,183.53 → $1,183.51), still holding BTC-USD.
+- meanrev, sentiment: no trades; both marks unchanged from Friday 10-09 close since equities/their benchmark don't print over the weekend.
+- Cron: 85 cycle commits in the 24h window, steady ~16–18 min cadence; one 58-min gap (08:48→09:46 UTC) — within normal range, no missed cycles. One scheduled run (queued 23:32 UTC) later shows GitHub Actions conclusion "cancelled" — the normal next-run overlap pattern, not a failure; no cycle gap resulted.
 
 ## Needs a look
-- Watcher (sentinel) hasn't produced a scan since 2026-09-11 — ~29 days down now (pre-existing, not new today). sentiment stays idle while it's down.
-- scalper's TVKUSDT seat (opened 2026-09-12) is still open 28 days later — same stuck seat flagged in prior digests, unresolved.
-- Scheduled-task note (unchanged): this routine's own prompt lists a 9-bot roster (trend, regime, congress, meanrev, commodity, allweather, hype, Hunter, Watcher) that doesn't match the repo. Per CLAUDE.md/`reports/kill_criteria.md`, the actual active fleet is 4 paper books (crypto, meanrev, sentiment, scalper) + the non-capital Watcher; congress, allweather, commodity, hunter, hypecrypto, scholar, analyst and stock remain retired frozen archives, untouched in this window. Reported against the real roster, not the stale prompt list.
+- Cosmetic data bug: `docs/scalper.md`'s 03:38 UTC stop-out row shows the ticker as garbled CJK text instead of "VTHOUSDT" — underlying `data/scalper_state.json` has the correct symbol, so this looks like a markdown-rendering/encoding bug, not a trade error.
+- `reports/supervisor_scoreboard.json` (Watcher's judgment scoreboard) hasn't been regenerated since 2026-10-05 — it still records the Watcher as down; next supervisor run should pick up the resumption above.
+- Per `reports/kill_criteria.md`, the fleet's first R2/R3 kill-criteria review window (~60 trading days) opened ~2026-10-10 — no scheduled review has been recorded yet in the scoreboard.
+- scalper's TVKUSDT seat (29 days open) remains stuck on a frozen/delisted price per the known sim-integrity alert — can't hit target/stop/time-exit.
+- This routine's own stored prompt names a 9-bot roster (trend, regime, congress, meanrev, commodity, allweather, hype, Hunter, Watcher) that doesn't match the repo. Per CLAUDE.md/`kill_criteria.md` the real active fleet is 4 paper books (crypto, meanrev, sentiment, scalper) plus the non-capital Watcher; congress, allweather, commodity, hunter, hypecrypto, scholar, analyst and stock are retired frozen archives, untouched this window. Reported against the real roster.
