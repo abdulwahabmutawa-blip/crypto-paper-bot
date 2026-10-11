@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-11T17:32:21+00:00",
+  "ts": "2026-10-11T17:37:41+00:00",
   "sources": {
     "coingecko": [
       "STRK",
@@ -25,7 +25,7 @@
       "CHIP",
       "TIA",
       "CFX",
-      "ENA"
+      "APT"
     ],
     "watcher": [
       "STRK",
@@ -42,8 +42,18 @@
         "movers",
         "watcher"
       ],
-      "funding": 2.4e-05,
+      "funding": 1.5e-05,
       "long_short": 0.61
+    },
+    {
+      "symbol": "APT",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.36
     },
     {
       "symbol": "S",
@@ -52,7 +62,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.000361,
+      "funding": -0.000349,
       "long_short": 1.37
     },
     {
@@ -74,20 +84,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "APT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 1.8e-05
+      "funding": 1.9e-05
     },
     {
       "symbol": "CFX",
@@ -95,7 +97,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -4.8e-05
+      "funding": -4.5e-05
     },
     {
       "symbol": "CHIP",
@@ -103,15 +105,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -5e-06
-    },
-    {
-      "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
+      "funding": -3e-06
     },
     {
       "symbol": "LUMIA",
@@ -119,7 +113,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -2.3e-05
+      "funding": -2.1e-05
     },
     {
       "symbol": "MAGIC",
@@ -151,7 +145,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.1e-05
+      "funding": 8e-06
     },
     {
       "symbol": "RENDER",
