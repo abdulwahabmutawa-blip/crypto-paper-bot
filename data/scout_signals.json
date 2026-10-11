@@ -1,24 +1,8 @@
 {
-  "ts": "2026-10-11T19:00:49+00:00",
-  "scanned": 107,
+  "ts": "2026-10-11T19:06:40+00:00",
+  "scanned": 105,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ATOMUSDT",
-      "signal": "ignition",
-      "score": 0.6862,
-      "raw_score": 0.7781,
-      "weight": 0.882,
-      "price": 1.919,
-      "why": "trades 7.5x and volume 10.6x the prior 4h, 70% taker-buy, $553,149 burst \u2014 while price has only moved -1.8%",
-      "chg_24h": -0.0265,
-      "vol_surge": 10.62,
-      "chg_1h": -0.0184,
-      "market_surge": 8.1,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.51% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.51% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.01% at 24h: market beta, not signal",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 3/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 19,
+    "count": 18,
     "baseline": 16.0,
     "wave": false
   },
