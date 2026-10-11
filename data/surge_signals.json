@@ -1,5 +1,5 @@
 {
- "ts": "2026-10-11T07:48:38+00:00",
+ "ts": "2026-10-11T07:54:23+00:00",
  "candidates": [
   {
    "symbol": "NEOUSDT",
@@ -11,7 +11,7 @@
    "v24": 6.062,
    "pos24": 0.875,
    "r24": 0.0924,
-   "funding": 5.506e-05,
+   "funding": 5.837e-05,
    "oi_chg_24h": 0.19755749625943064
   },
   {
@@ -24,14 +24,22 @@
    "v24": 2.148,
    "pos24": 0.919,
    "r24": 0.1215,
-   "funding": -1.8e-06,
+   "funding": 2.04e-06,
    "oi_chg_24h": 0.08441453732449133
   }
  ],
  "note": "SURGE lane (2026-09-05). Ranked opinion; the book decides.",
  "btc_24h": 0.0052,
- "shortlist": 34,
+ "shortlist": 33,
  "skipped": [
+  {
+   "symbol": "MAGICUSDT",
+   "why": "pos24 0.32 < 0.8"
+  },
+  {
+   "symbol": "RLCUSDT",
+   "why": "v24 0.59 < 1.6"
+  },
   {
    "symbol": "APTUSDT",
    "why": "v24 1.20 < 1.6"
@@ -75,14 +83,6 @@
   {
    "symbol": "ETHFIUSDT",
    "why": "v24 0.70 < 1.6"
-  },
-  {
-   "symbol": "BELUSDT",
-   "why": "pos24 0.30 < 0.8"
-  },
-  {
-   "symbol": "RONINUSDT",
-   "why": "pos24 0.25 < 0.8"
   },
   {
    "symbol": "EIGENUSDT",
@@ -155,10 +155,6 @@
   {
    "symbol": "ZAMAUSDT",
    "why": "v24 0.45 < 1.6"
-  },
-  {
-   "symbol": "PLUMEUSDT",
-   "why": "v24 0.57 < 1.6"
   }
  ]
 }
