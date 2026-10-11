@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-11T08:25:21+00:00",
+  "ts": "2026-10-11T08:31:14+00:00",
   "sources": {
     "coingecko": [
       "STRK",
@@ -18,12 +18,12 @@
     "movers": [
       "STRK",
       "CFX",
+      "LUMIA",
       "TIA",
       "CHIP",
-      "LUMIA",
       "MAGIC",
-      "ERA",
-      "ENA"
+      "ENA",
+      "UNI"
     ],
     "watcher": [
       "STRK",
@@ -41,7 +41,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -6e-06,
+      "funding": -2e-06,
       "long_short": 0.74
     },
     {
@@ -62,7 +62,7 @@
         "coingecko",
         "watcher"
       ],
-      "funding": 5e-05,
+      "funding": 5.1e-05,
       "long_short": 1.02
     },
     {
@@ -79,7 +79,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -7e-06
+      "funding": -8e-06
     },
     {
       "symbol": "CFX",
@@ -87,7 +87,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000165
+      "funding": -0.000168
     },
     {
       "symbol": "CHIP",
@@ -95,7 +95,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -3.3e-05
+      "funding": -2.8e-05
     },
     {
       "symbol": "CKB",
@@ -103,7 +103,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.1e-05
+      "funding": 8.9e-05
     },
     {
       "symbol": "ENA",
@@ -112,14 +112,6 @@
         "movers"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "ERA",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -0.012911
     },
     {
       "symbol": "LIT",
@@ -143,7 +135,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000877
+      "funding": -0.000863
     },
     {
       "symbol": "PENGU",
@@ -151,7 +143,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 4.7e-05
+    },
+    {
+      "symbol": "UNI",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 6.4e-05
     },
     {
       "symbol": "XRP",
@@ -159,7 +159,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.8e-05
+      "funding": 2.6e-05
     },
     {
       "symbol": "ZEC",
@@ -167,7 +167,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.6e-05
+      "funding": 6.2e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
