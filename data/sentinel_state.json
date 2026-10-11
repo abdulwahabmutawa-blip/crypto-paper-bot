@@ -4,92 +4,6 @@
       "risk_level": "caution",
       "risk_alerts": [
         {
-          "headline": "Walmart tumbles 9% on soft comps and outlook, dragging consumer stocks and indexes lower",
-          "markets": [
-            "stocks"
-          ],
-          "severity": "caution"
-        },
-        {
-          "headline": "Dow drops ~700pts as Treasury yields rebound despite Bessent buyback expansion",
-          "markets": [
-            "stocks"
-          ],
-          "severity": "caution"
-        }
-      ],
-      "hype": [
-        {
-          "symbol": "WMT",
-          "mood": "fearful",
-          "note": "9% crash on outlook miss"
-        },
-        {
-          "symbol": "HYPE",
-          "mood": "euphoric",
-          "note": "Trump comments spark calls"
-        },
-        {
-          "symbol": "MSTR",
-          "mood": "euphoric",
-          "note": "Rips with BTC breakout"
-        },
-        {
-          "symbol": "XRP",
-          "mood": "euphoric",
-          "note": "15% jump banker hours"
-        }
-      ],
-      "crypto_hype": [
-        {
-          "symbol": "ONG",
-          "mood": "euphoric",
-          "note": "Binance top +107% mover",
-          "stage": "peaked"
-        },
-        {
-          "symbol": "PUMP",
-          "mood": "euphoric",
-          "note": "Top mover +27% trending",
-          "stage": "peaked"
-        },
-        {
-          "symbol": "ENA",
-          "mood": "euphoric",
-          "note": "Top mover +23% heat",
-          "stage": "peaked"
-        },
-        {
-          "symbol": "XRP",
-          "mood": "euphoric",
-          "note": "+15% onchain pattern hype",
-          "stage": "peaked"
-        },
-        {
-          "symbol": "HYPE",
-          "mood": "euphoric",
-          "note": "Trump US path rally",
-          "stage": "peaked"
-        },
-        {
-          "symbol": "BOME",
-          "mood": "euphoric",
-          "note": "Meme top mover +32%",
-          "stage": "peaked"
-        }
-      ],
-      "overall_mood": "Stocks cautious on Walmart consumer warning and sticky yields; crypto greedy with BTC above 71k on Treasury liquidity and Trump policy tailwinds.",
-      "ts": "2026-08-20T23:13:11+00:00",
-      "gauges": {
-        "vix": 16.0,
-        "crypto_fear_greed": 62,
-        "crypto_fng_label": "Greed"
-      }
-    },
-    {
-      "risk_level": "caution",
-      "risk_alerts": [
-        {
           "headline": "Walmart stock tumbles ~9% on disappointing outlook and sales miss, dragging indexes lower",
           "markets": [
             "stocks"
@@ -10776,13 +10690,144 @@
           "output_tokens": 1280
         }
       }
+    },
+    {
+      "risk_level": "caution",
+      "risk_alerts": [
+        {
+          "headline": "Record margin debt binge as retail piles in on leverage",
+          "markets": [
+            "stocks"
+          ],
+          "severity": "caution"
+        },
+        {
+          "headline": "Oil volatility and Middle East/Houthi tensions with Trump comments",
+          "markets": [
+            "both"
+          ],
+          "severity": "caution"
+        },
+        {
+          "headline": "AI revenue scare at OpenAI weighing on tech stocks",
+          "markets": [
+            "stocks"
+          ],
+          "severity": "caution"
+        }
+      ],
+      "hype": [
+        {
+          "symbol": "STRK",
+          "mood": "euphoric",
+          "note": "Quantum L1 shift talk pumps hard"
+        },
+        {
+          "symbol": "S",
+          "mood": "euphoric",
+          "note": "Sonic L1 top Binance mover surge"
+        },
+        {
+          "symbol": "MAGIC",
+          "mood": "euphoric",
+          "note": "Gaming token sharp retail bid"
+        },
+        {
+          "symbol": "TIA",
+          "mood": "mixed",
+          "note": "Celestia mover with volume spike"
+        },
+        {
+          "symbol": "CVS",
+          "mood": "mixed",
+          "note": "Stocktwits retail chatter rising"
+        }
+      ],
+      "crypto_hype": [
+        {
+          "symbol": "STRK",
+          "mood": "euphoric",
+          "stage": "peaked",
+          "organic": true,
+          "promo_risk": "low",
+          "catalyst": "quantum-resistant L1 transition talk",
+          "why": "CEO warning plus staking ATH; multi-surface heat",
+          "note": "Binance top mover victory lap"
+        },
+        {
+          "symbol": "S",
+          "mood": "euphoric",
+          "stage": "peaked",
+          "organic": true,
+          "promo_risk": "low",
+          "catalyst": "none",
+          "why": "Top volume mover; L1 narrative rotation",
+          "note": "Sonic +42% crowd cheering"
+        },
+        {
+          "symbol": "MAGIC",
+          "mood": "euphoric",
+          "stage": "peaked",
+          "organic": true,
+          "promo_risk": "low",
+          "catalyst": "none",
+          "why": "Gaming ecosystem volume spike posts",
+          "note": "Treasure bid already run"
+        },
+        {
+          "symbol": "TIA",
+          "mood": "mixed",
+          "stage": "peaked",
+          "organic": true,
+          "promo_risk": "low",
+          "catalyst": "none",
+          "why": "Mover list plus watcher heat",
+          "note": "Celestia mild euphoria fade risk"
+        }
+      ],
+      "overall_mood": "Cautious greed with low VIX, crypto alts pumping on rotation while stocks digest AI scares, high yields, oil geo risks and record retail leverage.",
+      "ts": "2026-10-11T17:53:12+00:00",
+      "gauges": {
+        "vix": 14.8,
+        "crypto_fear_greed": 61,
+        "crypto_fng_label": "Greed"
+      },
+      "usage": {
+        "input_tokens": 142951,
+        "input_tokens_details": {
+          "cached_tokens": 75776
+        },
+        "output_tokens": 1811,
+        "output_tokens_details": {
+          "reasoning_tokens": 702
+        },
+        "total_tokens": 144762,
+        "num_sources_used": 0,
+        "num_server_side_tools_used": 14,
+        "cost_in_usd_ticks": 3279488000,
+        "server_side_tool_usage_details": {
+          "web_search_calls": 9,
+          "x_search_calls": 5,
+          "x_posts_fetched": 23,
+          "x_users_fetched": 0,
+          "code_interpreter_calls": 0,
+          "file_search_calls": 0,
+          "mcp_calls": 0,
+          "document_search_calls": 0,
+          "image_generation_calls": 0
+        },
+        "context_details": {
+          "input_tokens": 65014,
+          "output_tokens": 1146
+        }
+      }
     }
   ],
   "month_count": {
     "2026-07": 35,
     "2026-08": 130,
     "2026-09": 27,
-    "2026-10": 4
+    "2026-10": 5
   },
-  "last_scan_utc": "2026-10-11T09:50:38+00:00"
+  "last_scan_utc": "2026-10-11T17:53:12+00:00"
 }
