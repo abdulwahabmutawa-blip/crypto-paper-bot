@@ -1,18 +1,18 @@
 {
-  "ts": "2026-10-12T12:59:21+00:00",
+  "ts": "2026-10-12T13:05:21+00:00",
   "sources": {
     "coingecko": [
       "TRUMP",
       "W",
       "NEAR",
-      "STRK",
       "GTC",
+      "STRK",
       "PENGU",
-      "AERO",
+      "ONDO",
+      "RSR",
       "ETH",
-      "PYTH",
-      "TAO",
-      "ONDO"
+      "BTC",
+      "PLUME"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -42,8 +42,19 @@
         "movers",
         "watcher"
       ],
-      "funding": 3.1e-05,
-      "long_short": 1.18
+      "funding": 3.8e-05,
+      "long_short": 1.21
+    },
+    {
+      "symbol": "RSR",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": -0.02,
+      "long_short": 0.97
     },
     {
       "symbol": "W",
@@ -53,26 +64,16 @@
         "movers",
         "watcher"
       ],
-      "funding": -1.5e-05,
-      "long_short": 0.71
+      "funding": -1e-05,
+      "long_short": 0.78
     },
     {
-      "symbol": "RSR",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": -0.02,
-      "long_short": 1.2
-    },
-    {
-      "symbol": "AERO",
+      "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 1e-05
+      "funding": 7.7e-05
     },
     {
       "symbol": "CKB",
@@ -80,7 +81,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.0015
+      "funding": -0.001494
     },
     {
       "symbol": "CTK",
@@ -88,7 +89,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.008944
+      "funding": -0.00922
     },
     {
       "symbol": "ETH",
@@ -128,15 +129,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.2e-05
+      "funding": -8e-06
     },
     {
-      "symbol": "PYTH",
+      "symbol": "PLUME",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -3.1e-05
+      "funding": 4.9e-05
     },
     {
       "symbol": "S",
@@ -144,18 +145,10 @@
       "sources": [
         "movers"
       ],
-      "funding": -7.7e-05
+      "funding": -7.5e-05
     },
     {
       "symbol": "STRK",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "TAO",
       "surfaces": 1,
       "sources": [
         "coingecko"
