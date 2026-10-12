@@ -1,17 +1,17 @@
 {
-  "ts": "2026-10-12T04:49:31+00:00",
+  "ts": "2026-10-12T04:55:00+00:00",
   "sources": {
     "coingecko": [
       "W",
       "ICP",
-      "STRK",
       "NEAR",
-      "DATA",
+      "STRK",
       "TIA",
-      "IO",
-      "FET",
-      "PLUME",
-      "EIGEN"
+      "DATA",
+      "MET",
+      "ZEC",
+      "LINK",
+      "FET"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,8 +22,8 @@
       "MAGIC",
       "FIL",
       "NEAR",
-      "ENA",
-      "FET"
+      "FET",
+      "ZEC"
     ],
     "watcher": [
       "NEAR",
@@ -62,7 +62,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 3.1e-05,
+      "funding": 3.7e-05,
       "long_short": 0.85
     },
     {
@@ -72,7 +72,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 3.2e-05,
+      "funding": 3.8e-05,
       "long_short": 1.47
     },
     {
@@ -82,8 +82,17 @@
         "coingecko",
         "movers"
       ],
-      "funding": -5.7e-05,
+      "funding": -6e-05,
       "long_short": 0.88
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 3.6e-05
     },
     {
       "symbol": "CFX",
@@ -91,7 +100,7 @@
       "sources": [
         "watcher"
       ],
-      "funding": -0.000282
+      "funding": -0.000276
     },
     {
       "symbol": "CKB",
@@ -99,7 +108,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.002265
+      "funding": -0.002319
     },
     {
       "symbol": "DATA",
@@ -107,22 +116,6 @@
       "sources": [
         "coingecko"
       ]
-    },
-    {
-      "symbol": "EIGEN",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "FIL",
@@ -141,20 +134,20 @@
       "funding": 0.0001
     },
     {
-      "symbol": "IO",
+      "symbol": "LINK",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 1.2e-05
     },
     {
-      "symbol": "PLUME",
+      "symbol": "MET",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -2.4e-05
+      "funding": -0.000352
     },
     {
       "symbol": "STRK",
