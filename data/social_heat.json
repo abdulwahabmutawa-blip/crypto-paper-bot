@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-12T17:14:31+00:00",
+  "ts": "2026-10-12T17:19:41+00:00",
   "sources": {
     "coingecko": [
       "STRK",
@@ -20,7 +20,9 @@
       "CTK",
       "W",
       "ZRO",
-      "FIL"
+      "FIL",
+      "U",
+      "RLUSD"
     ],
     "watcher": [
       "RSR",
@@ -38,7 +40,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.015053,
+      "funding": -0.014758,
       "long_short": 0.96
     },
     {
@@ -49,7 +51,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.000115,
+      "funding": -0.000126,
       "long_short": 0.99
     },
     {
@@ -69,7 +71,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.014536
+      "funding": -0.014658
     },
     {
       "symbol": "FIL",
@@ -77,7 +79,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 9.3e-05
+      "funding": 8.9e-05
     },
     {
       "symbol": "NEAR",
@@ -85,7 +87,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9e-06
+      "funding": 5e-06
     },
     {
       "symbol": "PENGU",
@@ -93,7 +95,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1e-06
+      "funding": -0.0
     },
     {
       "symbol": "PYTH",
@@ -101,7 +103,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.8e-05
+      "funding": -1.7e-05
     },
     {
       "symbol": "QNT",
@@ -109,7 +111,14 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000128
+      "funding": -0.000122
+    },
+    {
+      "symbol": "RLUSD",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
     },
     {
       "symbol": "S",
@@ -134,6 +143,13 @@
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "U",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
