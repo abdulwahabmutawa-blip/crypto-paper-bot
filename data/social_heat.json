@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-12T05:11:53+00:00",
+  "ts": "2026-10-12T05:17:21+00:00",
   "sources": {
     "coingecko": [
       "W",
@@ -8,11 +8,10 @@
       "STRK",
       "ZEC",
       "ZRO",
-      "LINK",
-      "PLUME",
-      "DATA",
-      "TIA",
-      "MET"
+      "RSR",
+      "BTC",
+      "SOL",
+      "INJ"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -23,8 +22,8 @@
       "MAGIC",
       "FIL",
       "NEAR",
-      "PUMP",
-      "ENA"
+      "ENA",
+      "PUMP"
     ],
     "watcher": [
       "NEAR",
@@ -43,7 +42,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 9.3e-05,
+      "funding": 9.1e-05,
       "long_short": 1.2
     },
     {
@@ -53,7 +52,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 4.2e-05,
+      "funding": 4.4e-05,
       "long_short": 0.77
     },
     {
@@ -63,7 +62,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 2.1e-05,
+      "funding": 1.9e-05,
       "long_short": 1.45
     },
     {
@@ -73,8 +72,16 @@
         "coingecko",
         "movers"
       ],
-      "funding": -4e-05,
+      "funding": -3.4e-05,
       "long_short": 0.83
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 2e-05
     },
     {
       "symbol": "CFX",
@@ -82,7 +89,7 @@
       "sources": [
         "watcher"
       ],
-      "funding": -0.000244
+      "funding": -0.000233
     },
     {
       "symbol": "CKB",
@@ -90,14 +97,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.002469
-    },
-    {
-      "symbol": "DATA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ]
+      "funding": -0.002486
     },
     {
       "symbol": "ENA",
@@ -124,28 +124,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "LINK",
+      "symbol": "INJ",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 1.2e-05
-    },
-    {
-      "symbol": "MET",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -0.000372
-    },
-    {
-      "symbol": "PLUME",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -3e-05
+      "funding": 0.0001
     },
     {
       "symbol": "PUMP",
@@ -153,18 +137,26 @@
       "sources": [
         "movers"
       ],
-      "funding": 2.2e-05
+      "funding": 2.1e-05
     },
     {
-      "symbol": "STRK",
+      "symbol": "RSR",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": -0.007831
     },
     {
-      "symbol": "TIA",
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 8.9e-05
+    },
+    {
+      "symbol": "STRK",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -177,7 +169,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.3e-05
+      "funding": 3.4e-05
     },
     {
       "symbol": "ZRO",
