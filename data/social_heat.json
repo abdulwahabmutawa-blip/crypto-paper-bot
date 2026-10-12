@@ -1,23 +1,24 @@
 {
-  "ts": "2026-10-12T23:50:40+00:00",
+  "ts": "2026-10-12T23:56:21+00:00",
   "sources": {
     "coingecko": [
-      "STRK",
       "BTC",
+      "STRK",
       "NEAR",
-      "PENGU",
       "SOL",
-      "TAO",
       "W",
+      "PENGU",
       "QNT",
       "PUMP",
-      "RSR"
+      "AAVE",
+      "HYPE"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "GTC",
       "RSR",
+      "U",
       "RLUSD"
     ],
     "watcher": [
@@ -28,25 +29,32 @@
   },
   "heat": [
     {
-      "symbol": "RSR",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": -0.010112,
-      "long_short": 1.1
-    },
-    {
       "symbol": "GTC",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": -0.000811,
+      "funding": -0.000798,
       "long_short": 0.6
+    },
+    {
+      "symbol": "RSR",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": -0.010159,
+      "long_short": 1.1
+    },
+    {
+      "symbol": "AAVE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 3e-05
     },
     {
       "symbol": "BTC",
@@ -54,7 +62,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.1e-05
+      "funding": 6.9e-05
+    },
+    {
+      "symbol": "HYPE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -3.3e-05
     },
     {
       "symbol": "NEAR",
@@ -62,7 +78,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.2e-05
+      "funding": 1.5e-05
     },
     {
       "symbol": "PENGU",
@@ -70,7 +86,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.2e-05
+      "funding": -1.3e-05
     },
     {
       "symbol": "PUMP",
@@ -78,7 +94,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.9e-05
+      "funding": 4.1e-05
     },
     {
       "symbol": "QNT",
@@ -86,7 +102,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2e-06
+      "funding": 0.0
     },
     {
       "symbol": "RLUSD",
@@ -101,7 +117,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.4e-05
+      "funding": 3.2e-05
     },
     {
       "symbol": "STRK",
@@ -112,12 +128,11 @@
       "funding": 5e-05
     },
     {
-      "symbol": "TAO",
+      "symbol": "U",
       "surfaces": 1,
       "sources": [
-        "coingecko"
-      ],
-      "funding": 4e-05
+        "movers"
+      ]
     },
     {
       "symbol": "W",
