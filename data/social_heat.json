@@ -1,16 +1,17 @@
 {
-  "ts": "2026-10-12T03:48:21+00:00",
+  "ts": "2026-10-12T03:54:31+00:00",
   "sources": {
     "coingecko": [
       "W",
-      "STRK",
       "NEAR",
+      "STRK",
       "ICP",
       "PENGU",
       "BTC",
+      "ZRO",
+      "FIL",
       "PLUME",
-      "QNT",
-      "ZRO"
+      "QNT"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -51,8 +52,18 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.000402,
+      "funding": -0.000391,
       "long_short": 1.34
+    },
+    {
+      "symbol": "FIL",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.13
     },
     {
       "symbol": "MAGIC",
@@ -61,7 +72,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 1e-06,
+      "funding": 9e-06,
       "long_short": 0.83
     },
     {
@@ -71,7 +82,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 2.1e-05,
+      "funding": 2.5e-05,
       "long_short": 1.38
     },
     {
@@ -81,8 +92,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -4.2e-05,
-      "long_short": 1.08
+      "funding": -5e-05
     },
     {
       "symbol": "BTC",
@@ -90,7 +100,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1e-06
+      "funding": 4e-06
     },
     {
       "symbol": "CKB",
@@ -98,7 +108,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001964
+      "funding": -0.001983
     },
     {
       "symbol": "ENA",
@@ -107,14 +117,6 @@
         "movers"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "FIL",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "ICP",
@@ -130,7 +132,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -5e-06
+      "funding": -2e-06
     },
     {
       "symbol": "PLUME",
@@ -138,7 +140,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.4e-05
+      "funding": -2.2e-05
     },
     {
       "symbol": "QNT",
@@ -146,7 +148,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -7.7e-05
+      "funding": -7.8e-05
     },
     {
       "symbol": "STRK",

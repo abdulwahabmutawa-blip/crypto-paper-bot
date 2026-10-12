@@ -1,20 +1,35 @@
 {
-  "ts": "2026-10-12T03:48:28+00:00",
-  "scanned": 114,
+  "ts": "2026-10-12T03:54:40+00:00",
+  "scanned": 113,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "JTOUSDT",
+      "symbol": "METUSDT",
+      "signal": "ignition",
+      "score": 0.6452,
+      "raw_score": 0.7283,
+      "weight": 0.886,
+      "price": 0.4348,
+      "why": "trades 6.3x and volume 11.0x the prior 4h, 71% taker-buy, $87,699 burst \u2014 while price has only moved +2.1%",
+      "chg_24h": 0.0656,
+      "vol_surge": 10.95,
+      "chg_1h": 0.0207,
+      "market_surge": 2.93,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.20% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "ZROUSDT",
       "signal": "breakout",
-      "score": 0.6231,
-      "raw_score": 0.7001,
+      "score": 0.5904,
+      "raw_score": 0.6634,
       "weight": 0.89,
-      "price": 0.5832,
-      "why": "trades 4.6x, volume 27.3x, 95% taker-buy, +2.8% in an hour, at 98% of its 24h range",
-      "chg_24h": 0.0727,
-      "vol_surge": 27.28,
-      "chg_1h": 0.028,
-      "market_surge": 2.33,
+      "price": 2.208,
+      "why": "trades 6.3x, volume 5.6x, 68% taker-buy, +3.8% in an hour, at 97% of its 24h range",
+      "chg_24h": 0.1192,
+      "vol_surge": 5.56,
+      "chg_1h": 0.0376,
+      "market_surge": 3.56,
       "actionable": false,
       "status": "benched \u2014 BTC-excess day mean +0.59% at 24h: market beta, not signal"
     }
@@ -27,7 +42,7 @@
     "revival": "probation \u2014 3/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 22,
+    "count": 23,
     "baseline": 17.0,
     "wave": false
   },
