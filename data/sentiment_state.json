@@ -1,10 +1,10 @@
 {
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "holding": "CASH",
-  "units": 0.0,
-  "cash": 869.3000517119024,
-  "entry_price": null,
+  "holding": "STRK-USD",
+  "units": 7167.610035243015,
+  "cash": 0.0,
+  "entry_price": 0.12093,
   "bench_units": 1.332054612938296,
   "stopped": {
     "SHIB-USD": "2026-07-27T00:01:08+00:00",
@@ -829,6 +829,16 @@
       "value": 870.3,
       "fee": 1.0,
       "reason": "Hype faded \u2014 symbol dropped off Grok's euphoric list"
+    },
+    {
+      "date": "2026-10-12",
+      "action": "BUY",
+      "ticker": "STRK-USD",
+      "price": 0.12093,
+      "units": 7167.61,
+      "value": 866.78,
+      "fee": 2.52,
+      "reason": "Grok: STRK euphoric \u2014 Quantum L1 proposal sparks massive pump (scan 2026-10-11T17:54)"
     }
   ],
   "history": [
@@ -1300,15 +1310,16 @@
       "bench": 1037.1,
       "holding": "CASH",
       "bench_asof": "2026-10-09"
+    },
+    {
+      "date": "2026-10-12",
+      "value": 866.78,
+      "bench": 1037.1,
+      "holding": "STRK-USD",
+      "bench_asof": "2026-10-09"
     }
   ],
   "intraday": [
-    {
-      "ts": "2026-09-15T20:01:16+00:00",
-      "value": 869.3,
-      "bench": 1008.95,
-      "holding": "CASH"
-    },
     {
       "ts": "2026-09-15T20:17:41+00:00",
       "value": 869.3,
@@ -10302,9 +10313,15 @@
       "value": 869.3,
       "bench": 1037.1,
       "holding": "CASH"
+    },
+    {
+      "ts": "2026-10-12T00:15:51+00:00",
+      "value": 866.78,
+      "bench": 1037.1,
+      "holding": "STRK-USD"
     }
   ],
-  "last_updated_utc": "2026-10-11T23:59:26+00:00",
+  "last_updated_utc": "2026-10-12T00:15:51+00:00",
   "restatement": {
     "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)",
     "voided_trades": [
@@ -10383,5 +10400,5 @@
     ],
     "voided_reason": "signal faded before any real fill was possible (market closed the whole window) \u2014 trades could never have existed"
   },
-  "costs_paid": 154.3355
+  "costs_paid": 156.8565
 }
