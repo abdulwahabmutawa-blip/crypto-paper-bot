@@ -1,15 +1,15 @@
 {
-  "ts": "2026-10-12T18:08:41+00:00",
+  "ts": "2026-10-12T18:14:26+00:00",
   "sources": {
     "coingecko": [
-      "NEAR",
       "W",
+      "NEAR",
       "STRK",
       "TRUMP",
       "BTC",
       "PENGU",
       "AERO",
-      "RSR",
+      "AAVE",
       "SUI"
     ],
     "reddit": [],
@@ -32,17 +32,6 @@
   },
   "heat": [
     {
-      "symbol": "RSR",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": -0.012057,
-      "long_short": 0.98
-    },
-    {
       "symbol": "W",
       "surfaces": 3,
       "sources": [
@@ -50,8 +39,18 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.000258,
+      "funding": -0.000266,
       "long_short": 1.03
+    },
+    {
+      "symbol": "RSR",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": -0.011759,
+      "long_short": 0.98
     },
     {
       "symbol": "ZRO",
@@ -62,6 +61,14 @@
       ],
       "funding": 5e-05,
       "long_short": 1.21
+    },
+    {
+      "symbol": "AAVE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5.2e-05
     },
     {
       "symbol": "AERO",
@@ -85,7 +92,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.015011
+      "funding": -0.01492
     },
     {
       "symbol": "FIL",
@@ -93,7 +100,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 5.6e-05
+      "funding": 5.4e-05
     },
     {
       "symbol": "NEAR",
@@ -101,7 +108,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1e-05
+      "funding": -1.3e-05
     },
     {
       "symbol": "PENGU",
@@ -132,7 +139,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.7e-05
+      "funding": 5.3e-05
     },
     {
       "symbol": "TRUMP",
