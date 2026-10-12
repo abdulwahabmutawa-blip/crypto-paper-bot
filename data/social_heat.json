@@ -1,15 +1,15 @@
 {
-  "ts": "2026-10-12T06:29:21+00:00",
+  "ts": "2026-10-12T06:34:30+00:00",
   "sources": {
     "coingecko": [
       "W",
       "STRK",
       "RSR",
       "NEAR",
+      "BTC",
       "SUI",
-      "ICP",
       "PLUME",
-      "HYPE",
+      "IO",
       "S"
     ],
     "reddit": [],
@@ -41,7 +41,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 6e-05,
+      "funding": 5.9e-05,
       "long_short": 1.19
     },
     {
@@ -52,7 +52,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -4.2e-05,
+      "funding": -3.7e-05,
       "long_short": 1.43
     },
     {
@@ -76,12 +76,20 @@
       "long_short": 0.8
     },
     {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -2e-06
+    },
+    {
       "symbol": "CFX",
       "surfaces": 1,
       "sources": [
         "watcher"
       ],
-      "funding": -7.9e-05
+      "funding": -6.9e-05
     },
     {
       "symbol": "CKB",
@@ -89,7 +97,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.002712
+      "funding": -0.002722
     },
     {
       "symbol": "FIL",
@@ -100,20 +108,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "HYPE",
+      "symbol": "IO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -8e-06
-    },
-    {
-      "symbol": "ICP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": 5e-05
     },
     {
       "symbol": "PLUME",
@@ -161,7 +161,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 2.6e-05
+      "funding": 2.8e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
