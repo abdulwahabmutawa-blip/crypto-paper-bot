@@ -1,8 +1,39 @@
 {
-  "ts": "2026-10-12T02:53:31+00:00",
-  "scanned": 114,
+  "ts": "2026-10-12T02:59:27+00:00",
+  "scanned": 115,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "PYTHUSDT",
+      "signal": "ignition",
+      "score": 0.6851,
+      "raw_score": 0.7733,
+      "weight": 0.886,
+      "price": 0.081,
+      "why": "trades 7.1x and volume 16.5x the prior 4h, 82% taker-buy, $88,406 burst \u2014 while price has only moved +2.6%",
+      "chg_24h": 0.0247,
+      "vol_surge": 16.48,
+      "chg_1h": 0.0265,
+      "market_surge": 4.43,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.19% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "PYTHUSDT",
+      "signal": "breakout",
+      "score": 0.681,
+      "raw_score": 0.7634,
+      "weight": 0.892,
+      "price": 0.081,
+      "why": "trades 7.1x, volume 16.5x, 82% taker-buy, +2.6% in an hour, at 90% of its 24h range",
+      "chg_24h": 0.0247,
+      "vol_surge": 16.48,
+      "chg_1h": 0.0265,
+      "market_surge": 4.43,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.59% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.19% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.59% at 24h: market beta, not signal",
@@ -11,7 +42,7 @@
     "revival": "probation \u2014 3/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 19,
+    "count": 20,
     "baseline": 17.0,
     "wave": false
   },
