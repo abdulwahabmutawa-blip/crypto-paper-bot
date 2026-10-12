@@ -1,24 +1,24 @@
 {
-  "ts": "2026-10-12T04:32:11+00:00",
+  "ts": "2026-10-12T04:38:01+00:00",
   "sources": {
     "coingecko": [
       "W",
       "ICP",
       "STRK",
       "NEAR",
-      "BTC",
-      "ZRO",
+      "TIA",
       "DATA",
-      "EIGEN",
       "PUMP",
+      "BTC",
+      "FET",
       "IO"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "W",
-      "CKB",
       "S",
+      "CKB",
       "MAGIC",
       "FIL",
       "NEAR",
@@ -46,6 +46,16 @@
       "long_short": 1.2
     },
     {
+      "symbol": "FET",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.68
+    },
+    {
       "symbol": "MAGIC",
       "surfaces": 2,
       "sources": [
@@ -62,7 +72,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 3.7e-05,
+      "funding": 4.3e-05,
       "long_short": 1.47
     },
     {
@@ -72,7 +82,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -3.9e-05,
+      "funding": -4.8e-05,
       "long_short": 0.88
     },
     {
@@ -81,7 +91,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.1e-05
+      "funding": 1.5e-05
     },
     {
       "symbol": "CFX",
@@ -89,7 +99,7 @@
       "sources": [
         "watcher"
       ],
-      "funding": -0.000309
+      "funding": -0.000299
     },
     {
       "symbol": "CKB",
@@ -97,7 +107,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.002229
+      "funding": -0.00225
     },
     {
       "symbol": "DATA",
@@ -107,28 +117,12 @@
       ]
     },
     {
-      "symbol": "EIGEN",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "ENA",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "FET",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "FIL",
@@ -171,7 +165,7 @@
       "funding": 5e-05
     },
     {
-      "symbol": "ZRO",
+      "symbol": "TIA",
       "surfaces": 1,
       "sources": [
         "coingecko"
