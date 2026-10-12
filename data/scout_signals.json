@@ -1,8 +1,84 @@
 {
-  "ts": "2026-10-12T23:45:38+00:00",
+  "ts": "2026-10-12T23:50:46+00:00",
   "scanned": 144,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SOXLBUSDT",
+      "signal": "ignition",
+      "score": 0.8324,
+      "raw_score": 0.9481,
+      "weight": 0.878,
+      "price": 125.89,
+      "why": "trades 12.9x and volume 10.7x the prior 4h, 94% taker-buy, $73,634 burst \u2014 while price has only moved -1.5%",
+      "chg_24h": -0.1154,
+      "vol_surge": 10.7,
+      "chg_1h": -0.0149,
+      "market_surge": 1.81,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.13% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "NVDABUSDT",
+      "signal": "ignition",
+      "score": 0.7954,
+      "raw_score": 0.9059,
+      "weight": 0.878,
+      "price": 225.03,
+      "why": "trades 14.0x and volume 36.8x the prior 4h, 67% taker-buy, $150,192 burst \u2014 while price has only moved -0.5%",
+      "chg_24h": -0.0269,
+      "vol_surge": 36.76,
+      "chg_1h": -0.0049,
+      "market_surge": 7.56,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.13% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "MUBARAKUSDT",
+      "signal": "ignition",
+      "score": 0.5815,
+      "raw_score": 0.6624,
+      "weight": 0.878,
+      "price": 0.0714,
+      "why": "trades 4.3x and volume 12.0x the prior 4h, 60% taker-buy, $93,042 burst \u2014 while price has only moved -0.4%",
+      "chg_24h": -0.0114,
+      "vol_surge": 12.02,
+      "chg_1h": -0.0039,
+      "market_surge": 1.04,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.13% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "GRAMUSDT",
+      "signal": "ignition",
+      "score": 0.5347,
+      "raw_score": 0.609,
+      "weight": 0.878,
+      "price": 1.362,
+      "why": "trades 4.5x and volume 6.4x the prior 4h, 71% taker-buy, $93,299 burst \u2014 while price has only moved -0.3%",
+      "chg_24h": -0.062,
+      "vol_surge": 6.37,
+      "chg_1h": -0.0029,
+      "market_surge": 1.77,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.13% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "MAGICUSDT",
+      "signal": "ignition",
+      "score": 0.4867,
+      "raw_score": 0.5543,
+      "weight": 0.878,
+      "price": 0.1188,
+      "why": "trades 4.5x and volume 5.6x the prior 4h, 76% taker-buy, $99,949 burst \u2014 while price has only moved +2.1%",
+      "chg_24h": -0.1266,
+      "vol_surge": 5.58,
+      "chg_1h": 0.0215,
+      "market_surge": 0.0,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.13% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.13% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.03% at 24h: market beta, not signal",
@@ -11,7 +87,7 @@
     "revival": "probation \u2014 3/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 10,
+    "count": 9,
     "baseline": 18.0,
     "wave": false
   },
