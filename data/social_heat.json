@@ -1,17 +1,18 @@
 {
-  "ts": "2026-10-12T10:13:25+00:00",
+  "ts": "2026-10-12T10:24:43+00:00",
   "sources": {
     "coingecko": [
       "W",
       "NEAR",
-      "STRK",
       "GTC",
+      "STRK",
       "TRUMP",
       "PENGU",
       "ZRO",
       "RSR",
       "PLUME",
-      "BTC"
+      "BTC",
+      "S"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -26,10 +27,9 @@
       "MUBARAK"
     ],
     "watcher": [
-      "NEAR",
-      "MAGIC",
-      "S",
-      "CFX"
+      "W",
+      "RSR",
+      "NEAR"
     ],
     "cryptopanic": []
   },
@@ -42,38 +42,40 @@
         "movers",
         "watcher"
       ],
-      "funding": -1e-06,
+      "funding": -2e-06,
       "long_short": 1.15
     },
     {
       "symbol": "RSR",
-      "surfaces": 2,
+      "surfaces": 3,
       "sources": [
         "coingecko",
-        "movers"
+        "movers",
+        "watcher"
       ],
-      "funding": -0.01747,
+      "funding": -0.01824,
       "long_short": 1.11
+    },
+    {
+      "symbol": "W",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": -7.2e-05,
+      "long_short": 0.62
     },
     {
       "symbol": "S",
       "surfaces": 2,
       "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": 2.8e-05,
-      "long_short": 1.38
-    },
-    {
-      "symbol": "W",
-      "surfaces": 2,
-      "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": -6.7e-05,
-      "long_short": 0.62
+      "funding": 3.1e-05,
+      "long_short": 1.38
     },
     {
       "symbol": "ZRO",
@@ -82,7 +84,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 7e-06,
+      "funding": 1.5e-05,
       "long_short": 1.09
     },
     {
@@ -91,15 +93,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.3e-05
-    },
-    {
-      "symbol": "CFX",
-      "surfaces": 1,
-      "sources": [
-        "watcher"
-      ],
-      "funding": -2.6e-05
+      "funding": 4.6e-05
     },
     {
       "symbol": "CKB",
@@ -107,7 +101,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.002195
+      "funding": -0.002135
     },
     {
       "symbol": "FIL",
@@ -123,15 +117,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.005596
-    },
-    {
-      "symbol": "MAGIC",
-      "surfaces": 1,
-      "sources": [
-        "watcher"
-      ],
-      "funding": 4.5e-05
+      "funding": -0.010773
     },
     {
       "symbol": "MUBARAK",
@@ -147,7 +133,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.1e-05
+      "funding": -7e-06
     },
     {
       "symbol": "PLUME",
@@ -155,7 +141,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000118
+      "funding": -0.000105
     },
     {
       "symbol": "STRK",
