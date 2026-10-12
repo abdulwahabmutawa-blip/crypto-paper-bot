@@ -2,20 +2,21 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-12T06:20:33+00:00 · runs 3184 · equity **$790.59** (-20.94%) · cash $0.00 · open 10/10 · round trips 1183
+updated 2026-10-12T06:36:44+00:00 · runs 3185 · equity **$793.17** (-20.68%) · cash $0.00 · open 10/10 · round trips 1184
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
-- hit 50% (break-even 54%) · mean -0.19%/trade · realized $-203.54 · worst day $-50.94 · trades/day 31.1
+- hit 50% (break-even 54%) · mean -0.19%/trade · realized $-205.94 · worst day $-50.94 · trades/day 31.2
 
 | shape | n | hit | mean | target% | stop% | time% |
 |---|---|---|---|---|---|---|
-| surge | 1039 | 51% | -0.15% | 48% | 45% | 7% |
+| surge | 1040 | 51% | -0.16% | 48% | 45% | 7% |
 | bottom | 144 | 45% | -0.42% | 39% | 44% | 17% |
 
 ## Last 15 round trips
 | exit (UTC) | coin | shape | how | hours | net | P&L |
 |---|---|---|---|---|---|---|
+| 2026-10-12T06:35 | 币安人生USDT | surge | STOP | 2.5 | -3.25% | $-2.39 |
 | 2026-10-12T05:30 | CFGUSDT | surge | TARGET | 2.8 | +2.75% | $+2.42 |
 | 2026-10-12T05:14 | PEPEUSDT | surge | TARGET | 10.5 | +2.75% | $+2.06 |
 | 2026-10-12T03:53 | TRXUSDT | bottom | TIME | 24.0 | +0.14% | $+0.11 |
@@ -30,20 +31,19 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | 2026-10-11T17:51 | PLUMEUSDT | surge | TARGET | 3.2 | +2.75% | $+2.18 |
 | 2026-10-11T16:46 | 币安人生USDT | surge | TARGET | 0.0 | +2.75% | $+2.17 |
 | 2026-10-11T16:29 | MEGAUSDT | surge | TARGET | 0.5 | +2.75% | $+2.20 |
-| 2026-10-11T16:29 | ADAUSDT | bottom | TARGET | 12.5 | +2.75% | $+2.02 |
 
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-11T09:49 | BIOUSDT | surge | 0.02956 | 0.02979 | +0.78% |
-| 2026-10-11T15:40 | XLMUSDT | surge | 0.202 | 0.2023 | +0.15% |
-| 2026-10-11T16:29 | TRBUSDT | surge | 19.73 | 19.41 | -1.62% |
-| 2026-10-11T17:51 | MSTRBUSDT | surge | 158.04 | 157.88 | -0.10% |
-| 2026-10-12T02:49 | MORPHOUSDT | surge | 2.469 | 2.462 | -0.28% |
-| 2026-10-12T03:37 | LINEAUSDT | surge | 0.003138 | 0.003136 | -0.06% |
-| 2026-10-12T03:53 | 币安人生USDT | surge | 0.6207 | 0.6041 | -2.67% |
-| 2026-10-12T05:14 | SOXLBUSDT | surge | 142.79 | 139.12 | -2.57% |
-| 2026-10-12T05:30 | DASHUSDT | surge | 53.62 | 53.02 | -1.12% |
+| 2026-10-11T09:49 | BIOUSDT | surge | 0.02956 | 0.02977 | +0.71% |
+| 2026-10-11T15:40 | XLMUSDT | surge | 0.202 | 0.2028 | +0.40% |
+| 2026-10-11T16:29 | TRBUSDT | surge | 19.73 | 19.47 | -1.32% |
+| 2026-10-11T17:51 | MSTRBUSDT | surge | 158.04 | 158.45 | +0.26% |
+| 2026-10-12T02:49 | MORPHOUSDT | surge | 2.469 | 2.484 | +0.61% |
+| 2026-10-12T03:37 | LINEAUSDT | surge | 0.003138 | 0.00316 | +0.70% |
+| 2026-10-12T05:14 | SOXLBUSDT | surge | 142.79 | 139.99 | -1.96% |
+| 2026-10-12T05:30 | DASHUSDT | surge | 53.62 | 53.18 | -0.82% |
+| 2026-10-12T06:35 | ALTUSDT | surge | 0.00863 | 0.00867 | +0.46% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
