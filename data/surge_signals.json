@@ -1,5 +1,5 @@
 {
- "ts": "2026-10-12T06:14:31+00:00",
+ "ts": "2026-10-12T06:20:14+00:00",
  "candidates": [
   {
    "symbol": "LINEAUSDT",
@@ -11,7 +11,7 @@
    "v24": 2.618,
    "pos24": 0.844,
    "r24": 0.0905,
-   "funding": -7.89e-06,
+   "funding": -1.193e-05,
    "oi_chg_24h": 0.09740806326015639
   },
   {
@@ -24,8 +24,21 @@
    "v24": 1.64,
    "pos24": 0.882,
    "r24": 0.1349,
-   "funding": 3.493e-05,
+   "funding": 2.71e-05,
    "oi_chg_24h": 0.05911251462026823
+  },
+  {
+   "symbol": "ALTUSDT",
+   "signal": "surge",
+   "score": 0.2397,
+   "actionable": true,
+   "price": 0.00854,
+   "why": "v24 1.7x, top 16% of range, r24 +5.8%, BTC +1.2%",
+   "v24": 1.716,
+   "pos24": 0.838,
+   "r24": 0.0582,
+   "funding": 5e-05,
+   "oi_chg_24h": 0.08034664306074069
   },
   {
    "symbol": "FILUSDT",
@@ -43,7 +56,7 @@
  ],
  "note": "SURGE lane (2026-09-05). Ranked opinion; the book decides.",
  "btc_24h": 0.0116,
- "shortlist": 60,
+ "shortlist": 59,
  "skipped": [
   {
    "symbol": "ETHUSDT",
@@ -68,10 +81,6 @@
   {
    "symbol": "ENAUSDT",
    "why": "v24 1.13 < 1.6"
-  },
-  {
-   "symbol": "UNIUSDT",
-   "why": "v24 0.65 < 1.6"
   },
   {
    "symbol": "MAGICUSDT",
@@ -130,12 +139,20 @@
    "why": "v24 1.52 < 1.6"
   },
   {
+   "symbol": "PLUMEUSDT",
+   "why": "pos24 0.64 < 0.8"
+  },
+  {
    "symbol": "LTCUSDT",
    "why": "v24 0.68 < 1.6"
   },
   {
    "symbol": "XLMUSDT",
    "why": "v24 0.92 < 1.6"
+  },
+  {
+   "symbol": "ZKUSDT",
+   "why": "pos24 0.48 < 0.8"
   },
   {
    "symbol": "INJUSDT",
@@ -186,10 +203,6 @@
    "why": "v24 1.07 < 1.6"
   },
   {
-   "symbol": "POLUSDT",
-   "why": "v24 0.70 < 1.6"
-  },
-  {
    "symbol": "DASHUSDT",
    "why": "v24 0.78 < 1.6"
   },
@@ -198,12 +211,12 @@
    "why": "OI +23% in 24h > 20%"
   },
   {
-   "symbol": "CRVUSDT",
-   "why": "v24 0.93 < 1.6"
-  },
-  {
    "symbol": "RAYUSDT",
    "why": "v24 0.40 < 1.6"
+  },
+  {
+   "symbol": "LDOUSDT",
+   "why": "v24 0.99 < 1.6"
   }
  ]
 }

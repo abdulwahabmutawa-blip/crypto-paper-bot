@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-12T06:12:41+00:00",
+  "ts": "2026-10-12T06:18:21+00:00",
   "sources": {
     "coingecko": [
       "W",
@@ -22,7 +22,7 @@
       "NEAR",
       "PUMP",
       "ZEC",
-      "FET"
+      "MAGIC"
     ],
     "watcher": [
       "NEAR",
@@ -41,8 +41,18 @@
         "movers",
         "watcher"
       ],
-      "funding": 6.7e-05,
+      "funding": 6.4e-05,
       "long_short": 1.19
+    },
+    {
+      "symbol": "MAGIC",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": 4.2e-05,
+      "long_short": 0.81
     },
     {
       "symbol": "S",
@@ -51,7 +61,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -3e-05,
+      "funding": -4e-05,
       "long_short": 1.43
     },
     {
@@ -61,7 +71,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -1.3e-05,
+      "funding": -1.6e-05,
       "long_short": 0.8
     },
     {
@@ -71,7 +81,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 2.5e-05,
+      "funding": 2.4e-05,
       "long_short": 0.64
     },
     {
@@ -80,7 +90,7 @@
       "sources": [
         "watcher"
       ],
-      "funding": -0.000114
+      "funding": -0.000102
     },
     {
       "symbol": "CKB",
@@ -88,15 +98,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.002621
-    },
-    {
-      "symbol": "FET",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 9.9e-05
+      "funding": -0.002648
     },
     {
       "symbol": "FIL",
@@ -123,14 +125,6 @@
       "funding": 0.0001
     },
     {
-      "symbol": "MAGIC",
-      "surfaces": 1,
-      "sources": [
-        "watcher"
-      ],
-      "funding": 4.5e-05
-    },
-    {
       "symbol": "ONDO",
       "surfaces": 1,
       "sources": [
@@ -144,7 +138,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.7e-05
+      "funding": 5e-05
     },
     {
       "symbol": "RSR",
@@ -168,7 +162,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7e-05
+      "funding": 6.3e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
