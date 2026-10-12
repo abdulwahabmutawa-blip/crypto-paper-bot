@@ -1,17 +1,33 @@
 {
-  "ts": "2026-10-12T16:01:38+00:00",
+  "ts": "2026-10-12T16:07:38+00:00",
   "scanned": 132,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "MANTAUSDT",
+      "signal": "ignition",
+      "score": 0.4965,
+      "raw_score": 0.5655,
+      "weight": 0.878,
+      "price": 0.07514,
+      "why": "trades 4.5x and volume 6.2x the prior 4h, 70% taker-buy, $122,019 burst \u2014 while price has only moved +1.8%",
+      "chg_24h": 0.0449,
+      "vol_surge": 6.2,
+      "chg_1h": 0.0176,
+      "market_surge": 6.16,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.09% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.09% at 24h: market beta, not signal",
-    "breakout": "benched \u2014 BTC-excess day mean +0.37% at 24h: market beta, not signal",
+    "breakout": "benched \u2014 BTC-excess day mean +0.36% at 24h: market beta, not signal",
     "reversion": "benched \u2014 BTC-excess day mean +0.06% at 24h: market beta, not signal",
     "heat": "probation \u2014 7/12 resolved 24h samples under ruleset 3",
     "revival": "probation \u2014 3/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 11,
+    "count": 12,
     "baseline": 18.0,
     "wave": false
   },
@@ -84,19 +100,19 @@
       "avg_win_4h": 0.04016,
       "avg_loss_4h": -0.02726,
       "payoff_4h": 1.473,
-      "span_h_24h": 310.4,
-      "n_eff_24h": 12.93,
-      "n_24h": 314,
-      "hit_rate_24h": 0.312,
-      "mean_ret_24h": -0.0016,
+      "span_h_24h": 310.5,
+      "n_eff_24h": 12.94,
+      "n_24h": 316,
+      "hit_rate_24h": 0.31,
+      "mean_ret_24h": -0.00181,
       "median_ret_24h": -0.0243,
       "both_halves_24h": false,
       "days_24h": 14,
-      "mean_x_24h": 0.0037,
+      "mean_x_24h": 0.00359,
       "days_x_24h": 14,
       "avg_win_24h": 0.09494,
-      "avg_loss_24h": -0.04851,
-      "payoff_24h": 1.957
+      "avg_loss_24h": -0.04837,
+      "payoff_24h": 1.963
     },
     "reversion": {
       "span_h_1h": 333.0,
