@@ -1,16 +1,17 @@
 {
   "created": "2026-07-17",
   "starting_cash": 1000.0,
-  "holding": "STRK-USD",
-  "units": 7167.610035243015,
-  "cash": 0.0,
-  "entry_price": 0.12093,
+  "holding": "CASH",
+  "units": 0.0,
+  "cash": 770.4276235499794,
+  "entry_price": null,
   "bench_units": 1.332054612938296,
   "stopped": {
     "SHIB-USD": "2026-07-27T00:01:08+00:00",
     "NLST": "2026-08-17T18:05:32+00:00",
     "XRP-USD": "2026-08-21T01:30:56+00:00",
-    "SOPH-USD": "2026-09-08T11:13:19+00:00"
+    "SOPH-USD": "2026-09-08T11:13:19+00:00",
+    "STRK-USD": "2026-10-12T02:15:43+00:00"
   },
   "trades": [
     {
@@ -839,6 +840,16 @@
       "value": 866.78,
       "fee": 2.52,
       "reason": "Grok: STRK euphoric \u2014 Quantum L1 proposal sparks massive pump (scan 2026-10-11T17:54)"
+    },
+    {
+      "date": "2026-10-12",
+      "action": "SELL",
+      "ticker": "STRK-USD",
+      "price": 0.1078,
+      "units": 7167.61,
+      "value": 772.67,
+      "fee": 2.24,
+      "reason": "STOP-LOSS hit (-10.9% from entry) \u2014 hype that bleeds gets cut"
     }
   ],
   "history": [
@@ -1313,19 +1324,13 @@
     },
     {
       "date": "2026-10-12",
-      "value": 784.14,
+      "value": 770.43,
       "bench": 1037.1,
-      "holding": "STRK-USD",
+      "holding": "CASH",
       "bench_asof": "2026-10-09"
     }
   ],
   "intraday": [
-    {
-      "ts": "2026-09-15T20:50:34+00:00",
-      "value": 869.3,
-      "bench": 1008.88,
-      "holding": "CASH"
-    },
     {
       "ts": "2026-09-15T21:06:59+00:00",
       "value": 869.3,
@@ -10319,9 +10324,15 @@
       "value": 784.14,
       "bench": 1037.1,
       "holding": "STRK-USD"
+    },
+    {
+      "ts": "2026-10-12T04:11:17+00:00",
+      "value": 770.43,
+      "bench": 1037.1,
+      "holding": "CASH"
     }
   ],
-  "last_updated_utc": "2026-10-12T03:55:06+00:00",
+  "last_updated_utc": "2026-10-12T04:11:17+00:00",
   "restatement": {
     "note": "restated 2026-07-22: fill moved to first tradable moment (stale-fill bug fix)",
     "voided_trades": [
@@ -10400,5 +10411,5 @@
     ],
     "voided_reason": "signal faded before any real fill was possible (market closed the whole window) \u2014 trades could never have existed"
   },
-  "costs_paid": 156.8565
+  "costs_paid": 159.0972
 }
