@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-12T02:43:04+00:00",
+  "ts": "2026-10-12T02:48:15+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
@@ -19,11 +19,11 @@
       "W",
       "MAGIC",
       "S",
-      "FIL",
       "NEAR",
+      "FIL",
       "ENA",
-      "LUMIA",
-      "AVAX"
+      "FET",
+      "ONDO"
     ],
     "watcher": [
       "NEAR",
@@ -62,8 +62,18 @@
         "movers",
         "watcher"
       ],
-      "funding": -3.7e-05,
+      "funding": -3.6e-05,
       "long_short": 0.79
+    },
+    {
+      "symbol": "ONDO",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 2.15
     },
     {
       "symbol": "S",
@@ -72,7 +82,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -3e-06,
+      "funding": -2e-06,
       "long_short": 1.37
     },
     {
@@ -82,8 +92,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 5e-05,
-      "long_short": 1.56
+      "funding": 5e-05
     },
     {
       "symbol": "AERO",
@@ -94,20 +103,20 @@
       "funding": 5e-05
     },
     {
-      "symbol": "AVAX",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "CFX",
       "surfaces": 1,
       "sources": [
         "watcher"
       ],
-      "funding": -0.00046
+      "funding": -0.000478
+    },
+    {
+      "symbol": "FET",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "FIL",
@@ -123,7 +132,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-06
+      "funding": 6e-06
     },
     {
       "symbol": "ICP",
@@ -134,28 +143,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "LUMIA",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -8.6e-05
-    },
-    {
-      "symbol": "ONDO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -2.4e-05
+      "funding": -2.2e-05
     },
     {
       "symbol": "RAY",
