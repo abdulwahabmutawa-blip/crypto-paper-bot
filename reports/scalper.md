@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-12T22:12:47+00:00 · runs 3240 · equity **$757.95** (-24.20%) · cash $143.86 · open 8/10 · round trips 1212
+updated 2026-10-12T22:30:25+00:00 · runs 3241 · equity **$757.01** (-24.30%) · cash $143.86 · open 8/10 · round trips 1212
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,12 +36,12 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-12T13:52 | HYPEUSDT | bottom | 85.05 | 83.28 | -2.08% |
-| 2026-10-12T14:09 | SPCXBUSDT | surge | 166.2 | 163.69 | -1.51% |
-| 2026-10-12T15:49 | JSTUSDT | surge | 0.13999 | 0.13862 | -0.98% |
-| 2026-10-12T16:22 | SOXSBUSDT | surge | 36.79 | 37.31 | +1.41% |
-| 2026-10-12T20:57 | RENDERUSDT | surge | 2.113 | 2.129 | +0.76% |
-| 2026-10-12T21:52 | TRXUSDT | bottom | 0.3299 | 0.33 | +0.03% |
-| 2026-10-12T22:10 | AVAXUSDT | bottom | 10.349 | 10.415 | +0.64% |
+| 2026-10-12T13:52 | HYPEUSDT | bottom | 85.05 | 82.92 | -2.50% |
+| 2026-10-12T14:09 | SPCXBUSDT | surge | 166.2 | 163.71 | -1.50% |
+| 2026-10-12T15:49 | JSTUSDT | surge | 0.13999 | 0.13854 | -1.04% |
+| 2026-10-12T16:22 | SOXSBUSDT | surge | 36.79 | 37.32 | +1.44% |
+| 2026-10-12T20:57 | RENDERUSDT | surge | 2.113 | 2.122 | +0.43% |
+| 2026-10-12T21:52 | TRXUSDT | bottom | 0.3299 | 0.3299 | +0.00% |
+| 2026-10-12T22:10 | AVAXUSDT | bottom | 10.349 | 10.367 | +0.17% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
