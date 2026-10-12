@@ -1,24 +1,24 @@
 {
-  "ts": "2026-10-12T04:38:01+00:00",
+  "ts": "2026-10-12T04:43:41+00:00",
   "sources": {
     "coingecko": [
       "W",
       "ICP",
       "STRK",
       "NEAR",
-      "TIA",
       "DATA",
-      "PUMP",
-      "BTC",
+      "TIA",
+      "IO",
       "FET",
-      "IO"
+      "PLUME",
+      "EIGEN"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "W",
-      "S",
       "CKB",
+      "S",
       "MAGIC",
       "FIL",
       "NEAR",
@@ -62,7 +62,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 2.3e-05,
+      "funding": 2.5e-05,
       "long_short": 0.85
     },
     {
@@ -72,7 +72,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 4.3e-05,
+      "funding": 3.7e-05,
       "long_short": 1.47
     },
     {
@@ -82,16 +82,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": -4.8e-05,
+      "funding": -5.4e-05,
       "long_short": 0.88
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 1.5e-05
     },
     {
       "symbol": "CFX",
@@ -99,7 +91,7 @@
       "sources": [
         "watcher"
       ],
-      "funding": -0.000299
+      "funding": -0.000292
     },
     {
       "symbol": "CKB",
@@ -107,7 +99,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.00225
+      "funding": -0.002254
     },
     {
       "symbol": "DATA",
@@ -115,6 +107,14 @@
       "sources": [
         "coingecko"
       ]
+    },
+    {
+      "symbol": "EIGEN",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "ENA",
@@ -149,12 +149,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PUMP",
+      "symbol": "PLUME",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 1.6e-05
+      "funding": -2.3e-05
     },
     {
       "symbol": "STRK",
