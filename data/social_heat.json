@@ -1,18 +1,18 @@
 {
-  "ts": "2026-10-12T12:02:21+00:00",
+  "ts": "2026-10-12T12:08:31+00:00",
   "sources": {
     "coingecko": [
-      "TRUMP",
       "STRK",
+      "TRUMP",
+      "NEAR",
       "W",
       "GTC",
-      "NEAR",
-      "PENGU",
       "PYTH",
+      "PENGU",
       "INJ",
-      "LINK",
+      "AERO",
       "DATA",
-      "ETH"
+      "ZAMA"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,10 +20,10 @@
       "RSR",
       "W",
       "S",
-      "ZRO",
       "FIL",
-      "CKB",
+      "ZRO",
       "MAGIC",
+      "CKB",
       "NEAR"
     ],
     "watcher": [
@@ -42,7 +42,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 1.5e-05,
+      "funding": 2e-05,
       "long_short": 1.18
     },
     {
@@ -53,7 +53,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -4.5e-05,
+      "funding": -4.4e-05,
       "long_short": 0.71
     },
     {
@@ -67,12 +67,20 @@
       "long_short": 1.2
     },
     {
+      "symbol": "AERO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -1.4e-05
+    },
+    {
       "symbol": "CKB",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -0.001554
+      "funding": -0.001544
     },
     {
       "symbol": "DATA",
@@ -80,14 +88,6 @@
       "sources": [
         "coingecko"
       ]
-    },
-    {
-      "symbol": "ETH",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-06
     },
     {
       "symbol": "FIL",
@@ -114,14 +114,6 @@
       "funding": 0.0001
     },
     {
-      "symbol": "LINK",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 3.4e-05
-    },
-    {
       "symbol": "MAGIC",
       "surfaces": 1,
       "sources": [
@@ -135,7 +127,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.6e-05
+      "funding": -1.3e-05
     },
     {
       "symbol": "PYTH",
@@ -143,7 +135,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -3.6e-05
+      "funding": -4e-05
     },
     {
       "symbol": "S",
@@ -151,7 +143,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -2.6e-05
+      "funding": -2.3e-05
     },
     {
       "symbol": "STRK",
@@ -163,6 +155,14 @@
     },
     {
       "symbol": "TRUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "ZAMA",
       "surfaces": 1,
       "sources": [
         "coingecko"
