@@ -1,8 +1,41 @@
 {
-  "ts": "2026-10-12T19:15:08+00:00",
-  "scanned": 135,
+  "ts": "2026-10-12T19:20:39+00:00",
+  "scanned": 137,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "FLOWUSDT",
+      "signal": "ignition",
+      "score": 0.8078,
+      "raw_score": 0.9222,
+      "weight": 0.876,
+      "price": 0.03433,
+      "why": "trades 13.4x and volume 18.3x the prior 4h, 70% taker-buy, $50,162 burst \u2014 while price has only moved -0.1%",
+      "chg_24h": -0.0049,
+      "vol_surge": 18.28,
+      "chg_1h": -0.0015,
+      "market_surge": 1.97,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.08% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "SNXXBUSDT",
+      "signal": "reversion",
+      "score": 0.4596,
+      "raw_score": 0.4596,
+      "weight": 1.0,
+      "price": 11.98,
+      "why": "down -16% on the day (bottom decile of the market), now +0.8% over 15m with 3 green candles",
+      "chg_24h": -0.1578,
+      "vol_surge": 1.38,
+      "chg_1h": 0.0,
+      "market_surge": 0.59,
+      "oi_drop": null,
+      "funding": null,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.20% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.08% at 24h: market beta, not signal",
     "breakout": "benched \u2014 hit 31%, mean -0.27% over last 323 at 24h: not beating 4x the round trip",
