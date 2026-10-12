@@ -1,17 +1,17 @@
 {
-  "ts": "2026-10-12T05:17:21+00:00",
+  "ts": "2026-10-12T05:22:31+00:00",
   "sources": {
     "coingecko": [
       "W",
-      "ICP",
       "NEAR",
+      "ICP",
+      "RSR",
       "STRK",
       "ZEC",
       "ZRO",
-      "RSR",
-      "BTC",
-      "SOL",
-      "INJ"
+      "INJ",
+      "PUMP",
+      "TIA"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -23,7 +23,7 @@
       "FIL",
       "NEAR",
       "ENA",
-      "PUMP"
+      "FET"
     ],
     "watcher": [
       "NEAR",
@@ -42,7 +42,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 9.1e-05,
+      "funding": 9e-05,
       "long_short": 1.2
     },
     {
@@ -52,7 +52,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 4.4e-05,
+      "funding": 4.9e-05,
       "long_short": 0.77
     },
     {
@@ -62,7 +62,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 1.9e-05,
+      "funding": 1.2e-05,
       "long_short": 1.45
     },
     {
@@ -72,16 +72,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": -3.4e-05,
+      "funding": -3.2e-05,
       "long_short": 0.83
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 2e-05
     },
     {
       "symbol": "CFX",
@@ -89,7 +81,7 @@
       "sources": [
         "watcher"
       ],
-      "funding": -0.000233
+      "funding": -0.000216
     },
     {
       "symbol": "CKB",
@@ -97,7 +89,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.002486
+      "funding": -0.0025
     },
     {
       "symbol": "ENA",
@@ -106,6 +98,14 @@
         "movers"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "FET",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "FIL",
@@ -135,9 +135,9 @@
       "symbol": "PUMP",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
-      "funding": 2.1e-05
+      "funding": 2.6e-05
     },
     {
       "symbol": "RSR",
@@ -145,18 +145,18 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.007831
+      "funding": -0.010398
     },
     {
-      "symbol": "SOL",
+      "symbol": "STRK",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 8.9e-05
+      "funding": 5e-05
     },
     {
-      "symbol": "STRK",
+      "symbol": "TIA",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -169,7 +169,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.4e-05
+      "funding": 3.5e-05
     },
     {
       "symbol": "ZRO",
