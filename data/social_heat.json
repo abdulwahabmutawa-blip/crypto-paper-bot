@@ -1,17 +1,17 @@
 {
-  "ts": "2026-10-12T04:10:31+00:00",
+  "ts": "2026-10-12T04:15:41+00:00",
   "sources": {
     "coingecko": [
       "W",
       "ICP",
       "NEAR",
       "STRK",
-      "ZRO",
-      "FIL",
-      "BTC",
+      "DATA",
+      "EIGEN",
+      "FET",
       "PUMP",
-      "PENGU",
-      "PLUME"
+      "PLUME",
+      "ZRO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -52,18 +52,8 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.000355,
+      "funding": -0.000347,
       "long_short": 1.32
-    },
-    {
-      "symbol": "FIL",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 2.1
     },
     {
       "symbol": "MAGIC",
@@ -72,7 +62,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 3e-05,
+      "funding": 3.7e-05,
       "long_short": 0.85
     },
     {
@@ -82,7 +72,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 2.2e-05,
+      "funding": 2.8e-05,
       "long_short": 1.47
     },
     {
@@ -92,15 +82,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": -4.7e-05
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 6e-06
+      "funding": -4.5e-05,
+      "long_short": 0.88
     },
     {
       "symbol": "CKB",
@@ -108,7 +91,22 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.002093
+      "funding": -0.002126
+    },
+    {
+      "symbol": "DATA",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ]
+    },
+    {
+      "symbol": "EIGEN",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "ENA",
@@ -119,6 +117,22 @@
       "funding": 5e-05
     },
     {
+      "symbol": "FET",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "FIL",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "ICP",
       "surfaces": 1,
       "sources": [
@@ -127,20 +141,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "PENGU",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -7e-06
-    },
-    {
       "symbol": "PLUME",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -9e-06
+      "funding": -6e-06
     },
     {
       "symbol": "PUMP",
