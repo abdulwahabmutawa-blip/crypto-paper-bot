@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-12T09:23:13+00:00",
+  "ts": "2026-10-12T09:28:31+00:00",
   "sources": {
     "coingecko": [
       "W",
@@ -15,13 +15,13 @@
     "stocktwits": [],
     "movers": [
       "W",
+      "RSR",
       "ZRO",
       "S",
       "CKB",
       "FIL",
       "NEAR",
-      "AVAX",
-      "FET"
+      "AVAX"
     ],
     "watcher": [
       "NEAR",
@@ -44,13 +44,23 @@
       "long_short": 1.17
     },
     {
+      "symbol": "RSR",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -0.017753,
+      "long_short": 1.13
+    },
+    {
       "symbol": "S",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": 3e-06,
+      "funding": 6e-06,
       "long_short": 1.38
     },
     {
@@ -60,7 +70,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -8.2e-05,
+      "funding": -8.3e-05,
       "long_short": 0.66
     },
     {
@@ -70,7 +80,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -4e-06,
+      "funding": -2e-06,
       "long_short": 1.16
     },
     {
@@ -79,7 +89,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 5.9e-05
+      "funding": 5.8e-05
     },
     {
       "symbol": "CFX",
@@ -87,7 +97,7 @@
       "sources": [
         "watcher"
       ],
-      "funding": 1.2e-05
+      "funding": 8e-06
     },
     {
       "symbol": "CKB",
@@ -95,15 +105,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.002332
-    },
-    {
-      "symbol": "FET",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -3.9e-05
+      "funding": -0.002337
     },
     {
       "symbol": "FIL",
@@ -119,7 +121,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4e-06
+      "funding": 5e-06
     },
     {
       "symbol": "MAGIC",
@@ -127,7 +129,7 @@
       "sources": [
         "watcher"
       ],
-      "funding": 4.7e-05
+      "funding": 5e-05
     },
     {
       "symbol": "PENGU",
@@ -135,7 +137,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.9e-05
+      "funding": -2e-05
     },
     {
       "symbol": "PLUME",
@@ -143,15 +145,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -8.4e-05
-    },
-    {
-      "symbol": "RSR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -0.01785
+      "funding": -9.7e-05
     },
     {
       "symbol": "STRK",
