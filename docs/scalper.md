@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-12T18:04:47+00:00 · runs 3227 · equity **$764.92** (-23.51%) · cash $76.86 · open 9/10 · round trips 1204
+updated 2026-10-12T18:21:29+00:00 · runs 3228 · equity **$766.00** (-23.40%) · cash $76.86 · open 9/10 · round trips 1204
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,13 +36,13 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-12T13:52 | HYPEUSDT | bottom | 85.05 | 83.69 | -1.60% |
-| 2026-10-12T13:52 | AAVEUSDT | bottom | 164.79 | 161.13 | -2.22% |
+| 2026-10-12T13:52 | HYPEUSDT | bottom | 85.05 | 83.48 | -1.85% |
+| 2026-10-12T13:52 | AAVEUSDT | bottom | 164.79 | 160.78 | -2.43% |
 | 2026-10-12T14:09 | SPCXBUSDT | surge | 166.2 | 164.41 | -1.08% |
-| 2026-10-12T14:59 | FETUSDT | bottom | 0.2228 | 0.2231 | +0.13% |
-| 2026-10-12T15:16 | STXUSDT | surge | 0.398 | 0.4062 | +2.06% |
-| 2026-10-12T15:49 | JSTUSDT | surge | 0.13999 | 0.13999 | +0.00% |
-| 2026-10-12T16:22 | SOXSBUSDT | surge | 36.79 | 37.3 | +1.39% |
-| 2026-10-12T18:03 | BEAMXUSDT | surge | 0.00277 | 0.002793 | +0.83% |
+| 2026-10-12T14:59 | FETUSDT | bottom | 0.2228 | 0.2223 | -0.22% |
+| 2026-10-12T15:16 | STXUSDT | surge | 0.398 | 0.4068 | +2.21% |
+| 2026-10-12T15:49 | JSTUSDT | surge | 0.13999 | 0.14015 | +0.11% |
+| 2026-10-12T16:22 | SOXSBUSDT | surge | 36.79 | 37.33 | +1.47% |
+| 2026-10-12T18:03 | BEAMXUSDT | surge | 0.00277 | 0.002844 | +2.67% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
