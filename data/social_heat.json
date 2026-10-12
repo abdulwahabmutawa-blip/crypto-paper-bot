@@ -1,27 +1,29 @@
 {
-  "ts": "2026-10-12T15:38:11+00:00",
+  "ts": "2026-10-12T15:44:21+00:00",
   "sources": {
     "coingecko": [
-      "NEAR",
       "W",
+      "NEAR",
       "STRK",
       "ZRO",
       "S",
+      "BTC",
+      "PUMP",
       "PENGU",
-      "TRUMP",
-      "PUMP"
+      "QNT",
+      "SUI"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "RSR",
-      "CTK",
       "W",
+      "CTK",
       "ZRO",
       "FIL",
-      "S",
       "ZEC",
-      "NEAR"
+      "S",
+      "TRX"
     ],
     "watcher": [
       "RSR",
@@ -39,7 +41,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -5.6e-05,
+      "funding": -6e-05,
       "long_short": 0.95
     },
     {
@@ -50,18 +52,8 @@
         "movers",
         "watcher"
       ],
-      "funding": 2.2e-05,
+      "funding": 1.9e-05,
       "long_short": 1.04
-    },
-    {
-      "symbol": "NEAR",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 3.4e-05,
-      "long_short": 1.23
     },
     {
       "symbol": "RSR",
@@ -80,8 +72,16 @@
         "coingecko",
         "movers"
       ],
-      "funding": -1.2e-05,
+      "funding": -5e-06,
       "long_short": 1.39
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 2.6e-05
     },
     {
       "symbol": "CTK",
@@ -89,7 +89,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.012837
+      "funding": -0.013189
     },
     {
       "symbol": "FIL",
@@ -98,6 +98,14 @@
         "movers"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "NEAR",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 3e-05
     },
     {
       "symbol": "PENGU",
@@ -113,7 +121,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -6e-06
+      "funding": -8e-06
+    },
+    {
+      "symbol": "QNT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -8.9e-05
     },
     {
       "symbol": "STRK",
@@ -124,12 +140,20 @@
       "funding": 5e-05
     },
     {
-      "symbol": "TRUMP",
+      "symbol": "SUI",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 4.8e-05
+    },
+    {
+      "symbol": "TRX",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -0.000225
     },
     {
       "symbol": "ZEC",
