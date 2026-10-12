@@ -1,17 +1,18 @@
 {
-  "ts": "2026-10-12T05:39:21+00:00",
+  "ts": "2026-10-12T05:44:41+00:00",
   "sources": {
     "coingecko": [
       "W",
       "NEAR",
-      "ICP",
       "RSR",
+      "ICP",
       "STRK",
       "ZEC",
       "ZRO",
       "AERO",
       "ONDO",
-      "INJ"
+      "INJ",
+      "PUMP"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -23,7 +24,7 @@
       "NEAR",
       "MAGIC",
       "ZEC",
-      "ENA"
+      "PUMP"
     ],
     "watcher": [
       "NEAR",
@@ -42,7 +43,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 7.9e-05,
+      "funding": 7.5e-05,
       "long_short": 1.2
     },
     {
@@ -56,13 +57,23 @@
       "long_short": 0.77
     },
     {
+      "symbol": "PUMP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 4.4e-05,
+      "long_short": 0.89
+    },
+    {
       "symbol": "S",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": -9e-06,
+      "funding": -1.8e-05,
       "long_short": 1.45
     },
     {
@@ -72,7 +83,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -2.1e-05,
+      "funding": -1.6e-05,
       "long_short": 0.83
     },
     {
@@ -82,8 +93,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 3.7e-05,
-      "long_short": 0.66
+      "funding": 3.6e-05
     },
     {
       "symbol": "AERO",
@@ -99,7 +109,7 @@
       "sources": [
         "watcher"
       ],
-      "funding": -0.000183
+      "funding": -0.000169
     },
     {
       "symbol": "CKB",
@@ -107,15 +117,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.002533
-    },
-    {
-      "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
+      "funding": -0.002563
     },
     {
       "symbol": "FIL",
@@ -155,7 +157,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.018609
+      "funding": -0.02
     },
     {
       "symbol": "STRK",
