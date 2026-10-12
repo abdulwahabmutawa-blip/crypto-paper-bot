@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-12T07:14:21+00:00",
+  "ts": "2026-10-12T07:20:11+00:00",
   "sources": {
     "coingecko": [
       "W",
@@ -22,9 +22,9 @@
       "CKB",
       "FIL",
       "NEAR",
-      "MAGIC",
       "ZEC",
-      "FET"
+      "FET",
+      "ENA"
     ],
     "watcher": [
       "NEAR",
@@ -43,7 +43,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 4e-05,
+      "funding": 4.1e-05,
       "long_short": 1.2
     },
     {
@@ -54,18 +54,8 @@
         "movers",
         "watcher"
       ],
-      "funding": -8.9e-05,
+      "funding": -8.5e-05,
       "long_short": 1.47
-    },
-    {
-      "symbol": "MAGIC",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": 3.4e-05,
-      "long_short": 0.82
     },
     {
       "symbol": "W",
@@ -74,7 +64,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -5.5e-05,
+      "funding": -6.7e-05,
       "long_short": 0.8
     },
     {
@@ -83,7 +73,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1e-06
+      "funding": 0.0
     },
     {
       "symbol": "CFX",
@@ -91,7 +81,7 @@
       "sources": [
         "watcher"
       ],
-      "funding": -1.1e-05
+      "funding": -6e-06
     },
     {
       "symbol": "CKB",
@@ -99,7 +89,15 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.002844
+      "funding": -0.002879
+    },
+    {
+      "symbol": "ENA",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "FET",
@@ -107,7 +105,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 6e-05
+      "funding": 5.7e-05
     },
     {
       "symbol": "FIL",
@@ -123,7 +121,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.0
+      "funding": -2e-06
     },
     {
       "symbol": "IO",
@@ -132,6 +130,14 @@
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "MAGIC",
+      "surfaces": 1,
+      "sources": [
+        "watcher"
+      ],
+      "funding": 3e-05
     },
     {
       "symbol": "PENGU",
@@ -155,7 +161,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.6e-05
+      "funding": 4.4e-05
     },
     {
       "symbol": "RSR",
@@ -179,7 +185,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 3.3e-05
+      "funding": 3.1e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
