@@ -1,8 +1,39 @@
 {
-  "ts": "2026-10-12T23:05:47+00:00",
-  "scanned": 140,
+  "ts": "2026-10-12T23:11:37+00:00",
+  "scanned": 142,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ETCUSDT",
+      "signal": "ignition",
+      "score": 0.7876,
+      "raw_score": 0.8981,
+      "weight": 0.877,
+      "price": 8.04,
+      "why": "trades 12.4x and volume 31.4x the prior 4h, 78% taker-buy, $64,087 burst \u2014 while price has only moved -1.8%",
+      "chg_24h": -0.0495,
+      "vol_surge": 31.38,
+      "chg_1h": -0.0183,
+      "market_surge": 6.41,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.22% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "CAKEUSDT",
+      "signal": "ignition",
+      "score": 0.7727,
+      "raw_score": 0.881,
+      "weight": 0.877,
+      "price": 2.271,
+      "why": "trades 22.4x and volume 13.8x the prior 4h, 65% taker-buy, $106,632 burst \u2014 while price has only moved -1.3%",
+      "chg_24h": -0.0315,
+      "vol_surge": 13.81,
+      "chg_1h": -0.0126,
+      "market_surge": 2.19,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.22% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.22% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean +0.10% at 24h: market beta, not signal",
@@ -17,11 +48,11 @@
   },
   "scorecard": {
     "ignition": {
-      "span_h_1h": 334.7,
-      "n_eff_1h": 334.69,
-      "n_1h": 907,
+      "span_h_1h": 334.9,
+      "n_eff_1h": 334.87,
+      "n_1h": 908,
       "hit_rate_1h": 0.314,
-      "mean_ret_1h": -0.00127,
+      "mean_ret_1h": -0.00129,
       "median_ret_1h": -0.00145,
       "both_halves_1h": false,
       "days_1h": 15,
