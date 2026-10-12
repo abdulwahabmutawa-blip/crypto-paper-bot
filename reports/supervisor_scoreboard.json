@@ -1,229 +1,212 @@
 {
- "updated_utc": "2026-10-05T08:45:00+00:00",
- "run_note": "Monday-morning intraday run ~08:35Z 10-05; covers 10-04 20:35Z -> 10-05 08:17Z. No daily lines re-filed (10-05 dailies already logged at 21:00Z); scalper trade_event added. (1) No new SIM-INTEGRITY alert: 12 new scalper entries, 9 outside 3-min fill window but all <1% (stale signal-candle close, known/open since 10-05 ENJ alert); every TARGET/STOP touch verified. (2) No frozen bot: active state ages 0.1-0.4h. (3) No cron gap: 44 cycle commits, max gap 17.8 min; one cancelled loop run 10-04 20:06Z is the normal ~6h overlap. (4) No R1; scalper 856.42 and sentiment 869.30 still under 900. (5) Watcher down ~24d. (6) Closed 2 (scalper-1 alpha -5.92), issued 3. Cumulative alpha carried forward from the stored figure (-679.99) plus this run's delta; a raw recompute over judgments.jsonl gives -651.57, a 28.42 gap from earlier score_note adjustments to reconcile at the next review.",
- "fleet_snapshot": {
-  "as_of": "2026-10-05 ~08:15Z",
-  "roster_note": "Active roster cut from 10 books to 4 by owner decisions on 2026-09-04 and 2026-09-05. The old $8,000/$10,000 baseline no longer describes the live fleet; both are reported.",
-  "active_paper_bots": 4,
-  "baseline_usd": 4000,
-  "total_value_usd": 4074.74,
-  "total_pnl_usd": 74.74,
-  "total_pnl_pct": 1.87,
-  "active_bots": {
-   "meanrev": 1115.82,
-   "crypto": 1233.2,
-   "scalper": 856.42,
-   "sentiment": 869.3
+  "updated_utc": "2026-10-12T18:55:00+00:00",
+  "run_note": "Daily run 10-12 ~18:45Z, the first since 10-05 (no runs 10-06..10-11; those dailies were not back-filed). (1) R1 BREACH: sentiment 726.83, frozen by its own code at 08:02Z. (2) SIM-INTEGRITY ALERT: that breach rests on a ledger rewrite. Commit 8de8e10291 (08:04Z, first cycle of run 38196149411, queued 02:31Z) replaced the bot's verified 04:12Z STRK stop fill (0.1078, cash 770.43) with 0.1017 (726.83) and dropped the 02:19-07:57Z intraday marks. Inferred mechanism: a queued run uses its trigger-time checkout with no pull before cycle 1, and pushes with pull --rebase -X theirs. (3) Scalper 766.00, $16 above R1. (4) No frozen active bot; no cron gap (max 19 min in 24h). (5) Watcher back online (scans 10-10..10-12). (6) Closed 2 open judgments (+90.42, +142.47) and issued 4. The 28.42 reconciliation gap noted 10-05 still stands.",
+  "fleet_snapshot": {
+    "as_of": "2026-10-12 ~18:20Z",
+    "active_paper_bots": 4,
+    "baseline_usd": 4000,
+    "active_bots": {
+      "meanrev": 1145.78,
+      "crypto": 1176.48,
+      "scalper": 766.0,
+      "sentiment": 726.83
+    },
+    "total_value_usd": 3815.09,
+    "total_pnl_usd": -184.91,
+    "total_pnl_pct": -4.62,
+    "sentiment_if_original_fill": 770.43
   },
-  "retired_frozen_archives": {
-   "commodity": 1031.42,
-   "analyst": 1025.35,
-   "allweather": 1023.8,
-   "scholar": 1020.86,
-   "hunter": 994.61,
-   "congress": 990.64,
-   "stock": 892.3,
-   "hypecrypto": 739.48
-  },
-  "retired_archive_total_usd": 7718.46,
-  "real_money_boxes": {
-   "lottery_usd": 33.15,
-   "lottery_hwm_usd": 44.27,
-   "hype_ibkr": "never traded, state ~24d stale",
-   "carry_history_net_usd": 2.18
-  },
-  "caveat": "scalper's 856.42 includes 86.17 marked at a dead 2023 price (TVKUSDT), open since 2026-09-12, now day 23."
- },
- "total_judgments": 333,
- "judgments_closed": 331,
- "judgments_open": 2,
- "open_ids": [
-  "2026-10-05-scalper-2",
-  "2026-10-05-sentiment-2"
- ],
- "cumulative_alpha_usd": -685.91,
- "win_rate_closed_pct": 7.9,
- "win_rate_note": "Most closed judgments are no_change (alpha 0), so the headline rate carries no information - read the DIRECTIONAL record. This run closed three, all neutral (scalper/sentiment/lottery advice matched the bots' own behavior exactly, alpha 0 each). Cumulative alpha is still dominated by the single -1,111.03 sentiment call from 08-31. New this run: a directional scalper skip_new_entries call (2026-09-30-scalper-2), scored next run on book equity vs 883.21.",
- "directional_record": {
-  "scored": 47,
-  "wins": 26,
-  "losses": 21,
-  "neutral": 284,
-  "basis": "sign of realized alpha on closed judgments; the sparse legacy outcome field is not used"
- },
- "per_bot": {
-  "sentiment": {
-   "closed": 32,
-   "alpha": -1161.24,
-   "wins": 2,
-   "losses": 6
-  },
-  "stock": {
-   "closed": 10,
-   "alpha": -35.73,
-   "wins": 1,
-   "losses": 2
-  },
-  "meanrev": {
-   "closed": 37,
-   "alpha": -13.64,
-   "wins": 0,
-   "losses": 1
-  },
-  "congress": {
-   "closed": 27,
-   "alpha": -1.4,
-   "wins": 0,
-   "losses": 3
-  },
-  "allweather": {
-   "closed": 27,
-   "alpha": 0,
-   "wins": 0,
-   "losses": 0
-  },
-  "scholar": {
-   "closed": 17,
-   "alpha": 0,
-   "wins": 0,
-   "losses": 0
-  },
-  "analyst": {
-   "closed": 16,
-   "alpha": 0,
-   "wins": 0,
-   "losses": 0
-  },
-  "lottery": {
-   "closed": 15,
-   "alpha": 11.08,
-   "wins": 2,
-   "losses": 1
-  },
-  "commodity": {
-   "closed": 32,
-   "alpha": 47.79,
-   "wins": 1,
-   "losses": 1
-  },
-  "hunter": {
-   "closed": 32,
-   "alpha": 62.65,
-   "wins": 4,
-   "losses": 2
-  },
-  "hype": {
-   "closed": 11,
-   "alpha": 80.37,
-   "wins": 2,
-   "losses": 1
-  },
-  "crypto": {
-   "closed": 43,
-   "alpha": 106.83,
-   "wins": 7,
-   "losses": 0
-  },
-  "hypecrypto": {
-   "closed": 11,
-   "alpha": 190.58,
-   "wins": 5,
-   "losses": 2
-  },
-  "scalper": {
-   "closed": 13,
-   "alpha": 8.62,
-   "wins": 1,
-   "losses": 2
-  },
-  "carry": {
-   "closed": 2,
-   "alpha": 0,
-   "wins": 0,
-   "losses": 0
-  }
- },
- "sim_integrity_alerts_open": [
-  {
-   "date": "2026-09-03",
-   "bot": "sentiment",
-   "asset": "GPRO",
-   "finding": "2026-09-01 buy filled at 0.876, the prior day's close, 24.5% below the 09-01 low of 1.16",
-   "impact_usd": 819,
-   "status": "SUPERSEDED / RESOLVED 2026-09-05: owner ran src/sentiment_fill_audit.py over all 68 legs, restated 5 and voided 4 ARB legs, book 2,453.00 -> 1,323.05, root cause fixed in sentinel_trader. Recorded in kill_criteria.md."
-  },
-  {
-   "date": "2026-09-19",
-   "bot": "scalper",
-   "asset": "TVKUSDT",
-   "finding": "Seat booked 2026-09-12T17:16:36Z at 0.05405 = the close of a Binance candle from 2023-11-27, the pair's last ever bar. entry_ms 1701053999999 vs entry_ts 2026-09-12: 24,494h skew. Frozen price means the +3/-3 touch and the 24h time-stop can never fire; open on day 18 of a 24-hour rule as of 2026-09-30.",
-   "impact_usd": 86.17,
-   "scope": "1 of 448 scalper seats/trades carries a candle/wall-clock skew over 6h - isolated, a delisted-pair gap in the universe filter (which already excludes pegged assets: U, BFUSD, XAUT, PAXG)",
-   "status": "reported to owner, not fixed by supervisor"
-  },
-  {
-   "date": "2026-10-05",
-   "bot": "scalper",
-   "asset": "ENJUSDT",
-   "finding": "Seat booked 2026-10-02T12:13:59Z at 0.03292 = close of the 11:45-12:00Z 15m candle; market traded 0.0388-0.0403 in the fill minute (15.2% below). Booked TARGET +2.55; a real fill near 0.039 never reached a 3% target (later high 0.04079) and would have stopped out (~-2.8). Systemic: 36 of 79 entries since 10-02 lie outside the 3-minute range at fill time because fills use the signal-candle close 10-14 min late; two-sided, typically 0.1-1%, but surge entries (the shape this bot selects) can gap far.",
-   "impact_usd": 5.4,
-   "status": "reported to owner, not fixed by supervisor"
-  }
- ],
- "frozen_bots": [
-  {
-   "bot": "sentinel + social_radar",
-   "real_money": false,
-   "silent_from": "2026-09-11T15:12:52Z",
-   "silent_hours": 582,
-   "status": "DOWN. Final scan returned risk_level 'unparsed', no risk_alerts, no crypto_hype key; no scan since. September scan count 27 vs August 130.",
-   "downstream": [
-    "sentiment: entry input absent, flat in cash 19 days",
-    "hype_ibkr (REAL MONEY): never traded, state 19.6d stale",
-    "lottery (REAL MONEY): no_pair feed frozen at the same timestamp",
-    "all risk-gated bots: verdict older than 24h must be read as UNKNOWN, per the file's own note"
-   ]
-  },
-  {
-   "bot": "hype_ibkr",
-   "real_money": true,
-   "silent_from": "2026-09-10T17:50:16Z",
-   "silent_hours": 603,
-   "status": "Live book (paper=false) created 2026-09-05, zero entries and zero realized legs, state stale 19.6 days."
-  },
-  {
-   "bot": "allweather/commodity/scholar/congress/hunter/analyst/hypecrypto",
-   "real_money": false,
-   "silent_from": "2026-09-04T21:09Z and 2026-09-05T14:01Z",
-   "status": "NOT A FAULT - retired by owner decisions 40393d47f (09-04) and 0964d2fb4 (09-05), recorded in kill_criteria.md. Dashboards kept as frozen archives. Staleness alarm cleared."
-  }
- ],
- "loop_health": {
-  "window": "2026-10-02T08:45Z -> 2026-10-04T20:35Z",
-  "cycle_commits_window": 223,
-  "largest_gap_window_min": 17.9,
-  "largest_gap_window": "2026-10-04T03:42Z -> 04:00Z",
-  "cron_gap": false,
-  "gaps_over_90min_7d": 1,
-  "median_gap_min": 16.5,
-  "failed_runs": [],
-  "cadence_note": "last 30 workflow runs: 28 deploy-pages + 1 vps-alive success, 1 paper-trade-cycle in progress; lottery VPS commits ~5 min"
- },
- "kill_criteria_flags": {
-  "R1_breach_below_750": [
-   "hypecrypto 739.48 - breached 2026-08-31, self-frozen, owner-confirmed retired 09-04; no new breach"
+  "total_judgments": 337,
+  "judgments_closed": 336,
+  "judgments_open": 1,
+  "open_ids": [
+    "2026-10-12-scalper-1"
   ],
-  "below_800": [],
-  "below_900_drawdown_flag": [
-   "scalper 850.50 (-15.0%)",
-   "sentiment 869.30 (-13.1%)"
+  "cumulative_alpha_usd": -453.02,
+  "win_rate_closed_pct": 8.6,
+  "win_rate_note": "Most closed judgments are no_change (alpha 0), so the headline rate carries no information - read the DIRECTIONAL record. This run closed three, all neutral (scalper/sentiment/lottery advice matched the bots' own behavior exactly, alpha 0 each). Cumulative alpha is still dominated by the single -1,111.03 sentiment call from 08-31. New this run: a directional scalper skip_new_entries call (2026-09-30-scalper-2), scored next run on book equity vs 883.21.",
+  "directional_record": {
+    "scored": 49,
+    "wins": 28,
+    "losses": 21,
+    "neutral": 287,
+    "basis": "sign of realized alpha on closed judgments; the sparse legacy outcome field is not used"
+  },
+  "per_bot": {
+    "sentiment": {
+      "closed": 32,
+      "alpha": -1161.24,
+      "wins": 2,
+      "losses": 6,
+      "cumulative_alpha_usd": 142.47
+    },
+    "stock": {
+      "closed": 10,
+      "alpha": -35.73,
+      "wins": 1,
+      "losses": 2
+    },
+    "meanrev": {
+      "closed": 37,
+      "alpha": -13.64,
+      "wins": 0,
+      "losses": 1
+    },
+    "congress": {
+      "closed": 27,
+      "alpha": -1.4,
+      "wins": 0,
+      "losses": 3
+    },
+    "allweather": {
+      "closed": 27,
+      "alpha": 0,
+      "wins": 0,
+      "losses": 0
+    },
+    "scholar": {
+      "closed": 17,
+      "alpha": 0,
+      "wins": 0,
+      "losses": 0
+    },
+    "analyst": {
+      "closed": 16,
+      "alpha": 0,
+      "wins": 0,
+      "losses": 0
+    },
+    "lottery": {
+      "closed": 15,
+      "alpha": 11.08,
+      "wins": 2,
+      "losses": 1
+    },
+    "commodity": {
+      "closed": 32,
+      "alpha": 47.79,
+      "wins": 1,
+      "losses": 1
+    },
+    "hunter": {
+      "closed": 32,
+      "alpha": 62.65,
+      "wins": 4,
+      "losses": 2
+    },
+    "hype": {
+      "closed": 11,
+      "alpha": 80.37,
+      "wins": 2,
+      "losses": 1
+    },
+    "crypto": {
+      "closed": 43,
+      "alpha": 106.83,
+      "wins": 7,
+      "losses": 0
+    },
+    "hypecrypto": {
+      "closed": 11,
+      "alpha": 190.58,
+      "wins": 5,
+      "losses": 2
+    },
+    "scalper": {
+      "closed": 13,
+      "alpha": 8.62,
+      "wins": 1,
+      "losses": 2,
+      "cumulative_alpha_usd": 90.42
+    },
+    "carry": {
+      "closed": 2,
+      "alpha": 0,
+      "wins": 0,
+      "losses": 0
+    }
+  },
+  "sim_integrity_alerts_open": [
+    {
+      "date": "2026-09-03",
+      "bot": "sentiment",
+      "asset": "GPRO",
+      "finding": "2026-09-01 buy filled at 0.876, the prior day's close, 24.5% below the 09-01 low of 1.16",
+      "impact_usd": 819,
+      "status": "SUPERSEDED / RESOLVED 2026-09-05: owner ran src/sentiment_fill_audit.py over all 68 legs, restated 5 and voided 4 ARB legs, book 2,453.00 -> 1,323.05, root cause fixed in sentinel_trader. Recorded in kill_criteria.md."
+    },
+    {
+      "date": "2026-09-19",
+      "bot": "scalper",
+      "asset": "TVKUSDT",
+      "finding": "Seat booked 2026-09-12T17:16:36Z at 0.05405 = the close of a Binance candle from 2023-11-27, the pair's last ever bar. entry_ms 1701053999999 vs entry_ts 2026-09-12: 24,494h skew. Frozen price means the +3/-3 touch and the 24h time-stop can never fire; open on day 18 of a 24-hour rule as of 2026-09-30.",
+      "impact_usd": 86.17,
+      "scope": "1 of 448 scalper seats/trades carries a candle/wall-clock skew over 6h - isolated, a delisted-pair gap in the universe filter (which already excludes pegged assets: U, BFUSD, XAUT, PAXG)",
+      "status": "reported to owner, not fixed by supervisor"
+    },
+    {
+      "date": "2026-10-05",
+      "bot": "scalper",
+      "asset": "ENJUSDT",
+      "finding": "Seat booked 2026-10-02T12:13:59Z at 0.03292 = close of the 11:45-12:00Z 15m candle; market traded 0.0388-0.0403 in the fill minute (15.2% below). Booked TARGET +2.55; a real fill near 0.039 never reached a 3% target (later high 0.04079) and would have stopped out (~-2.8). Systemic: 36 of 79 entries since 10-02 lie outside the 3-minute range at fill time because fills use the signal-candle close 10-14 min late; two-sided, typically 0.1-1%, but surge entries (the shape this bot selects) can gap far.",
+      "impact_usd": 5.4,
+      "status": "reported to owner, not fixed by supervisor"
+    },
+    {
+      "date": "2026-10-12",
+      "bot": "sentiment",
+      "asset": "STRK-USD",
+      "finding": "The verified SELL at 0.1078 (04:12Z, cash 770.43) was rewritten to 0.1017 at 08:04Z by commit 8de8e10291, the first cycle of a queued run that likely started from a stale base; the rewrite triggered the R1 freeze. A second sell of a position that was already sold cannot happen. The same handoff pattern (queued run, actions/checkout at the trigger SHA, rebase -X theirs) may silently revert any bot's state in the first cycle of each run.",
+      "impact_usd": 43.6,
+      "status": "reported to owner, not fixed by supervisor"
+    }
   ],
-  "below_1000": [
-   "scalper 850.50",
-   "sentiment 869.30"
+  "frozen_bots": [
+    {
+      "bot": "sentiment",
+      "real_money": false,
+      "silent_from": "2026-10-12T08:02Z",
+      "status": "R1 code freeze (frozen field set). Still marking each cycle, so it is not stale."
+    },
+    {
+      "bot": "hype_ibkr",
+      "real_money": true,
+      "silent_from": "2026-09-10T17:50:16Z",
+      "silent_hours": 603,
+      "status": "Live book (paper=false) created 2026-09-05, zero entries and zero realized legs, state stale 19.6 days."
+    },
+    {
+      "bot": "allweather/commodity/scholar/congress/hunter/analyst/hypecrypto",
+      "real_money": false,
+      "silent_from": "2026-09-04T21:09Z and 2026-09-05T14:01Z",
+      "status": "NOT A FAULT - retired by owner decisions 40393d47f (09-04) and 0964d2fb4 (09-05), recorded in kill_criteria.md. Dashboards kept as frozen archives. Staleness alarm cleared."
+    }
   ],
-  "R4_dead_money": "sentiment 24 calendar days (~16 trading days) in cash; short of the 30-day R4 bar; cause is the dead watcher feed.",
-  "probation": "none newly assigned; R2/R3 windows are scheduled-review items and the roster has shrunk to 4 books"
- },
- "win_rate_scored_pct": 56.5
+  "loop_health": {
+    "window": "2026-10-11T18:40Z -> 2026-10-12T18:23Z",
+    "cycle_commits_window": 101,
+    "largest_gap_window_min": 19,
+    "cron_gap": false,
+    "gaps_over_90min_7d": 0,
+    "largest_gap_7d_min": 88.0,
+    "largest_gap_7d": "2026-10-06T12:16Z -> 13:44Z",
+    "failed_runs": [],
+    "cadence_note": "paper-trade-cycle runs 10-06..10-12 all succeeded; 2 normal cancellations (10-09, 10-10). Runs queue for hours behind the bot concurrency lock (e.g. 38196149411 created 02:31Z, started ~08:00Z)."
+  },
+  "kill_criteria_flags": {
+    "R1_breach_below_750": [
+      "sentiment 726.83 - breached 2026-10-12 08:02Z, self-frozen; the breach rests on the rewritten fill (the original 770.43 would NOT breach) - owner decides",
+      "hypecrypto 739.48 - retired 09-04 (old)"
+    ],
+    "below_800": [
+      "scalper 766.00 (-23.4%)"
+    ],
+    "below_900_drawdown_flag": [
+      "scalper 766.00",
+      "sentiment 726.83"
+    ],
+    "R4_dead_money": "n/a - sentiment traded 10-12",
+    "probation": "none newly assigned"
+  },
+  "win_rate_scored_pct": 57.1
 }
