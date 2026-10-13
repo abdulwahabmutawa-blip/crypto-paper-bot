@@ -1,8 +1,43 @@
 {
-  "ts": "2026-10-13T01:59:39+00:00",
-  "scanned": 152,
+  "ts": "2026-10-13T02:05:19+00:00",
+  "scanned": 153,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "KORUBUSDT",
+      "signal": "reversion",
+      "score": 0.4883,
+      "raw_score": 0.4883,
+      "weight": 1.0,
+      "price": 13.81,
+      "why": "down -22% on the day (bottom decile of the market), now +0.4% over 15m with 2 green candles",
+      "chg_24h": -0.2175,
+      "vol_surge": 13.19,
+      "chg_1h": -0.0281,
+      "market_surge": 8.23,
+      "oi_drop": null,
+      "funding": null,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.43% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "RAYUSDT",
+      "signal": "reversion",
+      "score": 0.3477,
+      "raw_score": 0.3477,
+      "weight": 1.0,
+      "price": 2.1321,
+      "why": "down -14% on the day (bottom decile of the market), now +0.5% over 15m with 3 green candles",
+      "chg_24h": -0.1371,
+      "vol_surge": 0.5,
+      "chg_1h": 0.0116,
+      "market_surge": 0.0,
+      "oi_drop": null,
+      "funding": 0.0,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.43% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.87% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.77% at 24h: market beta, not signal",
