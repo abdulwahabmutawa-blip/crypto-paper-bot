@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-13T12:03:36+00:00 · runs 3284 · equity **$742.53** (-25.75%) · cash $143.13 · open 8/10 · round trips 1227
+updated 2026-10-13T12:21:08+00:00 · runs 3285 · equity **$742.11** (-25.79%) · cash $71.57 · open 9/10 · round trips 1227
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,12 +36,13 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-12T14:09 | SPCXBUSDT | surge | 166.2 | 162.51 | -2.22% |
-| 2026-10-12T15:49 | JSTUSDT | surge | 0.13999 | 0.1388 | -0.85% |
-| 2026-10-12T21:52 | TRXUSDT | bottom | 0.3299 | 0.3288 | -0.33% |
-| 2026-10-13T01:39 | SOXSBUSDT | surge | 39.02 | 39.59 | +1.46% |
-| 2026-10-13T07:09 | PROMUSDT | surge | 5.304 | 5.171 | -2.51% |
-| 2026-10-13T10:16 | RSRUSDT | bottom | 0.002017 | 0.002029 | +0.59% |
-| 2026-10-13T11:26 | MUBUSDT | bottom | 951.97 | 950.21 | -0.18% |
+| 2026-10-12T14:09 | SPCXBUSDT | surge | 166.2 | 162.59 | -2.17% |
+| 2026-10-12T15:49 | JSTUSDT | surge | 0.13999 | 0.13814 | -1.32% |
+| 2026-10-12T21:52 | TRXUSDT | bottom | 0.3299 | 0.3286 | -0.39% |
+| 2026-10-13T01:39 | SOXSBUSDT | surge | 39.02 | 39.3 | +0.72% |
+| 2026-10-13T07:09 | PROMUSDT | surge | 5.304 | 5.195 | -2.06% |
+| 2026-10-13T10:16 | RSRUSDT | bottom | 0.002017 | 0.002044 | +1.34% |
+| 2026-10-13T11:26 | MUBUSDT | bottom | 951.97 | 944.89 | -0.74% |
+| 2026-10-13T12:19 | SUSDT | surge | 0.06132 | 0.06136 | +0.07% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
