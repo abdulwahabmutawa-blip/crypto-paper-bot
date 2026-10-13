@@ -1,10 +1,26 @@
 {
-  "ts": "2026-10-13T00:24:00+00:00",
-  "scanned": 148,
+  "ts": "2026-10-13T00:29:44+00:00",
+  "scanned": 150,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SPCXBUSDT",
+      "signal": "ignition",
+      "score": 0.6737,
+      "raw_score": 0.7664,
+      "weight": 0.879,
+      "price": 162.51,
+      "why": "trades 4.8x and volume 15.3x the prior 4h, 92% taker-buy, $292,591 burst \u2014 while price has only moved -0.2%",
+      "chg_24h": -0.0138,
+      "vol_surge": 15.35,
+      "chg_1h": -0.002,
+      "market_surge": 7.02,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.91% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
-    "ignition": "benched \u2014 BTC-excess day mean -1.16% at 24h: market beta, not signal",
+    "ignition": "benched \u2014 BTC-excess day mean -0.91% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.02% at 24h: market beta, not signal",
     "reversion": "benched \u2014 BTC-excess day mean +0.43% at 24h: market beta, not signal",
     "heat": "probation \u2014 8/12 resolved 24h samples under ruleset 3",
@@ -43,19 +59,19 @@
       "avg_win_4h": 0.02302,
       "avg_loss_4h": -0.0196,
       "payoff_4h": 1.174,
-      "span_h_24h": 311.5,
-      "n_eff_24h": 12.98,
-      "n_24h": 832,
+      "span_h_24h": 311.7,
+      "n_eff_24h": 12.99,
+      "n_24h": 833,
       "hit_rate_24h": 0.393,
-      "mean_ret_24h": -0.0048,
-      "median_ret_24h": -0.00834,
+      "mean_ret_24h": -0.00491,
+      "median_ret_24h": -0.00839,
       "both_halves_24h": false,
       "days_24h": 14,
-      "mean_x_24h": -0.01159,
+      "mean_x_24h": -0.0091,
       "days_x_24h": 14,
       "avg_win_24h": 0.04406,
-      "avg_loss_24h": -0.03923,
-      "payoff_24h": 1.123
+      "avg_loss_24h": -0.03934,
+      "payoff_24h": 1.12
     },
     "breakout": {
       "span_h_1h": 327.6,
