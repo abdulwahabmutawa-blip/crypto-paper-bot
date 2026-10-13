@@ -1,22 +1,24 @@
 {
-  "ts": "2026-10-13T08:13:07+00:00",
-  "scanned": 154,
+  "ts": "2026-10-13T08:18:37+00:00",
+  "scanned": 155,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "MSTRBUSDT",
-      "signal": "ignition",
-      "score": 0.5042,
-      "raw_score": 0.5789,
-      "weight": 0.871,
-      "price": 156.53,
-      "why": "trades 4.0x and volume 5.4x the prior 4h, 85% taker-buy, $190,260 burst \u2014 while price has only moved +1.2%",
-      "chg_24h": -0.0083,
-      "vol_surge": 5.44,
-      "chg_1h": 0.0122,
-      "market_surge": 3.01,
+      "symbol": "KORUBUSDT",
+      "signal": "reversion",
+      "score": 0.3611,
+      "raw_score": 0.3611,
+      "weight": 1.0,
+      "price": 14.27,
+      "why": "down -16% on the day (bottom decile of the market), now +0.4% over 15m with 2 green candles",
+      "chg_24h": -0.1638,
+      "vol_surge": 0.28,
+      "chg_1h": 0.0157,
+      "market_surge": 0.5,
+      "oi_drop": null,
+      "funding": null,
       "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.72% at 24h: market beta, not signal"
+      "status": "benched \u2014 BTC-excess day mean -0.75% at 24h: market beta, not signal"
     }
   ],
   "gate": {
