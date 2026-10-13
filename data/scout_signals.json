@@ -1,11 +1,29 @@
 {
-  "ts": "2026-10-13T08:40:39+00:00",
-  "scanned": 156,
+  "ts": "2026-10-13T08:46:15+00:00",
+  "scanned": 154,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SNXXBUSDT",
+      "signal": "reversion",
+      "score": 0.3995,
+      "raw_score": 0.3995,
+      "weight": 1.0,
+      "price": 11.44,
+      "why": "down -13% on the day (bottom decile of the market), now +0.8% over 15m with 3 green candles",
+      "chg_24h": -0.1319,
+      "vol_surge": 1.72,
+      "chg_1h": 0.0196,
+      "market_surge": 0.04,
+      "oi_drop": null,
+      "funding": null,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.75% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.71% at 24h: market beta, not signal",
-    "breakout": "benched \u2014 BTC-excess day mean -0.47% at 24h: market beta, not signal",
+    "breakout": "benched \u2014 BTC-excess day mean -0.43% at 24h: market beta, not signal",
     "reversion": "benched \u2014 BTC-excess day mean -0.75% at 24h: market beta, not signal",
     "heat": "probation \u2014 10/12 resolved 24h samples under ruleset 3",
     "revival": "probation \u2014 3/12 resolved 24h samples under ruleset 3"
@@ -92,7 +110,7 @@
       "median_ret_24h": -0.02672,
       "both_halves_24h": false,
       "days_24h": 14,
-      "mean_x_24h": -0.00469,
+      "mean_x_24h": -0.00429,
       "days_x_24h": 14,
       "avg_win_24h": 0.09375,
       "avg_loss_24h": -0.05119,
