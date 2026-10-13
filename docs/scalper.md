@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-13T12:38:34+00:00 · runs 3286 · equity **$745.62** (-25.44%) · cash $145.10 · open 8/10 · round trips 1228
+updated 2026-10-13T12:56:03+00:00 · runs 3287 · equity **$745.78** (-25.42%) · cash $72.55 · open 9/10 · round trips 1228
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,12 +36,13 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-12T14:09 | SPCXBUSDT | surge | 166.2 | 162.84 | -2.02% |
-| 2026-10-12T15:49 | JSTUSDT | surge | 0.13999 | 0.13894 | -0.75% |
-| 2026-10-12T21:52 | TRXUSDT | bottom | 0.3299 | 0.3285 | -0.42% |
-| 2026-10-13T01:39 | SOXSBUSDT | surge | 39.02 | 39.46 | +1.13% |
-| 2026-10-13T07:09 | PROMUSDT | surge | 5.304 | 5.228 | -1.43% |
-| 2026-10-13T10:16 | RSRUSDT | bottom | 0.002017 | 0.002057 | +1.98% |
-| 2026-10-13T11:26 | MUBUSDT | bottom | 951.97 | 942.26 | -1.02% |
+| 2026-10-12T14:09 | SPCXBUSDT | surge | 166.2 | 162.6 | -2.17% |
+| 2026-10-12T15:49 | JSTUSDT | surge | 0.13999 | 0.13861 | -0.99% |
+| 2026-10-12T21:52 | TRXUSDT | bottom | 0.3299 | 0.3282 | -0.52% |
+| 2026-10-13T01:39 | SOXSBUSDT | surge | 39.02 | 39.69 | +1.72% |
+| 2026-10-13T07:09 | PROMUSDT | surge | 5.304 | 5.217 | -1.64% |
+| 2026-10-13T10:16 | RSRUSDT | bottom | 0.002017 | 0.002081 | +3.17% |
+| 2026-10-13T11:26 | MUBUSDT | bottom | 951.97 | 942.06 | -1.04% |
+| 2026-10-13T12:54 | DUSKUSDT | surge | 0.0992 | 0.0984 | -0.81% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
