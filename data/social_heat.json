@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-13T17:05:11+00:00",
+  "ts": "2026-10-13T17:10:41+00:00",
   "sources": {
     "coingecko": [
       "S",
@@ -18,9 +18,10 @@
       "TIA",
       "UNI",
       "PEPE",
+      "S",
       "BTC",
-      "XRP",
-      "S"
+      "OGN",
+      "XRP"
     ],
     "watcher": [
       "STX",
@@ -38,8 +39,18 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.000196,
+      "funding": -0.000195,
       "long_short": 1.57
+    },
+    {
+      "symbol": "OGN",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": -0.000692,
+      "long_short": 1.07
     },
     {
       "symbol": "BTC",
@@ -47,7 +58,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4e-05
+      "funding": 3.9e-05
     },
     {
       "symbol": "GNS",
@@ -62,7 +73,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.1e-05
+      "funding": 4e-05
     },
     {
       "symbol": "NEAR",
@@ -70,15 +81,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.8e-05
-    },
-    {
-      "symbol": "OGN",
-      "surfaces": 1,
-      "sources": [
-        "watcher"
-      ],
-      "funding": -0.000729
+      "funding": 6.1e-05
     },
     {
       "symbol": "ONDO",
@@ -86,7 +89,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -5.8e-05
+      "funding": -5.5e-05
     },
     {
       "symbol": "PENGU",
@@ -109,7 +112,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000341
+      "funding": -0.000342
     },
     {
       "symbol": "SOL",
@@ -117,7 +120,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.6e-05
+      "funding": 2.7e-05
     },
     {
       "symbol": "STRK",
@@ -125,7 +128,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1e-06
+      "funding": 3e-06
     },
     {
       "symbol": "STX",
@@ -133,7 +136,7 @@
       "sources": [
         "watcher"
       ],
-      "funding": -0.000189
+      "funding": -0.000185
     },
     {
       "symbol": "TIA",
@@ -157,7 +160,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -1.8e-05
+      "funding": -1.7e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
