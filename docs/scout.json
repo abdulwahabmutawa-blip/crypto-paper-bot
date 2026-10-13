@@ -1,24 +1,8 @@
 {
-  "ts": "2026-10-13T14:27:26+00:00",
-  "scanned": 150,
+  "ts": "2026-10-13T14:33:20+00:00",
+  "scanned": 146,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "LDOUSDT",
-      "signal": "breakout",
-      "score": 0.5609,
-      "raw_score": 0.6477,
-      "weight": 0.866,
-      "price": 0.4295,
-      "why": "trades 5.9x, volume 6.8x, 64% taker-buy, +2.8% in an hour, at 95% of its 24h range",
-      "chg_24h": 0.0123,
-      "vol_surge": 6.8,
-      "chg_1h": 0.028,
-      "market_surge": 0.64,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.11% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.70% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.11% at 24h: market beta, not signal",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 3/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 11,
+    "count": 12,
     "baseline": 18.0,
     "wave": false
   },
@@ -41,7 +25,7 @@
       "median_ret_1h": -0.0015,
       "both_halves_1h": false,
       "days_1h": 15,
-      "mean_x_1h": -0.00076,
+      "mean_x_1h": -0.00075,
       "days_x_1h": 15,
       "avg_win_1h": 0.01246,
       "avg_loss_1h": -0.0113,
@@ -74,19 +58,19 @@
       "payoff_24h": 1.028
     },
     "breakout": {
-      "span_h_1h": 334.0,
-      "n_eff_1h": 333,
-      "n_1h": 333,
-      "hit_rate_1h": 0.324,
-      "mean_ret_1h": -0.0018,
-      "median_ret_1h": -0.00464,
+      "span_h_1h": 334.6,
+      "n_eff_1h": 334,
+      "n_1h": 334,
+      "hit_rate_1h": 0.326,
+      "mean_ret_1h": -0.00163,
+      "median_ret_1h": -0.00463,
       "both_halves_1h": false,
       "days_1h": 15,
-      "mean_x_1h": -0.00094,
+      "mean_x_1h": -0.00017,
       "days_x_1h": 15,
-      "avg_win_1h": 0.02264,
+      "avg_win_1h": 0.02291,
       "avg_loss_1h": -0.01613,
-      "payoff_1h": 1.404,
+      "payoff_1h": 1.421,
       "span_h_4h": 328.0,
       "n_eff_4h": 82.0,
       "n_4h": 331,
