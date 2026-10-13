@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-13T21:39:21+00:00",
+ "updated": "2026-10-13T21:41:50+00:00",
  "spec": "x_chatter_precursors_2026-08-23",
  "n_rows_total": 19,
- "n_scored_excess_24h": 15,
+ "n_scored_excess_24h": 16,
  "objective": "BTC-excess 24h",
  "hit_threshold": 0.03,
  "features": {
@@ -14,9 +14,9 @@
     "median": -0.03512
    },
    "mainnet_upgrade": {
-    "n": 6,
-    "hit": 0.167,
-    "mean": -0.01468,
+    "n": 7,
+    "hit": 0.143,
+    "mean": -0.0087,
     "median": 0.01629
    }
   },
@@ -28,19 +28,19 @@
     "median": -0.02079
    },
    "True": {
-    "n": 5,
-    "hit": 0.2,
-    "mean": -0.00649,
-    "median": 0.00586
+    "n": 6,
+    "hit": 0.167,
+    "mean": -0.00087,
+    "median": 0.02259
    }
   },
   "handle": {},
   "all": {
    "all": {
-    "n": 15,
-    "hit": 0.133,
-    "mean": -0.01747,
-    "median": -0.00854
+    "n": 16,
+    "hit": 0.125,
+    "mean": -0.01468,
+    "median": -0.00715
    }
   }
  },
@@ -72,10 +72,10 @@
    "horizon_h": 24,
    "group_true": null,
    "group_false": {
-    "n": 13,
-    "hit": 0.154,
-    "mean": -0.02076,
-    "median": -0.02079
+    "n": 14,
+    "hit": 0.143,
+    "mean": -0.01733,
+    "median": -0.00715
    }
   },
   "H4_occurred_catalyst_fades": {
@@ -105,12 +105,12 @@
     "median": -0.05942
    },
    "group_false": {
-    "n": 13,
-    "hit": 0.154,
-    "mean": -0.01056,
-    "median": -0.00715
+    "n": 14,
+    "hit": 0.143,
+    "mean": -0.00786,
+    "median": 0.00586
    },
-   "edge_pp": -5.19
+   "edge_pp": -5.46
   },
   "H6_exchange_surface_words_exhaust": {
    "note": "scanner/exchange-surface wording vs organic",
@@ -122,12 +122,12 @@
     "median": -0.02079
    },
    "group_false": {
-    "n": 14,
-    "hit": 0.143,
-    "mean": -0.01724,
+    "n": 15,
+    "hit": 0.133,
+    "mean": -0.01428,
     "median": -0.00715
    },
-   "edge_pp": -0.36
+   "edge_pp": -0.65
   },
   "H7_extreme_velocity_contrarian": {
    "note": "all-new handles vs familiar, 72h",
@@ -144,9 +144,9 @@
    "note": "first ever appearance vs repeat",
    "horizon_h": 24,
    "group_true": {
-    "n": 12,
-    "hit": 0.167,
-    "mean": -0.01556,
+    "n": 13,
+    "hit": 0.154,
+    "mean": -0.01227,
     "median": -0.00715
    },
    "group_false": {
@@ -155,16 +155,16 @@
     "mean": -0.02513,
     "median": -0.02105
    },
-   "edge_pp": 0.96
+   "edge_pp": 1.29
   }
  },
  "leaders": [
   {
    "kind": "catalyst",
    "feature": "mainnet_upgrade",
-   "n": 6,
-   "hit": 0.167,
-   "mean": -0.01468,
+   "n": 7,
+   "hit": 0.143,
+   "mean": -0.0087,
    "median": 0.01629
   }
  ],
@@ -172,9 +172,9 @@
   {
    "kind": "catalyst",
    "feature": "mainnet_upgrade",
-   "n": 6,
-   "hit": 0.167,
-   "mean": -0.01468,
+   "n": 7,
+   "hit": 0.143,
+   "mean": -0.0087,
    "median": 0.01629
   }
  ]
