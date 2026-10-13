@@ -1,21 +1,21 @@
 {
-  "ts": "2026-10-13T13:13:11+00:00",
+  "ts": "2026-10-13T13:18:57+00:00",
   "sources": {
     "coingecko": [
-      "S",
       "QNT",
-      "PENGU",
+      "S",
+      "BTC",
       "SUI",
-      "RENDER"
+      "PENGU"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "OGN",
-      "BTC",
       "TIA",
-      "U",
-      "RLUSD"
+      "BTC",
+      "RLUSD",
+      "U"
     ],
     "watcher": [
       "GTC"
@@ -25,11 +25,13 @@
   "heat": [
     {
       "symbol": "BTC",
-      "surfaces": 1,
+      "surfaces": 2,
       "sources": [
+        "coingecko",
         "movers"
       ],
-      "funding": 6.6e-05
+      "funding": 6.6e-05,
+      "long_short": 1.22
     },
     {
       "symbol": "GTC",
@@ -37,7 +39,7 @@
       "sources": [
         "watcher"
       ],
-      "funding": -0.00021
+      "funding": -0.000208
     },
     {
       "symbol": "OGN",
@@ -45,7 +47,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001855
+      "funding": -0.001925
     },
     {
       "symbol": "PENGU",
@@ -61,15 +63,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.00013
-    },
-    {
-      "symbol": "RENDER",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -6e-05
+      "funding": -0.000152
     },
     {
       "symbol": "RLUSD",
@@ -84,7 +78,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -3.2e-05
+      "funding": -3.5e-05
     },
     {
       "symbol": "SUI",
@@ -100,7 +94,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -1.7e-05
+      "funding": -1.8e-05
     },
     {
       "symbol": "U",
