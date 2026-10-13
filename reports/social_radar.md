@@ -1,6 +1,6 @@
 # Social radar — which X chatter precedes rises (learning)
 
-updated 2026-10-13T05:45:09+00:00 · rows 17 · scored@24h-excess 14 · objective **BTC-excess 24h**
+updated 2026-10-13T06:02:21+00:00 · rows 17 · scored@24h-excess 14 · objective **BTC-excess 24h**
 
 _Grok harvests posts; this module counts. Observation only — nothing trades until a pattern clears the gate (n>=12, 4x fees, both halves, payoff) **and** the owner approves. Power: ~3.5 candidates/day, so only large (>=5pp) effects are readable in two weeks._
 
@@ -24,9 +24,3 @@ _Grok harvests posts; this module counts. Observation only — nothing trades un
 | kind | feature | n | hit | mean | median |
 |---|---|---|---|---|---|
 | catalyst | mainnet_upgrade | 6 | 17% | -1.47% | +1.63% |
-
-## Latest admitted candidates
-
-| coin | prior 24h | handles | new% | T3 loud | catalyst | when |
-|---|---|---|---|---|---|---|
-| APT | -6.6% | 0 | 0% | no | mainnet_upgrade | 2026-10-13 |
