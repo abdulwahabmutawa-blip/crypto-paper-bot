@@ -1,20 +1,21 @@
 {
-  "ts": "2026-10-13T12:00:31+00:00",
+  "ts": "2026-10-13T12:06:01+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
-      "STRK",
-      "SUI",
       "QNT",
+      "STRK",
       "PENGU",
+      "SUI",
       "S",
-      "AAVE"
+      "PUMP"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "OGN",
       "CTK",
+      "TIA",
       "RLUSD",
       "U"
     ],
@@ -25,20 +26,12 @@
   },
   "heat": [
     {
-      "symbol": "AAVE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 8.1e-05
-    },
-    {
       "symbol": "CTK",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -0.008957
+      "funding": -0.008992
     },
     {
       "symbol": "GTC",
@@ -46,7 +39,7 @@
       "sources": [
         "watcher"
       ],
-      "funding": -0.000318
+      "funding": -0.000316
     },
     {
       "symbol": "NEAR",
@@ -62,7 +55,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.002058
+      "funding": -0.002023
     },
     {
       "symbol": "PENGU",
@@ -73,12 +66,20 @@
       "funding": 2.3e-05
     },
     {
+      "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "QNT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 2.2e-05
+      "funding": 9e-06
     },
     {
       "symbol": "RLUSD",
@@ -93,7 +94,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.1e-05
+      "funding": 1.2e-05
     },
     {
       "symbol": "STRK",
@@ -101,7 +102,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4e-06
+      "funding": 5e-06
     },
     {
       "symbol": "SUI",
@@ -110,6 +111,14 @@
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "TIA",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -2.4e-05
     },
     {
       "symbol": "U",
