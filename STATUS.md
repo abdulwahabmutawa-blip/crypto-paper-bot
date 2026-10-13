@@ -1,24 +1,22 @@
-# Fleet status — 2026-10-12 (UTC)
+# Fleet status — 2026-10-13 (UTC)
 
 | Bot | Holds | 24h change | Value |
 |---|---|---|---|
-| crypto (BTC tide gauge v4) | BTC-USD | No trade; flat with BTC | $1,199.50 (bench $1,304.24) |
-| meanrev | JNJ | No trade; no new mark yet (Monday close not printed) | $1,139.44 (last mark 10-09) |
-| sentiment | CASH | **Traded for the first time since Watcher resumed** — bought STRK-USD, stopped out same day | $770.43 (was $869.30) |
-| scalper | 10/10 seats | 33 round trips: 21 TARGET / 9 STOP / 3 TIME, net +$22.29 realized | $797.04 (was $769.63) |
-| Watcher (sentinel) | — | 3 more scans, steady cadence continues | last scan 2026-10-12 02:15 UTC |
+| crypto (BTC tide gauge v4) | BTC-USD | No trade; value tracked BTC down slightly | $1,189.32 (bench $1,293.17) |
+| meanrev | JNJ | No trade; new mark printed (Mon 10-12 close) | $1,150.44 (bench $1,036.38) |
+| sentiment | CASH | **Hit R1 hard stop — book FROZEN by code** | $726.83 |
+| scalper | 6/10 seats | 38 round trips: 12 TARGET / 24 STOP / 2 TIME, net −$36.09 | $752.50 (was $797.04) |
+| Watcher (sentinel) | — | 3 scans, normal ~8h cadence, no escalation | last scan 2026-10-12 21:39 UTC |
 
 ## Changed
-- **sentiment came off cash.** Bought STRK-USD 2026-10-12 off a Grok "euphoric — Quantum L1 proposal" hype signal (first trade since the Watcher's feed was restored), then hit its −10.9% stop-loss the same day. Value $869.30 → $770.43 (−$98.87). Back to 100% CASH.
-- scalper: 33 round trips closed this window (21 TARGET / 9 STOP / 3 TIME), net realized +$22.29; equity $769.63 → $797.04. One new seat opened on a symbol logged as **"币安人生USDT"** — see Needs a look. TVKUSDT (opened 2026-09-12) is still stuck open.
-- crypto: no trade, still holding BTC-USD; value tracked BTC's rally $1,183.51 → $1,199.50, still trailing its bench.
-- meanrev: no trade; mark unchanged, still Friday 10-09's close (next print expected once Monday's bar lands).
-- Watcher: 3 more clean scans (10-11 09:50, 10-11 17:54, 10-12 02:15 UTC), continuing its resumption from the ~29-day outage flagged in prior digests.
-- Cron: 86 cycle commits in the 24h window, steady ~16–18 min cadence; one 50-min gap (14:19→15:09 UTC). GitHub Actions: all scheduled runs "success" except one "cancelled" at the window's edge (run #860, 22:57 UTC) — the same benign next-run-overlap pattern noted before, no cycle actually missed.
+- **sentiment FROZEN.** The STRK-USD stop-loss from the prior window (−15.9%, sold 2026-10-12) dropped equity to $728.95 — below the $750 R1 hard-stop floor in `reports/kill_criteria.md`. `sentinel_trader.py` auto-froze the book same day (`frozen: {date: 2026-10-12, rule: "R1 kill floor"}`); cash now $726.83. Per the rules, un-freezing is a human decision — nothing further happens automatically.
+- scalper: 38 round trips closed this window (12 TARGET / 24 STOP / 2 TIME), net realized −$36.09; equity $797.04 → $752.50; open seats 10/10 → 6/10. The "币安人生USDT" ghost-symbol seat flagged yesterday is gone (closed/rolled off).
+- meanrev: no trade; got its first new close since Friday (Monday 10-12 printed), value $1,139.44 → $1,150.44.
+- crypto: no trade, still holding BTC-USD; value drifted $1,199.50 → $1,189.32 with BTC, still trailing bench.
+- `reports/supervisor_scoreboard.json` regenerated 2026-10-12 18:58 UTC — the staleness flagged in prior digests is resolved.
+- Cron: 84 cycle commits in the 24h window, one ~37-min gap, otherwise steady. All GitHub Actions runs in-window completed "success" (one loop still in_progress at report time, the current cycle).
 
 ## Needs a look
-- **scalper opened a live seat on symbol `币安人生USDT`** (2026-10-12 03:53:43 UTC, $73.66 stake, entry 0.6207) — this is written into `data/scalper_state.json`'s `open` list itself, not a display bug. Not a real Binance pair; looks like the symbol-universe feed picked up a non-ticker string (possibly a promo/marketing listing name) and the scalper traded it as if real. Worth checking the symbol source in the scan code.
-- `reports/supervisor_scoreboard.json` still not regenerated since 2026-10-05 — doesn't reflect the Watcher's resumption or sentiment's new trade/loss.
-- scalper's TVKUSDT seat (opened 2026-09-12, now 30 days open) remains stuck on a frozen/delisted price — still can't hit target/stop/time-exit.
-- Per `reports/kill_criteria.md`, the fleet's first R2/R3 review window opened ~2026-10-10 — no scheduled review recorded yet.
+- **sentiment's R1 freeze is the fleet's key open item** — book is retired per rule, awaiting an owner decision to un-freeze or formally retire (not something this routine can decide).
+- scalper's TVKUSDT seat (opened 2026-09-12, now 31 days open) is still stuck, unrealized ~0% — can't hit target/stop/time-exit; worth checking if its price feed is frozen/delisted.
 - This routine's own stored prompt names a 9-bot roster (trend, regime, congress, meanrev, commodity, allweather, hype, Hunter, Watcher) that still doesn't match the repo. Per CLAUDE.md/`kill_criteria.md` the real active fleet is crypto, meanrev, sentiment, scalper plus the non-capital Watcher; the rest are retired frozen archives, untouched this window.
