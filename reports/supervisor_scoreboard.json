@@ -1,40 +1,40 @@
 {
-  "updated_utc": "2026-10-12T18:55:00+00:00",
-  "run_note": "Daily run 10-12 ~18:45Z, the first since 10-05 (no runs 10-06..10-11; those dailies were not back-filed). (1) R1 BREACH: sentiment 726.83, frozen by its own code at 08:02Z. (2) SIM-INTEGRITY ALERT: that breach rests on a ledger rewrite. Commit 8de8e10291 (08:04Z, first cycle of run 38196149411, queued 02:31Z) replaced the bot's verified 04:12Z STRK stop fill (0.1078, cash 770.43) with 0.1017 (726.83) and dropped the 02:19-07:57Z intraday marks. Inferred mechanism: a queued run uses its trigger-time checkout with no pull before cycle 1, and pushes with pull --rebase -X theirs. (3) Scalper 766.00, $16 above R1. (4) No frozen active bot; no cron gap (max 19 min in 24h). (5) Watcher back online (scans 10-10..10-12). (6) Closed 2 open judgments (+90.42, +142.47) and issued 4. The 28.42 reconciliation gap noted 10-05 still stands.",
+  "updated_utc": "2026-10-13T08:45:00+00:00",
+  "run_note": "Daily run 10-13 ~08:30Z. (1) No R1 breach and no SIM-INTEGRITY ALERT: all 21 new scalper entries lie inside the Binance 24h range; the known stale-close skew persists (9 of 21 outside the fill-minute window). (2) Scalper 754.09, $4.09 above R1, and bot_scalper.py has no code-level R1 guard. (3) Sentiment still R1-frozen at 726.83; the 10-12 fill-rewrite alert is still open. (4) Loop: paper-trade-cycle run 38333089376 ended 07:13Z with no queued successor; 75 min without a cycle at 08:28Z, under the 90-min flag but open-ended. Largest closed gap in the window: 38 min. (5) JNJ (meanrev) reports Q3 before the 10-13 open. Closed 2026-10-12-scalper-1 (+11.91), issued 5.",
   "fleet_snapshot": {
-    "as_of": "2026-10-12 ~18:20Z",
+    "as_of": "2026-10-13 07:09Z",
     "active_paper_bots": 4,
     "baseline_usd": 4000,
     "active_bots": {
-      "meanrev": 1145.78,
-      "crypto": 1176.48,
-      "scalper": 766.0,
+      "meanrev": 1150.44,
+      "crypto": 1193.18,
+      "scalper": 754.09,
       "sentiment": 726.83
     },
-    "total_value_usd": 3815.09,
-    "total_pnl_usd": -184.91,
-    "total_pnl_pct": -4.62,
+    "total_value_usd": 3824.54,
+    "total_pnl_usd": -175.46,
+    "total_pnl_pct": -4.39,
     "sentiment_if_original_fill": 770.43
   },
-  "total_judgments": 337,
-  "judgments_closed": 336,
+  "total_judgments": 342,
+  "judgments_closed": 341,
   "judgments_open": 1,
   "open_ids": [
-    "2026-10-12-scalper-1"
+    "2026-10-13-scalper-1"
   ],
-  "cumulative_alpha_usd": -453.02,
-  "win_rate_closed_pct": 8.6,
+  "cumulative_alpha_usd": -441.11,
+  "win_rate_closed_pct": 8.8,
   "win_rate_note": "Most closed judgments are no_change (alpha 0), so the headline rate carries no information - read the DIRECTIONAL record. This run closed three, all neutral (scalper/sentiment/lottery advice matched the bots' own behavior exactly, alpha 0 each). Cumulative alpha is still dominated by the single -1,111.03 sentiment call from 08-31. New this run: a directional scalper skip_new_entries call (2026-09-30-scalper-2), scored next run on book equity vs 883.21.",
   "directional_record": {
-    "scored": 49,
-    "wins": 28,
+    "scored": 50,
+    "wins": 29,
     "losses": 21,
-    "neutral": 287,
+    "neutral": 291,
     "basis": "sign of realized alpha on closed judgments; the sparse legacy outcome field is not used"
   },
   "per_bot": {
     "sentiment": {
-      "closed": 32,
+      "closed": 33,
       "alpha": -1161.24,
       "wins": 2,
       "losses": 6,
@@ -47,7 +47,7 @@
       "losses": 2
     },
     "meanrev": {
-      "closed": 37,
+      "closed": 38,
       "alpha": -13.64,
       "wins": 0,
       "losses": 1
@@ -101,7 +101,7 @@
       "losses": 1
     },
     "crypto": {
-      "closed": 43,
+      "closed": 44,
       "alpha": 106.83,
       "wins": 7,
       "losses": 0
@@ -113,14 +113,14 @@
       "losses": 2
     },
     "scalper": {
-      "closed": 13,
-      "alpha": 8.62,
-      "wins": 1,
+      "closed": 14,
+      "alpha": 20.53,
+      "wins": 2,
       "losses": 2,
-      "cumulative_alpha_usd": 90.42
+      "cumulative_alpha_usd": 102.33
     },
     "carry": {
-      "closed": 2,
+      "closed": 3,
       "alpha": 0,
       "wins": 0,
       "losses": 0
@@ -183,15 +183,15 @@
     }
   ],
   "loop_health": {
-    "window": "2026-10-11T18:40Z -> 2026-10-12T18:23Z",
-    "cycle_commits_window": 101,
-    "largest_gap_window_min": 19,
+    "window": "2026-10-12T08:00Z -> 2026-10-13T08:28Z",
+    "cycle_commits_window": 81,
+    "largest_gap_window_min": 38,
+    "largest_gap_window": "2026-10-12T19:13Z -> 19:51Z (run handoff)",
+    "open_gap_min_at_check": 75,
+    "open_gap_from": "2026-10-13T07:13:18Z",
     "cron_gap": false,
-    "gaps_over_90min_7d": 0,
-    "largest_gap_7d_min": 88.0,
-    "largest_gap_7d": "2026-10-06T12:16Z -> 13:44Z",
     "failed_runs": [],
-    "cadence_note": "paper-trade-cycle runs 10-06..10-12 all succeeded; 2 normal cancellations (10-09, 10-10). Runs queue for hours behind the bot concurrency lock (e.g. 38196149411 created 02:31Z, started ~08:00Z)."
+    "cadence_note": "All paper-trade-cycle runs succeeded. Each run loops 5-10h; the 07:13Z run end had no queued successor at 08:28Z (earlier handoffs took 9-38 min). Deploy-pages and lottery loops are healthy every ~5.5 min."
   },
   "kill_criteria_flags": {
     "R1_breach_below_750": [
@@ -199,14 +199,14 @@
       "hypecrypto 739.48 - retired 09-04 (old)"
     ],
     "below_800": [
-      "scalper 766.00 (-23.4%)"
+      "scalper 754.09 (-24.6%), $4.09 above R1"
     ],
     "below_900_drawdown_flag": [
-      "scalper 766.00",
+      "scalper 754.09",
       "sentiment 726.83"
     ],
-    "R4_dead_money": "n/a - sentiment traded 10-12",
+    "R4_dead_money": "n/a - sentiment is R1-frozen, not idle by choice",
     "probation": "none newly assigned"
   },
-  "win_rate_scored_pct": 57.1
+  "win_rate_scored_pct": 58.0
 }
