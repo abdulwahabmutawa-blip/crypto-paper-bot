@@ -1,15 +1,14 @@
 {
-  "ts": "2026-10-13T14:11:01+00:00",
+  "ts": "2026-10-13T14:16:32+00:00",
   "sources": {
     "coingecko": [
-      "PENGU",
       "S",
-      "STRK",
       "NEAR",
-      "BTC",
+      "PENGU",
+      "STRK",
       "SOL",
-      "QNT",
-      "UNI"
+      "BTC",
+      "LIT"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -18,9 +17,10 @@
       "OGN",
       "TIA",
       "PEPE",
+      "UNI",
       "BTC",
-      "U",
-      "RLUSD"
+      "RLUSD",
+      "U"
     ],
     "watcher": [
       "STX",
@@ -38,7 +38,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -4.3e-05,
+      "funding": -3.7e-05,
       "long_short": 0.99
     },
     {
@@ -48,7 +48,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 6.2e-05,
+      "funding": 6e-05,
       "long_short": 1.25
     },
     {
@@ -58,8 +58,16 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.001764,
+      "funding": -0.001752,
       "long_short": 0.96
+    },
+    {
+      "symbol": "LIT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "NEAR",
@@ -67,7 +75,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3e-06
+      "funding": -3e-06
     },
     {
       "symbol": "PENGU",
@@ -75,7 +83,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.7e-05
+      "funding": 1.8e-05
     },
     {
       "symbol": "PEPE",
@@ -83,14 +91,6 @@
       "sources": [
         "movers"
       ]
-    },
-    {
-      "symbol": "QNT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -0.000208
     },
     {
       "symbol": "RLUSD",
@@ -105,7 +105,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.2e-05
+      "funding": 2.3e-05
     },
     {
       "symbol": "STRK",
@@ -113,7 +113,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.2e-05
+      "funding": 3.6e-05
     },
     {
       "symbol": "STX",
@@ -121,7 +121,7 @@
       "sources": [
         "watcher"
       ],
-      "funding": -0.000222
+      "funding": -0.000224
     },
     {
       "symbol": "TIA",
@@ -142,7 +142,7 @@
       "symbol": "UNI",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
       "funding": 0.0001
     }
