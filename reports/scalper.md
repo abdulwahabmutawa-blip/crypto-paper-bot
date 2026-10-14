@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-14T16:27:22+00:00 · runs 3381 · equity **$725.54** (-27.45%) · cash $435.25 · open 4/10 · round trips 1268
+updated 2026-10-14T16:43:24+00:00 · runs 3382 · equity **$727.89** (-27.21%) · cash $362.71 · open 5/10 · round trips 1268
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,8 +36,9 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-14T13:04 | BNBUSDT | bottom | 737.11 | 728.76 | -1.13% |
-| 2026-10-14T13:20 | SOLUSDT | bottom | 104.93 | 104.05 | -0.84% |
-| 2026-10-14T13:53 | BATUSDT | bottom | 0.1752 | 0.1726 | -1.48% |
+| 2026-10-14T13:04 | BNBUSDT | bottom | 737.11 | 730.88 | -0.85% |
+| 2026-10-14T13:20 | SOLUSDT | bottom | 104.93 | 104.63 | -0.29% |
+| 2026-10-14T13:53 | BATUSDT | bottom | 0.1752 | 0.1739 | -0.74% |
+| 2026-10-14T16:42 | BERAUSDT | surge | 0.2401 | 0.2443 | +1.75% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
