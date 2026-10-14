@@ -1,48 +1,17 @@
 {
-  "ts": "2026-10-14T00:45:35+00:00",
+  "ts": "2026-10-14T00:51:18+00:00",
   "scanned": 129,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "MARSCOINUSDT",
-      "signal": "ignition",
-      "score": 0.65,
-      "raw_score": 0.7378,
-      "weight": 0.881,
-      "price": 0.0818,
-      "why": "trades 5.9x and volume 15.4x the prior 4h, 86% taker-buy, $106,451 burst \u2014 while price has only moved +2.5%",
-      "chg_24h": 0.0433,
-      "vol_surge": 15.42,
-      "chg_1h": 0.0251,
-      "market_surge": 0.62,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.68% at 24h: market beta, not signal"
-    },
-    {
-      "symbol": "ARUSDT",
-      "signal": "breakout",
-      "score": 0.5473,
-      "raw_score": 0.6276,
-      "weight": 0.872,
-      "price": 4.017,
-      "why": "trades 4.4x, volume 17.8x, 74% taker-buy, +2.0% in an hour, at 97% of its 24h range",
-      "chg_24h": 0.086,
-      "vol_surge": 17.78,
-      "chg_1h": 0.0203,
-      "market_surge": 4.9,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.70% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
-    "ignition": "benched \u2014 BTC-excess day mean -0.68% at 24h: market beta, not signal",
+    "ignition": "benched \u2014 BTC-excess day mean -0.74% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.70% at 24h: market beta, not signal",
     "reversion": "benched \u2014 BTC-excess day mean -0.54% at 24h: market beta, not signal",
     "heat": "probation \u2014 13 rows but only 2.1 independent 24h windows (span 51h): overlapping labels are not a sample",
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 21,
+    "count": 24,
     "baseline": 18.0,
     "wave": false
   },
@@ -74,18 +43,18 @@
       "avg_win_4h": 0.02369,
       "avg_loss_4h": -0.01985,
       "payoff_4h": 1.194,
-      "span_h_24h": 311.8,
-      "n_eff_24h": 12.99,
-      "n_24h": 842,
+      "span_h_24h": 311.9,
+      "n_eff_24h": 13.0,
+      "n_24h": 843,
       "hit_rate_24h": 0.374,
-      "mean_ret_24h": -0.009,
-      "median_ret_24h": -0.01116,
+      "mean_ret_24h": -0.00906,
+      "median_ret_24h": -0.01126,
       "both_halves_24h": false,
       "days_24h": 14,
-      "mean_x_24h": -0.00675,
+      "mean_x_24h": -0.00736,
       "days_x_24h": 14,
       "avg_win_24h": 0.04436,
-      "avg_loss_24h": -0.04373,
+      "avg_loss_24h": -0.04376,
       "payoff_24h": 1.014
     },
     "breakout": {
