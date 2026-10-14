@@ -1,13 +1,31 @@
 {
-  "ts": "2026-10-14T21:50:47+00:00",
-  "scanned": 129,
+  "ts": "2026-10-14T21:56:36+00:00",
+  "scanned": 130,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SNXXBUSDT",
+      "signal": "reversion",
+      "score": 0.3798,
+      "raw_score": 0.3907,
+      "weight": 0.972,
+      "price": 10.4,
+      "why": "down -13% on the day (bottom decile of the market), now +0.5% over 15m with 3 green candles",
+      "chg_24h": -0.1341,
+      "vol_surge": 0.45,
+      "chg_1h": -0.0048,
+      "market_surge": 0.13,
+      "oi_drop": null,
+      "funding": null,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.47% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.92% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.82% at 24h: market beta, not signal",
     "reversion": "benched \u2014 BTC-excess day mean -0.47% at 24h: market beta, not signal",
-    "heat": "probation \u2014 14 rows but only 3.1 independent 24h windows (span 75h): overlapping labels are not a sample",
+    "heat": "probation \u2014 15 rows but only 3.5 independent 24h windows (span 83h): overlapping labels are not a sample",
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
@@ -166,19 +184,19 @@
       "avg_win_4h": 0.04784,
       "avg_loss_4h": -0.06821,
       "payoff_4h": 0.701,
-      "span_h_24h": 75.2,
-      "n_eff_24h": 3.14,
-      "n_24h": 14,
-      "hit_rate_24h": 0.429,
-      "mean_ret_24h": -0.02982,
-      "median_ret_24h": -0.03776,
+      "span_h_24h": 83.3,
+      "n_eff_24h": 3.47,
+      "n_24h": 15,
+      "hit_rate_24h": 0.4,
+      "mean_ret_24h": -0.03781,
+      "median_ret_24h": -0.05592,
       "both_halves_24h": false,
       "days_24h": 4,
-      "mean_x_24h": -0.04606,
+      "mean_x_24h": -0.04771,
       "days_x_24h": 4,
       "avg_win_24h": 0.10242,
-      "avg_loss_24h": -0.12899,
-      "payoff_24h": 0.794
+      "avg_loss_24h": -0.1313,
+      "payoff_24h": 0.78
     },
     "revival": {
       "span_h_1h": 138.5,
