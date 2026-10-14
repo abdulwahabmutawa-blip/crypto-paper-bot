@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-14T16:45:31+00:00",
+  "ts": "2026-10-14T16:51:01+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
@@ -18,7 +18,8 @@
     "movers": [
       "WAL",
       "TRX",
-      "QNT"
+      "QNT",
+      "U"
     ],
     "watcher": [
       "BAT",
@@ -34,7 +35,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.000103,
+      "funding": -0.0001,
       "long_short": 0.85
     },
     {
@@ -43,7 +44,7 @@
       "sources": [
         "watcher"
       ],
-      "funding": -5.9e-05
+      "funding": -4.2e-05
     },
     {
       "symbol": "BTC",
@@ -51,7 +52,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.6e-05
+      "funding": -1.7e-05
     },
     {
       "symbol": "ENA",
@@ -75,7 +76,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.9e-05
+      "funding": 3.8e-05
     },
     {
       "symbol": "NEAR",
@@ -91,7 +92,7 @@
       "sources": [
         "watcher"
       ],
-      "funding": -0.000153
+      "funding": -0.000158
     },
     {
       "symbol": "PENGU",
@@ -115,7 +116,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.9e-05
+      "funding": 3.6e-05
     },
     {
       "symbol": "TRX",
@@ -126,12 +127,19 @@
       "funding": 0.0001
     },
     {
+      "symbol": "U",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
+    },
+    {
       "symbol": "WAL",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -0.003811
+      "funding": -0.003761
     },
     {
       "symbol": "ZEC",
@@ -139,7 +147,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.6e-05
+      "funding": 6.4e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
