@@ -1,17 +1,15 @@
 {
-  "ts": "2026-10-14T20:11:55+00:00",
+  "ts": "2026-10-14T20:17:28+00:00",
   "sources": {
     "coingecko": [
-      "NEAR",
       "WAL",
-      "PENGU",
       "STRK",
-      "HYPE",
+      "PENGU",
       "BTC",
-      "QNT",
-      "ZEC",
-      "FET",
-      "ZRO"
+      "NEAR",
+      "HYPE",
+      "XRP",
+      "AERO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -34,7 +32,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.003169,
+      "funding": -0.003092,
       "long_short": 0.83
     },
     {
@@ -48,20 +46,20 @@
       "long_short": 1.4
     },
     {
+      "symbol": "AERO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -1.7e-05
-    },
-    {
-      "symbol": "FET",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 6.4e-05
+      "funding": -1.9e-05
     },
     {
       "symbol": "NEAR",
@@ -77,15 +75,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.3e-05
-    },
-    {
-      "symbol": "QNT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 1e-05
+      "funding": 4.1e-05
     },
     {
       "symbol": "STRK",
@@ -93,7 +83,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3e-05
+      "funding": 2.7e-05
     },
     {
       "symbol": "TRX",
@@ -104,20 +94,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "ZEC",
+      "symbol": "XRP",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 8.5e-05
-    },
-    {
-      "symbol": "ZRO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 1.2e-05
+      "funding": -7.1e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
