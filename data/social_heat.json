@@ -1,16 +1,16 @@
 {
-  "ts": "2026-10-14T11:00:41+00:00",
+  "ts": "2026-10-14T11:05:51+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
-      "WAL",
       "ARB",
-      "QNT",
-      "TAO",
-      "OP",
-      "SUI",
+      "WAL",
       "STRK",
-      "UNI"
+      "SUI",
+      "NEAR",
+      "ETH",
+      "QNT",
+      "TAO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,8 +20,8 @@
       "ZEC",
       "PEPE",
       "SNDKB",
-      "TRX",
       "XRP",
+      "TRX",
       "WLD"
     ],
     "watcher": [
@@ -32,25 +32,24 @@
   },
   "heat": [
     {
-      "symbol": "OP",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": 4.1e-05,
-      "long_short": 1.65
-    },
-    {
       "symbol": "BAT",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": -0.001089,
-      "long_short": 0.8
+      "funding": -0.001067,
+      "long_short": 0.79
+    },
+    {
+      "symbol": "OP",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": 3.5e-05,
+      "long_short": 1.65
     },
     {
       "symbol": "ARB",
@@ -58,7 +57,23 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.6e-05
+      "funding": 6.2e-05
+    },
+    {
+      "symbol": "ETH",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -2.9e-05
+    },
+    {
+      "symbol": "NEAR",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5.9e-05
     },
     {
       "symbol": "PENGU",
@@ -81,7 +96,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000323
+      "funding": -0.000325
     },
     {
       "symbol": "SNDKB",
@@ -104,7 +119,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.1e-05
+      "funding": 2.8e-05
     },
     {
       "symbol": "TAO",
@@ -123,20 +138,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "WAL",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -0.007506
+      "funding": -0.007603
     },
     {
       "symbol": "WLD",
@@ -144,7 +151,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 7e-06
+      "funding": -4e-06
     },
     {
       "symbol": "XRP",
@@ -152,7 +159,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -7e-06
+      "funding": -1e-05
     },
     {
       "symbol": "ZEC",
