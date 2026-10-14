@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-14T12:34:36+00:00",
+  "ts": "2026-10-14T12:40:09+00:00",
   "sources": {
     "coingecko": [
       "WAL",
@@ -21,9 +21,9 @@
       "ZEC",
       "TRX",
       "SNDKB",
+      "QNT",
       "PEPE",
-      "XRP",
-      "BAT"
+      "XRP"
     ],
     "watcher": [
       "BAT",
@@ -33,24 +33,24 @@
   },
   "heat": [
     {
-      "symbol": "BAT",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": -0.000908,
-      "long_short": 0.77
-    },
-    {
       "symbol": "OP",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": -1.1e-05,
+      "funding": -1.3e-05,
       "long_short": 1.74
+    },
+    {
+      "symbol": "QNT",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -0.000188,
+      "long_short": 0.82
     },
     {
       "symbol": "WAL",
@@ -59,8 +59,16 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.007691,
+      "funding": -0.007632,
       "long_short": 1.12
+    },
+    {
+      "symbol": "BAT",
+      "surfaces": 1,
+      "sources": [
+        "watcher"
+      ],
+      "funding": -0.000884
     },
     {
       "symbol": "BTC",
@@ -76,7 +84,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.8e-05
+      "funding": 5.6e-05
     },
     {
       "symbol": "LIT",
@@ -92,7 +100,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2e-06
+      "funding": 4e-06
     },
     {
       "symbol": "ONDO",
@@ -100,7 +108,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2e-05
+      "funding": -1.9e-05
     },
     {
       "symbol": "PENGU",
@@ -116,14 +124,6 @@
       "sources": [
         "movers"
       ]
-    },
-    {
-      "symbol": "QNT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -0.000193
     },
     {
       "symbol": "SNDKB",
@@ -146,7 +146,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -6e-06
+      "funding": -1e-06
     },
     {
       "symbol": "TRX",
@@ -162,7 +162,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 1e-06
+      "funding": 4e-06
     },
     {
       "symbol": "ZEC",
