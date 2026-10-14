@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-14T19:55:11+00:00",
+  "ts": "2026-10-14T20:00:34+00:00",
   "sources": {
     "coingecko": [
       "WAL",
@@ -18,7 +18,8 @@
     "stocktwits": [],
     "movers": [
       "WAL",
-      "TRX"
+      "TRX",
+      "HYPE"
     ],
     "watcher": [
       "WAL"
@@ -34,8 +35,18 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.003396,
+      "funding": -0.00328,
       "long_short": 0.83
+    },
+    {
+      "symbol": "HYPE",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.45
     },
     {
       "symbol": "AERO",
@@ -51,7 +62,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.4e-05
+      "funding": -1.7e-05
     },
     {
       "symbol": "ENA",
@@ -60,14 +71,6 @@
         "coingecko"
       ],
       "funding": 3e-05
-    },
-    {
-      "symbol": "HYPE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "NEAR",
@@ -83,7 +86,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -4.9e-05
+      "funding": -4.4e-05
     },
     {
       "symbol": "PENGU",
@@ -91,7 +94,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.6e-05
+      "funding": 3.8e-05
     },
     {
       "symbol": "QNT",
@@ -99,7 +102,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.0
+      "funding": 6e-06
     },
     {
       "symbol": "STRK",
