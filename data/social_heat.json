@@ -1,16 +1,17 @@
 {
-  "ts": "2026-10-14T23:13:29+00:00",
+  "ts": "2026-10-14T23:18:56+00:00",
   "sources": {
     "coingecko": [
       "WAL",
-      "BTC",
-      "SUI",
       "PENGU",
+      "BTC",
       "QNT",
+      "SUI",
       "AERO",
       "UNI",
-      "SOL",
-      "STRK"
+      "ENA",
+      "MORPHO",
+      "SOL"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -34,7 +35,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.001976,
+      "funding": -0.002018,
       "long_short": 0.76
     },
     {
@@ -43,7 +44,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.3e-05
+      "funding": 3.2e-05
     },
     {
       "symbol": "BTC",
@@ -52,6 +53,22 @@
         "coingecko"
       ],
       "funding": -4.2e-05
+    },
+    {
+      "symbol": "ENA",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-06
+    },
+    {
+      "symbol": "MORPHO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "PENGU",
@@ -67,7 +84,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7e-05
+      "funding": 6.6e-05
     },
     {
       "symbol": "RLUSD",
@@ -82,15 +99,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.1e-05
-    },
-    {
-      "symbol": "STRK",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 4.2e-05
+      "funding": 9.2e-05
     },
     {
       "symbol": "SUI",
@@ -106,7 +115,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -1.9e-05
+      "funding": -2.4e-05
     },
     {
       "symbol": "U",
@@ -121,7 +130,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.3e-05
+      "funding": 6.1e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
