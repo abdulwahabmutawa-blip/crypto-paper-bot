@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-14T12:06:41+00:00",
+  "ts": "2026-10-14T12:12:11+00:00",
   "sources": {
     "coingecko": [
       "WAL",
@@ -16,12 +16,12 @@
     "stocktwits": [],
     "movers": [
       "OP",
+      "BAT",
       "ZEC",
       "PEPE",
       "WLD",
       "SUI",
       "NEAR",
-      "UNI",
       "SNDKB"
     ],
     "watcher": [
@@ -32,13 +32,23 @@
   },
   "heat": [
     {
+      "symbol": "BAT",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": -0.000975,
+      "long_short": 0.77
+    },
+    {
       "symbol": "NEAR",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 2.9e-05,
+      "funding": 2.3e-05,
       "long_short": 1.49
     },
     {
@@ -48,7 +58,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 7e-06,
+      "funding": -0.0,
       "long_short": 1.74
     },
     {
@@ -58,16 +68,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 1.1e-05,
+      "funding": 1.2e-05,
       "long_short": 1.9
-    },
-    {
-      "symbol": "BAT",
-      "surfaces": 1,
-      "sources": [
-        "watcher"
-      ],
-      "funding": -0.000997
     },
     {
       "symbol": "BTC",
@@ -75,7 +77,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.5e-05
+      "funding": 3.7e-05
     },
     {
       "symbol": "ENA",
@@ -83,7 +85,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.5e-05
+      "funding": 3.6e-05
     },
     {
       "symbol": "PENGU",
@@ -114,7 +116,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000223
+      "funding": -0.000216
     },
     {
       "symbol": "SNDKB",
@@ -132,20 +134,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "WAL",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -0.00782
+      "funding": -0.007814
     },
     {
       "symbol": "WLD",
@@ -153,7 +147,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -9e-06
+      "funding": -1.4e-05
     },
     {
       "symbol": "ZEC",
