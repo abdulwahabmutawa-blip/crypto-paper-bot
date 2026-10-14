@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-14T21:57:37+00:00 · runs 3402 · equity **$722.50** (-27.75%) · cash $283.12 · open 6/10 · round trips 1276
+updated 2026-10-14T22:14:43+00:00 · runs 3403 · equity **$724.15** (-27.58%) · cash $283.12 · open 6/10 · round trips 1276
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,10 +36,10 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-14T13:04 | BNBUSDT | bottom | 737.11 | 729.68 | -1.01% |
-| 2026-10-14T13:20 | SOLUSDT | bottom | 104.93 | 104.72 | -0.20% |
-| 2026-10-14T18:03 | QQQBUSDT | bottom | 728.76 | 728.49 | -0.04% |
-| 2026-10-14T19:23 | SOXSBUSDT | surge | 42.6 | 42.96 | +0.85% |
-| 2026-10-14T21:00 | MEGAUSDT | surge | 0.04515 | 0.04543 | +0.62% |
+| 2026-10-14T13:04 | BNBUSDT | bottom | 737.11 | 729.01 | -1.10% |
+| 2026-10-14T13:20 | SOLUSDT | bottom | 104.93 | 104.62 | -0.30% |
+| 2026-10-14T18:03 | QQQBUSDT | bottom | 728.76 | 727.82 | -0.13% |
+| 2026-10-14T19:23 | SOXSBUSDT | surge | 42.6 | 43.92 | +3.10% |
+| 2026-10-14T21:00 | MEGAUSDT | surge | 0.04515 | 0.04559 | +0.97% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
