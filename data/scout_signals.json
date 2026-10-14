@@ -1,20 +1,35 @@
 {
-  "ts": "2026-10-14T07:00:08+00:00",
-  "scanned": 116,
+  "ts": "2026-10-14T07:05:36+00:00",
+  "scanned": 113,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "HUMAUSDT",
+      "symbol": "GPSUSDT",
+      "signal": "revival",
+      "score": 0.7737,
+      "raw_score": 0.7737,
+      "weight": 1.0,
+      "price": 0.00845,
+      "why": "revival day-one: fell -27% last week on $0.43M/day quiet, volume arriving 3.5x today, only +11% off its 30d low \u00b7 serial exploder: 9 runs in 2y",
+      "chg_24h": 0.0576,
+      "vol_surge": 3.5,
+      "chg_1h": null,
+      "market_surge": null,
+      "actionable": false,
+      "status": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
+    },
+    {
+      "symbol": "ONDOUSDT",
       "signal": "ignition",
-      "score": 0.5773,
-      "raw_score": 0.6598,
+      "score": 0.6079,
+      "raw_score": 0.6948,
       "weight": 0.875,
-      "price": 0.03266,
-      "why": "trades 4.4x and volume 9.1x the prior 4h, 69% taker-buy, $130,216 burst \u2014 while price has only moved +0.6%",
-      "chg_24h": -0.0806,
-      "vol_surge": 9.14,
-      "chg_1h": 0.0065,
-      "market_surge": 11.1,
+      "price": 0.4668,
+      "why": "trades 4.2x and volume 12.1x the prior 4h, 75% taker-buy, $362,453 burst \u2014 while price has only moved +0.5%",
+      "chg_24h": -0.0275,
+      "vol_surge": 12.12,
+      "chg_1h": 0.005,
+      "market_surge": 2.65,
       "actionable": false,
       "status": "benched \u2014 BTC-excess day mean -0.60% at 24h: market beta, not signal"
     }
@@ -27,7 +42,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 10,
+    "count": 11,
     "baseline": 18.0,
     "wave": false
   },
