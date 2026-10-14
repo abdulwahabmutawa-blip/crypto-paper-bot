@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-14T17:35:41+00:00",
+  "ts": "2026-10-14T17:41:57+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
@@ -22,12 +22,22 @@
       "QNT"
     ],
     "watcher": [
-      "BAT",
-      "OP"
+      "WAL"
     ],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "WAL",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": -0.003995,
+      "long_short": 0.93
+    },
     {
       "symbol": "QNT",
       "surfaces": 2,
@@ -35,26 +45,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": -8.7e-05,
+      "funding": -8.1e-05,
       "long_short": 0.86
-    },
-    {
-      "symbol": "WAL",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": -0.003837,
-      "long_short": 0.93
-    },
-    {
-      "symbol": "BAT",
-      "surfaces": 1,
-      "sources": [
-        "watcher"
-      ],
-      "funding": 1.5e-05
     },
     {
       "symbol": "BTC",
@@ -62,7 +54,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.4e-05
+      "funding": -2.3e-05
     },
     {
       "symbol": "ENA",
@@ -70,7 +62,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3e-06
+      "funding": 1e-06
     },
     {
       "symbol": "LIT",
@@ -87,14 +79,6 @@
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "OP",
-      "surfaces": 1,
-      "sources": [
-        "watcher"
-      ],
-      "funding": -0.000219
     },
     {
       "symbol": "PENGU",
@@ -126,7 +110,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.1e-05
+      "funding": 4e-05
     },
     {
       "symbol": "TRX",
@@ -142,7 +126,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6e-05
+      "funding": 6.3e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
