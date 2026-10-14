@@ -1,14 +1,15 @@
 {
-  "ts": "2026-10-14T01:41:41+00:00",
+  "ts": "2026-10-14T01:47:11+00:00",
   "sources": {
     "coingecko": [
-      "OP",
       "QNT",
-      "NEAR",
-      "STRK",
-      "SOL",
+      "OP",
       "INJ",
-      "ARB"
+      "STRK",
+      "NEAR",
+      "SOL",
+      "UNI",
+      "PENDLE"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -17,9 +18,9 @@
       "OP",
       "INJ",
       "TIA",
+      "ZEC",
       "UNI",
       "PEPE",
-      "ZEC",
       "SOXLB"
     ],
     "watcher": [
@@ -38,7 +39,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 3e-05,
+      "funding": 2.9e-05,
       "long_short": 1.85
     },
     {
@@ -48,7 +49,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.003929,
+      "funding": -0.003925,
       "long_short": 0.76
     },
     {
@@ -58,16 +59,18 @@
         "coingecko",
         "movers"
       ],
-      "funding": 9.3e-05,
+      "funding": 9e-05,
       "long_short": 1.92
     },
     {
-      "symbol": "ARB",
-      "surfaces": 1,
+      "symbol": "UNI",
+      "surfaces": 2,
       "sources": [
-        "coingecko"
+        "coingecko",
+        "movers"
       ],
-      "funding": -4e-06
+      "funding": 5.2e-05,
+      "long_short": 1.49
     },
     {
       "symbol": "NEAR",
@@ -75,7 +78,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.4e-05
+      "funding": -2.2e-05
+    },
+    {
+      "symbol": "PENDLE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "PEPE",
@@ -90,7 +101,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000457
+      "funding": -0.000465
     },
     {
       "symbol": "SOL",
@@ -113,7 +124,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.2e-05
+      "funding": 1.1e-05
     },
     {
       "symbol": "STX",
@@ -129,15 +140,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 3.5e-05
-    },
-    {
-      "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 4.8e-05
+      "funding": 3.8e-05
     },
     {
       "symbol": "ZEC",
