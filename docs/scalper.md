@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-14T12:32:55+00:00 · runs 3366 · equity **$736.53** (-26.35%) · cash $0.00 · open 10/10 · round trips 1256
+updated 2026-10-14T12:49:14+00:00 · runs 3367 · equity **$733.73** (-26.63%) · cash $0.00 · open 10/10 · round trips 1256
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-13T14:11 | GOOGLBUSDT | surge | 357.8 | 356.57 | -0.34% |
-| 2026-10-13T16:28 | PEPEUSDT | surge | 4.2e-06 | 4.14e-06 | -1.43% |
-| 2026-10-13T16:45 | AMDBUSDT | surge | 600.13 | 596.92 | -0.53% |
-| 2026-10-13T17:51 | INTCBUSDT | surge | 102.33 | 100.68 | -1.61% |
-| 2026-10-13T18:07 | CRCLBUSDT | surge | 84.28 | 83.28 | -1.19% |
-| 2026-10-14T05:32 | ZECUSDT | surge | 1254.15 | 1234.24 | -1.59% |
-| 2026-10-14T09:34 | BERAUSDT | surge | 0.2359 | 0.2355 | -0.17% |
-| 2026-10-14T11:26 | SPCXBUSDT | bottom | 157.19 | 155.8 | -0.88% |
-| 2026-10-14T11:42 | AMPUSDT | bottom | 0.000683 | 0.000687 | +0.59% |
+| 2026-10-13T14:11 | GOOGLBUSDT | surge | 357.8 | 357.19 | -0.17% |
+| 2026-10-13T16:28 | PEPEUSDT | surge | 4.2e-06 | 4.12e-06 | -1.90% |
+| 2026-10-13T16:45 | AMDBUSDT | surge | 600.13 | 593.74 | -1.06% |
+| 2026-10-13T17:51 | INTCBUSDT | surge | 102.33 | 100.58 | -1.71% |
+| 2026-10-13T18:07 | CRCLBUSDT | surge | 84.28 | 82.75 | -1.82% |
+| 2026-10-14T05:32 | ZECUSDT | surge | 1254.15 | 1221.51 | -2.60% |
+| 2026-10-14T09:34 | BERAUSDT | surge | 0.2359 | 0.2337 | -0.93% |
+| 2026-10-14T11:26 | SPCXBUSDT | bottom | 157.19 | 155.51 | -1.07% |
+| 2026-10-14T11:42 | AMPUSDT | bottom | 0.000683 | 0.000685 | +0.29% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
