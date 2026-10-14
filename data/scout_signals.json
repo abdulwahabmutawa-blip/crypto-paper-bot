@@ -1,54 +1,8 @@
 {
-  "ts": "2026-10-14T02:58:40+00:00",
-  "scanned": 119,
+  "ts": "2026-10-14T03:04:37+00:00",
+  "scanned": 118,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "STXUSDT",
-      "signal": "ignition",
-      "score": 0.6837,
-      "raw_score": 0.7761,
-      "weight": 0.881,
-      "price": 0.4413,
-      "why": "trades 8.1x and volume 14.7x the prior 4h, 62% taker-buy, $165,704 burst \u2014 while price has only moved +2.1%",
-      "chg_24h": 0.0669,
-      "vol_surge": 14.71,
-      "chg_1h": 0.0208,
-      "market_surge": 0.0,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.62% at 24h: market beta, not signal"
-    },
-    {
-      "symbol": "BATUSDT",
-      "signal": "heat",
-      "score": 0.6,
-      "raw_score": 0.6,
-      "weight": 1.0,
-      "price": 0.1891,
-      "why": "lit up on 3 independent surfaces at once (coingecko+movers+watcher) \u00b7 funding -0.383% \u00b7 L/S 0.77",
-      "chg_24h": 0.1644,
-      "vol_surge": null,
-      "chg_1h": null,
-      "market_surge": 3,
-      "actionable": false,
-      "status": "probation \u2014 13 rows but only 2.1 independent 24h windows (span 51h): overlapping labels are not a sample"
-    },
-    {
-      "symbol": "BEAMXUSDT",
-      "signal": "breakout",
-      "score": 0.5122,
-      "raw_score": 0.5867,
-      "weight": 0.873,
-      "price": 0.003116,
-      "why": "trades 4.2x, volume 6.2x, 78% taker-buy, +2.6% in an hour, at 92% of its 24h range",
-      "chg_24h": 0.1319,
-      "vol_surge": 6.22,
-      "chg_1h": 0.0257,
-      "market_surge": 3.73,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.68% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.62% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.68% at 24h: market beta, not signal",
@@ -57,7 +11,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 18,
+    "count": 17,
     "baseline": 18.0,
     "wave": false
   },
