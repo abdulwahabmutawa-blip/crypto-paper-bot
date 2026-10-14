@@ -1,37 +1,24 @@
 {
-  "ts": "2026-10-14T22:45:46+00:00",
-  "scanned": 133,
+  "ts": "2026-10-14T22:51:18+00:00",
+  "scanned": 134,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "QQQBUSDT",
-      "signal": "ignition",
-      "score": 0.5965,
-      "raw_score": 0.6896,
-      "weight": 0.865,
-      "price": 725.8,
-      "why": "trades 5.5x and volume 6.1x the prior 4h, 90% taker-buy, $145,961 burst \u2014 while price has only moved -0.4%",
-      "chg_24h": -0.0267,
-      "vol_surge": 6.13,
-      "chg_1h": -0.0038,
-      "market_surge": 2.98,
+      "symbol": "NBISBUSDT",
+      "signal": "reversion",
+      "score": 0.5186,
+      "raw_score": 0.5335,
+      "weight": 0.972,
+      "price": 180.43,
+      "why": "down -14% on the day (bottom decile of the market), now +0.9% over 15m with 3 green candles",
+      "chg_24h": -0.1402,
+      "vol_surge": 0.51,
+      "chg_1h": -0.0211,
+      "market_surge": 0.16,
+      "oi_drop": null,
+      "funding": null,
       "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.58% at 24h: market beta, not signal"
-    },
-    {
-      "symbol": "CHIPUSDT",
-      "signal": "ignition",
-      "score": 0.5935,
-      "raw_score": 0.6861,
-      "weight": 0.865,
-      "price": 0.052,
-      "why": "trades 4.6x and volume 10.9x the prior 4h, 70% taker-buy, $53,143 burst \u2014 while price has only moved -0.8%",
-      "chg_24h": -0.094,
-      "vol_surge": 10.89,
-      "chg_1h": -0.0084,
-      "market_surge": 2.7,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.58% at 24h: market beta, not signal"
+      "status": "benched \u2014 BTC-excess day mean -0.47% at 24h: market beta, not signal"
     }
   ],
   "gate": {
@@ -42,7 +29,7 @@
     "revival": "probation \u2014 4/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 11,
+    "count": 12,
     "baseline": 15.0,
     "wave": false
   },
