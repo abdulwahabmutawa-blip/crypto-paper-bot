@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-14T22:02:16+00:00",
+ "updated": "2026-10-14T22:07:43+00:00",
  "spec": "x_chatter_precursors_2026-08-23",
  "n_rows_total": 20,
- "n_scored_excess_24h": 19,
+ "n_scored_excess_24h": 20,
  "objective": "BTC-excess 24h",
  "hit_threshold": 0.03,
  "features": {
@@ -14,9 +14,9 @@
     "median": -0.03512
    },
    "mainnet_upgrade": {
-    "n": 9,
-    "hit": 0.111,
-    "mean": -0.00566,
+    "n": 10,
+    "hit": 0.1,
+    "mean": -0.00507,
     "median": 0.01629
    }
   },
@@ -28,19 +28,19 @@
     "median": -0.02079
    },
    "True": {
-    "n": 7,
-    "hit": 0.143,
-    "mean": -0.00167,
+    "n": 8,
+    "hit": 0.125,
+    "mean": -0.00144,
     "median": 0.00586
    }
   },
   "handle": {},
   "all": {
    "all": {
-    "n": 19,
-    "hit": 0.105,
-    "mean": -0.01293,
-    "median": -0.00715
+    "n": 20,
+    "hit": 0.1,
+    "mean": -0.01228,
+    "median": -0.00646
    }
   }
  },
@@ -49,9 +49,9 @@
    "note": "prior24h in [-2%,+5%] vs >+10%",
    "horizon_h": 24,
    "group_true": {
-    "n": 12,
-    "hit": 0.083,
-    "mean": -0.0195,
+    "n": 13,
+    "hit": 0.077,
+    "mean": -0.01799,
     "median": -0.00854
    },
    "group_false": null
@@ -72,10 +72,10 @@
    "horizon_h": 24,
    "group_true": null,
    "group_false": {
-    "n": 17,
-    "hit": 0.118,
-    "mean": -0.01491,
-    "median": -0.00715
+    "n": 18,
+    "hit": 0.111,
+    "mean": -0.01407,
+    "median": -0.00646
    }
   },
   "H4_occurred_catalyst_fades": {
@@ -105,12 +105,12 @@
     "median": -0.02079
    },
    "group_false": {
-    "n": 14,
-    "hit": 0.143,
-    "mean": -0.00786,
-    "median": 0.00586
+    "n": 15,
+    "hit": 0.133,
+    "mean": -0.00732,
+    "median": 0.00017
    },
-   "edge_pp": -1.93
+   "edge_pp": -1.98
   },
   "H6_exchange_surface_words_exhaust": {
    "note": "scanner/exchange-surface wording vs organic",
@@ -122,12 +122,12 @@
     "median": -0.02079
    },
    "group_false": {
-    "n": 18,
-    "hit": 0.111,
-    "mean": -0.0125,
+    "n": 19,
+    "hit": 0.105,
+    "mean": -0.01183,
     "median": -0.00646
    },
-   "edge_pp": -0.83
+   "edge_pp": -0.9
   },
   "H7_extreme_velocity_contrarian": {
    "note": "all-new handles vs familiar, 72h",
@@ -144,9 +144,9 @@
    "note": "first ever appearance vs repeat",
    "horizon_h": 24,
    "group_true": {
-    "n": 14,
-    "hit": 0.143,
-    "mean": -0.01186,
+    "n": 15,
+    "hit": 0.133,
+    "mean": -0.01106,
     "median": -0.00646
    },
    "group_false": {
@@ -155,16 +155,16 @@
     "mean": -0.01594,
     "median": -0.02079
    },
-   "edge_pp": 0.41
+   "edge_pp": 0.49
   }
  },
  "leaders": [
   {
    "kind": "catalyst",
    "feature": "mainnet_upgrade",
-   "n": 9,
-   "hit": 0.111,
-   "mean": -0.00566,
+   "n": 10,
+   "hit": 0.1,
+   "mean": -0.00507,
    "median": 0.01629
   },
   {
@@ -188,9 +188,9 @@
   {
    "kind": "catalyst",
    "feature": "mainnet_upgrade",
-   "n": 9,
-   "hit": 0.111,
-   "mean": -0.00566,
+   "n": 10,
+   "hit": 0.1,
+   "mean": -0.00507,
    "median": 0.01629
   }
  ]
