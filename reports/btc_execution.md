@@ -1,11 +1,11 @@
 # BTC execution observations
 
-Updated: 2026-10-14T17:33:08.183+00:00
+Updated: 2026-10-14T17:49:59.522+00:00
 Quote status: ACCEPTED
 Decision: NO_TRADE — no strategy has qualified for a forward trading trial
 
 Estimated immediate round-trip cost on $200: 24.97 basis points.
-Request latency: 422 ms.
+Request latency: 430 ms.
 
 Fees assume 0.10% per side plus 0.025% adverse slippage per side; spread and displayed depth are measured.
 These are hypothetical cost probes, not executed trades or realized profits. No account credentials or order endpoints are used.

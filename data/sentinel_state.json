@@ -11067,35 +11067,57 @@
       "risk_level": "caution",
       "risk_alerts": [
         {
-          "headline": "Hotter-than-expected US CPI (3.7% headline) sparks rate-hike odds jump, stocks and BTC pull back",
+          "headline": "Hotter-than-expected September CPI sparks rate-hike bets, stocks and yields reverse",
           "markets": [
             "both"
           ],
           "severity": "caution"
         },
         {
-          "headline": "Tech/Nasdaq and crypto-linked equities (COIN, MSTR, miners) drop on higher yields and dollar strength",
+          "headline": "CoreWeave shares tumble ~15% as bond yields near 15% on AI debt binge fears",
           "markets": [
-            "both"
+            "stocks"
+          ],
+          "severity": "caution"
+        },
+        {
+          "headline": "Larry Fink warns data-center moratorium could trigger US recession",
+          "markets": [
+            "stocks"
           ],
           "severity": "caution"
         }
       ],
       "hype": [
         {
+          "symbol": "CRWV",
+          "mood": "fearful",
+          "note": "AI debt yields spike; Musk yikes"
+        },
+        {
           "symbol": "WAL",
           "mood": "euphoric",
-          "note": "Binance top mover huge volume surge"
+          "note": "Binance top mover +66%"
         },
         {
-          "symbol": "ZEC",
-          "mood": "mixed",
-          "note": "Trending searches privacy narrative chatter"
+          "symbol": "SOFI",
+          "mood": "fearful",
+          "note": "Stocktwits trend, crypto-linked drop"
         },
         {
-          "symbol": "QNT",
+          "symbol": "APLD",
           "mood": "mixed",
-          "note": "Cross-surface heat mild price action"
+          "note": "AI data center retail chatter"
+        },
+        {
+          "symbol": "IBRX",
+          "mood": "mixed",
+          "note": "Stocktwits trending biotech"
+        },
+        {
+          "symbol": "LUNR",
+          "mood": "mixed",
+          "note": "Space retail buzz"
         }
       ],
       "crypto_hype": [
@@ -11103,47 +11125,67 @@
           "symbol": "WAL",
           "mood": "euphoric",
           "stage": "peaked",
-          "organic": false,
-          "promo_risk": "high",
-          "catalyst": "AI DATA Network storage partnership",
-          "why": "Top Binance mover +60%+; signal groups shilling heavily",
-          "note": "Shorts paying funding; victory lap posts"
+          "organic": true,
+          "promo_risk": "low",
+          "catalyst": "Sui/DATA AI storage partnership",
+          "why": "Top mover +66%, trending, real ecosystem news posts",
+          "note": "AI storage narrative crowd cheer"
         },
         {
           "symbol": "ZEC",
           "mood": "mixed",
-          "stage": "early",
+          "stage": "peaked",
           "organic": true,
           "promo_risk": "low",
           "catalyst": "none",
-          "why": "Trending niche mentions; privacy analyst nods rising",
-          "note": "Not exploded; independent small accounts"
+          "why": "Coingecko trend, prior ETF/privacy talk residual",
+          "note": "Privacy coin residual interest"
+        },
+        {
+          "symbol": "NEAR",
+          "mood": "mixed",
+          "stage": "peaked",
+          "organic": true,
+          "promo_risk": "low",
+          "catalyst": "none",
+          "why": "Trending searches, some inflow mentions",
+          "note": "Ecosystem flow chatter"
+        },
+        {
+          "symbol": "QNT",
+          "mood": "mixed",
+          "stage": "peaked",
+          "organic": true,
+          "promo_risk": "low",
+          "catalyst": "none",
+          "why": "Cross heat Coingecko+movers, funding note",
+          "note": "Quiet enterprise narrative"
         }
       ],
-      "overall_mood": "Cautious risk-off after hot CPI revived Fed hike fears, with stocks and crypto pulling back amid still-greedy crypto sentiment and low VIX.",
-      "ts": "2026-10-14T17:41:11+00:00",
+      "overall_mood": "Risk-off caution after hot CPI and AI-debt scares hit stocks/crypto, yet crypto Fear & Greed stays in greed with selective alt pumps.",
+      "ts": "2026-10-14T17:47:44+00:00",
       "gauges": {
-        "vix": 16.7,
+        "vix": 16.8,
         "crypto_fear_greed": 62,
         "crypto_fng_label": "Greed"
       },
       "usage": {
-        "input_tokens": 134654,
+        "input_tokens": 163090,
         "input_tokens_details": {
-          "cached_tokens": 78464
+          "cached_tokens": 83584
         },
-        "output_tokens": 1799,
+        "output_tokens": 2238,
         "output_tokens_details": {
-          "reasoning_tokens": 815
+          "reasoning_tokens": 757
         },
-        "total_tokens": 136453,
+        "total_tokens": 165328,
         "num_sources_used": 0,
-        "num_server_side_tools_used": 14,
-        "cost_in_usd_ticks": 3667132000,
+        "num_server_side_tools_used": 18,
+        "cost_in_usd_ticks": 4675152000,
         "server_side_tool_usage_details": {
-          "web_search_calls": 6,
-          "x_search_calls": 8,
-          "x_posts_fetched": 38,
+          "web_search_calls": 7,
+          "x_search_calls": 11,
+          "x_posts_fetched": 47,
           "x_users_fetched": 0,
           "code_interpreter_calls": 0,
           "file_search_calls": 0,
@@ -11152,8 +11194,8 @@
           "image_generation_calls": 0
         },
         "context_details": {
-          "input_tokens": 54357,
-          "output_tokens": 1024
+          "input_tokens": 51708,
+          "output_tokens": 1352
         }
       }
     }
@@ -11164,5 +11206,5 @@
     "2026-09": 27,
     "2026-10": 13
   },
-  "last_scan_utc": "2026-10-14T17:41:11+00:00"
+  "last_scan_utc": "2026-10-14T17:47:44+00:00"
 }
