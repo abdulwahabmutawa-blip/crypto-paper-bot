@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-14T16:43:24+00:00 · runs 3382 · equity **$727.89** (-27.21%) · cash $362.71 · open 5/10 · round trips 1268
+updated 2026-10-14T16:59:26+00:00 · runs 3383 · equity **$729.86** (-27.01%) · cash $145.08 · open 8/10 · round trips 1268
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,9 +36,12 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-14T13:04 | BNBUSDT | bottom | 737.11 | 730.88 | -0.85% |
-| 2026-10-14T13:20 | SOLUSDT | bottom | 104.93 | 104.63 | -0.29% |
+| 2026-10-14T13:04 | BNBUSDT | bottom | 737.11 | 731.93 | -0.70% |
+| 2026-10-14T13:20 | SOLUSDT | bottom | 104.93 | 104.79 | -0.13% |
 | 2026-10-14T13:53 | BATUSDT | bottom | 0.1752 | 0.1739 | -0.74% |
-| 2026-10-14T16:42 | BERAUSDT | surge | 0.2401 | 0.2443 | +1.75% |
+| 2026-10-14T16:42 | BERAUSDT | surge | 0.2401 | 0.2474 | +3.04% |
+| 2026-10-14T16:58 | AUSDT | surge | 0.1076 | 0.1074 | -0.19% |
+| 2026-10-14T16:58 | AXLUSDT | surge | 0.0627 | 0.0638 | +1.75% |
+| 2026-10-14T16:58 | SOXSBUSDT | surge | 41.6 | 41.42 | -0.43% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
