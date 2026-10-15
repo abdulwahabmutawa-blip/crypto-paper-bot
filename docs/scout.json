@@ -1,17 +1,33 @@
 {
-  "ts": "2026-10-15T08:25:48+00:00",
-  "scanned": 142,
+  "ts": "2026-10-15T08:31:15+00:00",
+  "scanned": 144,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "NBISBUSDT",
+      "signal": "ignition",
+      "score": 0.6547,
+      "raw_score": 0.7639,
+      "weight": 0.857,
+      "price": 178.48,
+      "why": "trades 5.2x and volume 21.2x the prior 4h, 95% taker-buy, $50,557 burst \u2014 while price has only moved -1.2%",
+      "chg_24h": -0.1396,
+      "vol_surge": 21.25,
+      "chg_1h": -0.0118,
+      "market_surge": 2.2,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.68% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
-    "ignition": "benched \u2014 BTC-excess day mean -0.67% at 24h: market beta, not signal",
+    "ignition": "benched \u2014 BTC-excess day mean -0.68% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.50% at 24h: market beta, not signal",
     "reversion": "benched \u2014 BTC-excess day mean -0.47% at 24h: market beta, not signal",
     "heat": "probation \u2014 18 rows but only 3.9 independent 24h windows (span 93h): overlapping labels are not a sample",
     "revival": "probation \u2014 6/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 10,
+    "count": 9,
     "baseline": 12.0,
     "wave": false
   },
@@ -51,7 +67,7 @@
       "median_ret_24h": -0.01256,
       "both_halves_24h": false,
       "days_24h": 14,
-      "mean_x_24h": -0.00673,
+      "mean_x_24h": -0.00679,
       "days_x_24h": 14,
       "avg_win_24h": 0.04736,
       "avg_loss_24h": -0.04555,
