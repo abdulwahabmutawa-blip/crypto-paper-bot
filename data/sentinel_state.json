@@ -11105,16 +11105,23 @@
       "risk_level": "caution",
       "risk_alerts": [
         {
-          "headline": "Hotter-than-expected US CPI sparks rate-hike fears, stocks and crypto sell off",
+          "headline": "Hotter-than-expected September CPI lifts Fed hike odds, stocks and crypto sell off",
           "markets": [
             "both"
           ],
           "severity": "caution"
         },
         {
-          "headline": "AI/tech and bank stocks hit hard amid higher yields and earnings misses",
+          "headline": "AI debt fears: CoreWeave bonds near 15% yield, Dell/CRWV/data-center stocks plunge 10-16%",
           "markets": [
             "stocks"
+          ],
+          "severity": "caution"
+        },
+        {
+          "headline": "Houthi attack on Aramco HQ, Iran Hormuz ship strikes keep oil elevated",
+          "markets": [
+            "both"
           ],
           "severity": "caution"
         }
@@ -11123,12 +11130,42 @@
         {
           "symbol": "WAL",
           "mood": "euphoric",
-          "note": "Sui AI storage surge amid broad selloff"
+          "note": "Top mover on AI storage catalyst"
+        },
+        {
+          "symbol": "CRWV",
+          "mood": "fearful",
+          "note": "Bond distress AI funding panic"
+        },
+        {
+          "symbol": "DELL",
+          "mood": "fearful",
+          "note": "Data center AI timing selloff"
+        },
+        {
+          "symbol": "SKHY",
+          "mood": "fearful",
+          "note": "Asia tech rout Fed AI fears"
+        },
+        {
+          "symbol": "QQQ",
+          "mood": "fearful",
+          "note": "Nasdaq worst day in months"
+        },
+        {
+          "symbol": "NBIS",
+          "mood": "fearful",
+          "note": "Neocloud AI peers tumbling"
         },
         {
           "symbol": "ZEC",
           "mood": "mixed",
-          "note": "Volatile privacy coin with ETF flows"
+          "note": "Privacy upgrade ETF chatter"
+        },
+        {
+          "symbol": "RKLB",
+          "mood": "mixed",
+          "note": "Retail space launch talk"
         }
       ],
       "crypto_hype": [
@@ -11138,35 +11175,45 @@
           "stage": "peaked",
           "organic": true,
           "promo_risk": "low",
-          "catalyst": "DATA Network AI storage partnership",
-          "why": "Binance top mover +40-50%, volume spike, independent chatter",
-          "note": "AI/Sui narrative victory lap"
+          "catalyst": "Sui DATA AI storage deal Oct 12",
+          "why": "Volume explosion independent accounts on partnership utility",
+          "note": "Binance top mover +50%"
+        },
+        {
+          "symbol": "ZEC",
+          "mood": "mixed",
+          "stage": "peaked",
+          "organic": true,
+          "promo_risk": "low",
+          "catalyst": "NU7 upgrade target Nov 5",
+          "why": "Trending searches ETF flows privacy narrative",
+          "note": "Volatile not mania"
         }
       ],
-      "overall_mood": "Risk-off caution after hot CPI data, with selective altcoin strength amid broader equity and crypto declines.",
-      "ts": "2026-10-15T01:50:01+00:00",
+      "overall_mood": "Risk-off caution dominates as hot CPI revives Fed hikes and AI financing fears crush tech while crypto tracks lower amid selective alt pumps.",
+      "ts": "2026-10-15T01:59:36+00:00",
       "gauges": {
         "vix": 16.9,
         "crypto_fear_greed": 53,
         "crypto_fng_label": "Neutral"
       },
       "usage": {
-        "input_tokens": 133311,
+        "input_tokens": 155583,
         "input_tokens_details": {
-          "cached_tokens": 73856
+          "cached_tokens": 92416
         },
-        "output_tokens": 1376,
+        "output_tokens": 2213,
         "output_tokens_details": {
-          "reasoning_tokens": 638
+          "reasoning_tokens": 1056
         },
-        "total_tokens": 134687,
+        "total_tokens": 157796,
         "num_sources_used": 0,
-        "num_server_side_tools_used": 13,
-        "cost_in_usd_ticks": 4093228000,
+        "num_server_side_tools_used": 16,
+        "cost_in_usd_ticks": 3923368000,
         "server_side_tool_usage_details": {
-          "web_search_calls": 6,
-          "x_search_calls": 7,
-          "x_posts_fetched": 46,
+          "web_search_calls": 8,
+          "x_search_calls": 8,
+          "x_posts_fetched": 37,
           "x_users_fetched": 0,
           "code_interpreter_calls": 0,
           "file_search_calls": 0,
@@ -11175,8 +11222,8 @@
           "image_generation_calls": 0
         },
         "context_details": {
-          "input_tokens": 60868,
-          "output_tokens": 749
+          "input_tokens": 63400,
+          "output_tokens": 1581
         }
       }
     }
@@ -11187,5 +11234,5 @@
     "2026-09": 27,
     "2026-10": 14
   },
-  "last_scan_utc": "2026-10-15T01:50:01+00:00"
+  "last_scan_utc": "2026-10-15T01:59:36+00:00"
 }
