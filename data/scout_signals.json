@@ -1,24 +1,8 @@
 {
-  "ts": "2026-10-15T03:59:35+00:00",
-  "scanned": 137,
+  "ts": "2026-10-15T04:04:44+00:00",
+  "scanned": 138,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "INTWBUSDT",
-      "signal": "ignition",
-      "score": 0.8279,
-      "raw_score": 0.9638,
-      "weight": 0.859,
-      "price": 19.22,
-      "why": "trades 21.1x and volume 175.5x the prior 4h, 96% taker-buy, $141,361 burst \u2014 while price has only moved -1.1%",
-      "chg_24h": -0.1645,
-      "vol_surge": 175.46,
-      "chg_1h": -0.0108,
-      "market_surge": 31.43,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.54% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.54% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.53% at 24h: market beta, not signal",
@@ -33,15 +17,15 @@
   },
   "scorecard": {
     "ignition": {
-      "span_h_1h": 334.6,
-      "n_eff_1h": 334.63,
-      "n_1h": 909,
-      "hit_rate_1h": 0.305,
-      "mean_ret_1h": -0.00179,
+      "span_h_1h": 334.7,
+      "n_eff_1h": 334.73,
+      "n_1h": 911,
+      "hit_rate_1h": 0.304,
+      "mean_ret_1h": -0.00181,
       "median_ret_1h": -0.00208,
       "both_halves_1h": false,
       "days_1h": 15,
-      "mean_x_1h": -0.00116,
+      "mean_x_1h": -0.00119,
       "days_x_1h": 15,
       "avg_win_1h": 0.01226,
       "avg_loss_1h": -0.01146,
