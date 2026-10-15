@@ -1,17 +1,17 @@
 {
- "updated": "2026-10-15T23:22:04+00:00",
+ "updated": "2026-10-15T23:26:04+00:00",
  "spec": "x_chatter_precursors_2026-08-23",
  "n_rows_total": 22,
- "n_scored_excess_24h": 20,
+ "n_scored_excess_24h": 22,
  "objective": "BTC-excess 24h",
  "hit_threshold": 0.03,
  "features": {
   "catalyst": {
    "unlock": {
-    "n": 5,
-    "hit": 0.0,
-    "mean": -0.03915,
-    "median": -0.03512
+    "n": 7,
+    "hit": 0.143,
+    "mean": -0.01127,
+    "median": -0.02079
    },
    "mainnet_upgrade": {
     "n": 10,
@@ -22,10 +22,10 @@
   },
   "tier_T3": {
    "False": {
-    "n": 12,
-    "hit": 0.083,
-    "mean": -0.0195,
-    "median": -0.02079
+    "n": 14,
+    "hit": 0.143,
+    "mean": -0.00837,
+    "median": -0.00854
    },
    "True": {
     "n": 8,
@@ -37,9 +37,9 @@
   "handle": {},
   "all": {
    "all": {
-    "n": 20,
-    "hit": 0.1,
-    "mean": -0.01228,
+    "n": 22,
+    "hit": 0.136,
+    "mean": -0.00585,
     "median": -0.00646
    }
   }
@@ -60,9 +60,9 @@
    "note": ">=8 distinct handles & no T3 vs narrow+loud",
    "horizon_h": 24,
    "group_true": {
-    "n": 10,
-    "hit": 0.1,
-    "mean": -0.02418,
+    "n": 11,
+    "hit": 0.182,
+    "mean": -0.01064,
     "median": -0.02079
    },
    "group_false": null
@@ -72,9 +72,9 @@
    "horizon_h": 24,
    "group_true": null,
    "group_false": {
-    "n": 18,
-    "hit": 0.111,
-    "mean": -0.01407,
+    "n": 19,
+    "hit": 0.158,
+    "mean": -0.00677,
     "median": -0.00646
    }
   },
@@ -105,12 +105,12 @@
     "median": -0.02079
    },
    "group_false": {
-    "n": 15,
-    "hit": 0.133,
-    "mean": -0.00732,
+    "n": 17,
+    "hit": 0.176,
+    "mean": 0.00041,
     "median": 0.00017
    },
-   "edge_pp": -1.98
+   "edge_pp": -2.75
   },
   "H6_exchange_surface_words_exhaust": {
    "note": "scanner/exchange-surface wording vs organic",
@@ -122,12 +122,12 @@
     "median": -0.02079
    },
    "group_false": {
-    "n": 19,
-    "hit": 0.105,
-    "mean": -0.01183,
+    "n": 21,
+    "hit": 0.143,
+    "mean": -0.00514,
     "median": -0.00646
    },
-   "edge_pp": -0.9
+   "edge_pp": -1.56
   },
   "H7_extreme_velocity_contrarian": {
    "note": "all-new handles vs familiar, 72h",
@@ -144,18 +144,18 @@
    "note": "first ever appearance vs repeat",
    "horizon_h": 24,
    "group_true": {
-    "n": 15,
-    "hit": 0.133,
-    "mean": -0.01106,
-    "median": -0.00646
+    "n": 16,
+    "hit": 0.188,
+    "mean": -0.00257,
+    "median": 0.00017
    },
    "group_false": {
-    "n": 5,
+    "n": 6,
     "hit": 0.0,
-    "mean": -0.01594,
-    "median": -0.02079
+    "mean": -0.0146,
+    "median": -0.00792
    },
-   "edge_pp": 0.49
+   "edge_pp": 1.2
   }
  },
  "leaders": [
@@ -170,20 +170,20 @@
   {
    "kind": "catalyst",
    "feature": "unlock",
-   "n": 5,
-   "hit": 0.0,
-   "mean": -0.03915,
-   "median": -0.03512
+   "n": 7,
+   "hit": 0.143,
+   "mean": -0.01127,
+   "median": -0.02079
   }
  ],
  "laggards": [
   {
    "kind": "catalyst",
    "feature": "unlock",
-   "n": 5,
-   "hit": 0.0,
-   "mean": -0.03915,
-   "median": -0.03512
+   "n": 7,
+   "hit": 0.143,
+   "mean": -0.01127,
+   "median": -0.02079
   },
   {
    "kind": "catalyst",
