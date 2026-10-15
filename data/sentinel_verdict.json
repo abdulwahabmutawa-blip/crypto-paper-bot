@@ -1,6 +1,35 @@
 {
-  "ts": "2026-10-15T10:39:21+00:00",
-  "risk_level": "unparsed",
-  "risk_alerts": [],
+  "ts": "2026-10-15T10:54:41+00:00",
+  "risk_level": "caution",
+  "risk_alerts": [
+    {
+      "headline": "Hotter-than-expected US CPI sparks Fed hike fears, AI/chip stocks plunge (NVDA/AMD/MU), Nasdaq -1.9%",
+      "markets": [
+        "stocks"
+      ],
+      "severity": "caution"
+    },
+    {
+      "headline": "Asian equities crash: Kospi -8%, Nikkei -5% on chip selloff and rate concerns",
+      "markets": [
+        "stocks"
+      ],
+      "severity": "caution"
+    },
+    {
+      "headline": "Bitcoin slips under $81k, ~$1B crypto liquidations as risk-off hits alts",
+      "markets": [
+        "crypto"
+      ],
+      "severity": "caution"
+    },
+    {
+      "headline": "BlackRock Fink flags data-center moratorium or debt as recession triggers",
+      "markets": [
+        "both"
+      ],
+      "severity": "caution"
+    }
+  ],
   "note": "consumed by every risk-gated bot via sentinel_gate.severe(); verdicts older than 24h are treated as UNKNOWN, not calm"
 }

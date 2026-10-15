@@ -11130,34 +11130,135 @@
       }
     },
     {
-      "risk_level": "unparsed",
-      "risk_alerts": [],
-      "hype": [],
-      "crypto_hype": [],
-      "overall_mood": "```html\n<html>\n<body>\n<script>\nfunction render_inline_citation(citation_id) {\n  // This is a placeholder for the render component\n  return `[cite:${citation_id}]`;\n}\n</script>\n</body>\n</html>\n```\n\nI need to gather data first using tools.\n{\n  \"risk_level\": \"caution\",\n  \"risk_alerts\": [\n    {\n      \"h",
-      "ts": "2026-10-15T10:39:21+00:00",
+      "risk_level": "caution",
+      "risk_alerts": [
+        {
+          "headline": "Hotter-than-expected US CPI sparks Fed hike fears, AI/chip stocks plunge (NVDA/AMD/MU), Nasdaq -1.9%",
+          "markets": [
+            "stocks"
+          ],
+          "severity": "caution"
+        },
+        {
+          "headline": "Asian equities crash: Kospi -8%, Nikkei -5% on chip selloff and rate concerns",
+          "markets": [
+            "stocks"
+          ],
+          "severity": "caution"
+        },
+        {
+          "headline": "Bitcoin slips under $81k, ~$1B crypto liquidations as risk-off hits alts",
+          "markets": [
+            "crypto"
+          ],
+          "severity": "caution"
+        },
+        {
+          "headline": "BlackRock Fink flags data-center moratorium or debt as recession triggers",
+          "markets": [
+            "both"
+          ],
+          "severity": "caution"
+        }
+      ],
+      "hype": [
+        {
+          "symbol": "CRWV",
+          "mood": "mixed",
+          "note": "Neocloud plunge, retail dip-buy polls"
+        },
+        {
+          "symbol": "NBIS",
+          "mood": "mixed",
+          "note": "AI infra selloff, Gartner fears, dip talk"
+        },
+        {
+          "symbol": "IBRX",
+          "mood": "euphoric",
+          "note": "FDA Anktiva expansion approval buzz"
+        },
+        {
+          "symbol": "NVDA",
+          "mood": "fearful",
+          "note": "AI trade reality check, chip rout"
+        },
+        {
+          "symbol": "TSM",
+          "mood": "mixed",
+          "note": "Record profit but selloff continues"
+        },
+        {
+          "symbol": "MU",
+          "mood": "fearful",
+          "note": "Memory chips lead global AI drop"
+        }
+      ],
+      "crypto_hype": [
+        {
+          "symbol": "STRK",
+          "mood": "mixed",
+          "stage": "early",
+          "organic": true,
+          "promo_risk": "low",
+          "catalyst": "7-day L1 quantum vote starts Oct15",
+          "why": "Governance news, rising niche mentions on substance",
+          "note": "Vote catalyst, not pure price cheer"
+        },
+        {
+          "symbol": "NEAR",
+          "mood": "mixed",
+          "stage": "early",
+          "organic": true,
+          "promo_risk": "low",
+          "catalyst": "none",
+          "why": "Trending searches, ecosystem talk rising",
+          "note": "Niche accounts, no big explosion"
+        },
+        {
+          "symbol": "ZK",
+          "mood": "euphoric",
+          "stage": "peaked",
+          "organic": false,
+          "promo_risk": "high",
+          "catalyst": "none",
+          "why": "Binance top mover +5.9%, victory posts",
+          "note": "Move done, crowd cheering"
+        },
+        {
+          "symbol": "PENGU",
+          "mood": "mixed",
+          "stage": "peaked",
+          "organic": false,
+          "promo_risk": "high",
+          "catalyst": "none",
+          "why": "Trending but signal-group heavy",
+          "note": "Meme chatter, promo risk"
+        }
+      ],
+      "overall_mood": "Risk-off caution dominates as hot CPI and AI valuation fears drive tech/crypto selloffs, with selective retail dip-buying and neutral Fear & Greed.",
+      "ts": "2026-10-15T10:54:41+00:00",
       "gauges": {
         "vix": 17.6,
         "crypto_fear_greed": 53,
         "crypto_fng_label": "Neutral"
       },
       "usage": {
-        "input_tokens": 131430,
+        "input_tokens": 174778,
         "input_tokens_details": {
-          "cached_tokens": 72064
+          "cached_tokens": 110976
         },
-        "output_tokens": 1291,
+        "output_tokens": 2306,
         "output_tokens_details": {
-          "reasoning_tokens": 410
+          "reasoning_tokens": 893
         },
-        "total_tokens": 132721,
+        "total_tokens": 177084,
         "num_sources_used": 0,
-        "num_server_side_tools_used": 13,
-        "cost_in_usd_ticks": 3180972000,
+        "num_server_side_tools_used": 18,
+        "cost_in_usd_ticks": 4447328000,
         "server_side_tool_usage_details": {
-          "web_search_calls": 8,
-          "x_search_calls": 5,
-          "x_posts_fetched": 26,
+          "web_search_calls": 9,
+          "x_search_calls": 9,
+          "x_posts_fetched": 45,
           "x_users_fetched": 0,
           "code_interpreter_calls": 0,
           "file_search_calls": 0,
@@ -11166,8 +11267,8 @@
           "image_generation_calls": 0
         },
         "context_details": {
-          "input_tokens": 57514,
-          "output_tokens": 694
+          "input_tokens": 65112,
+          "output_tokens": 1364
         }
       }
     }
@@ -11178,5 +11279,5 @@
     "2026-09": 27,
     "2026-10": 15
   },
-  "last_scan_utc": "2026-10-15T10:39:21+00:00"
+  "last_scan_utc": "2026-10-15T10:54:41+00:00"
 }
