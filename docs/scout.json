@@ -1,8 +1,39 @@
 {
-  "ts": "2026-10-15T17:59:37+00:00",
-  "scanned": 144,
+  "ts": "2026-10-15T18:05:26+00:00",
+  "scanned": 145,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "USUALUSDT",
+      "signal": "ignition",
+      "score": 0.8242,
+      "raw_score": 0.9595,
+      "weight": 0.859,
+      "price": 0.01062,
+      "why": "trades 24.1x and volume 105.8x the prior 4h, 88% taker-buy, $999,110 burst \u2014 while price has only moved -0.4%",
+      "chg_24h": -0.0185,
+      "vol_surge": 105.76,
+      "chg_1h": -0.0038,
+      "market_surge": 34.19,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.63% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "WBTCUSDT",
+      "signal": "ignition",
+      "score": 0.7983,
+      "raw_score": 0.9293,
+      "weight": 0.859,
+      "price": 82134.8,
+      "why": "trades 9.1x and volume 22.6x the prior 4h, 88% taker-buy, $91,081 burst \u2014 while price has only moved +0.2%",
+      "chg_24h": 0.0073,
+      "vol_surge": 22.59,
+      "chg_1h": 0.0017,
+      "market_surge": 3.1,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.63% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.63% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.62% at 24h: market beta, not signal",
@@ -11,7 +42,7 @@
     "revival": "probation \u2014 7/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 17,
+    "count": 18,
     "baseline": 11.0,
     "wave": false
   },
@@ -161,7 +192,7 @@
       "median_ret_4h": -0.00905,
       "both_halves_4h": false,
       "days_4h": 6,
-      "mean_x_4h": -0.01953,
+      "mean_x_4h": -0.01567,
       "days_x_4h": 6,
       "avg_win_4h": 0.04566,
       "avg_loss_4h": -0.06724,
