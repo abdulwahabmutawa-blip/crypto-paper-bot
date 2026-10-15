@@ -1,24 +1,8 @@
 {
-  "ts": "2026-10-15T23:43:24+00:00",
-  "scanned": 144,
+  "ts": "2026-10-15T23:49:16+00:00",
+  "scanned": 145,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "SKHYBUSDT",
-      "signal": "ignition",
-      "score": 0.5854,
-      "raw_score": 0.6783,
-      "weight": 0.863,
-      "price": 145.21,
-      "why": "trades 4.1x and volume 9.7x the prior 4h, 74% taker-buy, $123,213 burst \u2014 while price has only moved -0.6%",
-      "chg_24h": 0.0212,
-      "vol_surge": 9.73,
-      "chg_1h": -0.0056,
-      "market_surge": 0.35,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.63% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.63% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.65% at 24h: market beta, not signal",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 7/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 14,
+    "count": 15,
     "baseline": 11.0,
     "wave": false
   },
@@ -190,7 +174,7 @@
       "median_ret_24h": -0.05885,
       "both_halves_24h": false,
       "days_24h": 5,
-      "mean_x_24h": -0.0593,
+      "mean_x_24h": -0.0602,
       "days_x_24h": 5,
       "avg_win_24h": 0.10242,
       "avg_loss_24h": -0.12912,
