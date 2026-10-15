@@ -1,22 +1,22 @@
 {
-  "ts": "2026-10-15T22:14:17+00:00",
-  "scanned": 147,
+  "ts": "2026-10-15T22:20:08+00:00",
+  "scanned": 146,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "NXPCUSDT",
-      "signal": "revival",
-      "score": 0.4614,
-      "raw_score": 0.4614,
-      "weight": 1.0,
-      "price": 0.2235,
-      "why": "revival day-one: fell -9% last week on $0.19M/day quiet, volume arriving 52.3x today, only +20% off its 30d low",
-      "chg_24h": 0.1192,
-      "vol_surge": 52.3,
-      "chg_1h": null,
-      "market_surge": null,
+      "symbol": "PLUMEUSDT",
+      "signal": "breakout",
+      "score": 0.488,
+      "raw_score": 0.5635,
+      "weight": 0.866,
+      "price": 0.0208,
+      "why": "trades 4.0x, volume 5.5x, 70% taker-buy, +3.2% in an hour, at 103% of its 24h range",
+      "chg_24h": 0.0476,
+      "vol_surge": 5.5,
+      "chg_1h": 0.0323,
+      "market_surge": 2.74,
       "actionable": false,
-      "status": "probation \u2014 7/12 resolved 24h samples under ruleset 3"
+      "status": "benched \u2014 BTC-excess day mean -0.59% at 24h: market beta, not signal"
     }
   ],
   "gate": {
@@ -27,7 +27,7 @@
     "revival": "probation \u2014 7/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 16,
+    "count": 18,
     "baseline": 11.0,
     "wave": false
   },
