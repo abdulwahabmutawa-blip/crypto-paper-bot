@@ -1,13 +1,14 @@
 {
-  "ts": "2026-10-15T21:41:13+00:00",
+  "ts": "2026-10-15T21:46:21+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
       "INJ",
-      "PENGU",
-      "SUI",
       "BTC",
-      "HYPE"
+      "SUI",
+      "PENGU",
+      "STRK",
+      "SOL"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -17,9 +18,9 @@
       "INJ",
       "PYTH",
       "NEAR",
-      "ZRO",
+      "ZEC",
       "CRCLB",
-      "ZEC"
+      "ZRO"
     ],
     "watcher": [
       "STRK",
@@ -29,6 +30,17 @@
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "STRK",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.22
+    },
     {
       "symbol": "INJ",
       "surfaces": 2,
@@ -60,23 +72,13 @@
       "long_short": 1.71
     },
     {
-      "symbol": "STRK",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.22
-    },
-    {
       "symbol": "ZK",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": 2.8e-05,
+      "funding": 2.3e-05,
       "long_short": 1.66
     },
     {
@@ -95,14 +97,6 @@
       ]
     },
     {
-      "symbol": "HYPE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
@@ -111,12 +105,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 6.4e-05
+    },
+    {
       "symbol": "SUI",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 6.2e-05
+      "funding": 5.8e-05
     },
     {
       "symbol": "ZEC",

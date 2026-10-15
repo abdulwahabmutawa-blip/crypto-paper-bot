@@ -1,8 +1,24 @@
 {
-  "ts": "2026-10-15T21:41:20+00:00",
-  "scanned": 144,
+  "ts": "2026-10-15T21:46:26+00:00",
+  "scanned": 146,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "TSLABUSDT",
+      "signal": "ignition",
+      "score": 0.8116,
+      "raw_score": 0.9427,
+      "weight": 0.861,
+      "price": 362.8,
+      "why": "trades 14.0x and volume 7.7x the prior 4h, 100% taker-buy, $52,835 burst \u2014 while price has only moved +0.0%",
+      "chg_24h": -0.012,
+      "vol_surge": 7.75,
+      "chg_1h": 0.0004,
+      "market_surge": 4.46,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.73% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.73% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.59% at 24h: market beta, not signal",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 7/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 17,
+    "count": 16,
     "baseline": 11.0,
     "wave": false
   },
