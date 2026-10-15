@@ -1,23 +1,22 @@
 {
-  "ts": "2026-10-15T21:13:41+00:00",
+  "ts": "2026-10-15T21:19:11+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
-      "AERO",
       "PENGU",
-      "BAT",
       "BTC",
-      "STRK",
-      "PYTH",
-      "INJ"
+      "AERO",
+      "BAT",
+      "INJ",
+      "STRK"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "STRK",
       "ZK",
-      "NEAR",
       "INJ",
+      "NEAR",
       "PYTH",
       "ZRO",
       "ZEC",
@@ -31,17 +30,6 @@
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "PYTH",
-      "surfaces": 3,
-      "sources": [
-        "coingecko",
-        "movers",
-        "watcher"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.71
-    },
     {
       "symbol": "STRK",
       "surfaces": 3,
@@ -74,13 +62,23 @@
       "long_short": 1.32
     },
     {
+      "symbol": "PYTH",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.71
+    },
+    {
       "symbol": "ZK",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": 2.4e-05,
+      "funding": 2.5e-05,
       "long_short": 1.66
     },
     {
@@ -97,7 +95,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.8e-05
+      "funding": 2.6e-05
     },
     {
       "symbol": "BTC",
@@ -105,7 +103,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.8e-05
+      "funding": 7.6e-05
     },
     {
       "symbol": "CRCLB",
