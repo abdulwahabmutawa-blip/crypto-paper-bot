@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-15T01:33:21+00:00",
+  "ts": "2026-10-15T01:38:41+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
@@ -7,10 +7,11 @@
       "AERO",
       "STRK",
       "NEAR",
-      "QNT",
-      "PUMP",
+      "PENGU",
       "ONDO",
-      "UNI"
+      "SUI",
+      "UNI",
+      "PUMP"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -34,7 +35,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.003444,
+      "funding": -0.003454,
       "long_short": 0.74
     },
     {
@@ -43,7 +44,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2e-06
+      "funding": -5e-06
     },
     {
       "symbol": "NEAR",
@@ -59,7 +60,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0
+      "funding": 1e-06
+    },
+    {
+      "symbol": "PENGU",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "PUMP",
@@ -68,14 +77,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "QNT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 2.3e-05
     },
     {
       "symbol": "RLUSD",
@@ -90,7 +91,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3e-05
+      "funding": 2.6e-05
+    },
+    {
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 4.8e-05
     },
     {
       "symbol": "TRX",
@@ -98,7 +107,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -4.8e-05
+      "funding": -4.9e-05
     },
     {
       "symbol": "U",
@@ -113,7 +122,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1e-06
+      "funding": 2e-06
     },
     {
       "symbol": "ZEC",
@@ -121,7 +130,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.1e-05
+      "funding": 6.2e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
