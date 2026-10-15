@@ -1,22 +1,26 @@
 {
-  "ts": "2026-10-15T01:11:11+00:00",
+  "ts": "2026-10-15T01:16:41+00:00",
   "sources": {
     "coingecko": [
-      "WAL",
       "ZEC",
+      "AERO",
       "NEAR",
       "PENGU",
+      "PUMP",
+      "STRK",
+      "RAY",
+      "WAL",
       "SOL",
       "SUI",
-      "AERO",
-      "PUMP",
-      "RAY"
+      "ONDO",
+      "BTC"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "WAL",
       "TRX",
+      "PAXG",
       "U",
       "RLUSD"
     ],
@@ -34,7 +38,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.003457,
+      "funding": -0.003442,
       "long_short": 0.74
     },
     {
@@ -43,7 +47,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.1e-05
+      "funding": 1.1e-05
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -3.3e-05
     },
     {
       "symbol": "NEAR",
@@ -52,6 +64,22 @@
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "ONDO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -1e-06
+    },
+    {
+      "symbol": "PAXG",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "PENGU",
@@ -93,6 +121,14 @@
       "funding": 0.0001
     },
     {
+      "symbol": "STRK",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 3.9e-05
+    },
+    {
       "symbol": "SUI",
       "surfaces": 1,
       "sources": [
@@ -106,7 +142,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -3.4e-05
+      "funding": -3.8e-05
     },
     {
       "symbol": "U",
