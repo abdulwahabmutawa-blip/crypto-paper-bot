@@ -1,27 +1,27 @@
 {
-  "ts": "2026-10-15T20:33:41+00:00",
+  "ts": "2026-10-15T20:39:41+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
-      "INJ",
       "PENGU",
       "STRK",
-      "BTC",
-      "ZEC",
+      "INJ",
       "BAT",
-      "AERO"
+      "BTC",
+      "AERO",
+      "PYTH"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "ZK",
       "STRK",
+      "ZK",
       "NEAR",
       "INJ",
-      "PYTH",
       "ZRO",
-      "CRCLB",
-      "ZEC"
+      "PYTH",
+      "ZEC",
+      "CRCLB"
     ],
     "watcher": [
       "STRK",
@@ -32,6 +32,17 @@
   },
   "heat": [
     {
+      "symbol": "PYTH",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.7
+    },
+    {
       "symbol": "STRK",
       "surfaces": 3,
       "sources": [
@@ -39,7 +50,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 4.9e-05,
+      "funding": 5e-05,
       "long_short": 1.23
     },
     {
@@ -63,33 +74,14 @@
       "long_short": 1.36
     },
     {
-      "symbol": "PYTH",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.7
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 8.3e-05,
-      "long_short": 0.74
-    },
-    {
       "symbol": "ZK",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": 3.9e-05
+      "funding": 4.2e-05,
+      "long_short": 1.7
     },
     {
       "symbol": "AERO",
@@ -105,7 +97,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.5e-05
+      "funding": 3.8e-05
     },
     {
       "symbol": "BTC",
@@ -128,7 +120,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.7e-05
+      "funding": 5e-05
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 9.2e-05
     },
     {
       "symbol": "ZRO",
