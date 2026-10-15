@@ -1,22 +1,19 @@
-# Fleet status — 2026-10-14 (UTC)
+# Fleet Status — 2026-10-15 UTC
 
 | Bot | Holds | 24h change | Value |
 |---|---|---|---|
-| crypto (BTC tide gauge v4) | BTC-USD | No trade; value tracked BTC up slightly | $1,194.43 (bench $1,298.73) |
-| meanrev | JNJ | No trade; sharp down mark (Mon close) | $1,083.31 (bench $1,036.34) |
-| sentiment | CASH | Still R1 hard-stop FROZEN (since 2026-10-12) | $726.83 |
-| scalper | 10/10 seats | 30 round trips: 15 TARGET / 13 STOP / 2 TIME, net −$3.09 | $755.66 (was $752.50) |
-| Watcher (sentinel) | — | ~4 scans, normal cadence, latest flagged market caution | last scan 2026-10-13 22:03 UTC |
+| crypto (BTC tide gauge v4) | BTC-USD | No position change (last trade 2026-09-08) | $1,163.78 |
+| meanrev | JNJ | No position change (last trade 2026-10-01) | $1,106.49 |
+| sentiment (Watcher + sentinel_trader) | CASH | Still frozen (see Needs a look) | $726.83 |
+| scalper | 3/10 seats (TVKUSDT, QQQBUSDT, SOXSBUSDT) | 33 round trips, 9 wins, net -$35.78 | $715.92 |
+| Watcher (sentinel, no capital) | — | 3 scans, latest 02:38 UTC, risk "caution" | n/a |
+
+Fleet cron ran cleanly: 88 cycle commits in the last 24h, no gaps >25min, no RED FLAG commits, no systemic bot failures.
 
 ## Changed
-- **meanrev** dropped $1,150.44 → $1,083.31 (−5.8%) in one trading-day mark while still holding JNJ — no trade fired (no stop-loss on this book by design; meanrev runs without the trailing-stop overlay per `selection_engine.py` convention). Bench barely moved, so the drop is JNJ-specific, not a data glitch.
-- **crypto**: no trade, still BTC-USD; value drifted $1,187.34 → $1,194.43, still trailing bench.
-- **scalper**: seats filled from 6/10 → 10/10; 30 round trips closed this window (15 TARGET / 13 STOP / 2 TIME), net realized −$3.09; equity $752.50 → $755.66.
-- **sentiment**: unchanged, still frozen in cash at $726.83 since the 2026-10-12 R1 breach.
-- Cron: 76 cycle commits across the 24h window, every cycle touched all bot files (no partial/skipped runs). GitHub Actions: all runs in-window completed "success" (one still in_progress at report time, the current cycle); no cancelled or failed runs. The three timing gaps seen in commit spacing (max 137 min) all line up with the boundary between one multi-hour scheduled run ending and the next starting, not missed or failed cycles.
+- scalper: 33 closed round trips in the last 24h (9 wins / 24 losses), net -$35.78. New opens: QQQBUSDT (18:03 UTC), SOXSBUSDT (01:06 UTC). No other bot changed position.
 
 ## Needs a look
-- **Scalper is $5.66 above the $750 R1 hard-stop floor** — the closest any active book has been to forced retirement. Worth a check before the next down move.
-- scalper's TVKUSDT seat (opened 2026-09-12, now 32 days open) is still stuck at ~0% move — can't hit target/stop/time-exit; still looks like a frozen/delisted price feed, unchanged from prior digests.
-- `reports/supervisor_scoreboard.json` last regenerated 2026-10-13 08:45 UTC (~20h stale at report time) — its own run note flags a known stale-close skew in new scalper fills (9/21 outside the fill-minute window) and the sentiment fill-rewrite alert as still open; neither is new, both remain unresolved.
-- This routine's own stored prompt still names a 9-bot roster (trend, regime, congress, meanrev, commodity, allweather, hype, Hunter, Watcher) that doesn't match the repo. Per CLAUDE.md/`kill_criteria.md` the real active fleet is crypto, meanrev, sentiment, scalper plus the non-capital Watcher; the rest are retired frozen archives, untouched this window.
+- Only 4 capital books are active on the Actions roster (crypto, meanrev, sentiment, scalper) plus the no-capital Watcher — congress, hunter, analyst, hypecrypto, commodity, allweather, scholar and the old crypto rotation are all retired/frozen archives per owner decisions in `reports/kill_criteria.md`, not live bots.
+- **sentiment** hit the R1 kill floor (<$750) on 2026-10-12 and is code-frozen in CASH at $726.83 — per `reports/kill_criteria.md` R1 this should be "RETIRED: flagged for forced-cash/removal," but it's still on the Actions roster running each cycle (just skipping new entries). Un-freezing or formally retiring it is a human decision, not yet made.
+- This repo's checkout was shallow at session start (only ~50 commits visible); unshallowed mid-run to get the real 24h picture — no data gap in the fleet itself, just a clone artifact.
