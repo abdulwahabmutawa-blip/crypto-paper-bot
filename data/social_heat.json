@@ -1,16 +1,16 @@
 {
-  "ts": "2026-10-15T03:13:21+00:00",
+  "ts": "2026-10-15T03:19:11+00:00",
   "sources": {
     "coingecko": [
-      "ETH",
       "BTC",
       "ONDO",
-      "WAL",
       "NEAR",
-      "PUMP",
-      "PENGU",
+      "WAL",
+      "ETH",
       "SOL",
-      "UNI"
+      "PUMP",
+      "XRP",
+      "HYPE"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -33,7 +33,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.004086,
+      "funding": -0.004107,
       "long_short": 0.79
     },
     {
@@ -42,7 +42,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.5e-05
+      "funding": -2.4e-05
     },
     {
       "symbol": "ETH",
@@ -50,7 +50,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8e-06
+      "funding": 7e-06
+    },
+    {
+      "symbol": "HYPE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "NEAR",
@@ -66,15 +74,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -9e-06
-    },
-    {
-      "symbol": "PENGU",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 4e-05
+      "funding": -1e-05
     },
     {
       "symbol": "PUMP",
@@ -97,7 +97,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.5e-05
+      "funding": 8.4e-05
     },
     {
       "symbol": "U",
@@ -107,12 +107,12 @@
       ]
     },
     {
-      "symbol": "UNI",
+      "symbol": "XRP",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -3e-05
+      "funding": -4.2e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
