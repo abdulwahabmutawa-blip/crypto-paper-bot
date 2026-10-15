@@ -1,16 +1,15 @@
 {
-  "ts": "2026-10-15T22:20:01+00:00",
+  "ts": "2026-10-15T22:25:15+00:00",
   "sources": {
     "coingecko": [
-      "PENGU",
-      "INJ",
       "NEAR",
+      "INJ",
+      "PENGU",
       "ZAMA",
-      "STRK",
       "BTC",
-      "XRP",
-      "UNI",
-      "ZEC"
+      "STRK",
+      "AERO",
+      "UNI"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,10 +18,10 @@
       "ZK",
       "INJ",
       "PYTH",
-      "NEAR",
       "CRCLB",
-      "FIL",
-      "ZRO"
+      "NEAR",
+      "ZRO",
+      "FIL"
     ],
     "watcher": [
       "STRK",
@@ -80,8 +79,16 @@
         "movers",
         "watcher"
       ],
-      "funding": 7e-06,
+      "funding": -7e-06,
       "long_short": 1.74
+    },
+    {
+      "symbol": "AERO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "BTC",
@@ -123,28 +130,12 @@
       "funding": 9e-05
     },
     {
-      "symbol": "XRP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "ZAMA",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "ZRO",
