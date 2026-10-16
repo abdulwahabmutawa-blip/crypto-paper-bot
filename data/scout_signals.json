@@ -1,37 +1,22 @@
 {
-  "ts": "2026-10-16T06:33:28+00:00",
-  "scanned": 128,
+  "ts": "2026-10-16T06:39:26+00:00",
+  "scanned": 127,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "SKHYBUSDT",
-      "signal": "ignition",
-      "score": 0.6063,
-      "raw_score": 0.71,
-      "weight": 0.854,
-      "price": 142.67,
-      "why": "trades 5.0x and volume 8.4x the prior 4h, 89% taker-buy, $119,395 burst \u2014 while price has only moved -0.9%",
-      "chg_24h": 0.0308,
-      "vol_surge": 8.39,
-      "chg_1h": -0.0094,
-      "market_surge": 2.12,
+      "symbol": "TIAUSDT",
+      "signal": "breakout",
+      "score": 0.7353,
+      "raw_score": 0.853,
+      "weight": 0.862,
+      "price": 0.6523,
+      "why": "trades 9.7x, volume 15.4x, 65% taker-buy, +5.6% in an hour, at 95% of its 24h range",
+      "chg_24h": 0.2267,
+      "vol_surge": 15.36,
+      "chg_1h": 0.0557,
+      "market_surge": 10.38,
       "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.42% at 24h: market beta, not signal"
-    },
-    {
-      "symbol": "XPLUSDT",
-      "signal": "ignition",
-      "score": 0.5273,
-      "raw_score": 0.6175,
-      "weight": 0.854,
-      "price": 0.08547,
-      "why": "trades 4.7x and volume 6.5x the prior 4h, 68% taker-buy, $76,012 burst \u2014 while price has only moved +0.1%",
-      "chg_24h": 0.1068,
-      "vol_surge": 6.5,
-      "chg_1h": 0.0013,
-      "market_surge": 0.31,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.42% at 24h: market beta, not signal"
+      "status": "benched \u2014 BTC-excess day mean -1.22% at 24h: market beta, not signal"
     }
   ],
   "gate": {
@@ -42,7 +27,7 @@
     "revival": "probation \u2014 8/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 43,
+    "count": 42,
     "baseline": 11.0,
     "wave": true
   },
