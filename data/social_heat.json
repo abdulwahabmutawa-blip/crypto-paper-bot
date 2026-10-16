@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-16T16:15:26+00:00",
+  "ts": "2026-10-16T16:21:17+00:00",
   "sources": {
     "coingecko": [
       "INJ",
@@ -20,11 +20,11 @@
       "INJ",
       "TIA",
       "FIL",
-      "TAO",
       "WLD",
+      "TAO",
       "AVAX",
       "ENA",
-      "TRX"
+      "ZRO"
     ],
     "watcher": [
       "TIA",
@@ -67,6 +67,16 @@
       "long_short": 1.38
     },
     {
+      "symbol": "ZRO",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.2
+    },
+    {
       "symbol": "AERO",
       "surfaces": 1,
       "sources": [
@@ -88,7 +98,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.9e-05
+      "funding": 5.2e-05
     },
     {
       "symbol": "ENA",
@@ -120,7 +130,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7e-06
+      "funding": 6e-06
     },
     {
       "symbol": "NEAR",
@@ -128,7 +138,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.5e-05
+      "funding": 1.6e-05
     },
     {
       "symbol": "PENGU",
@@ -144,7 +154,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -9e-06
+      "funding": -6e-06
     },
     {
       "symbol": "STRK",
@@ -152,15 +162,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.1e-05
-    },
-    {
-      "symbol": "TRX",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
+      "funding": 2.3e-05
     },
     {
       "symbol": "WLD",
@@ -169,14 +171,6 @@
         "movers"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "ZRO",
-      "surfaces": 1,
-      "sources": [
-        "watcher"
-      ],
-      "funding": 5e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
