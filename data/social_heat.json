@@ -1,17 +1,17 @@
 {
-  "ts": "2026-10-16T18:22:55+00:00",
+  "ts": "2026-10-16T18:28:31+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "NEAR",
-      "TAO",
       "PENGU",
-      "TIA",
+      "TAO",
       "INJ",
+      "TIA",
       "HYPE",
-      "AERO",
-      "ZRO",
-      "SHIB"
+      "LIT",
+      "QNT",
+      "ZEC"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -55,30 +55,12 @@
       "long_short": 1.12
     },
     {
-      "symbol": "ZRO",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "watcher"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.24
-    },
-    {
-      "symbol": "AERO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "AVAX",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 4.4e-05
+      "funding": 4.2e-05
     },
     {
       "symbol": "BTC",
@@ -102,7 +84,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.8e-05
+      "funding": 3e-05
+    },
+    {
+      "symbol": "LIT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "NEAR",
@@ -118,20 +108,21 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.5e-05
+      "funding": -1.1e-05
+    },
+    {
+      "symbol": "QNT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -1.9e-05
     },
     {
       "symbol": "RLUSD",
       "surfaces": 1,
       "sources": [
         "movers"
-      ]
-    },
-    {
-      "symbol": "SHIB",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
       ]
     },
     {
@@ -155,6 +146,22 @@
       "surfaces": 1,
       "sources": [
         "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 3.9e-05
+    },
+    {
+      "symbol": "ZRO",
+      "surfaces": 1,
+      "sources": [
+        "watcher"
       ],
       "funding": 5e-05
     }
