@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-16T06:16:11+00:00",
+  "ts": "2026-10-16T06:22:12+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
@@ -20,11 +20,11 @@
       "INJ",
       "ZRO",
       "STRK",
-      "ZEC",
       "NEAR",
+      "ZEC",
       "FIL",
-      "PYTH",
-      "CRCLB"
+      "CRCLB",
+      "TAO"
     ],
     "watcher": [
       "INJ",
@@ -65,18 +65,8 @@
         "movers",
         "watcher"
       ],
-      "funding": -1.9e-05,
+      "funding": -1.6e-05,
       "long_short": 1.19
-    },
-    {
-      "symbol": "PYTH",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": 1.5e-05,
-      "long_short": 1.76
     },
     {
       "symbol": "AERO",
@@ -123,7 +113,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4e-05
+      "funding": 3.8e-05
     },
     {
       "symbol": "PUMP",
@@ -134,12 +124,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "PYTH",
+      "surfaces": 1,
+      "sources": [
+        "watcher"
+      ],
+      "funding": 1.9e-05
+    },
+    {
       "symbol": "QNT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -2.1e-05
+      "funding": -1.2e-05
     },
     {
       "symbol": "SOL",
@@ -147,7 +145,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.1e-05
+      "funding": 9.2e-05
     },
     {
       "symbol": "STRK",
@@ -155,7 +153,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -6.4e-05
+      "funding": -6.1e-05
     },
     {
       "symbol": "SUI",
@@ -164,6 +162,14 @@
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "TAO",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "ZEC",
