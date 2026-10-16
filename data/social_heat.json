@@ -1,16 +1,18 @@
 {
-  "ts": "2026-10-15T23:54:21+00:00",
+  "ts": "2026-10-15T23:59:41+00:00",
   "sources": {
     "coingecko": [
-      "NEAR",
-      "SUI",
       "ETH",
+      "SUI",
+      "NEAR",
+      "LIT",
       "PENGU",
       "INJ",
-      "LIT",
+      "SOL",
+      "ZEC",
       "HYPE",
-      "BTC",
-      "SOL"
+      "AERO",
+      "PUMP"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -73,22 +75,31 @@
       "long_short": 1.23
     },
     {
+      "symbol": "ZEC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 0.71
+    },
+    {
       "symbol": "ZK",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": 4e-06,
-      "long_short": 1.75
+      "funding": 5e-06
     },
     {
-      "symbol": "BTC",
+      "symbol": "AERO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5.2e-05
+      "funding": 5e-05
     },
     {
       "symbol": "CRCLB",
@@ -103,7 +114,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.4e-05
+      "funding": 7.5e-05
     },
     {
       "symbol": "HYPE",
@@ -130,12 +141,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "SOL",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 4.5e-05
+      "funding": 4.4e-05
     },
     {
       "symbol": "SUI",
@@ -143,15 +162,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.5e-05
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
+      "funding": 8.6e-05
     },
     {
       "symbol": "ZRO",
