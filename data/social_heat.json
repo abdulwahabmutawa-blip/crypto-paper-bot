@@ -1,18 +1,17 @@
 {
-  "ts": "2026-10-16T04:41:21+00:00",
+  "ts": "2026-10-16T04:47:11+00:00",
   "sources": {
     "coingecko": [
       "INJ",
       "NEAR",
       "AERO",
-      "HYPE",
       "STRK",
-      "BTC",
+      "HYPE",
+      "QNT",
       "PENDLE",
       "SOL",
-      "SUI",
-      "LIT",
-      "RENDER"
+      "ETH",
+      "SUI"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -24,7 +23,7 @@
       "NEAR",
       "FIL",
       "ZEC",
-      "TAO"
+      "PYTH"
     ],
     "watcher": [
       "INJ",
@@ -58,13 +57,23 @@
       "long_short": 1.22
     },
     {
+      "symbol": "PYTH",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": -1.8e-05,
+      "long_short": 1.79
+    },
+    {
       "symbol": "STRK",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": -3.5e-05,
+      "funding": -3.7e-05,
       "long_short": 1.23
     },
     {
@@ -74,7 +83,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -2.1e-05,
+      "funding": -2.3e-05,
       "long_short": 1.2
     },
     {
@@ -86,19 +95,19 @@
       "funding": 5e-05
     },
     {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 6.7e-05
-    },
-    {
       "symbol": "CRCLB",
       "surfaces": 1,
       "sources": [
         "movers"
       ]
+    },
+    {
+      "symbol": "ETH",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 7.5e-05
     },
     {
       "symbol": "FIL",
@@ -117,14 +126,6 @@
       "funding": 5e-05
     },
     {
-      "symbol": "LIT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 3.7e-05
-    },
-    {
       "symbol": "PENDLE",
       "surfaces": 1,
       "sources": [
@@ -133,20 +134,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "PYTH",
-      "surfaces": 1,
-      "sources": [
-        "watcher"
-      ],
-      "funding": -1e-05
-    },
-    {
-      "symbol": "RENDER",
+      "symbol": "QNT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": -4e-05
     },
     {
       "symbol": "SOL",
@@ -154,7 +147,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.6e-05
+      "funding": 7.9e-05
     },
     {
       "symbol": "SUI",
@@ -163,14 +156,6 @@
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "ZEC",
