@@ -1,17 +1,17 @@
 {
-  "ts": "2026-10-16T18:12:11+00:00",
+  "ts": "2026-10-16T18:17:30+00:00",
   "sources": {
     "coingecko": [
       "BTC",
-      "PENGU",
       "NEAR",
-      "TIA",
       "TAO",
+      "PENGU",
+      "TIA",
+      "INJ",
       "HYPE",
+      "AERO",
       "ZRO",
-      "PYTH",
-      "SHIB",
-      "AERO"
+      "SHIB"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -33,6 +33,17 @@
   },
   "heat": [
     {
+      "symbol": "INJ",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.25
+    },
+    {
       "symbol": "TIA",
       "surfaces": 3,
       "sources": [
@@ -42,16 +53,6 @@
       ],
       "funding": 5e-05,
       "long_short": 1.12
-    },
-    {
-      "symbol": "INJ",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.25
     },
     {
       "symbol": "ZRO",
@@ -77,7 +78,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.8e-05
+      "funding": 4.7e-05
     },
     {
       "symbol": "BTC",
@@ -85,7 +86,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.5e-05
+      "funding": 8.6e-05
     },
     {
       "symbol": "FIL",
@@ -101,7 +102,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.8e-05
+      "funding": 2.9e-05
     },
     {
       "symbol": "NEAR",
@@ -117,15 +118,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.5e-05
-    },
-    {
-      "symbol": "PYTH",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -6.6e-05
+      "funding": -1.1e-05
     },
     {
       "symbol": "RLUSD",
