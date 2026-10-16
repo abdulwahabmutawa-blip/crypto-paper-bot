@@ -1,12 +1,28 @@
 {
-  "ts": "2026-10-16T16:42:40+00:00",
-  "scanned": 120,
+  "ts": "2026-10-16T16:47:56+00:00",
+  "scanned": 121,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "DRAMBUSDT",
+      "signal": "ignition",
+      "score": 0.7301,
+      "raw_score": 0.8529,
+      "weight": 0.856,
+      "price": 47.36,
+      "why": "trades 7.8x and volume 21.4x the prior 4h, 84% taker-buy, $50,463 burst \u2014 while price has only moved -0.8%",
+      "chg_24h": -0.0204,
+      "vol_surge": 21.44,
+      "chg_1h": -0.0078,
+      "market_surge": 1.16,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.35% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.35% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -1.18% at 24h: market beta, not signal",
-    "reversion": "benched \u2014 BTC-excess day mean -0.02% at 24h: market beta, not signal",
+    "reversion": "benched \u2014 BTC-excess day mean -0.06% at 24h: market beta, not signal",
     "heat": "probation \u2014 21 rows but only 5.0 independent 24h windows (span 120h): overlapping labels are not a sample",
     "revival": "probation \u2014 10/12 resolved 24h samples under ruleset 3"
   },
@@ -125,19 +141,19 @@
       "avg_win_4h": 0.02499,
       "avg_loss_4h": -0.02324,
       "payoff_4h": 1.075,
-      "span_h_24h": 305.2,
-      "n_eff_24h": 12.72,
-      "n_24h": 55,
-      "hit_rate_24h": 0.564,
-      "mean_ret_24h": 0.00781,
+      "span_h_24h": 309.7,
+      "n_eff_24h": 12.91,
+      "n_24h": 56,
+      "hit_rate_24h": 0.554,
+      "mean_ret_24h": 0.00546,
       "median_ret_24h": 0.00974,
-      "both_halves_24h": true,
+      "both_halves_24h": false,
       "days_24h": 11,
-      "mean_x_24h": -0.00021,
+      "mean_x_24h": -0.00058,
       "days_x_24h": 11,
       "avg_win_24h": 0.04345,
-      "avg_loss_24h": -0.04178,
-      "payoff_24h": 1.04
+      "avg_loss_24h": -0.0452,
+      "payoff_24h": 0.961
     },
     "heat": {
       "span_h_1h": 144.8,
