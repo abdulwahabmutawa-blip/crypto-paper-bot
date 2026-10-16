@@ -1,18 +1,18 @@
 {
-  "ts": "2026-10-16T06:10:32+00:00",
+  "ts": "2026-10-16T06:16:11+00:00",
   "sources": {
     "coingecko": [
-      "INJ",
       "NEAR",
+      "INJ",
       "ZRO",
       "HYPE",
-      "AERO",
       "SOL",
-      "ZEC",
+      "AERO",
       "QNT",
       "BTC",
       "SUI",
-      "STRK"
+      "LINK",
+      "PUMP"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,8 +22,8 @@
       "STRK",
       "ZEC",
       "NEAR",
-      "PYTH",
       "FIL",
+      "PYTH",
       "CRCLB"
     ],
     "watcher": [
@@ -75,27 +75,8 @@
         "movers",
         "watcher"
       ],
-      "funding": 1e-05,
+      "funding": 1.5e-05,
       "long_short": 1.76
-    },
-    {
-      "symbol": "STRK",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": -6.5e-05,
-      "long_short": 1.25
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "AERO",
@@ -137,12 +118,28 @@
       "funding": 5e-05
     },
     {
+      "symbol": "LINK",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 4e-05
+    },
+    {
+      "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "QNT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -1.9e-05
+      "funding": -2.1e-05
     },
     {
       "symbol": "SOL",
@@ -153,10 +150,26 @@
       "funding": 9.1e-05
     },
     {
+      "symbol": "STRK",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -6.4e-05
+    },
+    {
       "symbol": "SUI",
       "surfaces": 1,
       "sources": [
         "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 1,
+      "sources": [
+        "movers"
       ],
       "funding": 0.0001
     }
