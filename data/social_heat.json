@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-16T04:58:31+00:00",
+  "ts": "2026-10-16T05:03:37+00:00",
   "sources": {
     "coingecko": [
       "INJ",
@@ -20,11 +20,11 @@
       "INJ",
       "ZRO",
       "STRK",
-      "CRCLB",
-      "NEAR",
-      "FIL",
       "ZEC",
-      "PYTH"
+      "NEAR",
+      "CRCLB",
+      "FIL",
+      "TAO"
     ],
     "watcher": [
       "INJ",
@@ -44,7 +44,7 @@
         "watcher"
       ],
       "funding": 0.0001,
-      "long_short": 1.3
+      "long_short": 1.28
     },
     {
       "symbol": "NEAR",
@@ -55,7 +55,7 @@
         "watcher"
       ],
       "funding": 0.0001,
-      "long_short": 1.22
+      "long_short": 1.21
     },
     {
       "symbol": "ZRO",
@@ -66,17 +66,7 @@
         "watcher"
       ],
       "funding": -1.6e-05,
-      "long_short": 1.2
-    },
-    {
-      "symbol": "PYTH",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": -1.9e-05,
-      "long_short": 1.79
+      "long_short": 1.19
     },
     {
       "symbol": "STRK",
@@ -85,8 +75,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": -4.5e-05,
-      "long_short": 1.23
+      "funding": -4.6e-05,
+      "long_short": 1.24
     },
     {
       "symbol": "AERO",
@@ -102,7 +92,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.9e-05
+      "funding": 7.1e-05
     },
     {
       "symbol": "CRCLB",
@@ -136,12 +126,20 @@
       "funding": 0.0001
     },
     {
+      "symbol": "PYTH",
+      "surfaces": 1,
+      "sources": [
+        "watcher"
+      ],
+      "funding": -1.7e-05
+    },
+    {
       "symbol": "QNT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -4.2e-05
+      "funding": -3.9e-05
     },
     {
       "symbol": "RENDER",
@@ -157,7 +155,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.5e-05
+      "funding": 8.9e-05
+    },
+    {
+      "symbol": "TAO",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "ZEC",
