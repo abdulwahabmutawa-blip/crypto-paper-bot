@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-16T06:04:31+00:00",
+  "ts": "2026-10-16T06:10:32+00:00",
   "sources": {
     "coingecko": [
       "INJ",
@@ -8,9 +8,10 @@
       "HYPE",
       "AERO",
       "SOL",
+      "ZEC",
       "QNT",
       "BTC",
-      "PUMP",
+      "SUI",
       "STRK"
     ],
     "reddit": [],
@@ -19,9 +20,9 @@
       "INJ",
       "ZRO",
       "STRK",
-      "PYTH",
-      "NEAR",
       "ZEC",
+      "NEAR",
+      "PYTH",
       "FIL",
       "CRCLB"
     ],
@@ -64,7 +65,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -1.6e-05,
+      "funding": -1.9e-05,
       "long_short": 1.19
     },
     {
@@ -74,7 +75,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 2e-06,
+      "funding": 1e-05,
       "long_short": 1.76
     },
     {
@@ -84,8 +85,17 @@
         "coingecko",
         "movers"
       ],
-      "funding": -6.6e-05,
+      "funding": -6.5e-05,
       "long_short": 1.25
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "AERO",
@@ -101,7 +111,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.2e-05
+      "funding": 7.3e-05
     },
     {
       "symbol": "CRCLB",
@@ -127,20 +137,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PUMP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "QNT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -2.3e-05
+      "funding": -1.9e-05
     },
     {
       "symbol": "SOL",
@@ -148,13 +150,13 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.2e-05
+      "funding": 9.1e-05
     },
     {
-      "symbol": "ZEC",
+      "symbol": "SUI",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
       "funding": 0.0001
     }
