@@ -1,17 +1,17 @@
 {
-  "ts": "2026-10-16T05:53:41+00:00",
+  "ts": "2026-10-16T05:59:01+00:00",
   "sources": {
     "coingecko": [
       "INJ",
       "NEAR",
-      "AERO",
-      "HYPE",
-      "SOL",
       "ZRO",
-      "SUI",
-      "BTC",
+      "HYPE",
+      "AERO",
+      "SOL",
       "QNT",
-      "ENA"
+      "BTC",
+      "PUMP",
+      "STRK"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,9 +20,9 @@
       "ZRO",
       "STRK",
       "NEAR",
-      "PYTH",
       "ZEC",
       "FIL",
+      "PYTH",
       "CRCLB"
     ],
     "watcher": [
@@ -64,7 +64,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -1e-05,
+      "funding": -1.4e-05,
       "long_short": 1.19
     },
     {
@@ -76,6 +76,16 @@
       ],
       "funding": -2e-06,
       "long_short": 1.8
+    },
+    {
+      "symbol": "STRK",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -6.3e-05,
+      "long_short": 1.24
     },
     {
       "symbol": "AERO",
@@ -91,7 +101,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7e-05
+      "funding": 7.2e-05
     },
     {
       "symbol": "CRCLB",
@@ -99,14 +109,6 @@
       "sources": [
         "movers"
       ]
-    },
-    {
-      "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "FIL",
@@ -125,12 +127,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "QNT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -1.9e-05
+      "funding": -2e-05
     },
     {
       "symbol": "SOL",
@@ -139,22 +149,6 @@
         "coingecko"
       ],
       "funding": 9.2e-05
-    },
-    {
-      "symbol": "STRK",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -6.4e-05
-    },
-    {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "ZEC",
