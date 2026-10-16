@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-16T17:46:51+00:00 · runs 3561 · equity **$701.83** (-29.82%) · cash $137.10 · open 8/10 · round trips 1313
+updated 2026-10-16T18:04:07+00:00 · runs 3562 · equity **$699.89** (-30.01%) · cash $137.10 · open 8/10 · round trips 1313
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,12 +36,12 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-16T14:16 | OPENUSDT | surge | 0.0994 | 0.098 | -1.41% |
-| 2026-10-16T15:07 | APEUSDT | surge | 0.1529 | 0.1525 | -0.26% |
-| 2026-10-16T15:42 | SOXSBUSDT | surge | 46.77 | 47.24 | +1.00% |
-| 2026-10-16T15:42 | SENTUSDT | surge | 0.02139 | 0.02115 | -1.12% |
-| 2026-10-16T17:09 | ZROUSDT | bottom | 2.008 | 2.042 | +1.69% |
-| 2026-10-16T17:09 | AEROUSDT | bottom | 0.8661 | 0.87 | +0.45% |
-| 2026-10-16T17:44 | BCHUSDT | bottom | 272.8 | 276 | +1.17% |
+| 2026-10-16T14:16 | OPENUSDT | surge | 0.0994 | 0.0972 | -2.21% |
+| 2026-10-16T15:07 | APEUSDT | surge | 0.1529 | 0.1512 | -1.11% |
+| 2026-10-16T15:42 | SOXSBUSDT | surge | 46.77 | 48.26 | +3.19% |
+| 2026-10-16T15:42 | SENTUSDT | surge | 0.02139 | 0.02096 | -2.01% |
+| 2026-10-16T17:09 | ZROUSDT | bottom | 2.008 | 2.018 | +0.50% |
+| 2026-10-16T17:09 | AEROUSDT | bottom | 0.8661 | 0.8628 | -0.38% |
+| 2026-10-16T17:44 | BCHUSDT | bottom | 272.8 | 274.7 | +0.70% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
