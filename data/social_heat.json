@@ -1,17 +1,17 @@
 {
-  "ts": "2026-10-16T17:10:14+00:00",
+  "ts": "2026-10-16T17:16:11+00:00",
   "sources": {
     "coingecko": [
-      "INJ",
       "NEAR",
-      "TAO",
       "TIA",
-      "PUMP",
       "BTC",
       "HYPE",
-      "SOL",
+      "INJ",
       "PENGU",
-      "LIT"
+      "TAO",
+      "SUI",
+      "PUMP",
+      "QNT"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,10 +20,8 @@
       "FIL",
       "INJ",
       "TRX",
-      "AVAX",
-      "TAO",
-      "WLD",
-      "XAUT"
+      "XAUT",
+      "RLUSD"
     ],
     "watcher": [
       "TIA",
@@ -56,30 +54,12 @@
       "long_short": 1.12
     },
     {
-      "symbol": "TAO",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.43
-    },
-    {
-      "symbol": "AVAX",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 6.9e-05
-    },
-    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 6.5e-05
+      "funding": 6.7e-05
     },
     {
       "symbol": "FIL",
@@ -95,15 +75,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.6e-05
-    },
-    {
-      "symbol": "LIT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": 1.7e-05
     },
     {
       "symbol": "NEAR",
@@ -111,7 +83,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.8e-05
+      "funding": 1.7e-05
     },
     {
       "symbol": "PENGU",
@@ -119,7 +91,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3e-06
+      "funding": -1e-06
     },
     {
       "symbol": "PUMP",
@@ -130,23 +102,38 @@
       "funding": 5e-05
     },
     {
-      "symbol": "SOL",
+      "symbol": "QNT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 4e-06
+      "funding": -3.2e-05
     },
     {
-      "symbol": "TRX",
+      "symbol": "RLUSD",
       "surfaces": 1,
       "sources": [
         "movers"
-      ],
-      "funding": 0.0001
+      ]
     },
     {
-      "symbol": "WLD",
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 7.4e-05
+    },
+    {
+      "symbol": "TAO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "TRX",
       "surfaces": 1,
       "sources": [
         "movers"
@@ -159,7 +146,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 2.7e-05
+      "funding": 3.1e-05
     },
     {
       "symbol": "ZRO",
