@@ -4,99 +4,6 @@
       "risk_level": "caution",
       "risk_alerts": [
         {
-          "headline": "Dalio warns Bessent buybacks signal looming US debt crisis; favors gold/BTC over bonds",
-          "markets": [
-            "both"
-          ],
-          "severity": "caution"
-        },
-        {
-          "headline": "Bessent bond gambit stirs inflation worries as yields stay elevated",
-          "markets": [
-            "stocks"
-          ],
-          "severity": "caution"
-        },
-        {
-          "headline": "Bitcoin faces $80k test amid thinner weekend liquidity after sharp rally",
-          "markets": [
-            "crypto"
-          ],
-          "severity": "caution"
-        }
-      ],
-      "hype": [
-        {
-          "symbol": "MSTR",
-          "mood": "euphoric",
-          "note": "crypto proxy surging with BTC"
-        },
-        {
-          "symbol": "HOOD",
-          "mood": "euphoric",
-          "note": "jumps on Clarity Act and crypto bid"
-        },
-        {
-          "symbol": "COIN",
-          "mood": "euphoric",
-          "note": "crypto stocks lead rebound"
-        },
-        {
-          "symbol": "TSLA",
-          "mood": "mixed",
-          "note": "rises despite China recall"
-        }
-      ],
-      "crypto_hype": [
-        {
-          "symbol": "HYPE",
-          "mood": "mixed",
-          "note": "trending searches, Hyperliquid chatter",
-          "stage": "early"
-        },
-        {
-          "symbol": "ZEC",
-          "mood": "euphoric",
-          "note": "top mover ATH push ETF filing",
-          "stage": "peaked"
-        },
-        {
-          "symbol": "TRUMP",
-          "mood": "euphoric",
-          "note": "Binance top +60% meme pump",
-          "stage": "peaked"
-        },
-        {
-          "symbol": "PEPE",
-          "mood": "euphoric",
-          "note": "memecoin multi-surface surge",
-          "stage": "peaked"
-        },
-        {
-          "symbol": "BTC",
-          "mood": "euphoric",
-          "note": "best week years short squeeze",
-          "stage": "peaked"
-        },
-        {
-          "symbol": "BCH",
-          "mood": "euphoric",
-          "note": "strong mover with rally",
-          "stage": "peaked"
-        }
-      ],
-      "overall_mood": "Risk-on rebound with stocks recovering and crypto in greed-fueled euphoria on liquidity and policy hopes, tempered by bond yield and debt concerns.",
-      "ts": "2026-08-22T04:01:27+00:00",
-      "gauges": {
-        "vix": 15.1,
-        "crypto_fear_greed": 71,
-        "crypto_fng_label": "Greed"
-      }
-    },
-    {
-      "risk_level": "caution",
-      "risk_alerts": [
-        {
           "headline": "Ray Dalio warns Bessent buybacks signal looming US debt crisis in ~3 years; underweight bonds, own gold + bit of BTC",
           "markets": [
             "both"
@@ -11435,13 +11342,139 @@
           "output_tokens": 1232
         }
       }
+    },
+    {
+      "risk_level": "caution",
+      "risk_alerts": [
+        {
+          "headline": "AI/tech selloff deepens; Nasdaq worst week in months, CoreWeave debt fears",
+          "markets": [
+            "stocks"
+          ],
+          "severity": "caution"
+        },
+        {
+          "headline": "Oil surges toward $110 on Hormuz/Saudi attacks, Iran war risks",
+          "markets": [
+            "both"
+          ],
+          "severity": "caution"
+        },
+        {
+          "headline": "MSCI rules risk ejecting Strategy/MSTR from indexes",
+          "markets": [
+            "both"
+          ],
+          "severity": "caution"
+        }
+      ],
+      "hype": [
+        {
+          "symbol": "TSLA",
+          "mood": "euphoric",
+          "note": "Flying Roadster SpaceX prototype unveil"
+        },
+        {
+          "symbol": "CRWV",
+          "mood": "fearful",
+          "note": "Debt distress, multi-day plunge"
+        },
+        {
+          "symbol": "MSTR",
+          "mood": "fearful",
+          "note": "MSCI index exclusion threat"
+        },
+        {
+          "symbol": "NVDA",
+          "mood": "mixed",
+          "note": "AI bubble rotation pressure"
+        }
+      ],
+      "crypto_hype": [
+        {
+          "symbol": "TIA",
+          "mood": "euphoric",
+          "stage": "peaked",
+          "organic": true,
+          "promo_risk": "low",
+          "catalyst": "Eden AI agents chain launch Oct 16",
+          "why": "Top mover +14-32%, volume/OI surge, news catalyst",
+          "note": "Alt leader on AI agent commerce"
+        },
+        {
+          "symbol": "ZEC",
+          "mood": "euphoric",
+          "stage": "peaked",
+          "organic": true,
+          "promo_risk": "low",
+          "catalyst": "none",
+          "why": "Trending, OI +14% with price, bullish CVD",
+          "note": "Privacy coin futures bid"
+        },
+        {
+          "symbol": "INJ",
+          "mood": "mixed",
+          "stage": "peaked",
+          "organic": true,
+          "promo_risk": "low",
+          "catalyst": "pending US ETF apps",
+          "why": "Mover, heat surfaces, volume double",
+          "note": "Finance L1 rebound"
+        },
+        {
+          "symbol": "ZRO",
+          "mood": "mixed",
+          "stage": "peaked",
+          "organic": true,
+          "promo_risk": "low",
+          "catalyst": "none",
+          "why": "Binance mover +heat with TIA/INJ",
+          "note": "Interop token follow-through"
+        }
+      ],
+      "overall_mood": "Cautious rotation from AI/tech into value/defensives amid oil geo spikes, with crypto alts showing greed while BTC holds ~$82k.",
+      "ts": "2026-10-16T21:09:41+00:00",
+      "gauges": {
+        "vix": 20.0,
+        "crypto_fear_greed": 63,
+        "crypto_fng_label": "Greed"
+      },
+      "usage": {
+        "input_tokens": 102776,
+        "input_tokens_details": {
+          "cached_tokens": 61824
+        },
+        "output_tokens": 2028,
+        "output_tokens_details": {
+          "reasoning_tokens": 789
+        },
+        "total_tokens": 104804,
+        "num_sources_used": 0,
+        "num_server_side_tools_used": 13,
+        "cost_in_usd_ticks": 3376192000,
+        "server_side_tool_usage_details": {
+          "web_search_calls": 5,
+          "x_search_calls": 8,
+          "x_posts_fetched": 40,
+          "x_users_fetched": 0,
+          "code_interpreter_calls": 0,
+          "file_search_calls": 0,
+          "mcp_calls": 0,
+          "document_search_calls": 0,
+          "image_generation_calls": 0
+        },
+        "context_details": {
+          "input_tokens": 43065,
+          "output_tokens": 1321
+        }
+      }
     }
   ],
   "month_count": {
     "2026-07": 35,
     "2026-08": 130,
     "2026-09": 27,
-    "2026-10": 18
+    "2026-10": 19
   },
-  "last_scan_utc": "2026-10-16T13:07:44+00:00"
+  "last_scan_utc": "2026-10-16T21:09:41+00:00"
 }
