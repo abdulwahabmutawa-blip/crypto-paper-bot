@@ -1,17 +1,18 @@
 {
-  "ts": "2026-10-16T11:04:11+00:00",
+  "ts": "2026-10-16T11:10:01+00:00",
   "sources": {
     "coingecko": [
-      "TIA",
       "INJ",
+      "TIA",
       "PENGU",
-      "NEAR",
       "SUI",
+      "BTC",
+      "NEAR",
       "ZRO",
       "STRK",
-      "ICP",
       "APT",
-      "PUMP"
+      "ICP",
+      "LIT"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,8 +23,8 @@
       "NEAR",
       "WLD",
       "ZEC",
-      "FIL",
-      "CRCLB"
+      "CRCLB",
+      "FIL"
     ],
     "watcher": [
       "INJ",
@@ -53,7 +54,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 2.3e-05,
+      "funding": 2.2e-05,
       "long_short": 1.29
     },
     {
@@ -74,7 +75,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 3.7e-05,
+      "funding": 3.3e-05,
       "long_short": 1.4
     },
     {
@@ -84,6 +85,14 @@
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 3.6e-05
     },
     {
       "symbol": "CRCLB",
@@ -109,7 +118,7 @@
       "funding": 0.0001
     },
     {
-      "symbol": "PENGU",
+      "symbol": "LIT",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -117,7 +126,7 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PUMP",
+      "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -130,7 +139,7 @@
       "sources": [
         "watcher"
       ],
-      "funding": 4.5e-05
+      "funding": 3.7e-05
     },
     {
       "symbol": "STRK",
@@ -138,7 +147,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3e-05
+      "funding": 2e-05
     },
     {
       "symbol": "SUI",
@@ -162,7 +171,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 6.7e-05
+      "funding": 6.4e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
