@@ -1,13 +1,13 @@
 {
-  "ts": "2026-10-16T00:43:29+00:00",
+  "ts": "2026-10-16T00:49:11+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
       "SUI",
       "PENGU",
-      "ETH",
-      "AERO",
       "ZRO",
+      "STRK",
+      "AERO",
       "PYTH"
     ],
     "reddit": [],
@@ -15,9 +15,9 @@
     "movers": [
       "ZRO",
       "INJ",
-      "STRK",
       "CRCLB",
       "PYTH",
+      "STRK",
       "NEAR",
       "ZEC",
       "ZK"
@@ -38,17 +38,18 @@
         "movers",
         "watcher"
       ],
-      "funding": 4.4e-05,
+      "funding": 4.9e-05,
       "long_short": 1.83
     },
     {
       "symbol": "STRK",
-      "surfaces": 2,
+      "surfaces": 3,
       "sources": [
+        "coingecko",
         "movers",
         "watcher"
       ],
-      "funding": 3.5e-05,
+      "funding": 3.3e-05,
       "long_short": 1.24
     },
     {
@@ -68,7 +69,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 4.2e-05,
+      "funding": 4.6e-05,
       "long_short": 1.72
     },
     {
@@ -78,7 +79,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 2.8e-05,
+      "funding": 2.3e-05,
       "long_short": 1.05
     },
     {
@@ -95,14 +96,6 @@
       "sources": [
         "movers"
       ]
-    },
-    {
-      "symbol": "ETH",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 7.3e-05
     },
     {
       "symbol": "INJ",
@@ -134,7 +127,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.2e-05
+      "funding": 8e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
