@@ -1,24 +1,8 @@
 {
-  "ts": "2026-10-16T08:42:46+00:00",
-  "scanned": 127,
+  "ts": "2026-10-16T08:48:10+00:00",
+  "scanned": 128,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "CAKEUSDT",
-      "signal": "ignition",
-      "score": 0.5865,
-      "raw_score": 0.6868,
-      "weight": 0.854,
-      "price": 2.214,
-      "why": "trades 4.1x and volume 9.6x the prior 4h, 76% taker-buy, $52,513 burst \u2014 while price has only moved +0.3%",
-      "chg_24h": 0.0077,
-      "vol_surge": 9.56,
-      "chg_1h": 0.0027,
-      "market_surge": 3.84,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.43% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.43% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -1.08% at 24h: market beta, not signal",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 8/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 32,
+    "count": 33,
     "baseline": 11.0,
     "wave": true
   },
@@ -59,19 +43,19 @@
       "avg_win_4h": 0.02356,
       "avg_loss_4h": -0.02106,
       "payoff_4h": 1.119,
-      "span_h_24h": 311.7,
-      "n_eff_24h": 12.99,
-      "n_24h": 839,
-      "hit_rate_24h": 0.374,
-      "mean_ret_24h": -0.0101,
-      "median_ret_24h": -0.01244,
+      "span_h_24h": 312.0,
+      "n_eff_24h": 13.0,
+      "n_24h": 840,
+      "hit_rate_24h": 0.375,
+      "mean_ret_24h": -0.01005,
+      "median_ret_24h": -0.01222,
       "both_halves_24h": false,
       "days_24h": 14,
       "mean_x_24h": -0.00432,
       "days_x_24h": 14,
-      "avg_win_24h": 0.04683,
+      "avg_win_24h": 0.04677,
       "avg_loss_24h": -0.04719,
-      "payoff_24h": 0.992
+      "payoff_24h": 0.991
     },
     "breakout": {
       "span_h_1h": 333.7,
@@ -231,7 +215,7 @@
       "median_ret_24h": -0.00848,
       "both_halves_24h": false,
       "days_24h": 6,
-      "mean_x_24h": -0.01607,
+      "mean_x_24h": -0.01559,
       "days_x_24h": 6,
       "avg_win_24h": 0.02882,
       "avg_loss_24h": -0.05728,
