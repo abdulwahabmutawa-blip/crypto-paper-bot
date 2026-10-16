@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-16T07:29:15+00:00",
+  "ts": "2026-10-16T07:35:03+00:00",
   "sources": {
     "coingecko": [
       "INJ",
@@ -18,11 +18,11 @@
       "INJ",
       "TIA",
       "ZRO",
+      "ENA",
       "STRK",
-      "PYTH",
       "FIL",
       "ZEC",
-      "ENA"
+      "NEAR"
     ],
     "watcher": [
       "INJ",
@@ -45,6 +45,17 @@
       "long_short": 1.18
     },
     {
+      "symbol": "NEAR",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.24
+    },
+    {
       "symbol": "ZRO",
       "surfaces": 3,
       "sources": [
@@ -52,28 +63,8 @@
         "movers",
         "watcher"
       ],
-      "funding": -1e-06,
+      "funding": 4e-06,
       "long_short": 1.14
-    },
-    {
-      "symbol": "NEAR",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "watcher"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.24
-    },
-    {
-      "symbol": "PYTH",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": 1.5e-05,
-      "long_short": 1.79
     },
     {
       "symbol": "TIA",
@@ -82,7 +73,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -8.9e-05,
+      "funding": -9e-05,
       "long_short": 1.9
     },
     {
@@ -92,7 +83,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 0.0001
+      "funding": 0.0001,
+      "long_short": 0.67
     },
     {
       "symbol": "AERO",
@@ -108,7 +100,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.2e-05
+      "funding": 7.1e-05
     },
     {
       "symbol": "ENA",
@@ -125,6 +117,14 @@
         "movers"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "PYTH",
+      "surfaces": 1,
+      "sources": [
+        "watcher"
+      ],
+      "funding": 9e-06
     },
     {
       "symbol": "STRK",
