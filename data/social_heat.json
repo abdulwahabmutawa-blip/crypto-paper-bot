@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-16T11:15:40+00:00",
+  "ts": "2026-10-16T11:22:11+00:00",
   "sources": {
     "coingecko": [
       "INJ",
@@ -25,10 +25,10 @@
       "FIL"
     ],
     "watcher": [
+      "TIA",
       "INJ",
-      "NEAR",
-      "PYTH",
-      "ZRO"
+      "ZRO",
+      "NEAR"
     ],
     "cryptopanic": []
   },
@@ -52,8 +52,19 @@
         "movers",
         "watcher"
       ],
-      "funding": 2.2e-05,
+      "funding": 1.9e-05,
       "long_short": 1.29
+    },
+    {
+      "symbol": "TIA",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 2.5e-05,
+      "long_short": 1.4
     },
     {
       "symbol": "ZRO",
@@ -65,16 +76,6 @@
       ],
       "funding": 5e-05,
       "long_short": 1.09
-    },
-    {
-      "symbol": "TIA",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 2.8e-05,
-      "long_short": 1.4
     },
     {
       "symbol": "WLD",
@@ -92,7 +93,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.6e-05
+      "funding": 3.7e-05
     },
     {
       "symbol": "CRCLB",
@@ -126,14 +127,6 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PYTH",
-      "surfaces": 1,
-      "sources": [
-        "watcher"
-      ],
-      "funding": 3.3e-05
-    },
-    {
       "symbol": "SUI",
       "surfaces": 1,
       "sources": [
@@ -147,7 +140,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 6.2e-05
+      "funding": 5.6e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
