@@ -1,8 +1,24 @@
 {
-  "ts": "2026-10-16T00:27:02+00:00",
-  "scanned": 143,
+  "ts": "2026-10-16T00:32:48+00:00",
+  "scanned": 139,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "DRAMBUSDT",
+      "signal": "ignition",
+      "score": 0.7904,
+      "raw_score": 0.9159,
+      "weight": 0.863,
+      "price": 48.15,
+      "why": "trades 17.4x and volume 81.5x the prior 4h, 85% taker-buy, $51,101 burst \u2014 while price has only moved -1.8%",
+      "chg_24h": -0.0008,
+      "vol_surge": 81.48,
+      "chg_1h": -0.0183,
+      "market_surge": 4.51,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.31% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.31% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.66% at 24h: market beta, not signal",
@@ -11,7 +27,7 @@
     "revival": "probation \u2014 7/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 14,
+    "count": 15,
     "baseline": 11.0,
     "wave": false
   },
