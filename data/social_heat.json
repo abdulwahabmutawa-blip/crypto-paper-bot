@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-16T15:35:37+00:00",
+  "ts": "2026-10-16T15:41:07+00:00",
   "sources": {
     "coingecko": [
       "TIA",
@@ -19,11 +19,11 @@
       "TIA",
       "INJ",
       "FIL",
-      "TAO",
       "WLD",
+      "TAO",
       "ZEC",
       "AVAX",
-      "ZRO"
+      "ENA"
     ],
     "watcher": [
       "TIA",
@@ -52,7 +52,7 @@
         "movers",
         "watcher"
       ],
-      "funding": 4.6e-05,
+      "funding": 5e-05,
       "long_short": 1.25
     },
     {
@@ -64,16 +64,6 @@
       ],
       "funding": 5e-05,
       "long_short": 1.31
-    },
-    {
-      "symbol": "ZRO",
-      "surfaces": 2,
-      "sources": [
-        "movers",
-        "watcher"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.16
     },
     {
       "symbol": "AERO",
@@ -89,7 +79,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 5.8e-05
+      "funding": 6.2e-05
     },
     {
       "symbol": "BTC",
@@ -97,7 +87,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.7e-05
+      "funding": 3.9e-05
+    },
+    {
+      "symbol": "ENA",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 3.2e-05
     },
     {
       "symbol": "FIL",
@@ -113,7 +111,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1e-06
+      "funding": 3e-06
     },
     {
       "symbol": "LIT",
@@ -121,7 +119,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-06
+      "funding": 1.1e-05
     },
     {
       "symbol": "SOL",
@@ -137,7 +135,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.2e-05
+      "funding": -6e-06
     },
     {
       "symbol": "SUI",
@@ -145,7 +143,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.8e-05
+      "funding": 4.3e-05
     },
     {
       "symbol": "WLD",
@@ -161,7 +159,15 @@
       "sources": [
         "movers"
       ],
-      "funding": -3e-06
+      "funding": -2e-06
+    },
+    {
+      "symbol": "ZRO",
+      "surfaces": 1,
+      "sources": [
+        "watcher"
+      ],
+      "funding": 5e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
