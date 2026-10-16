@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16T13:46:17+00:00",
+ "updated": "2026-10-16T13:51:35+00:00",
  "spec": "x_chatter_precursors_2026-08-23",
  "n_rows_total": 23,
  "n_scored_excess_24h": 22,
@@ -82,10 +82,10 @@
    "note": "occurred vs pending, 72h",
    "horizon_h": 72,
    "group_true": {
-    "n": 5,
-    "hit": 0.2,
-    "mean": -0.02714,
-    "median": -0.00881
+    "n": 7,
+    "hit": 0.429,
+    "mean": 0.01773,
+    "median": -0.00345
    },
    "group_false": {
     "n": 12,
@@ -93,7 +93,7 @@
     "mean": -0.01682,
     "median": -0.00445
    },
-   "edge_pp": -1.03
+   "edge_pp": 3.45
   },
   "H5_volatility_gate": {
    "note": "BTC 24h realized vol high vs low",
@@ -133,10 +133,10 @@
    "note": "all-new handles vs familiar, 72h",
    "horizon_h": 72,
    "group_true": {
-    "n": 15,
-    "hit": 0.067,
-    "mean": -0.01998,
-    "median": -0.00508
+    "n": 17,
+    "hit": 0.176,
+    "mean": -0.00235,
+    "median": -0.00445
    },
    "group_false": null
   },
