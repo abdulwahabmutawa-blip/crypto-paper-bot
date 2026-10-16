@@ -1,18 +1,18 @@
 {
-  "ts": "2026-10-16T06:22:12+00:00",
+  "ts": "2026-10-16T06:27:27+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
       "INJ",
       "ZRO",
       "HYPE",
+      "QNT",
       "SOL",
       "AERO",
-      "QNT",
-      "BTC",
       "SUI",
-      "LINK",
-      "PUMP"
+      "TAO",
+      "PUMP",
+      "LINK"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,8 +20,8 @@
       "INJ",
       "ZRO",
       "STRK",
-      "NEAR",
       "ZEC",
+      "NEAR",
       "FIL",
       "CRCLB",
       "TAO"
@@ -65,8 +65,18 @@
         "movers",
         "watcher"
       ],
-      "funding": -1.6e-05,
+      "funding": -1.7e-05,
       "long_short": 1.19
+    },
+    {
+      "symbol": "TAO",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.31
     },
     {
       "symbol": "AERO",
@@ -75,14 +85,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 7.3e-05
     },
     {
       "symbol": "CRCLB",
@@ -113,7 +115,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.8e-05
+      "funding": 3.7e-05
     },
     {
       "symbol": "PUMP",
@@ -129,7 +131,7 @@
       "sources": [
         "watcher"
       ],
-      "funding": 1.9e-05
+      "funding": 2.3e-05
     },
     {
       "symbol": "QNT",
@@ -137,7 +139,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.2e-05
+      "funding": -8e-06
     },
     {
       "symbol": "SOL",
@@ -145,7 +147,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.2e-05
+      "funding": 9.3e-05
     },
     {
       "symbol": "STRK",
@@ -153,7 +155,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -6.1e-05
+      "funding": -5.8e-05
     },
     {
       "symbol": "SUI",
@@ -162,14 +164,6 @@
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "ZEC",
