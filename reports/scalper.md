@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-17T17:56:52+00:00 · runs 3652 · equity **$685.78** (-31.42%) · cash $129.94 · open 8/10 · round trips 1347
+updated 2026-10-17T18:13:11+00:00 · runs 3653 · equity **$689.04** (-31.10%) · cash $129.94 · open 8/10 · round trips 1347
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,12 +36,12 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-16T20:22 | SOXSBUSDT | surge | 49.26 | 49.53 | +0.55% |
-| 2026-10-16T20:22 | MUBUSDT | bottom | 878.21 | 874.19 | -0.46% |
-| 2026-10-17T09:33 | XLMUSDT | bottom | 0.1791 | 0.1774 | -0.95% |
-| 2026-10-17T14:17 | CAKEUSDT | surge | 2.236 | 2.225 | -0.49% |
-| 2026-10-17T15:23 | NMRUSDT | surge | 12.66 | 12.57 | -0.71% |
-| 2026-10-17T16:45 | UNIUSDT | bottom | 7.069 | 7.094 | +0.35% |
-| 2026-10-17T17:55 | ALTUSDT | surge | 0.00893 | 0.00891 | -0.22% |
+| 2026-10-16T20:22 | SOXSBUSDT | surge | 49.26 | 49.37 | +0.22% |
+| 2026-10-16T20:22 | MUBUSDT | bottom | 878.21 | 875.31 | -0.33% |
+| 2026-10-17T09:33 | XLMUSDT | bottom | 0.1791 | 0.178 | -0.61% |
+| 2026-10-17T14:17 | CAKEUSDT | surge | 2.236 | 2.23 | -0.27% |
+| 2026-10-17T15:23 | NMRUSDT | surge | 12.66 | 12.78 | +0.95% |
+| 2026-10-17T16:45 | UNIUSDT | bottom | 7.069 | 7.134 | +0.92% |
+| 2026-10-17T17:55 | ALTUSDT | surge | 0.00893 | 0.00912 | +2.13% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
