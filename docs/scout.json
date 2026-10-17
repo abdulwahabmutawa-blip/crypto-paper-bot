@@ -1,33 +1,33 @@
 {
-  "ts": "2026-10-17T22:27:45+00:00",
-  "scanned": 98,
+  "ts": "2026-10-17T22:33:37+00:00",
+  "scanned": 99,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "XLMUSDT",
+      "symbol": "RSRUSDT",
       "signal": "ignition",
-      "score": 0.5939,
-      "raw_score": 0.6954,
+      "score": 0.639,
+      "raw_score": 0.7483,
       "weight": 0.854,
-      "price": 0.1764,
-      "why": "trades 5.1x and volume 8.1x the prior 4h, 77% taker-buy, $138,028 burst \u2014 while price has only moved -0.1%",
-      "chg_24h": -0.0286,
-      "vol_surge": 8.06,
-      "chg_1h": -0.0006,
-      "market_surge": 3.91,
+      "price": 0.001995,
+      "why": "trades 6.9x and volume 13.3x the prior 4h, 65% taker-buy, $69,510 burst \u2014 while price has only moved +1.5%",
+      "chg_24h": 0.0379,
+      "vol_surge": 13.33,
+      "chg_1h": 0.0153,
+      "market_surge": 0.25,
       "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.90% at 24h: market beta, not signal"
+      "status": "benched \u2014 BTC-excess day mean -0.91% at 24h: market beta, not signal"
     }
   ],
   "gate": {
-    "ignition": "benched \u2014 BTC-excess day mean -0.90% at 24h: market beta, not signal",
+    "ignition": "benched \u2014 BTC-excess day mean -0.91% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.75% at 24h: market beta, not signal",
     "reversion": "benched \u2014 BTC-excess day mean -0.78% at 24h: market beta, not signal",
     "heat": "probation \u2014 30 rows but only 6.0 independent 24h windows (span 145h): overlapping labels are not a sample",
     "revival": "probation \u2014 11/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 10,
+    "count": 11,
     "baseline": 11.0,
     "wave": false
   },
@@ -67,7 +67,7 @@
       "median_ret_24h": -0.01533,
       "both_halves_24h": false,
       "days_24h": 14,
-      "mean_x_24h": -0.00899,
+      "mean_x_24h": -0.00906,
       "days_x_24h": 14,
       "avg_win_24h": 0.0489,
       "avg_loss_24h": -0.04803,

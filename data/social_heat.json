@@ -1,17 +1,18 @@
 {
-  "ts": "2026-10-17T22:27:41+00:00",
+  "ts": "2026-10-17T22:33:31+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "NEAR",
-      "STRK",
-      "SOL",
-      "QNT",
       "ONDO",
+      "QNT",
+      "SOL",
+      "STRK",
       "LIT",
       "PENGU",
-      "XRP",
-      "ENA"
+      "AVAX",
+      "MET",
+      "XRP"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -29,8 +30,16 @@
         "coingecko",
         "watcher"
       ],
-      "funding": -7e-06,
+      "funding": -1.2e-05,
       "long_short": 0.99
+    },
+    {
+      "symbol": "AVAX",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -5e-06
     },
     {
       "symbol": "BTC",
@@ -38,15 +47,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.3e-05
-    },
-    {
-      "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 2.1e-05
+      "funding": 3.4e-05
     },
     {
       "symbol": "LIT",
@@ -57,12 +58,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "MET",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -9e-05
+    },
+    {
       "symbol": "NEAR",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -4.4e-05
+      "funding": -3.9e-05
     },
     {
       "symbol": "ONDO",
@@ -70,7 +79,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4e-06
+      "funding": 3e-06
     },
     {
       "symbol": "QNT",
@@ -78,7 +87,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -7.1e-05
+      "funding": -7.5e-05
     },
     {
       "symbol": "SOL",
@@ -86,7 +95,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -6.3e-05
+      "funding": -6.2e-05
     },
     {
       "symbol": "STRK",
@@ -102,7 +111,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -3.2e-05
+      "funding": -3.6e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
