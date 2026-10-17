@@ -1,19 +1,17 @@
 {
-  "ts": "2026-10-17T14:15:32+00:00",
+  "ts": "2026-10-17T14:22:05+00:00",
   "sources": {
     "coingecko": [
       "INJ",
       "BTC",
+      "PENGU",
       "SUI",
       "PUMP",
-      "QNT",
       "TIA",
-      "TAO",
-      "STRK",
-      "RAY",
-      "HYPE",
+      "QNT",
       "NEAR",
-      "PENGU"
+      "FIL",
+      "HYPE"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,22 +19,10 @@
       "TRX",
       "RLUSD"
     ],
-    "watcher": [
-      "TIA"
-    ],
+    "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "TIA",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "watcher"
-      ],
-      "funding": -0.000108,
-      "long_short": 1.72
-    },
     {
       "symbol": "BTC",
       "surfaces": 1,
@@ -46,12 +32,20 @@
       "funding": 3.9e-05
     },
     {
+      "symbol": "FIL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -7.5e-05
+    },
+    {
       "symbol": "HYPE",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 2e-05
+      "funding": 2.2e-05
     },
     {
       "symbol": "INJ",
@@ -67,7 +61,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.9e-05
+      "funding": 5.3e-05
     },
     {
       "symbol": "PENGU",
@@ -75,7 +69,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.1e-05
+      "funding": 2.5e-05
     },
     {
       "symbol": "PUMP",
@@ -83,7 +77,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.6e-05
+      "funding": 4.5e-05
     },
     {
       "symbol": "QNT",
@@ -91,15 +85,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -9.8e-05
-    },
-    {
-      "symbol": "RAY",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0
+      "funding": -9.2e-05
     },
     {
       "symbol": "RLUSD",
@@ -109,28 +95,20 @@
       ]
     },
     {
-      "symbol": "STRK",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "SUI",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 9.9e-05
+      "funding": 0.0001
     },
     {
-      "symbol": "TAO",
+      "symbol": "TIA",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 4e-05
+      "funding": -0.000105
     },
     {
       "symbol": "TRX",

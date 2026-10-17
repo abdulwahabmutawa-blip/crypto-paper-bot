@@ -1,22 +1,52 @@
 {
-  "ts": "2026-10-17T14:15:37+00:00",
-  "scanned": 113,
+  "ts": "2026-10-17T14:22:08+00:00",
+  "scanned": 112,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "ZKUSDT",
+      "symbol": "ALTUSDT",
+      "signal": "breakout",
+      "score": 0.6779,
+      "raw_score": 0.7865,
+      "weight": 0.862,
+      "price": 0.00876,
+      "why": "trades 7.5x, volume 9.8x, 62% taker-buy, +4.2% in an hour, at 86% of its 24h range",
+      "chg_24h": 0.0908,
+      "vol_surge": 9.76,
+      "chg_1h": 0.0416,
+      "market_surge": 3.62,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.79% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "KMNOUSDT",
       "signal": "ignition",
-      "score": 0.5666,
-      "raw_score": 0.6627,
+      "score": 0.5806,
+      "raw_score": 0.679,
       "weight": 0.855,
-      "price": 0.01601,
-      "why": "trades 4.4x and volume 9.4x the prior 4h, 80% taker-buy, $68,358 burst \u2014 while price has only moved +1.9%",
-      "chg_24h": -0.0582,
-      "vol_surge": 9.36,
-      "chg_1h": 0.0191,
-      "market_surge": 1.96,
+      "price": 0.042,
+      "why": "trades 5.9x and volume 9.6x the prior 4h, 63% taker-buy, $53,492 burst \u2014 while price has only moved +2.1%",
+      "chg_24h": 0.0777,
+      "vol_surge": 9.57,
+      "chg_1h": 0.0209,
+      "market_surge": 3.18,
       "actionable": false,
       "status": "benched \u2014 BTC-excess day mean -0.77% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "KMNOUSDT",
+      "signal": "breakout",
+      "score": 0.57,
+      "raw_score": 0.6612,
+      "weight": 0.862,
+      "price": 0.042,
+      "why": "trades 5.9x, volume 9.6x, 63% taker-buy, +2.1% in an hour, at 81% of its 24h range",
+      "chg_24h": 0.0777,
+      "vol_surge": 9.57,
+      "chg_1h": 0.0209,
+      "market_surge": 3.18,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.79% at 24h: market beta, not signal"
     }
   ],
   "gate": {
@@ -27,7 +57,7 @@
     "revival": "probation \u2014 11/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 11,
+    "count": 10,
     "baseline": 11.0,
     "wave": false
   },
