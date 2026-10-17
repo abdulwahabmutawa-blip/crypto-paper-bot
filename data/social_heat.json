@@ -1,27 +1,25 @@
 {
-  "ts": "2026-10-17T13:36:11+00:00",
+  "ts": "2026-10-17T13:41:41+00:00",
   "sources": {
     "coingecko": [
-      "INJ",
-      "BTC",
       "QNT",
-      "PENGU",
+      "BTC",
+      "INJ",
       "RAY",
       "TAO",
-      "LIT",
-      "STRK",
-      "AERO",
-      "PUMP",
+      "NEAR",
       "SUI",
-      "ZEC",
-      "NEAR"
+      "STRK",
+      "LIT",
+      "PENGU",
+      "HYPE",
+      "AERO"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "SPCXB",
-      "TRX",
-      "RLUSD"
+      "TRX"
     ],
     "watcher": [
       "TIA"
@@ -35,7 +33,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.8e-05
+      "funding": 3.3e-05
     },
     {
       "symbol": "BTC",
@@ -43,7 +41,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.9e-05
+      "funding": 3.8e-05
+    },
+    {
+      "symbol": "HYPE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 2.3e-05
     },
     {
       "symbol": "INJ",
@@ -67,7 +73,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.4e-05
+      "funding": 8.1e-05
     },
     {
       "symbol": "PENGU",
@@ -75,15 +81,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.7e-05
-    },
-    {
-      "symbol": "PUMP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": 1.3e-05
     },
     {
       "symbol": "QNT",
@@ -91,7 +89,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000117
+      "funding": -0.000114
     },
     {
       "symbol": "RAY",
@@ -100,13 +98,6 @@
         "coingecko"
       ],
       "funding": 0.0
-    },
-    {
-      "symbol": "RLUSD",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
     },
     {
       "symbol": "SPCXB",
@@ -145,21 +136,13 @@
       "sources": [
         "watcher"
       ],
-      "funding": -0.000114
+      "funding": -0.000115
     },
     {
       "symbol": "TRX",
       "surfaces": 1,
       "sources": [
         "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
       ],
       "funding": 0.0001
     }
