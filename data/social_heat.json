@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-17T14:32:21+00:00",
+  "ts": "2026-10-17T14:38:06+00:00",
   "sources": {
     "coingecko": [
       "INJ",
@@ -17,17 +17,29 @@
     "movers": [
       "TRX"
     ],
-    "watcher": [],
+    "watcher": [
+      "PENGU"
+    ],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "PENGU",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "watcher"
+      ],
+      "funding": 2.2e-05,
+      "long_short": 0.94
+    },
     {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 4.5e-05
+      "funding": 4.8e-05
     },
     {
       "symbol": "ENA",
@@ -51,15 +63,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.5e-05
-    },
-    {
-      "symbol": "PENGU",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 2.3e-05
+      "funding": 4.1e-05
     },
     {
       "symbol": "PUMP",
@@ -67,7 +71,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.6e-05
+      "funding": 4.7e-05
     },
     {
       "symbol": "SAND",
@@ -75,7 +79,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.007849
+      "funding": -0.007802
     },
     {
       "symbol": "SUI",
@@ -83,7 +87,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0001
+      "funding": 9.7e-05
     },
     {
       "symbol": "TIA",
@@ -91,7 +95,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000114
+      "funding": -0.000115
     },
     {
       "symbol": "TRX",
