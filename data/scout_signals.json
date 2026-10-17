@@ -1,8 +1,24 @@
 {
-  "ts": "2026-10-17T01:55:16+00:00",
+  "ts": "2026-10-17T02:00:34+00:00",
   "scanned": 122,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "AMPUSDT",
+      "signal": "ignition",
+      "score": 0.691,
+      "raw_score": 0.812,
+      "weight": 0.851,
+      "price": 0.000771,
+      "why": "trades 12.3x and volume 10.3x the prior 4h, 64% taker-buy, $86,188 burst \u2014 while price has only moved +3.9%",
+      "chg_24h": 0.1559,
+      "vol_surge": 10.27,
+      "chg_1h": 0.0391,
+      "market_surge": 2.81,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.53% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.53% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.58% at 24h: market beta, not signal",
