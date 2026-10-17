@@ -1,21 +1,22 @@
 {
-  "ts": "2026-10-17T15:05:41+00:00",
+  "ts": "2026-10-17T15:11:38+00:00",
   "sources": {
     "coingecko": [
-      "INJ",
       "STRK",
-      "PENGU",
+      "INJ",
       "NEAR",
-      "SUI",
       "TIA",
+      "PENGU",
+      "SUI",
+      "XPL",
       "AERO",
-      "ADA",
-      "PUMP"
+      "ADA"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "TRX"
+      "TRX",
+      "RLUSD"
     ],
     "watcher": [
       "PENGU"
@@ -39,7 +40,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.4e-05
+      "funding": -1.2e-05
     },
     {
       "symbol": "AERO",
@@ -63,15 +64,14 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.9e-05
+      "funding": 1.6e-05
     },
     {
-      "symbol": "PUMP",
+      "symbol": "RLUSD",
       "surfaces": 1,
       "sources": [
-        "coingecko"
-      ],
-      "funding": 3.7e-05
+        "movers"
+      ]
     },
     {
       "symbol": "STRK",
@@ -87,7 +87,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.2e-05
+      "funding": 6.8e-05
     },
     {
       "symbol": "TIA",
@@ -95,7 +95,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000102
+      "funding": -0.0001
     },
     {
       "symbol": "TRX",
@@ -104,6 +104,14 @@
         "movers"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "XPL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 4.2e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
