@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-17T00:48:06+00:00",
+ "updated": "2026-10-17T00:52:33+00:00",
  "spec": "x_chatter_precursors_2026-08-23",
  "n_rows_total": 24,
- "n_scored_excess_24h": 22,
+ "n_scored_excess_24h": 23,
  "objective": "BTC-excess 24h",
  "hit_threshold": 0.03,
  "features": {
@@ -14,10 +14,10 @@
     "median": -0.02079
    },
    "mainnet_upgrade": {
-    "n": 10,
-    "hit": 0.1,
-    "mean": -0.00507,
-    "median": 0.01629
+    "n": 11,
+    "hit": 0.091,
+    "mean": -0.0047,
+    "median": 0.00017
    }
   },
   "tier_T3": {
@@ -28,18 +28,18 @@
     "median": -0.00854
    },
    "True": {
-    "n": 8,
-    "hit": 0.125,
-    "mean": -0.00144,
-    "median": 0.00586
+    "n": 9,
+    "hit": 0.111,
+    "mean": -0.00138,
+    "median": 0.00017
    }
   },
   "handle": {},
   "all": {
    "all": {
-    "n": 22,
-    "hit": 0.136,
-    "mean": -0.00585,
+    "n": 23,
+    "hit": 0.13,
+    "mean": -0.00564,
     "median": -0.00646
    }
   }
@@ -49,10 +49,10 @@
    "note": "prior24h in [-2%,+5%] vs >+10%",
    "horizon_h": 24,
    "group_true": {
-    "n": 13,
-    "hit": 0.077,
-    "mean": -0.01799,
-    "median": -0.00854
+    "n": 14,
+    "hit": 0.071,
+    "mean": -0.01677,
+    "median": -0.00715
    },
    "group_false": null
   },
@@ -72,10 +72,10 @@
    "horizon_h": 24,
    "group_true": null,
    "group_false": {
-    "n": 19,
-    "hit": 0.158,
-    "mean": -0.00677,
-    "median": -0.00646
+    "n": 20,
+    "hit": 0.15,
+    "mean": -0.00647,
+    "median": -0.00092
    }
   },
   "H4_occurred_catalyst_fades": {
@@ -99,10 +99,10 @@
    "note": "BTC 24h realized vol high vs low",
    "horizon_h": 24,
    "group_true": {
-    "n": 5,
+    "n": 6,
     "hit": 0.0,
-    "mean": -0.02714,
-    "median": -0.02079
+    "mean": -0.02277,
+    "median": -0.00646
    },
    "group_false": {
     "n": 17,
@@ -110,7 +110,7 @@
     "mean": 0.00041,
     "median": 0.00017
    },
-   "edge_pp": -2.75
+   "edge_pp": -2.32
   },
   "H6_exchange_surface_words_exhaust": {
    "note": "scanner/exchange-surface wording vs organic",
@@ -122,12 +122,12 @@
     "median": -0.02079
    },
    "group_false": {
-    "n": 21,
-    "hit": 0.143,
-    "mean": -0.00514,
-    "median": -0.00646
+    "n": 22,
+    "hit": 0.136,
+    "mean": -0.00495,
+    "median": -0.00092
    },
-   "edge_pp": -1.56
+   "edge_pp": -1.58
   },
   "H7_extreme_velocity_contrarian": {
    "note": "all-new handles vs familiar, 72h",
@@ -150,22 +150,22 @@
     "median": 0.00017
    },
    "group_false": {
-    "n": 6,
+    "n": 7,
     "hit": 0.0,
-    "mean": -0.0146,
+    "mean": -0.01265,
     "median": -0.00792
    },
-   "edge_pp": 1.2
+   "edge_pp": 1.01
   }
  },
  "leaders": [
   {
    "kind": "catalyst",
    "feature": "mainnet_upgrade",
-   "n": 10,
-   "hit": 0.1,
-   "mean": -0.00507,
-   "median": 0.01629
+   "n": 11,
+   "hit": 0.091,
+   "mean": -0.0047,
+   "median": 0.00017
   },
   {
    "kind": "catalyst",
@@ -188,10 +188,10 @@
   {
    "kind": "catalyst",
    "feature": "mainnet_upgrade",
-   "n": 10,
-   "hit": 0.1,
-   "mean": -0.00507,
-   "median": 0.01629
+   "n": 11,
+   "hit": 0.091,
+   "mean": -0.0047,
+   "median": 0.00017
   }
  ]
 }
