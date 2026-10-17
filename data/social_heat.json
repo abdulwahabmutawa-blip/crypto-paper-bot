@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-17T19:51:39+00:00",
+  "ts": "2026-10-17T19:56:54+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
@@ -17,11 +17,9 @@
     "stocktwits": [],
     "movers": [
       "ZEC",
-      "WLD",
       "SOL",
-      "ETH",
-      "BTC",
-      "XRP"
+      "WLD",
+      "ETH"
     ],
     "watcher": [
       "PENGU"
@@ -29,16 +27,6 @@
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "BTC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 3.6e-05,
-      "long_short": 1.7
-    },
     {
       "symbol": "PENGU",
       "surfaces": 2,
@@ -48,6 +36,14 @@
       ],
       "funding": 5e-05,
       "long_short": 0.96
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 3.8e-05
     },
     {
       "symbol": "ETH",
@@ -63,7 +59,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.6e-05
+      "funding": 4.7e-05
     },
     {
       "symbol": "INJ",
@@ -71,7 +67,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.5e-05
+      "funding": -1.8e-05
     },
     {
       "symbol": "NEAR",
@@ -79,7 +75,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -8.4e-05
+      "funding": -8.3e-05
     },
     {
       "symbol": "ONDO",
@@ -87,7 +83,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.2e-05
+      "funding": 2e-05
     },
     {
       "symbol": "QNT",
@@ -95,7 +91,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -4.5e-05
+      "funding": -4.1e-05
     },
     {
       "symbol": "SOL",
@@ -103,7 +99,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -8.6e-05
+      "funding": -8.5e-05
     },
     {
       "symbol": "STRK",
@@ -119,7 +115,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.2e-05
+      "funding": 3.1e-05
     },
     {
       "symbol": "TIA",
@@ -127,7 +123,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -4.3e-05
+      "funding": -4.7e-05
     },
     {
       "symbol": "WLD",
@@ -135,15 +131,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000131
-    },
-    {
-      "symbol": "XRP",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -2.9e-05
+      "funding": -0.000132
     },
     {
       "symbol": "ZEC",
