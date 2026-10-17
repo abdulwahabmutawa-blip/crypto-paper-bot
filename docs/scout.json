@@ -1,39 +1,8 @@
 {
-  "ts": "2026-10-17T22:17:09+00:00",
+  "ts": "2026-10-17T22:22:25+00:00",
   "scanned": 95,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ENAUSDT",
-      "signal": "ignition",
-      "score": 0.5222,
-      "raw_score": 0.6115,
-      "weight": 0.854,
-      "price": 0.1882,
-      "why": "trades 5.3x and volume 7.2x the prior 4h, 67% taker-buy, $248,933 burst \u2014 while price has only moved -1.9%",
-      "chg_24h": -0.0519,
-      "vol_surge": 7.19,
-      "chg_1h": -0.0193,
-      "market_surge": 4.12,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.90% at 24h: market beta, not signal"
-    },
-    {
-      "symbol": "ERAUSDT",
-      "signal": "revival",
-      "score": 0.3676,
-      "raw_score": 0.3676,
-      "weight": 1.0,
-      "price": 0.0625,
-      "why": "revival day-one: fell -11% last week on $3.16M/day quiet, volume arriving 3.2x today, only +12% off its 30d low",
-      "chg_24h": 0.0813,
-      "vol_surge": 3.2,
-      "chg_1h": null,
-      "market_surge": null,
-      "actionable": false,
-      "status": "probation \u2014 11/12 resolved 24h samples under ruleset 3"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.90% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.75% at 24h: market beta, not signal",
@@ -42,7 +11,7 @@
     "revival": "probation \u2014 11/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 11,
+    "count": 10,
     "baseline": 11.0,
     "wave": false
   },
