@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-17T17:19:43+00:00 · runs 3649 · equity **$683.66** (-31.63%) · cash $65.66 · open 9/10 · round trips 1345
+updated 2026-10-17T17:36:06+00:00 · runs 3650 · equity **$685.45** (-31.45%) · cash $65.66 · open 9/10 · round trips 1345
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,13 +36,13 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-16T20:22 | SOXSBUSDT | surge | 49.26 | 49.54 | +0.57% |
-| 2026-10-16T20:22 | MUBUSDT | bottom | 878.21 | 873.32 | -0.56% |
-| 2026-10-17T09:33 | XLMUSDT | bottom | 0.1791 | 0.1767 | -1.34% |
-| 2026-10-17T14:17 | CAKEUSDT | surge | 2.236 | 2.214 | -0.98% |
-| 2026-10-17T15:23 | NMRUSDT | surge | 12.66 | 12.53 | -1.03% |
-| 2026-10-17T16:29 | ALTUSDT | surge | 0.00869 | 0.00867 | -0.23% |
+| 2026-10-16T20:22 | SOXSBUSDT | surge | 49.26 | 49.64 | +0.77% |
+| 2026-10-16T20:22 | MUBUSDT | bottom | 878.21 | 873.72 | -0.51% |
+| 2026-10-17T09:33 | XLMUSDT | bottom | 0.1791 | 0.1768 | -1.28% |
+| 2026-10-17T14:17 | CAKEUSDT | surge | 2.236 | 2.223 | -0.58% |
+| 2026-10-17T15:23 | NMRUSDT | surge | 12.66 | 12.56 | -0.79% |
+| 2026-10-17T16:29 | ALTUSDT | surge | 0.00869 | 0.0088 | +1.27% |
 | 2026-10-17T16:45 | UNIUSDT | bottom | 7.069 | 7.052 | -0.24% |
-| 2026-10-17T17:01 | AUSDT | surge | 0.1134 | 0.1114 | -1.76% |
+| 2026-10-17T17:01 | AUSDT | surge | 0.1134 | 0.1117 | -1.50% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
