@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-17T15:57:52+00:00 · runs 3644 · equity **$688.28** (-31.17%) · cash $131.65 · open 8/10 · round trips 1342
+updated 2026-10-17T16:14:15+00:00 · runs 3645 · equity **$688.58** (-31.14%) · cash $65.83 · open 9/10 · round trips 1342
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,12 +36,13 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-16T20:22 | SOXSBUSDT | surge | 49.26 | 49.36 | +0.20% |
-| 2026-10-16T20:22 | MUBUSDT | bottom | 878.21 | 874.37 | -0.44% |
-| 2026-10-17T09:33 | ARBUSDT | bottom | 0.1886 | 0.1839 | -2.49% |
-| 2026-10-17T09:33 | XLMUSDT | bottom | 0.1791 | 0.1771 | -1.12% |
-| 2026-10-17T14:17 | CAKEUSDT | surge | 2.236 | 2.213 | -1.03% |
-| 2026-10-17T15:23 | NMRUSDT | surge | 12.66 | 12.44 | -1.74% |
-| 2026-10-17T15:23 | PROMUSDT | surge | 5.061 | 4.976 | -1.68% |
+| 2026-10-16T20:22 | SOXSBUSDT | surge | 49.26 | 49.31 | +0.10% |
+| 2026-10-16T20:22 | MUBUSDT | bottom | 878.21 | 874.4 | -0.43% |
+| 2026-10-17T09:33 | ARBUSDT | bottom | 0.1886 | 0.1838 | -2.55% |
+| 2026-10-17T09:33 | XLMUSDT | bottom | 0.1791 | 0.1772 | -1.06% |
+| 2026-10-17T14:17 | CAKEUSDT | surge | 2.236 | 2.207 | -1.30% |
+| 2026-10-17T15:23 | NMRUSDT | surge | 12.66 | 12.47 | -1.50% |
+| 2026-10-17T15:23 | PROMUSDT | surge | 5.061 | 4.979 | -1.62% |
+| 2026-10-17T16:12 | SANDUSDT | surge | 0.06313 | 0.06346 | +0.52% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
