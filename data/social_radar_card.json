@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-17T18:38:01+00:00",
+ "updated": "2026-10-17T18:43:36+00:00",
  "spec": "x_chatter_precursors_2026-08-23",
  "n_rows_total": 25,
- "n_scored_excess_24h": 23,
+ "n_scored_excess_24h": 24,
  "objective": "BTC-excess 24h",
  "hit_threshold": 0.03,
  "features": {
@@ -14,9 +14,9 @@
     "median": -0.02079
    },
    "mainnet_upgrade": {
-    "n": 11,
-    "hit": 0.091,
-    "mean": -0.0047,
+    "n": 12,
+    "hit": 0.083,
+    "mean": -0.00593,
     "median": 0.00017
    }
   },
@@ -28,18 +28,18 @@
     "median": -0.00854
    },
    "True": {
-    "n": 9,
-    "hit": 0.111,
-    "mean": -0.00138,
+    "n": 10,
+    "hit": 0.1,
+    "mean": -0.0032,
     "median": 0.00017
    }
   },
   "handle": {},
   "all": {
    "all": {
-    "n": 23,
-    "hit": 0.13,
-    "mean": -0.00564,
+    "n": 24,
+    "hit": 0.125,
+    "mean": -0.00622,
     "median": -0.00646
    }
   }
@@ -72,10 +72,10 @@
    "horizon_h": 24,
    "group_true": null,
    "group_false": {
-    "n": 20,
-    "hit": 0.15,
-    "mean": -0.00647,
-    "median": -0.00092
+    "n": 21,
+    "hit": 0.143,
+    "mean": -0.00709,
+    "median": -0.00646
    }
   },
   "H4_occurred_catalyst_fades": {
@@ -105,12 +105,12 @@
     "median": -0.00646
    },
    "group_false": {
-    "n": 17,
-    "hit": 0.176,
-    "mean": 0.00041,
+    "n": 18,
+    "hit": 0.167,
+    "mean": -0.0007,
     "median": 0.00017
    },
-   "edge_pp": -2.32
+   "edge_pp": -2.21
   },
   "H6_exchange_surface_words_exhaust": {
    "note": "scanner/exchange-surface wording vs organic",
@@ -122,12 +122,12 @@
     "median": -0.02079
    },
    "group_false": {
-    "n": 22,
-    "hit": 0.136,
-    "mean": -0.00495,
-    "median": -0.00092
+    "n": 23,
+    "hit": 0.13,
+    "mean": -0.00558,
+    "median": -0.00646
    },
-   "edge_pp": -1.58
+   "edge_pp": -1.52
   },
   "H7_extreme_velocity_contrarian": {
    "note": "all-new handles vs familiar, 72h",
@@ -144,10 +144,10 @@
    "note": "first ever appearance vs repeat",
    "horizon_h": 24,
    "group_true": {
-    "n": 16,
-    "hit": 0.188,
-    "mean": -0.00257,
-    "median": 0.00017
+    "n": 17,
+    "hit": 0.176,
+    "mean": -0.00357,
+    "median": -0.00646
    },
    "group_false": {
     "n": 7,
@@ -155,16 +155,16 @@
     "mean": -0.01265,
     "median": -0.00792
    },
-   "edge_pp": 1.01
+   "edge_pp": 0.91
   }
  },
  "leaders": [
   {
    "kind": "catalyst",
    "feature": "mainnet_upgrade",
-   "n": 11,
-   "hit": 0.091,
-   "mean": -0.0047,
+   "n": 12,
+   "hit": 0.083,
+   "mean": -0.00593,
    "median": 0.00017
   },
   {
@@ -188,9 +188,9 @@
   {
    "kind": "catalyst",
    "feature": "mainnet_upgrade",
-   "n": 11,
-   "hit": 0.091,
-   "mean": -0.0047,
+   "n": 12,
+   "hit": 0.083,
+   "mean": -0.00593,
    "median": 0.00017
   }
  ]
