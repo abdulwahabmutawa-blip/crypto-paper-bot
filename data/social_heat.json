@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-17T03:47:11+00:00",
+  "ts": "2026-10-17T03:53:01+00:00",
   "sources": {
     "coingecko": [
       "INJ",
@@ -19,7 +19,6 @@
     "movers": [
       "TIA",
       "WLD",
-      "SOL",
       "U",
       "RLUSD"
     ],
@@ -30,23 +29,13 @@
   },
   "heat": [
     {
-      "symbol": "SOL",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": -0.0,
-      "long_short": 2.53
-    },
-    {
       "symbol": "TIA",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": 1.2e-05,
+      "funding": 8e-06,
       "long_short": 1.39
     },
     {
@@ -55,7 +44,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 4.6e-05
     },
     {
       "symbol": "BTC",
@@ -79,7 +68,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -6.6e-05
+      "funding": -7.1e-05
     },
     {
       "symbol": "LIT",
@@ -95,7 +84,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.9e-05
+      "funding": 5.4e-05
     },
     {
       "symbol": "PENGU",
@@ -119,7 +108,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -3.4e-05
+      "funding": -3.1e-05
     },
     {
       "symbol": "RLUSD",
@@ -127,6 +116,14 @@
       "sources": [
         "movers"
       ]
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -2e-06
     },
     {
       "symbol": "STRK",
@@ -149,7 +146,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 6.1e-05
+      "funding": 6e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
