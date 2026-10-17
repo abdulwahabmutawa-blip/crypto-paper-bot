@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-17T17:13:11+00:00",
+  "ts": "2026-10-17T17:18:57+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
@@ -18,6 +18,10 @@
     "stocktwits": [],
     "movers": [
       "BTC",
+      "ETH",
+      "SOL",
+      "TRX",
+      "HYPE",
       "RLUSD"
     ],
     "watcher": [
@@ -37,22 +41,32 @@
       "long_short": 1.68
     },
     {
+      "symbol": "ETH",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 7.1e-05,
+      "long_short": 2.81
+    },
+    {
       "symbol": "PENGU",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "watcher"
       ],
-      "funding": 1e-06,
+      "funding": 2e-06,
       "long_short": 0.97
     },
     {
-      "symbol": "ETH",
+      "symbol": "HYPE",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
-      "funding": 6.9e-05
+      "funding": 3.2e-05
     },
     {
       "symbol": "NEAR",
@@ -68,7 +82,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.2e-05
+      "funding": 3.4e-05
     },
     {
       "symbol": "QNT",
@@ -76,7 +90,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000106
+      "funding": -0.000102
     },
     {
       "symbol": "RLUSD",
@@ -84,6 +98,14 @@
       "sources": [
         "movers"
       ]
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -5e-05
     },
     {
       "symbol": "STRK",
@@ -99,7 +121,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.5e-05
+      "funding": 5.2e-05
     },
     {
       "symbol": "TIA",
@@ -107,7 +129,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.6e-05
+      "funding": -1.4e-05
+    },
+    {
+      "symbol": "TRX",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "ZEC",
