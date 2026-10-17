@@ -1,8 +1,54 @@
 {
-  "ts": "2026-10-17T12:50:36+00:00",
-  "scanned": 110,
+  "ts": "2026-10-17T12:56:08+00:00",
+  "scanned": 109,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "LSKUSDT",
+      "signal": "breakout",
+      "score": 0.702,
+      "raw_score": 0.8134,
+      "weight": 0.863,
+      "price": 0.2145,
+      "why": "trades 16.9x, volume 18.1x, 67% taker-buy, +4.1% in an hour, at 95% of its 24h range",
+      "chg_24h": 0.0615,
+      "vol_surge": 18.12,
+      "chg_1h": 0.0413,
+      "market_surge": 0.0,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.78% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "SUSDT",
+      "signal": "ignition",
+      "score": 0.6464,
+      "raw_score": 0.7551,
+      "weight": 0.856,
+      "price": 0.0539,
+      "why": "trades 6.7x and volume 22.4x the prior 4h, 68% taker-buy, $98,739 burst \u2014 while price has only moved -1.3%",
+      "chg_24h": -0.0106,
+      "vol_surge": 22.39,
+      "chg_1h": -0.0128,
+      "market_surge": 9.39,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.74% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "FETUSDT",
+      "signal": "ignition",
+      "score": 0.4941,
+      "raw_score": 0.5773,
+      "weight": 0.856,
+      "price": 0.192,
+      "why": "trades 4.8x and volume 5.6x the prior 4h, 67% taker-buy, $101,868 burst \u2014 while price has only moved -0.9%",
+      "chg_24h": -0.0639,
+      "vol_surge": 5.58,
+      "chg_1h": -0.0088,
+      "market_surge": 1.31,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.74% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.74% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.78% at 24h: market beta, not signal",
@@ -11,7 +57,7 @@
     "revival": "probation \u2014 11/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 11,
+    "count": 10,
     "baseline": 11.0,
     "wave": false
   },
