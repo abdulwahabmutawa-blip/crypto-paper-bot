@@ -1,22 +1,22 @@
 {
-  "ts": "2026-10-17T15:50:07+00:00",
-  "scanned": 101,
+  "ts": "2026-10-17T15:55:35+00:00",
+  "scanned": 99,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "MUBARAKUSDT",
-      "signal": "breakout",
-      "score": 0.7949,
-      "raw_score": 0.9265,
-      "weight": 0.858,
-      "price": 0.05865,
-      "why": "trades 8.7x, volume 16.3x, 67% taker-buy, +7.7% in an hour, at 93% of its 24h range",
-      "chg_24h": 0.0421,
-      "vol_surge": 16.35,
-      "chg_1h": 0.0773,
-      "market_surge": 15.72,
+      "symbol": "QUICKUSDT",
+      "signal": "revival",
+      "score": 0.8115,
+      "raw_score": 0.8115,
+      "weight": 1.0,
+      "price": 0.00715,
+      "why": "revival day-one: fell -39% last week on $0.28M/day quiet, volume arriving 9.8x today, only +18% off its 30d low \u00b7 serial exploder: 3 runs in 2y",
+      "chg_24h": 0.0866,
+      "vol_surge": 9.8,
+      "chg_1h": null,
+      "market_surge": null,
       "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -1.00% at 24h: market beta, not signal"
+      "status": "probation \u2014 11/12 resolved 24h samples under ruleset 3"
     }
   ],
   "gate": {
@@ -41,7 +41,7 @@
       "median_ret_1h": -0.00222,
       "both_halves_1h": false,
       "days_1h": 15,
-      "mean_x_1h": -0.00114,
+      "mean_x_1h": -0.00113,
       "days_x_1h": 15,
       "avg_win_1h": 0.0128,
       "avg_loss_1h": -0.01159,
