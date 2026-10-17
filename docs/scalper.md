@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-17T20:30:48+00:00 · runs 3661 · equity **$684.42** (-31.56%) · cash $0.00 · open 10/10 · round trips 1353
+updated 2026-10-17T20:47:08+00:00 · runs 3662 · equity **$683.87** (-31.61%) · cash $0.00 · open 10/10 · round trips 1353
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-17T09:33 | XLMUSDT | bottom | 0.1791 | 0.1789 | -0.11% |
-| 2026-10-17T14:17 | CAKEUSDT | surge | 2.236 | 2.215 | -0.94% |
-| 2026-10-17T15:23 | NMRUSDT | surge | 12.66 | 12.41 | -1.97% |
-| 2026-10-17T16:45 | UNIUSDT | bottom | 7.069 | 7.182 | +1.60% |
-| 2026-10-17T19:00 | AXLUSDT | surge | 0.0578 | 0.058 | +0.35% |
-| 2026-10-17T20:06 | AUSDT | surge | 0.114 | 0.1132 | -0.70% |
-| 2026-10-17T20:06 | CRVUSDT | surge | 0.3485 | 0.348 | -0.14% |
-| 2026-10-17T20:29 | HBARUSDT | surge | 0.0849 | 0.08463 | -0.32% |
+| 2026-10-17T09:33 | XLMUSDT | bottom | 0.1791 | 0.1791 | +0.00% |
+| 2026-10-17T14:17 | CAKEUSDT | surge | 2.236 | 2.218 | -0.81% |
+| 2026-10-17T15:23 | NMRUSDT | surge | 12.66 | 12.37 | -2.29% |
+| 2026-10-17T16:45 | UNIUSDT | bottom | 7.069 | 7.186 | +1.66% |
+| 2026-10-17T19:00 | AXLUSDT | surge | 0.0578 | 0.0578 | +0.00% |
+| 2026-10-17T20:06 | AUSDT | surge | 0.114 | 0.1121 | -1.67% |
+| 2026-10-17T20:06 | CRVUSDT | surge | 0.3485 | 0.3476 | -0.26% |
+| 2026-10-17T20:29 | HBARUSDT | surge | 0.0849 | 0.0851 | +0.24% |
 | 2026-10-17T20:29 | RWUSDUSDT | bottom | 1 | 1 | +0.00% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
