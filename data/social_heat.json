@@ -1,25 +1,26 @@
 {
-  "ts": "2026-10-17T04:21:11+00:00",
+  "ts": "2026-10-17T04:26:41+00:00",
   "sources": {
     "coingecko": [
-      "NEAR",
-      "SOL",
-      "PENGU",
       "TIA",
+      "NEAR",
       "INJ",
+      "SOL",
       "STRK",
-      "HYPE",
-      "SUI",
       "PUMP",
-      "OSMO",
-      "LIT"
+      "SUI",
+      "PENGU",
+      "OP",
+      "HYPE",
+      "ZIL"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "TIA",
       "WLD",
-      "U"
+      "U",
+      "RLUSD"
     ],
     "watcher": [
       "TIA"
@@ -35,7 +36,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -2e-06,
+      "funding": -3e-06,
       "long_short": 1.45
     },
     {
@@ -52,15 +53,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -7.7e-05
-    },
-    {
-      "symbol": "LIT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": -7.3e-05
     },
     {
       "symbol": "NEAR",
@@ -68,14 +61,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.9e-05
+      "funding": 3.5e-05
     },
     {
-      "symbol": "OSMO",
+      "symbol": "OP",
       "surfaces": 1,
       "sources": [
         "coingecko"
-      ]
+      ],
+      "funding": -5.4e-05
     },
     {
       "symbol": "PENGU",
@@ -92,6 +86,13 @@
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "RLUSD",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
     },
     {
       "symbol": "SOL",
@@ -130,7 +131,15 @@
       "sources": [
         "movers"
       ],
-      "funding": 5.7e-05
+      "funding": 6.1e-05
+    },
+    {
+      "symbol": "ZIL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -0.000389
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
