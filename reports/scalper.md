@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-18T21:50:26+00:00 · runs 3754 · equity **$654.38** (-34.56%) · cash $254.81 · open 6/10 · round trips 1386
+updated 2026-10-18T21:55:32+00:00 · runs 3755 · equity **$654.22** (-34.58%) · cash $254.81 · open 6/10 · round trips 1386
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,10 +36,10 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-18T01:44 | TRXUSDT | bottom | 0.3338 | 0.3327 | -0.33% |
-| 2026-10-18T03:05 | MSTRBUSDT | surge | 137.28 | 135.12 | -1.57% |
-| 2026-10-18T18:16 | SOXSBUSDT | surge | 52.08 | 51.45 | -1.21% |
-| 2026-10-18T20:37 | UNIUSDT | bottom | 6.862 | 6.933 | +1.03% |
-| 2026-10-18T21:30 | SANDUSDT | bottom | 0.05638 | 0.05661 | +0.41% |
+| 2026-10-18T01:44 | TRXUSDT | bottom | 0.3338 | 0.3328 | -0.30% |
+| 2026-10-18T03:05 | MSTRBUSDT | surge | 137.28 | 135.05 | -1.62% |
+| 2026-10-18T18:16 | SOXSBUSDT | surge | 52.08 | 51.1 | -1.88% |
+| 2026-10-18T20:37 | UNIUSDT | bottom | 6.862 | 6.94 | +1.14% |
+| 2026-10-18T21:30 | SANDUSDT | bottom | 0.05638 | 0.05679 | +0.73% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
