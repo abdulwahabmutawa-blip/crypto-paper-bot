@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-18T20:06:01+00:00",
+ "updated": "2026-10-18T20:11:07+00:00",
  "spec": "x_chatter_precursors_2026-08-23",
  "n_rows_total": 29,
- "n_scored_excess_24h": 25,
+ "n_scored_excess_24h": 27,
  "objective": "BTC-excess 24h",
  "hit_threshold": 0.03,
  "features": {
@@ -14,18 +14,18 @@
     "median": -0.02079
    },
    "mainnet_upgrade": {
-    "n": 12,
-    "hit": 0.083,
-    "mean": -0.00593,
-    "median": 0.00017
+    "n": 14,
+    "hit": 0.071,
+    "mean": -0.01283,
+    "median": -0.00092
    }
   },
   "tier_T3": {
    "False": {
-    "n": 15,
-    "hit": 0.133,
-    "mean": -0.00796,
-    "median": -0.00854
+    "n": 17,
+    "hit": 0.118,
+    "mean": -0.0134,
+    "median": -0.02079
    },
    "True": {
     "n": 10,
@@ -37,10 +37,10 @@
   "handle": {},
   "all": {
    "all": {
-    "n": 25,
-    "hit": 0.12,
-    "mean": -0.00605,
-    "median": -0.00646
+    "n": 27,
+    "hit": 0.111,
+    "mean": -0.00962,
+    "median": -0.00715
    }
   }
  },
@@ -49,10 +49,10 @@
    "note": "prior24h in [-2%,+5%] vs >+10%",
    "horizon_h": 24,
    "group_true": {
-    "n": 15,
-    "hit": 0.067,
-    "mean": -0.0158,
-    "median": -0.00715
+    "n": 17,
+    "hit": 0.059,
+    "mean": -0.02032,
+    "median": -0.00854
    },
    "group_false": null
   },
@@ -60,9 +60,9 @@
    "note": ">=8 distinct handles & no T3 vs narrow+loud",
    "horizon_h": 24,
    "group_true": {
-    "n": 12,
-    "hit": 0.167,
-    "mean": -0.00994,
+    "n": 13,
+    "hit": 0.154,
+    "mean": -0.01588,
     "median": -0.02079
    },
    "group_false": null
@@ -72,10 +72,10 @@
    "horizon_h": 24,
    "group_true": null,
    "group_false": {
-    "n": 22,
-    "hit": 0.136,
-    "mean": -0.00687,
-    "median": -0.00219
+    "n": 23,
+    "hit": 0.13,
+    "mean": -0.01037,
+    "median": -0.00646
    }
   },
   "H4_occurred_catalyst_fades": {
@@ -105,12 +105,12 @@
     "median": -0.00646
    },
    "group_false": {
-    "n": 19,
-    "hit": 0.158,
-    "mean": -0.00078,
-    "median": -0.00219
+    "n": 21,
+    "hit": 0.143,
+    "mean": -0.00587,
+    "median": -0.00715
    },
-   "edge_pp": -2.2
+   "edge_pp": -1.69
   },
   "H6_exchange_surface_words_exhaust": {
    "note": "scanner/exchange-surface wording vs organic",
@@ -122,12 +122,12 @@
     "median": -0.02079
    },
    "group_false": {
-    "n": 24,
-    "hit": 0.125,
-    "mean": -0.00544,
-    "median": -0.00219
+    "n": 26,
+    "hit": 0.115,
+    "mean": -0.00919,
+    "median": -0.00646
    },
-   "edge_pp": -1.53
+   "edge_pp": -1.16
   },
   "H7_extreme_velocity_contrarian": {
    "note": "all-new handles vs familiar, 72h",
@@ -150,48 +150,48 @@
     "median": -0.00219
    },
    "group_false": {
-    "n": 7,
+    "n": 9,
     "hit": 0.0,
-    "mean": -0.01265,
-    "median": -0.00792
+    "mean": -0.02189,
+    "median": -0.02079
    },
-   "edge_pp": 0.92
+   "edge_pp": 1.84
   }
  },
  "leaders": [
   {
    "kind": "catalyst",
-   "feature": "mainnet_upgrade",
-   "n": 12,
-   "hit": 0.083,
-   "mean": -0.00593,
-   "median": 0.00017
-  },
-  {
-   "kind": "catalyst",
    "feature": "unlock",
    "n": 7,
    "hit": 0.143,
    "mean": -0.01127,
    "median": -0.02079
+  },
+  {
+   "kind": "catalyst",
+   "feature": "mainnet_upgrade",
+   "n": 14,
+   "hit": 0.071,
+   "mean": -0.01283,
+   "median": -0.00092
   }
  ],
  "laggards": [
   {
    "kind": "catalyst",
+   "feature": "mainnet_upgrade",
+   "n": 14,
+   "hit": 0.071,
+   "mean": -0.01283,
+   "median": -0.00092
+  },
+  {
+   "kind": "catalyst",
    "feature": "unlock",
    "n": 7,
    "hit": 0.143,
    "mean": -0.01127,
    "median": -0.02079
-  },
-  {
-   "kind": "catalyst",
-   "feature": "mainnet_upgrade",
-   "n": 12,
-   "hit": 0.083,
-   "mean": -0.00593,
-   "median": 0.00017
   }
  ]
 }
