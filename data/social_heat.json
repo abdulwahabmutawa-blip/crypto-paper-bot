@@ -1,16 +1,17 @@
 {
-  "ts": "2026-10-18T10:30:29+00:00",
+  "ts": "2026-10-18T10:35:41+00:00",
   "sources": {
     "coingecko": [
+      "NEAR",
       "TAO",
-      "ENA",
-      "HYPE",
-      "ZEC",
       "XMR",
-      "BTT",
-      "QNT",
+      "ENA",
       "STRK",
-      "ICP"
+      "ZEC",
+      "ICP",
+      "BTT",
+      "BTC",
+      "ETH"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -26,13 +27,23 @@
   },
   "heat": [
     {
+      "symbol": "BTC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.67
+    },
+    {
       "symbol": "SAND",
       "surfaces": 2,
       "sources": [
         "movers",
         "watcher"
       ],
-      "funding": -0.00806,
+      "funding": -0.007852,
       "long_short": 1.29
     },
     {
@@ -41,15 +52,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 7.8e-05
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
+      "funding": 7.7e-05
     },
     {
       "symbol": "BTT",
@@ -64,15 +67,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9e-06
+      "funding": 7e-06
     },
     {
-      "symbol": "HYPE",
+      "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 4.9e-05
+      "funding": 3.6e-05
     },
     {
       "symbol": "ICP",
@@ -80,15 +83,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1e-05
+      "funding": -1e-06
     },
     {
-      "symbol": "QNT",
+      "symbol": "NEAR",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -6.5e-05
+      "funding": 1.5e-05
     },
     {
       "symbol": "STRK",
@@ -104,7 +107,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.1e-05
+      "funding": 3.5e-05
     },
     {
       "symbol": "XMR",
