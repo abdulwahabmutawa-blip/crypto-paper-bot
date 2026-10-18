@@ -1,22 +1,22 @@
 {
-  "ts": "2026-10-18T19:05:44+00:00",
-  "scanned": 95,
+  "ts": "2026-10-18T19:11:16+00:00",
+  "scanned": 96,
   "ruleset": 3,
   "candidates": [
     {
       "symbol": "RUNEUSDT",
-      "signal": "ignition",
-      "score": 0.7394,
-      "raw_score": 0.8608,
-      "weight": 0.859,
-      "price": 0.636,
-      "why": "trades 32.0x and volume 65.4x the prior 4h, 67% taker-buy, $170,427 burst \u2014 while price has only moved +2.3%",
-      "chg_24h": -0.0063,
-      "vol_surge": 65.36,
-      "chg_1h": 0.0225,
-      "market_surge": 0.0,
+      "signal": "breakout",
+      "score": 0.6735,
+      "raw_score": 0.7813,
+      "weight": 0.862,
+      "price": 0.643,
+      "why": "trades 24.0x, volume 27.9x, 63% taker-buy, +3.4% in an hour, at 84% of its 24h range",
+      "chg_24h": 0.0078,
+      "vol_surge": 27.88,
+      "chg_1h": 0.0338,
+      "market_surge": 15.78,
       "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.95% at 24h: market beta, not signal"
+      "status": "benched \u2014 BTC-excess day mean -0.93% at 24h: market beta, not signal"
     }
   ],
   "gate": {
@@ -27,7 +27,7 @@
     "revival": "probation \u2014 record spans 7 UTC days (need 8): regime luck, not a signal"
   },
   "breadth": {
-    "count": 8,
+    "count": 7,
     "baseline": 10.0,
     "wave": false
   },
