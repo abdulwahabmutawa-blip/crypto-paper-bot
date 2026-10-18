@@ -1,23 +1,25 @@
 {
-  "ts": "2026-10-18T22:58:41+00:00",
+  "ts": "2026-10-18T23:04:01+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
       "PENGU",
-      "BTC",
       "HYPE",
-      "AERO"
+      "BTC",
+      "AERO",
+      "TAO",
+      "SOL"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "SOXLB",
       "SNDKB",
-      "HBAR",
-      "SPCXB",
       "NEAR",
       "SUI",
-      "XRP",
+      "HBAR",
+      "SPCXB",
+      "SOL",
       "HYPE"
     ],
     "watcher": [],
@@ -41,8 +43,18 @@
         "coingecko",
         "movers"
       ],
-      "funding": 1.7e-05,
-      "long_short": 1.48
+      "funding": 1.5e-05,
+      "long_short": 1.47
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -1.2e-05,
+      "long_short": 2.77
     },
     {
       "symbol": "AERO",
@@ -50,7 +62,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.2e-05
+      "funding": 9e-06
     },
     {
       "symbol": "BTC",
@@ -58,7 +70,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.1e-05
+      "funding": 3.2e-05
     },
     {
       "symbol": "HBAR",
@@ -66,7 +78,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 1.4e-05
+      "funding": 1.2e-05
     },
     {
       "symbol": "PENGU",
@@ -103,15 +115,15 @@
       "sources": [
         "movers"
       ],
-      "funding": -4.4e-05
+      "funding": -4.8e-05
     },
     {
-      "symbol": "XRP",
+      "symbol": "TAO",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
-      "funding": -6.5e-05
+      "funding": 2.2e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
