@@ -1,14 +1,14 @@
 {
-  "ts": "2026-10-18T18:26:08+00:00",
+  "ts": "2026-10-18T18:32:01+00:00",
   "sources": {
     "coingecko": [
-      "STRK",
+      "BTC",
       "INJ",
       "TIA",
-      "NEAR",
-      "LIT",
+      "AERO",
       "PENGU",
-      "PUMP"
+      "XMR",
+      "LIT"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,12 +20,28 @@
   },
   "heat": [
     {
+      "symbol": "AERO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -5e-06
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 1.3e-05
+    },
+    {
       "symbol": "HBAR",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 2.1e-05
+      "funding": 2.3e-05
     },
     {
       "symbol": "INJ",
@@ -33,7 +49,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.00013
+      "funding": -0.000131
     },
     {
       "symbol": "LIT",
@@ -41,15 +57,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.0
-    },
-    {
-      "symbol": "NEAR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -5.3e-05
+      "funding": 3e-06
     },
     {
       "symbol": "PENGU",
@@ -57,23 +65,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.7e-05
-    },
-    {
-      "symbol": "PUMP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "STRK",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": 3.1e-05
     },
     {
       "symbol": "TIA",
@@ -82,6 +74,14 @@
         "coingecko"
       ],
       "funding": -9e-06
+    },
+    {
+      "symbol": "XMR",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
