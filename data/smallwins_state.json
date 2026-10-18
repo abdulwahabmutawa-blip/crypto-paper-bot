@@ -11917,29 +11917,6 @@
   },
   {
    "symbol": "HBARUSDT",
-   "tactic": "momentum|t1|s1|h6",
-   "shape": "momentum",
-   "target": 0.01,
-   "stop": 0.01,
-   "max_h": 6,
-   "entry": 0.08594,
-   "entry_ms": 1792288799999,
-   "entry_ts": "2026-10-18T02:01:48+00:00",
-   "feat": {
-    "r1h": 0.00163,
-    "r4h": 0.02578,
-    "r24": 0.02554,
-    "v4h": 2.98914,
-    "tbs4h": 0.55682,
-    "rp24": 0.79218,
-    "rng24": 0.0592,
-    "btc1": 0.00197,
-    "btc4": 0.0045,
-    "btc24": 0.00111
-   }
-  },
-  {
-   "symbol": "HBARUSDT",
    "tactic": "momentum|t1.5|s1|h8",
    "shape": "momentum",
    "target": 0.015,
@@ -13067,29 +13044,6 @@
   },
   {
    "symbol": "ERAUSDT",
-   "tactic": "dip_large|t2|s2|h8",
-   "shape": "dip_large",
-   "target": 0.02,
-   "stop": 0.02,
-   "max_h": 8,
-   "entry": 0.067,
-   "entry_ms": 1792292399999,
-   "entry_ts": "2026-10-18T03:06:43+00:00",
-   "feat": {
-    "r1h": -0.03597,
-    "r4h": 0.07372,
-    "r24": 0.13367,
-    "v4h": 2.72531,
-    "tbs4h": 0.49993,
-    "rp24": 0.60417,
-    "rng24": 0.247,
-    "btc1": 0.0025,
-    "btc4": 0.00651,
-    "btc24": 0.0051
-   }
-  },
-  {
-   "symbol": "ERAUSDT",
    "tactic": "dip_large|t3|s2|h12",
    "shape": "dip_large",
    "target": 0.03,
@@ -13573,60 +13527,6 @@
   }
  ],
  "resolved": [
-  {
-   "symbol": "NEARUSDT",
-   "tactic": "momentum|t1|s1|h6",
-   "shape": "momentum",
-   "target": 0.01,
-   "stop": 0.01,
-   "max_h": 6,
-   "entry": 5.832,
-   "entry_ms": 1791764999999,
-   "entry_ts": "2026-10-12T00:32:16+00:00",
-   "feat": {
-    "r1h": -0.00664,
-    "r4h": 0.03039,
-    "r24": 0.10727,
-    "v4h": 2.42585,
-    "tbs4h": 0.55884,
-    "rp24": 0.84891,
-    "rng24": 0.15109,
-    "btc1": 0.00184,
-    "btc4": 0.00203,
-    "btc24": 0.01069
-   },
-   "ret": 0.0075,
-   "how": "TARGET",
-   "hours": 0.0,
-   "exit_ts": "2026-10-12T00:48:35+00:00"
-  },
-  {
-   "symbol": "NEARUSDT",
-   "tactic": "momentum|t1.5|s1|h8",
-   "shape": "momentum",
-   "target": 0.015,
-   "stop": 0.01,
-   "max_h": 8,
-   "entry": 5.832,
-   "entry_ms": 1791764999999,
-   "entry_ts": "2026-10-12T00:32:16+00:00",
-   "feat": {
-    "r1h": -0.00664,
-    "r4h": 0.03039,
-    "r24": 0.10727,
-    "v4h": 2.42585,
-    "tbs4h": 0.55884,
-    "rp24": 0.84891,
-    "rng24": 0.15109,
-    "btc1": 0.00184,
-    "btc4": 0.00203,
-    "btc24": 0.01069
-   },
-   "ret": 0.0125,
-   "how": "TARGET",
-   "hours": 0.0,
-   "exit_ts": "2026-10-12T00:48:35+00:00"
-  },
   {
    "symbol": "TIAUSDT",
    "tactic": "range_bottom|t1|s1|h6",
@@ -553572,8 +553472,62 @@
    "how": "TARGET",
    "hours": 0.0,
    "exit_ts": "2026-10-18T04:17:33+00:00"
+  },
+  {
+   "symbol": "HBARUSDT",
+   "tactic": "momentum|t1|s1|h6",
+   "shape": "momentum",
+   "target": 0.01,
+   "stop": 0.01,
+   "max_h": 6,
+   "entry": 0.08594,
+   "entry_ms": 1792288799999,
+   "entry_ts": "2026-10-18T02:01:48+00:00",
+   "feat": {
+    "r1h": 0.00163,
+    "r4h": 0.02578,
+    "r24": 0.02554,
+    "v4h": 2.98914,
+    "tbs4h": 0.55682,
+    "rp24": 0.79218,
+    "rng24": 0.0592,
+    "btc1": 0.00197,
+    "btc4": 0.0045,
+    "btc24": 0.00111
+   },
+   "ret": 0.0075,
+   "how": "TARGET",
+   "hours": 2.25,
+   "exit_ts": "2026-10-18T04:33:51+00:00"
+  },
+  {
+   "symbol": "ERAUSDT",
+   "tactic": "dip_large|t2|s2|h8",
+   "shape": "dip_large",
+   "target": 0.02,
+   "stop": 0.02,
+   "max_h": 8,
+   "entry": 0.067,
+   "entry_ms": 1792292399999,
+   "entry_ts": "2026-10-18T03:06:43+00:00",
+   "feat": {
+    "r1h": -0.03597,
+    "r4h": 0.07372,
+    "r24": 0.13367,
+    "v4h": 2.72531,
+    "tbs4h": 0.49993,
+    "rp24": 0.60417,
+    "rng24": 0.247,
+    "btc1": 0.0025,
+    "btc4": 0.00651,
+    "btc24": 0.0051
+   },
+   "ret": 0.0175,
+   "how": "TARGET",
+   "hours": 1.25,
+   "exit_ts": "2026-10-18T04:33:51+00:00"
   }
  ],
- "runs": 3760,
- "updated": "2026-10-18T04:17:33+00:00"
+ "runs": 3761,
+ "updated": "2026-10-18T04:33:51+00:00"
 }
