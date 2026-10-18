@@ -1,22 +1,25 @@
 {
-  "ts": "2026-10-18T03:41:09+00:00",
+  "ts": "2026-10-18T03:46:22+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
       "XMR",
       "LIT",
-      "ENA",
       "SUI",
-      "QNT",
-      "PENGU",
       "BTC",
+      "ENA",
+      "INJ",
+      "PENGU",
+      "QNT",
+      "AERO",
       "XRP"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "SAND",
-      "BTC"
+      "BTC",
+      "BNB"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -33,12 +36,36 @@
       "long_short": 1.74
     },
     {
+      "symbol": "AERO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -4.5e-05
+    },
+    {
+      "symbol": "BNB",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 7.6e-05
+    },
+    {
       "symbol": "ENA",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -0.0
+      "funding": 0.0
+    },
+    {
+      "symbol": "INJ",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -2e-06
     },
     {
       "symbol": "LIT",
@@ -54,7 +81,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.3e-05
+      "funding": 1.5e-05
     },
     {
       "symbol": "PENGU",
@@ -62,7 +89,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.0
+      "funding": 7e-06
     },
     {
       "symbol": "QNT",
@@ -70,7 +97,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.00011
+      "funding": -0.000102
     },
     {
       "symbol": "SAND",
@@ -78,7 +105,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.007343
+      "funding": -0.007665
     },
     {
       "symbol": "SUI",
