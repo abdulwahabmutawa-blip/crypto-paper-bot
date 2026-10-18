@@ -1,21 +1,21 @@
-# Fleet Status — 2026-10-17 UTC
+# Fleet Status — 2026-10-18 UTC
 
 | Bot | Holds | 24h change | Value |
 |---|---|---|---|
-| crypto (BTC tide gauge v4) | BTC-USD | No position change (last trade 2026-09-08) | $1,162.17 |
-| meanrev | JNJ | No position change (last trade 2026-10-01) | $1,113.55 (as of 2026-10-16 close; NYSE closed Sat) |
+| crypto (BTC tide gauge v4) | BTC-USD | No position change (last trade 2026-09-08) | $1,165.98 (+$3.81) |
+| meanrev | JNJ | No position change (last trade 2026-10-01) | $1,113.55 (as of 2026-10-16 close; NYSE closed weekend) |
 | sentiment (Watcher + sentinel_trader) | CASH | Still R1-frozen (see Needs a look) | $726.83 |
-| scalper | 10/10 seats filled | 26 round trips, 7W/19L, net −$23.41 | $698.98 (−30.10%) |
-| Watcher (sentinel, no capital) | — | 2 scans, latest 21:12 UTC, risk "caution" | n/a |
+| scalper | 7/10 seats filled | 44 round trips, 14W/30L, net −$34.86 | $667.03 (−33.30%, was −30.10%) |
+| Watcher (sentinel, no capital) | — | 3 scans, latest 22:41 UTC, risk "caution" | n/a |
 
-Cycle-commit cadence checked via git history + GitHub API across the full 24h window: steady ~17min spacing on `paper-trade-cycle`, no gaps found, no failed runs seen in the sampled window.
+Cycle-commit cadence checked via git history + GitHub Actions API across the full 24h window: paper-trade-cycle runs as one long-lived job (~5h45m, cycle every ~13min) — current run in progress since 04:51 UTC is expected, not stuck. No failed runs in the sampled window.
 
 ## Changed
-- scalper: 26 round trips closed (7 wins / 19 losses), net −$23.41. Seats held steady at 10/10 throughout — no seat-count change.
+- scalper: 44 round trips closed (14 wins / 30 losses), net −$34.86. Seats dropped from 10/10 to 7/10 filled (3 empty, $186.54 cash) — equity down to $667.03 (−33.30%), further below the R1 floor.
 - No other bot changed position.
 
 ## Needs a look
-- **scalper** equity $698.98 (−30.10%) is below the R1 hard-stop floor ($750, `reports/kill_criteria.md`) — this has been true continuously since around 2026-10-12, not new today. It's still running every cycle; no retirement action has been taken (that's a human call, not made yet). Note the standing caveat: scalper fills are retrospective/candle-close, signal research rather than proven executable fills, per CLAUDE.md.
+- **scalper** equity $667.03 (−33.30%) remains below the R1 hard-stop floor ($750, `reports/kill_criteria.md`) and has worsened since yesterday (−30.10% → −33.30%). Still running every cycle; no retirement action taken (human call, not yet made). Standing caveat applies: scalper fills are retrospective/candle-close signal research, not proven executable fills, per CLAUDE.md.
 - **sentiment** remains R1-frozen in CASH at $726.83, unchanged since 2026-10-12. Un-freezing or formal retirement still undecided.
-- Only 4 capital books + the no-capital Watcher are live on the Actions roster (crypto, meanrev, sentiment, scalper) — congress, hunter, analyst, hypecrypto, commodity, allweather, scholar, stock are retired/frozen archives per `kill_criteria.md`, not active bots.
-- `reports/supervisor_scoreboard.json` is stale (last updated 2026-10-13) — not refreshed by the cycle loop, so not used for the numbers above.
+- Only 4 capital books + the no-capital Watcher are live on the Actions roster (crypto, meanrev, sentiment, scalper) — congress, hunter, analyst, hypecrypto, commodity, allweather, scholar, stock remain retired/frozen archives per `kill_criteria.md`. The repo also shows a `carry` funding book, updated via the lottery/VPS commits (not the Actions paper fleet, per CLAUDE.md), and a daily `oracle-cycle` research job with no capital and no bot code touched — neither is one of the four paper books, so neither is reported here.
+- `reports/supervisor_scoreboard.json` still stale (last updated 2026-10-13) — not used for the numbers above.
