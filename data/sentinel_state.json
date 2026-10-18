@@ -4,89 +4,6 @@
       "risk_level": "caution",
       "risk_alerts": [
         {
-          "headline": "Ray Dalio: Bessent buybacks signal looming US debt crisis; favors gold/bitcoin",
-          "markets": [
-            "both"
-          ],
-          "severity": "caution"
-        },
-        {
-          "headline": "US-Canada trade talks collapse; new 50% tariffs take effect",
-          "markets": [
-            "stocks"
-          ],
-          "severity": "caution"
-        },
-        {
-          "headline": "Elevated long-term Treasury yields and debt concerns pressure markets",
-          "markets": [
-            "both"
-          ],
-          "severity": "caution"
-        }
-      ],
-      "hype": [
-        {
-          "symbol": "HOOD",
-          "mood": "euphoric",
-          "note": "crypto stocks surge on BTC rally"
-        },
-        {
-          "symbol": "COIN",
-          "mood": "euphoric",
-          "note": "big gains with bitcoin and Clarity Act"
-        }
-      ],
-      "crypto_hype": [
-        {
-          "symbol": "ZEC",
-          "mood": "euphoric",
-          "note": "Grayscale ETF push to $800+",
-          "stage": "peaked"
-        },
-        {
-          "symbol": "TRUMP",
-          "mood": "euphoric",
-          "note": "meme short-squeeze +25% top mover",
-          "stage": "peaked"
-        },
-        {
-          "symbol": "PUMP",
-          "mood": "euphoric",
-          "note": "Solana meme top mover rally",
-          "stage": "peaked"
-        },
-        {
-          "symbol": "BTC",
-          "mood": "euphoric",
-          "note": "25% weekly squeeze to $77k",
-          "stage": "peaked"
-        },
-        {
-          "symbol": "XRP",
-          "mood": "mixed",
-          "note": "trending amid broad rally",
-          "stage": "peaked"
-        },
-        {
-          "symbol": "POL",
-          "mood": "euphoric",
-          "note": "top mover in crypto bounce",
-          "stage": "peaked"
-        }
-      ],
-      "overall_mood": "Crypto-led risk-on rebound with greed (F&G 71) and short squeezes, stocks bounce but weekly down amid debt/tariff caution.",
-      "ts": "2026-08-22T14:14:26+00:00",
-      "gauges": {
-        "vix": 15.1,
-        "crypto_fear_greed": 71,
-        "crypto_fng_label": "Greed"
-      }
-    },
-    {
-      "risk_level": "caution",
-      "risk_alerts": [
-        {
           "headline": "US-Canada trade talks collapse; retaliatory tariffs start",
           "markets": [
             "both"
@@ -11516,13 +11433,119 @@
           "output_tokens": 1162
         }
       }
+    },
+    {
+      "risk_level": "caution",
+      "risk_alerts": [
+        {
+          "headline": "AI/tech and chip stocks selloff on debt and spending jitters, Nasdaq weakness, VIX elevated",
+          "markets": [
+            "stocks"
+          ],
+          "severity": "caution"
+        },
+        {
+          "headline": "Hotter inflation data fuels Fed rate uncertainty, yields volatility weighing on risk assets",
+          "markets": [
+            "both"
+          ],
+          "severity": "caution"
+        },
+        {
+          "headline": "Crypto liquidations and mixed ETF flows as BTC tests $80k support",
+          "markets": [
+            "crypto"
+          ],
+          "severity": "caution"
+        }
+      ],
+      "hype": [
+        {
+          "symbol": "HBAR",
+          "mood": "mixed",
+          "note": "DTCC tokenization chatter lifting"
+        },
+        {
+          "symbol": "PENGU",
+          "mood": "mixed",
+          "note": "Trending searches, NFT support buys"
+        },
+        {
+          "symbol": "BTC",
+          "mood": "mixed",
+          "note": "Saylor bullish, $100k YE divided"
+        },
+        {
+          "symbol": "NVDA",
+          "mood": "fearful",
+          "note": "AI debt and chip sector losses"
+        }
+      ],
+      "crypto_hype": [
+        {
+          "symbol": "SOL",
+          "mood": "mixed",
+          "stage": "early",
+          "organic": true,
+          "promo_risk": "low",
+          "catalyst": "Alpenglow mainnet Oct 21",
+          "why": "Dated upgrade news, price not exploded, independent talk",
+          "note": "Finality speed catalyst forming"
+        },
+        {
+          "symbol": "HBAR",
+          "mood": "mixed",
+          "stage": "peaked",
+          "organic": true,
+          "promo_risk": "low",
+          "catalyst": "DTCC tokenization Oct 28",
+          "why": "Top mover with Fireblocks/XRP/XLM involvement chatter",
+          "note": "Adoption narrative post-move"
+        }
+      ],
+      "overall_mood": "Cautious neutral as AI rotation and inflation fears pressure stocks while crypto holds $80k BTC with analysts split on year-end upside and Fear & Greed at 53.",
+      "ts": "2026-10-18T14:59:41+00:00",
+      "gauges": {
+        "vix": 20.0,
+        "crypto_fear_greed": 53,
+        "crypto_fng_label": "Neutral"
+      },
+      "usage": {
+        "input_tokens": 207655,
+        "input_tokens_details": {
+          "cached_tokens": 137088
+        },
+        "output_tokens": 2120,
+        "output_tokens_details": {
+          "reasoning_tokens": 1067
+        },
+        "total_tokens": 209775,
+        "num_sources_used": 0,
+        "num_server_side_tools_used": 16,
+        "cost_in_usd_ticks": 6249608000,
+        "server_side_tool_usage_details": {
+          "web_search_calls": 9,
+          "x_search_calls": 7,
+          "x_posts_fetched": 38,
+          "x_users_fetched": 0,
+          "code_interpreter_calls": 0,
+          "file_search_calls": 0,
+          "mcp_calls": 0,
+          "document_search_calls": 0,
+          "image_generation_calls": 0
+        },
+        "context_details": {
+          "input_tokens": 69457,
+          "output_tokens": 759
+        }
+      }
     }
   ],
   "month_count": {
     "2026-07": 35,
     "2026-08": 130,
     "2026-09": 27,
-    "2026-10": 23
+    "2026-10": 24
   },
-  "last_scan_utc": "2026-10-18T06:54:48+00:00"
+  "last_scan_utc": "2026-10-18T14:59:41+00:00"
 }
