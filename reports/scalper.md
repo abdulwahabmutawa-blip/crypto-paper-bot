@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-18T04:50:04+00:00 · runs 3692 · equity **$667.20** (-33.28%) · cash $186.54 · open 7/10 · round trips 1364
+updated 2026-10-18T04:54:15+00:00 · runs 3693 · equity **$667.03** (-33.30%) · cash $186.54 · open 7/10 · round trips 1364
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -37,10 +37,10 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
 | 2026-10-17T09:33 | XLMUSDT | bottom | 0.1791 | 0.1779 | -0.67% |
-| 2026-10-17T20:29 | HBARUSDT | surge | 0.0849 | 0.08622 | +1.55% |
+| 2026-10-17T20:29 | HBARUSDT | surge | 0.0849 | 0.086 | +1.30% |
 | 2026-10-17T20:29 | RWUSDUSDT | bottom | 1 | 1 | +0.00% |
-| 2026-10-18T01:44 | TRXUSDT | bottom | 0.3338 | 0.3335 | -0.09% |
-| 2026-10-18T03:05 | MSTRBUSDT | surge | 137.28 | 137.24 | -0.03% |
+| 2026-10-18T01:44 | TRXUSDT | bottom | 0.3338 | 0.3336 | -0.06% |
+| 2026-10-18T03:05 | MSTRBUSDT | surge | 137.28 | 137.21 | -0.05% |
 | 2026-10-18T03:21 | MORPHOUSDT | surge | 2.409 | 2.404 | -0.21% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
