@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-18T11:32:31+00:00",
+  "ts": "2026-10-18T11:37:41+00:00",
   "sources": {
     "coingecko": [
       "LIT",
@@ -16,7 +16,8 @@
     "stocktwits": [],
     "movers": [
       "BTC",
-      "BNB"
+      "BNB",
+      "SAND"
     ],
     "watcher": [
       "SAND"
@@ -35,12 +36,22 @@
       "long_short": 1.63
     },
     {
+      "symbol": "SAND",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": -0.005828,
+      "long_short": 1.35
+    },
+    {
       "symbol": "APT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -4.6e-05
+      "funding": -5e-05
     },
     {
       "symbol": "BNB",
@@ -48,7 +59,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 7.1e-05
+      "funding": 7e-05
     },
     {
       "symbol": "LIT",
@@ -64,7 +75,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1e-06
+      "funding": -4e-06
     },
     {
       "symbol": "RAY",
@@ -73,14 +84,6 @@
         "coingecko"
       ],
       "funding": 0.0
-    },
-    {
-      "symbol": "SAND",
-      "surfaces": 1,
-      "sources": [
-        "watcher"
-      ],
-      "funding": -0.005985
     },
     {
       "symbol": "SOL",
@@ -104,7 +107,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.9e-05
+      "funding": 5.7e-05
     },
     {
       "symbol": "TAO",
@@ -112,7 +115,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.3e-05
+      "funding": 4e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
