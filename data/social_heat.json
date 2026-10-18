@@ -1,16 +1,15 @@
 {
-  "ts": "2026-10-18T06:40:34+00:00",
+  "ts": "2026-10-18T06:46:53+00:00",
   "sources": {
     "coingecko": [
-      "XMR",
-      "SAND",
       "TAO",
-      "FET",
       "NEAR",
-      "SUI",
+      "SAND",
+      "XMR",
       "LIT",
-      "ZEC",
-      "XRP"
+      "UNI",
+      "SUI",
+      "FET"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -18,18 +17,21 @@
       "SAND",
       "BTC"
     ],
-    "watcher": [],
+    "watcher": [
+      "SAND"
+    ],
     "cryptopanic": []
   },
   "heat": [
     {
       "symbol": "SAND",
-      "surfaces": 2,
+      "surfaces": 3,
       "sources": [
         "coingecko",
-        "movers"
+        "movers",
+        "watcher"
       ],
-      "funding": -0.013412,
+      "funding": -0.013279,
       "long_short": 1.34
     },
     {
@@ -38,7 +40,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 6.8e-05
+      "funding": 6.5e-05
     },
     {
       "symbol": "FET",
@@ -46,7 +48,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.4e-05
+      "funding": 1.9e-05
     },
     {
       "symbol": "LIT",
@@ -54,7 +56,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.3e-05
+      "funding": -2.4e-05
     },
     {
       "symbol": "NEAR",
@@ -62,7 +64,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.7e-05
+      "funding": 2.2e-05
     },
     {
       "symbol": "SUI",
@@ -78,26 +80,18 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.6e-05
+      "funding": 4e-05
+    },
+    {
+      "symbol": "UNI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -1.9e-05
     },
     {
       "symbol": "XMR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "XRP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -4e-05
-    },
-    {
-      "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
         "coingecko"
