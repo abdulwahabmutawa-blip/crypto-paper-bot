@@ -1,24 +1,8 @@
 {
-  "ts": "2026-10-18T01:10:47+00:00",
+  "ts": "2026-10-18T01:16:08+00:00",
   "scanned": 99,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ONDOUSDT",
-      "signal": "ignition",
-      "score": 0.5275,
-      "raw_score": 0.6169,
-      "weight": 0.855,
-      "price": 0.4398,
-      "why": "trades 4.1x and volume 7.5x the prior 4h, 71% taker-buy, $107,963 burst \u2014 while price has only moved +0.4%",
-      "chg_24h": -0.0216,
-      "vol_surge": 7.46,
-      "chg_1h": 0.0041,
-      "market_surge": 4.2,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.84% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.84% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.89% at 24h: market beta, not signal",
@@ -27,7 +11,7 @@
     "revival": "probation \u2014 11/12 resolved 24h samples under ruleset 3"
   },
   "breadth": {
-    "count": 9,
+    "count": 10,
     "baseline": 11.0,
     "wave": false
   },
@@ -59,19 +43,19 @@
       "avg_win_4h": 0.02429,
       "avg_loss_4h": -0.02138,
       "payoff_4h": 1.136,
-      "span_h_24h": 308.2,
-      "n_eff_24h": 12.84,
-      "n_24h": 804,
+      "span_h_24h": 310.1,
+      "n_eff_24h": 12.92,
+      "n_24h": 805,
       "hit_rate_24h": 0.348,
       "mean_ret_24h": -0.01245,
       "median_ret_24h": -0.01583,
       "both_halves_24h": false,
-      "days_24h": 13,
-      "mean_x_24h": -0.00843,
-      "days_x_24h": 13,
+      "days_24h": 14,
+      "mean_x_24h": -0.00838,
+      "days_x_24h": 14,
       "avg_win_24h": 0.04959,
-      "avg_loss_24h": -0.04831,
-      "payoff_24h": 1.027
+      "avg_loss_24h": -0.04823,
+      "payoff_24h": 1.028
     },
     "breakout": {
       "span_h_1h": 329.5,
