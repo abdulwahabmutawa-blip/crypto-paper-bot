@@ -1,29 +1,28 @@
 {
-  "ts": "2026-10-19T13:47:41+00:00",
+  "ts": "2026-10-19T13:53:41+00:00",
   "sources": {
     "coingecko": [
       "OSMO",
-      "TIA",
-      "ZRO",
-      "PENGU",
-      "STRK",
       "AERO",
+      "PENGU",
+      "BTC",
+      "ZRO",
+      "TIA",
       "NEAR",
       "HYPE",
-      "PUMP",
-      "SUI",
-      "LIT"
+      "ZEC",
+      "STRK"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "SOXLB",
       "SNDKB",
-      "PEPE",
       "MUB",
+      "PEPE",
       "INJ",
-      "PUMP",
       "WLD",
+      "PUMP",
       "SPCXB"
     ],
     "watcher": [
@@ -41,22 +40,20 @@
       ]
     },
     {
-      "symbol": "PUMP",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": -5e-06,
-      "long_short": 0.7
-    },
-    {
       "symbol": "AERO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 2.1e-05
+      "funding": 2.3e-05
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 7.1e-05
     },
     {
       "symbol": "HYPE",
@@ -64,7 +61,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.5e-05
+      "funding": 3.6e-05
     },
     {
       "symbol": "INJ",
@@ -72,15 +69,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 2.4e-05
-    },
-    {
-      "symbol": "LIT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 3.6e-05
+      "funding": 1.9e-05
     },
     {
       "symbol": "MUB",
@@ -95,7 +84,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.7e-05
+      "funding": 5.9e-05
     },
     {
       "symbol": "OSMO",
@@ -110,7 +99,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.7e-05
+      "funding": 3.8e-05
+    },
+    {
+      "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -7e-06
     },
     {
       "symbol": "SNDKB",
@@ -142,26 +139,26 @@
       "funding": 5e-05
     },
     {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "TIA",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -1e-05
+      "funding": -8e-06
     },
     {
       "symbol": "WLD",
       "surfaces": 1,
       "sources": [
         "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
       ],
       "funding": 0.0001
     },
