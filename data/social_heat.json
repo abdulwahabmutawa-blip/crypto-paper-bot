@@ -1,19 +1,17 @@
 {
-  "ts": "2026-10-19T22:48:11+00:00",
+  "ts": "2026-10-19T22:54:30+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "PENGU",
       "ETH",
-      "HBAR",
       "SOL",
+      "HYPE",
       "PHA",
       "QNT",
-      "HYPE",
       "PUMP",
-      "NEAR",
-      "ZEC",
-      "TIA"
+      "AAVE",
+      "ASTER"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -25,14 +23,38 @@
       "SOXLB",
       "PEPE",
       "INJ",
-      "MUB"
+      "ZEC"
     ],
     "watcher": [
+      "WLD",
+      "PUMP",
+      "ARB",
       "PEPE"
     ],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "PUMP",
+      "surfaces": 3,
+      "sources": [
+        "coingecko",
+        "movers",
+        "watcher"
+      ],
+      "funding": 4e-05,
+      "long_short": 0.71
+    },
+    {
+      "symbol": "ARB",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ],
+      "funding": 7e-06,
+      "long_short": 1.57
+    },
     {
       "symbol": "PEPE",
       "surfaces": 2,
@@ -42,22 +64,30 @@
       ]
     },
     {
-      "symbol": "PUMP",
+      "symbol": "WLD",
       "surfaces": 2,
       "sources": [
-        "coingecko",
-        "movers"
+        "movers",
+        "watcher"
       ],
-      "funding": 4.2e-05,
-      "long_short": 0.71
+      "funding": 8.6e-05,
+      "long_short": 1.47
     },
     {
-      "symbol": "ARB",
+      "symbol": "AAVE",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
-      "funding": 8e-06
+      "funding": 5e-05
+    },
+    {
+      "symbol": "ASTER",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "BTC",
@@ -73,15 +103,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.3e-05
-    },
-    {
-      "symbol": "HBAR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -1.7e-05
+      "funding": 6.1e-05
     },
     {
       "symbol": "HYPE",
@@ -97,22 +119,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 3.3e-05
-    },
-    {
-      "symbol": "MUB",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
-    },
-    {
-      "symbol": "NEAR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -2e-05
+      "funding": 3.1e-05
     },
     {
       "symbol": "PENGU",
@@ -120,7 +127,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -7e-06
+      "funding": -9e-06
     },
     {
       "symbol": "PHA",
@@ -128,7 +135,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000594
+      "funding": -0.000568
     },
     {
       "symbol": "QNT",
@@ -136,7 +143,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8e-05
+      "funding": 7.5e-05
     },
     {
       "symbol": "SNDKB",
@@ -161,26 +168,10 @@
       ]
     },
     {
-      "symbol": "TIA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -3.2e-05
-    },
-    {
-      "symbol": "WLD",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 8.5e-05
-    },
-    {
       "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
       "funding": 0.0001
     }
