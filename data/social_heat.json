@@ -1,16 +1,19 @@
 {
-  "ts": "2026-10-19T04:26:06+00:00",
+  "ts": "2026-10-19T04:32:07+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
-      "SUI",
-      "ZEC",
       "TAO",
+      "SUI",
       "ALGO",
-      "ETH",
+      "QNT",
+      "NIL",
       "BTC",
-      "RAY",
-      "QNT"
+      "PUMP",
+      "AERO",
+      "ETH",
+      "ZEC",
+      "ZRO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -18,9 +21,9 @@
       "SOXLB",
       "SNDKB",
       "PEPE",
-      "SPCXB",
       "PUMP",
       "ZEC",
+      "SPCXB",
       "SUI",
       "SOL"
     ],
@@ -28,6 +31,16 @@
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "PUMP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 3e-06,
+      "long_short": 0.73
+    },
     {
       "symbol": "SUI",
       "surfaces": 2,
@@ -45,8 +58,16 @@
         "coingecko",
         "movers"
       ],
-      "funding": 6.9e-05,
+      "funding": 7.3e-05,
       "long_short": 0.76
+    },
+    {
+      "symbol": "AERO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "ALGO",
@@ -54,7 +75,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.8e-05
+      "funding": 2.7e-05
     },
     {
       "symbol": "BTC",
@@ -73,12 +94,20 @@
       "funding": 0.0001
     },
     {
+      "symbol": "NIL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -1.1e-05
+    },
+    {
       "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 2.2e-05
+      "funding": 1.8e-05
     },
     {
       "symbol": "PEPE",
@@ -88,28 +117,12 @@
       ]
     },
     {
-      "symbol": "PUMP",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -3e-06
-    },
-    {
       "symbol": "QNT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 9e-06
-    },
-    {
-      "symbol": "RAY",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0
+      "funding": 1.1e-05
     },
     {
       "symbol": "SNDKB",
@@ -142,6 +155,14 @@
     },
     {
       "symbol": "TAO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "ZRO",
       "surfaces": 1,
       "sources": [
         "coingecko"
