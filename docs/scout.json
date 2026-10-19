@@ -1,24 +1,8 @@
 {
-  "ts": "2026-10-19T20:51:50+00:00",
-  "scanned": 113,
+  "ts": "2026-10-19T20:57:35+00:00",
+  "scanned": 112,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "SENTUSDT",
-      "signal": "ignition",
-      "score": 0.561,
-      "raw_score": 0.65,
-      "weight": 0.863,
-      "price": 0.02233,
-      "why": "trades 4.0x and volume 27.4x the prior 4h, 94% taker-buy, $80,941 burst \u2014 while price has only moved +3.8%",
-      "chg_24h": 0.0396,
-      "vol_surge": 27.43,
-      "chg_1h": 0.0381,
-      "market_surge": 1.58,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.95% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.95% at 24h: market beta, not signal",
     "breakout": "benched \u2014 hit 26%, mean -1.60% over last 245 at 24h: not beating 4x the round trip",
@@ -27,7 +11,7 @@
     "revival": "benched \u2014 BTC-excess day mean -3.27% at 24h: market beta, not signal"
   },
   "breadth": {
-    "count": 23,
+    "count": 22,
     "baseline": 11.0,
     "wave": true
   },
