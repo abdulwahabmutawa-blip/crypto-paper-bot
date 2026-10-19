@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-19T21:53:01+00:00",
+ "updated": "2026-10-19T22:00:14+00:00",
  "spec": "x_chatter_precursors_2026-08-23",
  "n_rows_total": 31,
- "n_scored_excess_24h": 29,
+ "n_scored_excess_24h": 30,
  "objective": "BTC-excess 24h",
  "hit_threshold": 0.03,
  "features": {
@@ -14,17 +14,17 @@
     "median": -0.00792
    },
    "mainnet_upgrade": {
-    "n": 15,
-    "hit": 0.067,
-    "mean": -0.01196,
-    "median": -0.00092
+    "n": 16,
+    "hit": 0.062,
+    "mean": -0.01029,
+    "median": 0.00017
    }
   },
   "tier_T3": {
    "False": {
-    "n": 18,
-    "hit": 0.111,
-    "mean": -0.0131,
+    "n": 19,
+    "hit": 0.105,
+    "mean": -0.01163,
     "median": -0.00854
    },
    "True": {
@@ -37,10 +37,10 @@
   "handle": {},
   "all": {
    "all": {
-    "n": 29,
-    "hit": 0.103,
-    "mean": -0.00922,
-    "median": -0.00715
+    "n": 30,
+    "hit": 0.1,
+    "mean": -0.00842,
+    "median": -0.00646
    }
   }
  },
@@ -49,9 +49,9 @@
    "note": "prior24h in [-2%,+5%] vs >+10%",
    "horizon_h": 24,
    "group_true": {
-    "n": 18,
-    "hit": 0.056,
-    "mean": -0.01918,
+    "n": 19,
+    "hit": 0.053,
+    "mean": -0.01739,
     "median": -0.00715
    },
    "group_false": null
@@ -105,12 +105,12 @@
     "median": -0.00646
    },
    "group_false": {
-    "n": 23,
-    "hit": 0.13,
-    "mean": -0.00569,
-    "median": -0.00715
+    "n": 24,
+    "hit": 0.125,
+    "mean": -0.00484,
+    "median": -0.00219
    },
-   "edge_pp": -1.71
+   "edge_pp": -1.79
   },
   "H6_exchange_surface_words_exhaust": {
    "note": "scanner/exchange-surface wording vs organic",
@@ -122,12 +122,12 @@
     "median": -0.02079
    },
    "group_false": {
-    "n": 28,
-    "hit": 0.107,
-    "mean": -0.00881,
+    "n": 29,
+    "hit": 0.103,
+    "mean": -0.008,
     "median": -0.00646
    },
-   "edge_pp": -1.2
+   "edge_pp": -1.28
   },
   "H7_extreme_velocity_contrarian": {
    "note": "all-new handles vs familiar, 72h",
@@ -150,48 +150,48 @@
     "median": -0.00646
    },
    "group_false": {
-    "n": 10,
+    "n": 11,
     "hit": 0.0,
-    "mean": -0.01967,
+    "mean": -0.01655,
     "median": -0.00792
    },
-   "edge_pp": 1.6
+   "edge_pp": 1.28
   }
  },
  "leaders": [
   {
    "kind": "catalyst",
+   "feature": "mainnet_upgrade",
+   "n": 16,
+   "hit": 0.062,
+   "mean": -0.01029,
+   "median": 0.00017
+  },
+  {
+   "kind": "catalyst",
    "feature": "unlock",
    "n": 8,
    "hit": 0.125,
    "mean": -0.01085,
    "median": -0.00792
-  },
-  {
-   "kind": "catalyst",
-   "feature": "mainnet_upgrade",
-   "n": 15,
-   "hit": 0.067,
-   "mean": -0.01196,
-   "median": -0.00092
   }
  ],
  "laggards": [
   {
    "kind": "catalyst",
-   "feature": "mainnet_upgrade",
-   "n": 15,
-   "hit": 0.067,
-   "mean": -0.01196,
-   "median": -0.00092
-  },
-  {
-   "kind": "catalyst",
    "feature": "unlock",
    "n": 8,
    "hit": 0.125,
    "mean": -0.01085,
    "median": -0.00792
+  },
+  {
+   "kind": "catalyst",
+   "feature": "mainnet_upgrade",
+   "n": 16,
+   "hit": 0.062,
+   "mean": -0.01029,
+   "median": 0.00017
   }
  ]
 }
