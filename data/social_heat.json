@@ -1,17 +1,19 @@
 {
-  "ts": "2026-10-19T12:47:04+00:00",
+  "ts": "2026-10-19T12:52:31+00:00",
   "sources": {
     "coingecko": [
-      "BTC",
       "PENGU",
-      "OSMO",
+      "BTC",
       "ZRO",
+      "OSMO",
+      "WLD",
+      "LIT",
+      "SUI",
       "TIA",
       "ARB",
-      "SUI",
-      "LIT",
-      "NEAR",
-      "PUMP"
+      "PUMP",
+      "HYPE",
+      "AERO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,8 +24,8 @@
       "PUMP",
       "MUB",
       "INJ",
-      "WLD",
-      "SPCXB"
+      "SPCXB",
+      "SUI"
     ],
     "watcher": [
       "PEPE"
@@ -50,6 +52,24 @@
       "long_short": 0.7
     },
     {
+      "symbol": "SUI",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.87
+    },
+    {
+      "symbol": "AERO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 2e-05
+    },
+    {
       "symbol": "ARB",
       "surfaces": 1,
       "sources": [
@@ -63,7 +83,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.3e-05
+      "funding": 8e-05
+    },
+    {
+      "symbol": "HYPE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 2.7e-05
     },
     {
       "symbol": "INJ",
@@ -71,7 +99,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.4e-05
+      "funding": 4.2e-05
     },
     {
       "symbol": "LIT",
@@ -79,7 +107,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.8e-05
+      "funding": 3.6e-05
     },
     {
       "symbol": "MUB",
@@ -87,14 +115,6 @@
       "sources": [
         "movers"
       ]
-    },
-    {
-      "symbol": "NEAR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 2.3e-05
     },
     {
       "symbol": "OSMO",
@@ -133,26 +153,18 @@
       ]
     },
     {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "TIA",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 6e-06
+      "funding": 2e-06
     },
     {
       "symbol": "WLD",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
       "funding": 0.0001
     },
