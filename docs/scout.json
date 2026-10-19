@@ -1,39 +1,8 @@
 {
-  "ts": "2026-10-19T21:25:48+00:00",
+  "ts": "2026-10-19T21:31:25+00:00",
   "scanned": 112,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ARBUSDT",
-      "signal": "ignition",
-      "score": 0.71,
-      "raw_score": 0.8237,
-      "weight": 0.862,
-      "price": 0.199,
-      "why": "trades 59.7x and volume 71.4x the prior 4h, 63% taker-buy, $1,642,863 burst \u2014 while price has only moved +3.3%",
-      "chg_24h": 0.1249,
-      "vol_surge": 71.38,
-      "chg_1h": 0.0332,
-      "market_surge": 20.9,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.93% at 24h: market beta, not signal"
-    },
-    {
-      "symbol": "ARBUSDT",
-      "signal": "breakout",
-      "score": 0.6904,
-      "raw_score": 0.7792,
-      "weight": 0.886,
-      "price": 0.199,
-      "why": "trades 59.7x, volume 71.4x, 63% taker-buy, +3.3% in an hour, at 86% of its 24h range",
-      "chg_24h": 0.1249,
-      "vol_surge": 71.38,
-      "chg_1h": 0.0332,
-      "market_surge": 20.9,
-      "actionable": false,
-      "status": "benched \u2014 hit 26%, mean -1.60% over last 245 at 24h: not beating 4x the round trip"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.93% at 24h: market beta, not signal",
     "breakout": "benched \u2014 hit 26%, mean -1.60% over last 245 at 24h: not beating 4x the round trip",
@@ -42,7 +11,7 @@
     "revival": "benched \u2014 BTC-excess day mean -3.29% at 24h: market beta, not signal"
   },
   "breadth": {
-    "count": 26,
+    "count": 27,
     "baseline": 11.0,
     "wave": true
   },
@@ -69,7 +38,7 @@
       "median_ret_4h": -0.00411,
       "both_halves_4h": false,
       "days_4h": 15,
-      "mean_x_4h": -0.00174,
+      "mean_x_4h": -0.00173,
       "days_x_4h": 15,
       "avg_win_4h": 0.02501,
       "avg_loss_4h": -0.02137,
