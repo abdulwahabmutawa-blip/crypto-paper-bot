@@ -1,6 +1,6 @@
 # Social radar — which X chatter precedes rises (learning)
 
-updated 2026-10-19T05:42:04+00:00 · rows 30 · scored@24h-excess 29 · objective **BTC-excess 24h**
+updated 2026-10-19T06:04:37+00:00 · rows 31 · scored@24h-excess 29 · objective **BTC-excess 24h**
 
 _Grok harvests posts; this module counts. Observation only — nothing trades until a pattern clears the gate (n>=12, 4x fees, both halves, payoff) **and** the owner approves. Power: ~3.5 candidates/day, so only large (>=5pp) effects are readable in two weeks._
 
@@ -25,3 +25,13 @@ _Grok harvests posts; this module counts. Observation only — nothing trades un
 |---|---|---|---|---|---|
 | catalyst | unlock | 8 | 12% | -1.08% | -0.79% |
 | catalyst | mainnet_upgrade | 15 | 7% | -1.20% | -0.09% |
+
+## Latest admitted candidates
+
+| coin | prior 24h | handles | new% | T3 loud | catalyst | when |
+|---|---|---|---|---|---|---|
+| SOL | +2.0% | None | 0% | no | mainnet_upgrade | 2026-10-21 |
+
+## Rejected this scan (the filter doing its job)
+
+HOOD (no Binance USDT spot pair), AXIS (no Binance USDT spot pair), KAS (no Binance USDT spot pair)
