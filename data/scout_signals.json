@@ -1,8 +1,54 @@
 {
-  "ts": "2026-10-20T01:43:45+00:00",
-  "scanned": 104,
+  "ts": "2026-10-20T01:49:45+00:00",
+  "scanned": 105,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "PYTHUSDT",
+      "signal": "ignition",
+      "score": 0.7179,
+      "raw_score": 0.8299,
+      "weight": 0.865,
+      "price": 0.0725,
+      "why": "trades 8.4x and volume 23.8x the prior 4h, 61% taker-buy, $260,831 burst \u2014 while price has only moved +0.3%",
+      "chg_24h": -0.0387,
+      "vol_surge": 23.77,
+      "chg_1h": 0.0026,
+      "market_surge": 11.84,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.74% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "SPCXBUSDT",
+      "signal": "ignition",
+      "score": 0.6845,
+      "raw_score": 0.7914,
+      "weight": 0.865,
+      "price": 148.18,
+      "why": "trades 4.9x and volume 15.9x the prior 4h, 100% taker-buy, $301,169 burst \u2014 while price has only moved +0.2%",
+      "chg_24h": 0.0041,
+      "vol_surge": 15.91,
+      "chg_1h": 0.0016,
+      "market_surge": 3.12,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.74% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "RAYUSDT",
+      "signal": "ignition",
+      "score": 0.6722,
+      "raw_score": 0.7771,
+      "weight": 0.865,
+      "price": 1.9015,
+      "why": "trades 6.0x and volume 10.9x the prior 4h, 83% taker-buy, $70,139 burst \u2014 while price has only moved +0.9%",
+      "chg_24h": 0.0118,
+      "vol_surge": 10.89,
+      "chg_1h": 0.0089,
+      "market_surge": 9.33,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.74% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.74% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.89% at 24h: market beta, not signal",
