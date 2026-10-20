@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-20T04:55:52+00:00",
+  "ts": "2026-10-20T05:00:56+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
@@ -21,7 +21,8 @@
       "PEPE",
       "SNDKB",
       "BNB",
-      "TRX"
+      "TRX",
+      "DOGE"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -43,7 +44,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000213
+      "funding": -0.000207
     },
     {
       "symbol": "BNB",
@@ -62,12 +63,20 @@
       "funding": 0.0001
     },
     {
+      "symbol": "DOGE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "GTC",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -0.00041
+      "funding": -0.000402
     },
     {
       "symbol": "HYPE",
@@ -83,7 +92,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.7e-05
+      "funding": 2.6e-05
     },
     {
       "symbol": "PENGU",
@@ -91,7 +100,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -5e-06
+      "funding": -8e-06
     },
     {
       "symbol": "PEPE",
@@ -106,7 +115,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.9e-05
+      "funding": 4.4e-05
     },
     {
       "symbol": "PUMP",
@@ -129,7 +138,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.7e-05
+      "funding": 4.2e-05
     },
     {
       "symbol": "TRX",
@@ -137,7 +146,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.3e-05
+      "funding": 4.4e-05
     },
     {
       "symbol": "XLM",
@@ -145,7 +154,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.2e-05
+      "funding": 8.1e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
