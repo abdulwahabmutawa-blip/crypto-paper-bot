@@ -1,8 +1,39 @@
 {
-  "ts": "2026-10-20T20:07:46+00:00",
-  "scanned": 111,
+  "ts": "2026-10-20T20:13:31+00:00",
+  "scanned": 112,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SPCXBUSDT",
+      "signal": "ignition",
+      "score": 0.7237,
+      "raw_score": 0.8357,
+      "weight": 0.866,
+      "price": 151.14,
+      "why": "trades 84.0x and volume 40.8x the prior 4h, 60% taker-buy, $1,292,708 burst \u2014 while price has only moved +2.6%",
+      "chg_24h": 0.0201,
+      "vol_surge": 40.79,
+      "chg_1h": 0.0257,
+      "market_surge": 7.48,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.69% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "SPCXBUSDT",
+      "signal": "breakout",
+      "score": 0.6468,
+      "raw_score": 0.7504,
+      "weight": 0.862,
+      "price": 151.14,
+      "why": "trades 84.0x, volume 40.8x, 60% taker-buy, +2.6% in an hour, at 88% of its 24h range",
+      "chg_24h": 0.0201,
+      "vol_surge": 40.79,
+      "chg_1h": 0.0257,
+      "market_surge": 7.48,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -1.17% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.69% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -1.17% at 24h: market beta, not signal",
