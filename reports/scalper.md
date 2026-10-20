@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-20T02:16:50+00:00 · runs 3855 · equity **$669.26** (-33.07%) · cash $0.00 · open 10/10 · round trips 1414
+updated 2026-10-20T02:21:05+00:00 · runs 3856 · equity **$669.46** (-33.05%) · cash $0.00 · open 10/10 · round trips 1414
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-19T02:24 | TQQQBUSDT | surge | 70.62 | 70.72 | +0.14% |
-| 2026-10-19T10:46 | ATOMUSDT | surge | 1.743 | 1.768 | +1.43% |
-| 2026-10-19T13:37 | BNCBUSDT | surge | 4.7 | 4.65 | -1.06% |
-| 2026-10-19T15:16 | GOOGLBUSDT | surge | 346.27 | 344.95 | -0.38% |
-| 2026-10-19T19:53 | SUSDT | surge | 0.05826 | 0.05761 | -1.12% |
-| 2026-10-19T19:53 | BEAMXUSDT | surge | 0.003044 | 0.003069 | +0.82% |
-| 2026-10-19T20:27 | HBARUSDT | bottom | 0.08232 | 0.08278 | +0.56% |
-| 2026-10-20T00:32 | NEARUSDT | bottom | 4.84 | 4.807 | -0.68% |
-| 2026-10-20T00:32 | TRUMPUSDT | bottom | 1.691 | 1.689 | -0.12% |
+| 2026-10-19T02:24 | TQQQBUSDT | surge | 70.62 | 70.85 | +0.33% |
+| 2026-10-19T10:46 | ATOMUSDT | surge | 1.743 | 1.77 | +1.55% |
+| 2026-10-19T13:37 | BNCBUSDT | surge | 4.7 | 4.67 | -0.64% |
+| 2026-10-19T15:16 | GOOGLBUSDT | surge | 346.27 | 345.35 | -0.27% |
+| 2026-10-19T19:53 | SUSDT | surge | 0.05826 | 0.05732 | -1.61% |
+| 2026-10-19T19:53 | BEAMXUSDT | surge | 0.003044 | 0.003068 | +0.79% |
+| 2026-10-19T20:27 | HBARUSDT | bottom | 0.08232 | 0.08293 | +0.74% |
+| 2026-10-20T00:32 | NEARUSDT | bottom | 4.84 | 4.803 | -0.76% |
+| 2026-10-20T00:32 | TRUMPUSDT | bottom | 1.691 | 1.687 | -0.24% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
