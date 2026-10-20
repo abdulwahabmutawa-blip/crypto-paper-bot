@@ -4,101 +4,6 @@
       "risk_level": "caution",
       "risk_alerts": [
         {
-          "headline": "BitMart weighs partial restart/payouts weeks after shutdown announcement",
-          "markets": [
-            "crypto"
-          ],
-          "severity": "caution"
-        },
-        {
-          "headline": "U.S.-Canada trade talks collapse; retaliatory tariffs eyed Sept. 8",
-          "markets": [
-            "stocks"
-          ],
-          "severity": "caution"
-        },
-        {
-          "headline": "Fluctuating Treasury yields and Iran tensions rattle equities weekly",
-          "markets": [
-            "both"
-          ],
-          "severity": "caution"
-        },
-        {
-          "headline": "Nvidia customers warned of AI-related price hikes",
-          "markets": [
-            "stocks"
-          ],
-          "severity": "caution"
-        }
-      ],
-      "hype": [
-        {
-          "symbol": "NVDA",
-          "mood": "mixed",
-          "note": "AI hikes vs strong demand chatter"
-        },
-        {
-          "symbol": "BRK",
-          "mood": "mixed",
-          "note": "Buffett still steering buys"
-        },
-        {
-          "symbol": "META",
-          "mood": "mixed",
-          "note": "Trump sold; courtroom focus"
-        }
-      ],
-      "crypto_hype": [
-        {
-          "symbol": "ZEC",
-          "mood": "euphoric",
-          "note": "Grayscale ETF push to $800+",
-          "stage": "peaked"
-        },
-        {
-          "symbol": "PUMP",
-          "mood": "euphoric",
-          "note": "Binance top mover meme surge",
-          "stage": "peaked"
-        },
-        {
-          "symbol": "TRUMP",
-          "mood": "euphoric",
-          "note": "Meme rally with volume spike",
-          "stage": "peaked"
-        },
-        {
-          "symbol": "TUT",
-          "mood": "euphoric",
-          "note": "+40% Binance top gainer",
-          "stage": "peaked"
-        },
-        {
-          "symbol": "ENA",
-          "mood": "euphoric",
-          "note": "FalconX deal fueled jump",
-          "stage": "peaked"
-        },
-        {
-          "symbol": "BTC",
-          "mood": "euphoric",
-          "note": "Treasury squeeze to ~$80k",
-          "stage": "peaked"
-        }
-      ],
-      "overall_mood": "Crypto euphoria from Treasury-fueled short squeeze and BTC near $80k with greed at 71, while stocks show cautious rebound amid yields, geopolitics, and selective AI/tech focus.",
-      "ts": "2026-08-22T22:23:07+00:00",
-      "gauges": {
-        "vix": 15.1,
-        "crypto_fear_greed": 71,
-        "crypto_fng_label": "Greed"
-      }
-    },
-    {
-      "risk_level": "caution",
-      "risk_alerts": [
-        {
           "headline": "Elevated long-term Treasury yields and debt concerns after volatility, despite buyback efforts",
           "markets": [
             "both"
@@ -11559,13 +11464,137 @@
           "output_tokens": 1270
         }
       }
+    },
+    {
+      "risk_level": "caution",
+      "risk_alerts": [
+        {
+          "headline": "AI/tech valuation and funding debt worries after Nasdaq's worst week since June",
+          "markets": [
+            "stocks"
+          ],
+          "severity": "caution"
+        },
+        {
+          "headline": "Elevated oil near $100+ amid lingering MidEast tensions; equity fear extreme vs crypto greed",
+          "markets": [
+            "both"
+          ],
+          "severity": "caution"
+        }
+      ],
+      "hype": [
+        {
+          "symbol": "GTC",
+          "mood": "euphoric",
+          "note": "Binance top mover +25% volume surge"
+        },
+        {
+          "symbol": "WLD",
+          "mood": "mixed",
+          "note": "World ID banking tools catalyst bounce"
+        },
+        {
+          "symbol": "AMZN",
+          "mood": "euphoric",
+          "note": "Near 5% rally leads tech rebound"
+        },
+        {
+          "symbol": "NVDA",
+          "mood": "mixed",
+          "note": "Chips snap long losing streak"
+        },
+        {
+          "symbol": "MSTR",
+          "mood": "mixed",
+          "note": "Saylor BTC buys and preferred buybacks"
+        },
+        {
+          "symbol": "PENGU",
+          "mood": "mixed",
+          "note": "Trending meme NFT brand chatter"
+        },
+        {
+          "symbol": "PEPE",
+          "mood": "mixed",
+          "note": "Mild green among meme retail"
+        }
+      ],
+      "crypto_hype": [
+        {
+          "symbol": "WLD",
+          "mood": "mixed",
+          "stage": "peaked",
+          "organic": true,
+          "promo_risk": "low",
+          "catalyst": "World ID for banks/finance launch Oct 19",
+          "why": "News-driven bounce with institutional partners noted",
+          "note": "Already +8% top mover"
+        },
+        {
+          "symbol": "GTC",
+          "mood": "euphoric",
+          "stage": "peaked",
+          "organic": false,
+          "promo_risk": "high",
+          "catalyst": "none",
+          "why": "Volume spike no fresh catalyst; momentum chase",
+          "note": "Binance +25% victory lap"
+        },
+        {
+          "symbol": "NEAR",
+          "mood": "mixed",
+          "stage": "peaked",
+          "organic": true,
+          "promo_risk": "low",
+          "catalyst": "ETF inflows; Intents recovery post-exploit",
+          "why": "Trending searches plus AI/ETF narrative talk",
+          "note": "Not exploding today"
+        }
+      ],
+      "overall_mood": "Cautious risk-on rebound in stocks and crypto after AI-tech selloff, lifted by China GDP beat, with eyes on big-tech earnings and Fed.",
+      "ts": "2026-10-20T07:13:31+00:00",
+      "gauges": {
+        "vix": 18.4,
+        "crypto_fear_greed": 55,
+        "crypto_fng_label": "Greed"
+      },
+      "usage": {
+        "input_tokens": 148975,
+        "input_tokens_details": {
+          "cached_tokens": 84352
+        },
+        "output_tokens": 2078,
+        "output_tokens_details": {
+          "reasoning_tokens": 923
+        },
+        "total_tokens": 151053,
+        "num_sources_used": 0,
+        "num_server_side_tools_used": 16,
+        "cost_in_usd_ticks": 3920196000,
+        "server_side_tool_usage_details": {
+          "web_search_calls": 8,
+          "x_search_calls": 8,
+          "x_posts_fetched": 37,
+          "x_users_fetched": 0,
+          "code_interpreter_calls": 0,
+          "file_search_calls": 0,
+          "mcp_calls": 0,
+          "document_search_calls": 0,
+          "image_generation_calls": 0
+        },
+        "context_details": {
+          "input_tokens": 64567,
+          "output_tokens": 1097
+        }
+      }
     }
   ],
   "month_count": {
     "2026-07": 35,
     "2026-08": 130,
     "2026-09": 27,
-    "2026-10": 27
+    "2026-10": 28
   },
-  "last_scan_utc": "2026-10-19T23:08:49+00:00"
+  "last_scan_utc": "2026-10-20T07:13:31+00:00"
 }
