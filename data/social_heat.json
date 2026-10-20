@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-20T16:03:31+00:00",
+  "ts": "2026-10-20T16:10:28+00:00",
   "sources": {
     "coingecko": [
       "AERO",
@@ -21,16 +21,23 @@
       "CRCLB",
       "SUI",
       "DOGE",
-      "ETH",
-      "XRP"
+      "XRP",
+      "ETH"
     ],
     "watcher": [
-      "PHA",
-      "GTC"
+      "PEPE"
     ],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "PEPE",
+      "surfaces": 2,
+      "sources": [
+        "movers",
+        "watcher"
+      ]
+    },
     {
       "symbol": "WLD",
       "surfaces": 2,
@@ -55,7 +62,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8e-05
+      "funding": 8.3e-05
     },
     {
       "symbol": "CHIP",
@@ -78,7 +85,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 9.5e-05
+      "funding": 9.4e-05
     },
     {
       "symbol": "ETH",
@@ -89,20 +96,12 @@
       "funding": 7.5e-05
     },
     {
-      "symbol": "GTC",
-      "surfaces": 1,
-      "sources": [
-        "watcher"
-      ],
-      "funding": -0.001762
-    },
-    {
       "symbol": "HYPE",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 2.2e-05
+      "funding": 1.7e-05
     },
     {
       "symbol": "INJ",
@@ -110,7 +109,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.1e-05
+      "funding": 2.8e-05
     },
     {
       "symbol": "LIT",
@@ -129,27 +128,12 @@
       "funding": 5.4e-05
     },
     {
-      "symbol": "PEPE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
-    },
-    {
-      "symbol": "PHA",
-      "surfaces": 1,
-      "sources": [
-        "watcher"
-      ],
-      "funding": -0.000309
-    },
-    {
       "symbol": "SOL",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 3.7e-05
+      "funding": 3.5e-05
     },
     {
       "symbol": "SUI",
@@ -165,7 +149,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.7e-05
+      "funding": 4.8e-05
     },
     {
       "symbol": "ZEC",
@@ -173,7 +157,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.4e-05
+      "funding": 4.3e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
