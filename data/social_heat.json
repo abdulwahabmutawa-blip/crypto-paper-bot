@@ -1,18 +1,18 @@
 {
-  "ts": "2026-10-20T04:18:41+00:00",
+  "ts": "2026-10-20T04:24:10+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
-      "NEAR",
       "BTC",
       "SUI",
+      "NEAR",
       "HYPE",
-      "SOL",
-      "ONDO",
-      "GTC",
+      "ARB",
       "PUMP",
-      "ZEC",
-      "AERO"
+      "PHA",
+      "SOL",
+      "AERO",
+      "ONDO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -24,21 +24,31 @@
       "SNDKB",
       "ENA",
       "BNB",
-      "UNI"
+      "HYPE"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
     {
-      "symbol": "GTC",
+      "symbol": "ARB",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": -0.000484,
-      "long_short": 0.91
+      "funding": -0.000191,
+      "long_short": 1.78
+    },
+    {
+      "symbol": "HYPE",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.66
     },
     {
       "symbol": "AERO",
@@ -49,20 +59,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "ARB",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -0.000185
-    },
-    {
       "symbol": "BNB",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 7.3e-05
+      "funding": 7.2e-05
     },
     {
       "symbol": "BTC",
@@ -81,12 +83,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "HYPE",
+      "symbol": "GTC",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
-      "funding": 5e-05
+      "funding": -0.000476
     },
     {
       "symbol": "NEAR",
@@ -94,7 +96,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.7e-05
+      "funding": 3.6e-05
     },
     {
       "symbol": "ONDO",
@@ -110,7 +112,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.9e-05
+      "funding": 3.6e-05
     },
     {
       "symbol": "PEPE",
@@ -118,6 +120,14 @@
       "sources": [
         "movers"
       ]
+    },
+    {
+      "symbol": "PHA",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -0.000609
     },
     {
       "symbol": "PUMP",
@@ -148,15 +158,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.7e-05
-    },
-    {
-      "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 8.2e-05
+      "funding": 7.9e-05
     },
     {
       "symbol": "WLD",
@@ -165,14 +167,6 @@
         "movers"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 9.5e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
