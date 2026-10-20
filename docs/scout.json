@@ -1,24 +1,37 @@
 {
-  "ts": "2026-10-20T20:52:24+00:00",
-  "scanned": 110,
+  "ts": "2026-10-20T20:58:52+00:00",
+  "scanned": 111,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "EPICUSDT",
-      "signal": "reversion",
-      "score": 0.6556,
-      "raw_score": 0.5793,
-      "weight": 0.984,
-      "price": 0.1886,
-      "why": "down -25% on the day (bottom decile of the market), now +1.1% over 15m with 2 green candles \u00b7 OI \u2212100% (cascade clearing)",
-      "chg_24h": -0.2461,
-      "vol_surge": 2.03,
-      "chg_1h": 0.0222,
-      "market_surge": 0.0,
-      "oi_drop": 1.0,
-      "funding": 0.0,
+      "symbol": "THETAUSDT",
+      "signal": "revival",
+      "score": 0.6796,
+      "raw_score": 0.6796,
+      "weight": 1.0,
+      "price": 0.2096,
+      "why": "revival day-one: fell -9% last week on $0.45M/day quiet, volume arriving 9.1x today, only +17% off its 30d low \u00b7 serial exploder: 4 runs in 2y \u2014 ON A WAVE DAY (breadth 30 vs 11 base)",
+      "chg_24h": 0.1239,
+      "vol_surge": 9.1,
+      "chg_1h": null,
+      "market_surge": null,
       "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -1.46% at 24h: market beta, not signal"
+      "status": "benched \u2014 BTC-excess day mean -3.60% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "INTCBUSDT",
+      "signal": "breakout",
+      "score": 0.5889,
+      "raw_score": 0.684,
+      "weight": 0.861,
+      "price": 94.04,
+      "why": "trades 6.0x, volume 12.0x, 64% taker-buy, +2.6% in an hour, at 99% of its 24h range",
+      "chg_24h": 0.0161,
+      "vol_surge": 11.98,
+      "chg_1h": 0.0256,
+      "market_surge": 9.68,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -1.25% at 24h: market beta, not signal"
     }
   ],
   "gate": {
@@ -29,7 +42,7 @@
     "revival": "benched \u2014 BTC-excess day mean -3.60% at 24h: market beta, not signal"
   },
   "breadth": {
-    "count": 27,
+    "count": 30,
     "baseline": 11.0,
     "wave": true
   },
@@ -138,7 +151,7 @@
       "median_ret_4h": 0.00163,
       "both_halves_4h": true,
       "days_4h": 11,
-      "mean_x_4h": -0.00169,
+      "mean_x_4h": -0.00151,
       "days_x_4h": 11,
       "avg_win_4h": 0.02111,
       "avg_loss_4h": -0.02431,
