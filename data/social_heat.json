@@ -1,15 +1,15 @@
 {
-  "ts": "2026-10-20T01:10:21+00:00",
+  "ts": "2026-10-20T01:15:29+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
-      "AERO",
-      "TAO",
-      "BTC",
-      "HYPE",
       "NEAR",
-      "PHA",
-      "XMR"
+      "HYPE",
+      "TAO",
+      "AMP",
+      "AERO",
+      "PYTH",
+      "GTC"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,7 +20,6 @@
       "PUMP",
       "PEPE",
       "SNDKB",
-      "UNI",
       "BNB"
     ],
     "watcher": [],
@@ -28,12 +27,29 @@
   },
   "heat": [
     {
+      "symbol": "GTC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -0.000474,
+      "long_short": 0.92
+    },
+    {
       "symbol": "AERO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 3.1e-05
+      "funding": 3.8e-05
+    },
+    {
+      "symbol": "AMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ]
     },
     {
       "symbol": "ARB",
@@ -41,7 +57,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000104
+      "funding": -0.000111
     },
     {
       "symbol": "BNB",
@@ -50,22 +66,6 @@
         "movers"
       ],
       "funding": 9.5e-05
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 8.5e-05
-    },
-    {
-      "symbol": "GTC",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -0.000436
     },
     {
       "symbol": "HYPE",
@@ -81,7 +81,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.2e-05
+      "funding": 2.4e-05
     },
     {
       "symbol": "PENGU",
@@ -89,7 +89,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.4e-05
+      "funding": 2.2e-05
     },
     {
       "symbol": "PEPE",
@@ -99,20 +99,20 @@
       ]
     },
     {
-      "symbol": "PHA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -0.00022
-    },
-    {
       "symbol": "PUMP",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 9e-06
+      "funding": 6e-06
+    },
+    {
+      "symbol": "PYTH",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 7e-06
     },
     {
       "symbol": "SNDKB",
@@ -127,29 +127,13 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.1e-05
-    },
-    {
-      "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 4.5e-05
+      "funding": 4e-05
     },
     {
       "symbol": "WLD",
       "surfaces": 1,
       "sources": [
         "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "XMR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
       ],
       "funding": 0.0001
     }
