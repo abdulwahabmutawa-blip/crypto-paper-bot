@@ -1,14 +1,15 @@
 {
-  "ts": "2026-10-20T05:11:41+00:00",
+  "ts": "2026-10-20T05:16:51+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
-      "BTC",
-      "PENGU",
-      "AERO",
       "PUMP",
+      "AERO",
+      "BTC",
+      "WLD",
       "XRP",
-      "SUI"
+      "PENGU",
+      "QNT"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,13 +20,23 @@
       "ARB",
       "SNDKB",
       "BNB",
-      "TRX",
+      "SPCXB",
       "DOGE"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "WLD",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.6
+    },
     {
       "symbol": "AERO",
       "surfaces": 1,
@@ -40,7 +51,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000198
+      "funding": -0.000203
     },
     {
       "symbol": "BNB",
@@ -48,7 +59,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 6.2e-05
+      "funding": 6.1e-05
     },
     {
       "symbol": "BTC",
@@ -72,7 +83,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.0004
+      "funding": -0.000388
     },
     {
       "symbol": "NEAR",
@@ -80,7 +91,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.3e-05
+      "funding": 2.1e-05
     },
     {
       "symbol": "PENGU",
@@ -88,7 +99,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2e-05
+      "funding": -2.5e-05
     },
     {
       "symbol": "PEPE",
@@ -106,6 +117,14 @@
       "funding": 5e-05
     },
     {
+      "symbol": "QNT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 7e-06
+    },
+    {
       "symbol": "SNDKB",
       "surfaces": 1,
       "sources": [
@@ -113,28 +132,11 @@
       ]
     },
     {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 3.9e-05
-    },
-    {
-      "symbol": "TRX",
+      "symbol": "SPCXB",
       "surfaces": 1,
       "sources": [
         "movers"
-      ],
-      "funding": 4.4e-05
-    },
-    {
-      "symbol": "WLD",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
+      ]
     },
     {
       "symbol": "XRP",
