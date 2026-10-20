@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-20T20:21:28+00:00 · runs 3924 · equity **$676.00** (-32.40%) · cash $0.00 · open 10/10 · round trips 1439
+updated 2026-10-20T20:37:51+00:00 · runs 3925 · equity **$680.26** (-31.97%) · cash $0.00 · open 10/10 · round trips 1439
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-20T14:29 | RSRUSDT | surge | 0.00192 | 0.001921 | +0.05% |
-| 2026-10-20T14:29 | CRCLBUSDT | surge | 85.2 | 86.16 | +1.13% |
-| 2026-10-20T15:34 | TSLABUSDT | surge | 374.56 | 374.53 | -0.01% |
-| 2026-10-20T15:34 | JTOUSDT | surge | 0.4772 | 0.4833 | +1.28% |
-| 2026-10-20T15:34 | CFXUSDT | surge | 0.05393 | 0.05456 | +1.17% |
-| 2026-10-20T16:25 | BONKUSDT | surge | 3.04e-06 | 3.05e-06 | +0.33% |
-| 2026-10-20T16:41 | REZUSDT | surge | 0.003796 | 0.003839 | +1.13% |
-| 2026-10-20T17:31 | DOGEUSDT | surge | 0.08115 | 0.0815 | +0.43% |
-| 2026-10-20T18:36 | RAYUSDT | surge | 2.0383 | 2.065 | +1.31% |
+| 2026-10-20T14:29 | RSRUSDT | surge | 0.00192 | 0.001931 | +0.57% |
+| 2026-10-20T14:29 | CRCLBUSDT | surge | 85.2 | 86.2 | +1.17% |
+| 2026-10-20T15:34 | TSLABUSDT | surge | 374.56 | 374.69 | +0.03% |
+| 2026-10-20T15:34 | JTOUSDT | surge | 0.4772 | 0.4851 | +1.66% |
+| 2026-10-20T15:34 | CFXUSDT | surge | 0.05393 | 0.05493 | +1.85% |
+| 2026-10-20T16:25 | BONKUSDT | surge | 3.04e-06 | 3.08e-06 | +1.32% |
+| 2026-10-20T16:41 | REZUSDT | surge | 0.003796 | 0.003938 | +3.74% |
+| 2026-10-20T17:31 | DOGEUSDT | surge | 0.08115 | 0.0819 | +0.92% |
+| 2026-10-20T18:36 | RAYUSDT | surge | 2.0383 | 2.0794 | +2.02% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
