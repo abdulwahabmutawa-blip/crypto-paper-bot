@@ -1,30 +1,30 @@
 {
-  "ts": "2026-10-20T05:50:28+00:00",
+  "ts": "2026-10-20T05:56:04+00:00",
   "sources": {
     "coingecko": [
-      "PUMP",
       "PENGU",
-      "AERO",
+      "PUMP",
       "PHA",
-      "BTC",
       "NEAR",
+      "AERO",
+      "MASK",
+      "ARB",
+      "BTC",
       "XMR",
       "MASK",
-      "MASK",
-      "XRP",
-      "ARB"
+      "NIL",
+      "VIRTUAL"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "GTC",
       "WLD",
-      "ARB",
       "PEPE",
+      "ARB",
       "SNDKB",
       "BNB",
-      "TRX",
-      "RLUSD"
+      "TRX"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -54,7 +54,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 5.4e-05
+      "funding": 5.3e-05
     },
     {
       "symbol": "BTC",
@@ -70,7 +70,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000422
+      "funding": -0.00044
     },
     {
       "symbol": "MASK",
@@ -86,7 +86,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7e-06
+      "funding": 2e-06
+    },
+    {
+      "symbol": "NIL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -5.1e-05
     },
     {
       "symbol": "PENGU",
@@ -94,7 +102,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -3.2e-05
+      "funding": -3.8e-05
     },
     {
       "symbol": "PEPE",
@@ -109,7 +117,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.001561
+      "funding": -0.001594
     },
     {
       "symbol": "PUMP",
@@ -118,13 +126,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "RLUSD",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
     },
     {
       "symbol": "SNDKB",
@@ -142,6 +143,14 @@
       "funding": 4.3e-05
     },
     {
+      "symbol": "VIRTUAL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 3.2e-05
+    },
+    {
       "symbol": "WLD",
       "surfaces": 1,
       "sources": [
@@ -151,14 +160,6 @@
     },
     {
       "symbol": "XMR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "XRP",
       "surfaces": 1,
       "sources": [
         "coingecko"
