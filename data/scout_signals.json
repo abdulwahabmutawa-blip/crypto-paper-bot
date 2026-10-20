@@ -1,33 +1,17 @@
 {
-  "ts": "2026-10-20T01:55:37+00:00",
-  "scanned": 101,
+  "ts": "2026-10-20T02:00:47+00:00",
+  "scanned": 103,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "INTCBUSDT",
-      "signal": "ignition",
-      "score": 0.6809,
-      "raw_score": 0.7871,
-      "weight": 0.865,
-      "price": 91.78,
-      "why": "trades 6.4x and volume 11.1x the prior 4h, 82% taker-buy, $133,320 burst \u2014 while price has only moved +1.0%",
-      "chg_24h": -0.0022,
-      "vol_surge": 11.09,
-      "chg_1h": 0.0099,
-      "market_surge": 1.96,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.74% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
-    "ignition": "benched \u2014 BTC-excess day mean -0.74% at 24h: market beta, not signal",
+    "ignition": "benched \u2014 BTC-excess day mean -0.82% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.89% at 24h: market beta, not signal",
     "reversion": "benched \u2014 BTC-excess day mean -0.60% at 24h: market beta, not signal",
     "heat": "probation \u2014 32 rows but only 7.8 independent 24h windows (span 188h): overlapping labels are not a sample",
     "revival": "benched \u2014 BTC-excess day mean -3.24% at 24h: market beta, not signal"
   },
   "breadth": {
-    "count": 12,
+    "count": 10,
     "baseline": 11.0,
     "wave": false
   },
@@ -59,18 +43,18 @@
       "avg_win_4h": 0.02505,
       "avg_loss_4h": -0.02156,
       "payoff_4h": 1.162,
-      "span_h_24h": 310.8,
-      "n_eff_24h": 12.95,
-      "n_24h": 798,
+      "span_h_24h": 311.9,
+      "n_eff_24h": 12.99,
+      "n_24h": 799,
       "hit_rate_24h": 0.338,
-      "mean_ret_24h": -0.01367,
-      "median_ret_24h": -0.01703,
+      "mean_ret_24h": -0.01371,
+      "median_ret_24h": -0.01711,
       "both_halves_24h": false,
       "days_24h": 14,
-      "mean_x_24h": -0.00743,
+      "mean_x_24h": -0.00822,
       "days_x_24h": 14,
       "avg_win_24h": 0.0511,
-      "avg_loss_24h": -0.04896,
+      "avg_loss_24h": -0.04895,
       "payoff_24h": 1.044
     },
     "breakout": {
