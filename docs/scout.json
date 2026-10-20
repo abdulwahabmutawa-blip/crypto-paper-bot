@@ -1,8 +1,24 @@
 {
-  "ts": "2026-10-20T08:58:45+00:00",
+  "ts": "2026-10-20T09:04:29+00:00",
   "scanned": 98,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "NBISBUSDT",
+      "signal": "ignition",
+      "score": 0.6737,
+      "raw_score": 0.7825,
+      "weight": 0.861,
+      "price": 165.03,
+      "why": "trades 5.3x and volume 12.8x the prior 4h, 89% taker-buy, $57,881 burst \u2014 while price has only moved -0.1%",
+      "chg_24h": -0.0375,
+      "vol_surge": 12.79,
+      "chg_1h": -0.0008,
+      "market_surge": 1.87,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.88% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.88% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -1.06% at 24h: market beta, not signal",
@@ -43,9 +59,9 @@
       "avg_win_4h": 0.02466,
       "avg_loss_4h": -0.02139,
       "payoff_4h": 1.153,
-      "span_h_24h": 311.3,
-      "n_eff_24h": 12.97,
-      "n_24h": 804,
+      "span_h_24h": 312.0,
+      "n_eff_24h": 13.0,
+      "n_24h": 805,
       "hit_rate_24h": 0.338,
       "mean_ret_24h": -0.01358,
       "median_ret_24h": -0.01711,
@@ -54,8 +70,8 @@
       "mean_x_24h": -0.00877,
       "days_x_24h": 14,
       "avg_win_24h": 0.05106,
-      "avg_loss_24h": -0.04897,
-      "payoff_24h": 1.043
+      "avg_loss_24h": -0.0489,
+      "payoff_24h": 1.044
     },
     "breakout": {
       "span_h_1h": 331.8,
