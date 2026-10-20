@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-20T23:38:16+00:00 · runs 3936 · equity **$675.95** (-32.41%) · cash $0.00 · open 10/10 · round trips 1440
+updated 2026-10-20T23:54:43+00:00 · runs 3937 · equity **$676.52** (-32.35%) · cash $0.00 · open 10/10 · round trips 1440
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -37,13 +37,13 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
 | 2026-10-20T14:29 | RSRUSDT | surge | 0.00192 | 0.001911 | -0.47% |
-| 2026-10-20T14:29 | CRCLBUSDT | surge | 85.2 | 86.05 | +1.00% |
-| 2026-10-20T15:34 | TSLABUSDT | surge | 374.56 | 379.07 | +1.20% |
+| 2026-10-20T14:29 | CRCLBUSDT | surge | 85.2 | 86.1 | +1.06% |
+| 2026-10-20T15:34 | TSLABUSDT | surge | 374.56 | 380.26 | +1.52% |
 | 2026-10-20T15:34 | JTOUSDT | surge | 0.4772 | 0.4821 | +1.03% |
-| 2026-10-20T15:34 | CFXUSDT | surge | 0.05393 | 0.05491 | +1.82% |
+| 2026-10-20T15:34 | CFXUSDT | surge | 0.05393 | 0.05495 | +1.89% |
 | 2026-10-20T16:25 | BONKUSDT | surge | 3.04e-06 | 3.07e-06 | +0.99% |
-| 2026-10-20T17:31 | DOGEUSDT | surge | 0.08115 | 0.0818 | +0.80% |
-| 2026-10-20T18:36 | RAYUSDT | surge | 2.0383 | 2.0074 | -1.52% |
-| 2026-10-20T20:52 | PENGUUSDT | surge | 0.00803 | 0.00797 | -0.75% |
+| 2026-10-20T17:31 | DOGEUSDT | surge | 0.08115 | 0.08192 | +0.95% |
+| 2026-10-20T18:36 | RAYUSDT | surge | 2.0383 | 2.0096 | -1.41% |
+| 2026-10-20T20:52 | PENGUUSDT | surge | 0.00803 | 0.007984 | -0.57% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
