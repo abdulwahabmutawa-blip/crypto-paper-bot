@@ -1,17 +1,17 @@
 {
-  "ts": "2026-10-20T21:38:41+00:00",
+  "ts": "2026-10-20T21:43:57+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
       "PEPE",
-      "QNT",
       "AERO",
       "ZEC",
-      "ZRO",
-      "ETH",
+      "QNT",
+      "XMR",
       "AAVE",
-      "SOL",
-      "XMR"
+      "SUI",
+      "ETH",
+      "ZRO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,8 +20,8 @@
       "PEPE",
       "ZEC",
       "PUMP",
-      "CRCLB",
       "ENA",
+      "CRCLB",
       "SUI",
       "SPCXB"
     ],
@@ -41,6 +41,16 @@
       ]
     },
     {
+      "symbol": "SUI",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -2.9e-05,
+      "long_short": 2.05
+    },
+    {
       "symbol": "ZEC",
       "surfaces": 2,
       "sources": [
@@ -56,7 +66,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -3.9e-05
+      "funding": -4e-05
     },
     {
       "symbol": "AERO",
@@ -95,7 +105,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.8e-05
+      "funding": 1.3e-05
     },
     {
       "symbol": "PUMP",
@@ -103,7 +113,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.5e-05
+      "funding": 5e-05
     },
     {
       "symbol": "QNT",
@@ -111,15 +121,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8e-06
-    },
-    {
-      "symbol": "SOL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 7e-06
+      "funding": 1.4e-05
     },
     {
       "symbol": "SPCXB",
@@ -127,14 +129,6 @@
       "sources": [
         "movers"
       ]
-    },
-    {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -2.9e-05
     },
     {
       "symbol": "WLD",
