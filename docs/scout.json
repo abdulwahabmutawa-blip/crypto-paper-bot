@@ -1,54 +1,8 @@
 {
-  "ts": "2026-10-20T21:04:36+00:00",
-  "scanned": 110,
+  "ts": "2026-10-20T21:10:26+00:00",
+  "scanned": 111,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "SKHYBUSDT",
-      "signal": "ignition",
-      "score": 0.7355,
-      "raw_score": 0.8474,
-      "weight": 0.868,
-      "price": 142.96,
-      "why": "trades 8.5x and volume 29.3x the prior 4h, 85% taker-buy, $69,994 burst \u2014 while price has only moved +2.1%",
-      "chg_24h": -0.0024,
-      "vol_surge": 29.32,
-      "chg_1h": 0.0214,
-      "market_surge": 0.73,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.73% at 24h: market beta, not signal"
-    },
-    {
-      "symbol": "SKHYBUSDT",
-      "signal": "breakout",
-      "score": 0.6769,
-      "raw_score": 0.7862,
-      "weight": 0.861,
-      "price": 142.96,
-      "why": "trades 8.5x, volume 29.3x, 85% taker-buy, +2.1% in an hour, at 82% of its 24h range",
-      "chg_24h": -0.0024,
-      "vol_surge": 29.32,
-      "chg_1h": 0.0214,
-      "market_surge": 0.73,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -1.25% at 24h: market beta, not signal"
-    },
-    {
-      "symbol": "NBISBUSDT",
-      "signal": "breakout",
-      "score": 0.6479,
-      "raw_score": 0.7525,
-      "weight": 0.861,
-      "price": 178.35,
-      "why": "trades 11.0x, volume 5.9x, 83% taker-buy, +3.3% in an hour, at 105% of its 24h range",
-      "chg_24h": 0.038,
-      "vol_surge": 5.85,
-      "chg_1h": 0.033,
-      "market_surge": 3.43,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -1.25% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.73% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -1.25% at 24h: market beta, not signal",
@@ -57,7 +11,7 @@
     "revival": "benched \u2014 BTC-excess day mean -3.60% at 24h: market beta, not signal"
   },
   "breadth": {
-    "count": 27,
+    "count": 29,
     "baseline": 11.0,
     "wave": true
   },
