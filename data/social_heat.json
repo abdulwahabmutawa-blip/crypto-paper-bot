@@ -1,16 +1,16 @@
 {
-  "ts": "2026-10-20T09:27:31+00:00",
+  "ts": "2026-10-20T09:32:41+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
       "BTC",
+      "PENGU",
       "PHA",
-      "SOL",
-      "ZEC",
       "INJ",
-      "AVAX",
       "ETH",
-      "PUMP"
+      "PUMP",
+      "SOL",
+      "ZEC"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -36,7 +36,7 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.001579,
+      "funding": -0.001567,
       "long_short": 0.88
     },
     {
@@ -46,16 +46,8 @@
         "coingecko",
         "watcher"
       ],
-      "funding": -0.001058,
+      "funding": -0.001013,
       "long_short": 1.22
-    },
-    {
-      "symbol": "AVAX",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 2e-06
     },
     {
       "symbol": "BNB",
@@ -71,7 +63,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.5e-05
+      "funding": 3.4e-05
     },
     {
       "symbol": "ETH",
@@ -79,7 +71,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0
+      "funding": -2e-06
     },
     {
       "symbol": "INJ",
@@ -87,7 +79,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.2e-05
+      "funding": 2.4e-05
     },
     {
       "symbol": "NEAR",
@@ -95,7 +87,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.9e-05
+      "funding": 4.1e-05
+    },
+    {
+      "symbol": "PENGU",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -5e-06
     },
     {
       "symbol": "PEPE",
@@ -133,7 +133,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 8.4e-05
+      "funding": 8.6e-05
     },
     {
       "symbol": "WLD",
@@ -149,7 +149,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.3e-05
+      "funding": 2.1e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
