@@ -1,26 +1,27 @@
 {
-  "ts": "2026-10-20T21:27:31+00:00",
+  "ts": "2026-10-20T21:33:03+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
       "PEPE",
       "QNT",
-      "XMR",
-      "ZEC",
       "AERO",
+      "ZEC",
       "ZRO",
-      "BTC",
-      "STRK"
+      "ETH",
+      "AAVE",
+      "SOL",
+      "XMR"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "WLD",
-      "PEPE",
       "ZEC",
+      "PEPE",
       "PUMP",
-      "ENA",
       "CRCLB",
+      "ENA",
       "SUI",
       "SPCXB"
     ],
@@ -46,8 +47,16 @@
         "coingecko",
         "movers"
       ],
-      "funding": 5.2e-05,
+      "funding": 5e-05,
       "long_short": 0.68
+    },
+    {
+      "symbol": "AAVE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -3.7e-05
     },
     {
       "symbol": "AERO",
@@ -56,14 +65,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "CRCLB",
@@ -81,12 +82,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "ETH",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 6.2e-05
+    },
+    {
       "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 2.1e-05
+      "funding": 1.8e-05
     },
     {
       "symbol": "PUMP",
@@ -94,7 +103,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.3e-05
+      "funding": 4.5e-05
     },
     {
       "symbol": "QNT",
@@ -102,7 +111,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2e-06
+      "funding": 4e-06
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 6e-06
     },
     {
       "symbol": "SPCXB",
@@ -112,20 +129,12 @@
       ]
     },
     {
-      "symbol": "STRK",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "SUI",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -2.1e-05
+      "funding": -2.6e-05
     },
     {
       "symbol": "WLD",
@@ -133,7 +142,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 7.2e-05
+      "funding": 7.8e-05
     },
     {
       "symbol": "XMR",
