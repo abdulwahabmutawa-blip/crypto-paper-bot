@@ -1,15 +1,16 @@
 {
-  "ts": "2026-10-20T10:00:48+00:00",
+  "ts": "2026-10-20T10:06:31+00:00",
   "sources": {
     "coingecko": [
       "BTC",
-      "NEAR",
       "PENGU",
+      "NEAR",
       "ZEC",
-      "PUMP",
-      "XMR",
       "INJ",
-      "TAO"
+      "PHA",
+      "TAO",
+      "XRP",
+      "PUMP"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -35,8 +36,18 @@
         "movers",
         "watcher"
       ],
-      "funding": -0.001599,
-      "long_short": 0.88
+      "funding": -0.001622,
+      "long_short": 0.93
+    },
+    {
+      "symbol": "PHA",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "watcher"
+      ],
+      "funding": -0.000749,
+      "long_short": 1.24
     },
     {
       "symbol": "BNB",
@@ -60,7 +71,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.7e-05
+      "funding": 2.9e-05
     },
     {
       "symbol": "NEAR",
@@ -68,7 +79,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.5e-05
+      "funding": 5.8e-05
     },
     {
       "symbol": "PENGU",
@@ -84,14 +95,6 @@
       "sources": [
         "movers"
       ]
-    },
-    {
-      "symbol": "PHA",
-      "surfaces": 1,
-      "sources": [
-        "watcher"
-      ],
-      "funding": -0.000776
     },
     {
       "symbol": "PUMP",
@@ -122,7 +125,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 9.8e-05
+      "funding": 9.9e-05
     },
     {
       "symbol": "WLD",
@@ -133,12 +136,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "XMR",
+      "symbol": "XRP",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0001
+      "funding": 1.2e-05
     },
     {
       "symbol": "ZEC",
@@ -146,7 +149,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.6e-05
+      "funding": 1.5e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
