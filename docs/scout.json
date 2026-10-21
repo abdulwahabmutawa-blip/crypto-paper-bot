@@ -1,8 +1,24 @@
 {
-  "ts": "2026-10-21T04:27:53+00:00",
-  "scanned": 114,
+  "ts": "2026-10-21T04:33:00+00:00",
+  "scanned": 115,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SOXSBUSDT",
+      "signal": "ignition",
+      "score": 0.6879,
+      "raw_score": 0.7917,
+      "weight": 0.869,
+      "price": 44.05,
+      "why": "trades 6.8x and volume 12.1x the prior 4h, 78% taker-buy, $92,861 burst \u2014 while price has only moved +1.1%",
+      "chg_24h": -0.0865,
+      "vol_surge": 12.13,
+      "chg_1h": 0.0108,
+      "market_surge": 7.04,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.36% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.36% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.64% at 24h: market beta, not signal",
@@ -11,7 +27,7 @@
     "revival": "benched \u2014 BTC-excess day mean -3.11% at 24h: market beta, not signal"
   },
   "breadth": {
-    "count": 16,
+    "count": 15,
     "baseline": 11.0,
     "wave": false
   },
