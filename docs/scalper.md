@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-21T10:26:32+00:00 · runs 3977 · equity **$676.88** (-32.31%) · cash $0.00 · open 10/10 · round trips 1442
+updated 2026-10-21T10:42:50+00:00 · runs 3978 · equity **$679.08** (-32.09%) · cash $0.00 · open 10/10 · round trips 1442
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-20T14:29 | RSRUSDT | surge | 0.00192 | 0.001937 | +0.89% |
-| 2026-10-20T14:29 | CRCLBUSDT | surge | 85.2 | 86.53 | +1.56% |
-| 2026-10-20T15:34 | TSLABUSDT | surge | 374.56 | 378.7 | +1.11% |
-| 2026-10-20T15:34 | JTOUSDT | surge | 0.4772 | 0.4758 | -0.29% |
+| 2026-10-20T14:29 | RSRUSDT | surge | 0.00192 | 0.001945 | +1.30% |
+| 2026-10-20T14:29 | CRCLBUSDT | surge | 85.2 | 86.67 | +1.73% |
+| 2026-10-20T15:34 | TSLABUSDT | surge | 374.56 | 379.72 | +1.38% |
+| 2026-10-20T15:34 | JTOUSDT | surge | 0.4772 | 0.4782 | +0.21% |
 | 2026-10-20T16:25 | BONKUSDT | surge | 3.04e-06 | 3.1e-06 | +1.97% |
-| 2026-10-20T17:31 | DOGEUSDT | surge | 0.08115 | 0.08177 | +0.76% |
-| 2026-10-20T20:52 | PENGUUSDT | surge | 0.00803 | 0.008082 | +0.65% |
-| 2026-10-21T02:42 | SPCXBUSDT | surge | 161.76 | 160.02 | -1.08% |
-| 2026-10-21T08:14 | BNCBUSDT | surge | 5.44 | 5.46 | +0.37% |
+| 2026-10-20T17:31 | DOGEUSDT | surge | 0.08115 | 0.08196 | +1.00% |
+| 2026-10-20T20:52 | PENGUUSDT | surge | 0.00803 | 0.008149 | +1.48% |
+| 2026-10-21T02:42 | SPCXBUSDT | surge | 161.76 | 160.26 | -0.93% |
+| 2026-10-21T08:14 | BNCBUSDT | surge | 5.44 | 5.5 | +1.10% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
