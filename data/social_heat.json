@@ -1,16 +1,16 @@
 {
-  "ts": "2026-10-21T17:40:21+00:00",
+  "ts": "2026-10-21T17:45:43+00:00",
   "sources": {
     "coingecko": [
       "AERO",
       "PENGU",
       "BTC",
-      "NEAR",
       "ZEC",
+      "NEAR",
+      "LIT",
+      "QNT",
       "SOL",
-      "IOST",
-      "ALT",
-      "HYPE"
+      "ZAMA"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,23 +21,13 @@
       "NEAR",
       "SPCXB",
       "PUMP",
-      "XRP",
-      "SOXLB"
+      "SOXLB",
+      "XRP"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "IOST",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": -0.017938,
-      "long_short": 0.7
-    },
     {
       "symbol": "NEAR",
       "surfaces": 2,
@@ -55,19 +45,11 @@
         "coingecko",
         "movers"
       ],
-      "funding": -6.5e-05,
+      "funding": -6.6e-05,
       "long_short": 0.56
     },
     {
       "symbol": "AERO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "ALT",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -80,7 +62,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.4e-05
+      "funding": 2.5e-05
     },
     {
       "symbol": "ENA",
@@ -91,12 +73,20 @@
       "funding": 5e-05
     },
     {
-      "symbol": "HYPE",
+      "symbol": "IOST",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -0.02
+    },
+    {
+      "symbol": "LIT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -2.8e-05
+      "funding": 5e-05
     },
     {
       "symbol": "PENGU",
@@ -112,7 +102,15 @@
       "sources": [
         "movers"
       ],
-      "funding": -4.1e-05
+      "funding": -4e-05
+    },
+    {
+      "symbol": "QNT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -1.2e-05
     },
     {
       "symbol": "SOL",
@@ -120,7 +118,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.6e-05
+      "funding": 6.8e-05
     },
     {
       "symbol": "SOXLB",
@@ -142,7 +140,15 @@
       "sources": [
         "movers"
       ],
-      "funding": 9.4e-05
+      "funding": 9.6e-05
+    },
+    {
+      "symbol": "ZAMA",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
