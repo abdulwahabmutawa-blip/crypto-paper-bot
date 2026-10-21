@@ -1,28 +1,12 @@
 {
-  "ts": "2026-10-21T20:48:16+00:00",
-  "scanned": 118,
+  "ts": "2026-10-21T20:54:23+00:00",
+  "scanned": 119,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "MUBUSDT",
-      "signal": "ignition",
-      "score": 0.6634,
-      "raw_score": 0.7513,
-      "weight": 0.883,
-      "price": 916.88,
-      "why": "trades 7.6x and volume 5.5x the prior 4h, 87% taker-buy, $94,432 burst \u2014 while price has only moved -0.2%",
-      "chg_24h": 0.0121,
-      "vol_surge": 5.46,
-      "chg_1h": -0.0025,
-      "market_surge": 1.95,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.63% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.63% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -1.07% at 24h: market beta, not signal",
-    "reversion": "benched \u2014 BTC-excess day mean -0.99% at 24h: market beta, not signal",
+    "reversion": "benched \u2014 BTC-excess day mean -1.15% at 24h: market beta, not signal",
     "heat": "benched \u2014 BTC-excess day mean -6.59% at 24h: market beta, not signal",
     "revival": "benched \u2014 BTC-excess day mean -2.98% at 24h: market beta, not signal"
   },
@@ -149,7 +133,7 @@
       "median_ret_24h": 0.00756,
       "both_halves_24h": false,
       "days_24h": 10,
-      "mean_x_24h": -0.00989,
+      "mean_x_24h": -0.01147,
       "days_x_24h": 10,
       "avg_win_24h": 0.04198,
       "avg_loss_24h": -0.04264,
