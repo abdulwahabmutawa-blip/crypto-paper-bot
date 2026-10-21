@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-21T08:05:44+00:00",
+ "updated": "2026-10-21T08:10:49+00:00",
  "spec": "x_chatter_precursors_2026-08-23",
  "n_rows_total": 32,
- "n_scored_excess_24h": 31,
+ "n_scored_excess_24h": 32,
  "objective": "BTC-excess 24h",
  "hit_threshold": 0.03,
  "features": {
@@ -28,19 +28,19 @@
     "median": -0.00792
    },
    "True": {
-    "n": 11,
-    "hit": 0.091,
-    "mean": -0.00288,
-    "median": 0.00017
+    "n": 12,
+    "hit": 0.083,
+    "mean": -0.00015,
+    "median": 0.00028
    }
   },
   "handle": {},
   "all": {
    "all": {
-    "n": 31,
-    "hit": 0.097,
-    "mean": -0.00804,
-    "median": -0.00646
+    "n": 32,
+    "hit": 0.094,
+    "mean": -0.00685,
+    "median": -0.00219
    }
   }
  },
@@ -49,9 +49,9 @@
    "note": "prior24h in [-2%,+5%] vs >+10%",
    "horizon_h": 24,
    "group_true": {
-    "n": 20,
-    "hit": 0.05,
-    "mean": -0.01635,
+    "n": 21,
+    "hit": 0.048,
+    "mean": -0.01414,
     "median": -0.00219
    },
    "group_false": null
@@ -72,10 +72,10 @@
    "horizon_h": 24,
    "group_true": null,
    "group_false": {
-    "n": 25,
-    "hit": 0.12,
-    "mean": -0.00984,
-    "median": -0.00646
+    "n": 26,
+    "hit": 0.115,
+    "mean": -0.00831,
+    "median": -0.00219
    }
   },
   "H4_occurred_catalyst_fades": {
@@ -105,12 +105,12 @@
     "median": -0.00646
    },
    "group_false": {
-    "n": 25,
-    "hit": 0.12,
-    "mean": -0.0045,
-    "median": -0.00219
+    "n": 26,
+    "hit": 0.115,
+    "mean": -0.00318,
+    "median": 0.00017
    },
-   "edge_pp": -1.83
+   "edge_pp": -1.96
   },
   "H6_exchange_surface_words_exhaust": {
    "note": "scanner/exchange-surface wording vs organic",
@@ -122,12 +122,12 @@
     "median": -0.02079
    },
    "group_false": {
-    "n": 30,
-    "hit": 0.1,
-    "mean": -0.00761,
+    "n": 31,
+    "hit": 0.097,
+    "mean": -0.0064,
     "median": -0.00219
    },
-   "edge_pp": -1.32
+   "edge_pp": -1.44
   },
   "H7_extreme_velocity_contrarian": {
    "note": "all-new handles vs familiar, 72h",
@@ -150,12 +150,12 @@
     "median": -0.00646
    },
    "group_false": {
-    "n": 12,
+    "n": 13,
     "hit": 0.0,
-    "mean": -0.01487,
+    "mean": -0.01143,
     "median": -0.00092
    },
-   "edge_pp": 1.12
+   "edge_pp": 0.77
   }
  },
  "leaders": [
