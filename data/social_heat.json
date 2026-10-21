@@ -1,13 +1,13 @@
 {
-  "ts": "2026-10-21T05:00:36+00:00",
+  "ts": "2026-10-21T05:06:35+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
-      "SUI",
       "NEAR",
+      "SUI",
+      "ZEC",
       "AERO",
       "SOL",
-      "ZEC",
       "PUMP",
       "BTC",
       "ETH"
@@ -17,17 +17,27 @@
     "movers": [
       "ZEC",
       "SPCXB",
-      "WLD",
       "SOXLB",
+      "WLD",
       "PEPE",
       "PUMP",
       "ENA",
-      "CRCLB"
+      "NEAR"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "NEAR",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.24
+    },
     {
       "symbol": "PUMP",
       "surfaces": 2,
@@ -45,7 +55,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 1.2e-05,
+      "funding": 1.6e-05,
       "long_short": 0.6
     },
     {
@@ -62,14 +72,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.4e-05
-    },
-    {
-      "symbol": "CRCLB",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
+      "funding": 6.6e-05
     },
     {
       "symbol": "ENA",
@@ -77,7 +80,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -1.2e-05
+      "funding": -9e-06
     },
     {
       "symbol": "ETH",
@@ -85,15 +88,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.7e-05
-    },
-    {
-      "symbol": "NEAR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": 3.8e-05
     },
     {
       "symbol": "PENGU",
@@ -101,7 +96,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.1e-05
+      "funding": 2.2e-05
     },
     {
       "symbol": "PEPE",
@@ -138,7 +133,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.7e-05
+      "funding": 2.1e-05
     },
     {
       "symbol": "WLD",
