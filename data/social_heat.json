@@ -1,44 +1,32 @@
 {
-  "ts": "2026-10-21T11:10:47+00:00",
+  "ts": "2026-10-21T11:16:36+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
       "ZEC",
-      "BTC",
       "NEAR",
+      "BTC",
       "HYPE",
-      "FET",
-      "IOST",
       "PUMP",
       "WLD",
-      "INJ"
+      "AERO"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "IOST",
       "ZEC",
-      "NEAR",
       "ENA",
-      "SPCXB",
-      "SOXLB",
+      "NEAR",
       "WLD",
-      "PUMP"
+      "SPCXB",
+      "PUMP",
+      "SOXLB"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "IOST",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": -0.007964,
-      "long_short": 0.73
-    },
     {
       "symbol": "NEAR",
       "surfaces": 2,
@@ -56,7 +44,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 1.4e-05,
+      "funding": 1e-05,
       "long_short": 0.78
     },
     {
@@ -76,8 +64,16 @@
         "coingecko",
         "movers"
       ],
-      "funding": -9e-06,
+      "funding": -1e-05,
       "long_short": 0.59
+    },
+    {
+      "symbol": "AERO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "BTC",
@@ -93,15 +89,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -1.4e-05
-    },
-    {
-      "symbol": "FET",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 2.2e-05
+      "funding": -1.2e-05
     },
     {
       "symbol": "HYPE",
@@ -109,15 +97,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.5e-05
+      "funding": -1.3e-05
     },
     {
-      "symbol": "INJ",
+      "symbol": "IOST",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
-      "funding": -3e-06
+      "funding": -0.008124
     },
     {
       "symbol": "PENGU",
