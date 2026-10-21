@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-21T11:05:07+00:00",
+  "ts": "2026-10-21T11:10:47+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
@@ -18,12 +18,12 @@
     "movers": [
       "IOST",
       "ZEC",
-      "ENA",
       "NEAR",
+      "ENA",
       "SPCXB",
       "SOXLB",
-      "PUMP",
-      "PEPE"
+      "WLD",
+      "PUMP"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -36,7 +36,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.007726,
+      "funding": -0.007964,
       "long_short": 0.73
     },
     {
@@ -56,8 +56,18 @@
         "coingecko",
         "movers"
       ],
-      "funding": 1.5e-05,
+      "funding": 1.4e-05,
       "long_short": 0.78
+    },
+    {
+      "symbol": "WLD",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.62
     },
     {
       "symbol": "ZEC",
@@ -66,7 +76,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -8e-06,
+      "funding": -9e-06,
       "long_short": 0.59
     },
     {
@@ -83,7 +93,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -1.5e-05
+      "funding": -1.4e-05
     },
     {
       "symbol": "FET",
@@ -91,7 +101,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.4e-05
+      "funding": 2.2e-05
     },
     {
       "symbol": "HYPE",
@@ -99,7 +109,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.7e-05
+      "funding": -1.5e-05
     },
     {
       "symbol": "INJ",
@@ -118,13 +128,6 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PEPE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
-    },
-    {
       "symbol": "SOXLB",
       "surfaces": 1,
       "sources": [
@@ -137,14 +140,6 @@
       "sources": [
         "movers"
       ]
-    },
-    {
-      "symbol": "WLD",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
