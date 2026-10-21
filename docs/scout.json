@@ -1,22 +1,22 @@
 {
-  "ts": "2026-10-21T15:42:51+00:00",
-  "scanned": 115,
+  "ts": "2026-10-21T15:48:34+00:00",
+  "scanned": 116,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "MUBARAKUSDT",
-      "signal": "breakout",
-      "score": 0.6636,
-      "raw_score": 0.761,
-      "weight": 0.872,
-      "price": 0.05621,
-      "why": "trades 9.2x, volume 13.4x, 64% taker-buy, +2.6% in an hour, at 81% of its 24h range",
-      "chg_24h": 0.0578,
-      "vol_surge": 13.36,
-      "chg_1h": 0.0265,
-      "market_surge": 4.67,
+      "symbol": "LAUSDT",
+      "signal": "revival",
+      "score": 0.6242,
+      "raw_score": 0.6242,
+      "weight": 1.0,
+      "price": 0.059,
+      "why": "revival day-one: fell -15% last week on $0.37M/day quiet, volume arriving 6.4x today, only +17% off its 30d low \u00b7 serial exploder: 3 runs in 2y \u2014 ON A WAVE DAY (breadth 24 vs 12 base)",
+      "chg_24h": 0.1007,
+      "vol_surge": 6.4,
+      "chg_1h": null,
+      "market_surge": null,
       "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.83% at 24h: market beta, not signal"
+      "status": "benched \u2014 BTC-excess day mean -3.09% at 24h: market beta, not signal"
     }
   ],
   "gate": {
@@ -27,9 +27,9 @@
     "revival": "benched \u2014 BTC-excess day mean -3.09% at 24h: market beta, not signal"
   },
   "breadth": {
-    "count": 21,
+    "count": 24,
     "baseline": 12.0,
-    "wave": false
+    "wave": true
   },
   "scorecard": {
     "ignition": {
