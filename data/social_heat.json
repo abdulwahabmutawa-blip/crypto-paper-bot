@@ -1,17 +1,16 @@
 {
-  "ts": "2026-10-21T18:02:12+00:00",
+  "ts": "2026-10-21T18:07:22+00:00",
   "sources": {
     "coingecko": [
       "AERO",
       "PENGU",
-      "BTC",
       "ZEC",
-      "NEAR",
+      "BTC",
       "IOST",
-      "QNT",
       "ZAMA",
-      "ETH",
-      "ENA"
+      "NEAR",
+      "XRP",
+      "ETH"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -29,16 +28,6 @@
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "ENA",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.31
-    },
     {
       "symbol": "IOST",
       "surfaces": 2,
@@ -60,13 +49,23 @@
       "long_short": 1.17
     },
     {
+      "symbol": "XRP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.36
+    },
+    {
       "symbol": "ZEC",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": -7.1e-05,
+      "funding": -7e-05,
       "long_short": 0.57
     },
     {
@@ -86,12 +85,20 @@
       "funding": 2.4e-05
     },
     {
+      "symbol": "ENA",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 6.8e-05
+      "funding": 7.1e-05
     },
     {
       "symbol": "PENGU",
@@ -99,7 +106,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.4e-05
+      "funding": 4.2e-05
     },
     {
       "symbol": "PUMP",
@@ -107,15 +114,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -4.3e-05
-    },
-    {
-      "symbol": "QNT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -1.3e-05
+      "funding": -4.4e-05
     },
     {
       "symbol": "SOXLB",
@@ -130,14 +129,6 @@
       "sources": [
         "movers"
       ]
-    },
-    {
-      "symbol": "XRP",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "ZAMA",
