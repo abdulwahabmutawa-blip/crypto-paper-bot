@@ -1,16 +1,16 @@
 {
-  "ts": "2026-10-21T16:27:46+00:00",
+  "ts": "2026-10-21T16:33:27+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
       "AERO",
       "ZEC",
-      "ENA",
       "NEAR",
-      "STRK",
-      "PUMP",
       "BTC",
-      "ZRO"
+      "ZRO",
+      "STRK",
+      "HYPE",
+      "ENA"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -18,8 +18,8 @@
       "IOST",
       "ENA",
       "ZEC",
-      "NEAR",
       "SPCXB",
+      "NEAR",
       "PUMP",
       "XRP",
       "ARB"
@@ -49,23 +49,13 @@
       "long_short": 1.12
     },
     {
-      "symbol": "PUMP",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": -3.4e-05,
-      "long_short": 0.78
-    },
-    {
       "symbol": "ZEC",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": -5.9e-05,
+      "funding": -6.2e-05,
       "long_short": 0.57
     },
     {
@@ -82,7 +72,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 9.4e-05
+      "funding": 8.7e-05
     },
     {
       "symbol": "BTC",
@@ -90,7 +80,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4e-05
+      "funding": 3.7e-05
+    },
+    {
+      "symbol": "HYPE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -2e-05
     },
     {
       "symbol": "IOST",
@@ -98,7 +96,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.011691
+      "funding": -0.011922
     },
     {
       "symbol": "PENGU",
@@ -107,6 +105,14 @@
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -3.7e-05
     },
     {
       "symbol": "SPCXB",
@@ -121,7 +127,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2e-06
+      "funding": -3e-06
     },
     {
       "symbol": "XRP",
@@ -129,7 +135,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 7.1e-05
+      "funding": 7.2e-05
     },
     {
       "symbol": "ZRO",
