@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-21T00:27:34+00:00 · runs 3939 · equity **$677.90** (-32.21%) · cash $0.00 · open 10/10 · round trips 1440
+updated 2026-10-21T00:43:59+00:00 · runs 3940 · equity **$678.07** (-32.19%) · cash $0.00 · open 10/10 · round trips 1440
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-20T14:29 | RSRUSDT | surge | 0.00192 | 0.001922 | +0.10% |
-| 2026-10-20T14:29 | CRCLBUSDT | surge | 85.2 | 86.55 | +1.58% |
-| 2026-10-20T15:34 | TSLABUSDT | surge | 374.56 | 382.12 | +2.02% |
-| 2026-10-20T15:34 | JTOUSDT | surge | 0.4772 | 0.4819 | +0.98% |
-| 2026-10-20T15:34 | CFXUSDT | surge | 0.05393 | 0.05489 | +1.78% |
-| 2026-10-20T16:25 | BONKUSDT | surge | 3.04e-06 | 3.08e-06 | +1.32% |
-| 2026-10-20T17:31 | DOGEUSDT | surge | 0.08115 | 0.08199 | +1.04% |
-| 2026-10-20T18:36 | RAYUSDT | surge | 2.0383 | 2.0123 | -1.28% |
-| 2026-10-20T20:52 | PENGUUSDT | surge | 0.00803 | 0.007993 | -0.46% |
+| 2026-10-20T14:29 | RSRUSDT | surge | 0.00192 | 0.001909 | -0.57% |
+| 2026-10-20T14:29 | CRCLBUSDT | surge | 85.2 | 86.45 | +1.47% |
+| 2026-10-20T15:34 | TSLABUSDT | surge | 374.56 | 382.4 | +2.09% |
+| 2026-10-20T15:34 | JTOUSDT | surge | 0.4772 | 0.4815 | +0.90% |
+| 2026-10-20T15:34 | CFXUSDT | surge | 0.05393 | 0.05506 | +2.10% |
+| 2026-10-20T16:25 | BONKUSDT | surge | 3.04e-06 | 3.09e-06 | +1.64% |
+| 2026-10-20T17:31 | DOGEUSDT | surge | 0.08115 | 0.08208 | +1.15% |
+| 2026-10-20T18:36 | RAYUSDT | surge | 2.0383 | 2.019 | -0.95% |
+| 2026-10-20T20:52 | PENGUUSDT | surge | 0.00803 | 0.007994 | -0.45% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
