@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-21T21:12:06+00:00 · runs 4017 · equity **$681.77** (-31.82%) · cash $0.00 · open 10/10 · round trips 1456
+updated 2026-10-21T21:29:19+00:00 · runs 4018 · equity **$682.58** (-31.74%) · cash $0.00 · open 10/10 · round trips 1456
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-21T02:42 | SPCXBUSDT | surge | 161.76 | 159.08 | -1.66% |
-| 2026-10-21T11:30 | LUMIAUSDT | surge | 0.0894 | 0.0884 | -1.12% |
+| 2026-10-21T02:42 | SPCXBUSDT | surge | 161.76 | 159.03 | -1.69% |
+| 2026-10-21T11:30 | LUMIAUSDT | surge | 0.0894 | 0.0885 | -1.01% |
 | 2026-10-21T13:13 | SCUSDT | surge | 0.000906 | 0.000887 | -2.10% |
-| 2026-10-21T15:25 | CRCLBUSDT | surge | 90.14 | 90.61 | +0.52% |
-| 2026-10-21T15:42 | DASHUSDT | surge | 53.45 | 52.1 | -2.53% |
-| 2026-10-21T16:15 | MSTRBUSDT | surge | 153.35 | 154.12 | +0.50% |
-| 2026-10-21T16:15 | ACEUSDT | surge | 0.1574 | 0.1583 | +0.57% |
-| 2026-10-21T16:15 | AAVEUSDT | surge | 158.89 | 156.53 | -1.49% |
-| 2026-10-21T16:48 | DOGEUSDT | surge | 0.08348 | 0.08287 | -0.73% |
+| 2026-10-21T15:25 | CRCLBUSDT | surge | 90.14 | 90.77 | +0.70% |
+| 2026-10-21T15:42 | DASHUSDT | surge | 53.45 | 52.23 | -2.28% |
+| 2026-10-21T16:15 | MSTRBUSDT | surge | 153.35 | 154.39 | +0.68% |
+| 2026-10-21T16:15 | ACEUSDT | surge | 0.1574 | 0.158 | +0.38% |
+| 2026-10-21T16:15 | AAVEUSDT | surge | 158.89 | 157.21 | -1.06% |
+| 2026-10-21T16:48 | DOGEUSDT | surge | 0.08348 | 0.0831 | -0.46% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
