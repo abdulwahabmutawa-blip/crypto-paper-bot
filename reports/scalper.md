@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-21T14:04:44+00:00 · runs 3991 · equity **$683.52** (-31.65%) · cash $0.00 · open 10/10 · round trips 1447
+updated 2026-10-21T14:21:19+00:00 · runs 3992 · equity **$681.50** (-31.85%) · cash $0.00 · open 10/10 · round trips 1447
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-20T14:29 | RSRUSDT | surge | 0.00192 | 0.001906 | -0.73% |
-| 2026-10-20T15:34 | JTOUSDT | surge | 0.4772 | 0.4837 | +1.36% |
-| 2026-10-20T17:31 | DOGEUSDT | surge | 0.08115 | 0.08208 | +1.15% |
-| 2026-10-20T20:52 | PENGUUSDT | surge | 0.00803 | 0.008072 | +0.52% |
-| 2026-10-21T02:42 | SPCXBUSDT | surge | 161.76 | 165.62 | +2.39% |
-| 2026-10-21T11:30 | LUMIAUSDT | surge | 0.0894 | 0.0895 | +0.11% |
-| 2026-10-21T13:13 | SCUSDT | surge | 0.000906 | 0.000892 | -1.55% |
-| 2026-10-21T13:46 | DASHUSDT | surge | 52.31 | 52.34 | +0.06% |
-| 2026-10-21T14:03 | PROMUSDT | surge | 5.546 | 5.509 | -0.67% |
+| 2026-10-20T14:29 | RSRUSDT | surge | 0.00192 | 0.001893 | -1.41% |
+| 2026-10-20T15:34 | JTOUSDT | surge | 0.4772 | 0.4836 | +1.34% |
+| 2026-10-20T17:31 | DOGEUSDT | surge | 0.08115 | 0.08209 | +1.16% |
+| 2026-10-20T20:52 | PENGUUSDT | surge | 0.00803 | 0.008081 | +0.64% |
+| 2026-10-21T02:42 | SPCXBUSDT | surge | 161.76 | 163.05 | +0.80% |
+| 2026-10-21T11:30 | LUMIAUSDT | surge | 0.0894 | 0.0898 | +0.45% |
+| 2026-10-21T13:13 | SCUSDT | surge | 0.000906 | 0.000893 | -1.43% |
+| 2026-10-21T13:46 | DASHUSDT | surge | 52.31 | 52.05 | -0.50% |
+| 2026-10-21T14:03 | PROMUSDT | surge | 5.546 | 5.464 | -1.48% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
