@@ -1,8 +1,24 @@
 {
-  "ts": "2026-10-21T00:15:53+00:00",
-  "scanned": 113,
+  "ts": "2026-10-21T00:21:18+00:00",
+  "scanned": 115,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "RENDERUSDT",
+      "signal": "ignition",
+      "score": 0.8194,
+      "raw_score": 0.9407,
+      "weight": 0.871,
+      "price": 1.859,
+      "why": "trades 9.8x and volume 27.4x the prior 4h, 82% taker-buy, $107,186 burst \u2014 while price has only moved +0.3%",
+      "chg_24h": 0.0311,
+      "vol_surge": 27.44,
+      "chg_1h": 0.0032,
+      "market_surge": 8.57,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.22% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.22% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.66% at 24h: market beta, not signal",
@@ -11,7 +27,7 @@
     "revival": "benched \u2014 BTC-excess day mean -3.31% at 24h: market beta, not signal"
   },
   "breadth": {
-    "count": 22,
+    "count": 26,
     "baseline": 11.0,
     "wave": true
   },
