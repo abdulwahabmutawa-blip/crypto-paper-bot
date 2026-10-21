@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-21T23:12:35+00:00 · runs 4024 · equity **$674.81** (-32.52%) · cash $0.00 · open 10/10 · round trips 1458
+updated 2026-10-21T23:17:19+00:00 · runs 4025 · equity **$674.90** (-32.51%) · cash $0.00 · open 10/10 · round trips 1458
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-21T11:30 | LUMIAUSDT | surge | 0.0894 | 0.0876 | -2.01% |
-| 2026-10-21T13:13 | SCUSDT | surge | 0.000906 | 0.000883 | -2.54% |
-| 2026-10-21T15:25 | CRCLBUSDT | surge | 90.14 | 88.97 | -1.30% |
-| 2026-10-21T16:15 | MSTRBUSDT | surge | 153.35 | 152.34 | -0.66% |
-| 2026-10-21T16:15 | ACEUSDT | surge | 0.1574 | 0.1571 | -0.19% |
-| 2026-10-21T16:15 | AAVEUSDT | surge | 158.89 | 155.65 | -2.04% |
-| 2026-10-21T16:48 | DOGEUSDT | surge | 0.08348 | 0.08211 | -1.64% |
-| 2026-10-21T22:19 | QNTUSDT | surge | 209.61 | 206.89 | -1.30% |
-| 2026-10-21T23:10 | TSLABUSDT | bottom | 375.06 | 373.81 | -0.33% |
+| 2026-10-21T11:30 | LUMIAUSDT | surge | 0.0894 | 0.0879 | -1.68% |
+| 2026-10-21T13:13 | SCUSDT | surge | 0.000906 | 0.000881 | -2.76% |
+| 2026-10-21T15:25 | CRCLBUSDT | surge | 90.14 | 89.18 | -1.07% |
+| 2026-10-21T16:15 | MSTRBUSDT | surge | 153.35 | 152.51 | -0.55% |
+| 2026-10-21T16:15 | ACEUSDT | surge | 0.1574 | 0.1575 | +0.06% |
+| 2026-10-21T16:15 | AAVEUSDT | surge | 158.89 | 156.04 | -1.79% |
+| 2026-10-21T16:48 | DOGEUSDT | surge | 0.08348 | 0.0821 | -1.65% |
+| 2026-10-21T22:19 | QNTUSDT | surge | 209.61 | 204.92 | -2.24% |
+| 2026-10-21T23:10 | TSLABUSDT | bottom | 375.06 | 374.19 | -0.23% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
