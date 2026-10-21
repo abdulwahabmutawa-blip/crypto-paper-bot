@@ -1,8 +1,24 @@
 {
-  "ts": "2026-10-21T20:42:42+00:00",
-  "scanned": 117,
+  "ts": "2026-10-21T20:48:16+00:00",
+  "scanned": 118,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "MUBUSDT",
+      "signal": "ignition",
+      "score": 0.6634,
+      "raw_score": 0.7513,
+      "weight": 0.883,
+      "price": 916.88,
+      "why": "trades 7.6x and volume 5.5x the prior 4h, 87% taker-buy, $94,432 burst \u2014 while price has only moved -0.2%",
+      "chg_24h": 0.0121,
+      "vol_surge": 5.46,
+      "chg_1h": -0.0025,
+      "market_surge": 1.95,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.63% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.63% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -1.07% at 24h: market beta, not signal",
@@ -11,7 +27,7 @@
     "revival": "benched \u2014 BTC-excess day mean -2.98% at 24h: market beta, not signal"
   },
   "breadth": {
-    "count": 22,
+    "count": 20,
     "baseline": 12.0,
     "wave": false
   },
