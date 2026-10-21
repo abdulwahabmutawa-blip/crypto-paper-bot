@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-10-20T23:53:12+00:00",
+  "generated_utc": "2026-10-21T00:09:40+00:00",
   "created": "2026-07-16",
   "starting_cash": 1000.0,
   "live_ts": "2026-10-20T19:55:00+00:00",
@@ -13,92 +13,92 @@
     {
       "sym": "NVDA",
       "price": 216.48,
-      "line": "z -1.45",
-      "tag": "normal",
-      "on": false,
+      "line": "z -1.62",
+      "tag": "oversold",
+      "on": true,
       "pick": false,
-      "fill": 24.21888662964131
+      "fill": 26.98632601796142
     },
     {
       "sym": "GOOGL",
       "price": 340.32,
-      "line": "z -1.06",
+      "line": "z -1.09",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 17.641058093564098
+      "fill": 18.234306104633436
     },
     {
       "sym": "JNJ",
       "price": 259.42,
-      "line": "z -0.10",
+      "line": "z -0.21",
       "tag": "HELD",
       "on": false,
       "pick": true,
-      "fill": 1.6564517241709364
-    },
-    {
-      "sym": "AAPL",
-      "price": 339.73,
-      "line": "z +0.48",
-      "tag": "normal",
-      "on": false,
-      "pick": false,
-      "fill": -8.07154723126377
+      "fill": 3.4239077417828936
     },
     {
       "sym": "JPM",
       "price": 335.37,
-      "line": "z +0.50",
+      "line": "z +0.41",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": -8.41053378715737
+      "fill": -6.838196061592374
+    },
+    {
+      "sym": "AAPL",
+      "price": 339.73,
+      "line": "z +0.54",
+      "tag": "normal",
+      "on": false,
+      "pick": false,
+      "fill": -8.989997695370661
     },
     {
       "sym": "MSFT",
       "price": 532.13,
-      "line": "z +0.64",
+      "line": "z +0.73",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": -10.734161785155118
+      "fill": -12.107096096529
     },
     {
       "sym": "MRK",
       "price": 148.31,
-      "line": "z +1.08",
+      "line": "z +0.88",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": -18.078233384616016
+      "fill": -14.628427670327351
     },
     {
       "sym": "WMT",
       "price": 117.9,
-      "line": "z +1.45",
+      "line": "z +1.66",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": -24.172861490182317
+      "fill": -27.643460976306994
     },
     {
       "sym": "XOM",
       "price": 177.89,
-      "line": "z +1.50",
+      "line": "z +1.68",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": -24.916742607533557
+      "fill": -28.017086958590028
     },
     {
       "sym": "AMZN",
       "price": 262.76,
-      "line": "z +1.63",
+      "line": "z +1.82",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": -27.111992034492022
+      "fill": -30.320610267440234
     }
   ],
   "board_title": "16 mega-caps, most oversold first (z < -1.5 = buy zone)",
@@ -109,12 +109,6 @@
     "board_note": "Buys panic, sells relief: enter the most stretched mega-cap below -1.5 z, exit when it recovers to average."
   },
   "intraday": [
-    {
-      "ts": "2026-09-23T14:24:12+00:00",
-      "value": 1215.97,
-      "bench": 1023.94,
-      "holding": "HD"
-    },
     {
       "ts": "2026-09-23T14:40:42+00:00",
       "value": 1211.08,
@@ -9108,6 +9102,12 @@
       "value": 1130.37,
       "bench": 1024.31,
       "holding": "JNJ"
+    },
+    {
+      "ts": "2026-10-21T00:09:40+00:00",
+      "value": 1130.37,
+      "bench": 1024.31,
+      "holding": "JNJ"
     }
   ],
   "trades": [
@@ -9663,5 +9663,5 @@
   },
   "costs_paid": 8.6628,
   "frozen": null,
-  "thoughts": "I'm holding JNJ. Most oversold mega-cap (z < -1.5) \u2014 buying the dip. I bought at $259.78; it's now $259.42 (-0.1% since I got in). My safety net: if the price falls to $232.34 (12% below its recent high), I sell automatically \u2014 no exceptions."
+  "thoughts": "I'm holding JNJ. Most oversold mega-cap (z < -1.5) \u2014 buying the dip. I bought at $259.78; it's now $259.42 (-0.1% since I got in). My safety net: if the price falls to $232.34 (12% below its recent high), I sell automatically \u2014 no exceptions. Closest challenger on my list is NVDA, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
 }
