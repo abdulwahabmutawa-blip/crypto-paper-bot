@@ -1,8 +1,24 @@
 {
-  "ts": "2026-10-21T09:40:26+00:00",
-  "scanned": 117,
+  "ts": "2026-10-21T09:46:11+00:00",
+  "scanned": 119,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "WUSDT",
+      "signal": "breakout",
+      "score": 0.5711,
+      "raw_score": 0.652,
+      "weight": 0.876,
+      "price": 0.01427,
+      "why": "trades 5.3x, volume 7.5x, 70% taker-buy, +2.5% in an hour, at 94% of its 24h range",
+      "chg_24h": 0.0996,
+      "vol_surge": 7.47,
+      "chg_1h": 0.0251,
+      "market_surge": 5.55,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.63% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.30% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.63% at 24h: market beta, not signal",
@@ -11,7 +27,7 @@
     "revival": "benched \u2014 BTC-excess day mean -3.04% at 24h: market beta, not signal"
   },
   "breadth": {
-    "count": 25,
+    "count": 26,
     "baseline": 11.0,
     "wave": true
   },
