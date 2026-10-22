@@ -1,6 +1,6 @@
 # Small-wins lab — paper study (owner request 2026-09-04)
 
-updated 2026-10-22T16:06:23+00:00 · runs 4154 · open 440 · resolved 20000 · cost 0.25%/RT
+updated 2026-10-22T16:11:04+00:00 · runs 4155 · open 440 · resolved 20000 · cost 0.25%/RT
 
 PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst day > -3 units.
 
