@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-22T02:25:17+00:00",
+  "ts": "2026-10-22T02:30:40+00:00",
   "sources": {
     "coingecko": [
       "AERO",
@@ -23,7 +23,7 @@
       "ZEC",
       "NEAR",
       "CRCLB",
-      "PEPE"
+      "XRP"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -40,21 +40,13 @@
       "long_short": 1.2
     },
     {
-      "symbol": "PEPE",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ]
-    },
-    {
       "symbol": "PUMP",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": -2e-05,
+      "funding": -1.8e-05,
       "long_short": 0.82
     },
     {
@@ -73,7 +65,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2e-05
+      "funding": 2.4e-05
     },
     {
       "symbol": "ALT",
@@ -89,7 +81,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.6e-05
+      "funding": -1.9e-05
     },
     {
       "symbol": "CRCLB",
@@ -120,7 +112,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -4.5e-05
+      "funding": -4.1e-05
     },
     {
       "symbol": "ONDO",
@@ -139,12 +131,27 @@
       "funding": 5e-05
     },
     {
+      "symbol": "PEPE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ]
+    },
+    {
       "symbol": "QNT",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
       "funding": -7.1e-05
+    },
+    {
+      "symbol": "XRP",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 8e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
