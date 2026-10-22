@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-22T01:53:12+00:00 · runs 4034 · equity **$668.25** (-33.17%) · cash $131.40 · open 8/10 · round trips 1462
+updated 2026-10-22T02:10:30+00:00 · runs 4035 · equity **$667.32** (-33.27%) · cash $131.40 · open 8/10 · round trips 1462
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,12 +36,12 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-21T11:30 | LUMIAUSDT | surge | 0.0894 | 0.0874 | -2.24% |
-| 2026-10-21T15:25 | CRCLBUSDT | surge | 90.14 | 88.44 | -1.89% |
-| 2026-10-21T16:15 | MSTRBUSDT | surge | 153.35 | 150.51 | -1.85% |
-| 2026-10-21T16:15 | ACEUSDT | surge | 0.1574 | 0.155 | -1.52% |
-| 2026-10-21T23:10 | TSLABUSDT | bottom | 375.06 | 372.12 | -0.78% |
-| 2026-10-21T23:33 | INTCBUSDT | bottom | 91.03 | 90.69 | -0.37% |
-| 2026-10-22T01:51 | ZROUSDT | bottom | 1.942 | 1.938 | -0.21% |
+| 2026-10-21T11:30 | LUMIAUSDT | surge | 0.0894 | 0.0877 | -1.90% |
+| 2026-10-21T15:25 | CRCLBUSDT | surge | 90.14 | 87.82 | -2.57% |
+| 2026-10-21T16:15 | MSTRBUSDT | surge | 153.35 | 150.03 | -2.16% |
+| 2026-10-21T16:15 | ACEUSDT | surge | 0.1574 | 0.1545 | -1.84% |
+| 2026-10-21T23:10 | TSLABUSDT | bottom | 375.06 | 371.9 | -0.84% |
+| 2026-10-21T23:33 | INTCBUSDT | bottom | 91.03 | 90.37 | -0.73% |
+| 2026-10-22T01:51 | ZROUSDT | bottom | 1.942 | 1.937 | -0.26% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
