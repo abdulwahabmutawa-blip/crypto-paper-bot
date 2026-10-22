@@ -1,16 +1,17 @@
 {
-  "ts": "2026-10-22T14:31:40+00:00",
+  "ts": "2026-10-22T14:37:22+00:00",
   "sources": {
     "coingecko": [
       "AERO",
       "NEAR",
-      "XMR",
       "SUI",
-      "PENGU",
-      "ENA",
       "BTC",
+      "ENA",
+      "BMT",
+      "STRK",
+      "XMR",
       "ETH",
-      "STRK"
+      "TAO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -27,7 +28,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -9e-06
+      "funding": -7e-06
     },
     {
       "symbol": "AI",
@@ -38,12 +39,20 @@
       "funding": 0.0
     },
     {
+      "symbol": "BMT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -0.001874
+    },
+    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -2.2e-05
+      "funding": -2e-05
     },
     {
       "symbol": "ENA",
@@ -67,15 +76,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -4.6e-05
-    },
-    {
-      "symbol": "PENGU",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -1e-05
+      "funding": -4.4e-05
     },
     {
       "symbol": "STRK",
@@ -83,7 +84,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4e-06
+      "funding": 3e-06
     },
     {
       "symbol": "SUI",
@@ -91,7 +92,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -6.9e-05
+      "funding": -8.1e-05
+    },
+    {
+      "symbol": "TAO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -2.7e-05
     },
     {
       "symbol": "XMR",
@@ -99,7 +108,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 0.000653
+      "funding": 0.000635
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
