@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-22T11:26:47+00:00",
+  "ts": "2026-10-22T11:32:30+00:00",
   "sources": {
     "coingecko": [
       "AERO",
@@ -15,19 +15,31 @@
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "AI"
+      "AI",
+      "PUMP",
+      "STRK"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
     {
+      "symbol": "STRK",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -7e-06,
+      "long_short": 0.84
+    },
+    {
       "symbol": "AERO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 3.4e-05
+      "funding": 3.8e-05
     },
     {
       "symbol": "AI",
@@ -59,7 +71,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -5e-06
+      "funding": -1.2e-05
     },
     {
       "symbol": "PENGU",
@@ -67,7 +79,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8e-06
+      "funding": 1.4e-05
+    },
+    {
+      "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 2.1e-05
     },
     {
       "symbol": "QNT",
@@ -75,15 +95,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -3.8e-05
-    },
-    {
-      "symbol": "STRK",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -1.2e-05
+      "funding": -3.7e-05
     },
     {
       "symbol": "XMR",
@@ -91,7 +103,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 0.000657
+      "funding": 0.000673
     },
     {
       "symbol": "ZEC",
