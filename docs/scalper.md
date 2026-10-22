@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-22T03:53:38+00:00 · runs 4041 · equity **$663.17** (-33.68%) · cash $259.24 · open 6/10 · round trips 1466
+updated 2026-10-22T04:10:52+00:00 · runs 4042 · equity **$662.81** (-33.72%) · cash $259.24 · open 6/10 · round trips 1466
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,10 +36,10 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-21T23:10 | TSLABUSDT | bottom | 375.06 | 369.73 | -1.42% |
-| 2026-10-21T23:33 | INTCBUSDT | bottom | 91.03 | 89.37 | -1.82% |
-| 2026-10-22T01:51 | ZROUSDT | bottom | 1.942 | 1.909 | -1.70% |
-| 2026-10-22T03:00 | PROMUSDT | surge | 5.889 | 5.914 | +0.42% |
-| 2026-10-22T03:34 | SOXSBUSDT | surge | 47.57 | 48 | +0.90% |
+| 2026-10-21T23:10 | TSLABUSDT | bottom | 375.06 | 370.18 | -1.30% |
+| 2026-10-21T23:33 | INTCBUSDT | bottom | 91.03 | 89.5 | -1.68% |
+| 2026-10-22T01:51 | ZROUSDT | bottom | 1.942 | 1.906 | -1.85% |
+| 2026-10-22T03:00 | PROMUSDT | surge | 5.889 | 5.87 | -0.32% |
+| 2026-10-22T03:34 | SOXSBUSDT | surge | 47.57 | 48.04 | +0.99% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
