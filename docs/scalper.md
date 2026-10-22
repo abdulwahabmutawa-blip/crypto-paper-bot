@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-22T10:28:22+00:00 · runs 4064 · equity **$665.40** (-33.46%) · cash $194.78 · open 7/10 · round trips 1474
+updated 2026-10-22T10:33:28+00:00 · runs 4065 · equity **$665.11** (-33.49%) · cash $194.78 · open 7/10 · round trips 1474
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,11 +36,11 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-21T23:10 | TSLABUSDT | bottom | 375.06 | 371.63 | -0.91% |
-| 2026-10-22T03:00 | PROMUSDT | surge | 5.889 | 5.848 | -0.70% |
-| 2026-10-22T06:34 | BTCUSDT | bottom | 82570.4 | 82081.3 | -0.59% |
-| 2026-10-22T08:22 | SPCXBUSDT | bottom | 155.12 | 155.82 | +0.45% |
-| 2026-10-22T10:08 | ARKMUSDT | surge | 0.1417 | 0.1386 | -2.19% |
-| 2026-10-22T10:26 | RUNEUSDT | surge | 0.701 | 0.699 | -0.29% |
+| 2026-10-21T23:10 | TSLABUSDT | bottom | 375.06 | 371.92 | -0.84% |
+| 2026-10-22T03:00 | PROMUSDT | surge | 5.889 | 5.85 | -0.66% |
+| 2026-10-22T06:34 | BTCUSDT | bottom | 82570.4 | 82088 | -0.58% |
+| 2026-10-22T08:22 | SPCXBUSDT | bottom | 155.12 | 155.93 | +0.52% |
+| 2026-10-22T10:08 | ARKMUSDT | surge | 0.1417 | 0.1379 | -2.68% |
+| 2026-10-22T10:26 | RUNEUSDT | surge | 0.701 | 0.698 | -0.43% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
