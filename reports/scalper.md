@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-23T20:55:59+00:00 · runs 4188 · equity **$657.44** (-34.26%) · cash $0.00 · open 10/10 · round trips 1500
+updated 2026-10-23T21:01:12+00:00 · runs 4189 · equity **$658.00** (-34.20%) · cash $0.00 · open 10/10 · round trips 1500
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-23T02:23 | ATOMUSDT | surge | 1.766 | 1.752 | -0.79% |
-| 2026-10-23T02:23 | RUNEUSDT | bottom | 0.642 | 0.635 | -1.09% |
+| 2026-10-23T02:23 | ATOMUSDT | surge | 1.766 | 1.75 | -0.91% |
+| 2026-10-23T02:23 | RUNEUSDT | bottom | 0.642 | 0.636 | -0.93% |
 | 2026-10-23T04:15 | BCHUSDT | surge | 284.8 | 285.5 | +0.25% |
-| 2026-10-23T04:32 | BNCBUSDT | surge | 5.49 | 5.37 | -2.19% |
-| 2026-10-23T11:06 | BOMEUSDT | surge | 0.0006433 | 0.0006402 | -0.48% |
-| 2026-10-23T13:01 | BONKUSDT | surge | 3.29e-06 | 3.24e-06 | -1.52% |
-| 2026-10-23T15:34 | MSTRBUSDT | surge | 148.55 | 146.85 | -1.14% |
-| 2026-10-23T17:56 | SENTUSDT | surge | 0.02372 | 0.02319 | -2.23% |
-| 2026-10-23T20:53 | LAUSDT | surge | 0.0615 | 0.06 | -2.44% |
+| 2026-10-23T04:32 | BNCBUSDT | surge | 5.49 | 5.38 | -2.00% |
+| 2026-10-23T11:06 | BOMEUSDT | surge | 0.0006433 | 0.0006438 | +0.08% |
+| 2026-10-23T13:01 | BONKUSDT | surge | 3.29e-06 | 3.25e-06 | -1.22% |
+| 2026-10-23T15:34 | MSTRBUSDT | surge | 148.55 | 146.81 | -1.17% |
+| 2026-10-23T17:56 | SENTUSDT | surge | 0.02372 | 0.02311 | -2.57% |
+| 2026-10-23T20:53 | LAUSDT | surge | 0.0615 | 0.0601 | -2.28% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
