@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-23T14:07:47+00:00 · runs 4164 · equity **$666.13** (-33.39%) · cash $0.00 · open 10/10 · round trips 1494
+updated 2026-10-23T14:24:07+00:00 · runs 4165 · equity **$661.72** (-33.83%) · cash $0.00 · open 10/10 · round trips 1494
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-23T02:23 | ATOMUSDT | surge | 1.766 | 1.782 | +0.91% |
-| 2026-10-23T02:23 | RUNEUSDT | bottom | 0.642 | 0.644 | +0.31% |
-| 2026-10-23T04:15 | BCHUSDT | surge | 284.8 | 284.8 | +0.00% |
-| 2026-10-23T04:32 | BNCBUSDT | surge | 5.49 | 5.48 | -0.18% |
-| 2026-10-23T06:49 | BEAMXUSDT | surge | 0.003166 | 0.003135 | -0.98% |
-| 2026-10-23T08:32 | ACEUSDT | surge | 0.1508 | 0.1487 | -1.39% |
-| 2026-10-23T10:18 | COTIUSDT | surge | 0.01167 | 0.01162 | -0.43% |
-| 2026-10-23T11:06 | BOMEUSDT | surge | 0.0006433 | 0.0006507 | +1.15% |
-| 2026-10-23T13:01 | BONKUSDT | surge | 3.29e-06 | 3.31e-06 | +0.61% |
+| 2026-10-23T02:23 | ATOMUSDT | surge | 1.766 | 1.766 | +0.00% |
+| 2026-10-23T02:23 | RUNEUSDT | bottom | 0.642 | 0.635 | -1.09% |
+| 2026-10-23T04:15 | BCHUSDT | surge | 284.8 | 283.1 | -0.60% |
+| 2026-10-23T04:32 | BNCBUSDT | surge | 5.49 | 5.39 | -1.82% |
+| 2026-10-23T06:49 | BEAMXUSDT | surge | 0.003166 | 0.003124 | -1.33% |
+| 2026-10-23T08:32 | ACEUSDT | surge | 0.1508 | 0.1483 | -1.66% |
+| 2026-10-23T10:18 | COTIUSDT | surge | 0.01167 | 0.01163 | -0.34% |
+| 2026-10-23T11:06 | BOMEUSDT | surge | 0.0006433 | 0.0006427 | -0.09% |
+| 2026-10-23T13:01 | BONKUSDT | surge | 3.29e-06 | 3.29e-06 | +0.00% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
