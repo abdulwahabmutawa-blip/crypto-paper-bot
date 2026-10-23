@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-23T17:33:48+00:00",
+  "ts": "2026-10-23T17:39:42+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
@@ -7,9 +7,10 @@
       "AERO",
       "PEPE",
       "HYPE",
-      "XMR",
+      "BTC",
       "ETH",
-      "TAO"
+      "INJ",
+      "STRK"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -17,8 +18,8 @@
       "PEPE",
       "ENA",
       "ZEC",
-      "BNB",
       "UNI",
+      "BNB",
       "MUB",
       "DOGE",
       "HYPE"
@@ -51,7 +52,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1e-06
+      "funding": 2e-06
     },
     {
       "symbol": "BNB",
@@ -60,6 +61,14 @@
         "movers"
       ],
       "funding": 3.4e-05
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 9.7e-05
     },
     {
       "symbol": "DOGE",
@@ -94,6 +103,14 @@
       "funding": 5e-05
     },
     {
+      "symbol": "INJ",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -6e-06
+    },
+    {
       "symbol": "MUB",
       "surfaces": 1,
       "sources": [
@@ -106,15 +123,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.1e-05
+      "funding": 6e-06
     },
     {
-      "symbol": "TAO",
+      "symbol": "STRK",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 1e-05
+      "funding": -1.8e-05
     },
     {
       "symbol": "UNI",
@@ -122,15 +139,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.5e-05
-    },
-    {
-      "symbol": "XMR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": 4.6e-05
     },
     {
       "symbol": "ZEC",
@@ -138,7 +147,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.3e-05
+      "funding": 4.1e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
