@@ -1,17 +1,17 @@
 {
-  "ts": "2026-10-23T16:10:22+00:00",
+  "ts": "2026-10-23T16:15:49+00:00",
   "sources": {
     "coingecko": [
-      "BTC",
-      "PEPE",
-      "PENGU",
       "INIT",
+      "PEPE",
+      "BTC",
+      "PENGU",
       "NEAR",
-      "AERO",
       "HYPE",
-      "LINK",
+      "ZEC",
+      "AERO",
       "XMR",
-      "XRP"
+      "LINK"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -23,22 +23,12 @@
       "UNI",
       "DOGE",
       "SUI",
-      "HYPE"
+      "ETH"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "HYPE",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.76
-    },
     {
       "symbol": "PEPE",
       "surfaces": 2,
@@ -53,7 +43,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.5e-05
+      "funding": 7e-06
     },
     {
       "symbol": "BNB",
@@ -61,7 +51,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 1.4e-05
+      "funding": 1.5e-05
     },
     {
       "symbol": "BTC",
@@ -85,7 +75,23 @@
       "sources": [
         "movers"
       ],
-      "funding": 3.5e-05
+      "funding": 3e-05
+    },
+    {
+      "symbol": "ETH",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 8.1e-05
+    },
+    {
+      "symbol": "HYPE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "INIT",
@@ -101,7 +107,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.3e-05
+      "funding": 6.2e-05
     },
     {
       "symbol": "MUB",
@@ -116,7 +122,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.7e-05
+      "funding": 4e-05
     },
     {
       "symbol": "PENGU",
@@ -132,7 +138,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.0001
+      "funding": 9.6e-05
     },
     {
       "symbol": "UNI",
@@ -140,7 +146,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 7.8e-05
+      "funding": 7.7e-05
     },
     {
       "symbol": "XMR",
@@ -151,12 +157,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "XRP",
+      "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0001
+      "funding": 4e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
