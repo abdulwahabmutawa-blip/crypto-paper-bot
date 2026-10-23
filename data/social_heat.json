@@ -1,40 +1,40 @@
 {
-  "ts": "2026-10-23T17:00:41+00:00",
+  "ts": "2026-10-23T17:06:40+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
       "INIT",
       "PEPE",
-      "NEAR",
+      "XMR",
       "AERO",
-      "ENA",
-      "XMR"
+      "HYPE",
+      "BTC"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "PEPE",
       "ENA",
-      "ZEC",
       "MUB",
+      "ZEC",
       "UNI",
       "BNB",
       "HYPE",
-      "DOGE"
+      "CRCLB"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
     {
-      "symbol": "ENA",
+      "symbol": "HYPE",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 3.8e-05,
-      "long_short": 1.7
+      "funding": 5e-05,
+      "long_short": 1.75
     },
     {
       "symbol": "PEPE",
@@ -58,23 +58,30 @@
       "sources": [
         "movers"
       ],
-      "funding": 2.9e-05
+      "funding": 3e-05
     },
     {
-      "symbol": "DOGE",
+      "symbol": "BTC",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
       "funding": 0.0001
     },
     {
-      "symbol": "HYPE",
+      "symbol": "CRCLB",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
+    },
+    {
+      "symbol": "ENA",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 5e-05
+      "funding": 4.3e-05
     },
     {
       "symbol": "INIT",
@@ -92,20 +99,12 @@
       ]
     },
     {
-      "symbol": "NEAR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5.5e-05
-    },
-    {
       "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 3.9e-05
+      "funding": 3.8e-05
     },
     {
       "symbol": "UNI",
@@ -113,7 +112,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 6.6e-05
+      "funding": 6.5e-05
     },
     {
       "symbol": "XMR",
