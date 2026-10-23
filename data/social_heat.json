@@ -1,16 +1,18 @@
 {
-  "ts": "2026-10-23T03:41:12+00:00",
+  "ts": "2026-10-23T03:46:55+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
-      "AERO",
       "STRK",
       "BTC",
-      "QNT",
-      "LIT",
+      "AERO",
+      "INJ",
+      "NEAR",
       "PUMP",
       "PENDLE",
-      "ONDO"
+      "QNT",
+      "ONDO",
+      "LIT"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -28,7 +30,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1e-06
+      "funding": -1e-06
     },
     {
       "symbol": "AI",
@@ -44,7 +46,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.6e-05
+      "funding": 6.8e-05
+    },
+    {
+      "symbol": "INJ",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -7.2e-05
     },
     {
       "symbol": "LIT",
@@ -55,12 +65,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "NEAR",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -1.4e-05
+    },
+    {
       "symbol": "ONDO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -3e-05
+      "funding": -2.5e-05
     },
     {
       "symbol": "PENDLE",
@@ -68,7 +86,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.2e-05
+      "funding": 2.7e-05
     },
     {
       "symbol": "PENGU",
@@ -84,7 +102,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.2e-05
+      "funding": 1.4e-05
     },
     {
       "symbol": "QNT",
@@ -92,7 +110,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000172
+      "funding": -0.000162
     },
     {
       "symbol": "RLUSD",
@@ -107,7 +125,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.4e-05
+      "funding": 2.1e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
