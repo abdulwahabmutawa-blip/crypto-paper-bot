@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-23T16:38:32+00:00",
+  "ts": "2026-10-23T16:44:19+00:00",
   "sources": {
     "coingecko": [
       "INIT",
@@ -17,11 +17,11 @@
       "PEPE",
       "ENA",
       "MUB",
-      "BNB",
       "UNI",
+      "BNB",
       "ZEC",
-      "DOGE",
-      "SUI"
+      "CRCLB",
+      "DOGE"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -50,6 +50,13 @@
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "CRCLB",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
     },
     {
       "symbol": "DOGE",
@@ -96,7 +103,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.2e-05
+      "funding": 5.3e-05
     },
     {
       "symbol": "PENGU",
@@ -104,15 +111,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.2e-05
-    },
-    {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 8.9e-05
+      "funding": 3.9e-05
     },
     {
       "symbol": "TAO",
@@ -120,7 +119,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.2e-05
+      "funding": 1.7e-05
     },
     {
       "symbol": "UNI",
@@ -128,7 +127,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 7.3e-05
+      "funding": 7.1e-05
     },
     {
       "symbol": "XMR",
@@ -144,7 +143,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.9e-05
+      "funding": 4.8e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
