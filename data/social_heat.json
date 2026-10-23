@@ -1,24 +1,24 @@
 {
-  "ts": "2026-10-23T13:59:47+00:00",
+  "ts": "2026-10-23T14:05:30+00:00",
   "sources": {
     "coingecko": [
-      "PENGU",
       "PEPE",
+      "PENGU",
       "AERO",
       "TAO",
-      "XMR",
-      "STRK",
-      "TIA",
       "PUMP",
-      "BTC"
+      "XMR",
+      "SUI",
+      "STRK",
+      "PHA"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "PEPE",
       "BNB",
-      "SUI",
       "ENA",
+      "SUI",
       "DOGE",
       "BTC",
       "ETH",
@@ -29,22 +29,22 @@
   },
   "heat": [
     {
-      "symbol": "BTC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 9e-05,
-      "long_short": 2.17
-    },
-    {
       "symbol": "PEPE",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ]
+    },
+    {
+      "symbol": "SUI",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 6.8e-05,
+      "long_short": 2.06
     },
     {
       "symbol": "AERO",
@@ -60,7 +60,15 @@
       "sources": [
         "movers"
       ],
-      "funding": 6e-06
+      "funding": 7e-06
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 9.3e-05
     },
     {
       "symbol": "DOGE",
@@ -68,7 +76,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 6.7e-05
+      "funding": 6.8e-05
     },
     {
       "symbol": "ENA",
@@ -84,7 +92,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 3e-05
+      "funding": 3.1e-05
     },
     {
       "symbol": "PENGU",
@@ -92,7 +100,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.6e-05
+      "funding": 2.9e-05
+    },
+    {
+      "symbol": "PHA",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -0.000307
     },
     {
       "symbol": "PUMP",
@@ -100,7 +116,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.5e-05
+      "funding": 1.4e-05
     },
     {
       "symbol": "STRK",
@@ -108,15 +124,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.4e-05
-    },
-    {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 6.7e-05
+      "funding": -2.3e-05
     },
     {
       "symbol": "TAO",
@@ -124,15 +132,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.7e-05
-    },
-    {
-      "symbol": "TIA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -6e-06
+      "funding": 3.8e-05
     },
     {
       "symbol": "U",
