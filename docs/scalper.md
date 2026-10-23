@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-23T02:25:55+00:00 · runs 4121 · equity **$662.87** (-33.71%) · cash $254.79 · open 6/10 · round trips 1479
+updated 2026-10-23T02:43:49+00:00 · runs 4122 · equity **$661.90** (-33.81%) · cash $63.70 · open 9/10 · round trips 1479
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,10 +36,13 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-22T06:34 | BTCUSDT | bottom | 82570.4 | 81598 | -1.18% |
-| 2026-10-23T02:23 | DASHUSDT | surge | 55.17 | 55.68 | +0.92% |
-| 2026-10-23T02:23 | DOTUSDT | surge | 1.159 | 1.166 | +0.60% |
+| 2026-10-22T06:34 | BTCUSDT | bottom | 82570.4 | 81819.2 | -0.91% |
+| 2026-10-23T02:23 | DASHUSDT | surge | 55.17 | 54.79 | -0.69% |
+| 2026-10-23T02:23 | DOTUSDT | surge | 1.159 | 1.162 | +0.26% |
 | 2026-10-23T02:23 | ATOMUSDT | surge | 1.766 | 1.782 | +0.91% |
 | 2026-10-23T02:23 | RUNEUSDT | bottom | 0.642 | 0.649 | +1.09% |
+| 2026-10-23T02:41 | KERNELUSDT | surge | 0.051 | 0.0518 | +1.57% |
+| 2026-10-23T02:41 | GTCUSDT | surge | 0.32449 | 0.31502 | -2.92% |
+| 2026-10-23T02:41 | REZUSDT | surge | 0.003943 | 0.004003 | +1.52% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
