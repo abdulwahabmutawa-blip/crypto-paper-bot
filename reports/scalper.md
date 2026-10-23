@@ -2,20 +2,22 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-23T21:01:12+00:00 · runs 4189 · equity **$658.00** (-34.20%) · cash $0.00 · open 10/10 · round trips 1500
+updated 2026-10-23T21:19:15+00:00 · runs 4190 · equity **$656.41** (-34.36%) · cash $0.00 · open 10/10 · round trips 1502
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
-- hit 48% (break-even 54%) · mean -0.27%/trade · realized $-334.99 · worst day $-50.94 · trades/day 30.6
+- hit 48% (break-even 54%) · mean -0.27%/trade · realized $-339.29 · worst day $-50.94 · trades/day 30.7
 
 | shape | n | hit | mean | target% | stop% | time% |
 |---|---|---|---|---|---|---|
-| surge | 1312 | 49% | -0.25% | 47% | 46% | 7% |
+| surge | 1314 | 49% | -0.26% | 46% | 46% | 7% |
 | bottom | 188 | 45% | -0.37% | 39% | 43% | 18% |
 
 ## Last 15 round trips
 | exit (UTC) | coin | shape | how | hours | net | P&L |
 |---|---|---|---|---|---|---|
+| 2026-10-23T21:17 | LAUSDT | surge | STOP | 0.2 | -3.25% | $-2.13 |
+| 2026-10-23T21:17 | SENTUSDT | surge | STOP | 3.2 | -3.25% | $-2.17 |
 | 2026-10-23T20:53 | LAUSDT | surge | TARGET | 0.0 | +2.75% | $+1.75 |
 | 2026-10-23T20:36 | ARKMUSDT | surge | STOP | 0.8 | -3.25% | $-2.14 |
 | 2026-10-23T19:43 | ACEUSDT | surge | STOP | 11.0 | -3.25% | $-2.21 |
@@ -29,21 +31,19 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | 2026-10-23T10:34 | REZUSDT | surge | STOP | 2.8 | -3.25% | $-2.13 |
 | 2026-10-23T10:18 | ARKUSDT | surge | TARGET | 0.2 | +2.75% | $+1.69 |
 | 2026-10-23T09:45 | DASHUSDT | surge | STOP | 7.2 | -3.25% | $-2.07 |
-| 2026-10-23T08:32 | PEPEUSDT | surge | TARGET | 2.0 | +2.75% | $+1.82 |
-| 2026-10-23T07:40 | DOTUSDT | surge | TARGET | 5.0 | +2.75% | $+1.75 |
 
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-23T02:23 | ATOMUSDT | surge | 1.766 | 1.75 | -0.91% |
-| 2026-10-23T02:23 | RUNEUSDT | bottom | 0.642 | 0.636 | -0.93% |
-| 2026-10-23T04:15 | BCHUSDT | surge | 284.8 | 285.5 | +0.25% |
-| 2026-10-23T04:32 | BNCBUSDT | surge | 5.49 | 5.38 | -2.00% |
-| 2026-10-23T11:06 | BOMEUSDT | surge | 0.0006433 | 0.0006438 | +0.08% |
-| 2026-10-23T13:01 | BONKUSDT | surge | 3.29e-06 | 3.25e-06 | -1.22% |
-| 2026-10-23T15:34 | MSTRBUSDT | surge | 148.55 | 146.81 | -1.17% |
-| 2026-10-23T17:56 | SENTUSDT | surge | 0.02372 | 0.02311 | -2.57% |
-| 2026-10-23T20:53 | LAUSDT | surge | 0.0615 | 0.0601 | -2.28% |
+| 2026-10-23T02:23 | ATOMUSDT | surge | 1.766 | 1.749 | -0.96% |
+| 2026-10-23T02:23 | RUNEUSDT | bottom | 0.642 | 0.635 | -1.09% |
+| 2026-10-23T04:15 | BCHUSDT | surge | 284.8 | 285.4 | +0.21% |
+| 2026-10-23T04:32 | BNCBUSDT | surge | 5.49 | 5.36 | -2.37% |
+| 2026-10-23T11:06 | BOMEUSDT | surge | 0.0006433 | 0.0006449 | +0.25% |
+| 2026-10-23T13:01 | BONKUSDT | surge | 3.29e-06 | 3.24e-06 | -1.52% |
+| 2026-10-23T15:34 | MSTRBUSDT | surge | 148.55 | 147.13 | -0.96% |
+| 2026-10-23T21:17 | INITUSDT | surge | 0.15412 | 0.15405 | -0.05% |
+| 2026-10-23T21:17 | WLFIUSDT | surge | 0.0548 | 0.0547 | -0.18% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
