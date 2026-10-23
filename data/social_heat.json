@@ -1,13 +1,16 @@
 {
-  "ts": "2026-10-23T02:22:26+00:00",
+  "ts": "2026-10-23T02:28:07+00:00",
   "sources": {
     "coingecko": [
+      "PENGU",
       "XRP",
       "BTC",
-      "PENGU",
+      "LINK",
+      "GTC",
+      "AERO",
       "PEPE",
-      "ARB",
-      "GTC"
+      "STRK",
+      "ARB"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,6 +22,14 @@
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "AERO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
     {
       "symbol": "AI",
       "surfaces": 1,
@@ -33,7 +44,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -8.6e-05
+      "funding": -8.8e-05
     },
     {
       "symbol": "BTC",
@@ -41,7 +52,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.6e-05
+      "funding": 4.8e-05
     },
     {
       "symbol": "GTC",
@@ -49,7 +60,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.008235
+      "funding": -0.008276
+    },
+    {
+      "symbol": "LINK",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -4.5e-05
     },
     {
       "symbol": "PENGU",
@@ -57,7 +76,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.2e-05
+      "funding": 4.6e-05
     },
     {
       "symbol": "PEPE",
@@ -74,12 +93,20 @@
       ]
     },
     {
+      "symbol": "STRK",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 4.2e-05
+    },
+    {
       "symbol": "XRP",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 6.7e-05
+      "funding": 6.9e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."

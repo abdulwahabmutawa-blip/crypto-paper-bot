@@ -1,22 +1,37 @@
 {
-  "ts": "2026-10-23T02:22:29+00:00",
-  "scanned": 115,
+  "ts": "2026-10-23T02:28:11+00:00",
+  "scanned": 116,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "DOTUSDT",
-      "signal": "breakout",
-      "score": 0.7302,
-      "raw_score": 0.8345,
-      "weight": 0.875,
-      "price": 1.168,
-      "why": "trades 10.0x, volume 20.7x, 71% taker-buy, +4.6% in an hour, at 96% of its 24h range",
-      "chg_24h": 0.0373,
-      "vol_surge": 20.65,
-      "chg_1h": 0.0457,
-      "market_surge": 2.82,
+      "symbol": "\u725b\u6765USDT",
+      "signal": "ignition",
+      "score": 0.623,
+      "raw_score": 0.7203,
+      "weight": 0.865,
+      "price": 0.05727,
+      "why": "trades 4.8x and volume 14.3x the prior 4h, 88% taker-buy, $58,521 burst \u2014 while price has only moved -1.6%",
+      "chg_24h": -0.0435,
+      "vol_surge": 14.28,
+      "chg_1h": -0.0156,
+      "market_surge": 2.9,
       "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -1.46% at 24h: market beta, not signal"
+      "status": "benched \u2014 BTC-excess day mean -0.73% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "SOXLBUSDT",
+      "signal": "ignition",
+      "score": 0.5875,
+      "raw_score": 0.6792,
+      "weight": 0.865,
+      "price": 84.19,
+      "why": "trades 5.3x and volume 7.9x the prior 4h, 68% taker-buy, $849,848 burst \u2014 while price has only moved +0.1%",
+      "chg_24h": -0.1254,
+      "vol_surge": 7.88,
+      "chg_1h": 0.0006,
+      "market_surge": 0.36,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.73% at 24h: market beta, not signal"
     }
   ],
   "gate": {
