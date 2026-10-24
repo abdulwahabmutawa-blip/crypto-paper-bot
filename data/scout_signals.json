@@ -1,8 +1,24 @@
 {
-  "ts": "2026-10-24T03:49:41+00:00",
-  "scanned": 110,
+  "ts": "2026-10-24T03:55:12+00:00",
+  "scanned": 109,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "MUBARAKUSDT",
+      "signal": "ignition",
+      "score": 0.6508,
+      "raw_score": 0.742,
+      "weight": 0.877,
+      "price": 0.05303,
+      "why": "trades 4.5x and volume 26.5x the prior 4h, 88% taker-buy, $177,576 burst \u2014 while price has only moved -0.4%",
+      "chg_24h": -0.0158,
+      "vol_surge": 26.51,
+      "chg_1h": -0.0036,
+      "market_surge": 9.67,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.57% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.57% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -1.82% at 24h: market beta, not signal",
@@ -43,18 +59,18 @@
       "avg_win_4h": 0.02075,
       "avg_loss_4h": -0.02017,
       "payoff_4h": 1.029,
-      "span_h_24h": 311.5,
-      "n_eff_24h": 12.98,
-      "n_24h": 745,
+      "span_h_24h": 311.8,
+      "n_eff_24h": 12.99,
+      "n_24h": 746,
       "hit_rate_24h": 0.373,
-      "mean_ret_24h": -0.01029,
+      "mean_ret_24h": -0.01032,
       "median_ret_24h": -0.0128,
       "both_halves_24h": false,
       "days_24h": 14,
       "mean_x_24h": -0.00574,
       "days_x_24h": 14,
       "avg_win_24h": 0.04695,
-      "avg_loss_24h": -0.04596,
+      "avg_loss_24h": -0.04592,
       "payoff_24h": 1.022
     },
     "breakout": {
