@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-24T16:52:36+00:00 · runs 4260 · equity **$645.10** (-35.49%) · cash $374.67 · open 4/10 · round trips 1544
+updated 2026-10-24T17:10:19+00:00 · runs 4261 · equity **$644.47** (-35.55%) · cash $312.23 · open 5/10 · round trips 1544
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,8 +36,9 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-23T23:01 | CRCLBUSDT | bottom | 85.12 | 84.43 | -0.81% |
-| 2026-10-23T23:01 | SNDKBUSDT | bottom | 1232.71 | 1225.27 | -0.60% |
-| 2026-10-24T16:50 | AIUSDT | bottom | 0.0193 | 0.0193 | +0.00% |
+| 2026-10-23T23:01 | CRCLBUSDT | bottom | 85.12 | 84.34 | -0.92% |
+| 2026-10-23T23:01 | SNDKBUSDT | bottom | 1232.71 | 1223.7 | -0.73% |
+| 2026-10-24T16:50 | AIUSDT | bottom | 0.0193 | 0.0194 | +0.52% |
+| 2026-10-24T17:08 | ZBTUSDT | surge | 0.0771 | 0.0761 | -1.30% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
