@@ -1,12 +1,14 @@
 {
-  "ts": "2026-10-24T11:31:49+00:00",
+  "ts": "2026-10-24T11:37:28+00:00",
   "sources": {
     "coingecko": [
       "AERO",
       "BTC",
       "PENGU",
-      "NEAR",
       "HYPE",
+      "NEAR",
+      "KAT",
+      "BMT",
       "TAO"
     ],
     "reddit": [],
@@ -22,20 +24,22 @@
   },
   "heat": [
     {
+      "symbol": "BMT",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -0.009102,
+      "long_short": 0.96
+    },
+    {
       "symbol": "AERO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 3.8e-05
-    },
-    {
-      "symbol": "BMT",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -0.009594
     },
     {
       "symbol": "BTC",
@@ -51,7 +55,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.00126
+      "funding": -0.001293
     },
     {
       "symbol": "HYPE",
@@ -59,7 +63,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.1e-05
+      "funding": 1.3e-05
+    },
+    {
+      "symbol": "KAT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -0.00068
     },
     {
       "symbol": "NEAR",
@@ -97,7 +109,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -4e-05
+      "funding": -4.3e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
