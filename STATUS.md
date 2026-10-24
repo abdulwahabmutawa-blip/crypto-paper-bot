@@ -1,22 +1,22 @@
-# Fleet Status — 2026-10-23 UTC
+# Fleet Status — 2026-10-24 UTC
 
 | Bot | Holds | 24h change | Value |
 |---|---|---|---|
-| crypto (BTC tide gauge v4) | BTC-USD | No position change | $1,164.17 (−$17.24 vs 10-21 $1,181.41, market move only) |
-| meanrev | GOOGL | **Position changed: JNJ → GOOGL** | $1,145.47 |
+| crypto (BTC tide gauge v4) | BTC-USD | No position change | $1,153.20 (−$10.97 vs 10-23 $1,164.17, market move only) |
+| meanrev | GOOGL | No position change | $1,131.47 (−$14.00 vs 10-23 $1,145.47; Fri-close mark, stock data stale over the weekend — expected) |
 | sentiment (Watcher + sentinel_trader) | CASH | Still R1-frozen, unchanged | $726.83 |
-| scalper | 10/10 seats filled | Seats refilled 6/10 → 10/10, equity down | $660.85 (≈−34%) |
-| Watcher (sentinel, no capital) | — | Loop was dark most of the window, see below | n/a |
+| scalper | 9/10 seats filled | Seats 10/10 → 9/10, equity down | $653.46 (≈−35%) |
+| Watcher (sentinel, no capital) | — | Loop ran, but its Grok hype scan did not refresh — see below | n/a |
 
 ## Changed
-- **meanrev**: position switched JNJ → GOOGL. State data timestamps the switch at 2026-10-22T16:07 UTC, but that falls inside the cycle-loop gap below, so the real execution time can't be confirmed from commit history.
-- **scalper**: open seats 6/10 → 10/10 filled; equity $666.91 → $660.85.
-- **crypto**: equity $1,181.41 → $1,164.17, no position change (BTC price move only).
+- **scalper**: open seats 10/10 → 9/10; equity $660.85 → $653.46.
+- **crypto**: equity $1,164.17 → $1,153.20, no position change (BTC price move only).
+- **meanrev**: equity $1,145.47 → $1,131.47 (Friday close carried over weekend), no position change.
 - **sentiment**: unchanged.
 
 ## Needs a look
-- **Fleet cycle loop was dark for ~45h.** Zero `cycle:` commits from 2026-10-21 04:56 UTC to 2026-10-23 01:52 UTC, even though the GitHub Actions `paper-trade-cycle` job completed with status "success" in every run across that window (i.e. the job ran but published nothing, for ~45h straight — unusual for a 24/7 crypto bot). Resumed at 01:52 UTC today; 12 cycles since at normal ~17-18 min cadence, data fresh as of ~04:49-04:53 UTC. Root cause not identified from the data available here.
-- Separate oddity, flagged only because it overlaps almost exactly: the unrelated VPS lottery path (real money, not part of this paper fleet — see CLAUDE.md) was also silent across nearly the same span (last commit 10-21 05:04 UTC, next at 10-23 01:37 UTC, ~15 min before the fleet loop resumed). Two independently-run processes going dark and recovering within minutes of each other points at a shared cause rather than two coincidental bugs — not reported further here since lottery itself is out of this digest's scope, but worth a look.
-- **scalper** equity $660.85 (≈−34%) remains well below the R1 hard-stop floor ($750); no retirement action taken (known open item, human call, not new this run).
+- **Fleet cycle loop ran cleanly all 24h** — 87 `cycle:` commits from 10-23 05:27 UTC to 10-24 05:10 UTC, max gap 18 min (median 17 min), no outage like yesterday's 45h gap. No error/exception/traceback strings found in any of today's cycle commit diffs.
+- **Watcher's Grok hype scan is stale and getting staler**: `sentiment`'s board still reads the same 2026-10-20T16:09 UTC scan it had yesterday — "STALE 81h" at the start of this window, "STALE 85h" by the end, climbing steadily the whole 24h. Trading is already suspended either way (R1-frozen since 10-12), but the Watcher feed itself is not producing fresh scans. Root cause not identified from the data available here.
+- **scalper** equity $653.46 (≈−35%) remains well below the R1 hard-stop floor ($750); no retirement action taken (known open item, human call, not new this run).
 - **sentiment** remains R1-frozen in CASH at $726.83, unchanged since 2026-10-12; un-freeze or formal retirement still undecided.
 - Only 4 capital books + the no-capital Watcher are live on the Actions roster (crypto, meanrev, sentiment, scalper); congress, hunter, analyst, hypecrypto, commodity, allweather, scholar, stock, carry remain retired/frozen archives per `reports/kill_criteria.md` — no activity from them expected or found.
