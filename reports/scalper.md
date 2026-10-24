@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-24T15:06:18+00:00 · runs 4254 · equity **$648.36** (-35.16%) · cash $253.89 · open 6/10 · round trips 1541
+updated 2026-10-24T15:24:00+00:00 · runs 4255 · equity **$645.79** (-35.42%) · cash $253.89 · open 6/10 · round trips 1541
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,10 +36,10 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-23T23:01 | CRCLBUSDT | bottom | 85.12 | 83.92 | -1.41% |
-| 2026-10-23T23:01 | LTCUSDT | bottom | 56.84 | 55.75 | -1.92% |
-| 2026-10-23T23:01 | SNDKBUSDT | bottom | 1232.71 | 1224.48 | -0.67% |
-| 2026-10-24T07:22 | PARTIUSDT | surge | 0.0351 | 0.0348 | -0.85% |
-| 2026-10-24T15:04 | OPENUSDT | surge | 0.0999 | 0.0987 | -1.20% |
+| 2026-10-23T23:01 | CRCLBUSDT | bottom | 85.12 | 83.41 | -2.01% |
+| 2026-10-23T23:01 | LTCUSDT | bottom | 56.84 | 55.56 | -2.25% |
+| 2026-10-23T23:01 | SNDKBUSDT | bottom | 1232.71 | 1219.66 | -1.06% |
+| 2026-10-24T07:22 | PARTIUSDT | surge | 0.0351 | 0.0345 | -1.71% |
+| 2026-10-24T15:04 | OPENUSDT | surge | 0.0999 | 0.0968 | -3.10% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
