@@ -1,33 +1,17 @@
 {
-  "ts": "2026-10-24T00:33:30+00:00",
-  "scanned": 110,
+  "ts": "2026-10-24T00:39:02+00:00",
+  "scanned": 107,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "MUBUSDT",
-      "signal": "ignition",
-      "score": 0.7076,
-      "raw_score": 0.805,
-      "weight": 0.879,
-      "price": 877.41,
-      "why": "trades 6.4x and volume 27.2x the prior 4h, 80% taker-buy, $209,217 burst \u2014 while price has only moved +0.1%",
-      "chg_24h": 0.0287,
-      "vol_surge": 27.21,
-      "chg_1h": 0.0007,
-      "market_surge": 0.0,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.51% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
-    "ignition": "benched \u2014 BTC-excess day mean -0.51% at 24h: market beta, not signal",
+    "ignition": "benched \u2014 BTC-excess day mean -0.52% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -1.64% at 24h: market beta, not signal",
     "reversion": "benched \u2014 BTC-excess day mean -2.59% at 24h: market beta, not signal",
     "heat": "benched \u2014 BTC-excess day mean -6.59% at 24h: market beta, not signal",
     "revival": "benched \u2014 BTC-excess day mean -3.11% at 24h: market beta, not signal"
   },
   "breadth": {
-    "count": 11,
+    "count": 13,
     "baseline": 12.0,
     "wave": false
   },
@@ -59,19 +43,19 @@
       "avg_win_4h": 0.02087,
       "avg_loss_4h": -0.02013,
       "payoff_4h": 1.037,
-      "span_h_24h": 311.8,
-      "n_eff_24h": 12.99,
-      "n_24h": 730,
+      "span_h_24h": 311.9,
+      "n_eff_24h": 13.0,
+      "n_24h": 731,
       "hit_rate_24h": 0.379,
       "mean_ret_24h": -0.00985,
-      "median_ret_24h": -0.01264,
+      "median_ret_24h": -0.01275,
       "both_halves_24h": false,
       "days_24h": 14,
-      "mean_x_24h": -0.00511,
+      "mean_x_24h": -0.00523,
       "days_x_24h": 14,
       "avg_win_24h": 0.04717,
-      "avg_loss_24h": -0.04636,
-      "payoff_24h": 1.017
+      "avg_loss_24h": -0.04628,
+      "payoff_24h": 1.019
     },
     "breakout": {
       "span_h_1h": 332.6,
