@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-24T01:57:48+00:00",
+  "ts": "2026-10-24T02:02:58+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
@@ -17,12 +17,24 @@
     "movers": [
       "PEPE",
       "BNB",
-      "TRX"
+      "TRX",
+      "SOXLB",
+      "ENA"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "ENA",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 2.8e-05,
+      "long_short": 1.67
+    },
     {
       "symbol": "PEPE",
       "surfaces": 2,
@@ -45,15 +57,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.9e-05
-    },
-    {
-      "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 2.9e-05
+      "funding": 6e-05
     },
     {
       "symbol": "ERA",
@@ -61,7 +65,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.0016
+      "funding": -0.001631
     },
     {
       "symbol": "ICP",
@@ -69,7 +73,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.9e-05
+      "funding": 4.2e-05
     },
     {
       "symbol": "NEAR",
@@ -85,7 +89,14 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4e-06
+      "funding": -1e-06
+    },
+    {
+      "symbol": "SOXLB",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
     },
     {
       "symbol": "SUI",
@@ -93,7 +104,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.5e-05
+      "funding": 7.3e-05
     },
     {
       "symbol": "TAO",
@@ -101,7 +112,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.3e-05
+      "funding": -2.6e-05
     },
     {
       "symbol": "TRX",
@@ -109,7 +120,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -4.1e-05
+      "funding": -4e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
