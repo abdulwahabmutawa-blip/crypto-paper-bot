@@ -2,20 +2,21 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-24T21:14:44+00:00 · runs 4276 · equity **$649.08** (-35.09%) · cash $188.20 · open 7/10 · round trips 1545
+updated 2026-10-24T21:31:00+00:00 · runs 4277 · equity **$650.03** (-35.00%) · cash $252.65 · open 6/10 · round trips 1546
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
-- hit 48% (break-even 54%) · mean -0.28%/trade · realized $-352.32 · worst day $-50.94 · trades/day 30.9
+- hit 48% (break-even 54%) · mean -0.28%/trade · realized $-350.59 · worst day $-50.94 · trades/day 30.9
 
 | shape | n | hit | mean | target% | stop% | time% |
 |---|---|---|---|---|---|---|
-| surge | 1353 | 49% | -0.26% | 47% | 46% | 7% |
+| surge | 1354 | 49% | -0.25% | 47% | 46% | 7% |
 | bottom | 192 | 44% | -0.43% | 39% | 44% | 18% |
 
 ## Last 15 round trips
 | exit (UTC) | coin | shape | how | hours | net | P&L |
 |---|---|---|---|---|---|---|
+| 2026-10-24T21:29 | CVXUSDT | surge | TARGET | 0.8 | +2.75% | $+1.73 |
 | 2026-10-24T17:43 | ZBTUSDT | surge | TARGET | 0.2 | +2.75% | $+1.72 |
 | 2026-10-24T16:15 | PARTIUSDT | surge | STOP | 8.8 | -3.25% | $-2.10 |
 | 2026-10-24T15:39 | OPENUSDT | surge | STOP | 0.2 | -3.25% | $-2.06 |
@@ -30,17 +31,15 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | 2026-10-24T10:19 | SAHARAUSDT | surge | TARGET | 0.5 | +2.75% | $+1.83 |
 | 2026-10-24T10:19 | VANAUSDT | surge | TARGET | 0.8 | +2.75% | $+1.87 |
 | 2026-10-24T10:19 | REZUSDT | surge | STOP | 1.8 | -3.25% | $-2.16 |
-| 2026-10-24T10:02 | HYPERUSDT | surge | TARGET | 9.8 | +2.75% | $+1.69 |
 
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-23T23:01 | CRCLBUSDT | bottom | 85.12 | 84.89 | -0.27% |
-| 2026-10-23T23:01 | SNDKBUSDT | bottom | 1232.71 | 1229.81 | -0.24% |
+| 2026-10-23T23:01 | CRCLBUSDT | bottom | 85.12 | 85.01 | -0.13% |
+| 2026-10-23T23:01 | SNDKBUSDT | bottom | 1232.71 | 1231.65 | -0.09% |
 | 2026-10-24T16:50 | AIUSDT | bottom | 0.0193 | 0.0195 | +1.04% |
-| 2026-10-24T19:52 | SOXLBUSDT | surge | 84.51 | 84.31 | -0.24% |
+| 2026-10-24T19:52 | SOXLBUSDT | surge | 84.51 | 84.5 | -0.01% |
 | 2026-10-24T19:52 | BNCBUSDT | surge | 5.44 | 5.45 | +0.18% |
-| 2026-10-24T20:41 | CVXUSDT | surge | 2.466 | 2.509 | +1.74% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
