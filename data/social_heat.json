@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-24T10:48:08+00:00",
+  "ts": "2026-10-24T10:53:26+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
@@ -13,7 +13,8 @@
     "stocktwits": [],
     "movers": [
       "BMT",
-      "ERA"
+      "ERA",
+      "RLUSD"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -33,7 +34,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.013819
+      "funding": -0.013266
     },
     {
       "symbol": "BTC",
@@ -41,7 +42,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.4e-05
+      "funding": 3.5e-05
     },
     {
       "symbol": "ERA",
@@ -49,7 +50,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001306
+      "funding": -0.001358
     },
     {
       "symbol": "HYPE",
@@ -57,7 +58,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8e-06
+      "funding": 7e-06
     },
     {
       "symbol": "LTC",
@@ -65,7 +66,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1e-06
+      "funding": -4e-06
     },
     {
       "symbol": "PENGU",
@@ -73,7 +74,14 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.1e-05
+      "funding": 3.6e-05
+    },
+    {
+      "symbol": "RLUSD",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
     },
     {
       "symbol": "UNI",
@@ -81,7 +89,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.7e-05
+      "funding": 2.6e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
