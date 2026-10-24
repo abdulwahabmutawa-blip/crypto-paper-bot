@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-24T10:36:38+00:00",
+  "ts": "2026-10-24T10:42:19+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
@@ -14,19 +14,27 @@
     "movers": [
       "BMT",
       "ERA",
-      "TRX"
+      "AI"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
     {
+      "symbol": "AI",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0
+    },
+    {
       "symbol": "BMT",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -0.014952
+      "funding": -0.014333
     },
     {
       "symbol": "BTC",
@@ -34,7 +42,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.8e-05
+      "funding": 3.2e-05
     },
     {
       "symbol": "ENA",
@@ -50,7 +58,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001189
+      "funding": -0.00126
     },
     {
       "symbol": "HYPE",
@@ -58,7 +66,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8e-06
+      "funding": 9e-06
     },
     {
       "symbol": "PENGU",
@@ -66,7 +74,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.3e-05
+      "funding": 4e-05
     },
     {
       "symbol": "SUI",
@@ -74,15 +82,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8e-05
-    },
-    {
-      "symbol": "TRX",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -0.000154
+      "funding": 7.9e-05
     },
     {
       "symbol": "UNI",
@@ -90,7 +90,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.8e-05
+      "funding": 2.7e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
