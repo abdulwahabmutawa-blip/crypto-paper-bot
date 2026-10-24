@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-24T02:31:29+00:00 · runs 4208 · equity **$654.95** (-34.51%) · cash $133.14 · open 8/10 · round trips 1520
+updated 2026-10-24T02:36:00+00:00 · runs 4209 · equity **$654.52** (-34.55%) · cash $133.14 · open 8/10 · round trips 1520
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,12 +36,12 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-23T15:34 | MSTRBUSDT | surge | 148.55 | 146.73 | -1.23% |
-| 2026-10-23T22:26 | KMNOUSDT | surge | 0.04211 | 0.04218 | +0.17% |
-| 2026-10-23T23:01 | CRCLBUSDT | bottom | 85.12 | 85.75 | +0.74% |
-| 2026-10-23T23:01 | LTCUSDT | bottom | 56.84 | 57.41 | +1.00% |
-| 2026-10-23T23:01 | SNDKBUSDT | bottom | 1232.71 | 1243.03 | +0.84% |
-| 2026-10-24T00:11 | HYPERUSDT | surge | 0.0649 | 0.0648 | -0.15% |
-| 2026-10-24T01:54 | LAUSDT | surge | 0.0647 | 0.065 | +0.46% |
+| 2026-10-23T15:34 | MSTRBUSDT | surge | 148.55 | 146.72 | -1.23% |
+| 2026-10-23T22:26 | KMNOUSDT | surge | 0.04211 | 0.04229 | +0.43% |
+| 2026-10-23T23:01 | CRCLBUSDT | bottom | 85.12 | 85.66 | +0.63% |
+| 2026-10-23T23:01 | LTCUSDT | bottom | 56.84 | 57.42 | +1.02% |
+| 2026-10-23T23:01 | SNDKBUSDT | bottom | 1232.71 | 1242.72 | +0.81% |
+| 2026-10-24T00:11 | HYPERUSDT | surge | 0.0649 | 0.0651 | +0.31% |
+| 2026-10-24T01:54 | LAUSDT | surge | 0.0647 | 0.0642 | -0.77% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
