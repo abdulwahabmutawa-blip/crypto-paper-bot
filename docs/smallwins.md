@@ -1,6 +1,6 @@
 # Small-wins lab — paper study (owner request 2026-09-04)
 
-updated 2026-10-24T21:32:30+00:00 · runs 4347 · open 364 · resolved 20000 · cost 0.25%/RT
+updated 2026-10-24T21:48:50+00:00 · runs 4348 · open 366 · resolved 20000 · cost 0.25%/RT
 
 PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst day > -3 units.
 
@@ -41,7 +41,7 @@ PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst
 | dip_large|t1|s1|h6 | 526 | 7 | 75.1 | 43% | 62% | -0.38% | 43% | 57% | 0% | -52.0% | fail |
 | ignition|t1.5|s1.5|h8 | 166 | 7 | 23.7 | 42% | 58% | -0.40% | 37% | 47% | 16% | -26.8% | fail |
 | dip_large|t2|s2|h8 | 412 | 7 | 58.9 | 45% | 56% | -0.40% | 43% | 51% | 6% | -69.6% | fail |
-| range_bottom|t1|s1|h6 | 1060 | 7 | 151.4 | 40% | 62% | -0.41% | 39% | 54% | 6% | -237.4% | fail |
+| range_bottom|t1|s1|h6 | 1061 | 7 | 151.6 | 40% | 62% | -0.41% | 39% | 54% | 6% | -237.4% | fail |
 | dip_large|t1.5|s1.5|h8 | 451 | 7 | 64.4 | 44% | 58% | -0.42% | 44% | 55% | 1% | -60.6% | fail |
 | range_bottom|t1.5|s1|h8 | 902 | 7 | 128.9 | 32% | 50% | -0.42% | 31% | 64% | 6% | -224.3% | fail |
 | ignition|t2|s2|h8 | 145 | 7 | 20.7 | 41% | 56% | -0.43% | 32% | 41% | 26% | -28.9% | fail |
@@ -52,8 +52,8 @@ PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst
 | range_bottom|t1.5|s1.5|h8 | 706 | 7 | 100.9 | 40% | 58% | -0.50% | 37% | 52% | 11% | -214.4% | fail |
 | btc_lag|t2|s2|h8 | 12 | 2 | 6.0 | 33% | 56% | -0.51% | 25% | 42% | 33% | -3.7% | fail |
 | ignition|t3|s4|h48 | 94 | 7 | 13.4 | 50% | 61% | -0.52% | 47% | 39% | 14% | -48.2% | fail |
-| dip_large|t3|s3|h24 | 315 | 7 | 45.0 | 44% | 54% | -0.58% | 43% | 55% | 3% | -93.2% | fail |
 | dip_large|t5|s3|h48 | 295 | 7 | 42.1 | 33% | 41% | -0.59% | 33% | 65% | 2% | -121.0% | fail |
+| dip_large|t3|s3|h24 | 314 | 7 | 44.9 | 44% | 54% | -0.59% | 43% | 55% | 3% | -93.2% | fail |
 | range_bottom|t2|s2|h8 | 582 | 7 | 83.1 | 37% | 56% | -0.60% | 31% | 47% | 22% | -206.3% | fail |
 | ignition|t3|s2|h12 | 127 | 7 | 18.1 | 30% | 45% | -0.60% | 22% | 52% | 26% | -28.1% | fail |
 | btc_lag|t3|s3|h24 | 12 | 3 | 4.0 | 42% | 54% | -0.63% | 25% | 42% | 33% | -4.3% | fail |
