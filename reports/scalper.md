@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-24T08:54:33+00:00 · runs 4232 · equity **$652.99** (-34.70%) · cash $0.00 · open 10/10 · round trips 1528
+updated 2026-10-24T09:11:54+00:00 · runs 4233 · equity **$656.37** (-34.36%) · cash $0.00 · open 10/10 · round trips 1528
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-23T15:34 | MSTRBUSDT | surge | 148.55 | 145.51 | -2.05% |
-| 2026-10-23T23:01 | CRCLBUSDT | bottom | 85.12 | 84.81 | -0.36% |
-| 2026-10-23T23:01 | LTCUSDT | bottom | 56.84 | 56.46 | -0.67% |
-| 2026-10-23T23:01 | SNDKBUSDT | bottom | 1232.71 | 1236.56 | +0.31% |
-| 2026-10-24T00:11 | HYPERUSDT | surge | 0.0649 | 0.064 | -1.39% |
-| 2026-10-24T05:23 | NILUSDT | surge | 0.08272 | 0.08255 | -0.21% |
-| 2026-10-24T07:22 | PARTIUSDT | surge | 0.0351 | 0.0351 | +0.00% |
-| 2026-10-24T08:17 | REZUSDT | surge | 0.00446 | 0.004396 | -1.43% |
-| 2026-10-24T08:52 | BREVUSDT | surge | 0.082 | 0.0825 | +0.61% |
+| 2026-10-23T15:34 | MSTRBUSDT | surge | 148.55 | 145.33 | -2.17% |
+| 2026-10-23T23:01 | CRCLBUSDT | bottom | 85.12 | 84.78 | -0.40% |
+| 2026-10-23T23:01 | LTCUSDT | bottom | 56.84 | 56.36 | -0.84% |
+| 2026-10-23T23:01 | SNDKBUSDT | bottom | 1232.71 | 1235.53 | +0.23% |
+| 2026-10-24T00:11 | HYPERUSDT | surge | 0.0649 | 0.065 | +0.15% |
+| 2026-10-24T05:23 | NILUSDT | surge | 0.08272 | 0.0827 | -0.02% |
+| 2026-10-24T07:22 | PARTIUSDT | surge | 0.0351 | 0.0356 | +1.42% |
+| 2026-10-24T08:17 | REZUSDT | surge | 0.00446 | 0.004388 | -1.61% |
+| 2026-10-24T08:52 | BREVUSDT | surge | 0.082 | 0.0847 | +3.29% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
