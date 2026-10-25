@@ -1,13 +1,13 @@
 {
-  "ts": "2026-10-25T10:10:46+00:00",
+  "ts": "2026-10-25T10:16:31+00:00",
   "sources": {
     "coingecko": [
       "HYPE",
       "BTC",
-      "PENGU",
       "NEAR",
       "INJ",
       "SEI",
+      "SOL",
       "ETH",
       "AERO"
     ],
@@ -16,9 +16,9 @@
     "movers": [
       "ZEC",
       "XRP",
-      "ENA",
+      "BNB",
       "PEPE",
-      "BNB"
+      "ENA"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -46,7 +46,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.1e-05
+      "funding": 7.4e-05
     },
     {
       "symbol": "ENA",
@@ -54,7 +54,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -1.7e-05
+      "funding": -2e-05
     },
     {
       "symbol": "ETH",
@@ -62,7 +62,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.2e-05
+      "funding": 5.3e-05
     },
     {
       "symbol": "HYPE",
@@ -70,7 +70,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9e-06
+      "funding": 1e-05
     },
     {
       "symbol": "INJ",
@@ -86,15 +86,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1e-05
-    },
-    {
-      "symbol": "PENGU",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -6.3e-05
+      "funding": 1.2e-05
     },
     {
       "symbol": "PEPE",
@@ -109,7 +101,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000113
+      "funding": -0.000111
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 4e-06
     },
     {
       "symbol": "XRP",
@@ -125,7 +125,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 6.6e-05
+      "funding": 6.5e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
