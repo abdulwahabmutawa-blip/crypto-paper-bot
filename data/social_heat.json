@@ -1,17 +1,18 @@
 {
-  "ts": "2026-10-25T01:31:14+00:00",
+  "ts": "2026-10-25T01:36:46+00:00",
   "sources": {
     "coingecko": [
       "HYPE",
-      "NEAR",
       "PENGU",
-      "ENA",
-      "AERO",
-      "QNT",
+      "NEAR",
       "BTC",
-      "AVAX",
-      "PUMP",
-      "UNI"
+      "SOL",
+      "AERO",
+      "ENA",
+      "QNT",
+      "UNI",
+      "SUI",
+      "ETH"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,23 +21,34 @@
       "ZEC",
       "XRP",
       "BNB",
+      "SOL",
+      "HYPE",
       "U",
-      "RLUSD",
-      "BTC"
+      "RLUSD"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
     {
-      "symbol": "BTC",
+      "symbol": "HYPE",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 9.6e-05,
-      "long_short": 2.2
+      "funding": 3.9e-05,
+      "long_short": 1.73
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 9.9e-05,
+      "long_short": 2.96
     },
     {
       "symbol": "AERO",
@@ -44,15 +56,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.5e-05
-    },
-    {
-      "symbol": "AVAX",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 1.4e-05
+      "funding": 2.2e-05
     },
     {
       "symbol": "BMT",
@@ -60,7 +64,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001487
+      "funding": -0.001429
     },
     {
       "symbol": "BNB",
@@ -71,6 +75,14 @@
       "funding": 0.0
     },
     {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 9.4e-05
+    },
+    {
       "symbol": "ENA",
       "surfaces": 1,
       "sources": [
@@ -79,12 +91,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "HYPE",
+      "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 3.8e-05
+      "funding": 4.7e-05
     },
     {
       "symbol": "NEAR",
@@ -92,7 +104,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7e-06
+      "funding": 8e-06
     },
     {
       "symbol": "PENGU",
@@ -100,15 +112,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -9e-06
-    },
-    {
-      "symbol": "PUMP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -3.7e-05
+      "funding": -8e-06
     },
     {
       "symbol": "QNT",
@@ -116,7 +120,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000103
+      "funding": -0.0001
     },
     {
       "symbol": "RLUSD",
@@ -124,6 +128,14 @@
       "sources": [
         "movers"
       ]
+    },
+    {
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 1.6e-05
     },
     {
       "symbol": "U",
@@ -138,7 +150,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1e-06
+      "funding": 2e-06
     },
     {
       "symbol": "XRP",
