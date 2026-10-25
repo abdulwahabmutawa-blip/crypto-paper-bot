@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-25T01:36:46+00:00",
+  "ts": "2026-10-25T01:42:16+00:00",
   "sources": {
     "coingecko": [
       "HYPE",
@@ -22,7 +22,6 @@
       "XRP",
       "BNB",
       "SOL",
-      "HYPE",
       "U",
       "RLUSD"
     ],
@@ -31,23 +30,13 @@
   },
   "heat": [
     {
-      "symbol": "HYPE",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 3.9e-05,
-      "long_short": 1.73
-    },
-    {
       "symbol": "SOL",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 9.9e-05,
+      "funding": 0.0001,
       "long_short": 2.96
     },
     {
@@ -56,7 +45,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.2e-05
+      "funding": 2.4e-05
     },
     {
       "symbol": "BMT",
@@ -64,7 +53,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001429
+      "funding": -0.001388
     },
     {
       "symbol": "BNB",
@@ -96,7 +85,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.7e-05
+      "funding": 4.8e-05
+    },
+    {
+      "symbol": "HYPE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 4e-05
     },
     {
       "symbol": "NEAR",
@@ -112,7 +109,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -8e-06
+      "funding": -4e-06
     },
     {
       "symbol": "QNT",
@@ -120,7 +117,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.0001
+      "funding": -0.000104
     },
     {
       "symbol": "RLUSD",
@@ -135,7 +132,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.6e-05
+      "funding": 1.4e-05
     },
     {
       "symbol": "U",
@@ -150,7 +147,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2e-06
+      "funding": 6e-06
     },
     {
       "symbol": "XRP",
@@ -166,7 +163,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -8e-06
+      "funding": -7e-06
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
