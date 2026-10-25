@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-25T12:40:15+00:00 · runs 4333 · equity **$638.91** (-36.11%) · cash $122.23 · open 8/10 · round trips 1569
+updated 2026-10-25T12:44:20+00:00 · runs 4334 · equity **$638.58** (-36.14%) · cash $122.23 · open 8/10 · round trips 1569
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -37,11 +37,11 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
 | 2026-10-24T16:50 | AIUSDT | bottom | 0.0193 | 0.0194 | +0.52% |
-| 2026-10-24T19:52 | SOXLBUSDT | surge | 84.51 | 84.25 | -0.31% |
-| 2026-10-25T01:55 | ASTERUSDT | surge | 0.712 | 0.708 | -0.56% |
-| 2026-10-25T09:37 | SUIUSDT | bottom | 0.9078 | 0.9189 | +1.22% |
-| 2026-10-25T12:05 | BABYUSDT | surge | 0.01401 | 0.01409 | +0.57% |
-| 2026-10-25T12:05 | STEEMUSDT | bottom | 0.04973 | 0.05034 | +1.23% |
-| 2026-10-25T12:38 | CHIPUSDT | surge | 0.04515 | 0.04569 | +1.20% |
+| 2026-10-24T19:52 | SOXLBUSDT | surge | 84.51 | 84.24 | -0.32% |
+| 2026-10-25T01:55 | ASTERUSDT | surge | 0.712 | 0.7088 | -0.45% |
+| 2026-10-25T09:37 | SUIUSDT | bottom | 0.9078 | 0.9176 | +1.08% |
+| 2026-10-25T12:05 | BABYUSDT | surge | 0.01401 | 0.01415 | +1.00% |
+| 2026-10-25T12:05 | STEEMUSDT | bottom | 0.04973 | 0.05013 | +0.80% |
+| 2026-10-25T12:38 | CHIPUSDT | surge | 0.04515 | 0.04547 | +0.71% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
