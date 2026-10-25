@@ -1,15 +1,17 @@
 {
-  "ts": "2026-10-25T07:50:57+00:00",
+  "ts": "2026-10-25T07:56:36+00:00",
   "sources": {
     "coingecko": [
       "HYPE",
       "BTC",
       "NEAR",
-      "ZEC",
-      "XRP",
-      "LINK",
+      "PENGU",
       "ENA",
-      "XMR"
+      "LINK",
+      "AERO",
+      "TAO",
+      "QNT",
+      "XRP"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -44,14 +46,12 @@
       "long_short": 3.08
     },
     {
-      "symbol": "ZEC",
-      "surfaces": 2,
+      "symbol": "AERO",
+      "surfaces": 1,
       "sources": [
-        "coingecko",
-        "movers"
+        "coingecko"
       ],
-      "funding": 5.7e-05,
-      "long_short": 1.0
+      "funding": 5e-05
     },
     {
       "symbol": "BNB",
@@ -59,7 +59,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 1.1e-05
+      "funding": 1.4e-05
     },
     {
       "symbol": "BTC",
@@ -67,7 +67,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.2e-05
+      "funding": 6.1e-05
     },
     {
       "symbol": "HYPE",
@@ -75,7 +75,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7e-06
+      "funding": 1e-05
     },
     {
       "symbol": "LINK",
@@ -83,7 +83,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.1e-05
+      "funding": 5.6e-05
     },
     {
       "symbol": "NEAR",
@@ -91,15 +91,39 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -3.5e-05
+      "funding": -3.9e-05
     },
     {
-      "symbol": "XMR",
+      "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 0.000255
+      "funding": -4.3e-05
+    },
+    {
+      "symbol": "QNT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -2e-06
+    },
+    {
+      "symbol": "TAO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 2.9e-05
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5.5e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
