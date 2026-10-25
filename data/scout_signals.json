@@ -1,17 +1,33 @@
 {
-  "ts": "2026-10-25T07:02:23+00:00",
-  "scanned": 100,
+  "ts": "2026-10-25T07:07:40+00:00",
+  "scanned": 98,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "PENDLEUSDT",
+      "signal": "ignition",
+      "score": 0.6634,
+      "raw_score": 0.7504,
+      "weight": 0.884,
+      "price": 1.96,
+      "why": "trades 4.9x and volume 32.0x the prior 4h, 90% taker-buy, $106,451 burst \u2014 while price has only moved -0.9%",
+      "chg_24h": -0.0258,
+      "vol_surge": 32.03,
+      "chg_1h": -0.0086,
+      "market_surge": 8.13,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.97% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.97% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -2.29% at 24h: market beta, not signal",
     "reversion": "benched \u2014 BTC-excess day mean -2.53% at 24h: market beta, not signal",
     "heat": "benched \u2014 BTC-excess day mean -8.97% at 24h: market beta, not signal",
-    "revival": "benched \u2014 BTC-excess day mean -2.81% at 24h: market beta, not signal"
+    "revival": "benched \u2014 BTC-excess day mean -2.85% at 24h: market beta, not signal"
   },
   "breadth": {
-    "count": 6,
+    "count": 7,
     "baseline": 11.0,
     "wave": false
   },
@@ -207,19 +223,19 @@
       "avg_win_4h": 0.03693,
       "avg_loss_4h": -0.04368,
       "payoff_4h": 0.845,
-      "span_h_24h": 275.4,
-      "n_eff_24h": 11.48,
-      "n_24h": 34,
-      "hit_rate_24h": 0.324,
-      "mean_ret_24h": -0.03743,
+      "span_h_24h": 278.4,
+      "n_eff_24h": 11.6,
+      "n_24h": 35,
+      "hit_rate_24h": 0.314,
+      "mean_ret_24h": -0.03661,
       "median_ret_24h": -0.03322,
       "both_halves_24h": false,
       "days_24h": 11,
-      "mean_x_24h": -0.02812,
+      "mean_x_24h": -0.02849,
       "days_x_24h": 11,
       "avg_win_24h": 0.05019,
-      "avg_loss_24h": -0.08522,
-      "payoff_24h": 0.589
+      "avg_loss_24h": -0.0819,
+      "payoff_24h": 0.613
     }
   },
   "note": "READ-ONLY scout. Ranked opinion only \u2014 the book decides."
