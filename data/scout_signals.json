@@ -1,8 +1,24 @@
 {
-  "ts": "2026-10-25T03:17:20+00:00",
-  "scanned": 106,
+  "ts": "2026-10-25T03:22:50+00:00",
+  "scanned": 103,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "MSTRBUSDT",
+      "signal": "ignition",
+      "score": 0.7319,
+      "raw_score": 0.8223,
+      "weight": 0.89,
+      "price": 145.59,
+      "why": "trades 6.3x and volume 13.5x the prior 4h, 91% taker-buy, $60,036 burst \u2014 while price has only moved +0.2%",
+      "chg_24h": -0.0081,
+      "vol_surge": 13.47,
+      "chg_1h": 0.0023,
+      "market_surge": 0.44,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.72% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.72% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -2.71% at 24h: market beta, not signal",
@@ -11,7 +27,7 @@
     "revival": "benched \u2014 BTC-excess day mean -3.12% at 24h: market beta, not signal"
   },
   "breadth": {
-    "count": 8,
+    "count": 7,
     "baseline": 11.0,
     "wave": false
   },
@@ -202,7 +218,7 @@
       "median_ret_4h": -0.01829,
       "both_halves_4h": false,
       "days_4h": 11,
-      "mean_x_4h": -0.01286,
+      "mean_x_4h": -0.01301,
       "days_x_4h": 11,
       "avg_win_4h": 0.03693,
       "avg_loss_4h": -0.04368,
