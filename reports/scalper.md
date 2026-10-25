@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-25T13:50:48+00:00 · runs 4338 · equity **$636.12** (-36.39%) · cash $60.84 · open 9/10 · round trips 1571
+updated 2026-10-25T14:07:15+00:00 · runs 4339 · equity **$633.35** (-36.67%) · cash $60.84 · open 9/10 · round trips 1571
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -37,12 +37,12 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
 | 2026-10-24T16:50 | AIUSDT | bottom | 0.0193 | 0.0194 | +0.52% |
-| 2026-10-24T19:52 | SOXLBUSDT | surge | 84.51 | 85.15 | +0.76% |
-| 2026-10-25T01:55 | ASTERUSDT | surge | 0.712 | 0.7068 | -0.73% |
-| 2026-10-25T09:37 | SUIUSDT | bottom | 0.9078 | 0.9141 | +0.69% |
-| 2026-10-25T12:05 | STEEMUSDT | bottom | 0.04973 | 0.05018 | +0.90% |
-| 2026-10-25T12:38 | CHIPUSDT | surge | 0.04515 | 0.0443 | -1.88% |
-| 2026-10-25T13:16 | DASHUSDT | surge | 53.63 | 53.31 | -0.60% |
-| 2026-10-25T13:49 | DODOUSDT | surge | 0.02286 | 0.02289 | +0.13% |
+| 2026-10-24T19:52 | SOXLBUSDT | surge | 84.51 | 84.83 | +0.38% |
+| 2026-10-25T01:55 | ASTERUSDT | surge | 0.712 | 0.7057 | -0.88% |
+| 2026-10-25T09:37 | SUIUSDT | bottom | 0.9078 | 0.9118 | +0.44% |
+| 2026-10-25T12:05 | STEEMUSDT | bottom | 0.04973 | 0.0492 | -1.07% |
+| 2026-10-25T12:38 | CHIPUSDT | surge | 0.04515 | 0.04389 | -2.79% |
+| 2026-10-25T13:16 | DASHUSDT | surge | 53.63 | 52.81 | -1.53% |
+| 2026-10-25T13:49 | DODOUSDT | surge | 0.02286 | 0.02291 | +0.22% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
