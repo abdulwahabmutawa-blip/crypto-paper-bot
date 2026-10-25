@@ -1,24 +1,23 @@
 {
-  "ts": "2026-10-25T02:32:23+00:00",
+  "ts": "2026-10-25T02:38:16+00:00",
   "sources": {
     "coingecko": [
       "HYPE",
+      "PENGU",
+      "STRK",
       "SOL",
       "BTC",
-      "STRK",
-      "PENGU",
       "SUI",
+      "ZEC",
       "NEAR",
-      "MORPHO"
+      "LIT"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "BMT",
       "ZEC",
       "XRP",
       "BNB",
-      "RLUSD",
       "U"
     ],
     "watcher": [],
@@ -26,12 +25,14 @@
   },
   "heat": [
     {
-      "symbol": "BMT",
-      "surfaces": 1,
+      "symbol": "ZEC",
+      "surfaces": 2,
       "sources": [
+        "coingecko",
         "movers"
       ],
-      "funding": -0.001549
+      "funding": -3e-06,
+      "long_short": 1.05
     },
     {
       "symbol": "BNB",
@@ -55,15 +56,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.5e-05
+      "funding": 3.4e-05
     },
     {
-      "symbol": "MORPHO",
+      "symbol": "LIT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 3.6e-05
+      "funding": 2e-06
     },
     {
       "symbol": "NEAR",
@@ -71,7 +72,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.2e-05
+      "funding": 1.3e-05
     },
     {
       "symbol": "PENGU",
@@ -80,13 +81,6 @@
         "coingecko"
       ],
       "funding": -1.7e-05
-    },
-    {
-      "symbol": "RLUSD",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
     },
     {
       "symbol": "SOL",
@@ -126,14 +120,6 @@
         "movers"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -1e-06
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
