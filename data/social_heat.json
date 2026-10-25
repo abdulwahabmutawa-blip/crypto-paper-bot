@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-25T03:46:27+00:00",
+  "ts": "2026-10-25T03:52:16+00:00",
   "sources": {
     "coingecko": [
       "HYPE",
@@ -20,6 +20,7 @@
       "ZEC",
       "XRP",
       "BNB",
+      "BTC",
       "U",
       "RLUSD"
     ],
@@ -28,13 +29,23 @@
   },
   "heat": [
     {
+      "symbol": "BTC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 7.9e-05,
+      "long_short": 2.18
+    },
+    {
       "symbol": "ZEC",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 2.4e-05,
+      "funding": 2.7e-05,
       "long_short": 1.04
     },
     {
@@ -43,7 +54,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.6e-05
+      "funding": -1.4e-05
     },
     {
       "symbol": "BNB",
@@ -54,20 +65,12 @@
       "funding": 0.0
     },
     {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 8.1e-05
-    },
-    {
       "symbol": "HYPE",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 3e-05
+      "funding": 2.8e-05
     },
     {
       "symbol": "ICP",
@@ -75,7 +78,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.9e-05
+      "funding": 2.6e-05
     },
     {
       "symbol": "INJ",
@@ -83,7 +86,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.1e-05
+      "funding": 6.2e-05
     },
     {
       "symbol": "LIT",
@@ -91,7 +94,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.1e-05
+      "funding": 7e-06
     },
     {
       "symbol": "NEAR",
@@ -99,7 +102,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.9e-05
+      "funding": 3e-05
     },
     {
       "symbol": "PENGU",
@@ -107,7 +110,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -9e-06
+      "funding": -6e-06
     },
     {
       "symbol": "RLUSD",
@@ -130,7 +133,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -3.1e-05
+      "funding": -3.4e-05
     },
     {
       "symbol": "U",
