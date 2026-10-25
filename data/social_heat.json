@@ -1,17 +1,17 @@
 {
-  "ts": "2026-10-25T04:30:49+00:00",
+  "ts": "2026-10-25T04:36:17+00:00",
   "sources": {
     "coingecko": [
       "HYPE",
       "ZEC",
+      "PENGU",
+      "NEAR",
       "SOL",
       "SUI",
       "AERO",
-      "PENGU",
       "ICP",
-      "XRP",
-      "BTC",
-      "TIA"
+      "TAO",
+      "XRP"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,24 +19,14 @@
       "ZEC",
       "XRP",
       "BNB",
-      "U",
       "BTC",
-      "RLUSD"
+      "RLUSD",
+      "U"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "BTC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 7.1e-05,
-      "long_short": 2.17
-    },
     {
       "symbol": "XRP",
       "surfaces": 2,
@@ -54,7 +44,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 3.5e-05,
+      "funding": 3.3e-05,
       "long_short": 1.04
     },
     {
@@ -74,12 +64,20 @@
       "funding": 0.0
     },
     {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 7.1e-05
+    },
+    {
       "symbol": "HYPE",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 1.8e-05
+      "funding": 2.1e-05
     },
     {
       "symbol": "ICP",
@@ -87,7 +85,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.6e-05
+      "funding": 3.3e-05
+    },
+    {
+      "symbol": "NEAR",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 1.2e-05
     },
     {
       "symbol": "PENGU",
@@ -118,15 +124,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -6.8e-05
+      "funding": -7.7e-05
     },
     {
-      "symbol": "TIA",
+      "symbol": "TAO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -7e-06
+      "funding": 6e-06
     },
     {
       "symbol": "U",
