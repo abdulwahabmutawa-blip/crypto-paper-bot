@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-25T01:19:29+00:00",
+  "ts": "2026-10-25T01:25:26+00:00",
   "sources": {
     "coingecko": [
       "HYPE",
@@ -21,6 +21,7 @@
       "ZEC",
       "XRP",
       "BNB",
+      "BTC",
       "U",
       "RLUSD"
     ],
@@ -29,12 +30,22 @@
   },
   "heat": [
     {
+      "symbol": "BTC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 9.7e-05,
+      "long_short": 2.2
+    },
+    {
       "symbol": "AERO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 2.5e-05
+      "funding": 2.4e-05
     },
     {
       "symbol": "AVAX",
@@ -50,7 +61,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001727
+      "funding": -0.001601
     },
     {
       "symbol": "BNB",
@@ -59,14 +70,6 @@
         "movers"
       ],
       "funding": 0.0
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 9.7e-05
     },
     {
       "symbol": "ENA",
@@ -82,7 +85,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.5e-05
+      "funding": 4.6e-05
     },
     {
       "symbol": "HYPE",
@@ -106,7 +109,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.5e-05
+      "funding": -1e-05
     },
     {
       "symbol": "PUMP",
@@ -114,7 +117,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -4.1e-05
+      "funding": -3.7e-05
     },
     {
       "symbol": "QNT",
@@ -122,7 +125,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -9e-05
+      "funding": -9.1e-05
     },
     {
       "symbol": "RLUSD",
@@ -144,7 +147,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2e-06
+      "funding": 0.0
     },
     {
       "symbol": "XRP",
@@ -160,7 +163,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -7e-06
+      "funding": -8e-06
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
