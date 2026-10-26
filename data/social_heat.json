@@ -1,14 +1,15 @@
 {
-  "ts": "2026-10-26T21:21:47+00:00",
+  "ts": "2026-10-26T21:27:17+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "AERO",
-      "HYPE",
       "PENGU",
       "ZEC",
-      "ONDO",
       "SUI",
+      "HYPE",
+      "PUMP",
+      "CHIP",
       "LIT",
       "BTC"
     ],
@@ -17,12 +18,12 @@
     "movers": [
       "SOXLB",
       "QNT",
-      "UNI",
       "ZEC",
-      "ENA",
+      "UNI",
       "BNB",
-      "DOGE",
-      "SNDKB"
+      "ENA",
+      "SNDKB",
+      "DOGE"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -35,7 +36,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 5.2e-05,
+      "funding": 5.1e-05,
       "long_short": 0.92
     },
     {
@@ -44,7 +45,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.4e-05
+      "funding": 3.7e-05
     },
     {
       "symbol": "BNB",
@@ -63,12 +64,20 @@
       "funding": 0.0001
     },
     {
+      "symbol": "CHIP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 1.7e-05
+    },
+    {
       "symbol": "DOGE",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 6.7e-05
+      "funding": 6.5e-05
     },
     {
       "symbol": "ENA",
@@ -84,18 +93,10 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.9e-05
+      "funding": 3e-05
     },
     {
       "symbol": "LIT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "ONDO",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -108,7 +109,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.1e-05
+      "funding": 3.7e-05
+    },
+    {
+      "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -7e-06
     },
     {
       "symbol": "QNT",
@@ -116,7 +125,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 6.9e-05
+      "funding": 6.2e-05
     },
     {
       "symbol": "SNDKB",
@@ -138,7 +147,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.7e-05
+      "funding": 6.9e-05
     },
     {
       "symbol": "UNI",
