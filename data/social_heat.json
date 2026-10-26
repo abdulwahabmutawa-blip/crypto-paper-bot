@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-26T19:08:38+00:00",
+  "ts": "2026-10-26T19:14:16+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -24,7 +24,7 @@
       "ENA",
       "XAUT",
       "SNDKB",
-      "TRX"
+      "BNB"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -37,6 +37,14 @@
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "BNB",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 9.8e-05
     },
     {
       "symbol": "BTC",
@@ -52,7 +60,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-06
+      "funding": 1.3e-05
     },
     {
       "symbol": "ENA",
@@ -60,7 +68,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.8e-05
+      "funding": 5e-05
     },
     {
       "symbol": "ETH",
@@ -76,7 +84,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.0
+      "funding": 3e-06
     },
     {
       "symbol": "INJ",
@@ -92,7 +100,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.8e-05
+      "funding": 2e-05
     },
     {
       "symbol": "QNT",
@@ -100,7 +108,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 6.3e-05
+      "funding": 6.4e-05
     },
     {
       "symbol": "SNDKB",
@@ -130,7 +138,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.6e-05
+      "funding": 5.8e-05
     },
     {
       "symbol": "TAO",
@@ -139,14 +147,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "TRX",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -0.000105
     },
     {
       "symbol": "UNI",
@@ -162,7 +162,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 3.4e-05
+      "funding": 3.3e-05
     },
     {
       "symbol": "ZEC",
@@ -170,7 +170,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4e-05
+      "funding": 3.8e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
