@@ -1,30 +1,14 @@
 {
-  "ts": "2026-10-26T13:56:08+00:00",
-  "scanned": 90,
+  "ts": "2026-10-26T14:01:45+00:00",
+  "scanned": 92,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "SKHYBUSDT",
-      "signal": "ignition",
-      "score": 0.6245,
-      "raw_score": 0.7025,
-      "weight": 0.889,
-      "price": 140.35,
-      "why": "trades 4.5x and volume 12.4x the prior 4h, 77% taker-buy, $124,364 burst \u2014 while price has only moved -0.8%",
-      "chg_24h": 0.0132,
-      "vol_surge": 12.41,
-      "chg_1h": -0.0078,
-      "market_surge": 2.53,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.66% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.66% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -2.15% at 24h: market beta, not signal",
     "reversion": "benched \u2014 BTC-excess day mean -2.49% at 24h: market beta, not signal",
     "heat": "probation \u2014 23 rows but only 6.8 independent 24h windows (span 163h): overlapping labels are not a sample",
-    "revival": "benched \u2014 BTC-excess day mean -2.69% at 24h: market beta, not signal"
+    "revival": "benched \u2014 BTC-excess day mean -2.60% at 24h: market beta, not signal"
   },
   "breadth": {
     "count": 11,
@@ -231,7 +215,7 @@
       "median_ret_24h": -0.03322,
       "both_halves_24h": false,
       "days_24h": 12,
-      "mean_x_24h": -0.02689,
+      "mean_x_24h": -0.026,
       "days_x_24h": 12,
       "avg_win_24h": 0.05019,
       "avg_loss_24h": -0.07796,
