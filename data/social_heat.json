@@ -1,18 +1,19 @@
 {
-  "ts": "2026-10-26T22:23:58+00:00",
+  "ts": "2026-10-26T22:29:46+00:00",
   "sources": {
     "coingecko": [
       "BTC",
-      "PUMP",
-      "PENGU",
       "AERO",
-      "ZEC",
-      "SUI",
-      "CHIP",
+      "PENGU",
       "BTC",
-      "QNT",
+      "ZEC",
+      "PUMP",
       "INJ",
-      "ETH"
+      "SUI",
+      "ETH",
+      "CHIP",
+      "HYPE",
+      "SOL"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -23,23 +24,13 @@
       "SNDKB",
       "ZEC",
       "BNB",
-      "DOGE",
-      "RLUSD"
+      "RLUSD",
+      "DOGE"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "QNT",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 1e-05,
-      "long_short": 1.33
-    },
     {
       "symbol": "ZEC",
       "surfaces": 2,
@@ -80,7 +71,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.2e-05
+      "funding": 3.6e-05
     },
     {
       "symbol": "DOGE",
@@ -97,6 +88,14 @@
         "coingecko"
       ],
       "funding": 8.1e-05
+    },
+    {
+      "symbol": "HYPE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 1.5e-05
     },
     {
       "symbol": "INJ",
@@ -120,7 +119,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -7e-06
+      "funding": -8e-06
+    },
+    {
+      "symbol": "QNT",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-06
     },
     {
       "symbol": "RLUSD",
@@ -135,6 +142,14 @@
       "sources": [
         "movers"
       ]
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "SOXLB",
