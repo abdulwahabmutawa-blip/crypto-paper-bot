@@ -1,18 +1,17 @@
 {
-  "ts": "2026-10-26T14:12:57+00:00",
+  "ts": "2026-10-26T14:17:57+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "QNT",
-      "SOL",
       "NEAR",
-      "CHIP",
       "PENGU",
+      "SOL",
+      "CHIP",
       "ETH",
       "TAO",
-      "AAVE",
-      "BTC",
-      "ENA"
+      "TIA",
+      "ONDO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -23,23 +22,13 @@
       "NEAR",
       "ZEC",
       "SOXLB",
-      "TRX",
-      "DOGE"
+      "DOGE",
+      "SOL"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "ENA",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.85
-    },
     {
       "symbol": "NEAR",
       "surfaces": 2,
@@ -47,7 +36,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 3.8e-05,
+      "funding": 4e-05,
       "long_short": 1.26
     },
     {
@@ -57,16 +46,18 @@
         "coingecko",
         "movers"
       ],
-      "funding": 1.8e-05,
+      "funding": 2.1e-05,
       "long_short": 1.17
     },
     {
-      "symbol": "AAVE",
-      "surfaces": 1,
+      "symbol": "SOL",
+      "surfaces": 2,
       "sources": [
-        "coingecko"
+        "coingecko",
+        "movers"
       ],
-      "funding": 9.1e-05
+      "funding": 0.0001,
+      "long_short": 2.94
     },
     {
       "symbol": "BTC",
@@ -74,7 +65,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.9e-05
+      "funding": 8e-05
     },
     {
       "symbol": "CHIP",
@@ -90,7 +81,15 @@
       "sources": [
         "movers"
       ],
-      "funding": 7.8e-05
+      "funding": 7.9e-05
+    },
+    {
+      "symbol": "ENA",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "ETH",
@@ -98,7 +97,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.5e-05
+      "funding": 7.3e-05
+    },
+    {
+      "symbol": "ONDO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 1e-05
     },
     {
       "symbol": "PENGU",
@@ -106,15 +113,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.6e-05
-    },
-    {
-      "symbol": "SOL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": 3.7e-05
     },
     {
       "symbol": "SOXLB",
@@ -132,12 +131,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "TRX",
+      "symbol": "TIA",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
-      "funding": -2.2e-05
+      "funding": 5e-05
     },
     {
       "symbol": "UNI",
@@ -145,7 +144,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 5.5e-05
+      "funding": 5.8e-05
     },
     {
       "symbol": "ZEC",
