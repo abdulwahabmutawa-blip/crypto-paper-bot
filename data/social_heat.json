@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-26T13:00:36+00:00",
+  "ts": "2026-10-26T13:05:47+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -18,10 +18,10 @@
       "ENA",
       "UNI",
       "SOXLB",
+      "SNDKB",
       "NEAR",
       "ZEC",
-      "SNDKB",
-      "DOGE"
+      "XAUT"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -35,7 +35,7 @@
         "movers"
       ],
       "funding": 5e-05,
-      "long_short": 1.83
+      "long_short": 1.85
     },
     {
       "symbol": "QNT",
@@ -44,8 +44,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": -2.3e-05,
-      "long_short": 1.3
+      "funding": -2e-05,
+      "long_short": 1.34
     },
     {
       "symbol": "AERO",
@@ -53,7 +53,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1e-05
+      "funding": -1.2e-05
     },
     {
       "symbol": "BTC",
@@ -61,7 +61,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8e-05
+      "funding": 7.9e-05
     },
     {
       "symbol": "CHIP",
@@ -72,20 +72,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "DOGE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 7e-05
-    },
-    {
       "symbol": "NEAR",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -6e-06
+      "funding": -5e-06
     },
     {
       "symbol": "PENGU",
@@ -115,7 +107,15 @@
       "sources": [
         "movers"
       ],
-      "funding": 2e-05
+      "funding": 2.2e-05
+    },
+    {
+      "symbol": "XAUT",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 4.9e-05
     },
     {
       "symbol": "XRP",
@@ -131,7 +131,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 5.7e-05
+      "funding": 5.6e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
