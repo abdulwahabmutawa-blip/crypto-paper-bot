@@ -1,19 +1,18 @@
 {
-  "ts": "2026-10-26T03:33:46+00:00",
+  "ts": "2026-10-26T03:39:07+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "PENGU",
       "LIT",
       "NEAR",
+      "QNT",
       "SOL",
       "TAO",
-      "ENA",
       "ICP",
+      "AVAX",
       "ZEC",
-      "QNT",
-      "FET",
-      "AVAX"
+      "PEPE"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,7 +20,6 @@
       "ENA",
       "XAUT",
       "UNI",
-      "NEAR",
       "RLUSD"
     ],
     "watcher": [],
@@ -29,32 +27,12 @@
   },
   "heat": [
     {
-      "symbol": "ENA",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.57
-    },
-    {
-      "symbol": "NEAR",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.27
-    },
-    {
       "symbol": "AVAX",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 2.6e-05
+      "funding": 2.5e-05
     },
     {
       "symbol": "BTC",
@@ -62,15 +40,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.9e-05
+      "funding": 4.2e-05
     },
     {
-      "symbol": "FET",
+      "symbol": "ENA",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
-      "funding": 0.0001
+      "funding": 5e-05
     },
     {
       "symbol": "ICP",
@@ -89,12 +67,27 @@
       "funding": 5e-05
     },
     {
+      "symbol": "NEAR",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -4e-06
+      "funding": 2e-06
+    },
+    {
+      "symbol": "PEPE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ]
     },
     {
       "symbol": "QNT",
@@ -102,7 +95,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.4e-05
+      "funding": 6.6e-05
     },
     {
       "symbol": "RLUSD",
@@ -133,7 +126,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 8.2e-05
+      "funding": 8.4e-05
     },
     {
       "symbol": "XAUT",
@@ -141,7 +134,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 3.5e-05
+      "funding": 3.4e-05
     },
     {
       "symbol": "ZEC",
