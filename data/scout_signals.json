@@ -1,8 +1,24 @@
 {
-  "ts": "2026-10-26T16:49:51+00:00",
-  "scanned": 102,
+  "ts": "2026-10-26T16:55:21+00:00",
+  "scanned": 100,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "NOMUSDT",
+      "signal": "revival",
+      "score": 0.5592,
+      "raw_score": 0.6778,
+      "weight": 0.825,
+      "price": 0.001654,
+      "why": "revival day-one: fell -8% last week on $0.32M/day quiet, volume arriving 11.5x today, only +10% off its 30d low \u00b7 serial exploder: 3 runs in 2y",
+      "chg_24h": 0.0528,
+      "vol_surge": 11.5,
+      "chg_1h": null,
+      "market_surge": null,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -2.61% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.63% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -2.17% at 24h: market beta, not signal",
@@ -11,7 +27,7 @@
     "revival": "benched \u2014 BTC-excess day mean -2.61% at 24h: market beta, not signal"
   },
   "breadth": {
-    "count": 12,
+    "count": 11,
     "baseline": 9.0,
     "wave": false
   },
