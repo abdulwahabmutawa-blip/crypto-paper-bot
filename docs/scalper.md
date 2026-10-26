@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-26T03:02:07+00:00 · runs 4386 · equity **$625.09** (-37.49%) · cash $118.05 · open 8/10 · round trips 1587
+updated 2026-10-26T03:19:15+00:00 · runs 4387 · equity **$624.40** (-37.56%) · cash $118.05 · open 8/10 · round trips 1587
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,12 +36,12 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-25T09:37 | SUIUSDT | bottom | 0.9078 | 0.912 | +0.46% |
-| 2026-10-25T17:23 | AAVEUSDT | surge | 137.88 | 134.65 | -2.34% |
-| 2026-10-25T20:01 | PYTHUSDT | surge | 0.0754 | 0.0742 | -1.59% |
-| 2026-10-25T22:54 | MUBARAKUSDT | surge | 0.05276 | 0.05263 | -0.25% |
-| 2026-10-26T01:34 | SKHYBUSDT | surge | 141.52 | 139.34 | -1.54% |
-| 2026-10-26T01:51 | BNBUSDT | bottom | 735.36 | 735.52 | +0.02% |
-| 2026-10-26T02:43 | CRCLBUSDT | bottom | 83.2 | 83.32 | +0.14% |
+| 2026-10-25T09:37 | SUIUSDT | bottom | 0.9078 | 0.9087 | +0.10% |
+| 2026-10-25T17:23 | AAVEUSDT | surge | 137.88 | 134.83 | -2.21% |
+| 2026-10-25T20:01 | PYTHUSDT | surge | 0.0754 | 0.07413 | -1.68% |
+| 2026-10-25T22:54 | MUBARAKUSDT | surge | 0.05276 | 0.05237 | -0.74% |
+| 2026-10-26T01:34 | SKHYBUSDT | surge | 141.52 | 138.81 | -1.91% |
+| 2026-10-26T01:51 | BNBUSDT | bottom | 735.36 | 736.26 | +0.12% |
+| 2026-10-26T02:43 | CRCLBUSDT | bottom | 83.2 | 83.3 | +0.12% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
