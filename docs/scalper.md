@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-26T08:56:07+00:00 · runs 4407 · equity **$619.01** (-38.10%) · cash $0.00 · open 10/10 · round trips 1590
+updated 2026-10-26T09:13:43+00:00 · runs 4408 · equity **$617.74** (-38.23%) · cash $0.00 · open 10/10 · round trips 1590
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-25T09:37 | SUIUSDT | bottom | 0.9078 | 0.9186 | +1.19% |
-| 2026-10-25T22:54 | MUBARAKUSDT | surge | 0.05276 | 0.05173 | -1.95% |
-| 2026-10-26T01:34 | SKHYBUSDT | surge | 141.52 | 139.56 | -1.38% |
-| 2026-10-26T01:51 | BNBUSDT | bottom | 735.36 | 737.49 | +0.29% |
-| 2026-10-26T02:43 | CRCLBUSDT | bottom | 83.2 | 83.68 | +0.58% |
-| 2026-10-26T03:34 | CFGUSDT | surge | 0.1036 | 0.1022 | -1.35% |
-| 2026-10-26T05:00 | CHIPUSDT | surge | 0.04604 | 0.04547 | -1.24% |
-| 2026-10-26T07:25 | TSLABUSDT | surge | 376.25 | 379.43 | +0.85% |
-| 2026-10-26T08:18 | SOXSBUSDT | surge | 53.74 | 52.34 | -2.61% |
+| 2026-10-25T09:37 | SUIUSDT | bottom | 0.9078 | 0.9145 | +0.74% |
+| 2026-10-25T22:54 | MUBARAKUSDT | surge | 0.05276 | 0.05155 | -2.29% |
+| 2026-10-26T01:34 | SKHYBUSDT | surge | 141.52 | 139.7 | -1.29% |
+| 2026-10-26T01:51 | BNBUSDT | bottom | 735.36 | 737.07 | +0.23% |
+| 2026-10-26T02:43 | CRCLBUSDT | bottom | 83.2 | 83.43 | +0.28% |
+| 2026-10-26T03:34 | CFGUSDT | surge | 0.1036 | 0.102 | -1.54% |
+| 2026-10-26T05:00 | CHIPUSDT | surge | 0.04604 | 0.04503 | -2.19% |
+| 2026-10-26T07:25 | TSLABUSDT | surge | 376.25 | 379.91 | +0.97% |
+| 2026-10-26T08:18 | SOXSBUSDT | surge | 53.74 | 52.3 | -2.68% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
