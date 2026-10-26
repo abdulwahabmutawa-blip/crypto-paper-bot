@@ -1,17 +1,18 @@
 {
-  "ts": "2026-10-26T03:50:36+00:00",
+  "ts": "2026-10-26T03:56:22+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "PENGU",
-      "LIT",
-      "QNT",
       "NEAR",
+      "HYPE",
+      "LIT",
       "SOL",
+      "QNT",
       "AERO",
-      "FET",
-      "ZEC",
-      "PEPE"
+      "ICP",
+      "PEPE",
+      "ZEC"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -49,7 +50,15 @@
       "funding": 5e-05
     },
     {
-      "symbol": "FET",
+      "symbol": "HYPE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-06
+    },
+    {
+      "symbol": "ICP",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -78,7 +87,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1e-06
+      "funding": -3e-06
     },
     {
       "symbol": "PEPE",
@@ -93,7 +102,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.8e-05
+      "funding": 6.2e-05
     },
     {
       "symbol": "RLUSD",
@@ -116,7 +125,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 3.2e-05
+      "funding": 2.9e-05
     },
     {
       "symbol": "ZEC",
