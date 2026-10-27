@@ -1,17 +1,16 @@
 {
-  "ts": "2026-10-27T23:05:35+00:00",
+  "ts": "2026-10-27T23:11:19+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
       "PENGU",
-      "SUI",
+      "NEAR",
       "PUMP",
       "LIT",
-      "NEAR",
-      "BTC",
       "AERO",
-      "FET",
-      "MORPHO"
+      "SUI",
+      "SOL",
+      "HYPE"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -30,6 +29,16 @@
   },
   "heat": [
     {
+      "symbol": "HYPE",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.83
+    },
+    {
       "symbol": "NEAR",
       "surfaces": 2,
       "sources": [
@@ -46,7 +55,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 9e-06,
+      "funding": 7e-06,
       "long_short": 0.67
     },
     {
@@ -55,42 +64,10 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -3.3e-05
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 6.8e-05
-    },
-    {
-      "symbol": "FET",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 6e-06
-    },
-    {
-      "symbol": "HYPE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
+      "funding": -2.5e-05
     },
     {
       "symbol": "LIT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "MORPHO",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -103,7 +80,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.00047
+      "funding": -0.000449
     },
     {
       "symbol": "PENGU",
@@ -126,7 +103,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0
+      "funding": -3e-06
     },
     {
       "symbol": "SNDKB",
@@ -134,6 +111,14 @@
       "sources": [
         "movers"
       ]
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "SOXLB",
@@ -148,7 +133,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.1e-05
+      "funding": 5.9e-05
     },
     {
       "symbol": "XRP",
