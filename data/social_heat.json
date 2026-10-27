@@ -1,19 +1,19 @@
 {
-  "ts": "2026-10-27T08:54:46+00:00",
+  "ts": "2026-10-27T09:00:15+00:00",
   "sources": {
     "coingecko": [
       "BTC",
-      "BTC",
       "PENGU",
-      "NIL",
-      "SUI",
       "QNT",
+      "NIL",
       "TAO",
-      "OSMO",
-      "NEAR",
+      "SUI",
       "LIT",
       "XRP",
-      "HYPE"
+      "OSMO",
+      "HYPE",
+      "AERO",
+      "AAVE"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -24,8 +24,8 @@
       "SNDKB",
       "HYPE",
       "XRP",
-      "U",
-      "RLUSD"
+      "DOGE",
+      "U"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -38,7 +38,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 4.9e-05,
+      "funding": 5e-05,
       "long_short": 2.05
     },
     {
@@ -48,7 +48,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.000266,
+      "funding": -0.000265,
       "long_short": 1.42
     },
     {
@@ -62,12 +62,36 @@
       "long_short": 3.14
     },
     {
+      "symbol": "AAVE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 8.8e-05
+    },
+    {
+      "symbol": "AERO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 8.4e-05
+    },
+    {
+      "symbol": "DOGE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 6.7e-05
     },
     {
       "symbol": "LIT",
@@ -78,20 +102,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "NEAR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 7.7e-05
-    },
-    {
       "symbol": "NIL",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -0.004805
+      "funding": -0.004711
     },
     {
       "symbol": "OSMO",
@@ -107,13 +123,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "RLUSD",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
     },
     {
       "symbol": "SNDKB",
@@ -143,7 +152,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.8e-05
+      "funding": 5e-05
     },
     {
       "symbol": "U",
@@ -158,7 +167,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 3.3e-05
+      "funding": 3.4e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
