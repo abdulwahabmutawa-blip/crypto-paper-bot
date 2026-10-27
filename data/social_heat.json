@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-27T02:58:36+00:00",
+  "ts": "2026-10-27T03:03:44+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
@@ -21,10 +21,10 @@
       "SOXLB",
       "QNT",
       "UNI",
-      "ZEC",
       "SNDKB",
-      "ENA",
+      "ZEC",
       "DOGE",
+      "XRP",
       "PEPE"
     ],
     "watcher": [],
@@ -39,7 +39,17 @@
         "movers"
       ],
       "funding": -9.4e-05,
-      "long_short": 1.39
+      "long_short": 1.4
+    },
+    {
+      "symbol": "XRP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 3.1
     },
     {
       "symbol": "AERO",
@@ -63,18 +73,10 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2e-06
+      "funding": -4e-06
     },
     {
       "symbol": "DOGE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "ENA",
       "surfaces": 1,
       "sources": [
         "movers"
@@ -87,7 +89,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.5e-05
+      "funding": 6.6e-05
     },
     {
       "symbol": "HYPE",
@@ -95,7 +97,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.2e-05
+      "funding": 1.1e-05
     },
     {
       "symbol": "NEAR",
@@ -103,7 +105,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.1e-05
+      "funding": 6.3e-05
     },
     {
       "symbol": "ONDO",
@@ -119,7 +121,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2e-05
+      "funding": -2.1e-05
     },
     {
       "symbol": "PEPE",
@@ -163,14 +165,6 @@
       "surfaces": 1,
       "sources": [
         "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "XRP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
       ],
       "funding": 0.0001
     },
