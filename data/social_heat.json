@@ -1,16 +1,16 @@
 {
-  "ts": "2026-10-27T12:04:39+00:00",
+  "ts": "2026-10-27T12:10:36+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "ETH",
       "AERO",
+      "DOT",
+      "STRK",
+      "REZ",
       "PUMP",
-      "SOL",
-      "XRP",
-      "FET",
-      "SUI",
-      "CHIP"
+      "PENGU",
+      "SOL"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -18,25 +18,16 @@
       "SOXLB",
       "ZEC",
       "SNDKB",
+      "NIL",
       "HYPE",
       "XRP",
-      "U",
-      "RLUSD"
+      "DOGE",
+      "U"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "XRP",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 3.11
-    },
     {
       "symbol": "AERO",
       "surfaces": 1,
@@ -51,15 +42,23 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.4e-05
+      "funding": 8.5e-05
     },
     {
-      "symbol": "CHIP",
+      "symbol": "DOGE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5.8e-05
+    },
+    {
+      "symbol": "DOT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 1e-06
+      "funding": -0.000108
     },
     {
       "symbol": "ETH",
@@ -70,20 +69,28 @@
       "funding": 5.3e-05
     },
     {
-      "symbol": "FET",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 6.4e-05
-    },
-    {
       "symbol": "HYPE",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "NIL",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -0.00048
+    },
+    {
+      "symbol": "PENGU",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 4.6e-05
     },
     {
       "symbol": "PUMP",
@@ -94,11 +101,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "RLUSD",
+      "symbol": "REZ",
       "surfaces": 1,
       "sources": [
-        "movers"
-      ]
+        "coingecko"
+      ],
+      "funding": -0.002335
     },
     {
       "symbol": "SNDKB",
@@ -113,7 +121,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.4e-05
+      "funding": 8.3e-05
     },
     {
       "symbol": "SOXLB",
@@ -123,12 +131,12 @@
       ]
     },
     {
-      "symbol": "SUI",
+      "symbol": "STRK",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5.6e-05
+      "funding": 5e-05
     },
     {
       "symbol": "U",
@@ -136,6 +144,14 @@
       "sources": [
         "movers"
       ]
+    },
+    {
+      "symbol": "XRP",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "ZEC",
