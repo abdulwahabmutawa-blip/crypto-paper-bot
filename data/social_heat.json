@@ -1,17 +1,17 @@
 {
-  "ts": "2026-10-27T02:24:56+00:00",
+  "ts": "2026-10-27T02:30:47+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
       "CHIP",
       "HYPE",
       "AERO",
-      "BTC",
       "XRP",
-      "SOL",
+      "BTC",
       "NEAR",
+      "SOL",
+      "ETH",
       "SUI",
-      "ONDO",
       "TAO",
       "ENA"
     ],
@@ -23,9 +23,9 @@
       "SNDKB",
       "UNI",
       "ZEC",
-      "ENA",
-      "PEPE",
-      "DOGE"
+      "DOGE",
+      "XRP",
+      "ENA"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -40,6 +40,16 @@
       ],
       "funding": 5e-05,
       "long_short": 1.78
+    },
+    {
+      "symbol": "XRP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 3.1
     },
     {
       "symbol": "AERO",
@@ -74,6 +84,14 @@
       "funding": 4.5e-05
     },
     {
+      "symbol": "ETH",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 6.8e-05
+    },
+    {
       "symbol": "HYPE",
       "surfaces": 1,
       "sources": [
@@ -87,15 +105,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6e-05
-    },
-    {
-      "symbol": "ONDO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 4e-05
+      "funding": 5.8e-05
     },
     {
       "symbol": "PENGU",
@@ -103,14 +113,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.5e-05
-    },
-    {
-      "symbol": "PEPE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
+      "funding": 8e-06
     },
     {
       "symbol": "QNT",
@@ -118,7 +121,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -9e-05
+      "funding": -9.5e-05
     },
     {
       "symbol": "SNDKB",
@@ -148,7 +151,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.4e-05
+      "funding": 8e-05
     },
     {
       "symbol": "TAO",
@@ -163,14 +166,6 @@
       "surfaces": 1,
       "sources": [
         "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "XRP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
       ],
       "funding": 0.0001
     },
