@@ -1,16 +1,16 @@
 {
-  "ts": "2026-10-27T13:45:49+00:00",
+  "ts": "2026-10-27T13:51:08+00:00",
   "sources": {
     "coingecko": [
       "BTC",
-      "PENGU",
       "ZEC",
+      "PENGU",
       "SOL",
-      "HYPE",
       "NEAR",
+      "HYPE",
       "QNT",
       "ENA",
-      "OSMO"
+      "SUI"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,15 +19,25 @@
       "ZEC",
       "XRP",
       "HYPE",
+      "SPCXB",
       "SNDKB",
       "UNI",
-      "SPCXB",
-      "DOGE"
+      "ENA"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "ENA",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.69
+    },
     {
       "symbol": "HYPE",
       "surfaces": 2,
@@ -45,7 +55,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 6.6e-05,
+      "funding": 6.7e-05,
       "long_short": 0.77
     },
     {
@@ -57,35 +67,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "DOGE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5.6e-05
-    },
-    {
-      "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "NEAR",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "OSMO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ]
     },
     {
       "symbol": "PENGU",
@@ -101,7 +88,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000246
+      "funding": -0.000242
     },
     {
       "symbol": "SNDKB",
@@ -116,7 +103,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.8e-05
+      "funding": 8.6e-05
     },
     {
       "symbol": "SOXLB",
@@ -131,6 +118,14 @@
       "sources": [
         "movers"
       ]
+    },
+    {
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -7e-06
     },
     {
       "symbol": "UNI",
