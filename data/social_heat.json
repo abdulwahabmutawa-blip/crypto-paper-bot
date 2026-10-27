@@ -1,25 +1,27 @@
 {
-  "ts": "2026-10-27T16:36:50+00:00",
+  "ts": "2026-10-27T16:42:39+00:00",
   "sources": {
     "coingecko": [
       "BTC",
+      "PENGU",
       "CHIP",
       "XRP",
-      "PENGU",
       "HYPE",
+      "NEAR",
+      "SOL",
       "ENA",
-      "SOL"
+      "ZEC"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "SOXLB",
       "ZEC",
-      "ENA",
       "SNDKB",
+      "ENA",
       "NIL",
-      "NEAR",
       "HYPE",
+      "NEAR",
       "XRP"
     ],
     "watcher": [],
@@ -47,6 +49,16 @@
       "long_short": 1.92
     },
     {
+      "symbol": "NEAR",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.21
+    },
+    {
       "symbol": "XRP",
       "surfaces": 2,
       "sources": [
@@ -55,6 +67,16 @@
       ],
       "funding": 0.0001,
       "long_short": 2.91
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 3.7e-05,
+      "long_short": 0.7
     },
     {
       "symbol": "BTC",
@@ -73,20 +95,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "NEAR",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "NIL",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -0.000411
+      "funding": -0.000402
     },
     {
       "symbol": "PENGU",
@@ -109,7 +123,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.8e-05
+      "funding": 8e-05
     },
     {
       "symbol": "SOXLB",
@@ -117,14 +131,6 @@
       "sources": [
         "movers"
       ]
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 4.1e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
