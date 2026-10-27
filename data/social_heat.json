@@ -1,24 +1,25 @@
 {
-  "ts": "2026-10-27T13:56:37+00:00",
+  "ts": "2026-10-27T14:01:52+00:00",
   "sources": {
     "coingecko": [
       "BTC",
-      "ZEC",
       "PENGU",
+      "ZEC",
       "SOL",
       "NEAR",
       "HYPE",
-      "QNT",
       "ENA",
-      "SUI"
+      "HUMA",
+      "XRP",
+      "QNT"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "SOXLB",
       "SNDKB",
-      "ZEC",
       "NIL",
+      "ZEC",
       "SPCXB",
       "HYPE",
       "XRP",
@@ -37,6 +38,16 @@
       ],
       "funding": 5e-05,
       "long_short": 2.08
+    },
+    {
+      "symbol": "XRP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.87
     },
     {
       "symbol": "ZEC",
@@ -65,6 +76,14 @@
       "funding": 5e-05
     },
     {
+      "symbol": "HUMA",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-06
+    },
+    {
       "symbol": "NEAR",
       "surfaces": 1,
       "sources": [
@@ -78,7 +97,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000424
+      "funding": -0.000415
     },
     {
       "symbol": "PENGU",
@@ -94,7 +113,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000233
+      "funding": -0.000227
     },
     {
       "symbol": "SNDKB",
@@ -109,7 +128,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.4e-05
+      "funding": 8.3e-05
     },
     {
       "symbol": "SOXLB",
@@ -126,23 +145,7 @@
       ]
     },
     {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -1.4e-05
-    },
-    {
       "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "XRP",
       "surfaces": 1,
       "sources": [
         "movers"
