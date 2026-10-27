@@ -1,24 +1,23 @@
 {
-  "ts": "2026-10-27T03:25:46+00:00",
+  "ts": "2026-10-27T03:31:31+00:00",
   "sources": {
     "coingecko": [
-      "PENGU",
       "BTC",
       "CHIP",
       "XRP",
+      "PENGU",
       "ETH",
-      "HYPE",
-      "QNT",
-      "PUMP",
-      "ADA"
+      "XLM",
+      "LIT",
+      "SUI"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "SOXLB",
       "QNT",
-      "SNDKB",
       "ZEC",
+      "SNDKB",
       "UNI",
       "ENA",
       "XRP",
@@ -29,16 +28,6 @@
   },
   "heat": [
     {
-      "symbol": "QNT",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": -0.00011,
-      "long_short": 1.4
-    },
-    {
       "symbol": "XRP",
       "surfaces": 2,
       "sources": [
@@ -47,14 +36,6 @@
       ],
       "funding": 0.0001,
       "long_short": 3.1
-    },
-    {
-      "symbol": "ADA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "BTC",
@@ -70,7 +51,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.0
+      "funding": 2e-06
     },
     {
       "symbol": "DOGE",
@@ -78,7 +59,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 5.1e-05
+      "funding": 5e-05
     },
     {
       "symbol": "ENA",
@@ -94,15 +75,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.5e-05
+      "funding": 6.6e-05
     },
     {
-      "symbol": "HYPE",
+      "symbol": "LIT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 2.6e-05
+      "funding": 5e-05
     },
     {
       "symbol": "PENGU",
@@ -110,15 +91,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.3e-05
+      "funding": -2.1e-05
     },
     {
-      "symbol": "PUMP",
+      "symbol": "QNT",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
-      "funding": 2.9e-05
+      "funding": -0.000105
     },
     {
       "symbol": "SNDKB",
@@ -135,12 +116,28 @@
       ]
     },
     {
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 3.1e-05
+    },
+    {
       "symbol": "UNI",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "XLM",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 8e-06
     },
     {
       "symbol": "ZEC",
