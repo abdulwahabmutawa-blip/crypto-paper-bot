@@ -1,18 +1,19 @@
 {
-  "ts": "2026-10-27T02:53:06+00:00",
+  "ts": "2026-10-27T02:58:36+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
-      "XRP",
-      "CHIP",
       "BTC",
-      "HYPE",
+      "CHIP",
+      "XRP",
       "ETH",
-      "AERO",
-      "ONDO",
-      "TAO",
       "SUI",
-      "SOL"
+      "HYPE",
+      "AERO",
+      "SOL",
+      "NEAR",
+      "QNT",
+      "ONDO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -24,21 +25,21 @@
       "SNDKB",
       "ENA",
       "DOGE",
-      "XRP"
+      "PEPE"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
     {
-      "symbol": "XRP",
+      "symbol": "QNT",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 0.0001,
-      "long_short": 3.1
+      "funding": -9.4e-05,
+      "long_short": 1.39
     },
     {
       "symbol": "AERO",
@@ -62,7 +63,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1e-06
+      "funding": -2e-06
     },
     {
       "symbol": "DOGE",
@@ -86,7 +87,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.7e-05
+      "funding": 6.5e-05
     },
     {
       "symbol": "HYPE",
@@ -94,7 +95,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.4e-05
+      "funding": 1.2e-05
+    },
+    {
+      "symbol": "NEAR",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 6.1e-05
     },
     {
       "symbol": "ONDO",
@@ -102,7 +111,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.3e-05
+      "funding": 3.5e-05
     },
     {
       "symbol": "PENGU",
@@ -110,15 +119,14 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.3e-05
+      "funding": -2e-05
     },
     {
-      "symbol": "QNT",
+      "symbol": "PEPE",
       "surfaces": 1,
       "sources": [
         "movers"
-      ],
-      "funding": -8.8e-05
+      ]
     },
     {
       "symbol": "SNDKB",
@@ -148,21 +156,21 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.7e-05
-    },
-    {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": 6.5e-05
     },
     {
       "symbol": "UNI",
       "surfaces": 1,
       "sources": [
         "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "XRP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
       ],
       "funding": 0.0001
     },
