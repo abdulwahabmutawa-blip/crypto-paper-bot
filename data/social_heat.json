@@ -1,19 +1,18 @@
 {
-  "ts": "2026-10-27T22:43:13+00:00",
+  "ts": "2026-10-27T22:49:08+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
       "ZEC",
+      "PUMP",
       "LIT",
       "SOL",
-      "PUMP",
+      "SUI",
       "BTC",
-      "APT",
       "AERO",
       "OSMO",
-      "XLM",
-      "ENA",
-      "SUI"
+      "APT",
+      "NEAR"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -32,13 +31,23 @@
   },
   "heat": [
     {
+      "symbol": "NEAR",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.22
+    },
+    {
       "symbol": "ZEC",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 1.1e-05,
+      "funding": 1e-05,
       "long_short": 0.68
     },
     {
@@ -47,7 +56,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -4.5e-05
+      "funding": -4.6e-05
     },
     {
       "symbol": "APT",
@@ -55,7 +64,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -8e-06
+      "funding": -1.5e-05
     },
     {
       "symbol": "BTC",
@@ -63,15 +72,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.2e-05
-    },
-    {
-      "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 9e-06
+      "funding": 7.1e-05
     },
     {
       "symbol": "HYPE",
@@ -90,20 +91,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "NEAR",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "NIL",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -0.000524
+      "funding": -0.000512
     },
     {
       "symbol": "OSMO",
@@ -133,7 +126,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9e-06
+      "funding": 4e-06
     },
     {
       "symbol": "SNDKB",
@@ -163,15 +156,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.5e-05
-    },
-    {
-      "symbol": "XLM",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": 4.4e-05
     },
     {
       "symbol": "XRP",
