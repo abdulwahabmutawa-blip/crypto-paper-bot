@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-27T12:28:19+00:00",
+  "ts": "2026-10-27T12:33:38+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -18,9 +18,9 @@
       "NIL",
       "ZEC",
       "HYPE",
-      "SNDKB",
       "XRP",
-      "UNI",
+      "SNDKB",
+      "ENA",
       "DOGE"
     ],
     "watcher": [],
@@ -43,7 +43,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.2e-05
+      "funding": 9.4e-05
     },
     {
       "symbol": "CHIP",
@@ -51,7 +51,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4e-06
+      "funding": 5e-06
     },
     {
       "symbol": "DASH",
@@ -70,6 +70,14 @@
       "funding": 5.6e-05
     },
     {
+      "symbol": "ENA",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 7e-06
+    },
+    {
       "symbol": "HYPE",
       "surfaces": 1,
       "sources": [
@@ -83,7 +91,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.9e-05
+      "funding": 9.3e-05
     },
     {
       "symbol": "NIL",
@@ -91,7 +99,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000435
+      "funding": -0.00043
     },
     {
       "symbol": "PENGU",
@@ -132,20 +140,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 4.6e-05
+      "funding": 4.5e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
