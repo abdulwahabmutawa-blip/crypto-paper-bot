@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-27T17:05:50+00:00 · runs 4521 · equity **$623.66** (-37.63%) · cash $0.00 · open 10/10 · round trips 1620
+updated 2026-10-27T17:22:35+00:00 · runs 4522 · equity **$623.41** (-37.66%) · cash $0.00 · open 10/10 · round trips 1620
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -37,13 +37,13 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
 | 2026-10-26T21:45 | RWUSDUSDT | bottom | 0.9998 | 0.9996 | -0.02% |
-| 2026-10-27T01:31 | SKHYBUSDT | surge | 148.19 | 146.29 | -1.28% |
-| 2026-10-27T03:48 | TRXUSDT | bottom | 0.3292 | 0.3277 | -0.46% |
+| 2026-10-27T01:31 | SKHYBUSDT | surge | 148.19 | 146.47 | -1.16% |
+| 2026-10-27T03:48 | TRXUSDT | bottom | 0.3292 | 0.3279 | -0.39% |
 | 2026-10-27T13:44 | LSKUSDT | surge | 0.1694 | 0.167 | -1.42% |
-| 2026-10-27T14:01 | SNDKBUSDT | surge | 1299.08 | 1305.21 | +0.47% |
-| 2026-10-27T14:55 | SENTUSDT | surge | 0.02269 | 0.02229 | -1.76% |
-| 2026-10-27T15:13 | MRVLBUSDT | surge | 241.37 | 242.12 | +0.31% |
-| 2026-10-27T15:48 | EWYBUSDT | surge | 157.89 | 157.56 | -0.21% |
-| 2026-10-27T16:24 | TQQQBUSDT | surge | 71.21 | 70.98 | -0.32% |
+| 2026-10-27T14:01 | SNDKBUSDT | surge | 1299.08 | 1302.91 | +0.29% |
+| 2026-10-27T14:55 | SENTUSDT | surge | 0.02269 | 0.0222 | -2.16% |
+| 2026-10-27T15:13 | MRVLBUSDT | surge | 241.37 | 241.96 | +0.24% |
+| 2026-10-27T15:48 | EWYBUSDT | surge | 157.89 | 157.7 | -0.12% |
+| 2026-10-27T16:24 | TQQQBUSDT | surge | 71.21 | 70.97 | -0.34% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
