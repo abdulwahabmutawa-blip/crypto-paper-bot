@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-28T13:28:06+00:00",
+  "ts": "2026-10-28T13:33:28+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
@@ -20,10 +20,10 @@
       "PEPE",
       "SOXLB",
       "SNDKB",
-      "DOGE",
       "NEAR",
-      "HYPE",
-      "BNB"
+      "DOGE",
+      "ZEC",
+      "HYPE"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -48,12 +48,14 @@
       ]
     },
     {
-      "symbol": "BNB",
-      "surfaces": 1,
+      "symbol": "ZEC",
+      "surfaces": 2,
       "sources": [
+        "coingecko",
         "movers"
       ],
-      "funding": 0.000136
+      "funding": 8.9e-05,
+      "long_short": 0.65
     },
     {
       "symbol": "BTC",
@@ -85,7 +87,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000225
+      "funding": -0.000223
     },
     {
       "symbol": "HYPE",
@@ -93,7 +95,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 1.8e-05
+      "funding": 2e-05
     },
     {
       "symbol": "INIT",
@@ -101,7 +103,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000384
+      "funding": -0.000341
     },
     {
       "symbol": "ONDO",
@@ -125,7 +127,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.00035
+      "funding": -0.000345
     },
     {
       "symbol": "SNDKB",
@@ -147,15 +149,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -3.3e-05
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 8.8e-05
+      "funding": -3.7e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
