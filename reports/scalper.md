@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-28T13:18:00+00:00 · runs 4597 · equity **$626.43** (-37.36%) · cash $0.00 · open 10/10 · round trips 1632
+updated 2026-10-28T13:34:20+00:00 · runs 4598 · equity **$629.21** (-37.08%) · cash $0.00 · open 10/10 · round trips 1632
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-27T13:44 | LSKUSDT | surge | 0.1694 | 0.1658 | -2.13% |
-| 2026-10-27T16:24 | TQQQBUSDT | surge | 71.21 | 71.84 | +0.88% |
-| 2026-10-27T22:06 | MRNABUSDT | surge | 206.72 | 204.58 | -1.04% |
-| 2026-10-28T01:41 | MUBUSDT | surge | 955.09 | 960.28 | +0.54% |
-| 2026-10-28T01:58 | EWYBUSDT | surge | 162.51 | 163.14 | +0.39% |
-| 2026-10-28T04:12 | SKHYBUSDT | surge | 155.52 | 155.95 | +0.28% |
-| 2026-10-28T11:38 | FLOKIUSDT | surge | 2.399e-05 | 2.38e-05 | -0.79% |
-| 2026-10-28T12:27 | BNBUSDT | surge | 756.74 | 753.83 | -0.38% |
-| 2026-10-28T12:43 | NBISBUSDT | surge | 175.68 | 173.48 | -1.25% |
+| 2026-10-27T13:44 | LSKUSDT | surge | 0.1694 | 0.1663 | -1.83% |
+| 2026-10-27T16:24 | TQQQBUSDT | surge | 71.21 | 71.87 | +0.93% |
+| 2026-10-27T22:06 | MRNABUSDT | surge | 206.72 | 207.76 | +0.50% |
+| 2026-10-28T01:41 | MUBUSDT | surge | 955.09 | 974.31 | +2.01% |
+| 2026-10-28T01:58 | EWYBUSDT | surge | 162.51 | 163.73 | +0.75% |
+| 2026-10-28T04:12 | SKHYBUSDT | surge | 155.52 | 159.65 | +2.66% |
+| 2026-10-28T11:38 | FLOKIUSDT | surge | 2.399e-05 | 2.384e-05 | -0.63% |
+| 2026-10-28T12:27 | BNBUSDT | surge | 756.74 | 752.72 | -0.53% |
+| 2026-10-28T12:43 | NBISBUSDT | surge | 175.68 | 170.83 | -2.76% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
