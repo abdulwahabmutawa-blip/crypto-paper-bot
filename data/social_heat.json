@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-28T16:58:19+00:00",
+  "ts": "2026-10-28T17:03:35+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -19,24 +19,14 @@
       "SOXLB",
       "DOGE",
       "TRX",
-      "SOL",
       "SUI",
-      "BTC"
+      "SOL",
+      "HYPE"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "BTC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 9.5e-05,
-      "long_short": 1.99
-    },
     {
       "symbol": "PEPE",
       "surfaces": 2,
@@ -52,8 +42,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 2.5e-05,
-      "long_short": 1.98
+      "funding": 3.3e-05,
+      "long_short": 1.97
     },
     {
       "symbol": "AERO",
@@ -64,12 +54,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 9.6e-05
+    },
+    {
       "symbol": "CHIP",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 6e-06
+      "funding": 5e-06
     },
     {
       "symbol": "DOGE",
@@ -80,12 +78,20 @@
       "funding": 0.0001
     },
     {
+      "symbol": "HYPE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "LIT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 3.7e-05
+      "funding": 3.9e-05
     },
     {
       "symbol": "NEAR",
@@ -131,7 +137,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 1.2e-05
+      "funding": 6e-06
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
