@@ -1,13 +1,16 @@
 {
-  "ts": "2026-10-28T21:43:49+00:00",
+  "ts": "2026-10-28T21:49:26+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
+      "PEPE",
+      "SOL",
       "BTC",
       "AERO",
       "QNT",
-      "PEPE",
-      "ENA"
+      "ETH",
+      "WLD",
+      "FET"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -17,9 +20,9 @@
       "SNDKB",
       "LTC",
       "UNI",
+      "SOXLB",
       "SUI",
-      "DOGE",
-      "SOXLB"
+      "DOGE"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -58,12 +61,20 @@
       "funding": 0.0001
     },
     {
-      "symbol": "ENA",
+      "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 0.0001
+    },
+    {
+      "symbol": "FET",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5.6e-05
     },
     {
       "symbol": "LTC",
@@ -87,7 +98,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6e-05
+      "funding": 6.3e-05
     },
     {
       "symbol": "SKHYB",
@@ -104,6 +115,14 @@
       ]
     },
     {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "SOXLB",
       "surfaces": 1,
       "sources": [
@@ -116,7 +135,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 8.9e-05
+      "funding": 9.5e-05
     },
     {
       "symbol": "UNI",
@@ -125,6 +144,14 @@
         "movers"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "WLD",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 9.5e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
