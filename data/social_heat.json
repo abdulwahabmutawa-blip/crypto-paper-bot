@@ -1,16 +1,17 @@
 {
-  "ts": "2026-10-28T01:23:46+00:00",
+  "ts": "2026-10-28T01:29:39+00:00",
   "sources": {
     "coingecko": [
       "SUI",
-      "ZEC",
-      "PENGU",
       "HYPE",
+      "PENGU",
+      "ZEC",
       "BTC",
       "NEAR",
-      "XRP",
-      "BONK",
-      "TAO"
+      "PUMP",
+      "ONDO",
+      "ICP",
+      "XRP"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -18,11 +19,11 @@
       "SOXLB",
       "PEPE",
       "ZEC",
-      "NEAR",
       "HYPE",
+      "NEAR",
       "SNDKB",
-      "SUI",
-      "XRP"
+      "XRP",
+      "SUI"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -55,7 +56,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 5.1e-05,
+      "funding": 4.9e-05,
       "long_short": 1.93
     },
     {
@@ -75,15 +76,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 3.7e-05,
+      "funding": 4e-05,
       "long_short": 0.66
-    },
-    {
-      "symbol": "BONK",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ]
     },
     {
       "symbol": "BTC",
@@ -91,7 +85,23 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.6e-05
+      "funding": 4.8e-05
+    },
+    {
+      "symbol": "ICP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 8.1e-05
+    },
+    {
+      "symbol": "ONDO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "PENGU",
@@ -109,6 +119,14 @@
       ]
     },
     {
+      "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "SNDKB",
       "surfaces": 1,
       "sources": [
@@ -121,14 +139,6 @@
       "sources": [
         "movers"
       ]
-    },
-    {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 4.7e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
