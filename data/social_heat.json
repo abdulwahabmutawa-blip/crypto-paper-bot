@@ -1,16 +1,17 @@
 {
-  "ts": "2026-10-28T23:17:09+00:00",
+  "ts": "2026-10-28T23:22:48+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
-      "PEPE",
       "SOL",
-      "SUI",
+      "PEPE",
       "XRP",
-      "NEAR",
-      "DOGE",
       "BTC",
-      "FET"
+      "SUI",
+      "NEAR",
+      "UNI",
+      "ETH",
+      "PUMP"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -47,12 +48,22 @@
       "long_short": 1.98
     },
     {
+      "symbol": "UNI",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.98
+    },
+    {
       "symbol": "BNB",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 0.000111
+      "funding": 0.000109
     },
     {
       "symbol": "BTC",
@@ -60,23 +71,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.4e-05
+      "funding": 7.3e-05
     },
     {
-      "symbol": "DOGE",
+      "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "FET",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 4.2e-05
+      "funding": 9.2e-05
     },
     {
       "symbol": "LTC",
@@ -96,6 +99,14 @@
     },
     {
       "symbol": "PENGU",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "PUMP",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -130,14 +141,6 @@
       "sources": [
         "movers"
       ]
-    },
-    {
-      "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "XRP",
