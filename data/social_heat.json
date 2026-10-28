@@ -1,16 +1,15 @@
 {
-  "ts": "2026-10-28T01:06:48+00:00",
+  "ts": "2026-10-28T01:12:31+00:00",
   "sources": {
     "coingecko": [
       "SUI",
       "ZEC",
-      "NEAR",
       "HYPE",
       "PENGU",
-      "PEPE",
-      "BONK",
-      "TAO",
-      "ONDO"
+      "BTC",
+      "NEAR",
+      "XRP",
+      "TAO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,7 +21,7 @@
       "NEAR",
       "SNDKB",
       "XRP",
-      "XAUT"
+      "SUI"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -49,12 +48,24 @@
       "long_short": 1.27
     },
     {
-      "symbol": "PEPE",
+      "symbol": "SUI",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
-      ]
+      ],
+      "funding": 5.5e-05,
+      "long_short": 1.93
+    },
+    {
+      "symbol": "XRP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.94
     },
     {
       "symbol": "ZEC",
@@ -63,23 +74,16 @@
         "coingecko",
         "movers"
       ],
-      "funding": 2.7e-05,
+      "funding": 3.1e-05,
       "long_short": 0.66
     },
     {
-      "symbol": "BONK",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ]
-    },
-    {
-      "symbol": "ONDO",
+      "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 4.6e-05
     },
     {
       "symbol": "PENGU",
@@ -88,6 +92,13 @@
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "PEPE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
     },
     {
       "symbol": "SNDKB",
@@ -104,36 +115,12 @@
       ]
     },
     {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 6e-05
-    },
-    {
       "symbol": "TAO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 3.3e-05
-    },
-    {
-      "symbol": "XAUT",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "XRP",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
+      "funding": 3.7e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
