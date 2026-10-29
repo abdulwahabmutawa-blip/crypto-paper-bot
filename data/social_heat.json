@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-29T17:51:10+00:00",
+  "ts": "2026-10-29T17:56:48+00:00",
   "sources": {
     "coingecko": [
       "HYPE",
@@ -21,7 +21,7 @@
       "ZEC",
       "UNI",
       "LINK",
-      "TRX"
+      "SUI"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -46,13 +46,23 @@
       ]
     },
     {
+      "symbol": "SUI",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.87
+    },
+    {
       "symbol": "ZEC",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 9.1e-05,
+      "funding": 9.4e-05,
       "long_short": 0.61
     },
     {
@@ -109,23 +119,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 2.1e-05
-    },
-    {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "TRX",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
+      "funding": 2.2e-05
     },
     {
       "symbol": "UNI",
