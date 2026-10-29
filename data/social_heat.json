@@ -1,14 +1,13 @@
 {
-  "ts": "2026-10-29T03:53:57+00:00",
+  "ts": "2026-10-29T03:59:48+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "LIT",
-      "PENGU",
       "PEPE",
-      "SOL",
+      "PENGU",
+      "BAT",
       "XRP",
-      "NEAR",
       "NXPC",
       "GALA"
     ],
@@ -31,12 +30,20 @@
       ]
     },
     {
+      "symbol": "BAT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 8e-06
+      "funding": 7e-06
     },
     {
       "symbol": "GALA",
@@ -44,7 +51,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.6e-05
+      "funding": 6.1e-05
     },
     {
       "symbol": "INIT",
@@ -52,7 +59,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000439
+      "funding": -0.000454
     },
     {
       "symbol": "LIT",
@@ -60,15 +67,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000139
-    },
-    {
-      "symbol": "NEAR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 4.7e-05
+      "funding": -0.00014
     },
     {
       "symbol": "NXPC",
@@ -85,14 +84,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "SOL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -2e-05
     },
     {
       "symbol": "XRP",
