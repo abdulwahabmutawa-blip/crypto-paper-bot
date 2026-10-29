@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-29T02:30:52+00:00",
+  "ts": "2026-10-29T02:36:09+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -19,21 +19,12 @@
       "INIT",
       "SKHYB",
       "LTC",
-      "PEPE",
       "BNB"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "PEPE",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ]
-    },
     {
       "symbol": "BNB",
       "surfaces": 1,
@@ -48,7 +39,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.2e-05
+      "funding": 2e-05
     },
     {
       "symbol": "ENA",
@@ -64,7 +55,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8e-06
+      "funding": 6e-06
     },
     {
       "symbol": "GRAM",
@@ -72,7 +63,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.2e-05
+      "funding": -1.7e-05
     },
     {
       "symbol": "HYPE",
@@ -80,7 +71,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3e-06
+      "funding": 6e-06
     },
     {
       "symbol": "INIT",
@@ -88,7 +79,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.00044
+      "funding": -0.000479
     },
     {
       "symbol": "LIT",
@@ -96,7 +87,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000118
+      "funding": -0.000127
     },
     {
       "symbol": "LTC",
@@ -104,7 +95,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.5e-05
+      "funding": 4.2e-05
     },
     {
       "symbol": "NEAR",
@@ -123,6 +114,13 @@
       "funding": 5e-05
     },
     {
+      "symbol": "PEPE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ]
+    },
+    {
       "symbol": "SKHYB",
       "surfaces": 1,
       "sources": [
@@ -135,7 +133,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.4e-05
+      "funding": 4.7e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
