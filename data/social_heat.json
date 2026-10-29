@@ -1,16 +1,17 @@
 {
-  "ts": "2026-10-29T14:04:30+00:00",
+  "ts": "2026-10-29T14:09:47+00:00",
   "sources": {
     "coingecko": [
       "HYPE",
       "LIT",
-      "BTC",
-      "SOL",
       "PENGU",
+      "SOL",
+      "BTC",
+      "SUI",
       "AERO",
+      "XMR",
       "NEAR",
-      "ENA",
-      "PENDLE"
+      "ENA"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,10 +20,10 @@
       "ENA",
       "PUMP",
       "UNI",
-      "LTC",
       "SUI",
       "SPCXB",
-      "SNDKB"
+      "LTC",
+      "SKHYB"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -49,6 +50,16 @@
       "long_short": 1.28
     },
     {
+      "symbol": "SUI",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 7.3e-05,
+      "long_short": 1.94
+    },
+    {
       "symbol": "AERO",
       "surfaces": 1,
       "sources": [
@@ -70,7 +81,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -6.6e-05
+      "funding": -5.7e-05
     },
     {
       "symbol": "LTC",
@@ -86,15 +97,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.1e-05
-    },
-    {
-      "symbol": "PENDLE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": 8e-05
     },
     {
       "symbol": "PENGU",
@@ -113,7 +116,7 @@
       "funding": 5e-05
     },
     {
-      "symbol": "SNDKB",
+      "symbol": "SKHYB",
       "surfaces": 1,
       "sources": [
         "movers"
@@ -135,20 +138,20 @@
       ]
     },
     {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 6.9e-05
-    },
-    {
       "symbol": "UNI",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 9.9e-05
+      "funding": 0.0001
+    },
+    {
+      "symbol": "XMR",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
