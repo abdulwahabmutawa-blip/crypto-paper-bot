@@ -1,9 +1,9 @@
 {
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "holding": "GOOGL",
-  "units": 3.5330991281425868,
-  "cash": 0.0,
+  "holding": "CASH",
+  "units": 0.0,
+  "cash": 994.8415030558986,
   "bench_units": 1.3319835726361926,
   "trades": [
     {
@@ -157,6 +157,25 @@
       "value": 1157.97,
       "fee": 1.45,
       "reason": "Most oversold mega-cap (z < -1.5) \u2014 buying the dip"
+    },
+    {
+      "date": "2026-10-29",
+      "action": "SELL",
+      "ticker": "GOOGL",
+      "price": 281.92999268,
+      "units": 3.5331,
+      "value": 996.09,
+      "fee": 1.25,
+      "reason": "TRAILING STOP \u2014 fell 12% from high-water $327.75"
+    },
+    {
+      "date": "2026-10-29",
+      "action": "TO CASH",
+      "ticker": "\u2014",
+      "price": 0,
+      "units": 0,
+      "value": 994.84,
+      "reason": "TRAILING STOP \u2014 fell 12% from high-water $327.75"
     }
   ],
   "history": [
@@ -604,15 +623,15 @@
       "value": 1150.41,
       "bench": 1028.76,
       "holding": "GOOGL"
+    },
+    {
+      "date": "2026-10-29",
+      "value": 994.84,
+      "bench": 1022.75,
+      "holding": "CASH"
     }
   ],
   "intraday": [
-    {
-      "ts": "2026-10-01T22:27:07+00:00",
-      "value": 1127.41,
-      "bench": 1017.66,
-      "holding": "JNJ"
-    },
     {
       "ts": "2026-10-01T22:44:58+00:00",
       "value": 1127.41,
@@ -9606,15 +9625,20 @@
       "value": 1150.41,
       "bench": 1028.76,
       "holding": "GOOGL"
+    },
+    {
+      "ts": "2026-10-29T13:36:29+00:00",
+      "value": 994.84,
+      "bench": 1022.75,
+      "holding": "CASH"
     }
   ],
-  "last_updated_utc": "2026-10-29T13:20:04+00:00",
+  "last_updated_utc": "2026-10-29T13:36:29+00:00",
   "feed_delayed": false,
-  "data_asof": "2026-10-28",
-  "costs_paid": 11.5632,
+  "data_asof": "2026-10-29",
+  "costs_paid": 12.8083,
   "stopped": {
-    "ticker": "HD",
-    "date": "2026-10-01"
-  },
-  "hwm": 327.75
+    "ticker": "GOOGL",
+    "date": "2026-10-29"
+  }
 }

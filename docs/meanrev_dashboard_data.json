@@ -1,104 +1,104 @@
 {
-  "generated_utc": "2026-10-29T13:20:04+00:00",
+  "generated_utc": "2026-10-29T13:36:29+00:00",
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "live_ts": "2026-10-28T19:55:00+00:00",
+  "live_ts": "2026-10-29T13:35:00+00:00",
   "current": {
-    "date": "2026-10-28",
-    "value": 1150.41,
-    "bench": 1028.76,
-    "holding": "GOOGL"
+    "date": "2026-10-29",
+    "value": 994.84,
+    "bench": 1022.75,
+    "holding": "CASH"
   },
   "board": [
     {
       "sym": "GOOGL",
-      "price": 325.61,
-      "line": "z -1.19",
+      "price": 281.93,
+      "line": "z -3.11",
       "tag": "HELD",
-      "on": false,
+      "on": true,
       "pick": true,
-      "fill": 19.779537005689853
-    },
-    {
-      "sym": "MRK",
-      "price": 140.99,
-      "line": "z -1.17",
-      "tag": "normal",
-      "on": false,
-      "pick": false,
-      "fill": 19.481485071302394
-    },
-    {
-      "sym": "NVDA",
-      "price": 215.39,
-      "line": "z -0.91",
-      "tag": "normal",
-      "on": false,
-      "pick": false,
-      "fill": 15.155700129596209
+      "fill": 50
     },
     {
       "sym": "AMZN",
-      "price": 254.65,
-      "line": "z -0.10",
+      "price": 243.25,
+      "line": "z -2.11",
+      "tag": "oversold",
+      "on": true,
+      "pick": false,
+      "fill": 35.17015433234503
+    },
+    {
+      "sym": "NVDA",
+      "price": 212.91,
+      "line": "z -1.06",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 1.7206634687697568
+      "fill": 17.719857734529697
     },
     {
       "sym": "MSFT",
-      "price": 530.83,
-      "line": "z +0.12",
+      "price": 531.49,
+      "line": "z +0.10",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": -2.060732365155996
+      "fill": -1.6956572915907218
     },
     {
       "sym": "KO",
-      "price": 91.86,
-      "line": "z +0.48",
+      "price": 92.6,
+      "line": "z +0.64",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": -8.030065289639404
-    },
-    {
-      "sym": "PEP",
-      "price": 132.67,
-      "line": "z +0.58",
-      "tag": "normal",
-      "on": false,
-      "pick": false,
-      "fill": -9.649346333696124
-    },
-    {
-      "sym": "AAPL",
-      "price": 343.86,
-      "line": "z +0.63",
-      "tag": "normal",
-      "on": false,
-      "pick": false,
-      "fill": -10.565790420676537
+      "fill": -10.72755780872393
     },
     {
       "sym": "UNH",
-      "price": 407.25,
-      "line": "z +0.65",
+      "price": 410.66,
+      "line": "z +0.74",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": -10.759830603676745
+      "fill": -12.36302735856664
+    },
+    {
+      "sym": "PEP",
+      "price": 133.84,
+      "line": "z +0.76",
+      "tag": "normal",
+      "on": false,
+      "pick": false,
+      "fill": -12.72904738804307
     },
     {
       "sym": "PG",
-      "price": 158.37,
-      "line": "z +0.75",
+      "price": 159.96,
+      "line": "z +0.93",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": -12.55017427859659
+      "fill": -15.554821699872381
+    },
+    {
+      "sym": "WMT",
+      "price": 120.4,
+      "line": "z +0.99",
+      "tag": "normal",
+      "on": false,
+      "pick": false,
+      "fill": -16.58161592780411
+    },
+    {
+      "sym": "MRK",
+      "price": 147.23,
+      "line": "z +1.01",
+      "tag": "normal",
+      "on": false,
+      "pick": false,
+      "fill": -16.83561631575866
     }
   ],
   "board_title": "16 mega-caps, most oversold first (z < -1.5 = buy zone)",
@@ -109,12 +109,6 @@
     "board_note": "Buys panic, sells relief: enter the most stretched mega-cap below -1.5 z, exit when it recovers to average."
   },
   "intraday": [
-    {
-      "ts": "2026-10-01T22:27:07+00:00",
-      "value": 1127.41,
-      "bench": 1017.66,
-      "holding": "JNJ"
-    },
     {
       "ts": "2026-10-01T22:44:58+00:00",
       "value": 1127.41,
@@ -9108,6 +9102,12 @@
       "value": 1150.41,
       "bench": 1028.76,
       "holding": "GOOGL"
+    },
+    {
+      "ts": "2026-10-29T13:36:29+00:00",
+      "value": 994.84,
+      "bench": 1022.75,
+      "holding": "CASH"
     }
   ],
   "trades": [
@@ -9262,6 +9262,25 @@
       "value": 1157.97,
       "fee": 1.45,
       "reason": "Most oversold mega-cap (z < -1.5) \u2014 buying the dip"
+    },
+    {
+      "date": "2026-10-29",
+      "action": "SELL",
+      "ticker": "GOOGL",
+      "price": 281.92999268,
+      "units": 3.5331,
+      "value": 996.09,
+      "fee": 1.25,
+      "reason": "TRAILING STOP \u2014 fell 12% from high-water $327.75"
+    },
+    {
+      "date": "2026-10-29",
+      "action": "TO CASH",
+      "ticker": "\u2014",
+      "price": 0,
+      "units": 0,
+      "value": 994.84,
+      "reason": "TRAILING STOP \u2014 fell 12% from high-water $327.75"
     }
   ],
   "history": [
@@ -9709,6 +9728,12 @@
       "value": 1150.41,
       "bench": 1028.76,
       "holding": "GOOGL"
+    },
+    {
+      "date": "2026-10-29",
+      "value": 994.84,
+      "bench": 1022.75,
+      "holding": "CASH"
     }
   ],
   "strategy": {
@@ -9717,7 +9742,7 @@
     "backtest_cagr": "+13.9%/yr since 2010 \u00b7 +9.7%/yr 2024+",
     "backtest_maxdd": "-57% (2010 era) \u00b7 verdict MIXED \u2014 this live run decides"
   },
-  "costs_paid": 11.5632,
+  "costs_paid": 12.8083,
   "frozen": null,
-  "thoughts": "I'm holding GOOGL. Most oversold mega-cap (z < -1.5) \u2014 buying the dip. I bought at $327.75; it's now $325.61 (-0.7% since I got in). My safety net: if the price falls to $288.42 (12% below its recent high), I sell automatically \u2014 no exceptions."
+  "thoughts": "I'm sitting in cash right now. Bounce harvested / nothing oversold \u2014 waiting in cash. I recently sold GOOGL after it fell too far, and my cooling-off rule stops me from buying it back for 5 days (so I don't catch a falling knife twice). I'd rather wait than force a trade \u2014 patience is part of my design."
 }
