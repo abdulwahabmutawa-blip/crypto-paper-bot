@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-29T20:16:13+00:00 · runs 4711 · equity **$593.56** (-40.64%) · cash $221.85 · open 6/10 · round trips 1678
+updated 2026-10-29T20:32:56+00:00 · runs 4712 · equity **$592.93** (-40.71%) · cash $221.85 · open 6/10 · round trips 1678
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,10 +36,10 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-29T01:59 | HBARUSDT | bottom | 0.07428 | 0.07275 | -2.06% |
-| 2026-10-29T02:48 | BTCUSDT | bottom | 79714 | 80393.7 | +0.85% |
-| 2026-10-29T05:27 | 币安人生USDT | surge | 0.5351 | 0.5359 | +0.15% |
-| 2026-10-29T13:36 | 牛来USDT | surge | 0.06099 | 0.06021 | -1.28% |
-| 2026-10-29T14:09 | XRPUSDT | bottom | 1.291 | 1.2695 | -1.67% |
+| 2026-10-29T01:59 | HBARUSDT | bottom | 0.07428 | 0.07246 | -2.45% |
+| 2026-10-29T02:48 | BTCUSDT | bottom | 79714 | 80330.7 | +0.77% |
+| 2026-10-29T05:27 | 币安人生USDT | surge | 0.5351 | 0.5322 | -0.54% |
+| 2026-10-29T13:36 | 牛来USDT | surge | 0.06099 | 0.06025 | -1.21% |
+| 2026-10-29T14:09 | XRPUSDT | bottom | 1.291 | 1.2693 | -1.68% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
