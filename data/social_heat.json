@@ -1,17 +1,17 @@
 {
-  "ts": "2026-10-29T00:44:38+00:00",
+  "ts": "2026-10-29T00:49:49+00:00",
   "sources": {
     "coingecko": [
       "PEPE",
       "PENGU",
-      "CHIP",
-      "XRP",
-      "SEI",
-      "ONDO",
-      "ETH",
-      "DOGE",
       "PUMP",
-      "HYPE"
+      "XRP",
+      "DOGE",
+      "SEI",
+      "CHIP",
+      "ONDO",
+      "BTC",
+      "UNI"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -38,12 +38,30 @@
       ]
     },
     {
+      "symbol": "UNI",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.95
+    },
+    {
       "symbol": "BNB",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 5.7e-05
+      "funding": 5.3e-05
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5.1e-05
     },
     {
       "symbol": "CHIP",
@@ -62,28 +80,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "ETH",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5.8e-05
-    },
-    {
-      "symbol": "HYPE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 2e-05
-    },
-    {
       "symbol": "INIT",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -0.000388
+      "funding": -0.000395
     },
     {
       "symbol": "LTC",
@@ -145,14 +147,6 @@
       "sources": [
         "movers"
       ]
-    },
-    {
-      "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "XRP",
