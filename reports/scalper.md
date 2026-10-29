@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-29T13:37:56+00:00 · runs 4687 · equity **$603.12** (-39.69%) · cash $116.31 · open 8/10 · round trips 1670
+updated 2026-10-29T13:54:21+00:00 · runs 4688 · equity **$605.64** (-39.44%) · cash $116.31 · open 8/10 · round trips 1670
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,12 +36,12 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-28T13:49 | SPCXBUSDT | bottom | 144.87 | 142.15 | -1.88% |
-| 2026-10-29T01:59 | SOXSBUSDT | surge | 42.98 | 42.32 | -1.54% |
-| 2026-10-29T01:59 | HBARUSDT | bottom | 0.07428 | 0.07425 | -0.04% |
-| 2026-10-29T02:48 | BTCUSDT | bottom | 79714 | 80128.3 | +0.52% |
-| 2026-10-29T05:27 | 币安人生USDT | surge | 0.5351 | 0.5363 | +0.22% |
-| 2026-10-29T13:03 | AVAUSDT | surge | 0.3389 | 0.3316 | -2.15% |
-| 2026-10-29T13:36 | 牛来USDT | surge | 0.06099 | 0.06089 | -0.16% |
+| 2026-10-28T13:49 | SPCXBUSDT | bottom | 144.87 | 142.73 | -1.48% |
+| 2026-10-29T01:59 | SOXSBUSDT | surge | 42.98 | 43.13 | +0.35% |
+| 2026-10-29T01:59 | HBARUSDT | bottom | 0.07428 | 0.07445 | +0.23% |
+| 2026-10-29T02:48 | BTCUSDT | bottom | 79714 | 80198 | +0.61% |
+| 2026-10-29T05:27 | 币安人生USDT | surge | 0.5351 | 0.5359 | +0.15% |
+| 2026-10-29T13:03 | AVAUSDT | surge | 0.3389 | 0.3309 | -2.36% |
+| 2026-10-29T13:36 | 牛来USDT | surge | 0.06099 | 0.0621 | +1.82% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
