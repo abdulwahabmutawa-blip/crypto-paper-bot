@@ -1,18 +1,17 @@
 {
-  "ts": "2026-10-29T17:34:57+00:00",
+  "ts": "2026-10-29T17:40:41+00:00",
   "sources": {
     "coingecko": [
       "HYPE",
       "PENGU",
-      "LIT",
-      "PEPE",
-      "SUI",
       "ZEC",
+      "PEPE",
       "ETH",
-      "PUMP",
-      "BTC",
+      "SUI",
+      "LIT",
       "NEAR",
-      "LINK"
+      "BTC",
+      "PUMP"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -41,16 +40,6 @@
       "long_short": 1.02
     },
     {
-      "symbol": "LINK",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.63
-    },
-    {
       "symbol": "PEPE",
       "surfaces": 2,
       "sources": [
@@ -65,7 +54,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 2.7e-05,
+      "funding": 2.4e-05,
       "long_short": 0.81
     },
     {
@@ -85,7 +74,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 8.4e-05
+      "funding": 8.4e-05,
+      "long_short": 0.61
     },
     {
       "symbol": "BTC",
@@ -108,6 +98,14 @@
       "surfaces": 1,
       "sources": [
         "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "LINK",
+      "surfaces": 1,
+      "sources": [
+        "movers"
       ],
       "funding": 0.0001
     },
