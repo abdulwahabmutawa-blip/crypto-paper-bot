@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-29T20:32:22+00:00",
+  "ts": "2026-10-29T20:37:57+00:00",
   "sources": {
     "coingecko": [
       "HYPE",
@@ -16,8 +16,6 @@
     "movers": [
       "PARTI",
       "HYPE",
-      "PEPE",
-      "ZEC",
       "TRX",
       "U",
       "RLUSD"
@@ -37,24 +35,6 @@
       "long_short": 0.87
     },
     {
-      "symbol": "PEPE",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ]
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 1.9e-05,
-      "long_short": 0.63
-    },
-    {
       "symbol": "LIT",
       "surfaces": 1,
       "sources": [
@@ -68,7 +48,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.009151
+      "funding": -0.008967
     },
     {
       "symbol": "PENGU",
@@ -79,12 +59,19 @@
       "funding": 5e-05
     },
     {
+      "symbol": "PEPE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ]
+    },
+    {
       "symbol": "PUMP",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -1e-05
+      "funding": -1.2e-05
     },
     {
       "symbol": "RLUSD",
@@ -107,7 +94,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.3e-05
+      "funding": -1.7e-05
     },
     {
       "symbol": "TRX",
@@ -115,7 +102,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 8.2e-05
+      "funding": 8e-05
     },
     {
       "symbol": "U",
@@ -123,6 +110,14 @@
       "sources": [
         "movers"
       ]
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 1.4e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
