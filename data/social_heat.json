@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-29T02:36:09+00:00",
+  "ts": "2026-10-29T02:41:46+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -7,11 +7,11 @@
       "SOL",
       "HYPE",
       "PENGU",
-      "LIT",
       "NEAR",
-      "ENA",
       "ETH",
-      "GRAM"
+      "PUMP",
+      "AI",
+      "ENA"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -26,6 +26,14 @@
   },
   "heat": [
     {
+      "symbol": "AI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0
+    },
+    {
       "symbol": "BNB",
       "surfaces": 1,
       "sources": [
@@ -39,7 +47,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2e-05
+      "funding": 1.9e-05
     },
     {
       "symbol": "ENA",
@@ -58,20 +66,12 @@
       "funding": 6e-06
     },
     {
-      "symbol": "GRAM",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -1.7e-05
-    },
-    {
       "symbol": "HYPE",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 6e-06
+      "funding": 3e-06
     },
     {
       "symbol": "INIT",
@@ -79,15 +79,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000479
-    },
-    {
-      "symbol": "LIT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -0.000127
+      "funding": -0.000464
     },
     {
       "symbol": "LTC",
@@ -95,7 +87,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.2e-05
+      "funding": 4e-05
     },
     {
       "symbol": "NEAR",
@@ -121,6 +113,14 @@
       ]
     },
     {
+      "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "SKHYB",
       "surfaces": 1,
       "sources": [
@@ -133,7 +133,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.7e-05
+      "funding": 4.3e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
