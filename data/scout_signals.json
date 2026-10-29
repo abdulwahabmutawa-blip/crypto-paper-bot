@@ -1,8 +1,39 @@
 {
-  "ts": "2026-10-29T10:31:51+00:00",
-  "scanned": 109,
+  "ts": "2026-10-29T10:37:24+00:00",
+  "scanned": 110,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "DRAMBUSDT",
+      "signal": "ignition",
+      "score": 0.9133,
+      "raw_score": 0.9737,
+      "weight": 0.938,
+      "price": 52.25,
+      "why": "trades 52.8x and volume 151.7x the prior 4h, 95% taker-buy, $80,810 burst \u2014 while price has only moved +0.5%",
+      "chg_24h": -0.0166,
+      "vol_surge": 151.72,
+      "chg_1h": 0.0054,
+      "market_surge": 4.58,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.21% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "CHIPUSDT",
+      "signal": "ignition",
+      "score": 0.764,
+      "raw_score": 0.8145,
+      "weight": 0.938,
+      "price": 0.04802,
+      "why": "trades 8.3x and volume 9.8x the prior 4h, 62% taker-buy, $51,515 burst \u2014 while price has only moved +0.8%",
+      "chg_24h": -0.1002,
+      "vol_surge": 9.8,
+      "chg_1h": 0.008,
+      "market_surge": 0.0,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.21% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.21% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -1.59% at 24h: market beta, not signal",
