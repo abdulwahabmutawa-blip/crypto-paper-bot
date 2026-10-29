@@ -1,28 +1,26 @@
 {
-  "ts": "2026-10-29T13:07:43+00:00",
+  "ts": "2026-10-29T13:13:29+00:00",
   "sources": {
     "coingecko": [
       "HYPE",
       "LIT",
-      "PENGU",
       "BTC",
       "PEPE",
-      "AERO",
+      "PENGU",
       "ETH",
-      "AAVE",
-      "INJ"
+      "AERO"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "HYPE",
-      "PUMP",
       "SKHYB",
+      "PUMP",
       "ENA",
       "UNI",
-      "LTC",
       "SNDKB",
-      "SUI"
+      "LTC",
+      "PEPE"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -39,12 +37,12 @@
       "long_short": 1.37
     },
     {
-      "symbol": "AAVE",
-      "surfaces": 1,
+      "symbol": "PEPE",
+      "surfaces": 2,
       "sources": [
-        "coingecko"
-      ],
-      "funding": 6.7e-05
+        "coingecko",
+        "movers"
+      ]
     },
     {
       "symbol": "AERO",
@@ -52,7 +50,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.4e-05
+      "funding": 4.1e-05
     },
     {
       "symbol": "BTC",
@@ -76,15 +74,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.7e-05
-    },
-    {
-      "symbol": "INJ",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": 8.5e-05
     },
     {
       "symbol": "LIT",
@@ -92,7 +82,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.0001
+      "funding": -0.000105
     },
     {
       "symbol": "LTC",
@@ -109,13 +99,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "PEPE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ]
     },
     {
       "symbol": "PUMP",
@@ -138,14 +121,6 @@
       "sources": [
         "movers"
       ]
-    },
-    {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 7.2e-05
     },
     {
       "symbol": "UNI",
