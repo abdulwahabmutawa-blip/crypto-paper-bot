@@ -1,16 +1,17 @@
 {
-  "ts": "2026-10-29T15:22:48+00:00",
+  "ts": "2026-10-29T15:28:16+00:00",
   "sources": {
     "coingecko": [
       "HYPE",
       "LIT",
       "BTC",
       "PENGU",
+      "ETH",
       "NEAR",
+      "SOL",
       "INJ",
-      "SUI",
-      "BNB",
-      "LINK"
+      "LINK",
+      "PEPE"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -18,8 +19,8 @@
       "HYPE",
       "ENA",
       "PUMP",
-      "PEPE",
       "UNI",
+      "PEPE",
       "ZEC",
       "LINK",
       "SUI"
@@ -49,22 +50,12 @@
       "long_short": 1.63
     },
     {
-      "symbol": "SUI",
+      "symbol": "PEPE",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
-      ],
-      "funding": 9.6e-05,
-      "long_short": 1.9
-    },
-    {
-      "symbol": "BNB",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 3.7e-05
+      ]
     },
     {
       "symbol": "BTC",
@@ -81,6 +72,14 @@
         "movers"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "ETH",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "INJ",
@@ -115,19 +114,28 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PEPE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
-    },
-    {
       "symbol": "PUMP",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 9.7e-05
     },
     {
       "symbol": "UNI",
