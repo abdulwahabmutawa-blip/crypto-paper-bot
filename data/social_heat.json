@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-29T03:48:11+00:00",
+  "ts": "2026-10-29T03:53:57+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -15,19 +15,28 @@
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "INIT"
+      "INIT",
+      "PEPE"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
     {
+      "symbol": "PEPE",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ]
+    },
+    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 9e-06
+      "funding": 8e-06
     },
     {
       "symbol": "GALA",
@@ -35,7 +44,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 5.6e-05
     },
     {
       "symbol": "INIT",
@@ -43,7 +52,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000456
+      "funding": -0.000439
     },
     {
       "symbol": "LIT",
@@ -59,7 +68,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.6e-05
+      "funding": 4.7e-05
     },
     {
       "symbol": "NXPC",
@@ -78,19 +87,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PEPE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ]
-    },
-    {
       "symbol": "SOL",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -1.5e-05
+      "funding": -2e-05
     },
     {
       "symbol": "XRP",
