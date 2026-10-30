@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-30T14:54:46+00:00",
+  "ts": "2026-10-30T15:00:27+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -7,14 +7,13 @@
       "SOL",
       "BEAM",
       "PENGU",
-      "PEPE",
-      "LIT",
-      "UNI",
-      "NEAR",
       "AERO",
-      "FET",
+      "SUI",
       "LINK",
-      "SUI"
+      "NEAR",
+      "AAVE",
+      "PEPE",
+      "ETH"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -25,7 +24,8 @@
       "HYPE",
       "XPL",
       "TRX",
-      "RLUSD"
+      "RLUSD",
+      "RWUSD"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -48,6 +48,14 @@
         "coingecko",
         "movers"
       ]
+    },
+    {
+      "symbol": "AAVE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -8.1e-05
     },
     {
       "symbol": "AERO",
@@ -81,12 +89,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "FET",
+      "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 9.7e-05
+      "funding": -3.4e-05
     },
     {
       "symbol": "LINK",
@@ -95,14 +103,6 @@
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "LIT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "NEAR",
@@ -118,7 +118,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -7.7e-05
+      "funding": -7.3e-05
     },
     {
       "symbol": "PENGU",
@@ -130,6 +130,13 @@
     },
     {
       "symbol": "RLUSD",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
+    },
+    {
+      "symbol": "RWUSD",
       "surfaces": 1,
       "sources": [
         "movers"
@@ -157,15 +164,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001178
-    },
-    {
-      "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": -0.001123
     },
     {
       "symbol": "XPL",
