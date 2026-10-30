@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-30T15:22:07+00:00",
+  "ts": "2026-10-30T15:27:34+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -25,23 +25,12 @@
       "PEPE",
       "XPL",
       "TRX",
-      "HYPE",
       "RLUSD"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "HYPE",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.24
-    },
     {
       "symbol": "PEPE",
       "surfaces": 2,
@@ -56,7 +45,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -9.5e-05
+      "funding": -9.7e-05
     },
     {
       "symbol": "BEAM",
@@ -95,7 +84,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.6e-05
+      "funding": -3.1e-05
     },
     {
       "symbol": "FET",
@@ -103,7 +92,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.3e-05
+      "funding": 7.5e-05
+    },
+    {
+      "symbol": "HYPE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "LINK",
@@ -166,7 +163,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000882
+      "funding": -0.000817
     },
     {
       "symbol": "XPL",
@@ -182,7 +179,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.2e-05
+      "funding": 6.7e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
