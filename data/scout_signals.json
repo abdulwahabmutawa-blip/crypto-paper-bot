@@ -1,22 +1,56 @@
 {
-  "ts": "2026-10-30T13:21:19+00:00",
-  "scanned": 157,
+  "ts": "2026-10-30T13:26:45+00:00",
+  "scanned": 160,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "HEIUSDT",
-      "signal": "revival",
-      "score": 0.5251,
-      "raw_score": 0.5714,
-      "weight": 0.919,
-      "price": 0.1057,
-      "why": "revival day-one: fell -12% last week on $0.35M/day quiet, volume arriving 7.9x today, only +18% off its 30d low \u00b7 serial exploder: 7 runs in 2y",
-      "chg_24h": 0.0242,
-      "vol_surge": 7.9,
-      "chg_1h": null,
-      "market_surge": null,
+      "symbol": "BCHUSDT",
+      "signal": "ignition",
+      "score": 0.6165,
+      "raw_score": 0.6664,
+      "weight": 0.925,
+      "price": 286.4,
+      "why": "trades 5.7x and volume 8.4x the prior 4h, 63% taker-buy, $109,435 burst \u2014 while price has only moved +1.1%",
+      "chg_24h": 0.0269,
+      "vol_surge": 8.41,
+      "chg_1h": 0.0113,
+      "market_surge": 1.77,
       "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -1.69% at 24h: market beta, not signal"
+      "status": "benched \u2014 BTC-excess day mean -0.46% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "SNXXBUSDT",
+      "signal": "reversion",
+      "score": 0.4598,
+      "raw_score": 0.4503,
+      "weight": 1.021,
+      "price": 7.71,
+      "why": "down -22% on the day (bottom decile of the market), now +0.8% over 15m with 2 green candles",
+      "chg_24h": -0.2237,
+      "vol_surge": 3.3,
+      "chg_1h": 0.0158,
+      "market_surge": 2.48,
+      "oi_drop": null,
+      "funding": null,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -2.14% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "SOXLBUSDT",
+      "signal": "reversion",
+      "score": 0.3205,
+      "raw_score": 0.314,
+      "weight": 1.021,
+      "price": 81.77,
+      "why": "down -19% on the day (bottom decile of the market), now +0.5% over 15m with 4 green candles",
+      "chg_24h": -0.1912,
+      "vol_surge": 0.79,
+      "chg_1h": -0.0051,
+      "market_surge": 0.0,
+      "oi_drop": null,
+      "funding": null,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -2.14% at 24h: market beta, not signal"
     }
   ],
   "gate": {
@@ -27,7 +61,7 @@
     "revival": "benched \u2014 BTC-excess day mean -1.69% at 24h: market beta, not signal"
   },
   "breadth": {
-    "count": 14,
+    "count": 13,
     "baseline": 11.0,
     "wave": false
   },
