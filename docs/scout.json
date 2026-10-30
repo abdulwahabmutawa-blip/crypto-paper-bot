@@ -1,8 +1,24 @@
 {
-  "ts": "2026-10-30T09:21:42+00:00",
-  "scanned": 152,
+  "ts": "2026-10-30T09:27:40+00:00",
+  "scanned": 156,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "GRAMUSDT",
+      "signal": "ignition",
+      "score": 0.5698,
+      "raw_score": 0.6194,
+      "weight": 0.92,
+      "price": 1.175,
+      "why": "trades 4.2x and volume 8.7x the prior 4h, 66% taker-buy, $83,431 burst \u2014 while price has only moved -1.2%",
+      "chg_24h": -0.0337,
+      "vol_surge": 8.69,
+      "chg_1h": -0.0118,
+      "market_surge": 0.58,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.50% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.50% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -1.75% at 24h: market beta, not signal",
