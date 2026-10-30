@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-30T06:49:54+00:00 · runs 4750 · equity **$585.56** (-41.44%) · cash $277.98 · open 5/10 · round trips 1683
+updated 2026-10-30T07:06:19+00:00 · runs 4751 · equity **$585.49** (-41.45%) · cash $277.98 · open 5/10 · round trips 1683
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,9 +36,9 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-30T06:15 | XPLUSDT | surge | 0.07677 | 0.0764 | -0.48% |
-| 2026-10-30T06:32 | RUNEUSDT | surge | 0.687 | 0.686 | -0.15% |
-| 2026-10-30T06:32 | WLFIUSDT | surge | 0.0521 | 0.0514 | -1.34% |
-| 2026-10-30T06:48 | TRXUSDT | bottom | 0.3341 | 0.3348 | +0.21% |
+| 2026-10-30T06:15 | XPLUSDT | surge | 0.07677 | 0.07694 | +0.22% |
+| 2026-10-30T06:32 | RUNEUSDT | surge | 0.687 | 0.677 | -1.46% |
+| 2026-10-30T06:32 | WLFIUSDT | surge | 0.0521 | 0.0515 | -1.15% |
+| 2026-10-30T06:48 | TRXUSDT | bottom | 0.3341 | 0.3358 | +0.51% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._

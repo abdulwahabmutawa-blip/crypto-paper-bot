@@ -1,6 +1,6 @@
 # Small-wins lab — paper study (owner request 2026-09-04)
 
-updated 2026-10-30T06:51:32+00:00 · runs 4820 · open 193 · resolved 20000 · cost 0.25%/RT
+updated 2026-10-30T07:07:57+00:00 · runs 4821 · open 192 · resolved 20000 · cost 0.25%/RT
 
 PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst day > -3 units.
 
@@ -14,8 +14,8 @@ PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst
 | btc_lag|t3|s2|h12 | 35 | 1 | 35.0 | 46% | 45% | +0.04% | 46% | 54% | 0% | +1.3% | watch |
 | ignition|t5|s3|h48 | 102 | 8 | 12.8 | 41% | 41% | -0.04% | 33% | 50% | 17% | -39.8% | fail |
 | ignition|t3|s3|h24 | 123 | 8 | 15.4 | 48% | 54% | -0.05% | 45% | 36% | 20% | -24.3% | fail |
+| range_bottom|t4|s2|h24 | 483 | 8 | 60.4 | 41% | 38% | -0.06% | 28% | 55% | 17% | -118.2% | fail |
 | range_bottom|t3|s3|h24 | 430 | 8 | 53.8 | 53% | 54% | -0.07% | 44% | 40% | 16% | -121.7% | fail |
-| range_bottom|t4|s2|h24 | 484 | 8 | 60.5 | 41% | 38% | -0.07% | 27% | 55% | 17% | -118.2% | fail |
 | ignition|t2|s2|h8 | 173 | 8 | 21.6 | 51% | 56% | -0.08% | 42% | 34% | 24% | -12.8% | fail |
 | ignition|t3|s2|h12 | 142 | 8 | 17.8 | 39% | 45% | -0.10% | 33% | 43% | 24% | -24.5% | fail |
 | range_bottom|t3|s2|h12 | 549 | 8 | 68.6 | 44% | 45% | -0.12% | 30% | 46% | 24% | -108.3% | fail |
@@ -24,7 +24,7 @@ PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst
 | range_bottom|t2|s2|h8 | 650 | 8 | 81.2 | 51% | 56% | -0.14% | 41% | 38% | 22% | -82.7% | fail |
 | ignition|t1.5|s1.5|h8 | 207 | 8 | 25.9 | 50% | 58% | -0.15% | 45% | 39% | 16% | -18.5% | fail |
 | ignition|t1.5|s1|h8 | 242 | 8 | 30.2 | 43% | 50% | -0.15% | 39% | 50% | 11% | -17.0% | fail |
-| range_bottom|t1|s1|h6 | 1190 | 8 | 148.8 | 53% | 62% | -0.17% | 52% | 44% | 5% | -67.3% | fail |
+| range_bottom|t1|s1|h6 | 1191 | 8 | 148.9 | 53% | 62% | -0.17% | 52% | 44% | 5% | -67.3% | fail |
 | dip_mid|t2|s2|h8 | 420 | 8 | 52.5 | 51% | 56% | -0.18% | 50% | 47% | 3% | -44.4% | fail |
 | range_bottom|t3|s4|h48 | 369 | 8 | 46.1 | 56% | 61% | -0.21% | 50% | 37% | 13% | -108.7% | fail |
 | dip_mid|t1.5|s1.5|h8 | 475 | 7 | 67.9 | 51% | 58% | -0.22% | 51% | 48% | 1% | -50.8% | fail |
