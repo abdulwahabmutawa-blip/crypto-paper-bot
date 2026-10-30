@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-30T20:49:18+00:00",
+  "ts": "2026-10-30T20:55:08+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -21,17 +21,27 @@
     "movers": [
       "BEAMX",
       "UNI",
-      "ARB",
-      "WLD",
       "ONDO",
+      "WLD",
       "NEAR",
+      "SUI",
       "ADA",
-      "SUI"
+      "LINK"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "LINK",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -9e-06,
+      "long_short": 1.68
+    },
     {
       "symbol": "NEAR",
       "surfaces": 2,
@@ -39,7 +49,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -3.3e-05,
+      "funding": -3.2e-05,
       "long_short": 1.16
     },
     {
@@ -49,7 +59,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 5.4e-05,
+      "funding": 6.1e-05,
       "long_short": 1.92
     },
     {
@@ -59,7 +69,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 9e-06,
+      "funding": 7e-06,
       "long_short": 1.64
     },
     {
@@ -69,14 +79,6 @@
         "movers"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "ARB",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 9.1e-05
     },
     {
       "symbol": "BEAM",
@@ -115,7 +117,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000202
+      "funding": -0.000204
     },
     {
       "symbol": "HYPE",
@@ -124,14 +126,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "LINK",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -8e-06
     },
     {
       "symbol": "LIT",
@@ -163,7 +157,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6e-06
+      "funding": 1e-05
     },
     {
       "symbol": "SOL",
@@ -171,7 +165,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -8.6e-05
+      "funding": -8.8e-05
     },
     {
       "symbol": "WLD",
@@ -179,7 +173,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001194
+      "funding": -0.001139
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
