@@ -1,18 +1,19 @@
 {
-  "ts": "2026-10-30T14:38:24+00:00",
+  "ts": "2026-10-30T14:43:38+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "HYPE",
-      "PEPE",
       "SOL",
       "BEAM",
+      "PEPE",
       "UNI",
-      "BNB",
-      "LIT",
       "SUI",
-      "ENA",
-      "FET"
+      "LIT",
+      "BNB",
+      "PENGU",
+      "NEAR",
+      "AERO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,6 +21,7 @@
       "PARTI",
       "BEAMX",
       "PEPE",
+      "HYPE",
       "XPL",
       "TRX",
       "RLUSD"
@@ -29,12 +31,30 @@
   },
   "heat": [
     {
+      "symbol": "HYPE",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.29
+    },
+    {
       "symbol": "PEPE",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ]
+    },
+    {
+      "symbol": "AERO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "BEAM",
@@ -68,30 +88,6 @@
       "funding": 0.0001
     },
     {
-      "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 3e-06
-    },
-    {
-      "symbol": "FET",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "HYPE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "LIT",
       "surfaces": 1,
       "sources": [
@@ -100,12 +96,28 @@
       "funding": 5e-05
     },
     {
+      "symbol": "NEAR",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "PARTI",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -5e-05
+      "funding": -5.6e-05
+    },
+    {
+      "symbol": "PENGU",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "RLUSD",
@@ -128,7 +140,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9e-05
+      "funding": 9.5e-05
     },
     {
       "symbol": "TRX",
@@ -136,7 +148,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.0013
+      "funding": -0.001273
     },
     {
       "symbol": "UNI",
