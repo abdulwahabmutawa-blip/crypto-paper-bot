@@ -2,20 +2,21 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-30T23:31:14+00:00 · runs 4808 · equity **$584.92** (-41.51%) · cash $332.02 · open 4/10 · round trips 1686
+updated 2026-10-30T23:48:16+00:00 · runs 4809 · equity **$585.52** (-41.45%) · cash $333.32 · open 4/10 · round trips 1687
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
-- hit 48% (break-even 54%) · mean -0.32%/trade · realized $-415.55 · worst day $-50.94 · trades/day 30.1
+- hit 48% (break-even 54%) · mean -0.32%/trade · realized $-414.03 · worst day $-50.94 · trades/day 30.1
 
 | shape | n | hit | mean | target% | stop% | time% |
 |---|---|---|---|---|---|---|
-| surge | 1469 | 48% | -0.29% | 46% | 47% | 7% |
+| surge | 1470 | 48% | -0.28% | 46% | 47% | 7% |
 | bottom | 217 | 42% | -0.52% | 36% | 45% | 19% |
 
 ## Last 15 round trips
 | exit (UTC) | coin | shape | how | hours | net | P&L |
 |---|---|---|---|---|---|---|
+| 2026-10-30T23:46 | OPUSDT | surge | TARGET | 0.2 | +2.75% | $+1.52 |
 | 2026-10-30T15:50 | XPLUSDT | surge | TARGET | 8.8 | +2.75% | $+1.53 |
 | 2026-10-30T10:41 | WLFIUSDT | surge | STOP | 3.8 | -3.25% | $-1.81 |
 | 2026-10-30T07:58 | RUNEUSDT | surge | STOP | 1.2 | -3.25% | $-1.81 |
@@ -30,14 +31,13 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | 2026-10-29T20:14 | BEBUSDT | surge | STOP | 6.0 | -3.25% | $-1.89 |
 | 2026-10-29T14:31 | SOXSBUSDT | surge | STOP | 12.5 | -3.25% | $-1.88 |
 | 2026-10-29T14:13 | LSKUSDT | surge | TARGET | 0.0 | +2.75% | $+1.60 |
-| 2026-10-29T14:13 | AVAUSDT | surge | STOP | 1.0 | -3.25% | $-1.87 |
 
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-30T06:48 | TRXUSDT | bottom | 0.3341 | 0.3293 | -1.44% |
-| 2026-10-30T23:29 | OPUSDT | surge | 0.1174 | 0.1194 | +1.70% |
-| 2026-10-30T23:29 | HYPEUSDT | bottom | 89.24 | 89.77 | +0.59% |
+| 2026-10-30T06:48 | TRXUSDT | bottom | 0.3341 | 0.3287 | -1.62% |
+| 2026-10-30T23:29 | HYPEUSDT | bottom | 89.24 | 90.06 | +0.92% |
+| 2026-10-30T23:46 | PENDLEUSDT | surge | 1.848 | 1.846 | -0.11% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
