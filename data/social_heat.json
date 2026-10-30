@@ -1,33 +1,38 @@
 {
-  "ts": "2026-10-30T16:45:11+00:00",
+  "ts": "2026-10-30T16:50:18+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "HYPE",
       "BNB",
       "NEAR",
-      "PENGU",
-      "PEPE",
-      "ENA",
       "PUMP",
+      "PEPE",
       "SUI",
+      "BEAM",
+      "PENGU",
       "LIT",
       "UNI",
-      "TAO"
+      "ENA"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "BEAMX",
       "PARTI",
-      "TRX",
-      "ZRO",
-      "RWUSD"
+      "TRX"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "BEAM",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ]
+    },
     {
       "symbol": "BEAMX",
       "surfaces": 1,
@@ -58,7 +63,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.4e-05
+      "funding": 2.5e-05
     },
     {
       "symbol": "HYPE",
@@ -90,7 +95,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -2.7e-05
+      "funding": -2.2e-05
     },
     {
       "symbol": "PENGU",
@@ -116,27 +121,12 @@
       "funding": 2.3e-05
     },
     {
-      "symbol": "RWUSD",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
-    },
-    {
       "symbol": "SUI",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 6.9e-05
-    },
-    {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -4.1e-05
+      "funding": 6.8e-05
     },
     {
       "symbol": "TRX",
@@ -144,7 +134,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000277
+      "funding": -0.000267
     },
     {
       "symbol": "UNI",
@@ -153,14 +143,6 @@
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "ZRO",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 3.8e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
