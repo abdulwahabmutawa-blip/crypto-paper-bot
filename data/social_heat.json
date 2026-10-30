@@ -1,19 +1,20 @@
 {
-  "ts": "2026-10-30T10:24:35+00:00",
+  "ts": "2026-10-30T10:30:07+00:00",
   "sources": {
     "coingecko": [
       "HYPE",
-      "BNB",
       "BEAM",
+      "BNB",
       "BTC",
-      "AAVE",
       "PEPE",
+      "AAVE",
       "UNI",
       "SOL",
-      "ENA",
-      "QNT",
       "AERO",
-      "TAO"
+      "PENGU",
+      "ENA",
+      "NEAR",
+      "ASTER"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,9 +23,9 @@
       "HYPE",
       "ZRO",
       "PEPE",
-      "QNT",
       "TRX",
       "ZEC",
+      "QNT",
       "U"
     ],
     "watcher": [],
@@ -50,22 +51,12 @@
       ]
     },
     {
-      "symbol": "QNT",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": -0.000145,
-      "long_short": 1.12
-    },
-    {
       "symbol": "AAVE",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 1e-06
+      "funding": 4e-06
     },
     {
       "symbol": "AERO",
@@ -73,7 +64,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -3.2e-05
+      "funding": -3e-05
+    },
+    {
+      "symbol": "ASTER",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "BEAM",
@@ -96,7 +95,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.8e-05
+      "funding": 7e-05
     },
     {
       "symbol": "ENA",
@@ -107,12 +106,36 @@
       "funding": 5e-05
     },
     {
+      "symbol": "NEAR",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -3e-06
+    },
+    {
       "symbol": "PARTI",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -0.000137
+      "funding": -0.000132
+    },
+    {
+      "symbol": "PENGU",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 3.9e-05
+    },
+    {
+      "symbol": "QNT",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -0.000142
     },
     {
       "symbol": "SOL",
@@ -120,15 +143,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.4e-05
-    },
-    {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": 0.0001
     },
     {
       "symbol": "TRX",
@@ -136,7 +151,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000507
+      "funding": -0.000567
     },
     {
       "symbol": "U",
