@@ -2625,29 +2625,6 @@
   },
   {
    "symbol": "GOOGLBUSDT",
-   "tactic": "range_bottom|t1|s1|h6",
-   "shape": "range_bottom",
-   "target": 0.01,
-   "stop": 0.01,
-   "max_h": 6,
-   "entry": 278.55,
-   "entry_ms": 1793384099999,
-   "entry_ts": "2026-10-30T18:23:30+00:00",
-   "feat": {
-    "r1h": -0.00258,
-    "r4h": -0.00589,
-    "r24": -0.01426,
-    "v4h": 1.24757,
-    "tbs4h": 0.41662,
-    "rp24": 0.08621,
-    "rng24": 0.02295,
-    "btc1": -0.00359,
-    "btc4": 0.00233,
-    "btc24": -0.0459
-   }
-  },
-  {
-   "symbol": "GOOGLBUSDT",
    "tactic": "range_bottom|t1.5|s1.5|h8",
    "shape": "range_bottom",
    "target": 0.015,
@@ -3637,33 +3614,6 @@
   }
  ],
  "resolved": [
-  {
-   "symbol": "HYPEUSDT",
-   "tactic": "range_bottom|t4|s2|h24",
-   "shape": "range_bottom",
-   "target": 0.04,
-   "stop": 0.02,
-   "max_h": 24,
-   "entry": 77.52,
-   "entry_ms": 1792682099999,
-   "entry_ts": "2026-10-22T15:29:47+00:00",
-   "feat": {
-    "r1h": -0.00946,
-    "r4h": -0.01223,
-    "r24": -0.05957,
-    "v4h": 1.31096,
-    "tbs4h": 0.34574,
-    "rp24": 0.03276,
-    "rng24": 0.0671,
-    "btc1": -0.00177,
-    "btc4": -0.00415,
-    "btc24": -0.03417
-   },
-   "ret": 0.00859,
-   "how": "TIME",
-   "hours": 24.0,
-   "exit_ts": "2026-10-23T15:36:34+00:00"
-  },
   {
    "symbol": "LTCUSDT",
    "tactic": "range_bottom|t4|s2|h24",
@@ -543636,8 +543586,35 @@
    "how": "TARGET",
    "hours": 1.0,
    "exit_ts": "2026-10-30T20:03:39+00:00"
+  },
+  {
+   "symbol": "GOOGLBUSDT",
+   "tactic": "range_bottom|t1|s1|h6",
+   "shape": "range_bottom",
+   "target": 0.01,
+   "stop": 0.01,
+   "max_h": 6,
+   "entry": 278.55,
+   "entry_ms": 1793384099999,
+   "entry_ts": "2026-10-30T18:23:30+00:00",
+   "feat": {
+    "r1h": -0.00258,
+    "r4h": -0.00589,
+    "r24": -0.01426,
+    "v4h": 1.24757,
+    "tbs4h": 0.41662,
+    "rp24": 0.08621,
+    "rng24": 0.02295,
+    "btc1": -0.00359,
+    "btc4": 0.00233,
+    "btc24": -0.0459
+   },
+   "ret": 0.0075,
+   "how": "TARGET",
+   "hours": 1.75,
+   "exit_ts": "2026-10-30T20:20:21+00:00"
   }
  ],
- "runs": 4865,
- "updated": "2026-10-30T20:03:39+00:00"
+ "runs": 4866,
+ "updated": "2026-10-30T20:20:21+00:00"
 }
