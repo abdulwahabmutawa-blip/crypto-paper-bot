@@ -1,9 +1,9 @@
 {
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "holding": "CASH",
-  "units": 0.0,
-  "cash": 1004.5807019173726,
+  "holding": "AMZN",
+  "units": 4.316425947221487,
+  "cash": 0.0,
   "bench_units": 1.3319835726361926,
   "trades": [
     {
@@ -176,6 +176,16 @@
       "units": 0,
       "value": 1004.58,
       "reason": "TRAILING STOP \u2014 fell 12% from high-water $327.75"
+    },
+    {
+      "date": "2026-10-30",
+      "action": "BUY",
+      "ticker": "AMZN",
+      "price": 232.49000549,
+      "units": 4.3164,
+      "value": 1003.53,
+      "fee": 1.05,
+      "reason": "Most oversold mega-cap (z < -1.5) \u2014 buying the dip"
     }
   ],
   "history": [
@@ -629,15 +639,15 @@
       "value": 1004.58,
       "bench": 1025.0,
       "holding": "CASH"
+    },
+    {
+      "date": "2026-10-30",
+      "value": 1003.53,
+      "bench": 1013.36,
+      "holding": "AMZN"
     }
   ],
   "intraday": [
-    {
-      "ts": "2026-10-02T20:33:09+00:00",
-      "value": 1115.82,
-      "bench": 1025.19,
-      "holding": "JNJ"
-    },
     {
       "ts": "2026-10-02T20:49:37+00:00",
       "value": 1115.82,
@@ -9631,14 +9641,21 @@
       "value": 1004.58,
       "bench": 1025.0,
       "holding": "CASH"
+    },
+    {
+      "ts": "2026-10-30T13:30:17+00:00",
+      "value": 1003.53,
+      "bench": 1013.36,
+      "holding": "AMZN"
     }
   ],
-  "last_updated_utc": "2026-10-30T13:13:22+00:00",
+  "last_updated_utc": "2026-10-30T13:30:17+00:00",
   "feed_delayed": false,
-  "data_asof": "2026-10-29",
-  "costs_paid": 12.8205,
+  "data_asof": "2026-10-30",
+  "costs_paid": 13.8753,
   "stopped": {
     "ticker": "GOOGL",
     "date": "2026-10-29"
-  }
+  },
+  "hwm": 232.49000549316406
 }
