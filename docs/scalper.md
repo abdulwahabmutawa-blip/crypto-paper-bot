@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-30T21:26:47+00:00 · runs 4800 · equity **$583.65** (-41.63%) · cash $442.69 · open 2/10 · round trips 1686
+updated 2026-10-30T21:31:10+00:00 · runs 4801 · equity **$583.64** (-41.64%) · cash $442.69 · open 2/10 · round trips 1686
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,6 +36,6 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-30T06:48 | TRXUSDT | bottom | 0.3341 | 0.3293 | -1.44% |
+| 2026-10-30T06:48 | TRXUSDT | bottom | 0.3341 | 0.3292 | -1.47% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
