@@ -2,20 +2,21 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-30T10:26:47+00:00 · runs 4764 · equity **$583.31** (-41.67%) · cash $331.77 · open 4/10 · round trips 1684
+updated 2026-10-30T10:43:01+00:00 · runs 4765 · equity **$582.83** (-41.72%) · cash $385.56 · open 3/10 · round trips 1685
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
-- hit 48% (break-even 54%) · mean -0.32%/trade · realized $-415.27 · worst day $-50.94 · trades/day 30.1
+- hit 48% (break-even 54%) · mean -0.32%/trade · realized $-417.08 · worst day $-50.94 · trades/day 30.1
 
 | shape | n | hit | mean | target% | stop% | time% |
 |---|---|---|---|---|---|---|
-| surge | 1467 | 48% | -0.29% | 46% | 47% | 7% |
+| surge | 1468 | 48% | -0.29% | 46% | 47% | 7% |
 | bottom | 217 | 42% | -0.52% | 36% | 45% | 19% |
 
 ## Last 15 round trips
 | exit (UTC) | coin | shape | how | hours | net | P&L |
 |---|---|---|---|---|---|---|
+| 2026-10-30T10:41 | WLFIUSDT | surge | STOP | 3.8 | -3.25% | $-1.81 |
 | 2026-10-30T07:58 | RUNEUSDT | surge | STOP | 1.2 | -3.25% | $-1.81 |
 | 2026-10-30T00:41 | BTCUSDT | bottom | STOP | 21.5 | -3.25% | $-1.85 |
 | 2026-10-29T20:48 | XRPUSDT | bottom | STOP | 6.5 | -3.25% | $-1.89 |
@@ -30,14 +31,12 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | 2026-10-29T14:13 | LSKUSDT | surge | TARGET | 0.0 | +2.75% | $+1.60 |
 | 2026-10-29T14:13 | AVAUSDT | surge | STOP | 1.0 | -3.25% | $-1.87 |
 | 2026-10-29T14:09 | SPCXBUSDT | bottom | TIME | 24.0 | -0.94% | $-0.55 |
-| 2026-10-29T13:36 | 牛来USDT | surge | TARGET | 0.5 | +2.75% | $+1.60 |
 
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-30T06:15 | XPLUSDT | surge | 0.07677 | 0.07595 | -1.07% |
-| 2026-10-30T06:32 | WLFIUSDT | surge | 0.0521 | 0.0508 | -2.50% |
-| 2026-10-30T06:48 | TRXUSDT | bottom | 0.3341 | 0.3375 | +1.02% |
+| 2026-10-30T06:15 | XPLUSDT | surge | 0.07677 | 0.07566 | -1.45% |
+| 2026-10-30T06:48 | TRXUSDT | bottom | 0.3341 | 0.3384 | +1.29% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
