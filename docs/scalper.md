@@ -2,20 +2,21 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-31T07:54:20+00:00 · runs 4839 · equity **$587.68** (-41.23%) · cash $111.57 · open 8/10 · round trips 1694
+updated 2026-10-31T08:10:36+00:00 · runs 4840 · equity **$587.53** (-41.25%) · cash $112.39 · open 8/10 · round trips 1695
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
-- hit 48% (break-even 54%) · mean -0.31%/trade · realized $-413.36 · worst day $-50.94 · trades/day 29.7
+- hit 48% (break-even 54%) · mean -0.31%/trade · realized $-411.83 · worst day $-50.94 · trades/day 29.7
 
 | shape | n | hit | mean | target% | stop% | time% |
 |---|---|---|---|---|---|---|
-| surge | 1475 | 48% | -0.28% | 46% | 47% | 7% |
+| surge | 1476 | 49% | -0.28% | 46% | 47% | 7% |
 | bottom | 219 | 42% | -0.52% | 36% | 45% | 19% |
 
 ## Last 15 round trips
 | exit (UTC) | coin | shape | how | hours | net | P&L |
 |---|---|---|---|---|---|---|
+| 2026-10-31T08:09 | RADUSDT | surge | TARGET | 2.8 | +2.75% | $+1.53 |
 | 2026-10-31T07:20 | PEPEUSDT | bottom | TARGET | 3.0 | +2.75% | $+1.53 |
 | 2026-10-31T06:31 | SPKUSDT | surge | STOP | 0.0 | -3.25% | $-1.82 |
 | 2026-10-31T05:59 | SPKUSDT | surge | TARGET | 1.2 | +2.75% | $+1.53 |
@@ -30,18 +31,17 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | 2026-10-30T00:41 | BTCUSDT | bottom | STOP | 21.5 | -3.25% | $-1.85 |
 | 2026-10-29T20:48 | XRPUSDT | bottom | STOP | 6.5 | -3.25% | $-1.89 |
 | 2026-10-29T20:48 | 牛来USDT | surge | STOP | 7.0 | -3.25% | $-1.89 |
-| 2026-10-29T20:48 | 币安人生USDT | surge | STOP | 15.2 | -3.25% | $-1.85 |
 
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-30T23:29 | HYPEUSDT | bottom | 89.24 | 88.15 | -1.22% |
-| 2026-10-30T23:46 | PENDLEUSDT | surge | 1.848 | 1.845 | -0.16% |
-| 2026-10-31T04:54 | ARBUSDT | bottom | 0.16 | 0.1609 | +0.56% |
-| 2026-10-31T05:10 | RADUSDT | surge | 0.244 | 0.252 | +3.28% |
-| 2026-10-31T05:42 | GTCUSDT | surge | 0.23139 | 0.22908 | -1.00% |
-| 2026-10-31T07:20 | SOPHUSDT | bottom | 0.00162 | 0.00163 | +0.62% |
-| 2026-10-31T07:36 | TIAUSDT | surge | 0.4772 | 0.4762 | -0.21% |
+| 2026-10-30T23:29 | HYPEUSDT | bottom | 89.24 | 88.11 | -1.27% |
+| 2026-10-30T23:46 | PENDLEUSDT | surge | 1.848 | 1.844 | -0.22% |
+| 2026-10-31T04:54 | ARBUSDT | bottom | 0.16 | 0.1614 | +0.87% |
+| 2026-10-31T05:42 | GTCUSDT | surge | 0.23139 | 0.22652 | -2.10% |
+| 2026-10-31T07:20 | SOPHUSDT | bottom | 0.00162 | 0.00165 | +1.85% |
+| 2026-10-31T07:36 | TIAUSDT | surge | 0.4772 | 0.4758 | -0.29% |
+| 2026-10-31T08:09 | RADUSDT | surge | 0.25 | 0.25 | +0.00% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
