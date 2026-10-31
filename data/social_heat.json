@@ -1,14 +1,14 @@
 {
-  "ts": "2026-10-31T09:13:34+00:00",
+  "ts": "2026-10-31T09:19:27+00:00",
   "sources": {
     "coingecko": [
-      "HYPE",
       "BTC",
+      "HYPE",
       "PENGU",
-      "SUI",
       "PEPE",
+      "SUI",
       "TAO",
-      "BNB",
+      "LIT",
       "ZEC",
       "AERO"
     ],
@@ -17,12 +17,12 @@
     "movers": [
       "BEAMX",
       "ONDO",
-      "UNI",
       "PEPE",
+      "UNI",
       "LINK",
       "ZRO",
-      "ENA",
-      "ZEC"
+      "ZEC",
+      "SUI"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -35,6 +35,16 @@
         "coingecko",
         "movers"
       ]
+    },
+    {
+      "symbol": "SUI",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.98
     },
     {
       "symbol": "ZEC",
@@ -63,28 +73,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "BNB",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0
-    },
-    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 3.8e-05
     },
     {
       "symbol": "HYPE",
@@ -100,7 +94,15 @@
       "sources": [
         "movers"
       ],
-      "funding": 5.3e-05
+      "funding": 5.4e-05
+    },
+    {
+      "symbol": "LIT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "ONDO",
@@ -108,7 +110,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 2.7e-05
+      "funding": 3.7e-05
     },
     {
       "symbol": "PENGU",
@@ -117,14 +119,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "TAO",
@@ -140,7 +134,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 8.2e-05
+      "funding": 8.5e-05
     },
     {
       "symbol": "ZRO",
