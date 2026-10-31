@@ -1,18 +1,16 @@
 {
-  "ts": "2026-10-31T12:18:47+00:00",
+  "ts": "2026-10-31T12:24:08+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "HYPE",
-      "BNB",
       "LSK",
-      "PENGU",
+      "BNB",
       "PEPE",
-      "SOL",
-      "POL",
-      "XLM",
-      "RAY",
-      "ETH"
+      "BEAM",
+      "ZEC",
+      "STRK",
+      "RAY"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,14 +20,31 @@
       "LINK",
       "ZEC",
       "ENA",
+      "NEAR",
       "SUI",
-      "ZRO",
-      "NEAR"
+      "ZRO"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "ZEC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 0.88
+    },
+    {
+      "symbol": "BEAM",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ]
+    },
     {
       "symbol": "BEAMX",
       "surfaces": 1,
@@ -60,15 +75,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 2.7e-05
-    },
-    {
-      "symbol": "ETH",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -5.6e-05
+      "funding": 3.1e-05
     },
     {
       "symbol": "HYPE",
@@ -84,7 +91,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -6e-06
+      "funding": -5e-06
     },
     {
       "symbol": "LSK",
@@ -92,7 +99,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.008015
+      "funding": -0.007673
     },
     {
       "symbol": "NEAR",
@@ -111,27 +118,11 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PENGU",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 4.2e-05
-    },
-    {
       "symbol": "PEPE",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ]
-    },
-    {
-      "symbol": "POL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -0.000111
     },
     {
       "symbol": "RAY",
@@ -142,31 +133,15 @@
       "funding": 0.0
     },
     {
-      "symbol": "SOL",
+      "symbol": "STRK",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 7.4e-05
+      "funding": 5e-05
     },
     {
       "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "XLM",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -5e-05
-    },
-    {
-      "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
         "movers"
