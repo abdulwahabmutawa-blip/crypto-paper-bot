@@ -1,16 +1,17 @@
 {
-  "ts": "2026-10-31T10:26:47+00:00",
+  "ts": "2026-10-31T10:32:38+00:00",
   "sources": {
     "coingecko": [
-      "HYPE",
       "AERO",
+      "HYPE",
+      "PENGU",
       "SUI",
       "BTC",
-      "LSK",
-      "AAVE",
-      "PENGU",
       "QNT",
-      "ETH"
+      "AAVE",
+      "LSK",
+      "ETH",
+      "BNB"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,13 +22,23 @@
       "UNI",
       "ZRO",
       "SUI",
-      "ZEC",
-      "ETH"
+      "ETH",
+      "BNB"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "BNB",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0,
+      "long_short": 2.67
+    },
     {
       "symbol": "ETH",
       "surfaces": 2,
@@ -35,7 +46,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -6.4e-05,
+      "funding": -6.3e-05,
       "long_short": 2.94
     },
     {
@@ -54,7 +65,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -5.6e-05
+      "funding": -5.2e-05
     },
     {
       "symbol": "AERO",
@@ -62,7 +73,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2e-06
+      "funding": -4e-06
     },
     {
       "symbol": "BEAMX",
@@ -94,7 +105,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 2.5e-05
+      "funding": 1.9e-05
     },
     {
       "symbol": "LSK",
@@ -102,7 +113,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.018225
+      "funding": -0.018076
     },
     {
       "symbol": "ONDO",
@@ -126,18 +137,10 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.2e-05
+      "funding": 6.9e-05
     },
     {
       "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
         "movers"
