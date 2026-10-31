@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-31T05:11:47+00:00 · runs 4829 · equity **$584.83** (-41.52%) · cash $166.44 · open 7/10 · round trips 1691
+updated 2026-10-31T05:28:01+00:00 · runs 4830 · equity **$583.88** (-41.61%) · cash $166.44 · open 7/10 · round trips 1691
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,11 +36,11 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-30T23:29 | HYPEUSDT | bottom | 89.24 | 88.82 | -0.47% |
-| 2026-10-30T23:46 | PENDLEUSDT | surge | 1.848 | 1.858 | +0.54% |
-| 2026-10-31T04:05 | PEPEUSDT | bottom | 4.93e-06 | 4.87e-06 | -1.22% |
-| 2026-10-31T04:21 | SPKUSDT | surge | 0.020105 | 0.020045 | -0.30% |
-| 2026-10-31T04:54 | ARBUSDT | bottom | 0.16 | 0.1613 | +0.81% |
-| 2026-10-31T05:10 | RADUSDT | surge | 0.244 | 0.243 | -0.41% |
+| 2026-10-30T23:29 | HYPEUSDT | bottom | 89.24 | 88.84 | -0.45% |
+| 2026-10-30T23:46 | PENDLEUSDT | surge | 1.848 | 1.85 | +0.11% |
+| 2026-10-31T04:05 | PEPEUSDT | bottom | 4.93e-06 | 4.84e-06 | -1.83% |
+| 2026-10-31T04:21 | SPKUSDT | surge | 0.020105 | 0.020116 | +0.05% |
+| 2026-10-31T04:54 | ARBUSDT | bottom | 0.16 | 0.1616 | +1.00% |
+| 2026-10-31T05:10 | RADUSDT | surge | 0.244 | 0.24 | -1.64% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
