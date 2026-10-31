@@ -1,16 +1,19 @@
 {
-  "ts": "2026-10-31T12:34:49+00:00",
+  "ts": "2026-10-31T12:40:07+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "HYPE",
       "LSK",
-      "BNB",
       "PEPE",
       "PENGU",
-      "BEAM",
-      "NEAR",
+      "BNB",
       "ZEC",
+      "LINK",
+      "PYTH",
+      "SOL",
+      "XRP",
+      "BEAM",
       "STRK"
     ],
     "reddit": [],
@@ -20,8 +23,8 @@
       "ONDO",
       "LINK",
       "ZEC",
-      "ENA",
       "NEAR",
+      "ENA",
       "SUI",
       "BNB"
     ],
@@ -40,14 +43,14 @@
       "long_short": 2.72
     },
     {
-      "symbol": "NEAR",
+      "symbol": "LINK",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 0.0001,
-      "long_short": 1.18
+      "funding": -4e-06,
+      "long_short": 1.77
     },
     {
       "symbol": "ZEC",
@@ -88,7 +91,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 2.9e-05
+      "funding": 3.1e-05
     },
     {
       "symbol": "HYPE",
@@ -99,20 +102,20 @@
       "funding": 5e-05
     },
     {
-      "symbol": "LINK",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -6e-06
-    },
-    {
       "symbol": "LSK",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -0.007193
+      "funding": -0.006768
+    },
+    {
+      "symbol": "NEAR",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "ONDO",
@@ -120,7 +123,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 5e-05
+      "funding": 4.7e-05
     },
     {
       "symbol": "PENGU",
@@ -138,6 +141,22 @@
       ]
     },
     {
+      "symbol": "PYTH",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 1e-06
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 7.5e-05
+    },
+    {
       "symbol": "STRK",
       "surfaces": 1,
       "sources": [
@@ -150,6 +169,14 @@
       "surfaces": 1,
       "sources": [
         "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "XRP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
       ],
       "funding": 0.0001
     }
