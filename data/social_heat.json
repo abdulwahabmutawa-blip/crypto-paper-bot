@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-31T17:40:47+00:00",
+  "ts": "2026-10-31T17:45:51+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -16,10 +16,10 @@
       "NEAR",
       "LINK",
       "ZEC",
-      "ENA",
       "UNI",
+      "ENA",
       "SOL",
-      "BNB"
+      "XRP"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -32,7 +32,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.001023,
+      "funding": -0.001036,
       "long_short": 1.15
     },
     {
@@ -42,16 +42,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": 8.6e-05,
+      "funding": 7.7e-05,
       "long_short": 1.2
-    },
-    {
-      "symbol": "BNB",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0
     },
     {
       "symbol": "BTC",
@@ -67,7 +59,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 5e-06
+      "funding": -3e-06
     },
     {
       "symbol": "HYPE",
@@ -83,7 +75,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 9e-05
+      "funding": 8.9e-05
     },
     {
       "symbol": "LIT",
@@ -107,7 +99,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 9.1e-05
+      "funding": 9.2e-05
     },
     {
       "symbol": "UNI",
@@ -115,7 +107,15 @@
       "sources": [
         "movers"
       ],
-      "funding": 6.1e-05
+      "funding": 6e-05
+    },
+    {
+      "symbol": "XRP",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "ZEC",
@@ -123,7 +123,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 1e-06
+      "funding": -1e-06
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
