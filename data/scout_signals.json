@@ -1,8 +1,24 @@
 {
-  "ts": "2026-10-31T13:14:44+00:00",
-  "scanned": 94,
+  "ts": "2026-10-31T13:20:24+00:00",
+  "scanned": 96,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "RUNEUSDT",
+      "signal": "breakout",
+      "score": 0.6624,
+      "raw_score": 0.7409,
+      "weight": 0.894,
+      "price": 0.716,
+      "why": "trades 5.6x, volume 8.9x, 67% taker-buy, +4.7% in an hour, at 99% of its 24h range",
+      "chg_24h": 0.0971,
+      "vol_surge": 8.94,
+      "chg_1h": 0.0468,
+      "market_surge": 5.02,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -1.44% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.14% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -1.44% at 24h: market beta, not signal",
@@ -11,7 +27,7 @@
     "revival": "benched \u2014 BTC-excess day mean -1.14% at 24h: market beta, not signal"
   },
   "breadth": {
-    "count": 15,
+    "count": 17,
     "baseline": 13.0,
     "wave": false
   },

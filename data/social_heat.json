@@ -1,29 +1,28 @@
 {
-  "ts": "2026-10-31T13:14:37+00:00",
+  "ts": "2026-10-31T13:20:18+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "HYPE",
       "LSK",
-      "PENGU",
       "LIT",
-      "PEPE",
-      "BNB",
-      "BEAM",
-      "LINK",
-      "ZEC",
-      "ADA",
+      "PENGU",
       "PYTH",
-      "NEAR"
+      "PEPE",
+      "ETH",
+      "BEAM",
+      "BNB",
+      "LINK",
+      "ADA"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "ONDO",
-      "BEAMX",
       "LINK",
-      "NEAR",
       "ZEC",
+      "BEAMX",
+      "NEAR",
       "ENA",
       "UNI",
       "ETH"
@@ -33,6 +32,16 @@
   },
   "heat": [
     {
+      "symbol": "ETH",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -6.1e-05,
+      "long_short": 2.9
+    },
+    {
       "symbol": "LINK",
       "surfaces": 2,
       "sources": [
@@ -41,26 +50,6 @@
       ],
       "funding": -8e-06,
       "long_short": 1.8
-    },
-    {
-      "symbol": "NEAR",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.18
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 0.85
     },
     {
       "symbol": "ADA",
@@ -110,14 +99,6 @@
       "funding": 2.8e-05
     },
     {
-      "symbol": "ETH",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -6.2e-05
-    },
-    {
       "symbol": "HYPE",
       "surfaces": 1,
       "sources": [
@@ -139,7 +120,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.004744
+      "funding": -0.004459
+    },
+    {
+      "symbol": "NEAR",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "ONDO",
@@ -147,7 +136,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 3.2e-05
+      "funding": 3.3e-05
     },
     {
       "symbol": "PENGU",
@@ -170,10 +159,18 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -6e-06
+      "funding": -1e-05
     },
     {
       "symbol": "UNI",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
         "movers"
