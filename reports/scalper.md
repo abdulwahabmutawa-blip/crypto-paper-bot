@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-31T00:56:32+00:00 · runs 4813 · equity **$585.48** (-41.45%) · cash $276.00 · open 5/10 · round trips 1688
+updated 2026-10-31T01:13:34+00:00 · runs 4814 · equity **$586.85** (-41.31%) · cash $276.00 · open 5/10 · round trips 1688
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,9 +36,9 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-30T23:29 | HYPEUSDT | bottom | 89.24 | 89.49 | +0.28% |
-| 2026-10-30T23:46 | PENDLEUSDT | surge | 1.848 | 1.885 | +2.00% |
-| 2026-10-31T00:03 | OPUSDT | surge | 0.1205 | 0.12 | -0.41% |
-| 2026-10-31T00:20 | HAEDALUSDT | surge | 0.02412 | 0.02424 | +0.50% |
+| 2026-10-30T23:29 | HYPEUSDT | bottom | 89.24 | 89.46 | +0.25% |
+| 2026-10-30T23:46 | PENDLEUSDT | surge | 1.848 | 1.883 | +1.89% |
+| 2026-10-31T00:03 | OPUSDT | surge | 0.1205 | 0.1218 | +1.08% |
+| 2026-10-31T00:20 | HAEDALUSDT | surge | 0.02412 | 0.02451 | +1.62% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
