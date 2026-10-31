@@ -1,5 +1,5 @@
 {
-  "ts": "2026-10-31T05:50:27+00:00",
+  "ts": "2026-10-31T05:55:47+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -20,21 +20,43 @@
       "BEAMX",
       "ONDO",
       "LINK",
-      "UNI",
       "NEAR",
-      "ENA"
+      "UNI",
+      "ENA",
+      "SUI",
+      "ETH"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
     {
+      "symbol": "ETH",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -0.000112,
+      "long_short": 2.94
+    },
+    {
+      "symbol": "SUI",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 7.9e-05,
+      "long_short": 1.97
+    },
+    {
       "symbol": "AAVE",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -9.4e-05
+      "funding": -9.1e-05
     },
     {
       "symbol": "ASTER",
@@ -42,7 +64,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.9e-05
+      "funding": 3.1e-05
     },
     {
       "symbol": "BEAMX",
@@ -69,14 +91,6 @@
       "funding": 5e-05
     },
     {
-      "symbol": "ETH",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -0.000112
-    },
-    {
       "symbol": "HYPE",
       "surfaces": 1,
       "sources": [
@@ -90,7 +104,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -5e-06
+      "funding": -7e-06
     },
     {
       "symbol": "NEAR",
@@ -130,15 +144,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.5e-05
-    },
-    {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 8.1e-05
+      "funding": -2.4e-05
     },
     {
       "symbol": "UNI",
@@ -146,7 +152,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 1e-06
+      "funding": 2e-06
     },
     {
       "symbol": "XMR",
@@ -154,7 +160,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 0.000418
+      "funding": 0.000409
     },
     {
       "symbol": "XPL",
