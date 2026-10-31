@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-10-31T09:20:21+00:00 · runs 4845 · equity **$586.12** (-41.39%) · cash $222.18 · open 6/10 · round trips 1700
+updated 2026-10-31T09:36:45+00:00 · runs 4846 · equity **$586.27** (-41.37%) · cash $111.09 · open 8/10 · round trips 1700
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,10 +36,12 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-30T23:46 | PENDLEUSDT | surge | 1.848 | 1.848 | +0.00% |
-| 2026-10-31T04:54 | ARBUSDT | bottom | 0.16 | 0.1622 | +1.38% |
-| 2026-10-31T07:36 | TIAUSDT | surge | 0.4772 | 0.4757 | -0.31% |
-| 2026-10-31T08:25 | TRXUSDT | bottom | 0.3206 | 0.3181 | -0.78% |
-| 2026-10-31T08:58 | LTCUSDT | bottom | 54.62 | 54.76 | +0.26% |
+| 2026-10-30T23:46 | PENDLEUSDT | surge | 1.848 | 1.851 | +0.16% |
+| 2026-10-31T04:54 | ARBUSDT | bottom | 0.16 | 0.162 | +1.25% |
+| 2026-10-31T07:36 | TIAUSDT | surge | 0.4772 | 0.4769 | -0.06% |
+| 2026-10-31T08:25 | TRXUSDT | bottom | 0.3206 | 0.3173 | -1.03% |
+| 2026-10-31T08:58 | LTCUSDT | bottom | 54.62 | 54.83 | +0.38% |
+| 2026-10-31T09:35 | ZROUSDT | surge | 1.746 | 1.758 | +0.69% |
+| 2026-10-31T09:35 | STXUSDT | surge | 0.3098 | 0.308 | -0.58% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
