@@ -1,13 +1,12 @@
 {
-  "ts": "2026-10-31T23:38:08+00:00",
+  "ts": "2026-10-31T23:43:49+00:00",
   "sources": {
     "coingecko": [
       "LIT",
-      "PEPE",
+      "BTC",
       "PENGU",
-      "TRX",
-      "XLM",
-      "BTC"
+      "PEPE",
+      "SOL"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -15,6 +14,7 @@
       "LSK",
       "NEAR",
       "LINK",
+      "PEPE",
       "ETH",
       "BTC"
     ],
@@ -33,12 +33,20 @@
       "long_short": 2.57
     },
     {
+      "symbol": "PEPE",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ]
+    },
+    {
       "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -3.7e-05
+      "funding": -3.5e-05
     },
     {
       "symbol": "LINK",
@@ -46,7 +54,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 2.1e-05
+      "funding": 2.3e-05
     },
     {
       "symbol": "LIT",
@@ -62,7 +70,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001153
+      "funding": -0.001165
     },
     {
       "symbol": "NEAR",
@@ -70,7 +78,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 6.5e-05
+      "funding": 6.6e-05
     },
     {
       "symbol": "PENGU",
@@ -81,27 +89,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PEPE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ]
-    },
-    {
-      "symbol": "TRX",
+      "symbol": "SOL",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -0.001273
-    },
-    {
-      "symbol": "XLM",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -9.1e-05
+      "funding": 9.6e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
