@@ -1,55 +1,34 @@
 {
-  "ts": "2026-10-31T00:48:15+00:00",
+  "ts": "2026-10-31T00:53:38+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
-      "HYPE",
+      "NEAR",
       "BTC",
+      "HYPE",
       "ETH",
       "SOL",
-      "NEAR",
       "ONDO",
-      "XLM",
-      "ENA",
-      "BNB",
-      "DOGE"
+      "DOGE",
+      "PUMP",
+      "LIT"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "BEAMX",
       "ONDO",
-      "UNI",
       "LINK",
-      "AAVE",
+      "UNI",
       "ENA",
-      "WLD",
-      "NEAR"
+      "AAVE",
+      "PEPE",
+      "WLD"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "ENA",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 2.7e-05,
-      "long_short": 1.3
-    },
-    {
-      "symbol": "NEAR",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.21
-    },
     {
       "symbol": "ONDO",
       "surfaces": 2,
@@ -57,7 +36,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -1.6e-05,
+      "funding": -1.2e-05,
       "long_short": 1.27
     },
     {
@@ -66,7 +45,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000107
+      "funding": -0.000108
     },
     {
       "symbol": "BEAMX",
@@ -75,14 +54,6 @@
         "movers"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "BNB",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0
     },
     {
       "symbol": "BTC",
@@ -99,6 +70,14 @@
         "coingecko"
       ],
       "funding": 6.1e-05
+    },
+    {
+      "symbol": "ENA",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 2.8e-05
     },
     {
       "symbol": "ETH",
@@ -122,10 +101,41 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.6e-05
+      "funding": 4.4e-05
+    },
+    {
+      "symbol": "LIT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "NEAR",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "PENGU",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "PEPE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
+    },
+    {
+      "symbol": "PUMP",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -146,21 +156,13 @@
       "sources": [
         "movers"
       ],
-      "funding": -8e-06
+      "funding": -1.4e-05
     },
     {
       "symbol": "WLD",
       "surfaces": 1,
       "sources": [
         "movers"
-      ],
-      "funding": -2e-06
-    },
-    {
-      "symbol": "XLM",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
       ],
       "funding": 5e-06
     }
