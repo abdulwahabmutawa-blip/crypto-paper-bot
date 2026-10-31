@@ -1,14 +1,15 @@
 {
-  "ts": "2026-10-31T17:23:47+00:00",
+  "ts": "2026-10-31T17:29:29+00:00",
   "sources": {
     "coingecko": [
-      "HYPE",
       "BTC",
+      "HYPE",
       "NEAR",
       "LIT",
       "ZEC",
+      "LSK",
       "RUNE",
-      "TAO"
+      "PUMP"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -27,6 +28,16 @@
   },
   "heat": [
     {
+      "symbol": "LSK",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -0.001018,
+      "long_short": 1.15
+    },
+    {
       "symbol": "NEAR",
       "surfaces": 2,
       "sources": [
@@ -43,7 +54,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 2e-06,
+      "funding": 1e-06,
       "long_short": 0.82
     },
     {
@@ -68,7 +79,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 3.2e-05
+      "funding": 2.1e-05
     },
     {
       "symbol": "HYPE",
@@ -84,7 +95,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 8.1e-05
+      "funding": 8.3e-05
     },
     {
       "symbol": "LIT",
@@ -95,12 +106,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "LSK",
+      "symbol": "PUMP",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
-      "funding": -0.001011
+      "funding": 5e-05
     },
     {
       "symbol": "RUNE",
@@ -116,15 +127,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 8.9e-05
-    },
-    {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": 9e-05
     },
     {
       "symbol": "UNI",
