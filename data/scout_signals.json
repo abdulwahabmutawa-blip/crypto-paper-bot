@@ -1,24 +1,8 @@
 {
-  "ts": "2026-11-01T12:21:28+00:00",
+  "ts": "2026-11-01T12:27:14+00:00",
   "scanned": 62,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ERAUSDT",
-      "signal": "ignition",
-      "score": 0.7777,
-      "raw_score": 0.8318,
-      "weight": 0.935,
-      "price": 0.0716,
-      "why": "trades 9.6x and volume 11.9x the prior 4h, 67% taker-buy, $75,210 burst \u2014 while price has only moved +2.7%",
-      "chg_24h": 0.0391,
-      "vol_surge": 11.86,
-      "chg_1h": 0.0273,
-      "market_surge": 10.37,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean +0.24% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.24% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.75% at 24h: market beta, not signal",
@@ -27,7 +11,7 @@
     "revival": "benched \u2014 BTC-excess day mean -1.31% at 24h: market beta, not signal"
   },
   "breadth": {
-    "count": 10,
+    "count": 11,
     "baseline": 12.0,
     "wave": false
   },
