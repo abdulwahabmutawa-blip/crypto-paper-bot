@@ -1,18 +1,17 @@
 {
-  "ts": "2026-11-01T23:12:14+00:00",
+  "ts": "2026-11-01T23:17:49+00:00",
   "sources": {
     "coingecko": [
-      "LIT",
       "INJ",
       "BEAM",
-      "PENGU",
       "BTC",
-      "SUI",
+      "PENGU",
       "HYPE",
-      "AERO",
-      "ONDO",
+      "LIT",
+      "SUI",
       "AAVE",
-      "XPL"
+      "QNT",
+      "AERO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,8 +21,8 @@
       "UNI",
       "AVAX",
       "BNB",
-      "ETH",
-      "BTC"
+      "BTC",
+      "ETH"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -92,7 +91,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 2.2e-05
+      "funding": 2e-05
     },
     {
       "symbol": "HYPE",
@@ -108,18 +107,10 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -8e-06
+      "funding": -5e-06
     },
     {
       "symbol": "LIT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "ONDO",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -135,6 +126,14 @@
       "funding": 5e-05
     },
     {
+      "symbol": "QNT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "SUI",
       "surfaces": 1,
       "sources": [
@@ -148,7 +147,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000149
+      "funding": -0.000144
     },
     {
       "symbol": "UNI",
@@ -157,14 +156,6 @@
         "movers"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "XPL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
