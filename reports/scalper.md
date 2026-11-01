@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-01T07:50:44+00:00 · runs 4927 · equity **$597.76** (-40.22%) · cash $0.00 · open 10/10 · round trips 1725
+updated 2026-11-01T07:55:06+00:00 · runs 4928 · equity **$597.80** (-40.22%) · cash $0.00 · open 10/10 · round trips 1725
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-31T16:14 | ETHFIUSDT | surge | 0.6381 | 0.6254 | -1.99% |
+| 2026-10-31T16:14 | ETHFIUSDT | surge | 0.6381 | 0.6251 | -2.04% |
 | 2026-10-31T16:14 | NEARUSDT | surge | 4.479 | 4.37 | -2.43% |
-| 2026-10-31T18:28 | INJUSDT | surge | 7.374 | 7.276 | -1.33% |
-| 2026-10-31T22:16 | BATUSDT | surge | 0.1421 | 0.1414 | -0.49% |
-| 2026-10-31T22:16 | AEROUSDT | surge | 0.6453 | 0.6391 | -0.96% |
+| 2026-10-31T18:28 | INJUSDT | surge | 7.374 | 7.275 | -1.34% |
+| 2026-10-31T22:16 | BATUSDT | surge | 0.1421 | 0.1416 | -0.35% |
+| 2026-10-31T22:16 | AEROUSDT | surge | 0.6453 | 0.6402 | -0.79% |
 | 2026-11-01T04:58 | RADUSDT | bottom | 0.242 | 0.242 | +0.00% |
 | 2026-11-01T06:06 | INTWBUSDT | surge | 7.52 | 7.49 | -0.40% |
-| 2026-11-01T06:23 | INTCBUSDT | surge | 66.03 | 65.77 | -0.39% |
-| 2026-11-01T06:57 | AVAXUSDT | surge | 8.954 | 8.905 | -0.55% |
+| 2026-11-01T06:23 | INTCBUSDT | surge | 66.03 | 65.75 | -0.42% |
+| 2026-11-01T06:57 | AVAXUSDT | surge | 8.954 | 8.892 | -0.69% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
