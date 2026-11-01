@@ -1,16 +1,17 @@
 {
-  "ts": "2026-11-01T18:21:14+00:00",
+  "ts": "2026-11-01T18:26:48+00:00",
   "sources": {
     "coingecko": [
       "LIT",
-      "PENGU",
       "LINK",
+      "QNT",
+      "XRP",
       "NEAR",
-      "SUI",
-      "SOL",
       "PUMP",
+      "AVAX",
       "BNB",
-      "GRAM"
+      "SUI",
+      "PENGU"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,13 +20,22 @@
       "AVAX",
       "BNB",
       "ETH",
-      "BTC",
-      "RLUSD"
+      "BTC"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "AVAX",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.75
+    },
     {
       "symbol": "BNB",
       "surfaces": 2,
@@ -35,14 +45,6 @@
       ],
       "funding": 7.1e-05,
       "long_short": 2.67
-    },
-    {
-      "symbol": "AVAX",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "BTC",
@@ -58,15 +60,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -5e-06
-    },
-    {
-      "symbol": "GRAM",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": -4e-06
     },
     {
       "symbol": "LINK",
@@ -109,14 +103,7 @@
       "funding": 5e-05
     },
     {
-      "symbol": "RLUSD",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
-    },
-    {
-      "symbol": "SOL",
+      "symbol": "QNT",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -138,6 +125,14 @@
         "movers"
       ],
       "funding": 9e-06
+    },
+    {
+      "symbol": "XRP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
