@@ -1,46 +1,36 @@
 {
-  "ts": "2026-11-01T06:36:28+00:00",
+  "ts": "2026-11-01T06:42:11+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "LIT",
       "PENGU",
-      "XPL",
       "BEAM",
-      "ICP",
-      "GTC",
-      "ENA",
+      "XPL",
       "BNB",
-      "DOGE",
-      "AERO",
-      "PEPE"
+      "DOT",
+      "GTC",
+      "PEPE",
+      "ASTER",
+      "ENA",
+      "ICP"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "UNI",
+      "AVAX",
       "LSK",
+      "UNI",
       "LINK",
       "NEAR",
       "ETH",
       "BTC",
-      "XRP",
-      "BNB"
+      "XRP"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "BNB",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5.1e-05,
-      "long_short": 2.73
-    },
     {
       "symbol": "BTC",
       "surfaces": 2,
@@ -52,12 +42,20 @@
       "long_short": 2.54
     },
     {
-      "symbol": "AERO",
+      "symbol": "ASTER",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "AVAX",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "BEAM",
@@ -67,7 +65,15 @@
       ]
     },
     {
-      "symbol": "DOGE",
+      "symbol": "BNB",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5.1e-05
+    },
+    {
+      "symbol": "DOT",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -80,7 +86,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.5e-05
+      "funding": -1.6e-05
     },
     {
       "symbol": "ETH",
@@ -88,7 +94,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 3.8e-05
+      "funding": 3.4e-05
     },
     {
       "symbol": "GTC",
@@ -96,7 +102,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.001241
+      "funding": -0.001194
     },
     {
       "symbol": "ICP",
@@ -128,7 +134,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.002549
+      "funding": -0.002496
     },
     {
       "symbol": "NEAR",
