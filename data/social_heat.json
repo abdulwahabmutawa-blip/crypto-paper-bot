@@ -1,17 +1,18 @@
 {
-  "ts": "2026-11-01T23:17:49+00:00",
+  "ts": "2026-11-01T23:23:29+00:00",
   "sources": {
     "coingecko": [
       "INJ",
       "BEAM",
-      "BTC",
-      "PENGU",
-      "HYPE",
-      "LIT",
-      "SUI",
       "AAVE",
-      "QNT",
-      "AERO"
+      "LIT",
+      "HYPE",
+      "SUI",
+      "PENGU",
+      "AERO",
+      "ZEC",
+      "BTC",
+      "QNT"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,8 +20,8 @@
       "BEAMX",
       "TRX",
       "UNI",
-      "AVAX",
       "BNB",
+      "AVAX",
       "BTC",
       "ETH"
     ],
@@ -83,7 +84,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 6.3e-05
+      "funding": 6e-05
     },
     {
       "symbol": "ETH",
@@ -91,7 +92,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 2e-05
+      "funding": 1.7e-05
     },
     {
       "symbol": "HYPE",
@@ -107,7 +108,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -5e-06
+      "funding": -2e-06
     },
     {
       "symbol": "LIT",
@@ -147,7 +148,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000144
+      "funding": -0.000142
     },
     {
       "symbol": "UNI",
@@ -156,6 +157,14 @@
         "movers"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 9.7e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
