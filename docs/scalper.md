@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-01T21:33:26+00:00 · runs 4977 · equity **$581.70** (-41.83%) · cash $105.35 · open 8/10 · round trips 1743
+updated 2026-11-01T21:50:17+00:00 · runs 4978 · equity **$583.16** (-41.68%) · cash $105.35 · open 8/10 · round trips 1743
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,12 +36,12 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-01T04:58 | RADUSDT | bottom | 0.242 | 0.239 | -1.24% |
-| 2026-11-01T06:06 | INTWBUSDT | surge | 7.52 | 7.54 | +0.27% |
-| 2026-11-01T06:23 | INTCBUSDT | surge | 66.03 | 65.87 | -0.24% |
-| 2026-11-01T16:34 | NIGHTUSDT | surge | 0.04234 | 0.04206 | -0.66% |
-| 2026-11-01T16:51 | ONDOUSDT | bottom | 0.4048 | 0.4031 | -0.42% |
-| 2026-11-01T17:09 | CELOUSDT | bottom | 0.07412 | 0.07386 | -0.35% |
-| 2026-11-01T21:31 | MITOUSDT | surge | 0.00801 | 0.00799 | -0.25% |
+| 2026-11-01T04:58 | RADUSDT | bottom | 0.242 | 0.24 | -0.83% |
+| 2026-11-01T06:06 | INTWBUSDT | surge | 7.52 | 7.53 | +0.13% |
+| 2026-11-01T06:23 | INTCBUSDT | surge | 66.03 | 65.96 | -0.11% |
+| 2026-11-01T16:34 | NIGHTUSDT | surge | 0.04234 | 0.04207 | -0.64% |
+| 2026-11-01T16:51 | ONDOUSDT | bottom | 0.4048 | 0.4039 | -0.22% |
+| 2026-11-01T17:09 | CELOUSDT | bottom | 0.07412 | 0.07398 | -0.19% |
+| 2026-11-01T21:31 | MITOUSDT | surge | 0.00801 | 0.00814 | +1.62% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
