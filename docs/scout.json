@@ -1,8 +1,24 @@
 {
-  "ts": "2026-11-01T10:46:40+00:00",
-  "scanned": 57,
+  "ts": "2026-11-01T10:52:25+00:00",
+  "scanned": 58,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "GTCUSDT",
+      "signal": "breakout",
+      "score": 0.6296,
+      "raw_score": 0.7042,
+      "weight": 0.894,
+      "price": 0.25121,
+      "why": "trades 4.1x, volume 6.3x, 62% taker-buy, +7.4% in an hour, at 87% of its 24h range",
+      "chg_24h": 0.0859,
+      "vol_surge": 6.31,
+      "chg_1h": 0.0736,
+      "market_surge": 8.42,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.83% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.21% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -0.83% at 24h: market beta, not signal",
@@ -11,7 +27,7 @@
     "revival": "benched \u2014 BTC-excess day mean -1.18% at 24h: market beta, not signal"
   },
   "breadth": {
-    "count": 13,
+    "count": 11,
     "baseline": 12.0,
     "wave": false
   },
