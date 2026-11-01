@@ -1,18 +1,18 @@
 {
-  "ts": "2026-11-01T08:38:10+00:00",
+  "ts": "2026-11-01T08:44:18+00:00",
   "sources": {
     "coingecko": [
       "BTC",
-      "BEAM",
       "LIT",
-      "HYPE",
+      "BEAM",
       "SOL",
-      "PENGU",
+      "HYPE",
       "AERO",
-      "DOT",
-      "BNB",
+      "PEPE",
       "LINK",
-      "PEPE"
+      "XPL",
+      "AVAX",
+      "ETH"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,9 +20,9 @@
       "UNI",
       "AVAX",
       "LINK",
-      "NEAR",
-      "ETH",
       "BNB",
+      "ETH",
+      "NEAR",
       "BTC",
       "XRP"
     ],
@@ -31,14 +31,14 @@
   },
   "heat": [
     {
-      "symbol": "BNB",
+      "symbol": "AVAX",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 2.5e-05,
-      "long_short": 2.72
+      "funding": 0.0001,
+      "long_short": 1.62
     },
     {
       "symbol": "BTC",
@@ -49,6 +49,16 @@
       ],
       "funding": 0.0001,
       "long_short": 2.5
+    },
+    {
+      "symbol": "ETH",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 2.2e-05,
+      "long_short": 2.69
     },
     {
       "symbol": "LINK",
@@ -66,15 +76,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.7e-05
-    },
-    {
-      "symbol": "AVAX",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
+      "funding": 2.3e-05
     },
     {
       "symbol": "BEAM",
@@ -84,20 +86,12 @@
       ]
     },
     {
-      "symbol": "DOT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "ETH",
+      "symbol": "BNB",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 1.9e-05
+      "funding": 2.4e-05
     },
     {
       "symbol": "HYPE",
@@ -124,14 +118,6 @@
       "funding": 0.0001
     },
     {
-      "symbol": "PENGU",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "PEPE",
       "surfaces": 1,
       "sources": [
@@ -153,6 +139,14 @@
         "movers"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "XPL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "XRP",
