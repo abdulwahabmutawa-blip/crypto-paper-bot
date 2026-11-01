@@ -1,18 +1,18 @@
 {
-  "ts": "2026-11-01T23:51:49+00:00",
+  "ts": "2026-11-01T23:57:38+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
       "LIT",
-      "INJ",
-      "HYPE",
       "AAVE",
-      "QNT",
-      "BEAM",
-      "SUI",
+      "HYPE",
+      "INJ",
       "ZEC",
-      "LINK",
-      "ZRO"
+      "BEAM",
+      "AERO",
+      "BNB",
+      "ZRO",
+      "LINK"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -23,13 +23,22 @@
       "AVAX",
       "BNB",
       "BTC",
-      "ETH",
-      "XRP"
+      "ETH"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "BNB",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 7.2e-05,
+      "long_short": 2.71
+    },
     {
       "symbol": "AAVE",
       "surfaces": 1,
@@ -37,6 +46,14 @@
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "AERO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "AVAX",
@@ -62,14 +79,6 @@
       "funding": 5e-05
     },
     {
-      "symbol": "BNB",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 7.1e-05
-    },
-    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
@@ -83,7 +92,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 1e-05
+      "funding": 1.2e-05
     },
     {
       "symbol": "HYPE",
@@ -99,7 +108,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.1e-05
+      "funding": 1e-05
     },
     {
       "symbol": "LINK",
@@ -126,39 +135,15 @@
       "funding": 5e-05
     },
     {
-      "symbol": "QNT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "TRX",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -0.000134
+      "funding": -0.00013
     },
     {
       "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "XRP",
       "surfaces": 1,
       "sources": [
         "movers"
@@ -171,7 +156,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.4e-05
+      "funding": 9.6e-05
     },
     {
       "symbol": "ZRO",
