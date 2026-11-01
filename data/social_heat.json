@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-01T11:54:10+00:00",
+  "ts": "2026-11-01T11:59:29+00:00",
   "sources": {
     "coingecko": [
       "LIT",
@@ -20,22 +20,22 @@
       "BNB",
       "ETH",
       "NEAR",
-      "XRP",
-      "BTC"
+      "HYPE",
+      "XRP"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
     {
-      "symbol": "BTC",
+      "symbol": "HYPE",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 0.0001,
-      "long_short": 2.39
+      "funding": 5e-05,
+      "long_short": 1.59
     },
     {
       "symbol": "AERO",
@@ -69,20 +69,20 @@
       "funding": 4.3e-05
     },
     {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
       "funding": -1e-05
-    },
-    {
-      "symbol": "HYPE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "LINK",
