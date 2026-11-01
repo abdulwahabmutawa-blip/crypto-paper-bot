@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-01T12:09:24+00:00 · runs 4943 · equity **$595.71** (-40.43%) · cash $0.00 · open 10/10 · round trips 1726
+updated 2026-11-01T12:26:27+00:00 · runs 4944 · equity **$592.81** (-40.72%) · cash $0.00 · open 10/10 · round trips 1726
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-10-31T16:14 | NEARUSDT | surge | 4.479 | 4.384 | -2.12% |
-| 2026-10-31T18:28 | INJUSDT | surge | 7.374 | 7.238 | -1.84% |
+| 2026-10-31T16:14 | NEARUSDT | surge | 4.479 | 4.363 | -2.59% |
+| 2026-10-31T18:28 | INJUSDT | surge | 7.374 | 7.188 | -2.52% |
 | 2026-10-31T22:16 | BATUSDT | surge | 0.1421 | 0.1383 | -2.67% |
-| 2026-10-31T22:16 | AEROUSDT | surge | 0.6453 | 0.6356 | -1.50% |
-| 2026-11-01T04:58 | RADUSDT | bottom | 0.242 | 0.244 | +0.83% |
-| 2026-11-01T06:06 | INTWBUSDT | surge | 7.52 | 7.6 | +1.06% |
-| 2026-11-01T06:23 | INTCBUSDT | surge | 66.03 | 66.3 | +0.41% |
-| 2026-11-01T06:57 | AVAXUSDT | surge | 8.954 | 8.744 | -2.35% |
-| 2026-11-01T09:51 | MARSCOINUSDT | surge | 0.0577 | 0.0572 | -0.87% |
+| 2026-10-31T22:16 | AEROUSDT | surge | 0.6453 | 0.6319 | -2.08% |
+| 2026-11-01T04:58 | RADUSDT | bottom | 0.242 | 0.242 | +0.00% |
+| 2026-11-01T06:06 | INTWBUSDT | surge | 7.52 | 7.53 | +0.13% |
+| 2026-11-01T06:23 | INTCBUSDT | surge | 66.03 | 65.95 | -0.12% |
+| 2026-11-01T06:57 | AVAXUSDT | surge | 8.954 | 8.698 | -2.86% |
+| 2026-11-01T09:51 | MARSCOINUSDT | surge | 0.0577 | 0.0569 | -1.39% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
