@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-01T07:36:39+00:00",
+  "ts": "2026-11-01T07:42:07+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -19,11 +19,11 @@
       "AVAX",
       "UNI",
       "LINK",
+      "LSK",
       "NEAR",
       "ETH",
       "BNB",
-      "BTC",
-      "XRP"
+      "BTC"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -46,7 +46,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 1.4e-05,
+      "funding": 1.3e-05,
       "long_short": 2.7
     },
     {
@@ -55,7 +55,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.7e-05
+      "funding": -2.8e-05
     },
     {
       "symbol": "AERO",
@@ -63,7 +63,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.4e-05
+      "funding": 2.2e-05
     },
     {
       "symbol": "AVAX",
@@ -86,7 +86,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.1e-05
+      "funding": 3.9e-05
     },
     {
       "symbol": "DOT",
@@ -111,6 +111,14 @@
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "LSK",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -0.00222
     },
     {
       "symbol": "NEAR",
@@ -145,14 +153,6 @@
     },
     {
       "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "XRP",
       "surfaces": 1,
       "sources": [
         "movers"
