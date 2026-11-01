@@ -1,25 +1,27 @@
 {
-  "ts": "2026-11-01T01:55:14+00:00",
+  "ts": "2026-11-01T02:01:18+00:00",
   "sources": {
     "coingecko": [
-      "SOL",
-      "PEPE",
       "LIT",
       "PENGU",
-      "QNT",
+      "SOL",
+      "PEPE",
+      "RUNE",
       "PENDLE",
-      "HYPE",
-      "TAO"
+      "PUMP",
+      "QNT",
+      "AERO"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
+      "PEPE",
       "LSK",
       "NEAR",
-      "PEPE",
-      "ETH",
       "UNI",
-      "BTC"
+      "ETH",
+      "BTC",
+      "LINK"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -32,6 +34,14 @@
         "coingecko",
         "movers"
       ]
+    },
+    {
+      "symbol": "AERO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -4.9e-05
     },
     {
       "symbol": "BTC",
@@ -50,12 +60,12 @@
       "funding": 1.6e-05
     },
     {
-      "symbol": "HYPE",
+      "symbol": "LINK",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
-      "funding": 5e-05
+      "funding": 7.3e-05
     },
     {
       "symbol": "LIT",
@@ -71,7 +81,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001558
+      "funding": -0.001498
     },
     {
       "symbol": "NEAR",
@@ -79,7 +89,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 5.2e-05
+      "funding": 4.8e-05
     },
     {
       "symbol": "PENDLE",
@@ -87,10 +97,18 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000238
+      "funding": -0.000242
     },
     {
       "symbol": "PENGU",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "PUMP",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -103,7 +121,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.2e-05
+      "funding": 9.7e-05
+    },
+    {
+      "symbol": "RUNE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "SOL",
@@ -111,15 +137,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.6e-05
-    },
-    {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": 7.7e-05
     },
     {
       "symbol": "UNI",
