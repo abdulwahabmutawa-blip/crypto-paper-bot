@@ -1,8 +1,24 @@
 {
-  "ts": "2026-11-01T04:57:54+00:00",
-  "scanned": 60,
+  "ts": "2026-11-01T05:03:08+00:00",
+  "scanned": 61,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ZAMAUSDT",
+      "signal": "breakout",
+      "score": 0.798,
+      "raw_score": 0.8867,
+      "weight": 0.9,
+      "price": 0.07336,
+      "why": "trades 14.0x, volume 31.3x, 87% taker-buy, +5.2% in an hour, at 86% of its 24h range",
+      "chg_24h": 0.1331,
+      "vol_surge": 31.34,
+      "chg_1h": 0.0522,
+      "market_surge": 0.56,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -1.15% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean +0.05% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -1.15% at 24h: market beta, not signal",
@@ -11,7 +27,7 @@
     "revival": "benched \u2014 BTC-excess day mean -1.09% at 24h: market beta, not signal"
   },
   "breadth": {
-    "count": 12,
+    "count": 11,
     "baseline": 13.0,
     "wave": false
   },
