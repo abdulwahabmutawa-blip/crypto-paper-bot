@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-01T06:52:38+00:00",
+  "ts": "2026-11-01T06:57:48+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -24,7 +24,7 @@
       "BTC",
       "NEAR",
       "BNB",
-      "XRP"
+      "LSK"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -87,7 +87,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 3.1e-05
+      "funding": 3e-05
     },
     {
       "symbol": "GTC",
@@ -95,7 +95,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.001136
+      "funding": -0.001104
     },
     {
       "symbol": "LINK",
@@ -112,6 +112,14 @@
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "LSK",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -0.002426
     },
     {
       "symbol": "NEAR",
@@ -159,14 +167,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "XRP",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
