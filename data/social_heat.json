@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-02T02:05:33+00:00",
+  "ts": "2026-11-02T02:11:06+00:00",
   "sources": {
     "coingecko": [
       "LIT",
@@ -20,10 +20,11 @@
       "UNI",
       "BNB",
       "TRX",
-      "AVAX",
       "ETH",
+      "AVAX",
       "BTC",
-      "XRP"
+      "XRP",
+      "ZEC"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -36,8 +37,18 @@
         "coingecko",
         "movers"
       ],
-      "funding": -2.4e-05,
+      "funding": -2.5e-05,
       "long_short": 2.42
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.01
     },
     {
       "symbol": "AERO",
@@ -61,7 +72,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 5.2e-05
+      "funding": 5.3e-05
     },
     {
       "symbol": "BTC",
@@ -69,7 +80,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 9.8e-05
+      "funding": 9.7e-05
     },
     {
       "symbol": "HBAR",
@@ -93,7 +104,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000137
+      "funding": -0.00013
     },
     {
       "symbol": "LIT",
@@ -141,7 +152,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -3e-05
+      "funding": -2.4e-05
     },
     {
       "symbol": "UNI",
@@ -156,14 +167,6 @@
       "surfaces": 1,
       "sources": [
         "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
       ],
       "funding": 0.0001
     }
