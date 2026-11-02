@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-02T05:46:13+00:00 · runs 5007 · equity **$586.98** (-41.30%) · cash $0.00 · open 10/10 · round trips 1748
+updated 2026-11-02T06:03:01+00:00 · runs 5008 · equity **$585.82** (-41.42%) · cash $0.00 · open 10/10 · round trips 1748
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-01T06:23 | INTCBUSDT | surge | 66.03 | 66.92 | +1.35% |
-| 2026-11-01T16:34 | NIGHTUSDT | surge | 0.04234 | 0.04175 | -1.39% |
-| 2026-11-01T16:51 | ONDOUSDT | bottom | 0.4048 | 0.401 | -0.94% |
-| 2026-11-01T17:09 | CELOUSDT | bottom | 0.07412 | 0.07434 | +0.30% |
-| 2026-11-01T23:29 | SEIUSDT | surge | 0.04825 | 0.04822 | -0.06% |
-| 2026-11-02T01:15 | SKHYBUSDT | surge | 156.37 | 157.89 | +0.97% |
-| 2026-11-02T01:32 | DRAMBUSDT | surge | 49.57 | 50.33 | +1.53% |
-| 2026-11-02T04:53 | SOXLBUSDT | surge | 82.34 | 82.57 | +0.28% |
-| 2026-11-02T05:10 | CRCLBUSDT | surge | 74.21 | 74.22 | +0.01% |
+| 2026-11-01T06:23 | INTCBUSDT | surge | 66.03 | 66.83 | +1.21% |
+| 2026-11-01T16:34 | NIGHTUSDT | surge | 0.04234 | 0.04168 | -1.56% |
+| 2026-11-01T16:51 | ONDOUSDT | bottom | 0.4048 | 0.3992 | -1.38% |
+| 2026-11-01T17:09 | CELOUSDT | bottom | 0.07412 | 0.07401 | -0.15% |
+| 2026-11-01T23:29 | SEIUSDT | surge | 0.04825 | 0.04806 | -0.39% |
+| 2026-11-02T01:15 | SKHYBUSDT | surge | 156.37 | 157.35 | +0.63% |
+| 2026-11-02T01:32 | DRAMBUSDT | surge | 49.57 | 50.29 | +1.45% |
+| 2026-11-02T04:53 | SOXLBUSDT | surge | 82.34 | 82.47 | +0.16% |
+| 2026-11-02T05:10 | CRCLBUSDT | surge | 74.21 | 74.19 | -0.03% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
