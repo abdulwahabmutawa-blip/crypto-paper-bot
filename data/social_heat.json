@@ -1,32 +1,54 @@
 {
-  "ts": "2026-11-02T15:21:48+00:00",
+  "ts": "2026-11-02T15:27:23+00:00",
   "sources": {
     "coingecko": [
-      "PENGU",
       "LIT",
+      "PENGU",
       "BTC",
       "SOL",
-      "INJ",
-      "ENA",
       "ZEC",
       "AERO",
-      "HYPE",
-      "NEAR"
+      "ENA",
+      "NEAR",
+      "ETH",
+      "INJ",
+      "SUI"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "TRX",
       "SPCXB",
       "ZEC",
+      "TRX",
       "ETH",
       "XRP",
+      "BTC",
       "RLUSD"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "BTC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.2
+    },
+    {
+      "symbol": "ETH",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 3.5e-05,
+      "long_short": 2.38
+    },
     {
       "symbol": "ZEC",
       "surfaces": 2,
@@ -43,34 +65,10 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.2e-05
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": 4.7e-05
     },
     {
       "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "ETH",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 3.8e-05
-    },
-    {
-      "symbol": "HYPE",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -83,7 +81,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.6e-05
+      "funding": 7.9e-05
     },
     {
       "symbol": "LIT",
@@ -132,12 +130,20 @@
       ]
     },
     {
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "TRX",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 7.8e-05
+      "funding": 8.1e-05
     },
     {
       "symbol": "XRP",
