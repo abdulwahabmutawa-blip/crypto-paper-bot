@@ -1,8 +1,26 @@
 {
-  "ts": "2026-11-02T20:18:50+00:00",
+  "ts": "2026-11-02T20:24:26+00:00",
   "scanned": 91,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "MRVLBUSDT",
+      "signal": "reversion",
+      "score": 0.6065,
+      "raw_score": 0.5843,
+      "weight": 1.038,
+      "price": 172.35,
+      "why": "down -13% on the day (bottom decile of the market), now +1.9% over 15m with 3 green candles",
+      "chg_24h": -0.1292,
+      "vol_surge": 0.28,
+      "chg_1h": -0.0097,
+      "market_surge": 0.16,
+      "oi_drop": null,
+      "funding": null,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -2.40% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.37% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -1.64% at 24h: market beta, not signal",
