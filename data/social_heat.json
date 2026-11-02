@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-02T09:38:10+00:00",
+  "ts": "2026-11-02T09:43:34+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -20,8 +20,9 @@
       "TRX",
       "ETH",
       "ZEC",
+      "BTC",
       "XRP",
-      "BTC"
+      "RLUSD"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -63,7 +64,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000243
+      "funding": -0.000235
     },
     {
       "symbol": "LINK",
@@ -103,7 +104,14 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9e-06
+      "funding": 6e-06
+    },
+    {
+      "symbol": "RLUSD",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
     },
     {
       "symbol": "SOL",
@@ -119,7 +127,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.8e-05
+      "funding": 2.4e-05
     },
     {
       "symbol": "TRX",
@@ -127,7 +135,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000284
+      "funding": -0.000279
     },
     {
       "symbol": "ZEC",
