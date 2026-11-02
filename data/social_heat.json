@@ -1,29 +1,29 @@
 {
-  "ts": "2026-11-02T04:11:40+00:00",
+  "ts": "2026-11-02T04:17:18+00:00",
   "sources": {
     "coingecko": [
-      "INJ",
-      "BTC",
-      "HYPE",
-      "ONDO",
       "LIT",
-      "PEPE",
-      "SUI",
+      "INJ",
+      "ONDO",
+      "HYPE",
       "PENGU",
-      "UNI",
-      "NEAR"
+      "PEPE",
+      "BTC",
+      "SUI",
+      "NEAR",
+      "AAVE"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
+      "BEAMX",
       "UNI",
       "ZEC",
       "ETH",
       "TRX",
       "BNB",
       "BTC",
-      "XRP",
-      "AVAX"
+      "XRP"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -40,22 +40,20 @@
       "long_short": 2.17
     },
     {
-      "symbol": "UNI",
-      "surfaces": 2,
+      "symbol": "AAVE",
+      "surfaces": 1,
       "sources": [
-        "coingecko",
-        "movers"
+        "coingecko"
       ],
-      "funding": 0.0001,
-      "long_short": 1.85
+      "funding": 0.0001
     },
     {
-      "symbol": "AVAX",
+      "symbol": "BEAMX",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 0.0001
+      "funding": 5e-05
     },
     {
       "symbol": "BNB",
@@ -63,7 +61,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 2.1e-05
+      "funding": 1.4e-05
     },
     {
       "symbol": "ETH",
@@ -71,7 +69,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -3.4e-05
+      "funding": -3.1e-05
     },
     {
       "symbol": "HYPE",
@@ -87,7 +85,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -3.6e-05
+      "funding": -3e-05
     },
     {
       "symbol": "LIT",
@@ -143,6 +141,14 @@
         "movers"
       ],
       "funding": 4e-06
+    },
+    {
+      "symbol": "UNI",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "XRP",
