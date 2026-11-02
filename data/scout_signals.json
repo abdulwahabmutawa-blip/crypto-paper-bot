@@ -1,39 +1,8 @@
 {
-  "ts": "2026-11-02T01:10:50+00:00",
-  "scanned": 59,
+  "ts": "2026-11-02T01:16:39+00:00",
+  "scanned": 61,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "SOLUSDT",
-      "signal": "ignition",
-      "score": 0.531,
-      "raw_score": 0.5728,
-      "weight": 0.927,
-      "price": 95.05,
-      "why": "trades 5.2x and volume 5.2x the prior 4h, 61% taker-buy, $1,408,087 burst \u2014 while price has only moved +0.8%",
-      "chg_24h": -0.0083,
-      "vol_surge": 5.2,
-      "chg_1h": 0.008,
-      "market_surge": 4.57,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.33% at 24h: market beta, not signal"
-    },
-    {
-      "symbol": "SOXLBUSDT",
-      "signal": "breakout",
-      "score": 0.5027,
-      "raw_score": 0.5785,
-      "weight": 0.869,
-      "price": 81.62,
-      "why": "trades 4.2x, volume 6.4x, 75% taker-buy, +2.3% in an hour, at 95% of its 24h range",
-      "chg_24h": 0.0528,
-      "vol_surge": 6.38,
-      "chg_1h": 0.0228,
-      "market_surge": 13.22,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -1.39% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.33% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -1.39% at 24h: market beta, not signal",
