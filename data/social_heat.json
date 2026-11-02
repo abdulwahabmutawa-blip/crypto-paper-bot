@@ -1,20 +1,22 @@
 {
-  "ts": "2026-11-02T21:59:29+00:00",
+  "ts": "2026-11-02T22:05:18+00:00",
   "sources": {
     "coingecko": [
       "HYPE",
-      "LIT",
-      "PENGU",
       "KMNO",
-      "XLM",
-      "ONDO",
       "BTC",
-      "LSK"
+      "PENGU",
+      "LIT",
+      "ONDO",
+      "AAVE",
+      "LSK",
+      "SUI"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "TRX",
+      "XAUT",
       "XRP",
       "RLUSD"
     ],
@@ -22,6 +24,14 @@
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "AAVE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
     {
       "symbol": "BTC",
       "surfaces": 1,
@@ -44,7 +54,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.6e-05
+      "funding": -1.4e-05
     },
     {
       "symbol": "LIT",
@@ -60,7 +70,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.001211
+      "funding": -0.001235
     },
     {
       "symbol": "ONDO",
@@ -86,20 +96,28 @@
       ]
     },
     {
-      "symbol": "TRX",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -0.000124
-    },
-    {
-      "symbol": "XLM",
+      "symbol": "SUI",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "TRX",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -0.000116
+    },
+    {
+      "symbol": "XAUT",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 2.4e-05
     },
     {
       "symbol": "XRP",
