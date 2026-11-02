@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-02T18:39:27+00:00 · runs 5038 · equity **$566.86** (-43.31%) · cash $0.00 · open 10/10 · round trips 1761
+updated 2026-11-02T18:55:43+00:00 · runs 5039 · equity **$566.41** (-43.36%) · cash $0.00 · open 10/10 · round trips 1761
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-02T07:11 | PROMUSDT | bottom | 5.468 | 5.423 | -0.82% |
-| 2026-11-02T16:59 | TSLABUSDT | surge | 410.69 | 408.21 | -0.60% |
-| 2026-11-02T16:59 | BABABUSDT | surge | 103.32 | 102.9 | -0.41% |
-| 2026-11-02T16:59 | MSTRBUSDT | surge | 136.3 | 133.44 | -2.10% |
-| 2026-11-02T16:59 | SPCXBUSDT | surge | 140.88 | 139.44 | -1.02% |
-| 2026-11-02T16:59 | COWUSDT | surge | 0.1187 | 0.1191 | +0.34% |
-| 2026-11-02T16:59 | MUBUSDT | bottom | 861.83 | 851.94 | -1.15% |
-| 2026-11-02T18:05 | BEAMXUSDT | bottom | 0.004689 | 0.004584 | -2.24% |
-| 2026-11-02T18:38 | HOTUSDT | surge | 0.000431 | 0.000431 | +0.00% |
+| 2026-11-02T07:11 | PROMUSDT | bottom | 5.468 | 5.424 | -0.80% |
+| 2026-11-02T16:59 | TSLABUSDT | surge | 410.69 | 408.09 | -0.63% |
+| 2026-11-02T16:59 | BABABUSDT | surge | 103.32 | 102.79 | -0.51% |
+| 2026-11-02T16:59 | MSTRBUSDT | surge | 136.3 | 133.08 | -2.36% |
+| 2026-11-02T16:59 | SPCXBUSDT | surge | 140.88 | 139.16 | -1.22% |
+| 2026-11-02T16:59 | COWUSDT | surge | 0.1187 | 0.1179 | -0.67% |
+| 2026-11-02T16:59 | MUBUSDT | bottom | 861.83 | 846.05 | -1.83% |
+| 2026-11-02T18:05 | BEAMXUSDT | bottom | 0.004689 | 0.004533 | -3.33% |
+| 2026-11-02T18:38 | HOTUSDT | surge | 0.000431 | 0.000442 | +2.55% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
