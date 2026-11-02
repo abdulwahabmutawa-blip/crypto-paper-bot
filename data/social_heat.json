@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-02T13:26:16+00:00",
+  "ts": "2026-11-02T13:32:17+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -15,30 +15,19 @@
     "stocktwits": [],
     "movers": [
       "TRX",
-      "ETH",
-      "ZEC"
+      "ETH"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
     {
-      "symbol": "ZEC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 0.98
-    },
-    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 9.8e-05
+      "funding": 0.0001
     },
     {
       "symbol": "ETH",
@@ -93,10 +82,18 @@
       "sources": [
         "movers"
       ],
-      "funding": -5.2e-05
+      "funding": -4.5e-05
     },
     {
       "symbol": "XMR",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
         "coingecko"
