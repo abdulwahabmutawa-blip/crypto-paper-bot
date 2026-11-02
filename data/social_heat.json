@@ -1,44 +1,32 @@
 {
-  "ts": "2026-11-02T08:42:47+00:00",
+  "ts": "2026-11-02T08:48:15+00:00",
   "sources": {
     "coingecko": [
       "BTC",
-      "PENGU",
-      "TRUMP",
-      "ETH",
       "LIT",
+      "PENGU",
       "QNT",
       "NEAR",
-      "SUI",
-      "BNB",
-      "INIT",
-      "MEGA"
+      "TRUMP",
+      "AAVE",
+      "ETH",
+      "ENA",
+      "BEAM",
+      "XRP"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "TRX",
-      "ETH",
       "ZEC",
-      "BTC",
+      "ETH",
       "XRP",
-      "BNB",
-      "RLUSD"
+      "BTC"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "BNB",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0,
-      "long_short": 2.73
-    },
     {
       "symbol": "BTC",
       "surfaces": 2,
@@ -60,15 +48,32 @@
       "long_short": 2.41
     },
     {
-      "symbol": "INIT",
+      "symbol": "XRP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.53
+    },
+    {
+      "symbol": "AAVE",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -1.5e-05
+      "funding": 0.0001
     },
     {
-      "symbol": "LIT",
+      "symbol": "BEAM",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ]
+    },
+    {
+      "symbol": "ENA",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -76,7 +81,7 @@
       "funding": 5e-05
     },
     {
-      "symbol": "MEGA",
+      "symbol": "LIT",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -105,22 +110,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.5e-05
-    },
-    {
-      "symbol": "RLUSD",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
-    },
-    {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": 1.8e-05
     },
     {
       "symbol": "TRUMP",
@@ -136,15 +126,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000288
-    },
-    {
-      "symbol": "XRP",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
+      "funding": -0.00029
     },
     {
       "symbol": "ZEC",
