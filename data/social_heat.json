@@ -1,18 +1,17 @@
 {
-  "ts": "2026-11-02T09:21:46+00:00",
+  "ts": "2026-11-02T09:27:01+00:00",
   "sources": {
     "coingecko": [
       "BTC",
-      "LIT",
       "NEAR",
-      "LINK",
-      "TRX",
-      "SOL",
-      "QNT",
+      "LIT",
+      "PENGU",
       "TAO",
-      "BEAM",
+      "SOL",
+      "LINK",
+      "QNT",
       "PENDLE",
-      "PENGU"
+      "ATOM"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,6 +19,7 @@
       "TRX",
       "ETH",
       "ZEC",
+      "XRP",
       "BTC"
     ],
     "watcher": [],
@@ -33,25 +33,16 @@
         "coingecko",
         "movers"
       ],
-      "funding": 0.0001,
+      "funding": 9.7e-05,
       "long_short": 2.13
     },
     {
-      "symbol": "TRX",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": -0.000294,
-      "long_short": 1.12
-    },
-    {
-      "symbol": "BEAM",
+      "symbol": "ATOM",
       "surfaces": 1,
       "sources": [
         "coingecko"
-      ]
+      ],
+      "funding": -0.000225
     },
     {
       "symbol": "ETH",
@@ -59,7 +50,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 9e-06
+      "funding": 8e-06
     },
     {
       "symbol": "LINK",
@@ -107,7 +98,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6e-06
+      "funding": 7e-06
     },
     {
       "symbol": "SOL",
@@ -123,7 +114,23 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 4.7e-05
+    },
+    {
+      "symbol": "TRX",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -0.000294
+    },
+    {
+      "symbol": "XRP",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "ZEC",
