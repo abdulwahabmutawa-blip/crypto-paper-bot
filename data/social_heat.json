@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-02T01:43:25+00:00",
+  "ts": "2026-11-02T01:48:47+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
@@ -18,10 +18,11 @@
       "UNI",
       "BNB",
       "AVAX",
-      "TRX",
       "ETH",
+      "TRX",
       "BTC",
-      "XRP"
+      "XRP",
+      "ZEC"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -34,7 +35,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -1.4e-05,
+      "funding": -1.2e-05,
       "long_short": 2.57
     },
     {
@@ -46,6 +47,16 @@
       ],
       "funding": 0.0001,
       "long_short": 1.91
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.08
     },
     {
       "symbol": "AERO",
@@ -69,7 +80,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 5.8e-05
+      "funding": 5.6e-05
     },
     {
       "symbol": "BTC",
@@ -125,21 +136,13 @@
       "sources": [
         "movers"
       ],
-      "funding": -5.7e-05
+      "funding": -5e-05
     },
     {
       "symbol": "XRP",
       "surfaces": 1,
       "sources": [
         "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
       ],
       "funding": 0.0001
     }
