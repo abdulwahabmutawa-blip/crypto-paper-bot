@@ -1,22 +1,24 @@
 {
-  "ts": "2026-11-02T20:41:09+00:00",
+  "ts": "2026-11-02T20:46:20+00:00",
   "sources": {
     "coingecko": [
       "HYPE",
-      "PENGU",
       "BTC",
       "NEAR",
       "QNT",
       "SOL",
       "ETH",
+      "PENGU",
       "AERO",
-      "SUI",
-      "XMR"
+      "XMR",
+      "PUMP",
+      "TAO"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "TRX",
+      "XRP",
       "RLUSD"
     ],
     "watcher": [],
@@ -45,7 +47,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3e-06
+      "funding": 5e-06
     },
     {
       "symbol": "HYPE",
@@ -72,12 +74,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "QNT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 3.6e-05
+      "funding": 4.1e-05
     },
     {
       "symbol": "RLUSD",
@@ -95,12 +105,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "SUI",
+      "symbol": "TAO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 7.8e-05
+      "funding": 4.8e-05
     },
     {
       "symbol": "TRX",
@@ -108,13 +118,21 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000206
+      "funding": -0.000205
     },
     {
       "symbol": "XMR",
       "surfaces": 1,
       "sources": [
         "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "XRP",
+      "surfaces": 1,
+      "sources": [
+        "movers"
       ],
       "funding": 0.0001
     }
