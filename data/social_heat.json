@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-02T15:05:19+00:00",
+  "ts": "2026-11-02T15:10:47+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -18,6 +18,7 @@
       "ZEC",
       "SPCXB",
       "ETH",
+      "XRP",
       "RLUSD"
     ],
     "watcher": [],
@@ -40,7 +41,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.3e-05
+      "funding": 4.8e-05
     },
     {
       "symbol": "BTC",
@@ -56,7 +57,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 3.7e-05
+      "funding": 4e-05
     },
     {
       "symbol": "INJ",
@@ -64,7 +65,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.7e-05
+      "funding": 8e-05
     },
     {
       "symbol": "LIT",
@@ -118,7 +119,15 @@
       "sources": [
         "movers"
       ],
-      "funding": 6.8e-05
+      "funding": 7.2e-05
+    },
+    {
+      "symbol": "XRP",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
