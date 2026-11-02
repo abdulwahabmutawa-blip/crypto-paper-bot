@@ -1,8 +1,24 @@
 {
-  "ts": "2026-11-02T17:30:31+00:00",
-  "scanned": 84,
+  "ts": "2026-11-02T17:36:04+00:00",
+  "scanned": 86,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SKHYBUSDT",
+      "signal": "ignition",
+      "score": 0.6387,
+      "raw_score": 0.689,
+      "weight": 0.927,
+      "price": 150.77,
+      "why": "trades 4.0x and volume 11.1x the prior 4h, 79% taker-buy, $166,416 burst \u2014 while price has only moved -0.7%",
+      "chg_24h": -0.0084,
+      "vol_surge": 11.1,
+      "chg_1h": -0.0073,
+      "market_surge": 4.12,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.33% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.33% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -1.69% at 24h: market beta, not signal",
@@ -11,7 +27,7 @@
     "revival": "benched \u2014 BTC-excess day mean -0.18% at 24h: market beta, not signal"
   },
   "breadth": {
-    "count": 7,
+    "count": 6,
     "baseline": 10.0,
     "wave": false
   },
