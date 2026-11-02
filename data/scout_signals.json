@@ -1,54 +1,8 @@
 {
-  "ts": "2026-11-02T03:32:24+00:00",
+  "ts": "2026-11-02T03:38:04+00:00",
   "scanned": 64,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ONDOUSDT",
-      "signal": "ignition",
-      "score": 0.8625,
-      "raw_score": 0.9284,
-      "weight": 0.929,
-      "price": 0.4032,
-      "why": "trades 12.0x and volume 29.1x the prior 4h, 72% taker-buy, $366,126 burst \u2014 while price has only moved +0.1%",
-      "chg_24h": -0.019,
-      "vol_surge": 29.13,
-      "chg_1h": 0.001,
-      "market_surge": 14.21,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.26% at 24h: market beta, not signal"
-    },
-    {
-      "symbol": "AVAXUSDT",
-      "signal": "ignition",
-      "score": 0.7272,
-      "raw_score": 0.7828,
-      "weight": 0.929,
-      "price": 8.687,
-      "why": "trades 7.2x and volume 9.1x the prior 4h, 71% taker-buy, $293,457 burst \u2014 while price has only moved +0.4%",
-      "chg_24h": 0.0091,
-      "vol_surge": 9.07,
-      "chg_1h": 0.0044,
-      "market_surge": 2.09,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.26% at 24h: market beta, not signal"
-    },
-    {
-      "symbol": "QNTUSDT",
-      "signal": "ignition",
-      "score": 0.5694,
-      "raw_score": 0.6129,
-      "weight": 0.929,
-      "price": 202.61,
-      "why": "trades 5.8x and volume 5.7x the prior 4h, 65% taker-buy, $62,584 burst \u2014 while price has only moved +1.0%",
-      "chg_24h": 0.0037,
-      "vol_surge": 5.7,
-      "chg_1h": 0.0097,
-      "market_surge": 1.35,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.26% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.26% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -1.39% at 24h: market beta, not signal",
