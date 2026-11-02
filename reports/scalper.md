@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-02T20:49:31+00:00 · runs 5046 · equity **$563.97** (-43.60%) · cash $160.17 · open 7/10 · round trips 1769
+updated 2026-11-02T21:05:48+00:00 · runs 5047 · equity **$564.62** (-43.54%) · cash $160.17 · open 7/10 · round trips 1769
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,11 +36,11 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-02T07:11 | PROMUSDT | bottom | 5.468 | 5.358 | -2.01% |
-| 2026-11-02T16:59 | TSLABUSDT | surge | 410.69 | 403.93 | -1.65% |
-| 2026-11-02T16:59 | BABABUSDT | surge | 103.32 | 101.84 | -1.43% |
-| 2026-11-02T16:59 | COWUSDT | surge | 0.1187 | 0.1169 | -1.52% |
-| 2026-11-02T19:59 | FETUSDT | bottom | 0.1538 | 0.1556 | +1.17% |
-| 2026-11-02T20:48 | KORUBUSDT | bottom | 10.48 | 10.49 | +0.10% |
+| 2026-11-02T07:11 | PROMUSDT | bottom | 5.468 | 5.399 | -1.26% |
+| 2026-11-02T16:59 | TSLABUSDT | surge | 410.69 | 405.12 | -1.36% |
+| 2026-11-02T16:59 | BABABUSDT | surge | 103.32 | 101.76 | -1.51% |
+| 2026-11-02T16:59 | COWUSDT | surge | 0.1187 | 0.1179 | -0.67% |
+| 2026-11-02T19:59 | FETUSDT | bottom | 0.1538 | 0.1552 | +0.91% |
+| 2026-11-02T20:48 | KORUBUSDT | bottom | 10.48 | 10.46 | -0.19% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
