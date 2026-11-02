@@ -1,25 +1,27 @@
 {
-  "ts": "2026-11-02T05:28:50+00:00",
+  "ts": "2026-11-02T05:34:36+00:00",
   "sources": {
     "coingecko": [
-      "BTC",
       "NEAR",
+      "BTC",
       "PENGU",
+      "HYPE",
       "AERO",
       "LIT",
-      "HYPE",
-      "INJ",
-      "XPL"
+      "ZEC",
+      "CFG",
+      "RAY"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "ZEC",
-      "TRX",
       "ETH",
       "UNI",
       "BNB",
-      "BTC"
+      "BTC",
+      "TRX",
+      "XRP"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -34,6 +36,16 @@
       ],
       "funding": 6.6e-05,
       "long_short": 2.08
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 0.84
     },
     {
       "symbol": "AERO",
@@ -52,12 +64,20 @@
       "funding": 0.0
     },
     {
+      "symbol": "CFG",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -3.6e-05
+      "funding": -3.3e-05
     },
     {
       "symbol": "HYPE",
@@ -66,14 +86,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "INJ",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -9e-06
     },
     {
       "symbol": "LIT",
@@ -100,12 +112,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "RAY",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0
+    },
+    {
       "symbol": "TRX",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -1.6e-05
+      "funding": -1.5e-05
     },
     {
       "symbol": "UNI",
@@ -116,15 +136,7 @@
       "funding": 0.0001
     },
     {
-      "symbol": "XPL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "ZEC",
+      "symbol": "XRP",
       "surfaces": 1,
       "sources": [
         "movers"
