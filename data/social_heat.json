@@ -1,16 +1,17 @@
 {
-  "ts": "2026-11-02T14:09:36+00:00",
+  "ts": "2026-11-02T14:15:39+00:00",
   "sources": {
     "coingecko": [
-      "NEAR",
       "BTC",
+      "NEAR",
       "HYPE",
-      "PENGU",
       "SOL",
+      "PENGU",
+      "PEPE",
       "LIT",
       "ZEC",
-      "ORCA",
-      "PEPE"
+      "XRP",
+      "AERO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -18,25 +19,12 @@
       "TRX",
       "ZEC",
       "ETH",
-      "XRP",
-      "BTC",
-      "SNDKB",
       "RLUSD"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "BTC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 2.16
-    },
     {
       "symbol": "ZEC",
       "surfaces": 2,
@@ -48,12 +36,28 @@
       "long_short": 0.9
     },
     {
+      "symbol": "AERO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 2.6e-05
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 6.8e-05
+      "funding": 6.3e-05
     },
     {
       "symbol": "HYPE",
@@ -80,14 +84,6 @@
       "funding": 0.0001
     },
     {
-      "symbol": "ORCA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
@@ -110,13 +106,6 @@
       ]
     },
     {
-      "symbol": "SNDKB",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
-    },
-    {
       "symbol": "SOL",
       "surfaces": 1,
       "sources": [
@@ -130,13 +119,13 @@
       "sources": [
         "movers"
       ],
-      "funding": -1e-06
+      "funding": 1.2e-05
     },
     {
       "symbol": "XRP",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
       "funding": 0.0001
     }
