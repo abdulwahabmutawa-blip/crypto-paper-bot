@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-02T13:37:36+00:00",
+  "ts": "2026-11-02T13:42:49+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -14,15 +14,28 @@
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "TRX",
       "ZEC",
+      "TRX",
       "ETH",
-      "XRP"
+      "XRP",
+      "UNI",
+      "BTC",
+      "RLUSD"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "BTC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.1
+    },
     {
       "symbol": "ZEC",
       "surfaces": 2,
@@ -34,20 +47,12 @@
       "long_short": 0.98
     },
     {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 5.9e-05
+      "funding": 6.3e-05
     },
     {
       "symbol": "LIT",
@@ -81,6 +86,13 @@
       ]
     },
     {
+      "symbol": "RLUSD",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
+    },
+    {
       "symbol": "SOL",
       "surfaces": 1,
       "sources": [
@@ -94,7 +106,15 @@
       "sources": [
         "movers"
       ],
-      "funding": -3.9e-05
+      "funding": -3.3e-05
+    },
+    {
+      "symbol": "UNI",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "XMR",
