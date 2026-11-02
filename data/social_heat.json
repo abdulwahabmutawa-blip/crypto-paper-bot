@@ -1,17 +1,16 @@
 {
-  "ts": "2026-11-02T23:31:23+00:00",
+  "ts": "2026-11-02T23:36:47+00:00",
   "sources": {
     "coingecko": [
       "HYPE",
       "BTC",
       "NEAR",
       "SOL",
-      "AERO",
-      "STRK",
       "QNT",
-      "SUI",
-      "PEPE",
-      "LIT"
+      "ETH",
+      "LIT",
+      "FET",
+      "SUI"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -24,20 +23,28 @@
   },
   "heat": [
     {
-      "symbol": "AERO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "ETH",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "FET",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 1.3e-05
     },
     {
       "symbol": "HYPE",
@@ -64,13 +71,6 @@
       "funding": 0.0001
     },
     {
-      "symbol": "PEPE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ]
-    },
-    {
       "symbol": "QNT",
       "surfaces": 1,
       "sources": [
@@ -94,14 +94,6 @@
       "funding": 0.0001
     },
     {
-      "symbol": "STRK",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "SUI",
       "surfaces": 1,
       "sources": [
@@ -115,7 +107,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 1.9e-05
+      "funding": 2.5e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
