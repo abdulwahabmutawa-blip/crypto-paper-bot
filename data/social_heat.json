@@ -1,18 +1,18 @@
 {
-  "ts": "2026-11-02T18:32:46+00:00",
+  "ts": "2026-11-02T18:38:38+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "LIT",
-      "HYPE",
-      "SOL",
-      "AERO",
       "NEAR",
-      "TAO",
       "PENGU",
+      "HYPE",
+      "TAO",
+      "SOL",
       "QNT",
+      "PUMP",
       "XRP",
-      "SUI"
+      "ETH"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -25,20 +25,20 @@
   },
   "heat": [
     {
-      "symbol": "AERO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -2.7e-05
-    },
-    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "ETH",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 2.3e-05
     },
     {
       "symbol": "HYPE",
@@ -73,12 +73,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "QNT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 8.8e-05
+      "funding": 8.6e-05
     },
     {
       "symbol": "SOL",
@@ -96,14 +104,6 @@
       ]
     },
     {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 7.6e-05
-    },
-    {
       "symbol": "TAO",
       "surfaces": 1,
       "sources": [
@@ -117,7 +117,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -5.1e-05
+      "funding": -6e-05
     },
     {
       "symbol": "XRP",
