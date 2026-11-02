@@ -1,25 +1,21 @@
 {
-  "ts": "2026-11-02T20:51:48+00:00",
+  "ts": "2026-11-02T20:57:38+00:00",
   "sources": {
     "coingecko": [
       "HYPE",
-      "BTC",
       "NEAR",
+      "ETH",
       "QNT",
       "SOL",
-      "ETH",
+      "BTC",
       "PENGU",
-      "AERO",
-      "XMR",
-      "PUMP",
-      "TAO"
+      "AERO"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "TRX",
-      "RLUSD",
-      "XRP"
+      "RLUSD"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -47,7 +43,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.2e-05
+      "funding": 1.8e-05
     },
     {
       "symbol": "HYPE",
@@ -74,20 +70,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PUMP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "QNT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 4.8e-05
+      "funding": 5e-05
     },
     {
       "symbol": "RLUSD",
@@ -105,36 +93,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "TRX",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": -0.000205
-    },
-    {
-      "symbol": "XMR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "XRP",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
+      "funding": -0.000202
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
