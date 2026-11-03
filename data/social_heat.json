@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-03T16:36:10+00:00",
+  "ts": "2026-11-03T16:41:48+00:00",
   "sources": {
     "coingecko": [
       "LIT",
@@ -18,11 +18,11 @@
       "PEPE",
       "XRP",
       "TRX",
-      "UNI",
       "ETH",
+      "UNI",
       "SUI",
       "HYPE",
-      "U"
+      "DOGE"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -54,7 +54,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.1e-05
+      "funding": -3.2e-05
+    },
+    {
+      "symbol": "DOGE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "LIT",
@@ -109,13 +117,6 @@
         "movers"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "U",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
     },
     {
       "symbol": "UNI",
