@@ -1,17 +1,17 @@
 {
-  "ts": "2026-11-03T21:34:19+00:00",
+  "ts": "2026-11-03T21:40:19+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
       "LIT",
       "XMR",
       "FET",
-      "HYPE",
-      "LINK",
-      "BTC",
-      "SOL",
       "NEAR",
-      "STRK",
+      "PUMP",
+      "BTC",
+      "HYPE",
+      "SOL",
+      "ZEC",
       "AERO"
     ],
     "reddit": [],
@@ -19,10 +19,10 @@
     "movers": [
       "ZEC",
       "SNDKB",
+      "PEPE",
       "SUI",
       "HYPE",
       "XRP",
-      "PEPE",
       "SOL",
       "ETH"
     ],
@@ -49,6 +49,16 @@
       ],
       "funding": 0.0001,
       "long_short": 3.05
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 0.78
     },
     {
       "symbol": "AERO",
@@ -83,14 +93,6 @@
       "funding": 0.0001
     },
     {
-      "symbol": "LINK",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "LIT",
       "surfaces": 1,
       "sources": [
@@ -104,7 +106,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 0.000107
+      "funding": 0.000101
     },
     {
       "symbol": "PENGU",
@@ -122,19 +124,19 @@
       ]
     },
     {
-      "symbol": "SNDKB",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
-    },
-    {
-      "symbol": "STRK",
+      "symbol": "PUMP",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "SNDKB",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
     },
     {
       "symbol": "SUI",
@@ -154,14 +156,6 @@
     },
     {
       "symbol": "XRP",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
         "movers"
