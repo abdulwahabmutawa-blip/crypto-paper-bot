@@ -1,53 +1,32 @@
 {
-  "ts": "2026-11-03T20:09:48+00:00",
+  "ts": "2026-11-03T20:15:36+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
-      "AERO",
       "XMR",
-      "NEAR",
       "HYPE",
-      "ETH",
+      "NEAR",
+      "AERO",
       "STRK",
-      "ZEC",
-      "BTC"
+      "BTC",
+      "ETH"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "ZEC",
       "SOXLB",
-      "SUI",
-      "PEPE",
       "UNI",
+      "SUI",
       "SNDKB",
-      "HYPE",
+      "PEPE",
+      "TRX",
       "XRP"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "HYPE",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.75
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 0.79
-    },
     {
       "symbol": "AERO",
       "surfaces": 1,
@@ -71,6 +50,14 @@
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "HYPE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "NEAR",
@@ -126,6 +113,14 @@
       "funding": 0.0001
     },
     {
+      "symbol": "TRX",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "UNI",
       "surfaces": 1,
       "sources": [
@@ -143,6 +138,14 @@
     },
     {
       "symbol": "XRP",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
         "movers"
