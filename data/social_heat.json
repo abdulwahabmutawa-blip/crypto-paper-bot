@@ -1,16 +1,16 @@
 {
-  "ts": "2026-11-03T09:49:07+00:00",
+  "ts": "2026-11-03T09:54:49+00:00",
   "sources": {
     "coingecko": [
-      "AERO",
-      "HYPE",
       "NEAR",
+      "AERO",
       "SUI",
       "PENGU",
-      "QNT",
+      "BTC",
+      "HYPE",
       "ETH",
       "LIT",
-      "PUMP"
+      "XPL"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -32,12 +32,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 7.9e-05
+      "funding": 8e-05
     },
     {
       "symbol": "HYPE",
@@ -72,22 +80,6 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PUMP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "QNT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "RLUSD",
       "surfaces": 1,
       "sources": [
@@ -109,6 +101,14 @@
         "movers"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "XPL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "XRP",
