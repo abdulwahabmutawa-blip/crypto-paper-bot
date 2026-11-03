@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-03T21:28:35+00:00",
+  "ts": "2026-11-03T21:34:19+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
@@ -20,11 +20,11 @@
       "ZEC",
       "SNDKB",
       "SUI",
-      "XRP",
       "HYPE",
+      "XRP",
       "PEPE",
       "SOL",
-      "UNI"
+      "ETH"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -63,6 +63,14 @@
       "surfaces": 1,
       "sources": [
         "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ETH",
+      "surfaces": 1,
+      "sources": [
+        "movers"
       ],
       "funding": 0.0001
     },
@@ -130,14 +138,6 @@
     },
     {
       "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "UNI",
       "surfaces": 1,
       "sources": [
         "movers"
