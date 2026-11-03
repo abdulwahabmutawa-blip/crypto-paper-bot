@@ -1,17 +1,17 @@
 {
-  "ts": "2026-11-03T12:24:29+00:00",
+  "ts": "2026-11-03T12:29:48+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "NEAR",
-      "PENGU",
-      "ZEC",
       "HYPE",
+      "HOT",
       "DOGE",
+      "ZEC",
       "ALGO",
       "STRK",
-      "XMR",
-      "HOT"
+      "UNI",
+      "PENGU"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,9 +19,9 @@
       "XRP",
       "TRX",
       "SUI",
-      "UNI",
-      "XAUT",
       "SPCXB",
+      "XAUT",
+      "UNI",
       "U",
       "RLUSD"
     ],
@@ -29,6 +29,16 @@
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "UNI",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.6
+    },
     {
       "symbol": "ALGO",
       "surfaces": 1,
@@ -51,7 +61,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.3e-05
+      "funding": 8.4e-05
     },
     {
       "symbol": "HOT",
@@ -131,28 +141,12 @@
       ]
     },
     {
-      "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "XAUT",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 2.5e-05
-    },
-    {
-      "symbol": "XMR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": 2.6e-05
     },
     {
       "symbol": "XRP",
