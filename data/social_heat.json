@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-03T06:42:38+00:00",
+  "ts": "2026-11-03T06:48:28+00:00",
   "sources": {
     "coingecko": [
       "HYPE",
@@ -7,35 +7,26 @@
       "NEAR",
       "SOL",
       "PENGU",
+      "SUI",
+      "AAVE",
       "ZEC",
       "HOT",
-      "SUI",
-      "XRP",
-      "AAVE",
-      "PEPE",
-      "LTC"
+      "LIT",
+      "PUMP",
+      "DOGE",
+      "XMR"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "TRX",
-      "XRP",
-      "RLUSD"
+      "RLUSD",
+      "XRP"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "XRP",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 2.58
-    },
     {
       "symbol": "AAVE",
       "surfaces": 1,
@@ -53,12 +44,20 @@
       "funding": 0.0001
     },
     {
+      "symbol": "DOGE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 8.5e-05
+    },
+    {
       "symbol": "HOT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -0.001821
+      "funding": -0.001836
     },
     {
       "symbol": "HYPE",
@@ -69,12 +68,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "LTC",
+      "symbol": "LIT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0001
+      "funding": 5e-05
     },
     {
       "symbol": "NEAR",
@@ -93,11 +92,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PEPE",
+      "symbol": "PUMP",
       "surfaces": 1,
       "sources": [
         "coingecko"
-      ]
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "RLUSD",
@@ -124,6 +124,22 @@
     },
     {
       "symbol": "TRX",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "XMR",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "XRP",
       "surfaces": 1,
       "sources": [
         "movers"
