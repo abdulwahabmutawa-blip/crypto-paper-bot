@@ -1,15 +1,16 @@
 {
-  "ts": "2026-11-03T12:13:32+00:00",
+  "ts": "2026-11-03T12:19:19+00:00",
   "sources": {
     "coingecko": [
       "BTC",
-      "PENGU",
       "NEAR",
+      "PENGU",
       "ZEC",
       "HYPE",
+      "DOGE",
       "ALGO",
       "STRK",
-      "DOGE",
+      "XMR",
       "HOT"
     ],
     "reddit": [],
@@ -17,9 +18,11 @@
     "movers": [
       "TRX",
       "XRP",
+      "UNI",
+      "SPCXB",
+      "XAUT",
       "U",
-      "RLUSD",
-      "RWUSD"
+      "RLUSD"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -47,7 +50,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.5e-05
+      "funding": 7.9e-05
     },
     {
       "symbol": "HOT",
@@ -55,7 +58,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.9e-05
+      "funding": 1.3e-05
     },
     {
       "symbol": "HYPE",
@@ -89,7 +92,7 @@
       ]
     },
     {
-      "symbol": "RWUSD",
+      "symbol": "SPCXB",
       "surfaces": 1,
       "sources": [
         "movers"
@@ -119,6 +122,30 @@
       ]
     },
     {
+      "symbol": "UNI",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "XAUT",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 2.5e-05
+    },
+    {
+      "symbol": "XMR",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "XRP",
       "surfaces": 1,
       "sources": [
@@ -132,7 +159,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.3e-05
+      "funding": 1.6e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
