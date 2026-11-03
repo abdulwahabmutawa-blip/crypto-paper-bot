@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-03T00:05:18+00:00",
+  "ts": "2026-11-03T00:10:45+00:00",
   "sources": {
     "coingecko": [
       "HYPE",
@@ -17,6 +17,7 @@
     "stocktwits": [],
     "movers": [
       "TRX",
+      "XRP",
       "RLUSD"
     ],
     "watcher": [],
@@ -116,7 +117,15 @@
       "sources": [
         "movers"
       ],
-      "funding": 7e-05
+      "funding": 8.3e-05
+    },
+    {
+      "symbol": "XRP",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
