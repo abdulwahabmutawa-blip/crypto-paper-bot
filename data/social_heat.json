@@ -1,17 +1,17 @@
 {
-  "ts": "2026-11-03T06:20:18+00:00",
+  "ts": "2026-11-03T06:25:46+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "HYPE",
+      "PENGU",
       "NEAR",
-      "LIT",
       "SOL",
+      "LIT",
       "ZEC",
       "SUI",
-      "PENGU",
-      "PUMP",
-      "PEPE"
+      "XRP",
+      "LTC"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -48,6 +48,14 @@
       "funding": 5e-05
     },
     {
+      "symbol": "LTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "NEAR",
       "surfaces": 1,
       "sources": [
@@ -57,21 +65,6 @@
     },
     {
       "symbol": "PENGU",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "PEPE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ]
-    },
-    {
-      "symbol": "PUMP",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -106,6 +99,14 @@
       "surfaces": 1,
       "sources": [
         "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "XRP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
       ],
       "funding": 0.0001
     },
