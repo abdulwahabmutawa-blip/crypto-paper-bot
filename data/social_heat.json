@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-03T17:21:27+00:00",
+  "ts": "2026-11-03T17:27:25+00:00",
   "sources": {
     "coingecko": [
       "LIT",
@@ -7,22 +7,22 @@
       "NEAR",
       "HYPE",
       "BTC",
-      "LINK",
       "SOL",
-      "TAO",
-      "ENA"
+      "SUI",
+      "ENA",
+      "FET"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "PEPE",
-      "XRP",
       "HYPE",
+      "XRP",
       "SUI",
+      "ZEC",
       "UNI",
       "ETH",
-      "TRX",
-      "SPCXB"
+      "DOGE"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -39,10 +39,28 @@
       "long_short": 1.69
     },
     {
+      "symbol": "SUI",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.95
+    },
+    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "DOGE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
       ],
       "funding": 0.0001
     },
@@ -63,7 +81,7 @@
       "funding": 0.0001
     },
     {
-      "symbol": "LINK",
+      "symbol": "FET",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -110,37 +128,6 @@
       "funding": 0.0001
     },
     {
-      "symbol": "SPCXB",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
-    },
-    {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "TRX",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "UNI",
       "surfaces": 1,
       "sources": [
@@ -150,6 +137,14 @@
     },
     {
       "symbol": "XRP",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
         "movers"
