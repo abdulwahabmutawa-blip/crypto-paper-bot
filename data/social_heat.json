@@ -1,19 +1,20 @@
 {
-  "ts": "2026-11-03T07:44:16+00:00",
+  "ts": "2026-11-03T07:50:18+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
       "SOL",
-      "BTC",
       "XMR",
-      "AAVE",
+      "BTC",
       "PENGU",
+      "AAVE",
       "LINK",
-      "SUI",
-      "PUMP",
+      "XPL",
       "ARB",
-      "DASH",
-      "HYPE"
+      "ETH",
+      "ONDO",
+      "ZEC",
+      "PUMP"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -51,20 +52,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "DASH",
+      "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 8e-05
-    },
-    {
-      "symbol": "HYPE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": 0.0001
     },
     {
       "symbol": "LINK",
@@ -72,7 +65,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.7e-05
+      "funding": 4.8e-05
     },
     {
       "symbol": "NEAR",
@@ -81,6 +74,14 @@
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "ONDO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "PENGU",
@@ -114,14 +115,6 @@
       "funding": 0.0001
     },
     {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "TRX",
       "surfaces": 1,
       "sources": [
@@ -138,12 +131,28 @@
       "funding": 0.0001
     },
     {
+      "symbol": "XPL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "XRP",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 7.4e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
