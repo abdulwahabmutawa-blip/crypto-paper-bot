@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-03T14:43:10+00:00 · runs 5097 · equity **$563.78** (-43.62%) · cash $0.00 · open 10/10 · round trips 1780
+updated 2026-11-03T15:01:09+00:00 · runs 5098 · equity **$564.27** (-43.57%) · cash $0.00 · open 10/10 · round trips 1780
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-02T16:59 | TSLABUSDT | surge | 410.69 | 402.39 | -2.02% |
-| 2026-11-02T16:59 | BABABUSDT | surge | 103.32 | 100.74 | -2.50% |
-| 2026-11-02T16:59 | COWUSDT | surge | 0.1187 | 0.1192 | +0.42% |
-| 2026-11-02T19:59 | FETUSDT | bottom | 0.1538 | 0.1567 | +1.89% |
-| 2026-11-02T23:51 | XLMUSDT | bottom | 0.1628 | 0.1656 | +1.72% |
-| 2026-11-03T06:36 | QQQBUSDT | bottom | 680.99 | 686.7 | +0.84% |
-| 2026-11-03T14:41 | BOMEUSDT | surge | 0.0006236 | 0.0006212 | -0.38% |
-| 2026-11-03T14:41 | WLFIUSDT | surge | 0.0518 | 0.0516 | -0.39% |
-| 2026-11-03T14:41 | PUMPUSDT | surge | 0.004189 | 0.004222 | +0.79% |
+| 2026-11-02T16:59 | TSLABUSDT | surge | 410.69 | 402.78 | -1.93% |
+| 2026-11-02T16:59 | BABABUSDT | surge | 103.32 | 100.82 | -2.42% |
+| 2026-11-02T16:59 | COWUSDT | surge | 0.1187 | 0.119 | +0.25% |
+| 2026-11-02T19:59 | FETUSDT | bottom | 0.1538 | 0.157 | +2.08% |
+| 2026-11-02T23:51 | XLMUSDT | bottom | 0.1628 | 0.1649 | +1.29% |
+| 2026-11-03T06:36 | QQQBUSDT | bottom | 680.99 | 685.66 | +0.69% |
+| 2026-11-03T14:41 | BOMEUSDT | surge | 0.0006236 | 0.0006259 | +0.37% |
+| 2026-11-03T14:41 | WLFIUSDT | surge | 0.0518 | 0.0518 | +0.00% |
+| 2026-11-03T14:41 | PUMPUSDT | surge | 0.004189 | 0.00423 | +0.98% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
