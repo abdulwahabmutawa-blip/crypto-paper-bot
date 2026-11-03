@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-03T20:38:35+00:00",
+  "ts": "2026-11-03T20:43:52+00:00",
   "sources": {
     "coingecko": [
       "AERO",
@@ -15,12 +15,12 @@
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "SOXLB",
       "ZEC",
       "SNDKB",
-      "PEPE",
       "UNI",
+      "PEPE",
       "SUI",
+      "HYPE",
       "SOL",
       "XRP"
     ],
@@ -53,6 +53,14 @@
       "surfaces": 1,
       "sources": [
         "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "HYPE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
       ],
       "funding": 5e-05
     },
@@ -109,13 +117,6 @@
         "movers"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "SOXLB",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
     },
     {
       "symbol": "STRK",
