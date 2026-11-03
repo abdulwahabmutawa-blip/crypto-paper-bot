@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-03T14:05:48+00:00",
+  "ts": "2026-11-03T14:11:43+00:00",
   "sources": {
     "coingecko": [
       "HYPE",
@@ -19,28 +19,18 @@
     "stocktwits": [],
     "movers": [
       "XRP",
-      "HYPE",
       "TRX",
+      "PEPE",
+      "UNI",
       "SPCXB",
       "SUI",
-      "UNI",
       "XAUT",
-      "PEPE"
+      "U"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "HYPE",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.76
-    },
     {
       "symbol": "SUI",
       "surfaces": 2,
@@ -74,6 +64,14 @@
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "HYPE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "LIT",
@@ -130,6 +128,13 @@
       "funding": 0.0001
     },
     {
+      "symbol": "U",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
+    },
+    {
       "symbol": "UNI",
       "surfaces": 1,
       "sources": [
@@ -143,7 +148,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 3.9e-05
+      "funding": 3.6e-05
     },
     {
       "symbol": "XMR",
@@ -167,7 +172,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.9e-05
+      "funding": 3.9e-05
     },
     {
       "symbol": "ZRO",
