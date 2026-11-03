@@ -1,42 +1,43 @@
 {
-  "ts": "2026-11-03T13:09:47+00:00",
+  "ts": "2026-11-03T13:15:38+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
       "BTC",
       "HYPE",
+      "SUI",
       "HOT",
       "NEAR",
-      "UNI",
       "ALGO",
+      "LIT",
       "XMR",
-      "STRK"
+      "TAO"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "XRP",
+      "PEPE",
       "TRX",
       "XAUT",
-      "PEPE",
       "SUI",
-      "SPCXB",
       "UNI",
-      "U"
+      "SPCXB",
+      "RLUSD"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
     {
-      "symbol": "UNI",
+      "symbol": "SUI",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
       "funding": 0.0001,
-      "long_short": 1.65
+      "long_short": 2.02
     },
     {
       "symbol": "ALGO",
@@ -60,10 +61,18 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.8e-05
+      "funding": -2.4e-05
     },
     {
       "symbol": "HYPE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "LIT",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -94,6 +103,13 @@
       ]
     },
     {
+      "symbol": "RLUSD",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
+    },
+    {
       "symbol": "SPCXB",
       "surfaces": 1,
       "sources": [
@@ -101,20 +117,12 @@
       ]
     },
     {
-      "symbol": "STRK",
+      "symbol": "TAO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "TRX",
@@ -125,11 +133,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "U",
+      "symbol": "UNI",
       "surfaces": 1,
       "sources": [
         "movers"
-      ]
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "XAUT",
@@ -137,7 +146,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 3.4e-05
+      "funding": 3.5e-05
     },
     {
       "symbol": "XMR",
