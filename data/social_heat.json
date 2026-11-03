@@ -1,16 +1,18 @@
 {
-  "ts": "2026-11-03T06:31:39+00:00",
+  "ts": "2026-11-03T06:37:17+00:00",
   "sources": {
     "coingecko": [
-      "BTC",
       "HYPE",
-      "PENGU",
+      "BTC",
       "NEAR",
       "SOL",
-      "LIT",
+      "PENGU",
       "ZEC",
+      "HOT",
       "SUI",
       "XRP",
+      "AAVE",
+      "PEPE",
       "LTC"
     ],
     "reddit": [],
@@ -35,6 +37,14 @@
       "long_short": 2.58
     },
     {
+      "symbol": "AAVE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
@@ -43,15 +53,15 @@
       "funding": 0.0001
     },
     {
-      "symbol": "HYPE",
+      "symbol": "HOT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": -0.001815
     },
     {
-      "symbol": "LIT",
+      "symbol": "HYPE",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -81,6 +91,13 @@
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "PEPE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ]
     },
     {
       "symbol": "RLUSD",
