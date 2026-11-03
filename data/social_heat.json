@@ -1,18 +1,18 @@
 {
-  "ts": "2026-11-03T05:29:47+00:00",
+  "ts": "2026-11-03T05:35:39+00:00",
   "sources": {
     "coingecko": [
-      "NEAR",
-      "HYPE",
       "BTC",
+      "HYPE",
       "LIT",
-      "PENGU",
+      "NEAR",
       "SUI",
+      "PENGU",
       "RENDER",
-      "PEPE",
+      "ZAMA",
       "APT",
-      "ETH",
-      "PUMP"
+      "SOL",
+      "ETH"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -81,21 +81,6 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PEPE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ]
-    },
-    {
-      "symbol": "PUMP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "RENDER",
       "surfaces": 1,
       "sources": [
@@ -109,6 +94,14 @@
       "sources": [
         "movers"
       ]
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "SUI",
@@ -125,6 +118,14 @@
         "movers"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "ZAMA",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
