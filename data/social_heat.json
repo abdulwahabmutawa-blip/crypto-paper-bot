@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-03T19:09:14+00:00",
+  "ts": "2026-11-03T19:14:46+00:00",
   "sources": {
     "coingecko": [
       "HYPE",
@@ -17,10 +17,10 @@
       "PEPE",
       "SUI",
       "XRP",
-      "HYPE",
       "SOXLB",
-      "UNI",
-      "TRX"
+      "HYPE",
+      "TRX",
+      "ETH"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -47,12 +47,20 @@
       "long_short": 1.96
     },
     {
+      "symbol": "ETH",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "KMNO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000335
+      "funding": -0.000346
     },
     {
       "symbol": "LIT",
@@ -94,14 +102,6 @@
     },
     {
       "symbol": "TRX",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "UNI",
       "surfaces": 1,
       "sources": [
         "movers"
