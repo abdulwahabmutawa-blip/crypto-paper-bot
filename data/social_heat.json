@@ -1,25 +1,25 @@
 {
-  "ts": "2026-11-03T15:40:26+00:00",
+  "ts": "2026-11-03T15:45:48+00:00",
   "sources": {
     "coingecko": [
       "HYPE",
-      "PENGU",
       "LIT",
+      "PENGU",
       "PEPE",
       "BTC",
-      "SUI",
-      "AERO"
+      "AERO",
+      "ZEC"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "PEPE",
       "XRP",
+      "HYPE",
       "UNI",
       "TRX",
       "SUI",
       "SPCXB",
-      "HYPE",
       "ETH"
     ],
     "watcher": [],
@@ -43,16 +43,6 @@
         "coingecko",
         "movers"
       ]
-    },
-    {
-      "symbol": "SUI",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.96
     },
     {
       "symbol": "AERO",
@@ -102,6 +92,14 @@
       ]
     },
     {
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "TRX",
       "surfaces": 1,
       "sources": [
@@ -122,6 +120,14 @@
       "surfaces": 1,
       "sources": [
         "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
       ],
       "funding": 0.0001
     }
