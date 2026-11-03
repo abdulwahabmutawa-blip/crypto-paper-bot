@@ -1,30 +1,41 @@
 {
-  "ts": "2026-11-03T15:34:37+00:00",
+  "ts": "2026-11-03T15:40:26+00:00",
   "sources": {
     "coingecko": [
-      "LIT",
       "HYPE",
+      "PENGU",
+      "LIT",
       "PEPE",
       "BTC",
-      "PENGU",
-      "ONDO"
+      "SUI",
+      "AERO"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "PEPE",
       "XRP",
-      "TRX",
       "UNI",
+      "TRX",
       "SUI",
       "SPCXB",
-      "ETH",
-      "RLUSD"
+      "HYPE",
+      "ETH"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "HYPE",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.69
+    },
     {
       "symbol": "PEPE",
       "surfaces": 2,
@@ -32,6 +43,24 @@
         "coingecko",
         "movers"
       ]
+    },
+    {
+      "symbol": "SUI",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.96
+    },
+    {
+      "symbol": "AERO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "BTC",
@@ -50,23 +79,7 @@
       "funding": 0.0001
     },
     {
-      "symbol": "HYPE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "LIT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "ONDO",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -82,26 +95,11 @@
       "funding": 5e-05
     },
     {
-      "symbol": "RLUSD",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
-    },
-    {
       "symbol": "SPCXB",
       "surfaces": 1,
       "sources": [
         "movers"
       ]
-    },
-    {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "TRX",
