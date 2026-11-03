@@ -1,17 +1,17 @@
 {
-  "ts": "2026-11-03T01:23:08+00:00",
+  "ts": "2026-11-03T01:28:44+00:00",
   "sources": {
     "coingecko": [
       "BTC",
+      "LIT",
+      "SOL",
       "QNT",
       "HYPE",
-      "SOL",
-      "LIT",
-      "AERO",
+      "ETH",
       "PENGU",
+      "XMR",
       "PEPE",
-      "PYTH",
-      "RAY"
+      "CRV"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -24,15 +24,23 @@
   },
   "heat": [
     {
-      "symbol": "AERO",
+      "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 0.0001
     },
     {
-      "symbol": "BTC",
+      "symbol": "CRV",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -71,28 +79,12 @@
       ]
     },
     {
-      "symbol": "PYTH",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "QNT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "RAY",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0
     },
     {
       "symbol": "RLUSD",
@@ -114,6 +106,14 @@
       "surfaces": 1,
       "sources": [
         "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "XMR",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
       ],
       "funding": 0.0001
     }
