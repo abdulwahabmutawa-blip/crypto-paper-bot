@@ -1,104 +1,104 @@
 {
-  "generated_utc": "2026-11-03T16:25:41+00:00",
+  "generated_utc": "2026-11-03T16:42:58+00:00",
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "live_ts": "2026-11-03T16:25:00+00:00",
+  "live_ts": "2026-11-03T16:40:00+00:00",
   "current": {
     "date": "2026-11-03",
-    "value": 1069.98,
-    "bench": 1006.59,
+    "value": 1071.93,
+    "bench": 1005.45,
     "holding": "AMZN"
   },
   "board": [
     {
       "sym": "AAPL",
-      "price": 330.73,
-      "line": "z -2.59",
+      "price": 331.19,
+      "line": "z -2.52",
       "tag": "oversold",
       "on": true,
       "pick": false,
-      "fill": 43.10011787176389
+      "fill": 42.05645886437517
     },
     {
       "sym": "GOOGL",
-      "price": 278.51,
-      "line": "z -1.82",
+      "price": 279.27,
+      "line": "z -1.79",
       "tag": "oversold",
       "on": true,
       "pick": false,
-      "fill": 30.281487187549043
+      "fill": 29.90973169418601
     },
     {
       "sym": "MSFT",
-      "price": 516.14,
-      "line": "z -1.54",
-      "tag": "oversold",
-      "on": true,
+      "price": 516.7,
+      "line": "z -1.49",
+      "tag": "normal",
+      "on": false,
       "pick": false,
-      "fill": 25.716546282774992
+      "fill": 24.81517023632499
     },
     {
       "sym": "NVDA",
-      "price": 208.33,
-      "line": "z -1.09",
+      "price": 207.59,
+      "line": "z -1.16",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 18.116710464410176
+      "fill": 19.329679810414447
     },
     {
       "sym": "AMZN",
-      "price": 247.88,
-      "line": "z -0.86",
+      "price": 248.34,
+      "line": "z -0.80",
       "tag": "HELD",
       "on": false,
       "pick": true,
-      "fill": 14.355504057187002
+      "fill": 13.331468070591251
     },
     {
       "sym": "MRK",
-      "price": 145.16,
-      "line": "z -0.01",
+      "price": 145.28,
+      "line": "z +0.03",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 0.16695753988333556
+      "fill": -0.5128170069089306
     },
     {
       "sym": "XOM",
-      "price": 177.48,
-      "line": "z +0.01",
+      "price": 177.69,
+      "line": "z +0.05",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": -0.18612638995806424
+      "fill": -0.7777007958962783
     },
     {
       "sym": "UNH",
-      "price": 403.2,
-      "line": "z +0.13",
+      "price": 401.93,
+      "line": "z +0.05",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": -2.157611851126622
-    },
-    {
-      "sym": "CVX",
-      "price": 225.57,
-      "line": "z +0.23",
-      "tag": "normal",
-      "on": false,
-      "pick": false,
-      "fill": -3.8659274157902845
+      "fill": -0.9146508746573659
     },
     {
       "sym": "JPM",
-      "price": 337.14,
-      "line": "z +0.48",
+      "price": 336.21,
+      "line": "z +0.22",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": -7.948729530147049
+      "fill": -3.7082751171636517
+    },
+    {
+      "sym": "CVX",
+      "price": 225.93,
+      "line": "z +0.27",
+      "tag": "normal",
+      "on": false,
+      "pick": false,
+      "fill": -4.575324792983368
     }
   ],
   "board_title": "16 mega-caps, most oversold first (z < -1.5 = buy zone)",
@@ -109,12 +109,6 @@
     "board_note": "Buys panic, sells relief: enter the most stretched mega-cap below -1.5 z, exit when it recovers to average."
   },
   "intraday": [
-    {
-      "ts": "2026-10-06T09:34:18+00:00",
-      "value": 1101.96,
-      "bench": 1032.21,
-      "holding": "JNJ"
-    },
     {
       "ts": "2026-10-06T09:51:49+00:00",
       "value": 1101.96,
@@ -9108,6 +9102,12 @@
       "value": 1069.98,
       "bench": 1006.59,
       "holding": "AMZN"
+    },
+    {
+      "ts": "2026-11-03T16:42:58+00:00",
+      "value": 1071.93,
+      "bench": 1005.45,
+      "holding": "AMZN"
     }
   ],
   "trades": [
@@ -9759,8 +9759,8 @@
     },
     {
       "date": "2026-11-03",
-      "value": 1069.98,
-      "bench": 1006.59,
+      "value": 1071.93,
+      "bench": 1005.45,
       "holding": "AMZN"
     }
   ],
@@ -9772,5 +9772,5 @@
   },
   "costs_paid": 13.8753,
   "frozen": null,
-  "thoughts": "I'm holding AMZN. Most oversold mega-cap (z < -1.5) \u2014 buying the dip. I bought at $232.49; it's now $247.88 (+6.6% since I got in). My safety net: if the price falls to $221.42 (12% below its recent high), I sell automatically \u2014 no exceptions. Closest challenger on my list is AAPL, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
+  "thoughts": "I'm holding AMZN. Most oversold mega-cap (z < -1.5) \u2014 buying the dip. I bought at $232.49; it's now $248.34 (+6.8% since I got in). My safety net: if the price falls to $221.42 (12% below its recent high), I sell automatically \u2014 no exceptions. Closest challenger on my list is AAPL, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
 }
