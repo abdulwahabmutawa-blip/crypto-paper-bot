@@ -1,43 +1,53 @@
 {
-  "ts": "2026-11-03T14:33:21+00:00",
+  "ts": "2026-11-03T14:38:48+00:00",
   "sources": {
     "coingecko": [
       "HYPE",
-      "BTC",
-      "PENGU",
-      "NEAR",
       "LIT",
+      "PENGU",
+      "BTC",
       "SOL",
+      "NEAR",
+      "XMR",
       "ZEC",
       "ETH",
-      "XMR",
       "ZRO",
-      "LINK",
-      "AERO"
+      "PEPE",
+      "LINK"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "SPCXB",
       "XRP",
-      "TRX",
+      "SPCXB",
       "PEPE",
+      "TRX",
+      "SNDKB",
       "UNI",
-      "SUI",
-      "RLUSD",
-      "U"
+      "HYPE",
+      "SUI"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
     {
-      "symbol": "AERO",
-      "surfaces": 1,
+      "symbol": "HYPE",
+      "surfaces": 2,
       "sources": [
-        "coingecko"
+        "coingecko",
+        "movers"
       ],
-      "funding": 5e-05
+      "funding": 5e-05,
+      "long_short": 1.76
+    },
+    {
+      "symbol": "PEPE",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ]
     },
     {
       "symbol": "BTC",
@@ -54,14 +64,6 @@
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "HYPE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "LINK",
@@ -96,14 +98,7 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PEPE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
-    },
-    {
-      "symbol": "RLUSD",
+      "symbol": "SNDKB",
       "surfaces": 1,
       "sources": [
         "movers"
@@ -141,13 +136,6 @@
       "funding": 0.0001
     },
     {
-      "symbol": "U",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
-    },
-    {
       "symbol": "UNI",
       "surfaces": 1,
       "sources": [
@@ -177,7 +165,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.3e-05
+      "funding": 7.1e-05
     },
     {
       "symbol": "ZRO",
