@@ -1,28 +1,29 @@
 {
-  "ts": "2026-11-03T17:50:18+00:00",
+  "ts": "2026-11-03T17:56:08+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "LIT",
       "NEAR",
-      "PENGU",
       "SUI",
+      "UNI",
+      "PENGU",
       "HYPE",
-      "LINK",
       "SOL",
-      "FET"
+      "FET",
+      "LINK"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "PEPE",
       "ZEC",
+      "PEPE",
       "XRP",
       "SUI",
       "HYPE",
       "UNI",
       "ETH",
-      "SOL"
+      "SPCXB"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -39,16 +40,6 @@
       "long_short": 1.69
     },
     {
-      "symbol": "SOL",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 3.09
-    },
-    {
       "symbol": "SUI",
       "surfaces": 2,
       "sources": [
@@ -57,6 +48,16 @@
       ],
       "funding": 0.0001,
       "long_short": 1.95
+    },
+    {
+      "symbol": "UNI",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.64
     },
     {
       "symbol": "BTC",
@@ -122,12 +123,19 @@
       ]
     },
     {
-      "symbol": "UNI",
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "SPCXB",
       "surfaces": 1,
       "sources": [
         "movers"
-      ],
-      "funding": 0.0001
+      ]
     },
     {
       "symbol": "XRP",
