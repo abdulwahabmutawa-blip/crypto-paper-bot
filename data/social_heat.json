@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-03T22:07:21+00:00",
+  "ts": "2026-11-03T22:13:18+00:00",
   "sources": {
     "coingecko": [
       "LIT",
@@ -24,21 +24,21 @@
       "SUI",
       "XRP",
       "ETH",
-      "SOL"
+      "HYPE"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
     {
-      "symbol": "SOL",
+      "symbol": "HYPE",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 0.0001,
-      "long_short": 3.05
+      "funding": 5e-05,
+      "long_short": 1.76
     },
     {
       "symbol": "ZEC",
@@ -91,14 +91,6 @@
       "funding": 0.0001
     },
     {
-      "symbol": "HYPE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "LIT",
       "surfaces": 1,
       "sources": [
@@ -143,6 +135,14 @@
       "sources": [
         "movers"
       ]
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "SUI",
