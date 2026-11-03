@@ -1,19 +1,19 @@
 {
-  "ts": "2026-11-03T08:41:38+00:00",
+  "ts": "2026-11-03T08:47:36+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "AAVE",
-      "ETH",
+      "NEAR",
       "HYPE",
       "SUI",
-      "NEAR",
-      "PUMP",
-      "ZEC",
-      "XPL",
-      "LINK",
+      "ETH",
       "RUNE",
-      "SOL"
+      "PUMP",
+      "PENGU",
+      "SOL",
+      "AERO",
+      "TAO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -34,6 +34,14 @@
       "funding": 0.0001
     },
     {
+      "symbol": "AERO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
@@ -47,7 +55,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.7e-05
+      "funding": 7.5e-05
     },
     {
       "symbol": "HYPE",
@@ -58,20 +66,20 @@
       "funding": 5e-05
     },
     {
-      "symbol": "LINK",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 3.3e-05
-    },
-    {
       "symbol": "NEAR",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "PENGU",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "PUMP",
@@ -113,28 +121,20 @@
       "funding": 0.0001
     },
     {
+      "symbol": "TAO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "TRX",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "XPL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 4.9e-05
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 6.2e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
