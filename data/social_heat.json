@@ -1,19 +1,19 @@
 {
-  "ts": "2026-11-03T03:33:49+00:00",
+  "ts": "2026-11-03T03:39:18+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "NEAR",
-      "PEPE",
       "SUI",
       "POL",
-      "XRP",
       "PENGU",
+      "XRP",
+      "PEPE",
+      "ETH",
+      "RAY",
       "SOL",
       "TAO",
-      "ETH",
-      "AVAX",
-      "UNI"
+      "ONDO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -25,14 +25,6 @@
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "AVAX",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 4e-05
-    },
     {
       "symbol": "BTC",
       "surfaces": 1,
@@ -58,6 +50,14 @@
       "funding": 0.0001
     },
     {
+      "symbol": "ONDO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
@@ -78,7 +78,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.2e-05
+      "funding": -1.3e-05
+    },
+    {
+      "symbol": "RAY",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0
     },
     {
       "symbol": "RLUSD",
@@ -116,14 +124,6 @@
       "surfaces": 1,
       "sources": [
         "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
       ],
       "funding": 0.0001
     },
