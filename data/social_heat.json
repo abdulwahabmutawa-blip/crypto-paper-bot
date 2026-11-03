@@ -1,19 +1,19 @@
 {
-  "ts": "2026-11-03T08:30:11+00:00",
+  "ts": "2026-11-03T08:35:38+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "AAVE",
       "ETH",
-      "XPL",
-      "ZEC",
-      "LINK",
-      "SUI",
       "HYPE",
-      "ZRO",
-      "SOL",
-      "POL",
-      "TAO"
+      "SUI",
+      "NEAR",
+      "PUMP",
+      "ZEC",
+      "XPL",
+      "LINK",
+      "RUNE",
+      "SOL"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -47,7 +47,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.4e-05
+      "funding": 8.1e-05
     },
     {
       "symbol": "HYPE",
@@ -66,12 +66,20 @@
       "funding": 3.6e-05
     },
     {
-      "symbol": "POL",
+      "symbol": "NEAR",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -1e-06
+      "funding": 0.0001
+    },
+    {
+      "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "RLUSD",
@@ -79,6 +87,14 @@
       "sources": [
         "movers"
       ]
+    },
+    {
+      "symbol": "RUNE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "SOL",
@@ -95,14 +111,6 @@
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "TRX",
@@ -127,14 +135,6 @@
         "coingecko"
       ],
       "funding": 6.1e-05
-    },
-    {
-      "symbol": "ZRO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
