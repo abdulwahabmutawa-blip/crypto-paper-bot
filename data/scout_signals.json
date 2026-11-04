@@ -1,22 +1,37 @@
 {
-  "ts": "2026-11-04T10:08:00+00:00",
-  "scanned": 93,
+  "ts": "2026-11-04T10:13:20+00:00",
+  "scanned": 94,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "MARSCOINUSDT",
+      "symbol": "BNCBUSDT",
       "signal": "ignition",
-      "score": 0.78,
-      "raw_score": 0.846,
+      "score": 0.7425,
+      "raw_score": 0.8054,
       "weight": 0.922,
-      "price": 0.0525,
-      "why": "trades 13.1x and volume 10.7x the prior 4h, 66% taker-buy, $116,120 burst \u2014 while price has only moved +2.7%",
-      "chg_24h": 0.0477,
-      "vol_surge": 10.74,
-      "chg_1h": 0.0274,
-      "market_surge": 2.07,
+      "price": 5.02,
+      "why": "trades 6.0x and volume 21.1x the prior 4h, 89% taker-buy, $73,554 burst \u2014 while price has only moved +0.4%",
+      "chg_24h": 0.048,
+      "vol_surge": 21.15,
+      "chg_1h": 0.004,
+      "market_surge": 6.53,
       "actionable": false,
       "status": "benched \u2014 BTC-excess day mean -0.49% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "KORUBUSDT",
+      "signal": "breakout",
+      "score": 0.6157,
+      "raw_score": 0.7093,
+      "weight": 0.868,
+      "price": 11.45,
+      "why": "trades 6.2x, volume 8.1x, 68% taker-buy, +2.9% in an hour, at 94% of its 24h range",
+      "chg_24h": 0.0495,
+      "vol_surge": 8.08,
+      "chg_1h": 0.0288,
+      "market_surge": 2.43,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean +0.53% at 24h: market beta, not signal"
     }
   ],
   "gate": {
