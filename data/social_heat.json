@@ -1,18 +1,18 @@
 {
-  "ts": "2026-11-03T23:59:18+00:00",
+  "ts": "2026-11-04T00:05:18+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "PENGU",
-      "LIT",
       "NEAR",
+      "LIT",
       "AERO",
-      "SOL",
-      "APT",
+      "UNI",
       "QNT",
       "XRP",
-      "HYPE",
-      "PUMP"
+      "SOL",
+      "PUMP",
+      "ADA"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -31,14 +31,14 @@
   },
   "heat": [
     {
-      "symbol": "HYPE",
+      "symbol": "UNI",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 5e-05,
-      "long_short": 1.77
+      "funding": 0.0001,
+      "long_short": 1.73
     },
     {
       "symbol": "XRP",
@@ -51,20 +51,20 @@
       "long_short": 2.32
     },
     {
-      "symbol": "AERO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -0.000172
-    },
-    {
-      "symbol": "APT",
+      "symbol": "ADA",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "AERO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -0.000173
     },
     {
       "symbol": "BTC",
@@ -76,6 +76,14 @@
     },
     {
       "symbol": "ENA",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "HYPE",
       "surfaces": 1,
       "sources": [
         "movers"
@@ -146,14 +154,6 @@
     },
     {
       "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "UNI",
       "surfaces": 1,
       "sources": [
         "movers"
