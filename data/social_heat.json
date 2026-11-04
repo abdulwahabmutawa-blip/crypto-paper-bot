@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-04T19:14:18+00:00",
+  "ts": "2026-11-04T19:20:07+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
@@ -7,28 +7,38 @@
       "TRUMP",
       "PENGU",
       "BTC",
+      "SOL",
       "HYPE",
       "XMR",
-      "SOL",
-      "ZEC",
-      "WLFI"
+      "WLFI",
+      "ZEC"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "ZEC",
-      "NEAR",
       "ETH",
       "ENA",
       "UNI",
+      "NEAR",
       "GOOGLB",
       "SUI",
-      "LINK"
+      "BTC"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "BTC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 8e-05,
+      "long_short": 1.39
+    },
     {
       "symbol": "ETH",
       "surfaces": 2,
@@ -60,14 +70,6 @@
       "long_short": 0.65
     },
     {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 8.5e-05
-    },
-    {
       "symbol": "ENA",
       "surfaces": 1,
       "sources": [
@@ -89,14 +91,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "LINK",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "PENGU",
@@ -128,7 +122,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.00039
+      "funding": -0.000379
     },
     {
       "symbol": "UNI",
