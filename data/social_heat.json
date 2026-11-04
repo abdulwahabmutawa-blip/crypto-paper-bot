@@ -1,29 +1,30 @@
 {
-  "ts": "2026-11-04T01:40:30+00:00",
+  "ts": "2026-11-04T01:45:48+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "PENGU",
       "XMR",
-      "NEAR",
       "HYPE",
+      "NEAR",
+      "SUI",
       "BNB",
-      "PUMP",
-      "ADA",
       "QNT",
       "ETH",
+      "PUMP",
+      "ADA",
+      "AAVE",
       "PEPE"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "ZEC",
-      "SUI",
       "TRX",
+      "SUI",
       "UNI",
       "XAUT",
-      "ETH",
-      "U"
+      "ETH"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -36,8 +37,26 @@
         "coingecko",
         "movers"
       ],
-      "funding": 6.7e-05,
+      "funding": 6.5e-05,
       "long_short": 2.34
+    },
+    {
+      "symbol": "SUI",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.06
+    },
+    {
+      "symbol": "AAVE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "ADA",
@@ -53,7 +72,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.3e-05
+      "funding": 4.1e-05
     },
     {
       "symbol": "BTC",
@@ -108,15 +127,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -4.9e-05
-    },
-    {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
+      "funding": -5.4e-05
     },
     {
       "symbol": "TRX",
@@ -125,13 +136,6 @@
         "movers"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "U",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
     },
     {
       "symbol": "UNI",
