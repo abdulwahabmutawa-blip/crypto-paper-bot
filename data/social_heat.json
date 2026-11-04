@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-04T01:45:48+00:00",
+  "ts": "2026-11-04T01:51:38+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -20,11 +20,13 @@
     "stocktwits": [],
     "movers": [
       "ZEC",
-      "TRX",
-      "SUI",
       "UNI",
+      "SUI",
+      "TRX",
+      "ETH",
+      "XRP",
       "XAUT",
-      "ETH"
+      "U"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -37,7 +39,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 6.5e-05,
+      "funding": 6.6e-05,
       "long_short": 2.34
     },
     {
@@ -72,7 +74,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.1e-05
+      "funding": 3.8e-05
     },
     {
       "symbol": "BTC",
@@ -127,7 +129,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -5.4e-05
+      "funding": -5.1e-05
     },
     {
       "symbol": "TRX",
@@ -136,6 +138,13 @@
         "movers"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "U",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
     },
     {
       "symbol": "UNI",
@@ -151,13 +160,21 @@
       "sources": [
         "movers"
       ],
-      "funding": 3.8e-05
+      "funding": 3.6e-05
     },
     {
       "symbol": "XMR",
       "surfaces": 1,
       "sources": [
         "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "XRP",
+      "surfaces": 1,
+      "sources": [
+        "movers"
       ],
       "funding": 0.0001
     },
