@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-04T03:57:01+00:00 · runs 5143 · equity **$544.06** (-45.59%) · cash $256.06 · open 5/10 · round trips 1801
+updated 2026-11-04T04:14:26+00:00 · runs 5144 · equity **$546.81** (-45.32%) · cash $256.06 · open 5/10 · round trips 1801
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,9 +36,9 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-03T06:36 | QQQBUSDT | bottom | 680.99 | 672.55 | -1.24% |
-| 2026-11-04T00:41 | LINKUSDT | bottom | 10.925 | 10.756 | -1.55% |
-| 2026-11-04T01:48 | HYPEUSDT | bottom | 81.77 | 82.96 | +1.46% |
-| 2026-11-04T03:02 | LSKUSDT | surge | 0.1877 | 0.1868 | -0.48% |
+| 2026-11-03T06:36 | QQQBUSDT | bottom | 680.99 | 673.06 | -1.16% |
+| 2026-11-04T00:41 | LINKUSDT | bottom | 10.925 | 10.878 | -0.43% |
+| 2026-11-04T01:48 | HYPEUSDT | bottom | 81.77 | 83.51 | +2.13% |
+| 2026-11-04T03:02 | LSKUSDT | surge | 0.1877 | 0.1935 | +3.09% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
