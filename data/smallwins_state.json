@@ -8582,29 +8582,6 @@
   },
   {
    "symbol": "MUBUSDT",
-   "tactic": "range_bottom|t1.5|s1.5|h8",
-   "shape": "range_bottom",
-   "target": 0.015,
-   "stop": 0.015,
-   "max_h": 8,
-   "entry": 804.45,
-   "entry_ms": 1793809799999,
-   "entry_ts": "2026-11-04T16:38:17+00:00",
-   "feat": {
-    "r1h": -0.02588,
-    "r4h": -0.04572,
-    "r24": -0.0556,
-    "v4h": 8.35493,
-    "tbs4h": 0.34614,
-    "rp24": 0.14782,
-    "rng24": 0.1047,
-    "btc1": 0.00461,
-    "btc4": 0.03033,
-    "btc24": 0.0409
-   }
-  },
-  {
-   "symbol": "MUBUSDT",
    "tactic": "range_bottom|t2|s2|h8",
    "shape": "range_bottom",
    "target": 0.02,
@@ -12676,33 +12653,6 @@
   }
  ],
  "resolved": [
-  {
-   "symbol": "TUTUSDT",
-   "tactic": "momentum|t3|s4|h48",
-   "shape": "momentum",
-   "target": 0.03,
-   "stop": 0.04,
-   "max_h": 48,
-   "entry": 0.01961,
-   "entry_ms": 1793131199999,
-   "entry_ts": "2026-10-27T20:10:41+00:00",
-   "feat": {
-    "r1h": 0.03156,
-    "r4h": 0.02994,
-    "r24": 0.1583,
-    "v4h": 9.16113,
-    "tbs4h": 0.53345,
-    "rp24": 0.97473,
-    "rng24": 0.16381,
-    "btc1": 0.00087,
-    "btc4": 0.0036,
-    "btc24": 0.00991
-   },
-   "ret": 0.0275,
-   "how": "TARGET",
-   "hours": 13.25,
-   "exit_ts": "2026-10-28T09:41:01+00:00"
-  },
   {
    "symbol": "REZUSDT",
    "tactic": "dip_mid|t3|s2|h12",
@@ -552675,8 +552625,35 @@
    "how": "TARGET",
    "hours": 1.25,
    "exit_ts": "2026-11-04T23:16:38+00:00"
+  },
+  {
+   "symbol": "MUBUSDT",
+   "tactic": "range_bottom|t1.5|s1.5|h8",
+   "shape": "range_bottom",
+   "target": 0.015,
+   "stop": 0.015,
+   "max_h": 8,
+   "entry": 804.45,
+   "entry_ms": 1793809799999,
+   "entry_ts": "2026-11-04T16:38:17+00:00",
+   "feat": {
+    "r1h": -0.02588,
+    "r4h": -0.04572,
+    "r24": -0.0556,
+    "v4h": 8.35493,
+    "tbs4h": 0.34614,
+    "rp24": 0.14782,
+    "rng24": 0.1047,
+    "btc1": 0.00461,
+    "btc4": 0.03033,
+    "btc24": 0.0409
+   },
+   "ret": -0.0175,
+   "how": "STOP",
+   "hours": 6.75,
+   "exit_ts": "2026-11-04T23:33:36+00:00"
   }
  ],
- "runs": 5275,
- "updated": "2026-11-04T23:16:38+00:00"
+ "runs": 5276,
+ "updated": "2026-11-04T23:33:36+00:00"
 }
