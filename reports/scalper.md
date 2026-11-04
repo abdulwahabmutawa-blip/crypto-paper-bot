@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-04T02:47:14+00:00 · runs 5139 · equity **$545.83** (-45.42%) · cash $151.34 · open 7/10 · round trips 1798
+updated 2026-11-04T03:04:36+00:00 · runs 5140 · equity **$544.66** (-45.53%) · cash $100.89 · open 8/10 · round trips 1798
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,11 +36,12 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-03T06:36 | QQQBUSDT | bottom | 680.99 | 672.95 | -1.18% |
-| 2026-11-03T18:45 | POLUSDT | surge | 0.09274 | 0.09072 | -2.18% |
-| 2026-11-03T21:53 | AEROUSDT | surge | 0.6215 | 0.6196 | -0.31% |
-| 2026-11-04T00:41 | LINKUSDT | bottom | 10.925 | 10.797 | -1.17% |
-| 2026-11-04T01:15 | SOXSBUSDT | surge | 56.76 | 57.99 | +2.17% |
-| 2026-11-04T01:48 | HYPEUSDT | bottom | 81.77 | 82.1 | +0.40% |
+| 2026-11-03T06:36 | QQQBUSDT | bottom | 680.99 | 671.49 | -1.40% |
+| 2026-11-03T18:45 | POLUSDT | surge | 0.09274 | 0.08979 | -3.18% |
+| 2026-11-03T21:53 | AEROUSDT | surge | 0.6215 | 0.6084 | -2.11% |
+| 2026-11-04T00:41 | LINKUSDT | bottom | 10.925 | 10.687 | -2.18% |
+| 2026-11-04T01:15 | SOXSBUSDT | surge | 56.76 | 58.81 | +3.61% |
+| 2026-11-04T01:48 | HYPEUSDT | bottom | 81.77 | 81.62 | -0.18% |
+| 2026-11-04T03:02 | LSKUSDT | surge | 0.1877 | 0.1896 | +1.01% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
