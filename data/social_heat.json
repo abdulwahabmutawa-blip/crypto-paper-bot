@@ -1,19 +1,20 @@
 {
-  "ts": "2026-11-04T09:04:32+00:00",
+  "ts": "2026-11-04T09:10:32+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
       "HYPE",
-      "PEPE",
       "PENGU",
+      "PEPE",
       "ZEC",
       "UNI",
       "LIT",
+      "ETH",
       "ZRO",
       "BTC",
-      "ETH",
+      "TRUMP",
       "TAO",
-      "ENA"
+      "AERO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -23,24 +24,14 @@
       "ENA",
       "NEAR",
       "SOXLB",
-      "UNI",
       "SUI",
+      "UNI",
       "XAUT"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "ENA",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.2
-    },
     {
       "symbol": "NEAR",
       "surfaces": 2,
@@ -80,12 +71,28 @@
       "long_short": 0.62
     },
     {
+      "symbol": "AERO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "ENA",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "ETH",
@@ -143,12 +150,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "TRUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -7.1e-05
+    },
+    {
       "symbol": "XAUT",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 3.3e-05
+      "funding": 3.1e-05
     },
     {
       "symbol": "ZRO",
