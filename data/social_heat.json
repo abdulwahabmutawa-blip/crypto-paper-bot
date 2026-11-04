@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-04T00:17:13+00:00",
+  "ts": "2026-11-04T00:22:37+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -19,17 +19,27 @@
     "movers": [
       "ZEC",
       "SNDKB",
-      "SUI",
       "XRP",
-      "ENA",
+      "TRX",
+      "SUI",
       "ETH",
-      "PEPE",
+      "BTC",
       "UNI"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "BTC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 2.31
+    },
     {
       "symbol": "UNI",
       "surfaces": 2,
@@ -64,23 +74,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000177
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
+      "funding": -0.000185
     },
     {
       "symbol": "ETH",
@@ -88,7 +82,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 8.5e-05
+      "funding": 8.3e-05
     },
     {
       "symbol": "HYPE",
@@ -123,13 +117,6 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PEPE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
-    },
-    {
       "symbol": "PUMP",
       "surfaces": 1,
       "sources": [
@@ -143,7 +130,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.6e-05
+      "funding": 1.1e-05
     },
     {
       "symbol": "SNDKB",
@@ -154,6 +141,14 @@
     },
     {
       "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "TRX",
       "surfaces": 1,
       "sources": [
         "movers"
