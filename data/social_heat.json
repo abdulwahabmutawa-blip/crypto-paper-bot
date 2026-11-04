@@ -1,15 +1,16 @@
 {
-  "ts": "2026-11-04T14:01:07+00:00",
+  "ts": "2026-11-04T14:06:48+00:00",
   "sources": {
     "coingecko": [
-      "BTC",
       "TRUMP",
+      "PENGU",
+      "BTC",
       "LIT",
       "NEAR",
-      "PENGU",
       "HYPE",
+      "UNI",
       "WLFI",
-      "UNI"
+      "ZRO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -18,9 +19,9 @@
       "ENA",
       "NEAR",
       "XAUT",
-      "PEPE",
       "ETH",
-      "SUI",
+      "CRCLB",
+      "PEPE",
       "BTC"
     ],
     "watcher": [],
@@ -35,7 +36,7 @@
         "movers"
       ],
       "funding": 0.0001,
-      "long_short": 1.7
+      "long_short": 1.68
     },
     {
       "symbol": "NEAR",
@@ -46,6 +47,13 @@
       ],
       "funding": 0.0001,
       "long_short": 1.13
+    },
+    {
+      "symbol": "CRCLB",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
     },
     {
       "symbol": "ENA",
@@ -95,20 +103,12 @@
       ]
     },
     {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "TRUMP",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000396
+      "funding": -0.000397
     },
     {
       "symbol": "UNI",
@@ -132,7 +132,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 1.2e-05
+      "funding": 1.4e-05
     },
     {
       "symbol": "ZEC",
@@ -141,6 +141,14 @@
         "movers"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "ZRO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
