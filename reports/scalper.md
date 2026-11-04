@@ -2,20 +2,22 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-04T06:34:20+00:00 · runs 5152 · equity **$553.52** (-44.65%) · cash $0.00 · open 10/10 · round trips 1805
+updated 2026-11-04T06:51:54+00:00 · runs 5153 · equity **$553.62** (-44.64%) · cash $0.00 · open 10/10 · round trips 1807
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
-- hit 47% (break-even 54%) · mean -0.33%/trade · realized $-452.50 · worst day $-50.94 · trades/day 29.6
+- hit 47% (break-even 54%) · mean -0.33%/trade · realized $-450.99 · worst day $-50.94 · trades/day 29.6
 
 | shape | n | hit | mean | target% | stop% | time% |
 |---|---|---|---|---|---|---|
-| surge | 1566 | 48% | -0.30% | 46% | 47% | 7% |
-| bottom | 239 | 42% | -0.54% | 36% | 45% | 19% |
+| surge | 1567 | 48% | -0.30% | 46% | 47% | 7% |
+| bottom | 240 | 42% | -0.54% | 36% | 45% | 19% |
 
 ## Last 15 round trips
 | exit (UTC) | coin | shape | how | hours | net | P&L |
 |---|---|---|---|---|---|---|
+| 2026-11-04T06:49 | ZAMAUSDT | surge | TARGET | 1.0 | +2.75% | $+1.43 |
+| 2026-11-04T06:49 | QQQBUSDT | bottom | TIME | 24.0 | +0.16% | $+0.08 |
 | 2026-11-04T06:32 | BONKUSDT | surge | TARGET | 1.0 | +2.75% | $+1.40 |
 | 2026-11-04T05:39 | HYPEUSDT | bottom | TARGET | 3.5 | +2.75% | $+1.39 |
 | 2026-11-04T05:04 | SOXSBUSDT | surge | STOP | 0.0 | -3.25% | $-1.67 |
@@ -29,21 +31,19 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | 2026-11-04T00:58 | ZROUSDT | surge | STOP | 7.5 | -3.25% | $-1.74 |
 | 2026-11-04T00:41 | SNXXBUSDT | surge | STOP | 0.2 | -3.25% | $-1.75 |
 | 2026-11-04T00:41 | PYTHUSDT | surge | STOP | 4.2 | -3.25% | $-1.76 |
-| 2026-11-04T00:41 | BOMEUSDT | surge | STOP | 9.8 | -3.25% | $-1.68 |
-| 2026-11-04T00:24 | WLFIUSDT | surge | STOP | 9.5 | -3.25% | $-1.68 |
 
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-03T06:36 | QQQBUSDT | bottom | 680.99 | 684 | +0.44% |
-| 2026-11-04T00:41 | LINKUSDT | bottom | 10.925 | 11.04 | +1.05% |
-| 2026-11-04T05:04 | RAYUSDT | surge | 1.5431 | 1.584 | +2.65% |
-| 2026-11-04T05:04 | ONDOUSDT | surge | 0.3905 | 0.3998 | +2.38% |
-| 2026-11-04T05:22 | AEROUSDT | surge | 0.6239 | 0.6288 | +0.79% |
-| 2026-11-04T05:22 | ICPUSDT | surge | 2.485 | 2.531 | +1.85% |
-| 2026-11-04T05:22 | AMDBUSDT | surge | 515.6 | 519.17 | +0.69% |
-| 2026-11-04T05:39 | ZAMAUSDT | surge | 0.06783 | 0.06911 | +1.89% |
-| 2026-11-04T06:32 | DOGEUSDT | surge | 0.07481 | 0.07483 | +0.03% |
+| 2026-11-04T00:41 | LINKUSDT | bottom | 10.925 | 11.071 | +1.34% |
+| 2026-11-04T05:04 | RAYUSDT | surge | 1.5431 | 1.5899 | +3.03% |
+| 2026-11-04T05:04 | ONDOUSDT | surge | 0.3905 | 0.4 | +2.43% |
+| 2026-11-04T05:22 | AEROUSDT | surge | 0.6239 | 0.6274 | +0.56% |
+| 2026-11-04T05:22 | ICPUSDT | surge | 2.485 | 2.529 | +1.77% |
+| 2026-11-04T05:22 | AMDBUSDT | surge | 515.6 | 518.8 | +0.62% |
+| 2026-11-04T06:32 | DOGEUSDT | surge | 0.07481 | 0.07478 | -0.04% |
+| 2026-11-04T06:49 | LSKUSDT | surge | 0.2006 | 0.1991 | -0.75% |
+| 2026-11-04T06:49 | ARUSDT | surge | 3.169 | 3.171 | +0.06% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
