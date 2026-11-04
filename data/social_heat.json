@@ -1,17 +1,18 @@
 {
-  "ts": "2026-11-04T03:13:18+00:00",
+  "ts": "2026-11-04T03:18:47+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
-      "HYPE",
       "LIT",
+      "HYPE",
       "NEAR",
+      "BTC",
       "XMR",
+      "PEPE",
       "SOL",
       "TRUMP",
-      "AERO",
-      "PUMP",
-      "BONK"
+      "XLM",
+      "PUMP"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,9 +20,8 @@
       "ZEC",
       "UNI",
       "PEPE",
-      "TRX",
       "XRP",
-      "U",
+      "TRX",
       "RLUSD"
     ],
     "watcher": [],
@@ -29,19 +29,20 @@
   },
   "heat": [
     {
-      "symbol": "AERO",
+      "symbol": "PEPE",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ]
+    },
+    {
+      "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000679
-    },
-    {
-      "symbol": "BONK",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ]
+      "funding": 0.0001
     },
     {
       "symbol": "HYPE",
@@ -76,13 +77,6 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PEPE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
-    },
-    {
       "symbol": "PUMP",
       "surfaces": 1,
       "sources": [
@@ -111,7 +105,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000139
+      "funding": -0.000147
     },
     {
       "symbol": "TRX",
@@ -122,17 +116,18 @@
       "funding": 0.0001
     },
     {
-      "symbol": "U",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
-    },
-    {
       "symbol": "UNI",
       "surfaces": 1,
       "sources": [
         "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "XLM",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
       ],
       "funding": 0.0001
     },
