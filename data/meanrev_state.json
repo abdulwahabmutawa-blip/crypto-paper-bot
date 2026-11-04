@@ -1,9 +1,9 @@
 {
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "holding": "CASH",
-  "units": 0.0,
-  "cash": 1154.7250802183937,
+  "holding": "NVDA",
+  "units": 5.686489489718455,
+  "cash": 0.0,
   "bench_units": 1.3319835726361926,
   "trades": [
     {
@@ -205,6 +205,16 @@
       "units": 0,
       "value": 1154.73,
       "reason": "Bounce harvested / nothing oversold \u2014 waiting in cash"
+    },
+    {
+      "date": "2026-11-04",
+      "action": "BUY",
+      "ticker": "NVDA",
+      "price": 202.84129333,
+      "units": 5.6865,
+      "value": 1153.45,
+      "fee": 1.27,
+      "reason": "Most oversold mega-cap (z < -1.5) \u2014 buying the dip"
     }
   ],
   "history": [
@@ -679,18 +689,12 @@
     },
     {
       "date": "2026-11-04",
-      "value": 1154.73,
-      "bench": 1022.39,
-      "holding": "CASH"
+      "value": 1153.45,
+      "bench": 1021.06,
+      "holding": "NVDA"
     }
   ],
   "intraday": [
-    {
-      "ts": "2026-10-07T15:57:27+00:00",
-      "value": 1134.49,
-      "bench": 1034.11,
-      "holding": "JNJ"
-    },
     {
       "ts": "2026-10-07T16:14:58+00:00",
       "value": 1134.3,
@@ -9684,14 +9688,21 @@
       "value": 1154.73,
       "bench": 1022.39,
       "holding": "CASH"
+    },
+    {
+      "ts": "2026-11-04T16:00:31+00:00",
+      "value": 1153.45,
+      "bench": 1021.06,
+      "holding": "NVDA"
     }
   ],
-  "last_updated_utc": "2026-11-04T15:41:47+00:00",
+  "last_updated_utc": "2026-11-04T16:00:31+00:00",
   "feed_delayed": false,
   "data_asof": "2026-11-04",
-  "costs_paid": 15.089,
+  "costs_paid": 16.3592,
   "stopped": {
     "ticker": "GOOGL",
     "date": "2026-10-29"
-  }
+  },
+  "hwm": 202.84129333496094
 }

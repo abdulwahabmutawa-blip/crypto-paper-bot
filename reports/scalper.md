@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-04T15:43:55+00:00 · runs 5179 · equity **$562.43** (-43.76%) · cash $0.00 · open 10/10 · round trips 1821
+updated 2026-11-04T16:02:38+00:00 · runs 5180 · equity **$560.30** (-43.97%) · cash $0.00 · open 10/10 · round trips 1821
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-04T15:41 | VETUSDT | surge | 0.005945 | 0.005987 | +0.71% |
-| 2026-11-04T15:41 | MUBARAKUSDT | surge | 0.04409 | 0.04392 | -0.39% |
-| 2026-11-04T15:41 | BABABUSDT | surge | 106.72 | 106.88 | +0.15% |
-| 2026-11-04T15:41 | SUSDT | surge | 0.04254 | 0.04227 | -0.63% |
-| 2026-11-04T15:41 | MSFTBUSDT | surge | 553.3 | 556.12 | +0.51% |
-| 2026-11-04T15:41 | BNCBUSDT | surge | 5.1 | 5.09 | -0.20% |
-| 2026-11-04T15:41 | RAYUSDT | surge | 1.7339 | 1.7349 | +0.06% |
-| 2026-11-04T15:41 | LUNCUSDT | surge | 4.224e-05 | 4.218e-05 | -0.14% |
-| 2026-11-04T15:41 | AMZNBUSDT | surge | 269.29 | 268.09 | -0.45% |
+| 2026-11-04T15:41 | VETUSDT | surge | 0.005945 | 0.005959 | +0.24% |
+| 2026-11-04T15:41 | MUBARAKUSDT | surge | 0.04409 | 0.0432 | -2.02% |
+| 2026-11-04T15:41 | BABABUSDT | surge | 106.72 | 107.56 | +0.79% |
+| 2026-11-04T15:41 | SUSDT | surge | 0.04254 | 0.04189 | -1.53% |
+| 2026-11-04T15:41 | MSFTBUSDT | surge | 553.3 | 552.44 | -0.16% |
+| 2026-11-04T15:41 | BNCBUSDT | surge | 5.1 | 5.05 | -0.98% |
+| 2026-11-04T15:41 | RAYUSDT | surge | 1.7339 | 1.7372 | +0.19% |
+| 2026-11-04T15:41 | LUNCUSDT | surge | 4.224e-05 | 4.216e-05 | -0.19% |
+| 2026-11-04T15:41 | AMZNBUSDT | surge | 269.29 | 267.29 | -0.74% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
