@@ -1,19 +1,19 @@
 {
-  "ts": "2026-11-04T11:21:03+00:00",
+  "ts": "2026-11-04T11:26:48+00:00",
   "sources": {
     "coingecko": [
-      "TAO",
       "LIT",
-      "BTC",
+      "TAO",
       "PENGU",
+      "AERO",
+      "SUI",
       "XRP",
       "SOL",
+      "BTC",
       "TRUMP",
-      "SUI",
       "HYPE",
-      "QNT",
-      "LINK",
-      "POL"
+      "ENA",
+      "LINK"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,15 +22,25 @@
       "ENA",
       "SOXLB",
       "NEAR",
+      "PUMP",
       "PEPE",
       "UNI",
-      "SUI",
-      "XAUT"
+      "SUI"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "ENA",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.22
+    },
     {
       "symbol": "SUI",
       "surfaces": 2,
@@ -42,20 +52,20 @@
       "long_short": 2.18
     },
     {
+      "symbol": "AERO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "HYPE",
@@ -105,20 +115,12 @@
       ]
     },
     {
-      "symbol": "POL",
+      "symbol": "PUMP",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "QNT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "SOL",
@@ -149,7 +151,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000177
+      "funding": -0.000188
     },
     {
       "symbol": "UNI",
@@ -158,14 +160,6 @@
         "movers"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "XAUT",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 2.7e-05
     },
     {
       "symbol": "XRP",
