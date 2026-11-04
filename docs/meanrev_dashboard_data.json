@@ -1,104 +1,104 @@
 {
-  "generated_utc": "2026-11-04T19:15:46+00:00",
+  "generated_utc": "2026-11-04T19:33:34+00:00",
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "live_ts": "2026-11-04T19:15:00+00:00",
+  "live_ts": "2026-11-04T19:30:00+00:00",
   "current": {
     "date": "2026-11-04",
-    "value": 1159.9,
-    "bench": 1023.4,
+    "value": 1157.71,
+    "bench": 1022.3,
     "holding": "NVDA"
   },
   "board": [
     {
       "sym": "XOM",
-      "price": 169.21,
-      "line": "z -1.62",
+      "price": 168.89,
+      "line": "z -1.67",
       "tag": "oversold",
       "on": true,
       "pick": false,
-      "fill": 27.038121905401834
+      "fill": 27.861710984148054
     },
     {
       "sym": "NVDA",
-      "price": 203.98,
-      "line": "z -1.48",
+      "price": 203.59,
+      "line": "z -1.52",
       "tag": "HELD",
-      "on": false,
+      "on": true,
       "pick": true,
-      "fill": 24.661450503351183
+      "fill": 25.300262631298608
     },
     {
       "sym": "GOOGL",
-      "price": 291.52,
-      "line": "z -1.20",
+      "price": 291.41,
+      "line": "z -1.21",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 20.079004666639033
+      "fill": 20.138015509782196
     },
     {
       "sym": "CVX",
-      "price": 216.64,
-      "line": "z -1.10",
+      "price": 216.36,
+      "line": "z -1.14",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 18.329257096280664
+      "fill": 18.923101344589487
     },
     {
       "sym": "UNH",
-      "price": 412.21,
-      "line": "z +0.61",
+      "price": 413.38,
+      "line": "z +0.68",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": -10.125717122577825
+      "fill": -11.315720645897903
     },
     {
       "sym": "MRK",
-      "price": 148.53,
-      "line": "z +1.09",
+      "price": 148.46,
+      "line": "z +1.06",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": -18.103063711286552
-    },
-    {
-      "sym": "JNJ",
-      "price": 275.53,
-      "line": "z +1.55",
-      "tag": "normal",
-      "on": false,
-      "pick": false,
-      "fill": -25.87082478063821
+      "fill": -17.73696203301234
     },
     {
       "sym": "KO",
-      "price": 96.14,
-      "line": "z +1.56",
+      "price": 96.04,
+      "line": "z +1.52",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": -26.001386295483876
+      "fill": -25.408581508839777
+    },
+    {
+      "sym": "JNJ",
+      "price": 275.7,
+      "line": "z +1.57",
+      "tag": "normal",
+      "on": false,
+      "pick": false,
+      "fill": -26.16993770561642
+    },
+    {
+      "sym": "AMZN",
+      "price": 267.89,
+      "line": "z +1.89",
+      "tag": "normal",
+      "on": false,
+      "pick": false,
+      "fill": -31.521688352010298
     },
     {
       "sym": "PG",
-      "price": 167.22,
+      "price": 167.23,
       "line": "z +1.92",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": -32.02954189827865
-    },
-    {
-      "sym": "AMZN",
-      "price": 268.71,
-      "line": "z +1.98",
-      "tag": "normal",
-      "on": false,
-      "pick": false,
-      "fill": -32.92891288436458
+      "fill": -32.05614019998484
     }
   ],
   "board_title": "16 mega-caps, most oversold first (z < -1.5 = buy zone)",
@@ -109,12 +109,6 @@
     "board_note": "Buys panic, sells relief: enter the most stretched mega-cap below -1.5 z, exit when it recovers to average."
   },
   "intraday": [
-    {
-      "ts": "2026-10-07T20:56:17+00:00",
-      "value": 1125.8,
-      "bench": 1035.14,
-      "holding": "JNJ"
-    },
     {
       "ts": "2026-10-07T21:13:29+00:00",
       "value": 1125.8,
@@ -9108,6 +9102,12 @@
       "value": 1159.9,
       "bench": 1023.4,
       "holding": "NVDA"
+    },
+    {
+      "ts": "2026-11-04T19:33:34+00:00",
+      "value": 1157.71,
+      "bench": 1022.3,
+      "holding": "NVDA"
     }
   ],
   "trades": [
@@ -9776,8 +9776,8 @@
     },
     {
       "date": "2026-11-04",
-      "value": 1159.9,
-      "bench": 1023.4,
+      "value": 1157.71,
+      "bench": 1022.3,
       "holding": "NVDA"
     }
   ],
@@ -9789,5 +9789,5 @@
   },
   "costs_paid": 16.3592,
   "frozen": null,
-  "thoughts": "I'm holding NVDA. Most oversold mega-cap (z < -1.5) \u2014 buying the dip. I bought at $202.84; it's now $203.98 (+0.6% since I got in). My safety net: if the price falls to $179.50 (12% below its recent high), I sell automatically \u2014 no exceptions. Closest challenger on my list is XOM, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
+  "thoughts": "I'm holding NVDA. Most oversold mega-cap (z < -1.5) \u2014 buying the dip. I bought at $202.84; it's now $203.59 (+0.4% since I got in). My safety net: if the price falls to $179.50 (12% below its recent high), I sell automatically \u2014 no exceptions. Closest challenger on my list is XOM, but it would need to look clearly better before I switch \u2014 jumping between positions too often just burns money on trades."
 }
