@@ -1,16 +1,15 @@
 {
-  "ts": "2026-11-04T01:12:48+00:00",
+  "ts": "2026-11-04T01:18:10+00:00",
   "sources": {
     "coingecko": [
-      "XMR",
-      "BTC",
-      "QNT",
-      "HYPE",
       "PENGU",
-      "TAO",
-      "HOT",
-      "BNB",
-      "LIT"
+      "BTC",
+      "XMR",
+      "LIT",
+      "QNT",
+      "PUMP",
+      "PEPE",
+      "BNB"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,9 +19,9 @@
       "SUI",
       "UNI",
       "XRP",
-      "SNDKB",
-      "PEPE",
-      "ETH"
+      "ETH",
+      "U",
+      "SNDKB"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -34,7 +33,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.1e-05
+      "funding": 5.6e-05
     },
     {
       "symbol": "BTC",
@@ -51,22 +50,6 @@
         "movers"
       ],
       "funding": 7.5e-05
-    },
-    {
-      "symbol": "HOT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -5.5e-05
-    },
-    {
-      "symbol": "HYPE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "LIT",
@@ -88,8 +71,16 @@
       "symbol": "PEPE",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ]
+    },
+    {
+      "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "QNT",
@@ -97,7 +88,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.6e-05
+      "funding": -3.2e-05
     },
     {
       "symbol": "SNDKB",
@@ -115,20 +106,19 @@
       "funding": 0.0001
     },
     {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "TRX",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "U",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
     },
     {
       "symbol": "UNI",
