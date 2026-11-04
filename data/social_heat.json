@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-04T13:27:48+00:00",
+  "ts": "2026-11-04T13:33:09+00:00",
   "sources": {
     "coingecko": [
       "TRUMP",
@@ -18,16 +18,26 @@
       "ZEC",
       "ENA",
       "NEAR",
+      "XAUT",
       "PEPE",
       "PUMP",
-      "XAUT",
-      "ETH",
-      "SUI"
+      "BTC",
+      "AAVE"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "BTC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.7
+    },
     {
       "symbol": "NEAR",
       "surfaces": 2,
@@ -49,10 +59,10 @@
       "long_short": 0.57
     },
     {
-      "symbol": "BTC",
+      "symbol": "AAVE",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
       "funding": 0.0001
     },
@@ -63,14 +73,6 @@
         "movers"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "ETH",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "HYPE",
@@ -94,7 +96,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.4e-05
+      "funding": 2.6e-05
     },
     {
       "symbol": "PENGU",
@@ -120,20 +122,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "TRUMP",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000352
+      "funding": -0.00036
     },
     {
       "symbol": "WLFI",
