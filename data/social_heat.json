@@ -1,21 +1,20 @@
 {
-  "ts": "2026-11-04T08:25:18+00:00",
+  "ts": "2026-11-04T08:30:22+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
-      "PENGU",
-      "ETH",
-      "AAVE",
-      "HYPE",
       "UNI",
+      "AAVE",
+      "PENGU",
+      "HYPE",
       "PEPE",
-      "INJ",
-      "RENDER",
-      "SUI",
-      "SKY",
+      "ETH",
       "AERO",
-      "QNT",
-      "ENA"
+      "LINK",
+      "BTC",
+      "SUI",
+      "LIT",
+      "INJ"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -33,16 +32,6 @@
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "ENA",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.19
-    },
     {
       "symbol": "NEAR",
       "surfaces": 2,
@@ -98,6 +87,22 @@
       "funding": 5e-05
     },
     {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ENA",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "ETH",
       "surfaces": 1,
       "sources": [
@@ -122,15 +127,7 @@
       "funding": 0.0001
     },
     {
-      "symbol": "PENGU",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "QNT",
+      "symbol": "LINK",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -138,7 +135,7 @@
       "funding": 0.0001
     },
     {
-      "symbol": "RENDER",
+      "symbol": "LIT",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -146,7 +143,7 @@
       "funding": 5e-05
     },
     {
-      "symbol": "SKY",
+      "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
         "coingecko"
