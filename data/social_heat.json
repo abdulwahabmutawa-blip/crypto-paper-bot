@@ -1,16 +1,17 @@
 {
-  "ts": "2026-11-04T04:53:19+00:00",
+  "ts": "2026-11-04T04:58:47+00:00",
   "sources": {
     "coingecko": [
       "HYPE",
       "PENGU",
-      "NEAR",
       "RUNE",
-      "BTC",
       "ZEC",
+      "BTC",
       "XMR",
+      "NEAR",
+      "TAO",
       "SOL",
-      "PEPE"
+      "BONK"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,21 +22,13 @@
       "ENA",
       "SUI",
       "XRP",
-      "XAUT",
-      "ETH"
+      "ETH",
+      "XAUT"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "PEPE",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ]
-    },
     {
       "symbol": "ZEC",
       "surfaces": 2,
@@ -43,8 +36,15 @@
         "coingecko",
         "movers"
       ],
-      "funding": 7.9e-05,
+      "funding": 7.4e-05,
       "long_short": 0.82
+    },
+    {
+      "symbol": "BONK",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ]
     },
     {
       "symbol": "BTC",
@@ -68,7 +68,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.4e-05
+      "funding": 4.6e-05
     },
     {
       "symbol": "HYPE",
@@ -95,12 +95,19 @@
       "funding": 5e-05
     },
     {
+      "symbol": "PEPE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
+    },
+    {
       "symbol": "RUNE",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 4.4e-05
     },
     {
       "symbol": "SOL",
@@ -117,6 +124,14 @@
         "movers"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "TAO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "UNI",
