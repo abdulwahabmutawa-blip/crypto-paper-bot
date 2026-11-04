@@ -1,17 +1,19 @@
 {
-  "ts": "2026-11-04T17:55:29+00:00",
+  "ts": "2026-11-04T18:00:48+00:00",
   "sources": {
     "coingecko": [
       "NEAR",
-      "ETH",
       "BTC",
+      "ETH",
       "TRUMP",
       "PENGU",
       "SOL",
       "HYPE",
-      "WLFI",
       "LIT",
-      "PEPE"
+      "WLFI",
+      "LINK",
+      "PEPE",
+      "AERO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -47,7 +49,7 @@
         "movers"
       ],
       "funding": 0.0001,
-      "long_short": 1.14
+      "long_short": 1.15
     },
     {
       "symbol": "AAVE",
@@ -56,6 +58,14 @@
         "movers"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "AERO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "BTC",
@@ -89,12 +99,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "LINK",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "LIT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 1.3e-05
+      "funding": 1.2e-05
     },
     {
       "symbol": "PENGU",
@@ -133,7 +151,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000446
+      "funding": -0.000445
     },
     {
       "symbol": "UNI",
