@@ -1,46 +1,35 @@
 {
-  "ts": "2026-11-05T07:00:29+00:00",
+  "ts": "2026-11-05T07:05:56+00:00",
   "sources": {
     "coingecko": [
+      "PENGU",
       "TRUMP",
       "LIT",
       "AERO",
-      "PENGU",
-      "TAO",
       "ZEC",
-      "LINK",
-      "BTC",
+      "TAO",
       "ZAMA",
       "NEAR",
-      "QNT",
-      "HYPE"
+      "LINK",
+      "BTC",
+      "QNT"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "ETH",
+      "ZEC",
       "LINK",
       "UNI",
-      "ZEC",
-      "GOOGLB",
       "ADA",
-      "BTC",
-      "SOL"
+      "GOOGLB",
+      "SOL",
+      "SUI"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "BTC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.39
-    },
     {
       "symbol": "LINK",
       "surfaces": 2,
@@ -49,7 +38,7 @@
         "movers"
       ],
       "funding": 0.0001,
-      "long_short": 1.89
+      "long_short": 1.9
     },
     {
       "symbol": "ZEC",
@@ -78,12 +67,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 3.3e-05
+      "funding": 3.7e-05
     },
     {
       "symbol": "GOOGLB",
@@ -91,14 +88,6 @@
       "sources": [
         "movers"
       ]
-    },
-    {
-      "symbol": "HYPE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "LIT",
@@ -141,6 +130,14 @@
       "funding": 0.0001
     },
     {
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "TAO",
       "surfaces": 1,
       "sources": [
@@ -154,7 +151,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.00035
+      "funding": -0.000349
     },
     {
       "symbol": "UNI",
