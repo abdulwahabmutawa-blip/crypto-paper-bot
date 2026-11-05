@@ -1,21 +1,21 @@
 {
-  "ts": "2026-11-05T03:42:38+00:00",
+  "ts": "2026-11-05T03:48:28+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
       "TRUMP",
       "BTC",
       "NEAR",
-      "LINK",
       "ENA",
+      "LINK",
       "HYPE",
-      "SOL",
+      "PEPE",
+      "UNI",
       "WLFI",
       "DASH",
-      "ICP",
-      "ZEC",
-      "PEPE",
-      "ETH"
+      "ARB",
+      "SOL",
+      "ZEC"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -23,8 +23,8 @@
       "ZEC",
       "UNI",
       "NEAR",
-      "ENA",
       "ETH",
+      "ENA",
       "LINK",
       "ADA",
       "SUI"
@@ -42,16 +42,6 @@
       ],
       "funding": 5e-05,
       "long_short": 1.23
-    },
-    {
-      "symbol": "ETH",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 3.1e-05,
-      "long_short": 1.87
     },
     {
       "symbol": "LINK",
@@ -74,13 +64,23 @@
       "long_short": 1.16
     },
     {
+      "symbol": "UNI",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.76
+    },
+    {
       "symbol": "ZEC",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": 6.2e-05,
+      "funding": 5.9e-05,
       "long_short": 0.68
     },
     {
@@ -92,12 +92,20 @@
       "funding": 0.0001
     },
     {
+      "symbol": "ARB",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 2.4e-05
+    },
+    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 7.4e-05
+      "funding": 7.5e-05
     },
     {
       "symbol": "DASH",
@@ -108,20 +116,20 @@
       "funding": 0.0001
     },
     {
+      "symbol": "ETH",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 3e-05
+    },
+    {
       "symbol": "HYPE",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "ICP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "PENGU",
@@ -160,15 +168,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000287
-    },
-    {
-      "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
+      "funding": -0.000298
     },
     {
       "symbol": "WLFI",
