@@ -1,19 +1,19 @@
 {
-  "ts": "2026-11-05T14:13:29+00:00",
+  "ts": "2026-11-05T14:19:07+00:00",
   "sources": {
     "coingecko": [
       "TRUMP",
       "BTC",
-      "PENGU",
       "ETH",
-      "INJ",
       "ZIL",
-      "SOL",
+      "INJ",
       "DOT",
+      "PENGU",
       "NEAR",
       "ENA",
-      "HYPE",
-      "ZEC"
+      "BNB",
+      "SOL",
+      "LIT"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -25,12 +25,22 @@
       "XAUT",
       "XRP",
       "BTC",
-      "DOGE"
+      "BNB"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "BNB",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.00021,
+      "long_short": 2.5
+    },
     {
       "symbol": "BTC",
       "surfaces": 2,
@@ -62,24 +72,6 @@
       "long_short": 2.77
     },
     {
-      "symbol": "ZEC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 0.65
-    },
-    {
-      "symbol": "DOGE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "DOT",
       "surfaces": 1,
       "sources": [
@@ -89,14 +81,6 @@
     },
     {
       "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "HYPE",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -120,6 +104,14 @@
       "funding": 0.0001
     },
     {
+      "symbol": "LIT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 2.6e-05
+    },
+    {
       "symbol": "NEAR",
       "surfaces": 1,
       "sources": [
@@ -141,7 +133,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000316
+      "funding": -0.000315
     },
     {
       "symbol": "XAUT",
@@ -153,6 +145,14 @@
     },
     {
       "symbol": "XRP",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
         "movers"
