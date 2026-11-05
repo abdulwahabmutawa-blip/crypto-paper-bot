@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-05T13:16:34+00:00",
+  "ts": "2026-11-05T13:22:08+00:00",
   "sources": {
     "coingecko": [
       "TRUMP",
@@ -23,9 +23,9 @@
       "LINK",
       "XRP",
       "XAUT",
-      "DOGE",
-      "BNB",
-      "BTC"
+      "BTC",
+      "ZEC",
+      "DOGE"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -78,14 +78,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "BNB",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.000205
     },
     {
       "symbol": "DOGE",
@@ -166,6 +158,14 @@
         "movers"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
