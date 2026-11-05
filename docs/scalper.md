@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-05T09:24:21+00:00 · runs 5241 · equity **$560.35** (-43.96%) · cash $0.00 · open 10/10 · round trips 1832
+updated 2026-11-05T09:42:28+00:00 · runs 5242 · equity **$560.59** (-43.94%) · cash $0.00 · open 10/10 · round trips 1832
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-04T15:41 | MSFTBUSDT | surge | 553.3 | 555.36 | +0.37% |
+| 2026-11-04T15:41 | MSFTBUSDT | surge | 553.3 | 555.6 | +0.42% |
 | 2026-11-04T15:41 | BNCBUSDT | surge | 5.1 | 5.01 | -1.76% |
-| 2026-11-04T15:41 | LUNCUSDT | surge | 4.224e-05 | 4.206e-05 | -0.43% |
-| 2026-11-04T15:41 | AMZNBUSDT | surge | 269.29 | 268.18 | -0.41% |
-| 2026-11-04T16:18 | PENDLEUSDT | surge | 1.821 | 1.786 | -1.92% |
-| 2026-11-04T18:57 | CAKEUSDT | surge | 2.039 | 2.014 | -1.23% |
-| 2026-11-05T01:29 | NVDABUSDT | bottom | 199.06 | 198.45 | -0.31% |
-| 2026-11-05T02:54 | BABABUSDT | surge | 109.24 | 110.81 | +1.44% |
-| 2026-11-05T08:45 | AEROUSDT | surge | 0.6663 | 0.6655 | -0.12% |
+| 2026-11-04T15:41 | LUNCUSDT | surge | 4.224e-05 | 4.21e-05 | -0.33% |
+| 2026-11-04T15:41 | AMZNBUSDT | surge | 269.29 | 267.91 | -0.51% |
+| 2026-11-04T16:18 | PENDLEUSDT | surge | 1.821 | 1.793 | -1.54% |
+| 2026-11-04T18:57 | CAKEUSDT | surge | 2.039 | 2.017 | -1.08% |
+| 2026-11-05T01:29 | NVDABUSDT | bottom | 199.06 | 199.04 | -0.01% |
+| 2026-11-05T02:54 | BABABUSDT | surge | 109.24 | 110.98 | +1.59% |
+| 2026-11-05T08:45 | AEROUSDT | surge | 0.6663 | 0.6615 | -0.72% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
