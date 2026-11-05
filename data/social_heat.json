@@ -1,36 +1,45 @@
 {
-  "ts": "2026-11-05T14:31:22+00:00",
+  "ts": "2026-11-05T14:37:10+00:00",
   "sources": {
     "coingecko": [
       "TRUMP",
       "BTC",
       "SOL",
-      "PENGU",
       "ETH",
       "INJ",
       "NEAR",
       "ZEC",
+      "AAVE",
       "ZIL",
-      "HYPE",
       "LIT",
-      "DOT"
+      "BNB"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "ETH",
       "XAUT",
+      "ETH",
       "SOL",
       "LINK",
       "BTC",
-      "XRP",
       "BNB",
-      "DOGE"
+      "XRP",
+      "U"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "BNB",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.000209,
+      "long_short": 2.5
+    },
     {
       "symbol": "BTC",
       "surfaces": 2,
@@ -62,36 +71,12 @@
       "long_short": 2.77
     },
     {
-      "symbol": "BNB",
+      "symbol": "AAVE",
       "surfaces": 1,
       "sources": [
-        "movers"
-      ],
-      "funding": 0.000211
-    },
-    {
-      "symbol": "DOGE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
+        "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "DOT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 9e-06
-    },
-    {
-      "symbol": "HYPE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     },
     {
       "symbol": "INJ",
@@ -115,7 +100,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.3e-05
+      "funding": 1.4e-05
     },
     {
       "symbol": "NEAR",
@@ -126,20 +111,19 @@
       "funding": 0.0001
     },
     {
-      "symbol": "PENGU",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "TRUMP",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": -0.000308
+    },
+    {
+      "symbol": "U",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
     },
     {
       "symbol": "XAUT",
