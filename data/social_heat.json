@@ -1,17 +1,17 @@
 {
-  "ts": "2026-11-05T11:12:49+00:00",
+  "ts": "2026-11-05T11:18:38+00:00",
   "sources": {
     "coingecko": [
       "TRUMP",
+      "BTC",
       "INJ",
       "PENGU",
-      "BTC",
-      "SOL",
-      "QNT",
-      "TAO",
       "AERO",
+      "TAO",
+      "QNT",
       "SUI",
-      "HYPE"
+      "HYPE",
+      "ADA"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -19,11 +19,11 @@
       "ETH",
       "LINK",
       "SOL",
-      "BTC",
       "BNB",
-      "DOGE",
+      "BTC",
+      "XAUT",
       "XRP",
-      "XAUT"
+      "DOGE"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -40,14 +40,12 @@
       "long_short": 1.41
     },
     {
-      "symbol": "SOL",
-      "surfaces": 2,
+      "symbol": "ADA",
+      "surfaces": 1,
       "sources": [
-        "coingecko",
-        "movers"
+        "coingecko"
       ],
-      "funding": 0.0001,
-      "long_short": 2.72
+      "funding": 0.0001
     },
     {
       "symbol": "AERO",
@@ -55,7 +53,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -6.4e-05
+      "funding": -5e-05
     },
     {
       "symbol": "BNB",
@@ -63,7 +61,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.000182
+      "funding": 0.000184
     },
     {
       "symbol": "DOGE",
@@ -118,6 +116,14 @@
       "surfaces": 1,
       "sources": [
         "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "movers"
       ],
       "funding": 0.0001
     },
