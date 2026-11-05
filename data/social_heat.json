@@ -1,20 +1,20 @@
 {
-  "ts": "2026-11-05T17:13:01+00:00",
+  "ts": "2026-11-05T17:18:48+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "TRUMP",
       "HYPE",
-      "NEAR",
       "LIT",
       "ETH",
-      "ONDO",
-      "ZEC",
       "SUI",
-      "PENGU",
+      "NEAR",
+      "UNI",
       "SOL",
-      "XRP",
-      "UNI"
+      "PENGU",
+      "ZEC",
+      "ONDO",
+      "INJ"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -29,6 +29,16 @@
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "INJ",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.49
+    },
     {
       "symbol": "BTC",
       "surfaces": 1,
@@ -54,20 +64,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "INJ",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "LIT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -3.3e-05
+      "funding": -3.1e-05
     },
     {
       "symbol": "NEAR",
@@ -91,7 +93,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.4e-05
+      "funding": -2.3e-05
     },
     {
       "symbol": "RLUSD",
@@ -113,7 +115,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9e-06
+      "funding": 5e-06
     },
     {
       "symbol": "SUI",
@@ -121,7 +123,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -7.3e-05
+      "funding": -7.8e-05
     },
     {
       "symbol": "TRUMP",
@@ -153,14 +155,6 @@
         "movers"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "XRP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "ZEC",
