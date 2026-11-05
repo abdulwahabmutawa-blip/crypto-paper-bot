@@ -1,16 +1,17 @@
 {
-  "ts": "2026-11-05T08:05:49+00:00",
+  "ts": "2026-11-05T08:11:08+00:00",
   "sources": {
     "coingecko": [
-      "LIT",
-      "PENGU",
-      "TRUMP",
       "SOL",
-      "AERO",
+      "LIT",
+      "WLFI",
+      "TRUMP",
       "INJ",
-      "FET",
-      "ZRO",
-      "WLFI"
+      "AERO",
+      "BTC",
+      "ZEC",
+      "UNI",
+      "FET"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -18,16 +19,26 @@
       "ETH",
       "GOOGLB",
       "LINK",
-      "ADA",
       "XRP",
+      "ADA",
       "SOL",
       "BTC",
-      "XAUT"
+      "ZEC"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "BTC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.39
+    },
     {
       "symbol": "SOL",
       "surfaces": 2,
@@ -37,6 +48,16 @@
       ],
       "funding": 0.0001,
       "long_short": 2.81
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 0.68
     },
     {
       "symbol": "ADA",
@@ -55,20 +76,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 6.5e-05
+      "funding": 7.2e-05
     },
     {
       "symbol": "FET",
@@ -110,20 +123,20 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PENGU",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "TRUMP",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000352
+      "funding": -0.000361
+    },
+    {
+      "symbol": "UNI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "WLFI",
@@ -134,28 +147,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "XAUT",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 4.8e-05
-    },
-    {
       "symbol": "XRP",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "ZRO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
