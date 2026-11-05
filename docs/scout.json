@@ -1,8 +1,24 @@
 {
-  "ts": "2026-11-05T22:59:43+00:00",
-  "scanned": 104,
+  "ts": "2026-11-05T23:05:28+00:00",
+  "scanned": 105,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SPYBUSDT",
+      "signal": "ignition",
+      "score": 0.6969,
+      "raw_score": 0.7642,
+      "weight": 0.912,
+      "price": 731.64,
+      "why": "trades 4.8x and volume 12.0x the prior 4h, 89% taker-buy, $106,233 burst \u2014 while price has only moved -0.0%",
+      "chg_24h": -0.0473,
+      "vol_surge": 11.98,
+      "chg_1h": -0.0004,
+      "market_surge": 10.62,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.88% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.88% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -1.70% at 24h: market beta, not signal",
