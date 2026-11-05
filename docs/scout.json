@@ -1,8 +1,39 @@
 {
-  "ts": "2026-11-05T05:30:44+00:00",
-  "scanned": 100,
+  "ts": "2026-11-05T05:35:54+00:00",
+  "scanned": 99,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "LTCUSDT",
+      "signal": "ignition",
+      "score": 0.6524,
+      "raw_score": 0.7185,
+      "weight": 0.908,
+      "price": 55.82,
+      "why": "trades 5.2x and volume 10.1x the prior 4h, 68% taker-buy, $172,446 burst \u2014 while price has only moved -0.3%",
+      "chg_24h": 0.0389,
+      "vol_surge": 10.06,
+      "chg_1h": -0.0034,
+      "market_surge": 3.25,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.63% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "BEAMXUSDT",
+      "signal": "breakout",
+      "score": 0.6197,
+      "raw_score": 0.752,
+      "weight": 0.824,
+      "price": 0.00488,
+      "why": "trades 6.7x, volume 11.3x, 66% taker-buy, +3.9% in an hour, at 91% of its 24h range",
+      "chg_24h": 0.2067,
+      "vol_surge": 11.28,
+      "chg_1h": 0.0385,
+      "market_surge": 6.21,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -1.42% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.63% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -1.42% at 24h: market beta, not signal",
