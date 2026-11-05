@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-05T16:27:39+00:00",
+  "ts": "2026-11-05T16:33:22+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -20,7 +20,8 @@
     "movers": [
       "XAUT",
       "U",
-      "RLUSD"
+      "RLUSD",
+      "RWUSD"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -88,10 +89,17 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -3e-06
+      "funding": -8e-06
     },
     {
       "symbol": "RLUSD",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
+    },
+    {
+      "symbol": "RWUSD",
       "surfaces": 1,
       "sources": [
         "movers"
@@ -103,7 +111,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.8e-05
+      "funding": 4.9e-05
     },
     {
       "symbol": "TAO",
@@ -119,7 +127,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000118
+      "funding": -0.00011
     },
     {
       "symbol": "U",
