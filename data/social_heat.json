@@ -1,14 +1,16 @@
 {
-  "ts": "2026-11-05T02:00:48+00:00",
+  "ts": "2026-11-05T02:06:28+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
-      "BTC",
       "TRUMP",
       "NEAR",
-      "XRP",
+      "BTC",
+      "WLD",
+      "HYPE",
       "PUMP",
-      "RUNE"
+      "RUNE",
+      "ARB"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -18,8 +20,8 @@
       "ETH",
       "NEAR",
       "ENA",
-      "SUI",
       "LINK",
+      "SUI",
       "ADA"
     ],
     "watcher": [],
@@ -34,7 +36,7 @@
         "movers"
       ],
       "funding": 0.0001,
-      "long_short": 1.17
+      "long_short": 1.14
     },
     {
       "symbol": "ADA",
@@ -45,12 +47,20 @@
       "funding": 0.0001
     },
     {
+      "symbol": "ARB",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -4.7e-05
+    },
+    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 4.6e-05
+      "funding": 4.8e-05
     },
     {
       "symbol": "ENA",
@@ -66,7 +76,15 @@
       "sources": [
         "movers"
       ],
-      "funding": -1.1e-05
+      "funding": -1.6e-05
+    },
+    {
+      "symbol": "HYPE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "LINK",
@@ -90,7 +108,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.2e-05
+      "funding": 1.6e-05
     },
     {
       "symbol": "RUNE",
@@ -114,7 +132,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000403
+      "funding": -0.0004
     },
     {
       "symbol": "UNI",
@@ -125,12 +143,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "XRP",
+      "symbol": "WLD",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0001
+      "funding": -0.000375
     },
     {
       "symbol": "ZEC",
