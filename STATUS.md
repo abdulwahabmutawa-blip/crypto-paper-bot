@@ -20,3 +20,4 @@
 - **scalper** seat **TVKUSDT still open since 2026-09-12** (~54 days) — past the bot's 24h hold cap; unresolved known bug, not new this run.
 - **scalper** equity $560.94 remains below the R1 hard-stop floor ($750, −25%); no retirement action taken (known open item, human call).
 - **sentiment** remains R1-frozen in CASH at $726.83 since 2026-10-12; un-freeze or formal retirement still undecided.
+- **Scheduled-task roster mismatch (recurring)**: today's digest instructions again described a 9-bot fleet (trend, regime, congress, meanrev, commodity, allweather, hype, Hunter, Watcher) that doesn't match the actual roster. Per CLAUDE.md/`reports/kill_criteria.md`, congress/commodity/allweather/hype/hunter/stock/scholar/analyst are retired, frozen archives. The active paper fleet is 4 books — crypto, meanrev, sentiment, scalper — plus the non-capital Watcher. This report covers the real current roster; the stale scheduled-task prompt likely needs updating at the source.
