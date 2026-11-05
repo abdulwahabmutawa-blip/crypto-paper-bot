@@ -1,27 +1,26 @@
 {
-  "ts": "2026-11-05T10:50:38+00:00",
+  "ts": "2026-11-05T10:56:43+00:00",
   "sources": {
     "coingecko": [
       "TRUMP",
+      "BTC",
       "INJ",
       "PENGU",
-      "BTC",
-      "ETH",
-      "SOL",
-      "TAO",
       "AERO",
+      "TAO",
+      "SOL",
       "HYPE",
-      "ADA",
-      "LIT"
+      "SUI",
+      "WLFI"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "ETH",
-      "SOL",
       "LINK",
-      "BTC",
+      "SOL",
       "DOGE",
+      "BTC",
       "XRP",
       "BNB",
       "XAUT"
@@ -41,16 +40,6 @@
       "long_short": 1.41
     },
     {
-      "symbol": "ETH",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.97
-    },
-    {
       "symbol": "SOL",
       "surfaces": 2,
       "sources": [
@@ -61,20 +50,12 @@
       "long_short": 2.73
     },
     {
-      "symbol": "ADA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "AERO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000105
+      "funding": -9.4e-05
     },
     {
       "symbol": "BNB",
@@ -82,10 +63,18 @@
       "sources": [
         "movers"
       ],
-      "funding": 0.00017
+      "funding": 0.000173
     },
     {
       "symbol": "DOGE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
+    },
+    {
+      "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "movers"
@@ -117,7 +106,7 @@
       "funding": 0.0001
     },
     {
-      "symbol": "LIT",
+      "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -125,12 +114,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PENGU",
+      "symbol": "SUI",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 0.0001
     },
     {
       "symbol": "TAO",
@@ -146,7 +135,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000335
+      "funding": -0.000339
+    },
+    {
+      "symbol": "WLFI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "XAUT",
