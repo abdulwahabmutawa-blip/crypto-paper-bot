@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-05T10:28:32+00:00",
+  "ts": "2026-11-05T10:33:48+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
@@ -17,13 +17,13 @@
     "stocktwits": [],
     "movers": [
       "ETH",
-      "LINK",
       "SOL",
+      "LINK",
       "GOOGLB",
-      "XRP",
       "BTC",
       "DOGE",
-      "BNB"
+      "XRP",
+      "XAUT"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -58,14 +58,6 @@
       ],
       "funding": 0.0001,
       "long_short": 2.73
-    },
-    {
-      "symbol": "BNB",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.000154
     },
     {
       "symbol": "DOGE",
@@ -136,7 +128,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000332
+      "funding": -0.000334
+    },
+    {
+      "symbol": "XAUT",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "XRP",
