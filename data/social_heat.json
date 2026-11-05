@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-05T09:00:11+00:00",
+  "ts": "2026-11-05T09:05:48+00:00",
   "sources": {
     "coingecko": [
       "TRUMP",
@@ -13,14 +13,14 @@
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "ETH",
       "GOOGLB",
+      "ETH",
       "LINK",
       "SOL",
       "XRP",
-      "ZEC",
       "BTC",
-      "DOGE"
+      "DOGE",
+      "XAUT"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -118,20 +118,20 @@
       "funding": 5e-05
     },
     {
+      "symbol": "XAUT",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "XRP",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 4.9e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
