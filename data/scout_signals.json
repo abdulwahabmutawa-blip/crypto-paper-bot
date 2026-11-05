@@ -1,22 +1,24 @@
 {
-  "ts": "2026-11-05T16:22:03+00:00",
-  "scanned": 101,
+  "ts": "2026-11-05T16:27:44+00:00",
+  "scanned": 99,
   "ruleset": 3,
   "candidates": [
     {
-      "symbol": "MORPHOUSDT",
-      "signal": "ignition",
-      "score": 0.7845,
-      "raw_score": 0.8583,
-      "weight": 0.914,
-      "price": 2.109,
-      "why": "trades 8.9x and volume 14.7x the prior 4h, 61% taker-buy, $76,130 burst \u2014 while price has only moved +0.0%",
-      "chg_24h": -0.0554,
-      "vol_surge": 14.74,
-      "chg_1h": 0.0,
-      "market_surge": 5.57,
+      "symbol": "SOXLBUSDT",
+      "signal": "reversion",
+      "score": 0.6216,
+      "raw_score": 0.6064,
+      "weight": 1.025,
+      "price": 49.15,
+      "why": "down -24% on the day (bottom decile of the market), now +4.6% over 15m with 5 green candles",
+      "chg_24h": -0.2416,
+      "vol_surge": 3.71,
+      "chg_1h": 0.0184,
+      "market_surge": 3.74,
+      "oi_drop": null,
+      "funding": null,
       "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.76% at 24h: market beta, not signal"
+      "status": "benched \u2014 BTC-excess day mean -2.88% at 24h: market beta, not signal"
     }
   ],
   "gate": {
