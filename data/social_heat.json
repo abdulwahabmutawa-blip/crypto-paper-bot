@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-05T14:37:10+00:00",
+  "ts": "2026-11-05T14:42:40+00:00",
   "sources": {
     "coingecko": [
       "TRUMP",
@@ -20,36 +20,12 @@
       "XAUT",
       "ETH",
       "SOL",
-      "LINK",
-      "BTC",
-      "BNB",
-      "XRP",
       "U"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "BNB",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.000209,
-      "long_short": 2.5
-    },
-    {
-      "symbol": "BTC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.51
-    },
     {
       "symbol": "ETH",
       "surfaces": 2,
@@ -79,7 +55,15 @@
       "funding": 0.0001
     },
     {
-      "symbol": "INJ",
+      "symbol": "BNB",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.000205
+    },
+    {
+      "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -87,10 +71,10 @@
       "funding": 0.0001
     },
     {
-      "symbol": "LINK",
+      "symbol": "INJ",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
       "funding": 0.0001
     },
@@ -100,7 +84,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.4e-05
+      "funding": 1.3e-05
     },
     {
       "symbol": "NEAR",
@@ -116,7 +100,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000308
+      "funding": -0.000311
     },
     {
       "symbol": "U",
@@ -132,14 +116,6 @@
         "movers"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "XRP",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "ZEC",
