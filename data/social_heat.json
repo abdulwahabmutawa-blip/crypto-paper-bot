@@ -1,15 +1,16 @@
 {
-  "ts": "2026-11-06T22:11:09+00:00",
+  "ts": "2026-11-06T22:16:39+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
+      "AERO",
       "BTC",
+      "TAO",
+      "LINK",
+      "PYTH",
       "ZRO",
       "INJ",
-      "SOL",
-      "AERO",
-      "LINK",
-      "TAO",
+      "ZEC",
       "PUMP"
     ],
     "reddit": [],
@@ -18,8 +19,8 @@
       "CYBER",
       "SOXLB",
       "SPCXB",
-      "ZEC",
       "MUB",
+      "ZEC",
       "NVDAB",
       "SUI",
       "PEPE"
@@ -29,12 +30,22 @@
   },
   "heat": [
     {
+      "symbol": "ZEC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 0.66
+    },
+    {
       "symbol": "AERO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000135
+      "funding": -0.000139
     },
     {
       "symbol": "BTC",
@@ -50,7 +61,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001707
+      "funding": -0.001722
     },
     {
       "symbol": "INJ",
@@ -106,12 +117,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "SOL",
+      "symbol": "PYTH",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 9.4e-05
+      "funding": 5e-05
     },
     {
       "symbol": "SOXLB",
@@ -142,14 +153,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "ZRO",
