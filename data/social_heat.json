@@ -1,28 +1,42 @@
 {
-  "ts": "2026-11-06T07:52:35+00:00",
+  "ts": "2026-11-06T07:58:23+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "SOL",
       "PENGU",
       "INJ",
-      "HYPE",
       "NEAR",
-      "ETH",
+      "HYPE",
       "LIT",
+      "LINK",
+      "SUI",
       "ZEC"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "ARB",
+      "PEPE",
       "U",
-      "RLUSD"
+      "INJ",
+      "RLUSD",
+      "TRX"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "INJ",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.66
+    },
     {
       "symbol": "ARB",
       "surfaces": 1,
@@ -37,15 +51,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.6e-05
-    },
-    {
-      "symbol": "ETH",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 6e-05
+      "funding": 5.5e-05
     },
     {
       "symbol": "HYPE",
@@ -56,12 +62,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "INJ",
+      "symbol": "LINK",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0001
+      "funding": 8.8e-05
     },
     {
       "symbol": "LIT",
@@ -69,7 +75,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -3.5e-05
+      "funding": -3.9e-05
     },
     {
       "symbol": "NEAR",
@@ -88,6 +94,13 @@
       "funding": 5e-05
     },
     {
+      "symbol": "PEPE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
+    },
+    {
       "symbol": "RLUSD",
       "surfaces": 1,
       "sources": [
@@ -100,7 +113,23 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.4e-05
+      "funding": 3.3e-05
+    },
+    {
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 4.5e-05
+    },
+    {
+      "symbol": "TRX",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 9.3e-05
     },
     {
       "symbol": "U",
