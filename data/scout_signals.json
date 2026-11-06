@@ -1,8 +1,39 @@
 {
-  "ts": "2026-11-06T09:52:33+00:00",
+  "ts": "2026-11-06T09:57:55+00:00",
   "scanned": 114,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "SKHYBUSDT",
+      "signal": "ignition",
+      "score": 0.7539,
+      "raw_score": 0.834,
+      "weight": 0.904,
+      "price": 129.83,
+      "why": "trades 7.3x and volume 24.1x the prior 4h, 97% taker-buy, $499,032 burst \u2014 while price has only moved +2.0%",
+      "chg_24h": -0.0556,
+      "vol_surge": 24.08,
+      "chg_1h": 0.0196,
+      "market_surge": 9.44,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -1.09% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "ZAMAUSDT",
+      "signal": "breakout",
+      "score": 0.6749,
+      "raw_score": 0.8332,
+      "weight": 0.81,
+      "price": 0.07171,
+      "why": "trades 8.8x, volume 17.9x, 76% taker-buy, +4.2% in an hour, at 84% of its 24h range",
+      "chg_24h": -0.0147,
+      "vol_surge": 17.91,
+      "chg_1h": 0.042,
+      "market_surge": 5.2,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -2.05% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -1.09% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -2.05% at 24h: market beta, not signal",
@@ -11,7 +42,7 @@
     "revival": "benched \u2014 BTC-excess day mean -0.80% at 24h: market beta, not signal"
   },
   "breadth": {
-    "count": 10,
+    "count": 11,
     "baseline": 9.0,
     "wave": false
   },
