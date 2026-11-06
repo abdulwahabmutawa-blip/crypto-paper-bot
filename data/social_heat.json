@@ -1,21 +1,22 @@
 {
-  "ts": "2026-11-06T06:25:33+00:00",
+  "ts": "2026-11-06T06:30:46+00:00",
   "sources": {
     "coingecko": [
       "BTC",
-      "NEAR",
       "HYPE",
+      "NEAR",
       "AERO",
-      "GRAM",
       "INJ",
-      "ETH"
+      "ETH",
+      "PEPE"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "INJ",
       "U",
-      "RLUSD"
+      "RLUSD",
+      "RWUSD"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -37,7 +38,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.1e-05
+      "funding": 2.5e-05
     },
     {
       "symbol": "BTC",
@@ -45,7 +46,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.4e-05
+      "funding": 5.7e-05
     },
     {
       "symbol": "ETH",
@@ -53,15 +54,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.9e-05
-    },
-    {
-      "symbol": "GRAM",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 2.2e-05
+      "funding": 6.1e-05
     },
     {
       "symbol": "HYPE",
@@ -80,7 +73,21 @@
       "funding": 0.0001
     },
     {
+      "symbol": "PEPE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ]
+    },
+    {
       "symbol": "RLUSD",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
+    },
+    {
+      "symbol": "RWUSD",
       "surfaces": 1,
       "sources": [
         "movers"
