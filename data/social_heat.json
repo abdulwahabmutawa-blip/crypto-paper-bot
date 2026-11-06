@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-06T08:56:29+00:00",
+  "ts": "2026-11-06T09:02:18+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -17,8 +17,9 @@
     "stocktwits": [],
     "movers": [
       "ARB",
-      "U",
+      "PEPE",
       "RLUSD",
+      "U",
       "RWUSD"
     ],
     "watcher": [],
@@ -26,12 +27,20 @@
   },
   "heat": [
     {
+      "symbol": "PEPE",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ]
+    },
+    {
       "symbol": "AAVE",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 7.1e-05
+      "funding": 7e-05
     },
     {
       "symbol": "ARB",
@@ -47,7 +56,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.7e-05
+      "funding": 4.5e-05
     },
     {
       "symbol": "INJ",
@@ -74,13 +83,6 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PEPE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ]
-    },
-    {
       "symbol": "RLUSD",
       "surfaces": 1,
       "sources": [
@@ -100,7 +102,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.1e-05
+      "funding": 1e-05
     },
     {
       "symbol": "U",
