@@ -1,14 +1,16 @@
 {
-  "ts": "2026-11-06T13:41:36+00:00",
+  "ts": "2026-11-06T13:46:49+00:00",
   "sources": {
     "coingecko": [
       "BTC",
-      "HYPE",
       "SOL",
+      "HYPE",
       "INJ",
+      "QNT",
       "PENGU",
       "NEAR",
-      "QNT",
+      "MORPHO",
+      "ETH",
       "ONDO"
     ],
     "reddit": [],
@@ -19,8 +21,7 @@
       "AAVE",
       "TRX",
       "RLUSD",
-      "U",
-      "RWUSD"
+      "U"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -48,7 +49,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.2e-05
+      "funding": 7.1e-05
+    },
+    {
+      "symbol": "ETH",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 4.7e-05
     },
     {
       "symbol": "HYPE",
@@ -65,6 +74,14 @@
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "MORPHO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "NEAR",
@@ -103,17 +120,10 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -3e-06
+      "funding": -4e-06
     },
     {
       "symbol": "RLUSD",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
-    },
-    {
-      "symbol": "RWUSD",
       "surfaces": 1,
       "sources": [
         "movers"
@@ -125,7 +135,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.1e-05
+      "funding": 4e-05
     },
     {
       "symbol": "TRX",
