@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-06T23:46:46+00:00",
+  "ts": "2026-11-06T23:52:27+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
@@ -21,21 +21,31 @@
       "CYBER",
       "SPCXB",
       "MUB",
-      "NVDAB",
       "PEPE",
-      "SUI"
+      "NVDAB",
+      "ZEC"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
     {
+      "symbol": "ZEC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 0.68
+    },
+    {
       "symbol": "AERO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000164
+      "funding": -0.000159
     },
     {
       "symbol": "BTC",
@@ -51,7 +61,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.002102
+      "funding": -0.002131
     },
     {
       "symbol": "HYPE",
@@ -129,14 +139,6 @@
       ]
     },
     {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 7.6e-05
-    },
-    {
       "symbol": "TAO",
       "surfaces": 1,
       "sources": [
@@ -151,14 +153,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "ZK",
