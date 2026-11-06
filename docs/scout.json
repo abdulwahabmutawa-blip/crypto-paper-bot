@@ -1,8 +1,24 @@
 {
-  "ts": "2026-11-06T07:02:34+00:00",
+  "ts": "2026-11-06T07:08:24+00:00",
   "scanned": 111,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ONEUSDT",
+      "signal": "revival",
+      "score": 0.381,
+      "raw_score": 0.4088,
+      "weight": 0.932,
+      "price": 0.001156,
+      "why": "revival day-one: fell -11% last week on $0.50M/day quiet, volume arriving 3.0x today, only +13% off its 30d low \u00b7 serial exploder: 5 runs in 2y",
+      "chg_24h": 0.0396,
+      "vol_surge": 3.0,
+      "chg_1h": null,
+      "market_surge": null,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.83% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -1.08% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -1.90% at 24h: market beta, not signal",
@@ -11,7 +27,7 @@
     "revival": "benched \u2014 BTC-excess day mean -0.83% at 24h: market beta, not signal"
   },
   "breadth": {
-    "count": 12,
+    "count": 11,
     "baseline": 9.0,
     "wave": false
   },
