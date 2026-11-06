@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-06T10:03:38+00:00",
+  "ts": "2026-11-06T10:09:28+00:00",
   "sources": {
     "coingecko": [
       "SOL",
@@ -7,11 +7,12 @@
       "PENGU",
       "PEPE",
       "ZEC",
+      "INJ",
+      "SUI",
       "HYPE",
       "NEAR",
-      "XMR",
+      "XPL",
       "LIT",
-      "SUI",
       "QNT"
     ],
     "reddit": [],
@@ -19,9 +20,9 @@
     "movers": [
       "ARB",
       "PEPE",
-      "RLUSD",
       "U",
-      "RWUSD"
+      "RLUSD",
+      "TRX"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -58,6 +59,14 @@
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "INJ",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "LIT",
@@ -99,13 +108,6 @@
       ]
     },
     {
-      "symbol": "RWUSD",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
-    },
-    {
       "symbol": "SOL",
       "surfaces": 1,
       "sources": [
@@ -119,7 +121,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.8e-05
+      "funding": 3.7e-05
+    },
+    {
+      "symbol": "TRX",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "U",
@@ -129,12 +139,12 @@
       ]
     },
     {
-      "symbol": "XMR",
+      "symbol": "XPL",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 0.0001
+      "funding": 5e-05
     },
     {
       "symbol": "ZEC",
