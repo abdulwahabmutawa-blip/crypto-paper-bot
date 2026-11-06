@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-06T14:09:18+00:00",
+  "ts": "2026-11-06T14:14:30+00:00",
   "sources": {
     "coingecko": [
       "SOL",
@@ -17,6 +17,7 @@
     "movers": [
       "ARB",
       "PEPE",
+      "ZEC",
       "TRX",
       "RLUSD",
       "U"
@@ -25,6 +26,16 @@
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "ZEC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 0.71
+    },
     {
       "symbol": "ARB",
       "surfaces": 1,
@@ -39,7 +50,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.1e-05
+      "funding": 7.2e-05
     },
     {
       "symbol": "ETH",
@@ -47,7 +58,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.2e-05
+      "funding": 4.1e-05
     },
     {
       "symbol": "HYPE",
@@ -101,7 +112,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.9e-05
+      "funding": 4e-05
     },
     {
       "symbol": "TRX",
@@ -120,14 +131,6 @@
     },
     {
       "symbol": "XMR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
         "coingecko"
