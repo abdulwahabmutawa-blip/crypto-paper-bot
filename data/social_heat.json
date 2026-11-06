@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-06T00:07:36+00:00",
+  "ts": "2026-11-06T00:13:27+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -21,7 +21,8 @@
       "XAUT",
       "PAXG",
       "U",
-      "RLUSD"
+      "RLUSD",
+      "RWUSD"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -97,7 +98,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 2.4e-05
+      "funding": 2.5e-05
     },
     {
       "symbol": "PENGU",
@@ -105,10 +106,17 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.3e-05
+      "funding": 1.2e-05
     },
     {
       "symbol": "RLUSD",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
+    },
+    {
+      "symbol": "RWUSD",
       "surfaces": 1,
       "sources": [
         "movers"
@@ -120,7 +128,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.1e-05
+      "funding": 2.5e-05
     },
     {
       "symbol": "TRUMP",
