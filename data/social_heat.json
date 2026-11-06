@@ -1,17 +1,16 @@
 {
-  "ts": "2026-11-06T16:33:48+00:00",
+  "ts": "2026-11-06T16:39:15+00:00",
   "sources": {
     "coingecko": [
       "BTC",
-      "PENGU",
-      "ZEC",
       "HYPE",
+      "ZEC",
+      "PENGU",
+      "AERO",
       "ETH",
-      "XMR",
-      "INJ",
+      "BNB",
       "SOL",
-      "QNT",
-      "AERO"
+      "INJ"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,9 +20,9 @@
       "PEPE",
       "TRUMP",
       "SPCXB",
+      "ENA",
       "SUI",
-      "NVDAB",
-      "ENA"
+      "NVDAB"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -45,7 +44,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4e-06
+      "funding": -2e-06
+    },
+    {
+      "symbol": "BNB",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 6.7e-05
     },
     {
       "symbol": "BTC",
@@ -53,7 +60,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.4e-05
+      "funding": 9.3e-05
     },
     {
       "symbol": "CYBER",
@@ -61,7 +68,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000501
+      "funding": -0.000514
     },
     {
       "symbol": "ENA",
@@ -118,20 +125,12 @@
       ]
     },
     {
-      "symbol": "QNT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 4e-06
-    },
-    {
       "symbol": "SOL",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 7.5e-05
+      "funding": 7.7e-05
     },
     {
       "symbol": "SPCXB",
@@ -154,15 +153,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.4e-05
-    },
-    {
-      "symbol": "XMR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": 4.2e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
