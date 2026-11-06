@@ -1,19 +1,17 @@
 {
-  "ts": "2026-11-06T00:23:48+00:00",
+  "ts": "2026-11-06T00:29:27+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "NEAR",
       "HYPE",
-      "PENGU",
       "ETH",
-      "LIT",
-      "AERO",
       "SOL",
-      "LINK",
+      "AERO",
       "ZEC",
-      "FET",
-      "HBAR"
+      "LIT",
+      "PENGU",
+      "FET"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,14 +19,25 @@
       "INJ",
       "XAUT",
       "PAXG",
-      "RLUSD",
+      "ZEC",
       "U",
+      "RLUSD",
       "RWUSD"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "ZEC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 0.8
+    },
     {
       "symbol": "AERO",
       "surfaces": 1,
@@ -59,15 +68,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000227
-    },
-    {
-      "symbol": "HBAR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -2e-05
+      "funding": -0.000225
     },
     {
       "symbol": "HYPE",
@@ -84,14 +85,6 @@
         "movers"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "LINK",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 4.9e-05
     },
     {
       "symbol": "LIT",
@@ -123,7 +116,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.6e-05
+      "funding": 1.8e-05
     },
     {
       "symbol": "RLUSD",
@@ -145,7 +138,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.2e-05
+      "funding": 3.6e-05
     },
     {
       "symbol": "U",
@@ -161,14 +154,6 @@
         "movers"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
