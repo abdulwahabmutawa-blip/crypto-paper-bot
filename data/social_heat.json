@@ -1,18 +1,15 @@
 {
-  "ts": "2026-11-07T08:02:36+00:00",
+  "ts": "2026-11-07T08:07:49+00:00",
   "sources": {
     "coingecko": [
-      "ONE",
       "PENGU",
       "BTC",
-      "SOL",
+      "ONE",
       "XRP",
       "NEAR",
       "HYPE",
-      "QNT",
       "LIT",
-      "AVAX",
-      "HBAR"
+      "AAVE"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -24,12 +21,22 @@
       "NEAR",
       "ETH",
       "BNB",
-      "SOL"
+      "BTC"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "BTC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 1.2e-05,
+      "long_short": 3.06
+    },
     {
       "symbol": "HYPE",
       "surfaces": 2,
@@ -47,7 +54,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 8.1e-05,
+      "funding": 7.8e-05,
       "long_short": 1.24
     },
     {
@@ -57,26 +64,16 @@
         "coingecko",
         "movers"
       ],
-      "funding": -3.7e-05,
+      "funding": -3.3e-05,
       "long_short": 0.79
     },
     {
-      "symbol": "SOL",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5.6e-05,
-      "long_short": 3.58
-    },
-    {
-      "symbol": "AVAX",
+      "symbol": "AAVE",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 4.1e-05
+      "funding": 7.4e-05
     },
     {
       "symbol": "BNB",
@@ -87,28 +84,12 @@
       "funding": 9.5e-05
     },
     {
-      "symbol": "BTC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 1.3e-05
-    },
-    {
       "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 4.5e-05
-    },
-    {
-      "symbol": "HBAR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -2.1e-05
+      "funding": 4.6e-05
     },
     {
       "symbol": "LIT",
@@ -125,14 +106,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "QNT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     },
     {
       "symbol": "SPCXB",
