@@ -1,17 +1,17 @@
 {
-  "ts": "2026-11-07T09:14:34+00:00",
+  "ts": "2026-11-07T09:19:37+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "ONE",
-      "HYPE",
       "NEAR",
+      "HYPE",
       "LIT",
+      "ETH",
       "INJ",
       "ARB",
-      "PLUME",
       "SOL",
-      "ETH"
+      "PENGU"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,24 +21,12 @@
       "ZEC",
       "HYPE",
       "ETH",
-      "BNB",
-      "SOL",
-      "BTC"
+      "BNB"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "BTC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 3e-06,
-      "long_short": 3.06
-    },
     {
       "symbol": "ETH",
       "surfaces": 2,
@@ -66,18 +54,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": -4.5e-05,
+      "funding": -5.7e-05,
       "long_short": 0.77
-    },
-    {
-      "symbol": "SOL",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5.3e-05,
-      "long_short": 3.61
     },
     {
       "symbol": "ARB",
@@ -94,6 +72,14 @@
         "movers"
       ],
       "funding": 9.8e-05
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0
     },
     {
       "symbol": "INJ",
@@ -117,15 +103,23 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.5e-05
+      "funding": 3.8e-05
     },
     {
-      "symbol": "PLUME",
+      "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5.2e-05
     },
     {
       "symbol": "SPCXB",
