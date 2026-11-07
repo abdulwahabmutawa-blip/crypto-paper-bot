@@ -1,28 +1,12 @@
 {
-  "ts": "2026-11-07T10:37:43+00:00",
+  "ts": "2026-11-07T10:43:36+00:00",
   "scanned": 71,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "TRUMPUSDT",
-      "signal": "ignition",
-      "score": 0.5309,
-      "raw_score": 0.5873,
-      "weight": 0.904,
-      "price": 1.184,
-      "why": "trades 4.2x and volume 6.5x the prior 4h, 68% taker-buy, $92,182 burst \u2014 while price has only moved +0.4%",
-      "chg_24h": -0.0256,
-      "vol_surge": 6.48,
-      "chg_1h": 0.0042,
-      "market_surge": 3.19,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -0.75% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.75% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -2.28% at 24h: market beta, not signal",
-    "reversion": "benched \u2014 BTC-excess day mean -3.62% at 24h: market beta, not signal",
+    "reversion": "benched \u2014 BTC-excess day mean -3.64% at 24h: market beta, not signal",
     "heat": "probation \u2014 0/12 resolved 24h samples under ruleset 3",
     "revival": "benched \u2014 hit 38%, mean +0.36% over last 34 at 24h: not beating 4x the round trip"
   },
@@ -149,7 +133,7 @@
       "median_ret_24h": 0.01644,
       "both_halves_24h": false,
       "days_24h": 10,
-      "mean_x_24h": -0.0362,
+      "mean_x_24h": -0.0364,
       "days_x_24h": 10,
       "avg_win_24h": 0.06591,
       "avg_loss_24h": -0.09473,
