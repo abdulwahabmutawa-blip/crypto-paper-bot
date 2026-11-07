@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-07T09:58:39+00:00",
+  "ts": "2026-11-07T10:03:46+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -20,7 +20,9 @@
       "ZEC",
       "HYPE",
       "ETH",
-      "BNB"
+      "BNB",
+      "UNI",
+      "SOL"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -34,7 +36,7 @@
         "movers"
       ],
       "funding": 4.8e-05,
-      "long_short": 3.72
+      "long_short": 3.7
     },
     {
       "symbol": "HYPE",
@@ -44,7 +46,7 @@
         "movers"
       ],
       "funding": 5e-05,
-      "long_short": 1.92
+      "long_short": 1.94
     },
     {
       "symbol": "ONE",
@@ -53,8 +55,18 @@
         "coingecko",
         "movers"
       ],
-      "funding": -6.3e-05,
+      "funding": -6.2e-05,
       "long_short": 0.77
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 4.2e-05,
+      "long_short": 3.61
     },
     {
       "symbol": "ARB",
@@ -105,19 +117,19 @@
       "funding": 5e-05
     },
     {
-      "symbol": "SOL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 4.2e-05
-    },
-    {
       "symbol": "SPCXB",
       "surfaces": 1,
       "sources": [
         "movers"
       ]
+    },
+    {
+      "symbol": "UNI",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": -9e-06
     },
     {
       "symbol": "ZEC",
