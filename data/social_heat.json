@@ -1,17 +1,17 @@
 {
-  "ts": "2026-11-07T14:16:29+00:00",
+  "ts": "2026-11-07T14:21:47+00:00",
   "sources": {
     "coingecko": [
       "ONE",
-      "PENGU",
-      "SOL",
       "QNT",
-      "TAO",
+      "SOL",
       "HYPE",
+      "PENGU",
       "LIT",
-      "BTC",
+      "BNB",
       "XRP",
-      "BNB"
+      "TAO",
+      "INJ"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -27,23 +27,13 @@
   },
   "heat": [
     {
-      "symbol": "BTC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-06,
-      "long_short": 3.05
-    },
-    {
       "symbol": "ONE",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": -5e-05,
+      "funding": -4.5e-05,
       "long_short": 0.72
     },
     {
@@ -52,7 +42,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.7e-05
+      "funding": 5.8e-05
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-06
     },
     {
       "symbol": "ETH",
@@ -71,6 +69,14 @@
       "funding": 5e-05
     },
     {
+      "symbol": "INJ",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "LIT",
       "surfaces": 1,
       "sources": [
@@ -84,7 +90,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.7e-05
+      "funding": 1.2e-05
     },
     {
       "symbol": "QNT",
