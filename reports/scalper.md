@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-07T19:18:04+00:00 · runs 5439 · equity **$530.08** (-46.99%) · cash $0.00 · open 10/10 · round trips 1874
+updated 2026-11-07T19:34:54+00:00 · runs 5440 · equity **$529.20** (-47.08%) · cash $0.00 · open 10/10 · round trips 1874
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-06T21:23 | XRPUSDT | bottom | 1.1787 | 1.1629 | -1.34% |
-| 2026-11-07T03:06 | FETUSDT | bottom | 0.1461 | 0.145 | -0.75% |
-| 2026-11-07T04:59 | XLMUSDT | bottom | 0.1519 | 0.1509 | -0.66% |
-| 2026-11-07T08:27 | NIGHTUSDT | surge | 0.04012 | 0.04083 | +1.77% |
-| 2026-11-07T15:06 | RSRUSDT | surge | 0.00156 | 0.00155 | -0.64% |
-| 2026-11-07T16:25 | STXUSDT | surge | 0.3433 | 0.3464 | +0.90% |
-| 2026-11-07T18:59 | OPENUSDT | surge | 0.0906 | 0.0903 | -0.33% |
-| 2026-11-07T18:59 | MEGAUSDT | surge | 0.05089 | 0.05049 | -0.79% |
-| 2026-11-07T19:16 | ETHFIUSDT | surge | 0.5924 | 0.5916 | -0.14% |
+| 2026-11-06T21:23 | XRPUSDT | bottom | 1.1787 | 1.1622 | -1.40% |
+| 2026-11-07T03:06 | FETUSDT | bottom | 0.1461 | 0.1449 | -0.82% |
+| 2026-11-07T04:59 | XLMUSDT | bottom | 0.1519 | 0.1508 | -0.72% |
+| 2026-11-07T08:27 | NIGHTUSDT | surge | 0.04012 | 0.04053 | +1.02% |
+| 2026-11-07T15:06 | RSRUSDT | surge | 0.00156 | 0.001554 | -0.38% |
+| 2026-11-07T16:25 | STXUSDT | surge | 0.3433 | 0.3454 | +0.61% |
+| 2026-11-07T18:59 | OPENUSDT | surge | 0.0906 | 0.0897 | -0.99% |
+| 2026-11-07T18:59 | MEGAUSDT | surge | 0.05089 | 0.0502 | -1.36% |
+| 2026-11-07T19:16 | ETHFIUSDT | surge | 0.5924 | 0.5941 | +0.29% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
