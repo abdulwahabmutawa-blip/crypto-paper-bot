@@ -1,18 +1,18 @@
 {
-  "ts": "2026-11-07T11:16:49+00:00",
+  "ts": "2026-11-07T11:22:19+00:00",
   "sources": {
     "coingecko": [
       "ONE",
-      "PENGU",
-      "BTC",
-      "SOL",
       "HYPE",
-      "ONDO",
+      "BTC",
       "NEAR",
+      "PENGU",
       "TRUMP",
+      "SOL",
+      "AERO",
       "ZIL",
-      "LIT",
-      "FET"
+      "RENDER",
+      "ONDO"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,24 +20,12 @@
       "ONE",
       "SPCXB",
       "ZEC",
-      "ETH",
-      "UNI",
-      "HYPE"
+      "ETH"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "HYPE",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.94
-    },
     {
       "symbol": "ONE",
       "surfaces": 2,
@@ -45,8 +33,16 @@
         "coingecko",
         "movers"
       ],
-      "funding": -8.8e-05,
+      "funding": -0.000112,
       "long_short": 0.78
+    },
+    {
+      "symbol": "AERO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -9.8e-05
     },
     {
       "symbol": "BTC",
@@ -54,7 +50,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -8e-06
+      "funding": -9e-06
     },
     {
       "symbol": "ETH",
@@ -62,18 +58,10 @@
       "sources": [
         "movers"
       ],
-      "funding": 6e-05
+      "funding": 5.9e-05
     },
     {
-      "symbol": "FET",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -0.0001
-    },
-    {
-      "symbol": "LIT",
+      "symbol": "HYPE",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -86,7 +74,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.7e-05
+      "funding": 4e-05
     },
     {
       "symbol": "ONDO",
@@ -102,7 +90,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.3e-05
+      "funding": 3e-05
+    },
+    {
+      "symbol": "RENDER",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "SOL",
@@ -110,7 +106,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.6e-05
+      "funding": 2.3e-05
     },
     {
       "symbol": "SPCXB",
@@ -125,15 +121,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.9e-05
-    },
-    {
-      "symbol": "UNI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -1e-06
+      "funding": 4.1e-05
     },
     {
       "symbol": "ZEC",
