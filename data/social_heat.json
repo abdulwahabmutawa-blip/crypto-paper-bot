@@ -1,16 +1,18 @@
 {
-  "ts": "2026-11-07T07:56:48+00:00",
+  "ts": "2026-11-07T08:02:36+00:00",
   "sources": {
     "coingecko": [
-      "BTC",
       "ONE",
+      "PENGU",
+      "BTC",
       "SOL",
       "XRP",
       "NEAR",
-      "LIT",
       "HYPE",
+      "QNT",
+      "LIT",
       "AVAX",
-      "PEPE"
+      "HBAR"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,22 +24,12 @@
       "NEAR",
       "ETH",
       "BNB",
-      "BTC"
+      "SOL"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "BTC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 1.4e-05,
-      "long_short": 3.07
-    },
     {
       "symbol": "HYPE",
       "surfaces": 2,
@@ -55,7 +47,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 8.5e-05,
+      "funding": 8.1e-05,
       "long_short": 1.24
     },
     {
@@ -65,8 +57,18 @@
         "coingecko",
         "movers"
       ],
-      "funding": -4.2e-05,
-      "long_short": 0.8
+      "funding": -3.7e-05,
+      "long_short": 0.79
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5.6e-05,
+      "long_short": 3.58
     },
     {
       "symbol": "AVAX",
@@ -74,7 +76,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.9e-05
+      "funding": 4.1e-05
     },
     {
       "symbol": "BNB",
@@ -82,7 +84,15 @@
       "sources": [
         "movers"
       ],
-      "funding": 9.8e-05
+      "funding": 9.5e-05
+    },
+    {
+      "symbol": "BTC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 1.3e-05
     },
     {
       "symbol": "ETH",
@@ -90,7 +100,15 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.7e-05
+      "funding": 4.5e-05
+    },
+    {
+      "symbol": "HBAR",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -2.1e-05
     },
     {
       "symbol": "LIT",
@@ -101,19 +119,20 @@
       "funding": 5e-05
     },
     {
-      "symbol": "PEPE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ]
-    },
-    {
-      "symbol": "SOL",
+      "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5.6e-05
+      "funding": 5e-05
+    },
+    {
+      "symbol": "QNT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "SPCXB",
