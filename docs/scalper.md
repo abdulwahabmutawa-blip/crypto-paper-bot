@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-07T01:30:59+00:00 · runs 5372 · equity **$529.52** (-47.05%) · cash $0.00 · open 10/10 · round trips 1853
+updated 2026-11-07T01:47:03+00:00 · runs 5373 · equity **$530.69** (-46.93%) · cash $0.00 · open 10/10 · round trips 1853
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-06T15:20 | MUBARAKUSDT | surge | 0.04328 | 0.04274 | -1.25% |
-| 2026-11-06T15:20 | RAYUSDT | surge | 1.8138 | 1.7938 | -1.10% |
-| 2026-11-06T15:20 | PYTHUSDT | surge | 0.0669 | 0.06608 | -1.23% |
-| 2026-11-06T15:20 | FILUSDT | surge | 0.8373 | 0.8162 | -2.52% |
-| 2026-11-06T15:53 | DASHUSDT | surge | 47.87 | 46.93 | -1.96% |
-| 2026-11-06T18:58 | BABABUSDT | surge | 109.38 | 109.46 | +0.07% |
-| 2026-11-06T21:23 | XRPUSDT | bottom | 1.1787 | 1.1797 | +0.08% |
-| 2026-11-06T23:16 | ACTUSDT | surge | 0.01048 | 0.0104 | -0.76% |
-| 2026-11-07T01:29 | HUMAUSDT | bottom | 0.01275 | 0.01271 | -0.31% |
+| 2026-11-06T15:20 | MUBARAKUSDT | surge | 0.04328 | 0.04242 | -1.99% |
+| 2026-11-06T15:20 | RAYUSDT | surge | 1.8138 | 1.8024 | -0.63% |
+| 2026-11-06T15:20 | PYTHUSDT | surge | 0.0669 | 0.06598 | -1.38% |
+| 2026-11-06T15:20 | FILUSDT | surge | 0.8373 | 0.816 | -2.54% |
+| 2026-11-06T15:53 | DASHUSDT | surge | 47.87 | 46.97 | -1.88% |
+| 2026-11-06T18:58 | BABABUSDT | surge | 109.38 | 109.43 | +0.05% |
+| 2026-11-06T21:23 | XRPUSDT | bottom | 1.1787 | 1.1798 | +0.09% |
+| 2026-11-06T23:16 | ACTUSDT | surge | 0.01048 | 0.01044 | -0.38% |
+| 2026-11-07T01:29 | HUMAUSDT | bottom | 0.01275 | 0.01303 | +2.20% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
