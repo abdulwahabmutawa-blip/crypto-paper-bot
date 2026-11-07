@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-07T05:54:59+00:00 · runs 5389 · equity **$530.80** (-46.92%) · cash $97.90 · open 8/10 · round trips 1858
+updated 2026-11-07T06:12:10+00:00 · runs 5390 · equity **$529.51** (-47.05%) · cash $97.90 · open 8/10 · round trips 1858
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,12 +36,12 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-06T15:20 | RAYUSDT | surge | 1.8138 | 1.8043 | -0.52% |
-| 2026-11-06T15:53 | DASHUSDT | surge | 47.87 | 47.05 | -1.71% |
-| 2026-11-06T18:58 | BABABUSDT | surge | 109.38 | 109.42 | +0.04% |
-| 2026-11-06T21:23 | XRPUSDT | bottom | 1.1787 | 1.1625 | -1.37% |
-| 2026-11-07T03:06 | FETUSDT | bottom | 0.1461 | 0.1473 | +0.82% |
-| 2026-11-07T04:59 | XLMUSDT | bottom | 0.1519 | 0.153 | +0.72% |
-| 2026-11-07T05:31 | ACTUSDT | surge | 0.01101 | 0.01104 | +0.27% |
+| 2026-11-06T15:20 | RAYUSDT | surge | 1.8138 | 1.7998 | -0.77% |
+| 2026-11-06T15:53 | DASHUSDT | surge | 47.87 | 46.93 | -1.96% |
+| 2026-11-06T18:58 | BABABUSDT | surge | 109.38 | 109.4 | +0.02% |
+| 2026-11-06T21:23 | XRPUSDT | bottom | 1.1787 | 1.1632 | -1.32% |
+| 2026-11-07T03:06 | FETUSDT | bottom | 0.1461 | 0.147 | +0.62% |
+| 2026-11-07T04:59 | XLMUSDT | bottom | 0.1519 | 0.1533 | +0.92% |
+| 2026-11-07T05:31 | ACTUSDT | surge | 0.01101 | 0.0108 | -1.91% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
