@@ -1,16 +1,16 @@
 {
-  "ts": "2026-11-07T07:45:56+00:00",
+  "ts": "2026-11-07T07:51:25+00:00",
   "sources": {
     "coingecko": [
+      "BTC",
+      "ONE",
       "SOL",
       "XRP",
-      "BTC",
-      "AVAX",
+      "NEAR",
       "LIT",
-      "ONE",
       "HYPE",
-      "QNT",
-      "GRAM"
+      "AVAX",
+      "PEPE"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -39,13 +39,23 @@
       "long_short": 1.92
     },
     {
+      "symbol": "NEAR",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 8.8e-05,
+      "long_short": 1.24
+    },
+    {
       "symbol": "ONE",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": -4e-05,
+      "funding": -3.8e-05,
       "long_short": 0.8
     },
     {
@@ -72,7 +82,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 9.5e-05
+      "funding": 9.7e-05
     },
     {
       "symbol": "BTC",
@@ -88,15 +98,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.8e-05
-    },
-    {
-      "symbol": "GRAM",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 1.7e-05
+      "funding": 4.7e-05
     },
     {
       "symbol": "LIT",
@@ -107,20 +109,11 @@
       "funding": 5e-05
     },
     {
-      "symbol": "NEAR",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 9.1e-05
-    },
-    {
-      "symbol": "QNT",
+      "symbol": "PEPE",
       "surfaces": 1,
       "sources": [
         "coingecko"
-      ],
-      "funding": 0.0001
+      ]
     },
     {
       "symbol": "SPCXB",
