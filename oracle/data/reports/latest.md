@@ -1,27 +1,27 @@
 # Oracle scoreboard
 
-generation `gen-000-baserate` · forecaster `baserate_v1` · 2026-11-07T06:26:28+00:00
+generation `gen-000-baserate` · forecaster `baserate_v1` · 2026-11-08T06:32:31+00:00
 
-- predictions written: **29925**
-- resolved and scored: **17968**
-- annulled: **70** (rate 0.4% — OK)
+- predictions written: **30300**
+- resolved and scored: **18356**
+- annulled: **72** (rate 0.4% — OK)
 
-- observed event rate: **0.2240**
-- Brier (forecaster): 0.182998
-- Brier (baseline):   0.182998
+- observed event rate: **0.2209**
+- Brier (forecaster): 0.180712
+- Brier (baseline):   0.180712
 - paired mean d: 0.00000000 (sd 0.000000)
-- cluster rho: **0.0581** (mean group 338.98)
-- **n_eff 871.3 / 100 required**
+- cluster rho: **0.06** (mean group 339.88)
+- **n_eff 860.6 / 100 required**
 
 > **verdict: indistinguishable from baseline** (90% CI [0.0, 0.0])
 
 ## Comparators (phase 1 — paired vs baseline on shared resolutions)
 
-- `age_v1`: n 16794 (n_eff 795.8), Brier 0.177872, paired d -0.00022627 — indistinguishable from baseline
-- `liq_band_v1`: n 16496 (n_eff 765.3), Brier 0.177457, paired d +0.00011749 — indistinguishable from baseline
-- `liqtier_v1`: n 16794 (n_eff 795.8), Brier 0.177505, paired d +0.00014061 — indistinguishable from baseline
-- `momo_v1`: n 16794 (n_eff 795.8), Brier 0.178014, paired d -0.00036824 — indistinguishable from baseline
-- `momo_v2`: n 16496 (n_eff 765.3), Brier 0.177052, paired d +0.00052203 — indistinguishable from baseline
-- `ownrate_v1`: n 16794 (n_eff 795.8), Brier 0.184954, paired d -0.00730830 — worse than baseline
+- `age_v1`: n 17182 (n_eff 788.6), Brier 0.175554, paired d -0.00022956 — indistinguishable from baseline
+- `liq_band_v1`: n 16884 (n_eff 758.8), Brier 0.175110, paired d +0.00010388 — indistinguishable from baseline
+- `liqtier_v1`: n 17182 (n_eff 788.6), Brier 0.175190, paired d +0.00013478 — indistinguishable from baseline
+- `momo_v1`: n 17182 (n_eff 788.6), Brier 0.175687, paired d -0.00036197 — indistinguishable from baseline
+- `momo_v2`: n 16884 (n_eff 758.8), Brier 0.174685, paired d +0.00052938 — indistinguishable from baseline
+- `ownrate_v1`: n 17182 (n_eff 788.6), Brier 0.182649, paired d -0.00732404 — worse than baseline
 
 _AUC, precision, recall and hit rate are deliberately absent — see oracle/README.md._
