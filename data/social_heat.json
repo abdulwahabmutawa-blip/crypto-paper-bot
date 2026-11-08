@@ -1,15 +1,14 @@
 {
-  "ts": "2026-11-08T06:55:17+00:00",
+  "ts": "2026-11-08T07:00:54+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "NEAR",
-      "PUMP",
       "HYPE",
-      "XRP",
-      "XLM",
-      "AERO",
       "PENGU",
+      "PUMP",
+      "WLD",
+      "XLM",
       "SOL"
     ],
     "reddit": [],
@@ -24,14 +23,6 @@
   },
   "heat": [
     {
-      "symbol": "AERO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -0.000196
-    },
-    {
       "symbol": "BNB",
       "surfaces": 1,
       "sources": [
@@ -45,7 +36,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7e-05
+      "funding": 7.1e-05
     },
     {
       "symbol": "HYPE",
@@ -61,7 +52,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4e-05
+      "funding": 4.4e-05
     },
     {
       "symbol": "ONE",
@@ -69,7 +60,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000346
+      "funding": -0.000393
     },
     {
       "symbol": "PENGU",
@@ -93,7 +84,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.3e-05
+      "funding": 4.4e-05
     },
     {
       "symbol": "UNI",
@@ -104,20 +95,20 @@
       "funding": 1.5e-05
     },
     {
+      "symbol": "WLD",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -0.000167
+    },
+    {
       "symbol": "XLM",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": -1.3e-05
-    },
-    {
-      "symbol": "XRP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 9.6e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
