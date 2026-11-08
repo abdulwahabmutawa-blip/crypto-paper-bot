@@ -1,12 +1,13 @@
 {
-  "ts": "2026-11-08T17:26:36+00:00",
+  "ts": "2026-11-08T17:32:29+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "PENGU",
       "HYPE",
       "NEAR",
-      "LIT"
+      "LIT",
+      "PUMP"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -32,7 +33,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.7e-05
+      "funding": 2.8e-05
     },
     {
       "symbol": "HYPE",
@@ -56,7 +57,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.8e-05
+      "funding": 4e-05
     },
     {
       "symbol": "PENGU",
@@ -64,7 +65,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2e-06
+      "funding": -4e-06
     },
     {
       "symbol": "PEPE",
@@ -72,6 +73,14 @@
       "sources": [
         "movers"
       ]
+    },
+    {
+      "symbol": "PUMP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 1e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
