@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-08T14:49:08+00:00",
+  "ts": "2026-11-08T14:54:31+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
@@ -16,7 +16,9 @@
     "stocktwits": [],
     "movers": [
       "PEPE",
+      "ZEC",
       "BNB",
+      "NEAR",
       "BTC"
     ],
     "watcher": [],
@@ -24,12 +26,32 @@
   },
   "heat": [
     {
+      "symbol": "NEAR",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 2.3e-05,
+      "long_short": 1.31
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -3.3e-05,
+      "long_short": 1.06
+    },
+    {
       "symbol": "BNB",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
-      "funding": 8e-06
+      "funding": 6e-06
     },
     {
       "symbol": "BTC",
@@ -45,7 +67,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.2e-05
+      "funding": 5.3e-05
     },
     {
       "symbol": "FET",
@@ -53,7 +75,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -7e-06
+      "funding": -8e-06
     },
     {
       "symbol": "HYPE",
@@ -72,20 +94,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "NEAR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 1.8e-05
-    },
-    {
       "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 3.5e-05
+      "funding": 3.3e-05
     },
     {
       "symbol": "PEPE",
@@ -100,7 +114,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2e-06
+      "funding": 4e-06
     },
     {
       "symbol": "SOL",
@@ -109,14 +123,6 @@
         "coingecko"
       ],
       "funding": 8.8e-05
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -3.5e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
