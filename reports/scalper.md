@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-08T08:39:05+00:00 · runs 5491 · equity **$523.86** (-47.61%) · cash $0.00 · open 10/10 · round trips 1883
+updated 2026-11-08T08:54:36+00:00 · runs 5492 · equity **$523.17** (-47.68%) · cash $-0.00 · open 10/10 · round trips 1883
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-07T16:25 | STXUSDT | surge | 0.3433 | 0.3373 | -1.75% |
-| 2026-11-07T19:16 | ETHFIUSDT | surge | 0.5924 | 0.592 | -0.07% |
-| 2026-11-08T01:34 | MSTRBUSDT | bottom | 126.98 | 128.47 | +1.17% |
-| 2026-11-08T03:23 | ARBUSDT | surge | 0.1708 | 0.1699 | -0.53% |
-| 2026-11-08T03:23 | STRKUSDT | bottom | 0.03974 | 0.03934 | -1.01% |
-| 2026-11-08T04:25 | DASHUSDT | surge | 47.81 | 47.08 | -1.53% |
-| 2026-11-08T05:00 | HBARUSDT | bottom | 0.06644 | 0.06657 | +0.20% |
-| 2026-11-08T07:20 | RSRUSDT | surge | 0.001619 | 0.001619 | +0.00% |
-| 2026-11-08T08:38 | BEAMXUSDT | surge | 0.004112 | 0.004132 | +0.49% |
+| 2026-11-07T16:25 | STXUSDT | surge | 0.3433 | 0.3381 | -1.51% |
+| 2026-11-07T19:16 | ETHFIUSDT | surge | 0.5924 | 0.5913 | -0.19% |
+| 2026-11-08T01:34 | MSTRBUSDT | bottom | 126.98 | 128.49 | +1.19% |
+| 2026-11-08T03:23 | ARBUSDT | surge | 0.1708 | 0.1703 | -0.29% |
+| 2026-11-08T03:23 | STRKUSDT | bottom | 0.03974 | 0.03936 | -0.96% |
+| 2026-11-08T04:25 | DASHUSDT | surge | 47.81 | 47.15 | -1.38% |
+| 2026-11-08T05:00 | HBARUSDT | bottom | 0.06644 | 0.06667 | +0.35% |
+| 2026-11-08T07:20 | RSRUSDT | surge | 0.001619 | 0.001614 | -0.31% |
+| 2026-11-08T08:38 | BEAMXUSDT | surge | 0.004112 | 0.004059 | -1.29% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
