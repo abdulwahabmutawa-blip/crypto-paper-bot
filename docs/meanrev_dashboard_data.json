@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-08T10:14:01+00:00",
+  "generated_utc": "2026-11-08T10:30:53+00:00",
   "created": "2026-07-16",
   "starting_cash": 1000.0,
   "live_ts": "2026-11-06T20:55:00+00:00",
@@ -11,13 +11,67 @@
   },
   "board": [
     {
+      "sym": "NVDA",
+      "price": 186.68,
+      "line": "z -2.09",
+      "tag": "HELD",
+      "on": true,
+      "pick": true,
+      "fill": 34.82470347472077
+    },
+    {
+      "sym": "XOM",
+      "price": 165.89,
+      "line": "z -1.97",
+      "tag": "oversold",
+      "on": true,
+      "pick": false,
+      "fill": 32.80626825470669
+    },
+    {
+      "sym": "CVX",
+      "price": 212.67,
+      "line": "z -1.74",
+      "tag": "oversold",
+      "on": true,
+      "pick": false,
+      "fill": 29.03142427748427
+    },
+    {
+      "sym": "GOOGL",
+      "price": 284.73,
+      "line": "z -1.16",
+      "tag": "normal",
+      "on": false,
+      "pick": false,
+      "fill": 19.27398815668602
+    },
+    {
+      "sym": "UNH",
+      "price": 394.12,
+      "line": "z -0.88",
+      "tag": "normal",
+      "on": false,
+      "pick": false,
+      "fill": 14.644411328984516
+    },
+    {
+      "sym": "JPM",
+      "price": 334.49,
+      "line": "z -0.55",
+      "tag": "normal",
+      "on": false,
+      "pick": false,
+      "fill": 9.159010999095585
+    },
+    {
       "sym": "AAPL",
       "price": 342.36,
       "line": "z -0.25",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 4.182699291098927
+      "fill": 4.182699291090155
     },
     {
       "sym": "MSFT",
@@ -26,7 +80,16 @@
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 1.4300340754889416
+      "fill": 1.430034075488508
+    },
+    {
+      "sym": "MRK",
+      "price": 146.72,
+      "line": "z +0.31",
+      "tag": "normal",
+      "on": false,
+      "pick": false,
+      "fill": -5.152242766653667
     },
     {
       "sym": "AMZN",
@@ -36,69 +99,6 @@
       "on": false,
       "pick": false,
       "fill": -12.008795141898156
-    },
-    {
-      "sym": "GOOGL",
-      "price": 284.73,
-      "line": "z +nan",
-      "tag": "normal",
-      "on": false,
-      "pick": false,
-      "fill": 50
-    },
-    {
-      "sym": "NVDA",
-      "price": 186.68,
-      "line": "z -2.09",
-      "tag": "HELD",
-      "on": true,
-      "pick": true,
-      "fill": 34.824703474721126
-    },
-    {
-      "sym": "XOM",
-      "price": 165.89,
-      "line": "z -1.97",
-      "tag": "oversold",
-      "on": true,
-      "pick": false,
-      "fill": 32.806268254708534
-    },
-    {
-      "sym": "CVX",
-      "price": 212.67,
-      "line": "z -1.74",
-      "tag": "oversold",
-      "on": true,
-      "pick": false,
-      "fill": 29.031424277505813
-    },
-    {
-      "sym": "UNH",
-      "price": 394.12,
-      "line": "z -0.88",
-      "tag": "normal",
-      "on": false,
-      "pick": false,
-      "fill": 14.644411328987445
-    },
-    {
-      "sym": "JPM",
-      "price": 334.49,
-      "line": "z -0.55",
-      "tag": "normal",
-      "on": false,
-      "pick": false,
-      "fill": 9.159010999113145
-    },
-    {
-      "sym": "MRK",
-      "price": 146.72,
-      "line": "z +0.31",
-      "tag": "normal",
-      "on": false,
-      "pick": false,
-      "fill": -5.1522427666547275
     }
   ],
   "board_title": "16 mega-caps, most oversold first (z < -1.5 = buy zone)",
@@ -109,12 +109,6 @@
     "board_note": "Buys panic, sells relief: enter the most stretched mega-cap below -1.5 z, exit when it recovers to average."
   },
   "intraday": [
-    {
-      "ts": "2026-10-12T14:09:08+00:00",
-      "value": 1145.45,
-      "bench": 1036.14,
-      "holding": "JNJ"
-    },
     {
       "ts": "2026-10-12T14:25:49+00:00",
       "value": 1143.18,
@@ -9105,6 +9099,12 @@
     },
     {
       "ts": "2026-11-08T10:14:01+00:00",
+      "value": 1061.55,
+      "bench": 979.46,
+      "holding": "NVDA"
+    },
+    {
+      "ts": "2026-11-08T10:30:53+00:00",
       "value": 1061.55,
       "bench": 979.46,
       "holding": "NVDA"
