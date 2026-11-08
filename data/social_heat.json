@@ -1,15 +1,16 @@
 {
-  "ts": "2026-11-08T22:42:48+00:00",
+  "ts": "2026-11-08T22:48:16+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "HYPE",
-      "PENGU",
-      "NEAR",
       "AAVE",
-      "ETH",
+      "NEAR",
       "PEPE",
-      "ENA"
+      "ETH",
+      "INJ",
+      "SUI",
+      "XRP"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -34,7 +35,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.1e-05
+      "funding": 4e-05
     },
     {
       "symbol": "BTC",
@@ -42,15 +43,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.5e-05
-    },
-    {
-      "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 3.2e-05
+      "funding": 3.4e-05
     },
     {
       "symbol": "ETH",
@@ -58,7 +51,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -7.3e-05
+      "funding": -7.7e-05
     },
     {
       "symbol": "HYPE",
@@ -69,20 +62,36 @@
       "funding": 4.6e-05
     },
     {
+      "symbol": "INJ",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "NEAR",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 4.2e-05
+      "funding": 3.9e-05
     },
     {
-      "symbol": "PENGU",
+      "symbol": "SUI",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -7e-06
+      "funding": 4.4e-05
+    },
+    {
+      "symbol": "XRP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
