@@ -2,20 +2,21 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-08T23:16:57+00:00 · runs 5546 · equity **$506.50** (-49.35%) · cash $278.43 · open 4/10 · round trips 1905
+updated 2026-11-08T23:33:25+00:00 · runs 5547 · equity **$506.41** (-49.36%) · cash $279.53 · open 4/10 · round trips 1906
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
-- hit 47% (break-even 54%) · mean -0.36%/trade · realized $-496.19 · worst day $-50.94 · trades/day 29.3
+- hit 47% (break-even 54%) · mean -0.36%/trade · realized $-494.91 · worst day $-50.94 · trades/day 29.3
 
 | shape | n | hit | mean | target% | stop% | time% |
 |---|---|---|---|---|---|---|
 | surge | 1652 | 48% | -0.32% | 46% | 48% | 7% |
-| bottom | 253 | 41% | -0.61% | 35% | 46% | 19% |
+| bottom | 254 | 41% | -0.60% | 35% | 46% | 19% |
 
 ## Last 15 round trips
 | exit (UTC) | coin | shape | how | hours | net | P&L |
 |---|---|---|---|---|---|---|
+| 2026-11-08T23:31 | QNTUSDT | bottom | TARGET | 1.2 | +2.75% | $+1.28 |
 | 2026-11-08T22:06 | RSRUSDT | surge | STOP | 0.2 | -3.25% | $-1.41 |
 | 2026-11-08T22:06 | SNDKBUSDT | surge | STOP | 2.2 | -3.25% | $-1.66 |
 | 2026-11-08T22:06 | GRAMUSDT | bottom | STOP | 4.8 | -3.25% | $-1.51 |
@@ -30,14 +31,13 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | 2026-11-08T19:30 | ETHFIUSDT | surge | TIME | 24.0 | -0.69% | $-0.35 |
 | 2026-11-08T17:57 | BEAMXUSDT | surge | STOP | 5.2 | -3.25% | $-1.56 |
 | 2026-11-08T17:41 | RSRUSDT | surge | STOP | 0.5 | -3.25% | $-1.70 |
-| 2026-11-08T17:10 | STRKUSDT | bottom | STOP | 13.5 | -3.25% | $-1.56 |
 
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-08T22:06 | BNBUSDT | bottom | 680.36 | 692.22 | +1.74% |
-| 2026-11-08T22:06 | HYPEUSDT | bottom | 74.24 | 75.44 | +1.62% |
-| 2026-11-08T22:06 | QNTUSDT | bottom | 192.69 | 197.38 | +2.43% |
+| 2026-11-08T22:06 | BNBUSDT | bottom | 680.36 | 688.86 | +1.25% |
+| 2026-11-08T22:06 | HYPEUSDT | bottom | 74.24 | 75.41 | +1.58% |
+| 2026-11-08T23:31 | RWUSDUSDT | bottom | 0.9998 | 1 | +0.02% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
