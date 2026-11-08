@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-08T13:16:27+00:00 · runs 5509 · equity **$523.51** (-47.65%) · cash $0.00 · open 10/10 · round trips 1888
+updated 2026-11-08T13:32:52+00:00 · runs 5510 · equity **$522.47** (-47.75%) · cash $0.00 · open 10/10 · round trips 1888
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-07T19:16 | ETHFIUSDT | surge | 0.5924 | 0.5986 | +1.05% |
-| 2026-11-08T01:34 | MSTRBUSDT | bottom | 126.98 | 128.7 | +1.35% |
-| 2026-11-08T03:23 | ARBUSDT | surge | 0.1708 | 0.1707 | -0.06% |
-| 2026-11-08T03:23 | STRKUSDT | bottom | 0.03974 | 0.03909 | -1.64% |
-| 2026-11-08T04:25 | DASHUSDT | surge | 47.81 | 46.87 | -1.97% |
-| 2026-11-08T05:00 | HBARUSDT | bottom | 0.06644 | 0.067 | +0.84% |
-| 2026-11-08T11:20 | RSRUSDT | surge | 0.001656 | 0.001679 | +1.39% |
-| 2026-11-08T12:25 | BEAMXUSDT | surge | 0.004201 | 0.004184 | -0.40% |
-| 2026-11-08T13:15 | PEPEUSDT | surge | 5.02e-06 | 5.02e-06 | +0.00% |
+| 2026-11-07T19:16 | ETHFIUSDT | surge | 0.5924 | 0.5972 | +0.81% |
+| 2026-11-08T01:34 | MSTRBUSDT | bottom | 126.98 | 128.75 | +1.39% |
+| 2026-11-08T03:23 | ARBUSDT | surge | 0.1708 | 0.17 | -0.47% |
+| 2026-11-08T03:23 | STRKUSDT | bottom | 0.03974 | 0.03893 | -2.04% |
+| 2026-11-08T04:25 | DASHUSDT | surge | 47.81 | 46.7 | -2.32% |
+| 2026-11-08T05:00 | HBARUSDT | bottom | 0.06644 | 0.06681 | +0.56% |
+| 2026-11-08T11:20 | RSRUSDT | surge | 0.001656 | 0.001665 | +0.54% |
+| 2026-11-08T12:25 | BEAMXUSDT | surge | 0.004201 | 0.004192 | -0.21% |
+| 2026-11-08T13:15 | PEPEUSDT | surge | 5.02e-06 | 5.03e-06 | +0.20% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
