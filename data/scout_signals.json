@@ -1,8 +1,24 @@
 {
-  "ts": "2026-11-08T00:53:33+00:00",
-  "scanned": 52,
+  "ts": "2026-11-08T00:58:42+00:00",
+  "scanned": 51,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "LSKUSDT",
+      "signal": "ignition",
+      "score": 0.7708,
+      "raw_score": 0.866,
+      "weight": 0.89,
+      "price": 0.1847,
+      "why": "trades 13.1x and volume 20.3x the prior 4h, 74% taker-buy, $54,478 burst \u2014 while price has only moved +2.7%",
+      "chg_24h": -0.0616,
+      "vol_surge": 20.33,
+      "chg_1h": 0.0273,
+      "market_surge": 1.18,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.81% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -0.81% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -1.63% at 24h: market beta, not signal",
