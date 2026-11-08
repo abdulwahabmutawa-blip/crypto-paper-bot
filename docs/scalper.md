@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-08T05:01:48+00:00 · runs 5477 · equity **$521.32** (-47.87%) · cash $0.00 · open 10/10 · round trips 1881
+updated 2026-11-08T05:17:19+00:00 · runs 5478 · equity **$522.34** (-47.77%) · cash $-0.00 · open 10/10 · round trips 1881
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-07T08:27 | NIGHTUSDT | surge | 0.04012 | 0.03988 | -0.60% |
-| 2026-11-07T15:06 | RSRUSDT | surge | 0.00156 | 0.001562 | +0.13% |
-| 2026-11-07T16:25 | STXUSDT | surge | 0.3433 | 0.3356 | -2.24% |
-| 2026-11-07T19:16 | ETHFIUSDT | surge | 0.5924 | 0.5876 | -0.81% |
-| 2026-11-08T01:34 | MSTRBUSDT | bottom | 126.98 | 127.22 | +0.19% |
-| 2026-11-08T03:23 | ARBUSDT | surge | 0.1708 | 0.1685 | -1.35% |
-| 2026-11-08T03:23 | STRKUSDT | bottom | 0.03974 | 0.03943 | -0.78% |
-| 2026-11-08T04:25 | DASHUSDT | surge | 47.81 | 47.23 | -1.21% |
-| 2026-11-08T05:00 | HBARUSDT | bottom | 0.06644 | 0.06648 | +0.06% |
+| 2026-11-07T08:27 | NIGHTUSDT | surge | 0.04012 | 0.04008 | -0.10% |
+| 2026-11-07T15:06 | RSRUSDT | surge | 0.00156 | 0.001576 | +1.03% |
+| 2026-11-07T16:25 | STXUSDT | surge | 0.3433 | 0.3365 | -1.98% |
+| 2026-11-07T19:16 | ETHFIUSDT | surge | 0.5924 | 0.5853 | -1.20% |
+| 2026-11-08T01:34 | MSTRBUSDT | bottom | 126.98 | 127.4 | +0.33% |
+| 2026-11-08T03:23 | ARBUSDT | surge | 0.1708 | 0.1684 | -1.41% |
+| 2026-11-08T03:23 | STRKUSDT | bottom | 0.03974 | 0.0395 | -0.60% |
+| 2026-11-08T04:25 | DASHUSDT | surge | 47.81 | 47.47 | -0.71% |
+| 2026-11-08T05:00 | HBARUSDT | bottom | 0.06644 | 0.06655 | +0.17% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
