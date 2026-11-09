@@ -1,35 +1,44 @@
 {
-  "ts": "2026-11-09T19:25:07+00:00",
+  "ts": "2026-11-09T19:30:40+00:00",
   "sources": {
     "coingecko": [
       "AVAX",
       "BTC",
       "INJ",
-      "PENGU",
       "ONDO",
+      "AERO",
+      "AERO",
       "XRP",
-      "STRK",
-      "SOL",
       "ZEC",
-      "ETH",
-      "LIT"
+      "ARB",
+      "AAVE"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "SOXLB",
       "ARB",
-      "AVAX",
-      "SPCXB",
       "SNDKB",
+      "SPCXB",
+      "AVAX",
       "MUB",
       "PEPE",
-      "ENA"
+      "XAUT"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "ARB",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -1.6e-05,
+      "long_short": 1.83
+    },
     {
       "symbol": "AVAX",
       "surfaces": 2,
@@ -41,12 +50,20 @@
       "long_short": 1.53
     },
     {
-      "symbol": "ARB",
+      "symbol": "AAVE",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
-      "funding": -1.1e-05
+      "funding": 0.0001
+    },
+    {
+      "symbol": "AERO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -0.00021
     },
     {
       "symbol": "BTC",
@@ -57,36 +74,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "ENA",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "ETH",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 9.3e-05
-    },
-    {
       "symbol": "INJ",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "LIT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 1.1e-05
     },
     {
       "symbol": "MUB",
@@ -101,15 +94,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2e-05
-    },
-    {
-      "symbol": "PENGU",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": 1.6e-05
     },
     {
       "symbol": "PEPE",
@@ -126,14 +111,6 @@
       ]
     },
     {
-      "symbol": "SOL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 9e-05
-    },
-    {
       "symbol": "SOXLB",
       "surfaces": 1,
       "sources": [
@@ -148,10 +125,10 @@
       ]
     },
     {
-      "symbol": "STRK",
+      "symbol": "XAUT",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
       "funding": 5e-05
     },
@@ -161,7 +138,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.5e-05
+      "funding": 6.7e-05
     },
     {
       "symbol": "ZEC",
