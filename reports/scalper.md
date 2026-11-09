@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-09T01:12:33+00:00 · runs 5553 · equity **$506.70** (-49.33%) · cash $186.35 · open 6/10 · round trips 1906
+updated 2026-11-09T01:29:06+00:00 · runs 5554 · equity **$505.50** (-49.45%) · cash $186.35 · open 6/10 · round trips 1906
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,10 +36,10 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-08T22:06 | BNBUSDT | bottom | 680.36 | 688.99 | +1.27% |
-| 2026-11-08T22:06 | HYPEUSDT | bottom | 74.24 | 75.06 | +1.10% |
+| 2026-11-08T22:06 | BNBUSDT | bottom | 680.36 | 686.33 | +0.88% |
+| 2026-11-08T22:06 | HYPEUSDT | bottom | 74.24 | 74.34 | +0.13% |
 | 2026-11-08T23:31 | RWUSDUSDT | bottom | 0.9998 | 0.9999 | +0.01% |
-| 2026-11-09T00:04 | DODOUSDT | surge | 0.02221 | 0.02232 | +0.50% |
-| 2026-11-09T01:11 | ARBUSDT | surge | 0.1709 | 0.1719 | +0.59% |
+| 2026-11-09T00:04 | DODOUSDT | surge | 0.02221 | 0.02231 | +0.45% |
+| 2026-11-09T01:11 | ARBUSDT | surge | 0.1709 | 0.1699 | -0.59% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
