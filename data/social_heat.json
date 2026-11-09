@@ -1,28 +1,28 @@
 {
-  "ts": "2026-11-09T20:04:23+00:00",
+  "ts": "2026-11-09T20:09:46+00:00",
   "sources": {
     "coingecko": [
       "AVAX",
-      "BTC",
-      "ONDO",
-      "HYPE",
-      "INJ",
-      "ZEC",
-      "NEAR",
-      "LINK",
       "ARB",
-      "PENGU",
-      "LIT"
+      "ONDO",
+      "NEAR",
+      "DOT",
+      "HYPE",
+      "LINK",
+      "ENA",
+      "SOL",
+      "ETH",
+      "ZEC"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "SOXLB",
-      "ARB",
       "SNDKB",
-      "SPCXB",
+      "ARB",
       "MUB",
       "AVAX",
+      "SPCXB",
       "XAUT",
       "ENA"
     ],
@@ -37,7 +37,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -5.8e-05,
+      "funding": -5.6e-05,
       "long_short": 1.84
     },
     {
@@ -51,7 +51,17 @@
       "long_short": 1.57
     },
     {
-      "symbol": "BTC",
+      "symbol": "ENA",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 5e-05,
+      "long_short": 1.1
+    },
+    {
+      "symbol": "DOT",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -59,12 +69,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "ENA",
+      "symbol": "ETH",
       "surfaces": 1,
       "sources": [
-        "movers"
+        "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 9.8e-05
     },
     {
       "symbol": "HYPE",
@@ -72,15 +82,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.7e-05
-    },
-    {
-      "symbol": "INJ",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": 4.6e-05
     },
     {
       "symbol": "LINK",
@@ -89,14 +91,6 @@
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "LIT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 4e-06
     },
     {
       "symbol": "MUB",
@@ -119,15 +113,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7e-06
-    },
-    {
-      "symbol": "PENGU",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": 1.4e-05
     },
     {
       "symbol": "SNDKB",
@@ -135,6 +121,14 @@
       "sources": [
         "movers"
       ]
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "SOXLB",
