@@ -1,16 +1,17 @@
 {
-  "ts": "2026-11-09T06:14:06+00:00",
+  "ts": "2026-11-09T06:19:29+00:00",
   "sources": {
     "coingecko": [
       "HYPE",
-      "AERO",
       "ETH",
-      "NEAR",
-      "PENGU",
+      "AERO",
       "PUMP",
+      "PENGU",
       "BTC",
+      "NEAR",
+      "ZEC",
       "UNI",
-      "AAVE",
+      "PEPE",
       "LIT"
     ],
     "reddit": [],
@@ -24,12 +25,12 @@
   },
   "heat": [
     {
-      "symbol": "AAVE",
-      "surfaces": 1,
+      "symbol": "PEPE",
+      "surfaces": 2,
       "sources": [
-        "coingecko"
-      ],
-      "funding": 8.2e-05
+        "coingecko",
+        "movers"
+      ]
     },
     {
       "symbol": "AERO",
@@ -37,7 +38,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000245
+      "funding": -0.000248
     },
     {
       "symbol": "BTC",
@@ -53,7 +54,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -3.5e-05
+      "funding": -3.7e-05
     },
     {
       "symbol": "HYPE",
@@ -69,7 +70,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.4e-05
+      "funding": -3.2e-05
     },
     {
       "symbol": "NEAR",
@@ -85,14 +86,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.6e-05
-    },
-    {
-      "symbol": "PEPE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
+      "funding": 1.3e-05
     },
     {
       "symbol": "PUMP",
@@ -100,7 +94,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5e-05
+      "funding": 4.3e-05
     },
     {
       "symbol": "UNI",
@@ -108,7 +102,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.7e-05
+      "funding": 9.1e-05
     },
     {
       "symbol": "XAUT",
@@ -117,6 +111,14 @@
         "movers"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 3.8e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
