@@ -1,9 +1,9 @@
 {
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "holding": "NVDA",
-  "units": 5.686489489718455,
-  "cash": 0.0,
+  "holding": "CASH",
+  "units": 0.0,
+  "cash": 1000.7436464051899,
   "bench_units": 1.3319835726361926,
   "trades": [
     {
@@ -215,6 +215,25 @@
       "value": 1153.45,
       "fee": 1.27,
       "reason": "Most oversold mega-cap (z < -1.5) \u2014 buying the dip"
+    },
+    {
+      "date": "2026-11-09",
+      "action": "SELL",
+      "ticker": "NVDA",
+      "price": 176.17999268,
+      "units": 5.6865,
+      "value": 1001.85,
+      "fee": 1.1,
+      "reason": "TRAILING STOP \u2014 fell 12% from high-water $203.98"
+    },
+    {
+      "date": "2026-11-09",
+      "action": "TO CASH",
+      "ticker": "\u2014",
+      "price": 0,
+      "units": 0,
+      "value": 1000.74,
+      "reason": "TRAILING STOP \u2014 fell 12% from high-water $203.98"
     }
   ],
   "history": [
@@ -704,15 +723,15 @@
       "value": 1061.55,
       "bench": 979.46,
       "holding": "NVDA"
+    },
+    {
+      "date": "2026-11-09",
+      "value": 1000.74,
+      "bench": 994.27,
+      "holding": "CASH"
     }
   ],
   "intraday": [
-    {
-      "ts": "2026-10-13T12:19:05+00:00",
-      "value": 1150.44,
-      "bench": 1036.38,
-      "holding": "JNJ"
-    },
     {
       "ts": "2026-10-13T12:36:33+00:00",
       "value": 1150.44,
@@ -9706,15 +9725,20 @@
       "value": 1061.55,
       "bench": 979.46,
       "holding": "NVDA"
+    },
+    {
+      "ts": "2026-11-09T14:44:20+00:00",
+      "value": 1000.74,
+      "bench": 994.27,
+      "holding": "CASH"
     }
   ],
-  "last_updated_utc": "2026-11-09T14:27:16+00:00",
+  "last_updated_utc": "2026-11-09T14:44:20+00:00",
   "feed_delayed": false,
-  "data_asof": "2026-11-06",
-  "costs_paid": 16.3592,
+  "data_asof": "2026-11-09",
+  "costs_paid": 17.4612,
   "stopped": {
-    "ticker": "GOOGL",
-    "date": "2026-10-29"
-  },
-  "hwm": 203.97500610351562
+    "ticker": "NVDA",
+    "date": "2026-11-09"
+  }
 }
