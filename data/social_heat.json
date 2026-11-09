@@ -1,18 +1,19 @@
 {
-  "ts": "2026-11-09T20:15:27+00:00",
+  "ts": "2026-11-09T20:20:55+00:00",
   "sources": {
     "coingecko": [
       "AVAX",
-      "ARB",
-      "ONDO",
+      "PENGU",
       "NEAR",
+      "ARB",
+      "ZEC",
       "DOT",
       "HYPE",
+      "ONDO",
+      "XRP",
       "LINK",
-      "ENA",
       "SOL",
-      "ETH",
-      "ZEC"
+      "SUI"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,10 +21,10 @@
       "SOXLB",
       "SNDKB",
       "MUB",
-      "ARB",
       "AVAX",
+      "ARB",
       "SPCXB",
-      "ENA",
+      "PEPE",
       "XAUT"
     ],
     "watcher": [],
@@ -51,25 +52,7 @@
       "long_short": 1.57
     },
     {
-      "symbol": "ENA",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 5e-05,
-      "long_short": 1.1
-    },
-    {
       "symbol": "DOT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -113,7 +96,22 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.1e-05
+      "funding": 2.5e-05
+    },
+    {
+      "symbol": "PENGU",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "PEPE",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
     },
     {
       "symbol": "SNDKB",
@@ -145,12 +143,28 @@
       ]
     },
     {
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "XAUT",
       "surfaces": 1,
       "sources": [
         "movers"
       ],
       "funding": 5e-05
+    },
+    {
+      "symbol": "XRP",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 7.9e-05
     },
     {
       "symbol": "ZEC",
