@@ -1,8 +1,24 @@
 {
-  "ts": "2026-11-09T15:11:20+00:00",
-  "scanned": 93,
+  "ts": "2026-11-09T15:17:13+00:00",
+  "scanned": 96,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "TSTUSDT",
+      "signal": "revival",
+      "score": 0.5912,
+      "raw_score": 0.6827,
+      "weight": 0.866,
+      "price": 0.01275,
+      "why": "revival day-one: fell -16% last week on $0.40M/day quiet, volume arriving 19.9x today, only +19% off its 30d low \u00b7 serial exploder: 6 runs in 2y",
+      "chg_24h": 0.0963,
+      "vol_surge": 19.9,
+      "chg_1h": null,
+      "market_surge": null,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -1.98% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -1.23% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -2.11% at 24h: market beta, not signal",
@@ -11,7 +27,7 @@
     "revival": "benched \u2014 BTC-excess day mean -1.98% at 24h: market beta, not signal"
   },
   "breadth": {
-    "count": 14,
+    "count": 15,
     "baseline": 9.0,
     "wave": false
   },
