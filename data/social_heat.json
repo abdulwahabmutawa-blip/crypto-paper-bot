@@ -1,18 +1,19 @@
 {
-  "ts": "2026-11-09T12:12:48+00:00",
+  "ts": "2026-11-09T12:18:17+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "HYPE",
-      "LIT",
       "PENGU",
-      "PEPE",
+      "LIT",
       "QNT",
-      "ZEC",
-      "GRAM",
+      "PEPE",
+      "RSR",
       "ARB",
-      "SUI",
-      "DOT"
+      "ZEC",
+      "ZIL",
+      "GRAM",
+      "NEAR"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,8 +21,7 @@
       "SPCXB",
       "PEPE",
       "XAUT",
-      "SOXLB",
-      "U"
+      "SOXLB"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -41,7 +41,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.9e-05
+      "funding": 7.7e-05
     },
     {
       "symbol": "BTC",
@@ -49,15 +49,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.4e-05
-    },
-    {
-      "symbol": "DOT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
+      "funding": 9.7e-05
     },
     {
       "symbol": "GRAM",
@@ -84,6 +76,14 @@
       "funding": 5e-05
     },
     {
+      "symbol": "NEAR",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "PENGU",
       "surfaces": 1,
       "sources": [
@@ -100,6 +100,14 @@
       "funding": 0.0001
     },
     {
+      "symbol": "RSR",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -0.003183
+    },
+    {
       "symbol": "SOXLB",
       "surfaces": 1,
       "sources": [
@@ -108,21 +116,6 @@
     },
     {
       "symbol": "SPCXB",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
-    },
-    {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 7.4e-05
-    },
-    {
-      "symbol": "U",
       "surfaces": 1,
       "sources": [
         "movers"
@@ -143,6 +136,14 @@
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "ZIL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -0.004638
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
