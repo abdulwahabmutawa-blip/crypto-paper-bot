@@ -1,18 +1,17 @@
 {
-  "ts": "2026-11-09T10:47:48+00:00",
+  "ts": "2026-11-09T10:52:57+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "HYPE",
       "LIT",
-      "XRP",
       "ZEC",
       "PENGU",
-      "PUMP",
+      "XRP",
       "ETH",
-      "RENDER",
       "LINK",
-      "SUI"
+      "INJ",
+      "PEPE"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -25,6 +24,14 @@
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "PEPE",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ]
+    },
     {
       "symbol": "BTC",
       "surfaces": 1,
@@ -47,7 +54,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.2e-05
+      "funding": 3.5e-05
+    },
+    {
+      "symbol": "INJ",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "LINK",
@@ -55,7 +70,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6e-06
+      "funding": 5e-06
     },
     {
       "symbol": "LIT",
@@ -71,30 +86,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.7e-05
-    },
-    {
-      "symbol": "PEPE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
-    },
-    {
-      "symbol": "PUMP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 3.8e-05
-    },
-    {
-      "symbol": "RENDER",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": 4.4e-05
     },
     {
       "symbol": "SPCXB",
@@ -102,14 +94,6 @@
       "sources": [
         "movers"
       ]
-    },
-    {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 4.4e-05
     },
     {
       "symbol": "XAUT",
@@ -125,7 +109,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.6e-05
+      "funding": 8.7e-05
     },
     {
       "symbol": "ZEC",
