@@ -1,26 +1,27 @@
 {
-  "ts": "2026-11-09T19:47:29+00:00",
+  "ts": "2026-11-09T19:53:26+00:00",
   "sources": {
     "coingecko": [
       "AVAX",
       "BTC",
       "INJ",
+      "LINK",
       "ONDO",
       "AERO",
       "PENGU",
+      "ZEC",
+      "NEAR",
       "AERO",
-      "AAVE",
-      "STRK",
-      "XRP"
+      "AAVE"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
       "SOXLB",
       "ARB",
-      "SNDKB",
       "AVAX",
       "SPCXB",
+      "SNDKB",
       "MUB",
       "ENA",
       "XAUT"
@@ -53,7 +54,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000189
+      "funding": -0.000182
     },
     {
       "symbol": "ARB",
@@ -61,7 +62,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -3.1e-05
+      "funding": -3.5e-05
     },
     {
       "symbol": "BTC",
@@ -88,6 +89,14 @@
       "funding": 0.0001
     },
     {
+      "symbol": "LINK",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "MUB",
       "surfaces": 1,
       "sources": [
@@ -95,12 +104,20 @@
       ]
     },
     {
+      "symbol": "NEAR",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
+    },
+    {
       "symbol": "ONDO",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 1.2e-05
+      "funding": 1.1e-05
     },
     {
       "symbol": "PENGU",
@@ -132,14 +149,6 @@
       ]
     },
     {
-      "symbol": "STRK",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
       "symbol": "XAUT",
       "surfaces": 1,
       "sources": [
@@ -148,12 +157,12 @@
       "funding": 5e-05
     },
     {
-      "symbol": "XRP",
+      "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 7.1e-05
+      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
