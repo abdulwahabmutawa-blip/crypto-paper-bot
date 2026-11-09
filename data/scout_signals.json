@@ -1,8 +1,24 @@
 {
-  "ts": "2026-11-09T21:05:59+00:00",
-  "scanned": 99,
+  "ts": "2026-11-09T21:11:44+00:00",
+  "scanned": 98,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "ICPUSDT",
+      "signal": "ignition",
+      "score": 0.7097,
+      "raw_score": 0.7807,
+      "weight": 0.909,
+      "price": 2.39,
+      "why": "trades 5.0x and volume 25.9x the prior 4h, 97% taker-buy, $114,372 burst \u2014 while price has only moved -0.5%",
+      "chg_24h": 0.0055,
+      "vol_surge": 25.91,
+      "chg_1h": -0.0046,
+      "market_surge": 8.66,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -1.08% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -1.08% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -2.03% at 24h: market beta, not signal",
@@ -11,7 +27,7 @@
     "revival": "benched \u2014 BTC-excess day mean -2.02% at 24h: market beta, not signal"
   },
   "breadth": {
-    "count": 24,
+    "count": 23,
     "baseline": 9.0,
     "wave": true
   },
@@ -38,7 +54,7 @@
       "median_ret_4h": -0.00085,
       "both_halves_4h": false,
       "days_4h": 15,
-      "mean_x_4h": -0.00214,
+      "mean_x_4h": -0.00222,
       "days_x_4h": 15,
       "avg_win_4h": 0.0162,
       "avg_loss_4h": -0.02,
