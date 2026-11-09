@@ -1,8 +1,54 @@
 {
-  "ts": "2026-11-09T09:00:52+00:00",
-  "scanned": 86,
+  "ts": "2026-11-09T09:06:02+00:00",
+  "scanned": 88,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "PEPEUSDT",
+      "signal": "ignition",
+      "score": 0.6818,
+      "raw_score": 0.7559,
+      "weight": 0.902,
+      "price": 5.16e-06,
+      "why": "trades 8.6x and volume 8.9x the prior 4h, 65% taker-buy, $1,824,218 burst \u2014 while price has only moved +3.0%",
+      "chg_24h": 0.0509,
+      "vol_surge": 8.89,
+      "chg_1h": 0.0299,
+      "market_surge": 7.32,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -1.12% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "PEPEUSDT",
+      "signal": "breakout",
+      "score": 0.6049,
+      "raw_score": 0.7745,
+      "weight": 0.781,
+      "price": 5.16e-06,
+      "why": "trades 8.6x, volume 8.9x, 65% taker-buy, +3.0% in an hour, at 82% of its 24h range",
+      "chg_24h": 0.0509,
+      "vol_surge": 8.89,
+      "chg_1h": 0.0299,
+      "market_surge": 7.32,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -1.86% at 24h: market beta, not signal"
+    },
+    {
+      "symbol": "RAYUSDT",
+      "signal": "ignition",
+      "score": 0.59,
+      "raw_score": 0.6541,
+      "weight": 0.902,
+      "price": 1.7269,
+      "why": "trades 5.4x and volume 10.1x the prior 4h, 63% taker-buy, $55,896 burst \u2014 while price has only moved +2.8%",
+      "chg_24h": -0.0344,
+      "vol_surge": 10.06,
+      "chg_1h": 0.0278,
+      "market_surge": 4.29,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -1.12% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -1.12% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -1.86% at 24h: market beta, not signal",
