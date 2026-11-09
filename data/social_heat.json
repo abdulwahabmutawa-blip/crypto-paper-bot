@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-09T12:18:17+00:00",
+  "ts": "2026-11-09T12:24:06+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -18,15 +18,25 @@
     "reddit": [],
     "stocktwits": [],
     "movers": [
+      "ARB",
       "SPCXB",
       "PEPE",
-      "XAUT",
-      "SOXLB"
+      "XAUT"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "ARB",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 7.4e-05,
+      "long_short": 1.76
+    },
     {
       "symbol": "PEPE",
       "surfaces": 2,
@@ -36,20 +46,12 @@
       ]
     },
     {
-      "symbol": "ARB",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 7.7e-05
-    },
-    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 9.7e-05
+      "funding": 9.8e-05
     },
     {
       "symbol": "GRAM",
@@ -105,14 +107,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.003183
-    },
-    {
-      "symbol": "SOXLB",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
+      "funding": -0.003139
     },
     {
       "symbol": "SPCXB",
@@ -143,7 +138,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.004638
+      "funding": -0.004869
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
