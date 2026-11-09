@@ -1,39 +1,8 @@
 {
-  "ts": "2026-11-09T20:43:46+00:00",
+  "ts": "2026-11-09T20:49:38+00:00",
   "scanned": 97,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "ONEUSDT",
-      "signal": "ignition",
-      "score": 0.7343,
-      "raw_score": 0.8079,
-      "weight": 0.909,
-      "price": 0.001544,
-      "why": "trades 14.2x and volume 12.9x the prior 4h, 61% taker-buy, $261,576 burst \u2014 while price has only moved +3.8%",
-      "chg_24h": -0.0943,
-      "vol_surge": 12.95,
-      "chg_1h": 0.0376,
-      "market_surge": 4.97,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -1.10% at 24h: market beta, not signal"
-    },
-    {
-      "symbol": "PROMUSDT",
-      "signal": "ignition",
-      "score": 0.6344,
-      "raw_score": 0.6979,
-      "weight": 0.909,
-      "price": 5.406,
-      "why": "trades 5.7x and volume 7.2x the prior 4h, 78% taker-buy, $225,554 burst \u2014 while price has only moved +0.3%",
-      "chg_24h": 0.0419,
-      "vol_surge": 7.23,
-      "chg_1h": 0.003,
-      "market_surge": 1.09,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -1.10% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -1.10% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -2.03% at 24h: market beta, not signal",
@@ -42,7 +11,7 @@
     "revival": "benched \u2014 BTC-excess day mean -2.02% at 24h: market beta, not signal"
   },
   "breadth": {
-    "count": 25,
+    "count": 22,
     "baseline": 9.0,
     "wave": true
   },
@@ -56,7 +25,7 @@
       "median_ret_1h": -0.00112,
       "both_halves_1h": false,
       "days_1h": 15,
-      "mean_x_1h": -0.00125,
+      "mean_x_1h": -0.00124,
       "days_x_1h": 15,
       "avg_win_1h": 0.00833,
       "avg_loss_1h": -0.00977,
