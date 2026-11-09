@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-09T09:56:52+00:00 · runs 5585 · equity **$503.15** (-49.68%) · cash $139.33 · open 7/10 · round trips 1912
+updated 2026-11-09T10:13:53+00:00 · runs 5586 · equity **$503.51** (-49.65%) · cash $139.33 · open 7/10 · round trips 1912
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,11 +36,11 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-08T22:06 | BNBUSDT | bottom | 680.36 | 681.93 | +0.23% |
-| 2026-11-08T22:06 | HYPEUSDT | bottom | 74.24 | 73.47 | -1.04% |
-| 2026-11-08T23:31 | RWUSDUSDT | bottom | 0.9998 | 1 | +0.02% |
-| 2026-11-09T02:00 | SPCXBUSDT | surge | 137.01 | 136.71 | -0.22% |
-| 2026-11-09T09:14 | PORTALUSDT | surge | 0.01226 | 0.01222 | -0.33% |
-| 2026-11-09T09:14 | DODOUSDT | surge | 0.02317 | 0.02287 | -1.29% |
+| 2026-11-08T22:06 | BNBUSDT | bottom | 680.36 | 680.47 | +0.02% |
+| 2026-11-08T22:06 | HYPEUSDT | bottom | 74.24 | 72.93 | -1.76% |
+| 2026-11-08T23:31 | RWUSDUSDT | bottom | 0.9998 | 0.9999 | +0.01% |
+| 2026-11-09T02:00 | SPCXBUSDT | surge | 137.01 | 136.36 | -0.47% |
+| 2026-11-09T09:14 | PORTALUSDT | surge | 0.01226 | 0.01241 | +1.22% |
+| 2026-11-09T09:14 | DODOUSDT | surge | 0.02317 | 0.02297 | -0.86% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
