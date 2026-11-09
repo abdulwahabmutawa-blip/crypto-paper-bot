@@ -1,18 +1,16 @@
 {
-  "ts": "2026-11-09T12:34:58+00:00",
+  "ts": "2026-11-09T12:40:48+00:00",
   "sources": {
     "coingecko": [
       "BTC",
       "HYPE",
-      "PENGU",
-      "PEPE",
       "QNT",
-      "LIT",
       "RSR",
+      "PENGU",
       "GRAM",
       "DOT",
-      "ARB",
-      "ZEC"
+      "PEPE",
+      "LIT"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,22 +19,13 @@
       "PEPE",
       "SPCXB",
       "XAUT",
-      "SOXLB"
+      "SOXLB",
+      "ENA"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "ARB",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 8e-05,
-      "long_short": 1.76
-    },
     {
       "symbol": "PEPE",
       "surfaces": 2,
@@ -44,6 +33,14 @@
         "coingecko",
         "movers"
       ]
+    },
+    {
+      "symbol": "ARB",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 7e-05
     },
     {
       "symbol": "BTC",
@@ -62,12 +59,20 @@
       "funding": 0.0001
     },
     {
+      "symbol": "ENA",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "GRAM",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 4.3e-05
+      "funding": 3.2e-05
     },
     {
       "symbol": "HYPE",
@@ -107,7 +112,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.003061
+      "funding": -0.003007
     },
     {
       "symbol": "SOXLB",
@@ -130,14 +135,6 @@
         "movers"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
