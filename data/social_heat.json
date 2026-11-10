@@ -1,18 +1,18 @@
 {
-  "ts": "2026-11-10T12:38:28+00:00",
+  "ts": "2026-11-10T12:44:38+00:00",
   "sources": {
     "coingecko": [
-      "PENGU",
       "BTC",
+      "PENGU",
       "AVAX",
       "HYPE",
-      "AERO",
       "CYBER",
-      "SOL",
-      "ONE",
+      "AERO",
       "NEAR",
       "XRP",
-      "ZEC"
+      "SOL",
+      "ZEC",
+      "ARB"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -24,7 +24,7 @@
       "SPCXB",
       "NEAR",
       "UNI",
-      "NVDAB"
+      "ENA"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -49,12 +49,20 @@
       "funding": 2.8e-05
     },
     {
+      "symbol": "ARB",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -0.000104
+    },
+    {
       "symbol": "AVAX",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -2.4e-05
+      "funding": -2.6e-05
     },
     {
       "symbol": "BTC",
@@ -62,7 +70,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.9e-05
+      "funding": 7.7e-05
     },
     {
       "symbol": "CYBER",
@@ -70,7 +78,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.001599
+      "funding": -0.001747
+    },
+    {
+      "symbol": "ENA",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 4.8e-05
     },
     {
       "symbol": "HYPE",
@@ -86,22 +102,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.015046
-    },
-    {
-      "symbol": "NVDAB",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
-    },
-    {
-      "symbol": "ONE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -0.004543
+      "funding": -0.015246
     },
     {
       "symbol": "PENGU",
