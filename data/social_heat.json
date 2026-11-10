@@ -1,16 +1,16 @@
 {
-  "ts": "2026-11-10T07:23:39+00:00",
+  "ts": "2026-11-10T07:29:18+00:00",
   "sources": {
     "coingecko": [
-      "HYPE",
       "PENGU",
+      "HYPE",
       "AVAX",
       "BTC",
-      "INIT",
-      "INJ",
       "PEPE",
-      "PENDLE",
-      "ZEC"
+      "INIT",
+      "DOT",
+      "INJ",
+      "NEAR"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,7 +22,7 @@
       "UNI",
       "SPCXB",
       "SUI",
-      "NEAR"
+      "ENA"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -35,7 +35,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -3e-06,
+      "funding": -4e-06,
       "long_short": 1.87
     },
     {
@@ -55,6 +55,22 @@
       "funding": 0.0001
     },
     {
+      "symbol": "DOT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 7e-06
+    },
+    {
+      "symbol": "ENA",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "HYPE",
       "surfaces": 1,
       "sources": [
@@ -68,7 +84,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.008296
+      "funding": -0.008397
     },
     {
       "symbol": "INJ",
@@ -80,14 +96,6 @@
     },
     {
       "symbol": "NEAR",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "PENDLE",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -129,7 +137,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 7.7e-05
+      "funding": 8e-05
     },
     {
       "symbol": "UNI",
@@ -138,14 +146,6 @@
         "movers"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5.7e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
