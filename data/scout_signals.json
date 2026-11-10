@@ -1,8 +1,24 @@
 {
-  "ts": "2026-11-10T00:10:32+00:00",
-  "scanned": 89,
+  "ts": "2026-11-10T00:15:53+00:00",
+  "scanned": 90,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "BMTUSDT",
+      "signal": "ignition",
+      "score": 0.8099,
+      "raw_score": 0.8881,
+      "weight": 0.912,
+      "price": 0.02297,
+      "why": "trades 34.5x and volume 21.2x the prior 4h, 60% taker-buy, $117,758 burst \u2014 while price has only moved -0.5%",
+      "chg_24h": -0.0916,
+      "vol_surge": 21.23,
+      "chg_1h": -0.0052,
+      "market_surge": 8.43,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -1.54% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -1.54% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -2.01% at 24h: market beta, not signal",
@@ -11,7 +27,7 @@
     "revival": "benched \u2014 BTC-excess day mean -2.02% at 24h: market beta, not signal"
   },
   "breadth": {
-    "count": 29,
+    "count": 27,
     "baseline": 9.0,
     "wave": true
   },
