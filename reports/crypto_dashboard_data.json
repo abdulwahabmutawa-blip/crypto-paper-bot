@@ -1,105 +1,99 @@
 {
-  "generated_utc": "2026-11-10T17:53:44+00:00",
+  "generated_utc": "2026-11-10T18:11:29+00:00",
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "live_ts": "2026-11-10T17:53:44+00:00",
+  "live_ts": "2026-11-10T18:11:29+00:00",
   "current": {
     "date": "2026-11-10",
-    "value": 1039.16,
-    "bench": 1133.76,
-    "holding": "CASH"
+    "value": 1036.56,
+    "bench": 1136.19,
+    "holding": "BTC-USD"
   },
   "board": {
     "BTC-USD": {
-      "price": 73049.2,
-      "ma200": 73133.4745,
-      "gap_pct": -0.12,
-      "mom_pct": -5.54,
-      "z": -1.98,
-      "above_ma": false,
-      "rank": 5,
+      "price": 73205.3,
+      "ma200": 73134.255,
+      "gap_pct": 0.1,
+      "mom_pct": -5.34,
+      "z": -1.93,
+      "above_ma": true,
+      "rank": 2,
       "spread_bps": 0.01
     },
     "ETH-USD": {
-      "price": 2024.34,
-      "ma200": 2152.0842,
-      "gap_pct": -5.94,
-      "mom_pct": -10.88,
-      "z": -2.52,
+      "price": 2025.32,
+      "ma200": 2152.0891,
+      "gap_pct": -5.89,
+      "mom_pct": -10.84,
+      "z": -2.51,
       "above_ma": false,
-      "rank": 1,
-      "spread_bps": 0.05
+      "rank": 5,
+      "spread_bps": 0.3
     },
     "SOL-USD": {
-      "price": 82.23,
-      "ma200": 88.9737,
-      "gap_pct": -7.58,
-      "mom_pct": -11.3,
-      "z": -2.02,
-      "above_ma": false,
-      "rank": 4,
-      "spread_bps": 1.22
-    },
-    "DOGE-USD": {
-      "price": 0.067,
-      "ma200": 0.0851,
-      "gap_pct": -21.25,
-      "mom_pct": -10.74,
-      "z": -2.17,
-      "above_ma": false,
-      "rank": 3,
-      "spread_bps": 2.67
-    },
-    "AVAX-USD": {
-      "price": 8.227,
-      "ma200": 8.109,
-      "gap_pct": 1.45,
-      "mom_pct": -3.39,
-      "z": -1.09,
-      "above_ma": true,
-      "rank": 8,
-      "spread_bps": 2.43
-    },
-    "LINK-USD": {
-      "price": 10.224,
-      "ma200": 10.092,
-      "gap_pct": 1.31,
-      "mom_pct": -7.19,
-      "z": -1.89,
-      "above_ma": true,
-      "rank": 6,
-      "spread_bps": 6.02
-    },
-    "ADA-USD": {
-      "price": 0.1721,
-      "ma200": 0.2061,
-      "gap_pct": -16.53,
-      "mom_pct": -9.3,
-      "z": -1.71,
+      "price": 82.36,
+      "ma200": 88.9744,
+      "gap_pct": -7.43,
+      "mom_pct": -11.16,
+      "z": -2.0,
       "above_ma": false,
       "rank": 7,
-      "spread_bps": 7.2
+      "spread_bps": 1.21
+    },
+    "DOGE-USD": {
+      "price": 0.0668,
+      "ma200": 0.0851,
+      "gap_pct": -21.54,
+      "mom_pct": -11.06,
+      "z": -2.21,
+      "above_ma": false,
+      "rank": 6,
+      "spread_bps": 3.38
+    },
+    "AVAX-USD": {
+      "price": 8.272,
+      "ma200": 8.1093,
+      "gap_pct": 2.01,
+      "mom_pct": -2.87,
+      "z": -0.97,
+      "above_ma": true,
+      "rank": 1,
+      "spread_bps": 2.42
+    },
+    "LINK-USD": {
+      "price": 10.2176,
+      "ma200": 10.0919,
+      "gap_pct": 1.25,
+      "mom_pct": -7.25,
+      "z": -1.9,
+      "above_ma": true,
+      "rank": 3,
+      "spread_bps": 0.34
+    },
+    "ADA-USD": {
+      "price": 0.1724,
+      "ma200": 0.2061,
+      "gap_pct": -16.39,
+      "mom_pct": -9.15,
+      "z": -1.7,
+      "above_ma": false,
+      "rank": 4,
+      "spread_bps": 4.06
     },
     "XRP-USD": {
-      "price": 1.0526,
+      "price": 1.0539,
       "ma200": 1.2645,
-      "gap_pct": -16.76,
-      "mom_pct": -17.44,
-      "z": -2.32,
+      "gap_pct": -16.66,
+      "mom_pct": -17.34,
+      "z": -2.31,
       "above_ma": false,
-      "rank": 2,
-      "spread_bps": 0.1
+      "rank": 8,
+      "spread_bps": 0.66
     }
   },
-  "pick": "CASH",
-  "regime": "CHOP",
+  "pick": "BTC-USD",
+  "regime": "TREND",
   "intraday": [
-    {
-      "ts": "2026-10-15T00:15:23+00:00",
-      "value": 1165.73,
-      "bench": 1267.53,
-      "holding": "BTC-USD"
-    },
     {
       "ts": "2026-10-15T00:32:26+00:00",
       "value": 1165.4,
@@ -9093,19 +9087,15 @@
       "value": 1039.16,
       "bench": 1133.76,
       "holding": "CASH"
+    },
+    {
+      "ts": "2026-11-10T18:11:29+00:00",
+      "value": 1036.56,
+      "bench": 1136.19,
+      "holding": "BTC-USD"
     }
   ],
   "trades": [
-    {
-      "date": "2026-08-10",
-      "action": "SELL",
-      "ticker": "XRP-USD",
-      "price": 1.034,
-      "units": 1012.484231,
-      "value": 1046.91,
-      "fee": 2.62,
-      "reason": "Signal flip"
-    },
     {
       "date": "2026-08-10",
       "action": "TO CASH",
@@ -9290,6 +9280,16 @@
       "units": 0,
       "value": 1039.16,
       "reason": "Bounce harvested or nothing oversold enough \u2014 cash"
+    },
+    {
+      "date": "2026-11-10",
+      "action": "BUY",
+      "ticker": "BTC-USD",
+      "price": 73205.3,
+      "units": 0.01416,
+      "value": 1036.56,
+      "fee": 2.6,
+      "reason": "Strongest eligible coin (-5.3% 7d momentum)"
     }
   ],
   "history": [
@@ -9997,14 +9997,14 @@
     },
     {
       "date": "2026-11-10",
-      "value": 1039.16,
-      "bench": 1133.76,
-      "holding": "CASH"
+      "value": 1036.56,
+      "bench": 1136.19,
+      "holding": "BTC-USD"
     }
   ],
-  "costs_paid": 101.9646,
+  "costs_paid": 104.563,
   "frozen": null,
-  "thoughts": "Right now I'm in CHOP mode: Bitcoin is below its 200-day average, which means the market is directionless \u2014 history says the cheapest thing to do here is hold cash and wait for the tide to turn. Nothing qualifies at this moment, so I'm in cash \u2014 in crypto, sitting out is often the smartest trade.",
+  "thoughts": "Right now I'm in TREND mode: Bitcoin is above its 200-day average, which historically means crypto is in an uptrend \u2014 so I hold Bitcoin itself. I used to rotate into the hottest altcoin; a two-year replay showed that lost to simply holding BTC, so I stopped. That's why I'm holding BTC. I keep my seat through small wobbles instead of paying fees on every flicker, and I sell if I'm 10% below my entry.",
   "strategy": {
     "name": "BTC Tide Gauge (v4) \u2014 one rule, no rotation",
     "rule": "BTC above its 200-day MA -> hold BTC; below -> cash. -10% failure stop; exit dead-band (mom > -2%) against whipsaw; Watcher SEVERE and the $750 floor force cash. v1-v3 rotated 8 alts by momentum/oversold z \u2014 retired 2026-09-05 after a 2-year replay showed every rotation variant losing to BTC (reports/crypto_regime_lab.md)",
