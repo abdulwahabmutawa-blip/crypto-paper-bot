@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-10T06:27:09+00:00",
+  "ts": "2026-11-10T06:32:48+00:00",
   "sources": {
     "coingecko": [
       "HYPE",
@@ -7,10 +7,12 @@
       "PENGU",
       "BTC",
       "INIT",
-      "ZEC",
       "PEPE",
+      "SOL",
+      "AAVE",
       "NEAR",
-      "SOL"
+      "ZEC",
+      "SUI"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -20,8 +22,8 @@
       "AVAX",
       "PEPE",
       "SPCXB",
-      "ENA",
       "UNI",
+      "ENA",
       "SUI"
     ],
     "watcher": [],
@@ -35,7 +37,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 4e-06,
+      "funding": 3e-06,
       "long_short": 1.8
     },
     {
@@ -45,6 +47,24 @@
         "coingecko",
         "movers"
       ]
+    },
+    {
+      "symbol": "SUI",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 6.7e-05,
+      "long_short": 1.97
+    },
+    {
+      "symbol": "AAVE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 3.2e-05
     },
     {
       "symbol": "BTC",
@@ -76,7 +96,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.007663
+      "funding": -0.007607
     },
     {
       "symbol": "NEAR",
@@ -107,7 +127,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.6e-05
+      "funding": 3.8e-05
     },
     {
       "symbol": "SOXLB",
@@ -124,14 +144,6 @@
       ]
     },
     {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 6.7e-05
-    },
-    {
       "symbol": "UNI",
       "surfaces": 1,
       "sources": [
@@ -145,7 +157,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.3e-05
+      "funding": 7.2e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
