@@ -1,19 +1,19 @@
 {
-  "ts": "2026-11-10T00:45:09+00:00",
+  "ts": "2026-11-10T00:50:27+00:00",
   "sources": {
     "coingecko": [
       "AVAX",
-      "XRP",
       "LINK",
+      "ZEC",
+      "PENGU",
       "BTC",
       "PEPE",
-      "PENGU",
-      "ZEC",
+      "XRP",
       "SOL",
-      "NEAR",
       "ONDO",
-      "ETH",
-      "TAO"
+      "TAO",
+      "INIT",
+      "BNB"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -23,9 +23,9 @@
       "SNDKB",
       "SPCXB",
       "ARB",
-      "PEPE",
-      "LINK",
-      "UNI"
+      "UNI",
+      "ENA",
+      "PEPE"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -38,18 +38,8 @@
         "coingecko",
         "movers"
       ],
-      "funding": -4e-05,
+      "funding": -4.1e-05,
       "long_short": 1.61
-    },
-    {
-      "symbol": "LINK",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 0.0001,
-      "long_short": 1.9
     },
     {
       "symbol": "PEPE",
@@ -65,7 +55,15 @@
       "sources": [
         "movers"
       ],
-      "funding": -9.2e-05
+      "funding": -9.8e-05
+    },
+    {
+      "symbol": "BNB",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.00013
     },
     {
       "symbol": "BTC",
@@ -76,15 +74,23 @@
       "funding": 0.0001
     },
     {
-      "symbol": "ETH",
+      "symbol": "ENA",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 5e-05
+    },
+    {
+      "symbol": "INIT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 4.8e-05
+      "funding": -0.009065
     },
     {
-      "symbol": "NEAR",
+      "symbol": "LINK",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -97,7 +103,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.9e-05
+      "funding": 2.3e-05
     },
     {
       "symbol": "PENGU",
@@ -120,7 +126,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.5e-05
+      "funding": 6.2e-05
     },
     {
       "symbol": "SOXLB",
@@ -158,7 +164,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.9e-05
+      "funding": 7.6e-05
     },
     {
       "symbol": "ZEC",
