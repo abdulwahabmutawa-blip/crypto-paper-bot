@@ -1,16 +1,14 @@
 {
-  "ts": "2026-11-10T09:44:35+00:00",
+  "ts": "2026-11-10T09:50:17+00:00",
   "sources": {
     "coingecko": [
+      "NEAR",
       "INIT",
       "BTC",
-      "NEAR",
-      "HYPE",
-      "ETH",
       "PENGU",
-      "XRP",
-      "HBAR",
-      "ONE",
+      "HYPE",
+      "ZEC",
+      "TAO",
       "INJ"
     ],
     "reddit": [],
@@ -22,8 +20,8 @@
       "SPCXB",
       "UNI",
       "NVDAB",
-      "NEAR",
-      "PEPE"
+      "PEPE",
+      "NEAR"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -45,7 +43,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -7e-06
+      "funding": -5e-06
     },
     {
       "symbol": "BTC",
@@ -53,23 +51,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.1e-05
-    },
-    {
-      "symbol": "ETH",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 3.1e-05
-    },
-    {
-      "symbol": "HBAR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5.5e-05
+      "funding": 9e-05
     },
     {
       "symbol": "HYPE",
@@ -85,7 +67,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.010053
+      "funding": -0.010041
     },
     {
       "symbol": "INJ",
@@ -101,14 +83,6 @@
       "sources": [
         "movers"
       ]
-    },
-    {
-      "symbol": "ONE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -0.004936
     },
     {
       "symbol": "PENGU",
@@ -147,6 +121,14 @@
       ]
     },
     {
+      "symbol": "TAO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
+    },
+    {
       "symbol": "UNI",
       "surfaces": 1,
       "sources": [
@@ -155,12 +137,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "XRP",
+      "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 9.4e-05
+      "funding": 6.3e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
