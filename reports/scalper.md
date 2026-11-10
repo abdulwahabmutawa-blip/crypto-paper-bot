@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-10T21:28:25+00:00 · runs 5686 · equity **$504.41** (-49.56%) · cash $94.23 · open 8/10 · round trips 1939
+updated 2026-11-10T21:47:59+00:00 · runs 5687 · equity **$505.22** (-49.48%) · cash $94.23 · open 8/10 · round trips 1939
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,12 +36,12 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-10T00:27 | RWUSDUSDT | bottom | 0.9998 | 0.9996 | -0.02% |
-| 2026-11-10T08:14 | OPGUSDT | surge | 0.1287 | 0.1294 | +0.54% |
-| 2026-11-10T16:24 | AVGOBUSDT | surge | 329.06 | 332.33 | +0.99% |
-| 2026-11-10T18:29 | GOOGLBUSDT | bottom | 285.98 | 287.9 | +0.67% |
-| 2026-11-10T18:29 | BCHUSDT | bottom | 227 | 230.2 | +1.41% |
-| 2026-11-10T19:57 | OPENUSDT | surge | 0.0915 | 0.0918 | +0.33% |
-| 2026-11-10T20:15 | ICPUSDT | surge | 2.444 | 2.428 | -0.65% |
+| 2026-11-10T00:27 | RWUSDUSDT | bottom | 0.9998 | 0.9994 | -0.04% |
+| 2026-11-10T08:14 | OPGUSDT | surge | 0.1287 | 0.1296 | +0.70% |
+| 2026-11-10T16:24 | AVGOBUSDT | surge | 329.06 | 333.86 | +1.46% |
+| 2026-11-10T18:29 | GOOGLBUSDT | bottom | 285.98 | 288.14 | +0.76% |
+| 2026-11-10T18:29 | BCHUSDT | bottom | 227 | 231.3 | +1.89% |
+| 2026-11-10T19:57 | OPENUSDT | surge | 0.0915 | 0.0917 | +0.22% |
+| 2026-11-10T20:15 | ICPUSDT | surge | 2.444 | 2.445 | +0.04% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
