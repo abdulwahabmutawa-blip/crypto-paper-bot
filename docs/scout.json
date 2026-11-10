@@ -1,8 +1,24 @@
 {
-  "ts": "2026-11-10T23:43:33+00:00",
+  "ts": "2026-11-10T23:48:54+00:00",
   "scanned": 90,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "NIGHTUSDT",
+      "signal": "ignition",
+      "score": 0.722,
+      "raw_score": 0.8251,
+      "weight": 0.875,
+      "price": 0.04176,
+      "why": "trades 7.0x and volume 24.9x the prior 4h, 81% taker-buy, $105,691 burst \u2014 while price has only moved +0.3%",
+      "chg_24h": 0.0365,
+      "vol_surge": 24.89,
+      "chg_1h": 0.0029,
+      "market_surge": 7.23,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -1.17% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -1.17% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -2.47% at 24h: market beta, not signal",
