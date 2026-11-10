@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-10T03:11:36+00:00",
+  "ts": "2026-11-10T03:17:26+00:00",
   "sources": {
     "coingecko": [
       "AVAX",
@@ -23,8 +23,8 @@
       "SPCXB",
       "PEPE",
       "SUI",
-      "NVDAB",
-      "DOGE"
+      "LINK",
+      "UNI"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -67,20 +67,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "DOGE",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 1.4e-05
+      "funding": 1.3e-05
     },
     {
       "symbol": "HYPE",
@@ -88,7 +80,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.4e-05
+      "funding": 3.6e-05
     },
     {
       "symbol": "INIT",
@@ -96,7 +88,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.011069
+      "funding": -0.010966
+    },
+    {
+      "symbol": "LINK",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "NEAR",
@@ -105,13 +105,6 @@
         "coingecko"
       ],
       "funding": 0.0001
-    },
-    {
-      "symbol": "NVDAB",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
     },
     {
       "symbol": "ONDO",
@@ -142,7 +135,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1e-05
+      "funding": 8e-06
     },
     {
       "symbol": "SOXLB",
@@ -157,6 +150,14 @@
       "sources": [
         "movers"
       ]
+    },
+    {
+      "symbol": "UNI",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 0.0001
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
