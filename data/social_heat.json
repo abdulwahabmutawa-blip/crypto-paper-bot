@@ -1,17 +1,17 @@
 {
-  "ts": "2026-11-10T09:27:08+00:00",
+  "ts": "2026-11-10T09:32:46+00:00",
   "sources": {
     "coingecko": [
-      "BTC",
-      "HYPE",
       "INIT",
-      "PENGU",
-      "ETH",
+      "BTC",
+      "NEAR",
+      "HYPE",
       "ONE",
       "TAO",
+      "XRP",
+      "INJ",
       "AVAX",
-      "NEAR",
-      "ZEC"
+      "ETH"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,8 +22,8 @@
       "SPCXB",
       "UNI",
       "PEPE",
-      "NEAR",
-      "NVDAB"
+      "NVDAB",
+      "NEAR"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -36,7 +36,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -9e-06,
+      "funding": -7e-06,
       "long_short": 1.96
     },
     {
@@ -55,7 +55,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.3e-05
+      "funding": 9.4e-05
     },
     {
       "symbol": "ETH",
@@ -63,7 +63,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.1e-05
+      "funding": 3.2e-05
     },
     {
       "symbol": "HYPE",
@@ -79,7 +79,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.010093
+      "funding": -0.010121
+    },
+    {
+      "symbol": "INJ",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0001
     },
     {
       "symbol": "NVDAB",
@@ -94,15 +102,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.004269
-    },
-    {
-      "symbol": "PENGU",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": -0.004489
     },
     {
       "symbol": "PEPE",
@@ -149,12 +149,12 @@
       "funding": 0.0001
     },
     {
-      "symbol": "ZEC",
+      "symbol": "XRP",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 5.1e-05
+      "funding": 9.3e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
