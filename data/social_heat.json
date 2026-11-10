@@ -1,15 +1,16 @@
 {
-  "ts": "2026-11-10T10:07:08+00:00",
+  "ts": "2026-11-10T10:12:39+00:00",
   "sources": {
     "coingecko": [
-      "NEAR",
-      "BTC",
       "INIT",
+      "BTC",
+      "NEAR",
       "PENGU",
       "HYPE",
-      "ZEC",
       "SOL",
-      "TAO"
+      "ZEC",
+      "ETH",
+      "DOT"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -17,11 +18,11 @@
       "SOXLB",
       "SNDKB",
       "AVAX",
-      "SPCXB",
       "PEPE",
+      "SPCXB",
       "UNI",
       "NEAR",
-      "NVDAB"
+      "SUI"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -43,7 +44,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 6e-06
+      "funding": 8e-06
     },
     {
       "symbol": "BTC",
@@ -52,6 +53,22 @@
         "coingecko"
       ],
       "funding": 8.7e-05
+    },
+    {
+      "symbol": "DOT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -2.3e-05
+    },
+    {
+      "symbol": "ETH",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 3.1e-05
     },
     {
       "symbol": "HYPE",
@@ -67,14 +84,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.009935
-    },
-    {
-      "symbol": "NVDAB",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
+      "funding": -0.009888
     },
     {
       "symbol": "PENGU",
@@ -121,12 +131,12 @@
       ]
     },
     {
-      "symbol": "TAO",
+      "symbol": "SUI",
       "surfaces": 1,
       "sources": [
-        "coingecko"
+        "movers"
       ],
-      "funding": 5e-05
+      "funding": 6.1e-05
     },
     {
       "symbol": "UNI",
