@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-10T08:50:00+00:00 · runs 5650 · equity **$507.59** (-49.24%) · cash $0.00 · open 10/10 · round trips 1925
+updated 2026-11-10T09:07:05+00:00 · runs 5651 · equity **$506.52** (-49.35%) · cash $0.00 · open 10/10 · round trips 1925
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,13 +36,13 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-09T09:14 | DODOUSDT | surge | 0.02317 | 0.02328 | +0.47% |
-| 2026-11-09T11:20 | RENDERUSDT | surge | 1.589 | 1.584 | -0.31% |
-| 2026-11-09T12:45 | JSTUSDT | surge | 0.14623 | 0.14427 | -1.34% |
-| 2026-11-09T16:42 | TSLABUSDT | surge | 377.77 | 377.2 | -0.15% |
-| 2026-11-09T17:34 | QQQBUSDT | surge | 678.06 | 679.53 | +0.22% |
-| 2026-11-09T22:26 | BEBUSDT | surge | 196.71 | 194.94 | -0.90% |
-| 2026-11-10T00:27 | ZROUSDT | bottom | 1.484 | 1.508 | +1.62% |
+| 2026-11-09T09:14 | DODOUSDT | surge | 0.02317 | 0.02322 | +0.22% |
+| 2026-11-09T11:20 | RENDERUSDT | surge | 1.589 | 1.577 | -0.76% |
+| 2026-11-09T12:45 | JSTUSDT | surge | 0.14623 | 0.14415 | -1.42% |
+| 2026-11-09T16:42 | TSLABUSDT | surge | 377.77 | 376.65 | -0.30% |
+| 2026-11-09T17:34 | QQQBUSDT | surge | 678.06 | 677.9 | -0.02% |
+| 2026-11-09T22:26 | BEBUSDT | surge | 196.71 | 193.02 | -1.88% |
+| 2026-11-10T00:27 | ZROUSDT | bottom | 1.484 | 1.506 | +1.48% |
 | 2026-11-10T00:27 | RWUSDUSDT | bottom | 0.9998 | 0.9999 | +0.01% |
 | 2026-11-10T08:14 | OPGUSDT | surge | 0.1287 | 0.1293 | +0.47% |
 
