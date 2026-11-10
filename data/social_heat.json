@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-10T11:19:36+00:00",
+  "ts": "2026-11-10T11:25:30+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
@@ -20,11 +20,11 @@
       "INIT",
       "SOXLB",
       "SNDKB",
-      "SPCXB",
       "PEPE",
+      "SPCXB",
       "AVAX",
-      "UNI",
-      "NVDAB"
+      "NEAR",
+      "UNI"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -37,7 +37,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 8e-06,
+      "funding": 6e-06,
       "long_short": 2.02
     },
     {
@@ -47,8 +47,18 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.012152,
+      "funding": -0.01269,
       "long_short": 0.64
+    },
+    {
+      "symbol": "NEAR",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 1.3
     },
     {
       "symbol": "BTC",
@@ -64,22 +74,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9e-06
-    },
-    {
-      "symbol": "NEAR",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "NVDAB",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ]
+      "funding": 1.1e-05
     },
     {
       "symbol": "ONE",
@@ -87,7 +82,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.005585
+      "funding": -0.005551
     },
     {
       "symbol": "PENGU",
@@ -139,7 +134,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.1e-05
+      "funding": 7.7e-05
     },
     {
       "symbol": "UNI",
@@ -163,7 +158,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.3e-05
+      "funding": 8.4e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
