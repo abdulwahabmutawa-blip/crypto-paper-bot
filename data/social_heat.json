@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-10T23:32:28+00:00",
+  "ts": "2026-11-10T23:37:48+00:00",
   "sources": {
     "coingecko": [
       "INIT",
@@ -22,7 +22,7 @@
       "PEPE",
       "SOXLB",
       "SPCXB",
-      "TRX"
+      "RLUSD"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -35,7 +35,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.018761,
+      "funding": -0.018589,
       "long_short": 0.91
     },
     {
@@ -52,7 +52,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.7e-05
+      "funding": 1.9e-05
     },
     {
       "symbol": "BTC",
@@ -84,7 +84,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001006
+      "funding": -0.001013
     },
     {
       "symbol": "PENGU",
@@ -93,6 +93,13 @@
         "coingecko"
       ],
       "funding": 1.5e-05
+    },
+    {
+      "symbol": "RLUSD",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
     },
     {
       "symbol": "SOXLB",
@@ -114,15 +121,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.4e-05
-    },
-    {
-      "symbol": "TRX",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -0.000106
+      "funding": 4.2e-05
     },
     {
       "symbol": "XMR",
@@ -138,7 +137,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.8e-05
+      "funding": 0.0001
     },
     {
       "symbol": "ZEC",
@@ -146,7 +145,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2e-05
+      "funding": 2.2e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
