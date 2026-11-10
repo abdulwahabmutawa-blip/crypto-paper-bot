@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-10T23:09:38+00:00",
+  "ts": "2026-11-10T23:15:11+00:00",
   "sources": {
     "coingecko": [
       "BTC",
@@ -19,8 +19,10 @@
       "ONE",
       "GRAM",
       "PEPE",
+      "SOXLB",
       "SPCXB",
-      "TRX"
+      "TRX",
+      "RLUSD"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -33,7 +35,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -0.017994,
+      "funding": -0.018132,
       "long_short": 0.91
     },
     {
@@ -50,7 +52,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7e-06
+      "funding": 1e-05
     },
     {
       "symbol": "BTC",
@@ -58,7 +60,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.2e-05
+      "funding": 7.5e-05
     },
     {
       "symbol": "GRAM",
@@ -82,7 +84,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.8e-05
+      "funding": 1.7e-05
     },
     {
       "symbol": "ONE",
@@ -90,7 +92,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000996
+      "funding": -0.000985
     },
     {
       "symbol": "PYTH",
@@ -98,7 +100,21 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.8e-05
+      "funding": 3.1e-05
+    },
+    {
+      "symbol": "RLUSD",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
+    },
+    {
+      "symbol": "SOXLB",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
     },
     {
       "symbol": "SPCXB",
@@ -113,7 +129,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.000105
+      "funding": -0.000108
     },
     {
       "symbol": "XRP",
@@ -129,7 +145,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.6e-05
+      "funding": 1.8e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
