@@ -1,9 +1,9 @@
 {
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "holding": "BTC-USD",
-  "units": 0.014274095144590984,
-  "cash": 0.0,
+  "holding": "CASH",
+  "units": 0.0,
+  "cash": 1039.1570778188657,
   "bench_units": 0.01552055830726173,
   "trades": [
     {
@@ -1355,6 +1355,25 @@
       "value": 1109.1,
       "fee": 2.78,
       "reason": "Strongest eligible coin (+0.4% 7d momentum)"
+    },
+    {
+      "date": "2026-11-10",
+      "action": "SELL",
+      "ticker": "BTC-USD",
+      "price": 72982.7,
+      "units": 0.014274,
+      "value": 1041.76,
+      "fee": 2.6,
+      "reason": "Signal flip"
+    },
+    {
+      "date": "2026-11-10",
+      "action": "TO CASH",
+      "ticker": "\u2014",
+      "price": 0,
+      "units": 0,
+      "value": 1039.16,
+      "reason": "Bounce harvested or nothing oversold enough \u2014 cash"
     }
   ],
   "history": [
@@ -2062,19 +2081,13 @@
     },
     {
       "date": "2026-11-10",
-      "value": 1045.72,
-      "bench": 1137.03,
-      "holding": "BTC-USD"
+      "value": 1039.16,
+      "bench": 1132.73,
+      "holding": "CASH"
     }
   ],
-  "last_updated_utc": "2026-11-10T16:24:57+00:00",
+  "last_updated_utc": "2026-11-10T16:42:42+00:00",
   "intraday": [
-    {
-      "ts": "2026-10-14T22:47:02+00:00",
-      "value": 1162.15,
-      "bench": 1263.63,
-      "holding": "BTC-USD"
-    },
     {
       "ts": "2026-10-14T23:04:06+00:00",
       "value": 1164.25,
@@ -11068,9 +11081,13 @@
       "value": 1045.72,
       "bench": 1137.03,
       "holding": "BTC-USD"
+    },
+    {
+      "ts": "2026-11-10T16:42:42+00:00",
+      "value": 1039.16,
+      "bench": 1132.73,
+      "holding": "CASH"
     }
   ],
-  "costs_paid": 99.3597,
-  "entry_regime": "TREND",
-  "entry_price": 77700.1
+  "costs_paid": 101.9646
 }
