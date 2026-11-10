@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-10T20:17:35+00:00 · runs 5682 · equity **$503.12** (-49.69%) · cash $46.08 · open 9/10 · round trips 1938
+updated 2026-11-10T20:35:17+00:00 · runs 5683 · equity **$502.32** (-49.77%) · cash $46.08 · open 9/10 · round trips 1938
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,13 +36,13 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-10T00:27 | RWUSDUSDT | bottom | 0.9998 | 0.9994 | -0.04% |
-| 2026-11-10T08:14 | OPGUSDT | surge | 0.1287 | 0.1288 | +0.08% |
-| 2026-11-10T16:24 | AVGOBUSDT | surge | 329.06 | 331.58 | +0.77% |
-| 2026-11-10T16:24 | GRAMUSDT | surge | 1.107 | 1.108 | +0.09% |
-| 2026-11-10T18:29 | GOOGLBUSDT | bottom | 285.98 | 287.1 | +0.39% |
-| 2026-11-10T18:29 | BCHUSDT | bottom | 227 | 231.1 | +1.81% |
-| 2026-11-10T19:57 | OPENUSDT | surge | 0.0915 | 0.0917 | +0.22% |
-| 2026-11-10T20:15 | ICPUSDT | surge | 2.444 | 2.443 | -0.04% |
+| 2026-11-10T00:27 | RWUSDUSDT | bottom | 0.9998 | 0.9995 | -0.03% |
+| 2026-11-10T08:14 | OPGUSDT | surge | 0.1287 | 0.1286 | -0.08% |
+| 2026-11-10T16:24 | AVGOBUSDT | surge | 329.06 | 332.28 | +0.98% |
+| 2026-11-10T16:24 | GRAMUSDT | surge | 1.107 | 1.1 | -0.63% |
+| 2026-11-10T18:29 | GOOGLBUSDT | bottom | 285.98 | 287.8 | +0.64% |
+| 2026-11-10T18:29 | BCHUSDT | bottom | 227 | 230.5 | +1.54% |
+| 2026-11-10T19:57 | OPENUSDT | surge | 0.0915 | 0.0914 | -0.11% |
+| 2026-11-10T20:15 | ICPUSDT | surge | 2.444 | 2.425 | -0.78% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
