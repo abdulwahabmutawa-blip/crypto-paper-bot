@@ -1,36 +1,46 @@
 {
-  "ts": "2026-11-11T02:43:38+00:00",
+  "ts": "2026-11-11T02:49:32+00:00",
   "sources": {
     "coingecko": [
-      "BTC",
       "PENGU",
+      "BTC",
       "ZEC",
-      "HYPE",
-      "LIT",
       "NEAR",
       "AERO",
+      "AERO",
       "SOL",
-      "LINK",
-      "INJ",
-      "SUI",
-      "AERO"
+      "HYPE",
+      "LIT",
+      "QNT",
+      "RAY",
+      "INIT"
     ],
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "ONE",
       "INIT",
+      "ONE",
       "SOXLB",
       "PEPE",
       "NEAR",
       "SPCXB",
-      "SNDKB",
-      "ENA"
+      "ENA",
+      "SNDKB"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "INIT",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -0.00979,
+      "long_short": 0.98
+    },
     {
       "symbol": "NEAR",
       "surfaces": 2,
@@ -47,7 +57,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -3.2e-05
+      "funding": -2.7e-05
     },
     {
       "symbol": "BTC",
@@ -74,30 +84,6 @@
       "funding": 5e-05
     },
     {
-      "symbol": "INIT",
-      "surfaces": 1,
-      "sources": [
-        "movers"
-      ],
-      "funding": -0.009948
-    },
-    {
-      "symbol": "INJ",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
-      "symbol": "LINK",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 4.9e-05
-    },
-    {
       "symbol": "LIT",
       "surfaces": 1,
       "sources": [
@@ -111,7 +97,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001111
+      "funding": -0.00111
     },
     {
       "symbol": "PENGU",
@@ -127,6 +113,22 @@
       "sources": [
         "movers"
       ]
+    },
+    {
+      "symbol": "QNT",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -0.000205
+    },
+    {
+      "symbol": "RAY",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0
     },
     {
       "symbol": "SNDKB",
@@ -156,14 +158,6 @@
       "sources": [
         "movers"
       ]
-    },
-    {
-      "symbol": "SUI",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 1.2e-05
     },
     {
       "symbol": "ZEC",
