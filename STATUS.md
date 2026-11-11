@@ -1,24 +1,24 @@
-# Fleet Status — 2026-11-10 UTC
+# Fleet Status — 2026-11-11 UTC
 
 | Bot | Holds | 24h change | Value |
 |---|---|---|---|
-| crypto (BTC tide gauge v4) | BTC-USD | No trade; price drifted down with BTC | $1,065.66 (11-09 close $1,069.89 → now $1,065.66), bench $1,158.72 |
-| meanrev | CASH | **SOLD NVDA** — trailing stop (-12% from $203.98 high) | $1,000.74 (11-06 $1,061.55 → now $1,000.74), bench $1,002.46 |
+| crypto (BTC tide gauge v4) | BTC-USD | Round-tripped: SOLD (signal flip) → brief CASH → re-BOUGHT same day | $1,043.03 (11-10 $1,043.85 → now), bench $1,143.28 |
+| meanrev | CASH | Unchanged, still CASH since 11-09 stop-out | $1,000.74, bench $998.91 (11-10) |
 | sentiment (Watcher + sentinel_trader) | CASH | Unchanged, still R1-frozen | $726.83 |
-| scalper | 10/10 seats | 18 round trips closed, net +$4.00 | $505.93 (vs $506.05 yday) |
+| scalper | 10/10 seats | 19 round trips closed, net -$5.28 | $507.37 (vs $505.93 yday) |
 | Watcher (sentinel, no capital) | — | Grok risk scan still NOT refreshed | n/a |
 
 ## Changed
-- **meanrev**: first position change since 11-04 — NVDA hit its 12% trailing stop at $176.18 (high-water $203.98), sold for $1,001.85, book moved TO CASH at $1,000.74. Next entry picks the most oversold mega-cap again.
-- **scalper**: 18 round trips closed in the window — 10 TARGET, 6 STOP, 2 TIME — net +$4.00, equity roughly flat ($506.05 → $505.93). New opens: DODOUSDT, RENDERUSDT, JSTUSDT, TSLABUSDT, QQQBUSDT, BEBUSDT, ZROUSDT, RWUSDUSDT, AVAXUSDT. TVKUSDT still open since 09-12, still 10/10 seats.
-- **crypto**: no trade, still holding BTC-USD since 09-08 (entry $77,700.1). Book $1,069.89 → $1,065.66 as BTC eased off; bench also down.
+- **crypto**: round-tripped BTC-USD on 11-10 — SELL "Signal flip" at $72,982.70, briefly TO CASH ($1,039.16), then re-BUY same day at $73,205.30 ("Strongest eligible coin, -5.3% 7d momentum"). Now holding BTC-USD from this new 11-10 entry, not the old 09-08/$77,700.10 position reported yesterday. Value drifted $1,043.85 → $1,043.03; bench $1,144.18 → $1,143.28.
+- **scalper**: 19 round trips closed in the window — 6 TARGET, 7 STOP, 6 TIME — net -$5.28. Equity $505.93 → $507.37 (up, so open-seat marks offset the closed-trade loss). New opens include OPGUSDT, GOOGLBUSDT, BCHUSDT, OPENUSDT, ICPUSDT, AVGOBUSDT, RENDERUSDT, SKHYBUSDT, DRAMBUSDT. TVKUSDT still open since 09-12, 10/10 seats.
+- **meanrev**: no new trade since the 11-09 trailing-stop exit; still CASH at $1,000.74.
 - **sentiment**: unchanged at $726.83 (R1-frozen since 10-12).
-- No GitHub Actions failures found for this window (checked via Actions API, all `paper-trade-cycle` runs "success"). Two cycle gaps (~102 min around 15:05→16:47 UTC, ~121 min around 22:30→00:31 UTC) — within the documented schedule-throttling range, not errors.
+- GitHub Actions: checked via Actions API — every `paper-trade-cycle` run touching this window shows `success`; the current run (#1016) is still `in_progress` (started 01:29 UTC), which is normal — one run spans several hours and makes many internal cycle/lottery commits. No failed or skipped runs found.
 
 ## Needs a look
-- **Watcher's Grok risk scan is still stale**: `data/sentinel_verdict.json` unchanged since 2026-10-20T16:09 UTC (~20.6 days / ~495h old). `sentinel_gate.severe()` treats verdicts older than 24h as UNKNOWN, not calm — risk gate still running blind.
-- **scalper** seat **TVKUSDT still open since 2026-09-12** (~59 days) — past the bot's 24h hold cap; known unresolved bug, not new this run.
-- **scalper** equity $505.93 remains below the R1 hard-stop floor ($750, -25%); no retirement action taken (known open item, human call).
+- **Watcher's Grok risk scan is still stale**: `data/sentinel_verdict.json` unchanged since 2026-10-20T16:09 UTC (~21.5 days / ~517h old). `sentinel_gate.severe()` treats verdicts older than 24h as UNKNOWN, not calm — risk gate still running blind. Getting longer each digest, unresolved.
+- **scalper** seat **TVKUSDT still open since 2026-09-12** (~60 days) — past the bot's 24h hold cap; known unresolved bug, not new this run.
+- **scalper** equity $507.37 remains below the R1 hard-stop floor ($750, -25%); no retirement action taken (known open item, human call).
 - **sentiment** remains R1-frozen in CASH at $726.83 since 2026-10-12; un-freeze or formal retirement still undecided.
-- **Scheduled-task roster mismatch (recurring)**: today's digest instructions again describe a 9-bot fleet (trend, regime, congress, meanrev, commodity, allweather, hype, Hunter, Watcher) that doesn't match the actual roster. Per CLAUDE.md / `reports/kill_criteria.md`, congress/commodity/allweather/hype/hunter/stock/scholar/carry are retired, frozen archives. The active paper fleet is 4 books — crypto, meanrev, sentiment, scalper — plus the non-capital Watcher.
-- Lottery/IBKR activity (real-money VPS path) and an unrelated "oracle" bot's commits both appear in this window's commit history but are out of scope for this digest per CLAUDE.md.
+- **Scheduled-task roster mismatch (recurring)**: today's digest instructions again describe a 9-bot fleet (trend, regime, congress, meanrev, commodity, allweather, hype, Hunter, Watcher) that doesn't match the actual roster. Per CLAUDE.md / `reports/kill_criteria.md`, congress/commodity/allweather/hype/hunter/stock/scholar/carry/analyst are retired, frozen archives. The active paper fleet is 4 books — crypto, meanrev, sentiment, scalper — plus the non-capital Watcher.
+- Lottery/IBKR activity (real-money VPS path) made up most of this window's commit volume but is out of scope for this digest per CLAUDE.md.
