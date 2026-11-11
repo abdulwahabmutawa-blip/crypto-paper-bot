@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-11T09:20:47+00:00",
+  "ts": "2026-11-11T09:26:38+00:00",
   "sources": {
     "coingecko": [
       "LIT",
@@ -22,6 +22,7 @@
       "MUB",
       "SPCXB",
       "SNDKB",
+      "INIT",
       "AVAX"
     ],
     "watcher": [],
@@ -35,8 +36,18 @@
         "coingecko",
         "movers"
       ],
-      "funding": 2.7e-05,
+      "funding": 3.1e-05,
       "long_short": 2.25
+    },
+    {
+      "symbol": "INIT",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -0.010999,
+      "long_short": 1.25
     },
     {
       "symbol": "BTC",
@@ -52,7 +63,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.4e-05
+      "funding": 3.5e-05
     },
     {
       "symbol": "HYPE",
@@ -61,14 +72,6 @@
         "coingecko"
       ],
       "funding": 5e-05
-    },
-    {
-      "symbol": "INIT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -0.011178
     },
     {
       "symbol": "INJ",
@@ -84,7 +87,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -8e-06
+      "funding": -3e-06
     },
     {
       "symbol": "MUB",
@@ -107,7 +110,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000137
+      "funding": -0.000132
     },
     {
       "symbol": "SNDKB",
@@ -136,7 +139,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -4.3e-05
+      "funding": -4.7e-05
     },
     {
       "symbol": "XMR",
@@ -152,7 +155,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.8e-05
+      "funding": 1.9e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
