@@ -1,18 +1,18 @@
 {
-  "ts": "2026-11-11T04:26:09+00:00",
+  "ts": "2026-11-11T04:31:28+00:00",
   "sources": {
     "coingecko": [
-      "BTC",
-      "ZEC",
       "HYPE",
+      "BTC",
       "LIT",
+      "ZEC",
       "INJ",
-      "XRP",
       "SOL",
-      "GRAM",
+      "XRP",
+      "AVAX",
       "MEGA",
-      "AERO",
-      "TAO"
+      "TAO",
+      "GRAM"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -23,19 +23,20 @@
       "SNDKB",
       "SPCXB",
       "PEPE",
-      "NEAR"
+      "NEAR",
+      "ENA"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
     {
-      "symbol": "AERO",
+      "symbol": "AVAX",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": -2.7e-05
+      "funding": 8.8e-05
     },
     {
       "symbol": "BTC",
@@ -44,6 +45,14 @@
         "coingecko"
       ],
       "funding": 0.0001
+    },
+    {
+      "symbol": "ENA",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 4.5e-05
     },
     {
       "symbol": "GRAM",
@@ -67,7 +76,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.008914
+      "funding": -0.008733
     },
     {
       "symbol": "INJ",
@@ -83,7 +92,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -2.7e-05
+      "funding": -2.3e-05
     },
     {
       "symbol": "MEGA",
@@ -107,7 +116,7 @@
       "sources": [
         "movers"
       ],
-      "funding": -0.001344
+      "funding": -0.00137
     },
     {
       "symbol": "PEPE",
@@ -167,7 +176,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.6e-05
+      "funding": 9.8e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
