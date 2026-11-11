@@ -1,20 +1,20 @@
 {
-  "ts": "2026-11-11T14:43:19+00:00",
+  "ts": "2026-11-11T14:49:28+00:00",
   "sources": {
     "coingecko": [
       "DOGE",
-      "ZEC",
       "GRAM",
-      "HYPE",
-      "XRP",
-      "PUMP",
+      "ZEC",
       "BTC",
+      "HYPE",
+      "PUMP",
       "AVAX",
       "LIT",
+      "XRP",
       "AERO",
+      "ETH",
       "SOL",
-      "SUI",
-      "ETH"
+      "SUI"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -24,8 +24,9 @@
       "SNDKB",
       "MUB",
       "AVAX",
+      "NEAR",
       "NVDAB",
-      "NEAR"
+      "SOL"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -52,6 +53,16 @@
       "long_short": 1.39
     },
     {
+      "symbol": "SOL",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 8.8e-05,
+      "long_short": 3.32
+    },
+    {
       "symbol": "AERO",
       "surfaces": 1,
       "sources": [
@@ -73,7 +84,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.8e-05
+      "funding": 4.9e-05
     },
     {
       "symbol": "ETH",
@@ -81,7 +92,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.6e-05
+      "funding": 6.5e-05
     },
     {
       "symbol": "HYPE",
@@ -127,7 +138,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.2e-05
+      "funding": 1.6e-05
     },
     {
       "symbol": "SNDKB",
@@ -135,14 +146,6 @@
       "sources": [
         "movers"
       ]
-    },
-    {
-      "symbol": "SOL",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 8.8e-05
     },
     {
       "symbol": "SOXLB",
@@ -173,7 +176,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.8e-05
+      "funding": 4.5e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
