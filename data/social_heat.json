@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-11T19:51:16+00:00",
+  "ts": "2026-11-11T19:56:46+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
@@ -21,10 +21,10 @@
       "SNDKB",
       "MUB",
       "GRAM",
+      "INTCB",
       "NVDAB",
       "AVAX",
-      "NEAR",
-      "SOL"
+      "NEAR"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -37,7 +37,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": 2.5e-05,
+      "funding": 2.7e-05,
       "long_short": 2.25
     },
     {
@@ -61,22 +61,12 @@
       "long_short": 1.36
     },
     {
-      "symbol": "SOL",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 2.3e-05,
-      "long_short": 3.31
-    },
-    {
       "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 4.2e-05
+      "funding": 4.1e-05
     },
     {
       "symbol": "ETH",
@@ -84,7 +74,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 6.3e-05
+      "funding": 6.2e-05
     },
     {
       "symbol": "HYPE",
@@ -95,12 +85,19 @@
       "funding": 5e-05
     },
     {
+      "symbol": "INTCB",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
+    },
+    {
       "symbol": "LIT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 1.1e-05
+      "funding": 1e-05
     },
     {
       "symbol": "MUB",
@@ -130,7 +127,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000375
+      "funding": -0.000374
     },
     {
       "symbol": "SNDKB",
@@ -138,6 +135,14 @@
       "sources": [
         "movers"
       ]
+    },
+    {
+      "symbol": "SOL",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 2.3e-05
     },
     {
       "symbol": "SOXLB",
@@ -152,7 +157,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1e-05
+      "funding": -8e-06
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
