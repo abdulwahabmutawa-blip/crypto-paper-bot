@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-11T15:11:38+00:00",
+  "ts": "2026-11-11T15:16:48+00:00",
   "sources": {
     "coingecko": [
       "GRAM",
@@ -17,11 +17,12 @@
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "GRAM",
+      "SNDKB",
       "SOXLB",
       "MUB",
-      "SNDKB",
+      "GRAM",
       "AVAX",
+      "XRP",
       "NEAR"
     ],
     "watcher": [],
@@ -49,6 +50,16 @@
       "long_short": 1.53
     },
     {
+      "symbol": "XRP",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 0.0001,
+      "long_short": 3.04
+    },
+    {
       "symbol": "AERO",
       "surfaces": 1,
       "sources": [
@@ -70,7 +81,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 5.6e-05
+      "funding": 5.7e-05
     },
     {
       "symbol": "ENA",
@@ -117,7 +128,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2e-06
+      "funding": 4e-06
     },
     {
       "symbol": "SNDKB",
@@ -134,20 +145,12 @@
       ]
     },
     {
-      "symbol": "XRP",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 0.0001
-    },
-    {
       "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 4.5e-05
+      "funding": 4.7e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
