@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-11T09:04:38+00:00",
+  "ts": "2026-11-11T09:09:49+00:00",
   "sources": {
     "coingecko": [
       "ZEC",
@@ -7,11 +7,9 @@
       "HYPE",
       "ETH",
       "BTC",
-      "LINK",
+      "AERO",
       "INIT",
-      "AVAX",
-      "XMR",
-      "QNT"
+      "XMR"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -28,24 +26,30 @@
   },
   "heat": [
     {
-      "symbol": "AVAX",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 2.3e-05,
-      "long_short": 2.25
-    },
-    {
       "symbol": "INIT",
       "surfaces": 2,
       "sources": [
         "coingecko",
         "movers"
       ],
-      "funding": -0.010867,
+      "funding": -0.011302,
       "long_short": 1.25
+    },
+    {
+      "symbol": "AERO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -7.3e-05
+    },
+    {
+      "symbol": "AVAX",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 2.4e-05
     },
     {
       "symbol": "BTC",
@@ -61,18 +65,10 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.2e-05
+      "funding": 4.1e-05
     },
     {
       "symbol": "HYPE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
-    },
-    {
-      "symbol": "LINK",
       "surfaces": 1,
       "sources": [
         "coingecko"
@@ -85,7 +81,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.2e-05
+      "funding": -1.3e-05
     },
     {
       "symbol": "MUB",
@@ -93,14 +89,6 @@
       "sources": [
         "movers"
       ]
-    },
-    {
-      "symbol": "QNT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -0.000135
     },
     {
       "symbol": "SNDKB",
