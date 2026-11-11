@@ -1,10 +1,26 @@
 {
-  "ts": "2026-11-11T12:45:15+00:00",
-  "scanned": 84,
+  "ts": "2026-11-11T12:50:53+00:00",
+  "scanned": 86,
   "ruleset": 3,
-  "candidates": [],
+  "candidates": [
+    {
+      "symbol": "WBETHUSDT",
+      "signal": "ignition",
+      "score": 0.7367,
+      "raw_score": 0.8343,
+      "weight": 0.883,
+      "price": 2281.57,
+      "why": "trades 6.7x and volume 8.8x the prior 4h, 100% taker-buy, $60,832 burst \u2014 while price has only moved -0.1%",
+      "chg_24h": -0.0183,
+      "vol_surge": 8.78,
+      "chg_1h": -0.0006,
+      "market_surge": 2.15,
+      "actionable": false,
+      "status": "benched \u2014 BTC-excess day mean -0.97% at 24h: market beta, not signal"
+    }
+  ],
   "gate": {
-    "ignition": "benched \u2014 BTC-excess day mean -0.96% at 24h: market beta, not signal",
+    "ignition": "benched \u2014 BTC-excess day mean -0.97% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -2.42% at 24h: market beta, not signal",
     "reversion": "benched \u2014 BTC-excess day mean -4.38% at 24h: market beta, not signal",
     "heat": "probation \u2014 0/12 resolved 24h samples under ruleset 3",
@@ -43,19 +59,19 @@
       "avg_win_4h": 0.01644,
       "avg_loss_4h": -0.01982,
       "payoff_4h": 0.829,
-      "span_h_24h": 310.5,
-      "n_eff_24h": 12.94,
-      "n_24h": 555,
-      "hit_rate_24h": 0.295,
-      "mean_ret_24h": -0.01891,
+      "span_h_24h": 311.7,
+      "n_eff_24h": 12.99,
+      "n_24h": 556,
+      "hit_rate_24h": 0.297,
+      "mean_ret_24h": -0.01887,
       "median_ret_24h": -0.01338,
       "both_halves_24h": false,
       "days_24h": 14,
-      "mean_x_24h": -0.00964,
+      "mean_x_24h": -0.00966,
       "days_x_24h": 14,
-      "avg_win_24h": 0.03491,
+      "avg_win_24h": 0.03474,
       "avg_loss_24h": -0.04498,
-      "payoff_24h": 0.776
+      "payoff_24h": 0.772
     },
     "breakout": {
       "span_h_1h": 332.8,
