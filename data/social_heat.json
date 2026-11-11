@@ -1,18 +1,18 @@
 {
-  "ts": "2026-11-11T23:08:48+00:00",
+  "ts": "2026-11-11T23:14:29+00:00",
   "sources": {
     "coingecko": [
       "BTC",
-      "GRAM",
       "PENGU",
-      "AVAX",
       "DOGE",
+      "GRAM",
+      "AERO",
       "TAO",
-      "ZEC",
-      "LIT",
       "HYPE",
-      "SUI",
+      "LIT",
       "XMR",
+      "SUI",
+      "AVAX",
       "SOL"
     ],
     "reddit": [],
@@ -24,8 +24,8 @@
       "INTCB",
       "GRAM",
       "AVAX",
-      "NEAR",
-      "BNB"
+      "BNB",
+      "NEAR"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -48,8 +48,16 @@
         "coingecko",
         "movers"
       ],
-      "funding": -3e-05,
+      "funding": -2.9e-05,
       "long_short": 1.68
+    },
+    {
+      "symbol": "AERO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "BNB",
@@ -57,7 +65,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 8.2e-05
+      "funding": 7.7e-05
     },
     {
       "symbol": "BTC",
@@ -65,7 +73,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.9e-05
+      "funding": 2.7e-05
     },
     {
       "symbol": "DOGE",
@@ -73,7 +81,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 8.3e-05
+      "funding": 7.7e-05
     },
     {
       "symbol": "HYPE",
@@ -96,7 +104,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -1.3e-05
+      "funding": -1.6e-05
     },
     {
       "symbol": "MUB",
@@ -134,7 +142,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.5e-05
+      "funding": 2.4e-05
     },
     {
       "symbol": "SOXLB",
@@ -165,15 +173,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 0.000325
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 6e-05
+      "funding": 0.000304
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
