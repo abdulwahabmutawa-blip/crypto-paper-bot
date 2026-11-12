@@ -1,17 +1,19 @@
 {
-  "ts": "2026-11-12T04:57:06+00:00",
+  "ts": "2026-11-12T05:02:38+00:00",
   "sources": {
     "coingecko": [
-      "BTC",
       "ZEC",
-      "SOL",
       "PEPE",
+      "BTC",
       "ONDO",
+      "SUI",
+      "SOL",
+      "ETH",
+      "HYPE",
       "INIT",
-      "GRAM",
       "LIT",
-      "MOVE",
-      "ICP"
+      "GRAM",
+      "ARB"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -21,23 +23,12 @@
       "GRAM",
       "AVAX",
       "INTCB",
-      "SOL",
-      "BTC"
+      "SOL"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
-    {
-      "symbol": "BTC",
-      "surfaces": 2,
-      "sources": [
-        "coingecko",
-        "movers"
-      ],
-      "funding": 8.1e-05,
-      "long_short": 2.68
-    },
     {
       "symbol": "GRAM",
       "surfaces": 2,
@@ -46,7 +37,7 @@
         "movers"
       ],
       "funding": 5e-05,
-      "long_short": 1.51
+      "long_short": 1.54
     },
     {
       "symbol": "SOL",
@@ -55,8 +46,16 @@
         "coingecko",
         "movers"
       ],
-      "funding": -4e-06,
-      "long_short": 3.41
+      "funding": -5e-06,
+      "long_short": 3.44
+    },
+    {
+      "symbol": "ARB",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -0.000276
     },
     {
       "symbol": "AVAX",
@@ -64,15 +63,31 @@
       "sources": [
         "movers"
       ],
-      "funding": 4.2e-05
+      "funding": 4.1e-05
     },
     {
-      "symbol": "ICP",
+      "symbol": "BTC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 6.1e-05
+      "funding": 8.1e-05
+    },
+    {
+      "symbol": "ETH",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 6.8e-05
+    },
+    {
+      "symbol": "HYPE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "INIT",
@@ -80,7 +95,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000809
+      "funding": -0.00078
     },
     {
       "symbol": "INTCB",
@@ -95,15 +110,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.5e-05
-    },
-    {
-      "symbol": "MOVE",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": 4.3e-05
     },
     {
       "symbol": "MUB",
@@ -135,12 +142,20 @@
       ]
     },
     {
+      "symbol": "SUI",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": -3.9e-05
+    },
+    {
       "symbol": "ZEC",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 9.8e-05
+      "funding": 9.6e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
