@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-12T15:07:25+00:00 · runs 5823 · equity **$494.02** (-50.60%) · cash $181.49 · open 6/10 · round trips 1982
+updated 2026-11-12T15:24:40+00:00 · runs 5824 · equity **$494.44** (-50.56%) · cash $181.49 · open 6/10 · round trips 1982
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,10 +36,10 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-11T19:19 | QQQBUSDT | surge | 693.04 | 685.28 | -1.12% |
-| 2026-11-11T23:39 | GOOGLBUSDT | surge | 297.09 | 295.09 | -0.67% |
-| 2026-11-12T11:55 | GRAMUSDT | surge | 1.253 | 1.245 | -0.64% |
-| 2026-11-12T13:21 | OPENUSDT | surge | 0.0962 | 0.0961 | -0.10% |
-| 2026-11-12T13:38 | TRXUSDT | bottom | 0.3159 | 0.3156 | -0.09% |
+| 2026-11-11T19:19 | QQQBUSDT | surge | 693.04 | 686.76 | -0.91% |
+| 2026-11-11T23:39 | GOOGLBUSDT | surge | 297.09 | 295.66 | -0.48% |
+| 2026-11-12T11:55 | GRAMUSDT | surge | 1.253 | 1.248 | -0.40% |
+| 2026-11-12T13:21 | OPENUSDT | surge | 0.0962 | 0.0963 | +0.10% |
+| 2026-11-12T13:38 | TRXUSDT | bottom | 0.3159 | 0.3158 | -0.03% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
