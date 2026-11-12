@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-12T06:53:26+00:00",
+  "ts": "2026-11-12T06:58:45+00:00",
   "sources": {
     "coingecko": [
       "GRAM",
@@ -18,11 +18,12 @@
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "GRAM",
       "SNDKB",
       "MUB",
-      "INTCB",
-      "SOL"
+      "GRAM",
+      "ZEC",
+      "SOL",
+      "INTCB"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -39,12 +40,22 @@
       "long_short": 1.54
     },
     {
+      "symbol": "ZEC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 7.9e-05,
+      "long_short": 0.88
+    },
+    {
       "symbol": "AVAX",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 4.7e-05
+      "funding": 4.6e-05
     },
     {
       "symbol": "BTC",
@@ -52,7 +63,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7.3e-05
+      "funding": 7.1e-05
     },
     {
       "symbol": "EPIC",
@@ -68,7 +79,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": -0.000893
+      "funding": -0.000887
     },
     {
       "symbol": "INTCB",
@@ -83,7 +94,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4e-05
+      "funding": 4.1e-05
     },
     {
       "symbol": "MUB",
@@ -120,7 +131,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 8e-06
+      "funding": 7e-06
     },
     {
       "symbol": "STRK",
@@ -128,7 +139,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.5e-05
+      "funding": 4.3e-05
     },
     {
       "symbol": "TAO",
@@ -136,15 +147,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.5e-05
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 8.2e-05
+      "funding": 2.3e-05
     },
     {
       "symbol": "ZRO",
