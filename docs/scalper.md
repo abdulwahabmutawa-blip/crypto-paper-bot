@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-12T07:25:09+00:00 · runs 5800 · equity **$501.17** (-49.88%) · cash $0.00 · open 10/10 · round trips 1971
+updated 2026-11-12T07:42:15+00:00 · runs 5801 · equity **$499.87** (-50.01%) · cash $0.00 · open 10/10 · round trips 1971
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-11T19:19 | QQQBUSDT | surge | 693.04 | 683.89 | -1.32% |
-| 2026-11-11T23:06 | AMDBUSDT | surge | 572.98 | 565.83 | -1.25% |
-| 2026-11-11T23:06 | SPCXBUSDT | bottom | 138.14 | 138.68 | +0.39% |
-| 2026-11-11T23:06 | TAOUSDT | bottom | 216.3 | 215.6 | -0.32% |
-| 2026-11-11T23:39 | GOOGLBUSDT | surge | 297.09 | 294.15 | -0.99% |
-| 2026-11-11T23:39 | AVGOBUSDT | surge | 355.92 | 351.1 | -1.35% |
-| 2026-11-12T05:57 | MSTRBUSDT | bottom | 117.16 | 116.95 | -0.18% |
-| 2026-11-12T06:15 | KITEUSDT | surge | 0.1275 | 0.1274 | -0.08% |
-| 2026-11-12T07:06 | HAEDALUSDT | surge | 0.02634 | 0.0264 | +0.23% |
+| 2026-11-11T19:19 | QQQBUSDT | surge | 693.04 | 684.09 | -1.29% |
+| 2026-11-11T23:06 | AMDBUSDT | surge | 572.98 | 566.01 | -1.22% |
+| 2026-11-11T23:06 | SPCXBUSDT | bottom | 138.14 | 138.74 | +0.43% |
+| 2026-11-11T23:06 | TAOUSDT | bottom | 216.3 | 215.3 | -0.46% |
+| 2026-11-11T23:39 | GOOGLBUSDT | surge | 297.09 | 294.25 | -0.96% |
+| 2026-11-11T23:39 | AVGOBUSDT | surge | 355.92 | 350.98 | -1.39% |
+| 2026-11-12T05:57 | MSTRBUSDT | bottom | 117.16 | 117.02 | -0.12% |
+| 2026-11-12T06:15 | KITEUSDT | surge | 0.1275 | 0.1242 | -2.59% |
+| 2026-11-12T07:06 | HAEDALUSDT | surge | 0.02634 | 0.02633 | -0.04% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
