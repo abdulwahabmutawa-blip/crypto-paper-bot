@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-12T11:56:58+00:00 · runs 5812 · equity **$497.38** (-50.26%) · cash $0.00 · open 10/10 · round trips 1975
+updated 2026-11-12T12:14:50+00:00 · runs 5813 · equity **$498.79** (-50.12%) · cash $0.00 · open 10/10 · round trips 1975
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-11T19:19 | QQQBUSDT | surge | 693.04 | 684.65 | -1.21% |
-| 2026-11-11T23:06 | AMDBUSDT | surge | 572.98 | 567.16 | -1.02% |
-| 2026-11-11T23:06 | SPCXBUSDT | bottom | 138.14 | 139.47 | +0.96% |
-| 2026-11-11T23:06 | TAOUSDT | bottom | 216.3 | 211 | -2.45% |
-| 2026-11-11T23:39 | GOOGLBUSDT | surge | 297.09 | 291.87 | -1.76% |
-| 2026-11-11T23:39 | AVGOBUSDT | surge | 355.92 | 351.74 | -1.17% |
-| 2026-11-12T05:57 | MSTRBUSDT | bottom | 117.16 | 114.88 | -1.95% |
-| 2026-11-12T11:55 | ONEUSDT | surge | 0.001701 | 0.001664 | -2.18% |
-| 2026-11-12T11:55 | GRAMUSDT | surge | 1.253 | 1.237 | -1.28% |
+| 2026-11-11T19:19 | QQQBUSDT | surge | 693.04 | 686.38 | -0.96% |
+| 2026-11-11T23:06 | AMDBUSDT | surge | 572.98 | 568.54 | -0.77% |
+| 2026-11-11T23:06 | SPCXBUSDT | bottom | 138.14 | 140.11 | +1.43% |
+| 2026-11-11T23:06 | TAOUSDT | bottom | 216.3 | 211.9 | -2.03% |
+| 2026-11-11T23:39 | GOOGLBUSDT | surge | 297.09 | 293.54 | -1.19% |
+| 2026-11-11T23:39 | AVGOBUSDT | surge | 355.92 | 351.15 | -1.34% |
+| 2026-11-12T05:57 | MSTRBUSDT | bottom | 117.16 | 115.49 | -1.43% |
+| 2026-11-12T11:55 | ONEUSDT | surge | 0.001701 | 0.001666 | -2.06% |
+| 2026-11-12T11:55 | GRAMUSDT | surge | 1.253 | 1.245 | -0.64% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
