@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-12T01:52:36+00:00",
+  "ts": "2026-11-12T01:58:32+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
@@ -21,7 +21,8 @@
       "GRAM",
       "SOXLB",
       "INTCB",
-      "AVAX"
+      "AVAX",
+      "BTC"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -39,11 +40,13 @@
     },
     {
       "symbol": "BTC",
-      "surfaces": 1,
+      "surfaces": 2,
       "sources": [
-        "coingecko"
+        "coingecko",
+        "movers"
       ],
-      "funding": 6.4e-05
+      "funding": 6.7e-05,
+      "long_short": 2.64
     },
     {
       "symbol": "EPIC",
@@ -82,7 +85,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.6e-05
+      "funding": 3.1e-05
     },
     {
       "symbol": "MUB",
@@ -127,7 +130,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 3.5e-05
+      "funding": 3.9e-05
     },
     {
       "symbol": "XRP",
