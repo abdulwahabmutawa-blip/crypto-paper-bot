@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-12T08:50:38+00:00 · runs 5805 · equity **$500.26** (-49.97%) · cash $45.97 · open 9/10 · round trips 1972
+updated 2026-11-12T09:07:40+00:00 · runs 5806 · equity **$499.47** (-50.05%) · cash $45.97 · open 9/10 · round trips 1972
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,13 +36,13 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-11T19:19 | QQQBUSDT | surge | 693.04 | 685.11 | -1.14% |
-| 2026-11-11T23:06 | AMDBUSDT | surge | 572.98 | 572.03 | -0.17% |
-| 2026-11-11T23:06 | SPCXBUSDT | bottom | 138.14 | 139.11 | +0.70% |
-| 2026-11-11T23:06 | TAOUSDT | bottom | 216.3 | 214.5 | -0.83% |
-| 2026-11-11T23:39 | GOOGLBUSDT | surge | 297.09 | 295.14 | -0.66% |
+| 2026-11-11T19:19 | QQQBUSDT | surge | 693.04 | 684.44 | -1.24% |
+| 2026-11-11T23:06 | AMDBUSDT | surge | 572.98 | 568.03 | -0.86% |
+| 2026-11-11T23:06 | SPCXBUSDT | bottom | 138.14 | 138.9 | +0.55% |
+| 2026-11-11T23:06 | TAOUSDT | bottom | 216.3 | 213.5 | -1.29% |
+| 2026-11-11T23:39 | GOOGLBUSDT | surge | 297.09 | 294.91 | -0.73% |
 | 2026-11-11T23:39 | AVGOBUSDT | surge | 355.92 | 354.51 | -0.40% |
-| 2026-11-12T05:57 | MSTRBUSDT | bottom | 117.16 | 117.22 | +0.05% |
-| 2026-11-12T07:06 | HAEDALUSDT | surge | 0.02634 | 0.02605 | -1.10% |
+| 2026-11-12T05:57 | MSTRBUSDT | bottom | 117.16 | 117.02 | -0.12% |
+| 2026-11-12T07:06 | HAEDALUSDT | surge | 0.02634 | 0.02604 | -1.14% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
