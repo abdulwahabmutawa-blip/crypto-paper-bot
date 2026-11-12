@@ -1,20 +1,20 @@
 {
-  "ts": "2026-11-12T07:25:47+00:00",
+  "ts": "2026-11-12T07:31:37+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
-      "GRAM",
-      "LINK",
-      "ZEC",
       "EPIC",
       "SOL",
-      "TAO",
-      "LIT",
-      "INIT",
+      "GRAM",
       "BTC",
+      "ZEC",
+      "LINK",
       "HYPE",
-      "QNT",
-      "ZRO"
+      "AERO",
+      "TAO",
+      "PEPE",
+      "LIT",
+      "QNT"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,7 +22,8 @@
       "GRAM",
       "SNDKB",
       "MUB",
-      "INTCB"
+      "INTCB",
+      "ZEC"
     ],
     "watcher": [],
     "cryptopanic": []
@@ -35,8 +36,26 @@
         "coingecko",
         "movers"
       ],
-      "funding": 0.0,
+      "funding": -2.4e-05,
       "long_short": 1.59
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": 6.6e-05,
+      "long_short": 0.86
+    },
+    {
+      "symbol": "AERO",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 5e-05
     },
     {
       "symbol": "BTC",
@@ -44,7 +63,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7e-05
+      "funding": 6.9e-05
     },
     {
       "symbol": "EPIC",
@@ -63,14 +82,6 @@
       "funding": 5e-05
     },
     {
-      "symbol": "INIT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": -0.00088
-    },
-    {
       "symbol": "INTCB",
       "surfaces": 1,
       "sources": [
@@ -83,7 +94,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 1.6e-05
+      "funding": 1.5e-05
     },
     {
       "symbol": "LIT",
@@ -109,12 +120,19 @@
       "funding": 5e-05
     },
     {
+      "symbol": "PEPE",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ]
+    },
+    {
       "symbol": "QNT",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 1.3e-05
+      "funding": 2e-05
     },
     {
       "symbol": "SNDKB",
@@ -129,7 +147,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 7e-06
+      "funding": 8e-06
     },
     {
       "symbol": "TAO",
@@ -137,23 +155,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.7e-05
-    },
-    {
-      "symbol": "ZEC",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 6.8e-05
-    },
-    {
-      "symbol": "ZRO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 5e-05
+      "funding": 3e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
