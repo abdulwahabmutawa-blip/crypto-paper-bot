@@ -1,24 +1,8 @@
 {
-  "ts": "2026-11-12T00:12:53+00:00",
-  "scanned": 83,
+  "ts": "2026-11-12T00:18:32+00:00",
+  "scanned": 82,
   "ruleset": 3,
-  "candidates": [
-    {
-      "symbol": "AAVEUSDT",
-      "signal": "ignition",
-      "score": 0.6388,
-      "raw_score": 0.7283,
-      "weight": 0.877,
-      "price": 119.2,
-      "why": "trades 5.3x and volume 27.0x the prior 4h, 67% taker-buy, $710,510 burst \u2014 while price has only moved +0.1%",
-      "chg_24h": -0.0377,
-      "vol_surge": 27.04,
-      "chg_1h": 0.001,
-      "market_surge": 16.86,
-      "actionable": false,
-      "status": "benched \u2014 BTC-excess day mean -1.50% at 24h: market beta, not signal"
-    }
-  ],
+  "candidates": [],
   "gate": {
     "ignition": "benched \u2014 BTC-excess day mean -1.50% at 24h: market beta, not signal",
     "breakout": "benched \u2014 BTC-excess day mean -2.00% at 24h: market beta, not signal",
@@ -27,7 +11,7 @@
     "revival": "benched \u2014 BTC-excess day mean -1.63% at 24h: market beta, not signal"
   },
   "breadth": {
-    "count": 12,
+    "count": 15,
     "baseline": 10.0,
     "wave": false
   },
