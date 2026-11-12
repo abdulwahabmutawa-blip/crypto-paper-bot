@@ -1,18 +1,17 @@
 {
-  "ts": "2026-11-12T03:55:31+00:00",
+  "ts": "2026-11-12T04:01:27+00:00",
   "sources": {
     "coingecko": [
+      "BTC",
       "ZEC",
       "SOL",
-      "BTC",
       "ONDO",
-      "ETH",
       "AERO",
-      "ASTER",
-      "NEAR",
+      "EPIC",
       "XRP",
-      "TAO",
-      "LIT"
+      "NEAR",
+      "ETH",
+      "ASTER"
     ],
     "reddit": [],
     "stocktwits": [],
@@ -22,12 +21,24 @@
       "MUB",
       "AVAX",
       "INTCB",
-      "HYPE"
+      "HYPE",
+      "SOXLB",
+      "SOL"
     ],
     "watcher": [],
     "cryptopanic": []
   },
   "heat": [
+    {
+      "symbol": "SOL",
+      "surfaces": 2,
+      "sources": [
+        "coingecko",
+        "movers"
+      ],
+      "funding": -2e-06,
+      "long_short": 3.41
+    },
     {
       "symbol": "AERO",
       "surfaces": 1,
@@ -42,7 +53,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.9e-05
+      "funding": 5e-05
     },
     {
       "symbol": "AVAX",
@@ -50,7 +61,7 @@
       "sources": [
         "movers"
       ],
-      "funding": 5e-05
+      "funding": 5.1e-05
     },
     {
       "symbol": "BTC",
@@ -61,12 +72,20 @@
       "funding": 7.8e-05
     },
     {
+      "symbol": "EPIC",
+      "surfaces": 1,
+      "sources": [
+        "coingecko"
+      ],
+      "funding": 0.0
+    },
+    {
       "symbol": "ETH",
       "surfaces": 1,
       "sources": [
         "coingecko"
       ],
-      "funding": 7e-05
+      "funding": 7.1e-05
     },
     {
       "symbol": "GRAM",
@@ -92,14 +111,6 @@
       ]
     },
     {
-      "symbol": "LIT",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 4.2e-05
-    },
-    {
       "symbol": "MUB",
       "surfaces": 1,
       "sources": [
@@ -120,7 +131,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 2.3e-05
+      "funding": 2.6e-05
     },
     {
       "symbol": "SNDKB",
@@ -130,20 +141,11 @@
       ]
     },
     {
-      "symbol": "SOL",
+      "symbol": "SOXLB",
       "surfaces": 1,
       "sources": [
-        "coingecko"
-      ],
-      "funding": -3e-06
-    },
-    {
-      "symbol": "TAO",
-      "surfaces": 1,
-      "sources": [
-        "coingecko"
-      ],
-      "funding": 1.5e-05
+        "movers"
+      ]
     },
     {
       "symbol": "XRP",
