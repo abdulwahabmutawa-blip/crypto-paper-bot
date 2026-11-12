@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-12T10:10:46+00:00",
+  "ts": "2026-11-12T10:16:29+00:00",
   "sources": {
     "coingecko": [
       "PENGU",
@@ -16,10 +16,12 @@
     "reddit": [],
     "stocktwits": [],
     "movers": [
-      "GRAM",
       "MUB",
+      "GRAM",
       "SNDKB",
       "INTCB",
+      "SOXLB",
+      "ZEC",
       "RLUSD"
     ],
     "watcher": [],
@@ -33,7 +35,7 @@
         "coingecko",
         "movers"
       ],
-      "funding": -2e-05,
+      "funding": -2.4e-05,
       "long_short": 1.64
     },
     {
@@ -42,7 +44,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.2e-05
+      "funding": 8.9e-05
     },
     {
       "symbol": "BTC",
@@ -50,7 +52,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.5e-05
+      "funding": 4.3e-05
     },
     {
       "symbol": "HYPE",
@@ -73,7 +75,7 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 4.2e-05
+      "funding": 4.3e-05
     },
     {
       "symbol": "MUB",
@@ -120,6 +122,13 @@
       "funding": 3.5e-05
     },
     {
+      "symbol": "SOXLB",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ]
+    },
+    {
       "symbol": "TAO",
       "surfaces": 1,
       "sources": [
@@ -133,7 +142,15 @@
       "sources": [
         "coingecko"
       ],
-      "funding": 9.7e-05
+      "funding": 9.6e-05
+    },
+    {
+      "symbol": "ZEC",
+      "surfaces": 1,
+      "sources": [
+        "movers"
+      ],
+      "funding": 8.2e-05
     }
   ],
   "note": "READ-ONLY heat map. Surfaces are independent; agreement is the signal. The Scout's gate decides if it trades."
