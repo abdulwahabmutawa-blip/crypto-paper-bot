@@ -4005,29 +4005,6 @@
   },
   {
    "symbol": "XPLUSDT",
-   "tactic": "momentum|t3|s2|h12",
-   "shape": "momentum",
-   "target": 0.03,
-   "stop": 0.02,
-   "max_h": 12,
-   "entry": 0.04998,
-   "entry_ms": 1794561299999,
-   "entry_ts": "2026-11-13T09:29:12+00:00",
-   "feat": {
-    "r1h": -0.00339,
-    "r4h": 0.0303,
-    "r24": -0.00794,
-    "v4h": 2.44674,
-    "tbs4h": 0.48588,
-    "rp24": 0.73529,
-    "rng24": 0.07919,
-    "btc1": 0.00269,
-    "btc4": 0.00409,
-    "btc24": -0.06135
-   }
-  },
-  {
-   "symbol": "XPLUSDT",
    "tactic": "momentum|t3|s3|h24",
    "shape": "momentum",
    "target": 0.03,
@@ -7271,33 +7248,6 @@
   }
  ],
  "resolved": [
-  {
-   "symbol": "ONDOUSDT",
-   "tactic": "momentum|t2|s2|h8",
-   "shape": "momentum",
-   "target": 0.02,
-   "stop": 0.02,
-   "max_h": 8,
-   "entry": 0.416,
-   "entry_ms": 1793806199999,
-   "entry_ts": "2026-11-04T15:44:06+00:00",
-   "feat": {
-    "r1h": 0.04628,
-    "r4h": 0.02463,
-    "r24": 0.07605,
-    "v4h": 3.80687,
-    "tbs4h": 0.52053,
-    "rp24": 0.90045,
-    "rng24": 0.11749,
-    "btc1": 0.01101,
-    "btc4": 0.02132,
-    "btc24": 0.0351
-   },
-   "ret": -0.0225,
-   "how": "STOP",
-   "hours": 1.5,
-   "exit_ts": "2026-11-04T17:13:47+00:00"
-  },
   {
    "symbol": "ONDOUSDT",
    "tactic": "momentum|t3|s2|h12",
@@ -547270,8 +547220,35 @@
    "how": "TARGET",
    "hours": 0.25,
    "exit_ts": "2026-11-13T21:23:37+00:00"
+  },
+  {
+   "symbol": "XPLUSDT",
+   "tactic": "momentum|t3|s2|h12",
+   "shape": "momentum",
+   "target": 0.03,
+   "stop": 0.02,
+   "max_h": 12,
+   "entry": 0.04998,
+   "entry_ms": 1794561299999,
+   "entry_ts": "2026-11-13T09:29:12+00:00",
+   "feat": {
+    "r1h": -0.00339,
+    "r4h": 0.0303,
+    "r24": -0.00794,
+    "v4h": 2.44674,
+    "tbs4h": 0.48588,
+    "rp24": 0.73529,
+    "rng24": 0.07919,
+    "btc1": 0.00269,
+    "btc4": 0.00409,
+    "btc24": -0.06135
+   },
+   "ret": -0.0007,
+   "how": "TIME",
+   "hours": 12.0,
+   "exit_ts": "2026-11-13T21:39:57+00:00"
   }
  ],
- "runs": 5985,
- "updated": "2026-11-13T21:23:37+00:00"
+ "runs": 5986,
+ "updated": "2026-11-13T21:39:57+00:00"
 }

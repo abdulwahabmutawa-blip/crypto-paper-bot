@@ -1,6 +1,6 @@
 # Small-wins lab — paper study (owner request 2026-09-04)
 
-updated 2026-11-13T21:25:07+00:00 · runs 5985 · open 316 · resolved 20000 · cost 0.25%/RT
+updated 2026-11-13T21:41:26+00:00 · runs 5986 · open 315 · resolved 20000 · cost 0.25%/RT
 
 PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst day > -3 units.
 
@@ -51,9 +51,9 @@ PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst
 | dip_mid|t4|s2|h24 | 273 | 9 | 30.3 | 28% | 38% | -0.58% | 27% | 71% | 2% | -72.0% | fail |
 | range_bottom|t4|s2|h24 | 526 | 10 | 52.6 | 28% | 38% | -0.59% | 22% | 65% | 13% | -131.5% | fail |
 | dip_large|t4|s2|h24 | 380 | 9 | 42.2 | 28% | 38% | -0.62% | 26% | 72% | 2% | -76.0% | fail |
-| momentum|t2|s2|h8 | 634 | 10 | 63.4 | 37% | 56% | -0.66% | 34% | 52% | 14% | -137.2% | fail |
+| momentum|t2|s2|h8 | 633 | 10 | 63.3 | 37% | 56% | -0.66% | 34% | 52% | 14% | -135.0% | fail |
 | dip_mid|t5|s3|h48 | 241 | 10 | 24.1 | 33% | 41% | -0.68% | 31% | 67% | 2% | -75.0% | fail |
-| momentum|t3|s2|h12 | 569 | 10 | 56.9 | 28% | 45% | -0.80% | 24% | 63% | 14% | -136.7% | fail |
+| momentum|t3|s2|h12 | 570 | 10 | 57.0 | 28% | 45% | -0.80% | 24% | 63% | 14% | -136.7% | fail |
 | dip_large|t3|s3|h24 | 346 | 9 | 38.4 | 41% | 54% | -0.81% | 38% | 58% | 4% | -89.3% | fail |
 | range_bottom|t3|s3|h24 | 451 | 10 | 45.1 | 38% | 54% | -0.81% | 33% | 51% | 15% | -149.2% | fail |
 | dip_large|t3|s4|h48 | 306 | 10 | 30.6 | 46% | 61% | -1.02% | 45% | 53% | 2% | -100.5% | fail |
