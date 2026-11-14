@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-14T13:43:37+00:00 · runs 5976 · equity **$491.96** (-50.80%) · cash $226.74 · open 5/10 · round trips 1988
+updated 2026-11-14T13:59:53+00:00 · runs 5977 · equity **$492.00** (-50.80%) · cash $226.74 · open 5/10 · round trips 1988
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,9 +36,9 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-14T05:52 | GOOGLBUSDT | bottom | 293.01 | 292.95 | -0.02% |
-| 2026-11-14T05:52 | FETUSDT | bottom | 0.1418 | 0.1388 | -2.12% |
-| 2026-11-14T05:52 | SPCXBUSDT | bottom | 136.28 | 135.13 | -0.84% |
-| 2026-11-14T06:09 | WLFIUSDT | surge | 0.0478 | 0.0478 | +0.00% |
+| 2026-11-14T05:52 | GOOGLBUSDT | bottom | 293.01 | 292.56 | -0.15% |
+| 2026-11-14T05:52 | FETUSDT | bottom | 0.1418 | 0.1387 | -2.19% |
+| 2026-11-14T05:52 | SPCXBUSDT | bottom | 136.28 | 135.26 | -0.75% |
+| 2026-11-14T06:09 | WLFIUSDT | surge | 0.0478 | 0.0479 | +0.21% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
