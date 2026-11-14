@@ -7868,29 +7868,6 @@
    }
   },
   {
-   "symbol": "INITUSDT",
-   "tactic": "range_bottom|t1.5|s1.5|h8",
-   "shape": "range_bottom",
-   "target": 0.015,
-   "stop": 0.015,
-   "max_h": 8,
-   "entry": 0.11328,
-   "entry_ms": 1794616199999,
-   "entry_ts": "2026-11-14T00:34:08+00:00",
-   "feat": {
-    "r1h": -0.00282,
-    "r4h": -0.00806,
-    "r24": -0.02689,
-    "v4h": 0.50409,
-    "tbs4h": 0.42347,
-    "rp24": 0.12936,
-    "rng24": 0.16803,
-    "btc1": 6e-05,
-    "btc4": -0.01074,
-    "btc24": -0.03915
-   }
-  },
-  {
    "symbol": "SPCXBUSDT",
    "tactic": "range_bottom|t1|s1|h6",
    "shape": "range_bottom",
@@ -8326,36 +8303,78 @@
     "btc4": -0.00228,
     "btc24": -0.03998
    }
+  },
+  {
+   "symbol": "RWUSDUSDT",
+   "tactic": "range_bottom|t1.5|s1.5|h8",
+   "shape": "range_bottom",
+   "target": 0.015,
+   "stop": 0.015,
+   "max_h": 8,
+   "entry": 0.9998,
+   "entry_ms": 1794619799999,
+   "entry_ts": "2026-11-14T01:39:48+00:00",
+   "feat": {
+    "r1h": -0.0001,
+    "r4h": -0.0001,
+    "r24": -0.0001,
+    "v4h": 0.6052,
+    "tbs4h": 0.27445,
+    "rp24": 0.0,
+    "rng24": 0.0002,
+    "btc1": -0.00047,
+    "btc4": 0.00191,
+    "btc24": -0.03785
+   }
+  },
+  {
+   "symbol": "RWUSDUSDT",
+   "tactic": "range_bottom|t2|s2|h8",
+   "shape": "range_bottom",
+   "target": 0.02,
+   "stop": 0.02,
+   "max_h": 8,
+   "entry": 0.9998,
+   "entry_ms": 1794619799999,
+   "entry_ts": "2026-11-14T01:39:48+00:00",
+   "feat": {
+    "r1h": -0.0001,
+    "r4h": -0.0001,
+    "r24": -0.0001,
+    "v4h": 0.6052,
+    "tbs4h": 0.27445,
+    "rp24": 0.0,
+    "rng24": 0.0002,
+    "btc1": -0.00047,
+    "btc4": 0.00191,
+    "btc24": -0.03785
+   }
+  },
+  {
+   "symbol": "RWUSDUSDT",
+   "tactic": "range_bottom|t1.5|s1|h8",
+   "shape": "range_bottom",
+   "target": 0.015,
+   "stop": 0.01,
+   "max_h": 8,
+   "entry": 0.9998,
+   "entry_ms": 1794619799999,
+   "entry_ts": "2026-11-14T01:39:48+00:00",
+   "feat": {
+    "r1h": -0.0001,
+    "r4h": -0.0001,
+    "r24": -0.0001,
+    "v4h": 0.6052,
+    "tbs4h": 0.27445,
+    "rp24": 0.0,
+    "rng24": 0.0002,
+    "btc1": -0.00047,
+    "btc4": 0.00191,
+    "btc24": -0.03785
+   }
   }
  ],
  "resolved": [
-  {
-   "symbol": "SNXXBUSDT",
-   "tactic": "dip_mid|t3|s3|h24",
-   "shape": "dip_mid",
-   "target": 0.03,
-   "stop": 0.03,
-   "max_h": 24,
-   "entry": 5.3,
-   "entry_ms": 1793808899999,
-   "entry_ts": "2026-11-04T16:20:31+00:00",
-   "feat": {
-    "r1h": -0.1354,
-    "r4h": -0.14791,
-    "r24": -0.17829,
-    "v4h": 7.86757,
-    "tbs4h": 0.45972,
-    "rp24": 0.09091,
-    "rng24": 0.29845,
-    "btc1": 0.00137,
-    "btc4": 0.03106,
-    "btc24": 0.04077
-   },
-   "ret": 0.0275,
-   "how": "TARGET",
-   "hours": 0.5,
-   "exit_ts": "2026-11-04T17:13:47+00:00"
-  },
   {
    "symbol": "SNXXBUSDT",
    "tactic": "dip_mid|t4|s2|h24",
@@ -548328,8 +548347,35 @@
    "how": "TARGET",
    "hours": 0.25,
    "exit_ts": "2026-11-14T01:23:24+00:00"
+  },
+  {
+   "symbol": "INITUSDT",
+   "tactic": "range_bottom|t1.5|s1.5|h8",
+   "shape": "range_bottom",
+   "target": 0.015,
+   "stop": 0.015,
+   "max_h": 8,
+   "entry": 0.11328,
+   "entry_ms": 1794616199999,
+   "entry_ts": "2026-11-14T00:34:08+00:00",
+   "feat": {
+    "r1h": -0.00282,
+    "r4h": -0.00806,
+    "r24": -0.02689,
+    "v4h": 0.50409,
+    "tbs4h": 0.42347,
+    "rp24": 0.12936,
+    "rng24": 0.16803,
+    "btc1": 6e-05,
+    "btc4": -0.01074,
+    "btc24": -0.03915
+   },
+   "ret": -0.0175,
+   "how": "STOP",
+   "hours": 0.75,
+   "exit_ts": "2026-11-14T01:39:48+00:00"
   }
  ],
- "runs": 6000,
- "updated": "2026-11-14T01:23:24+00:00"
+ "runs": 6001,
+ "updated": "2026-11-14T01:39:48+00:00"
 }
