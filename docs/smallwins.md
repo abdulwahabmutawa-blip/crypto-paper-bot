@@ -1,13 +1,13 @@
 # Small-wins lab — paper study (owner request 2026-09-04)
 
-updated 2026-11-15T19:39:23+00:00 · runs 6152 · open 209 · resolved 20000 · cost 0.25%/RT
+updated 2026-11-15T19:55:40+00:00 · runs 6153 · open 212 · resolved 20000 · cost 0.25%/RT
 
 PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst day > -3 units.
 
 | tactic | n | days | trades/day | hit | break-even | mean net | target% | stop% | time% | worst day | verdict |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | btc_lag|t4|s2|h24 | 128 | 7 | 18.3 | 67% | 38% | +1.66% | 58% | 27% | 15% | -23.8% | PASS |
-| btc_lag|t5|s3|h48 | 110 | 8 | 13.8 | 65% | 41% | +1.62% | 53% | 29% | 18% | -37.5% | PASS |
+| btc_lag|t5|s3|h48 | 111 | 8 | 13.9 | 65% | 41% | +1.65% | 53% | 29% | 18% | -37.5% | PASS |
 | btc_lag|t3|s2|h12 | 140 | 5 | 28.0 | 74% | 45% | +1.41% | 64% | 20% | 16% | -19.2% | PASS |
 | btc_lag|t3|s3|h24 | 137 | 7 | 19.6 | 74% | 54% | +1.30% | 71% | 19% | 10% | -32.3% | PASS |
 | btc_lag|t3|s4|h48 | 135 | 8 | 16.9 | 76% | 61% | +1.17% | 73% | 19% | 7% | -49.7% | PASS |
@@ -24,8 +24,8 @@ PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst
 | dip_mid|t1|s1|h6 | 254 | 8 | 31.8 | 52% | 62% | -0.21% | 52% | 48% | 0% | -26.0% | fail |
 | ignition|t3|s2|h12 | 174 | 11 | 15.8 | 39% | 45% | -0.23% | 25% | 42% | 33% | -28.2% | fail |
 | calm_dip|t1.5|s1|h8 | 18 | 4 | 4.5 | 39% | 50% | -0.23% | 39% | 56% | 6% | -1.2% | fail |
-| ignition|t2|s2|h8 | 192 | 11 | 17.5 | 45% | 56% | -0.24% | 37% | 37% | 26% | -27.0% | fail |
 | ignition|t1.5|s1.5|h8 | 227 | 11 | 20.6 | 47% | 58% | -0.24% | 42% | 43% | 15% | -32.0% | fail |
+| ignition|t2|s2|h8 | 191 | 11 | 17.4 | 45% | 56% | -0.25% | 37% | 37% | 26% | -28.8% | fail |
 | calm_dip|t1|s1|h6 | 18 | 5 | 3.6 | 50% | 62% | -0.25% | 50% | 50% | 0% | -3.5% | fail |
 | calm_dip|t1.5|s1.5|h8 | 17 | 4 | 4.2 | 47% | 58% | -0.26% | 47% | 47% | 6% | -2.2% | fail |
 | ignition|t5|s3|h48 | 121 | 11 | 11.0 | 39% | 41% | -0.27% | 29% | 51% | 20% | -23.6% | fail |
