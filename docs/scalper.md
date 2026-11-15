@@ -2,20 +2,21 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-15T20:47:23+00:00 · runs 6087 · equity **$492.93** (-50.71%) · cash $0.00 · open 10/10 · round trips 2001
+updated 2026-11-15T21:03:44+00:00 · runs 6088 · equity **$492.53** (-50.75%) · cash $0.00 · open 10/10 · round trips 2002
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
-- hit 47% (break-even 54%) · mean -0.36%/trade · realized $-506.81 · worst day $-50.94 · trades/day 27.8
+- hit 47% (break-even 54%) · mean -0.36%/trade · realized $-508.30 · worst day $-50.94 · trades/day 27.8
 
 | shape | n | hit | mean | target% | stop% | time% |
 |---|---|---|---|---|---|---|
-| surge | 1728 | 48% | -0.33% | 45% | 48% | 7% |
+| surge | 1729 | 48% | -0.33% | 45% | 48% | 7% |
 | bottom | 273 | 42% | -0.54% | 36% | 44% | 20% |
 
 ## Last 15 round trips
 | exit (UTC) | coin | shape | how | hours | net | P&L |
 |---|---|---|---|---|---|---|
+| 2026-11-15T21:02 | WINUSDT | surge | STOP | 1.5 | -3.25% | $-1.48 |
 | 2026-11-15T20:25 | PARTIUSDT | surge | STOP | 3.5 | -3.25% | $-1.47 |
 | 2026-11-15T20:25 | KITEUSDT | surge | TARGET | 6.5 | +2.75% | $+1.24 |
 | 2026-11-15T19:20 | FFUSDT | surge | STOP | 0.2 | -3.25% | $-1.50 |
@@ -30,20 +31,19 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | 2026-11-14T19:55 | WLFIUSDT | surge | STOP | 13.5 | -3.25% | $-1.47 |
 | 2026-11-14T14:14 | FETUSDT | bottom | STOP | 8.2 | -3.25% | $-1.47 |
 | 2026-11-14T06:26 | DODOUSDT | surge | TARGET | 0.2 | +2.75% | $+1.24 |
-| 2026-11-13T16:11 | TRXUSDT | bottom | TIME | 24.0 | -0.98% | $-0.44 |
 
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-15T14:30 | LSKUSDT | surge | 0.148 | 0.1474 | -0.41% |
-| 2026-11-15T14:58 | TRXUSDT | bottom | 0.3057 | 0.3051 | -0.20% |
+| 2026-11-15T14:30 | LSKUSDT | surge | 0.148 | 0.1475 | -0.34% |
+| 2026-11-15T14:58 | TRXUSDT | bottom | 0.3057 | 0.3048 | -0.29% |
 | 2026-11-15T16:20 | PROMUSDT | surge | 5.211 | 5.248 | +0.71% |
-| 2026-11-15T16:53 | SOXLBUSDT | surge | 56.36 | 56.68 | +0.57% |
-| 2026-11-15T19:20 | WINUSDT | surge | 5.631e-05 | 5.583e-05 | -0.85% |
-| 2026-11-15T19:20 | NVDABUSDT | surge | 164.87 | 164 | -0.53% |
-| 2026-11-15T19:36 | NBISBUSDT | surge | 113.18 | 113.4 | +0.19% |
-| 2026-11-15T20:25 | SENTUSDT | surge | 0.01694 | 0.01693 | -0.06% |
-| 2026-11-15T20:45 | KORUBUSDT | surge | 7.4 | 7.4 | +0.00% |
+| 2026-11-15T16:53 | SOXLBUSDT | surge | 56.36 | 56.6 | +0.43% |
+| 2026-11-15T19:20 | NVDABUSDT | surge | 164.87 | 165.45 | +0.35% |
+| 2026-11-15T19:36 | NBISBUSDT | surge | 113.18 | 113.75 | +0.50% |
+| 2026-11-15T20:25 | SENTUSDT | surge | 0.01694 | 0.01708 | +0.83% |
+| 2026-11-15T20:45 | KORUBUSDT | surge | 7.4 | 7.46 | +0.81% |
+| 2026-11-15T21:02 | SAGAUSDT | surge | 0.01416 | 0.01399 | -1.20% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
