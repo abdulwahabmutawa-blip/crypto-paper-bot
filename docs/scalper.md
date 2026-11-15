@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-15T06:08:43+00:00 · runs 6033 · equity **$490.19** (-50.98%) · cash $404.02 · open 1/10 · round trips 1992
+updated 2026-11-15T06:25:09+00:00 · runs 6034 · equity **$490.19** (-50.98%) · cash $404.02 · open 1/10 · round trips 1992
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
