@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-15T18:32:44+00:00 · runs 6078 · equity **$493.18** (-50.68%) · cash $138.20 · open 7/10 · round trips 1998
+updated 2026-11-15T18:48:59+00:00 · runs 6079 · equity **$493.38** (-50.66%) · cash $92.13 · open 8/10 · round trips 1998
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,11 +36,12 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-15T13:37 | KITEUSDT | surge | 0.1381 | 0.1387 | +0.43% |
-| 2026-11-15T14:30 | LSKUSDT | surge | 0.148 | 0.1451 | -1.96% |
+| 2026-11-15T13:37 | KITEUSDT | surge | 0.1381 | 0.1392 | +0.80% |
+| 2026-11-15T14:30 | LSKUSDT | surge | 0.148 | 0.1452 | -1.89% |
 | 2026-11-15T14:58 | TRXUSDT | bottom | 0.3057 | 0.3052 | -0.16% |
-| 2026-11-15T16:20 | PROMUSDT | surge | 5.211 | 5.192 | -0.36% |
-| 2026-11-15T16:37 | PARTIUSDT | surge | 0.0357 | 0.0357 | +0.00% |
-| 2026-11-15T16:53 | SOXLBUSDT | surge | 56.36 | 55.35 | -1.79% |
+| 2026-11-15T16:20 | PROMUSDT | surge | 5.211 | 5.211 | +0.00% |
+| 2026-11-15T16:37 | PARTIUSDT | surge | 0.0357 | 0.0356 | -0.28% |
+| 2026-11-15T16:53 | SOXLBUSDT | surge | 56.36 | 55.45 | -1.61% |
+| 2026-11-15T18:47 | FFUSDT | surge | 0.10006 | 0.09981 | -0.25% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
