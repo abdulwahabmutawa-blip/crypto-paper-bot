@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-16T10:20:16+00:00 · runs 6137 · equity **$490.88** (-50.91%) · cash $0.00 · open 10/10 · round trips 2019
+updated 2026-11-16T10:36:24+00:00 · runs 6138 · equity **$490.97** (-50.90%) · cash $0.00 · open 10/10 · round trips 2019
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-15T14:58 | TRXUSDT | bottom | 0.3057 | 0.3028 | -0.95% |
-| 2026-11-15T21:02 | SAGAUSDT | surge | 0.01416 | 0.01403 | -0.92% |
-| 2026-11-16T01:24 | PROMUSDT | surge | 5.315 | 5.22 | -1.79% |
-| 2026-11-16T02:01 | MSTRBUSDT | surge | 102.8 | 103.21 | +0.40% |
-| 2026-11-16T02:36 | BMNRBUSDT | surge | 16.7 | 16.32 | -2.28% |
-| 2026-11-16T06:03 | SOXSBUSDT | surge | 55.98 | 56.25 | +0.48% |
-| 2026-11-16T07:11 | PEPEUSDT | bottom | 3.77e-06 | 3.77e-06 | +0.00% |
-| 2026-11-16T07:46 | NBISBUSDT | bottom | 110.23 | 109.83 | -0.36% |
-| 2026-11-16T09:30 | SENTUSDT | surge | 0.01735 | 0.01725 | -0.58% |
+| 2026-11-15T14:58 | TRXUSDT | bottom | 0.3057 | 0.3029 | -0.92% |
+| 2026-11-15T21:02 | SAGAUSDT | surge | 0.01416 | 0.01396 | -1.41% |
+| 2026-11-16T01:24 | PROMUSDT | surge | 5.315 | 5.184 | -2.46% |
+| 2026-11-16T02:01 | MSTRBUSDT | surge | 102.8 | 103.29 | +0.48% |
+| 2026-11-16T02:36 | BMNRBUSDT | surge | 16.7 | 16.33 | -2.22% |
+| 2026-11-16T06:03 | SOXSBUSDT | surge | 55.98 | 56.2 | +0.39% |
+| 2026-11-16T07:11 | PEPEUSDT | bottom | 3.77e-06 | 3.76e-06 | -0.27% |
+| 2026-11-16T07:46 | NBISBUSDT | bottom | 110.23 | 109.59 | -0.58% |
+| 2026-11-16T09:30 | SENTUSDT | surge | 0.01735 | 0.01755 | +1.15% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
