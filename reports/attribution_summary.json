@@ -1,12 +1,12 @@
 {
-  "updated_utc": "2026-10-13T08:45:00+00:00",
-  "daily_lines_total": 439,
-  "trade_event_lines_total": 139,
+  "updated_utc": "2026-11-16T09:20:00+00:00",
+  "daily_lines_total": 446,
+  "trade_event_lines_total": 142,
   "by_primary_driver": {
     "unknown": {
       "profit": 15,
       "loss": 15,
-      "flat": 86
+      "flat": 87
     },
     "market_beta": {
       "profit": 43,
@@ -16,7 +16,7 @@
     "none_cash": {
       "profit": 0,
       "loss": 1,
-      "flat": 82
+      "flat": 87
     },
     "macro": {
       "profit": 18,
@@ -36,7 +36,7 @@
     "technical": {
       "profit": 10,
       "loss": 25,
-      "flat": 0
+      "flat": 1
     },
     "news_idiosyncratic": {
       "profit": 10,
@@ -53,7 +53,7 @@
     "n/a": {
       "profit": 14,
       "loss": 6,
-      "flat": 171
+      "flat": 178
     },
     "alpha": {
       "profit": 58,
@@ -71,5 +71,6 @@
       "flat": 2
     }
   },
-  "note": "Rolling tally over every daily attribution line ever filed. 'unknown' is a legitimate and common verdict - it means no citable cause was found, not that none existed. The none_cash count is inflated in September because the Watcher outage has held the hype trader, the live IBKR book and the real-money lottery box in cash simultaneously."
+  "note": "Rolling tally over every daily attribution line ever filed. 'unknown' is a legitimate and common verdict - it means no citable cause was found, not that none existed. The none_cash count is inflated in September because the Watcher outage has held the hype trader, the live IBKR book and the real-money lottery box in cash simultaneously.",
+  "gap_note": "No daily lines exist for 2026-10-14..2026-11-15 (supervisor did not run); the 11-16 trade_event lines are catch-up summaries and are not counted in the daily tally."
 }

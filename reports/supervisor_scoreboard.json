@@ -1,40 +1,39 @@
 {
-  "updated_utc": "2026-10-13T08:45:00+00:00",
-  "run_note": "Daily run 10-13 ~08:30Z. (1) No R1 breach and no SIM-INTEGRITY ALERT: all 21 new scalper entries lie inside the Binance 24h range; the known stale-close skew persists (9 of 21 outside the fill-minute window). (2) Scalper 754.09, $4.09 above R1, and bot_scalper.py has no code-level R1 guard. (3) Sentiment still R1-frozen at 726.83; the 10-12 fill-rewrite alert is still open. (4) Loop: paper-trade-cycle run 38333089376 ended 07:13Z with no queued successor; 75 min without a cycle at 08:28Z, under the 90-min flag but open-ended. Largest closed gap in the window: 38 min. (5) JNJ (meanrev) reports Q3 before the 10-13 open. Closed 2026-10-12-scalper-1 (+11.91), issued 5.",
+  "updated_utc": "2026-11-16T09:20:00+00:00",
+  "run_note": "Daily run 11-16 ~08:10-09:20Z, the FIRST supervisor run since 10-13 (34-day gap; catch-up lines filed). (1) R1 HARD-STOP BREACH: scalper 490.04; realized equity crossed 750 on 10-13 and the bot traded 797 more round trips for -263. (2) No new SIM-INTEGRITY ALERT: meanrev/crypto fills since 10-13 all in hours and in range; scalper last-24h entries 25/35 inside the 1m window, 10 stale-close skews under 2.5%. (3) Stale: carry + lottery state since 11-12 11:41Z; Watcher verdict since 10-20 16:09Z. (4) Loop healthy: 92 cycle commits in 24h, largest gap 17.7 min, no failed runs. (5) git pull failed 4 times on a slow link before succeeding in steps. Closed 2026-10-13-scalper-1 (+264.05), issued 5.",
   "fleet_snapshot": {
-    "as_of": "2026-10-13 07:09Z",
+    "as_of": "2026-11-16 08:42Z",
     "active_paper_bots": 4,
     "baseline_usd": 4000,
     "active_bots": {
-      "meanrev": 1150.44,
-      "crypto": 1193.18,
-      "scalper": 754.09,
-      "sentiment": 726.83
+      "crypto": 1027.21,
+      "meanrev": 1000.74,
+      "sentiment": 726.83,
+      "scalper": 490.04
     },
-    "total_value_usd": 3824.54,
-    "total_pnl_usd": -175.46,
-    "total_pnl_pct": -4.39,
-    "sentiment_if_original_fill": 770.43
+    "total_value_usd": 3244.82,
+    "total_pnl_usd": -755.18,
+    "total_pnl_pct": -18.88
   },
-  "total_judgments": 342,
-  "judgments_closed": 341,
+  "total_judgments": 347,
+  "judgments_closed": 346,
   "judgments_open": 1,
   "open_ids": [
-    "2026-10-13-scalper-1"
+    "2026-11-16-scalper-1"
   ],
-  "cumulative_alpha_usd": -441.11,
-  "win_rate_closed_pct": 8.8,
-  "win_rate_note": "Most closed judgments are no_change (alpha 0), so the headline rate carries no information - read the DIRECTIONAL record. This run closed three, all neutral (scalper/sentiment/lottery advice matched the bots' own behavior exactly, alpha 0 each). Cumulative alpha is still dominated by the single -1,111.03 sentiment call from 08-31. New this run: a directional scalper skip_new_entries call (2026-09-30-scalper-2), scored next run on book equity vs 883.21.",
+  "cumulative_alpha_usd": -177.06,
+  "win_rate_closed_pct": 8.7,
+  "win_rate_note": "Most closed judgments are no_change (alpha 0), so read the DIRECTIONAL record. This run's +264.05 scalper win is scored over 34 days because the supervisor was absent, not over the intended 10 trading days (about +130 at that mark). Cumulative alpha is still dominated by the -1,111.03 sentiment call from 08-31.",
   "directional_record": {
-    "scored": 50,
-    "wins": 29,
+    "scored": 51,
+    "wins": 30,
     "losses": 21,
-    "neutral": 291,
+    "neutral": 295,
     "basis": "sign of realized alpha on closed judgments; the sparse legacy outcome field is not used"
   },
   "per_bot": {
     "sentiment": {
-      "closed": 33,
+      "closed": 34,
       "alpha": -1161.24,
       "wins": 2,
       "losses": 6,
@@ -47,7 +46,7 @@
       "losses": 2
     },
     "meanrev": {
-      "closed": 38,
+      "closed": 39,
       "alpha": -13.64,
       "wins": 0,
       "losses": 1
@@ -101,7 +100,7 @@
       "losses": 1
     },
     "crypto": {
-      "closed": 44,
+      "closed": 45,
       "alpha": 106.83,
       "wins": 7,
       "losses": 0
@@ -113,14 +112,14 @@
       "losses": 2
     },
     "scalper": {
-      "closed": 14,
-      "alpha": 20.53,
-      "wins": 2,
+      "closed": 15,
+      "alpha": 284.58,
+      "wins": 3,
       "losses": 2,
-      "cumulative_alpha_usd": 102.33
+      "cumulative_alpha_usd": 366.38
     },
     "carry": {
-      "closed": 3,
+      "closed": 4,
       "alpha": 0,
       "wins": 0,
       "losses": 0
@@ -180,33 +179,46 @@
       "real_money": false,
       "silent_from": "2026-09-04T21:09Z and 2026-09-05T14:01Z",
       "status": "NOT A FAULT - retired by owner decisions 40393d47f (09-04) and 0964d2fb4 (09-05), recorded in kill_criteria.md. Dashboards kept as frozen archives. Staleness alarm cleared."
+    },
+    {
+      "bot": "carry/lottery",
+      "real_money": true,
+      "silent_from": "2026-11-12T11:41:40Z",
+      "silent_hours": 93,
+      "status": "State files stopped updating; last commit 'lottery: 2026-11-12 11:41 UTC'. vps-alive workflow still green. Not diagnosed (VPS path, read-only)."
+    },
+    {
+      "bot": "sentinel (Watcher)",
+      "real_money": false,
+      "silent_from": "2026-10-20T16:09:21Z",
+      "status": "sentinel_verdict.json 27 days old; sentinel_gate treats it as UNKNOWN."
     }
   ],
   "loop_health": {
-    "window": "2026-10-12T08:00Z -> 2026-10-13T08:28Z",
-    "cycle_commits_window": 81,
-    "largest_gap_window_min": 38,
-    "largest_gap_window": "2026-10-12T19:13Z -> 19:51Z (run handoff)",
-    "open_gap_min_at_check": 75,
-    "open_gap_from": "2026-10-13T07:13:18Z",
+    "window": "2026-11-15T08:05Z -> 2026-11-16T08:44Z",
+    "cycle_commits_window": 92,
+    "largest_gap_window_min": 17.7,
+    "largest_gap_window": "2026-11-15T11:03Z -> 11:21Z",
     "cron_gap": false,
     "failed_runs": [],
-    "cadence_note": "All paper-trade-cycle runs succeeded. Each run loops 5-10h; the 07:13Z run end had no queued successor at 08:28Z (earlier handoffs took 9-38 min). Deploy-pages and lottery loops are healthy every ~5.5 min."
+    "cadence_note": "paper-trade-cycle runs are multi-hour loops; all recent runs success, one in progress. oracle-cycle and vps-alive green. The lottery/carry loop has committed nothing since 2026-11-12T11:41Z."
   },
   "kill_criteria_flags": {
     "R1_breach_below_750": [
-      "sentiment 726.83 - breached 2026-10-12 08:02Z, self-frozen; the breach rests on the rewritten fill (the original 770.43 would NOT breach) - owner decides",
+      "scalper 490.04 (-51.0%) - realized equity crossed 750 on 2026-10-13, no code-level freeze, still trading 10/10 seats; owner decides",
+      "sentiment 726.83 - breached 2026-10-12, self-frozen; rests on the rewritten STRK fill; owner decides",
       "hypecrypto 739.48 - retired 09-04 (old)"
     ],
     "below_800": [
-      "scalper 754.09 (-24.6%), $4.09 above R1"
-    ],
-    "below_900_drawdown_flag": [
-      "scalper 754.09",
+      "scalper 490.04",
       "sentiment 726.83"
     ],
-    "R4_dead_money": "n/a - sentiment is R1-frozen, not idle by choice",
+    "below_900_drawdown_flag": [
+      "scalper 490.04",
+      "sentiment 726.83"
+    ],
+    "R4_dead_money": "none: crypto in cash 2 trading days (bench falling), meanrev in cash 5 trading days",
     "probation": "none newly assigned"
   },
-  "win_rate_scored_pct": 58.0
+  "win_rate_scored_pct": 58.8
 }
