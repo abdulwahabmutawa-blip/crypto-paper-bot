@@ -1,6 +1,6 @@
 # Exit timing — the bot grading its own exits
 
-updated 2026-11-16T06:05:11+00:00 · 47 exits audited · early/late line ±3% · MEASUREMENT ONLY
+updated 2026-11-16T06:22:19+00:00 · 47 exits audited · early/late line ±3% · MEASUREMENT ONLY
 
 | verdict | n |
 |---|---|
@@ -27,8 +27,8 @@ updated 2026-11-16T06:05:11+00:00 · 47 exits audited · early/late line ±3% ·
 
 - book since inception (08-15, $40 stake): **-66.4%** — trading P&L only (-$26.55 over 47 closed trades), deposits excluded
 - account balance: $33.15 (of which **+$19.70 is deposited capital, not profit** — inferred as balance minus stake minus P&L; deposits are not tracked anywhere yet)
-- BTC since inception: +2.3% (book gap **-68.7pp**) · last 24h -1.3%
-- ETH since inception: -3.6% (book gap **-62.8pp**) · last 24h -1.1%
+- BTC since inception: +2.2% (book gap **-68.6pp**) · last 24h -1.4%
+- ETH since inception: -3.8% (book gap **-62.6pp**) · last 24h -1.3%
 
 ## Alpha by regime (book minus BTC, daily, paired)
 
@@ -37,7 +37,7 @@ updated 2026-11-16T06:05:11+00:00 · 47 exits audited · early/late line ±3% ·
 | regime (BTC day) | days | avg book | avg gap vs BTC |
 |---|---|---|---|
 | red | 13 | -2.11% | **+1.30pp** |
-| flat | 72 | -0.71% | **-0.76pp** |
+| flat | 72 | -0.71% | **-0.75pp** |
 | green | 9 | -1.99% | **-7.10pp** |
 
 | date | regime | book | BTC | gap |
@@ -51,7 +51,7 @@ updated 2026-11-16T06:05:11+00:00 · 47 exits audited · early/late line ±3% ·
 | 2026-11-13 | red | +0.00% | -4.40% | +4.40pp |
 | 2026-11-14 | red | +0.00% | -6.10% | +6.10pp |
 | 2026-11-15 | flat | +0.00% | +1.87% | -1.87pp |
-| 2026-11-16 | flat | +0.00% | -1.27% | +1.27pp |
+| 2026-11-16 | flat | +0.00% | -1.42% | +1.42pp |
 
 
 _giveback = in-hold peak the exit surrendered; post-24h run = what the coin did after we sold. High post-run with low giveback = selling too early; high giveback = selling too late._
