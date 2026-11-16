@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-16T18:23:49+00:00 · runs 6158 · equity **$496.38** (-50.36%) · cash $0.00 · open 10/10 · round trips 2026
+updated 2026-11-16T18:39:54+00:00 · runs 6159 · equity **$496.30** (-50.37%) · cash $0.00 · open 10/10 · round trips 2026
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-15T21:02 | SAGAUSDT | surge | 0.01416 | 0.01431 | +1.06% |
-| 2026-11-16T02:01 | MSTRBUSDT | surge | 102.8 | 103.38 | +0.56% |
-| 2026-11-16T12:45 | GRAMUSDT | bottom | 1.033 | 1.051 | +1.74% |
-| 2026-11-16T13:33 | DODOUSDT | surge | 0.03287 | 0.03344 | +1.73% |
-| 2026-11-16T16:12 | SOXSBUSDT | surge | 57.21 | 58.33 | +1.96% |
-| 2026-11-16T16:12 | ZAMAUSDT | surge | 0.05507 | 0.05517 | +0.18% |
-| 2026-11-16T16:12 | ATOMUSDT | surge | 1.329 | 1.34 | +0.83% |
-| 2026-11-16T16:12 | ZROUSDT | surge | 1.453 | 1.438 | -1.03% |
+| 2026-11-15T21:02 | SAGAUSDT | surge | 0.01416 | 0.01428 | +0.85% |
+| 2026-11-16T02:01 | MSTRBUSDT | surge | 102.8 | 102.77 | -0.03% |
+| 2026-11-16T12:45 | GRAMUSDT | bottom | 1.033 | 1.045 | +1.16% |
+| 2026-11-16T13:33 | DODOUSDT | surge | 0.03287 | 0.03354 | +2.04% |
+| 2026-11-16T16:12 | SOXSBUSDT | surge | 57.21 | 58.85 | +2.87% |
+| 2026-11-16T16:12 | ZAMAUSDT | surge | 0.05507 | 0.0555 | +0.78% |
+| 2026-11-16T16:12 | ATOMUSDT | surge | 1.329 | 1.333 | +0.30% |
+| 2026-11-16T16:12 | ZROUSDT | surge | 1.453 | 1.437 | -1.10% |
 | 2026-11-16T17:50 | PHAUSDT | surge | 0.0314 | 0.0317 | +0.96% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
