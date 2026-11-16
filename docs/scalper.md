@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-16T12:30:15+00:00 · runs 6145 · equity **$488.57** (-51.14%) · cash $135.09 · open 7/10 · round trips 2022
+updated 2026-11-16T12:46:28+00:00 · runs 6146 · equity **$488.87** (-51.11%) · cash $90.06 · open 8/10 · round trips 2022
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,11 +36,12 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-15T14:58 | TRXUSDT | bottom | 0.3057 | 0.304 | -0.56% |
-| 2026-11-15T21:02 | SAGAUSDT | surge | 0.01416 | 0.01393 | -1.62% |
-| 2026-11-16T01:24 | PROMUSDT | surge | 5.315 | 5.177 | -2.60% |
-| 2026-11-16T02:01 | MSTRBUSDT | surge | 102.8 | 101.98 | -0.80% |
-| 2026-11-16T07:11 | PEPEUSDT | bottom | 3.77e-06 | 3.74e-06 | -0.80% |
-| 2026-11-16T09:30 | SENTUSDT | surge | 0.01735 | 0.01721 | -0.81% |
+| 2026-11-15T14:58 | TRXUSDT | bottom | 0.3057 | 0.3036 | -0.69% |
+| 2026-11-15T21:02 | SAGAUSDT | surge | 0.01416 | 0.01392 | -1.69% |
+| 2026-11-16T01:24 | PROMUSDT | surge | 5.315 | 5.191 | -2.33% |
+| 2026-11-16T02:01 | MSTRBUSDT | surge | 102.8 | 102.75 | -0.05% |
+| 2026-11-16T07:11 | PEPEUSDT | bottom | 3.77e-06 | 3.77e-06 | +0.00% |
+| 2026-11-16T09:30 | SENTUSDT | surge | 0.01735 | 0.01705 | -1.73% |
+| 2026-11-16T12:45 | GRAMUSDT | bottom | 1.033 | 1.033 | +0.00% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
