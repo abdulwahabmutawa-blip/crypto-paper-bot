@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-17T18:02:31+00:00 · runs 6216 · equity **$491.62** (-50.84%) · cash $133.79 · open 7/10 · round trips 2053
+updated 2026-11-17T18:18:38+00:00 · runs 6217 · equity **$491.22** (-50.88%) · cash $133.79 · open 7/10 · round trips 2053
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,11 +36,11 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-16T19:10 | XPLUSDT | surge | 0.04537 | 0.04515 | -0.48% |
-| 2026-11-17T02:19 | QNTUSDT | bottom | 152.98 | 152.38 | -0.39% |
-| 2026-11-17T17:44 | SPCXBUSDT | surge | 141.25 | 140.91 | -0.24% |
-| 2026-11-17T17:44 | ZROUSDT | bottom | 1.417 | 1.41 | -0.49% |
-| 2026-11-17T17:44 | HBARUSDT | bottom | 0.05642 | 0.05627 | -0.27% |
-| 2026-11-17T18:01 | FFUSDT | surge | 0.10386 | 0.10403 | +0.16% |
+| 2026-11-16T19:10 | XPLUSDT | surge | 0.04537 | 0.0451 | -0.60% |
+| 2026-11-17T02:19 | QNTUSDT | bottom | 152.98 | 152.1 | -0.58% |
+| 2026-11-17T17:44 | SPCXBUSDT | surge | 141.25 | 141.08 | -0.12% |
+| 2026-11-17T17:44 | ZROUSDT | bottom | 1.417 | 1.408 | -0.64% |
+| 2026-11-17T17:44 | HBARUSDT | bottom | 0.05642 | 0.05603 | -0.69% |
+| 2026-11-17T18:01 | FFUSDT | surge | 0.10386 | 0.10389 | +0.03% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
