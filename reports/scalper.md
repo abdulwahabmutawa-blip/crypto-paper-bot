@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-18T01:08:37+00:00 · runs 6241 · equity **$492.57** (-50.74%) · cash $0.00 · open 10/10 · round trips 2059
+updated 2026-11-18T01:25:29+00:00 · runs 6242 · equity **$490.50** (-50.95%) · cash $0.00 · open 10/10 · round trips 2059
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-17T17:44 | SPCXBUSDT | surge | 141.25 | 143.08 | +1.30% |
-| 2026-11-17T18:01 | FFUSDT | surge | 0.10386 | 0.10314 | -0.69% |
-| 2026-11-17T18:33 | SKYUSDT | surge | 0.05397 | 0.05303 | -1.74% |
-| 2026-11-17T18:33 | POLUSDT | surge | 0.0827 | 0.08231 | -0.47% |
-| 2026-11-17T20:59 | WUSDT | surge | 0.00878 | 0.00888 | +1.14% |
-| 2026-11-17T23:26 | PENGUUSDT | surge | 0.004934 | 0.00483 | -2.11% |
-| 2026-11-17T23:26 | TQQQBUSDT | surge | 54.67 | 53.65 | -1.87% |
-| 2026-11-17T23:26 | NVDABUSDT | surge | 163.75 | 162.13 | -0.99% |
-| 2026-11-17T23:59 | AVGOBUSDT | surge | 351.62 | 349.83 | -0.51% |
+| 2026-11-17T17:44 | SPCXBUSDT | surge | 141.25 | 142.7 | +1.03% |
+| 2026-11-17T18:01 | FFUSDT | surge | 0.10386 | 0.10301 | -0.82% |
+| 2026-11-17T18:33 | SKYUSDT | surge | 0.05397 | 0.05282 | -2.13% |
+| 2026-11-17T18:33 | POLUSDT | surge | 0.0827 | 0.08214 | -0.68% |
+| 2026-11-17T20:59 | WUSDT | surge | 0.00878 | 0.00885 | +0.80% |
+| 2026-11-17T23:26 | PENGUUSDT | surge | 0.004934 | 0.004793 | -2.86% |
+| 2026-11-17T23:26 | TQQQBUSDT | surge | 54.67 | 53.17 | -2.74% |
+| 2026-11-17T23:26 | NVDABUSDT | surge | 163.75 | 160.72 | -1.85% |
+| 2026-11-17T23:59 | AVGOBUSDT | surge | 351.62 | 347.4 | -1.20% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
