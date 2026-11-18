@@ -1,39 +1,39 @@
 {
-  "updated_utc": "2026-11-17T09:30:00+00:00",
-  "run_note": "Daily run 11-17 ~09:00-09:30Z. (1) R1 HARD-STOP BREACH continues: scalper 498.80, still trading 10/10 seats; sentiment 726.83 self-frozen. (2) No new SIM-INTEGRITY ALERT: meanrev NVDA buy 11-16 11:12 ET at 158.73, inside the 155.01-163.20 day range; scalper 15/21 new entries inside the 1m window, 5 stale-close skews <=1.0%, 1 unchecked. Trade logs append-only across all three loop-run handoffs. (3) CRON GAPS: three gaps over 90 min in 24h (13:36-16:15Z 159 min, 21:54-00:24Z 151 min, 06:01-08:17Z 136 min) - each multi-hour loop run ends and the next scheduled run starts 2h+ later; about 7.4h of the 24h had no cycle. (4) Still stale: carry + lottery since 11-12 11:41Z; Watcher verdict since 10-20 16:09Z. (5) meanrev re-bought NVDA one session before NVDA earnings (11-17 after close). Open scalper judgment interim alpha -8.76. Issued 4 no_change.",
+  "updated_utc": "2026-11-18T13:30:00+00:00",
+  "run_note": "Daily run 11-18 ~13:05-13:30Z. (1) R1 HARD-STOP BREACH continues: scalper 486.46, still trading 10/10 seats; sentiment 726.83 self-frozen. (2) No new SIM-INTEGRITY ALERT: no equity fills; scalper 18/31 new entries inside the 1m window, 13 stale-close skews <=0.72%. Trade logs append-only across all three loop-run handoffs. (3) CRON GAPS: two over 90 min (11-17 13:50-17:47Z 236 min, which covered the first 3h17m of the US session; 11-18 05:40-07:16Z 97 min). (4) Still stale: carry + lottery since 11-12 11:41Z; Watcher verdict since 10-20 16:09Z. (5) meanrev held NVDA through its scheduled earnings: marked 979.11 at the 11-17 close, pre-market +2.6%. Open scalper judgment interim alpha +3.58. Issued 4 no_change.",
   "fleet_snapshot": {
-    "as_of": "2026-11-17 08:49Z",
+    "as_of": "2026-11-18 12:53Z",
     "active_paper_bots": 4,
     "baseline_usd": 4000,
     "active_bots": {
       "crypto": 1027.21,
-      "meanrev": 983.46,
+      "meanrev": 979.11,
       "sentiment": 726.83,
-      "scalper": 498.8
+      "scalper": 486.46
     },
-    "total_value_usd": 3236.3,
-    "total_pnl_usd": -763.7,
-    "total_pnl_pct": -19.09
+    "total_value_usd": 3219.61,
+    "total_pnl_usd": -780.39,
+    "total_pnl_pct": -19.51
   },
-  "total_judgments": 351,
-  "judgments_closed": 350,
+  "total_judgments": 355,
+  "judgments_closed": 354,
   "judgments_open": 1,
   "open_ids": [
     "2026-11-16-scalper-1"
   ],
   "cumulative_alpha_usd": -177.06,
-  "win_rate_closed_pct": 8.6,
+  "win_rate_closed_pct": 8.5,
   "win_rate_note": "Most closed judgments are no_change (alpha 0), so read the DIRECTIONAL record. This run's +264.05 scalper win is scored over 34 days because the supervisor was absent, not over the intended 10 trading days (about +130 at that mark). Cumulative alpha is still dominated by the -1,111.03 sentiment call from 08-31.",
   "directional_record": {
     "scored": 51,
     "wins": 30,
     "losses": 21,
-    "neutral": 299,
+    "neutral": 303,
     "basis": "sign of realized alpha on closed judgments; the sparse legacy outcome field is not used"
   },
   "per_bot": {
     "sentiment": {
-      "closed": 35,
+      "closed": 36,
       "alpha": -1161.24,
       "wins": 2,
       "losses": 6,
@@ -46,7 +46,7 @@
       "losses": 2
     },
     "meanrev": {
-      "closed": 40,
+      "closed": 41,
       "alpha": -13.64,
       "wins": 0,
       "losses": 1
@@ -100,7 +100,7 @@
       "losses": 1
     },
     "crypto": {
-      "closed": 46,
+      "closed": 47,
       "alpha": 106.83,
       "wins": 7,
       "losses": 0
@@ -119,7 +119,7 @@
       "cumulative_alpha_usd": 366.38
     },
     "carry": {
-      "closed": 5,
+      "closed": 6,
       "alpha": 0,
       "wins": 0,
       "losses": 0
@@ -184,68 +184,63 @@
       "bot": "carry/lottery",
       "real_money": true,
       "silent_from": "2026-11-12T11:41:40Z",
-      "silent_hours": 117,
-      "status": "State files stopped updating; last commit 'lottery: 2026-11-12 11:41 UTC'. vps-alive workflow still green. Not diagnosed (VPS path, read-only)."
+      "silent_hours": 145,
+      "status": "State files stopped updating; last commit 'lottery: 2026-11-12 11:41 UTC'. vps-alive workflow still green (through 11-18 09:28Z). Not diagnosed (VPS path, read-only)."
     },
     {
       "bot": "sentinel (Watcher)",
       "real_money": false,
       "silent_from": "2026-10-20T16:09:21Z",
-      "status": "sentinel_verdict.json 27 days old; sentinel_gate treats it as UNKNOWN."
+      "status": "sentinel_verdict.json 29 days old; sentinel_gate treats it as UNKNOWN."
     }
   ],
   "loop_health": {
-    "window": "2026-11-16T09:00Z -> 2026-11-17T08:50Z",
-    "cycle_commits_window": 64,
-    "largest_gap_window_min": 158.9,
-    "largest_gap_window": "2026-11-16T13:36Z -> 16:15Z",
+    "window": "2026-11-17T08:17Z -> 2026-11-18T12:54Z",
+    "cycle_commits_window": 87,
+    "largest_gap_window_min": 236.2,
+    "largest_gap_window": "2026-11-17T13:50Z -> 17:47Z",
     "cron_gap": true,
     "cron_gaps": [
       {
-        "start": "2026-11-16T13:36:46Z",
-        "end": "2026-11-16T16:15:42Z",
-        "min": 158.9
+        "start": "2026-11-17T13:50:50Z",
+        "end": "2026-11-17T17:47:01Z",
+        "min": 236.2
       },
       {
-        "start": "2026-11-16T21:54:17Z",
-        "end": "2026-11-17T00:24:57Z",
-        "min": 150.7
-      },
-      {
-        "start": "2026-11-17T06:01:34Z",
-        "end": "2026-11-17T08:17:10Z",
-        "min": 135.6
+        "start": "2026-11-18T05:40:10Z",
+        "end": "2026-11-18T07:16:51Z",
+        "min": 96.7
       }
     ],
     "failed_runs": [],
-    "cadence_note": "paper-trade-cycle runs are ~5.7h loops (16:12Z->21:54Z, 00:20Z->06:01Z); after each ends the next scheduled run does not start for 2h+. Inside a run, cycles are <=17.3 min apart. All runs success, one in progress. The 11-15/11-16 window had no such gap. The lottery/carry loop has committed nothing since 2026-11-12T11:41Z."
+    "cadence_note": "paper-trade-cycle runs are ~5.6h loops; after each ends the next scheduled run starts late. Gaps between the last four runs: 236, 34, 97 min. Inside a run, cycles are <=17.3 min apart. All 30 listed runs success. The 236-min gap spanned the US open (09:30 ET) to 12:47 ET on 11-17, so equity bots had no cycle for half the session. The lottery/carry loop has committed nothing since 2026-11-12T11:41Z."
   },
   "kill_criteria_flags": {
     "R1_breach_below_750": [
-      "scalper 498.80 (-50.1%) - realized equity crossed 750 on 2026-10-13, no code-level freeze, still trading 10/10 seats; owner decides",
+      "scalper 486.46 (-51.4%) - realized equity crossed 750 on 2026-10-13, no code-level freeze, still trading 10/10 seats; owner decides",
       "sentiment 726.83 - breached 2026-10-12, self-frozen; rests on the rewritten STRK fill; owner decides",
       "hypecrypto 739.48 - retired 09-04 (old)"
     ],
     "below_800": [
-      "scalper 498.80",
+      "scalper 486.46",
       "sentiment 726.83"
     ],
     "below_900_drawdown_flag": [
-      "scalper 498.80",
+      "scalper 486.46",
       "sentiment 726.83"
     ],
-    "R4_dead_money": "none: crypto in cash 3 trading days (bench falling); meanrev back in NVDA 11-16",
+    "R4_dead_money": "none: crypto in cash 4 trading days (bench falling); meanrev in NVDA since 11-16",
     "probation": "none newly assigned"
   },
   "win_rate_scored_pct": 58.8,
   "open_judgment_interim": {
     "2026-11-16-scalper-1": {
       "reference_equity": 490.04,
-      "equity_now": 498.8,
-      "actual_pnl": 8.76,
+      "equity_now": 486.46,
+      "actual_pnl": -3.58,
       "counterfactual_pnl": 0.0,
-      "interim_alpha": -8.76,
-      "note": "day 1 of 10; not closed"
+      "interim_alpha": 3.58,
+      "note": "day 2 of 10; not closed"
     }
   }
 }
