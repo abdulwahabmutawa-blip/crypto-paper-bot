@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-18T16:56:30+00:00 · runs 6281 · equity **$480.75** (-51.92%) · cash $305.42 · open 3/10 · round trips 2077
+updated 2026-11-18T17:12:33+00:00 · runs 6282 · equity **$481.39** (-51.86%) · cash $174.53 · open 6/10 · round trips 2077
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,7 +36,10 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-17T23:59 | AVGOBUSDT | surge | 351.62 | 347.07 | -1.29% |
-| 2026-11-18T07:30 | EWYBUSDT | surge | 138.73 | 135.29 | -2.48% |
+| 2026-11-17T23:59 | AVGOBUSDT | surge | 351.62 | 349.83 | -0.51% |
+| 2026-11-18T07:30 | EWYBUSDT | surge | 138.73 | 136.29 | -1.76% |
+| 2026-11-18T17:11 | TLMUSDT | bottom | 0.000919 | 0.000921 | +0.22% |
+| 2026-11-18T17:11 | NVDABUSDT | bottom | 151.75 | 151.68 | -0.05% |
+| 2026-11-18T17:11 | ICPUSDT | bottom | 2.193 | 2.187 | -0.27% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
