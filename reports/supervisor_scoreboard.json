@@ -1,22 +1,22 @@
 {
-  "updated_utc": "2026-11-18T13:30:00+00:00",
-  "run_note": "Daily run 11-18 ~13:05-13:30Z. (1) R1 HARD-STOP BREACH continues: scalper 486.46, still trading 10/10 seats; sentiment 726.83 self-frozen. (2) No new SIM-INTEGRITY ALERT: no equity fills; scalper 18/31 new entries inside the 1m window, 13 stale-close skews <=0.72%. Trade logs append-only across all three loop-run handoffs. (3) CRON GAPS: two over 90 min (11-17 13:50-17:47Z 236 min, which covered the first 3h17m of the US session; 11-18 05:40-07:16Z 97 min). (4) Still stale: carry + lottery since 11-12 11:41Z; Watcher verdict since 10-20 16:09Z. (5) meanrev held NVDA through its scheduled earnings: marked 979.11 at the 11-17 close, pre-market +2.6%. Open scalper judgment interim alpha +3.58. Issued 4 no_change.",
+  "updated_utc": "2026-11-19T12:55:00+00:00",
+  "run_note": "Daily run 11-19 ~12:40-12:55Z. R1 breach continues: scalper 489.49 (still trading), sentiment 726.83 frozen. No SIM-INTEGRITY ALERT (18/18 scalper entries inside 1m candle). Cron gaps (GH paper-trade-cycle): 11-18 16:37-23:08Z 391m, 23:08-04:18Z 310m; VPS/loop commits max gap 54m, but loop idle since 10:31Z. Carry+lottery stale since 11-12. TVKUSDT scalper seat frozen at entry price since 09-12. meanrev NVDA -2.96% day post-earnings. Open scalper judgment interim alpha +0.55. Issued 4 no_change.",
   "fleet_snapshot": {
-    "as_of": "2026-11-18 12:53Z",
+    "as_of": "2026-11-19 12:40Z",
     "active_paper_bots": 4,
     "baseline_usd": 4000,
     "active_bots": {
       "crypto": 1027.21,
-      "meanrev": 979.11,
+      "meanrev": 950.14,
       "sentiment": 726.83,
-      "scalper": 486.46
+      "scalper": 489.49
     },
-    "total_value_usd": 3219.61,
-    "total_pnl_usd": -780.39,
-    "total_pnl_pct": -19.51
+    "total_value_usd": 3193.67,
+    "total_pnl_usd": -806.33,
+    "total_pnl_pct": -20.16
   },
-  "total_judgments": 355,
-  "judgments_closed": 354,
+  "total_judgments": 359,
+  "judgments_closed": 358,
   "judgments_open": 1,
   "open_ids": [
     "2026-11-16-scalper-1"
