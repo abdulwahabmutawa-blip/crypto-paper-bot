@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-19T16:36:46+00:00 · runs 6356 · equity **$479.92** (-52.01%) · cash $86.67 · open 8/10 · round trips 2106
+updated 2026-11-19T16:52:40+00:00 · runs 6357 · equity **$478.44** (-52.16%) · cash $43.33 · open 9/10 · round trips 2106
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,12 +36,13 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-18T17:27 | PROMUSDT | surge | 5.559 | 5.512 | -0.85% |
-| 2026-11-19T04:30 | BNCBUSDT | surge | 3.52 | 3.53 | +0.28% |
-| 2026-11-19T07:55 | PYTHUSDT | surge | 0.05705 | 0.05614 | -1.60% |
+| 2026-11-18T17:27 | PROMUSDT | surge | 5.559 | 5.508 | -0.92% |
+| 2026-11-19T04:30 | BNCBUSDT | surge | 3.52 | 3.5 | -0.57% |
+| 2026-11-19T07:55 | PYTHUSDT | surge | 0.05705 | 0.0557 | -2.37% |
 | 2026-11-19T09:36 | RWUSDUSDT | bottom | 0.9999 | 1.0001 | +0.02% |
-| 2026-11-19T15:31 | BABABUSDT | surge | 87.31 | 86.26 | -1.20% |
-| 2026-11-19T15:47 | AAVEUSDT | bottom | 104.48 | 104.42 | -0.06% |
-| 2026-11-19T16:03 | STRKUSDT | bottom | 0.0318 | 0.03135 | -1.42% |
+| 2026-11-19T15:31 | BABABUSDT | surge | 87.31 | 86.2 | -1.27% |
+| 2026-11-19T15:47 | AAVEUSDT | bottom | 104.48 | 104.14 | -0.33% |
+| 2026-11-19T16:03 | STRKUSDT | bottom | 0.0318 | 0.03139 | -1.29% |
+| 2026-11-19T16:51 | USTCUSDT | surge | 0.00427 | 0.00421 | -1.41% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
