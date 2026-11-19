@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-19T21:52:12+00:00 · runs 6367 · equity **$472.72** (-52.73%) · cash $172.98 · open 6/10 · round trips 2113
+updated 2026-11-19T22:09:34+00:00 · runs 6368 · equity **$472.72** (-52.73%) · cash $172.98 · open 6/10 · round trips 2113
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -37,9 +37,9 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
 | 2026-11-19T09:36 | RWUSDUSDT | bottom | 0.9999 | 1 | +0.01% |
-| 2026-11-19T15:47 | AAVEUSDT | bottom | 104.48 | 103.85 | -0.60% |
-| 2026-11-19T16:03 | STRKUSDT | bottom | 0.0318 | 0.03105 | -2.36% |
-| 2026-11-19T18:11 | ERAUSDT | surge | 0.0736 | 0.0719 | -2.31% |
-| 2026-11-19T18:43 | KATUSDT | surge | 0.00319 | 0.00314 | -1.57% |
+| 2026-11-19T15:47 | AAVEUSDT | bottom | 104.48 | 103.82 | -0.63% |
+| 2026-11-19T16:03 | STRKUSDT | bottom | 0.0318 | 0.03103 | -2.42% |
+| 2026-11-19T18:11 | ERAUSDT | surge | 0.0736 | 0.0715 | -2.85% |
+| 2026-11-19T18:43 | KATUSDT | surge | 0.00319 | 0.00316 | -0.94% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
