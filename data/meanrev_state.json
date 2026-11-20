@@ -1,9 +1,9 @@
 {
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "holding": "NVDA",
-  "units": 6.297756286152977,
-  "cash": 0.0,
+  "holding": "CASH",
+  "units": 0.0,
+  "cash": 874.1031489498521,
   "bench_units": 1.3319835726361926,
   "trades": [
     {
@@ -244,6 +244,25 @@
       "value": 999.64,
       "fee": 1.1,
       "reason": "Most oversold mega-cap (z < -1.5) \u2014 buying the dip"
+    },
+    {
+      "date": "2026-11-20",
+      "action": "SELL",
+      "ticker": "NVDA",
+      "price": 138.94880676,
+      "units": 6.2978,
+      "value": 875.07,
+      "fee": 0.96,
+      "reason": "TRAILING STOP \u2014 fell 12% from high-water $159.67"
+    },
+    {
+      "date": "2026-11-20",
+      "action": "TO CASH",
+      "ticker": "\u2014",
+      "price": 0,
+      "units": 0,
+      "value": 874.1,
+      "reason": "TRAILING STOP \u2014 fell 12% from high-water $159.67"
     }
   ],
   "history": [
@@ -790,18 +809,12 @@
     },
     {
       "date": "2026-11-20",
-      "value": 891.45,
-      "bench": 953.46,
-      "holding": "NVDA"
+      "value": 874.1,
+      "bench": 946.27,
+      "holding": "CASH"
     }
   ],
   "intraday": [
-    {
-      "ts": "2026-10-28T05:34:30+00:00",
-      "value": 1132.61,
-      "bench": 1025.25,
-      "holding": "GOOGL"
-    },
     {
       "ts": "2026-10-28T05:50:54+00:00",
       "value": 1132.61,
@@ -9795,11 +9808,20 @@
       "value": 891.45,
       "bench": 953.46,
       "holding": "NVDA"
+    },
+    {
+      "ts": "2026-11-20T15:23:29+00:00",
+      "value": 874.1,
+      "bench": 946.27,
+      "holding": "CASH"
     }
   ],
-  "last_updated_utc": "2026-11-20T15:06:27+00:00",
+  "last_updated_utc": "2026-11-20T15:23:29+00:00",
   "feed_delayed": false,
   "data_asof": "2026-11-20",
-  "costs_paid": 18.562,
-  "hwm": 159.6699981689453
+  "costs_paid": 19.5246,
+  "stopped": {
+    "ticker": "NVDA",
+    "date": "2026-11-20"
+  }
 }
