@@ -1,9 +1,9 @@
 {
   "created": "2026-07-16",
   "starting_cash": 1000.0,
-  "holding": "CASH",
-  "units": 0.0,
-  "cash": 874.1031489498521,
+  "holding": "JPM",
+  "units": 2.7431595287153643,
+  "cash": 0.0,
   "bench_units": 1.3319835726361926,
   "trades": [
     {
@@ -263,6 +263,16 @@
       "units": 0,
       "value": 874.1,
       "reason": "TRAILING STOP \u2014 fell 12% from high-water $159.67"
+    },
+    {
+      "date": "2026-11-20",
+      "action": "BUY",
+      "ticker": "JPM",
+      "price": 318.25,
+      "units": 2.7432,
+      "value": 873.01,
+      "fee": 1.09,
+      "reason": "Most oversold mega-cap (z < -1.5) \u2014 buying the dip"
     }
   ],
   "history": [
@@ -809,18 +819,12 @@
     },
     {
       "date": "2026-11-20",
-      "value": 874.1,
-      "bench": 946.27,
-      "holding": "CASH"
+      "value": 873.01,
+      "bench": 944.79,
+      "holding": "JPM"
     }
   ],
   "intraday": [
-    {
-      "ts": "2026-10-28T05:50:54+00:00",
-      "value": 1132.61,
-      "bench": 1025.25,
-      "holding": "GOOGL"
-    },
     {
       "ts": "2026-10-28T06:07:12+00:00",
       "value": 1132.61,
@@ -9814,14 +9818,21 @@
       "value": 874.1,
       "bench": 946.27,
       "holding": "CASH"
+    },
+    {
+      "ts": "2026-11-20T15:40:35+00:00",
+      "value": 873.01,
+      "bench": 944.79,
+      "holding": "JPM"
     }
   ],
-  "last_updated_utc": "2026-11-20T15:23:29+00:00",
+  "last_updated_utc": "2026-11-20T15:40:35+00:00",
   "feed_delayed": false,
   "data_asof": "2026-11-20",
-  "costs_paid": 19.5246,
+  "costs_paid": 20.6172,
   "stopped": {
     "ticker": "NVDA",
     "date": "2026-11-20"
-  }
+  },
+  "hwm": 318.25
 }
