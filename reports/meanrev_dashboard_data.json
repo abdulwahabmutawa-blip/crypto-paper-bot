@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-21T22:01:47+00:00",
+  "generated_utc": "2026-11-21T22:19:59+00:00",
   "created": "2026-07-16",
   "starting_cash": 1000.0,
   "live_ts": "2026-11-20T20:55:00+00:00",
@@ -17,7 +17,7 @@
       "tag": "HELD",
       "on": true,
       "pick": true,
-      "fill": 45.72140406846135
+      "fill": 45.72140406846701
     },
     {
       "sym": "MSFT",
@@ -26,7 +26,7 @@
       "tag": "oversold",
       "on": true,
       "pick": false,
-      "fill": 38.56075321934768
+      "fill": 38.560753219352065
     },
     {
       "sym": "UNH",
@@ -35,7 +35,16 @@
       "tag": "oversold",
       "on": true,
       "pick": false,
-      "fill": 37.29746576040674
+      "fill": 37.29746576040655
+    },
+    {
+      "sym": "MRK",
+      "price": 133.71,
+      "line": "z -2.12",
+      "tag": "oversold",
+      "on": true,
+      "pick": false,
+      "fill": 35.403550121770195
     },
     {
       "sym": "NVDA",
@@ -44,7 +53,16 @@
       "tag": "oversold",
       "on": true,
       "pick": false,
-      "fill": 34.071297868500956
+      "fill": 34.07129786850074
+    },
+    {
+      "sym": "GOOGL",
+      "price": 265.68,
+      "line": "z -1.54",
+      "tag": "oversold",
+      "on": true,
+      "pick": false,
+      "fill": 25.689998517631267
     },
     {
       "sym": "XOM",
@@ -53,7 +71,7 @@
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 20.356017499699707
+      "fill": 20.35601749970205
     },
     {
       "sym": "AMZN",
@@ -65,40 +83,22 @@
       "fill": 18.750328281566045
     },
     {
-      "sym": "AAPL",
-      "price": 342.68,
-      "line": "z -0.75",
-      "tag": "normal",
-      "on": false,
-      "pick": false,
-      "fill": 12.484323967826578
-    },
-    {
-      "sym": "GOOGL",
-      "price": 265.68,
-      "line": "z +nan",
-      "tag": "normal",
-      "on": false,
-      "pick": false,
-      "fill": 50
-    },
-    {
-      "sym": "MRK",
-      "price": 133.71,
-      "line": "z -2.12",
-      "tag": "oversold",
-      "on": true,
-      "pick": false,
-      "fill": 35.403550121761306
-    },
-    {
       "sym": "CVX",
       "price": 208.42,
       "line": "z -1.01",
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 16.912146880621847
+      "fill": 16.912146880627716
+    },
+    {
+      "sym": "AAPL",
+      "price": 342.68,
+      "line": "z -0.75",
+      "tag": "normal",
+      "on": false,
+      "pick": false,
+      "fill": 12.484323967820172
     }
   ],
   "board_title": "16 mega-caps, most oversold first (z < -1.5 = buy zone)",
@@ -109,12 +109,6 @@
     "board_note": "Buys panic, sells relief: enter the most stretched mega-cap below -1.5 z, exit when it recovers to average."
   },
   "intraday": [
-    {
-      "ts": "2026-10-29T20:31:20+00:00",
-      "value": 1004.58,
-      "bench": 1025.0,
-      "holding": "CASH"
-    },
     {
       "ts": "2026-10-29T20:48:02+00:00",
       "value": 1004.58,
@@ -9105,6 +9099,12 @@
     },
     {
       "ts": "2026-11-21T22:01:47+00:00",
+      "value": 851.86,
+      "bench": 920.28,
+      "holding": "JPM"
+    },
+    {
+      "ts": "2026-11-21T22:19:59+00:00",
       "value": 851.86,
       "bench": 920.28,
       "holding": "JPM"
