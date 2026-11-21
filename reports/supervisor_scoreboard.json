@@ -1,25 +1,26 @@
 {
-  "updated_utc": "2026-11-19T12:55:00+00:00",
-  "run_note": "Daily run 11-19 ~12:40-12:55Z. R1 breach continues: scalper 489.49 (still trading), sentiment 726.83 frozen. No SIM-INTEGRITY ALERT (18/18 scalper entries inside 1m candle). Cron gaps (GH paper-trade-cycle): 11-18 16:37-23:08Z 391m, 23:08-04:18Z 310m; VPS/loop commits max gap 54m, but loop idle since 10:31Z. Carry+lottery stale since 11-12. TVKUSDT scalper seat frozen at entry price since 09-12. meanrev NVDA -2.96% day post-earnings. Open scalper judgment interim alpha +0.55. Issued 4 no_change.",
+  "updated_utc": "2026-11-21T11:40:00+00:00",
+  "run_note": "Daily run 11-21 ~11:15-11:40Z (no run on 11-20). R1 breaches continue: scalper 468.17 (no new entries since 11-20 03:49Z), sentiment 726.83 frozen. No SIM-INTEGRITY ALERT: 17/17 scalper entries inside 1m candle, meanrev NVDA sell and JPM buy inside day range and US hours. Meanrev -7.35% on 11-20 (851.86; SPY -3.6%, NVDA -14%). GH vps-alive runs 30/30 green; commit gaps >90m: 11-19 19:17-21:54Z 157m, 11-20 09:19-11:27Z 128m, 17:09-19:14Z 125m. Carry+lottery stale since 11-12; 7 other bots frozen since early Sept (retired). Open scalper judgment interim alpha +21.87. Issued 5 judgments (1 directional).",
   "fleet_snapshot": {
-    "as_of": "2026-11-19 12:40Z",
+    "as_of": "2026-11-21 11:15Z",
     "active_paper_bots": 4,
     "baseline_usd": 4000,
     "active_bots": {
       "crypto": 1027.21,
-      "meanrev": 950.14,
+      "meanrev": 851.86,
       "sentiment": 726.83,
-      "scalper": 489.49
+      "scalper": 468.17
     },
-    "total_value_usd": 3193.67,
-    "total_pnl_usd": -806.33,
-    "total_pnl_pct": -20.16
+    "total_value_usd": 3074.07,
+    "total_pnl_usd": -925.93,
+    "total_pnl_pct": -23.15
   },
-  "total_judgments": 359,
-  "judgments_closed": 358,
-  "judgments_open": 1,
+  "total_judgments": 364,
+  "judgments_closed": 363,
+  "judgments_open": 2,
   "open_ids": [
-    "2026-11-16-scalper-1"
+    "2026-11-16-scalper-1",
+    "2026-11-21-meanrev-1"
   ],
   "cumulative_alpha_usd": -177.06,
   "win_rate_closed_pct": 8.5,
