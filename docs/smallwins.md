@@ -1,6 +1,6 @@
 # Small-wins lab — paper study (owner request 2026-09-04)
 
-updated 2026-11-21T05:18:03+00:00 · runs 6538 · open 350 · resolved 20000 · cost 0.25%/RT
+updated 2026-11-21T05:35:05+00:00 · runs 6539 · open 358 · resolved 20000 · cost 0.25%/RT
 
 PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst day > -3 units.
 
@@ -22,7 +22,7 @@ PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst
 | dip_large|t1.5|s1.5|h8 | 412 | 8 | 51.5 | 50% | 58% | -0.26% | 50% | 50% | 0% | -46.0% | fail |
 | dip_large|t1.5|s1|h8 | 438 | 8 | 54.8 | 38% | 50% | -0.29% | 38% | 62% | 0% | -46.3% | fail |
 | dip_large|t2|s2|h8 | 363 | 8 | 45.4 | 48% | 56% | -0.30% | 46% | 48% | 6% | -47.8% | fail |
-| range_bottom|t1|s1|h6 | 1637 | 11 | 148.8 | 46% | 62% | -0.30% | 46% | 51% | 4% | -174.3% | fail |
+| range_bottom|t1|s1|h6 | 1638 | 11 | 148.9 | 46% | 62% | -0.30% | 46% | 51% | 4% | -174.3% | fail |
 | dip_large|t1|s1|h6 | 455 | 8 | 56.9 | 47% | 62% | -0.30% | 47% | 53% | 0% | -43.5% | fail |
 | dip_mid|t3|s2|h12 | 239 | 8 | 29.9 | 38% | 45% | -0.31% | 37% | 58% | 5% | -76.0% | fail |
 | ignition|t1|s1|h6 | 235 | 11 | 21.4 | 43% | 62% | -0.31% | 42% | 48% | 10% | -25.0% | fail |
@@ -40,8 +40,8 @@ PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst
 | momentum|t2|s2|h8 | 385 | 11 | 35.0 | 43% | 56% | -0.47% | 40% | 48% | 11% | -43.1% | fail |
 | dip_mid|t3|s3|h24 | 218 | 8 | 27.2 | 46% | 54% | -0.47% | 46% | 53% | 1% | -83.0% | fail |
 | ignition|t2|s2|h8 | 153 | 10 | 15.3 | 39% | 56% | -0.49% | 33% | 44% | 24% | -25.9% | fail |
+| dip_large|t3|s2|h12 | 342 | 8 | 42.8 | 35% | 45% | -0.50% | 32% | 61% | 6% | -62.2% | fail |
 | range_bottom|t2|s2|h8 | 855 | 11 | 77.7 | 41% | 56% | -0.50% | 34% | 47% | 19% | -218.4% | fail |
-| dip_large|t3|s2|h12 | 343 | 8 | 42.9 | 35% | 45% | -0.51% | 32% | 61% | 6% | -62.2% | fail |
 | calm_dip|t1.5|s1.5|h8 | 17 | 6 | 2.8 | 35% | 58% | -0.52% | 24% | 47% | 29% | -3.3% | fail |
 | ignition|t3|s2|h12 | 137 | 10 | 13.7 | 30% | 45% | -0.59% | 23% | 53% | 23% | -30.9% | fail |
 | calm_dip|t3|s2|h12 | 16 | 6 | 2.7 | 31% | 45% | -0.59% | 31% | 62% | 6% | -9.0% | fail |
