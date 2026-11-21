@@ -1,6 +1,6 @@
 # Small-wins lab — paper study (owner request 2026-09-04)
 
-updated 2026-11-21T08:34:32+00:00 · runs 6545 · open 244 · resolved 20000 · cost 0.25%/RT
+updated 2026-11-21T08:51:34+00:00 · runs 6546 · open 243 · resolved 20000 · cost 0.25%/RT
 
 PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst day > -3 units.
 
@@ -16,7 +16,7 @@ PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst
 | btc_lag|t5|s3|h48 | 190 | 9 | 21.1 | 44% | 41% | +0.24% | 38% | 49% | 13% | -95.1% | watch |
 | btc_lag|t1|s1|h6 | 275 | 8 | 34.4 | 67% | 62% | +0.15% | 65% | 25% | 10% | -13.5% | watch |
 | dip_mid|t2|s2|h8 | 238 | 8 | 29.8 | 53% | 56% | -0.11% | 52% | 45% | 4% | -48.0% | fail |
-| dip_mid|t1.5|s1.5|h8 | 249 | 8 | 31.1 | 55% | 58% | -0.11% | 54% | 45% | 1% | -39.8% | fail |
+| dip_mid|t1.5|s1.5|h8 | 248 | 8 | 31.0 | 54% | 58% | -0.12% | 54% | 45% | 1% | -39.8% | fail |
 | dip_mid|t1.5|s1|h8 | 281 | 7 | 40.1 | 43% | 50% | -0.16% | 43% | 57% | 0% | -37.5% | fail |
 | dip_large|t1.5|s1.5|h8 | 397 | 8 | 49.6 | 50% | 58% | -0.25% | 50% | 50% | 1% | -46.0% | fail |
 | calm_dip|t4|s2|h24 | 15 | 5 | 3.0 | 33% | 38% | -0.25% | 33% | 67% | 0% | -9.0% | fail |
@@ -66,7 +66,7 @@ PASS needs: >=5 UTC days, >=60 trades, hit >= break-even + 5pts, mean > 0, worst
 | ignition|t5|s3|h48 | 106 | 10 | 10.6 | 23% | 41% | -1.32% | 20% | 67% | 13% | -39.5% | fail |
 | momentum|t3|s4|h48 | 325 | 10 | 32.5 | 41% | 61% | -1.34% | 41% | 57% | 3% | -107.1% | fail |
 | range_bottom|t3|s4|h48 | 444 | 10 | 44.4 | 39% | 61% | -1.39% | 38% | 56% | 6% | -250.1% | fail |
-| momentum|t5|s3|h48 | 288 | 10 | 28.8 | 23% | 41% | -1.42% | 22% | 75% | 3% | -78.0% | fail |
+| momentum|t5|s3|h48 | 289 | 10 | 28.9 | 23% | 41% | -1.40% | 22% | 75% | 3% | -78.0% | fail |
 | range_bottom|t5|s3|h48 | 464 | 10 | 46.4 | 23% | 41% | -1.48% | 19% | 74% | 7% | -286.3% | fail |
 | calm_dip|t3|s4|h48 | 15 | 5 | 3.0 | 33% | 61% | -1.92% | 33% | 67% | 0% | -21.3% | fail |
 
