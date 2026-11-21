@@ -1359,29 +1359,6 @@
    }
   },
   {
-   "symbol": "TRXUSDT",
-   "tactic": "range_bottom|t3|s2|h12",
-   "shape": "range_bottom",
-   "target": 0.03,
-   "stop": 0.02,
-   "max_h": 12,
-   "entry": 0.306,
-   "entry_ms": 1795184099999,
-   "entry_ts": "2026-11-20T14:17:10+00:00",
-   "feat": {
-    "r1h": 0.0,
-    "r4h": -0.00617,
-    "r24": -0.02143,
-    "v4h": 1.72813,
-    "tbs4h": 0.30376,
-    "rp24": 0.11538,
-    "rng24": 0.02557,
-    "btc1": 0.00633,
-    "btc4": -0.00106,
-    "btc24": -0.03195
-   }
-  },
-  {
    "symbol": "XLMUSDT",
    "tactic": "range_bottom|t3|s3|h24",
    "shape": "range_bottom",
@@ -4094,36 +4071,32 @@
     "btc4": -0.00285,
     "btc24": -0.04063
    }
+  },
+  {
+   "symbol": "TRXUSDT",
+   "tactic": "range_bottom|t3|s2|h12",
+   "shape": "range_bottom",
+   "target": 0.03,
+   "stop": 0.02,
+   "max_h": 12,
+   "entry": 0.3023,
+   "entry_ms": 1795228199999,
+   "entry_ts": "2026-11-21T02:42:38+00:00",
+   "feat": {
+    "r1h": 0.00232,
+    "r4h": -0.00033,
+    "r24": -0.02232,
+    "v4h": 0.66735,
+    "tbs4h": 0.41518,
+    "rp24": 0.13684,
+    "rng24": 0.03156,
+    "btc1": -0.00679,
+    "btc4": -0.01072,
+    "btc24": -0.05041
+   }
   }
  ],
  "resolved": [
-  {
-   "symbol": "OPGUSDT",
-   "tactic": "dip_large|t1|s1|h6",
-   "shape": "dip_large",
-   "target": 0.01,
-   "stop": 0.01,
-   "max_h": 6,
-   "entry": 0.138,
-   "entry_ms": 1794432599999,
-   "entry_ts": "2026-11-11T21:37:36+00:00",
-   "feat": {
-    "r1h": -0.02405,
-    "r4h": -0.02128,
-    "r24": 0.06646,
-    "v4h": 8.38675,
-    "tbs4h": 0.40439,
-    "rp24": 0.31854,
-    "rng24": 0.30445,
-    "btc1": 0.0014,
-    "btc4": 0.00017,
-    "btc24": 0.00991
-   },
-   "ret": -0.0125,
-   "how": "STOP",
-   "hours": 0.25,
-   "exit_ts": "2026-11-11T22:11:40+00:00"
-  },
   {
    "symbol": "OPGUSDT",
    "tactic": "dip_large|t1.5|s1.5|h8",
@@ -544096,8 +544069,35 @@
    "how": "TARGET",
    "hours": 0.25,
    "exit_ts": "2026-11-21T02:25:35+00:00"
+  },
+  {
+   "symbol": "TRXUSDT",
+   "tactic": "range_bottom|t3|s2|h12",
+   "shape": "range_bottom",
+   "target": 0.03,
+   "stop": 0.02,
+   "max_h": 12,
+   "entry": 0.306,
+   "entry_ms": 1795184099999,
+   "entry_ts": "2026-11-20T14:17:10+00:00",
+   "feat": {
+    "r1h": 0.0,
+    "r4h": -0.00617,
+    "r24": -0.02143,
+    "v4h": 1.72813,
+    "tbs4h": 0.30376,
+    "rp24": 0.11538,
+    "rng24": 0.02557,
+    "btc1": 0.00633,
+    "btc4": -0.00106,
+    "btc24": -0.03195
+   },
+   "ret": -0.01459,
+   "how": "TIME",
+   "hours": 12.0,
+   "exit_ts": "2026-11-21T02:42:38+00:00"
   }
  ],
- "runs": 6528,
- "updated": "2026-11-21T02:25:35+00:00"
+ "runs": 6529,
+ "updated": "2026-11-21T02:42:38+00:00"
 }
