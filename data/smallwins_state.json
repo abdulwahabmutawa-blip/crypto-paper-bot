@@ -2924,29 +2924,6 @@
   },
   {
    "symbol": "RENDERUSDT",
-   "tactic": "momentum|t3|s2|h12",
-   "shape": "momentum",
-   "target": 0.03,
-   "stop": 0.02,
-   "max_h": 12,
-   "entry": 1.302,
-   "entry_ms": 1795279499999,
-   "entry_ts": "2026-11-21T16:55:47+00:00",
-   "feat": {
-    "r1h": -0.00989,
-    "r4h": 0.03333,
-    "r24": 0.02762,
-    "v4h": 2.91635,
-    "tbs4h": 0.47768,
-    "rp24": 0.896,
-    "rng24": 0.10504,
-    "btc1": 0.0023,
-    "btc4": 0.02066,
-    "btc24": 0.00899
-   }
-  },
-  {
-   "symbol": "RENDERUSDT",
    "tactic": "momentum|t3|s3|h24",
    "shape": "momentum",
    "target": 0.03,
@@ -4648,29 +4625,6 @@
    }
   },
   {
-   "symbol": "ENSOUSDT",
-   "tactic": "dip_mid|t3|s4|h48",
-   "shape": "dip_mid",
-   "target": 0.03,
-   "stop": 0.04,
-   "max_h": 48,
-   "entry": 0.503,
-   "entry_ms": 1795315499999,
-   "entry_ts": "2026-11-22T02:45:09+00:00",
-   "feat": {
-    "r1h": -0.04373,
-    "r4h": 0.07709,
-    "r24": -0.05981,
-    "v4h": 2.65693,
-    "tbs4h": 0.49203,
-    "rp24": 0.59,
-    "rng24": 0.22523,
-    "btc1": -0.00809,
-    "btc4": -0.0087,
-    "btc24": 0.0177
-   }
-  },
-  {
    "symbol": "DODOUSDT",
    "tactic": "dip_large|t3|s2|h12",
    "shape": "dip_large",
@@ -5431,29 +5385,6 @@
   },
   {
    "symbol": "RAREUSDT",
-   "tactic": "range_bottom|t1|s1|h6",
-   "shape": "range_bottom",
-   "target": 0.01,
-   "stop": 0.01,
-   "max_h": 6,
-   "entry": 0.01366,
-   "entry_ms": 1795322699999,
-   "entry_ts": "2026-11-22T04:53:15+00:00",
-   "feat": {
-    "r1h": 0.0111,
-    "r4h": -0.01938,
-    "r24": 0.01637,
-    "v4h": 0.29528,
-    "tbs4h": 0.50017,
-    "rp24": 0.12462,
-    "rng24": 0.2483,
-    "btc1": -0.00114,
-    "btc4": -0.01524,
-    "btc24": 0.05313
-   }
-  },
-  {
-   "symbol": "RAREUSDT",
    "tactic": "range_bottom|t1.5|s1.5|h8",
    "shape": "range_bottom",
    "target": 0.015,
@@ -5589,90 +5520,32 @@
     "btc4": -0.01524,
     "btc24": 0.05313
    }
-  }
- ],
- "resolved": [
-  {
-   "symbol": "NEARUSDT",
-   "tactic": "range_bottom|t1.5|s1|h8",
-   "shape": "range_bottom",
-   "target": 0.015,
-   "stop": 0.01,
-   "max_h": 8,
-   "entry": 3.553,
-   "entry_ms": 1794458699999,
-   "entry_ts": "2026-11-12T04:46:48+00:00",
-   "feat": {
-    "r1h": 0.00056,
-    "r4h": -0.01932,
-    "r24": -0.03765,
-    "v4h": 0.8535,
-    "tbs4h": 0.43446,
-    "rp24": 0.0807,
-    "rng24": 0.08074,
-    "btc1": -0.00052,
-    "btc4": -0.00435,
-    "btc24": 0.00045
-   },
-   "ret": -0.0125,
-   "how": "STOP",
-   "hours": 1.75,
-   "exit_ts": "2026-11-12T06:51:09+00:00"
   },
   {
-   "symbol": "ENAUSDT",
+   "symbol": "RAREUSDT",
    "tactic": "range_bottom|t1|s1|h6",
    "shape": "range_bottom",
    "target": 0.01,
    "stop": 0.01,
    "max_h": 6,
-   "entry": 0.1439,
-   "entry_ms": 1794459599999,
-   "entry_ts": "2026-11-12T05:08:30+00:00",
+   "entry": 0.0138,
+   "entry_ms": 1795323599999,
+   "entry_ts": "2026-11-22T05:10:34+00:00",
    "feat": {
-    "r1h": -0.00069,
-    "r4h": -0.01775,
-    "r24": -0.05886,
-    "v4h": 0.65092,
-    "tbs4h": 0.51241,
-    "rp24": 0.08392,
-    "rng24": 0.10021,
-    "btc1": -0.00189,
-    "btc4": -0.00267,
-    "btc24": -0.00132
-   },
-   "ret": -0.0125,
-   "how": "STOP",
-   "hours": 1.5,
-   "exit_ts": "2026-11-12T06:51:09+00:00"
-  },
-  {
-   "symbol": "ENAUSDT",
-   "tactic": "range_bottom|t1.5|s1|h8",
-   "shape": "range_bottom",
-   "target": 0.015,
-   "stop": 0.01,
-   "max_h": 8,
-   "entry": 0.1439,
-   "entry_ms": 1794459599999,
-   "entry_ts": "2026-11-12T05:08:30+00:00",
-   "feat": {
-    "r1h": -0.00069,
-    "r4h": -0.01775,
-    "r24": -0.05886,
-    "v4h": 0.65092,
-    "tbs4h": 0.51241,
-    "rp24": 0.08392,
-    "rng24": 0.10021,
-    "btc1": -0.00189,
-    "btc4": -0.00267,
-    "btc24": -0.00132
-   },
-   "ret": -0.0125,
-   "how": "STOP",
-   "hours": 1.5,
-   "exit_ts": "2026-11-12T06:51:09+00:00"
-  },
+    "r1h": 0.0162,
+    "r4h": -0.00648,
+    "r24": 0.01173,
+    "v4h": 0.2881,
+    "tbs4h": 0.50433,
+    "rp24": 0.13016,
+    "rng24": 0.23525,
+    "btc1": -0.00597,
+    "btc4": -0.01843,
+    "btc24": 0.04931
+   }
+  }
+ ],
+ "resolved": [
   {
    "symbol": "INTCBUSDT",
    "tactic": "range_bottom|t1|s1|h6",
@@ -545591,8 +545464,89 @@
    "how": "STOP",
    "hours": 11.0,
    "exit_ts": "2026-11-22T04:53:15+00:00"
+  },
+  {
+   "symbol": "RENDERUSDT",
+   "tactic": "momentum|t3|s2|h12",
+   "shape": "momentum",
+   "target": 0.03,
+   "stop": 0.02,
+   "max_h": 12,
+   "entry": 1.302,
+   "entry_ms": 1795279499999,
+   "entry_ts": "2026-11-21T16:55:47+00:00",
+   "feat": {
+    "r1h": -0.00989,
+    "r4h": 0.03333,
+    "r24": 0.02762,
+    "v4h": 2.91635,
+    "tbs4h": 0.47768,
+    "rp24": 0.896,
+    "rng24": 0.10504,
+    "btc1": 0.0023,
+    "btc4": 0.02066,
+    "btc24": 0.00899
+   },
+   "ret": 0.00595,
+   "how": "TIME",
+   "hours": 12.0,
+   "exit_ts": "2026-11-22T05:10:34+00:00"
+  },
+  {
+   "symbol": "ENSOUSDT",
+   "tactic": "dip_mid|t3|s4|h48",
+   "shape": "dip_mid",
+   "target": 0.03,
+   "stop": 0.04,
+   "max_h": 48,
+   "entry": 0.503,
+   "entry_ms": 1795315499999,
+   "entry_ts": "2026-11-22T02:45:09+00:00",
+   "feat": {
+    "r1h": -0.04373,
+    "r4h": 0.07709,
+    "r24": -0.05981,
+    "v4h": 2.65693,
+    "tbs4h": 0.49203,
+    "rp24": 0.59,
+    "rng24": 0.22523,
+    "btc1": -0.00809,
+    "btc4": -0.0087,
+    "btc24": 0.0177
+   },
+   "ret": 0.0275,
+   "how": "TARGET",
+   "hours": 2.0,
+   "exit_ts": "2026-11-22T05:10:34+00:00"
+  },
+  {
+   "symbol": "RAREUSDT",
+   "tactic": "range_bottom|t1|s1|h6",
+   "shape": "range_bottom",
+   "target": 0.01,
+   "stop": 0.01,
+   "max_h": 6,
+   "entry": 0.01366,
+   "entry_ms": 1795322699999,
+   "entry_ts": "2026-11-22T04:53:15+00:00",
+   "feat": {
+    "r1h": 0.0111,
+    "r4h": -0.01938,
+    "r24": 0.01637,
+    "v4h": 0.29528,
+    "tbs4h": 0.50017,
+    "rp24": 0.12462,
+    "rng24": 0.2483,
+    "btc1": -0.00114,
+    "btc4": -0.01524,
+    "btc24": 0.05313
+   },
+   "ret": 0.0075,
+   "how": "TARGET",
+   "hours": 0.0,
+   "exit_ts": "2026-11-22T05:10:34+00:00"
   }
  ],
- "runs": 6609,
- "updated": "2026-11-22T04:53:15+00:00"
+ "runs": 6610,
+ "updated": "2026-11-22T05:10:34+00:00"
 }
