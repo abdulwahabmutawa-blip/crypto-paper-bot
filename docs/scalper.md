@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-22T23:23:09+00:00 · runs 6600 · equity **$484.22** (-51.58%) · cash $-0.00 · open 10/10 · round trips 2145
+updated 2026-11-22T23:39:56+00:00 · runs 6601 · equity **$484.57** (-51.54%) · cash $-0.00 · open 10/10 · round trips 2145
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-22T08:16 | KITEUSDT | surge | 0.1394 | 0.1423 | +2.08% |
-| 2026-11-22T09:07 | RENDERUSDT | surge | 1.337 | 1.332 | -0.37% |
-| 2026-11-22T10:02 | EWYBUSDT | surge | 127.63 | 128.12 | +0.38% |
-| 2026-11-22T10:02 | BONKUSDT | surge | 2.1e-06 | 2.06e-06 | -1.90% |
-| 2026-11-22T10:19 | NVDABUSDT | surge | 132.81 | 133.86 | +0.79% |
-| 2026-11-22T11:44 | TSLABUSDT | surge | 359.44 | 359.53 | +0.03% |
-| 2026-11-22T17:03 | CAKEUSDT | surge | 1.524 | 1.518 | -0.39% |
-| 2026-11-22T17:03 | INITUSDT | bottom | 0.08665 | 0.08643 | -0.25% |
-| 2026-11-22T23:04 | LISTAUSDT | surge | 0.0757 | 0.0769 | +1.59% |
+| 2026-11-22T08:16 | KITEUSDT | surge | 0.1394 | 0.1422 | +2.01% |
+| 2026-11-22T09:07 | RENDERUSDT | surge | 1.337 | 1.333 | -0.30% |
+| 2026-11-22T10:02 | EWYBUSDT | surge | 127.63 | 128.35 | +0.56% |
+| 2026-11-22T10:02 | BONKUSDT | surge | 2.1e-06 | 2.07e-06 | -1.43% |
+| 2026-11-22T10:19 | NVDABUSDT | surge | 132.81 | 134.36 | +1.17% |
+| 2026-11-22T11:44 | TSLABUSDT | surge | 359.44 | 359.82 | +0.11% |
+| 2026-11-22T17:03 | CAKEUSDT | surge | 1.524 | 1.522 | -0.13% |
+| 2026-11-22T17:03 | INITUSDT | bottom | 0.08665 | 0.08627 | -0.44% |
+| 2026-11-22T23:04 | LISTAUSDT | surge | 0.0757 | 0.0766 | +1.19% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
