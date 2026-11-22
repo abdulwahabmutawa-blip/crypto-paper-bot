@@ -4349,29 +4349,6 @@
    }
   },
   {
-   "symbol": "ETHFIUSDT",
-   "tactic": "momentum|t4|s2|h24",
-   "shape": "momentum",
-   "target": 0.04,
-   "stop": 0.02,
-   "max_h": 24,
-   "entry": 0.4693,
-   "entry_ms": 1795282199999,
-   "entry_ts": "2026-11-21T17:31:24+00:00",
-   "feat": {
-    "r1h": 0.00128,
-    "r4h": 0.02044,
-    "r24": 0.07146,
-    "v4h": 2.85682,
-    "tbs4h": 0.55979,
-    "rp24": 0.93262,
-    "rng24": 0.13535,
-    "btc1": 0.0026,
-    "btc4": -0.0045,
-    "btc24": 0.01864
-   }
-  },
-  {
    "symbol": "BEAMXUSDT",
    "tactic": "momentum|t3|s4|h48",
    "shape": "momentum",
@@ -5431,33 +5408,6 @@
   }
  ],
  "resolved": [
-  {
-   "symbol": "SOXLBUSDT",
-   "tactic": "dip_large|t3|s4|h48",
-   "shape": "dip_large",
-   "target": 0.03,
-   "stop": 0.04,
-   "max_h": 48,
-   "entry": 62.74,
-   "entry_ms": 1794454199999,
-   "entry_ts": "2026-11-12T03:42:23+00:00",
-   "feat": {
-    "r1h": -0.02879,
-    "r4h": -0.01212,
-    "r24": 0.0139,
-    "v4h": 0.70004,
-    "tbs4h": 0.46418,
-    "rp24": 0.22297,
-    "rng24": 0.14768,
-    "btc1": -0.0019,
-    "btc4": -0.00238,
-    "btc24": -0.00023
-   },
-   "ret": -0.0425,
-   "how": "STOP",
-   "hours": 1.75,
-   "exit_ts": "2026-11-12T05:42:43+00:00"
-  },
   {
    "symbol": "SOXLBUSDT",
    "tactic": "range_bottom|t3|s3|h24",
@@ -545430,8 +545380,35 @@
    "how": "STOP",
    "hours": 0.0,
    "exit_ts": "2026-11-22T01:52:40+00:00"
+  },
+  {
+   "symbol": "ETHFIUSDT",
+   "tactic": "momentum|t4|s2|h24",
+   "shape": "momentum",
+   "target": 0.04,
+   "stop": 0.02,
+   "max_h": 24,
+   "entry": 0.4693,
+   "entry_ms": 1795282199999,
+   "entry_ts": "2026-11-21T17:31:24+00:00",
+   "feat": {
+    "r1h": 0.00128,
+    "r4h": 0.02044,
+    "r24": 0.07146,
+    "v4h": 2.85682,
+    "tbs4h": 0.55979,
+    "rp24": 0.93262,
+    "rng24": 0.13535,
+    "btc1": 0.0026,
+    "btc4": -0.0045,
+    "btc24": 0.01864
+   },
+   "ret": 0.0375,
+   "how": "TARGET",
+   "hours": 8.25,
+   "exit_ts": "2026-11-22T02:10:09+00:00"
   }
  ],
- "runs": 6598,
- "updated": "2026-11-22T01:52:40+00:00"
+ "runs": 6599,
+ "updated": "2026-11-22T02:10:09+00:00"
 }
