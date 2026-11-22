@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-22T00:42:24+00:00 · runs 6524 · equity **$469.69** (-53.03%) · cash $39.85 · open 9/10 · round trips 2127
+updated 2026-11-22T00:59:54+00:00 · runs 6525 · equity **$469.91** (-53.01%) · cash $39.85 · open 9/10 · round trips 2127
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -37,12 +37,12 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
 | 2026-11-21T16:17 | STXUSDT | surge | 0.2474 | 0.2517 | +1.74% |
-| 2026-11-21T16:17 | RENDERUSDT | surge | 1.301 | 1.303 | +0.15% |
-| 2026-11-21T16:17 | UNIUSDT | surge | 4.72 | 4.714 | -0.13% |
+| 2026-11-21T16:17 | RENDERUSDT | surge | 1.301 | 1.31 | +0.69% |
+| 2026-11-21T16:17 | UNIUSDT | surge | 4.72 | 4.703 | -0.36% |
 | 2026-11-21T16:17 | ETCUSDT | surge | 5.5 | 5.49 | -0.18% |
-| 2026-11-21T16:35 | PYTHUSDT | surge | 0.04835 | 0.04885 | +1.03% |
-| 2026-11-21T16:35 | ARUSDT | surge | 2.24 | 2.263 | +1.03% |
-| 2026-11-21T16:53 | STRKUSDT | surge | 0.03068 | 0.03015 | -1.73% |
-| 2026-11-21T17:11 | ETHFIUSDT | surge | 0.4683 | 0.4799 | +2.48% |
+| 2026-11-21T16:35 | PYTHUSDT | surge | 0.04835 | 0.04901 | +1.37% |
+| 2026-11-21T16:35 | ARUSDT | surge | 2.24 | 2.265 | +1.12% |
+| 2026-11-21T16:53 | STRKUSDT | surge | 0.03068 | 0.03014 | -1.76% |
+| 2026-11-21T17:11 | ETHFIUSDT | surge | 0.4683 | 0.4791 | +2.31% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
