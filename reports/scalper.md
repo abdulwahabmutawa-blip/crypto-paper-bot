@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-22T02:27:30+00:00 · runs 6530 · equity **$469.42** (-53.06%) · cash $84.80 · open 8/10 · round trips 2128
+updated 2026-11-22T02:45:00+00:00 · runs 6531 · equity **$466.67** (-53.33%) · cash $42.40 · open 9/10 · round trips 2128
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,12 +36,13 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-21T16:17 | STXUSDT | surge | 0.2474 | 0.2509 | +1.41% |
-| 2026-11-21T16:17 | RENDERUSDT | surge | 1.301 | 1.313 | +0.92% |
-| 2026-11-21T16:17 | UNIUSDT | surge | 4.72 | 4.712 | -0.17% |
-| 2026-11-21T16:17 | ETCUSDT | surge | 5.5 | 5.48 | -0.36% |
-| 2026-11-21T16:35 | PYTHUSDT | surge | 0.04835 | 0.04853 | +0.37% |
-| 2026-11-21T16:35 | ARUSDT | surge | 2.24 | 2.255 | +0.67% |
-| 2026-11-21T16:53 | STRKUSDT | surge | 0.03068 | 0.03012 | -1.83% |
+| 2026-11-21T16:17 | STXUSDT | surge | 0.2474 | 0.2486 | +0.49% |
+| 2026-11-21T16:17 | RENDERUSDT | surge | 1.301 | 1.301 | +0.00% |
+| 2026-11-21T16:17 | UNIUSDT | surge | 4.72 | 4.678 | -0.89% |
+| 2026-11-21T16:17 | ETCUSDT | surge | 5.5 | 5.45 | -0.91% |
+| 2026-11-21T16:35 | PYTHUSDT | surge | 0.04835 | 0.04796 | -0.81% |
+| 2026-11-21T16:35 | ARUSDT | surge | 2.24 | 2.241 | +0.04% |
+| 2026-11-21T16:53 | STRKUSDT | surge | 0.03068 | 0.02987 | -2.64% |
+| 2026-11-22T02:42 | ICPUSDT | bottom | 1.885 | 1.871 | -0.74% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
