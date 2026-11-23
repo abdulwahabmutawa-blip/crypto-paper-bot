@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-23T09:50:12+00:00 · runs 6638 · equity **$483.71** (-51.63%) · cash $0.00 · open 10/10 · round trips 2155
+updated 2026-11-23T10:07:04+00:00 · runs 6639 · equity **$484.95** (-51.50%) · cash $0.00 · open 10/10 · round trips 2155
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-22T10:02 | EWYBUSDT | surge | 127.63 | 128.87 | +0.97% |
-| 2026-11-22T11:44 | TSLABUSDT | surge | 359.44 | 362.22 | +0.77% |
-| 2026-11-22T17:03 | CAKEUSDT | surge | 1.524 | 1.538 | +0.92% |
-| 2026-11-23T01:53 | SKHYBUSDT | surge | 111.81 | 113.5 | +1.51% |
-| 2026-11-23T02:26 | XLMUSDT | bottom | 0.1263 | 0.1282 | +1.50% |
-| 2026-11-23T06:26 | COINBUSDT | surge | 107.54 | 107.42 | -0.11% |
-| 2026-11-23T08:24 | BLURUSDT | surge | 0.008 | 0.00801 | +0.12% |
-| 2026-11-23T09:14 | AMDBUSDT | surge | 451.83 | 450.44 | -0.31% |
-| 2026-11-23T09:14 | DRAMBUSDT | surge | 36.42 | 36.56 | +0.38% |
+| 2026-11-22T10:02 | EWYBUSDT | surge | 127.63 | 129.04 | +1.10% |
+| 2026-11-22T11:44 | TSLABUSDT | surge | 359.44 | 362.24 | +0.78% |
+| 2026-11-22T17:03 | CAKEUSDT | surge | 1.524 | 1.539 | +0.98% |
+| 2026-11-23T01:53 | SKHYBUSDT | surge | 111.81 | 113.56 | +1.57% |
+| 2026-11-23T02:26 | XLMUSDT | bottom | 0.1263 | 0.1287 | +1.90% |
+| 2026-11-23T06:26 | COINBUSDT | surge | 107.54 | 107.33 | -0.20% |
+| 2026-11-23T08:24 | BLURUSDT | surge | 0.008 | 0.00819 | +2.37% |
+| 2026-11-23T09:14 | AMDBUSDT | surge | 451.83 | 450.15 | -0.37% |
+| 2026-11-23T09:14 | DRAMBUSDT | surge | 36.42 | 36.57 | +0.41% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
