@@ -1,0 +1,98 @@
+{
+ "annulment_alarm": 0.08,
+ "annulment_rate": 0.0045,
+ "annulment_target": 0.04,
+ "brier_baseline": 0.149752,
+ "brier_forecaster": 0.149752,
+ "cluster_rho": 0.0911,
+ "comparators": {
+  "age_v1": {
+   "brier": 0.144234,
+   "n": 23143,
+   "n_eff": 697.1,
+   "paired_d_90ci": [
+    -0.00100637,
+    0.00090071
+   ],
+   "paired_mean_d_vs_baseline": -5.283e-05,
+   "verdict": "indistinguishable from baseline"
+  },
+  "liq_band_v1": {
+   "brier": 0.143665,
+   "n": 22845,
+   "n_eff": 677.0,
+   "paired_d_90ci": [
+    -0.00058726,
+    0.00064465
+   ],
+   "paired_mean_d_vs_baseline": 2.87e-05,
+   "verdict": "indistinguishable from baseline"
+  },
+  "liqtier_v1": {
+   "brier": 0.144148,
+   "n": 23143,
+   "n_eff": 697.1,
+   "paired_d_90ci": [
+    -0.00045636,
+    0.00052181
+   ],
+   "paired_mean_d_vs_baseline": 3.273e-05,
+   "verdict": "indistinguishable from baseline"
+  },
+  "momo_v1": {
+   "brier": 0.144457,
+   "n": 23143,
+   "n_eff": 697.1,
+   "paired_d_90ci": [
+    -0.00101516,
+    0.0004635
+   ],
+   "paired_mean_d_vs_baseline": -0.00027583,
+   "verdict": "indistinguishable from baseline"
+  },
+  "momo_v2": {
+   "brier": 0.143542,
+   "n": 22845,
+   "n_eff": 677.0,
+   "paired_d_90ci": [
+    -0.00171688,
+    0.00201874
+   ],
+   "paired_mean_d_vs_baseline": 0.00015093,
+   "verdict": "indistinguishable from baseline"
+  },
+  "ownrate_v1": {
+   "brier": 0.151381,
+   "n": 23143,
+   "n_eff": 697.1,
+   "paired_d_90ci": [
+    -0.01134524,
+    -0.00305436
+   ],
+   "paired_mean_d_vs_baseline": -0.0071998,
+   "verdict": "worse than baseline"
+  }
+ },
+ "forecaster_id": "baserate_v1",
+ "generated_utc": "2026-11-23T08:02:17+00:00",
+ "generation_id": "gen-000-baserate",
+ "mean_group_size": 352.37,
+ "n_annulled": 111,
+ "n_eff": 736.3,
+ "n_eff_required_for_claim": 100,
+ "n_predictions_written": 35779,
+ "n_required_for_target": null,
+ "n_required_note": "nominal paired n; multiply by (1+(m-1)*rho) for the clustered reality",
+ "n_resolution_records": 24428,
+ "n_scored": 24317,
+ "observed_event_rate": 0.17852,
+ "paired_d_90ci": [
+  0.0,
+  0.0
+ ],
+ "paired_mean_d": 0.0,
+ "paired_sd_d": 0.0,
+ "status": "scored",
+ "target_delta_bss_0.02": 0.00299504,
+ "verdict": "indistinguishable from baseline"
+}
