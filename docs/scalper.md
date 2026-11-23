@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-23T16:36:24+00:00 · runs 6656 · equity **$497.42** (-50.26%) · cash $0.00 · open 10/10 · round trips 2175
+updated 2026-11-23T16:52:41+00:00 · runs 6657 · equity **$495.68** (-50.43%) · cash $0.00 · open 10/10 · round trips 2175
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-23T12:16 | GOOGLBUSDT | surge | 279.77 | 282.51 | +0.98% |
-| 2026-11-23T14:08 | NILUSDT | surge | 0.04992 | 0.04972 | -0.40% |
-| 2026-11-23T14:24 | PENDLEUSDT | surge | 1.365 | 1.363 | -0.15% |
-| 2026-11-23T14:24 | TRXUSDT | surge | 0.3103 | 0.3118 | +0.48% |
-| 2026-11-23T14:24 | ADAUSDT | surge | 0.154 | 0.1541 | +0.06% |
-| 2026-11-23T14:24 | SHIBUSDT | surge | 3.81e-06 | 3.75e-06 | -1.57% |
-| 2026-11-23T14:40 | SPCXBUSDT | surge | 140.07 | 136.98 | -2.21% |
-| 2026-11-23T14:57 | MORPHOUSDT | surge | 1.66 | 1.643 | -1.02% |
-| 2026-11-23T15:29 | ALGOUSDT | surge | 0.0852 | 0.0865 | +1.53% |
+| 2026-11-23T12:16 | GOOGLBUSDT | surge | 279.77 | 282.19 | +0.86% |
+| 2026-11-23T14:08 | NILUSDT | surge | 0.04992 | 0.04941 | -1.02% |
+| 2026-11-23T14:24 | PENDLEUSDT | surge | 1.365 | 1.351 | -1.03% |
+| 2026-11-23T14:24 | TRXUSDT | surge | 0.3103 | 0.3117 | +0.45% |
+| 2026-11-23T14:24 | ADAUSDT | surge | 0.154 | 0.1529 | -0.71% |
+| 2026-11-23T14:24 | SHIBUSDT | surge | 3.81e-06 | 3.73e-06 | -2.10% |
+| 2026-11-23T14:40 | SPCXBUSDT | surge | 140.07 | 136.72 | -2.39% |
+| 2026-11-23T14:57 | MORPHOUSDT | surge | 1.66 | 1.636 | -1.45% |
+| 2026-11-23T15:29 | ALGOUSDT | surge | 0.0852 | 0.0863 | +1.29% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
