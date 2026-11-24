@@ -5960,56 +5960,10 @@
   },
   {
    "symbol": "HBARUSDT",
-   "tactic": "range_bottom|t1.5|s1.5|h8",
-   "shape": "range_bottom",
-   "target": 0.015,
-   "stop": 0.015,
-   "max_h": 8,
-   "entry": 0.0498,
-   "entry_ms": 1795553099999,
-   "entry_ts": "2026-11-24T20:46:04+00:00",
-   "feat": {
-    "r1h": -0.005,
-    "r4h": -0.00757,
-    "r24": -0.05664,
-    "v4h": 1.22513,
-    "tbs4h": 0.52774,
-    "rp24": 0.05833,
-    "rng24": 0.0726,
-    "btc1": -0.00082,
-    "btc4": 0.00358,
-    "btc24": -0.02627
-   }
-  },
-  {
-   "symbol": "HBARUSDT",
    "tactic": "range_bottom|t2|s2|h8",
    "shape": "range_bottom",
    "target": 0.02,
    "stop": 0.02,
-   "max_h": 8,
-   "entry": 0.0498,
-   "entry_ms": 1795553099999,
-   "entry_ts": "2026-11-24T20:46:04+00:00",
-   "feat": {
-    "r1h": -0.005,
-    "r4h": -0.00757,
-    "r24": -0.05664,
-    "v4h": 1.22513,
-    "tbs4h": 0.52774,
-    "rp24": 0.05833,
-    "rng24": 0.0726,
-    "btc1": -0.00082,
-    "btc4": 0.00358,
-    "btc24": -0.02627
-   }
-  },
-  {
-   "symbol": "HBARUSDT",
-   "tactic": "range_bottom|t1.5|s1|h8",
-   "shape": "range_bottom",
-   "target": 0.015,
-   "stop": 0.01,
    "max_h": 8,
    "entry": 0.0498,
    "entry_ms": 1795553099999,
@@ -7294,60 +7248,6 @@
   }
  ],
  "resolved": [
-  {
-   "symbol": "XPLUSDT",
-   "tactic": "momentum|t1.5|s1|h8",
-   "shape": "momentum",
-   "target": 0.015,
-   "stop": 0.01,
-   "max_h": 8,
-   "entry": 0.0449,
-   "entry_ms": 1794784499999,
-   "entry_ts": "2026-11-15T23:15:06+00:00",
-   "feat": {
-    "r1h": 0.00246,
-    "r4h": 0.02558,
-    "r24": 0.09459,
-    "v4h": 2.03035,
-    "tbs4h": 0.55342,
-    "rp24": 0.88548,
-    "rng24": 0.12053,
-    "btc1": -0.00191,
-    "btc4": 0.00155,
-    "btc24": 0.0209
-   },
-   "ret": -0.0125,
-   "how": "STOP",
-   "hours": 0.75,
-   "exit_ts": "2026-11-16T00:20:46+00:00"
-  },
-  {
-   "symbol": "XPLUSDT",
-   "tactic": "momentum|t3|s2|h12",
-   "shape": "momentum",
-   "target": 0.03,
-   "stop": 0.02,
-   "max_h": 12,
-   "entry": 0.0449,
-   "entry_ms": 1794784499999,
-   "entry_ts": "2026-11-15T23:15:06+00:00",
-   "feat": {
-    "r1h": 0.00246,
-    "r4h": 0.02558,
-    "r24": 0.09459,
-    "v4h": 2.03035,
-    "tbs4h": 0.55342,
-    "rp24": 0.88548,
-    "rng24": 0.12053,
-    "btc1": -0.00191,
-    "btc4": 0.00155,
-    "btc24": 0.0209
-   },
-   "ret": -0.0225,
-   "how": "STOP",
-   "hours": 0.75,
-   "exit_ts": "2026-11-16T00:20:46+00:00"
-  },
   {
    "symbol": "XPLUSDT",
    "tactic": "momentum|t4|s2|h24",
@@ -547293,8 +547193,62 @@
    "how": "TARGET",
    "hours": 1.25,
    "exit_ts": "2026-11-24T22:23:21+00:00"
+  },
+  {
+   "symbol": "HBARUSDT",
+   "tactic": "range_bottom|t1.5|s1.5|h8",
+   "shape": "range_bottom",
+   "target": 0.015,
+   "stop": 0.015,
+   "max_h": 8,
+   "entry": 0.0498,
+   "entry_ms": 1795553099999,
+   "entry_ts": "2026-11-24T20:46:04+00:00",
+   "feat": {
+    "r1h": -0.005,
+    "r4h": -0.00757,
+    "r24": -0.05664,
+    "v4h": 1.22513,
+    "tbs4h": 0.52774,
+    "rp24": 0.05833,
+    "rng24": 0.0726,
+    "btc1": -0.00082,
+    "btc4": 0.00358,
+    "btc24": -0.02627
+   },
+   "ret": 0.0125,
+   "how": "TARGET",
+   "hours": 1.5,
+   "exit_ts": "2026-11-24T22:39:24+00:00"
+  },
+  {
+   "symbol": "HBARUSDT",
+   "tactic": "range_bottom|t1.5|s1|h8",
+   "shape": "range_bottom",
+   "target": 0.015,
+   "stop": 0.01,
+   "max_h": 8,
+   "entry": 0.0498,
+   "entry_ms": 1795553099999,
+   "entry_ts": "2026-11-24T20:46:04+00:00",
+   "feat": {
+    "r1h": -0.005,
+    "r4h": -0.00757,
+    "r24": -0.05664,
+    "v4h": 1.22513,
+    "tbs4h": 0.52774,
+    "rp24": 0.05833,
+    "rng24": 0.0726,
+    "btc1": -0.00082,
+    "btc4": 0.00358,
+    "btc24": -0.02627
+   },
+   "ret": 0.0125,
+   "how": "TARGET",
+   "hours": 1.5,
+   "exit_ts": "2026-11-24T22:39:24+00:00"
   }
  ],
- "runs": 6780,
- "updated": "2026-11-24T22:23:21+00:00"
+ "runs": 6781,
+ "updated": "2026-11-24T22:39:24+00:00"
 }
