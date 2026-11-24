@@ -3430,52 +3430,6 @@
   },
   {
    "symbol": "PEPEUSDT",
-   "tactic": "range_bottom|t3|s3|h24",
-   "shape": "range_bottom",
-   "target": 0.03,
-   "stop": 0.03,
-   "max_h": 24,
-   "entry": 3.39e-06,
-   "entry_ms": 1795526099999,
-   "entry_ts": "2026-11-24T13:28:46+00:00",
-   "feat": {
-    "r1h": -0.02023,
-    "r4h": -0.02865,
-    "r24": -0.01739,
-    "v4h": 1.52156,
-    "tbs4h": 0.45362,
-    "rp24": 0.07317,
-    "rng24": 0.12202,
-    "btc1": -0.00166,
-    "btc4": 0.0031,
-    "btc24": -0.0194
-   }
-  },
-  {
-   "symbol": "PEPEUSDT",
-   "tactic": "range_bottom|t3|s4|h48",
-   "shape": "range_bottom",
-   "target": 0.03,
-   "stop": 0.04,
-   "max_h": 48,
-   "entry": 3.39e-06,
-   "entry_ms": 1795526099999,
-   "entry_ts": "2026-11-24T13:28:46+00:00",
-   "feat": {
-    "r1h": -0.02023,
-    "r4h": -0.02865,
-    "r24": -0.01739,
-    "v4h": 1.52156,
-    "tbs4h": 0.45362,
-    "rp24": 0.07317,
-    "rng24": 0.12202,
-    "btc1": -0.00166,
-    "btc4": 0.0031,
-    "btc24": -0.0194
-   }
-  },
-  {
-   "symbol": "PEPEUSDT",
    "tactic": "range_bottom|t5|s3|h48",
    "shape": "range_bottom",
    "target": 0.05,
@@ -7202,60 +7156,6 @@
   }
  ],
  "resolved": [
-  {
-   "symbol": "SAGAUSDT",
-   "tactic": "momentum|t1.5|s1.5|h8",
-   "shape": "momentum",
-   "target": 0.015,
-   "stop": 0.015,
-   "max_h": 8,
-   "entry": 0.01409,
-   "entry_ms": 1794781799999,
-   "entry_ts": "2026-11-15T22:42:18+00:00",
-   "feat": {
-    "r1h": 0.01586,
-    "r4h": 0.02175,
-    "r24": 0.06823,
-    "v4h": 7.32897,
-    "tbs4h": 0.52193,
-    "rp24": 0.83871,
-    "rng24": 0.09502,
-    "btc1": 0.00191,
-    "btc4": 0.00822,
-    "btc24": 0.01988
-   },
-   "ret": 0.0125,
-   "how": "TARGET",
-   "hours": 1.5,
-   "exit_ts": "2026-11-16T00:20:46+00:00"
-  },
-  {
-   "symbol": "SAGAUSDT",
-   "tactic": "momentum|t1.5|s1|h8",
-   "shape": "momentum",
-   "target": 0.015,
-   "stop": 0.01,
-   "max_h": 8,
-   "entry": 0.01409,
-   "entry_ms": 1794781799999,
-   "entry_ts": "2026-11-15T22:42:18+00:00",
-   "feat": {
-    "r1h": 0.01586,
-    "r4h": 0.02175,
-    "r24": 0.06823,
-    "v4h": 7.32897,
-    "tbs4h": 0.52193,
-    "rp24": 0.83871,
-    "rng24": 0.09502,
-    "btc1": 0.00191,
-    "btc4": 0.00822,
-    "btc24": 0.01988
-   },
-   "ret": 0.0125,
-   "how": "TARGET",
-   "hours": 1.5,
-   "exit_ts": "2026-11-16T00:20:46+00:00"
-  },
   {
    "symbol": "XPLUSDT",
    "tactic": "momentum|t1|s1|h6",
@@ -547201,8 +547101,62 @@
    "how": "TIME",
    "hours": 6.0,
    "exit_ts": "2026-11-24T21:51:14+00:00"
+  },
+  {
+   "symbol": "PEPEUSDT",
+   "tactic": "range_bottom|t3|s3|h24",
+   "shape": "range_bottom",
+   "target": 0.03,
+   "stop": 0.03,
+   "max_h": 24,
+   "entry": 3.39e-06,
+   "entry_ms": 1795526099999,
+   "entry_ts": "2026-11-24T13:28:46+00:00",
+   "feat": {
+    "r1h": -0.02023,
+    "r4h": -0.02865,
+    "r24": -0.01739,
+    "v4h": 1.52156,
+    "tbs4h": 0.45362,
+    "rp24": 0.07317,
+    "rng24": 0.12202,
+    "btc1": -0.00166,
+    "btc4": 0.0031,
+    "btc24": -0.0194
+   },
+   "ret": 0.0275,
+   "how": "TARGET",
+   "hours": 8.5,
+   "exit_ts": "2026-11-24T22:07:17+00:00"
+  },
+  {
+   "symbol": "PEPEUSDT",
+   "tactic": "range_bottom|t3|s4|h48",
+   "shape": "range_bottom",
+   "target": 0.03,
+   "stop": 0.04,
+   "max_h": 48,
+   "entry": 3.39e-06,
+   "entry_ms": 1795526099999,
+   "entry_ts": "2026-11-24T13:28:46+00:00",
+   "feat": {
+    "r1h": -0.02023,
+    "r4h": -0.02865,
+    "r24": -0.01739,
+    "v4h": 1.52156,
+    "tbs4h": 0.45362,
+    "rp24": 0.07317,
+    "rng24": 0.12202,
+    "btc1": -0.00166,
+    "btc4": 0.0031,
+    "btc24": -0.0194
+   },
+   "ret": 0.0275,
+   "how": "TARGET",
+   "hours": 8.5,
+   "exit_ts": "2026-11-24T22:07:17+00:00"
   }
  ],
- "runs": 6778,
- "updated": "2026-11-24T21:51:14+00:00"
+ "runs": 6779,
+ "updated": "2026-11-24T22:07:17+00:00"
 }
