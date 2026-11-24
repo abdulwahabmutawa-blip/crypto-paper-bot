@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-24T00:09:24+00:00",
+  "generated_utc": "2026-11-24T00:26:21+00:00",
   "created": "2026-07-16",
   "starting_cash": 1000.0,
   "live_ts": "2026-11-23T20:55:00+00:00",
@@ -17,7 +17,7 @@
       "tag": "oversold",
       "on": true,
       "pick": false,
-      "fill": 33.27094225098077
+      "fill": 33.27094225098078
     },
     {
       "sym": "JPM",
@@ -26,7 +26,7 @@
       "tag": "HELD",
       "on": true,
       "pick": true,
-      "fill": 30.220324290950533
+      "fill": 30.220324290950717
     },
     {
       "sym": "MRK",
@@ -44,7 +44,7 @@
       "tag": "oversold",
       "on": true,
       "pick": false,
-      "fill": 26.372161249096422
+      "fill": 26.372161249104316
     },
     {
       "sym": "XOM",
@@ -53,7 +53,16 @@
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 23.869301637074237
+      "fill": 23.869301637076003
+    },
+    {
+      "sym": "CVX",
+      "price": 206.21,
+      "line": "z -1.16",
+      "tag": "normal",
+      "on": false,
+      "pick": false,
+      "fill": 19.281841794007526
     },
     {
       "sym": "JNJ",
@@ -62,7 +71,7 @@
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 14.42268145407279
+      "fill": 14.422681454066769
     },
     {
       "sym": "NVDA",
@@ -71,7 +80,7 @@
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 8.726754833990448
+      "fill": 8.726754833990467
     },
     {
       "sym": "GOOGL",
@@ -80,7 +89,7 @@
       "tag": "normal",
       "on": false,
       "pick": false,
-      "fill": 6.391091391943034
+      "fill": 6.391091391945768
     },
     {
       "sym": "AMZN",
@@ -90,15 +99,6 @@
       "on": false,
       "pick": false,
       "fill": 4.307486269598963
-    },
-    {
-      "sym": "PEP",
-      "price": 140.23,
-      "line": "z -0.05",
-      "tag": "normal",
-      "on": false,
-      "pick": false,
-      "fill": 0.87991154216578
     }
   ],
   "board_title": "16 mega-caps, most oversold first (z < -1.5 = buy zone)",
@@ -109,12 +109,6 @@
     "board_note": "Buys panic, sells relief: enter the most stretched mega-cap below -1.5 z, exit when it recovers to average."
   },
   "intraday": [
-    {
-      "ts": "2026-11-01T23:12:45+00:00",
-      "value": 1037.71,
-      "bench": 1006.59,
-      "holding": "AMZN"
-    },
     {
       "ts": "2026-11-01T23:29:32+00:00",
       "value": 1037.71,
@@ -9105,6 +9099,12 @@
     },
     {
       "ts": "2026-11-24T00:09:24+00:00",
+      "value": 868.81,
+      "bench": 962.21,
+      "holding": "JPM"
+    },
+    {
+      "ts": "2026-11-24T00:26:21+00:00",
       "value": 868.81,
       "bench": 962.21,
       "holding": "JPM"
