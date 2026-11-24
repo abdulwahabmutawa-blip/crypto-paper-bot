@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-24T01:48:22+00:00 · runs 6668 · equity **$488.80** (-51.12%) · cash $0.00 · open 10/10 · round trips 2182
+updated 2026-11-24T02:04:29+00:00 · runs 6669 · equity **$487.17** (-51.28%) · cash $0.00 · open 10/10 · round trips 2182
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-23T12:16 | GOOGLBUSDT | surge | 279.77 | 285.46 | +2.03% |
-| 2026-11-23T14:24 | TRXUSDT | surge | 0.3103 | 0.3108 | +0.16% |
-| 2026-11-23T17:56 | METABUSDT | surge | 594.66 | 601.01 | +1.07% |
-| 2026-11-23T17:56 | SPYBUSDT | surge | 722.28 | 725.05 | +0.38% |
-| 2026-11-24T00:09 | ZECUSDT | bottom | 776.93 | 776.66 | -0.03% |
-| 2026-11-24T00:09 | ETHUSDT | bottom | 1710.65 | 1712.03 | +0.08% |
-| 2026-11-24T00:09 | PUMPUSDT | bottom | 0.002534 | 0.002525 | -0.36% |
-| 2026-11-24T01:14 | BEBUSDT | surge | 171.8 | 170.51 | -0.75% |
-| 2026-11-24T01:47 | BABYUSDT | surge | 0.00856 | 0.00848 | -0.93% |
+| 2026-11-23T12:16 | GOOGLBUSDT | surge | 279.77 | 284.49 | +1.69% |
+| 2026-11-23T14:24 | TRXUSDT | surge | 0.3103 | 0.3103 | +0.00% |
+| 2026-11-23T17:56 | METABUSDT | surge | 594.66 | 599.77 | +0.86% |
+| 2026-11-23T17:56 | SPYBUSDT | surge | 722.28 | 723.89 | +0.22% |
+| 2026-11-24T00:09 | ZECUSDT | bottom | 776.93 | 769.87 | -0.91% |
+| 2026-11-24T00:09 | ETHUSDT | bottom | 1710.65 | 1697.84 | -0.75% |
+| 2026-11-24T00:09 | PUMPUSDT | bottom | 0.002534 | 0.002503 | -1.22% |
+| 2026-11-24T01:14 | BEBUSDT | surge | 171.8 | 169.35 | -1.43% |
+| 2026-11-24T01:47 | BABYUSDT | surge | 0.00856 | 0.00852 | -0.47% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
