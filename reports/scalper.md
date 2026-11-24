@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-24T12:35:35+00:00 · runs 6692 · equity **$482.30** (-51.77%) · cash $132.45 · open 7/10 · round trips 2189
+updated 2026-11-24T12:53:15+00:00 · runs 6693 · equity **$482.57** (-51.74%) · cash $132.45 · open 7/10 · round trips 2189
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,11 +36,11 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-23T14:24 | TRXUSDT | surge | 0.3103 | 0.3078 | -0.81% |
-| 2026-11-23T17:56 | METABUSDT | surge | 594.66 | 590.63 | -0.68% |
-| 2026-11-23T17:56 | SPYBUSDT | surge | 722.28 | 715.47 | -0.94% |
-| 2026-11-24T00:09 | ETHUSDT | bottom | 1710.65 | 1696.15 | -0.85% |
-| 2026-11-24T03:39 | INJUSDT | bottom | 6.169 | 6.045 | -2.01% |
-| 2026-11-24T11:58 | HBARUSDT | bottom | 0.05113 | 0.05111 | -0.04% |
+| 2026-11-23T14:24 | TRXUSDT | surge | 0.3103 | 0.3085 | -0.58% |
+| 2026-11-23T17:56 | METABUSDT | surge | 594.66 | 590.68 | -0.67% |
+| 2026-11-23T17:56 | SPYBUSDT | surge | 722.28 | 716.82 | -0.76% |
+| 2026-11-24T00:09 | ETHUSDT | bottom | 1710.65 | 1701.49 | -0.54% |
+| 2026-11-24T03:39 | INJUSDT | bottom | 6.169 | 6.033 | -2.20% |
+| 2026-11-24T11:58 | HBARUSDT | bottom | 0.05113 | 0.05114 | +0.02% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
