@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-24T00:27:40+00:00 · runs 6663 · equity **$489.30** (-51.07%) · cash $88.56 · open 8/10 · round trips 2182
+updated 2026-11-24T00:43:49+00:00 · runs 6664 · equity **$489.45** (-51.05%) · cash $88.56 · open 8/10 · round trips 2182
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,12 +36,12 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-23T12:16 | GOOGLBUSDT | surge | 279.77 | 284.31 | +1.62% |
+| 2026-11-23T12:16 | GOOGLBUSDT | surge | 279.77 | 284.35 | +1.64% |
 | 2026-11-23T14:24 | TRXUSDT | surge | 0.3103 | 0.3109 | +0.19% |
-| 2026-11-23T17:56 | METABUSDT | surge | 594.66 | 599.2 | +0.76% |
-| 2026-11-23T17:56 | SPYBUSDT | surge | 722.28 | 724.09 | +0.25% |
-| 2026-11-24T00:09 | ZECUSDT | bottom | 776.93 | 773.75 | -0.41% |
-| 2026-11-24T00:09 | ETHUSDT | bottom | 1710.65 | 1710.29 | -0.02% |
-| 2026-11-24T00:09 | PUMPUSDT | bottom | 0.002534 | 0.002544 | +0.39% |
+| 2026-11-23T17:56 | METABUSDT | surge | 594.66 | 599.49 | +0.81% |
+| 2026-11-23T17:56 | SPYBUSDT | surge | 722.28 | 723.8 | +0.21% |
+| 2026-11-24T00:09 | ZECUSDT | bottom | 776.93 | 776.9 | -0.00% |
+| 2026-11-24T00:09 | ETHUSDT | bottom | 1710.65 | 1713.62 | +0.17% |
+| 2026-11-24T00:09 | PUMPUSDT | bottom | 0.002534 | 0.002537 | +0.12% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
