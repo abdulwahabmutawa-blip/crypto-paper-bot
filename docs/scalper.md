@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-24T02:52:48+00:00 · runs 6672 · equity **$485.47** (-51.45%) · cash $0.00 · open 10/10 · round trips 2183
+updated 2026-11-24T03:08:54+00:00 · runs 6673 · equity **$483.10** (-51.69%) · cash $0.00 · open 10/10 · round trips 2183
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-23T12:16 | GOOGLBUSDT | surge | 279.77 | 284.49 | +1.69% |
-| 2026-11-23T14:24 | TRXUSDT | surge | 0.3103 | 0.3094 | -0.29% |
-| 2026-11-23T17:56 | METABUSDT | surge | 594.66 | 599.41 | +0.80% |
-| 2026-11-23T17:56 | SPYBUSDT | surge | 722.28 | 723.89 | +0.22% |
-| 2026-11-24T00:09 | ETHUSDT | bottom | 1710.65 | 1686.88 | -1.39% |
-| 2026-11-24T00:09 | PUMPUSDT | bottom | 0.002534 | 0.00249 | -1.74% |
-| 2026-11-24T01:14 | BEBUSDT | surge | 171.8 | 169.16 | -1.54% |
-| 2026-11-24T01:47 | BABYUSDT | surge | 0.00856 | 0.00853 | -0.35% |
-| 2026-11-24T02:51 | ZROUSDT | bottom | 1.127 | 1.127 | +0.00% |
+| 2026-11-23T12:16 | GOOGLBUSDT | surge | 279.77 | 283.5 | +1.33% |
+| 2026-11-23T14:24 | TRXUSDT | surge | 0.3103 | 0.3086 | -0.55% |
+| 2026-11-23T17:56 | METABUSDT | surge | 594.66 | 598.68 | +0.68% |
+| 2026-11-23T17:56 | SPYBUSDT | surge | 722.28 | 722.8 | +0.07% |
+| 2026-11-24T00:09 | ETHUSDT | bottom | 1710.65 | 1675.7 | -2.04% |
+| 2026-11-24T00:09 | PUMPUSDT | bottom | 0.002534 | 0.002461 | -2.88% |
+| 2026-11-24T01:14 | BEBUSDT | surge | 171.8 | 167.25 | -2.65% |
+| 2026-11-24T01:47 | BABYUSDT | surge | 0.00856 | 0.00848 | -0.93% |
+| 2026-11-24T02:51 | ZROUSDT | bottom | 1.127 | 1.116 | -0.98% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
