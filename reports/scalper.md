@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-24T22:07:11+00:00 · runs 6709 · equity **$480.84** (-51.92%) · cash $219.46 · open 5/10 · round trips 2194
+updated 2026-11-24T22:23:15+00:00 · runs 6710 · equity **$480.65** (-51.94%) · cash $219.46 · open 5/10 · round trips 2194
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,9 +36,9 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-24T00:09 | ETHUSDT | bottom | 1710.65 | 1683.17 | -1.61% |
-| 2026-11-24T13:26 | AAVEUSDT | bottom | 93.51 | 94.18 | +0.72% |
-| 2026-11-24T22:05 | USUALUSDT | surge | 0.01159 | 0.01161 | +0.17% |
-| 2026-11-24T22:05 | TAOUSDT | bottom | 180.2 | 180.2 | +0.00% |
+| 2026-11-24T00:09 | ETHUSDT | bottom | 1710.65 | 1683.85 | -1.57% |
+| 2026-11-24T13:26 | AAVEUSDT | bottom | 93.51 | 94.32 | +0.87% |
+| 2026-11-24T22:05 | USUALUSDT | surge | 0.01159 | 0.01155 | -0.35% |
+| 2026-11-24T22:05 | TAOUSDT | bottom | 180.2 | 180 | -0.11% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
