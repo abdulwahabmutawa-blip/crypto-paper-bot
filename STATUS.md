@@ -1,24 +1,25 @@
-# Fleet Status — 2026-11-23 UTC
+# Fleet Status — 2026-11-24 UTC
 
 | Bot | Holds | 24h change | Value |
 |---|---|---|---|
-| crypto (BTC tide gauge v4) | CASH | Unchanged, CHOP regime, no trade | $1,027.21 |
-| meanrev | JPM | Unchanged position (US equities closed Sat/Sun, Monday not yet closed) | $851.86 (11-20 close) |
+| crypto (BTC tide gauge v4) | CASH | Unchanged since 11-12, no trade | $1,027.21 |
+| meanrev | JPM | Unchanged position; price drifted up | $868.81 (vs $851.86 11-20) |
 | sentiment (Watcher + sentinel_trader) | CASH | Unchanged, still R1-frozen since 10-12 | $726.83 |
-| scalper | 10/10 seats | Seats stayed 10/10; 21 round trips closed (16W/5L, net +$11.24) | $480.79 (vs $468.00 yday) |
-| Watcher (sentinel, no capital) | — | Grok risk scan still NOT refreshed (805h stale) | n/a |
+| scalper | 10/10 seats | 34 round trips closed (22W/12L, net +$6.36) | $486.31 (vs $480.79 yday) |
+| Watcher (sentinel, no capital) | — | Grok risk scan still NOT refreshed (~35d stale) | n/a |
 
 ## Changed
-- **scalper**: 21 round trips closed in the window (16 wins, 5 losses, net +$11.24); equity up from $468.00 to $480.79. Seat count held at 10/10 — same coins rotating through as seats free up.
-- **crypto, meanrev, sentiment**: no trades, no position changes. meanrev's price data is still dated 2026-11-20 — expected, Monday's US close hadn't happened yet as of this cycle.
+- **scalper**: 34 round trips closed in the 24h window (22 wins, 12 losses, net +$6.36); equity $480.79 → $486.31. Seats held at 10/10, same rotation pattern.
+- **crypto, sentiment**: no trades, no position changes.
+- **meanrev**: no new trade; still holding JPM from the 11-20 trailing-stop re-entry. Value moved from $851.86 to $868.81 on price action alone.
 - Routine data refreshes (`social_radar.md`, `smallwins.md`, `announcements.json`, btc execution samples): nothing abnormal.
-- GitHub Actions cycles: 50 commits in the available lookback window, ~17-18 min apart, one ~116min gap (15:11→17:07 UTC 11-22) consistent with previously-documented GH Actions scheduling throttling. No error or failed-cycle commits found.
+- Full 24h of commit history was available this run (prior shallow-clone limitation did not recur).
 
 ## Needs a look
-- **Shallow clone limit (recurring)**: this session's checkout only has history back to 2026-11-22 14:03 UTC (~15h), not a full 24h — everything above covers that shorter window.
-- **Watcher's Grok risk scan**: unchanged since 2026-10-20T16:09 UTC — now ~34 days stale.
-- **scalper seat TVKUSDT**: still open since 2026-09-12 (~72 days), past the bot's 24h hold cap — known unresolved bug, unchanged.
-- **scalper equity** ($480.79) remains below the R1 hard-stop floor ($750); no retirement action taken (known open item, human call).
+- **Cycle gap, 2026-11-23**: ~6h12m between the 12:19 and 17:59 UTC cycles (vs. the usual ~17-25 min cadence) — larger than the previously-documented ~2h GH Actions throttling gap. No error text in commit messages explaining it; worth checking Actions run history if it recurs. One smaller 130min gap (08:02→10:08) also present.
+- **Watcher's Grok risk scan**: unchanged since 2026-10-20T16:09 UTC — now ~35 days stale.
+- **scalper seat TVKUSDT**: still open since 2026-09-12 (~73 days), past the bot's 24h hold cap — known unresolved bug, unchanged.
+- **scalper equity** ($486.31) remains below the R1 hard-stop floor ($750); no retirement action taken (known open item, human call).
 - **sentiment** remains R1-frozen in CASH at $726.83 since 10-12; un-freeze or formal retirement still undecided.
-- `exit_auditor`'s `data/exit_audit.jsonl` has no new entries since 2026-09-10 — ~74 days stale.
+- `exit_auditor`'s `data/exit_audit.jsonl` has no new entries since 2026-09-10 — ~75 days stale.
 - **Scheduled-task roster mismatch (recurring)**: this digest's stored instructions describe a 9-bot fleet (trend, regime, congress, meanrev, commodity, allweather, hype, Hunter, Watcher) that doesn't match the actual roster. Per CLAUDE.md, the active paper fleet is 4 books — crypto, meanrev, sentiment, scalper — plus the non-capital Watcher; the others are retired/frozen archives.
