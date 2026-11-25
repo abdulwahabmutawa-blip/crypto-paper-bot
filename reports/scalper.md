@@ -2,20 +2,21 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-25T06:06:25+00:00 · runs 6734 · equity **$482.46** (-51.75%) · cash $176.49 · open 6/10 · round trips 2199
+updated 2026-11-25T06:23:27+00:00 · runs 6735 · equity **$482.20** (-51.78%) · cash $221.82 · open 5/10 · round trips 2200
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
-- hit 47% (break-even 54%) · mean -0.33%/trade · realized $-517.78 · worst day $-50.94 · trades/day 26.8
+- hit 47% (break-even 54%) · mean -0.33%/trade · realized $-516.57 · worst day $-50.94 · trades/day 26.8
 
 | shape | n | hit | mean | target% | stop% | time% |
 |---|---|---|---|---|---|---|
-| surge | 1892 | 48% | -0.31% | 46% | 47% | 7% |
+| surge | 1893 | 48% | -0.31% | 46% | 47% | 7% |
 | bottom | 307 | 43% | -0.50% | 37% | 44% | 19% |
 
 ## Last 15 round trips
 | exit (UTC) | coin | shape | how | hours | net | P&L |
 |---|---|---|---|---|---|---|
+| 2026-11-25T06:21 | USUALUSDT | surge | TARGET | 1.2 | +2.75% | $+1.21 |
 | 2026-11-25T04:39 | ERAUSDT | surge | TARGET | 0.5 | +2.75% | $+1.21 |
 | 2026-11-25T04:22 | INITUSDT | surge | TARGET | 0.0 | +2.75% | $+1.21 |
 | 2026-11-25T04:22 | BLURUSDT | surge | STOP | 0.2 | -3.25% | $-1.43 |
@@ -30,16 +31,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | 2026-11-24T10:11 | BABYUSDT | surge | TARGET | 3.5 | +2.75% | $+1.25 |
 | 2026-11-24T10:11 | ZROUSDT | bottom | STOP | 6.0 | -3.25% | $-1.39 |
 | 2026-11-24T10:11 | BEBUSDT | surge | STOP | 5.2 | -3.25% | $-1.44 |
-| 2026-11-24T04:44 | BABYUSDT | surge | TARGET | 2.5 | +2.75% | $+1.22 |
 
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-24T13:26 | AAVEUSDT | bottom | 93.51 | 92.92 | -0.63% |
-| 2026-11-24T22:05 | TAOUSDT | bottom | 180.2 | 177.5 | -1.50% |
+| 2026-11-24T13:26 | AAVEUSDT | bottom | 93.51 | 92.9 | -0.65% |
+| 2026-11-24T22:05 | TAOUSDT | bottom | 180.2 | 177.7 | -1.39% |
 | 2026-11-25T03:47 | ICPUSDT | bottom | 1.976 | 1.984 | +0.40% |
-| 2026-11-25T04:56 | ERAUSDT | surge | 0.0768 | 0.077 | +0.26% |
-| 2026-11-25T04:56 | USUALUSDT | surge | 0.01207 | 0.01231 | +1.99% |
+| 2026-11-25T04:56 | ERAUSDT | surge | 0.0768 | 0.0759 | -1.17% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
