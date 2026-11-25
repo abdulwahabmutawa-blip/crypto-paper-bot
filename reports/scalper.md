@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-25T08:40:04+00:00 · runs 6743 · equity **$479.14** (-52.09%) · cash $219.04 · open 5/10 · round trips 2202
+updated 2026-11-25T08:57:10+00:00 · runs 6744 · equity **$478.68** (-52.13%) · cash $175.23 · open 6/10 · round trips 2202
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,9 +36,10 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-24T13:26 | AAVEUSDT | bottom | 93.51 | 92.46 | -1.12% |
-| 2026-11-25T03:47 | ICPUSDT | bottom | 1.976 | 1.963 | -0.66% |
-| 2026-11-25T04:56 | ERAUSDT | surge | 0.0768 | 0.0754 | -1.82% |
-| 2026-11-25T08:21 | SOLUSDT | bottom | 67.89 | 68.14 | +0.37% |
+| 2026-11-24T13:26 | AAVEUSDT | bottom | 93.51 | 92.57 | -1.01% |
+| 2026-11-25T03:47 | ICPUSDT | bottom | 1.976 | 1.964 | -0.61% |
+| 2026-11-25T04:56 | ERAUSDT | surge | 0.0768 | 0.0755 | -1.69% |
+| 2026-11-25T08:21 | SOLUSDT | bottom | 67.89 | 68.03 | +0.21% |
+| 2026-11-25T08:55 | ALICEUSDT | surge | 0.1005 | 0.0993 | -1.19% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
