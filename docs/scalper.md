@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-26T15:21:13+00:00 · runs 6808 · equity **$482.38** (-51.76%) · cash $0.00 · open 10/10 · round trips 2231
+updated 2026-11-26T15:38:13+00:00 · runs 6809 · equity **$485.07** (-51.49%) · cash $0.00 · open 10/10 · round trips 2231
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-25T17:45 | STXUSDT | surge | 0.2623 | 0.2618 | -0.19% |
-| 2026-11-25T22:49 | SUPERUSDT | surge | 0.1173 | 0.1167 | -0.51% |
-| 2026-11-26T00:33 | EWYBUSDT | surge | 131.04 | 129.19 | -1.41% |
-| 2026-11-26T15:01 | SAGAUSDT | surge | 0.01438 | 0.01423 | -1.04% |
-| 2026-11-26T15:01 | SEIUSDT | surge | 0.03709 | 0.0368 | -0.78% |
-| 2026-11-26T15:19 | SKYUSDT | surge | 0.04609 | 0.04616 | +0.15% |
-| 2026-11-26T15:19 | TRXUSDT | bottom | 0.3026 | 0.3024 | -0.07% |
-| 2026-11-26T15:19 | MANTRAUSDT | bottom | 0.00242 | 0.0024 | -0.83% |
-| 2026-11-26T15:19 | ZECUSDT | bottom | 678.39 | 682.49 | +0.60% |
+| 2026-11-25T17:45 | STXUSDT | surge | 0.2623 | 0.2635 | +0.46% |
+| 2026-11-25T22:49 | SUPERUSDT | surge | 0.1173 | 0.1171 | -0.17% |
+| 2026-11-26T00:33 | EWYBUSDT | surge | 131.04 | 128.92 | -1.62% |
+| 2026-11-26T15:01 | SAGAUSDT | surge | 0.01438 | 0.01446 | +0.56% |
+| 2026-11-26T15:01 | SEIUSDT | surge | 0.03709 | 0.03785 | +2.05% |
+| 2026-11-26T15:19 | SKYUSDT | surge | 0.04609 | 0.04562 | -1.02% |
+| 2026-11-26T15:19 | TRXUSDT | bottom | 0.3026 | 0.3021 | -0.17% |
+| 2026-11-26T15:19 | MANTRAUSDT | bottom | 0.00242 | 0.00242 | +0.00% |
+| 2026-11-26T15:19 | ZECUSDT | bottom | 678.39 | 691.56 | +1.94% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
