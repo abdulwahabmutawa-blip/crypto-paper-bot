@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-26T16:29:06+00:00 · runs 6812 · equity **$486.79** (-51.32%) · cash $0.00 · open 10/10 · round trips 2233
+updated 2026-11-26T16:46:02+00:00 · runs 6813 · equity **$486.87** (-51.31%) · cash $0.00 · open 10/10 · round trips 2233
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-25T17:45 | STXUSDT | surge | 0.2623 | 0.2633 | +0.38% |
-| 2026-11-25T22:49 | SUPERUSDT | surge | 0.1173 | 0.1172 | -0.09% |
-| 2026-11-26T00:33 | EWYBUSDT | surge | 131.04 | 129.14 | -1.45% |
-| 2026-11-26T15:01 | SAGAUSDT | surge | 0.01438 | 0.0145 | +0.83% |
-| 2026-11-26T15:19 | SKYUSDT | surge | 0.04609 | 0.04657 | +1.04% |
-| 2026-11-26T15:19 | TRXUSDT | bottom | 0.3026 | 0.3025 | -0.03% |
-| 2026-11-26T15:19 | MANTRAUSDT | bottom | 0.00242 | 0.0024 | -0.83% |
-| 2026-11-26T15:53 | SENTUSDT | surge | 0.02125 | 0.02143 | +0.85% |
-| 2026-11-26T16:10 | WIFUSDT | surge | 0.1353 | 0.1349 | -0.30% |
+| 2026-11-25T17:45 | STXUSDT | surge | 0.2623 | 0.2628 | +0.19% |
+| 2026-11-25T22:49 | SUPERUSDT | surge | 0.1173 | 0.1169 | -0.34% |
+| 2026-11-26T00:33 | EWYBUSDT | surge | 131.04 | 129.12 | -1.47% |
+| 2026-11-26T15:01 | SAGAUSDT | surge | 0.01438 | 0.01469 | +2.16% |
+| 2026-11-26T15:19 | SKYUSDT | surge | 0.04609 | 0.04567 | -0.91% |
+| 2026-11-26T15:19 | TRXUSDT | bottom | 0.3026 | 0.3027 | +0.03% |
+| 2026-11-26T15:19 | MANTRAUSDT | bottom | 0.00242 | 0.00242 | +0.00% |
+| 2026-11-26T15:53 | SENTUSDT | surge | 0.02125 | 0.02137 | +0.56% |
+| 2026-11-26T16:10 | WIFUSDT | surge | 0.1353 | 0.1358 | +0.37% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
