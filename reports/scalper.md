@@ -2,20 +2,21 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-26T01:44:38+00:00 · runs 6777 · equity **$493.68** (-50.63%) · cash $-0.00 · open 10/10 · round trips 2224
+updated 2026-11-26T02:01:58+00:00 · runs 6778 · equity **$490.94** (-50.91%) · cash $0.00 · open 10/10 · round trips 2225
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
-- hit 48% (break-even 54%) · mean -0.32%/trade · realized $-508.10 · worst day $-50.94 · trades/day 26.8
+- hit 48% (break-even 54%) · mean -0.32%/trade · realized $-509.63 · worst day $-50.94 · trades/day 26.8
 
 | shape | n | hit | mean | target% | stop% | time% |
 |---|---|---|---|---|---|---|
-| surge | 1910 | 48% | -0.29% | 46% | 47% | 7% |
+| surge | 1911 | 48% | -0.29% | 46% | 47% | 7% |
 | bottom | 314 | 43% | -0.50% | 37% | 44% | 19% |
 
 ## Last 15 round trips
 | exit (UTC) | coin | shape | how | hours | net | P&L |
 |---|---|---|---|---|---|---|
+| 2026-11-26T02:00 | ATUSDT | surge | STOP | 0.5 | -3.25% | $-1.53 |
 | 2026-11-26T01:25 | ATUSDT | surge | TARGET | 0.8 | +2.75% | $+1.26 |
 | 2026-11-26T00:33 | XLMUSDT | surge | TARGET | 5.8 | +2.75% | $+1.22 |
 | 2026-11-26T00:33 | WLDUSDT | surge | TARGET | 6.2 | +2.75% | $+1.22 |
@@ -30,20 +31,19 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | 2026-11-25T18:38 | NVDABUSDT | bottom | TARGET | 2.0 | +2.75% | $+1.19 |
 | 2026-11-25T18:21 | WLFIUSDT | surge | TARGET | 1.8 | +2.75% | $+1.19 |
 | 2026-11-25T18:03 | 牛来USDT | surge | TARGET | 1.5 | +2.75% | $+1.19 |
-| 2026-11-25T17:45 | ANTBUSDT | surge | TARGET | 1.0 | +2.75% | $+1.19 |
 
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-25T16:35 | SENTUSDT | surge | 0.02055 | 0.02056 | +0.05% |
-| 2026-11-25T17:45 | STXUSDT | surge | 0.2623 | 0.2634 | +0.42% |
-| 2026-11-25T19:14 | STRKUSDT | surge | 0.03085 | 0.03109 | +0.78% |
-| 2026-11-25T22:49 | SUPERUSDT | surge | 0.1173 | 0.1186 | +1.11% |
-| 2026-11-26T00:16 | RAYUSDT | surge | 1.3357 | 1.3495 | +1.03% |
-| 2026-11-26T00:16 | NEARUSDT | surge | 3.094 | 3.098 | +0.13% |
-| 2026-11-26T00:33 | EWYBUSDT | surge | 131.04 | 131.37 | +0.25% |
-| 2026-11-26T00:33 | SKHYBUSDT | surge | 114.1 | 113.39 | -0.62% |
-| 2026-11-26T01:25 | ATUSDT | surge | 0.0628 | 0.0633 | +0.80% |
+| 2026-11-25T16:35 | SENTUSDT | surge | 0.02055 | 0.02059 | +0.19% |
+| 2026-11-25T17:45 | STXUSDT | surge | 0.2623 | 0.2628 | +0.19% |
+| 2026-11-25T19:14 | STRKUSDT | surge | 0.03085 | 0.03098 | +0.42% |
+| 2026-11-25T22:49 | SUPERUSDT | surge | 0.1173 | 0.1185 | +1.02% |
+| 2026-11-26T00:16 | RAYUSDT | surge | 1.3357 | 1.3502 | +1.09% |
+| 2026-11-26T00:16 | NEARUSDT | surge | 3.094 | 3.087 | -0.23% |
+| 2026-11-26T00:33 | EWYBUSDT | surge | 131.04 | 130.93 | -0.08% |
+| 2026-11-26T00:33 | SKHYBUSDT | surge | 114.1 | 112.68 | -1.24% |
+| 2026-11-26T02:00 | PUMPUSDT | surge | 0.002634 | 0.002632 | -0.08% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
