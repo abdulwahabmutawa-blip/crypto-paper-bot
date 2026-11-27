@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-27T06:01:42+00:00 · runs 6851 · equity **$500.82** (-49.92%) · cash $0.00 · open 10/10 · round trips 2250
+updated 2026-11-27T06:17:39+00:00 · runs 6852 · equity **$500.70** (-49.93%) · cash $0.00 · open 10/10 · round trips 2250
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,14 +36,14 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-26T15:19 | TRXUSDT | bottom | 0.3026 | 0.3058 | +1.06% |
-| 2026-11-26T17:51 | THETAUSDT | surge | 0.1357 | 0.138 | +1.69% |
-| 2026-11-26T18:25 | WIFUSDT | surge | 0.1387 | 0.137 | -1.23% |
-| 2026-11-26T19:32 | DOTUSDT | surge | 0.676 | 0.693 | +2.51% |
-| 2026-11-27T02:34 | QQQBUSDT | surge | 647.34 | 652.9 | +0.86% |
-| 2026-11-27T02:34 | TQQQBUSDT | surge | 48.01 | 49.17 | +2.42% |
-| 2026-11-27T03:42 | SKHYBUSDT | surge | 117.38 | 117.77 | +0.33% |
-| 2026-11-27T03:58 | GOOGLBUSDT | surge | 279.91 | 281.38 | +0.53% |
-| 2026-11-27T04:15 | SPCXBUSDT | surge | 133.15 | 133.69 | +0.41% |
+| 2026-11-26T15:19 | TRXUSDT | bottom | 0.3026 | 0.3057 | +1.02% |
+| 2026-11-26T17:51 | THETAUSDT | surge | 0.1357 | 0.1379 | +1.62% |
+| 2026-11-26T18:25 | WIFUSDT | surge | 0.1387 | 0.1366 | -1.51% |
+| 2026-11-26T19:32 | DOTUSDT | surge | 0.676 | 0.694 | +2.66% |
+| 2026-11-27T02:34 | QQQBUSDT | surge | 647.34 | 653.16 | +0.90% |
+| 2026-11-27T02:34 | TQQQBUSDT | surge | 48.01 | 49.19 | +2.46% |
+| 2026-11-27T03:42 | SKHYBUSDT | surge | 117.38 | 117.66 | +0.24% |
+| 2026-11-27T03:58 | GOOGLBUSDT | surge | 279.91 | 281.01 | +0.39% |
+| 2026-11-27T04:15 | SPCXBUSDT | surge | 133.15 | 133.84 | +0.52% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
