@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-27T09:13:06+00:00 · runs 6863 · equity **$500.99** (-49.90%) · cash $0.00 · open 10/10 · round trips 2250
+updated 2026-11-27T09:29:06+00:00 · runs 6864 · equity **$501.39** (-49.86%) · cash $0.00 · open 10/10 · round trips 2250
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -37,13 +37,13 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
 | 2026-11-26T15:19 | TRXUSDT | bottom | 0.3026 | 0.3057 | +1.02% |
-| 2026-11-26T17:51 | THETAUSDT | surge | 0.1357 | 0.1373 | +1.18% |
-| 2026-11-26T18:25 | WIFUSDT | surge | 0.1387 | 0.1387 | +0.00% |
-| 2026-11-26T19:32 | DOTUSDT | surge | 0.676 | 0.686 | +1.48% |
-| 2026-11-27T02:34 | QQQBUSDT | surge | 647.34 | 652.49 | +0.80% |
+| 2026-11-26T17:51 | THETAUSDT | surge | 0.1357 | 0.1377 | +1.47% |
+| 2026-11-26T18:25 | WIFUSDT | surge | 0.1387 | 0.1384 | -0.22% |
+| 2026-11-26T19:32 | DOTUSDT | surge | 0.676 | 0.684 | +1.18% |
+| 2026-11-27T02:34 | QQQBUSDT | surge | 647.34 | 652.65 | +0.82% |
 | 2026-11-27T02:34 | TQQQBUSDT | surge | 48.01 | 49.15 | +2.37% |
-| 2026-11-27T03:42 | SKHYBUSDT | surge | 117.38 | 118.99 | +1.37% |
-| 2026-11-27T03:58 | GOOGLBUSDT | surge | 279.91 | 281.25 | +0.48% |
-| 2026-11-27T04:15 | SPCXBUSDT | surge | 133.15 | 133.54 | +0.29% |
+| 2026-11-27T03:42 | SKHYBUSDT | surge | 117.38 | 119.92 | +2.16% |
+| 2026-11-27T03:58 | GOOGLBUSDT | surge | 279.91 | 281.46 | +0.55% |
+| 2026-11-27T04:15 | SPCXBUSDT | surge | 133.15 | 133.84 | +0.52% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
