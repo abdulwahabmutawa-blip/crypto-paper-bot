@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-27T05:25:02+00:00 · runs 6848 · equity **$500.13** (-49.99%) · cash $0.00 · open 10/10 · round trips 2250
+updated 2026-11-27T05:29:03+00:00 · runs 6849 · equity **$500.04** (-50.00%) · cash $0.00 · open 10/10 · round trips 2250
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -37,13 +37,13 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
 | 2026-11-26T15:19 | TRXUSDT | bottom | 0.3026 | 0.3057 | +1.02% |
-| 2026-11-26T17:51 | THETAUSDT | surge | 0.1357 | 0.1359 | +0.15% |
-| 2026-11-26T18:25 | WIFUSDT | surge | 0.1387 | 0.137 | -1.23% |
+| 2026-11-26T17:51 | THETAUSDT | surge | 0.1357 | 0.1358 | +0.07% |
+| 2026-11-26T18:25 | WIFUSDT | surge | 0.1387 | 0.1371 | -1.15% |
 | 2026-11-26T19:32 | DOTUSDT | surge | 0.676 | 0.691 | +2.22% |
-| 2026-11-27T02:34 | QQQBUSDT | surge | 647.34 | 652.66 | +0.82% |
-| 2026-11-27T02:34 | TQQQBUSDT | surge | 48.01 | 49.12 | +2.31% |
-| 2026-11-27T03:42 | SKHYBUSDT | surge | 117.38 | 118 | +0.53% |
-| 2026-11-27T03:58 | GOOGLBUSDT | surge | 279.91 | 281.59 | +0.60% |
-| 2026-11-27T04:15 | SPCXBUSDT | surge | 133.15 | 133.98 | +0.62% |
+| 2026-11-27T02:34 | QQQBUSDT | surge | 647.34 | 652.32 | +0.77% |
+| 2026-11-27T02:34 | TQQQBUSDT | surge | 48.01 | 49.07 | +2.21% |
+| 2026-11-27T03:42 | SKHYBUSDT | surge | 117.38 | 118.09 | +0.60% |
+| 2026-11-27T03:58 | GOOGLBUSDT | surge | 279.91 | 281.29 | +0.49% |
+| 2026-11-27T04:15 | SPCXBUSDT | surge | 133.15 | 133.96 | +0.61% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
