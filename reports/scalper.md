@@ -2,20 +2,21 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-27T01:29:15+00:00 · runs 6834 · equity **$491.87** (-50.81%) · cash $0.00 · open 10/10 · round trips 2243
+updated 2026-11-27T01:46:05+00:00 · runs 6835 · equity **$489.89** (-51.01%) · cash $0.00 · open 10/10 · round trips 2244
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
-- hit 48% (break-even 54%) · mean -0.32%/trade · realized $-508.98 · worst day $-50.94 · trades/day 26.7
+- hit 48% (break-even 54%) · mean -0.32%/trade · realized $-510.44 · worst day $-50.94 · trades/day 26.7
 
 | shape | n | hit | mean | target% | stop% | time% |
 |---|---|---|---|---|---|---|
-| surge | 1927 | 48% | -0.29% | 46% | 47% | 7% |
+| surge | 1928 | 48% | -0.29% | 46% | 47% | 7% |
 | bottom | 316 | 43% | -0.48% | 37% | 44% | 19% |
 
 ## Last 15 round trips
 | exit (UTC) | coin | shape | how | hours | net | P&L |
 |---|---|---|---|---|---|---|
+| 2026-11-27T01:44 | SOPHUSDT | surge | STOP | 0.5 | -3.25% | $-1.46 |
 | 2026-11-27T00:54 | EWYBUSDT | surge | TIME | 24.0 | -1.35% | $-0.61 |
 | 2026-11-26T23:46 | SAGAUSDT | surge | STOP | 4.5 | -3.25% | $-1.47 |
 | 2026-11-26T23:46 | SUPERUSDT | surge | TIME | 24.0 | -1.10% | $-0.49 |
@@ -30,20 +31,19 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | 2026-11-26T15:53 | SEIUSDT | surge | TARGET | 0.5 | +2.75% | $+1.21 |
 | 2026-11-26T15:19 | PUMPUSDT | surge | STOP | 13.0 | -3.25% | $-1.48 |
 | 2026-11-26T15:19 | NEARUSDT | surge | STOP | 14.8 | -3.25% | $-1.48 |
-| 2026-11-26T15:19 | RAYUSDT | surge | STOP | 14.8 | -3.25% | $-1.48 |
 
 ## Open seats
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-26T15:19 | SKYUSDT | surge | 0.04609 | 0.04715 | +2.30% |
-| 2026-11-26T15:19 | TRXUSDT | bottom | 0.3026 | 0.3042 | +0.53% |
-| 2026-11-26T17:51 | THETAUSDT | surge | 0.1357 | 0.1351 | -0.44% |
-| 2026-11-26T18:25 | WIFUSDT | surge | 0.1387 | 0.1366 | -1.51% |
-| 2026-11-26T18:58 | SENTUSDT | surge | 0.02178 | 0.02169 | -0.41% |
+| 2026-11-26T15:19 | SKYUSDT | surge | 0.04609 | 0.04672 | +1.37% |
+| 2026-11-26T15:19 | TRXUSDT | bottom | 0.3026 | 0.3041 | +0.50% |
+| 2026-11-26T17:51 | THETAUSDT | surge | 0.1357 | 0.1344 | -0.96% |
+| 2026-11-26T18:25 | WIFUSDT | surge | 0.1387 | 0.1367 | -1.44% |
+| 2026-11-26T18:58 | SENTUSDT | surge | 0.02178 | 0.0216 | -0.83% |
 | 2026-11-26T19:32 | DOTUSDT | surge | 0.676 | 0.68 | +0.59% |
-| 2026-11-26T23:46 | TIAUSDT | bottom | 0.3353 | 0.3402 | +1.46% |
-| 2026-11-26T23:46 | TRUMPUSDT | bottom | 0.863 | 0.868 | +0.58% |
-| 2026-11-27T00:54 | SOPHUSDT | surge | 0.00093 | 0.00092 | -1.08% |
+| 2026-11-26T23:46 | TIAUSDT | bottom | 0.3353 | 0.3403 | +1.49% |
+| 2026-11-26T23:46 | TRUMPUSDT | bottom | 0.863 | 0.869 | +0.70% |
+| 2026-11-27T01:44 | SNDKBUSDT | surge | 77.37 | 76.93 | -0.57% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
