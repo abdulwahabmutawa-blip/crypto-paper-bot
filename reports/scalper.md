@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-28T17:05:19+00:00 · runs 6945 · equity **$487.98** (-51.20%) · cash $43.87 · open 9/10 · round trips 2273
+updated 2026-11-28T17:21:20+00:00 · runs 6946 · equity **$486.68** (-51.33%) · cash $43.87 · open 9/10 · round trips 2273
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -37,12 +37,12 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
 | 2026-11-27T18:29 | DRAMBUSDT | surge | 37.62 | 37.29 | -0.88% |
-| 2026-11-27T19:01 | MUBUSDT | surge | 645.42 | 640.21 | -0.81% |
-| 2026-11-27T19:18 | ANTBUSDT | surge | 91.18 | 91.52 | +0.37% |
-| 2026-11-28T14:39 | DODOUSDT | surge | 0.04201 | 0.04203 | +0.05% |
-| 2026-11-28T14:39 | TLMUSDT | bottom | 0.000919 | 0.000927 | +0.87% |
-| 2026-11-28T14:39 | HBARUSDT | bottom | 0.05271 | 0.05236 | -0.66% |
-| 2026-11-28T14:55 | PEPEUSDT | bottom | 3.4e-06 | 3.42e-06 | +0.59% |
-| 2026-11-28T17:04 | YBUSDT | surge | 0.0623 | 0.0618 | -0.80% |
+| 2026-11-27T19:01 | MUBUSDT | surge | 645.42 | 640.96 | -0.69% |
+| 2026-11-27T19:18 | ANTBUSDT | surge | 91.18 | 91.47 | +0.32% |
+| 2026-11-28T14:39 | DODOUSDT | surge | 0.04201 | 0.04167 | -0.81% |
+| 2026-11-28T14:39 | TLMUSDT | bottom | 0.000919 | 0.000919 | +0.00% |
+| 2026-11-28T14:39 | HBARUSDT | bottom | 0.05271 | 0.05237 | -0.65% |
+| 2026-11-28T14:55 | PEPEUSDT | bottom | 3.4e-06 | 3.41e-06 | +0.29% |
+| 2026-11-28T17:04 | YBUSDT | surge | 0.0623 | 0.0612 | -1.77% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
