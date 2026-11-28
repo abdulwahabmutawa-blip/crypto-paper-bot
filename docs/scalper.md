@@ -2,7 +2,7 @@
 
 **Execution caveat:** retrospective candle-close entries, observed later by a polling bot. This is a signal simulation, not an executable forward-fill record. Do not promote it on the trade count alone.
 
-updated 2026-11-28T08:35:24+00:00 · runs 6924 · equity **$491.89** (-50.81%) · cash $181.77 · open 6/10 · round trips 2268
+updated 2026-11-28T08:51:30+00:00 · runs 6925 · equity **$492.71** (-50.73%) · cash $181.77 · open 6/10 · round trips 2268
 
 Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + bottom on 15m candles. Judge on >= 100 round trips.
 
@@ -36,10 +36,10 @@ Rule: 10 seats, +3% target / -3% stop / 24h, cost 0.25%/RT, shapes surge + botto
 | entry (UTC) | coin | shape | entry | mark | unrealized |
 |---|---|---|---|---|---|
 | 2026-09-12T17:16 | TVKUSDT | surge | 0.05405 | 0.05405 | +0.00% |
-| 2026-11-27T15:28 | TSLABUSDT | surge | 393.11 | 398.93 | +1.48% |
-| 2026-11-27T18:29 | DRAMBUSDT | surge | 37.62 | 37.35 | -0.72% |
-| 2026-11-27T19:01 | MUBUSDT | surge | 645.42 | 642.93 | -0.39% |
-| 2026-11-27T19:18 | ANTBUSDT | surge | 91.18 | 91.23 | +0.05% |
-| 2026-11-27T19:18 | NIGHTUSDT | surge | 0.05011 | 0.05067 | +1.12% |
+| 2026-11-27T15:28 | TSLABUSDT | surge | 393.11 | 399.02 | +1.50% |
+| 2026-11-27T18:29 | DRAMBUSDT | surge | 37.62 | 37.46 | -0.43% |
+| 2026-11-27T19:01 | MUBUSDT | surge | 645.42 | 643.55 | -0.29% |
+| 2026-11-27T19:18 | ANTBUSDT | surge | 91.18 | 91.47 | +0.32% |
+| 2026-11-27T19:18 | NIGHTUSDT | surge | 0.05011 | 0.05125 | +2.27% |
 
 _Paper only. $1,000 start, equal stakes = cash / free seats at entry. Entries at the close of the 15m candle that fired; exits on the first later candle touching target or stop (stop first if both), else the 24h close._
